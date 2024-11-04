@@ -1,0 +1,142 @@
+{software.amazon.awscdk
+ {RemoveTag$Builder [tag-key]
+  SecretValue$Builder [protected-value]
+  Tag$Builder [tag-key tag-value]
+  TagManager$Builder [[tag-type resource-manager]
+                      [tag-type resource-manager initial-tags]]}
+
+ software.amazon.awscdk.aws_apigatewayv2_authorizers
+ {HttpJwtAuthorizer$Builder [id jwt-issuer]
+  HttpLambdaAuthorizer$Builder [id handler-function]
+  HttpUserPoolAuthorizer$Builder [id user-pool]
+  WebSocketLambdaAuthorizer$Builder [id handler-function]}
+
+ software.amazon.awscdk.aws_apigatewayv2_integrations
+ {HttpAlbIntegration$Builder [id listener]
+  HttpLambdaIntegration$Builder [id handler-function]
+  HttpNlbIntegration$Builder [id listener]
+  HttpServiceDiscoveryIntegration$Builder [id service]
+  HttpStepFunctionsIntegration$Builder [id]
+  HttpUrlIntegration$Builder [id url]
+  WebSocketAwsIntegration$Builder [id]
+  WebSocketLambdaIntegration$Builder [id handler-function]}
+
+ software.amazon.awscdk.cxapi
+ {AssetManifestArtifact$Builder [assembly artifact-name]
+  CloudAssembly$Builder [directory]
+  CloudAssemblyBuilder$Builder [[]
+                                [out-dir]]
+  CloudFormationStackArtifact$Builder [assembly artifact-id]
+  NestedCloudAssemblyArtifact$Builder [assembly artifact-name]
+  TreeCloudArtifact$Builder [assembly artifact-name]}
+
+ software.amazon.awscdk.pipelines
+ {CodeBuildStep$Builder [id]
+  ConfirmPermissionsBroadening$Builder [id]
+  ManualApprovalStep$Builder [id]
+  ShellStep$Builder [id]
+  Wave$Builder [id]}
+
+ software.amazon.awscdk.services.apigateway
+ {AssetApiDefinition$Builder [path]
+  HttpIntegration$Builder [url]
+  LambdaIntegration$Builder [handler-function]
+  SagemakerIntegration$Builder [endpoint]}
+
+ software.amazon.awscdk.services.appsync
+ {AssetCode$Builder [path]}
+
+ software.amazon.awscdk.services.backup
+ {BackupResource$Builder [[]
+                          [resource]
+                          [resource construct]]}
+
+ software.amazon.awscdk.services.cloudfront
+ {AssetImportSource$Builder [path]}
+
+ software.amazon.awscdk.services.cloudfront.origins
+ {FunctionUrlOrigin$Builder [function-url]
+  HttpOrigin$Builder [domain-name]
+  LoadBalancerV2Origin$Builder [load-balancer]
+  RestApiOrigin$Builder [rest-api]
+  S3Origin$Builder [bucket]}
+
+ software.amazon.awscdk.services.ec2
+ {GenericLinuxImage$Builder [ami-map]
+  GenericWindowsImage$Builder [ami-map]
+  InterfaceVpcEndpointAwsService$Builder [[service-name]
+                                          [service-name prefix]
+                                          [service-name prefix port]]
+  ResolveSsmParameterAtLaunchImage$Builder [parameter-name]
+  WindowsImage$Builder [windows-version]}
+
+ software.amazon.awscdk.services.ecs
+ {AssetEnvironmentFile$Builder [path]
+  AssetImage$Builder [directory]
+  PortMap$Builder [network-mode]
+  RepositoryImage$Builder [image-name]
+  ServiceConnect$Builder [network-mode]}
+
+ software.amazon.awscdk.services.events.targets
+ {ApiDestination$Builder [api-destination]
+  ApiGateway$Builder [rest-api]
+  AppSync$Builder [graphql-api]
+  BatchJob$Builder [job-queue-arn job-queue-scope job-definition-arn job-definition-scope]
+  CloudWatchLogGroup$Builder [log-group]
+  CodeBuildProject$Builder [project]
+  CodePipeline$Builder [pipeline]
+  EventBus$Builder [event-bus]
+  KinesisFirehoseStreamV2$Builder [delivery-stream]
+  KinesisStream$Builder [stream]
+  LambdaFunction$Builder [handler-function]
+  SfnStateMachine$Builder [state-machine]
+  SnsTopic$Builder [topic]
+  SqsQueue$Builder [queue]}
+
+ software.amazon.awscdk.services.globalaccelerator.endpoints
+ {ApplicationLoadBalancerEndpoint$Builder [load-balancer]
+  CfnEipEndpoint$Builder [eip]
+  InstanceEndpoint$Builder [endpoint-instance]
+  NetworkLoadBalancerEndpoint$Builder [load-balancer]}
+
+ software.amazon.awscdk.services.iam
+ {ServicePrincipal$Builder [service]}
+
+ software.amazon.awscdk.services.lambda
+ {AssetCode$Builder [path]
+  AssetImageCode$Builder [directory]
+  EcrImageCode$Builder [repository]
+  Runtime$Builder [[runtime-name] [runtime-name runtime-family]]}
+
+ software.amazon.awscdk.services.lambda.destinations
+ {LambdaDestination$Builder [software.amazon.awscdk.services.lambda.IFunction]}
+
+ software.amazon.awscdk.services.lambda.eventsources
+ {ApiEventSource$Builder [String String]
+  DynamoEventSource$Builder [table]
+  KinesisEventSource$Builder [stream]
+  S3EventSource$Builder [bucket]
+  S3EventSourceV2$Builder [bucket]
+  SnsEventSource$Builder [topic]
+  SqsEventSource$Builder [queue]}
+
+
+ software.amazon.awscdk.services.logs.destinations
+ {KinesisDestination$Builder [stream]
+  LambdaDestination$Builder [handler-function]}
+
+ software.amazon.awscdk.services.secretsmanager
+ {SecretRotationApplication$Builder [application-id semantic-version]}
+
+ software.amazon.awscdk.services.sns.subscriptions
+ {EmailSubscription$Builder [email-address]
+  LambdaSubscription$Builder [handler-function]
+  SmsSubscription$Builder [phone-number]
+  SqsSubscription$Builder [queue]
+  UrlSubscription$Builder [url]}
+
+ software.amazon.awscdk.services.stepfunctions
+ {FileDefinitionBody$Builder [path]}
+
+ software.amazon.awscdk.services.synthetics
+ {AssetCode$Builder [path]}}

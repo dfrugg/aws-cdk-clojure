@@ -1,0 +1,81 @@
+(ns cdk.api.services.kms-test
+  "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.kms package. "
+  (:require [clojure.test :refer [deftest
+                                  is
+                                  testing]]
+            [cdk.api.services.kms :refer [key-spec
+                                          key-usage]])
+  (:import [software.amazon.awscdk.services.kms KeySpec
+                                                KeyUsage]))
+
+
+(deftest key-spec-test
+  (testing "Testing enum function key-spec"
+    (is (= KeySpec/HMAC_512 (key-spec {:item KeySpec/HMAC_512} "test" :item)))
+    (is (= KeySpec/HMAC_512 (key-spec {:test/item KeySpec/HMAC_512} "test" :item)))
+    (is (= KeySpec/ECC_NIST_P384 (key-spec {:item KeySpec/ECC_NIST_P384} "test" :item)))
+    (is (= KeySpec/ECC_NIST_P384 (key-spec {:test/item KeySpec/ECC_NIST_P384} "test" :item)))
+    (is (= KeySpec/RSA_3072 (key-spec {:item KeySpec/RSA_3072} "test" :item)))
+    (is (= KeySpec/RSA_3072 (key-spec {:test/item KeySpec/RSA_3072} "test" :item)))
+    (is (= KeySpec/HMAC_384 (key-spec {:item KeySpec/HMAC_384} "test" :item)))
+    (is (= KeySpec/HMAC_384 (key-spec {:test/item KeySpec/HMAC_384} "test" :item)))
+    (is (= KeySpec/SM2 (key-spec {:item KeySpec/SM2} "test" :item)))
+    (is (= KeySpec/SM2 (key-spec {:test/item KeySpec/SM2} "test" :item)))
+    (is (= KeySpec/RSA_2048 (key-spec {:item KeySpec/RSA_2048} "test" :item)))
+    (is (= KeySpec/RSA_2048 (key-spec {:test/item KeySpec/RSA_2048} "test" :item)))
+    (is (= KeySpec/HMAC_256 (key-spec {:item KeySpec/HMAC_256} "test" :item)))
+    (is (= KeySpec/HMAC_256 (key-spec {:test/item KeySpec/HMAC_256} "test" :item)))
+    (is (= KeySpec/ECC_SECG_P256K1 (key-spec {:item KeySpec/ECC_SECG_P256K1} "test" :item)))
+    (is (= KeySpec/ECC_SECG_P256K1 (key-spec {:test/item KeySpec/ECC_SECG_P256K1} "test" :item)))
+    (is (= KeySpec/RSA_4096 (key-spec {:item KeySpec/RSA_4096} "test" :item)))
+    (is (= KeySpec/RSA_4096 (key-spec {:test/item KeySpec/RSA_4096} "test" :item)))
+    (is (= KeySpec/HMAC_224 (key-spec {:item KeySpec/HMAC_224} "test" :item)))
+    (is (= KeySpec/HMAC_224 (key-spec {:test/item KeySpec/HMAC_224} "test" :item)))
+    (is (= KeySpec/ECC_NIST_P521 (key-spec {:item KeySpec/ECC_NIST_P521} "test" :item)))
+    (is (= KeySpec/ECC_NIST_P521 (key-spec {:test/item KeySpec/ECC_NIST_P521} "test" :item)))
+    (is (= KeySpec/ECC_NIST_P256 (key-spec {:item KeySpec/ECC_NIST_P256} "test" :item)))
+    (is (= KeySpec/ECC_NIST_P256 (key-spec {:test/item KeySpec/ECC_NIST_P256} "test" :item)))
+    (is (= KeySpec/SYMMETRIC_DEFAULT (key-spec {:item KeySpec/SYMMETRIC_DEFAULT} "test" :item)))
+    (is (= KeySpec/SYMMETRIC_DEFAULT (key-spec {:test/item KeySpec/SYMMETRIC_DEFAULT} "test" :item)))
+    (is (= KeySpec/HMAC_512 (key-spec {:item :hmac-512} "test" :item)))
+    (is (= KeySpec/HMAC_512 (key-spec {:test/item :hmac-512} "test" :item)))
+    (is (= KeySpec/ECC_NIST_P384 (key-spec {:item :ecc-nist-p384} "test" :item)))
+    (is (= KeySpec/ECC_NIST_P384 (key-spec {:test/item :ecc-nist-p384} "test" :item)))
+    (is (= KeySpec/RSA_3072 (key-spec {:item :rsa-3072} "test" :item)))
+    (is (= KeySpec/RSA_3072 (key-spec {:test/item :rsa-3072} "test" :item)))
+    (is (= KeySpec/HMAC_384 (key-spec {:item :hmac-384} "test" :item)))
+    (is (= KeySpec/HMAC_384 (key-spec {:test/item :hmac-384} "test" :item)))
+    (is (= KeySpec/SM2 (key-spec {:item :sm2} "test" :item)))
+    (is (= KeySpec/SM2 (key-spec {:test/item :sm2} "test" :item)))
+    (is (= KeySpec/RSA_2048 (key-spec {:item :rsa-2048} "test" :item)))
+    (is (= KeySpec/RSA_2048 (key-spec {:test/item :rsa-2048} "test" :item)))
+    (is (= KeySpec/HMAC_256 (key-spec {:item :hmac-256} "test" :item)))
+    (is (= KeySpec/HMAC_256 (key-spec {:test/item :hmac-256} "test" :item)))
+    (is (= KeySpec/ECC_SECG_P256K1 (key-spec {:item :ecc-secg-p256k1} "test" :item)))
+    (is (= KeySpec/ECC_SECG_P256K1 (key-spec {:test/item :ecc-secg-p256k1} "test" :item)))
+    (is (= KeySpec/RSA_4096 (key-spec {:item :rsa-4096} "test" :item)))
+    (is (= KeySpec/RSA_4096 (key-spec {:test/item :rsa-4096} "test" :item)))
+    (is (= KeySpec/HMAC_224 (key-spec {:item :hmac-224} "test" :item)))
+    (is (= KeySpec/HMAC_224 (key-spec {:test/item :hmac-224} "test" :item)))
+    (is (= KeySpec/ECC_NIST_P521 (key-spec {:item :ecc-nist-p521} "test" :item)))
+    (is (= KeySpec/ECC_NIST_P521 (key-spec {:test/item :ecc-nist-p521} "test" :item)))
+    (is (= KeySpec/ECC_NIST_P256 (key-spec {:item :ecc-nist-p256} "test" :item)))
+    (is (= KeySpec/ECC_NIST_P256 (key-spec {:test/item :ecc-nist-p256} "test" :item)))
+    (is (= KeySpec/SYMMETRIC_DEFAULT (key-spec {:item :symmetric-default} "test" :item)))
+    (is (= KeySpec/SYMMETRIC_DEFAULT (key-spec {:test/item :symmetric-default} "test" :item)))))
+
+
+(deftest key-usage-test
+  (testing "Testing enum function key-usage"
+    (is (= KeyUsage/ENCRYPT_DECRYPT (key-usage {:item KeyUsage/ENCRYPT_DECRYPT} "test" :item)))
+    (is (= KeyUsage/ENCRYPT_DECRYPT (key-usage {:test/item KeyUsage/ENCRYPT_DECRYPT} "test" :item)))
+    (is (= KeyUsage/GENERATE_VERIFY_MAC (key-usage {:item KeyUsage/GENERATE_VERIFY_MAC} "test" :item)))
+    (is (= KeyUsage/GENERATE_VERIFY_MAC (key-usage {:test/item KeyUsage/GENERATE_VERIFY_MAC} "test" :item)))
+    (is (= KeyUsage/SIGN_VERIFY (key-usage {:item KeyUsage/SIGN_VERIFY} "test" :item)))
+    (is (= KeyUsage/SIGN_VERIFY (key-usage {:test/item KeyUsage/SIGN_VERIFY} "test" :item)))
+    (is (= KeyUsage/ENCRYPT_DECRYPT (key-usage {:item :encrypt-decrypt} "test" :item)))
+    (is (= KeyUsage/ENCRYPT_DECRYPT (key-usage {:test/item :encrypt-decrypt} "test" :item)))
+    (is (= KeyUsage/GENERATE_VERIFY_MAC (key-usage {:item :generate-verify-mac} "test" :item)))
+    (is (= KeyUsage/GENERATE_VERIFY_MAC (key-usage {:test/item :generate-verify-mac} "test" :item)))
+    (is (= KeyUsage/SIGN_VERIFY (key-usage {:item :sign-verify} "test" :item)))
+    (is (= KeyUsage/SIGN_VERIFY (key-usage {:test/item :sign-verify} "test" :item)))))

@@ -1,0 +1,31 @@
+= AWS CDK For Clojure
+:toc: preamble
+:toclevels: 5
+
+Provides Clojure function wrappers for resolving enum values and populating and building builders within the AWS CDK Java library.
+
+== About
+
+The `aws-cdk-clojure` project provides function that you can use to create AWS CDK apps and stacks and things in order to define AWS CloudFormation templates via the AWS CDK library.  The functions handle all the Java-interop to resolve enum values and processing builder classes into the artifacts AWS CDK synthesizes into the templates.
+
+The library itself is created by inspecting and interpreting the AWS CDK Java library and generating source code and tests.  The functions for builders and enums in the same package are found in the same Clojure namespace.  The root path for generated code is `cdk.api`, and functions for any builders and enums in the `software.amazon.awscdk` will be found in the `cdk.api` namespace.  The namespace paths for all other packages with match the library but with a root of `cdk.api` rather than `software.amazon.awscdk`.  For example, the `software.amazon.awscdk.services.rds.AuroraCapacityUnit` enum is interpreted into function `aurora-capacity-unit` in the `cdk.api.services.rds` namespace.
+
+The version of the `aws-cdk-clojure` library will follow the version of the AWS CDK Java library that has been interpretted, plus an incremental index.  For example, the version at this writing is `2.144.0-beta0` as it is based on the AWS CDK Java library version `2.144.0`, and this library is the first beta version.  Once out of beta and fully tested the version for this library version will be `2.144.0-0`.
+
+
+[red yellow-background]*WARNING: _This library is very very beta.  Function names and behaviors may be subject to change._*
+
+=== Why?
+
+Given that the AWS CDK supports multiple languages already, I can only imagine how many _why even do this_ questions other developers may have.  For me, it's simply that after spending almost 20 years in an imperative and OO world(generally) before leaning into Clojure, I just can't fathom doing any work unless it's functional and data driven.  As well, I like data, and the CDK just seems like a three lefts of programming and markup to just to go 1 right to a configuration.  I played with the CDK using Clojure and Java-interop, which felt a bit clunky.  I tried using pure Java, and pure Typescript, which felt like I was carrying a sack of rocks.  (BTW, I know others love those languages and this is not trying to disparage other language.  It's just my personal experience and perspective after a long career).
+
+
+== Usage
+
+TBDocumented...
+
+## License
+
+Copyright © 2024 dfrugg
+
+Distributed under the Eclipse Public License version 1.0.
