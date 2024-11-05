@@ -26,3 +26,7 @@
 /checkouts
 /classes
 /target
+.local*
+pom.xml
+pom.xml*
+
