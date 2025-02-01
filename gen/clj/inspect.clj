@@ -46,6 +46,12 @@
   (atom {}))
 
 
+(defn reset
+  []
+  (reset! packages {})
+  (reset! enums {}))
+
+
 (defn ignore?
   "Checks if a class has been configured to be ignored."
   [data {:keys [ignored]}]
@@ -152,7 +158,13 @@
   (and data (empty? parameter-types)))
 
 
-(defn stack-id?
+(defn scope-only?
+  [{:keys [parameter-types]}]
+  (and (= 1 (count parameter-types))
+       (= construct-sym (first parameter-types))))
+
+
+(defn scope-id?
   [{:keys [parameter-types]}]
   (and (= 2 (count parameter-types))
        (= construct-sym (first parameter-types))
@@ -175,7 +187,7 @@
   [data]
   (cond
     (no-arg? data) {:init-type :no-arg}
-    (stack-id? data) {:init-type :stack-id :init-args (:parameter-types data)}
+    (scope-id? data) {:init-type :stack-id :init-args (:parameter-types data)}
     (some? data) {:init-type :other-arg :init-args (:parameter-types data)}))
 
 
@@ -183,7 +195,7 @@
   [data]
   (cond
     (no-arg? data) {:init-type :no-arg :init-args (:parameter-types data)}
-    (stack-id? data) {:init-type :stack-id :init-args (:parameter-types data)}
+    (scope-id? data) {:init-type :stack-id :init-args (:parameter-types data)}
     (some? data) {:init-type :other-arg :init-args (:parameter-types data)}))
 
 

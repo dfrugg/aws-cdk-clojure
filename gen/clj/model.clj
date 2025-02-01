@@ -9,7 +9,6 @@
                           conjv]]))
 
 
-
 (def construct-sym 'software.constructs.Construct)
 (def string-sym 'java.lang.String)
 

@@ -1,9 +1,9 @@
 (ns cdk.api.customresources
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.customresources package. "
   (:require [cdk.support :refer [lookup-entry]]
+            [cdk.api.services.stepfunctions :refer [log-level]]
             [cdk.api.services.logs :refer [retention-days]]
-            [cdk.api :refer [removal-policy]]
-            [cdk.api.services.stepfunctions :refer [log-level]])
+            [cdk.api :refer [removal-policy]])
   (:import [software.amazon.awscdk.customresources AwsCustomResource$Builder
                                                    AwsCustomResourceProps$Builder
                                                    AwsSdkCall$Builder

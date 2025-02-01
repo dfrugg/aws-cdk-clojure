@@ -10,6 +10,7 @@
 (defn gen
   "Generates all the files."
   []
+  (in/reset)
   (let [config (co/load)]
     (mapv #(in/add-enum % config) (cp/find-enums config))
     (mapv #(in/add-builder % config) (cp/find-builders config))
