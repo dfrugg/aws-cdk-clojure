@@ -1,7 +1,7 @@
 (ns inspect
   (:require [model :refer [construct-sym
                            string-sym
-                           names]]
+                           java-class-info]]
             [util :refer [conjv
                           constant-keyword
                           camel->kebab-case
@@ -116,7 +116,7 @@
 (defn add-enum
   "Adds an Enum to the registry"
   [^Class enum-class config]
-  (-> (names enum-class)
+  (-> (java-class-info enum-class)
       (assoc :values (enum-values enum-class))
       (register :enums config)))
 
@@ -250,6 +250,6 @@
 
 (defn add-builder
   [^Class builder-class config]
-  (-> (names builder-class)
+  (-> (java-class-info builder-class)
       (builder-methods config)
       (register :builders config)))

@@ -14,8 +14,8 @@
 (def string-sym 'java.lang.String)
 
 
-(defn names
-  "Gets the names we use for a class."
+(defn java-class-info
+  "Gets the info on a java class that is needed, such as the different name forms used."
   [^Class target-class]
   (let [package-name (.getPackageName target-class)
         class-name (.getName target-class)
