@@ -100,9 +100,12 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :alias data) NetworkLoadBalancedServiceRecordType/ALIAS)))
 
 
-(defn application-listener-props-builder
-  "The application-listener-props-builder function buildes out new instances of 
-ApplicationListenerProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-listener-props-builder
+  "The build-application-listener-props-builder function updates a ApplicationListenerProps$Builder instance using the provided configuration.
+  The function takes the ApplicationListenerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -110,25 +113,28 @@ ApplicationListenerProps$Builder using the provided configuration.  Each field i
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationProtocol | [[cdk.api.services.elasticloadbalancingv2/application-protocol]] | `:protocol` |
-| `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |"
-  [stack id config]
-  (let [builder (ApplicationListenerProps$Builder.)]
-    (when-let [data (lookup-entry config id :certificate)]
-      (. builder certificate data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (application-protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (ssl-policy config id :ssl-policy)]
-      (. builder sslPolicy data))
-    (.build builder)))
+| `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |
+"
+  [^ApplicationListenerProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate)]
+    (. builder certificate data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (application-protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (ssl-policy config id :ssl-policy)]
+    (. builder sslPolicy data))
+  (.build builder))
 
 
-(defn application-load-balanced-ec2-service-builder
-  "The application-load-balanced-ec2-service-builder function buildes out new instances of 
-ApplicationLoadBalancedEc2Service$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-load-balanced-ec2-service-builder
+  "The build-application-load-balanced-ec2-service-builder function updates a ApplicationLoadBalancedEc2Service$Builder instance using the provided configuration.
+  The function takes the ApplicationLoadBalancedEc2Service$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -167,87 +173,90 @@ ApplicationLoadBalancedEc2Service$Builder using the provided configuration.  Eac
 | `targetProtocol` | software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationProtocol | [[cdk.api.services.elasticloadbalancingv2/application-protocol]] | `:target-protocol` |
 | `taskDefinition` | software.amazon.awscdk.services.ecs.Ec2TaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 | `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageOptions | [[cdk.support/lookup-entry]] | `:task-image-options` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (ApplicationLoadBalancedEc2Service$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :capacity-provider-strategies)]
-      (. builder capacityProviderStrategies data))
-    (when-let [data (lookup-entry config id :certificate)]
-      (. builder certificate data))
-    (when-let [data (lookup-entry config id :circuit-breaker)]
-      (. builder circuitBreaker data))
-    (when-let [data (lookup-entry config id :cloud-map-options)]
-      (. builder cloudMapOptions data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :deployment-controller)]
-      (. builder deploymentController data))
-    (when-let [data (lookup-entry config id :desired-count)]
-      (. builder desiredCount data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :domain-zone)]
-      (. builder domainZone data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :health-check-grace-period)]
-      (. builder healthCheckGracePeriod data))
-    (when-let [data (lookup-entry config id :idle-timeout)]
-      (. builder idleTimeout data))
-    (when-let [data (lookup-entry config id :listener-port)]
-      (. builder listenerPort data))
-    (when-let [data (lookup-entry config id :load-balancer)]
-      (. builder loadBalancer data))
-    (when-let [data (lookup-entry config id :load-balancer-name)]
-      (. builder loadBalancerName data))
-    (when-let [data (lookup-entry config id :max-healthy-percent)]
-      (. builder maxHealthyPercent data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
-      (. builder memoryReservationMiB data))
-    (when-let [data (lookup-entry config id :min-healthy-percent)]
-      (. builder minHealthyPercent data))
-    (when-let [data (lookup-entry config id :open-listener)]
-      (. builder openListener data))
-    (when-let [data (lookup-entry config id :placement-constraints)]
-      (. builder placementConstraints data))
-    (when-let [data (lookup-entry config id :placement-strategies)]
-      (. builder placementStrategies data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (application-protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (application-protocol-version config id :protocol-version)]
-      (. builder protocolVersion data))
-    (when-let [data (lookup-entry config id :public-load-balancer)]
-      (. builder publicLoadBalancer data))
-    (when-let [data (application-load-balanced-service-record-type config id :record-type)]
-      (. builder recordType data))
-    (when-let [data (lookup-entry config id :redirect-http)]
-      (. builder redirectHttp data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (ssl-policy config id :ssl-policy)]
-      (. builder sslPolicy data))
-    (when-let [data (application-protocol config id :target-protocol)]
-      (. builder targetProtocol data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :task-image-options)]
-      (. builder taskImageOptions data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^ApplicationLoadBalancedEc2Service$Builder builder id config]
+  (when-let [data (lookup-entry config id :capacity-provider-strategies)]
+    (. builder capacityProviderStrategies data))
+  (when-let [data (lookup-entry config id :certificate)]
+    (. builder certificate data))
+  (when-let [data (lookup-entry config id :circuit-breaker)]
+    (. builder circuitBreaker data))
+  (when-let [data (lookup-entry config id :cloud-map-options)]
+    (. builder cloudMapOptions data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :deployment-controller)]
+    (. builder deploymentController data))
+  (when-let [data (lookup-entry config id :desired-count)]
+    (. builder desiredCount data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :domain-zone)]
+    (. builder domainZone data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :health-check-grace-period)]
+    (. builder healthCheckGracePeriod data))
+  (when-let [data (lookup-entry config id :idle-timeout)]
+    (. builder idleTimeout data))
+  (when-let [data (lookup-entry config id :listener-port)]
+    (. builder listenerPort data))
+  (when-let [data (lookup-entry config id :load-balancer)]
+    (. builder loadBalancer data))
+  (when-let [data (lookup-entry config id :load-balancer-name)]
+    (. builder loadBalancerName data))
+  (when-let [data (lookup-entry config id :max-healthy-percent)]
+    (. builder maxHealthyPercent data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
+    (. builder memoryReservationMiB data))
+  (when-let [data (lookup-entry config id :min-healthy-percent)]
+    (. builder minHealthyPercent data))
+  (when-let [data (lookup-entry config id :open-listener)]
+    (. builder openListener data))
+  (when-let [data (lookup-entry config id :placement-constraints)]
+    (. builder placementConstraints data))
+  (when-let [data (lookup-entry config id :placement-strategies)]
+    (. builder placementStrategies data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (application-protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (application-protocol-version config id :protocol-version)]
+    (. builder protocolVersion data))
+  (when-let [data (lookup-entry config id :public-load-balancer)]
+    (. builder publicLoadBalancer data))
+  (when-let [data (application-load-balanced-service-record-type config id :record-type)]
+    (. builder recordType data))
+  (when-let [data (lookup-entry config id :redirect-http)]
+    (. builder redirectHttp data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (ssl-policy config id :ssl-policy)]
+    (. builder sslPolicy data))
+  (when-let [data (application-protocol config id :target-protocol)]
+    (. builder targetProtocol data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :task-image-options)]
+    (. builder taskImageOptions data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn application-load-balanced-ec2-service-props-builder
-  "The application-load-balanced-ec2-service-props-builder function buildes out new instances of 
-ApplicationLoadBalancedEc2ServiceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-load-balanced-ec2-service-props-builder
+  "The build-application-load-balanced-ec2-service-props-builder function updates a ApplicationLoadBalancedEc2ServiceProps$Builder instance using the provided configuration.
+  The function takes the ApplicationLoadBalancedEc2ServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -286,87 +295,90 @@ ApplicationLoadBalancedEc2ServiceProps$Builder using the provided configuration.
 | `targetProtocol` | software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationProtocol | [[cdk.api.services.elasticloadbalancingv2/application-protocol]] | `:target-protocol` |
 | `taskDefinition` | software.amazon.awscdk.services.ecs.Ec2TaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 | `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageOptions | [[cdk.support/lookup-entry]] | `:task-image-options` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (ApplicationLoadBalancedEc2ServiceProps$Builder.)]
-    (when-let [data (lookup-entry config id :capacity-provider-strategies)]
-      (. builder capacityProviderStrategies data))
-    (when-let [data (lookup-entry config id :certificate)]
-      (. builder certificate data))
-    (when-let [data (lookup-entry config id :circuit-breaker)]
-      (. builder circuitBreaker data))
-    (when-let [data (lookup-entry config id :cloud-map-options)]
-      (. builder cloudMapOptions data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :deployment-controller)]
-      (. builder deploymentController data))
-    (when-let [data (lookup-entry config id :desired-count)]
-      (. builder desiredCount data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :domain-zone)]
-      (. builder domainZone data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :health-check-grace-period)]
-      (. builder healthCheckGracePeriod data))
-    (when-let [data (lookup-entry config id :idle-timeout)]
-      (. builder idleTimeout data))
-    (when-let [data (lookup-entry config id :listener-port)]
-      (. builder listenerPort data))
-    (when-let [data (lookup-entry config id :load-balancer)]
-      (. builder loadBalancer data))
-    (when-let [data (lookup-entry config id :load-balancer-name)]
-      (. builder loadBalancerName data))
-    (when-let [data (lookup-entry config id :max-healthy-percent)]
-      (. builder maxHealthyPercent data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
-      (. builder memoryReservationMiB data))
-    (when-let [data (lookup-entry config id :min-healthy-percent)]
-      (. builder minHealthyPercent data))
-    (when-let [data (lookup-entry config id :open-listener)]
-      (. builder openListener data))
-    (when-let [data (lookup-entry config id :placement-constraints)]
-      (. builder placementConstraints data))
-    (when-let [data (lookup-entry config id :placement-strategies)]
-      (. builder placementStrategies data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (application-protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (application-protocol-version config id :protocol-version)]
-      (. builder protocolVersion data))
-    (when-let [data (lookup-entry config id :public-load-balancer)]
-      (. builder publicLoadBalancer data))
-    (when-let [data (application-load-balanced-service-record-type config id :record-type)]
-      (. builder recordType data))
-    (when-let [data (lookup-entry config id :redirect-http)]
-      (. builder redirectHttp data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (ssl-policy config id :ssl-policy)]
-      (. builder sslPolicy data))
-    (when-let [data (application-protocol config id :target-protocol)]
-      (. builder targetProtocol data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :task-image-options)]
-      (. builder taskImageOptions data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^ApplicationLoadBalancedEc2ServiceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :capacity-provider-strategies)]
+    (. builder capacityProviderStrategies data))
+  (when-let [data (lookup-entry config id :certificate)]
+    (. builder certificate data))
+  (when-let [data (lookup-entry config id :circuit-breaker)]
+    (. builder circuitBreaker data))
+  (when-let [data (lookup-entry config id :cloud-map-options)]
+    (. builder cloudMapOptions data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :deployment-controller)]
+    (. builder deploymentController data))
+  (when-let [data (lookup-entry config id :desired-count)]
+    (. builder desiredCount data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :domain-zone)]
+    (. builder domainZone data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :health-check-grace-period)]
+    (. builder healthCheckGracePeriod data))
+  (when-let [data (lookup-entry config id :idle-timeout)]
+    (. builder idleTimeout data))
+  (when-let [data (lookup-entry config id :listener-port)]
+    (. builder listenerPort data))
+  (when-let [data (lookup-entry config id :load-balancer)]
+    (. builder loadBalancer data))
+  (when-let [data (lookup-entry config id :load-balancer-name)]
+    (. builder loadBalancerName data))
+  (when-let [data (lookup-entry config id :max-healthy-percent)]
+    (. builder maxHealthyPercent data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
+    (. builder memoryReservationMiB data))
+  (when-let [data (lookup-entry config id :min-healthy-percent)]
+    (. builder minHealthyPercent data))
+  (when-let [data (lookup-entry config id :open-listener)]
+    (. builder openListener data))
+  (when-let [data (lookup-entry config id :placement-constraints)]
+    (. builder placementConstraints data))
+  (when-let [data (lookup-entry config id :placement-strategies)]
+    (. builder placementStrategies data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (application-protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (application-protocol-version config id :protocol-version)]
+    (. builder protocolVersion data))
+  (when-let [data (lookup-entry config id :public-load-balancer)]
+    (. builder publicLoadBalancer data))
+  (when-let [data (application-load-balanced-service-record-type config id :record-type)]
+    (. builder recordType data))
+  (when-let [data (lookup-entry config id :redirect-http)]
+    (. builder redirectHttp data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (ssl-policy config id :ssl-policy)]
+    (. builder sslPolicy data))
+  (when-let [data (application-protocol config id :target-protocol)]
+    (. builder targetProtocol data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :task-image-options)]
+    (. builder taskImageOptions data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn application-load-balanced-fargate-service-builder
-  "The application-load-balanced-fargate-service-builder function buildes out new instances of 
-ApplicationLoadBalancedFargateService$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-load-balanced-fargate-service-builder
+  "The build-application-load-balanced-fargate-service-builder function updates a ApplicationLoadBalancedFargateService$Builder instance using the provided configuration.
+  The function takes the ApplicationLoadBalancedFargateService$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -409,95 +421,98 @@ ApplicationLoadBalancedFargateService$Builder using the provided configuration. 
 | `taskDefinition` | software.amazon.awscdk.services.ecs.FargateTaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 | `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageOptions | [[cdk.support/lookup-entry]] | `:task-image-options` |
 | `taskSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:task-subnets` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (ApplicationLoadBalancedFargateService$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :assign-public-ip)]
-      (. builder assignPublicIp data))
-    (when-let [data (lookup-entry config id :capacity-provider-strategies)]
-      (. builder capacityProviderStrategies data))
-    (when-let [data (lookup-entry config id :certificate)]
-      (. builder certificate data))
-    (when-let [data (lookup-entry config id :circuit-breaker)]
-      (. builder circuitBreaker data))
-    (when-let [data (lookup-entry config id :cloud-map-options)]
-      (. builder cloudMapOptions data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :deployment-controller)]
-      (. builder deploymentController data))
-    (when-let [data (lookup-entry config id :desired-count)]
-      (. builder desiredCount data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :domain-zone)]
-      (. builder domainZone data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
-      (. builder ephemeralStorageGiB data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :health-check-grace-period)]
-      (. builder healthCheckGracePeriod data))
-    (when-let [data (lookup-entry config id :idle-timeout)]
-      (. builder idleTimeout data))
-    (when-let [data (lookup-entry config id :listener-port)]
-      (. builder listenerPort data))
-    (when-let [data (lookup-entry config id :load-balancer)]
-      (. builder loadBalancer data))
-    (when-let [data (lookup-entry config id :load-balancer-name)]
-      (. builder loadBalancerName data))
-    (when-let [data (lookup-entry config id :max-healthy-percent)]
-      (. builder maxHealthyPercent data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (lookup-entry config id :min-healthy-percent)]
-      (. builder minHealthyPercent data))
-    (when-let [data (lookup-entry config id :open-listener)]
-      (. builder openListener data))
-    (when-let [data (fargate-platform-version config id :platform-version)]
-      (. builder platformVersion data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (application-protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (application-protocol-version config id :protocol-version)]
-      (. builder protocolVersion data))
-    (when-let [data (lookup-entry config id :public-load-balancer)]
-      (. builder publicLoadBalancer data))
-    (when-let [data (application-load-balanced-service-record-type config id :record-type)]
-      (. builder recordType data))
-    (when-let [data (lookup-entry config id :redirect-http)]
-      (. builder redirectHttp data))
-    (when-let [data (lookup-entry config id :runtime-platform)]
-      (. builder runtimePlatform data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (ssl-policy config id :ssl-policy)]
-      (. builder sslPolicy data))
-    (when-let [data (application-protocol config id :target-protocol)]
-      (. builder targetProtocol data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :task-image-options)]
-      (. builder taskImageOptions data))
-    (when-let [data (lookup-entry config id :task-subnets)]
-      (. builder taskSubnets data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^ApplicationLoadBalancedFargateService$Builder builder id config]
+  (when-let [data (lookup-entry config id :assign-public-ip)]
+    (. builder assignPublicIp data))
+  (when-let [data (lookup-entry config id :capacity-provider-strategies)]
+    (. builder capacityProviderStrategies data))
+  (when-let [data (lookup-entry config id :certificate)]
+    (. builder certificate data))
+  (when-let [data (lookup-entry config id :circuit-breaker)]
+    (. builder circuitBreaker data))
+  (when-let [data (lookup-entry config id :cloud-map-options)]
+    (. builder cloudMapOptions data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :deployment-controller)]
+    (. builder deploymentController data))
+  (when-let [data (lookup-entry config id :desired-count)]
+    (. builder desiredCount data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :domain-zone)]
+    (. builder domainZone data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
+    (. builder ephemeralStorageGiB data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :health-check-grace-period)]
+    (. builder healthCheckGracePeriod data))
+  (when-let [data (lookup-entry config id :idle-timeout)]
+    (. builder idleTimeout data))
+  (when-let [data (lookup-entry config id :listener-port)]
+    (. builder listenerPort data))
+  (when-let [data (lookup-entry config id :load-balancer)]
+    (. builder loadBalancer data))
+  (when-let [data (lookup-entry config id :load-balancer-name)]
+    (. builder loadBalancerName data))
+  (when-let [data (lookup-entry config id :max-healthy-percent)]
+    (. builder maxHealthyPercent data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (lookup-entry config id :min-healthy-percent)]
+    (. builder minHealthyPercent data))
+  (when-let [data (lookup-entry config id :open-listener)]
+    (. builder openListener data))
+  (when-let [data (fargate-platform-version config id :platform-version)]
+    (. builder platformVersion data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (application-protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (application-protocol-version config id :protocol-version)]
+    (. builder protocolVersion data))
+  (when-let [data (lookup-entry config id :public-load-balancer)]
+    (. builder publicLoadBalancer data))
+  (when-let [data (application-load-balanced-service-record-type config id :record-type)]
+    (. builder recordType data))
+  (when-let [data (lookup-entry config id :redirect-http)]
+    (. builder redirectHttp data))
+  (when-let [data (lookup-entry config id :runtime-platform)]
+    (. builder runtimePlatform data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (ssl-policy config id :ssl-policy)]
+    (. builder sslPolicy data))
+  (when-let [data (application-protocol config id :target-protocol)]
+    (. builder targetProtocol data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :task-image-options)]
+    (. builder taskImageOptions data))
+  (when-let [data (lookup-entry config id :task-subnets)]
+    (. builder taskSubnets data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn application-load-balanced-fargate-service-props-builder
-  "The application-load-balanced-fargate-service-props-builder function buildes out new instances of 
-ApplicationLoadBalancedFargateServiceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-load-balanced-fargate-service-props-builder
+  "The build-application-load-balanced-fargate-service-props-builder function updates a ApplicationLoadBalancedFargateServiceProps$Builder instance using the provided configuration.
+  The function takes the ApplicationLoadBalancedFargateServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -540,95 +555,98 @@ ApplicationLoadBalancedFargateServiceProps$Builder using the provided configurat
 | `taskDefinition` | software.amazon.awscdk.services.ecs.FargateTaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 | `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageOptions | [[cdk.support/lookup-entry]] | `:task-image-options` |
 | `taskSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:task-subnets` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (ApplicationLoadBalancedFargateServiceProps$Builder.)]
-    (when-let [data (lookup-entry config id :assign-public-ip)]
-      (. builder assignPublicIp data))
-    (when-let [data (lookup-entry config id :capacity-provider-strategies)]
-      (. builder capacityProviderStrategies data))
-    (when-let [data (lookup-entry config id :certificate)]
-      (. builder certificate data))
-    (when-let [data (lookup-entry config id :circuit-breaker)]
-      (. builder circuitBreaker data))
-    (when-let [data (lookup-entry config id :cloud-map-options)]
-      (. builder cloudMapOptions data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :deployment-controller)]
-      (. builder deploymentController data))
-    (when-let [data (lookup-entry config id :desired-count)]
-      (. builder desiredCount data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :domain-zone)]
-      (. builder domainZone data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
-      (. builder ephemeralStorageGiB data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :health-check-grace-period)]
-      (. builder healthCheckGracePeriod data))
-    (when-let [data (lookup-entry config id :idle-timeout)]
-      (. builder idleTimeout data))
-    (when-let [data (lookup-entry config id :listener-port)]
-      (. builder listenerPort data))
-    (when-let [data (lookup-entry config id :load-balancer)]
-      (. builder loadBalancer data))
-    (when-let [data (lookup-entry config id :load-balancer-name)]
-      (. builder loadBalancerName data))
-    (when-let [data (lookup-entry config id :max-healthy-percent)]
-      (. builder maxHealthyPercent data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (lookup-entry config id :min-healthy-percent)]
-      (. builder minHealthyPercent data))
-    (when-let [data (lookup-entry config id :open-listener)]
-      (. builder openListener data))
-    (when-let [data (fargate-platform-version config id :platform-version)]
-      (. builder platformVersion data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (application-protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (application-protocol-version config id :protocol-version)]
-      (. builder protocolVersion data))
-    (when-let [data (lookup-entry config id :public-load-balancer)]
-      (. builder publicLoadBalancer data))
-    (when-let [data (application-load-balanced-service-record-type config id :record-type)]
-      (. builder recordType data))
-    (when-let [data (lookup-entry config id :redirect-http)]
-      (. builder redirectHttp data))
-    (when-let [data (lookup-entry config id :runtime-platform)]
-      (. builder runtimePlatform data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (ssl-policy config id :ssl-policy)]
-      (. builder sslPolicy data))
-    (when-let [data (application-protocol config id :target-protocol)]
-      (. builder targetProtocol data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :task-image-options)]
-      (. builder taskImageOptions data))
-    (when-let [data (lookup-entry config id :task-subnets)]
-      (. builder taskSubnets data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^ApplicationLoadBalancedFargateServiceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :assign-public-ip)]
+    (. builder assignPublicIp data))
+  (when-let [data (lookup-entry config id :capacity-provider-strategies)]
+    (. builder capacityProviderStrategies data))
+  (when-let [data (lookup-entry config id :certificate)]
+    (. builder certificate data))
+  (when-let [data (lookup-entry config id :circuit-breaker)]
+    (. builder circuitBreaker data))
+  (when-let [data (lookup-entry config id :cloud-map-options)]
+    (. builder cloudMapOptions data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :deployment-controller)]
+    (. builder deploymentController data))
+  (when-let [data (lookup-entry config id :desired-count)]
+    (. builder desiredCount data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :domain-zone)]
+    (. builder domainZone data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
+    (. builder ephemeralStorageGiB data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :health-check-grace-period)]
+    (. builder healthCheckGracePeriod data))
+  (when-let [data (lookup-entry config id :idle-timeout)]
+    (. builder idleTimeout data))
+  (when-let [data (lookup-entry config id :listener-port)]
+    (. builder listenerPort data))
+  (when-let [data (lookup-entry config id :load-balancer)]
+    (. builder loadBalancer data))
+  (when-let [data (lookup-entry config id :load-balancer-name)]
+    (. builder loadBalancerName data))
+  (when-let [data (lookup-entry config id :max-healthy-percent)]
+    (. builder maxHealthyPercent data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (lookup-entry config id :min-healthy-percent)]
+    (. builder minHealthyPercent data))
+  (when-let [data (lookup-entry config id :open-listener)]
+    (. builder openListener data))
+  (when-let [data (fargate-platform-version config id :platform-version)]
+    (. builder platformVersion data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (application-protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (application-protocol-version config id :protocol-version)]
+    (. builder protocolVersion data))
+  (when-let [data (lookup-entry config id :public-load-balancer)]
+    (. builder publicLoadBalancer data))
+  (when-let [data (application-load-balanced-service-record-type config id :record-type)]
+    (. builder recordType data))
+  (when-let [data (lookup-entry config id :redirect-http)]
+    (. builder redirectHttp data))
+  (when-let [data (lookup-entry config id :runtime-platform)]
+    (. builder runtimePlatform data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (ssl-policy config id :ssl-policy)]
+    (. builder sslPolicy data))
+  (when-let [data (application-protocol config id :target-protocol)]
+    (. builder targetProtocol data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :task-image-options)]
+    (. builder taskImageOptions data))
+  (when-let [data (lookup-entry config id :task-subnets)]
+    (. builder taskSubnets data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn application-load-balanced-service-base-props-builder
-  "The application-load-balanced-service-base-props-builder function buildes out new instances of 
-ApplicationLoadBalancedServiceBaseProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-load-balanced-service-base-props-builder
+  "The build-application-load-balanced-service-base-props-builder function updates a ApplicationLoadBalancedServiceBaseProps$Builder instance using the provided configuration.
+  The function takes the ApplicationLoadBalancedServiceBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -661,75 +679,78 @@ ApplicationLoadBalancedServiceBaseProps$Builder using the provided configuration
 | `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |
 | `targetProtocol` | software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationProtocol | [[cdk.api.services.elasticloadbalancingv2/application-protocol]] | `:target-protocol` |
 | `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageOptions | [[cdk.support/lookup-entry]] | `:task-image-options` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (ApplicationLoadBalancedServiceBaseProps$Builder.)]
-    (when-let [data (lookup-entry config id :capacity-provider-strategies)]
-      (. builder capacityProviderStrategies data))
-    (when-let [data (lookup-entry config id :certificate)]
-      (. builder certificate data))
-    (when-let [data (lookup-entry config id :circuit-breaker)]
-      (. builder circuitBreaker data))
-    (when-let [data (lookup-entry config id :cloud-map-options)]
-      (. builder cloudMapOptions data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :deployment-controller)]
-      (. builder deploymentController data))
-    (when-let [data (lookup-entry config id :desired-count)]
-      (. builder desiredCount data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :domain-zone)]
-      (. builder domainZone data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :health-check-grace-period)]
-      (. builder healthCheckGracePeriod data))
-    (when-let [data (lookup-entry config id :idle-timeout)]
-      (. builder idleTimeout data))
-    (when-let [data (lookup-entry config id :listener-port)]
-      (. builder listenerPort data))
-    (when-let [data (lookup-entry config id :load-balancer)]
-      (. builder loadBalancer data))
-    (when-let [data (lookup-entry config id :load-balancer-name)]
-      (. builder loadBalancerName data))
-    (when-let [data (lookup-entry config id :max-healthy-percent)]
-      (. builder maxHealthyPercent data))
-    (when-let [data (lookup-entry config id :min-healthy-percent)]
-      (. builder minHealthyPercent data))
-    (when-let [data (lookup-entry config id :open-listener)]
-      (. builder openListener data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (application-protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (application-protocol-version config id :protocol-version)]
-      (. builder protocolVersion data))
-    (when-let [data (lookup-entry config id :public-load-balancer)]
-      (. builder publicLoadBalancer data))
-    (when-let [data (application-load-balanced-service-record-type config id :record-type)]
-      (. builder recordType data))
-    (when-let [data (lookup-entry config id :redirect-http)]
-      (. builder redirectHttp data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (ssl-policy config id :ssl-policy)]
-      (. builder sslPolicy data))
-    (when-let [data (application-protocol config id :target-protocol)]
-      (. builder targetProtocol data))
-    (when-let [data (lookup-entry config id :task-image-options)]
-      (. builder taskImageOptions data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^ApplicationLoadBalancedServiceBaseProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :capacity-provider-strategies)]
+    (. builder capacityProviderStrategies data))
+  (when-let [data (lookup-entry config id :certificate)]
+    (. builder certificate data))
+  (when-let [data (lookup-entry config id :circuit-breaker)]
+    (. builder circuitBreaker data))
+  (when-let [data (lookup-entry config id :cloud-map-options)]
+    (. builder cloudMapOptions data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :deployment-controller)]
+    (. builder deploymentController data))
+  (when-let [data (lookup-entry config id :desired-count)]
+    (. builder desiredCount data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :domain-zone)]
+    (. builder domainZone data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :health-check-grace-period)]
+    (. builder healthCheckGracePeriod data))
+  (when-let [data (lookup-entry config id :idle-timeout)]
+    (. builder idleTimeout data))
+  (when-let [data (lookup-entry config id :listener-port)]
+    (. builder listenerPort data))
+  (when-let [data (lookup-entry config id :load-balancer)]
+    (. builder loadBalancer data))
+  (when-let [data (lookup-entry config id :load-balancer-name)]
+    (. builder loadBalancerName data))
+  (when-let [data (lookup-entry config id :max-healthy-percent)]
+    (. builder maxHealthyPercent data))
+  (when-let [data (lookup-entry config id :min-healthy-percent)]
+    (. builder minHealthyPercent data))
+  (when-let [data (lookup-entry config id :open-listener)]
+    (. builder openListener data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (application-protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (application-protocol-version config id :protocol-version)]
+    (. builder protocolVersion data))
+  (when-let [data (lookup-entry config id :public-load-balancer)]
+    (. builder publicLoadBalancer data))
+  (when-let [data (application-load-balanced-service-record-type config id :record-type)]
+    (. builder recordType data))
+  (when-let [data (lookup-entry config id :redirect-http)]
+    (. builder redirectHttp data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (ssl-policy config id :ssl-policy)]
+    (. builder sslPolicy data))
+  (when-let [data (application-protocol config id :target-protocol)]
+    (. builder targetProtocol data))
+  (when-let [data (lookup-entry config id :task-image-options)]
+    (. builder taskImageOptions data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn application-load-balanced-task-image-options-builder
-  "The application-load-balanced-task-image-options-builder function buildes out new instances of 
-ApplicationLoadBalancedTaskImageOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-load-balanced-task-image-options-builder
+  "The build-application-load-balanced-task-image-options-builder function updates a ApplicationLoadBalancedTaskImageOptions$Builder instance using the provided configuration.
+  The function takes the ApplicationLoadBalancedTaskImageOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -745,41 +766,44 @@ ApplicationLoadBalancedTaskImageOptions$Builder using the provided configuration
 | `image` | software.amazon.awscdk.services.ecs.ContainerImage | [[cdk.support/lookup-entry]] | `:image` |
 | `logDriver` | software.amazon.awscdk.services.ecs.LogDriver | [[cdk.support/lookup-entry]] | `:log-driver` |
 | `secrets` | java.util.Map | [[cdk.support/lookup-entry]] | `:secrets` |
-| `taskRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:task-role` |"
-  [stack id config]
-  (let [builder (ApplicationLoadBalancedTaskImageOptions$Builder.)]
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :container-name)]
-      (. builder containerName data))
-    (when-let [data (lookup-entry config id :container-port)]
-      (. builder containerPort data))
-    (when-let [data (lookup-entry config id :docker-labels)]
-      (. builder dockerLabels data))
-    (when-let [data (lookup-entry config id :enable-logging)]
-      (. builder enableLogging data))
-    (when-let [data (lookup-entry config id :entry-point)]
-      (. builder entryPoint data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :execution-role)]
-      (. builder executionRole data))
-    (when-let [data (lookup-entry config id :family)]
-      (. builder family data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (lookup-entry config id :log-driver)]
-      (. builder logDriver data))
-    (when-let [data (lookup-entry config id :secrets)]
-      (. builder secrets data))
-    (when-let [data (lookup-entry config id :task-role)]
-      (. builder taskRole data))
-    (.build builder)))
+| `taskRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:task-role` |
+"
+  [^ApplicationLoadBalancedTaskImageOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :container-name)]
+    (. builder containerName data))
+  (when-let [data (lookup-entry config id :container-port)]
+    (. builder containerPort data))
+  (when-let [data (lookup-entry config id :docker-labels)]
+    (. builder dockerLabels data))
+  (when-let [data (lookup-entry config id :enable-logging)]
+    (. builder enableLogging data))
+  (when-let [data (lookup-entry config id :entry-point)]
+    (. builder entryPoint data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :execution-role)]
+    (. builder executionRole data))
+  (when-let [data (lookup-entry config id :family)]
+    (. builder family data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (lookup-entry config id :log-driver)]
+    (. builder logDriver data))
+  (when-let [data (lookup-entry config id :secrets)]
+    (. builder secrets data))
+  (when-let [data (lookup-entry config id :task-role)]
+    (. builder taskRole data))
+  (.build builder))
 
 
-(defn application-load-balanced-task-image-props-builder
-  "The application-load-balanced-task-image-props-builder function buildes out new instances of 
-ApplicationLoadBalancedTaskImageProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-load-balanced-task-image-props-builder
+  "The build-application-load-balanced-task-image-props-builder function updates a ApplicationLoadBalancedTaskImageProps$Builder instance using the provided configuration.
+  The function takes the ApplicationLoadBalancedTaskImageProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -793,37 +817,40 @@ ApplicationLoadBalancedTaskImageProps$Builder using the provided configuration. 
 | `image` | software.amazon.awscdk.services.ecs.ContainerImage | [[cdk.support/lookup-entry]] | `:image` |
 | `logDriver` | software.amazon.awscdk.services.ecs.LogDriver | [[cdk.support/lookup-entry]] | `:log-driver` |
 | `secrets` | java.util.Map | [[cdk.support/lookup-entry]] | `:secrets` |
-| `taskRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:task-role` |"
-  [stack id config]
-  (let [builder (ApplicationLoadBalancedTaskImageProps$Builder.)]
-    (when-let [data (lookup-entry config id :container-name)]
-      (. builder containerName data))
-    (when-let [data (lookup-entry config id :container-ports)]
-      (. builder containerPorts data))
-    (when-let [data (lookup-entry config id :docker-labels)]
-      (. builder dockerLabels data))
-    (when-let [data (lookup-entry config id :enable-logging)]
-      (. builder enableLogging data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :execution-role)]
-      (. builder executionRole data))
-    (when-let [data (lookup-entry config id :family)]
-      (. builder family data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (lookup-entry config id :log-driver)]
-      (. builder logDriver data))
-    (when-let [data (lookup-entry config id :secrets)]
-      (. builder secrets data))
-    (when-let [data (lookup-entry config id :task-role)]
-      (. builder taskRole data))
-    (.build builder)))
+| `taskRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:task-role` |
+"
+  [^ApplicationLoadBalancedTaskImageProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :container-name)]
+    (. builder containerName data))
+  (when-let [data (lookup-entry config id :container-ports)]
+    (. builder containerPorts data))
+  (when-let [data (lookup-entry config id :docker-labels)]
+    (. builder dockerLabels data))
+  (when-let [data (lookup-entry config id :enable-logging)]
+    (. builder enableLogging data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :execution-role)]
+    (. builder executionRole data))
+  (when-let [data (lookup-entry config id :family)]
+    (. builder family data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (lookup-entry config id :log-driver)]
+    (. builder logDriver data))
+  (when-let [data (lookup-entry config id :secrets)]
+    (. builder secrets data))
+  (when-let [data (lookup-entry config id :task-role)]
+    (. builder taskRole data))
+  (.build builder))
 
 
-(defn application-load-balancer-props-builder
-  "The application-load-balancer-props-builder function buildes out new instances of 
-ApplicationLoadBalancerProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-load-balancer-props-builder
+  "The build-application-load-balancer-props-builder function updates a ApplicationLoadBalancerProps$Builder instance using the provided configuration.
+  The function takes the ApplicationLoadBalancerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -832,92 +859,30 @@ ApplicationLoadBalancerProps$Builder using the provided configuration.  Each fie
 | `idleTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:idle-timeout` |
 | `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `publicLoadBalancer` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:public-load-balancer` |"
-  [stack id config]
-  (let [builder (ApplicationLoadBalancerProps$Builder.)]
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :domain-zone)]
-      (. builder domainZone data))
-    (when-let [data (lookup-entry config id :idle-timeout)]
-      (. builder idleTimeout data))
-    (when-let [data (lookup-entry config id :listeners)]
-      (. builder listeners data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :public-load-balancer)]
-      (. builder publicLoadBalancer data))
-    (.build builder)))
+| `publicLoadBalancer` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:public-load-balancer` |
+"
+  [^ApplicationLoadBalancerProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :domain-zone)]
+    (. builder domainZone data))
+  (when-let [data (lookup-entry config id :idle-timeout)]
+    (. builder idleTimeout data))
+  (when-let [data (lookup-entry config id :listeners)]
+    (. builder listeners data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :public-load-balancer)]
+    (. builder publicLoadBalancer data))
+  (.build builder))
 
 
-(defn application-multiple-target-groups-ec2-service-builder
-  "The application-multiple-target-groups-ec2-service-builder function buildes out new instances of 
-ApplicationMultipleTargetGroupsEc2Service$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-multiple-target-groups-ec2-service-builder
+  "The build-application-multiple-target-groups-ec2-service-builder function updates a ApplicationMultipleTargetGroupsEc2Service$Builder instance using the provided configuration.
+  The function takes the ApplicationMultipleTargetGroupsEc2Service$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `cloudMapOptions` | software.amazon.awscdk.services.ecs.CloudMapOptions | [[cdk.support/lookup-entry]] | `:cloud-map-options` |
-| `cluster` | software.amazon.awscdk.services.ecs.ICluster | [[cdk.support/lookup-entry]] | `:cluster` |
-| `cpu` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cpu` |
-| `desiredCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:desired-count` |
-| `enableEcsManagedTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-ecs-managed-tags` |
-| `enableExecuteCommand` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-execute-command` |
-| `healthCheckGracePeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:health-check-grace-period` |
-| `loadBalancers` | java.util.List | [[cdk.support/lookup-entry]] | `:load-balancers` |
-| `memoryLimitMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-limit-mi-b` |
-| `memoryReservationMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-reservation-mi-b` |
-| `placementConstraints` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-constraints` |
-| `placementStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-strategies` |
-| `propagateTags` | software.amazon.awscdk.services.ecs.PropagatedTagSource | [[cdk.api.services.ecs/propagated-tag-source]] | `:propagate-tags` |
-| `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
-| `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
-| `taskDefinition` | software.amazon.awscdk.services.ecs.Ec2TaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
-| `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageProps | [[cdk.support/lookup-entry]] | `:task-image-options` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (ApplicationMultipleTargetGroupsEc2Service$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :cloud-map-options)]
-      (. builder cloudMapOptions data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :desired-count)]
-      (. builder desiredCount data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :health-check-grace-period)]
-      (. builder healthCheckGracePeriod data))
-    (when-let [data (lookup-entry config id :load-balancers)]
-      (. builder loadBalancers data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
-      (. builder memoryReservationMiB data))
-    (when-let [data (lookup-entry config id :placement-constraints)]
-      (. builder placementConstraints data))
-    (when-let [data (lookup-entry config id :placement-strategies)]
-      (. builder placementStrategies data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (lookup-entry config id :target-groups)]
-      (. builder targetGroups data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :task-image-options)]
-      (. builder taskImageOptions data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
-
-
-(defn application-multiple-target-groups-ec2-service-props-builder
-  "The application-multiple-target-groups-ec2-service-props-builder function buildes out new instances of 
-ApplicationMultipleTargetGroupsEc2ServiceProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -938,51 +903,122 @@ ApplicationMultipleTargetGroupsEc2ServiceProps$Builder using the provided config
 | `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
 | `taskDefinition` | software.amazon.awscdk.services.ecs.Ec2TaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 | `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageProps | [[cdk.support/lookup-entry]] | `:task-image-options` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (ApplicationMultipleTargetGroupsEc2ServiceProps$Builder.)]
-    (when-let [data (lookup-entry config id :cloud-map-options)]
-      (. builder cloudMapOptions data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :desired-count)]
-      (. builder desiredCount data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :health-check-grace-period)]
-      (. builder healthCheckGracePeriod data))
-    (when-let [data (lookup-entry config id :load-balancers)]
-      (. builder loadBalancers data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
-      (. builder memoryReservationMiB data))
-    (when-let [data (lookup-entry config id :placement-constraints)]
-      (. builder placementConstraints data))
-    (when-let [data (lookup-entry config id :placement-strategies)]
-      (. builder placementStrategies data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (lookup-entry config id :target-groups)]
-      (. builder targetGroups data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :task-image-options)]
-      (. builder taskImageOptions data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^ApplicationMultipleTargetGroupsEc2Service$Builder builder id config]
+  (when-let [data (lookup-entry config id :cloud-map-options)]
+    (. builder cloudMapOptions data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :desired-count)]
+    (. builder desiredCount data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :health-check-grace-period)]
+    (. builder healthCheckGracePeriod data))
+  (when-let [data (lookup-entry config id :load-balancers)]
+    (. builder loadBalancers data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
+    (. builder memoryReservationMiB data))
+  (when-let [data (lookup-entry config id :placement-constraints)]
+    (. builder placementConstraints data))
+  (when-let [data (lookup-entry config id :placement-strategies)]
+    (. builder placementStrategies data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (lookup-entry config id :target-groups)]
+    (. builder targetGroups data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :task-image-options)]
+    (. builder taskImageOptions data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn application-multiple-target-groups-fargate-service-builder
-  "The application-multiple-target-groups-fargate-service-builder function buildes out new instances of 
-ApplicationMultipleTargetGroupsFargateService$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-multiple-target-groups-ec2-service-props-builder
+  "The build-application-multiple-target-groups-ec2-service-props-builder function updates a ApplicationMultipleTargetGroupsEc2ServiceProps$Builder instance using the provided configuration.
+  The function takes the ApplicationMultipleTargetGroupsEc2ServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `cloudMapOptions` | software.amazon.awscdk.services.ecs.CloudMapOptions | [[cdk.support/lookup-entry]] | `:cloud-map-options` |
+| `cluster` | software.amazon.awscdk.services.ecs.ICluster | [[cdk.support/lookup-entry]] | `:cluster` |
+| `cpu` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cpu` |
+| `desiredCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:desired-count` |
+| `enableEcsManagedTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-ecs-managed-tags` |
+| `enableExecuteCommand` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-execute-command` |
+| `healthCheckGracePeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:health-check-grace-period` |
+| `loadBalancers` | java.util.List | [[cdk.support/lookup-entry]] | `:load-balancers` |
+| `memoryLimitMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-limit-mi-b` |
+| `memoryReservationMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-reservation-mi-b` |
+| `placementConstraints` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-constraints` |
+| `placementStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-strategies` |
+| `propagateTags` | software.amazon.awscdk.services.ecs.PropagatedTagSource | [[cdk.api.services.ecs/propagated-tag-source]] | `:propagate-tags` |
+| `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
+| `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
+| `taskDefinition` | software.amazon.awscdk.services.ecs.Ec2TaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
+| `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageProps | [[cdk.support/lookup-entry]] | `:task-image-options` |
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^ApplicationMultipleTargetGroupsEc2ServiceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :cloud-map-options)]
+    (. builder cloudMapOptions data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :desired-count)]
+    (. builder desiredCount data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :health-check-grace-period)]
+    (. builder healthCheckGracePeriod data))
+  (when-let [data (lookup-entry config id :load-balancers)]
+    (. builder loadBalancers data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
+    (. builder memoryReservationMiB data))
+  (when-let [data (lookup-entry config id :placement-constraints)]
+    (. builder placementConstraints data))
+  (when-let [data (lookup-entry config id :placement-strategies)]
+    (. builder placementStrategies data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (lookup-entry config id :target-groups)]
+    (. builder targetGroups data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :task-image-options)]
+    (. builder taskImageOptions data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
+
+
+(defn build-application-multiple-target-groups-fargate-service-builder
+  "The build-application-multiple-target-groups-fargate-service-builder function updates a ApplicationMultipleTargetGroupsFargateService$Builder instance using the provided configuration.
+  The function takes the ApplicationMultipleTargetGroupsFargateService$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1004,53 +1040,56 @@ ApplicationMultipleTargetGroupsFargateService$Builder using the provided configu
 | `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
 | `taskDefinition` | software.amazon.awscdk.services.ecs.FargateTaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 | `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageProps | [[cdk.support/lookup-entry]] | `:task-image-options` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (ApplicationMultipleTargetGroupsFargateService$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :assign-public-ip)]
-      (. builder assignPublicIp data))
-    (when-let [data (lookup-entry config id :cloud-map-options)]
-      (. builder cloudMapOptions data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :desired-count)]
-      (. builder desiredCount data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
-      (. builder ephemeralStorageGiB data))
-    (when-let [data (lookup-entry config id :health-check-grace-period)]
-      (. builder healthCheckGracePeriod data))
-    (when-let [data (lookup-entry config id :load-balancers)]
-      (. builder loadBalancers data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (fargate-platform-version config id :platform-version)]
-      (. builder platformVersion data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :runtime-platform)]
-      (. builder runtimePlatform data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (lookup-entry config id :target-groups)]
-      (. builder targetGroups data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :task-image-options)]
-      (. builder taskImageOptions data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^ApplicationMultipleTargetGroupsFargateService$Builder builder id config]
+  (when-let [data (lookup-entry config id :assign-public-ip)]
+    (. builder assignPublicIp data))
+  (when-let [data (lookup-entry config id :cloud-map-options)]
+    (. builder cloudMapOptions data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :desired-count)]
+    (. builder desiredCount data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
+    (. builder ephemeralStorageGiB data))
+  (when-let [data (lookup-entry config id :health-check-grace-period)]
+    (. builder healthCheckGracePeriod data))
+  (when-let [data (lookup-entry config id :load-balancers)]
+    (. builder loadBalancers data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (fargate-platform-version config id :platform-version)]
+    (. builder platformVersion data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :runtime-platform)]
+    (. builder runtimePlatform data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (lookup-entry config id :target-groups)]
+    (. builder targetGroups data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :task-image-options)]
+    (. builder taskImageOptions data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn application-multiple-target-groups-fargate-service-props-builder
-  "The application-multiple-target-groups-fargate-service-props-builder function buildes out new instances of 
-ApplicationMultipleTargetGroupsFargateServiceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-multiple-target-groups-fargate-service-props-builder
+  "The build-application-multiple-target-groups-fargate-service-props-builder function updates a ApplicationMultipleTargetGroupsFargateServiceProps$Builder instance using the provided configuration.
+  The function takes the ApplicationMultipleTargetGroupsFargateServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1072,53 +1111,56 @@ ApplicationMultipleTargetGroupsFargateServiceProps$Builder using the provided co
 | `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
 | `taskDefinition` | software.amazon.awscdk.services.ecs.FargateTaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 | `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageProps | [[cdk.support/lookup-entry]] | `:task-image-options` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (ApplicationMultipleTargetGroupsFargateServiceProps$Builder.)]
-    (when-let [data (lookup-entry config id :assign-public-ip)]
-      (. builder assignPublicIp data))
-    (when-let [data (lookup-entry config id :cloud-map-options)]
-      (. builder cloudMapOptions data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :desired-count)]
-      (. builder desiredCount data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
-      (. builder ephemeralStorageGiB data))
-    (when-let [data (lookup-entry config id :health-check-grace-period)]
-      (. builder healthCheckGracePeriod data))
-    (when-let [data (lookup-entry config id :load-balancers)]
-      (. builder loadBalancers data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (fargate-platform-version config id :platform-version)]
-      (. builder platformVersion data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :runtime-platform)]
-      (. builder runtimePlatform data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (lookup-entry config id :target-groups)]
-      (. builder targetGroups data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :task-image-options)]
-      (. builder taskImageOptions data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^ApplicationMultipleTargetGroupsFargateServiceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :assign-public-ip)]
+    (. builder assignPublicIp data))
+  (when-let [data (lookup-entry config id :cloud-map-options)]
+    (. builder cloudMapOptions data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :desired-count)]
+    (. builder desiredCount data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
+    (. builder ephemeralStorageGiB data))
+  (when-let [data (lookup-entry config id :health-check-grace-period)]
+    (. builder healthCheckGracePeriod data))
+  (when-let [data (lookup-entry config id :load-balancers)]
+    (. builder loadBalancers data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (fargate-platform-version config id :platform-version)]
+    (. builder platformVersion data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :runtime-platform)]
+    (. builder runtimePlatform data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (lookup-entry config id :target-groups)]
+    (. builder targetGroups data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :task-image-options)]
+    (. builder taskImageOptions data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn application-multiple-target-groups-service-base-props-builder
-  "The application-multiple-target-groups-service-base-props-builder function buildes out new instances of 
-ApplicationMultipleTargetGroupsServiceBaseProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-multiple-target-groups-service-base-props-builder
+  "The build-application-multiple-target-groups-service-base-props-builder function updates a ApplicationMultipleTargetGroupsServiceBaseProps$Builder instance using the provided configuration.
+  The function takes the ApplicationMultipleTargetGroupsServiceBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1133,39 +1175,42 @@ ApplicationMultipleTargetGroupsServiceBaseProps$Builder using the provided confi
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
 | `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
 | `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageProps | [[cdk.support/lookup-entry]] | `:task-image-options` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (ApplicationMultipleTargetGroupsServiceBaseProps$Builder.)]
-    (when-let [data (lookup-entry config id :cloud-map-options)]
-      (. builder cloudMapOptions data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :desired-count)]
-      (. builder desiredCount data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :health-check-grace-period)]
-      (. builder healthCheckGracePeriod data))
-    (when-let [data (lookup-entry config id :load-balancers)]
-      (. builder loadBalancers data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (lookup-entry config id :target-groups)]
-      (. builder targetGroups data))
-    (when-let [data (lookup-entry config id :task-image-options)]
-      (. builder taskImageOptions data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^ApplicationMultipleTargetGroupsServiceBaseProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :cloud-map-options)]
+    (. builder cloudMapOptions data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :desired-count)]
+    (. builder desiredCount data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :health-check-grace-period)]
+    (. builder healthCheckGracePeriod data))
+  (when-let [data (lookup-entry config id :load-balancers)]
+    (. builder loadBalancers data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (lookup-entry config id :target-groups)]
+    (. builder targetGroups data))
+  (when-let [data (lookup-entry config id :task-image-options)]
+    (. builder taskImageOptions data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn application-target-props-builder
-  "The application-target-props-builder function buildes out new instances of 
-ApplicationTargetProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-target-props-builder
+  "The build-application-target-props-builder function updates a ApplicationTargetProps$Builder instance using the provided configuration.
+  The function takes the ApplicationTargetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1174,27 +1219,30 @@ ApplicationTargetProps$Builder using the provided configuration.  Each field is 
 | `listener` | java.lang.String | [[cdk.support/lookup-entry]] | `:listener` |
 | `pathPattern` | java.lang.String | [[cdk.support/lookup-entry]] | `:path-pattern` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
-| `protocol` | software.amazon.awscdk.services.ecs.Protocol | [[cdk.api.services.ecs/protocol]] | `:protocol` |"
-  [stack id config]
-  (let [builder (ApplicationTargetProps$Builder.)]
-    (when-let [data (lookup-entry config id :container-port)]
-      (. builder containerPort data))
-    (when-let [data (lookup-entry config id :host-header)]
-      (. builder hostHeader data))
-    (when-let [data (lookup-entry config id :listener)]
-      (. builder listener data))
-    (when-let [data (lookup-entry config id :path-pattern)]
-      (. builder pathPattern data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (protocol config id :protocol)]
-      (. builder protocol data))
-    (.build builder)))
+| `protocol` | software.amazon.awscdk.services.ecs.Protocol | [[cdk.api.services.ecs/protocol]] | `:protocol` |
+"
+  [^ApplicationTargetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :container-port)]
+    (. builder containerPort data))
+  (when-let [data (lookup-entry config id :host-header)]
+    (. builder hostHeader data))
+  (when-let [data (lookup-entry config id :listener)]
+    (. builder listener data))
+  (when-let [data (lookup-entry config id :path-pattern)]
+    (. builder pathPattern data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (protocol config id :protocol)]
+    (. builder protocol data))
+  (.build builder))
 
 
-(defn fargate-service-base-props-builder
-  "The fargate-service-base-props-builder function buildes out new instances of 
-FargateServiceBaseProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-fargate-service-base-props-builder
+  "The build-fargate-service-base-props-builder function updates a FargateServiceBaseProps$Builder instance using the provided configuration.
+  The function takes the FargateServiceBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1203,139 +1251,50 @@ FargateServiceBaseProps$Builder using the provided configuration.  Each field is
 | `memoryLimitMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-limit-mi-b` |
 | `platformVersion` | software.amazon.awscdk.services.ecs.FargatePlatformVersion | [[cdk.api.services.ecs/fargate-platform-version]] | `:platform-version` |
 | `runtimePlatform` | software.amazon.awscdk.services.ecs.RuntimePlatform | [[cdk.support/lookup-entry]] | `:runtime-platform` |
-| `taskDefinition` | software.amazon.awscdk.services.ecs.FargateTaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |"
-  [stack id config]
-  (let [builder (FargateServiceBaseProps$Builder.)]
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
-      (. builder ephemeralStorageGiB data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (fargate-platform-version config id :platform-version)]
-      (. builder platformVersion data))
-    (when-let [data (lookup-entry config id :runtime-platform)]
-      (. builder runtimePlatform data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (.build builder)))
+| `taskDefinition` | software.amazon.awscdk.services.ecs.FargateTaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
+"
+  [^FargateServiceBaseProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
+    (. builder ephemeralStorageGiB data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (fargate-platform-version config id :platform-version)]
+    (. builder platformVersion data))
+  (when-let [data (lookup-entry config id :runtime-platform)]
+    (. builder runtimePlatform data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (.build builder))
 
 
-(defn network-listener-props-builder
-  "The network-listener-props-builder function buildes out new instances of 
-NetworkListenerProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-listener-props-builder
+  "The build-network-listener-props-builder function updates a NetworkListenerProps$Builder instance using the provided configuration.
+  The function takes the NetworkListenerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |"
-  [stack id config]
-  (let [builder (NetworkListenerProps$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (.build builder)))
+| `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
+"
+  [^NetworkListenerProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (.build builder))
 
 
-(defn network-load-balanced-ec2-service-builder
-  "The network-load-balanced-ec2-service-builder function buildes out new instances of 
-NetworkLoadBalancedEc2Service$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-load-balanced-ec2-service-builder
+  "The build-network-load-balanced-ec2-service-builder function updates a NetworkLoadBalancedEc2Service$Builder instance using the provided configuration.
+  The function takes the NetworkLoadBalancedEc2Service$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `capacityProviderStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:capacity-provider-strategies` |
-| `circuitBreaker` | software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker | [[cdk.support/lookup-entry]] | `:circuit-breaker` |
-| `cloudMapOptions` | software.amazon.awscdk.services.ecs.CloudMapOptions | [[cdk.support/lookup-entry]] | `:cloud-map-options` |
-| `cluster` | software.amazon.awscdk.services.ecs.ICluster | [[cdk.support/lookup-entry]] | `:cluster` |
-| `cpu` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cpu` |
-| `deploymentController` | software.amazon.awscdk.services.ecs.DeploymentController | [[cdk.support/lookup-entry]] | `:deployment-controller` |
-| `desiredCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:desired-count` |
-| `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
-| `domainZone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:domain-zone` |
-| `enableEcsManagedTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-ecs-managed-tags` |
-| `enableExecuteCommand` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-execute-command` |
-| `healthCheckGracePeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:health-check-grace-period` |
-| `ipAddressType` | software.amazon.awscdk.services.elasticloadbalancingv2.IpAddressType | [[cdk.api.services.elasticloadbalancingv2/ip-address-type]] | `:ip-address-type` |
-| `listenerPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:listener-port` |
-| `loadBalancer` | software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer | [[cdk.support/lookup-entry]] | `:load-balancer` |
-| `maxHealthyPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-healthy-percent` |
-| `memoryLimitMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-limit-mi-b` |
-| `memoryReservationMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-reservation-mi-b` |
-| `minHealthyPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-healthy-percent` |
-| `placementConstraints` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-constraints` |
-| `placementStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-strategies` |
-| `propagateTags` | software.amazon.awscdk.services.ecs.PropagatedTagSource | [[cdk.api.services.ecs/propagated-tag-source]] | `:propagate-tags` |
-| `publicLoadBalancer` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:public-load-balancer` |
-| `recordType` | software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedServiceRecordType | [[cdk.api.services.ecs.patterns/network-load-balanced-service-record-type]] | `:record-type` |
-| `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
-| `taskDefinition` | software.amazon.awscdk.services.ecs.Ec2TaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
-| `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageOptions | [[cdk.support/lookup-entry]] | `:task-image-options` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (NetworkLoadBalancedEc2Service$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :capacity-provider-strategies)]
-      (. builder capacityProviderStrategies data))
-    (when-let [data (lookup-entry config id :circuit-breaker)]
-      (. builder circuitBreaker data))
-    (when-let [data (lookup-entry config id :cloud-map-options)]
-      (. builder cloudMapOptions data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :deployment-controller)]
-      (. builder deploymentController data))
-    (when-let [data (lookup-entry config id :desired-count)]
-      (. builder desiredCount data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :domain-zone)]
-      (. builder domainZone data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :health-check-grace-period)]
-      (. builder healthCheckGracePeriod data))
-    (when-let [data (ip-address-type config id :ip-address-type)]
-      (. builder ipAddressType data))
-    (when-let [data (lookup-entry config id :listener-port)]
-      (. builder listenerPort data))
-    (when-let [data (lookup-entry config id :load-balancer)]
-      (. builder loadBalancer data))
-    (when-let [data (lookup-entry config id :max-healthy-percent)]
-      (. builder maxHealthyPercent data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
-      (. builder memoryReservationMiB data))
-    (when-let [data (lookup-entry config id :min-healthy-percent)]
-      (. builder minHealthyPercent data))
-    (when-let [data (lookup-entry config id :placement-constraints)]
-      (. builder placementConstraints data))
-    (when-let [data (lookup-entry config id :placement-strategies)]
-      (. builder placementStrategies data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :public-load-balancer)]
-      (. builder publicLoadBalancer data))
-    (when-let [data (network-load-balanced-service-record-type config id :record-type)]
-      (. builder recordType data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :task-image-options)]
-      (. builder taskImageOptions data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
-
-
-(defn network-load-balanced-ec2-service-props-builder
-  "The network-load-balanced-ec2-service-props-builder function buildes out new instances of 
-NetworkLoadBalancedEc2ServiceProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1366,71 +1325,172 @@ NetworkLoadBalancedEc2ServiceProps$Builder using the provided configuration.  Ea
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
 | `taskDefinition` | software.amazon.awscdk.services.ecs.Ec2TaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 | `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageOptions | [[cdk.support/lookup-entry]] | `:task-image-options` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (NetworkLoadBalancedEc2ServiceProps$Builder.)]
-    (when-let [data (lookup-entry config id :capacity-provider-strategies)]
-      (. builder capacityProviderStrategies data))
-    (when-let [data (lookup-entry config id :circuit-breaker)]
-      (. builder circuitBreaker data))
-    (when-let [data (lookup-entry config id :cloud-map-options)]
-      (. builder cloudMapOptions data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :deployment-controller)]
-      (. builder deploymentController data))
-    (when-let [data (lookup-entry config id :desired-count)]
-      (. builder desiredCount data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :domain-zone)]
-      (. builder domainZone data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :health-check-grace-period)]
-      (. builder healthCheckGracePeriod data))
-    (when-let [data (ip-address-type config id :ip-address-type)]
-      (. builder ipAddressType data))
-    (when-let [data (lookup-entry config id :listener-port)]
-      (. builder listenerPort data))
-    (when-let [data (lookup-entry config id :load-balancer)]
-      (. builder loadBalancer data))
-    (when-let [data (lookup-entry config id :max-healthy-percent)]
-      (. builder maxHealthyPercent data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
-      (. builder memoryReservationMiB data))
-    (when-let [data (lookup-entry config id :min-healthy-percent)]
-      (. builder minHealthyPercent data))
-    (when-let [data (lookup-entry config id :placement-constraints)]
-      (. builder placementConstraints data))
-    (when-let [data (lookup-entry config id :placement-strategies)]
-      (. builder placementStrategies data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :public-load-balancer)]
-      (. builder publicLoadBalancer data))
-    (when-let [data (network-load-balanced-service-record-type config id :record-type)]
-      (. builder recordType data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :task-image-options)]
-      (. builder taskImageOptions data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^NetworkLoadBalancedEc2Service$Builder builder id config]
+  (when-let [data (lookup-entry config id :capacity-provider-strategies)]
+    (. builder capacityProviderStrategies data))
+  (when-let [data (lookup-entry config id :circuit-breaker)]
+    (. builder circuitBreaker data))
+  (when-let [data (lookup-entry config id :cloud-map-options)]
+    (. builder cloudMapOptions data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :deployment-controller)]
+    (. builder deploymentController data))
+  (when-let [data (lookup-entry config id :desired-count)]
+    (. builder desiredCount data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :domain-zone)]
+    (. builder domainZone data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :health-check-grace-period)]
+    (. builder healthCheckGracePeriod data))
+  (when-let [data (ip-address-type config id :ip-address-type)]
+    (. builder ipAddressType data))
+  (when-let [data (lookup-entry config id :listener-port)]
+    (. builder listenerPort data))
+  (when-let [data (lookup-entry config id :load-balancer)]
+    (. builder loadBalancer data))
+  (when-let [data (lookup-entry config id :max-healthy-percent)]
+    (. builder maxHealthyPercent data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
+    (. builder memoryReservationMiB data))
+  (when-let [data (lookup-entry config id :min-healthy-percent)]
+    (. builder minHealthyPercent data))
+  (when-let [data (lookup-entry config id :placement-constraints)]
+    (. builder placementConstraints data))
+  (when-let [data (lookup-entry config id :placement-strategies)]
+    (. builder placementStrategies data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :public-load-balancer)]
+    (. builder publicLoadBalancer data))
+  (when-let [data (network-load-balanced-service-record-type config id :record-type)]
+    (. builder recordType data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :task-image-options)]
+    (. builder taskImageOptions data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn network-load-balanced-fargate-service-builder
-  "The network-load-balanced-fargate-service-builder function buildes out new instances of 
-NetworkLoadBalancedFargateService$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-load-balanced-ec2-service-props-builder
+  "The build-network-load-balanced-ec2-service-props-builder function updates a NetworkLoadBalancedEc2ServiceProps$Builder instance using the provided configuration.
+  The function takes the NetworkLoadBalancedEc2ServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `capacityProviderStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:capacity-provider-strategies` |
+| `circuitBreaker` | software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker | [[cdk.support/lookup-entry]] | `:circuit-breaker` |
+| `cloudMapOptions` | software.amazon.awscdk.services.ecs.CloudMapOptions | [[cdk.support/lookup-entry]] | `:cloud-map-options` |
+| `cluster` | software.amazon.awscdk.services.ecs.ICluster | [[cdk.support/lookup-entry]] | `:cluster` |
+| `cpu` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cpu` |
+| `deploymentController` | software.amazon.awscdk.services.ecs.DeploymentController | [[cdk.support/lookup-entry]] | `:deployment-controller` |
+| `desiredCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:desired-count` |
+| `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
+| `domainZone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:domain-zone` |
+| `enableEcsManagedTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-ecs-managed-tags` |
+| `enableExecuteCommand` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-execute-command` |
+| `healthCheckGracePeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:health-check-grace-period` |
+| `ipAddressType` | software.amazon.awscdk.services.elasticloadbalancingv2.IpAddressType | [[cdk.api.services.elasticloadbalancingv2/ip-address-type]] | `:ip-address-type` |
+| `listenerPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:listener-port` |
+| `loadBalancer` | software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer | [[cdk.support/lookup-entry]] | `:load-balancer` |
+| `maxHealthyPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-healthy-percent` |
+| `memoryLimitMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-limit-mi-b` |
+| `memoryReservationMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-reservation-mi-b` |
+| `minHealthyPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-healthy-percent` |
+| `placementConstraints` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-constraints` |
+| `placementStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-strategies` |
+| `propagateTags` | software.amazon.awscdk.services.ecs.PropagatedTagSource | [[cdk.api.services.ecs/propagated-tag-source]] | `:propagate-tags` |
+| `publicLoadBalancer` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:public-load-balancer` |
+| `recordType` | software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedServiceRecordType | [[cdk.api.services.ecs.patterns/network-load-balanced-service-record-type]] | `:record-type` |
+| `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
+| `taskDefinition` | software.amazon.awscdk.services.ecs.Ec2TaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
+| `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageOptions | [[cdk.support/lookup-entry]] | `:task-image-options` |
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^NetworkLoadBalancedEc2ServiceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :capacity-provider-strategies)]
+    (. builder capacityProviderStrategies data))
+  (when-let [data (lookup-entry config id :circuit-breaker)]
+    (. builder circuitBreaker data))
+  (when-let [data (lookup-entry config id :cloud-map-options)]
+    (. builder cloudMapOptions data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :deployment-controller)]
+    (. builder deploymentController data))
+  (when-let [data (lookup-entry config id :desired-count)]
+    (. builder desiredCount data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :domain-zone)]
+    (. builder domainZone data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :health-check-grace-period)]
+    (. builder healthCheckGracePeriod data))
+  (when-let [data (ip-address-type config id :ip-address-type)]
+    (. builder ipAddressType data))
+  (when-let [data (lookup-entry config id :listener-port)]
+    (. builder listenerPort data))
+  (when-let [data (lookup-entry config id :load-balancer)]
+    (. builder loadBalancer data))
+  (when-let [data (lookup-entry config id :max-healthy-percent)]
+    (. builder maxHealthyPercent data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
+    (. builder memoryReservationMiB data))
+  (when-let [data (lookup-entry config id :min-healthy-percent)]
+    (. builder minHealthyPercent data))
+  (when-let [data (lookup-entry config id :placement-constraints)]
+    (. builder placementConstraints data))
+  (when-let [data (lookup-entry config id :placement-strategies)]
+    (. builder placementStrategies data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :public-load-balancer)]
+    (. builder publicLoadBalancer data))
+  (when-let [data (network-load-balanced-service-record-type config id :record-type)]
+    (. builder recordType data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :task-image-options)]
+    (. builder taskImageOptions data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
+
+
+(defn build-network-load-balanced-fargate-service-builder
+  "The build-network-load-balanced-fargate-service-builder function updates a NetworkLoadBalancedFargateService$Builder instance using the provided configuration.
+  The function takes the NetworkLoadBalancedFargateService$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1464,77 +1524,80 @@ NetworkLoadBalancedFargateService$Builder using the provided configuration.  Eac
 | `taskDefinition` | software.amazon.awscdk.services.ecs.FargateTaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 | `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageOptions | [[cdk.support/lookup-entry]] | `:task-image-options` |
 | `taskSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:task-subnets` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (NetworkLoadBalancedFargateService$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :assign-public-ip)]
-      (. builder assignPublicIp data))
-    (when-let [data (lookup-entry config id :capacity-provider-strategies)]
-      (. builder capacityProviderStrategies data))
-    (when-let [data (lookup-entry config id :circuit-breaker)]
-      (. builder circuitBreaker data))
-    (when-let [data (lookup-entry config id :cloud-map-options)]
-      (. builder cloudMapOptions data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :deployment-controller)]
-      (. builder deploymentController data))
-    (when-let [data (lookup-entry config id :desired-count)]
-      (. builder desiredCount data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :domain-zone)]
-      (. builder domainZone data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
-      (. builder ephemeralStorageGiB data))
-    (when-let [data (lookup-entry config id :health-check-grace-period)]
-      (. builder healthCheckGracePeriod data))
-    (when-let [data (ip-address-type config id :ip-address-type)]
-      (. builder ipAddressType data))
-    (when-let [data (lookup-entry config id :listener-port)]
-      (. builder listenerPort data))
-    (when-let [data (lookup-entry config id :load-balancer)]
-      (. builder loadBalancer data))
-    (when-let [data (lookup-entry config id :max-healthy-percent)]
-      (. builder maxHealthyPercent data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (lookup-entry config id :min-healthy-percent)]
-      (. builder minHealthyPercent data))
-    (when-let [data (fargate-platform-version config id :platform-version)]
-      (. builder platformVersion data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :public-load-balancer)]
-      (. builder publicLoadBalancer data))
-    (when-let [data (network-load-balanced-service-record-type config id :record-type)]
-      (. builder recordType data))
-    (when-let [data (lookup-entry config id :runtime-platform)]
-      (. builder runtimePlatform data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :task-image-options)]
-      (. builder taskImageOptions data))
-    (when-let [data (lookup-entry config id :task-subnets)]
-      (. builder taskSubnets data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^NetworkLoadBalancedFargateService$Builder builder id config]
+  (when-let [data (lookup-entry config id :assign-public-ip)]
+    (. builder assignPublicIp data))
+  (when-let [data (lookup-entry config id :capacity-provider-strategies)]
+    (. builder capacityProviderStrategies data))
+  (when-let [data (lookup-entry config id :circuit-breaker)]
+    (. builder circuitBreaker data))
+  (when-let [data (lookup-entry config id :cloud-map-options)]
+    (. builder cloudMapOptions data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :deployment-controller)]
+    (. builder deploymentController data))
+  (when-let [data (lookup-entry config id :desired-count)]
+    (. builder desiredCount data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :domain-zone)]
+    (. builder domainZone data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
+    (. builder ephemeralStorageGiB data))
+  (when-let [data (lookup-entry config id :health-check-grace-period)]
+    (. builder healthCheckGracePeriod data))
+  (when-let [data (ip-address-type config id :ip-address-type)]
+    (. builder ipAddressType data))
+  (when-let [data (lookup-entry config id :listener-port)]
+    (. builder listenerPort data))
+  (when-let [data (lookup-entry config id :load-balancer)]
+    (. builder loadBalancer data))
+  (when-let [data (lookup-entry config id :max-healthy-percent)]
+    (. builder maxHealthyPercent data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (lookup-entry config id :min-healthy-percent)]
+    (. builder minHealthyPercent data))
+  (when-let [data (fargate-platform-version config id :platform-version)]
+    (. builder platformVersion data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :public-load-balancer)]
+    (. builder publicLoadBalancer data))
+  (when-let [data (network-load-balanced-service-record-type config id :record-type)]
+    (. builder recordType data))
+  (when-let [data (lookup-entry config id :runtime-platform)]
+    (. builder runtimePlatform data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :task-image-options)]
+    (. builder taskImageOptions data))
+  (when-let [data (lookup-entry config id :task-subnets)]
+    (. builder taskSubnets data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn network-load-balanced-fargate-service-props-builder
-  "The network-load-balanced-fargate-service-props-builder function buildes out new instances of 
-NetworkLoadBalancedFargateServiceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-load-balanced-fargate-service-props-builder
+  "The build-network-load-balanced-fargate-service-props-builder function updates a NetworkLoadBalancedFargateServiceProps$Builder instance using the provided configuration.
+  The function takes the NetworkLoadBalancedFargateServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1568,77 +1631,80 @@ NetworkLoadBalancedFargateServiceProps$Builder using the provided configuration.
 | `taskDefinition` | software.amazon.awscdk.services.ecs.FargateTaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 | `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageOptions | [[cdk.support/lookup-entry]] | `:task-image-options` |
 | `taskSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:task-subnets` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (NetworkLoadBalancedFargateServiceProps$Builder.)]
-    (when-let [data (lookup-entry config id :assign-public-ip)]
-      (. builder assignPublicIp data))
-    (when-let [data (lookup-entry config id :capacity-provider-strategies)]
-      (. builder capacityProviderStrategies data))
-    (when-let [data (lookup-entry config id :circuit-breaker)]
-      (. builder circuitBreaker data))
-    (when-let [data (lookup-entry config id :cloud-map-options)]
-      (. builder cloudMapOptions data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :deployment-controller)]
-      (. builder deploymentController data))
-    (when-let [data (lookup-entry config id :desired-count)]
-      (. builder desiredCount data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :domain-zone)]
-      (. builder domainZone data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
-      (. builder ephemeralStorageGiB data))
-    (when-let [data (lookup-entry config id :health-check-grace-period)]
-      (. builder healthCheckGracePeriod data))
-    (when-let [data (ip-address-type config id :ip-address-type)]
-      (. builder ipAddressType data))
-    (when-let [data (lookup-entry config id :listener-port)]
-      (. builder listenerPort data))
-    (when-let [data (lookup-entry config id :load-balancer)]
-      (. builder loadBalancer data))
-    (when-let [data (lookup-entry config id :max-healthy-percent)]
-      (. builder maxHealthyPercent data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (lookup-entry config id :min-healthy-percent)]
-      (. builder minHealthyPercent data))
-    (when-let [data (fargate-platform-version config id :platform-version)]
-      (. builder platformVersion data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :public-load-balancer)]
-      (. builder publicLoadBalancer data))
-    (when-let [data (network-load-balanced-service-record-type config id :record-type)]
-      (. builder recordType data))
-    (when-let [data (lookup-entry config id :runtime-platform)]
-      (. builder runtimePlatform data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :task-image-options)]
-      (. builder taskImageOptions data))
-    (when-let [data (lookup-entry config id :task-subnets)]
-      (. builder taskSubnets data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^NetworkLoadBalancedFargateServiceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :assign-public-ip)]
+    (. builder assignPublicIp data))
+  (when-let [data (lookup-entry config id :capacity-provider-strategies)]
+    (. builder capacityProviderStrategies data))
+  (when-let [data (lookup-entry config id :circuit-breaker)]
+    (. builder circuitBreaker data))
+  (when-let [data (lookup-entry config id :cloud-map-options)]
+    (. builder cloudMapOptions data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :deployment-controller)]
+    (. builder deploymentController data))
+  (when-let [data (lookup-entry config id :desired-count)]
+    (. builder desiredCount data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :domain-zone)]
+    (. builder domainZone data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
+    (. builder ephemeralStorageGiB data))
+  (when-let [data (lookup-entry config id :health-check-grace-period)]
+    (. builder healthCheckGracePeriod data))
+  (when-let [data (ip-address-type config id :ip-address-type)]
+    (. builder ipAddressType data))
+  (when-let [data (lookup-entry config id :listener-port)]
+    (. builder listenerPort data))
+  (when-let [data (lookup-entry config id :load-balancer)]
+    (. builder loadBalancer data))
+  (when-let [data (lookup-entry config id :max-healthy-percent)]
+    (. builder maxHealthyPercent data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (lookup-entry config id :min-healthy-percent)]
+    (. builder minHealthyPercent data))
+  (when-let [data (fargate-platform-version config id :platform-version)]
+    (. builder platformVersion data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :public-load-balancer)]
+    (. builder publicLoadBalancer data))
+  (when-let [data (network-load-balanced-service-record-type config id :record-type)]
+    (. builder recordType data))
+  (when-let [data (lookup-entry config id :runtime-platform)]
+    (. builder runtimePlatform data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :task-image-options)]
+    (. builder taskImageOptions data))
+  (when-let [data (lookup-entry config id :task-subnets)]
+    (. builder taskSubnets data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn network-load-balanced-service-base-props-builder
-  "The network-load-balanced-service-base-props-builder function buildes out new instances of 
-NetworkLoadBalancedServiceBaseProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-load-balanced-service-base-props-builder
+  "The build-network-load-balanced-service-base-props-builder function updates a NetworkLoadBalancedServiceBaseProps$Builder instance using the provided configuration.
+  The function takes the NetworkLoadBalancedServiceBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1663,59 +1729,62 @@ NetworkLoadBalancedServiceBaseProps$Builder using the provided configuration.  E
 | `recordType` | software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedServiceRecordType | [[cdk.api.services.ecs.patterns/network-load-balanced-service-record-type]] | `:record-type` |
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
 | `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageOptions | [[cdk.support/lookup-entry]] | `:task-image-options` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (NetworkLoadBalancedServiceBaseProps$Builder.)]
-    (when-let [data (lookup-entry config id :capacity-provider-strategies)]
-      (. builder capacityProviderStrategies data))
-    (when-let [data (lookup-entry config id :circuit-breaker)]
-      (. builder circuitBreaker data))
-    (when-let [data (lookup-entry config id :cloud-map-options)]
-      (. builder cloudMapOptions data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :deployment-controller)]
-      (. builder deploymentController data))
-    (when-let [data (lookup-entry config id :desired-count)]
-      (. builder desiredCount data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :domain-zone)]
-      (. builder domainZone data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :health-check-grace-period)]
-      (. builder healthCheckGracePeriod data))
-    (when-let [data (ip-address-type config id :ip-address-type)]
-      (. builder ipAddressType data))
-    (when-let [data (lookup-entry config id :listener-port)]
-      (. builder listenerPort data))
-    (when-let [data (lookup-entry config id :load-balancer)]
-      (. builder loadBalancer data))
-    (when-let [data (lookup-entry config id :max-healthy-percent)]
-      (. builder maxHealthyPercent data))
-    (when-let [data (lookup-entry config id :min-healthy-percent)]
-      (. builder minHealthyPercent data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :public-load-balancer)]
-      (. builder publicLoadBalancer data))
-    (when-let [data (network-load-balanced-service-record-type config id :record-type)]
-      (. builder recordType data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (lookup-entry config id :task-image-options)]
-      (. builder taskImageOptions data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^NetworkLoadBalancedServiceBaseProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :capacity-provider-strategies)]
+    (. builder capacityProviderStrategies data))
+  (when-let [data (lookup-entry config id :circuit-breaker)]
+    (. builder circuitBreaker data))
+  (when-let [data (lookup-entry config id :cloud-map-options)]
+    (. builder cloudMapOptions data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :deployment-controller)]
+    (. builder deploymentController data))
+  (when-let [data (lookup-entry config id :desired-count)]
+    (. builder desiredCount data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :domain-zone)]
+    (. builder domainZone data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :health-check-grace-period)]
+    (. builder healthCheckGracePeriod data))
+  (when-let [data (ip-address-type config id :ip-address-type)]
+    (. builder ipAddressType data))
+  (when-let [data (lookup-entry config id :listener-port)]
+    (. builder listenerPort data))
+  (when-let [data (lookup-entry config id :load-balancer)]
+    (. builder loadBalancer data))
+  (when-let [data (lookup-entry config id :max-healthy-percent)]
+    (. builder maxHealthyPercent data))
+  (when-let [data (lookup-entry config id :min-healthy-percent)]
+    (. builder minHealthyPercent data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :public-load-balancer)]
+    (. builder publicLoadBalancer data))
+  (when-let [data (network-load-balanced-service-record-type config id :record-type)]
+    (. builder recordType data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (lookup-entry config id :task-image-options)]
+    (. builder taskImageOptions data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn network-load-balanced-task-image-options-builder
-  "The network-load-balanced-task-image-options-builder function buildes out new instances of 
-NetworkLoadBalancedTaskImageOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-load-balanced-task-image-options-builder
+  "The build-network-load-balanced-task-image-options-builder function updates a NetworkLoadBalancedTaskImageOptions$Builder instance using the provided configuration.
+  The function takes the NetworkLoadBalancedTaskImageOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1729,37 +1798,40 @@ NetworkLoadBalancedTaskImageOptions$Builder using the provided configuration.  E
 | `image` | software.amazon.awscdk.services.ecs.ContainerImage | [[cdk.support/lookup-entry]] | `:image` |
 | `logDriver` | software.amazon.awscdk.services.ecs.LogDriver | [[cdk.support/lookup-entry]] | `:log-driver` |
 | `secrets` | java.util.Map | [[cdk.support/lookup-entry]] | `:secrets` |
-| `taskRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:task-role` |"
-  [stack id config]
-  (let [builder (NetworkLoadBalancedTaskImageOptions$Builder.)]
-    (when-let [data (lookup-entry config id :container-name)]
-      (. builder containerName data))
-    (when-let [data (lookup-entry config id :container-port)]
-      (. builder containerPort data))
-    (when-let [data (lookup-entry config id :docker-labels)]
-      (. builder dockerLabels data))
-    (when-let [data (lookup-entry config id :enable-logging)]
-      (. builder enableLogging data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :execution-role)]
-      (. builder executionRole data))
-    (when-let [data (lookup-entry config id :family)]
-      (. builder family data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (lookup-entry config id :log-driver)]
-      (. builder logDriver data))
-    (when-let [data (lookup-entry config id :secrets)]
-      (. builder secrets data))
-    (when-let [data (lookup-entry config id :task-role)]
-      (. builder taskRole data))
-    (.build builder)))
+| `taskRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:task-role` |
+"
+  [^NetworkLoadBalancedTaskImageOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :container-name)]
+    (. builder containerName data))
+  (when-let [data (lookup-entry config id :container-port)]
+    (. builder containerPort data))
+  (when-let [data (lookup-entry config id :docker-labels)]
+    (. builder dockerLabels data))
+  (when-let [data (lookup-entry config id :enable-logging)]
+    (. builder enableLogging data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :execution-role)]
+    (. builder executionRole data))
+  (when-let [data (lookup-entry config id :family)]
+    (. builder family data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (lookup-entry config id :log-driver)]
+    (. builder logDriver data))
+  (when-let [data (lookup-entry config id :secrets)]
+    (. builder secrets data))
+  (when-let [data (lookup-entry config id :task-role)]
+    (. builder taskRole data))
+  (.build builder))
 
 
-(defn network-load-balanced-task-image-props-builder
-  "The network-load-balanced-task-image-props-builder function buildes out new instances of 
-NetworkLoadBalancedTaskImageProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-load-balanced-task-image-props-builder
+  "The build-network-load-balanced-task-image-props-builder function updates a NetworkLoadBalancedTaskImageProps$Builder instance using the provided configuration.
+  The function takes the NetworkLoadBalancedTaskImageProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1773,37 +1845,40 @@ NetworkLoadBalancedTaskImageProps$Builder using the provided configuration.  Eac
 | `image` | software.amazon.awscdk.services.ecs.ContainerImage | [[cdk.support/lookup-entry]] | `:image` |
 | `logDriver` | software.amazon.awscdk.services.ecs.LogDriver | [[cdk.support/lookup-entry]] | `:log-driver` |
 | `secrets` | java.util.Map | [[cdk.support/lookup-entry]] | `:secrets` |
-| `taskRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:task-role` |"
-  [stack id config]
-  (let [builder (NetworkLoadBalancedTaskImageProps$Builder.)]
-    (when-let [data (lookup-entry config id :container-name)]
-      (. builder containerName data))
-    (when-let [data (lookup-entry config id :container-ports)]
-      (. builder containerPorts data))
-    (when-let [data (lookup-entry config id :docker-labels)]
-      (. builder dockerLabels data))
-    (when-let [data (lookup-entry config id :enable-logging)]
-      (. builder enableLogging data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :execution-role)]
-      (. builder executionRole data))
-    (when-let [data (lookup-entry config id :family)]
-      (. builder family data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (lookup-entry config id :log-driver)]
-      (. builder logDriver data))
-    (when-let [data (lookup-entry config id :secrets)]
-      (. builder secrets data))
-    (when-let [data (lookup-entry config id :task-role)]
-      (. builder taskRole data))
-    (.build builder)))
+| `taskRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:task-role` |
+"
+  [^NetworkLoadBalancedTaskImageProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :container-name)]
+    (. builder containerName data))
+  (when-let [data (lookup-entry config id :container-ports)]
+    (. builder containerPorts data))
+  (when-let [data (lookup-entry config id :docker-labels)]
+    (. builder dockerLabels data))
+  (when-let [data (lookup-entry config id :enable-logging)]
+    (. builder enableLogging data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :execution-role)]
+    (. builder executionRole data))
+  (when-let [data (lookup-entry config id :family)]
+    (. builder family data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (lookup-entry config id :log-driver)]
+    (. builder logDriver data))
+  (when-let [data (lookup-entry config id :secrets)]
+    (. builder secrets data))
+  (when-let [data (lookup-entry config id :task-role)]
+    (. builder taskRole data))
+  (.build builder))
 
 
-(defn network-load-balancer-props-builder
-  "The network-load-balancer-props-builder function buildes out new instances of 
-NetworkLoadBalancerProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-load-balancer-props-builder
+  "The build-network-load-balancer-props-builder function updates a NetworkLoadBalancerProps$Builder instance using the provided configuration.
+  The function takes the NetworkLoadBalancerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1811,90 +1886,28 @@ NetworkLoadBalancerProps$Builder using the provided configuration.  Each field i
 | `domainZone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:domain-zone` |
 | `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `publicLoadBalancer` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:public-load-balancer` |"
-  [stack id config]
-  (let [builder (NetworkLoadBalancerProps$Builder.)]
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :domain-zone)]
-      (. builder domainZone data))
-    (when-let [data (lookup-entry config id :listeners)]
-      (. builder listeners data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :public-load-balancer)]
-      (. builder publicLoadBalancer data))
-    (.build builder)))
+| `publicLoadBalancer` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:public-load-balancer` |
+"
+  [^NetworkLoadBalancerProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :domain-zone)]
+    (. builder domainZone data))
+  (when-let [data (lookup-entry config id :listeners)]
+    (. builder listeners data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :public-load-balancer)]
+    (. builder publicLoadBalancer data))
+  (.build builder))
 
 
-(defn network-multiple-target-groups-ec2-service-builder
-  "The network-multiple-target-groups-ec2-service-builder function buildes out new instances of 
-NetworkMultipleTargetGroupsEc2Service$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-multiple-target-groups-ec2-service-builder
+  "The build-network-multiple-target-groups-ec2-service-builder function updates a NetworkMultipleTargetGroupsEc2Service$Builder instance using the provided configuration.
+  The function takes the NetworkMultipleTargetGroupsEc2Service$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `cloudMapOptions` | software.amazon.awscdk.services.ecs.CloudMapOptions | [[cdk.support/lookup-entry]] | `:cloud-map-options` |
-| `cluster` | software.amazon.awscdk.services.ecs.ICluster | [[cdk.support/lookup-entry]] | `:cluster` |
-| `cpu` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cpu` |
-| `desiredCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:desired-count` |
-| `enableEcsManagedTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-ecs-managed-tags` |
-| `enableExecuteCommand` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-execute-command` |
-| `healthCheckGracePeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:health-check-grace-period` |
-| `loadBalancers` | java.util.List | [[cdk.support/lookup-entry]] | `:load-balancers` |
-| `memoryLimitMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-limit-mi-b` |
-| `memoryReservationMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-reservation-mi-b` |
-| `placementConstraints` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-constraints` |
-| `placementStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-strategies` |
-| `propagateTags` | software.amazon.awscdk.services.ecs.PropagatedTagSource | [[cdk.api.services.ecs/propagated-tag-source]] | `:propagate-tags` |
-| `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
-| `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
-| `taskDefinition` | software.amazon.awscdk.services.ecs.Ec2TaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
-| `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageProps | [[cdk.support/lookup-entry]] | `:task-image-options` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (NetworkMultipleTargetGroupsEc2Service$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :cloud-map-options)]
-      (. builder cloudMapOptions data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :desired-count)]
-      (. builder desiredCount data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :health-check-grace-period)]
-      (. builder healthCheckGracePeriod data))
-    (when-let [data (lookup-entry config id :load-balancers)]
-      (. builder loadBalancers data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
-      (. builder memoryReservationMiB data))
-    (when-let [data (lookup-entry config id :placement-constraints)]
-      (. builder placementConstraints data))
-    (when-let [data (lookup-entry config id :placement-strategies)]
-      (. builder placementStrategies data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (lookup-entry config id :target-groups)]
-      (. builder targetGroups data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :task-image-options)]
-      (. builder taskImageOptions data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
-
-
-(defn network-multiple-target-groups-ec2-service-props-builder
-  "The network-multiple-target-groups-ec2-service-props-builder function buildes out new instances of 
-NetworkMultipleTargetGroupsEc2ServiceProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1915,51 +1928,122 @@ NetworkMultipleTargetGroupsEc2ServiceProps$Builder using the provided configurat
 | `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
 | `taskDefinition` | software.amazon.awscdk.services.ecs.Ec2TaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 | `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageProps | [[cdk.support/lookup-entry]] | `:task-image-options` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (NetworkMultipleTargetGroupsEc2ServiceProps$Builder.)]
-    (when-let [data (lookup-entry config id :cloud-map-options)]
-      (. builder cloudMapOptions data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :desired-count)]
-      (. builder desiredCount data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :health-check-grace-period)]
-      (. builder healthCheckGracePeriod data))
-    (when-let [data (lookup-entry config id :load-balancers)]
-      (. builder loadBalancers data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
-      (. builder memoryReservationMiB data))
-    (when-let [data (lookup-entry config id :placement-constraints)]
-      (. builder placementConstraints data))
-    (when-let [data (lookup-entry config id :placement-strategies)]
-      (. builder placementStrategies data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (lookup-entry config id :target-groups)]
-      (. builder targetGroups data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :task-image-options)]
-      (. builder taskImageOptions data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^NetworkMultipleTargetGroupsEc2Service$Builder builder id config]
+  (when-let [data (lookup-entry config id :cloud-map-options)]
+    (. builder cloudMapOptions data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :desired-count)]
+    (. builder desiredCount data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :health-check-grace-period)]
+    (. builder healthCheckGracePeriod data))
+  (when-let [data (lookup-entry config id :load-balancers)]
+    (. builder loadBalancers data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
+    (. builder memoryReservationMiB data))
+  (when-let [data (lookup-entry config id :placement-constraints)]
+    (. builder placementConstraints data))
+  (when-let [data (lookup-entry config id :placement-strategies)]
+    (. builder placementStrategies data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (lookup-entry config id :target-groups)]
+    (. builder targetGroups data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :task-image-options)]
+    (. builder taskImageOptions data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn network-multiple-target-groups-fargate-service-builder
-  "The network-multiple-target-groups-fargate-service-builder function buildes out new instances of 
-NetworkMultipleTargetGroupsFargateService$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-multiple-target-groups-ec2-service-props-builder
+  "The build-network-multiple-target-groups-ec2-service-props-builder function updates a NetworkMultipleTargetGroupsEc2ServiceProps$Builder instance using the provided configuration.
+  The function takes the NetworkMultipleTargetGroupsEc2ServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `cloudMapOptions` | software.amazon.awscdk.services.ecs.CloudMapOptions | [[cdk.support/lookup-entry]] | `:cloud-map-options` |
+| `cluster` | software.amazon.awscdk.services.ecs.ICluster | [[cdk.support/lookup-entry]] | `:cluster` |
+| `cpu` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cpu` |
+| `desiredCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:desired-count` |
+| `enableEcsManagedTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-ecs-managed-tags` |
+| `enableExecuteCommand` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-execute-command` |
+| `healthCheckGracePeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:health-check-grace-period` |
+| `loadBalancers` | java.util.List | [[cdk.support/lookup-entry]] | `:load-balancers` |
+| `memoryLimitMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-limit-mi-b` |
+| `memoryReservationMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-reservation-mi-b` |
+| `placementConstraints` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-constraints` |
+| `placementStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-strategies` |
+| `propagateTags` | software.amazon.awscdk.services.ecs.PropagatedTagSource | [[cdk.api.services.ecs/propagated-tag-source]] | `:propagate-tags` |
+| `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
+| `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
+| `taskDefinition` | software.amazon.awscdk.services.ecs.Ec2TaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
+| `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageProps | [[cdk.support/lookup-entry]] | `:task-image-options` |
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^NetworkMultipleTargetGroupsEc2ServiceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :cloud-map-options)]
+    (. builder cloudMapOptions data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :desired-count)]
+    (. builder desiredCount data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :health-check-grace-period)]
+    (. builder healthCheckGracePeriod data))
+  (when-let [data (lookup-entry config id :load-balancers)]
+    (. builder loadBalancers data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
+    (. builder memoryReservationMiB data))
+  (when-let [data (lookup-entry config id :placement-constraints)]
+    (. builder placementConstraints data))
+  (when-let [data (lookup-entry config id :placement-strategies)]
+    (. builder placementStrategies data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (lookup-entry config id :target-groups)]
+    (. builder targetGroups data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :task-image-options)]
+    (. builder taskImageOptions data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
+
+
+(defn build-network-multiple-target-groups-fargate-service-builder
+  "The build-network-multiple-target-groups-fargate-service-builder function updates a NetworkMultipleTargetGroupsFargateService$Builder instance using the provided configuration.
+  The function takes the NetworkMultipleTargetGroupsFargateService$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1981,53 +2065,56 @@ NetworkMultipleTargetGroupsFargateService$Builder using the provided configurati
 | `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
 | `taskDefinition` | software.amazon.awscdk.services.ecs.FargateTaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 | `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageProps | [[cdk.support/lookup-entry]] | `:task-image-options` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (NetworkMultipleTargetGroupsFargateService$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :assign-public-ip)]
-      (. builder assignPublicIp data))
-    (when-let [data (lookup-entry config id :cloud-map-options)]
-      (. builder cloudMapOptions data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :desired-count)]
-      (. builder desiredCount data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
-      (. builder ephemeralStorageGiB data))
-    (when-let [data (lookup-entry config id :health-check-grace-period)]
-      (. builder healthCheckGracePeriod data))
-    (when-let [data (lookup-entry config id :load-balancers)]
-      (. builder loadBalancers data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (fargate-platform-version config id :platform-version)]
-      (. builder platformVersion data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :runtime-platform)]
-      (. builder runtimePlatform data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (lookup-entry config id :target-groups)]
-      (. builder targetGroups data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :task-image-options)]
-      (. builder taskImageOptions data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^NetworkMultipleTargetGroupsFargateService$Builder builder id config]
+  (when-let [data (lookup-entry config id :assign-public-ip)]
+    (. builder assignPublicIp data))
+  (when-let [data (lookup-entry config id :cloud-map-options)]
+    (. builder cloudMapOptions data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :desired-count)]
+    (. builder desiredCount data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
+    (. builder ephemeralStorageGiB data))
+  (when-let [data (lookup-entry config id :health-check-grace-period)]
+    (. builder healthCheckGracePeriod data))
+  (when-let [data (lookup-entry config id :load-balancers)]
+    (. builder loadBalancers data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (fargate-platform-version config id :platform-version)]
+    (. builder platformVersion data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :runtime-platform)]
+    (. builder runtimePlatform data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (lookup-entry config id :target-groups)]
+    (. builder targetGroups data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :task-image-options)]
+    (. builder taskImageOptions data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn network-multiple-target-groups-fargate-service-props-builder
-  "The network-multiple-target-groups-fargate-service-props-builder function buildes out new instances of 
-NetworkMultipleTargetGroupsFargateServiceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-multiple-target-groups-fargate-service-props-builder
+  "The build-network-multiple-target-groups-fargate-service-props-builder function updates a NetworkMultipleTargetGroupsFargateServiceProps$Builder instance using the provided configuration.
+  The function takes the NetworkMultipleTargetGroupsFargateServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2049,53 +2136,56 @@ NetworkMultipleTargetGroupsFargateServiceProps$Builder using the provided config
 | `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
 | `taskDefinition` | software.amazon.awscdk.services.ecs.FargateTaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 | `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageProps | [[cdk.support/lookup-entry]] | `:task-image-options` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (NetworkMultipleTargetGroupsFargateServiceProps$Builder.)]
-    (when-let [data (lookup-entry config id :assign-public-ip)]
-      (. builder assignPublicIp data))
-    (when-let [data (lookup-entry config id :cloud-map-options)]
-      (. builder cloudMapOptions data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :desired-count)]
-      (. builder desiredCount data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
-      (. builder ephemeralStorageGiB data))
-    (when-let [data (lookup-entry config id :health-check-grace-period)]
-      (. builder healthCheckGracePeriod data))
-    (when-let [data (lookup-entry config id :load-balancers)]
-      (. builder loadBalancers data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (fargate-platform-version config id :platform-version)]
-      (. builder platformVersion data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :runtime-platform)]
-      (. builder runtimePlatform data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (lookup-entry config id :target-groups)]
-      (. builder targetGroups data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :task-image-options)]
-      (. builder taskImageOptions data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^NetworkMultipleTargetGroupsFargateServiceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :assign-public-ip)]
+    (. builder assignPublicIp data))
+  (when-let [data (lookup-entry config id :cloud-map-options)]
+    (. builder cloudMapOptions data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :desired-count)]
+    (. builder desiredCount data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
+    (. builder ephemeralStorageGiB data))
+  (when-let [data (lookup-entry config id :health-check-grace-period)]
+    (. builder healthCheckGracePeriod data))
+  (when-let [data (lookup-entry config id :load-balancers)]
+    (. builder loadBalancers data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (fargate-platform-version config id :platform-version)]
+    (. builder platformVersion data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :runtime-platform)]
+    (. builder runtimePlatform data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (lookup-entry config id :target-groups)]
+    (. builder targetGroups data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :task-image-options)]
+    (. builder taskImageOptions data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn network-multiple-target-groups-service-base-props-builder
-  "The network-multiple-target-groups-service-base-props-builder function buildes out new instances of 
-NetworkMultipleTargetGroupsServiceBaseProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-multiple-target-groups-service-base-props-builder
+  "The build-network-multiple-target-groups-service-base-props-builder function updates a NetworkMultipleTargetGroupsServiceBaseProps$Builder instance using the provided configuration.
+  The function takes the NetworkMultipleTargetGroupsServiceBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2110,172 +2200,62 @@ NetworkMultipleTargetGroupsServiceBaseProps$Builder using the provided configura
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
 | `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
 | `taskImageOptions` | software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageProps | [[cdk.support/lookup-entry]] | `:task-image-options` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (NetworkMultipleTargetGroupsServiceBaseProps$Builder.)]
-    (when-let [data (lookup-entry config id :cloud-map-options)]
-      (. builder cloudMapOptions data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :desired-count)]
-      (. builder desiredCount data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :health-check-grace-period)]
-      (. builder healthCheckGracePeriod data))
-    (when-let [data (lookup-entry config id :load-balancers)]
-      (. builder loadBalancers data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (lookup-entry config id :target-groups)]
-      (. builder targetGroups data))
-    (when-let [data (lookup-entry config id :task-image-options)]
-      (. builder taskImageOptions data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^NetworkMultipleTargetGroupsServiceBaseProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :cloud-map-options)]
+    (. builder cloudMapOptions data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :desired-count)]
+    (. builder desiredCount data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :health-check-grace-period)]
+    (. builder healthCheckGracePeriod data))
+  (when-let [data (lookup-entry config id :load-balancers)]
+    (. builder loadBalancers data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (lookup-entry config id :target-groups)]
+    (. builder targetGroups data))
+  (when-let [data (lookup-entry config id :task-image-options)]
+    (. builder taskImageOptions data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn network-target-props-builder
-  "The network-target-props-builder function buildes out new instances of 
-NetworkTargetProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-target-props-builder
+  "The build-network-target-props-builder function updates a NetworkTargetProps$Builder instance using the provided configuration.
+  The function takes the NetworkTargetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `containerPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:container-port` |
-| `listener` | java.lang.String | [[cdk.support/lookup-entry]] | `:listener` |"
-  [stack id config]
-  (let [builder (NetworkTargetProps$Builder.)]
-    (when-let [data (lookup-entry config id :container-port)]
-      (. builder containerPort data))
-    (when-let [data (lookup-entry config id :listener)]
-      (. builder listener data))
-    (.build builder)))
+| `listener` | java.lang.String | [[cdk.support/lookup-entry]] | `:listener` |
+"
+  [^NetworkTargetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :container-port)]
+    (. builder containerPort data))
+  (when-let [data (lookup-entry config id :listener)]
+    (. builder listener data))
+  (.build builder))
 
 
-(defn queue-processing-ec2-service-builder
-  "The queue-processing-ec2-service-builder function buildes out new instances of 
-QueueProcessingEc2Service$Builder using the provided configuration.  Each field is set as follows:
+(defn build-queue-processing-ec2-service-builder
+  "The build-queue-processing-ec2-service-builder function updates a QueueProcessingEc2Service$Builder instance using the provided configuration.
+  The function takes the QueueProcessingEc2Service$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `capacityProviderStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:capacity-provider-strategies` |
-| `circuitBreaker` | software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker | [[cdk.support/lookup-entry]] | `:circuit-breaker` |
-| `cluster` | software.amazon.awscdk.services.ecs.ICluster | [[cdk.support/lookup-entry]] | `:cluster` |
-| `command` | java.util.List | [[cdk.support/lookup-entry]] | `:command` |
-| `containerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-name` |
-| `cooldown` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:cooldown` |
-| `cpu` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cpu` |
-| `cpuTargetUtilizationPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cpu-target-utilization-percent` |
-| `deploymentController` | software.amazon.awscdk.services.ecs.DeploymentController | [[cdk.support/lookup-entry]] | `:deployment-controller` |
-| `disableCpuBasedScaling` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-cpu-based-scaling` |
-| `enableEcsManagedTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-ecs-managed-tags` |
-| `enableExecuteCommand` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-execute-command` |
-| `enableLogging` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-logging` |
-| `environment` | java.util.Map | [[cdk.support/lookup-entry]] | `:environment` |
-| `family` | java.lang.String | [[cdk.support/lookup-entry]] | `:family` |
-| `gpuCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:gpu-count` |
-| `image` | software.amazon.awscdk.services.ecs.ContainerImage | [[cdk.support/lookup-entry]] | `:image` |
-| `logDriver` | software.amazon.awscdk.services.ecs.LogDriver | [[cdk.support/lookup-entry]] | `:log-driver` |
-| `maxHealthyPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-healthy-percent` |
-| `maxReceiveCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-receive-count` |
-| `maxScalingCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-scaling-capacity` |
-| `memoryLimitMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-limit-mi-b` |
-| `memoryReservationMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-reservation-mi-b` |
-| `minHealthyPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-healthy-percent` |
-| `minScalingCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-scaling-capacity` |
-| `placementConstraints` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-constraints` |
-| `placementStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-strategies` |
-| `propagateTags` | software.amazon.awscdk.services.ecs.PropagatedTagSource | [[cdk.api.services.ecs/propagated-tag-source]] | `:propagate-tags` |
-| `queue` | software.amazon.awscdk.services.sqs.IQueue | [[cdk.support/lookup-entry]] | `:queue` |
-| `retentionPeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:retention-period` |
-| `scalingSteps` | java.util.List | [[cdk.support/lookup-entry]] | `:scaling-steps` |
-| `secrets` | java.util.Map | [[cdk.support/lookup-entry]] | `:secrets` |
-| `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
-| `visibilityTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:visibility-timeout` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (QueueProcessingEc2Service$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :capacity-provider-strategies)]
-      (. builder capacityProviderStrategies data))
-    (when-let [data (lookup-entry config id :circuit-breaker)]
-      (. builder circuitBreaker data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :container-name)]
-      (. builder containerName data))
-    (when-let [data (lookup-entry config id :cooldown)]
-      (. builder cooldown data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :cpu-target-utilization-percent)]
-      (. builder cpuTargetUtilizationPercent data))
-    (when-let [data (lookup-entry config id :deployment-controller)]
-      (. builder deploymentController data))
-    (when-let [data (lookup-entry config id :disable-cpu-based-scaling)]
-      (. builder disableCpuBasedScaling data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :enable-logging)]
-      (. builder enableLogging data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :family)]
-      (. builder family data))
-    (when-let [data (lookup-entry config id :gpu-count)]
-      (. builder gpuCount data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (lookup-entry config id :log-driver)]
-      (. builder logDriver data))
-    (when-let [data (lookup-entry config id :max-healthy-percent)]
-      (. builder maxHealthyPercent data))
-    (when-let [data (lookup-entry config id :max-receive-count)]
-      (. builder maxReceiveCount data))
-    (when-let [data (lookup-entry config id :max-scaling-capacity)]
-      (. builder maxScalingCapacity data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
-      (. builder memoryReservationMiB data))
-    (when-let [data (lookup-entry config id :min-healthy-percent)]
-      (. builder minHealthyPercent data))
-    (when-let [data (lookup-entry config id :min-scaling-capacity)]
-      (. builder minScalingCapacity data))
-    (when-let [data (lookup-entry config id :placement-constraints)]
-      (. builder placementConstraints data))
-    (when-let [data (lookup-entry config id :placement-strategies)]
-      (. builder placementStrategies data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :queue)]
-      (. builder queue data))
-    (when-let [data (lookup-entry config id :retention-period)]
-      (. builder retentionPeriod data))
-    (when-let [data (lookup-entry config id :scaling-steps)]
-      (. builder scalingSteps data))
-    (when-let [data (lookup-entry config id :secrets)]
-      (. builder secrets data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (lookup-entry config id :visibility-timeout)]
-      (. builder visibilityTimeout data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
-
-
-(defn queue-processing-ec2-service-props-builder
-  "The queue-processing-ec2-service-props-builder function buildes out new instances of 
-QueueProcessingEc2ServiceProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2313,85 +2293,207 @@ QueueProcessingEc2ServiceProps$Builder using the provided configuration.  Each f
 | `secrets` | java.util.Map | [[cdk.support/lookup-entry]] | `:secrets` |
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
 | `visibilityTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:visibility-timeout` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (QueueProcessingEc2ServiceProps$Builder.)]
-    (when-let [data (lookup-entry config id :capacity-provider-strategies)]
-      (. builder capacityProviderStrategies data))
-    (when-let [data (lookup-entry config id :circuit-breaker)]
-      (. builder circuitBreaker data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :container-name)]
-      (. builder containerName data))
-    (when-let [data (lookup-entry config id :cooldown)]
-      (. builder cooldown data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :cpu-target-utilization-percent)]
-      (. builder cpuTargetUtilizationPercent data))
-    (when-let [data (lookup-entry config id :deployment-controller)]
-      (. builder deploymentController data))
-    (when-let [data (lookup-entry config id :disable-cpu-based-scaling)]
-      (. builder disableCpuBasedScaling data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :enable-logging)]
-      (. builder enableLogging data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :family)]
-      (. builder family data))
-    (when-let [data (lookup-entry config id :gpu-count)]
-      (. builder gpuCount data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (lookup-entry config id :log-driver)]
-      (. builder logDriver data))
-    (when-let [data (lookup-entry config id :max-healthy-percent)]
-      (. builder maxHealthyPercent data))
-    (when-let [data (lookup-entry config id :max-receive-count)]
-      (. builder maxReceiveCount data))
-    (when-let [data (lookup-entry config id :max-scaling-capacity)]
-      (. builder maxScalingCapacity data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
-      (. builder memoryReservationMiB data))
-    (when-let [data (lookup-entry config id :min-healthy-percent)]
-      (. builder minHealthyPercent data))
-    (when-let [data (lookup-entry config id :min-scaling-capacity)]
-      (. builder minScalingCapacity data))
-    (when-let [data (lookup-entry config id :placement-constraints)]
-      (. builder placementConstraints data))
-    (when-let [data (lookup-entry config id :placement-strategies)]
-      (. builder placementStrategies data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :queue)]
-      (. builder queue data))
-    (when-let [data (lookup-entry config id :retention-period)]
-      (. builder retentionPeriod data))
-    (when-let [data (lookup-entry config id :scaling-steps)]
-      (. builder scalingSteps data))
-    (when-let [data (lookup-entry config id :secrets)]
-      (. builder secrets data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (lookup-entry config id :visibility-timeout)]
-      (. builder visibilityTimeout data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^QueueProcessingEc2Service$Builder builder id config]
+  (when-let [data (lookup-entry config id :capacity-provider-strategies)]
+    (. builder capacityProviderStrategies data))
+  (when-let [data (lookup-entry config id :circuit-breaker)]
+    (. builder circuitBreaker data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :container-name)]
+    (. builder containerName data))
+  (when-let [data (lookup-entry config id :cooldown)]
+    (. builder cooldown data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :cpu-target-utilization-percent)]
+    (. builder cpuTargetUtilizationPercent data))
+  (when-let [data (lookup-entry config id :deployment-controller)]
+    (. builder deploymentController data))
+  (when-let [data (lookup-entry config id :disable-cpu-based-scaling)]
+    (. builder disableCpuBasedScaling data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :enable-logging)]
+    (. builder enableLogging data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :family)]
+    (. builder family data))
+  (when-let [data (lookup-entry config id :gpu-count)]
+    (. builder gpuCount data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (lookup-entry config id :log-driver)]
+    (. builder logDriver data))
+  (when-let [data (lookup-entry config id :max-healthy-percent)]
+    (. builder maxHealthyPercent data))
+  (when-let [data (lookup-entry config id :max-receive-count)]
+    (. builder maxReceiveCount data))
+  (when-let [data (lookup-entry config id :max-scaling-capacity)]
+    (. builder maxScalingCapacity data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
+    (. builder memoryReservationMiB data))
+  (when-let [data (lookup-entry config id :min-healthy-percent)]
+    (. builder minHealthyPercent data))
+  (when-let [data (lookup-entry config id :min-scaling-capacity)]
+    (. builder minScalingCapacity data))
+  (when-let [data (lookup-entry config id :placement-constraints)]
+    (. builder placementConstraints data))
+  (when-let [data (lookup-entry config id :placement-strategies)]
+    (. builder placementStrategies data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :queue)]
+    (. builder queue data))
+  (when-let [data (lookup-entry config id :retention-period)]
+    (. builder retentionPeriod data))
+  (when-let [data (lookup-entry config id :scaling-steps)]
+    (. builder scalingSteps data))
+  (when-let [data (lookup-entry config id :secrets)]
+    (. builder secrets data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (lookup-entry config id :visibility-timeout)]
+    (. builder visibilityTimeout data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn queue-processing-fargate-service-builder
-  "The queue-processing-fargate-service-builder function buildes out new instances of 
-QueueProcessingFargateService$Builder using the provided configuration.  Each field is set as follows:
+(defn build-queue-processing-ec2-service-props-builder
+  "The build-queue-processing-ec2-service-props-builder function updates a QueueProcessingEc2ServiceProps$Builder instance using the provided configuration.
+  The function takes the QueueProcessingEc2ServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `capacityProviderStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:capacity-provider-strategies` |
+| `circuitBreaker` | software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker | [[cdk.support/lookup-entry]] | `:circuit-breaker` |
+| `cluster` | software.amazon.awscdk.services.ecs.ICluster | [[cdk.support/lookup-entry]] | `:cluster` |
+| `command` | java.util.List | [[cdk.support/lookup-entry]] | `:command` |
+| `containerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-name` |
+| `cooldown` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:cooldown` |
+| `cpu` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cpu` |
+| `cpuTargetUtilizationPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cpu-target-utilization-percent` |
+| `deploymentController` | software.amazon.awscdk.services.ecs.DeploymentController | [[cdk.support/lookup-entry]] | `:deployment-controller` |
+| `disableCpuBasedScaling` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-cpu-based-scaling` |
+| `enableEcsManagedTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-ecs-managed-tags` |
+| `enableExecuteCommand` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-execute-command` |
+| `enableLogging` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-logging` |
+| `environment` | java.util.Map | [[cdk.support/lookup-entry]] | `:environment` |
+| `family` | java.lang.String | [[cdk.support/lookup-entry]] | `:family` |
+| `gpuCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:gpu-count` |
+| `image` | software.amazon.awscdk.services.ecs.ContainerImage | [[cdk.support/lookup-entry]] | `:image` |
+| `logDriver` | software.amazon.awscdk.services.ecs.LogDriver | [[cdk.support/lookup-entry]] | `:log-driver` |
+| `maxHealthyPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-healthy-percent` |
+| `maxReceiveCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-receive-count` |
+| `maxScalingCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-scaling-capacity` |
+| `memoryLimitMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-limit-mi-b` |
+| `memoryReservationMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-reservation-mi-b` |
+| `minHealthyPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-healthy-percent` |
+| `minScalingCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-scaling-capacity` |
+| `placementConstraints` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-constraints` |
+| `placementStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-strategies` |
+| `propagateTags` | software.amazon.awscdk.services.ecs.PropagatedTagSource | [[cdk.api.services.ecs/propagated-tag-source]] | `:propagate-tags` |
+| `queue` | software.amazon.awscdk.services.sqs.IQueue | [[cdk.support/lookup-entry]] | `:queue` |
+| `retentionPeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:retention-period` |
+| `scalingSteps` | java.util.List | [[cdk.support/lookup-entry]] | `:scaling-steps` |
+| `secrets` | java.util.Map | [[cdk.support/lookup-entry]] | `:secrets` |
+| `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
+| `visibilityTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:visibility-timeout` |
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^QueueProcessingEc2ServiceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :capacity-provider-strategies)]
+    (. builder capacityProviderStrategies data))
+  (when-let [data (lookup-entry config id :circuit-breaker)]
+    (. builder circuitBreaker data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :container-name)]
+    (. builder containerName data))
+  (when-let [data (lookup-entry config id :cooldown)]
+    (. builder cooldown data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :cpu-target-utilization-percent)]
+    (. builder cpuTargetUtilizationPercent data))
+  (when-let [data (lookup-entry config id :deployment-controller)]
+    (. builder deploymentController data))
+  (when-let [data (lookup-entry config id :disable-cpu-based-scaling)]
+    (. builder disableCpuBasedScaling data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :enable-logging)]
+    (. builder enableLogging data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :family)]
+    (. builder family data))
+  (when-let [data (lookup-entry config id :gpu-count)]
+    (. builder gpuCount data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (lookup-entry config id :log-driver)]
+    (. builder logDriver data))
+  (when-let [data (lookup-entry config id :max-healthy-percent)]
+    (. builder maxHealthyPercent data))
+  (when-let [data (lookup-entry config id :max-receive-count)]
+    (. builder maxReceiveCount data))
+  (when-let [data (lookup-entry config id :max-scaling-capacity)]
+    (. builder maxScalingCapacity data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
+    (. builder memoryReservationMiB data))
+  (when-let [data (lookup-entry config id :min-healthy-percent)]
+    (. builder minHealthyPercent data))
+  (when-let [data (lookup-entry config id :min-scaling-capacity)]
+    (. builder minScalingCapacity data))
+  (when-let [data (lookup-entry config id :placement-constraints)]
+    (. builder placementConstraints data))
+  (when-let [data (lookup-entry config id :placement-strategies)]
+    (. builder placementStrategies data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :queue)]
+    (. builder queue data))
+  (when-let [data (lookup-entry config id :retention-period)]
+    (. builder retentionPeriod data))
+  (when-let [data (lookup-entry config id :scaling-steps)]
+    (. builder scalingSteps data))
+  (when-let [data (lookup-entry config id :secrets)]
+    (. builder secrets data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (lookup-entry config id :visibility-timeout)]
+    (. builder visibilityTimeout data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
+
+
+(defn build-queue-processing-fargate-service-builder
+  "The build-queue-processing-fargate-service-builder function updates a QueueProcessingFargateService$Builder instance using the provided configuration.
+  The function takes the QueueProcessingFargateService$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2433,93 +2535,96 @@ QueueProcessingFargateService$Builder using the provided configuration.  Each fi
 | `taskDefinition` | software.amazon.awscdk.services.ecs.FargateTaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 | `taskSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:task-subnets` |
 | `visibilityTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:visibility-timeout` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (QueueProcessingFargateService$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :assign-public-ip)]
-      (. builder assignPublicIp data))
-    (when-let [data (lookup-entry config id :capacity-provider-strategies)]
-      (. builder capacityProviderStrategies data))
-    (when-let [data (lookup-entry config id :circuit-breaker)]
-      (. builder circuitBreaker data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :container-name)]
-      (. builder containerName data))
-    (when-let [data (lookup-entry config id :cooldown)]
-      (. builder cooldown data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :cpu-target-utilization-percent)]
-      (. builder cpuTargetUtilizationPercent data))
-    (when-let [data (lookup-entry config id :deployment-controller)]
-      (. builder deploymentController data))
-    (when-let [data (lookup-entry config id :disable-cpu-based-scaling)]
-      (. builder disableCpuBasedScaling data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :enable-logging)]
-      (. builder enableLogging data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
-      (. builder ephemeralStorageGiB data))
-    (when-let [data (lookup-entry config id :family)]
-      (. builder family data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (lookup-entry config id :log-driver)]
-      (. builder logDriver data))
-    (when-let [data (lookup-entry config id :max-healthy-percent)]
-      (. builder maxHealthyPercent data))
-    (when-let [data (lookup-entry config id :max-receive-count)]
-      (. builder maxReceiveCount data))
-    (when-let [data (lookup-entry config id :max-scaling-capacity)]
-      (. builder maxScalingCapacity data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (lookup-entry config id :min-healthy-percent)]
-      (. builder minHealthyPercent data))
-    (when-let [data (lookup-entry config id :min-scaling-capacity)]
-      (. builder minScalingCapacity data))
-    (when-let [data (fargate-platform-version config id :platform-version)]
-      (. builder platformVersion data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :queue)]
-      (. builder queue data))
-    (when-let [data (lookup-entry config id :retention-period)]
-      (. builder retentionPeriod data))
-    (when-let [data (lookup-entry config id :runtime-platform)]
-      (. builder runtimePlatform data))
-    (when-let [data (lookup-entry config id :scaling-steps)]
-      (. builder scalingSteps data))
-    (when-let [data (lookup-entry config id :secrets)]
-      (. builder secrets data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :task-subnets)]
-      (. builder taskSubnets data))
-    (when-let [data (lookup-entry config id :visibility-timeout)]
-      (. builder visibilityTimeout data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^QueueProcessingFargateService$Builder builder id config]
+  (when-let [data (lookup-entry config id :assign-public-ip)]
+    (. builder assignPublicIp data))
+  (when-let [data (lookup-entry config id :capacity-provider-strategies)]
+    (. builder capacityProviderStrategies data))
+  (when-let [data (lookup-entry config id :circuit-breaker)]
+    (. builder circuitBreaker data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :container-name)]
+    (. builder containerName data))
+  (when-let [data (lookup-entry config id :cooldown)]
+    (. builder cooldown data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :cpu-target-utilization-percent)]
+    (. builder cpuTargetUtilizationPercent data))
+  (when-let [data (lookup-entry config id :deployment-controller)]
+    (. builder deploymentController data))
+  (when-let [data (lookup-entry config id :disable-cpu-based-scaling)]
+    (. builder disableCpuBasedScaling data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :enable-logging)]
+    (. builder enableLogging data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
+    (. builder ephemeralStorageGiB data))
+  (when-let [data (lookup-entry config id :family)]
+    (. builder family data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (lookup-entry config id :log-driver)]
+    (. builder logDriver data))
+  (when-let [data (lookup-entry config id :max-healthy-percent)]
+    (. builder maxHealthyPercent data))
+  (when-let [data (lookup-entry config id :max-receive-count)]
+    (. builder maxReceiveCount data))
+  (when-let [data (lookup-entry config id :max-scaling-capacity)]
+    (. builder maxScalingCapacity data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (lookup-entry config id :min-healthy-percent)]
+    (. builder minHealthyPercent data))
+  (when-let [data (lookup-entry config id :min-scaling-capacity)]
+    (. builder minScalingCapacity data))
+  (when-let [data (fargate-platform-version config id :platform-version)]
+    (. builder platformVersion data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :queue)]
+    (. builder queue data))
+  (when-let [data (lookup-entry config id :retention-period)]
+    (. builder retentionPeriod data))
+  (when-let [data (lookup-entry config id :runtime-platform)]
+    (. builder runtimePlatform data))
+  (when-let [data (lookup-entry config id :scaling-steps)]
+    (. builder scalingSteps data))
+  (when-let [data (lookup-entry config id :secrets)]
+    (. builder secrets data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :task-subnets)]
+    (. builder taskSubnets data))
+  (when-let [data (lookup-entry config id :visibility-timeout)]
+    (. builder visibilityTimeout data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn queue-processing-fargate-service-props-builder
-  "The queue-processing-fargate-service-props-builder function buildes out new instances of 
-QueueProcessingFargateServiceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-queue-processing-fargate-service-props-builder
+  "The build-queue-processing-fargate-service-props-builder function updates a QueueProcessingFargateServiceProps$Builder instance using the provided configuration.
+  The function takes the QueueProcessingFargateServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2561,93 +2666,96 @@ QueueProcessingFargateServiceProps$Builder using the provided configuration.  Ea
 | `taskDefinition` | software.amazon.awscdk.services.ecs.FargateTaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 | `taskSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:task-subnets` |
 | `visibilityTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:visibility-timeout` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (QueueProcessingFargateServiceProps$Builder.)]
-    (when-let [data (lookup-entry config id :assign-public-ip)]
-      (. builder assignPublicIp data))
-    (when-let [data (lookup-entry config id :capacity-provider-strategies)]
-      (. builder capacityProviderStrategies data))
-    (when-let [data (lookup-entry config id :circuit-breaker)]
-      (. builder circuitBreaker data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :container-name)]
-      (. builder containerName data))
-    (when-let [data (lookup-entry config id :cooldown)]
-      (. builder cooldown data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :cpu-target-utilization-percent)]
-      (. builder cpuTargetUtilizationPercent data))
-    (when-let [data (lookup-entry config id :deployment-controller)]
-      (. builder deploymentController data))
-    (when-let [data (lookup-entry config id :disable-cpu-based-scaling)]
-      (. builder disableCpuBasedScaling data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :enable-logging)]
-      (. builder enableLogging data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
-      (. builder ephemeralStorageGiB data))
-    (when-let [data (lookup-entry config id :family)]
-      (. builder family data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (lookup-entry config id :log-driver)]
-      (. builder logDriver data))
-    (when-let [data (lookup-entry config id :max-healthy-percent)]
-      (. builder maxHealthyPercent data))
-    (when-let [data (lookup-entry config id :max-receive-count)]
-      (. builder maxReceiveCount data))
-    (when-let [data (lookup-entry config id :max-scaling-capacity)]
-      (. builder maxScalingCapacity data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (lookup-entry config id :min-healthy-percent)]
-      (. builder minHealthyPercent data))
-    (when-let [data (lookup-entry config id :min-scaling-capacity)]
-      (. builder minScalingCapacity data))
-    (when-let [data (fargate-platform-version config id :platform-version)]
-      (. builder platformVersion data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :queue)]
-      (. builder queue data))
-    (when-let [data (lookup-entry config id :retention-period)]
-      (. builder retentionPeriod data))
-    (when-let [data (lookup-entry config id :runtime-platform)]
-      (. builder runtimePlatform data))
-    (when-let [data (lookup-entry config id :scaling-steps)]
-      (. builder scalingSteps data))
-    (when-let [data (lookup-entry config id :secrets)]
-      (. builder secrets data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :task-subnets)]
-      (. builder taskSubnets data))
-    (when-let [data (lookup-entry config id :visibility-timeout)]
-      (. builder visibilityTimeout data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^QueueProcessingFargateServiceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :assign-public-ip)]
+    (. builder assignPublicIp data))
+  (when-let [data (lookup-entry config id :capacity-provider-strategies)]
+    (. builder capacityProviderStrategies data))
+  (when-let [data (lookup-entry config id :circuit-breaker)]
+    (. builder circuitBreaker data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :container-name)]
+    (. builder containerName data))
+  (when-let [data (lookup-entry config id :cooldown)]
+    (. builder cooldown data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :cpu-target-utilization-percent)]
+    (. builder cpuTargetUtilizationPercent data))
+  (when-let [data (lookup-entry config id :deployment-controller)]
+    (. builder deploymentController data))
+  (when-let [data (lookup-entry config id :disable-cpu-based-scaling)]
+    (. builder disableCpuBasedScaling data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :enable-logging)]
+    (. builder enableLogging data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
+    (. builder ephemeralStorageGiB data))
+  (when-let [data (lookup-entry config id :family)]
+    (. builder family data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (lookup-entry config id :log-driver)]
+    (. builder logDriver data))
+  (when-let [data (lookup-entry config id :max-healthy-percent)]
+    (. builder maxHealthyPercent data))
+  (when-let [data (lookup-entry config id :max-receive-count)]
+    (. builder maxReceiveCount data))
+  (when-let [data (lookup-entry config id :max-scaling-capacity)]
+    (. builder maxScalingCapacity data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (lookup-entry config id :min-healthy-percent)]
+    (. builder minHealthyPercent data))
+  (when-let [data (lookup-entry config id :min-scaling-capacity)]
+    (. builder minScalingCapacity data))
+  (when-let [data (fargate-platform-version config id :platform-version)]
+    (. builder platformVersion data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :queue)]
+    (. builder queue data))
+  (when-let [data (lookup-entry config id :retention-period)]
+    (. builder retentionPeriod data))
+  (when-let [data (lookup-entry config id :runtime-platform)]
+    (. builder runtimePlatform data))
+  (when-let [data (lookup-entry config id :scaling-steps)]
+    (. builder scalingSteps data))
+  (when-let [data (lookup-entry config id :secrets)]
+    (. builder secrets data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :task-subnets)]
+    (. builder taskSubnets data))
+  (when-let [data (lookup-entry config id :visibility-timeout)]
+    (. builder visibilityTimeout data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn queue-processing-service-base-props-builder
-  "The queue-processing-service-base-props-builder function buildes out new instances of 
-QueueProcessingServiceBaseProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-queue-processing-service-base-props-builder
+  "The build-queue-processing-service-base-props-builder function updates a QueueProcessingServiceBaseProps$Builder instance using the provided configuration.
+  The function takes the QueueProcessingServiceBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2678,71 +2786,74 @@ QueueProcessingServiceBaseProps$Builder using the provided configuration.  Each 
 | `secrets` | java.util.Map | [[cdk.support/lookup-entry]] | `:secrets` |
 | `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
 | `visibilityTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:visibility-timeout` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (QueueProcessingServiceBaseProps$Builder.)]
-    (when-let [data (lookup-entry config id :capacity-provider-strategies)]
-      (. builder capacityProviderStrategies data))
-    (when-let [data (lookup-entry config id :circuit-breaker)]
-      (. builder circuitBreaker data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :cooldown)]
-      (. builder cooldown data))
-    (when-let [data (lookup-entry config id :cpu-target-utilization-percent)]
-      (. builder cpuTargetUtilizationPercent data))
-    (when-let [data (lookup-entry config id :deployment-controller)]
-      (. builder deploymentController data))
-    (when-let [data (lookup-entry config id :disable-cpu-based-scaling)]
-      (. builder disableCpuBasedScaling data))
-    (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
-      (. builder enableEcsManagedTags data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :enable-logging)]
-      (. builder enableLogging data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :family)]
-      (. builder family data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (lookup-entry config id :log-driver)]
-      (. builder logDriver data))
-    (when-let [data (lookup-entry config id :max-healthy-percent)]
-      (. builder maxHealthyPercent data))
-    (when-let [data (lookup-entry config id :max-receive-count)]
-      (. builder maxReceiveCount data))
-    (when-let [data (lookup-entry config id :max-scaling-capacity)]
-      (. builder maxScalingCapacity data))
-    (when-let [data (lookup-entry config id :min-healthy-percent)]
-      (. builder minHealthyPercent data))
-    (when-let [data (lookup-entry config id :min-scaling-capacity)]
-      (. builder minScalingCapacity data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :queue)]
-      (. builder queue data))
-    (when-let [data (lookup-entry config id :retention-period)]
-      (. builder retentionPeriod data))
-    (when-let [data (lookup-entry config id :scaling-steps)]
-      (. builder scalingSteps data))
-    (when-let [data (lookup-entry config id :secrets)]
-      (. builder secrets data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (when-let [data (lookup-entry config id :visibility-timeout)]
-      (. builder visibilityTimeout data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^QueueProcessingServiceBaseProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :capacity-provider-strategies)]
+    (. builder capacityProviderStrategies data))
+  (when-let [data (lookup-entry config id :circuit-breaker)]
+    (. builder circuitBreaker data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :cooldown)]
+    (. builder cooldown data))
+  (when-let [data (lookup-entry config id :cpu-target-utilization-percent)]
+    (. builder cpuTargetUtilizationPercent data))
+  (when-let [data (lookup-entry config id :deployment-controller)]
+    (. builder deploymentController data))
+  (when-let [data (lookup-entry config id :disable-cpu-based-scaling)]
+    (. builder disableCpuBasedScaling data))
+  (when-let [data (lookup-entry config id :enable-ecs-managed-tags)]
+    (. builder enableEcsManagedTags data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :enable-logging)]
+    (. builder enableLogging data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :family)]
+    (. builder family data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (lookup-entry config id :log-driver)]
+    (. builder logDriver data))
+  (when-let [data (lookup-entry config id :max-healthy-percent)]
+    (. builder maxHealthyPercent data))
+  (when-let [data (lookup-entry config id :max-receive-count)]
+    (. builder maxReceiveCount data))
+  (when-let [data (lookup-entry config id :max-scaling-capacity)]
+    (. builder maxScalingCapacity data))
+  (when-let [data (lookup-entry config id :min-healthy-percent)]
+    (. builder minHealthyPercent data))
+  (when-let [data (lookup-entry config id :min-scaling-capacity)]
+    (. builder minScalingCapacity data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :queue)]
+    (. builder queue data))
+  (when-let [data (lookup-entry config id :retention-period)]
+    (. builder retentionPeriod data))
+  (when-let [data (lookup-entry config id :scaling-steps)]
+    (. builder scalingSteps data))
+  (when-let [data (lookup-entry config id :secrets)]
+    (. builder secrets data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (when-let [data (lookup-entry config id :visibility-timeout)]
+    (. builder visibilityTimeout data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn scheduled-ec2-task-builder
-  "The scheduled-ec2-task-builder function buildes out new instances of 
-ScheduledEc2Task$Builder using the provided configuration.  Each field is set as follows:
+(defn build-scheduled-ec2-task-builder
+  "The build-scheduled-ec2-task-builder function updates a ScheduledEc2Task$Builder instance using the provided configuration.
+  The function takes the ScheduledEc2Task$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2757,53 +2868,59 @@ ScheduledEc2Task$Builder using the provided configuration.  Each field is set as
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
 | `subnetSelection` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:subnet-selection` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (ScheduledEc2Task$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :desired-task-count)]
-      (. builder desiredTaskCount data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :rule-name)]
-      (. builder ruleName data))
-    (when-let [data (lookup-entry config id :schedule)]
-      (. builder schedule data))
-    (when-let [data (lookup-entry config id :scheduled-ec2-task-definition-options)]
-      (. builder scheduledEc2TaskDefinitionOptions data))
-    (when-let [data (lookup-entry config id :scheduled-ec2-task-image-options)]
-      (. builder scheduledEc2TaskImageOptions data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :subnet-selection)]
-      (. builder subnetSelection data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^ScheduledEc2Task$Builder builder id config]
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :desired-task-count)]
+    (. builder desiredTaskCount data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :rule-name)]
+    (. builder ruleName data))
+  (when-let [data (lookup-entry config id :schedule)]
+    (. builder schedule data))
+  (when-let [data (lookup-entry config id :scheduled-ec2-task-definition-options)]
+    (. builder scheduledEc2TaskDefinitionOptions data))
+  (when-let [data (lookup-entry config id :scheduled-ec2-task-image-options)]
+    (. builder scheduledEc2TaskImageOptions data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :subnet-selection)]
+    (. builder subnetSelection data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn scheduled-ec2-task-definition-options-builder
-  "The scheduled-ec2-task-definition-options-builder function buildes out new instances of 
-ScheduledEc2TaskDefinitionOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-scheduled-ec2-task-definition-options-builder
+  "The build-scheduled-ec2-task-definition-options-builder function updates a ScheduledEc2TaskDefinitionOptions$Builder instance using the provided configuration.
+  The function takes the ScheduledEc2TaskDefinitionOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `taskDefinition` | software.amazon.awscdk.services.ecs.Ec2TaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |"
-  [stack id config]
-  (let [builder (ScheduledEc2TaskDefinitionOptions$Builder.)]
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (.build builder)))
+| `taskDefinition` | software.amazon.awscdk.services.ecs.Ec2TaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
+"
+  [^ScheduledEc2TaskDefinitionOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (.build builder))
 
 
-(defn scheduled-ec2-task-image-options-builder
-  "The scheduled-ec2-task-image-options-builder function buildes out new instances of 
-ScheduledEc2TaskImageOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-scheduled-ec2-task-image-options-builder
+  "The build-scheduled-ec2-task-image-options-builder function updates a ScheduledEc2TaskImageOptions$Builder instance using the provided configuration.
+  The function takes the ScheduledEc2TaskImageOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2815,33 +2932,36 @@ ScheduledEc2TaskImageOptions$Builder using the provided configuration.  Each fie
 | `logDriver` | software.amazon.awscdk.services.ecs.LogDriver | [[cdk.support/lookup-entry]] | `:log-driver` |
 | `memoryLimitMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-limit-mi-b` |
 | `memoryReservationMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-reservation-mi-b` |
-| `secrets` | java.util.Map | [[cdk.support/lookup-entry]] | `:secrets` |"
-  [stack id config]
-  (let [builder (ScheduledEc2TaskImageOptions$Builder.)]
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :container-name)]
-      (. builder containerName data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (lookup-entry config id :log-driver)]
-      (. builder logDriver data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
-      (. builder memoryReservationMiB data))
-    (when-let [data (lookup-entry config id :secrets)]
-      (. builder secrets data))
-    (.build builder)))
+| `secrets` | java.util.Map | [[cdk.support/lookup-entry]] | `:secrets` |
+"
+  [^ScheduledEc2TaskImageOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :container-name)]
+    (. builder containerName data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (lookup-entry config id :log-driver)]
+    (. builder logDriver data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (lookup-entry config id :memory-reservation-mi-b)]
+    (. builder memoryReservationMiB data))
+  (when-let [data (lookup-entry config id :secrets)]
+    (. builder secrets data))
+  (.build builder))
 
 
-(defn scheduled-ec2-task-props-builder
-  "The scheduled-ec2-task-props-builder function buildes out new instances of 
-ScheduledEc2TaskProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-scheduled-ec2-task-props-builder
+  "The build-scheduled-ec2-task-props-builder function updates a ScheduledEc2TaskProps$Builder instance using the provided configuration.
+  The function takes the ScheduledEc2TaskProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2856,39 +2976,42 @@ ScheduledEc2TaskProps$Builder using the provided configuration.  Each field is s
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
 | `subnetSelection` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:subnet-selection` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (ScheduledEc2TaskProps$Builder.)]
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :desired-task-count)]
-      (. builder desiredTaskCount data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :rule-name)]
-      (. builder ruleName data))
-    (when-let [data (lookup-entry config id :schedule)]
-      (. builder schedule data))
-    (when-let [data (lookup-entry config id :scheduled-ec2-task-definition-options)]
-      (. builder scheduledEc2TaskDefinitionOptions data))
-    (when-let [data (lookup-entry config id :scheduled-ec2-task-image-options)]
-      (. builder scheduledEc2TaskImageOptions data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :subnet-selection)]
-      (. builder subnetSelection data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^ScheduledEc2TaskProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :desired-task-count)]
+    (. builder desiredTaskCount data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :rule-name)]
+    (. builder ruleName data))
+  (when-let [data (lookup-entry config id :schedule)]
+    (. builder schedule data))
+  (when-let [data (lookup-entry config id :scheduled-ec2-task-definition-options)]
+    (. builder scheduledEc2TaskDefinitionOptions data))
+  (when-let [data (lookup-entry config id :scheduled-ec2-task-image-options)]
+    (. builder scheduledEc2TaskImageOptions data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :subnet-selection)]
+    (. builder subnetSelection data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn scheduled-fargate-task-builder
-  "The scheduled-fargate-task-builder function buildes out new instances of 
-ScheduledFargateTask$Builder using the provided configuration.  Each field is set as follows:
+(defn build-scheduled-fargate-task-builder
+  "The build-scheduled-fargate-task-builder function updates a ScheduledFargateTask$Builder instance using the provided configuration.
+  The function takes the ScheduledFargateTask$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2909,65 +3032,71 @@ ScheduledFargateTask$Builder using the provided configuration.  Each field is se
 | `subnetSelection` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:subnet-selection` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskDefinition` | software.amazon.awscdk.services.ecs.FargateTaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (ScheduledFargateTask$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :desired-task-count)]
-      (. builder desiredTaskCount data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
-      (. builder ephemeralStorageGiB data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (fargate-platform-version config id :platform-version)]
-      (. builder platformVersion data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :rule-name)]
-      (. builder ruleName data))
-    (when-let [data (lookup-entry config id :runtime-platform)]
-      (. builder runtimePlatform data))
-    (when-let [data (lookup-entry config id :schedule)]
-      (. builder schedule data))
-    (when-let [data (lookup-entry config id :scheduled-fargate-task-definition-options)]
-      (. builder scheduledFargateTaskDefinitionOptions data))
-    (when-let [data (lookup-entry config id :scheduled-fargate-task-image-options)]
-      (. builder scheduledFargateTaskImageOptions data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :subnet-selection)]
-      (. builder subnetSelection data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^ScheduledFargateTask$Builder builder id config]
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :desired-task-count)]
+    (. builder desiredTaskCount data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
+    (. builder ephemeralStorageGiB data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (fargate-platform-version config id :platform-version)]
+    (. builder platformVersion data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :rule-name)]
+    (. builder ruleName data))
+  (when-let [data (lookup-entry config id :runtime-platform)]
+    (. builder runtimePlatform data))
+  (when-let [data (lookup-entry config id :schedule)]
+    (. builder schedule data))
+  (when-let [data (lookup-entry config id :scheduled-fargate-task-definition-options)]
+    (. builder scheduledFargateTaskDefinitionOptions data))
+  (when-let [data (lookup-entry config id :scheduled-fargate-task-image-options)]
+    (. builder scheduledFargateTaskImageOptions data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :subnet-selection)]
+    (. builder subnetSelection data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn scheduled-fargate-task-definition-options-builder
-  "The scheduled-fargate-task-definition-options-builder function buildes out new instances of 
-ScheduledFargateTaskDefinitionOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-scheduled-fargate-task-definition-options-builder
+  "The build-scheduled-fargate-task-definition-options-builder function updates a ScheduledFargateTaskDefinitionOptions$Builder instance using the provided configuration.
+  The function takes the ScheduledFargateTaskDefinitionOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `taskDefinition` | software.amazon.awscdk.services.ecs.FargateTaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |"
-  [stack id config]
-  (let [builder (ScheduledFargateTaskDefinitionOptions$Builder.)]
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (.build builder)))
+| `taskDefinition` | software.amazon.awscdk.services.ecs.FargateTaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
+"
+  [^ScheduledFargateTaskDefinitionOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (.build builder))
 
 
-(defn scheduled-fargate-task-image-options-builder
-  "The scheduled-fargate-task-image-options-builder function buildes out new instances of 
-ScheduledFargateTaskImageOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-scheduled-fargate-task-image-options-builder
+  "The build-scheduled-fargate-task-image-options-builder function updates a ScheduledFargateTaskImageOptions$Builder instance using the provided configuration.
+  The function takes the ScheduledFargateTaskImageOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2982,39 +3111,42 @@ ScheduledFargateTaskImageOptions$Builder using the provided configuration.  Each
 | `platformVersion` | software.amazon.awscdk.services.ecs.FargatePlatformVersion | [[cdk.api.services.ecs/fargate-platform-version]] | `:platform-version` |
 | `runtimePlatform` | software.amazon.awscdk.services.ecs.RuntimePlatform | [[cdk.support/lookup-entry]] | `:runtime-platform` |
 | `secrets` | java.util.Map | [[cdk.support/lookup-entry]] | `:secrets` |
-| `taskDefinition` | software.amazon.awscdk.services.ecs.FargateTaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |"
-  [stack id config]
-  (let [builder (ScheduledFargateTaskImageOptions$Builder.)]
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :container-name)]
-      (. builder containerName data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
-      (. builder ephemeralStorageGiB data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (lookup-entry config id :log-driver)]
-      (. builder logDriver data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (fargate-platform-version config id :platform-version)]
-      (. builder platformVersion data))
-    (when-let [data (lookup-entry config id :runtime-platform)]
-      (. builder runtimePlatform data))
-    (when-let [data (lookup-entry config id :secrets)]
-      (. builder secrets data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (.build builder)))
+| `taskDefinition` | software.amazon.awscdk.services.ecs.FargateTaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
+"
+  [^ScheduledFargateTaskImageOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :container-name)]
+    (. builder containerName data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
+    (. builder ephemeralStorageGiB data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (lookup-entry config id :log-driver)]
+    (. builder logDriver data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (fargate-platform-version config id :platform-version)]
+    (. builder platformVersion data))
+  (when-let [data (lookup-entry config id :runtime-platform)]
+    (. builder runtimePlatform data))
+  (when-let [data (lookup-entry config id :secrets)]
+    (. builder secrets data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (.build builder))
 
 
-(defn scheduled-fargate-task-props-builder
-  "The scheduled-fargate-task-props-builder function buildes out new instances of 
-ScheduledFargateTaskProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-scheduled-fargate-task-props-builder
+  "The build-scheduled-fargate-task-props-builder function updates a ScheduledFargateTaskProps$Builder instance using the provided configuration.
+  The function takes the ScheduledFargateTaskProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3035,51 +3167,54 @@ ScheduledFargateTaskProps$Builder using the provided configuration.  Each field 
 | `subnetSelection` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:subnet-selection` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskDefinition` | software.amazon.awscdk.services.ecs.FargateTaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (ScheduledFargateTaskProps$Builder.)]
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :desired-task-count)]
-      (. builder desiredTaskCount data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
-      (. builder ephemeralStorageGiB data))
-    (when-let [data (lookup-entry config id :memory-limit-mi-b)]
-      (. builder memoryLimitMiB data))
-    (when-let [data (fargate-platform-version config id :platform-version)]
-      (. builder platformVersion data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :rule-name)]
-      (. builder ruleName data))
-    (when-let [data (lookup-entry config id :runtime-platform)]
-      (. builder runtimePlatform data))
-    (when-let [data (lookup-entry config id :schedule)]
-      (. builder schedule data))
-    (when-let [data (lookup-entry config id :scheduled-fargate-task-definition-options)]
-      (. builder scheduledFargateTaskDefinitionOptions data))
-    (when-let [data (lookup-entry config id :scheduled-fargate-task-image-options)]
-      (. builder scheduledFargateTaskImageOptions data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :subnet-selection)]
-      (. builder subnetSelection data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^ScheduledFargateTaskProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :desired-task-count)]
+    (. builder desiredTaskCount data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :ephemeral-storage-gi-b)]
+    (. builder ephemeralStorageGiB data))
+  (when-let [data (lookup-entry config id :memory-limit-mi-b)]
+    (. builder memoryLimitMiB data))
+  (when-let [data (fargate-platform-version config id :platform-version)]
+    (. builder platformVersion data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :rule-name)]
+    (. builder ruleName data))
+  (when-let [data (lookup-entry config id :runtime-platform)]
+    (. builder runtimePlatform data))
+  (when-let [data (lookup-entry config id :schedule)]
+    (. builder schedule data))
+  (when-let [data (lookup-entry config id :scheduled-fargate-task-definition-options)]
+    (. builder scheduledFargateTaskDefinitionOptions data))
+  (when-let [data (lookup-entry config id :scheduled-fargate-task-image-options)]
+    (. builder scheduledFargateTaskImageOptions data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :subnet-selection)]
+    (. builder subnetSelection data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn scheduled-task-base-props-builder
-  "The scheduled-task-base-props-builder function buildes out new instances of 
-ScheduledTaskBaseProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-scheduled-task-base-props-builder
+  "The build-scheduled-task-base-props-builder function updates a ScheduledTaskBaseProps$Builder instance using the provided configuration.
+  The function takes the ScheduledTaskBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3092,35 +3227,38 @@ ScheduledTaskBaseProps$Builder using the provided configuration.  Each field is 
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
 | `subnetSelection` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:subnet-selection` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (ScheduledTaskBaseProps$Builder.)]
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :desired-task-count)]
-      (. builder desiredTaskCount data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (propagated-tag-source config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :rule-name)]
-      (. builder ruleName data))
-    (when-let [data (lookup-entry config id :schedule)]
-      (. builder schedule data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :subnet-selection)]
-      (. builder subnetSelection data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^ScheduledTaskBaseProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :desired-task-count)]
+    (. builder desiredTaskCount data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (propagated-tag-source config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :rule-name)]
+    (. builder ruleName data))
+  (when-let [data (lookup-entry config id :schedule)]
+    (. builder schedule data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :subnet-selection)]
+    (. builder subnetSelection data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn scheduled-task-image-props-builder
-  "The scheduled-task-image-props-builder function buildes out new instances of 
-ScheduledTaskImageProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-scheduled-task-image-props-builder
+  "The build-scheduled-task-image-props-builder function updates a ScheduledTaskImageProps$Builder instance using the provided configuration.
+  The function takes the ScheduledTaskImageProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3129,19 +3267,19 @@ ScheduledTaskImageProps$Builder using the provided configuration.  Each field is
 | `environment` | java.util.Map | [[cdk.support/lookup-entry]] | `:environment` |
 | `image` | software.amazon.awscdk.services.ecs.ContainerImage | [[cdk.support/lookup-entry]] | `:image` |
 | `logDriver` | software.amazon.awscdk.services.ecs.LogDriver | [[cdk.support/lookup-entry]] | `:log-driver` |
-| `secrets` | java.util.Map | [[cdk.support/lookup-entry]] | `:secrets` |"
-  [stack id config]
-  (let [builder (ScheduledTaskImageProps$Builder.)]
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :container-name)]
-      (. builder containerName data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (lookup-entry config id :log-driver)]
-      (. builder logDriver data))
-    (when-let [data (lookup-entry config id :secrets)]
-      (. builder secrets data))
-    (.build builder)))
+| `secrets` | java.util.Map | [[cdk.support/lookup-entry]] | `:secrets` |
+"
+  [^ScheduledTaskImageProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :container-name)]
+    (. builder containerName data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (lookup-entry config id :log-driver)]
+    (. builder logDriver data))
+  (when-let [data (lookup-entry config id :secrets)]
+    (. builder secrets data))
+  (.build builder))

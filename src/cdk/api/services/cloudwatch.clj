@@ -487,64 +487,29 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :none data) VerticalShading/NONE)))
 
 
-(defn alarm-action-config-builder
-  "The alarm-action-config-builder function buildes out new instances of 
-AlarmActionConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-alarm-action-config-builder
+  "The build-alarm-action-config-builder function updates a AlarmActionConfig$Builder instance using the provided configuration.
+  The function takes the AlarmActionConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `alarmActionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-action-arn` |"
-  [stack id config]
-  (let [builder (AlarmActionConfig$Builder.)]
-    (when-let [data (lookup-entry config id :alarm-action-arn)]
-      (. builder alarmActionArn data))
-    (.build builder)))
+| `alarmActionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-action-arn` |
+"
+  [^AlarmActionConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :alarm-action-arn)]
+    (. builder alarmActionArn data))
+  (.build builder))
 
 
-(defn alarm-builder
-  "The alarm-builder function buildes out new instances of 
-Alarm$Builder using the provided configuration.  Each field is set as follows:
+(defn build-alarm-builder
+  "The build-alarm-builder function updates a Alarm$Builder instance using the provided configuration.
+  The function takes the Alarm$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `actionsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:actions-enabled` |
-| `alarmDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-description` |
-| `alarmName` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-name` |
-| `comparisonOperator` | software.amazon.awscdk.services.cloudwatch.ComparisonOperator | [[cdk.api.services.cloudwatch/comparison-operator]] | `:comparison-operator` |
-| `datapointsToAlarm` | java.lang.Number | [[cdk.support/lookup-entry]] | `:datapoints-to-alarm` |
-| `evaluateLowSampleCountPercentile` | java.lang.String | [[cdk.support/lookup-entry]] | `:evaluate-low-sample-count-percentile` |
-| `evaluationPeriods` | java.lang.Number | [[cdk.support/lookup-entry]] | `:evaluation-periods` |
-| `metric` | software.amazon.awscdk.services.cloudwatch.IMetric | [[cdk.support/lookup-entry]] | `:metric` |
-| `threshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:threshold` |
-| `treatMissingData` | software.amazon.awscdk.services.cloudwatch.TreatMissingData | [[cdk.api.services.cloudwatch/treat-missing-data]] | `:treat-missing-data` |"
-  [stack id config]
-  (let [builder (Alarm$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :actions-enabled)]
-      (. builder actionsEnabled data))
-    (when-let [data (lookup-entry config id :alarm-description)]
-      (. builder alarmDescription data))
-    (when-let [data (lookup-entry config id :alarm-name)]
-      (. builder alarmName data))
-    (when-let [data (comparison-operator config id :comparison-operator)]
-      (. builder comparisonOperator data))
-    (when-let [data (lookup-entry config id :datapoints-to-alarm)]
-      (. builder datapointsToAlarm data))
-    (when-let [data (lookup-entry config id :evaluate-low-sample-count-percentile)]
-      (. builder evaluateLowSampleCountPercentile data))
-    (when-let [data (lookup-entry config id :evaluation-periods)]
-      (. builder evaluationPeriods data))
-    (when-let [data (lookup-entry config id :metric)]
-      (. builder metric data))
-    (when-let [data (lookup-entry config id :threshold)]
-      (. builder threshold data))
-    (when-let [data (treat-missing-data config id :treat-missing-data)]
-      (. builder treatMissingData data))
-    (.build builder)))
-
-
-(defn alarm-props-builder
-  "The alarm-props-builder function buildes out new instances of 
-AlarmProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -557,35 +522,82 @@ AlarmProps$Builder using the provided configuration.  Each field is set as follo
 | `evaluationPeriods` | java.lang.Number | [[cdk.support/lookup-entry]] | `:evaluation-periods` |
 | `metric` | software.amazon.awscdk.services.cloudwatch.IMetric | [[cdk.support/lookup-entry]] | `:metric` |
 | `threshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:threshold` |
-| `treatMissingData` | software.amazon.awscdk.services.cloudwatch.TreatMissingData | [[cdk.api.services.cloudwatch/treat-missing-data]] | `:treat-missing-data` |"
-  [stack id config]
-  (let [builder (AlarmProps$Builder.)]
-    (when-let [data (lookup-entry config id :actions-enabled)]
-      (. builder actionsEnabled data))
-    (when-let [data (lookup-entry config id :alarm-description)]
-      (. builder alarmDescription data))
-    (when-let [data (lookup-entry config id :alarm-name)]
-      (. builder alarmName data))
-    (when-let [data (comparison-operator config id :comparison-operator)]
-      (. builder comparisonOperator data))
-    (when-let [data (lookup-entry config id :datapoints-to-alarm)]
-      (. builder datapointsToAlarm data))
-    (when-let [data (lookup-entry config id :evaluate-low-sample-count-percentile)]
-      (. builder evaluateLowSampleCountPercentile data))
-    (when-let [data (lookup-entry config id :evaluation-periods)]
-      (. builder evaluationPeriods data))
-    (when-let [data (lookup-entry config id :metric)]
-      (. builder metric data))
-    (when-let [data (lookup-entry config id :threshold)]
-      (. builder threshold data))
-    (when-let [data (treat-missing-data config id :treat-missing-data)]
-      (. builder treatMissingData data))
-    (.build builder)))
+| `treatMissingData` | software.amazon.awscdk.services.cloudwatch.TreatMissingData | [[cdk.api.services.cloudwatch/treat-missing-data]] | `:treat-missing-data` |
+"
+  [^Alarm$Builder builder id config]
+  (when-let [data (lookup-entry config id :actions-enabled)]
+    (. builder actionsEnabled data))
+  (when-let [data (lookup-entry config id :alarm-description)]
+    (. builder alarmDescription data))
+  (when-let [data (lookup-entry config id :alarm-name)]
+    (. builder alarmName data))
+  (when-let [data (comparison-operator config id :comparison-operator)]
+    (. builder comparisonOperator data))
+  (when-let [data (lookup-entry config id :datapoints-to-alarm)]
+    (. builder datapointsToAlarm data))
+  (when-let [data (lookup-entry config id :evaluate-low-sample-count-percentile)]
+    (. builder evaluateLowSampleCountPercentile data))
+  (when-let [data (lookup-entry config id :evaluation-periods)]
+    (. builder evaluationPeriods data))
+  (when-let [data (lookup-entry config id :metric)]
+    (. builder metric data))
+  (when-let [data (lookup-entry config id :threshold)]
+    (. builder threshold data))
+  (when-let [data (treat-missing-data config id :treat-missing-data)]
+    (. builder treatMissingData data))
+  (.build builder))
 
 
-(defn alarm-status-widget-builder
-  "The alarm-status-widget-builder function buildes out new instances of 
-AlarmStatusWidget$Builder using the provided configuration.  Each field is set as follows:
+(defn build-alarm-props-builder
+  "The build-alarm-props-builder function updates a AlarmProps$Builder instance using the provided configuration.
+  The function takes the AlarmProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `actionsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:actions-enabled` |
+| `alarmDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-description` |
+| `alarmName` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-name` |
+| `comparisonOperator` | software.amazon.awscdk.services.cloudwatch.ComparisonOperator | [[cdk.api.services.cloudwatch/comparison-operator]] | `:comparison-operator` |
+| `datapointsToAlarm` | java.lang.Number | [[cdk.support/lookup-entry]] | `:datapoints-to-alarm` |
+| `evaluateLowSampleCountPercentile` | java.lang.String | [[cdk.support/lookup-entry]] | `:evaluate-low-sample-count-percentile` |
+| `evaluationPeriods` | java.lang.Number | [[cdk.support/lookup-entry]] | `:evaluation-periods` |
+| `metric` | software.amazon.awscdk.services.cloudwatch.IMetric | [[cdk.support/lookup-entry]] | `:metric` |
+| `threshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:threshold` |
+| `treatMissingData` | software.amazon.awscdk.services.cloudwatch.TreatMissingData | [[cdk.api.services.cloudwatch/treat-missing-data]] | `:treat-missing-data` |
+"
+  [^AlarmProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :actions-enabled)]
+    (. builder actionsEnabled data))
+  (when-let [data (lookup-entry config id :alarm-description)]
+    (. builder alarmDescription data))
+  (when-let [data (lookup-entry config id :alarm-name)]
+    (. builder alarmName data))
+  (when-let [data (comparison-operator config id :comparison-operator)]
+    (. builder comparisonOperator data))
+  (when-let [data (lookup-entry config id :datapoints-to-alarm)]
+    (. builder datapointsToAlarm data))
+  (when-let [data (lookup-entry config id :evaluate-low-sample-count-percentile)]
+    (. builder evaluateLowSampleCountPercentile data))
+  (when-let [data (lookup-entry config id :evaluation-periods)]
+    (. builder evaluationPeriods data))
+  (when-let [data (lookup-entry config id :metric)]
+    (. builder metric data))
+  (when-let [data (lookup-entry config id :threshold)]
+    (. builder threshold data))
+  (when-let [data (treat-missing-data config id :treat-missing-data)]
+    (. builder treatMissingData data))
+  (.build builder))
+
+
+(defn build-alarm-status-widget-builder
+  "The build-alarm-status-widget-builder function updates a AlarmStatusWidget$Builder instance using the provided configuration.
+  The function takes the AlarmStatusWidget$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -594,27 +606,30 @@ AlarmStatusWidget$Builder using the provided configuration.  Each field is set a
 | `sortBy` | software.amazon.awscdk.services.cloudwatch.AlarmStatusWidgetSortBy | [[cdk.api.services.cloudwatch/alarm-status-widget-sort-by]] | `:sort-by` |
 | `states` | java.util.List | [[cdk.support/lookup-entry]] | `:states` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (AlarmStatusWidget$Builder/create)]
-    (when-let [data (lookup-entry config id :alarms)]
-      (. builder alarms data))
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (alarm-status-widget-sort-by config id :sort-by)]
-      (. builder sortBy data))
-    (when-let [data (lookup-entry config id :states)]
-      (. builder states data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^AlarmStatusWidget$Builder builder id config]
+  (when-let [data (lookup-entry config id :alarms)]
+    (. builder alarms data))
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (alarm-status-widget-sort-by config id :sort-by)]
+    (. builder sortBy data))
+  (when-let [data (lookup-entry config id :states)]
+    (. builder states data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
 
 
-(defn alarm-status-widget-props-builder
-  "The alarm-status-widget-props-builder function buildes out new instances of 
-AlarmStatusWidgetProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-alarm-status-widget-props-builder
+  "The build-alarm-status-widget-props-builder function updates a AlarmStatusWidgetProps$Builder instance using the provided configuration.
+  The function takes the AlarmStatusWidgetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -623,56 +638,30 @@ AlarmStatusWidgetProps$Builder using the provided configuration.  Each field is 
 | `sortBy` | software.amazon.awscdk.services.cloudwatch.AlarmStatusWidgetSortBy | [[cdk.api.services.cloudwatch/alarm-status-widget-sort-by]] | `:sort-by` |
 | `states` | java.util.List | [[cdk.support/lookup-entry]] | `:states` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (AlarmStatusWidgetProps$Builder.)]
-    (when-let [data (lookup-entry config id :alarms)]
-      (. builder alarms data))
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (alarm-status-widget-sort-by config id :sort-by)]
-      (. builder sortBy data))
-    (when-let [data (lookup-entry config id :states)]
-      (. builder states data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^AlarmStatusWidgetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :alarms)]
+    (. builder alarms data))
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (alarm-status-widget-sort-by config id :sort-by)]
+    (. builder sortBy data))
+  (when-let [data (lookup-entry config id :states)]
+    (. builder states data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
 
 
-(defn alarm-widget-builder
-  "The alarm-widget-builder function buildes out new instances of 
-AlarmWidget$Builder using the provided configuration.  Each field is set as follows:
+(defn build-alarm-widget-builder
+  "The build-alarm-widget-builder function updates a AlarmWidget$Builder instance using the provided configuration.
+  The function takes the AlarmWidget$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `alarm` | software.amazon.awscdk.services.cloudwatch.IAlarm | [[cdk.support/lookup-entry]] | `:alarm` |
-| `height` | java.lang.Number | [[cdk.support/lookup-entry]] | `:height` |
-| `leftYAxis` | software.amazon.awscdk.services.cloudwatch.YAxisProps | [[cdk.support/lookup-entry]] | `:left-y-axis` |
-| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
-| `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (AlarmWidget$Builder/create)]
-    (when-let [data (lookup-entry config id :alarm)]
-      (. builder alarm data))
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (lookup-entry config id :left-y-axis)]
-      (. builder leftYAxis data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
-
-
-(defn alarm-widget-props-builder
-  "The alarm-widget-props-builder function buildes out new instances of 
-AlarmWidgetProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -681,27 +670,62 @@ AlarmWidgetProps$Builder using the provided configuration.  Each field is set as
 | `leftYAxis` | software.amazon.awscdk.services.cloudwatch.YAxisProps | [[cdk.support/lookup-entry]] | `:left-y-axis` |
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (AlarmWidgetProps$Builder.)]
-    (when-let [data (lookup-entry config id :alarm)]
-      (. builder alarm data))
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (lookup-entry config id :left-y-axis)]
-      (. builder leftYAxis data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^AlarmWidget$Builder builder id config]
+  (when-let [data (lookup-entry config id :alarm)]
+    (. builder alarm data))
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (lookup-entry config id :left-y-axis)]
+    (. builder leftYAxis data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
 
 
-(defn cfn-alarm-builder
-  "The cfn-alarm-builder function buildes out new instances of 
-CfnAlarm$Builder using the provided configuration.  Each field is set as follows:
+(defn build-alarm-widget-props-builder
+  "The build-alarm-widget-props-builder function updates a AlarmWidgetProps$Builder instance using the provided configuration.
+  The function takes the AlarmWidgetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `alarm` | software.amazon.awscdk.services.cloudwatch.IAlarm | [[cdk.support/lookup-entry]] | `:alarm` |
+| `height` | java.lang.Number | [[cdk.support/lookup-entry]] | `:height` |
+| `leftYAxis` | software.amazon.awscdk.services.cloudwatch.YAxisProps | [[cdk.support/lookup-entry]] | `:left-y-axis` |
+| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
+| `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^AlarmWidgetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :alarm)]
+    (. builder alarm data))
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (lookup-entry config id :left-y-axis)]
+    (. builder leftYAxis data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
+
+
+(defn build-cfn-alarm-builder
+  "The build-cfn-alarm-builder function updates a CfnAlarm$Builder instance using the provided configuration.
+  The function takes the CfnAlarm$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -726,76 +750,82 @@ CfnAlarm$Builder using the provided configuration.  Each field is set as follows
 | `threshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:threshold` |
 | `thresholdMetricId` | java.lang.String | [[cdk.support/lookup-entry]] | `:threshold-metric-id` |
 | `treatMissingData` | java.lang.String | [[cdk.support/lookup-entry]] | `:treat-missing-data` |
-| `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |"
-  [stack id config]
-  (let [builder (CfnAlarm$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :actions-enabled)]
-      (. builder actionsEnabled data))
-    (when-let [data (lookup-entry config id :alarm-actions)]
-      (. builder alarmActions data))
-    (when-let [data (lookup-entry config id :alarm-description)]
-      (. builder alarmDescription data))
-    (when-let [data (lookup-entry config id :alarm-name)]
-      (. builder alarmName data))
-    (when-let [data (lookup-entry config id :comparison-operator)]
-      (. builder comparisonOperator data))
-    (when-let [data (lookup-entry config id :datapoints-to-alarm)]
-      (. builder datapointsToAlarm data))
-    (when-let [data (lookup-entry config id :dimensions)]
-      (. builder dimensions data))
-    (when-let [data (lookup-entry config id :evaluate-low-sample-count-percentile)]
-      (. builder evaluateLowSampleCountPercentile data))
-    (when-let [data (lookup-entry config id :evaluation-periods)]
-      (. builder evaluationPeriods data))
-    (when-let [data (lookup-entry config id :extended-statistic)]
-      (. builder extendedStatistic data))
-    (when-let [data (lookup-entry config id :insufficient-data-actions)]
-      (. builder insufficientDataActions data))
-    (when-let [data (lookup-entry config id :metric-name)]
-      (. builder metricName data))
-    (when-let [data (lookup-entry config id :metrics)]
-      (. builder metrics data))
-    (when-let [data (lookup-entry config id :namespace)]
-      (. builder namespace data))
-    (when-let [data (lookup-entry config id :ok-actions)]
-      (. builder okActions data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :statistic)]
-      (. builder statistic data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :threshold)]
-      (. builder threshold data))
-    (when-let [data (lookup-entry config id :threshold-metric-id)]
-      (. builder thresholdMetricId data))
-    (when-let [data (lookup-entry config id :treat-missing-data)]
-      (. builder treatMissingData data))
-    (when-let [data (lookup-entry config id :unit)]
-      (. builder unit data))
-    (.build builder)))
+| `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
+"
+  [^CfnAlarm$Builder builder id config]
+  (when-let [data (lookup-entry config id :actions-enabled)]
+    (. builder actionsEnabled data))
+  (when-let [data (lookup-entry config id :alarm-actions)]
+    (. builder alarmActions data))
+  (when-let [data (lookup-entry config id :alarm-description)]
+    (. builder alarmDescription data))
+  (when-let [data (lookup-entry config id :alarm-name)]
+    (. builder alarmName data))
+  (when-let [data (lookup-entry config id :comparison-operator)]
+    (. builder comparisonOperator data))
+  (when-let [data (lookup-entry config id :datapoints-to-alarm)]
+    (. builder datapointsToAlarm data))
+  (when-let [data (lookup-entry config id :dimensions)]
+    (. builder dimensions data))
+  (when-let [data (lookup-entry config id :evaluate-low-sample-count-percentile)]
+    (. builder evaluateLowSampleCountPercentile data))
+  (when-let [data (lookup-entry config id :evaluation-periods)]
+    (. builder evaluationPeriods data))
+  (when-let [data (lookup-entry config id :extended-statistic)]
+    (. builder extendedStatistic data))
+  (when-let [data (lookup-entry config id :insufficient-data-actions)]
+    (. builder insufficientDataActions data))
+  (when-let [data (lookup-entry config id :metric-name)]
+    (. builder metricName data))
+  (when-let [data (lookup-entry config id :metrics)]
+    (. builder metrics data))
+  (when-let [data (lookup-entry config id :namespace)]
+    (. builder namespace data))
+  (when-let [data (lookup-entry config id :ok-actions)]
+    (. builder okActions data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :statistic)]
+    (. builder statistic data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :threshold)]
+    (. builder threshold data))
+  (when-let [data (lookup-entry config id :threshold-metric-id)]
+    (. builder thresholdMetricId data))
+  (when-let [data (lookup-entry config id :treat-missing-data)]
+    (. builder treatMissingData data))
+  (when-let [data (lookup-entry config id :unit)]
+    (. builder unit data))
+  (.build builder))
 
 
-(defn cfn-alarm-dimension-property-builder
-  "The cfn-alarm-dimension-property-builder function buildes out new instances of 
-CfnAlarm$DimensionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-alarm-dimension-property-builder
+  "The build-cfn-alarm-dimension-property-builder function updates a CfnAlarm$DimensionProperty$Builder instance using the provided configuration.
+  The function takes the CfnAlarm$DimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnAlarm$DimensionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnAlarm$DimensionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-alarm-metric-data-query-property-builder
-  "The cfn-alarm-metric-data-query-property-builder function buildes out new instances of 
-CfnAlarm$MetricDataQueryProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-alarm-metric-data-query-property-builder
+  "The build-cfn-alarm-metric-data-query-property-builder function updates a CfnAlarm$MetricDataQueryProperty$Builder instance using the provided configuration.
+  The function takes the CfnAlarm$MetricDataQueryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -805,72 +835,81 @@ CfnAlarm$MetricDataQueryProperty$Builder using the provided configuration.  Each
 | `label` | java.lang.String | [[cdk.support/lookup-entry]] | `:label` |
 | `metricStat` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-stat` |
 | `period` | java.lang.Number | [[cdk.support/lookup-entry]] | `:period` |
-| `returnData` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:return-data` |"
-  [stack id config]
-  (let [builder (CfnAlarm$MetricDataQueryProperty$Builder.)]
-    (when-let [data (lookup-entry config id :account-id)]
-      (. builder accountId data))
-    (when-let [data (lookup-entry config id :expression)]
-      (. builder expression data))
-    (when-let [data (lookup-entry config id :id)]
-      (. builder id data))
-    (when-let [data (lookup-entry config id :label)]
-      (. builder label data))
-    (when-let [data (lookup-entry config id :metric-stat)]
-      (. builder metricStat data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :return-data)]
-      (. builder returnData data))
-    (.build builder)))
+| `returnData` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:return-data` |
+"
+  [^CfnAlarm$MetricDataQueryProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :account-id)]
+    (. builder accountId data))
+  (when-let [data (lookup-entry config id :expression)]
+    (. builder expression data))
+  (when-let [data (lookup-entry config id :id)]
+    (. builder id data))
+  (when-let [data (lookup-entry config id :label)]
+    (. builder label data))
+  (when-let [data (lookup-entry config id :metric-stat)]
+    (. builder metricStat data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :return-data)]
+    (. builder returnData data))
+  (.build builder))
 
 
-(defn cfn-alarm-metric-property-builder
-  "The cfn-alarm-metric-property-builder function buildes out new instances of 
-CfnAlarm$MetricProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-alarm-metric-property-builder
+  "The build-cfn-alarm-metric-property-builder function updates a CfnAlarm$MetricProperty$Builder instance using the provided configuration.
+  The function takes the CfnAlarm$MetricProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dimensions` | java.util.List | [[cdk.support/lookup-entry]] | `:dimensions` |
 | `metricName` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-name` |
-| `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |"
-  [stack id config]
-  (let [builder (CfnAlarm$MetricProperty$Builder.)]
-    (when-let [data (lookup-entry config id :dimensions)]
-      (. builder dimensions data))
-    (when-let [data (lookup-entry config id :metric-name)]
-      (. builder metricName data))
-    (when-let [data (lookup-entry config id :namespace)]
-      (. builder namespace data))
-    (.build builder)))
+| `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
+"
+  [^CfnAlarm$MetricProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :dimensions)]
+    (. builder dimensions data))
+  (when-let [data (lookup-entry config id :metric-name)]
+    (. builder metricName data))
+  (when-let [data (lookup-entry config id :namespace)]
+    (. builder namespace data))
+  (.build builder))
 
 
-(defn cfn-alarm-metric-stat-property-builder
-  "The cfn-alarm-metric-stat-property-builder function buildes out new instances of 
-CfnAlarm$MetricStatProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-alarm-metric-stat-property-builder
+  "The build-cfn-alarm-metric-stat-property-builder function updates a CfnAlarm$MetricStatProperty$Builder instance using the provided configuration.
+  The function takes the CfnAlarm$MetricStatProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `metric` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric` |
 | `period` | java.lang.Number | [[cdk.support/lookup-entry]] | `:period` |
 | `stat` | java.lang.String | [[cdk.support/lookup-entry]] | `:stat` |
-| `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |"
-  [stack id config]
-  (let [builder (CfnAlarm$MetricStatProperty$Builder.)]
-    (when-let [data (lookup-entry config id :metric)]
-      (. builder metric data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :stat)]
-      (. builder stat data))
-    (when-let [data (lookup-entry config id :unit)]
-      (. builder unit data))
-    (.build builder)))
+| `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
+"
+  [^CfnAlarm$MetricStatProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :metric)]
+    (. builder metric data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :stat)]
+    (. builder stat data))
+  (when-let [data (lookup-entry config id :unit)]
+    (. builder unit data))
+  (.build builder))
 
 
-(defn cfn-alarm-props-builder
-  "The cfn-alarm-props-builder function buildes out new instances of 
-CfnAlarmProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-alarm-props-builder
+  "The build-cfn-alarm-props-builder function updates a CfnAlarmProps$Builder instance using the provided configuration.
+  The function takes the CfnAlarmProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -895,59 +934,62 @@ CfnAlarmProps$Builder using the provided configuration.  Each field is set as fo
 | `threshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:threshold` |
 | `thresholdMetricId` | java.lang.String | [[cdk.support/lookup-entry]] | `:threshold-metric-id` |
 | `treatMissingData` | java.lang.String | [[cdk.support/lookup-entry]] | `:treat-missing-data` |
-| `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |"
-  [stack id config]
-  (let [builder (CfnAlarmProps$Builder.)]
-    (when-let [data (lookup-entry config id :actions-enabled)]
-      (. builder actionsEnabled data))
-    (when-let [data (lookup-entry config id :alarm-actions)]
-      (. builder alarmActions data))
-    (when-let [data (lookup-entry config id :alarm-description)]
-      (. builder alarmDescription data))
-    (when-let [data (lookup-entry config id :alarm-name)]
-      (. builder alarmName data))
-    (when-let [data (lookup-entry config id :comparison-operator)]
-      (. builder comparisonOperator data))
-    (when-let [data (lookup-entry config id :datapoints-to-alarm)]
-      (. builder datapointsToAlarm data))
-    (when-let [data (lookup-entry config id :dimensions)]
-      (. builder dimensions data))
-    (when-let [data (lookup-entry config id :evaluate-low-sample-count-percentile)]
-      (. builder evaluateLowSampleCountPercentile data))
-    (when-let [data (lookup-entry config id :evaluation-periods)]
-      (. builder evaluationPeriods data))
-    (when-let [data (lookup-entry config id :extended-statistic)]
-      (. builder extendedStatistic data))
-    (when-let [data (lookup-entry config id :insufficient-data-actions)]
-      (. builder insufficientDataActions data))
-    (when-let [data (lookup-entry config id :metric-name)]
-      (. builder metricName data))
-    (when-let [data (lookup-entry config id :metrics)]
-      (. builder metrics data))
-    (when-let [data (lookup-entry config id :namespace)]
-      (. builder namespace data))
-    (when-let [data (lookup-entry config id :ok-actions)]
-      (. builder okActions data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :statistic)]
-      (. builder statistic data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :threshold)]
-      (. builder threshold data))
-    (when-let [data (lookup-entry config id :threshold-metric-id)]
-      (. builder thresholdMetricId data))
-    (when-let [data (lookup-entry config id :treat-missing-data)]
-      (. builder treatMissingData data))
-    (when-let [data (lookup-entry config id :unit)]
-      (. builder unit data))
-    (.build builder)))
+| `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
+"
+  [^CfnAlarmProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :actions-enabled)]
+    (. builder actionsEnabled data))
+  (when-let [data (lookup-entry config id :alarm-actions)]
+    (. builder alarmActions data))
+  (when-let [data (lookup-entry config id :alarm-description)]
+    (. builder alarmDescription data))
+  (when-let [data (lookup-entry config id :alarm-name)]
+    (. builder alarmName data))
+  (when-let [data (lookup-entry config id :comparison-operator)]
+    (. builder comparisonOperator data))
+  (when-let [data (lookup-entry config id :datapoints-to-alarm)]
+    (. builder datapointsToAlarm data))
+  (when-let [data (lookup-entry config id :dimensions)]
+    (. builder dimensions data))
+  (when-let [data (lookup-entry config id :evaluate-low-sample-count-percentile)]
+    (. builder evaluateLowSampleCountPercentile data))
+  (when-let [data (lookup-entry config id :evaluation-periods)]
+    (. builder evaluationPeriods data))
+  (when-let [data (lookup-entry config id :extended-statistic)]
+    (. builder extendedStatistic data))
+  (when-let [data (lookup-entry config id :insufficient-data-actions)]
+    (. builder insufficientDataActions data))
+  (when-let [data (lookup-entry config id :metric-name)]
+    (. builder metricName data))
+  (when-let [data (lookup-entry config id :metrics)]
+    (. builder metrics data))
+  (when-let [data (lookup-entry config id :namespace)]
+    (. builder namespace data))
+  (when-let [data (lookup-entry config id :ok-actions)]
+    (. builder okActions data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :statistic)]
+    (. builder statistic data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :threshold)]
+    (. builder threshold data))
+  (when-let [data (lookup-entry config id :threshold-metric-id)]
+    (. builder thresholdMetricId data))
+  (when-let [data (lookup-entry config id :treat-missing-data)]
+    (. builder treatMissingData data))
+  (when-let [data (lookup-entry config id :unit)]
+    (. builder unit data))
+  (.build builder))
 
 
-(defn cfn-anomaly-detector-builder
-  "The cfn-anomaly-detector-builder function buildes out new instances of 
-CfnAnomalyDetector$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-anomaly-detector-builder
+  "The build-cfn-anomaly-detector-builder function updates a CfnAnomalyDetector$Builder instance using the provided configuration.
+  The function takes the CfnAnomalyDetector$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -958,79 +1000,91 @@ CfnAnomalyDetector$Builder using the provided configuration.  Each field is set 
 | `metricName` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-name` |
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
 | `singleMetricAnomalyDetector` | software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector$SingleMetricAnomalyDetectorProperty | [[cdk.support/lookup-entry]] | `:single-metric-anomaly-detector` |
-| `stat` | java.lang.String | [[cdk.support/lookup-entry]] | `:stat` |"
-  [stack id config]
-  (let [builder (CfnAnomalyDetector$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :configuration)]
-      (. builder configuration data))
-    (when-let [data (lookup-entry config id :dimensions)]
-      (. builder dimensions data))
-    (when-let [data (lookup-entry config id :metric-characteristics)]
-      (. builder metricCharacteristics data))
-    (when-let [data (lookup-entry config id :metric-math-anomaly-detector)]
-      (. builder metricMathAnomalyDetector data))
-    (when-let [data (lookup-entry config id :metric-name)]
-      (. builder metricName data))
-    (when-let [data (lookup-entry config id :namespace)]
-      (. builder namespace data))
-    (when-let [data (lookup-entry config id :single-metric-anomaly-detector)]
-      (. builder singleMetricAnomalyDetector data))
-    (when-let [data (lookup-entry config id :stat)]
-      (. builder stat data))
-    (.build builder)))
+| `stat` | java.lang.String | [[cdk.support/lookup-entry]] | `:stat` |
+"
+  [^CfnAnomalyDetector$Builder builder id config]
+  (when-let [data (lookup-entry config id :configuration)]
+    (. builder configuration data))
+  (when-let [data (lookup-entry config id :dimensions)]
+    (. builder dimensions data))
+  (when-let [data (lookup-entry config id :metric-characteristics)]
+    (. builder metricCharacteristics data))
+  (when-let [data (lookup-entry config id :metric-math-anomaly-detector)]
+    (. builder metricMathAnomalyDetector data))
+  (when-let [data (lookup-entry config id :metric-name)]
+    (. builder metricName data))
+  (when-let [data (lookup-entry config id :namespace)]
+    (. builder namespace data))
+  (when-let [data (lookup-entry config id :single-metric-anomaly-detector)]
+    (. builder singleMetricAnomalyDetector data))
+  (when-let [data (lookup-entry config id :stat)]
+    (. builder stat data))
+  (.build builder))
 
 
-(defn cfn-anomaly-detector-configuration-property-builder
-  "The cfn-anomaly-detector-configuration-property-builder function buildes out new instances of 
-CfnAnomalyDetector$ConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-anomaly-detector-configuration-property-builder
+  "The build-cfn-anomaly-detector-configuration-property-builder function updates a CfnAnomalyDetector$ConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnAnomalyDetector$ConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `excludedTimeRanges` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:excluded-time-ranges` |
-| `metricTimeZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-time-zone` |"
-  [stack id config]
-  (let [builder (CfnAnomalyDetector$ConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :excluded-time-ranges)]
-      (. builder excludedTimeRanges data))
-    (when-let [data (lookup-entry config id :metric-time-zone)]
-      (. builder metricTimeZone data))
-    (.build builder)))
+| `metricTimeZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-time-zone` |
+"
+  [^CfnAnomalyDetector$ConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :excluded-time-ranges)]
+    (. builder excludedTimeRanges data))
+  (when-let [data (lookup-entry config id :metric-time-zone)]
+    (. builder metricTimeZone data))
+  (.build builder))
 
 
-(defn cfn-anomaly-detector-dimension-property-builder
-  "The cfn-anomaly-detector-dimension-property-builder function buildes out new instances of 
-CfnAnomalyDetector$DimensionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-anomaly-detector-dimension-property-builder
+  "The build-cfn-anomaly-detector-dimension-property-builder function updates a CfnAnomalyDetector$DimensionProperty$Builder instance using the provided configuration.
+  The function takes the CfnAnomalyDetector$DimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnAnomalyDetector$DimensionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnAnomalyDetector$DimensionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-anomaly-detector-metric-characteristics-property-builder
-  "The cfn-anomaly-detector-metric-characteristics-property-builder function buildes out new instances of 
-CfnAnomalyDetector$MetricCharacteristicsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-anomaly-detector-metric-characteristics-property-builder
+  "The build-cfn-anomaly-detector-metric-characteristics-property-builder function updates a CfnAnomalyDetector$MetricCharacteristicsProperty$Builder instance using the provided configuration.
+  The function takes the CfnAnomalyDetector$MetricCharacteristicsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `periodicSpikes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:periodic-spikes` |"
-  [stack id config]
-  (let [builder (CfnAnomalyDetector$MetricCharacteristicsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :periodic-spikes)]
-      (. builder periodicSpikes data))
-    (.build builder)))
+| `periodicSpikes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:periodic-spikes` |
+"
+  [^CfnAnomalyDetector$MetricCharacteristicsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :periodic-spikes)]
+    (. builder periodicSpikes data))
+  (.build builder))
 
 
-(defn cfn-anomaly-detector-metric-data-query-property-builder
-  "The cfn-anomaly-detector-metric-data-query-property-builder function buildes out new instances of 
-CfnAnomalyDetector$MetricDataQueryProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-anomaly-detector-metric-data-query-property-builder
+  "The build-cfn-anomaly-detector-metric-data-query-property-builder function updates a CfnAnomalyDetector$MetricDataQueryProperty$Builder instance using the provided configuration.
+  The function takes the CfnAnomalyDetector$MetricDataQueryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1040,86 +1094,98 @@ CfnAnomalyDetector$MetricDataQueryProperty$Builder using the provided configurat
 | `label` | java.lang.String | [[cdk.support/lookup-entry]] | `:label` |
 | `metricStat` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-stat` |
 | `period` | java.lang.Number | [[cdk.support/lookup-entry]] | `:period` |
-| `returnData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:return-data` |"
-  [stack id config]
-  (let [builder (CfnAnomalyDetector$MetricDataQueryProperty$Builder.)]
-    (when-let [data (lookup-entry config id :account-id)]
-      (. builder accountId data))
-    (when-let [data (lookup-entry config id :expression)]
-      (. builder expression data))
-    (when-let [data (lookup-entry config id :id)]
-      (. builder id data))
-    (when-let [data (lookup-entry config id :label)]
-      (. builder label data))
-    (when-let [data (lookup-entry config id :metric-stat)]
-      (. builder metricStat data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :return-data)]
-      (. builder returnData data))
-    (.build builder)))
+| `returnData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:return-data` |
+"
+  [^CfnAnomalyDetector$MetricDataQueryProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :account-id)]
+    (. builder accountId data))
+  (when-let [data (lookup-entry config id :expression)]
+    (. builder expression data))
+  (when-let [data (lookup-entry config id :id)]
+    (. builder id data))
+  (when-let [data (lookup-entry config id :label)]
+    (. builder label data))
+  (when-let [data (lookup-entry config id :metric-stat)]
+    (. builder metricStat data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :return-data)]
+    (. builder returnData data))
+  (.build builder))
 
 
-(defn cfn-anomaly-detector-metric-math-anomaly-detector-property-builder
-  "The cfn-anomaly-detector-metric-math-anomaly-detector-property-builder function buildes out new instances of 
-CfnAnomalyDetector$MetricMathAnomalyDetectorProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-anomaly-detector-metric-math-anomaly-detector-property-builder
+  "The build-cfn-anomaly-detector-metric-math-anomaly-detector-property-builder function updates a CfnAnomalyDetector$MetricMathAnomalyDetectorProperty$Builder instance using the provided configuration.
+  The function takes the CfnAnomalyDetector$MetricMathAnomalyDetectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `metricDataQueries` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-data-queries` |"
-  [stack id config]
-  (let [builder (CfnAnomalyDetector$MetricMathAnomalyDetectorProperty$Builder.)]
-    (when-let [data (lookup-entry config id :metric-data-queries)]
-      (. builder metricDataQueries data))
-    (.build builder)))
+| `metricDataQueries` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-data-queries` |
+"
+  [^CfnAnomalyDetector$MetricMathAnomalyDetectorProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :metric-data-queries)]
+    (. builder metricDataQueries data))
+  (.build builder))
 
 
-(defn cfn-anomaly-detector-metric-property-builder
-  "The cfn-anomaly-detector-metric-property-builder function buildes out new instances of 
-CfnAnomalyDetector$MetricProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-anomaly-detector-metric-property-builder
+  "The build-cfn-anomaly-detector-metric-property-builder function updates a CfnAnomalyDetector$MetricProperty$Builder instance using the provided configuration.
+  The function takes the CfnAnomalyDetector$MetricProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dimensions` | java.util.List | [[cdk.support/lookup-entry]] | `:dimensions` |
 | `metricName` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-name` |
-| `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |"
-  [stack id config]
-  (let [builder (CfnAnomalyDetector$MetricProperty$Builder.)]
-    (when-let [data (lookup-entry config id :dimensions)]
-      (. builder dimensions data))
-    (when-let [data (lookup-entry config id :metric-name)]
-      (. builder metricName data))
-    (when-let [data (lookup-entry config id :namespace)]
-      (. builder namespace data))
-    (.build builder)))
+| `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
+"
+  [^CfnAnomalyDetector$MetricProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :dimensions)]
+    (. builder dimensions data))
+  (when-let [data (lookup-entry config id :metric-name)]
+    (. builder metricName data))
+  (when-let [data (lookup-entry config id :namespace)]
+    (. builder namespace data))
+  (.build builder))
 
 
-(defn cfn-anomaly-detector-metric-stat-property-builder
-  "The cfn-anomaly-detector-metric-stat-property-builder function buildes out new instances of 
-CfnAnomalyDetector$MetricStatProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-anomaly-detector-metric-stat-property-builder
+  "The build-cfn-anomaly-detector-metric-stat-property-builder function updates a CfnAnomalyDetector$MetricStatProperty$Builder instance using the provided configuration.
+  The function takes the CfnAnomalyDetector$MetricStatProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `metric` | software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector$MetricProperty | [[cdk.support/lookup-entry]] | `:metric` |
 | `period` | java.lang.Number | [[cdk.support/lookup-entry]] | `:period` |
 | `stat` | java.lang.String | [[cdk.support/lookup-entry]] | `:stat` |
-| `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |"
-  [stack id config]
-  (let [builder (CfnAnomalyDetector$MetricStatProperty$Builder.)]
-    (when-let [data (lookup-entry config id :metric)]
-      (. builder metric data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :stat)]
-      (. builder stat data))
-    (when-let [data (lookup-entry config id :unit)]
-      (. builder unit data))
-    (.build builder)))
+| `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
+"
+  [^CfnAnomalyDetector$MetricStatProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :metric)]
+    (. builder metric data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :stat)]
+    (. builder stat data))
+  (when-let [data (lookup-entry config id :unit)]
+    (. builder unit data))
+  (.build builder))
 
 
-(defn cfn-anomaly-detector-props-builder
-  "The cfn-anomaly-detector-props-builder function buildes out new instances of 
-CfnAnomalyDetectorProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-anomaly-detector-props-builder
+  "The build-cfn-anomaly-detector-props-builder function updates a CfnAnomalyDetectorProps$Builder instance using the provided configuration.
+  The function takes the CfnAnomalyDetectorProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1130,48 +1196,54 @@ CfnAnomalyDetectorProps$Builder using the provided configuration.  Each field is
 | `metricName` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-name` |
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
 | `singleMetricAnomalyDetector` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:single-metric-anomaly-detector` |
-| `stat` | java.lang.String | [[cdk.support/lookup-entry]] | `:stat` |"
-  [stack id config]
-  (let [builder (CfnAnomalyDetectorProps$Builder.)]
-    (when-let [data (lookup-entry config id :configuration)]
-      (. builder configuration data))
-    (when-let [data (lookup-entry config id :dimensions)]
-      (. builder dimensions data))
-    (when-let [data (lookup-entry config id :metric-characteristics)]
-      (. builder metricCharacteristics data))
-    (when-let [data (lookup-entry config id :metric-math-anomaly-detector)]
-      (. builder metricMathAnomalyDetector data))
-    (when-let [data (lookup-entry config id :metric-name)]
-      (. builder metricName data))
-    (when-let [data (lookup-entry config id :namespace)]
-      (. builder namespace data))
-    (when-let [data (lookup-entry config id :single-metric-anomaly-detector)]
-      (. builder singleMetricAnomalyDetector data))
-    (when-let [data (lookup-entry config id :stat)]
-      (. builder stat data))
-    (.build builder)))
+| `stat` | java.lang.String | [[cdk.support/lookup-entry]] | `:stat` |
+"
+  [^CfnAnomalyDetectorProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :configuration)]
+    (. builder configuration data))
+  (when-let [data (lookup-entry config id :dimensions)]
+    (. builder dimensions data))
+  (when-let [data (lookup-entry config id :metric-characteristics)]
+    (. builder metricCharacteristics data))
+  (when-let [data (lookup-entry config id :metric-math-anomaly-detector)]
+    (. builder metricMathAnomalyDetector data))
+  (when-let [data (lookup-entry config id :metric-name)]
+    (. builder metricName data))
+  (when-let [data (lookup-entry config id :namespace)]
+    (. builder namespace data))
+  (when-let [data (lookup-entry config id :single-metric-anomaly-detector)]
+    (. builder singleMetricAnomalyDetector data))
+  (when-let [data (lookup-entry config id :stat)]
+    (. builder stat data))
+  (.build builder))
 
 
-(defn cfn-anomaly-detector-range-property-builder
-  "The cfn-anomaly-detector-range-property-builder function buildes out new instances of 
-CfnAnomalyDetector$RangeProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-anomaly-detector-range-property-builder
+  "The build-cfn-anomaly-detector-range-property-builder function updates a CfnAnomalyDetector$RangeProperty$Builder instance using the provided configuration.
+  The function takes the CfnAnomalyDetector$RangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `endTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:end-time` |
-| `startTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:start-time` |"
-  [stack id config]
-  (let [builder (CfnAnomalyDetector$RangeProperty$Builder.)]
-    (when-let [data (lookup-entry config id :end-time)]
-      (. builder endTime data))
-    (when-let [data (lookup-entry config id :start-time)]
-      (. builder startTime data))
-    (.build builder)))
+| `startTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:start-time` |
+"
+  [^CfnAnomalyDetector$RangeProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :end-time)]
+    (. builder endTime data))
+  (when-let [data (lookup-entry config id :start-time)]
+    (. builder startTime data))
+  (.build builder))
 
 
-(defn cfn-anomaly-detector-single-metric-anomaly-detector-property-builder
-  "The cfn-anomaly-detector-single-metric-anomaly-detector-property-builder function buildes out new instances of 
-CfnAnomalyDetector$SingleMetricAnomalyDetectorProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-anomaly-detector-single-metric-anomaly-detector-property-builder
+  "The build-cfn-anomaly-detector-single-metric-anomaly-detector-property-builder function updates a CfnAnomalyDetector$SingleMetricAnomalyDetectorProperty$Builder instance using the provided configuration.
+  The function takes the CfnAnomalyDetector$SingleMetricAnomalyDetectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1179,69 +1251,28 @@ CfnAnomalyDetector$SingleMetricAnomalyDetectorProperty$Builder using the provide
 | `dimensions` | java.util.List | [[cdk.support/lookup-entry]] | `:dimensions` |
 | `metricName` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-name` |
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
-| `stat` | java.lang.String | [[cdk.support/lookup-entry]] | `:stat` |"
-  [stack id config]
-  (let [builder (CfnAnomalyDetector$SingleMetricAnomalyDetectorProperty$Builder.)]
-    (when-let [data (lookup-entry config id :account-id)]
-      (. builder accountId data))
-    (when-let [data (lookup-entry config id :dimensions)]
-      (. builder dimensions data))
-    (when-let [data (lookup-entry config id :metric-name)]
-      (. builder metricName data))
-    (when-let [data (lookup-entry config id :namespace)]
-      (. builder namespace data))
-    (when-let [data (lookup-entry config id :stat)]
-      (. builder stat data))
-    (.build builder)))
+| `stat` | java.lang.String | [[cdk.support/lookup-entry]] | `:stat` |
+"
+  [^CfnAnomalyDetector$SingleMetricAnomalyDetectorProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :account-id)]
+    (. builder accountId data))
+  (when-let [data (lookup-entry config id :dimensions)]
+    (. builder dimensions data))
+  (when-let [data (lookup-entry config id :metric-name)]
+    (. builder metricName data))
+  (when-let [data (lookup-entry config id :namespace)]
+    (. builder namespace data))
+  (when-let [data (lookup-entry config id :stat)]
+    (. builder stat data))
+  (.build builder))
 
 
-(defn cfn-composite-alarm-builder
-  "The cfn-composite-alarm-builder function buildes out new instances of 
-CfnCompositeAlarm$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-composite-alarm-builder
+  "The build-cfn-composite-alarm-builder function updates a CfnCompositeAlarm$Builder instance using the provided configuration.
+  The function takes the CfnCompositeAlarm$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `actionsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions-enabled` |
-| `actionsSuppressor` | java.lang.String | [[cdk.support/lookup-entry]] | `:actions-suppressor` |
-| `actionsSuppressorExtensionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:actions-suppressor-extension-period` |
-| `actionsSuppressorWaitPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:actions-suppressor-wait-period` |
-| `alarmActions` | java.util.List | [[cdk.support/lookup-entry]] | `:alarm-actions` |
-| `alarmDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-description` |
-| `alarmName` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-name` |
-| `alarmRule` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-rule` |
-| `insufficientDataActions` | java.util.List | [[cdk.support/lookup-entry]] | `:insufficient-data-actions` |
-| `okActions` | java.util.List | [[cdk.support/lookup-entry]] | `:ok-actions` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnCompositeAlarm$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :actions-enabled)]
-      (. builder actionsEnabled data))
-    (when-let [data (lookup-entry config id :actions-suppressor)]
-      (. builder actionsSuppressor data))
-    (when-let [data (lookup-entry config id :actions-suppressor-extension-period)]
-      (. builder actionsSuppressorExtensionPeriod data))
-    (when-let [data (lookup-entry config id :actions-suppressor-wait-period)]
-      (. builder actionsSuppressorWaitPeriod data))
-    (when-let [data (lookup-entry config id :alarm-actions)]
-      (. builder alarmActions data))
-    (when-let [data (lookup-entry config id :alarm-description)]
-      (. builder alarmDescription data))
-    (when-let [data (lookup-entry config id :alarm-name)]
-      (. builder alarmName data))
-    (when-let [data (lookup-entry config id :alarm-rule)]
-      (. builder alarmRule data))
-    (when-let [data (lookup-entry config id :insufficient-data-actions)]
-      (. builder insufficientDataActions data))
-    (when-let [data (lookup-entry config id :ok-actions)]
-      (. builder okActions data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
-
-
-(defn cfn-composite-alarm-props-builder
-  "The cfn-composite-alarm-props-builder function buildes out new instances of 
-CfnCompositeAlarmProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1255,117 +1286,179 @@ CfnCompositeAlarmProps$Builder using the provided configuration.  Each field is 
 | `alarmRule` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-rule` |
 | `insufficientDataActions` | java.util.List | [[cdk.support/lookup-entry]] | `:insufficient-data-actions` |
 | `okActions` | java.util.List | [[cdk.support/lookup-entry]] | `:ok-actions` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnCompositeAlarmProps$Builder.)]
-    (when-let [data (lookup-entry config id :actions-enabled)]
-      (. builder actionsEnabled data))
-    (when-let [data (lookup-entry config id :actions-suppressor)]
-      (. builder actionsSuppressor data))
-    (when-let [data (lookup-entry config id :actions-suppressor-extension-period)]
-      (. builder actionsSuppressorExtensionPeriod data))
-    (when-let [data (lookup-entry config id :actions-suppressor-wait-period)]
-      (. builder actionsSuppressorWaitPeriod data))
-    (when-let [data (lookup-entry config id :alarm-actions)]
-      (. builder alarmActions data))
-    (when-let [data (lookup-entry config id :alarm-description)]
-      (. builder alarmDescription data))
-    (when-let [data (lookup-entry config id :alarm-name)]
-      (. builder alarmName data))
-    (when-let [data (lookup-entry config id :alarm-rule)]
-      (. builder alarmRule data))
-    (when-let [data (lookup-entry config id :insufficient-data-actions)]
-      (. builder insufficientDataActions data))
-    (when-let [data (lookup-entry config id :ok-actions)]
-      (. builder okActions data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnCompositeAlarm$Builder builder id config]
+  (when-let [data (lookup-entry config id :actions-enabled)]
+    (. builder actionsEnabled data))
+  (when-let [data (lookup-entry config id :actions-suppressor)]
+    (. builder actionsSuppressor data))
+  (when-let [data (lookup-entry config id :actions-suppressor-extension-period)]
+    (. builder actionsSuppressorExtensionPeriod data))
+  (when-let [data (lookup-entry config id :actions-suppressor-wait-period)]
+    (. builder actionsSuppressorWaitPeriod data))
+  (when-let [data (lookup-entry config id :alarm-actions)]
+    (. builder alarmActions data))
+  (when-let [data (lookup-entry config id :alarm-description)]
+    (. builder alarmDescription data))
+  (when-let [data (lookup-entry config id :alarm-name)]
+    (. builder alarmName data))
+  (when-let [data (lookup-entry config id :alarm-rule)]
+    (. builder alarmRule data))
+  (when-let [data (lookup-entry config id :insufficient-data-actions)]
+    (. builder insufficientDataActions data))
+  (when-let [data (lookup-entry config id :ok-actions)]
+    (. builder okActions data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-dashboard-builder
-  "The cfn-dashboard-builder function buildes out new instances of 
-CfnDashboard$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-composite-alarm-props-builder
+  "The build-cfn-composite-alarm-props-builder function updates a CfnCompositeAlarmProps$Builder instance using the provided configuration.
+  The function takes the CfnCompositeAlarmProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `actionsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions-enabled` |
+| `actionsSuppressor` | java.lang.String | [[cdk.support/lookup-entry]] | `:actions-suppressor` |
+| `actionsSuppressorExtensionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:actions-suppressor-extension-period` |
+| `actionsSuppressorWaitPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:actions-suppressor-wait-period` |
+| `alarmActions` | java.util.List | [[cdk.support/lookup-entry]] | `:alarm-actions` |
+| `alarmDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-description` |
+| `alarmName` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-name` |
+| `alarmRule` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-rule` |
+| `insufficientDataActions` | java.util.List | [[cdk.support/lookup-entry]] | `:insufficient-data-actions` |
+| `okActions` | java.util.List | [[cdk.support/lookup-entry]] | `:ok-actions` |
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnCompositeAlarmProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :actions-enabled)]
+    (. builder actionsEnabled data))
+  (when-let [data (lookup-entry config id :actions-suppressor)]
+    (. builder actionsSuppressor data))
+  (when-let [data (lookup-entry config id :actions-suppressor-extension-period)]
+    (. builder actionsSuppressorExtensionPeriod data))
+  (when-let [data (lookup-entry config id :actions-suppressor-wait-period)]
+    (. builder actionsSuppressorWaitPeriod data))
+  (when-let [data (lookup-entry config id :alarm-actions)]
+    (. builder alarmActions data))
+  (when-let [data (lookup-entry config id :alarm-description)]
+    (. builder alarmDescription data))
+  (when-let [data (lookup-entry config id :alarm-name)]
+    (. builder alarmName data))
+  (when-let [data (lookup-entry config id :alarm-rule)]
+    (. builder alarmRule data))
+  (when-let [data (lookup-entry config id :insufficient-data-actions)]
+    (. builder insufficientDataActions data))
+  (when-let [data (lookup-entry config id :ok-actions)]
+    (. builder okActions data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
+
+
+(defn build-cfn-dashboard-builder
+  "The build-cfn-dashboard-builder function updates a CfnDashboard$Builder instance using the provided configuration.
+  The function takes the CfnDashboard$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dashboardBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:dashboard-body` |
-| `dashboardName` | java.lang.String | [[cdk.support/lookup-entry]] | `:dashboard-name` |"
-  [stack id config]
-  (let [builder (CfnDashboard$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :dashboard-body)]
-      (. builder dashboardBody data))
-    (when-let [data (lookup-entry config id :dashboard-name)]
-      (. builder dashboardName data))
-    (.build builder)))
+| `dashboardName` | java.lang.String | [[cdk.support/lookup-entry]] | `:dashboard-name` |
+"
+  [^CfnDashboard$Builder builder id config]
+  (when-let [data (lookup-entry config id :dashboard-body)]
+    (. builder dashboardBody data))
+  (when-let [data (lookup-entry config id :dashboard-name)]
+    (. builder dashboardName data))
+  (.build builder))
 
 
-(defn cfn-dashboard-props-builder
-  "The cfn-dashboard-props-builder function buildes out new instances of 
-CfnDashboardProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-dashboard-props-builder
+  "The build-cfn-dashboard-props-builder function updates a CfnDashboardProps$Builder instance using the provided configuration.
+  The function takes the CfnDashboardProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dashboardBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:dashboard-body` |
-| `dashboardName` | java.lang.String | [[cdk.support/lookup-entry]] | `:dashboard-name` |"
-  [stack id config]
-  (let [builder (CfnDashboardProps$Builder.)]
-    (when-let [data (lookup-entry config id :dashboard-body)]
-      (. builder dashboardBody data))
-    (when-let [data (lookup-entry config id :dashboard-name)]
-      (. builder dashboardName data))
-    (.build builder)))
+| `dashboardName` | java.lang.String | [[cdk.support/lookup-entry]] | `:dashboard-name` |
+"
+  [^CfnDashboardProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :dashboard-body)]
+    (. builder dashboardBody data))
+  (when-let [data (lookup-entry config id :dashboard-name)]
+    (. builder dashboardName data))
+  (.build builder))
 
 
-(defn cfn-insight-rule-builder
-  "The cfn-insight-rule-builder function buildes out new instances of 
-CfnInsightRule$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-insight-rule-builder
+  "The build-cfn-insight-rule-builder function updates a CfnInsightRule$Builder instance using the provided configuration.
+  The function takes the CfnInsightRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `ruleBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-body` |
 | `ruleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-name` |
 | `ruleState` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-state` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnInsightRule$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :rule-body)]
-      (. builder ruleBody data))
-    (when-let [data (lookup-entry config id :rule-name)]
-      (. builder ruleName data))
-    (when-let [data (lookup-entry config id :rule-state)]
-      (. builder ruleState data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnInsightRule$Builder builder id config]
+  (when-let [data (lookup-entry config id :rule-body)]
+    (. builder ruleBody data))
+  (when-let [data (lookup-entry config id :rule-name)]
+    (. builder ruleName data))
+  (when-let [data (lookup-entry config id :rule-state)]
+    (. builder ruleState data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-insight-rule-props-builder
-  "The cfn-insight-rule-props-builder function buildes out new instances of 
-CfnInsightRuleProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-insight-rule-props-builder
+  "The build-cfn-insight-rule-props-builder function updates a CfnInsightRuleProps$Builder instance using the provided configuration.
+  The function takes the CfnInsightRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `ruleBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-body` |
 | `ruleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-name` |
 | `ruleState` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-state` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnInsightRuleProps$Builder.)]
-    (when-let [data (lookup-entry config id :rule-body)]
-      (. builder ruleBody data))
-    (when-let [data (lookup-entry config id :rule-name)]
-      (. builder ruleName data))
-    (when-let [data (lookup-entry config id :rule-state)]
-      (. builder ruleState data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnInsightRuleProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :rule-body)]
+    (. builder ruleBody data))
+  (when-let [data (lookup-entry config id :rule-name)]
+    (. builder ruleName data))
+  (when-let [data (lookup-entry config id :rule-state)]
+    (. builder ruleState data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-metric-stream-builder
-  "The cfn-metric-stream-builder function buildes out new instances of 
-CfnMetricStream$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-metric-stream-builder
+  "The build-cfn-metric-stream-builder function updates a CfnMetricStream$Builder instance using the provided configuration.
+  The function takes the CfnMetricStream$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1377,84 +1470,96 @@ CfnMetricStream$Builder using the provided configuration.  Each field is set as 
 | `outputFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-format` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `statisticsConfigurations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:statistics-configurations` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnMetricStream$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :exclude-filters)]
-      (. builder excludeFilters data))
-    (when-let [data (lookup-entry config id :firehose-arn)]
-      (. builder firehoseArn data))
-    (when-let [data (lookup-entry config id :include-filters)]
-      (. builder includeFilters data))
-    (when-let [data (lookup-entry config id :include-linked-accounts-metrics)]
-      (. builder includeLinkedAccountsMetrics data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :output-format)]
-      (. builder outputFormat data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :statistics-configurations)]
-      (. builder statisticsConfigurations data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnMetricStream$Builder builder id config]
+  (when-let [data (lookup-entry config id :exclude-filters)]
+    (. builder excludeFilters data))
+  (when-let [data (lookup-entry config id :firehose-arn)]
+    (. builder firehoseArn data))
+  (when-let [data (lookup-entry config id :include-filters)]
+    (. builder includeFilters data))
+  (when-let [data (lookup-entry config id :include-linked-accounts-metrics)]
+    (. builder includeLinkedAccountsMetrics data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :output-format)]
+    (. builder outputFormat data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :statistics-configurations)]
+    (. builder statisticsConfigurations data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-metric-stream-metric-stream-filter-property-builder
-  "The cfn-metric-stream-metric-stream-filter-property-builder function buildes out new instances of 
-CfnMetricStream$MetricStreamFilterProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-metric-stream-metric-stream-filter-property-builder
+  "The build-cfn-metric-stream-metric-stream-filter-property-builder function updates a CfnMetricStream$MetricStreamFilterProperty$Builder instance using the provided configuration.
+  The function takes the CfnMetricStream$MetricStreamFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `metricNames` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-names` |
-| `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |"
-  [stack id config]
-  (let [builder (CfnMetricStream$MetricStreamFilterProperty$Builder.)]
-    (when-let [data (lookup-entry config id :metric-names)]
-      (. builder metricNames data))
-    (when-let [data (lookup-entry config id :namespace)]
-      (. builder namespace data))
-    (.build builder)))
+| `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
+"
+  [^CfnMetricStream$MetricStreamFilterProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :metric-names)]
+    (. builder metricNames data))
+  (when-let [data (lookup-entry config id :namespace)]
+    (. builder namespace data))
+  (.build builder))
 
 
-(defn cfn-metric-stream-metric-stream-statistics-configuration-property-builder
-  "The cfn-metric-stream-metric-stream-statistics-configuration-property-builder function buildes out new instances of 
-CfnMetricStream$MetricStreamStatisticsConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-metric-stream-metric-stream-statistics-configuration-property-builder
+  "The build-cfn-metric-stream-metric-stream-statistics-configuration-property-builder function updates a CfnMetricStream$MetricStreamStatisticsConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnMetricStream$MetricStreamStatisticsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `additionalStatistics` | java.util.List | [[cdk.support/lookup-entry]] | `:additional-statistics` |
-| `includeMetrics` | java.util.List | [[cdk.support/lookup-entry]] | `:include-metrics` |"
-  [stack id config]
-  (let [builder (CfnMetricStream$MetricStreamStatisticsConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :additional-statistics)]
-      (. builder additionalStatistics data))
-    (when-let [data (lookup-entry config id :include-metrics)]
-      (. builder includeMetrics data))
-    (.build builder)))
+| `includeMetrics` | java.util.List | [[cdk.support/lookup-entry]] | `:include-metrics` |
+"
+  [^CfnMetricStream$MetricStreamStatisticsConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :additional-statistics)]
+    (. builder additionalStatistics data))
+  (when-let [data (lookup-entry config id :include-metrics)]
+    (. builder includeMetrics data))
+  (.build builder))
 
 
-(defn cfn-metric-stream-metric-stream-statistics-metric-property-builder
-  "The cfn-metric-stream-metric-stream-statistics-metric-property-builder function buildes out new instances of 
-CfnMetricStream$MetricStreamStatisticsMetricProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-metric-stream-metric-stream-statistics-metric-property-builder
+  "The build-cfn-metric-stream-metric-stream-statistics-metric-property-builder function updates a CfnMetricStream$MetricStreamStatisticsMetricProperty$Builder instance using the provided configuration.
+  The function takes the CfnMetricStream$MetricStreamStatisticsMetricProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `metricName` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-name` |
-| `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |"
-  [stack id config]
-  (let [builder (CfnMetricStream$MetricStreamStatisticsMetricProperty$Builder.)]
-    (when-let [data (lookup-entry config id :metric-name)]
-      (. builder metricName data))
-    (when-let [data (lookup-entry config id :namespace)]
-      (. builder namespace data))
-    (.build builder)))
+| `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
+"
+  [^CfnMetricStream$MetricStreamStatisticsMetricProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :metric-name)]
+    (. builder metricName data))
+  (when-let [data (lookup-entry config id :namespace)]
+    (. builder namespace data))
+  (.build builder))
 
 
-(defn cfn-metric-stream-props-builder
-  "The cfn-metric-stream-props-builder function buildes out new instances of 
-CfnMetricStreamProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-metric-stream-props-builder
+  "The build-cfn-metric-stream-props-builder function updates a CfnMetricStreamProps$Builder instance using the provided configuration.
+  The function takes the CfnMetricStreamProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1466,33 +1571,36 @@ CfnMetricStreamProps$Builder using the provided configuration.  Each field is se
 | `outputFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-format` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `statisticsConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:statistics-configurations` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnMetricStreamProps$Builder.)]
-    (when-let [data (lookup-entry config id :exclude-filters)]
-      (. builder excludeFilters data))
-    (when-let [data (lookup-entry config id :firehose-arn)]
-      (. builder firehoseArn data))
-    (when-let [data (lookup-entry config id :include-filters)]
-      (. builder includeFilters data))
-    (when-let [data (lookup-entry config id :include-linked-accounts-metrics)]
-      (. builder includeLinkedAccountsMetrics data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :output-format)]
-      (. builder outputFormat data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :statistics-configurations)]
-      (. builder statisticsConfigurations data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnMetricStreamProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :exclude-filters)]
+    (. builder excludeFilters data))
+  (when-let [data (lookup-entry config id :firehose-arn)]
+    (. builder firehoseArn data))
+  (when-let [data (lookup-entry config id :include-filters)]
+    (. builder includeFilters data))
+  (when-let [data (lookup-entry config id :include-linked-accounts-metrics)]
+    (. builder includeLinkedAccountsMetrics data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :output-format)]
+    (. builder outputFormat data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :statistics-configurations)]
+    (. builder statisticsConfigurations data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn common-metric-options-builder
-  "The common-metric-options-builder function buildes out new instances of 
-CommonMetricOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-common-metric-options-builder
+  "The build-common-metric-options-builder function updates a CommonMetricOptions$Builder instance using the provided configuration.
+  The function takes the CommonMetricOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1503,63 +1611,34 @@ CommonMetricOptions$Builder using the provided configuration.  Each field is set
 | `period` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:period` |
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 | `statistic` | java.lang.String | [[cdk.support/lookup-entry]] | `:statistic` |
-| `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |"
-  [stack id config]
-  (let [builder (CommonMetricOptions$Builder.)]
-    (when-let [data (lookup-entry config id :account)]
-      (. builder account data))
-    (when-let [data (lookup-entry config id :color)]
-      (. builder color data))
-    (when-let [data (lookup-entry config id :dimensions-map)]
-      (. builder dimensionsMap data))
-    (when-let [data (lookup-entry config id :label)]
-      (. builder label data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :statistic)]
-      (. builder statistic data))
-    (when-let [data (unit config id :unit)]
-      (. builder unit data))
-    (.build builder)))
+| `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |
+"
+  [^CommonMetricOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :account)]
+    (. builder account data))
+  (when-let [data (lookup-entry config id :color)]
+    (. builder color data))
+  (when-let [data (lookup-entry config id :dimensions-map)]
+    (. builder dimensionsMap data))
+  (when-let [data (lookup-entry config id :label)]
+    (. builder label data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :statistic)]
+    (. builder statistic data))
+  (when-let [data (unit config id :unit)]
+    (. builder unit data))
+  (.build builder))
 
 
-(defn composite-alarm-builder
-  "The composite-alarm-builder function buildes out new instances of 
-CompositeAlarm$Builder using the provided configuration.  Each field is set as follows:
+(defn build-composite-alarm-builder
+  "The build-composite-alarm-builder function updates a CompositeAlarm$Builder instance using the provided configuration.
+  The function takes the CompositeAlarm$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `actionsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:actions-enabled` |
-| `actionsSuppressor` | software.amazon.awscdk.services.cloudwatch.IAlarm | [[cdk.support/lookup-entry]] | `:actions-suppressor` |
-| `actionsSuppressorExtensionPeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:actions-suppressor-extension-period` |
-| `actionsSuppressorWaitPeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:actions-suppressor-wait-period` |
-| `alarmDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-description` |
-| `alarmRule` | software.amazon.awscdk.services.cloudwatch.IAlarmRule | [[cdk.support/lookup-entry]] | `:alarm-rule` |
-| `compositeAlarmName` | java.lang.String | [[cdk.support/lookup-entry]] | `:composite-alarm-name` |"
-  [stack id config]
-  (let [builder (CompositeAlarm$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :actions-enabled)]
-      (. builder actionsEnabled data))
-    (when-let [data (lookup-entry config id :actions-suppressor)]
-      (. builder actionsSuppressor data))
-    (when-let [data (lookup-entry config id :actions-suppressor-extension-period)]
-      (. builder actionsSuppressorExtensionPeriod data))
-    (when-let [data (lookup-entry config id :actions-suppressor-wait-period)]
-      (. builder actionsSuppressorWaitPeriod data))
-    (when-let [data (lookup-entry config id :alarm-description)]
-      (. builder alarmDescription data))
-    (when-let [data (lookup-entry config id :alarm-rule)]
-      (. builder alarmRule data))
-    (when-let [data (lookup-entry config id :composite-alarm-name)]
-      (. builder compositeAlarmName data))
-    (.build builder)))
-
-
-(defn composite-alarm-props-builder
-  "The composite-alarm-props-builder function buildes out new instances of 
-CompositeAlarmProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1569,29 +1648,67 @@ CompositeAlarmProps$Builder using the provided configuration.  Each field is set
 | `actionsSuppressorWaitPeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:actions-suppressor-wait-period` |
 | `alarmDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-description` |
 | `alarmRule` | software.amazon.awscdk.services.cloudwatch.IAlarmRule | [[cdk.support/lookup-entry]] | `:alarm-rule` |
-| `compositeAlarmName` | java.lang.String | [[cdk.support/lookup-entry]] | `:composite-alarm-name` |"
-  [stack id config]
-  (let [builder (CompositeAlarmProps$Builder.)]
-    (when-let [data (lookup-entry config id :actions-enabled)]
-      (. builder actionsEnabled data))
-    (when-let [data (lookup-entry config id :actions-suppressor)]
-      (. builder actionsSuppressor data))
-    (when-let [data (lookup-entry config id :actions-suppressor-extension-period)]
-      (. builder actionsSuppressorExtensionPeriod data))
-    (when-let [data (lookup-entry config id :actions-suppressor-wait-period)]
-      (. builder actionsSuppressorWaitPeriod data))
-    (when-let [data (lookup-entry config id :alarm-description)]
-      (. builder alarmDescription data))
-    (when-let [data (lookup-entry config id :alarm-rule)]
-      (. builder alarmRule data))
-    (when-let [data (lookup-entry config id :composite-alarm-name)]
-      (. builder compositeAlarmName data))
-    (.build builder)))
+| `compositeAlarmName` | java.lang.String | [[cdk.support/lookup-entry]] | `:composite-alarm-name` |
+"
+  [^CompositeAlarm$Builder builder id config]
+  (when-let [data (lookup-entry config id :actions-enabled)]
+    (. builder actionsEnabled data))
+  (when-let [data (lookup-entry config id :actions-suppressor)]
+    (. builder actionsSuppressor data))
+  (when-let [data (lookup-entry config id :actions-suppressor-extension-period)]
+    (. builder actionsSuppressorExtensionPeriod data))
+  (when-let [data (lookup-entry config id :actions-suppressor-wait-period)]
+    (. builder actionsSuppressorWaitPeriod data))
+  (when-let [data (lookup-entry config id :alarm-description)]
+    (. builder alarmDescription data))
+  (when-let [data (lookup-entry config id :alarm-rule)]
+    (. builder alarmRule data))
+  (when-let [data (lookup-entry config id :composite-alarm-name)]
+    (. builder compositeAlarmName data))
+  (.build builder))
 
 
-(defn create-alarm-options-builder
-  "The create-alarm-options-builder function buildes out new instances of 
-CreateAlarmOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-composite-alarm-props-builder
+  "The build-composite-alarm-props-builder function updates a CompositeAlarmProps$Builder instance using the provided configuration.
+  The function takes the CompositeAlarmProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `actionsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:actions-enabled` |
+| `actionsSuppressor` | software.amazon.awscdk.services.cloudwatch.IAlarm | [[cdk.support/lookup-entry]] | `:actions-suppressor` |
+| `actionsSuppressorExtensionPeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:actions-suppressor-extension-period` |
+| `actionsSuppressorWaitPeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:actions-suppressor-wait-period` |
+| `alarmDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-description` |
+| `alarmRule` | software.amazon.awscdk.services.cloudwatch.IAlarmRule | [[cdk.support/lookup-entry]] | `:alarm-rule` |
+| `compositeAlarmName` | java.lang.String | [[cdk.support/lookup-entry]] | `:composite-alarm-name` |
+"
+  [^CompositeAlarmProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :actions-enabled)]
+    (. builder actionsEnabled data))
+  (when-let [data (lookup-entry config id :actions-suppressor)]
+    (. builder actionsSuppressor data))
+  (when-let [data (lookup-entry config id :actions-suppressor-extension-period)]
+    (. builder actionsSuppressorExtensionPeriod data))
+  (when-let [data (lookup-entry config id :actions-suppressor-wait-period)]
+    (. builder actionsSuppressorWaitPeriod data))
+  (when-let [data (lookup-entry config id :alarm-description)]
+    (. builder alarmDescription data))
+  (when-let [data (lookup-entry config id :alarm-rule)]
+    (. builder alarmRule data))
+  (when-let [data (lookup-entry config id :composite-alarm-name)]
+    (. builder compositeAlarmName data))
+  (.build builder))
+
+
+(defn build-create-alarm-options-builder
+  "The build-create-alarm-options-builder function updates a CreateAlarmOptions$Builder instance using the provided configuration.
+  The function takes the CreateAlarmOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1603,68 +1720,36 @@ CreateAlarmOptions$Builder using the provided configuration.  Each field is set 
 | `evaluateLowSampleCountPercentile` | java.lang.String | [[cdk.support/lookup-entry]] | `:evaluate-low-sample-count-percentile` |
 | `evaluationPeriods` | java.lang.Number | [[cdk.support/lookup-entry]] | `:evaluation-periods` |
 | `threshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:threshold` |
-| `treatMissingData` | software.amazon.awscdk.services.cloudwatch.TreatMissingData | [[cdk.api.services.cloudwatch/treat-missing-data]] | `:treat-missing-data` |"
-  [stack id config]
-  (let [builder (CreateAlarmOptions$Builder.)]
-    (when-let [data (lookup-entry config id :actions-enabled)]
-      (. builder actionsEnabled data))
-    (when-let [data (lookup-entry config id :alarm-description)]
-      (. builder alarmDescription data))
-    (when-let [data (lookup-entry config id :alarm-name)]
-      (. builder alarmName data))
-    (when-let [data (comparison-operator config id :comparison-operator)]
-      (. builder comparisonOperator data))
-    (when-let [data (lookup-entry config id :datapoints-to-alarm)]
-      (. builder datapointsToAlarm data))
-    (when-let [data (lookup-entry config id :evaluate-low-sample-count-percentile)]
-      (. builder evaluateLowSampleCountPercentile data))
-    (when-let [data (lookup-entry config id :evaluation-periods)]
-      (. builder evaluationPeriods data))
-    (when-let [data (lookup-entry config id :threshold)]
-      (. builder threshold data))
-    (when-let [data (treat-missing-data config id :treat-missing-data)]
-      (. builder treatMissingData data))
-    (.build builder)))
+| `treatMissingData` | software.amazon.awscdk.services.cloudwatch.TreatMissingData | [[cdk.api.services.cloudwatch/treat-missing-data]] | `:treat-missing-data` |
+"
+  [^CreateAlarmOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :actions-enabled)]
+    (. builder actionsEnabled data))
+  (when-let [data (lookup-entry config id :alarm-description)]
+    (. builder alarmDescription data))
+  (when-let [data (lookup-entry config id :alarm-name)]
+    (. builder alarmName data))
+  (when-let [data (comparison-operator config id :comparison-operator)]
+    (. builder comparisonOperator data))
+  (when-let [data (lookup-entry config id :datapoints-to-alarm)]
+    (. builder datapointsToAlarm data))
+  (when-let [data (lookup-entry config id :evaluate-low-sample-count-percentile)]
+    (. builder evaluateLowSampleCountPercentile data))
+  (when-let [data (lookup-entry config id :evaluation-periods)]
+    (. builder evaluationPeriods data))
+  (when-let [data (lookup-entry config id :threshold)]
+    (. builder threshold data))
+  (when-let [data (treat-missing-data config id :treat-missing-data)]
+    (. builder treatMissingData data))
+  (.build builder))
 
 
-(defn custom-widget-builder
-  "The custom-widget-builder function buildes out new instances of 
-CustomWidget$Builder using the provided configuration.  Each field is set as follows:
+(defn build-custom-widget-builder
+  "The build-custom-widget-builder function updates a CustomWidget$Builder instance using the provided configuration.
+  The function takes the CustomWidget$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `functionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-arn` |
-| `height` | java.lang.Number | [[cdk.support/lookup-entry]] | `:height` |
-| `params` | java.lang.Object | [[cdk.support/lookup-entry]] | `:params` |
-| `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
-| `updateOnRefresh` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:update-on-refresh` |
-| `updateOnResize` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:update-on-resize` |
-| `updateOnTimeRangeChange` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:update-on-time-range-change` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (CustomWidget$Builder/create)]
-    (when-let [data (lookup-entry config id :function-arn)]
-      (. builder functionArn data))
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (lookup-entry config id :params)]
-      (. builder params data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (lookup-entry config id :update-on-refresh)]
-      (. builder updateOnRefresh data))
-    (when-let [data (lookup-entry config id :update-on-resize)]
-      (. builder updateOnResize data))
-    (when-let [data (lookup-entry config id :update-on-time-range-change)]
-      (. builder updateOnTimeRangeChange data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
-
-
-(defn custom-widget-props-builder
-  "The custom-widget-props-builder function buildes out new instances of 
-CustomWidgetProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1675,31 +1760,72 @@ CustomWidgetProps$Builder using the provided configuration.  Each field is set a
 | `updateOnRefresh` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:update-on-refresh` |
 | `updateOnResize` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:update-on-resize` |
 | `updateOnTimeRangeChange` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:update-on-time-range-change` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (CustomWidgetProps$Builder.)]
-    (when-let [data (lookup-entry config id :function-arn)]
-      (. builder functionArn data))
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (lookup-entry config id :params)]
-      (. builder params data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (lookup-entry config id :update-on-refresh)]
-      (. builder updateOnRefresh data))
-    (when-let [data (lookup-entry config id :update-on-resize)]
-      (. builder updateOnResize data))
-    (when-let [data (lookup-entry config id :update-on-time-range-change)]
-      (. builder updateOnTimeRangeChange data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^CustomWidget$Builder builder id config]
+  (when-let [data (lookup-entry config id :function-arn)]
+    (. builder functionArn data))
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (lookup-entry config id :params)]
+    (. builder params data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (lookup-entry config id :update-on-refresh)]
+    (. builder updateOnRefresh data))
+  (when-let [data (lookup-entry config id :update-on-resize)]
+    (. builder updateOnResize data))
+  (when-let [data (lookup-entry config id :update-on-time-range-change)]
+    (. builder updateOnTimeRangeChange data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
 
 
-(defn dashboard-builder
-  "The dashboard-builder function buildes out new instances of 
-Dashboard$Builder using the provided configuration.  Each field is set as follows:
+(defn build-custom-widget-props-builder
+  "The build-custom-widget-props-builder function updates a CustomWidgetProps$Builder instance using the provided configuration.
+  The function takes the CustomWidgetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `functionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-arn` |
+| `height` | java.lang.Number | [[cdk.support/lookup-entry]] | `:height` |
+| `params` | java.lang.Object | [[cdk.support/lookup-entry]] | `:params` |
+| `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
+| `updateOnRefresh` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:update-on-refresh` |
+| `updateOnResize` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:update-on-resize` |
+| `updateOnTimeRangeChange` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:update-on-time-range-change` |
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^CustomWidgetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :function-arn)]
+    (. builder functionArn data))
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (lookup-entry config id :params)]
+    (. builder params data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (lookup-entry config id :update-on-refresh)]
+    (. builder updateOnRefresh data))
+  (when-let [data (lookup-entry config id :update-on-resize)]
+    (. builder updateOnResize data))
+  (when-let [data (lookup-entry config id :update-on-time-range-change)]
+    (. builder updateOnTimeRangeChange data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
+
+
+(defn build-dashboard-builder
+  "The build-dashboard-builder function updates a Dashboard$Builder instance using the provided configuration.
+  The function takes the Dashboard$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1709,29 +1835,32 @@ Dashboard$Builder using the provided configuration.  Each field is set as follow
 | `periodOverride` | software.amazon.awscdk.services.cloudwatch.PeriodOverride | [[cdk.api.services.cloudwatch/period-override]] | `:period-override` |
 | `start` | java.lang.String | [[cdk.support/lookup-entry]] | `:start` |
 | `variables` | java.util.List | [[cdk.support/lookup-entry]] | `:variables` |
-| `widgets` | java.util.List | [[cdk.support/lookup-entry]] | `:widgets` |"
-  [stack id config]
-  (let [builder (Dashboard$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :dashboard-name)]
-      (. builder dashboardName data))
-    (when-let [data (lookup-entry config id :default-interval)]
-      (. builder defaultInterval data))
-    (when-let [data (lookup-entry config id :end)]
-      (. builder end data))
-    (when-let [data (period-override config id :period-override)]
-      (. builder periodOverride data))
-    (when-let [data (lookup-entry config id :start)]
-      (. builder start data))
-    (when-let [data (lookup-entry config id :variables)]
-      (. builder variables data))
-    (when-let [data (lookup-entry config id :widgets)]
-      (. builder widgets data))
-    (.build builder)))
+| `widgets` | java.util.List | [[cdk.support/lookup-entry]] | `:widgets` |
+"
+  [^Dashboard$Builder builder id config]
+  (when-let [data (lookup-entry config id :dashboard-name)]
+    (. builder dashboardName data))
+  (when-let [data (lookup-entry config id :default-interval)]
+    (. builder defaultInterval data))
+  (when-let [data (lookup-entry config id :end)]
+    (. builder end data))
+  (when-let [data (period-override config id :period-override)]
+    (. builder periodOverride data))
+  (when-let [data (lookup-entry config id :start)]
+    (. builder start data))
+  (when-let [data (lookup-entry config id :variables)]
+    (. builder variables data))
+  (when-let [data (lookup-entry config id :widgets)]
+    (. builder widgets data))
+  (.build builder))
 
 
-(defn dashboard-props-builder
-  "The dashboard-props-builder function buildes out new instances of 
-DashboardProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-dashboard-props-builder
+  "The build-dashboard-props-builder function updates a DashboardProps$Builder instance using the provided configuration.
+  The function takes the DashboardProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1741,29 +1870,32 @@ DashboardProps$Builder using the provided configuration.  Each field is set as f
 | `periodOverride` | software.amazon.awscdk.services.cloudwatch.PeriodOverride | [[cdk.api.services.cloudwatch/period-override]] | `:period-override` |
 | `start` | java.lang.String | [[cdk.support/lookup-entry]] | `:start` |
 | `variables` | java.util.List | [[cdk.support/lookup-entry]] | `:variables` |
-| `widgets` | java.util.List | [[cdk.support/lookup-entry]] | `:widgets` |"
-  [stack id config]
-  (let [builder (DashboardProps$Builder.)]
-    (when-let [data (lookup-entry config id :dashboard-name)]
-      (. builder dashboardName data))
-    (when-let [data (lookup-entry config id :default-interval)]
-      (. builder defaultInterval data))
-    (when-let [data (lookup-entry config id :end)]
-      (. builder end data))
-    (when-let [data (period-override config id :period-override)]
-      (. builder periodOverride data))
-    (when-let [data (lookup-entry config id :start)]
-      (. builder start data))
-    (when-let [data (lookup-entry config id :variables)]
-      (. builder variables data))
-    (when-let [data (lookup-entry config id :widgets)]
-      (. builder widgets data))
-    (.build builder)))
+| `widgets` | java.util.List | [[cdk.support/lookup-entry]] | `:widgets` |
+"
+  [^DashboardProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :dashboard-name)]
+    (. builder dashboardName data))
+  (when-let [data (lookup-entry config id :default-interval)]
+    (. builder defaultInterval data))
+  (when-let [data (lookup-entry config id :end)]
+    (. builder end data))
+  (when-let [data (period-override config id :period-override)]
+    (. builder periodOverride data))
+  (when-let [data (lookup-entry config id :start)]
+    (. builder start data))
+  (when-let [data (lookup-entry config id :variables)]
+    (. builder variables data))
+  (when-let [data (lookup-entry config id :widgets)]
+    (. builder widgets data))
+  (.build builder))
 
 
-(defn dashboard-variable-builder
-  "The dashboard-variable-builder function buildes out new instances of 
-DashboardVariable$Builder using the provided configuration.  Each field is set as follows:
+(defn build-dashboard-variable-builder
+  "The build-dashboard-variable-builder function updates a DashboardVariable$Builder instance using the provided configuration.
+  The function takes the DashboardVariable$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1774,31 +1906,34 @@ DashboardVariable$Builder using the provided configuration.  Each field is set a
 | `type` | software.amazon.awscdk.services.cloudwatch.VariableType | [[cdk.api.services.cloudwatch/variable-type]] | `:type` |
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 | `values` | software.amazon.awscdk.services.cloudwatch.Values | [[cdk.support/lookup-entry]] | `:values` |
-| `visible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:visible` |"
-  [stack id config]
-  (let [builder (DashboardVariable$Builder/create)]
-    (when-let [data (lookup-entry config id :default-value)]
-      (. builder defaultValue data))
-    (when-let [data (lookup-entry config id :id)]
-      (. builder id data))
-    (when-let [data (variable-input-type config id :input-type)]
-      (. builder inputType data))
-    (when-let [data (lookup-entry config id :label)]
-      (. builder label data))
-    (when-let [data (variable-type config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (when-let [data (lookup-entry config id :values)]
-      (. builder values data))
-    (when-let [data (lookup-entry config id :visible)]
-      (. builder visible data))
-    (.build builder)))
+| `visible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:visible` |
+"
+  [^DashboardVariable$Builder builder id config]
+  (when-let [data (lookup-entry config id :default-value)]
+    (. builder defaultValue data))
+  (when-let [data (lookup-entry config id :id)]
+    (. builder id data))
+  (when-let [data (variable-input-type config id :input-type)]
+    (. builder inputType data))
+  (when-let [data (lookup-entry config id :label)]
+    (. builder label data))
+  (when-let [data (variable-type config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (when-let [data (lookup-entry config id :values)]
+    (. builder values data))
+  (when-let [data (lookup-entry config id :visible)]
+    (. builder visible data))
+  (.build builder))
 
 
-(defn dashboard-variable-options-builder
-  "The dashboard-variable-options-builder function buildes out new instances of 
-DashboardVariableOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-dashboard-variable-options-builder
+  "The build-dashboard-variable-options-builder function updates a DashboardVariableOptions$Builder instance using the provided configuration.
+  The function takes the DashboardVariableOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1809,101 +1944,54 @@ DashboardVariableOptions$Builder using the provided configuration.  Each field i
 | `type` | software.amazon.awscdk.services.cloudwatch.VariableType | [[cdk.api.services.cloudwatch/variable-type]] | `:type` |
 | `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
 | `values` | software.amazon.awscdk.services.cloudwatch.Values | [[cdk.support/lookup-entry]] | `:values` |
-| `visible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:visible` |"
-  [stack id config]
-  (let [builder (DashboardVariableOptions$Builder.)]
-    (when-let [data (lookup-entry config id :default-value)]
-      (. builder defaultValue data))
-    (when-let [data (lookup-entry config id :id)]
-      (. builder id data))
-    (when-let [data (variable-input-type config id :input-type)]
-      (. builder inputType data))
-    (when-let [data (lookup-entry config id :label)]
-      (. builder label data))
-    (when-let [data (variable-type config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (when-let [data (lookup-entry config id :values)]
-      (. builder values data))
-    (when-let [data (lookup-entry config id :visible)]
-      (. builder visible data))
-    (.build builder)))
+| `visible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:visible` |
+"
+  [^DashboardVariableOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :default-value)]
+    (. builder defaultValue data))
+  (when-let [data (lookup-entry config id :id)]
+    (. builder id data))
+  (when-let [data (variable-input-type config id :input-type)]
+    (. builder inputType data))
+  (when-let [data (lookup-entry config id :label)]
+    (. builder label data))
+  (when-let [data (variable-type config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (when-let [data (lookup-entry config id :values)]
+    (. builder values data))
+  (when-let [data (lookup-entry config id :visible)]
+    (. builder visible data))
+  (.build builder))
 
 
-(defn dimension-builder
-  "The dimension-builder function buildes out new instances of 
-Dimension$Builder using the provided configuration.  Each field is set as follows:
+(defn build-dimension-builder
+  "The build-dimension-builder function updates a Dimension$Builder instance using the provided configuration.
+  The function takes the Dimension$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `value` | java.lang.Object | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (Dimension$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.Object | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^Dimension$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn gauge-widget-builder
-  "The gauge-widget-builder function buildes out new instances of 
-GaugeWidget$Builder using the provided configuration.  Each field is set as follows:
+(defn build-gauge-widget-builder
+  "The build-gauge-widget-builder function updates a GaugeWidget$Builder instance using the provided configuration.
+  The function takes the GaugeWidget$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `annotations` | java.util.List | [[cdk.support/lookup-entry]] | `:annotations` |
-| `end` | java.lang.String | [[cdk.support/lookup-entry]] | `:end` |
-| `height` | java.lang.Number | [[cdk.support/lookup-entry]] | `:height` |
-| `leftYAxis` | software.amazon.awscdk.services.cloudwatch.YAxisProps | [[cdk.support/lookup-entry]] | `:left-y-axis` |
-| `legendPosition` | software.amazon.awscdk.services.cloudwatch.LegendPosition | [[cdk.api.services.cloudwatch/legend-position]] | `:legend-position` |
-| `liveData` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:live-data` |
-| `metrics` | java.util.List | [[cdk.support/lookup-entry]] | `:metrics` |
-| `period` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:period` |
-| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
-| `setPeriodToTimeRange` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:set-period-to-time-range` |
-| `start` | java.lang.String | [[cdk.support/lookup-entry]] | `:start` |
-| `statistic` | java.lang.String | [[cdk.support/lookup-entry]] | `:statistic` |
-| `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (GaugeWidget$Builder/create)]
-    (when-let [data (lookup-entry config id :annotations)]
-      (. builder annotations data))
-    (when-let [data (lookup-entry config id :end)]
-      (. builder end data))
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (lookup-entry config id :left-y-axis)]
-      (. builder leftYAxis data))
-    (when-let [data (legend-position config id :legend-position)]
-      (. builder legendPosition data))
-    (when-let [data (lookup-entry config id :live-data)]
-      (. builder liveData data))
-    (when-let [data (lookup-entry config id :metrics)]
-      (. builder metrics data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :set-period-to-time-range)]
-      (. builder setPeriodToTimeRange data))
-    (when-let [data (lookup-entry config id :start)]
-      (. builder start data))
-    (when-let [data (lookup-entry config id :statistic)]
-      (. builder statistic data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
-
-
-(defn gauge-widget-props-builder
-  "The gauge-widget-props-builder function buildes out new instances of 
-GaugeWidgetProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1920,43 +2008,102 @@ GaugeWidgetProps$Builder using the provided configuration.  Each field is set as
 | `start` | java.lang.String | [[cdk.support/lookup-entry]] | `:start` |
 | `statistic` | java.lang.String | [[cdk.support/lookup-entry]] | `:statistic` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (GaugeWidgetProps$Builder.)]
-    (when-let [data (lookup-entry config id :annotations)]
-      (. builder annotations data))
-    (when-let [data (lookup-entry config id :end)]
-      (. builder end data))
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (lookup-entry config id :left-y-axis)]
-      (. builder leftYAxis data))
-    (when-let [data (legend-position config id :legend-position)]
-      (. builder legendPosition data))
-    (when-let [data (lookup-entry config id :live-data)]
-      (. builder liveData data))
-    (when-let [data (lookup-entry config id :metrics)]
-      (. builder metrics data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :set-period-to-time-range)]
-      (. builder setPeriodToTimeRange data))
-    (when-let [data (lookup-entry config id :start)]
-      (. builder start data))
-    (when-let [data (lookup-entry config id :statistic)]
-      (. builder statistic data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^GaugeWidget$Builder builder id config]
+  (when-let [data (lookup-entry config id :annotations)]
+    (. builder annotations data))
+  (when-let [data (lookup-entry config id :end)]
+    (. builder end data))
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (lookup-entry config id :left-y-axis)]
+    (. builder leftYAxis data))
+  (when-let [data (legend-position config id :legend-position)]
+    (. builder legendPosition data))
+  (when-let [data (lookup-entry config id :live-data)]
+    (. builder liveData data))
+  (when-let [data (lookup-entry config id :metrics)]
+    (. builder metrics data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :set-period-to-time-range)]
+    (. builder setPeriodToTimeRange data))
+  (when-let [data (lookup-entry config id :start)]
+    (. builder start data))
+  (when-let [data (lookup-entry config id :statistic)]
+    (. builder statistic data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
 
 
-(defn graph-widget-builder
-  "The graph-widget-builder function buildes out new instances of 
-GraphWidget$Builder using the provided configuration.  Each field is set as follows:
+(defn build-gauge-widget-props-builder
+  "The build-gauge-widget-props-builder function updates a GaugeWidgetProps$Builder instance using the provided configuration.
+  The function takes the GaugeWidgetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `annotations` | java.util.List | [[cdk.support/lookup-entry]] | `:annotations` |
+| `end` | java.lang.String | [[cdk.support/lookup-entry]] | `:end` |
+| `height` | java.lang.Number | [[cdk.support/lookup-entry]] | `:height` |
+| `leftYAxis` | software.amazon.awscdk.services.cloudwatch.YAxisProps | [[cdk.support/lookup-entry]] | `:left-y-axis` |
+| `legendPosition` | software.amazon.awscdk.services.cloudwatch.LegendPosition | [[cdk.api.services.cloudwatch/legend-position]] | `:legend-position` |
+| `liveData` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:live-data` |
+| `metrics` | java.util.List | [[cdk.support/lookup-entry]] | `:metrics` |
+| `period` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:period` |
+| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
+| `setPeriodToTimeRange` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:set-period-to-time-range` |
+| `start` | java.lang.String | [[cdk.support/lookup-entry]] | `:start` |
+| `statistic` | java.lang.String | [[cdk.support/lookup-entry]] | `:statistic` |
+| `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^GaugeWidgetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :annotations)]
+    (. builder annotations data))
+  (when-let [data (lookup-entry config id :end)]
+    (. builder end data))
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (lookup-entry config id :left-y-axis)]
+    (. builder leftYAxis data))
+  (when-let [data (legend-position config id :legend-position)]
+    (. builder legendPosition data))
+  (when-let [data (lookup-entry config id :live-data)]
+    (. builder liveData data))
+  (when-let [data (lookup-entry config id :metrics)]
+    (. builder metrics data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :set-period-to-time-range)]
+    (. builder setPeriodToTimeRange data))
+  (when-let [data (lookup-entry config id :start)]
+    (. builder start data))
+  (when-let [data (lookup-entry config id :statistic)]
+    (. builder statistic data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
+
+
+(defn build-graph-widget-builder
+  "The build-graph-widget-builder function updates a GraphWidget$Builder instance using the provided configuration.
+  The function takes the GraphWidget$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1979,55 +2126,58 @@ GraphWidget$Builder using the provided configuration.  Each field is set as foll
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
 | `verticalAnnotations` | java.util.List | [[cdk.support/lookup-entry]] | `:vertical-annotations` |
 | `view` | software.amazon.awscdk.services.cloudwatch.GraphWidgetView | [[cdk.api.services.cloudwatch/graph-widget-view]] | `:view` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (GraphWidget$Builder/create)]
-    (when-let [data (lookup-entry config id :end)]
-      (. builder end data))
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (lookup-entry config id :left)]
-      (. builder left data))
-    (when-let [data (lookup-entry config id :left-annotations)]
-      (. builder leftAnnotations data))
-    (when-let [data (lookup-entry config id :left-y-axis)]
-      (. builder leftYAxis data))
-    (when-let [data (legend-position config id :legend-position)]
-      (. builder legendPosition data))
-    (when-let [data (lookup-entry config id :live-data)]
-      (. builder liveData data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :right)]
-      (. builder right data))
-    (when-let [data (lookup-entry config id :right-annotations)]
-      (. builder rightAnnotations data))
-    (when-let [data (lookup-entry config id :right-y-axis)]
-      (. builder rightYAxis data))
-    (when-let [data (lookup-entry config id :set-period-to-time-range)]
-      (. builder setPeriodToTimeRange data))
-    (when-let [data (lookup-entry config id :stacked)]
-      (. builder stacked data))
-    (when-let [data (lookup-entry config id :start)]
-      (. builder start data))
-    (when-let [data (lookup-entry config id :statistic)]
-      (. builder statistic data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (lookup-entry config id :vertical-annotations)]
-      (. builder verticalAnnotations data))
-    (when-let [data (graph-widget-view config id :view)]
-      (. builder view data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^GraphWidget$Builder builder id config]
+  (when-let [data (lookup-entry config id :end)]
+    (. builder end data))
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (lookup-entry config id :left)]
+    (. builder left data))
+  (when-let [data (lookup-entry config id :left-annotations)]
+    (. builder leftAnnotations data))
+  (when-let [data (lookup-entry config id :left-y-axis)]
+    (. builder leftYAxis data))
+  (when-let [data (legend-position config id :legend-position)]
+    (. builder legendPosition data))
+  (when-let [data (lookup-entry config id :live-data)]
+    (. builder liveData data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :right)]
+    (. builder right data))
+  (when-let [data (lookup-entry config id :right-annotations)]
+    (. builder rightAnnotations data))
+  (when-let [data (lookup-entry config id :right-y-axis)]
+    (. builder rightYAxis data))
+  (when-let [data (lookup-entry config id :set-period-to-time-range)]
+    (. builder setPeriodToTimeRange data))
+  (when-let [data (lookup-entry config id :stacked)]
+    (. builder stacked data))
+  (when-let [data (lookup-entry config id :start)]
+    (. builder start data))
+  (when-let [data (lookup-entry config id :statistic)]
+    (. builder statistic data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (lookup-entry config id :vertical-annotations)]
+    (. builder verticalAnnotations data))
+  (when-let [data (graph-widget-view config id :view)]
+    (. builder view data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
 
 
-(defn graph-widget-props-builder
-  "The graph-widget-props-builder function buildes out new instances of 
-GraphWidgetProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-graph-widget-props-builder
+  "The build-graph-widget-props-builder function updates a GraphWidgetProps$Builder instance using the provided configuration.
+  The function takes the GraphWidgetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2050,55 +2200,58 @@ GraphWidgetProps$Builder using the provided configuration.  Each field is set as
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
 | `verticalAnnotations` | java.util.List | [[cdk.support/lookup-entry]] | `:vertical-annotations` |
 | `view` | software.amazon.awscdk.services.cloudwatch.GraphWidgetView | [[cdk.api.services.cloudwatch/graph-widget-view]] | `:view` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (GraphWidgetProps$Builder.)]
-    (when-let [data (lookup-entry config id :end)]
-      (. builder end data))
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (lookup-entry config id :left)]
-      (. builder left data))
-    (when-let [data (lookup-entry config id :left-annotations)]
-      (. builder leftAnnotations data))
-    (when-let [data (lookup-entry config id :left-y-axis)]
-      (. builder leftYAxis data))
-    (when-let [data (legend-position config id :legend-position)]
-      (. builder legendPosition data))
-    (when-let [data (lookup-entry config id :live-data)]
-      (. builder liveData data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :right)]
-      (. builder right data))
-    (when-let [data (lookup-entry config id :right-annotations)]
-      (. builder rightAnnotations data))
-    (when-let [data (lookup-entry config id :right-y-axis)]
-      (. builder rightYAxis data))
-    (when-let [data (lookup-entry config id :set-period-to-time-range)]
-      (. builder setPeriodToTimeRange data))
-    (when-let [data (lookup-entry config id :stacked)]
-      (. builder stacked data))
-    (when-let [data (lookup-entry config id :start)]
-      (. builder start data))
-    (when-let [data (lookup-entry config id :statistic)]
-      (. builder statistic data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (lookup-entry config id :vertical-annotations)]
-      (. builder verticalAnnotations data))
-    (when-let [data (graph-widget-view config id :view)]
-      (. builder view data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^GraphWidgetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :end)]
+    (. builder end data))
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (lookup-entry config id :left)]
+    (. builder left data))
+  (when-let [data (lookup-entry config id :left-annotations)]
+    (. builder leftAnnotations data))
+  (when-let [data (lookup-entry config id :left-y-axis)]
+    (. builder leftYAxis data))
+  (when-let [data (legend-position config id :legend-position)]
+    (. builder legendPosition data))
+  (when-let [data (lookup-entry config id :live-data)]
+    (. builder liveData data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :right)]
+    (. builder right data))
+  (when-let [data (lookup-entry config id :right-annotations)]
+    (. builder rightAnnotations data))
+  (when-let [data (lookup-entry config id :right-y-axis)]
+    (. builder rightYAxis data))
+  (when-let [data (lookup-entry config id :set-period-to-time-range)]
+    (. builder setPeriodToTimeRange data))
+  (when-let [data (lookup-entry config id :stacked)]
+    (. builder stacked data))
+  (when-let [data (lookup-entry config id :start)]
+    (. builder start data))
+  (when-let [data (lookup-entry config id :statistic)]
+    (. builder statistic data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (lookup-entry config id :vertical-annotations)]
+    (. builder verticalAnnotations data))
+  (when-let [data (graph-widget-view config id :view)]
+    (. builder view data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
 
 
-(defn horizontal-annotation-builder
-  "The horizontal-annotation-builder function buildes out new instances of 
-HorizontalAnnotation$Builder using the provided configuration.  Each field is set as follows:
+(defn build-horizontal-annotation-builder
+  "The build-horizontal-annotation-builder function updates a HorizontalAnnotation$Builder instance using the provided configuration.
+  The function takes the HorizontalAnnotation$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2106,60 +2259,28 @@ HorizontalAnnotation$Builder using the provided configuration.  Each field is se
 | `fill` | software.amazon.awscdk.services.cloudwatch.Shading | [[cdk.api.services.cloudwatch/shading]] | `:fill` |
 | `label` | java.lang.String | [[cdk.support/lookup-entry]] | `:label` |
 | `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
-| `visible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:visible` |"
-  [stack id config]
-  (let [builder (HorizontalAnnotation$Builder.)]
-    (when-let [data (lookup-entry config id :color)]
-      (. builder color data))
-    (when-let [data (shading config id :fill)]
-      (. builder fill data))
-    (when-let [data (lookup-entry config id :label)]
-      (. builder label data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (when-let [data (lookup-entry config id :visible)]
-      (. builder visible data))
-    (.build builder)))
+| `visible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:visible` |
+"
+  [^HorizontalAnnotation$Builder builder id config]
+  (when-let [data (lookup-entry config id :color)]
+    (. builder color data))
+  (when-let [data (shading config id :fill)]
+    (. builder fill data))
+  (when-let [data (lookup-entry config id :label)]
+    (. builder label data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (when-let [data (lookup-entry config id :visible)]
+    (. builder visible data))
+  (.build builder))
 
 
-(defn log-query-widget-builder
-  "The log-query-widget-builder function buildes out new instances of 
-LogQueryWidget$Builder using the provided configuration.  Each field is set as follows:
+(defn build-log-query-widget-builder
+  "The build-log-query-widget-builder function updates a LogQueryWidget$Builder instance using the provided configuration.
+  The function takes the LogQueryWidget$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `height` | java.lang.Number | [[cdk.support/lookup-entry]] | `:height` |
-| `logGroupNames` | java.util.List | [[cdk.support/lookup-entry]] | `:log-group-names` |
-| `queryLines` | java.util.List | [[cdk.support/lookup-entry]] | `:query-lines` |
-| `queryString` | java.lang.String | [[cdk.support/lookup-entry]] | `:query-string` |
-| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
-| `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
-| `view` | software.amazon.awscdk.services.cloudwatch.LogQueryVisualizationType | [[cdk.api.services.cloudwatch/log-query-visualization-type]] | `:view` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (LogQueryWidget$Builder/create)]
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (lookup-entry config id :log-group-names)]
-      (. builder logGroupNames data))
-    (when-let [data (lookup-entry config id :query-lines)]
-      (. builder queryLines data))
-    (when-let [data (lookup-entry config id :query-string)]
-      (. builder queryString data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (log-query-visualization-type config id :view)]
-      (. builder view data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
-
-
-(defn log-query-widget-props-builder
-  "The log-query-widget-props-builder function buildes out new instances of 
-LogQueryWidgetProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2170,31 +2291,72 @@ LogQueryWidgetProps$Builder using the provided configuration.  Each field is set
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
 | `view` | software.amazon.awscdk.services.cloudwatch.LogQueryVisualizationType | [[cdk.api.services.cloudwatch/log-query-visualization-type]] | `:view` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (LogQueryWidgetProps$Builder.)]
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (lookup-entry config id :log-group-names)]
-      (. builder logGroupNames data))
-    (when-let [data (lookup-entry config id :query-lines)]
-      (. builder queryLines data))
-    (when-let [data (lookup-entry config id :query-string)]
-      (. builder queryString data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (log-query-visualization-type config id :view)]
-      (. builder view data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^LogQueryWidget$Builder builder id config]
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (lookup-entry config id :log-group-names)]
+    (. builder logGroupNames data))
+  (when-let [data (lookup-entry config id :query-lines)]
+    (. builder queryLines data))
+  (when-let [data (lookup-entry config id :query-string)]
+    (. builder queryString data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (log-query-visualization-type config id :view)]
+    (. builder view data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
 
 
-(defn math-expression-builder
-  "The math-expression-builder function buildes out new instances of 
-MathExpression$Builder using the provided configuration.  Each field is set as follows:
+(defn build-log-query-widget-props-builder
+  "The build-log-query-widget-props-builder function updates a LogQueryWidgetProps$Builder instance using the provided configuration.
+  The function takes the LogQueryWidgetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `height` | java.lang.Number | [[cdk.support/lookup-entry]] | `:height` |
+| `logGroupNames` | java.util.List | [[cdk.support/lookup-entry]] | `:log-group-names` |
+| `queryLines` | java.util.List | [[cdk.support/lookup-entry]] | `:query-lines` |
+| `queryString` | java.lang.String | [[cdk.support/lookup-entry]] | `:query-string` |
+| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
+| `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
+| `view` | software.amazon.awscdk.services.cloudwatch.LogQueryVisualizationType | [[cdk.api.services.cloudwatch/log-query-visualization-type]] | `:view` |
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^LogQueryWidgetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (lookup-entry config id :log-group-names)]
+    (. builder logGroupNames data))
+  (when-let [data (lookup-entry config id :query-lines)]
+    (. builder queryLines data))
+  (when-let [data (lookup-entry config id :query-string)]
+    (. builder queryString data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (log-query-visualization-type config id :view)]
+    (. builder view data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
+
+
+(defn build-math-expression-builder
+  "The build-math-expression-builder function updates a MathExpression$Builder instance using the provided configuration.
+  The function takes the MathExpression$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2204,29 +2366,32 @@ MathExpression$Builder using the provided configuration.  Each field is set as f
 | `period` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:period` |
 | `searchAccount` | java.lang.String | [[cdk.support/lookup-entry]] | `:search-account` |
 | `searchRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:search-region` |
-| `usingMetrics` | java.util.Map | [[cdk.support/lookup-entry]] | `:using-metrics` |"
-  [stack id config]
-  (let [builder (MathExpression$Builder/create)]
-    (when-let [data (lookup-entry config id :color)]
-      (. builder color data))
-    (when-let [data (lookup-entry config id :expression)]
-      (. builder expression data))
-    (when-let [data (lookup-entry config id :label)]
-      (. builder label data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :search-account)]
-      (. builder searchAccount data))
-    (when-let [data (lookup-entry config id :search-region)]
-      (. builder searchRegion data))
-    (when-let [data (lookup-entry config id :using-metrics)]
-      (. builder usingMetrics data))
-    (.build builder)))
+| `usingMetrics` | java.util.Map | [[cdk.support/lookup-entry]] | `:using-metrics` |
+"
+  [^MathExpression$Builder builder id config]
+  (when-let [data (lookup-entry config id :color)]
+    (. builder color data))
+  (when-let [data (lookup-entry config id :expression)]
+    (. builder expression data))
+  (when-let [data (lookup-entry config id :label)]
+    (. builder label data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :search-account)]
+    (. builder searchAccount data))
+  (when-let [data (lookup-entry config id :search-region)]
+    (. builder searchRegion data))
+  (when-let [data (lookup-entry config id :using-metrics)]
+    (. builder usingMetrics data))
+  (.build builder))
 
 
-(defn math-expression-options-builder
-  "The math-expression-options-builder function buildes out new instances of 
-MathExpressionOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-math-expression-options-builder
+  "The build-math-expression-options-builder function updates a MathExpressionOptions$Builder instance using the provided configuration.
+  The function takes the MathExpressionOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2234,25 +2399,28 @@ MathExpressionOptions$Builder using the provided configuration.  Each field is s
 | `label` | java.lang.String | [[cdk.support/lookup-entry]] | `:label` |
 | `period` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:period` |
 | `searchAccount` | java.lang.String | [[cdk.support/lookup-entry]] | `:search-account` |
-| `searchRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:search-region` |"
-  [stack id config]
-  (let [builder (MathExpressionOptions$Builder.)]
-    (when-let [data (lookup-entry config id :color)]
-      (. builder color data))
-    (when-let [data (lookup-entry config id :label)]
-      (. builder label data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :search-account)]
-      (. builder searchAccount data))
-    (when-let [data (lookup-entry config id :search-region)]
-      (. builder searchRegion data))
-    (.build builder)))
+| `searchRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:search-region` |
+"
+  [^MathExpressionOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :color)]
+    (. builder color data))
+  (when-let [data (lookup-entry config id :label)]
+    (. builder label data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :search-account)]
+    (. builder searchAccount data))
+  (when-let [data (lookup-entry config id :search-region)]
+    (. builder searchRegion data))
+  (.build builder))
 
 
-(defn math-expression-props-builder
-  "The math-expression-props-builder function buildes out new instances of 
-MathExpressionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-math-expression-props-builder
+  "The build-math-expression-props-builder function updates a MathExpressionProps$Builder instance using the provided configuration.
+  The function takes the MathExpressionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2262,29 +2430,32 @@ MathExpressionProps$Builder using the provided configuration.  Each field is set
 | `period` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:period` |
 | `searchAccount` | java.lang.String | [[cdk.support/lookup-entry]] | `:search-account` |
 | `searchRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:search-region` |
-| `usingMetrics` | java.util.Map | [[cdk.support/lookup-entry]] | `:using-metrics` |"
-  [stack id config]
-  (let [builder (MathExpressionProps$Builder.)]
-    (when-let [data (lookup-entry config id :color)]
-      (. builder color data))
-    (when-let [data (lookup-entry config id :expression)]
-      (. builder expression data))
-    (when-let [data (lookup-entry config id :label)]
-      (. builder label data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :search-account)]
-      (. builder searchAccount data))
-    (when-let [data (lookup-entry config id :search-region)]
-      (. builder searchRegion data))
-    (when-let [data (lookup-entry config id :using-metrics)]
-      (. builder usingMetrics data))
-    (.build builder)))
+| `usingMetrics` | java.util.Map | [[cdk.support/lookup-entry]] | `:using-metrics` |
+"
+  [^MathExpressionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :color)]
+    (. builder color data))
+  (when-let [data (lookup-entry config id :expression)]
+    (. builder expression data))
+  (when-let [data (lookup-entry config id :label)]
+    (. builder label data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :search-account)]
+    (. builder searchAccount data))
+  (when-let [data (lookup-entry config id :search-region)]
+    (. builder searchRegion data))
+  (when-let [data (lookup-entry config id :using-metrics)]
+    (. builder usingMetrics data))
+  (.build builder))
 
 
-(defn metric-builder
-  "The metric-builder function buildes out new instances of 
-Metric$Builder using the provided configuration.  Each field is set as follows:
+(defn build-metric-builder
+  "The build-metric-builder function updates a Metric$Builder instance using the provided configuration.
+  The function takes the Metric$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2297,55 +2468,61 @@ Metric$Builder using the provided configuration.  Each field is set as follows:
 | `period` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:period` |
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 | `statistic` | java.lang.String | [[cdk.support/lookup-entry]] | `:statistic` |
-| `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |"
-  [stack id config]
-  (let [builder (Metric$Builder/create)]
-    (when-let [data (lookup-entry config id :account)]
-      (. builder account data))
-    (when-let [data (lookup-entry config id :color)]
-      (. builder color data))
-    (when-let [data (lookup-entry config id :dimensions-map)]
-      (. builder dimensionsMap data))
-    (when-let [data (lookup-entry config id :label)]
-      (. builder label data))
-    (when-let [data (lookup-entry config id :metric-name)]
-      (. builder metricName data))
-    (when-let [data (lookup-entry config id :namespace)]
-      (. builder namespace data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :statistic)]
-      (. builder statistic data))
-    (when-let [data (unit config id :unit)]
-      (. builder unit data))
-    (.build builder)))
+| `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |
+"
+  [^Metric$Builder builder id config]
+  (when-let [data (lookup-entry config id :account)]
+    (. builder account data))
+  (when-let [data (lookup-entry config id :color)]
+    (. builder color data))
+  (when-let [data (lookup-entry config id :dimensions-map)]
+    (. builder dimensionsMap data))
+  (when-let [data (lookup-entry config id :label)]
+    (. builder label data))
+  (when-let [data (lookup-entry config id :metric-name)]
+    (. builder metricName data))
+  (when-let [data (lookup-entry config id :namespace)]
+    (. builder namespace data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :statistic)]
+    (. builder statistic data))
+  (when-let [data (unit config id :unit)]
+    (. builder unit data))
+  (.build builder))
 
 
-(defn metric-config-builder
-  "The metric-config-builder function buildes out new instances of 
-MetricConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-metric-config-builder
+  "The build-metric-config-builder function updates a MetricConfig$Builder instance using the provided configuration.
+  The function takes the MetricConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `mathExpression` | software.amazon.awscdk.services.cloudwatch.MetricExpressionConfig | [[cdk.support/lookup-entry]] | `:math-expression` |
 | `metricStat` | software.amazon.awscdk.services.cloudwatch.MetricStatConfig | [[cdk.support/lookup-entry]] | `:metric-stat` |
-| `renderingProperties` | java.util.Map | [[cdk.support/lookup-entry]] | `:rendering-properties` |"
-  [stack id config]
-  (let [builder (MetricConfig$Builder.)]
-    (when-let [data (lookup-entry config id :math-expression)]
-      (. builder mathExpression data))
-    (when-let [data (lookup-entry config id :metric-stat)]
-      (. builder metricStat data))
-    (when-let [data (lookup-entry config id :rendering-properties)]
-      (. builder renderingProperties data))
-    (.build builder)))
+| `renderingProperties` | java.util.Map | [[cdk.support/lookup-entry]] | `:rendering-properties` |
+"
+  [^MetricConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :math-expression)]
+    (. builder mathExpression data))
+  (when-let [data (lookup-entry config id :metric-stat)]
+    (. builder metricStat data))
+  (when-let [data (lookup-entry config id :rendering-properties)]
+    (. builder renderingProperties data))
+  (.build builder))
 
 
-(defn metric-expression-config-builder
-  "The metric-expression-config-builder function buildes out new instances of 
-MetricExpressionConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-metric-expression-config-builder
+  "The build-metric-expression-config-builder function updates a MetricExpressionConfig$Builder instance using the provided configuration.
+  The function takes the MetricExpressionConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2353,25 +2530,28 @@ MetricExpressionConfig$Builder using the provided configuration.  Each field is 
 | `period` | java.lang.Number | [[cdk.support/lookup-entry]] | `:period` |
 | `searchAccount` | java.lang.String | [[cdk.support/lookup-entry]] | `:search-account` |
 | `searchRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:search-region` |
-| `usingMetrics` | java.util.Map | [[cdk.support/lookup-entry]] | `:using-metrics` |"
-  [stack id config]
-  (let [builder (MetricExpressionConfig$Builder.)]
-    (when-let [data (lookup-entry config id :expression)]
-      (. builder expression data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :search-account)]
-      (. builder searchAccount data))
-    (when-let [data (lookup-entry config id :search-region)]
-      (. builder searchRegion data))
-    (when-let [data (lookup-entry config id :using-metrics)]
-      (. builder usingMetrics data))
-    (.build builder)))
+| `usingMetrics` | java.util.Map | [[cdk.support/lookup-entry]] | `:using-metrics` |
+"
+  [^MetricExpressionConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :expression)]
+    (. builder expression data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :search-account)]
+    (. builder searchAccount data))
+  (when-let [data (lookup-entry config id :search-region)]
+    (. builder searchRegion data))
+  (when-let [data (lookup-entry config id :using-metrics)]
+    (. builder usingMetrics data))
+  (.build builder))
 
 
-(defn metric-options-builder
-  "The metric-options-builder function buildes out new instances of 
-MetricOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-metric-options-builder
+  "The build-metric-options-builder function updates a MetricOptions$Builder instance using the provided configuration.
+  The function takes the MetricOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2382,31 +2562,34 @@ MetricOptions$Builder using the provided configuration.  Each field is set as fo
 | `period` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:period` |
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 | `statistic` | java.lang.String | [[cdk.support/lookup-entry]] | `:statistic` |
-| `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |"
-  [stack id config]
-  (let [builder (MetricOptions$Builder.)]
-    (when-let [data (lookup-entry config id :account)]
-      (. builder account data))
-    (when-let [data (lookup-entry config id :color)]
-      (. builder color data))
-    (when-let [data (lookup-entry config id :dimensions-map)]
-      (. builder dimensionsMap data))
-    (when-let [data (lookup-entry config id :label)]
-      (. builder label data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :statistic)]
-      (. builder statistic data))
-    (when-let [data (unit config id :unit)]
-      (. builder unit data))
-    (.build builder)))
+| `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |
+"
+  [^MetricOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :account)]
+    (. builder account data))
+  (when-let [data (lookup-entry config id :color)]
+    (. builder color data))
+  (when-let [data (lookup-entry config id :dimensions-map)]
+    (. builder dimensionsMap data))
+  (when-let [data (lookup-entry config id :label)]
+    (. builder label data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :statistic)]
+    (. builder statistic data))
+  (when-let [data (unit config id :unit)]
+    (. builder unit data))
+  (.build builder))
 
 
-(defn metric-props-builder
-  "The metric-props-builder function buildes out new instances of 
-MetricProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-metric-props-builder
+  "The build-metric-props-builder function updates a MetricProps$Builder instance using the provided configuration.
+  The function takes the MetricProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2419,35 +2602,38 @@ MetricProps$Builder using the provided configuration.  Each field is set as foll
 | `period` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:period` |
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 | `statistic` | java.lang.String | [[cdk.support/lookup-entry]] | `:statistic` |
-| `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |"
-  [stack id config]
-  (let [builder (MetricProps$Builder.)]
-    (when-let [data (lookup-entry config id :account)]
-      (. builder account data))
-    (when-let [data (lookup-entry config id :color)]
-      (. builder color data))
-    (when-let [data (lookup-entry config id :dimensions-map)]
-      (. builder dimensionsMap data))
-    (when-let [data (lookup-entry config id :label)]
-      (. builder label data))
-    (when-let [data (lookup-entry config id :metric-name)]
-      (. builder metricName data))
-    (when-let [data (lookup-entry config id :namespace)]
-      (. builder namespace data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :statistic)]
-      (. builder statistic data))
-    (when-let [data (unit config id :unit)]
-      (. builder unit data))
-    (.build builder)))
+| `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |
+"
+  [^MetricProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :account)]
+    (. builder account data))
+  (when-let [data (lookup-entry config id :color)]
+    (. builder color data))
+  (when-let [data (lookup-entry config id :dimensions-map)]
+    (. builder dimensionsMap data))
+  (when-let [data (lookup-entry config id :label)]
+    (. builder label data))
+  (when-let [data (lookup-entry config id :metric-name)]
+    (. builder metricName data))
+  (when-let [data (lookup-entry config id :namespace)]
+    (. builder namespace data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :statistic)]
+    (. builder statistic data))
+  (when-let [data (unit config id :unit)]
+    (. builder unit data))
+  (.build builder))
 
 
-(defn metric-stat-config-builder
-  "The metric-stat-config-builder function buildes out new instances of 
-MetricStatConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-metric-stat-config-builder
+  "The build-metric-stat-config-builder function updates a MetricStatConfig$Builder instance using the provided configuration.
+  The function takes the MetricStatConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2458,77 +2644,86 @@ MetricStatConfig$Builder using the provided configuration.  Each field is set as
 | `period` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:period` |
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 | `statistic` | java.lang.String | [[cdk.support/lookup-entry]] | `:statistic` |
-| `unitFilter` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit-filter` |"
-  [stack id config]
-  (let [builder (MetricStatConfig$Builder.)]
-    (when-let [data (lookup-entry config id :account)]
-      (. builder account data))
-    (when-let [data (lookup-entry config id :dimensions)]
-      (. builder dimensions data))
-    (when-let [data (lookup-entry config id :metric-name)]
-      (. builder metricName data))
-    (when-let [data (lookup-entry config id :namespace)]
-      (. builder namespace data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :statistic)]
-      (. builder statistic data))
-    (when-let [data (unit config id :unit-filter)]
-      (. builder unitFilter data))
-    (.build builder)))
+| `unitFilter` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit-filter` |
+"
+  [^MetricStatConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :account)]
+    (. builder account data))
+  (when-let [data (lookup-entry config id :dimensions)]
+    (. builder dimensions data))
+  (when-let [data (lookup-entry config id :metric-name)]
+    (. builder metricName data))
+  (when-let [data (lookup-entry config id :namespace)]
+    (. builder namespace data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :statistic)]
+    (. builder statistic data))
+  (when-let [data (unit config id :unit-filter)]
+    (. builder unitFilter data))
+  (.build builder))
 
 
-(defn metric-widget-props-builder
-  "The metric-widget-props-builder function buildes out new instances of 
-MetricWidgetProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-metric-widget-props-builder
+  "The build-metric-widget-props-builder function updates a MetricWidgetProps$Builder instance using the provided configuration.
+  The function takes the MetricWidgetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `height` | java.lang.Number | [[cdk.support/lookup-entry]] | `:height` |
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (MetricWidgetProps$Builder.)]
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^MetricWidgetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
 
 
-(defn search-components-builder
-  "The search-components-builder function buildes out new instances of 
-SearchComponents$Builder using the provided configuration.  Each field is set as follows:
+(defn build-search-components-builder
+  "The build-search-components-builder function updates a SearchComponents$Builder instance using the provided configuration.
+  The function takes the SearchComponents$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dimensions` | java.util.List | [[cdk.support/lookup-entry]] | `:dimensions` |
 | `metricName` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-name` |
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
-| `populateFrom` | java.lang.String | [[cdk.support/lookup-entry]] | `:populate-from` |"
-  [stack id config]
-  (let [builder (SearchComponents$Builder.)]
-    (when-let [data (lookup-entry config id :dimensions)]
-      (. builder dimensions data))
-    (when-let [data (lookup-entry config id :metric-name)]
-      (. builder metricName data))
-    (when-let [data (lookup-entry config id :namespace)]
-      (. builder namespace data))
-    (when-let [data (lookup-entry config id :populate-from)]
-      (. builder populateFrom data))
-    (.build builder)))
+| `populateFrom` | java.lang.String | [[cdk.support/lookup-entry]] | `:populate-from` |
+"
+  [^SearchComponents$Builder builder id config]
+  (when-let [data (lookup-entry config id :dimensions)]
+    (. builder dimensions data))
+  (when-let [data (lookup-entry config id :metric-name)]
+    (. builder metricName data))
+  (when-let [data (lookup-entry config id :namespace)]
+    (. builder namespace data))
+  (when-let [data (lookup-entry config id :populate-from)]
+    (. builder populateFrom data))
+  (.build builder))
 
 
-(defn single-value-widget-builder
-  "The single-value-widget-builder function buildes out new instances of 
-SingleValueWidget$Builder using the provided configuration.  Each field is set as follows:
+(defn build-single-value-widget-builder
+  "The build-single-value-widget-builder function updates a SingleValueWidget$Builder instance using the provided configuration.
+  The function takes the SingleValueWidget$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2542,37 +2737,40 @@ SingleValueWidget$Builder using the provided configuration.  Each field is set a
 | `sparkline` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:sparkline` |
 | `start` | java.lang.String | [[cdk.support/lookup-entry]] | `:start` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (SingleValueWidget$Builder/create)]
-    (when-let [data (lookup-entry config id :end)]
-      (. builder end data))
-    (when-let [data (lookup-entry config id :full-precision)]
-      (. builder fullPrecision data))
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (lookup-entry config id :metrics)]
-      (. builder metrics data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :set-period-to-time-range)]
-      (. builder setPeriodToTimeRange data))
-    (when-let [data (lookup-entry config id :sparkline)]
-      (. builder sparkline data))
-    (when-let [data (lookup-entry config id :start)]
-      (. builder start data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^SingleValueWidget$Builder builder id config]
+  (when-let [data (lookup-entry config id :end)]
+    (. builder end data))
+  (when-let [data (lookup-entry config id :full-precision)]
+    (. builder fullPrecision data))
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (lookup-entry config id :metrics)]
+    (. builder metrics data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :set-period-to-time-range)]
+    (. builder setPeriodToTimeRange data))
+  (when-let [data (lookup-entry config id :sparkline)]
+    (. builder sparkline data))
+  (when-let [data (lookup-entry config id :start)]
+    (. builder start data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
 
 
-(defn single-value-widget-props-builder
-  "The single-value-widget-props-builder function buildes out new instances of 
-SingleValueWidgetProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-single-value-widget-props-builder
+  "The build-single-value-widget-props-builder function updates a SingleValueWidgetProps$Builder instance using the provided configuration.
+  The function takes the SingleValueWidgetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2586,150 +2784,103 @@ SingleValueWidgetProps$Builder using the provided configuration.  Each field is 
 | `sparkline` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:sparkline` |
 | `start` | java.lang.String | [[cdk.support/lookup-entry]] | `:start` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (SingleValueWidgetProps$Builder.)]
-    (when-let [data (lookup-entry config id :end)]
-      (. builder end data))
-    (when-let [data (lookup-entry config id :full-precision)]
-      (. builder fullPrecision data))
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (lookup-entry config id :metrics)]
-      (. builder metrics data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :set-period-to-time-range)]
-      (. builder setPeriodToTimeRange data))
-    (when-let [data (lookup-entry config id :sparkline)]
-      (. builder sparkline data))
-    (when-let [data (lookup-entry config id :start)]
-      (. builder start data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^SingleValueWidgetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :end)]
+    (. builder end data))
+  (when-let [data (lookup-entry config id :full-precision)]
+    (. builder fullPrecision data))
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (lookup-entry config id :metrics)]
+    (. builder metrics data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :set-period-to-time-range)]
+    (. builder setPeriodToTimeRange data))
+  (when-let [data (lookup-entry config id :sparkline)]
+    (. builder sparkline data))
+  (when-let [data (lookup-entry config id :start)]
+    (. builder start data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
 
 
-(defn spacer-builder
-  "The spacer-builder function buildes out new instances of 
-Spacer$Builder using the provided configuration.  Each field is set as follows:
+(defn build-spacer-builder
+  "The build-spacer-builder function updates a Spacer$Builder instance using the provided configuration.
+  The function takes the Spacer$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `height` | java.lang.Number | [[cdk.support/lookup-entry]] | `:height` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (Spacer$Builder/create)]
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
-
-
-(defn spacer-props-builder
-  "The spacer-props-builder function buildes out new instances of 
-SpacerProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `height` | java.lang.Number | [[cdk.support/lookup-entry]] | `:height` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (SpacerProps$Builder.)]
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^Spacer$Builder builder id config]
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
 
 
-(defn table-summary-props-builder
-  "The table-summary-props-builder function buildes out new instances of 
-TableSummaryProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-spacer-props-builder
+  "The build-spacer-props-builder function updates a SpacerProps$Builder instance using the provided configuration.
+  The function takes the SpacerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `height` | java.lang.Number | [[cdk.support/lookup-entry]] | `:height` |
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^SpacerProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
+
+
+(defn build-table-summary-props-builder
+  "The build-table-summary-props-builder function updates a TableSummaryProps$Builder instance using the provided configuration.
+  The function takes the TableSummaryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `columns` | java.util.List | [[cdk.support/lookup-entry]] | `:columns` |
 | `hideNonSummaryColumns` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:hide-non-summary-columns` |
-| `sticky` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:sticky` |"
-  [stack id config]
-  (let [builder (TableSummaryProps$Builder.)]
-    (when-let [data (lookup-entry config id :columns)]
-      (. builder columns data))
-    (when-let [data (lookup-entry config id :hide-non-summary-columns)]
-      (. builder hideNonSummaryColumns data))
-    (when-let [data (lookup-entry config id :sticky)]
-      (. builder sticky data))
-    (.build builder)))
+| `sticky` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:sticky` |
+"
+  [^TableSummaryProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :columns)]
+    (. builder columns data))
+  (when-let [data (lookup-entry config id :hide-non-summary-columns)]
+    (. builder hideNonSummaryColumns data))
+  (when-let [data (lookup-entry config id :sticky)]
+    (. builder sticky data))
+  (.build builder))
 
 
-(defn table-widget-builder
-  "The table-widget-builder function buildes out new instances of 
-TableWidget$Builder using the provided configuration.  Each field is set as follows:
+(defn build-table-widget-builder
+  "The build-table-widget-builder function updates a TableWidget$Builder instance using the provided configuration.
+  The function takes the TableWidget$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `end` | java.lang.String | [[cdk.support/lookup-entry]] | `:end` |
-| `fullPrecision` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:full-precision` |
-| `height` | java.lang.Number | [[cdk.support/lookup-entry]] | `:height` |
-| `layout` | software.amazon.awscdk.services.cloudwatch.TableLayout | [[cdk.api.services.cloudwatch/table-layout]] | `:layout` |
-| `liveData` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:live-data` |
-| `metrics` | java.util.List | [[cdk.support/lookup-entry]] | `:metrics` |
-| `period` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:period` |
-| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
-| `setPeriodToTimeRange` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:set-period-to-time-range` |
-| `showUnitsInLabel` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:show-units-in-label` |
-| `start` | java.lang.String | [[cdk.support/lookup-entry]] | `:start` |
-| `statistic` | java.lang.String | [[cdk.support/lookup-entry]] | `:statistic` |
-| `summary` | software.amazon.awscdk.services.cloudwatch.TableSummaryProps | [[cdk.support/lookup-entry]] | `:summary` |
-| `thresholds` | java.util.List | [[cdk.support/lookup-entry]] | `:thresholds` |
-| `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (TableWidget$Builder/create)]
-    (when-let [data (lookup-entry config id :end)]
-      (. builder end data))
-    (when-let [data (lookup-entry config id :full-precision)]
-      (. builder fullPrecision data))
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (table-layout config id :layout)]
-      (. builder layout data))
-    (when-let [data (lookup-entry config id :live-data)]
-      (. builder liveData data))
-    (when-let [data (lookup-entry config id :metrics)]
-      (. builder metrics data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :set-period-to-time-range)]
-      (. builder setPeriodToTimeRange data))
-    (when-let [data (lookup-entry config id :show-units-in-label)]
-      (. builder showUnitsInLabel data))
-    (when-let [data (lookup-entry config id :start)]
-      (. builder start data))
-    (when-let [data (lookup-entry config id :statistic)]
-      (. builder statistic data))
-    (when-let [data (lookup-entry config id :summary)]
-      (. builder summary data))
-    (when-let [data (lookup-entry config id :thresholds)]
-      (. builder thresholds data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
-
-
-(defn table-widget-props-builder
-  "The table-widget-props-builder function buildes out new instances of 
-TableWidgetProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2748,110 +2899,184 @@ TableWidgetProps$Builder using the provided configuration.  Each field is set as
 | `summary` | software.amazon.awscdk.services.cloudwatch.TableSummaryProps | [[cdk.support/lookup-entry]] | `:summary` |
 | `thresholds` | java.util.List | [[cdk.support/lookup-entry]] | `:thresholds` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (TableWidgetProps$Builder.)]
-    (when-let [data (lookup-entry config id :end)]
-      (. builder end data))
-    (when-let [data (lookup-entry config id :full-precision)]
-      (. builder fullPrecision data))
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (table-layout config id :layout)]
-      (. builder layout data))
-    (when-let [data (lookup-entry config id :live-data)]
-      (. builder liveData data))
-    (when-let [data (lookup-entry config id :metrics)]
-      (. builder metrics data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :set-period-to-time-range)]
-      (. builder setPeriodToTimeRange data))
-    (when-let [data (lookup-entry config id :show-units-in-label)]
-      (. builder showUnitsInLabel data))
-    (when-let [data (lookup-entry config id :start)]
-      (. builder start data))
-    (when-let [data (lookup-entry config id :statistic)]
-      (. builder statistic data))
-    (when-let [data (lookup-entry config id :summary)]
-      (. builder summary data))
-    (when-let [data (lookup-entry config id :thresholds)]
-      (. builder thresholds data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^TableWidget$Builder builder id config]
+  (when-let [data (lookup-entry config id :end)]
+    (. builder end data))
+  (when-let [data (lookup-entry config id :full-precision)]
+    (. builder fullPrecision data))
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (table-layout config id :layout)]
+    (. builder layout data))
+  (when-let [data (lookup-entry config id :live-data)]
+    (. builder liveData data))
+  (when-let [data (lookup-entry config id :metrics)]
+    (. builder metrics data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :set-period-to-time-range)]
+    (. builder setPeriodToTimeRange data))
+  (when-let [data (lookup-entry config id :show-units-in-label)]
+    (. builder showUnitsInLabel data))
+  (when-let [data (lookup-entry config id :start)]
+    (. builder start data))
+  (when-let [data (lookup-entry config id :statistic)]
+    (. builder statistic data))
+  (when-let [data (lookup-entry config id :summary)]
+    (. builder summary data))
+  (when-let [data (lookup-entry config id :thresholds)]
+    (. builder thresholds data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
 
 
-(defn text-widget-builder
-  "The text-widget-builder function buildes out new instances of 
-TextWidget$Builder using the provided configuration.  Each field is set as follows:
+(defn build-table-widget-props-builder
+  "The build-table-widget-props-builder function updates a TableWidgetProps$Builder instance using the provided configuration.
+  The function takes the TableWidgetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `end` | java.lang.String | [[cdk.support/lookup-entry]] | `:end` |
+| `fullPrecision` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:full-precision` |
+| `height` | java.lang.Number | [[cdk.support/lookup-entry]] | `:height` |
+| `layout` | software.amazon.awscdk.services.cloudwatch.TableLayout | [[cdk.api.services.cloudwatch/table-layout]] | `:layout` |
+| `liveData` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:live-data` |
+| `metrics` | java.util.List | [[cdk.support/lookup-entry]] | `:metrics` |
+| `period` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:period` |
+| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
+| `setPeriodToTimeRange` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:set-period-to-time-range` |
+| `showUnitsInLabel` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:show-units-in-label` |
+| `start` | java.lang.String | [[cdk.support/lookup-entry]] | `:start` |
+| `statistic` | java.lang.String | [[cdk.support/lookup-entry]] | `:statistic` |
+| `summary` | software.amazon.awscdk.services.cloudwatch.TableSummaryProps | [[cdk.support/lookup-entry]] | `:summary` |
+| `thresholds` | java.util.List | [[cdk.support/lookup-entry]] | `:thresholds` |
+| `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^TableWidgetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :end)]
+    (. builder end data))
+  (when-let [data (lookup-entry config id :full-precision)]
+    (. builder fullPrecision data))
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (table-layout config id :layout)]
+    (. builder layout data))
+  (when-let [data (lookup-entry config id :live-data)]
+    (. builder liveData data))
+  (when-let [data (lookup-entry config id :metrics)]
+    (. builder metrics data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :set-period-to-time-range)]
+    (. builder setPeriodToTimeRange data))
+  (when-let [data (lookup-entry config id :show-units-in-label)]
+    (. builder showUnitsInLabel data))
+  (when-let [data (lookup-entry config id :start)]
+    (. builder start data))
+  (when-let [data (lookup-entry config id :statistic)]
+    (. builder statistic data))
+  (when-let [data (lookup-entry config id :summary)]
+    (. builder summary data))
+  (when-let [data (lookup-entry config id :thresholds)]
+    (. builder thresholds data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
+
+
+(defn build-text-widget-builder
+  "The build-text-widget-builder function updates a TextWidget$Builder instance using the provided configuration.
+  The function takes the TextWidget$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `background` | software.amazon.awscdk.services.cloudwatch.TextWidgetBackground | [[cdk.api.services.cloudwatch/text-widget-background]] | `:background` |
 | `height` | java.lang.Number | [[cdk.support/lookup-entry]] | `:height` |
 | `markdown` | java.lang.String | [[cdk.support/lookup-entry]] | `:markdown` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (TextWidget$Builder/create)]
-    (when-let [data (text-widget-background config id :background)]
-      (. builder background data))
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (lookup-entry config id :markdown)]
-      (. builder markdown data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^TextWidget$Builder builder id config]
+  (when-let [data (text-widget-background config id :background)]
+    (. builder background data))
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (lookup-entry config id :markdown)]
+    (. builder markdown data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
 
 
-(defn text-widget-props-builder
-  "The text-widget-props-builder function buildes out new instances of 
-TextWidgetProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-text-widget-props-builder
+  "The build-text-widget-props-builder function updates a TextWidgetProps$Builder instance using the provided configuration.
+  The function takes the TextWidgetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `background` | software.amazon.awscdk.services.cloudwatch.TextWidgetBackground | [[cdk.api.services.cloudwatch/text-widget-background]] | `:background` |
 | `height` | java.lang.Number | [[cdk.support/lookup-entry]] | `:height` |
 | `markdown` | java.lang.String | [[cdk.support/lookup-entry]] | `:markdown` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (TextWidgetProps$Builder.)]
-    (when-let [data (text-widget-background config id :background)]
-      (. builder background data))
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (lookup-entry config id :markdown)]
-      (. builder markdown data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^TextWidgetProps$Builder builder id config]
+  (when-let [data (text-widget-background config id :background)]
+    (. builder background data))
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (lookup-entry config id :markdown)]
+    (. builder markdown data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
 
 
-(defn variable-value-builder
-  "The variable-value-builder function buildes out new instances of 
-VariableValue$Builder using the provided configuration.  Each field is set as follows:
+(defn build-variable-value-builder
+  "The build-variable-value-builder function updates a VariableValue$Builder instance using the provided configuration.
+  The function takes the VariableValue$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `label` | java.lang.String | [[cdk.support/lookup-entry]] | `:label` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (VariableValue$Builder.)]
-    (when-let [data (lookup-entry config id :label)]
-      (. builder label data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^VariableValue$Builder builder id config]
+  (when-let [data (lookup-entry config id :label)]
+    (. builder label data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn vertical-annotation-builder
-  "The vertical-annotation-builder function buildes out new instances of 
-VerticalAnnotation$Builder using the provided configuration.  Each field is set as follows:
+(defn build-vertical-annotation-builder
+  "The build-vertical-annotation-builder function updates a VerticalAnnotation$Builder instance using the provided configuration.
+  The function takes the VerticalAnnotation$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2859,40 +3084,43 @@ VerticalAnnotation$Builder using the provided configuration.  Each field is set 
 | `date` | java.lang.String | [[cdk.support/lookup-entry]] | `:date` |
 | `fill` | software.amazon.awscdk.services.cloudwatch.VerticalShading | [[cdk.api.services.cloudwatch/vertical-shading]] | `:fill` |
 | `label` | java.lang.String | [[cdk.support/lookup-entry]] | `:label` |
-| `visible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:visible` |"
-  [stack id config]
-  (let [builder (VerticalAnnotation$Builder.)]
-    (when-let [data (lookup-entry config id :color)]
-      (. builder color data))
-    (when-let [data (lookup-entry config id :date)]
-      (. builder date data))
-    (when-let [data (vertical-shading config id :fill)]
-      (. builder fill data))
-    (when-let [data (lookup-entry config id :label)]
-      (. builder label data))
-    (when-let [data (lookup-entry config id :visible)]
-      (. builder visible data))
-    (.build builder)))
+| `visible` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:visible` |
+"
+  [^VerticalAnnotation$Builder builder id config]
+  (when-let [data (lookup-entry config id :color)]
+    (. builder color data))
+  (when-let [data (lookup-entry config id :date)]
+    (. builder date data))
+  (when-let [data (vertical-shading config id :fill)]
+    (. builder fill data))
+  (when-let [data (lookup-entry config id :label)]
+    (. builder label data))
+  (when-let [data (lookup-entry config id :visible)]
+    (. builder visible data))
+  (.build builder))
 
 
-(defn y-axis-props-builder
-  "The y-axis-props-builder function buildes out new instances of 
-YAxisProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-y-axis-props-builder
+  "The build-y-axis-props-builder function updates a YAxisProps$Builder instance using the provided configuration.
+  The function takes the YAxisProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `label` | java.lang.String | [[cdk.support/lookup-entry]] | `:label` |
 | `max` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max` |
 | `min` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min` |
-| `showUnits` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:show-units` |"
-  [stack id config]
-  (let [builder (YAxisProps$Builder.)]
-    (when-let [data (lookup-entry config id :label)]
-      (. builder label data))
-    (when-let [data (lookup-entry config id :max)]
-      (. builder max data))
-    (when-let [data (lookup-entry config id :min)]
-      (. builder min data))
-    (when-let [data (lookup-entry config id :show-units)]
-      (. builder showUnits data))
-    (.build builder)))
+| `showUnits` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:show-units` |
+"
+  [^YAxisProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :label)]
+    (. builder label data))
+  (when-let [data (lookup-entry config id :max)]
+    (. builder max data))
+  (when-let [data (lookup-entry config id :min)]
+    (. builder min data))
+  (when-let [data (lookup-entry config id :show-units)]
+    (. builder showUnits data))
+  (.build builder))

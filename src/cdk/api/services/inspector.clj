@@ -9,43 +9,52 @@
                                                       CfnResourceGroupProps$Builder]))
 
 
-(defn cfn-assessment-target-builder
-  "The cfn-assessment-target-builder function buildes out new instances of 
-CfnAssessmentTarget$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-assessment-target-builder
+  "The build-cfn-assessment-target-builder function updates a CfnAssessmentTarget$Builder instance using the provided configuration.
+  The function takes the CfnAssessmentTarget$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `assessmentTargetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:assessment-target-name` |
-| `resourceGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-group-arn` |"
-  [stack id config]
-  (let [builder (CfnAssessmentTarget$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :assessment-target-name)]
-      (. builder assessmentTargetName data))
-    (when-let [data (lookup-entry config id :resource-group-arn)]
-      (. builder resourceGroupArn data))
-    (.build builder)))
+| `resourceGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-group-arn` |
+"
+  [^CfnAssessmentTarget$Builder builder id config]
+  (when-let [data (lookup-entry config id :assessment-target-name)]
+    (. builder assessmentTargetName data))
+  (when-let [data (lookup-entry config id :resource-group-arn)]
+    (. builder resourceGroupArn data))
+  (.build builder))
 
 
-(defn cfn-assessment-target-props-builder
-  "The cfn-assessment-target-props-builder function buildes out new instances of 
-CfnAssessmentTargetProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-assessment-target-props-builder
+  "The build-cfn-assessment-target-props-builder function updates a CfnAssessmentTargetProps$Builder instance using the provided configuration.
+  The function takes the CfnAssessmentTargetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `assessmentTargetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:assessment-target-name` |
-| `resourceGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-group-arn` |"
-  [stack id config]
-  (let [builder (CfnAssessmentTargetProps$Builder.)]
-    (when-let [data (lookup-entry config id :assessment-target-name)]
-      (. builder assessmentTargetName data))
-    (when-let [data (lookup-entry config id :resource-group-arn)]
-      (. builder resourceGroupArn data))
-    (.build builder)))
+| `resourceGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-group-arn` |
+"
+  [^CfnAssessmentTargetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :assessment-target-name)]
+    (. builder assessmentTargetName data))
+  (when-let [data (lookup-entry config id :resource-group-arn)]
+    (. builder resourceGroupArn data))
+  (.build builder))
 
 
-(defn cfn-assessment-template-builder
-  "The cfn-assessment-template-builder function buildes out new instances of 
-CfnAssessmentTemplate$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-assessment-template-builder
+  "The build-cfn-assessment-template-builder function updates a CfnAssessmentTemplate$Builder instance using the provided configuration.
+  The function takes the CfnAssessmentTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -53,25 +62,28 @@ CfnAssessmentTemplate$Builder using the provided configuration.  Each field is s
 | `assessmentTemplateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:assessment-template-name` |
 | `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |
 | `rulesPackageArns` | java.util.List | [[cdk.support/lookup-entry]] | `:rules-package-arns` |
-| `userAttributesForFindings` | java.util.List | [[cdk.support/lookup-entry]] | `:user-attributes-for-findings` |"
-  [stack id config]
-  (let [builder (CfnAssessmentTemplate$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :assessment-target-arn)]
-      (. builder assessmentTargetArn data))
-    (when-let [data (lookup-entry config id :assessment-template-name)]
-      (. builder assessmentTemplateName data))
-    (when-let [data (lookup-entry config id :duration-in-seconds)]
-      (. builder durationInSeconds data))
-    (when-let [data (lookup-entry config id :rules-package-arns)]
-      (. builder rulesPackageArns data))
-    (when-let [data (lookup-entry config id :user-attributes-for-findings)]
-      (. builder userAttributesForFindings data))
-    (.build builder)))
+| `userAttributesForFindings` | java.util.List | [[cdk.support/lookup-entry]] | `:user-attributes-for-findings` |
+"
+  [^CfnAssessmentTemplate$Builder builder id config]
+  (when-let [data (lookup-entry config id :assessment-target-arn)]
+    (. builder assessmentTargetArn data))
+  (when-let [data (lookup-entry config id :assessment-template-name)]
+    (. builder assessmentTemplateName data))
+  (when-let [data (lookup-entry config id :duration-in-seconds)]
+    (. builder durationInSeconds data))
+  (when-let [data (lookup-entry config id :rules-package-arns)]
+    (. builder rulesPackageArns data))
+  (when-let [data (lookup-entry config id :user-attributes-for-findings)]
+    (. builder userAttributesForFindings data))
+  (.build builder))
 
 
-(defn cfn-assessment-template-props-builder
-  "The cfn-assessment-template-props-builder function buildes out new instances of 
-CfnAssessmentTemplateProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-assessment-template-props-builder
+  "The build-cfn-assessment-template-props-builder function updates a CfnAssessmentTemplateProps$Builder instance using the provided configuration.
+  The function takes the CfnAssessmentTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -79,45 +91,51 @@ CfnAssessmentTemplateProps$Builder using the provided configuration.  Each field
 | `assessmentTemplateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:assessment-template-name` |
 | `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |
 | `rulesPackageArns` | java.util.List | [[cdk.support/lookup-entry]] | `:rules-package-arns` |
-| `userAttributesForFindings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-attributes-for-findings` |"
-  [stack id config]
-  (let [builder (CfnAssessmentTemplateProps$Builder.)]
-    (when-let [data (lookup-entry config id :assessment-target-arn)]
-      (. builder assessmentTargetArn data))
-    (when-let [data (lookup-entry config id :assessment-template-name)]
-      (. builder assessmentTemplateName data))
-    (when-let [data (lookup-entry config id :duration-in-seconds)]
-      (. builder durationInSeconds data))
-    (when-let [data (lookup-entry config id :rules-package-arns)]
-      (. builder rulesPackageArns data))
-    (when-let [data (lookup-entry config id :user-attributes-for-findings)]
-      (. builder userAttributesForFindings data))
-    (.build builder)))
+| `userAttributesForFindings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:user-attributes-for-findings` |
+"
+  [^CfnAssessmentTemplateProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :assessment-target-arn)]
+    (. builder assessmentTargetArn data))
+  (when-let [data (lookup-entry config id :assessment-template-name)]
+    (. builder assessmentTemplateName data))
+  (when-let [data (lookup-entry config id :duration-in-seconds)]
+    (. builder durationInSeconds data))
+  (when-let [data (lookup-entry config id :rules-package-arns)]
+    (. builder rulesPackageArns data))
+  (when-let [data (lookup-entry config id :user-attributes-for-findings)]
+    (. builder userAttributesForFindings data))
+  (.build builder))
 
 
-(defn cfn-resource-group-builder
-  "The cfn-resource-group-builder function buildes out new instances of 
-CfnResourceGroup$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resource-group-builder
+  "The build-cfn-resource-group-builder function updates a CfnResourceGroup$Builder instance using the provided configuration.
+  The function takes the CfnResourceGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `resourceGroupTags` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-group-tags` |"
-  [stack id config]
-  (let [builder (CfnResourceGroup$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :resource-group-tags)]
-      (. builder resourceGroupTags data))
-    (.build builder)))
-
-
-(defn cfn-resource-group-props-builder
-  "The cfn-resource-group-props-builder function buildes out new instances of 
-CfnResourceGroupProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `resourceGroupTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-group-tags` |"
-  [stack id config]
-  (let [builder (CfnResourceGroupProps$Builder.)]
-    (when-let [data (lookup-entry config id :resource-group-tags)]
-      (. builder resourceGroupTags data))
-    (.build builder)))
+| `resourceGroupTags` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-group-tags` |
+"
+  [^CfnResourceGroup$Builder builder id config]
+  (when-let [data (lookup-entry config id :resource-group-tags)]
+    (. builder resourceGroupTags data))
+  (.build builder))
+
+
+(defn build-cfn-resource-group-props-builder
+  "The build-cfn-resource-group-props-builder function updates a CfnResourceGroupProps$Builder instance using the provided configuration.
+  The function takes the CfnResourceGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `resourceGroupTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-group-tags` |
+"
+  [^CfnResourceGroupProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :resource-group-tags)]
+    (. builder resourceGroupTags data))
+  (.build builder))

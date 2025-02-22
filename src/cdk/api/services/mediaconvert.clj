@@ -11,23 +11,29 @@
                                                          CfnQueueProps$Builder]))
 
 
-(defn cfn-job-template-acceleration-settings-property-builder
-  "The cfn-job-template-acceleration-settings-property-builder function buildes out new instances of 
-CfnJobTemplate$AccelerationSettingsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-template-acceleration-settings-property-builder
+  "The build-cfn-job-template-acceleration-settings-property-builder function updates a CfnJobTemplate$AccelerationSettingsProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobTemplate$AccelerationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |"
-  [stack id config]
-  (let [builder (CfnJobTemplate$AccelerationSettingsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :mode)]
-      (. builder mode data))
-    (.build builder)))
+| `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
+"
+  [^CfnJobTemplate$AccelerationSettingsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :mode)]
+    (. builder mode data))
+  (.build builder))
 
 
-(defn cfn-job-template-builder
-  "The cfn-job-template-builder function buildes out new instances of 
-CfnJobTemplate$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-template-builder
+  "The build-cfn-job-template-builder function updates a CfnJobTemplate$Builder instance using the provided configuration.
+  The function takes the CfnJobTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -40,55 +46,61 @@ CfnJobTemplate$Builder using the provided configuration.  Each field is set as f
 | `queue` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue` |
 | `settingsJson` | java.lang.Object | [[cdk.support/lookup-entry]] | `:settings-json` |
 | `statusUpdateInterval` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-update-interval` |
-| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnJobTemplate$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :acceleration-settings)]
-      (. builder accelerationSettings data))
-    (when-let [data (lookup-entry config id :category)]
-      (. builder category data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :hop-destinations)]
-      (. builder hopDestinations data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :queue)]
-      (. builder queue data))
-    (when-let [data (lookup-entry config id :settings-json)]
-      (. builder settingsJson data))
-    (when-let [data (lookup-entry config id :status-update-interval)]
-      (. builder statusUpdateInterval data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnJobTemplate$Builder builder id config]
+  (when-let [data (lookup-entry config id :acceleration-settings)]
+    (. builder accelerationSettings data))
+  (when-let [data (lookup-entry config id :category)]
+    (. builder category data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :hop-destinations)]
+    (. builder hopDestinations data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :queue)]
+    (. builder queue data))
+  (when-let [data (lookup-entry config id :settings-json)]
+    (. builder settingsJson data))
+  (when-let [data (lookup-entry config id :status-update-interval)]
+    (. builder statusUpdateInterval data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-job-template-hop-destination-property-builder
-  "The cfn-job-template-hop-destination-property-builder function buildes out new instances of 
-CfnJobTemplate$HopDestinationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-template-hop-destination-property-builder
+  "The build-cfn-job-template-hop-destination-property-builder function updates a CfnJobTemplate$HopDestinationProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobTemplate$HopDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 | `queue` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue` |
-| `waitMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:wait-minutes` |"
-  [stack id config]
-  (let [builder (CfnJobTemplate$HopDestinationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :queue)]
-      (. builder queue data))
-    (when-let [data (lookup-entry config id :wait-minutes)]
-      (. builder waitMinutes data))
-    (.build builder)))
+| `waitMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:wait-minutes` |
+"
+  [^CfnJobTemplate$HopDestinationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :queue)]
+    (. builder queue data))
+  (when-let [data (lookup-entry config id :wait-minutes)]
+    (. builder waitMinutes data))
+  (.build builder))
 
 
-(defn cfn-job-template-props-builder
-  "The cfn-job-template-props-builder function buildes out new instances of 
-CfnJobTemplateProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-template-props-builder
+  "The build-cfn-job-template-props-builder function updates a CfnJobTemplateProps$Builder instance using the provided configuration.
+  The function takes the CfnJobTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -101,61 +113,38 @@ CfnJobTemplateProps$Builder using the provided configuration.  Each field is set
 | `queue` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue` |
 | `settingsJson` | java.lang.Object | [[cdk.support/lookup-entry]] | `:settings-json` |
 | `statusUpdateInterval` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-update-interval` |
-| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnJobTemplateProps$Builder.)]
-    (when-let [data (lookup-entry config id :acceleration-settings)]
-      (. builder accelerationSettings data))
-    (when-let [data (lookup-entry config id :category)]
-      (. builder category data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :hop-destinations)]
-      (. builder hopDestinations data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :queue)]
-      (. builder queue data))
-    (when-let [data (lookup-entry config id :settings-json)]
-      (. builder settingsJson data))
-    (when-let [data (lookup-entry config id :status-update-interval)]
-      (. builder statusUpdateInterval data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnJobTemplateProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :acceleration-settings)]
+    (. builder accelerationSettings data))
+  (when-let [data (lookup-entry config id :category)]
+    (. builder category data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :hop-destinations)]
+    (. builder hopDestinations data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :queue)]
+    (. builder queue data))
+  (when-let [data (lookup-entry config id :settings-json)]
+    (. builder settingsJson data))
+  (when-let [data (lookup-entry config id :status-update-interval)]
+    (. builder statusUpdateInterval data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-preset-builder
-  "The cfn-preset-builder function buildes out new instances of 
-CfnPreset$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-preset-builder
+  "The build-cfn-preset-builder function updates a CfnPreset$Builder instance using the provided configuration.
+  The function takes the CfnPreset$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `category` | java.lang.String | [[cdk.support/lookup-entry]] | `:category` |
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `settingsJson` | java.lang.Object | [[cdk.support/lookup-entry]] | `:settings-json` |
-| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnPreset$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :category)]
-      (. builder category data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :settings-json)]
-      (. builder settingsJson data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
-
-
-(defn cfn-preset-props-builder
-  "The cfn-preset-props-builder function buildes out new instances of 
-CfnPresetProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -163,25 +152,57 @@ CfnPresetProps$Builder using the provided configuration.  Each field is set as f
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `settingsJson` | java.lang.Object | [[cdk.support/lookup-entry]] | `:settings-json` |
-| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnPresetProps$Builder.)]
-    (when-let [data (lookup-entry config id :category)]
-      (. builder category data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :settings-json)]
-      (. builder settingsJson data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnPreset$Builder builder id config]
+  (when-let [data (lookup-entry config id :category)]
+    (. builder category data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :settings-json)]
+    (. builder settingsJson data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-queue-builder
-  "The cfn-queue-builder function buildes out new instances of 
-CfnQueue$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-preset-props-builder
+  "The build-cfn-preset-props-builder function updates a CfnPresetProps$Builder instance using the provided configuration.
+  The function takes the CfnPresetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `category` | java.lang.String | [[cdk.support/lookup-entry]] | `:category` |
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `settingsJson` | java.lang.Object | [[cdk.support/lookup-entry]] | `:settings-json` |
+| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnPresetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :category)]
+    (. builder category data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :settings-json)]
+    (. builder settingsJson data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
+
+
+(defn build-cfn-queue-builder
+  "The build-cfn-queue-builder function updates a CfnQueue$Builder instance using the provided configuration.
+  The function takes the CfnQueue$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -189,25 +210,28 @@ CfnQueue$Builder using the provided configuration.  Each field is set as follows
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `pricingPlan` | java.lang.String | [[cdk.support/lookup-entry]] | `:pricing-plan` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
-| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnQueue$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :pricing-plan)]
-      (. builder pricingPlan data))
-    (when-let [data (lookup-entry config id :status)]
-      (. builder status data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnQueue$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :pricing-plan)]
+    (. builder pricingPlan data))
+  (when-let [data (lookup-entry config id :status)]
+    (. builder status data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-queue-props-builder
-  "The cfn-queue-props-builder function buildes out new instances of 
-CfnQueueProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-queue-props-builder
+  "The build-cfn-queue-props-builder function updates a CfnQueueProps$Builder instance using the provided configuration.
+  The function takes the CfnQueueProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -215,17 +239,17 @@ CfnQueueProps$Builder using the provided configuration.  Each field is set as fo
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `pricingPlan` | java.lang.String | [[cdk.support/lookup-entry]] | `:pricing-plan` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
-| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnQueueProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :pricing-plan)]
-      (. builder pricingPlan data))
-    (when-let [data (lookup-entry config id :status)]
-      (. builder status data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnQueueProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :pricing-plan)]
+    (. builder pricingPlan data))
+  (when-let [data (lookup-entry config id :status)]
+    (. builder status data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))

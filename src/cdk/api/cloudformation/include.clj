@@ -6,9 +6,12 @@
                                                           IncludedNestedStack$Builder]))
 
 
-(defn cfn-include-builder
-  "The cfn-include-builder function buildes out new instances of 
-CfnInclude$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-include-builder
+  "The build-cfn-include-builder function updates a CfnInclude$Builder instance using the provided configuration.
+  The function takes the CfnInclude$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -16,25 +19,28 @@ CfnInclude$Builder using the provided configuration.  Each field is set as follo
 | `loadNestedStacks` | java.util.Map | [[cdk.support/lookup-entry]] | `:load-nested-stacks` |
 | `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
 | `preserveLogicalIds` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:preserve-logical-ids` |
-| `templateFile` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-file` |"
-  [stack id config]
-  (let [builder (CfnInclude$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :allow-cyclical-references)]
-      (. builder allowCyclicalReferences data))
-    (when-let [data (lookup-entry config id :load-nested-stacks)]
-      (. builder loadNestedStacks data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :preserve-logical-ids)]
-      (. builder preserveLogicalIds data))
-    (when-let [data (lookup-entry config id :template-file)]
-      (. builder templateFile data))
-    (.build builder)))
+| `templateFile` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-file` |
+"
+  [^CfnInclude$Builder builder id config]
+  (when-let [data (lookup-entry config id :allow-cyclical-references)]
+    (. builder allowCyclicalReferences data))
+  (when-let [data (lookup-entry config id :load-nested-stacks)]
+    (. builder loadNestedStacks data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :preserve-logical-ids)]
+    (. builder preserveLogicalIds data))
+  (when-let [data (lookup-entry config id :template-file)]
+    (. builder templateFile data))
+  (.build builder))
 
 
-(defn cfn-include-props-builder
-  "The cfn-include-props-builder function buildes out new instances of 
-CfnIncludeProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-include-props-builder
+  "The build-cfn-include-props-builder function updates a CfnIncludeProps$Builder instance using the provided configuration.
+  The function takes the CfnIncludeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -42,34 +48,37 @@ CfnIncludeProps$Builder using the provided configuration.  Each field is set as 
 | `loadNestedStacks` | java.util.Map | [[cdk.support/lookup-entry]] | `:load-nested-stacks` |
 | `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
 | `preserveLogicalIds` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:preserve-logical-ids` |
-| `templateFile` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-file` |"
-  [stack id config]
-  (let [builder (CfnIncludeProps$Builder.)]
-    (when-let [data (lookup-entry config id :allow-cyclical-references)]
-      (. builder allowCyclicalReferences data))
-    (when-let [data (lookup-entry config id :load-nested-stacks)]
-      (. builder loadNestedStacks data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :preserve-logical-ids)]
-      (. builder preserveLogicalIds data))
-    (when-let [data (lookup-entry config id :template-file)]
-      (. builder templateFile data))
-    (.build builder)))
+| `templateFile` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-file` |
+"
+  [^CfnIncludeProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :allow-cyclical-references)]
+    (. builder allowCyclicalReferences data))
+  (when-let [data (lookup-entry config id :load-nested-stacks)]
+    (. builder loadNestedStacks data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :preserve-logical-ids)]
+    (. builder preserveLogicalIds data))
+  (when-let [data (lookup-entry config id :template-file)]
+    (. builder templateFile data))
+  (.build builder))
 
 
-(defn included-nested-stack-builder
-  "The included-nested-stack-builder function buildes out new instances of 
-IncludedNestedStack$Builder using the provided configuration.  Each field is set as follows:
+(defn build-included-nested-stack-builder
+  "The build-included-nested-stack-builder function updates a IncludedNestedStack$Builder instance using the provided configuration.
+  The function takes the IncludedNestedStack$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `includedTemplate` | software.amazon.awscdk.cloudformation.include.CfnInclude | [[cdk.support/lookup-entry]] | `:included-template` |
-| `stack` | software.amazon.awscdk.NestedStack | [[cdk.support/lookup-entry]] | `:stack` |"
-  [stack id config]
-  (let [builder (IncludedNestedStack$Builder.)]
-    (when-let [data (lookup-entry config id :included-template)]
-      (. builder includedTemplate data))
-    (when-let [data (lookup-entry config id :stack)]
-      (. builder stack data))
-    (.build builder)))
+| `stack` | software.amazon.awscdk.NestedStack | [[cdk.support/lookup-entry]] | `:stack` |
+"
+  [^IncludedNestedStack$Builder builder id config]
+  (when-let [data (lookup-entry config id :included-template)]
+    (. builder includedTemplate data))
+  (when-let [data (lookup-entry config id :stack)]
+    (. builder stack data))
+  (.build builder))

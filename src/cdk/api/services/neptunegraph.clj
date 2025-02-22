@@ -8,9 +8,12 @@
                                                          CfnPrivateGraphEndpointProps$Builder]))
 
 
-(defn cfn-graph-builder
-  "The cfn-graph-builder function buildes out new instances of 
-CfnGraph$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-graph-builder
+  "The build-cfn-graph-builder function updates a CfnGraph$Builder instance using the provided configuration.
+  The function takes the CfnGraph$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -20,29 +23,32 @@ CfnGraph$Builder using the provided configuration.  Each field is set as follows
 | `publicConnectivity` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:public-connectivity` |
 | `replicaCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:replica-count` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vectorSearchConfiguration` | software.amazon.awscdk.services.neptunegraph.CfnGraph$VectorSearchConfigurationProperty | [[cdk.support/lookup-entry]] | `:vector-search-configuration` |"
-  [stack id config]
-  (let [builder (CfnGraph$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :deletion-protection)]
-      (. builder deletionProtection data))
-    (when-let [data (lookup-entry config id :graph-name)]
-      (. builder graphName data))
-    (when-let [data (lookup-entry config id :provisioned-memory)]
-      (. builder provisionedMemory data))
-    (when-let [data (lookup-entry config id :public-connectivity)]
-      (. builder publicConnectivity data))
-    (when-let [data (lookup-entry config id :replica-count)]
-      (. builder replicaCount data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :vector-search-configuration)]
-      (. builder vectorSearchConfiguration data))
-    (.build builder)))
+| `vectorSearchConfiguration` | software.amazon.awscdk.services.neptunegraph.CfnGraph$VectorSearchConfigurationProperty | [[cdk.support/lookup-entry]] | `:vector-search-configuration` |
+"
+  [^CfnGraph$Builder builder id config]
+  (when-let [data (lookup-entry config id :deletion-protection)]
+    (. builder deletionProtection data))
+  (when-let [data (lookup-entry config id :graph-name)]
+    (. builder graphName data))
+  (when-let [data (lookup-entry config id :provisioned-memory)]
+    (. builder provisionedMemory data))
+  (when-let [data (lookup-entry config id :public-connectivity)]
+    (. builder publicConnectivity data))
+  (when-let [data (lookup-entry config id :replica-count)]
+    (. builder replicaCount data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :vector-search-configuration)]
+    (. builder vectorSearchConfiguration data))
+  (.build builder))
 
 
-(defn cfn-graph-props-builder
-  "The cfn-graph-props-builder function buildes out new instances of 
-CfnGraphProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-graph-props-builder
+  "The build-cfn-graph-props-builder function updates a CfnGraphProps$Builder instance using the provided configuration.
+  The function takes the CfnGraphProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -52,81 +58,90 @@ CfnGraphProps$Builder using the provided configuration.  Each field is set as fo
 | `publicConnectivity` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:public-connectivity` |
 | `replicaCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:replica-count` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vectorSearchConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vector-search-configuration` |"
-  [stack id config]
-  (let [builder (CfnGraphProps$Builder.)]
-    (when-let [data (lookup-entry config id :deletion-protection)]
-      (. builder deletionProtection data))
-    (when-let [data (lookup-entry config id :graph-name)]
-      (. builder graphName data))
-    (when-let [data (lookup-entry config id :provisioned-memory)]
-      (. builder provisionedMemory data))
-    (when-let [data (lookup-entry config id :public-connectivity)]
-      (. builder publicConnectivity data))
-    (when-let [data (lookup-entry config id :replica-count)]
-      (. builder replicaCount data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :vector-search-configuration)]
-      (. builder vectorSearchConfiguration data))
-    (.build builder)))
+| `vectorSearchConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vector-search-configuration` |
+"
+  [^CfnGraphProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :deletion-protection)]
+    (. builder deletionProtection data))
+  (when-let [data (lookup-entry config id :graph-name)]
+    (. builder graphName data))
+  (when-let [data (lookup-entry config id :provisioned-memory)]
+    (. builder provisionedMemory data))
+  (when-let [data (lookup-entry config id :public-connectivity)]
+    (. builder publicConnectivity data))
+  (when-let [data (lookup-entry config id :replica-count)]
+    (. builder replicaCount data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :vector-search-configuration)]
+    (. builder vectorSearchConfiguration data))
+  (.build builder))
 
 
-(defn cfn-graph-vector-search-configuration-property-builder
-  "The cfn-graph-vector-search-configuration-property-builder function buildes out new instances of 
-CfnGraph$VectorSearchConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-graph-vector-search-configuration-property-builder
+  "The build-cfn-graph-vector-search-configuration-property-builder function updates a CfnGraph$VectorSearchConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnGraph$VectorSearchConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `vectorSearchDimension` | java.lang.Number | [[cdk.support/lookup-entry]] | `:vector-search-dimension` |"
-  [stack id config]
-  (let [builder (CfnGraph$VectorSearchConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :vector-search-dimension)]
-      (. builder vectorSearchDimension data))
-    (.build builder)))
-
-
-(defn cfn-private-graph-endpoint-builder
-  "The cfn-private-graph-endpoint-builder function buildes out new instances of 
-CfnPrivateGraphEndpoint$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `graphIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:graph-identifier` |
-| `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
-| `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
-| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |"
-  [stack id config]
-  (let [builder (CfnPrivateGraphEndpoint$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :graph-identifier)]
-      (. builder graphIdentifier data))
-    (when-let [data (lookup-entry config id :security-group-ids)]
-      (. builder securityGroupIds data))
-    (when-let [data (lookup-entry config id :subnet-ids)]
-      (. builder subnetIds data))
-    (when-let [data (lookup-entry config id :vpc-id)]
-      (. builder vpcId data))
-    (.build builder)))
+| `vectorSearchDimension` | java.lang.Number | [[cdk.support/lookup-entry]] | `:vector-search-dimension` |
+"
+  [^CfnGraph$VectorSearchConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :vector-search-dimension)]
+    (. builder vectorSearchDimension data))
+  (.build builder))
 
 
-(defn cfn-private-graph-endpoint-props-builder
-  "The cfn-private-graph-endpoint-props-builder function buildes out new instances of 
-CfnPrivateGraphEndpointProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-private-graph-endpoint-builder
+  "The build-cfn-private-graph-endpoint-builder function updates a CfnPrivateGraphEndpoint$Builder instance using the provided configuration.
+  The function takes the CfnPrivateGraphEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `graphIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:graph-identifier` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
-| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |"
-  [stack id config]
-  (let [builder (CfnPrivateGraphEndpointProps$Builder.)]
-    (when-let [data (lookup-entry config id :graph-identifier)]
-      (. builder graphIdentifier data))
-    (when-let [data (lookup-entry config id :security-group-ids)]
-      (. builder securityGroupIds data))
-    (when-let [data (lookup-entry config id :subnet-ids)]
-      (. builder subnetIds data))
-    (when-let [data (lookup-entry config id :vpc-id)]
-      (. builder vpcId data))
-    (.build builder)))
+| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
+"
+  [^CfnPrivateGraphEndpoint$Builder builder id config]
+  (when-let [data (lookup-entry config id :graph-identifier)]
+    (. builder graphIdentifier data))
+  (when-let [data (lookup-entry config id :security-group-ids)]
+    (. builder securityGroupIds data))
+  (when-let [data (lookup-entry config id :subnet-ids)]
+    (. builder subnetIds data))
+  (when-let [data (lookup-entry config id :vpc-id)]
+    (. builder vpcId data))
+  (.build builder))
+
+
+(defn build-cfn-private-graph-endpoint-props-builder
+  "The build-cfn-private-graph-endpoint-props-builder function updates a CfnPrivateGraphEndpointProps$Builder instance using the provided configuration.
+  The function takes the CfnPrivateGraphEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `graphIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:graph-identifier` |
+| `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
+| `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
+| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
+"
+  [^CfnPrivateGraphEndpointProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :graph-identifier)]
+    (. builder graphIdentifier data))
+  (when-let [data (lookup-entry config id :security-group-ids)]
+    (. builder securityGroupIds data))
+  (when-let [data (lookup-entry config id :subnet-ids)]
+    (. builder subnetIds data))
+  (when-let [data (lookup-entry config id :vpc-id)]
+    (. builder vpcId data))
+  (.build builder))

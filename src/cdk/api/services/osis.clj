@@ -11,23 +11,29 @@
                                                  CfnPipelineProps$Builder]))
 
 
-(defn cfn-pipeline-buffer-options-property-builder
-  "The cfn-pipeline-buffer-options-property-builder function buildes out new instances of 
-CfnPipeline$BufferOptionsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-pipeline-buffer-options-property-builder
+  "The build-cfn-pipeline-buffer-options-property-builder function updates a CfnPipeline$BufferOptionsProperty$Builder instance using the provided configuration.
+  The function takes the CfnPipeline$BufferOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `persistentBufferEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:persistent-buffer-enabled` |"
-  [stack id config]
-  (let [builder (CfnPipeline$BufferOptionsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :persistent-buffer-enabled)]
-      (. builder persistentBufferEnabled data))
-    (.build builder)))
+| `persistentBufferEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:persistent-buffer-enabled` |
+"
+  [^CfnPipeline$BufferOptionsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :persistent-buffer-enabled)]
+    (. builder persistentBufferEnabled data))
+  (.build builder))
 
 
-(defn cfn-pipeline-builder
-  "The cfn-pipeline-builder function buildes out new instances of 
-CfnPipeline$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-pipeline-builder
+  "The build-cfn-pipeline-builder function updates a CfnPipeline$Builder instance using the provided configuration.
+  The function takes the CfnPipeline$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -39,78 +45,90 @@ CfnPipeline$Builder using the provided configuration.  Each field is set as foll
 | `pipelineConfigurationBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:pipeline-configuration-body` |
 | `pipelineName` | java.lang.String | [[cdk.support/lookup-entry]] | `:pipeline-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcOptions` | software.amazon.awscdk.services.osis.CfnPipeline$VpcOptionsProperty | [[cdk.support/lookup-entry]] | `:vpc-options` |"
-  [stack id config]
-  (let [builder (CfnPipeline$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :buffer-options)]
-      (. builder bufferOptions data))
-    (when-let [data (lookup-entry config id :encryption-at-rest-options)]
-      (. builder encryptionAtRestOptions data))
-    (when-let [data (lookup-entry config id :log-publishing-options)]
-      (. builder logPublishingOptions data))
-    (when-let [data (lookup-entry config id :max-units)]
-      (. builder maxUnits data))
-    (when-let [data (lookup-entry config id :min-units)]
-      (. builder minUnits data))
-    (when-let [data (lookup-entry config id :pipeline-configuration-body)]
-      (. builder pipelineConfigurationBody data))
-    (when-let [data (lookup-entry config id :pipeline-name)]
-      (. builder pipelineName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :vpc-options)]
-      (. builder vpcOptions data))
-    (.build builder)))
+| `vpcOptions` | software.amazon.awscdk.services.osis.CfnPipeline$VpcOptionsProperty | [[cdk.support/lookup-entry]] | `:vpc-options` |
+"
+  [^CfnPipeline$Builder builder id config]
+  (when-let [data (lookup-entry config id :buffer-options)]
+    (. builder bufferOptions data))
+  (when-let [data (lookup-entry config id :encryption-at-rest-options)]
+    (. builder encryptionAtRestOptions data))
+  (when-let [data (lookup-entry config id :log-publishing-options)]
+    (. builder logPublishingOptions data))
+  (when-let [data (lookup-entry config id :max-units)]
+    (. builder maxUnits data))
+  (when-let [data (lookup-entry config id :min-units)]
+    (. builder minUnits data))
+  (when-let [data (lookup-entry config id :pipeline-configuration-body)]
+    (. builder pipelineConfigurationBody data))
+  (when-let [data (lookup-entry config id :pipeline-name)]
+    (. builder pipelineName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :vpc-options)]
+    (. builder vpcOptions data))
+  (.build builder))
 
 
-(defn cfn-pipeline-cloud-watch-log-destination-property-builder
-  "The cfn-pipeline-cloud-watch-log-destination-property-builder function buildes out new instances of 
-CfnPipeline$CloudWatchLogDestinationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-pipeline-cloud-watch-log-destination-property-builder
+  "The build-cfn-pipeline-cloud-watch-log-destination-property-builder function updates a CfnPipeline$CloudWatchLogDestinationProperty$Builder instance using the provided configuration.
+  The function takes the CfnPipeline$CloudWatchLogDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `logGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-group` |"
-  [stack id config]
-  (let [builder (CfnPipeline$CloudWatchLogDestinationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :log-group)]
-      (. builder logGroup data))
-    (.build builder)))
-
-
-(defn cfn-pipeline-encryption-at-rest-options-property-builder
-  "The cfn-pipeline-encryption-at-rest-options-property-builder function buildes out new instances of 
-CfnPipeline$EncryptionAtRestOptionsProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |"
-  [stack id config]
-  (let [builder (CfnPipeline$EncryptionAtRestOptionsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :kms-key-arn)]
-      (. builder kmsKeyArn data))
-    (.build builder)))
+| `logGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-group` |
+"
+  [^CfnPipeline$CloudWatchLogDestinationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :log-group)]
+    (. builder logGroup data))
+  (.build builder))
 
 
-(defn cfn-pipeline-log-publishing-options-property-builder
-  "The cfn-pipeline-log-publishing-options-property-builder function buildes out new instances of 
-CfnPipeline$LogPublishingOptionsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-pipeline-encryption-at-rest-options-property-builder
+  "The build-cfn-pipeline-encryption-at-rest-options-property-builder function updates a CfnPipeline$EncryptionAtRestOptionsProperty$Builder instance using the provided configuration.
+  The function takes the CfnPipeline$EncryptionAtRestOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
+"
+  [^CfnPipeline$EncryptionAtRestOptionsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :kms-key-arn)]
+    (. builder kmsKeyArn data))
+  (.build builder))
+
+
+(defn build-cfn-pipeline-log-publishing-options-property-builder
+  "The build-cfn-pipeline-log-publishing-options-property-builder function updates a CfnPipeline$LogPublishingOptionsProperty$Builder instance using the provided configuration.
+  The function takes the CfnPipeline$LogPublishingOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `cloudWatchLogDestination` | software.amazon.awscdk.services.osis.CfnPipeline$CloudWatchLogDestinationProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-log-destination` |
-| `isLoggingEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-logging-enabled` |"
-  [stack id config]
-  (let [builder (CfnPipeline$LogPublishingOptionsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :cloud-watch-log-destination)]
-      (. builder cloudWatchLogDestination data))
-    (when-let [data (lookup-entry config id :is-logging-enabled)]
-      (. builder isLoggingEnabled data))
-    (.build builder)))
+| `isLoggingEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-logging-enabled` |
+"
+  [^CfnPipeline$LogPublishingOptionsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :cloud-watch-log-destination)]
+    (. builder cloudWatchLogDestination data))
+  (when-let [data (lookup-entry config id :is-logging-enabled)]
+    (. builder isLoggingEnabled data))
+  (.build builder))
 
 
-(defn cfn-pipeline-props-builder
-  "The cfn-pipeline-props-builder function buildes out new instances of 
-CfnPipelineProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-pipeline-props-builder
+  "The build-cfn-pipeline-props-builder function updates a CfnPipelineProps$Builder instance using the provided configuration.
+  The function takes the CfnPipelineProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -122,62 +140,68 @@ CfnPipelineProps$Builder using the provided configuration.  Each field is set as
 | `pipelineConfigurationBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:pipeline-configuration-body` |
 | `pipelineName` | java.lang.String | [[cdk.support/lookup-entry]] | `:pipeline-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-options` |"
-  [stack id config]
-  (let [builder (CfnPipelineProps$Builder.)]
-    (when-let [data (lookup-entry config id :buffer-options)]
-      (. builder bufferOptions data))
-    (when-let [data (lookup-entry config id :encryption-at-rest-options)]
-      (. builder encryptionAtRestOptions data))
-    (when-let [data (lookup-entry config id :log-publishing-options)]
-      (. builder logPublishingOptions data))
-    (when-let [data (lookup-entry config id :max-units)]
-      (. builder maxUnits data))
-    (when-let [data (lookup-entry config id :min-units)]
-      (. builder minUnits data))
-    (when-let [data (lookup-entry config id :pipeline-configuration-body)]
-      (. builder pipelineConfigurationBody data))
-    (when-let [data (lookup-entry config id :pipeline-name)]
-      (. builder pipelineName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :vpc-options)]
-      (. builder vpcOptions data))
-    (.build builder)))
+| `vpcOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-options` |
+"
+  [^CfnPipelineProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :buffer-options)]
+    (. builder bufferOptions data))
+  (when-let [data (lookup-entry config id :encryption-at-rest-options)]
+    (. builder encryptionAtRestOptions data))
+  (when-let [data (lookup-entry config id :log-publishing-options)]
+    (. builder logPublishingOptions data))
+  (when-let [data (lookup-entry config id :max-units)]
+    (. builder maxUnits data))
+  (when-let [data (lookup-entry config id :min-units)]
+    (. builder minUnits data))
+  (when-let [data (lookup-entry config id :pipeline-configuration-body)]
+    (. builder pipelineConfigurationBody data))
+  (when-let [data (lookup-entry config id :pipeline-name)]
+    (. builder pipelineName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :vpc-options)]
+    (. builder vpcOptions data))
+  (.build builder))
 
 
-(defn cfn-pipeline-vpc-endpoint-property-builder
-  "The cfn-pipeline-vpc-endpoint-property-builder function buildes out new instances of 
-CfnPipeline$VpcEndpointProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-pipeline-vpc-endpoint-property-builder
+  "The build-cfn-pipeline-vpc-endpoint-property-builder function updates a CfnPipeline$VpcEndpointProperty$Builder instance using the provided configuration.
+  The function takes the CfnPipeline$VpcEndpointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `vpcEndpointId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-endpoint-id` |
 | `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
-| `vpcOptions` | software.amazon.awscdk.services.osis.CfnPipeline$VpcOptionsProperty | [[cdk.support/lookup-entry]] | `:vpc-options` |"
-  [stack id config]
-  (let [builder (CfnPipeline$VpcEndpointProperty$Builder.)]
-    (when-let [data (lookup-entry config id :vpc-endpoint-id)]
-      (. builder vpcEndpointId data))
-    (when-let [data (lookup-entry config id :vpc-id)]
-      (. builder vpcId data))
-    (when-let [data (lookup-entry config id :vpc-options)]
-      (. builder vpcOptions data))
-    (.build builder)))
+| `vpcOptions` | software.amazon.awscdk.services.osis.CfnPipeline$VpcOptionsProperty | [[cdk.support/lookup-entry]] | `:vpc-options` |
+"
+  [^CfnPipeline$VpcEndpointProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :vpc-endpoint-id)]
+    (. builder vpcEndpointId data))
+  (when-let [data (lookup-entry config id :vpc-id)]
+    (. builder vpcId data))
+  (when-let [data (lookup-entry config id :vpc-options)]
+    (. builder vpcOptions data))
+  (.build builder))
 
 
-(defn cfn-pipeline-vpc-options-property-builder
-  "The cfn-pipeline-vpc-options-property-builder function buildes out new instances of 
-CfnPipeline$VpcOptionsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-pipeline-vpc-options-property-builder
+  "The build-cfn-pipeline-vpc-options-property-builder function updates a CfnPipeline$VpcOptionsProperty$Builder instance using the provided configuration.
+  The function takes the CfnPipeline$VpcOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
-| `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |"
-  [stack id config]
-  (let [builder (CfnPipeline$VpcOptionsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :security-group-ids)]
-      (. builder securityGroupIds data))
-    (when-let [data (lookup-entry config id :subnet-ids)]
-      (. builder subnetIds data))
-    (.build builder)))
+| `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
+"
+  [^CfnPipeline$VpcOptionsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :security-group-ids)]
+    (. builder securityGroupIds data))
+  (when-let [data (lookup-entry config id :subnet-ids)]
+    (. builder subnetIds data))
+  (.build builder))

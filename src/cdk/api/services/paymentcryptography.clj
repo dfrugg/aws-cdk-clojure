@@ -9,43 +9,52 @@
                                                                 CfnKeyProps$Builder]))
 
 
-(defn cfn-alias-builder
-  "The cfn-alias-builder function buildes out new instances of 
-CfnAlias$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-alias-builder
+  "The build-cfn-alias-builder function updates a CfnAlias$Builder instance using the provided configuration.
+  The function takes the CfnAlias$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aliasName` | java.lang.String | [[cdk.support/lookup-entry]] | `:alias-name` |
-| `keyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-arn` |"
-  [stack id config]
-  (let [builder (CfnAlias$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :alias-name)]
-      (. builder aliasName data))
-    (when-let [data (lookup-entry config id :key-arn)]
-      (. builder keyArn data))
-    (.build builder)))
+| `keyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-arn` |
+"
+  [^CfnAlias$Builder builder id config]
+  (when-let [data (lookup-entry config id :alias-name)]
+    (. builder aliasName data))
+  (when-let [data (lookup-entry config id :key-arn)]
+    (. builder keyArn data))
+  (.build builder))
 
 
-(defn cfn-alias-props-builder
-  "The cfn-alias-props-builder function buildes out new instances of 
-CfnAliasProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-alias-props-builder
+  "The build-cfn-alias-props-builder function updates a CfnAliasProps$Builder instance using the provided configuration.
+  The function takes the CfnAliasProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aliasName` | java.lang.String | [[cdk.support/lookup-entry]] | `:alias-name` |
-| `keyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-arn` |"
-  [stack id config]
-  (let [builder (CfnAliasProps$Builder.)]
-    (when-let [data (lookup-entry config id :alias-name)]
-      (. builder aliasName data))
-    (when-let [data (lookup-entry config id :key-arn)]
-      (. builder keyArn data))
-    (.build builder)))
+| `keyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-arn` |
+"
+  [^CfnAliasProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :alias-name)]
+    (. builder aliasName data))
+  (when-let [data (lookup-entry config id :key-arn)]
+    (. builder keyArn data))
+  (.build builder))
 
 
-(defn cfn-key-builder
-  "The cfn-key-builder function buildes out new instances of 
-CfnKey$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-key-builder
+  "The build-cfn-key-builder function updates a CfnKey$Builder instance using the provided configuration.
+  The function takes the CfnKey$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -53,48 +62,54 @@ CfnKey$Builder using the provided configuration.  Each field is set as follows:
 | `exportable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exportable` |
 | `keyAttributes` | software.amazon.awscdk.services.paymentcryptography.CfnKey$KeyAttributesProperty | [[cdk.support/lookup-entry]] | `:key-attributes` |
 | `keyCheckValueAlgorithm` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-check-value-algorithm` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnKey$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :exportable)]
-      (. builder exportable data))
-    (when-let [data (lookup-entry config id :key-attributes)]
-      (. builder keyAttributes data))
-    (when-let [data (lookup-entry config id :key-check-value-algorithm)]
-      (. builder keyCheckValueAlgorithm data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnKey$Builder builder id config]
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :exportable)]
+    (. builder exportable data))
+  (when-let [data (lookup-entry config id :key-attributes)]
+    (. builder keyAttributes data))
+  (when-let [data (lookup-entry config id :key-check-value-algorithm)]
+    (. builder keyCheckValueAlgorithm data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-key-key-attributes-property-builder
-  "The cfn-key-key-attributes-property-builder function buildes out new instances of 
-CfnKey$KeyAttributesProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-key-key-attributes-property-builder
+  "The build-cfn-key-key-attributes-property-builder function updates a CfnKey$KeyAttributesProperty$Builder instance using the provided configuration.
+  The function takes the CfnKey$KeyAttributesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `keyAlgorithm` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-algorithm` |
 | `keyClass` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-class` |
 | `keyModesOfUse` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-modes-of-use` |
-| `keyUsage` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-usage` |"
-  [stack id config]
-  (let [builder (CfnKey$KeyAttributesProperty$Builder.)]
-    (when-let [data (lookup-entry config id :key-algorithm)]
-      (. builder keyAlgorithm data))
-    (when-let [data (lookup-entry config id :key-class)]
-      (. builder keyClass data))
-    (when-let [data (lookup-entry config id :key-modes-of-use)]
-      (. builder keyModesOfUse data))
-    (when-let [data (lookup-entry config id :key-usage)]
-      (. builder keyUsage data))
-    (.build builder)))
+| `keyUsage` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-usage` |
+"
+  [^CfnKey$KeyAttributesProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :key-algorithm)]
+    (. builder keyAlgorithm data))
+  (when-let [data (lookup-entry config id :key-class)]
+    (. builder keyClass data))
+  (when-let [data (lookup-entry config id :key-modes-of-use)]
+    (. builder keyModesOfUse data))
+  (when-let [data (lookup-entry config id :key-usage)]
+    (. builder keyUsage data))
+  (.build builder))
 
 
-(defn cfn-key-key-modes-of-use-property-builder
-  "The cfn-key-key-modes-of-use-property-builder function buildes out new instances of 
-CfnKey$KeyModesOfUseProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-key-key-modes-of-use-property-builder
+  "The build-cfn-key-key-modes-of-use-property-builder function updates a CfnKey$KeyModesOfUseProperty$Builder instance using the provided configuration.
+  The function takes the CfnKey$KeyModesOfUseProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -106,33 +121,36 @@ CfnKey$KeyModesOfUseProperty$Builder using the provided configuration.  Each fie
 | `sign` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sign` |
 | `unwrap` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:unwrap` |
 | `verify` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:verify` |
-| `wrap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:wrap` |"
-  [stack id config]
-  (let [builder (CfnKey$KeyModesOfUseProperty$Builder.)]
-    (when-let [data (lookup-entry config id :decrypt)]
-      (. builder decrypt data))
-    (when-let [data (lookup-entry config id :derive-key)]
-      (. builder deriveKey data))
-    (when-let [data (lookup-entry config id :encrypt)]
-      (. builder encrypt data))
-    (when-let [data (lookup-entry config id :generate)]
-      (. builder generate data))
-    (when-let [data (lookup-entry config id :no-restrictions)]
-      (. builder noRestrictions data))
-    (when-let [data (lookup-entry config id :sign)]
-      (. builder sign data))
-    (when-let [data (lookup-entry config id :unwrap)]
-      (. builder unwrap data))
-    (when-let [data (lookup-entry config id :verify)]
-      (. builder verify data))
-    (when-let [data (lookup-entry config id :wrap)]
-      (. builder wrap data))
-    (.build builder)))
+| `wrap` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:wrap` |
+"
+  [^CfnKey$KeyModesOfUseProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :decrypt)]
+    (. builder decrypt data))
+  (when-let [data (lookup-entry config id :derive-key)]
+    (. builder deriveKey data))
+  (when-let [data (lookup-entry config id :encrypt)]
+    (. builder encrypt data))
+  (when-let [data (lookup-entry config id :generate)]
+    (. builder generate data))
+  (when-let [data (lookup-entry config id :no-restrictions)]
+    (. builder noRestrictions data))
+  (when-let [data (lookup-entry config id :sign)]
+    (. builder sign data))
+  (when-let [data (lookup-entry config id :unwrap)]
+    (. builder unwrap data))
+  (when-let [data (lookup-entry config id :verify)]
+    (. builder verify data))
+  (when-let [data (lookup-entry config id :wrap)]
+    (. builder wrap data))
+  (.build builder))
 
 
-(defn cfn-key-props-builder
-  "The cfn-key-props-builder function buildes out new instances of 
-CfnKeyProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-key-props-builder
+  "The build-cfn-key-props-builder function updates a CfnKeyProps$Builder instance using the provided configuration.
+  The function takes the CfnKeyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -140,17 +158,17 @@ CfnKeyProps$Builder using the provided configuration.  Each field is set as foll
 | `exportable` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exportable` |
 | `keyAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-attributes` |
 | `keyCheckValueAlgorithm` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-check-value-algorithm` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnKeyProps$Builder.)]
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :exportable)]
-      (. builder exportable data))
-    (when-let [data (lookup-entry config id :key-attributes)]
-      (. builder keyAttributes data))
-    (when-let [data (lookup-entry config id :key-check-value-algorithm)]
-      (. builder keyCheckValueAlgorithm data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnKeyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :exportable)]
+    (. builder exportable data))
+  (when-let [data (lookup-entry config id :key-attributes)]
+    (. builder keyAttributes data))
+  (when-let [data (lookup-entry config id :key-check-value-algorithm)]
+    (. builder keyCheckValueAlgorithm data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))

@@ -55,9 +55,12 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :on-demand data) StreamMode/ON_DEMAND)))
 
 
-(defn cfn-stream-builder
-  "The cfn-stream-builder function buildes out new instances of 
-CfnStream$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-stream-builder
+  "The build-cfn-stream-builder function updates a CfnStream$Builder instance using the provided configuration.
+  The function takes the CfnStream$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -66,61 +69,70 @@ CfnStream$Builder using the provided configuration.  Each field is set as follow
 | `shardCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:shard-count` |
 | `streamEncryption` | software.amazon.awscdk.services.kinesis.CfnStream$StreamEncryptionProperty | [[cdk.support/lookup-entry]] | `:stream-encryption` |
 | `streamModeDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stream-mode-details` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnStream$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :retention-period-hours)]
-      (. builder retentionPeriodHours data))
-    (when-let [data (lookup-entry config id :shard-count)]
-      (. builder shardCount data))
-    (when-let [data (lookup-entry config id :stream-encryption)]
-      (. builder streamEncryption data))
-    (when-let [data (lookup-entry config id :stream-mode-details)]
-      (. builder streamModeDetails data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnStream$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :retention-period-hours)]
+    (. builder retentionPeriodHours data))
+  (when-let [data (lookup-entry config id :shard-count)]
+    (. builder shardCount data))
+  (when-let [data (lookup-entry config id :stream-encryption)]
+    (. builder streamEncryption data))
+  (when-let [data (lookup-entry config id :stream-mode-details)]
+    (. builder streamModeDetails data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-stream-consumer-builder
-  "The cfn-stream-consumer-builder function buildes out new instances of 
-CfnStreamConsumer$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-stream-consumer-builder
+  "The build-cfn-stream-consumer-builder function updates a CfnStreamConsumer$Builder instance using the provided configuration.
+  The function takes the CfnStreamConsumer$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `consumerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:consumer-name` |
-| `streamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-arn` |"
-  [stack id config]
-  (let [builder (CfnStreamConsumer$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :consumer-name)]
-      (. builder consumerName data))
-    (when-let [data (lookup-entry config id :stream-arn)]
-      (. builder streamArn data))
-    (.build builder)))
-
-
-(defn cfn-stream-consumer-props-builder
-  "The cfn-stream-consumer-props-builder function buildes out new instances of 
-CfnStreamConsumerProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `consumerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:consumer-name` |
-| `streamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-arn` |"
-  [stack id config]
-  (let [builder (CfnStreamConsumerProps$Builder.)]
-    (when-let [data (lookup-entry config id :consumer-name)]
-      (. builder consumerName data))
-    (when-let [data (lookup-entry config id :stream-arn)]
-      (. builder streamArn data))
-    (.build builder)))
+| `streamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-arn` |
+"
+  [^CfnStreamConsumer$Builder builder id config]
+  (when-let [data (lookup-entry config id :consumer-name)]
+    (. builder consumerName data))
+  (when-let [data (lookup-entry config id :stream-arn)]
+    (. builder streamArn data))
+  (.build builder))
 
 
-(defn cfn-stream-props-builder
-  "The cfn-stream-props-builder function buildes out new instances of 
-CfnStreamProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-stream-consumer-props-builder
+  "The build-cfn-stream-consumer-props-builder function updates a CfnStreamConsumerProps$Builder instance using the provided configuration.
+  The function takes the CfnStreamConsumerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `consumerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:consumer-name` |
+| `streamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-arn` |
+"
+  [^CfnStreamConsumerProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :consumer-name)]
+    (. builder consumerName data))
+  (when-let [data (lookup-entry config id :stream-arn)]
+    (. builder streamArn data))
+  (.build builder))
+
+
+(defn build-cfn-stream-props-builder
+  "The build-cfn-stream-props-builder function updates a CfnStreamProps$Builder instance using the provided configuration.
+  The function takes the CfnStreamProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -129,75 +141,87 @@ CfnStreamProps$Builder using the provided configuration.  Each field is set as f
 | `shardCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:shard-count` |
 | `streamEncryption` | software.amazon.awscdk.services.kinesis.CfnStream$StreamEncryptionProperty | [[cdk.support/lookup-entry]] | `:stream-encryption` |
 | `streamModeDetails` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:stream-mode-details` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnStreamProps$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :retention-period-hours)]
-      (. builder retentionPeriodHours data))
-    (when-let [data (lookup-entry config id :shard-count)]
-      (. builder shardCount data))
-    (when-let [data (lookup-entry config id :stream-encryption)]
-      (. builder streamEncryption data))
-    (when-let [data (lookup-entry config id :stream-mode-details)]
-      (. builder streamModeDetails data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnStreamProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :retention-period-hours)]
+    (. builder retentionPeriodHours data))
+  (when-let [data (lookup-entry config id :shard-count)]
+    (. builder shardCount data))
+  (when-let [data (lookup-entry config id :stream-encryption)]
+    (. builder streamEncryption data))
+  (when-let [data (lookup-entry config id :stream-mode-details)]
+    (. builder streamModeDetails data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-stream-stream-encryption-property-builder
-  "The cfn-stream-stream-encryption-property-builder function buildes out new instances of 
-CfnStream$StreamEncryptionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-stream-stream-encryption-property-builder
+  "The build-cfn-stream-stream-encryption-property-builder function updates a CfnStream$StreamEncryptionProperty$Builder instance using the provided configuration.
+  The function takes the CfnStream$StreamEncryptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `encryptionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:encryption-type` |
-| `keyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-id` |"
-  [stack id config]
-  (let [builder (CfnStream$StreamEncryptionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :encryption-type)]
-      (. builder encryptionType data))
-    (when-let [data (lookup-entry config id :key-id)]
-      (. builder keyId data))
-    (.build builder)))
+| `keyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-id` |
+"
+  [^CfnStream$StreamEncryptionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :encryption-type)]
+    (. builder encryptionType data))
+  (when-let [data (lookup-entry config id :key-id)]
+    (. builder keyId data))
+  (.build builder))
 
 
-(defn cfn-stream-stream-mode-details-property-builder
-  "The cfn-stream-stream-mode-details-property-builder function buildes out new instances of 
-CfnStream$StreamModeDetailsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-stream-stream-mode-details-property-builder
+  "The build-cfn-stream-stream-mode-details-property-builder function updates a CfnStream$StreamModeDetailsProperty$Builder instance using the provided configuration.
+  The function takes the CfnStream$StreamModeDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `streamMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-mode` |"
-  [stack id config]
-  (let [builder (CfnStream$StreamModeDetailsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :stream-mode)]
-      (. builder streamMode data))
-    (.build builder)))
+| `streamMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-mode` |
+"
+  [^CfnStream$StreamModeDetailsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :stream-mode)]
+    (. builder streamMode data))
+  (.build builder))
 
 
-(defn stream-attributes-builder
-  "The stream-attributes-builder function buildes out new instances of 
-StreamAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-stream-attributes-builder
+  "The build-stream-attributes-builder function updates a StreamAttributes$Builder instance using the provided configuration.
+  The function takes the StreamAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `encryptionKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:encryption-key` |
-| `streamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-arn` |"
-  [stack id config]
-  (let [builder (StreamAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (lookup-entry config id :stream-arn)]
-      (. builder streamArn data))
-    (.build builder)))
+| `streamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-arn` |
+"
+  [^StreamAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (lookup-entry config id :stream-arn)]
+    (. builder streamArn data))
+  (.build builder))
 
 
-(defn stream-builder
-  "The stream-builder function buildes out new instances of 
-Stream$Builder using the provided configuration.  Each field is set as follows:
+(defn build-stream-builder
+  "The build-stream-builder function updates a Stream$Builder instance using the provided configuration.
+  The function takes the Stream$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -207,29 +231,32 @@ Stream$Builder using the provided configuration.  Each field is set as follows:
 | `retentionPeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:retention-period` |
 | `shardCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:shard-count` |
 | `streamMode` | software.amazon.awscdk.services.kinesis.StreamMode | [[cdk.api.services.kinesis/stream-mode]] | `:stream-mode` |
-| `streamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-name` |"
-  [stack id config]
-  (let [builder (Stream$Builder/create stack id)]
-    (when-let [data (stream-encryption config id :encryption)]
-      (. builder encryption data))
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (removal-policy config id :removal-policy)]
-      (. builder removalPolicy data))
-    (when-let [data (lookup-entry config id :retention-period)]
-      (. builder retentionPeriod data))
-    (when-let [data (lookup-entry config id :shard-count)]
-      (. builder shardCount data))
-    (when-let [data (stream-mode config id :stream-mode)]
-      (. builder streamMode data))
-    (when-let [data (lookup-entry config id :stream-name)]
-      (. builder streamName data))
-    (.build builder)))
+| `streamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-name` |
+"
+  [^Stream$Builder builder id config]
+  (when-let [data (stream-encryption config id :encryption)]
+    (. builder encryption data))
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (removal-policy config id :removal-policy)]
+    (. builder removalPolicy data))
+  (when-let [data (lookup-entry config id :retention-period)]
+    (. builder retentionPeriod data))
+  (when-let [data (lookup-entry config id :shard-count)]
+    (. builder shardCount data))
+  (when-let [data (stream-mode config id :stream-mode)]
+    (. builder streamMode data))
+  (when-let [data (lookup-entry config id :stream-name)]
+    (. builder streamName data))
+  (.build builder))
 
 
-(defn stream-props-builder
-  "The stream-props-builder function buildes out new instances of 
-StreamProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-stream-props-builder
+  "The build-stream-props-builder function updates a StreamProps$Builder instance using the provided configuration.
+  The function takes the StreamProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -239,21 +266,21 @@ StreamProps$Builder using the provided configuration.  Each field is set as foll
 | `retentionPeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:retention-period` |
 | `shardCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:shard-count` |
 | `streamMode` | software.amazon.awscdk.services.kinesis.StreamMode | [[cdk.api.services.kinesis/stream-mode]] | `:stream-mode` |
-| `streamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-name` |"
-  [stack id config]
-  (let [builder (StreamProps$Builder.)]
-    (when-let [data (stream-encryption config id :encryption)]
-      (. builder encryption data))
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (removal-policy config id :removal-policy)]
-      (. builder removalPolicy data))
-    (when-let [data (lookup-entry config id :retention-period)]
-      (. builder retentionPeriod data))
-    (when-let [data (lookup-entry config id :shard-count)]
-      (. builder shardCount data))
-    (when-let [data (stream-mode config id :stream-mode)]
-      (. builder streamMode data))
-    (when-let [data (lookup-entry config id :stream-name)]
-      (. builder streamName data))
-    (.build builder)))
+| `streamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-name` |
+"
+  [^StreamProps$Builder builder id config]
+  (when-let [data (stream-encryption config id :encryption)]
+    (. builder encryption data))
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (removal-policy config id :removal-policy)]
+    (. builder removalPolicy data))
+  (when-let [data (lookup-entry config id :retention-period)]
+    (. builder retentionPeriod data))
+  (when-let [data (lookup-entry config id :shard-count)]
+    (. builder shardCount data))
+  (when-let [data (stream-mode config id :stream-mode)]
+    (. builder streamMode data))
+  (when-let [data (lookup-entry config id :stream-name)]
+    (. builder streamName data))
+  (.build builder))

@@ -53,9 +53,12 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :handler-change data) TriggerInvalidation/HANDLER_CHANGE)))
 
 
-(defn trigger-builder
-  "The trigger-builder function buildes out new instances of 
-Trigger$Builder using the provided configuration.  Each field is set as follows:
+(defn build-trigger-builder
+  "The build-trigger-builder function updates a Trigger$Builder instance using the provided configuration.
+  The function takes the Trigger$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -64,27 +67,30 @@ Trigger$Builder using the provided configuration.  Each field is set as follows:
 | `executeOnHandlerChange` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:execute-on-handler-change` |
 | `handler` | software.amazon.awscdk.services.lambda.Function | [[cdk.support/lookup-entry]] | `:handler` |
 | `invocationType` | software.amazon.awscdk.triggers.InvocationType | [[cdk.api.triggers/invocation-type]] | `:invocation-type` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (Trigger$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :execute-after)]
-      (. builder executeAfter data))
-    (when-let [data (lookup-entry config id :execute-before)]
-      (. builder executeBefore data))
-    (when-let [data (lookup-entry config id :execute-on-handler-change)]
-      (. builder executeOnHandlerChange data))
-    (when-let [data (lookup-entry config id :handler)]
-      (. builder handler data))
-    (when-let [data (invocation-type config id :invocation-type)]
-      (. builder invocationType data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^Trigger$Builder builder id config]
+  (when-let [data (lookup-entry config id :execute-after)]
+    (. builder executeAfter data))
+  (when-let [data (lookup-entry config id :execute-before)]
+    (. builder executeBefore data))
+  (when-let [data (lookup-entry config id :execute-on-handler-change)]
+    (. builder executeOnHandlerChange data))
+  (when-let [data (lookup-entry config id :handler)]
+    (. builder handler data))
+  (when-let [data (invocation-type config id :invocation-type)]
+    (. builder invocationType data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn trigger-function-builder
-  "The trigger-function-builder function buildes out new instances of 
-TriggerFunction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-trigger-function-builder
+  "The build-trigger-function-builder function updates a TriggerFunction$Builder instance using the provided configuration.
+  The function takes the TriggerFunction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -140,121 +146,124 @@ TriggerFunction$Builder using the provided configuration.  Each field is set as 
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 | `tracing` | software.amazon.awscdk.services.lambda.Tracing | [[cdk.api.services.lambda/tracing]] | `:tracing` |
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |"
-  [stack id config]
-  (let [builder (TriggerFunction$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :adot-instrumentation)]
-      (. builder adotInstrumentation data))
-    (when-let [data (lookup-entry config id :allow-all-outbound)]
-      (. builder allowAllOutbound data))
-    (when-let [data (lookup-entry config id :allow-public-subnet)]
-      (. builder allowPublicSubnet data))
-    (when-let [data (lookup-entry config id :application-log-level)]
-      (. builder applicationLogLevel data))
-    (when-let [data (application-log-level config id :application-log-level-v2)]
-      (. builder applicationLogLevelV2 data))
-    (when-let [data (lookup-entry config id :architecture)]
-      (. builder architecture data))
-    (when-let [data (lookup-entry config id :code)]
-      (. builder code data))
-    (when-let [data (lookup-entry config id :code-signing-config)]
-      (. builder codeSigningConfig data))
-    (when-let [data (lookup-entry config id :current-version-options)]
-      (. builder currentVersionOptions data))
-    (when-let [data (lookup-entry config id :dead-letter-queue)]
-      (. builder deadLetterQueue data))
-    (when-let [data (lookup-entry config id :dead-letter-queue-enabled)]
-      (. builder deadLetterQueueEnabled data))
-    (when-let [data (lookup-entry config id :dead-letter-topic)]
-      (. builder deadLetterTopic data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :environment-encryption)]
-      (. builder environmentEncryption data))
-    (when-let [data (lookup-entry config id :ephemeral-storage-size)]
-      (. builder ephemeralStorageSize data))
-    (when-let [data (lookup-entry config id :events)]
-      (. builder events data))
-    (when-let [data (lookup-entry config id :execute-after)]
-      (. builder executeAfter data))
-    (when-let [data (lookup-entry config id :execute-before)]
-      (. builder executeBefore data))
-    (when-let [data (lookup-entry config id :execute-on-handler-change)]
-      (. builder executeOnHandlerChange data))
-    (when-let [data (lookup-entry config id :filesystem)]
-      (. builder filesystem data))
-    (when-let [data (lookup-entry config id :function-name)]
-      (. builder functionName data))
-    (when-let [data (lookup-entry config id :handler)]
-      (. builder handler data))
-    (when-let [data (lookup-entry config id :initial-policy)]
-      (. builder initialPolicy data))
-    (when-let [data (lookup-entry config id :insights-version)]
-      (. builder insightsVersion data))
-    (when-let [data (lookup-entry config id :ipv6-allowed-for-dual-stack)]
-      (. builder ipv6AllowedForDualStack data))
-    (when-let [data (lookup-entry config id :layers)]
-      (. builder layers data))
-    (when-let [data (lookup-entry config id :log-format)]
-      (. builder logFormat data))
-    (when-let [data (lookup-entry config id :log-group)]
-      (. builder logGroup data))
-    (when-let [data (retention-days config id :log-retention)]
-      (. builder logRetention data))
-    (when-let [data (lookup-entry config id :log-retention-retry-options)]
-      (. builder logRetentionRetryOptions data))
-    (when-let [data (lookup-entry config id :log-retention-role)]
-      (. builder logRetentionRole data))
-    (when-let [data (logging-format config id :logging-format)]
-      (. builder loggingFormat data))
-    (when-let [data (lookup-entry config id :max-event-age)]
-      (. builder maxEventAge data))
-    (when-let [data (lookup-entry config id :memory-size)]
-      (. builder memorySize data))
-    (when-let [data (lookup-entry config id :on-failure)]
-      (. builder onFailure data))
-    (when-let [data (lookup-entry config id :on-success)]
-      (. builder onSuccess data))
-    (when-let [data (lookup-entry config id :params-and-secrets)]
-      (. builder paramsAndSecrets data))
-    (when-let [data (lookup-entry config id :profiling)]
-      (. builder profiling data))
-    (when-let [data (lookup-entry config id :profiling-group)]
-      (. builder profilingGroup data))
-    (when-let [data (lookup-entry config id :reserved-concurrent-executions)]
-      (. builder reservedConcurrentExecutions data))
-    (when-let [data (lookup-entry config id :retry-attempts)]
-      (. builder retryAttempts data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :runtime)]
-      (. builder runtime data))
-    (when-let [data (lookup-entry config id :runtime-management-mode)]
-      (. builder runtimeManagementMode data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :snap-start)]
-      (. builder snapStart data))
-    (when-let [data (lookup-entry config id :system-log-level)]
-      (. builder systemLogLevel data))
-    (when-let [data (system-log-level config id :system-log-level-v2)]
-      (. builder systemLogLevelV2 data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (tracing config id :tracing)]
-      (. builder tracing data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnets)]
-      (. builder vpcSubnets data))
-    (.build builder)))
+| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
+"
+  [^TriggerFunction$Builder builder id config]
+  (when-let [data (lookup-entry config id :adot-instrumentation)]
+    (. builder adotInstrumentation data))
+  (when-let [data (lookup-entry config id :allow-all-outbound)]
+    (. builder allowAllOutbound data))
+  (when-let [data (lookup-entry config id :allow-public-subnet)]
+    (. builder allowPublicSubnet data))
+  (when-let [data (lookup-entry config id :application-log-level)]
+    (. builder applicationLogLevel data))
+  (when-let [data (application-log-level config id :application-log-level-v2)]
+    (. builder applicationLogLevelV2 data))
+  (when-let [data (lookup-entry config id :architecture)]
+    (. builder architecture data))
+  (when-let [data (lookup-entry config id :code)]
+    (. builder code data))
+  (when-let [data (lookup-entry config id :code-signing-config)]
+    (. builder codeSigningConfig data))
+  (when-let [data (lookup-entry config id :current-version-options)]
+    (. builder currentVersionOptions data))
+  (when-let [data (lookup-entry config id :dead-letter-queue)]
+    (. builder deadLetterQueue data))
+  (when-let [data (lookup-entry config id :dead-letter-queue-enabled)]
+    (. builder deadLetterQueueEnabled data))
+  (when-let [data (lookup-entry config id :dead-letter-topic)]
+    (. builder deadLetterTopic data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :environment-encryption)]
+    (. builder environmentEncryption data))
+  (when-let [data (lookup-entry config id :ephemeral-storage-size)]
+    (. builder ephemeralStorageSize data))
+  (when-let [data (lookup-entry config id :events)]
+    (. builder events data))
+  (when-let [data (lookup-entry config id :execute-after)]
+    (. builder executeAfter data))
+  (when-let [data (lookup-entry config id :execute-before)]
+    (. builder executeBefore data))
+  (when-let [data (lookup-entry config id :execute-on-handler-change)]
+    (. builder executeOnHandlerChange data))
+  (when-let [data (lookup-entry config id :filesystem)]
+    (. builder filesystem data))
+  (when-let [data (lookup-entry config id :function-name)]
+    (. builder functionName data))
+  (when-let [data (lookup-entry config id :handler)]
+    (. builder handler data))
+  (when-let [data (lookup-entry config id :initial-policy)]
+    (. builder initialPolicy data))
+  (when-let [data (lookup-entry config id :insights-version)]
+    (. builder insightsVersion data))
+  (when-let [data (lookup-entry config id :ipv6-allowed-for-dual-stack)]
+    (. builder ipv6AllowedForDualStack data))
+  (when-let [data (lookup-entry config id :layers)]
+    (. builder layers data))
+  (when-let [data (lookup-entry config id :log-format)]
+    (. builder logFormat data))
+  (when-let [data (lookup-entry config id :log-group)]
+    (. builder logGroup data))
+  (when-let [data (retention-days config id :log-retention)]
+    (. builder logRetention data))
+  (when-let [data (lookup-entry config id :log-retention-retry-options)]
+    (. builder logRetentionRetryOptions data))
+  (when-let [data (lookup-entry config id :log-retention-role)]
+    (. builder logRetentionRole data))
+  (when-let [data (logging-format config id :logging-format)]
+    (. builder loggingFormat data))
+  (when-let [data (lookup-entry config id :max-event-age)]
+    (. builder maxEventAge data))
+  (when-let [data (lookup-entry config id :memory-size)]
+    (. builder memorySize data))
+  (when-let [data (lookup-entry config id :on-failure)]
+    (. builder onFailure data))
+  (when-let [data (lookup-entry config id :on-success)]
+    (. builder onSuccess data))
+  (when-let [data (lookup-entry config id :params-and-secrets)]
+    (. builder paramsAndSecrets data))
+  (when-let [data (lookup-entry config id :profiling)]
+    (. builder profiling data))
+  (when-let [data (lookup-entry config id :profiling-group)]
+    (. builder profilingGroup data))
+  (when-let [data (lookup-entry config id :reserved-concurrent-executions)]
+    (. builder reservedConcurrentExecutions data))
+  (when-let [data (lookup-entry config id :retry-attempts)]
+    (. builder retryAttempts data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :runtime)]
+    (. builder runtime data))
+  (when-let [data (lookup-entry config id :runtime-management-mode)]
+    (. builder runtimeManagementMode data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :snap-start)]
+    (. builder snapStart data))
+  (when-let [data (lookup-entry config id :system-log-level)]
+    (. builder systemLogLevel data))
+  (when-let [data (system-log-level config id :system-log-level-v2)]
+    (. builder systemLogLevelV2 data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (tracing config id :tracing)]
+    (. builder tracing data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnets)]
+    (. builder vpcSubnets data))
+  (.build builder))
 
 
-(defn trigger-function-props-builder
-  "The trigger-function-props-builder function buildes out new instances of 
-TriggerFunctionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-trigger-function-props-builder
+  "The build-trigger-function-props-builder function updates a TriggerFunctionProps$Builder instance using the provided configuration.
+  The function takes the TriggerFunctionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -310,141 +319,147 @@ TriggerFunctionProps$Builder using the provided configuration.  Each field is se
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 | `tracing` | software.amazon.awscdk.services.lambda.Tracing | [[cdk.api.services.lambda/tracing]] | `:tracing` |
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |"
-  [stack id config]
-  (let [builder (TriggerFunctionProps$Builder.)]
-    (when-let [data (lookup-entry config id :adot-instrumentation)]
-      (. builder adotInstrumentation data))
-    (when-let [data (lookup-entry config id :allow-all-outbound)]
-      (. builder allowAllOutbound data))
-    (when-let [data (lookup-entry config id :allow-public-subnet)]
-      (. builder allowPublicSubnet data))
-    (when-let [data (lookup-entry config id :application-log-level)]
-      (. builder applicationLogLevel data))
-    (when-let [data (application-log-level config id :application-log-level-v2)]
-      (. builder applicationLogLevelV2 data))
-    (when-let [data (lookup-entry config id :architecture)]
-      (. builder architecture data))
-    (when-let [data (lookup-entry config id :code)]
-      (. builder code data))
-    (when-let [data (lookup-entry config id :code-signing-config)]
-      (. builder codeSigningConfig data))
-    (when-let [data (lookup-entry config id :current-version-options)]
-      (. builder currentVersionOptions data))
-    (when-let [data (lookup-entry config id :dead-letter-queue)]
-      (. builder deadLetterQueue data))
-    (when-let [data (lookup-entry config id :dead-letter-queue-enabled)]
-      (. builder deadLetterQueueEnabled data))
-    (when-let [data (lookup-entry config id :dead-letter-topic)]
-      (. builder deadLetterTopic data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :environment-encryption)]
-      (. builder environmentEncryption data))
-    (when-let [data (lookup-entry config id :ephemeral-storage-size)]
-      (. builder ephemeralStorageSize data))
-    (when-let [data (lookup-entry config id :events)]
-      (. builder events data))
-    (when-let [data (lookup-entry config id :execute-after)]
-      (. builder executeAfter data))
-    (when-let [data (lookup-entry config id :execute-before)]
-      (. builder executeBefore data))
-    (when-let [data (lookup-entry config id :execute-on-handler-change)]
-      (. builder executeOnHandlerChange data))
-    (when-let [data (lookup-entry config id :filesystem)]
-      (. builder filesystem data))
-    (when-let [data (lookup-entry config id :function-name)]
-      (. builder functionName data))
-    (when-let [data (lookup-entry config id :handler)]
-      (. builder handler data))
-    (when-let [data (lookup-entry config id :initial-policy)]
-      (. builder initialPolicy data))
-    (when-let [data (lookup-entry config id :insights-version)]
-      (. builder insightsVersion data))
-    (when-let [data (lookup-entry config id :ipv6-allowed-for-dual-stack)]
-      (. builder ipv6AllowedForDualStack data))
-    (when-let [data (lookup-entry config id :layers)]
-      (. builder layers data))
-    (when-let [data (lookup-entry config id :log-format)]
-      (. builder logFormat data))
-    (when-let [data (lookup-entry config id :log-group)]
-      (. builder logGroup data))
-    (when-let [data (retention-days config id :log-retention)]
-      (. builder logRetention data))
-    (when-let [data (lookup-entry config id :log-retention-retry-options)]
-      (. builder logRetentionRetryOptions data))
-    (when-let [data (lookup-entry config id :log-retention-role)]
-      (. builder logRetentionRole data))
-    (when-let [data (logging-format config id :logging-format)]
-      (. builder loggingFormat data))
-    (when-let [data (lookup-entry config id :max-event-age)]
-      (. builder maxEventAge data))
-    (when-let [data (lookup-entry config id :memory-size)]
-      (. builder memorySize data))
-    (when-let [data (lookup-entry config id :on-failure)]
-      (. builder onFailure data))
-    (when-let [data (lookup-entry config id :on-success)]
-      (. builder onSuccess data))
-    (when-let [data (lookup-entry config id :params-and-secrets)]
-      (. builder paramsAndSecrets data))
-    (when-let [data (lookup-entry config id :profiling)]
-      (. builder profiling data))
-    (when-let [data (lookup-entry config id :profiling-group)]
-      (. builder profilingGroup data))
-    (when-let [data (lookup-entry config id :reserved-concurrent-executions)]
-      (. builder reservedConcurrentExecutions data))
-    (when-let [data (lookup-entry config id :retry-attempts)]
-      (. builder retryAttempts data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :runtime)]
-      (. builder runtime data))
-    (when-let [data (lookup-entry config id :runtime-management-mode)]
-      (. builder runtimeManagementMode data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :snap-start)]
-      (. builder snapStart data))
-    (when-let [data (lookup-entry config id :system-log-level)]
-      (. builder systemLogLevel data))
-    (when-let [data (system-log-level config id :system-log-level-v2)]
-      (. builder systemLogLevelV2 data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (tracing config id :tracing)]
-      (. builder tracing data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnets)]
-      (. builder vpcSubnets data))
-    (.build builder)))
+| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
+"
+  [^TriggerFunctionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :adot-instrumentation)]
+    (. builder adotInstrumentation data))
+  (when-let [data (lookup-entry config id :allow-all-outbound)]
+    (. builder allowAllOutbound data))
+  (when-let [data (lookup-entry config id :allow-public-subnet)]
+    (. builder allowPublicSubnet data))
+  (when-let [data (lookup-entry config id :application-log-level)]
+    (. builder applicationLogLevel data))
+  (when-let [data (application-log-level config id :application-log-level-v2)]
+    (. builder applicationLogLevelV2 data))
+  (when-let [data (lookup-entry config id :architecture)]
+    (. builder architecture data))
+  (when-let [data (lookup-entry config id :code)]
+    (. builder code data))
+  (when-let [data (lookup-entry config id :code-signing-config)]
+    (. builder codeSigningConfig data))
+  (when-let [data (lookup-entry config id :current-version-options)]
+    (. builder currentVersionOptions data))
+  (when-let [data (lookup-entry config id :dead-letter-queue)]
+    (. builder deadLetterQueue data))
+  (when-let [data (lookup-entry config id :dead-letter-queue-enabled)]
+    (. builder deadLetterQueueEnabled data))
+  (when-let [data (lookup-entry config id :dead-letter-topic)]
+    (. builder deadLetterTopic data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :environment-encryption)]
+    (. builder environmentEncryption data))
+  (when-let [data (lookup-entry config id :ephemeral-storage-size)]
+    (. builder ephemeralStorageSize data))
+  (when-let [data (lookup-entry config id :events)]
+    (. builder events data))
+  (when-let [data (lookup-entry config id :execute-after)]
+    (. builder executeAfter data))
+  (when-let [data (lookup-entry config id :execute-before)]
+    (. builder executeBefore data))
+  (when-let [data (lookup-entry config id :execute-on-handler-change)]
+    (. builder executeOnHandlerChange data))
+  (when-let [data (lookup-entry config id :filesystem)]
+    (. builder filesystem data))
+  (when-let [data (lookup-entry config id :function-name)]
+    (. builder functionName data))
+  (when-let [data (lookup-entry config id :handler)]
+    (. builder handler data))
+  (when-let [data (lookup-entry config id :initial-policy)]
+    (. builder initialPolicy data))
+  (when-let [data (lookup-entry config id :insights-version)]
+    (. builder insightsVersion data))
+  (when-let [data (lookup-entry config id :ipv6-allowed-for-dual-stack)]
+    (. builder ipv6AllowedForDualStack data))
+  (when-let [data (lookup-entry config id :layers)]
+    (. builder layers data))
+  (when-let [data (lookup-entry config id :log-format)]
+    (. builder logFormat data))
+  (when-let [data (lookup-entry config id :log-group)]
+    (. builder logGroup data))
+  (when-let [data (retention-days config id :log-retention)]
+    (. builder logRetention data))
+  (when-let [data (lookup-entry config id :log-retention-retry-options)]
+    (. builder logRetentionRetryOptions data))
+  (when-let [data (lookup-entry config id :log-retention-role)]
+    (. builder logRetentionRole data))
+  (when-let [data (logging-format config id :logging-format)]
+    (. builder loggingFormat data))
+  (when-let [data (lookup-entry config id :max-event-age)]
+    (. builder maxEventAge data))
+  (when-let [data (lookup-entry config id :memory-size)]
+    (. builder memorySize data))
+  (when-let [data (lookup-entry config id :on-failure)]
+    (. builder onFailure data))
+  (when-let [data (lookup-entry config id :on-success)]
+    (. builder onSuccess data))
+  (when-let [data (lookup-entry config id :params-and-secrets)]
+    (. builder paramsAndSecrets data))
+  (when-let [data (lookup-entry config id :profiling)]
+    (. builder profiling data))
+  (when-let [data (lookup-entry config id :profiling-group)]
+    (. builder profilingGroup data))
+  (when-let [data (lookup-entry config id :reserved-concurrent-executions)]
+    (. builder reservedConcurrentExecutions data))
+  (when-let [data (lookup-entry config id :retry-attempts)]
+    (. builder retryAttempts data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :runtime)]
+    (. builder runtime data))
+  (when-let [data (lookup-entry config id :runtime-management-mode)]
+    (. builder runtimeManagementMode data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :snap-start)]
+    (. builder snapStart data))
+  (when-let [data (lookup-entry config id :system-log-level)]
+    (. builder systemLogLevel data))
+  (when-let [data (system-log-level config id :system-log-level-v2)]
+    (. builder systemLogLevelV2 data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (tracing config id :tracing)]
+    (. builder tracing data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnets)]
+    (. builder vpcSubnets data))
+  (.build builder))
 
 
-(defn trigger-options-builder
-  "The trigger-options-builder function buildes out new instances of 
-TriggerOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-trigger-options-builder
+  "The build-trigger-options-builder function updates a TriggerOptions$Builder instance using the provided configuration.
+  The function takes the TriggerOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `executeAfter` | java.util.List | [[cdk.support/lookup-entry]] | `:execute-after` |
 | `executeBefore` | java.util.List | [[cdk.support/lookup-entry]] | `:execute-before` |
-| `executeOnHandlerChange` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:execute-on-handler-change` |"
-  [stack id config]
-  (let [builder (TriggerOptions$Builder.)]
-    (when-let [data (lookup-entry config id :execute-after)]
-      (. builder executeAfter data))
-    (when-let [data (lookup-entry config id :execute-before)]
-      (. builder executeBefore data))
-    (when-let [data (lookup-entry config id :execute-on-handler-change)]
-      (. builder executeOnHandlerChange data))
-    (.build builder)))
+| `executeOnHandlerChange` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:execute-on-handler-change` |
+"
+  [^TriggerOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :execute-after)]
+    (. builder executeAfter data))
+  (when-let [data (lookup-entry config id :execute-before)]
+    (. builder executeBefore data))
+  (when-let [data (lookup-entry config id :execute-on-handler-change)]
+    (. builder executeOnHandlerChange data))
+  (.build builder))
 
 
-(defn trigger-props-builder
-  "The trigger-props-builder function buildes out new instances of 
-TriggerProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-trigger-props-builder
+  "The build-trigger-props-builder function updates a TriggerProps$Builder instance using the provided configuration.
+  The function takes the TriggerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -453,19 +468,19 @@ TriggerProps$Builder using the provided configuration.  Each field is set as fol
 | `executeOnHandlerChange` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:execute-on-handler-change` |
 | `handler` | software.amazon.awscdk.services.lambda.Function | [[cdk.support/lookup-entry]] | `:handler` |
 | `invocationType` | software.amazon.awscdk.triggers.InvocationType | [[cdk.api.triggers/invocation-type]] | `:invocation-type` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (TriggerProps$Builder.)]
-    (when-let [data (lookup-entry config id :execute-after)]
-      (. builder executeAfter data))
-    (when-let [data (lookup-entry config id :execute-before)]
-      (. builder executeBefore data))
-    (when-let [data (lookup-entry config id :execute-on-handler-change)]
-      (. builder executeOnHandlerChange data))
-    (when-let [data (lookup-entry config id :handler)]
-      (. builder handler data))
-    (when-let [data (invocation-type config id :invocation-type)]
-      (. builder invocationType data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^TriggerProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :execute-after)]
+    (. builder executeAfter data))
+  (when-let [data (lookup-entry config id :execute-before)]
+    (. builder executeBefore data))
+  (when-let [data (lookup-entry config id :execute-on-handler-change)]
+    (. builder executeOnHandlerChange data))
+  (when-let [data (lookup-entry config id :handler)]
+    (. builder handler data))
+  (when-let [data (invocation-type config id :invocation-type)]
+    (. builder invocationType data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))

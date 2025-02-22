@@ -459,52 +459,61 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :append data) XffHeaderProcessingMode/APPEND)))
 
 
-(defn add-application-action-props-builder
-  "The add-application-action-props-builder function buildes out new instances of 
-AddApplicationActionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-add-application-action-props-builder
+  "The build-add-application-action-props-builder function updates a AddApplicationActionProps$Builder instance using the provided configuration.
+  The function takes the AddApplicationActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `action` | software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction | [[cdk.support/lookup-entry]] | `:action` |
 | `conditions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditions` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
-| `removeSuffix` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:remove-suffix` |"
-  [stack id config]
-  (let [builder (AddApplicationActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :conditions)]
-      (. builder conditions data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :remove-suffix)]
-      (. builder removeSuffix data))
-    (.build builder)))
+| `removeSuffix` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:remove-suffix` |
+"
+  [^AddApplicationActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :conditions)]
+    (. builder conditions data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :remove-suffix)]
+    (. builder removeSuffix data))
+  (.build builder))
 
 
-(defn add-application-target-groups-props-builder
-  "The add-application-target-groups-props-builder function buildes out new instances of 
-AddApplicationTargetGroupsProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-add-application-target-groups-props-builder
+  "The build-add-application-target-groups-props-builder function updates a AddApplicationTargetGroupsProps$Builder instance using the provided configuration.
+  The function takes the AddApplicationTargetGroupsProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `conditions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditions` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
-| `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |"
-  [stack id config]
-  (let [builder (AddApplicationTargetGroupsProps$Builder.)]
-    (when-let [data (lookup-entry config id :conditions)]
-      (. builder conditions data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :target-groups)]
-      (. builder targetGroups data))
-    (.build builder)))
+| `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
+"
+  [^AddApplicationTargetGroupsProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :conditions)]
+    (. builder conditions data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :target-groups)]
+    (. builder targetGroups data))
+  (.build builder))
 
 
-(defn add-application-targets-props-builder
-  "The add-application-targets-props-builder function buildes out new instances of 
-AddApplicationTargetsProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-add-application-targets-props-builder
+  "The build-add-application-targets-props-builder function updates a AddApplicationTargetsProps$Builder instance using the provided configuration.
+  The function takes the AddApplicationTargetsProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -520,55 +529,61 @@ AddApplicationTargetsProps$Builder using the provided configuration.  Each field
 | `stickinessCookieDuration` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:stickiness-cookie-duration` |
 | `stickinessCookieName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stickiness-cookie-name` |
 | `targetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-group-name` |
-| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |"
-  [stack id config]
-  (let [builder (AddApplicationTargetsProps$Builder.)]
-    (when-let [data (lookup-entry config id :conditions)]
-      (. builder conditions data))
-    (when-let [data (lookup-entry config id :deregistration-delay)]
-      (. builder deregistrationDelay data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (target-group-load-balancing-algorithm-type config id :load-balancing-algorithm-type)]
-      (. builder loadBalancingAlgorithmType data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (application-protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (application-protocol-version config id :protocol-version)]
-      (. builder protocolVersion data))
-    (when-let [data (lookup-entry config id :slow-start)]
-      (. builder slowStart data))
-    (when-let [data (lookup-entry config id :stickiness-cookie-duration)]
-      (. builder stickinessCookieDuration data))
-    (when-let [data (lookup-entry config id :stickiness-cookie-name)]
-      (. builder stickinessCookieName data))
-    (when-let [data (lookup-entry config id :target-group-name)]
-      (. builder targetGroupName data))
-    (when-let [data (lookup-entry config id :targets)]
-      (. builder targets data))
-    (.build builder)))
+| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
+"
+  [^AddApplicationTargetsProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :conditions)]
+    (. builder conditions data))
+  (when-let [data (lookup-entry config id :deregistration-delay)]
+    (. builder deregistrationDelay data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (target-group-load-balancing-algorithm-type config id :load-balancing-algorithm-type)]
+    (. builder loadBalancingAlgorithmType data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (application-protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (application-protocol-version config id :protocol-version)]
+    (. builder protocolVersion data))
+  (when-let [data (lookup-entry config id :slow-start)]
+    (. builder slowStart data))
+  (when-let [data (lookup-entry config id :stickiness-cookie-duration)]
+    (. builder stickinessCookieDuration data))
+  (when-let [data (lookup-entry config id :stickiness-cookie-name)]
+    (. builder stickinessCookieName data))
+  (when-let [data (lookup-entry config id :target-group-name)]
+    (. builder targetGroupName data))
+  (when-let [data (lookup-entry config id :targets)]
+    (. builder targets data))
+  (.build builder))
 
 
-(defn add-network-action-props-builder
-  "The add-network-action-props-builder function buildes out new instances of 
-AddNetworkActionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-add-network-action-props-builder
+  "The build-add-network-action-props-builder function updates a AddNetworkActionProps$Builder instance using the provided configuration.
+  The function takes the AddNetworkActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `action` | software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction | [[cdk.support/lookup-entry]] | `:action` |"
-  [stack id config]
-  (let [builder (AddNetworkActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (.build builder)))
+| `action` | software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction | [[cdk.support/lookup-entry]] | `:action` |
+"
+  [^AddNetworkActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (.build builder))
 
 
-(defn add-network-targets-props-builder
-  "The add-network-targets-props-builder function buildes out new instances of 
-AddNetworkTargetsProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-add-network-targets-props-builder
+  "The build-add-network-targets-props-builder function updates a AddNetworkTargetsProps$Builder instance using the provided configuration.
+  The function takes the AddNetworkTargetsProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -579,68 +594,77 @@ AddNetworkTargetsProps$Builder using the provided configuration.  Each field is 
 | `protocol` | software.amazon.awscdk.services.elasticloadbalancingv2.Protocol | [[cdk.api.services.elasticloadbalancingv2/protocol]] | `:protocol` |
 | `proxyProtocolV2` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:proxy-protocol-v2` |
 | `targetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-group-name` |
-| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |"
-  [stack id config]
-  (let [builder (AddNetworkTargetsProps$Builder.)]
-    (when-let [data (lookup-entry config id :deregistration-delay)]
-      (. builder deregistrationDelay data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :preserve-client-ip)]
-      (. builder preserveClientIp data))
-    (when-let [data (protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :proxy-protocol-v2)]
-      (. builder proxyProtocolV2 data))
-    (when-let [data (lookup-entry config id :target-group-name)]
-      (. builder targetGroupName data))
-    (when-let [data (lookup-entry config id :targets)]
-      (. builder targets data))
-    (.build builder)))
+| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
+"
+  [^AddNetworkTargetsProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :deregistration-delay)]
+    (. builder deregistrationDelay data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :preserve-client-ip)]
+    (. builder preserveClientIp data))
+  (when-let [data (protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :proxy-protocol-v2)]
+    (. builder proxyProtocolV2 data))
+  (when-let [data (lookup-entry config id :target-group-name)]
+    (. builder targetGroupName data))
+  (when-let [data (lookup-entry config id :targets)]
+    (. builder targets data))
+  (.build builder))
 
 
-(defn add-rule-props-builder
-  "The add-rule-props-builder function buildes out new instances of 
-AddRuleProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-add-rule-props-builder
+  "The build-add-rule-props-builder function updates a AddRuleProps$Builder instance using the provided configuration.
+  The function takes the AddRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `conditions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditions` |
-| `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |"
-  [stack id config]
-  (let [builder (AddRuleProps$Builder.)]
-    (when-let [data (lookup-entry config id :conditions)]
-      (. builder conditions data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (.build builder)))
+| `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
+"
+  [^AddRuleProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :conditions)]
+    (. builder conditions data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (.build builder))
 
 
-(defn application-listener-attributes-builder
-  "The application-listener-attributes-builder function buildes out new instances of 
-ApplicationListenerAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-listener-attributes-builder
+  "The build-application-listener-attributes-builder function updates a ApplicationListenerAttributes$Builder instance using the provided configuration.
+  The function takes the ApplicationListenerAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `defaultPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:default-port` |
 | `listenerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:listener-arn` |
-| `securityGroup` | software.amazon.awscdk.services.ec2.ISecurityGroup | [[cdk.support/lookup-entry]] | `:security-group` |"
-  [stack id config]
-  (let [builder (ApplicationListenerAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :default-port)]
-      (. builder defaultPort data))
-    (when-let [data (lookup-entry config id :listener-arn)]
-      (. builder listenerArn data))
-    (when-let [data (lookup-entry config id :security-group)]
-      (. builder securityGroup data))
-    (.build builder)))
+| `securityGroup` | software.amazon.awscdk.services.ec2.ISecurityGroup | [[cdk.support/lookup-entry]] | `:security-group` |
+"
+  [^ApplicationListenerAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :default-port)]
+    (. builder defaultPort data))
+  (when-let [data (lookup-entry config id :listener-arn)]
+    (. builder listenerArn data))
+  (when-let [data (lookup-entry config id :security-group)]
+    (. builder securityGroup data))
+  (.build builder))
 
 
-(defn application-listener-builder
-  "The application-listener-builder function buildes out new instances of 
-ApplicationListener$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-listener-builder
+  "The build-application-listener-builder function updates a ApplicationListener$Builder instance using the provided configuration.
+  The function takes the ApplicationListener$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -651,65 +675,74 @@ ApplicationListener$Builder using the provided configuration.  Each field is set
 | `open` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:open` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationProtocol | [[cdk.api.services.elasticloadbalancingv2/application-protocol]] | `:protocol` |
-| `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |"
-  [stack id config]
-  (let [builder (ApplicationListener$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :certificates)]
-      (. builder certificates data))
-    (when-let [data (lookup-entry config id :default-action)]
-      (. builder defaultAction data))
-    (when-let [data (lookup-entry config id :default-target-groups)]
-      (. builder defaultTargetGroups data))
-    (when-let [data (lookup-entry config id :load-balancer)]
-      (. builder loadBalancer data))
-    (when-let [data (lookup-entry config id :open)]
-      (. builder open data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (application-protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (ssl-policy config id :ssl-policy)]
-      (. builder sslPolicy data))
-    (.build builder)))
+| `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |
+"
+  [^ApplicationListener$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificates)]
+    (. builder certificates data))
+  (when-let [data (lookup-entry config id :default-action)]
+    (. builder defaultAction data))
+  (when-let [data (lookup-entry config id :default-target-groups)]
+    (. builder defaultTargetGroups data))
+  (when-let [data (lookup-entry config id :load-balancer)]
+    (. builder loadBalancer data))
+  (when-let [data (lookup-entry config id :open)]
+    (. builder open data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (application-protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (ssl-policy config id :ssl-policy)]
+    (. builder sslPolicy data))
+  (.build builder))
 
 
-(defn application-listener-certificate-builder
-  "The application-listener-certificate-builder function buildes out new instances of 
-ApplicationListenerCertificate$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-listener-certificate-builder
+  "The build-application-listener-certificate-builder function updates a ApplicationListenerCertificate$Builder instance using the provided configuration.
+  The function takes the ApplicationListenerCertificate$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `certificates` | java.util.List | [[cdk.support/lookup-entry]] | `:certificates` |
-| `listener` | software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListener | [[cdk.support/lookup-entry]] | `:listener` |"
-  [stack id config]
-  (let [builder (ApplicationListenerCertificate$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :certificates)]
-      (. builder certificates data))
-    (when-let [data (lookup-entry config id :listener)]
-      (. builder listener data))
-    (.build builder)))
-
-
-(defn application-listener-certificate-props-builder
-  "The application-listener-certificate-props-builder function buildes out new instances of 
-ApplicationListenerCertificateProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `certificates` | java.util.List | [[cdk.support/lookup-entry]] | `:certificates` |
-| `listener` | software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListener | [[cdk.support/lookup-entry]] | `:listener` |"
-  [stack id config]
-  (let [builder (ApplicationListenerCertificateProps$Builder.)]
-    (when-let [data (lookup-entry config id :certificates)]
-      (. builder certificates data))
-    (when-let [data (lookup-entry config id :listener)]
-      (. builder listener data))
-    (.build builder)))
+| `listener` | software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListener | [[cdk.support/lookup-entry]] | `:listener` |
+"
+  [^ApplicationListenerCertificate$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificates)]
+    (. builder certificates data))
+  (when-let [data (lookup-entry config id :listener)]
+    (. builder listener data))
+  (.build builder))
 
 
-(defn application-listener-lookup-options-builder
-  "The application-listener-lookup-options-builder function buildes out new instances of 
-ApplicationListenerLookupOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-listener-certificate-props-builder
+  "The build-application-listener-certificate-props-builder function updates a ApplicationListenerCertificateProps$Builder instance using the provided configuration.
+  The function takes the ApplicationListenerCertificateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `certificates` | java.util.List | [[cdk.support/lookup-entry]] | `:certificates` |
+| `listener` | software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListener | [[cdk.support/lookup-entry]] | `:listener` |
+"
+  [^ApplicationListenerCertificateProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificates)]
+    (. builder certificates data))
+  (when-let [data (lookup-entry config id :listener)]
+    (. builder listener data))
+  (.build builder))
+
+
+(defn build-application-listener-lookup-options-builder
+  "The build-application-listener-lookup-options-builder function updates a ApplicationListenerLookupOptions$Builder instance using the provided configuration.
+  The function takes the ApplicationListenerLookupOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -717,25 +750,28 @@ ApplicationListenerLookupOptions$Builder using the provided configuration.  Each
 | `listenerPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:listener-port` |
 | `listenerProtocol` | software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationProtocol | [[cdk.api.services.elasticloadbalancingv2/application-protocol]] | `:listener-protocol` |
 | `loadBalancerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-arn` |
-| `loadBalancerTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:load-balancer-tags` |"
-  [stack id config]
-  (let [builder (ApplicationListenerLookupOptions$Builder.)]
-    (when-let [data (lookup-entry config id :listener-arn)]
-      (. builder listenerArn data))
-    (when-let [data (lookup-entry config id :listener-port)]
-      (. builder listenerPort data))
-    (when-let [data (application-protocol config id :listener-protocol)]
-      (. builder listenerProtocol data))
-    (when-let [data (lookup-entry config id :load-balancer-arn)]
-      (. builder loadBalancerArn data))
-    (when-let [data (lookup-entry config id :load-balancer-tags)]
-      (. builder loadBalancerTags data))
-    (.build builder)))
+| `loadBalancerTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:load-balancer-tags` |
+"
+  [^ApplicationListenerLookupOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :listener-arn)]
+    (. builder listenerArn data))
+  (when-let [data (lookup-entry config id :listener-port)]
+    (. builder listenerPort data))
+  (when-let [data (application-protocol config id :listener-protocol)]
+    (. builder listenerProtocol data))
+  (when-let [data (lookup-entry config id :load-balancer-arn)]
+    (. builder loadBalancerArn data))
+  (when-let [data (lookup-entry config id :load-balancer-tags)]
+    (. builder loadBalancerTags data))
+  (.build builder))
 
 
-(defn application-listener-props-builder
-  "The application-listener-props-builder function buildes out new instances of 
-ApplicationListenerProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-listener-props-builder
+  "The build-application-listener-props-builder function updates a ApplicationListenerProps$Builder instance using the provided configuration.
+  The function takes the ApplicationListenerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -746,57 +782,34 @@ ApplicationListenerProps$Builder using the provided configuration.  Each field i
 | `open` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:open` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationProtocol | [[cdk.api.services.elasticloadbalancingv2/application-protocol]] | `:protocol` |
-| `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |"
-  [stack id config]
-  (let [builder (ApplicationListenerProps$Builder.)]
-    (when-let [data (lookup-entry config id :certificates)]
-      (. builder certificates data))
-    (when-let [data (lookup-entry config id :default-action)]
-      (. builder defaultAction data))
-    (when-let [data (lookup-entry config id :default-target-groups)]
-      (. builder defaultTargetGroups data))
-    (when-let [data (lookup-entry config id :load-balancer)]
-      (. builder loadBalancer data))
-    (when-let [data (lookup-entry config id :open)]
-      (. builder open data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (application-protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (ssl-policy config id :ssl-policy)]
-      (. builder sslPolicy data))
-    (.build builder)))
+| `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |
+"
+  [^ApplicationListenerProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificates)]
+    (. builder certificates data))
+  (when-let [data (lookup-entry config id :default-action)]
+    (. builder defaultAction data))
+  (when-let [data (lookup-entry config id :default-target-groups)]
+    (. builder defaultTargetGroups data))
+  (when-let [data (lookup-entry config id :load-balancer)]
+    (. builder loadBalancer data))
+  (when-let [data (lookup-entry config id :open)]
+    (. builder open data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (application-protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (ssl-policy config id :ssl-policy)]
+    (. builder sslPolicy data))
+  (.build builder))
 
 
-(defn application-listener-rule-builder
-  "The application-listener-rule-builder function buildes out new instances of 
-ApplicationListenerRule$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-listener-rule-builder
+  "The build-application-listener-rule-builder function updates a ApplicationListenerRule$Builder instance using the provided configuration.
+  The function takes the ApplicationListenerRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `action` | software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction | [[cdk.support/lookup-entry]] | `:action` |
-| `conditions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditions` |
-| `listener` | software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListener | [[cdk.support/lookup-entry]] | `:listener` |
-| `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
-| `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |"
-  [stack id config]
-  (let [builder (ApplicationListenerRule$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :conditions)]
-      (. builder conditions data))
-    (when-let [data (lookup-entry config id :listener)]
-      (. builder listener data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :target-groups)]
-      (. builder targetGroups data))
-    (.build builder)))
-
-
-(defn application-listener-rule-props-builder
-  "The application-listener-rule-props-builder function buildes out new instances of 
-ApplicationListenerRuleProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -804,25 +817,57 @@ ApplicationListenerRuleProps$Builder using the provided configuration.  Each fie
 | `conditions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditions` |
 | `listener` | software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListener | [[cdk.support/lookup-entry]] | `:listener` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
-| `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |"
-  [stack id config]
-  (let [builder (ApplicationListenerRuleProps$Builder.)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :conditions)]
-      (. builder conditions data))
-    (when-let [data (lookup-entry config id :listener)]
-      (. builder listener data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :target-groups)]
-      (. builder targetGroups data))
-    (.build builder)))
+| `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
+"
+  [^ApplicationListenerRule$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :conditions)]
+    (. builder conditions data))
+  (when-let [data (lookup-entry config id :listener)]
+    (. builder listener data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :target-groups)]
+    (. builder targetGroups data))
+  (.build builder))
 
 
-(defn application-load-balancer-attributes-builder
-  "The application-load-balancer-attributes-builder function buildes out new instances of 
-ApplicationLoadBalancerAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-listener-rule-props-builder
+  "The build-application-listener-rule-props-builder function updates a ApplicationListenerRuleProps$Builder instance using the provided configuration.
+  The function takes the ApplicationListenerRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `action` | software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction | [[cdk.support/lookup-entry]] | `:action` |
+| `conditions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditions` |
+| `listener` | software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListener | [[cdk.support/lookup-entry]] | `:listener` |
+| `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
+| `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
+"
+  [^ApplicationListenerRuleProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :conditions)]
+    (. builder conditions data))
+  (when-let [data (lookup-entry config id :listener)]
+    (. builder listener data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :target-groups)]
+    (. builder targetGroups data))
+  (.build builder))
+
+
+(defn build-application-load-balancer-attributes-builder
+  "The build-application-load-balancer-attributes-builder function updates a ApplicationLoadBalancerAttributes$Builder instance using the provided configuration.
+  The function takes the ApplicationLoadBalancerAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -831,27 +876,30 @@ ApplicationLoadBalancerAttributes$Builder using the provided configuration.  Eac
 | `loadBalancerDnsName` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-dns-name` |
 | `securityGroupAllowsAllOutbound` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:security-group-allows-all-outbound` |
 | `securityGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:security-group-id` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (ApplicationLoadBalancerAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :load-balancer-arn)]
-      (. builder loadBalancerArn data))
-    (when-let [data (lookup-entry config id :load-balancer-canonical-hosted-zone-id)]
-      (. builder loadBalancerCanonicalHostedZoneId data))
-    (when-let [data (lookup-entry config id :load-balancer-dns-name)]
-      (. builder loadBalancerDnsName data))
-    (when-let [data (lookup-entry config id :security-group-allows-all-outbound)]
-      (. builder securityGroupAllowsAllOutbound data))
-    (when-let [data (lookup-entry config id :security-group-id)]
-      (. builder securityGroupId data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^ApplicationLoadBalancerAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :load-balancer-arn)]
+    (. builder loadBalancerArn data))
+  (when-let [data (lookup-entry config id :load-balancer-canonical-hosted-zone-id)]
+    (. builder loadBalancerCanonicalHostedZoneId data))
+  (when-let [data (lookup-entry config id :load-balancer-dns-name)]
+    (. builder loadBalancerDnsName data))
+  (when-let [data (lookup-entry config id :security-group-allows-all-outbound)]
+    (. builder securityGroupAllowsAllOutbound data))
+  (when-let [data (lookup-entry config id :security-group-id)]
+    (. builder securityGroupId data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn application-load-balancer-builder
-  "The application-load-balancer-builder function buildes out new instances of 
-ApplicationLoadBalancer$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-load-balancer-builder
+  "The build-application-load-balancer-builder function updates a ApplicationLoadBalancer$Builder instance using the provided configuration.
+  The function takes the ApplicationLoadBalancer$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -873,70 +921,76 @@ ApplicationLoadBalancer$Builder using the provided configuration.  Each field is
 | `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
 | `wafFailOpen` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:waf-fail-open` |
 | `xAmznTlsVersionAndCipherSuiteHeaders` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:x-amzn-tls-version-and-cipher-suite-headers` |
-| `xffHeaderProcessingMode` | software.amazon.awscdk.services.elasticloadbalancingv2.XffHeaderProcessingMode | [[cdk.api.services.elasticloadbalancingv2/xff-header-processing-mode]] | `:xff-header-processing-mode` |"
-  [stack id config]
-  (let [builder (ApplicationLoadBalancer$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :client-keep-alive)]
-      (. builder clientKeepAlive data))
-    (when-let [data (lookup-entry config id :cross-zone-enabled)]
-      (. builder crossZoneEnabled data))
-    (when-let [data (lookup-entry config id :deletion-protection)]
-      (. builder deletionProtection data))
-    (when-let [data (lookup-entry config id :deny-all-igw-traffic)]
-      (. builder denyAllIgwTraffic data))
-    (when-let [data (desync-mitigation-mode config id :desync-mitigation-mode)]
-      (. builder desyncMitigationMode data))
-    (when-let [data (lookup-entry config id :drop-invalid-header-fields)]
-      (. builder dropInvalidHeaderFields data))
-    (when-let [data (lookup-entry config id :http2-enabled)]
-      (. builder http2Enabled data))
-    (when-let [data (lookup-entry config id :idle-timeout)]
-      (. builder idleTimeout data))
-    (when-let [data (lookup-entry config id :internet-facing)]
-      (. builder internetFacing data))
-    (when-let [data (ip-address-type config id :ip-address-type)]
-      (. builder ipAddressType data))
-    (when-let [data (lookup-entry config id :load-balancer-name)]
-      (. builder loadBalancerName data))
-    (when-let [data (lookup-entry config id :preserve-host-header)]
-      (. builder preserveHostHeader data))
-    (when-let [data (lookup-entry config id :preserve-xff-client-port)]
-      (. builder preserveXffClientPort data))
-    (when-let [data (lookup-entry config id :security-group)]
-      (. builder securityGroup data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnets)]
-      (. builder vpcSubnets data))
-    (when-let [data (lookup-entry config id :waf-fail-open)]
-      (. builder wafFailOpen data))
-    (when-let [data (lookup-entry config id :x-amzn-tls-version-and-cipher-suite-headers)]
-      (. builder xAmznTlsVersionAndCipherSuiteHeaders data))
-    (when-let [data (xff-header-processing-mode config id :xff-header-processing-mode)]
-      (. builder xffHeaderProcessingMode data))
-    (.build builder)))
+| `xffHeaderProcessingMode` | software.amazon.awscdk.services.elasticloadbalancingv2.XffHeaderProcessingMode | [[cdk.api.services.elasticloadbalancingv2/xff-header-processing-mode]] | `:xff-header-processing-mode` |
+"
+  [^ApplicationLoadBalancer$Builder builder id config]
+  (when-let [data (lookup-entry config id :client-keep-alive)]
+    (. builder clientKeepAlive data))
+  (when-let [data (lookup-entry config id :cross-zone-enabled)]
+    (. builder crossZoneEnabled data))
+  (when-let [data (lookup-entry config id :deletion-protection)]
+    (. builder deletionProtection data))
+  (when-let [data (lookup-entry config id :deny-all-igw-traffic)]
+    (. builder denyAllIgwTraffic data))
+  (when-let [data (desync-mitigation-mode config id :desync-mitigation-mode)]
+    (. builder desyncMitigationMode data))
+  (when-let [data (lookup-entry config id :drop-invalid-header-fields)]
+    (. builder dropInvalidHeaderFields data))
+  (when-let [data (lookup-entry config id :http2-enabled)]
+    (. builder http2Enabled data))
+  (when-let [data (lookup-entry config id :idle-timeout)]
+    (. builder idleTimeout data))
+  (when-let [data (lookup-entry config id :internet-facing)]
+    (. builder internetFacing data))
+  (when-let [data (ip-address-type config id :ip-address-type)]
+    (. builder ipAddressType data))
+  (when-let [data (lookup-entry config id :load-balancer-name)]
+    (. builder loadBalancerName data))
+  (when-let [data (lookup-entry config id :preserve-host-header)]
+    (. builder preserveHostHeader data))
+  (when-let [data (lookup-entry config id :preserve-xff-client-port)]
+    (. builder preserveXffClientPort data))
+  (when-let [data (lookup-entry config id :security-group)]
+    (. builder securityGroup data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnets)]
+    (. builder vpcSubnets data))
+  (when-let [data (lookup-entry config id :waf-fail-open)]
+    (. builder wafFailOpen data))
+  (when-let [data (lookup-entry config id :x-amzn-tls-version-and-cipher-suite-headers)]
+    (. builder xAmznTlsVersionAndCipherSuiteHeaders data))
+  (when-let [data (xff-header-processing-mode config id :xff-header-processing-mode)]
+    (. builder xffHeaderProcessingMode data))
+  (.build builder))
 
 
-(defn application-load-balancer-lookup-options-builder
-  "The application-load-balancer-lookup-options-builder function buildes out new instances of 
-ApplicationLoadBalancerLookupOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-load-balancer-lookup-options-builder
+  "The build-application-load-balancer-lookup-options-builder function updates a ApplicationLoadBalancerLookupOptions$Builder instance using the provided configuration.
+  The function takes the ApplicationLoadBalancerLookupOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `loadBalancerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-arn` |
-| `loadBalancerTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:load-balancer-tags` |"
-  [stack id config]
-  (let [builder (ApplicationLoadBalancerLookupOptions$Builder.)]
-    (when-let [data (lookup-entry config id :load-balancer-arn)]
-      (. builder loadBalancerArn data))
-    (when-let [data (lookup-entry config id :load-balancer-tags)]
-      (. builder loadBalancerTags data))
-    (.build builder)))
+| `loadBalancerTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:load-balancer-tags` |
+"
+  [^ApplicationLoadBalancerLookupOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :load-balancer-arn)]
+    (. builder loadBalancerArn data))
+  (when-let [data (lookup-entry config id :load-balancer-tags)]
+    (. builder loadBalancerTags data))
+  (.build builder))
 
 
-(defn application-load-balancer-props-builder
-  "The application-load-balancer-props-builder function buildes out new instances of 
-ApplicationLoadBalancerProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-load-balancer-props-builder
+  "The build-application-load-balancer-props-builder function updates a ApplicationLoadBalancerProps$Builder instance using the provided configuration.
+  The function takes the ApplicationLoadBalancerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -958,53 +1012,56 @@ ApplicationLoadBalancerProps$Builder using the provided configuration.  Each fie
 | `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
 | `wafFailOpen` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:waf-fail-open` |
 | `xAmznTlsVersionAndCipherSuiteHeaders` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:x-amzn-tls-version-and-cipher-suite-headers` |
-| `xffHeaderProcessingMode` | software.amazon.awscdk.services.elasticloadbalancingv2.XffHeaderProcessingMode | [[cdk.api.services.elasticloadbalancingv2/xff-header-processing-mode]] | `:xff-header-processing-mode` |"
-  [stack id config]
-  (let [builder (ApplicationLoadBalancerProps$Builder.)]
-    (when-let [data (lookup-entry config id :client-keep-alive)]
-      (. builder clientKeepAlive data))
-    (when-let [data (lookup-entry config id :cross-zone-enabled)]
-      (. builder crossZoneEnabled data))
-    (when-let [data (lookup-entry config id :deletion-protection)]
-      (. builder deletionProtection data))
-    (when-let [data (lookup-entry config id :deny-all-igw-traffic)]
-      (. builder denyAllIgwTraffic data))
-    (when-let [data (desync-mitigation-mode config id :desync-mitigation-mode)]
-      (. builder desyncMitigationMode data))
-    (when-let [data (lookup-entry config id :drop-invalid-header-fields)]
-      (. builder dropInvalidHeaderFields data))
-    (when-let [data (lookup-entry config id :http2-enabled)]
-      (. builder http2Enabled data))
-    (when-let [data (lookup-entry config id :idle-timeout)]
-      (. builder idleTimeout data))
-    (when-let [data (lookup-entry config id :internet-facing)]
-      (. builder internetFacing data))
-    (when-let [data (ip-address-type config id :ip-address-type)]
-      (. builder ipAddressType data))
-    (when-let [data (lookup-entry config id :load-balancer-name)]
-      (. builder loadBalancerName data))
-    (when-let [data (lookup-entry config id :preserve-host-header)]
-      (. builder preserveHostHeader data))
-    (when-let [data (lookup-entry config id :preserve-xff-client-port)]
-      (. builder preserveXffClientPort data))
-    (when-let [data (lookup-entry config id :security-group)]
-      (. builder securityGroup data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnets)]
-      (. builder vpcSubnets data))
-    (when-let [data (lookup-entry config id :waf-fail-open)]
-      (. builder wafFailOpen data))
-    (when-let [data (lookup-entry config id :x-amzn-tls-version-and-cipher-suite-headers)]
-      (. builder xAmznTlsVersionAndCipherSuiteHeaders data))
-    (when-let [data (xff-header-processing-mode config id :xff-header-processing-mode)]
-      (. builder xffHeaderProcessingMode data))
-    (.build builder)))
+| `xffHeaderProcessingMode` | software.amazon.awscdk.services.elasticloadbalancingv2.XffHeaderProcessingMode | [[cdk.api.services.elasticloadbalancingv2/xff-header-processing-mode]] | `:xff-header-processing-mode` |
+"
+  [^ApplicationLoadBalancerProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :client-keep-alive)]
+    (. builder clientKeepAlive data))
+  (when-let [data (lookup-entry config id :cross-zone-enabled)]
+    (. builder crossZoneEnabled data))
+  (when-let [data (lookup-entry config id :deletion-protection)]
+    (. builder deletionProtection data))
+  (when-let [data (lookup-entry config id :deny-all-igw-traffic)]
+    (. builder denyAllIgwTraffic data))
+  (when-let [data (desync-mitigation-mode config id :desync-mitigation-mode)]
+    (. builder desyncMitigationMode data))
+  (when-let [data (lookup-entry config id :drop-invalid-header-fields)]
+    (. builder dropInvalidHeaderFields data))
+  (when-let [data (lookup-entry config id :http2-enabled)]
+    (. builder http2Enabled data))
+  (when-let [data (lookup-entry config id :idle-timeout)]
+    (. builder idleTimeout data))
+  (when-let [data (lookup-entry config id :internet-facing)]
+    (. builder internetFacing data))
+  (when-let [data (ip-address-type config id :ip-address-type)]
+    (. builder ipAddressType data))
+  (when-let [data (lookup-entry config id :load-balancer-name)]
+    (. builder loadBalancerName data))
+  (when-let [data (lookup-entry config id :preserve-host-header)]
+    (. builder preserveHostHeader data))
+  (when-let [data (lookup-entry config id :preserve-xff-client-port)]
+    (. builder preserveXffClientPort data))
+  (when-let [data (lookup-entry config id :security-group)]
+    (. builder securityGroup data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnets)]
+    (. builder vpcSubnets data))
+  (when-let [data (lookup-entry config id :waf-fail-open)]
+    (. builder wafFailOpen data))
+  (when-let [data (lookup-entry config id :x-amzn-tls-version-and-cipher-suite-headers)]
+    (. builder xAmznTlsVersionAndCipherSuiteHeaders data))
+  (when-let [data (xff-header-processing-mode config id :xff-header-processing-mode)]
+    (. builder xffHeaderProcessingMode data))
+  (.build builder))
 
 
-(defn application-load-balancer-redirect-config-builder
-  "The application-load-balancer-redirect-config-builder function buildes out new instances of 
-ApplicationLoadBalancerRedirectConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-load-balancer-redirect-config-builder
+  "The build-application-load-balancer-redirect-config-builder function updates a ApplicationLoadBalancerRedirectConfig$Builder instance using the provided configuration.
+  The function takes the ApplicationLoadBalancerRedirectConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1012,75 +1069,28 @@ ApplicationLoadBalancerRedirectConfig$Builder using the provided configuration. 
 | `sourcePort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:source-port` |
 | `sourceProtocol` | software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationProtocol | [[cdk.api.services.elasticloadbalancingv2/application-protocol]] | `:source-protocol` |
 | `targetPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-port` |
-| `targetProtocol` | software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationProtocol | [[cdk.api.services.elasticloadbalancingv2/application-protocol]] | `:target-protocol` |"
-  [stack id config]
-  (let [builder (ApplicationLoadBalancerRedirectConfig$Builder.)]
-    (when-let [data (lookup-entry config id :open)]
-      (. builder open data))
-    (when-let [data (lookup-entry config id :source-port)]
-      (. builder sourcePort data))
-    (when-let [data (application-protocol config id :source-protocol)]
-      (. builder sourceProtocol data))
-    (when-let [data (lookup-entry config id :target-port)]
-      (. builder targetPort data))
-    (when-let [data (application-protocol config id :target-protocol)]
-      (. builder targetProtocol data))
-    (.build builder)))
+| `targetProtocol` | software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationProtocol | [[cdk.api.services.elasticloadbalancingv2/application-protocol]] | `:target-protocol` |
+"
+  [^ApplicationLoadBalancerRedirectConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :open)]
+    (. builder open data))
+  (when-let [data (lookup-entry config id :source-port)]
+    (. builder sourcePort data))
+  (when-let [data (application-protocol config id :source-protocol)]
+    (. builder sourceProtocol data))
+  (when-let [data (lookup-entry config id :target-port)]
+    (. builder targetPort data))
+  (when-let [data (application-protocol config id :target-protocol)]
+    (. builder targetProtocol data))
+  (.build builder))
 
 
-(defn application-target-group-builder
-  "The application-target-group-builder function buildes out new instances of 
-ApplicationTargetGroup$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-target-group-builder
+  "The build-application-target-group-builder function updates a ApplicationTargetGroup$Builder instance using the provided configuration.
+  The function takes the ApplicationTargetGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `deregistrationDelay` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:deregistration-delay` |
-| `healthCheck` | software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck | [[cdk.support/lookup-entry]] | `:health-check` |
-| `loadBalancingAlgorithmType` | software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupLoadBalancingAlgorithmType | [[cdk.api.services.elasticloadbalancingv2/target-group-load-balancing-algorithm-type]] | `:load-balancing-algorithm-type` |
-| `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
-| `protocol` | software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationProtocol | [[cdk.api.services.elasticloadbalancingv2/application-protocol]] | `:protocol` |
-| `protocolVersion` | software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationProtocolVersion | [[cdk.api.services.elasticloadbalancingv2/application-protocol-version]] | `:protocol-version` |
-| `slowStart` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:slow-start` |
-| `stickinessCookieDuration` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:stickiness-cookie-duration` |
-| `stickinessCookieName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stickiness-cookie-name` |
-| `targetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-group-name` |
-| `targetType` | software.amazon.awscdk.services.elasticloadbalancingv2.TargetType | [[cdk.api.services.elasticloadbalancingv2/target-type]] | `:target-type` |
-| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (ApplicationTargetGroup$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :deregistration-delay)]
-      (. builder deregistrationDelay data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (target-group-load-balancing-algorithm-type config id :load-balancing-algorithm-type)]
-      (. builder loadBalancingAlgorithmType data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (application-protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (application-protocol-version config id :protocol-version)]
-      (. builder protocolVersion data))
-    (when-let [data (lookup-entry config id :slow-start)]
-      (. builder slowStart data))
-    (when-let [data (lookup-entry config id :stickiness-cookie-duration)]
-      (. builder stickinessCookieDuration data))
-    (when-let [data (lookup-entry config id :stickiness-cookie-name)]
-      (. builder stickinessCookieName data))
-    (when-let [data (lookup-entry config id :target-group-name)]
-      (. builder targetGroupName data))
-    (when-let [data (target-type config id :target-type)]
-      (. builder targetType data))
-    (when-let [data (lookup-entry config id :targets)]
-      (. builder targets data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
-
-
-(defn application-target-group-props-builder
-  "The application-target-group-props-builder function buildes out new instances of 
-ApplicationTargetGroupProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1096,41 +1106,97 @@ ApplicationTargetGroupProps$Builder using the provided configuration.  Each fiel
 | `targetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-group-name` |
 | `targetType` | software.amazon.awscdk.services.elasticloadbalancingv2.TargetType | [[cdk.api.services.elasticloadbalancingv2/target-type]] | `:target-type` |
 | `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (ApplicationTargetGroupProps$Builder.)]
-    (when-let [data (lookup-entry config id :deregistration-delay)]
-      (. builder deregistrationDelay data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (target-group-load-balancing-algorithm-type config id :load-balancing-algorithm-type)]
-      (. builder loadBalancingAlgorithmType data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (application-protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (application-protocol-version config id :protocol-version)]
-      (. builder protocolVersion data))
-    (when-let [data (lookup-entry config id :slow-start)]
-      (. builder slowStart data))
-    (when-let [data (lookup-entry config id :stickiness-cookie-duration)]
-      (. builder stickinessCookieDuration data))
-    (when-let [data (lookup-entry config id :stickiness-cookie-name)]
-      (. builder stickinessCookieName data))
-    (when-let [data (lookup-entry config id :target-group-name)]
-      (. builder targetGroupName data))
-    (when-let [data (target-type config id :target-type)]
-      (. builder targetType data))
-    (when-let [data (lookup-entry config id :targets)]
-      (. builder targets data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^ApplicationTargetGroup$Builder builder id config]
+  (when-let [data (lookup-entry config id :deregistration-delay)]
+    (. builder deregistrationDelay data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (target-group-load-balancing-algorithm-type config id :load-balancing-algorithm-type)]
+    (. builder loadBalancingAlgorithmType data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (application-protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (application-protocol-version config id :protocol-version)]
+    (. builder protocolVersion data))
+  (when-let [data (lookup-entry config id :slow-start)]
+    (. builder slowStart data))
+  (when-let [data (lookup-entry config id :stickiness-cookie-duration)]
+    (. builder stickinessCookieDuration data))
+  (when-let [data (lookup-entry config id :stickiness-cookie-name)]
+    (. builder stickinessCookieName data))
+  (when-let [data (lookup-entry config id :target-group-name)]
+    (. builder targetGroupName data))
+  (when-let [data (target-type config id :target-type)]
+    (. builder targetType data))
+  (when-let [data (lookup-entry config id :targets)]
+    (. builder targets data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn authenticate-oidc-options-builder
-  "The authenticate-oidc-options-builder function buildes out new instances of 
-AuthenticateOidcOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-target-group-props-builder
+  "The build-application-target-group-props-builder function updates a ApplicationTargetGroupProps$Builder instance using the provided configuration.
+  The function takes the ApplicationTargetGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `deregistrationDelay` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:deregistration-delay` |
+| `healthCheck` | software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck | [[cdk.support/lookup-entry]] | `:health-check` |
+| `loadBalancingAlgorithmType` | software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupLoadBalancingAlgorithmType | [[cdk.api.services.elasticloadbalancingv2/target-group-load-balancing-algorithm-type]] | `:load-balancing-algorithm-type` |
+| `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
+| `protocol` | software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationProtocol | [[cdk.api.services.elasticloadbalancingv2/application-protocol]] | `:protocol` |
+| `protocolVersion` | software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationProtocolVersion | [[cdk.api.services.elasticloadbalancingv2/application-protocol-version]] | `:protocol-version` |
+| `slowStart` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:slow-start` |
+| `stickinessCookieDuration` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:stickiness-cookie-duration` |
+| `stickinessCookieName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stickiness-cookie-name` |
+| `targetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-group-name` |
+| `targetType` | software.amazon.awscdk.services.elasticloadbalancingv2.TargetType | [[cdk.api.services.elasticloadbalancingv2/target-type]] | `:target-type` |
+| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^ApplicationTargetGroupProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :deregistration-delay)]
+    (. builder deregistrationDelay data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (target-group-load-balancing-algorithm-type config id :load-balancing-algorithm-type)]
+    (. builder loadBalancingAlgorithmType data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (application-protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (application-protocol-version config id :protocol-version)]
+    (. builder protocolVersion data))
+  (when-let [data (lookup-entry config id :slow-start)]
+    (. builder slowStart data))
+  (when-let [data (lookup-entry config id :stickiness-cookie-duration)]
+    (. builder stickinessCookieDuration data))
+  (when-let [data (lookup-entry config id :stickiness-cookie-name)]
+    (. builder stickinessCookieName data))
+  (when-let [data (lookup-entry config id :target-group-name)]
+    (. builder targetGroupName data))
+  (when-let [data (target-type config id :target-type)]
+    (. builder targetType data))
+  (when-let [data (lookup-entry config id :targets)]
+    (. builder targets data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
+
+
+(defn build-authenticate-oidc-options-builder
+  "The build-authenticate-oidc-options-builder function updates a AuthenticateOidcOptions$Builder instance using the provided configuration.
+  The function takes the AuthenticateOidcOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1146,41 +1212,44 @@ AuthenticateOidcOptions$Builder using the provided configuration.  Each field is
 | `sessionCookieName` | java.lang.String | [[cdk.support/lookup-entry]] | `:session-cookie-name` |
 | `sessionTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:session-timeout` |
 | `tokenEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-endpoint` |
-| `userInfoEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-info-endpoint` |"
-  [stack id config]
-  (let [builder (AuthenticateOidcOptions$Builder.)]
-    (when-let [data (lookup-entry config id :allow-https-outbound)]
-      (. builder allowHttpsOutbound data))
-    (when-let [data (lookup-entry config id :authentication-request-extra-params)]
-      (. builder authenticationRequestExtraParams data))
-    (when-let [data (lookup-entry config id :authorization-endpoint)]
-      (. builder authorizationEndpoint data))
-    (when-let [data (lookup-entry config id :client-id)]
-      (. builder clientId data))
-    (when-let [data (lookup-entry config id :client-secret)]
-      (. builder clientSecret data))
-    (when-let [data (lookup-entry config id :issuer)]
-      (. builder issuer data))
-    (when-let [data (lookup-entry config id :next)]
-      (. builder next data))
-    (when-let [data (unauthenticated-action config id :on-unauthenticated-request)]
-      (. builder onUnauthenticatedRequest data))
-    (when-let [data (lookup-entry config id :scope)]
-      (. builder scope data))
-    (when-let [data (lookup-entry config id :session-cookie-name)]
-      (. builder sessionCookieName data))
-    (when-let [data (lookup-entry config id :session-timeout)]
-      (. builder sessionTimeout data))
-    (when-let [data (lookup-entry config id :token-endpoint)]
-      (. builder tokenEndpoint data))
-    (when-let [data (lookup-entry config id :user-info-endpoint)]
-      (. builder userInfoEndpoint data))
-    (.build builder)))
+| `userInfoEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-info-endpoint` |
+"
+  [^AuthenticateOidcOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :allow-https-outbound)]
+    (. builder allowHttpsOutbound data))
+  (when-let [data (lookup-entry config id :authentication-request-extra-params)]
+    (. builder authenticationRequestExtraParams data))
+  (when-let [data (lookup-entry config id :authorization-endpoint)]
+    (. builder authorizationEndpoint data))
+  (when-let [data (lookup-entry config id :client-id)]
+    (. builder clientId data))
+  (when-let [data (lookup-entry config id :client-secret)]
+    (. builder clientSecret data))
+  (when-let [data (lookup-entry config id :issuer)]
+    (. builder issuer data))
+  (when-let [data (lookup-entry config id :next)]
+    (. builder next data))
+  (when-let [data (unauthenticated-action config id :on-unauthenticated-request)]
+    (. builder onUnauthenticatedRequest data))
+  (when-let [data (lookup-entry config id :scope)]
+    (. builder scope data))
+  (when-let [data (lookup-entry config id :session-cookie-name)]
+    (. builder sessionCookieName data))
+  (when-let [data (lookup-entry config id :session-timeout)]
+    (. builder sessionTimeout data))
+  (when-let [data (lookup-entry config id :token-endpoint)]
+    (. builder tokenEndpoint data))
+  (when-let [data (lookup-entry config id :user-info-endpoint)]
+    (. builder userInfoEndpoint data))
+  (.build builder))
 
 
-(defn base-application-listener-props-builder
-  "The base-application-listener-props-builder function buildes out new instances of 
-BaseApplicationListenerProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-base-application-listener-props-builder
+  "The build-base-application-listener-props-builder function updates a BaseApplicationListenerProps$Builder instance using the provided configuration.
+  The function takes the BaseApplicationListenerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1190,89 +1259,101 @@ BaseApplicationListenerProps$Builder using the provided configuration.  Each fie
 | `open` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:open` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationProtocol | [[cdk.api.services.elasticloadbalancingv2/application-protocol]] | `:protocol` |
-| `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |"
-  [stack id config]
-  (let [builder (BaseApplicationListenerProps$Builder.)]
-    (when-let [data (lookup-entry config id :certificates)]
-      (. builder certificates data))
-    (when-let [data (lookup-entry config id :default-action)]
-      (. builder defaultAction data))
-    (when-let [data (lookup-entry config id :default-target-groups)]
-      (. builder defaultTargetGroups data))
-    (when-let [data (lookup-entry config id :open)]
-      (. builder open data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (application-protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (ssl-policy config id :ssl-policy)]
-      (. builder sslPolicy data))
-    (.build builder)))
+| `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |
+"
+  [^BaseApplicationListenerProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificates)]
+    (. builder certificates data))
+  (when-let [data (lookup-entry config id :default-action)]
+    (. builder defaultAction data))
+  (when-let [data (lookup-entry config id :default-target-groups)]
+    (. builder defaultTargetGroups data))
+  (when-let [data (lookup-entry config id :open)]
+    (. builder open data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (application-protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (ssl-policy config id :ssl-policy)]
+    (. builder sslPolicy data))
+  (.build builder))
 
 
-(defn base-application-listener-rule-props-builder
-  "The base-application-listener-rule-props-builder function buildes out new instances of 
-BaseApplicationListenerRuleProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-base-application-listener-rule-props-builder
+  "The build-base-application-listener-rule-props-builder function updates a BaseApplicationListenerRuleProps$Builder instance using the provided configuration.
+  The function takes the BaseApplicationListenerRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `action` | software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction | [[cdk.support/lookup-entry]] | `:action` |
 | `conditions` | java.util.List | [[cdk.support/lookup-entry]] | `:conditions` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
-| `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |"
-  [stack id config]
-  (let [builder (BaseApplicationListenerRuleProps$Builder.)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :conditions)]
-      (. builder conditions data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :target-groups)]
-      (. builder targetGroups data))
-    (.build builder)))
+| `targetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:target-groups` |
+"
+  [^BaseApplicationListenerRuleProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :conditions)]
+    (. builder conditions data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :target-groups)]
+    (. builder targetGroups data))
+  (.build builder))
 
 
-(defn base-listener-lookup-options-builder
-  "The base-listener-lookup-options-builder function buildes out new instances of 
-BaseListenerLookupOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-base-listener-lookup-options-builder
+  "The build-base-listener-lookup-options-builder function updates a BaseListenerLookupOptions$Builder instance using the provided configuration.
+  The function takes the BaseListenerLookupOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `listenerPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:listener-port` |
 | `loadBalancerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-arn` |
-| `loadBalancerTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:load-balancer-tags` |"
-  [stack id config]
-  (let [builder (BaseListenerLookupOptions$Builder.)]
-    (when-let [data (lookup-entry config id :listener-port)]
-      (. builder listenerPort data))
-    (when-let [data (lookup-entry config id :load-balancer-arn)]
-      (. builder loadBalancerArn data))
-    (when-let [data (lookup-entry config id :load-balancer-tags)]
-      (. builder loadBalancerTags data))
-    (.build builder)))
+| `loadBalancerTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:load-balancer-tags` |
+"
+  [^BaseListenerLookupOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :listener-port)]
+    (. builder listenerPort data))
+  (when-let [data (lookup-entry config id :load-balancer-arn)]
+    (. builder loadBalancerArn data))
+  (when-let [data (lookup-entry config id :load-balancer-tags)]
+    (. builder loadBalancerTags data))
+  (.build builder))
 
 
-(defn base-load-balancer-lookup-options-builder
-  "The base-load-balancer-lookup-options-builder function buildes out new instances of 
-BaseLoadBalancerLookupOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-base-load-balancer-lookup-options-builder
+  "The build-base-load-balancer-lookup-options-builder function updates a BaseLoadBalancerLookupOptions$Builder instance using the provided configuration.
+  The function takes the BaseLoadBalancerLookupOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `loadBalancerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-arn` |
-| `loadBalancerTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:load-balancer-tags` |"
-  [stack id config]
-  (let [builder (BaseLoadBalancerLookupOptions$Builder.)]
-    (when-let [data (lookup-entry config id :load-balancer-arn)]
-      (. builder loadBalancerArn data))
-    (when-let [data (lookup-entry config id :load-balancer-tags)]
-      (. builder loadBalancerTags data))
-    (.build builder)))
+| `loadBalancerTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:load-balancer-tags` |
+"
+  [^BaseLoadBalancerLookupOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :load-balancer-arn)]
+    (. builder loadBalancerArn data))
+  (when-let [data (lookup-entry config id :load-balancer-tags)]
+    (. builder loadBalancerTags data))
+  (.build builder))
 
 
-(defn base-load-balancer-props-builder
-  "The base-load-balancer-props-builder function buildes out new instances of 
-BaseLoadBalancerProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-base-load-balancer-props-builder
+  "The build-base-load-balancer-props-builder function updates a BaseLoadBalancerProps$Builder instance using the provided configuration.
+  The function takes the BaseLoadBalancerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1282,29 +1363,32 @@ BaseLoadBalancerProps$Builder using the provided configuration.  Each field is s
 | `internetFacing` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:internet-facing` |
 | `loadBalancerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-name` |
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |"
-  [stack id config]
-  (let [builder (BaseLoadBalancerProps$Builder.)]
-    (when-let [data (lookup-entry config id :cross-zone-enabled)]
-      (. builder crossZoneEnabled data))
-    (when-let [data (lookup-entry config id :deletion-protection)]
-      (. builder deletionProtection data))
-    (when-let [data (lookup-entry config id :deny-all-igw-traffic)]
-      (. builder denyAllIgwTraffic data))
-    (when-let [data (lookup-entry config id :internet-facing)]
-      (. builder internetFacing data))
-    (when-let [data (lookup-entry config id :load-balancer-name)]
-      (. builder loadBalancerName data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnets)]
-      (. builder vpcSubnets data))
-    (.build builder)))
+| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
+"
+  [^BaseLoadBalancerProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :cross-zone-enabled)]
+    (. builder crossZoneEnabled data))
+  (when-let [data (lookup-entry config id :deletion-protection)]
+    (. builder deletionProtection data))
+  (when-let [data (lookup-entry config id :deny-all-igw-traffic)]
+    (. builder denyAllIgwTraffic data))
+  (when-let [data (lookup-entry config id :internet-facing)]
+    (. builder internetFacing data))
+  (when-let [data (lookup-entry config id :load-balancer-name)]
+    (. builder loadBalancerName data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnets)]
+    (. builder vpcSubnets data))
+  (.build builder))
 
 
-(defn base-network-listener-props-builder
-  "The base-network-listener-props-builder function buildes out new instances of 
-BaseNetworkListenerProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-base-network-listener-props-builder
+  "The build-base-network-listener-props-builder function updates a BaseNetworkListenerProps$Builder instance using the provided configuration.
+  The function takes the BaseNetworkListenerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1314,29 +1398,32 @@ BaseNetworkListenerProps$Builder using the provided configuration.  Each field i
 | `defaultTargetGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:default-target-groups` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | software.amazon.awscdk.services.elasticloadbalancingv2.Protocol | [[cdk.api.services.elasticloadbalancingv2/protocol]] | `:protocol` |
-| `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |"
-  [stack id config]
-  (let [builder (BaseNetworkListenerProps$Builder.)]
-    (when-let [data (alpn-policy config id :alpn-policy)]
-      (. builder alpnPolicy data))
-    (when-let [data (lookup-entry config id :certificates)]
-      (. builder certificates data))
-    (when-let [data (lookup-entry config id :default-action)]
-      (. builder defaultAction data))
-    (when-let [data (lookup-entry config id :default-target-groups)]
-      (. builder defaultTargetGroups data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (ssl-policy config id :ssl-policy)]
-      (. builder sslPolicy data))
-    (.build builder)))
+| `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |
+"
+  [^BaseNetworkListenerProps$Builder builder id config]
+  (when-let [data (alpn-policy config id :alpn-policy)]
+    (. builder alpnPolicy data))
+  (when-let [data (lookup-entry config id :certificates)]
+    (. builder certificates data))
+  (when-let [data (lookup-entry config id :default-action)]
+    (. builder defaultAction data))
+  (when-let [data (lookup-entry config id :default-target-groups)]
+    (. builder defaultTargetGroups data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (ssl-policy config id :ssl-policy)]
+    (. builder sslPolicy data))
+  (.build builder))
 
 
-(defn base-target-group-props-builder
-  "The base-target-group-props-builder function buildes out new instances of 
-BaseTargetGroupProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-base-target-group-props-builder
+  "The build-base-target-group-props-builder function updates a BaseTargetGroupProps$Builder instance using the provided configuration.
+  The function takes the BaseTargetGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1344,25 +1431,28 @@ BaseTargetGroupProps$Builder using the provided configuration.  Each field is se
 | `healthCheck` | software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck | [[cdk.support/lookup-entry]] | `:health-check` |
 | `targetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-group-name` |
 | `targetType` | software.amazon.awscdk.services.elasticloadbalancingv2.TargetType | [[cdk.api.services.elasticloadbalancingv2/target-type]] | `:target-type` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (BaseTargetGroupProps$Builder.)]
-    (when-let [data (lookup-entry config id :deregistration-delay)]
-      (. builder deregistrationDelay data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :target-group-name)]
-      (. builder targetGroupName data))
-    (when-let [data (target-type config id :target-type)]
-      (. builder targetType data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^BaseTargetGroupProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :deregistration-delay)]
+    (. builder deregistrationDelay data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :target-group-name)]
+    (. builder targetGroupName data))
+  (when-let [data (target-type config id :target-type)]
+    (. builder targetType data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn cfn-listener-action-property-builder
-  "The cfn-listener-action-property-builder function buildes out new instances of 
-CfnListener$ActionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-action-property-builder
+  "The build-cfn-listener-action-property-builder function updates a CfnListener$ActionProperty$Builder instance using the provided configuration.
+  The function takes the CfnListener$ActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1373,31 +1463,34 @@ CfnListener$ActionProperty$Builder using the provided configuration.  Each field
 | `order` | java.lang.Number | [[cdk.support/lookup-entry]] | `:order` |
 | `redirectConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:redirect-config` |
 | `targetGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-group-arn` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnListener$ActionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :authenticate-cognito-config)]
-      (. builder authenticateCognitoConfig data))
-    (when-let [data (lookup-entry config id :authenticate-oidc-config)]
-      (. builder authenticateOidcConfig data))
-    (when-let [data (lookup-entry config id :fixed-response-config)]
-      (. builder fixedResponseConfig data))
-    (when-let [data (lookup-entry config id :forward-config)]
-      (. builder forwardConfig data))
-    (when-let [data (lookup-entry config id :order)]
-      (. builder order data))
-    (when-let [data (lookup-entry config id :redirect-config)]
-      (. builder redirectConfig data))
-    (when-let [data (lookup-entry config id :target-group-arn)]
-      (. builder targetGroupArn data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnListener$ActionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :authenticate-cognito-config)]
+    (. builder authenticateCognitoConfig data))
+  (when-let [data (lookup-entry config id :authenticate-oidc-config)]
+    (. builder authenticateOidcConfig data))
+  (when-let [data (lookup-entry config id :fixed-response-config)]
+    (. builder fixedResponseConfig data))
+  (when-let [data (lookup-entry config id :forward-config)]
+    (. builder forwardConfig data))
+  (when-let [data (lookup-entry config id :order)]
+    (. builder order data))
+  (when-let [data (lookup-entry config id :redirect-config)]
+    (. builder redirectConfig data))
+  (when-let [data (lookup-entry config id :target-group-arn)]
+    (. builder targetGroupArn data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-listener-authenticate-cognito-config-property-builder
-  "The cfn-listener-authenticate-cognito-config-property-builder function buildes out new instances of 
-CfnListener$AuthenticateCognitoConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-authenticate-cognito-config-property-builder
+  "The build-cfn-listener-authenticate-cognito-config-property-builder function updates a CfnListener$AuthenticateCognitoConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnListener$AuthenticateCognitoConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1408,31 +1501,34 @@ CfnListener$AuthenticateCognitoConfigProperty$Builder using the provided configu
 | `sessionTimeout` | java.lang.String | [[cdk.support/lookup-entry]] | `:session-timeout` |
 | `userPoolArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-arn` |
 | `userPoolClientId` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-client-id` |
-| `userPoolDomain` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-domain` |"
-  [stack id config]
-  (let [builder (CfnListener$AuthenticateCognitoConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :authentication-request-extra-params)]
-      (. builder authenticationRequestExtraParams data))
-    (when-let [data (lookup-entry config id :on-unauthenticated-request)]
-      (. builder onUnauthenticatedRequest data))
-    (when-let [data (lookup-entry config id :scope)]
-      (. builder scope data))
-    (when-let [data (lookup-entry config id :session-cookie-name)]
-      (. builder sessionCookieName data))
-    (when-let [data (lookup-entry config id :session-timeout)]
-      (. builder sessionTimeout data))
-    (when-let [data (lookup-entry config id :user-pool-arn)]
-      (. builder userPoolArn data))
-    (when-let [data (lookup-entry config id :user-pool-client-id)]
-      (. builder userPoolClientId data))
-    (when-let [data (lookup-entry config id :user-pool-domain)]
-      (. builder userPoolDomain data))
-    (.build builder)))
+| `userPoolDomain` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-domain` |
+"
+  [^CfnListener$AuthenticateCognitoConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :authentication-request-extra-params)]
+    (. builder authenticationRequestExtraParams data))
+  (when-let [data (lookup-entry config id :on-unauthenticated-request)]
+    (. builder onUnauthenticatedRequest data))
+  (when-let [data (lookup-entry config id :scope)]
+    (. builder scope data))
+  (when-let [data (lookup-entry config id :session-cookie-name)]
+    (. builder sessionCookieName data))
+  (when-let [data (lookup-entry config id :session-timeout)]
+    (. builder sessionTimeout data))
+  (when-let [data (lookup-entry config id :user-pool-arn)]
+    (. builder userPoolArn data))
+  (when-let [data (lookup-entry config id :user-pool-client-id)]
+    (. builder userPoolClientId data))
+  (when-let [data (lookup-entry config id :user-pool-domain)]
+    (. builder userPoolDomain data))
+  (.build builder))
 
 
-(defn cfn-listener-authenticate-oidc-config-property-builder
-  "The cfn-listener-authenticate-oidc-config-property-builder function buildes out new instances of 
-CfnListener$AuthenticateOidcConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-authenticate-oidc-config-property-builder
+  "The build-cfn-listener-authenticate-oidc-config-property-builder function updates a CfnListener$AuthenticateOidcConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnListener$AuthenticateOidcConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1447,39 +1543,42 @@ CfnListener$AuthenticateOidcConfigProperty$Builder using the provided configurat
 | `sessionTimeout` | java.lang.String | [[cdk.support/lookup-entry]] | `:session-timeout` |
 | `tokenEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-endpoint` |
 | `useExistingClientSecret` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-existing-client-secret` |
-| `userInfoEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-info-endpoint` |"
-  [stack id config]
-  (let [builder (CfnListener$AuthenticateOidcConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :authentication-request-extra-params)]
-      (. builder authenticationRequestExtraParams data))
-    (when-let [data (lookup-entry config id :authorization-endpoint)]
-      (. builder authorizationEndpoint data))
-    (when-let [data (lookup-entry config id :client-id)]
-      (. builder clientId data))
-    (when-let [data (lookup-entry config id :client-secret)]
-      (. builder clientSecret data))
-    (when-let [data (lookup-entry config id :issuer)]
-      (. builder issuer data))
-    (when-let [data (lookup-entry config id :on-unauthenticated-request)]
-      (. builder onUnauthenticatedRequest data))
-    (when-let [data (lookup-entry config id :scope)]
-      (. builder scope data))
-    (when-let [data (lookup-entry config id :session-cookie-name)]
-      (. builder sessionCookieName data))
-    (when-let [data (lookup-entry config id :session-timeout)]
-      (. builder sessionTimeout data))
-    (when-let [data (lookup-entry config id :token-endpoint)]
-      (. builder tokenEndpoint data))
-    (when-let [data (lookup-entry config id :use-existing-client-secret)]
-      (. builder useExistingClientSecret data))
-    (when-let [data (lookup-entry config id :user-info-endpoint)]
-      (. builder userInfoEndpoint data))
-    (.build builder)))
+| `userInfoEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-info-endpoint` |
+"
+  [^CfnListener$AuthenticateOidcConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :authentication-request-extra-params)]
+    (. builder authenticationRequestExtraParams data))
+  (when-let [data (lookup-entry config id :authorization-endpoint)]
+    (. builder authorizationEndpoint data))
+  (when-let [data (lookup-entry config id :client-id)]
+    (. builder clientId data))
+  (when-let [data (lookup-entry config id :client-secret)]
+    (. builder clientSecret data))
+  (when-let [data (lookup-entry config id :issuer)]
+    (. builder issuer data))
+  (when-let [data (lookup-entry config id :on-unauthenticated-request)]
+    (. builder onUnauthenticatedRequest data))
+  (when-let [data (lookup-entry config id :scope)]
+    (. builder scope data))
+  (when-let [data (lookup-entry config id :session-cookie-name)]
+    (. builder sessionCookieName data))
+  (when-let [data (lookup-entry config id :session-timeout)]
+    (. builder sessionTimeout data))
+  (when-let [data (lookup-entry config id :token-endpoint)]
+    (. builder tokenEndpoint data))
+  (when-let [data (lookup-entry config id :use-existing-client-secret)]
+    (. builder useExistingClientSecret data))
+  (when-let [data (lookup-entry config id :user-info-endpoint)]
+    (. builder userInfoEndpoint data))
+  (.build builder))
 
 
-(defn cfn-listener-builder
-  "The cfn-listener-builder function buildes out new instances of 
-CfnListener$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-builder
+  "The build-cfn-listener-builder function updates a CfnListener$Builder instance using the provided configuration.
+  The function takes the CfnListener$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1490,150 +1589,174 @@ CfnListener$Builder using the provided configuration.  Each field is set as foll
 | `mutualAuthentication` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener$MutualAuthenticationProperty | [[cdk.support/lookup-entry]] | `:mutual-authentication` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
-| `sslPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:ssl-policy` |"
-  [stack id config]
-  (let [builder (CfnListener$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :alpn-policy)]
-      (. builder alpnPolicy data))
-    (when-let [data (lookup-entry config id :certificates)]
-      (. builder certificates data))
-    (when-let [data (lookup-entry config id :default-actions)]
-      (. builder defaultActions data))
-    (when-let [data (lookup-entry config id :load-balancer-arn)]
-      (. builder loadBalancerArn data))
-    (when-let [data (lookup-entry config id :mutual-authentication)]
-      (. builder mutualAuthentication data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :ssl-policy)]
-      (. builder sslPolicy data))
-    (.build builder)))
+| `sslPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:ssl-policy` |
+"
+  [^CfnListener$Builder builder id config]
+  (when-let [data (lookup-entry config id :alpn-policy)]
+    (. builder alpnPolicy data))
+  (when-let [data (lookup-entry config id :certificates)]
+    (. builder certificates data))
+  (when-let [data (lookup-entry config id :default-actions)]
+    (. builder defaultActions data))
+  (when-let [data (lookup-entry config id :load-balancer-arn)]
+    (. builder loadBalancerArn data))
+  (when-let [data (lookup-entry config id :mutual-authentication)]
+    (. builder mutualAuthentication data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :ssl-policy)]
+    (. builder sslPolicy data))
+  (.build builder))
 
 
-(defn cfn-listener-certificate-builder
-  "The cfn-listener-certificate-builder function buildes out new instances of 
-CfnListenerCertificate$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-certificate-builder
+  "The build-cfn-listener-certificate-builder function updates a CfnListenerCertificate$Builder instance using the provided configuration.
+  The function takes the CfnListenerCertificate$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `certificates` | java.util.List | [[cdk.support/lookup-entry]] | `:certificates` |
-| `listenerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:listener-arn` |"
-  [stack id config]
-  (let [builder (CfnListenerCertificate$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :certificates)]
-      (. builder certificates data))
-    (when-let [data (lookup-entry config id :listener-arn)]
-      (. builder listenerArn data))
-    (.build builder)))
+| `listenerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:listener-arn` |
+"
+  [^CfnListenerCertificate$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificates)]
+    (. builder certificates data))
+  (when-let [data (lookup-entry config id :listener-arn)]
+    (. builder listenerArn data))
+  (.build builder))
 
 
-(defn cfn-listener-certificate-certificate-property-builder
-  "The cfn-listener-certificate-certificate-property-builder function buildes out new instances of 
-CfnListenerCertificate$CertificateProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-certificate-certificate-property-builder
+  "The build-cfn-listener-certificate-certificate-property-builder function updates a CfnListenerCertificate$CertificateProperty$Builder instance using the provided configuration.
+  The function takes the CfnListenerCertificate$CertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `certificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-arn` |"
-  [stack id config]
-  (let [builder (CfnListenerCertificate$CertificateProperty$Builder.)]
-    (when-let [data (lookup-entry config id :certificate-arn)]
-      (. builder certificateArn data))
-    (.build builder)))
-
-
-(defn cfn-listener-certificate-property-builder
-  "The cfn-listener-certificate-property-builder function buildes out new instances of 
-CfnListener$CertificateProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `certificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-arn` |"
-  [stack id config]
-  (let [builder (CfnListener$CertificateProperty$Builder.)]
-    (when-let [data (lookup-entry config id :certificate-arn)]
-      (. builder certificateArn data))
-    (.build builder)))
+| `certificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-arn` |
+"
+  [^CfnListenerCertificate$CertificateProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate-arn)]
+    (. builder certificateArn data))
+  (.build builder))
 
 
-(defn cfn-listener-certificate-props-builder
-  "The cfn-listener-certificate-props-builder function buildes out new instances of 
-CfnListenerCertificateProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-certificate-property-builder
+  "The build-cfn-listener-certificate-property-builder function updates a CfnListener$CertificateProperty$Builder instance using the provided configuration.
+  The function takes the CfnListener$CertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `certificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-arn` |
+"
+  [^CfnListener$CertificateProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate-arn)]
+    (. builder certificateArn data))
+  (.build builder))
+
+
+(defn build-cfn-listener-certificate-props-builder
+  "The build-cfn-listener-certificate-props-builder function updates a CfnListenerCertificateProps$Builder instance using the provided configuration.
+  The function takes the CfnListenerCertificateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `certificates` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificates` |
-| `listenerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:listener-arn` |"
-  [stack id config]
-  (let [builder (CfnListenerCertificateProps$Builder.)]
-    (when-let [data (lookup-entry config id :certificates)]
-      (. builder certificates data))
-    (when-let [data (lookup-entry config id :listener-arn)]
-      (. builder listenerArn data))
-    (.build builder)))
+| `listenerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:listener-arn` |
+"
+  [^CfnListenerCertificateProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificates)]
+    (. builder certificates data))
+  (when-let [data (lookup-entry config id :listener-arn)]
+    (. builder listenerArn data))
+  (.build builder))
 
 
-(defn cfn-listener-fixed-response-config-property-builder
-  "The cfn-listener-fixed-response-config-property-builder function buildes out new instances of 
-CfnListener$FixedResponseConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-fixed-response-config-property-builder
+  "The build-cfn-listener-fixed-response-config-property-builder function updates a CfnListener$FixedResponseConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnListener$FixedResponseConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `contentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:content-type` |
 | `messageBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:message-body` |
-| `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |"
-  [stack id config]
-  (let [builder (CfnListener$FixedResponseConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :content-type)]
-      (. builder contentType data))
-    (when-let [data (lookup-entry config id :message-body)]
-      (. builder messageBody data))
-    (when-let [data (lookup-entry config id :status-code)]
-      (. builder statusCode data))
-    (.build builder)))
+| `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
+"
+  [^CfnListener$FixedResponseConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :content-type)]
+    (. builder contentType data))
+  (when-let [data (lookup-entry config id :message-body)]
+    (. builder messageBody data))
+  (when-let [data (lookup-entry config id :status-code)]
+    (. builder statusCode data))
+  (.build builder))
 
 
-(defn cfn-listener-forward-config-property-builder
-  "The cfn-listener-forward-config-property-builder function buildes out new instances of 
-CfnListener$ForwardConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-forward-config-property-builder
+  "The build-cfn-listener-forward-config-property-builder function updates a CfnListener$ForwardConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnListener$ForwardConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `targetGroupStickinessConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener$TargetGroupStickinessConfigProperty | [[cdk.support/lookup-entry]] | `:target-group-stickiness-config` |
-| `targetGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-groups` |"
-  [stack id config]
-  (let [builder (CfnListener$ForwardConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :target-group-stickiness-config)]
-      (. builder targetGroupStickinessConfig data))
-    (when-let [data (lookup-entry config id :target-groups)]
-      (. builder targetGroups data))
-    (.build builder)))
+| `targetGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-groups` |
+"
+  [^CfnListener$ForwardConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :target-group-stickiness-config)]
+    (. builder targetGroupStickinessConfig data))
+  (when-let [data (lookup-entry config id :target-groups)]
+    (. builder targetGroups data))
+  (.build builder))
 
 
-(defn cfn-listener-mutual-authentication-property-builder
-  "The cfn-listener-mutual-authentication-property-builder function buildes out new instances of 
-CfnListener$MutualAuthenticationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-mutual-authentication-property-builder
+  "The build-cfn-listener-mutual-authentication-property-builder function updates a CfnListener$MutualAuthenticationProperty$Builder instance using the provided configuration.
+  The function takes the CfnListener$MutualAuthenticationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `ignoreClientCertificateExpiry` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ignore-client-certificate-expiry` |
 | `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
-| `trustStoreArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trust-store-arn` |"
-  [stack id config]
-  (let [builder (CfnListener$MutualAuthenticationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :ignore-client-certificate-expiry)]
-      (. builder ignoreClientCertificateExpiry data))
-    (when-let [data (lookup-entry config id :mode)]
-      (. builder mode data))
-    (when-let [data (lookup-entry config id :trust-store-arn)]
-      (. builder trustStoreArn data))
-    (.build builder)))
+| `trustStoreArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trust-store-arn` |
+"
+  [^CfnListener$MutualAuthenticationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :ignore-client-certificate-expiry)]
+    (. builder ignoreClientCertificateExpiry data))
+  (when-let [data (lookup-entry config id :mode)]
+    (. builder mode data))
+  (when-let [data (lookup-entry config id :trust-store-arn)]
+    (. builder trustStoreArn data))
+  (.build builder))
 
 
-(defn cfn-listener-props-builder
-  "The cfn-listener-props-builder function buildes out new instances of 
-CfnListenerProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-props-builder
+  "The build-cfn-listener-props-builder function updates a CfnListenerProps$Builder instance using the provided configuration.
+  The function takes the CfnListenerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1644,31 +1767,34 @@ CfnListenerProps$Builder using the provided configuration.  Each field is set as
 | `mutualAuthentication` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener$MutualAuthenticationProperty | [[cdk.support/lookup-entry]] | `:mutual-authentication` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
-| `sslPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:ssl-policy` |"
-  [stack id config]
-  (let [builder (CfnListenerProps$Builder.)]
-    (when-let [data (lookup-entry config id :alpn-policy)]
-      (. builder alpnPolicy data))
-    (when-let [data (lookup-entry config id :certificates)]
-      (. builder certificates data))
-    (when-let [data (lookup-entry config id :default-actions)]
-      (. builder defaultActions data))
-    (when-let [data (lookup-entry config id :load-balancer-arn)]
-      (. builder loadBalancerArn data))
-    (when-let [data (lookup-entry config id :mutual-authentication)]
-      (. builder mutualAuthentication data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :ssl-policy)]
-      (. builder sslPolicy data))
-    (.build builder)))
+| `sslPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:ssl-policy` |
+"
+  [^CfnListenerProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :alpn-policy)]
+    (. builder alpnPolicy data))
+  (when-let [data (lookup-entry config id :certificates)]
+    (. builder certificates data))
+  (when-let [data (lookup-entry config id :default-actions)]
+    (. builder defaultActions data))
+  (when-let [data (lookup-entry config id :load-balancer-arn)]
+    (. builder loadBalancerArn data))
+  (when-let [data (lookup-entry config id :mutual-authentication)]
+    (. builder mutualAuthentication data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :ssl-policy)]
+    (. builder sslPolicy data))
+  (.build builder))
 
 
-(defn cfn-listener-redirect-config-property-builder
-  "The cfn-listener-redirect-config-property-builder function buildes out new instances of 
-CfnListener$RedirectConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-redirect-config-property-builder
+  "The build-cfn-listener-redirect-config-property-builder function updates a CfnListener$RedirectConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnListener$RedirectConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1677,27 +1803,30 @@ CfnListener$RedirectConfigProperty$Builder using the provided configuration.  Ea
 | `port` | java.lang.String | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 | `query` | java.lang.String | [[cdk.support/lookup-entry]] | `:query` |
-| `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |"
-  [stack id config]
-  (let [builder (CfnListener$RedirectConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :host)]
-      (. builder host data))
-    (when-let [data (lookup-entry config id :path)]
-      (. builder path data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :query)]
-      (. builder query data))
-    (when-let [data (lookup-entry config id :status-code)]
-      (. builder statusCode data))
-    (.build builder)))
+| `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
+"
+  [^CfnListener$RedirectConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :host)]
+    (. builder host data))
+  (when-let [data (lookup-entry config id :path)]
+    (. builder path data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :query)]
+    (. builder query data))
+  (when-let [data (lookup-entry config id :status-code)]
+    (. builder statusCode data))
+  (.build builder))
 
 
-(defn cfn-listener-rule-action-property-builder
-  "The cfn-listener-rule-action-property-builder function buildes out new instances of 
-CfnListenerRule$ActionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-rule-action-property-builder
+  "The build-cfn-listener-rule-action-property-builder function updates a CfnListenerRule$ActionProperty$Builder instance using the provided configuration.
+  The function takes the CfnListenerRule$ActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1708,31 +1837,34 @@ CfnListenerRule$ActionProperty$Builder using the provided configuration.  Each f
 | `order` | java.lang.Number | [[cdk.support/lookup-entry]] | `:order` |
 | `redirectConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule$RedirectConfigProperty | [[cdk.support/lookup-entry]] | `:redirect-config` |
 | `targetGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-group-arn` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnListenerRule$ActionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :authenticate-cognito-config)]
-      (. builder authenticateCognitoConfig data))
-    (when-let [data (lookup-entry config id :authenticate-oidc-config)]
-      (. builder authenticateOidcConfig data))
-    (when-let [data (lookup-entry config id :fixed-response-config)]
-      (. builder fixedResponseConfig data))
-    (when-let [data (lookup-entry config id :forward-config)]
-      (. builder forwardConfig data))
-    (when-let [data (lookup-entry config id :order)]
-      (. builder order data))
-    (when-let [data (lookup-entry config id :redirect-config)]
-      (. builder redirectConfig data))
-    (when-let [data (lookup-entry config id :target-group-arn)]
-      (. builder targetGroupArn data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnListenerRule$ActionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :authenticate-cognito-config)]
+    (. builder authenticateCognitoConfig data))
+  (when-let [data (lookup-entry config id :authenticate-oidc-config)]
+    (. builder authenticateOidcConfig data))
+  (when-let [data (lookup-entry config id :fixed-response-config)]
+    (. builder fixedResponseConfig data))
+  (when-let [data (lookup-entry config id :forward-config)]
+    (. builder forwardConfig data))
+  (when-let [data (lookup-entry config id :order)]
+    (. builder order data))
+  (when-let [data (lookup-entry config id :redirect-config)]
+    (. builder redirectConfig data))
+  (when-let [data (lookup-entry config id :target-group-arn)]
+    (. builder targetGroupArn data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-listener-rule-authenticate-cognito-config-property-builder
-  "The cfn-listener-rule-authenticate-cognito-config-property-builder function buildes out new instances of 
-CfnListenerRule$AuthenticateCognitoConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-rule-authenticate-cognito-config-property-builder
+  "The build-cfn-listener-rule-authenticate-cognito-config-property-builder function updates a CfnListenerRule$AuthenticateCognitoConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnListenerRule$AuthenticateCognitoConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1743,31 +1875,34 @@ CfnListenerRule$AuthenticateCognitoConfigProperty$Builder using the provided con
 | `sessionTimeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:session-timeout` |
 | `userPoolArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-arn` |
 | `userPoolClientId` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-client-id` |
-| `userPoolDomain` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-domain` |"
-  [stack id config]
-  (let [builder (CfnListenerRule$AuthenticateCognitoConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :authentication-request-extra-params)]
-      (. builder authenticationRequestExtraParams data))
-    (when-let [data (lookup-entry config id :on-unauthenticated-request)]
-      (. builder onUnauthenticatedRequest data))
-    (when-let [data (lookup-entry config id :scope)]
-      (. builder scope data))
-    (when-let [data (lookup-entry config id :session-cookie-name)]
-      (. builder sessionCookieName data))
-    (when-let [data (lookup-entry config id :session-timeout)]
-      (. builder sessionTimeout data))
-    (when-let [data (lookup-entry config id :user-pool-arn)]
-      (. builder userPoolArn data))
-    (when-let [data (lookup-entry config id :user-pool-client-id)]
-      (. builder userPoolClientId data))
-    (when-let [data (lookup-entry config id :user-pool-domain)]
-      (. builder userPoolDomain data))
-    (.build builder)))
+| `userPoolDomain` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-pool-domain` |
+"
+  [^CfnListenerRule$AuthenticateCognitoConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :authentication-request-extra-params)]
+    (. builder authenticationRequestExtraParams data))
+  (when-let [data (lookup-entry config id :on-unauthenticated-request)]
+    (. builder onUnauthenticatedRequest data))
+  (when-let [data (lookup-entry config id :scope)]
+    (. builder scope data))
+  (when-let [data (lookup-entry config id :session-cookie-name)]
+    (. builder sessionCookieName data))
+  (when-let [data (lookup-entry config id :session-timeout)]
+    (. builder sessionTimeout data))
+  (when-let [data (lookup-entry config id :user-pool-arn)]
+    (. builder userPoolArn data))
+  (when-let [data (lookup-entry config id :user-pool-client-id)]
+    (. builder userPoolClientId data))
+  (when-let [data (lookup-entry config id :user-pool-domain)]
+    (. builder userPoolDomain data))
+  (.build builder))
 
 
-(defn cfn-listener-rule-authenticate-oidc-config-property-builder
-  "The cfn-listener-rule-authenticate-oidc-config-property-builder function buildes out new instances of 
-CfnListenerRule$AuthenticateOidcConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-rule-authenticate-oidc-config-property-builder
+  "The build-cfn-listener-rule-authenticate-oidc-config-property-builder function updates a CfnListenerRule$AuthenticateOidcConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnListenerRule$AuthenticateOidcConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1782,212 +1917,245 @@ CfnListenerRule$AuthenticateOidcConfigProperty$Builder using the provided config
 | `sessionTimeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:session-timeout` |
 | `tokenEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-endpoint` |
 | `useExistingClientSecret` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-existing-client-secret` |
-| `userInfoEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-info-endpoint` |"
-  [stack id config]
-  (let [builder (CfnListenerRule$AuthenticateOidcConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :authentication-request-extra-params)]
-      (. builder authenticationRequestExtraParams data))
-    (when-let [data (lookup-entry config id :authorization-endpoint)]
-      (. builder authorizationEndpoint data))
-    (when-let [data (lookup-entry config id :client-id)]
-      (. builder clientId data))
-    (when-let [data (lookup-entry config id :client-secret)]
-      (. builder clientSecret data))
-    (when-let [data (lookup-entry config id :issuer)]
-      (. builder issuer data))
-    (when-let [data (lookup-entry config id :on-unauthenticated-request)]
-      (. builder onUnauthenticatedRequest data))
-    (when-let [data (lookup-entry config id :scope)]
-      (. builder scope data))
-    (when-let [data (lookup-entry config id :session-cookie-name)]
-      (. builder sessionCookieName data))
-    (when-let [data (lookup-entry config id :session-timeout)]
-      (. builder sessionTimeout data))
-    (when-let [data (lookup-entry config id :token-endpoint)]
-      (. builder tokenEndpoint data))
-    (when-let [data (lookup-entry config id :use-existing-client-secret)]
-      (. builder useExistingClientSecret data))
-    (when-let [data (lookup-entry config id :user-info-endpoint)]
-      (. builder userInfoEndpoint data))
-    (.build builder)))
+| `userInfoEndpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-info-endpoint` |
+"
+  [^CfnListenerRule$AuthenticateOidcConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :authentication-request-extra-params)]
+    (. builder authenticationRequestExtraParams data))
+  (when-let [data (lookup-entry config id :authorization-endpoint)]
+    (. builder authorizationEndpoint data))
+  (when-let [data (lookup-entry config id :client-id)]
+    (. builder clientId data))
+  (when-let [data (lookup-entry config id :client-secret)]
+    (. builder clientSecret data))
+  (when-let [data (lookup-entry config id :issuer)]
+    (. builder issuer data))
+  (when-let [data (lookup-entry config id :on-unauthenticated-request)]
+    (. builder onUnauthenticatedRequest data))
+  (when-let [data (lookup-entry config id :scope)]
+    (. builder scope data))
+  (when-let [data (lookup-entry config id :session-cookie-name)]
+    (. builder sessionCookieName data))
+  (when-let [data (lookup-entry config id :session-timeout)]
+    (. builder sessionTimeout data))
+  (when-let [data (lookup-entry config id :token-endpoint)]
+    (. builder tokenEndpoint data))
+  (when-let [data (lookup-entry config id :use-existing-client-secret)]
+    (. builder useExistingClientSecret data))
+  (when-let [data (lookup-entry config id :user-info-endpoint)]
+    (. builder userInfoEndpoint data))
+  (.build builder))
 
 
-(defn cfn-listener-rule-builder
-  "The cfn-listener-rule-builder function buildes out new instances of 
-CfnListenerRule$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-rule-builder
+  "The build-cfn-listener-rule-builder function updates a CfnListenerRule$Builder instance using the provided configuration.
+  The function takes the CfnListenerRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
 | `conditions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditions` |
 | `listenerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:listener-arn` |
-| `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |"
-  [stack id config]
-  (let [builder (CfnListenerRule$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :actions)]
-      (. builder actions data))
-    (when-let [data (lookup-entry config id :conditions)]
-      (. builder conditions data))
-    (when-let [data (lookup-entry config id :listener-arn)]
-      (. builder listenerArn data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (.build builder)))
+| `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
+"
+  [^CfnListenerRule$Builder builder id config]
+  (when-let [data (lookup-entry config id :actions)]
+    (. builder actions data))
+  (when-let [data (lookup-entry config id :conditions)]
+    (. builder conditions data))
+  (when-let [data (lookup-entry config id :listener-arn)]
+    (. builder listenerArn data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (.build builder))
 
 
-(defn cfn-listener-rule-fixed-response-config-property-builder
-  "The cfn-listener-rule-fixed-response-config-property-builder function buildes out new instances of 
-CfnListenerRule$FixedResponseConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-rule-fixed-response-config-property-builder
+  "The build-cfn-listener-rule-fixed-response-config-property-builder function updates a CfnListenerRule$FixedResponseConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnListenerRule$FixedResponseConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `contentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:content-type` |
 | `messageBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:message-body` |
-| `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |"
-  [stack id config]
-  (let [builder (CfnListenerRule$FixedResponseConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :content-type)]
-      (. builder contentType data))
-    (when-let [data (lookup-entry config id :message-body)]
-      (. builder messageBody data))
-    (when-let [data (lookup-entry config id :status-code)]
-      (. builder statusCode data))
-    (.build builder)))
+| `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
+"
+  [^CfnListenerRule$FixedResponseConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :content-type)]
+    (. builder contentType data))
+  (when-let [data (lookup-entry config id :message-body)]
+    (. builder messageBody data))
+  (when-let [data (lookup-entry config id :status-code)]
+    (. builder statusCode data))
+  (.build builder))
 
 
-(defn cfn-listener-rule-forward-config-property-builder
-  "The cfn-listener-rule-forward-config-property-builder function buildes out new instances of 
-CfnListenerRule$ForwardConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-rule-forward-config-property-builder
+  "The build-cfn-listener-rule-forward-config-property-builder function updates a CfnListenerRule$ForwardConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnListenerRule$ForwardConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `targetGroupStickinessConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule$TargetGroupStickinessConfigProperty | [[cdk.support/lookup-entry]] | `:target-group-stickiness-config` |
-| `targetGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-groups` |"
-  [stack id config]
-  (let [builder (CfnListenerRule$ForwardConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :target-group-stickiness-config)]
-      (. builder targetGroupStickinessConfig data))
-    (when-let [data (lookup-entry config id :target-groups)]
-      (. builder targetGroups data))
-    (.build builder)))
+| `targetGroups` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-groups` |
+"
+  [^CfnListenerRule$ForwardConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :target-group-stickiness-config)]
+    (. builder targetGroupStickinessConfig data))
+  (when-let [data (lookup-entry config id :target-groups)]
+    (. builder targetGroups data))
+  (.build builder))
 
 
-(defn cfn-listener-rule-host-header-config-property-builder
-  "The cfn-listener-rule-host-header-config-property-builder function buildes out new instances of 
-CfnListenerRule$HostHeaderConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-rule-host-header-config-property-builder
+  "The build-cfn-listener-rule-host-header-config-property-builder function updates a CfnListenerRule$HostHeaderConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnListenerRule$HostHeaderConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |"
-  [stack id config]
-  (let [builder (CfnListenerRule$HostHeaderConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :values)]
-      (. builder values data))
-    (.build builder)))
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+"
+  [^CfnListenerRule$HostHeaderConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :values)]
+    (. builder values data))
+  (.build builder))
 
 
-(defn cfn-listener-rule-http-header-config-property-builder
-  "The cfn-listener-rule-http-header-config-property-builder function buildes out new instances of 
-CfnListenerRule$HttpHeaderConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-rule-http-header-config-property-builder
+  "The build-cfn-listener-rule-http-header-config-property-builder function updates a CfnListenerRule$HttpHeaderConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnListenerRule$HttpHeaderConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `httpHeaderName` | java.lang.String | [[cdk.support/lookup-entry]] | `:http-header-name` |
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |"
-  [stack id config]
-  (let [builder (CfnListenerRule$HttpHeaderConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :http-header-name)]
-      (. builder httpHeaderName data))
-    (when-let [data (lookup-entry config id :values)]
-      (. builder values data))
-    (.build builder)))
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+"
+  [^CfnListenerRule$HttpHeaderConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :http-header-name)]
+    (. builder httpHeaderName data))
+  (when-let [data (lookup-entry config id :values)]
+    (. builder values data))
+  (.build builder))
 
 
-(defn cfn-listener-rule-http-request-method-config-property-builder
-  "The cfn-listener-rule-http-request-method-config-property-builder function buildes out new instances of 
-CfnListenerRule$HttpRequestMethodConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-rule-http-request-method-config-property-builder
+  "The build-cfn-listener-rule-http-request-method-config-property-builder function updates a CfnListenerRule$HttpRequestMethodConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnListenerRule$HttpRequestMethodConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |"
-  [stack id config]
-  (let [builder (CfnListenerRule$HttpRequestMethodConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :values)]
-      (. builder values data))
-    (.build builder)))
-
-
-(defn cfn-listener-rule-path-pattern-config-property-builder
-  "The cfn-listener-rule-path-pattern-config-property-builder function buildes out new instances of 
-CfnListenerRule$PathPatternConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |"
-  [stack id config]
-  (let [builder (CfnListenerRule$PathPatternConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :values)]
-      (. builder values data))
-    (.build builder)))
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+"
+  [^CfnListenerRule$HttpRequestMethodConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :values)]
+    (. builder values data))
+  (.build builder))
 
 
-(defn cfn-listener-rule-props-builder
-  "The cfn-listener-rule-props-builder function buildes out new instances of 
-CfnListenerRuleProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-rule-path-pattern-config-property-builder
+  "The build-cfn-listener-rule-path-pattern-config-property-builder function updates a CfnListenerRule$PathPatternConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnListenerRule$PathPatternConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+"
+  [^CfnListenerRule$PathPatternConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :values)]
+    (. builder values data))
+  (.build builder))
+
+
+(defn build-cfn-listener-rule-props-builder
+  "The build-cfn-listener-rule-props-builder function updates a CfnListenerRuleProps$Builder instance using the provided configuration.
+  The function takes the CfnListenerRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:actions` |
 | `conditions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:conditions` |
 | `listenerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:listener-arn` |
-| `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |"
-  [stack id config]
-  (let [builder (CfnListenerRuleProps$Builder.)]
-    (when-let [data (lookup-entry config id :actions)]
-      (. builder actions data))
-    (when-let [data (lookup-entry config id :conditions)]
-      (. builder conditions data))
-    (when-let [data (lookup-entry config id :listener-arn)]
-      (. builder listenerArn data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (.build builder)))
+| `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
+"
+  [^CfnListenerRuleProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :actions)]
+    (. builder actions data))
+  (when-let [data (lookup-entry config id :conditions)]
+    (. builder conditions data))
+  (when-let [data (lookup-entry config id :listener-arn)]
+    (. builder listenerArn data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (.build builder))
 
 
-(defn cfn-listener-rule-query-string-config-property-builder
-  "The cfn-listener-rule-query-string-config-property-builder function buildes out new instances of 
-CfnListenerRule$QueryStringConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-rule-query-string-config-property-builder
+  "The build-cfn-listener-rule-query-string-config-property-builder function updates a CfnListenerRule$QueryStringConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnListenerRule$QueryStringConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |"
-  [stack id config]
-  (let [builder (CfnListenerRule$QueryStringConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :values)]
-      (. builder values data))
-    (.build builder)))
+| `values` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:values` |
+"
+  [^CfnListenerRule$QueryStringConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :values)]
+    (. builder values data))
+  (.build builder))
 
 
-(defn cfn-listener-rule-query-string-key-value-property-builder
-  "The cfn-listener-rule-query-string-key-value-property-builder function buildes out new instances of 
-CfnListenerRule$QueryStringKeyValueProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-rule-query-string-key-value-property-builder
+  "The build-cfn-listener-rule-query-string-key-value-property-builder function updates a CfnListenerRule$QueryStringKeyValueProperty$Builder instance using the provided configuration.
+  The function takes the CfnListenerRule$QueryStringKeyValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnListenerRule$QueryStringKeyValueProperty$Builder.)]
-    (when-let [data (lookup-entry config id :key)]
-      (. builder key data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnListenerRule$QueryStringKeyValueProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :key)]
+    (. builder key data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-listener-rule-redirect-config-property-builder
-  "The cfn-listener-rule-redirect-config-property-builder function buildes out new instances of 
-CfnListenerRule$RedirectConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-rule-redirect-config-property-builder
+  "The build-cfn-listener-rule-redirect-config-property-builder function updates a CfnListenerRule$RedirectConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnListenerRule$RedirectConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1996,27 +2164,30 @@ CfnListenerRule$RedirectConfigProperty$Builder using the provided configuration.
 | `port` | java.lang.String | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 | `query` | java.lang.String | [[cdk.support/lookup-entry]] | `:query` |
-| `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |"
-  [stack id config]
-  (let [builder (CfnListenerRule$RedirectConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :host)]
-      (. builder host data))
-    (when-let [data (lookup-entry config id :path)]
-      (. builder path data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :query)]
-      (. builder query data))
-    (when-let [data (lookup-entry config id :status-code)]
-      (. builder statusCode data))
-    (.build builder)))
+| `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
+"
+  [^CfnListenerRule$RedirectConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :host)]
+    (. builder host data))
+  (when-let [data (lookup-entry config id :path)]
+    (. builder path data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :query)]
+    (. builder query data))
+  (when-let [data (lookup-entry config id :status-code)]
+    (. builder statusCode data))
+  (.build builder))
 
 
-(defn cfn-listener-rule-rule-condition-property-builder
-  "The cfn-listener-rule-rule-condition-property-builder function buildes out new instances of 
-CfnListenerRule$RuleConditionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-rule-rule-condition-property-builder
+  "The build-cfn-listener-rule-rule-condition-property-builder function updates a CfnListenerRule$RuleConditionProperty$Builder instance using the provided configuration.
+  The function takes the CfnListenerRule$RuleConditionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2027,113 +2198,131 @@ CfnListenerRule$RuleConditionProperty$Builder using the provided configuration. 
 | `pathPatternConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:path-pattern-config` |
 | `queryStringConfig` | software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule$QueryStringConfigProperty | [[cdk.support/lookup-entry]] | `:query-string-config` |
 | `sourceIpConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-ip-config` |
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |"
-  [stack id config]
-  (let [builder (CfnListenerRule$RuleConditionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :field)]
-      (. builder field data))
-    (when-let [data (lookup-entry config id :host-header-config)]
-      (. builder hostHeaderConfig data))
-    (when-let [data (lookup-entry config id :http-header-config)]
-      (. builder httpHeaderConfig data))
-    (when-let [data (lookup-entry config id :http-request-method-config)]
-      (. builder httpRequestMethodConfig data))
-    (when-let [data (lookup-entry config id :path-pattern-config)]
-      (. builder pathPatternConfig data))
-    (when-let [data (lookup-entry config id :query-string-config)]
-      (. builder queryStringConfig data))
-    (when-let [data (lookup-entry config id :source-ip-config)]
-      (. builder sourceIpConfig data))
-    (when-let [data (lookup-entry config id :values)]
-      (. builder values data))
-    (.build builder)))
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+"
+  [^CfnListenerRule$RuleConditionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :field)]
+    (. builder field data))
+  (when-let [data (lookup-entry config id :host-header-config)]
+    (. builder hostHeaderConfig data))
+  (when-let [data (lookup-entry config id :http-header-config)]
+    (. builder httpHeaderConfig data))
+  (when-let [data (lookup-entry config id :http-request-method-config)]
+    (. builder httpRequestMethodConfig data))
+  (when-let [data (lookup-entry config id :path-pattern-config)]
+    (. builder pathPatternConfig data))
+  (when-let [data (lookup-entry config id :query-string-config)]
+    (. builder queryStringConfig data))
+  (when-let [data (lookup-entry config id :source-ip-config)]
+    (. builder sourceIpConfig data))
+  (when-let [data (lookup-entry config id :values)]
+    (. builder values data))
+  (.build builder))
 
 
-(defn cfn-listener-rule-source-ip-config-property-builder
-  "The cfn-listener-rule-source-ip-config-property-builder function buildes out new instances of 
-CfnListenerRule$SourceIpConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-rule-source-ip-config-property-builder
+  "The build-cfn-listener-rule-source-ip-config-property-builder function updates a CfnListenerRule$SourceIpConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnListenerRule$SourceIpConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |"
-  [stack id config]
-  (let [builder (CfnListenerRule$SourceIpConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :values)]
-      (. builder values data))
-    (.build builder)))
-
-
-(defn cfn-listener-rule-target-group-stickiness-config-property-builder
-  "The cfn-listener-rule-target-group-stickiness-config-property-builder function buildes out new instances of 
-CfnListenerRule$TargetGroupStickinessConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `durationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-seconds` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |"
-  [stack id config]
-  (let [builder (CfnListenerRule$TargetGroupStickinessConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :duration-seconds)]
-      (. builder durationSeconds data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (.build builder)))
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+"
+  [^CfnListenerRule$SourceIpConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :values)]
+    (. builder values data))
+  (.build builder))
 
 
-(defn cfn-listener-rule-target-group-tuple-property-builder
-  "The cfn-listener-rule-target-group-tuple-property-builder function buildes out new instances of 
-CfnListenerRule$TargetGroupTupleProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-rule-target-group-stickiness-config-property-builder
+  "The build-cfn-listener-rule-target-group-stickiness-config-property-builder function updates a CfnListenerRule$TargetGroupStickinessConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnListenerRule$TargetGroupStickinessConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `targetGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-group-arn` |
-| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |"
-  [stack id config]
-  (let [builder (CfnListenerRule$TargetGroupTupleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :target-group-arn)]
-      (. builder targetGroupArn data))
-    (when-let [data (lookup-entry config id :weight)]
-      (. builder weight data))
-    (.build builder)))
-
-
-(defn cfn-listener-target-group-stickiness-config-property-builder
-  "The cfn-listener-target-group-stickiness-config-property-builder function buildes out new instances of 
-CfnListener$TargetGroupStickinessConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `durationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-seconds` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |"
-  [stack id config]
-  (let [builder (CfnListener$TargetGroupStickinessConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :duration-seconds)]
-      (. builder durationSeconds data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (.build builder)))
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+"
+  [^CfnListenerRule$TargetGroupStickinessConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :duration-seconds)]
+    (. builder durationSeconds data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (.build builder))
 
 
-(defn cfn-listener-target-group-tuple-property-builder
-  "The cfn-listener-target-group-tuple-property-builder function buildes out new instances of 
-CfnListener$TargetGroupTupleProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-rule-target-group-tuple-property-builder
+  "The build-cfn-listener-rule-target-group-tuple-property-builder function updates a CfnListenerRule$TargetGroupTupleProperty$Builder instance using the provided configuration.
+  The function takes the CfnListenerRule$TargetGroupTupleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `targetGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-group-arn` |
-| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |"
-  [stack id config]
-  (let [builder (CfnListener$TargetGroupTupleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :target-group-arn)]
-      (. builder targetGroupArn data))
-    (when-let [data (lookup-entry config id :weight)]
-      (. builder weight data))
-    (.build builder)))
+| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
+"
+  [^CfnListenerRule$TargetGroupTupleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :target-group-arn)]
+    (. builder targetGroupArn data))
+  (when-let [data (lookup-entry config id :weight)]
+    (. builder weight data))
+  (.build builder))
 
 
-(defn cfn-load-balancer-builder
-  "The cfn-load-balancer-builder function buildes out new instances of 
-CfnLoadBalancer$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-listener-target-group-stickiness-config-property-builder
+  "The build-cfn-listener-target-group-stickiness-config-property-builder function updates a CfnListener$TargetGroupStickinessConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnListener$TargetGroupStickinessConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `durationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-seconds` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+"
+  [^CfnListener$TargetGroupStickinessConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :duration-seconds)]
+    (. builder durationSeconds data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (.build builder))
+
+
+(defn build-cfn-listener-target-group-tuple-property-builder
+  "The build-cfn-listener-target-group-tuple-property-builder function updates a CfnListener$TargetGroupTupleProperty$Builder instance using the provided configuration.
+  The function takes the CfnListener$TargetGroupTupleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `targetGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-group-arn` |
+| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
+"
+  [^CfnListener$TargetGroupTupleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :target-group-arn)]
+    (. builder targetGroupArn data))
+  (when-let [data (lookup-entry config id :weight)]
+    (. builder weight data))
+  (.build builder))
+
+
+(defn build-cfn-load-balancer-builder
+  "The build-cfn-load-balancer-builder function updates a CfnLoadBalancer$Builder instance using the provided configuration.
+  The function takes the CfnLoadBalancer$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2146,52 +2335,58 @@ CfnLoadBalancer$Builder using the provided configuration.  Each field is set as 
 | `subnetMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subnet-mappings` |
 | `subnets` | java.util.List | [[cdk.support/lookup-entry]] | `:subnets` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnLoadBalancer$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :enforce-security-group-inbound-rules-on-private-link-traffic)]
-      (. builder enforceSecurityGroupInboundRulesOnPrivateLinkTraffic data))
-    (when-let [data (lookup-entry config id :ip-address-type)]
-      (. builder ipAddressType data))
-    (when-let [data (lookup-entry config id :load-balancer-attributes)]
-      (. builder loadBalancerAttributes data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :scheme)]
-      (. builder scheme data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :subnet-mappings)]
-      (. builder subnetMappings data))
-    (when-let [data (lookup-entry config id :subnets)]
-      (. builder subnets data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnLoadBalancer$Builder builder id config]
+  (when-let [data (lookup-entry config id :enforce-security-group-inbound-rules-on-private-link-traffic)]
+    (. builder enforceSecurityGroupInboundRulesOnPrivateLinkTraffic data))
+  (when-let [data (lookup-entry config id :ip-address-type)]
+    (. builder ipAddressType data))
+  (when-let [data (lookup-entry config id :load-balancer-attributes)]
+    (. builder loadBalancerAttributes data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :scheme)]
+    (. builder scheme data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :subnet-mappings)]
+    (. builder subnetMappings data))
+  (when-let [data (lookup-entry config id :subnets)]
+    (. builder subnets data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-load-balancer-load-balancer-attribute-property-builder
-  "The cfn-load-balancer-load-balancer-attribute-property-builder function buildes out new instances of 
-CfnLoadBalancer$LoadBalancerAttributeProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-load-balancer-load-balancer-attribute-property-builder
+  "The build-cfn-load-balancer-load-balancer-attribute-property-builder function updates a CfnLoadBalancer$LoadBalancerAttributeProperty$Builder instance using the provided configuration.
+  The function takes the CfnLoadBalancer$LoadBalancerAttributeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnLoadBalancer$LoadBalancerAttributeProperty$Builder.)]
-    (when-let [data (lookup-entry config id :key)]
-      (. builder key data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnLoadBalancer$LoadBalancerAttributeProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :key)]
+    (. builder key data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-load-balancer-props-builder
-  "The cfn-load-balancer-props-builder function buildes out new instances of 
-CfnLoadBalancerProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-load-balancer-props-builder
+  "The build-cfn-load-balancer-props-builder function updates a CfnLoadBalancerProps$Builder instance using the provided configuration.
+  The function takes the CfnLoadBalancerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2204,58 +2399,64 @@ CfnLoadBalancerProps$Builder using the provided configuration.  Each field is se
 | `subnetMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subnet-mappings` |
 | `subnets` | java.util.List | [[cdk.support/lookup-entry]] | `:subnets` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnLoadBalancerProps$Builder.)]
-    (when-let [data (lookup-entry config id :enforce-security-group-inbound-rules-on-private-link-traffic)]
-      (. builder enforceSecurityGroupInboundRulesOnPrivateLinkTraffic data))
-    (when-let [data (lookup-entry config id :ip-address-type)]
-      (. builder ipAddressType data))
-    (when-let [data (lookup-entry config id :load-balancer-attributes)]
-      (. builder loadBalancerAttributes data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :scheme)]
-      (. builder scheme data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :subnet-mappings)]
-      (. builder subnetMappings data))
-    (when-let [data (lookup-entry config id :subnets)]
-      (. builder subnets data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnLoadBalancerProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :enforce-security-group-inbound-rules-on-private-link-traffic)]
+    (. builder enforceSecurityGroupInboundRulesOnPrivateLinkTraffic data))
+  (when-let [data (lookup-entry config id :ip-address-type)]
+    (. builder ipAddressType data))
+  (when-let [data (lookup-entry config id :load-balancer-attributes)]
+    (. builder loadBalancerAttributes data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :scheme)]
+    (. builder scheme data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :subnet-mappings)]
+    (. builder subnetMappings data))
+  (when-let [data (lookup-entry config id :subnets)]
+    (. builder subnets data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-load-balancer-subnet-mapping-property-builder
-  "The cfn-load-balancer-subnet-mapping-property-builder function buildes out new instances of 
-CfnLoadBalancer$SubnetMappingProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-load-balancer-subnet-mapping-property-builder
+  "The build-cfn-load-balancer-subnet-mapping-property-builder function updates a CfnLoadBalancer$SubnetMappingProperty$Builder instance using the provided configuration.
+  The function takes the CfnLoadBalancer$SubnetMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `allocationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:allocation-id` |
 | `iPv6Address` | java.lang.String | [[cdk.support/lookup-entry]] | `:i-pv6-address` |
 | `privateIPv4Address` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-i-pv4-address` |
-| `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |"
-  [stack id config]
-  (let [builder (CfnLoadBalancer$SubnetMappingProperty$Builder.)]
-    (when-let [data (lookup-entry config id :allocation-id)]
-      (. builder allocationId data))
-    (when-let [data (lookup-entry config id :i-pv6-address)]
-      (. builder iPv6Address data))
-    (when-let [data (lookup-entry config id :private-i-pv4-address)]
-      (. builder privateIPv4Address data))
-    (when-let [data (lookup-entry config id :subnet-id)]
-      (. builder subnetId data))
-    (.build builder)))
+| `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
+"
+  [^CfnLoadBalancer$SubnetMappingProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :allocation-id)]
+    (. builder allocationId data))
+  (when-let [data (lookup-entry config id :i-pv6-address)]
+    (. builder iPv6Address data))
+  (when-let [data (lookup-entry config id :private-i-pv4-address)]
+    (. builder privateIPv4Address data))
+  (when-let [data (lookup-entry config id :subnet-id)]
+    (. builder subnetId data))
+  (.build builder))
 
 
-(defn cfn-target-group-builder
-  "The cfn-target-group-builder function buildes out new instances of 
-CfnTargetGroup$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-target-group-builder
+  "The build-cfn-target-group-builder function updates a CfnTargetGroup$Builder instance using the provided configuration.
+  The function takes the CfnTargetGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2277,70 +2478,76 @@ CfnTargetGroup$Builder using the provided configuration.  Each field is set as f
 | `targetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-type` |
 | `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
 | `unhealthyThresholdCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold-count` |
-| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |"
-  [stack id config]
-  (let [builder (CfnTargetGroup$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :health-check-enabled)]
-      (. builder healthCheckEnabled data))
-    (when-let [data (lookup-entry config id :health-check-interval-seconds)]
-      (. builder healthCheckIntervalSeconds data))
-    (when-let [data (lookup-entry config id :health-check-path)]
-      (. builder healthCheckPath data))
-    (when-let [data (lookup-entry config id :health-check-port)]
-      (. builder healthCheckPort data))
-    (when-let [data (lookup-entry config id :health-check-protocol)]
-      (. builder healthCheckProtocol data))
-    (when-let [data (lookup-entry config id :health-check-timeout-seconds)]
-      (. builder healthCheckTimeoutSeconds data))
-    (when-let [data (lookup-entry config id :healthy-threshold-count)]
-      (. builder healthyThresholdCount data))
-    (when-let [data (lookup-entry config id :ip-address-type)]
-      (. builder ipAddressType data))
-    (when-let [data (lookup-entry config id :matcher)]
-      (. builder matcher data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :protocol-version)]
-      (. builder protocolVersion data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :target-group-attributes)]
-      (. builder targetGroupAttributes data))
-    (when-let [data (lookup-entry config id :target-type)]
-      (. builder targetType data))
-    (when-let [data (lookup-entry config id :targets)]
-      (. builder targets data))
-    (when-let [data (lookup-entry config id :unhealthy-threshold-count)]
-      (. builder unhealthyThresholdCount data))
-    (when-let [data (lookup-entry config id :vpc-id)]
-      (. builder vpcId data))
-    (.build builder)))
+| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
+"
+  [^CfnTargetGroup$Builder builder id config]
+  (when-let [data (lookup-entry config id :health-check-enabled)]
+    (. builder healthCheckEnabled data))
+  (when-let [data (lookup-entry config id :health-check-interval-seconds)]
+    (. builder healthCheckIntervalSeconds data))
+  (when-let [data (lookup-entry config id :health-check-path)]
+    (. builder healthCheckPath data))
+  (when-let [data (lookup-entry config id :health-check-port)]
+    (. builder healthCheckPort data))
+  (when-let [data (lookup-entry config id :health-check-protocol)]
+    (. builder healthCheckProtocol data))
+  (when-let [data (lookup-entry config id :health-check-timeout-seconds)]
+    (. builder healthCheckTimeoutSeconds data))
+  (when-let [data (lookup-entry config id :healthy-threshold-count)]
+    (. builder healthyThresholdCount data))
+  (when-let [data (lookup-entry config id :ip-address-type)]
+    (. builder ipAddressType data))
+  (when-let [data (lookup-entry config id :matcher)]
+    (. builder matcher data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :protocol-version)]
+    (. builder protocolVersion data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :target-group-attributes)]
+    (. builder targetGroupAttributes data))
+  (when-let [data (lookup-entry config id :target-type)]
+    (. builder targetType data))
+  (when-let [data (lookup-entry config id :targets)]
+    (. builder targets data))
+  (when-let [data (lookup-entry config id :unhealthy-threshold-count)]
+    (. builder unhealthyThresholdCount data))
+  (when-let [data (lookup-entry config id :vpc-id)]
+    (. builder vpcId data))
+  (.build builder))
 
 
-(defn cfn-target-group-matcher-property-builder
-  "The cfn-target-group-matcher-property-builder function buildes out new instances of 
-CfnTargetGroup$MatcherProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-target-group-matcher-property-builder
+  "The build-cfn-target-group-matcher-property-builder function updates a CfnTargetGroup$MatcherProperty$Builder instance using the provided configuration.
+  The function takes the CfnTargetGroup$MatcherProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `grpcCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:grpc-code` |
-| `httpCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:http-code` |"
-  [stack id config]
-  (let [builder (CfnTargetGroup$MatcherProperty$Builder.)]
-    (when-let [data (lookup-entry config id :grpc-code)]
-      (. builder grpcCode data))
-    (when-let [data (lookup-entry config id :http-code)]
-      (. builder httpCode data))
-    (.build builder)))
+| `httpCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:http-code` |
+"
+  [^CfnTargetGroup$MatcherProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :grpc-code)]
+    (. builder grpcCode data))
+  (when-let [data (lookup-entry config id :http-code)]
+    (. builder httpCode data))
+  (.build builder))
 
 
-(defn cfn-target-group-props-builder
-  "The cfn-target-group-props-builder function buildes out new instances of 
-CfnTargetGroupProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-target-group-props-builder
+  "The build-cfn-target-group-props-builder function updates a CfnTargetGroupProps$Builder instance using the provided configuration.
+  The function takes the CfnTargetGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2362,116 +2569,99 @@ CfnTargetGroupProps$Builder using the provided configuration.  Each field is set
 | `targetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-type` |
 | `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
 | `unhealthyThresholdCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold-count` |
-| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |"
-  [stack id config]
-  (let [builder (CfnTargetGroupProps$Builder.)]
-    (when-let [data (lookup-entry config id :health-check-enabled)]
-      (. builder healthCheckEnabled data))
-    (when-let [data (lookup-entry config id :health-check-interval-seconds)]
-      (. builder healthCheckIntervalSeconds data))
-    (when-let [data (lookup-entry config id :health-check-path)]
-      (. builder healthCheckPath data))
-    (when-let [data (lookup-entry config id :health-check-port)]
-      (. builder healthCheckPort data))
-    (when-let [data (lookup-entry config id :health-check-protocol)]
-      (. builder healthCheckProtocol data))
-    (when-let [data (lookup-entry config id :health-check-timeout-seconds)]
-      (. builder healthCheckTimeoutSeconds data))
-    (when-let [data (lookup-entry config id :healthy-threshold-count)]
-      (. builder healthyThresholdCount data))
-    (when-let [data (lookup-entry config id :ip-address-type)]
-      (. builder ipAddressType data))
-    (when-let [data (lookup-entry config id :matcher)]
-      (. builder matcher data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :protocol-version)]
-      (. builder protocolVersion data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :target-group-attributes)]
-      (. builder targetGroupAttributes data))
-    (when-let [data (lookup-entry config id :target-type)]
-      (. builder targetType data))
-    (when-let [data (lookup-entry config id :targets)]
-      (. builder targets data))
-    (when-let [data (lookup-entry config id :unhealthy-threshold-count)]
-      (. builder unhealthyThresholdCount data))
-    (when-let [data (lookup-entry config id :vpc-id)]
-      (. builder vpcId data))
-    (.build builder)))
+| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
+"
+  [^CfnTargetGroupProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :health-check-enabled)]
+    (. builder healthCheckEnabled data))
+  (when-let [data (lookup-entry config id :health-check-interval-seconds)]
+    (. builder healthCheckIntervalSeconds data))
+  (when-let [data (lookup-entry config id :health-check-path)]
+    (. builder healthCheckPath data))
+  (when-let [data (lookup-entry config id :health-check-port)]
+    (. builder healthCheckPort data))
+  (when-let [data (lookup-entry config id :health-check-protocol)]
+    (. builder healthCheckProtocol data))
+  (when-let [data (lookup-entry config id :health-check-timeout-seconds)]
+    (. builder healthCheckTimeoutSeconds data))
+  (when-let [data (lookup-entry config id :healthy-threshold-count)]
+    (. builder healthyThresholdCount data))
+  (when-let [data (lookup-entry config id :ip-address-type)]
+    (. builder ipAddressType data))
+  (when-let [data (lookup-entry config id :matcher)]
+    (. builder matcher data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :protocol-version)]
+    (. builder protocolVersion data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :target-group-attributes)]
+    (. builder targetGroupAttributes data))
+  (when-let [data (lookup-entry config id :target-type)]
+    (. builder targetType data))
+  (when-let [data (lookup-entry config id :targets)]
+    (. builder targets data))
+  (when-let [data (lookup-entry config id :unhealthy-threshold-count)]
+    (. builder unhealthyThresholdCount data))
+  (when-let [data (lookup-entry config id :vpc-id)]
+    (. builder vpcId data))
+  (.build builder))
 
 
-(defn cfn-target-group-target-description-property-builder
-  "The cfn-target-group-target-description-property-builder function buildes out new instances of 
-CfnTargetGroup$TargetDescriptionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-target-group-target-description-property-builder
+  "The build-cfn-target-group-target-description-property-builder function updates a CfnTargetGroup$TargetDescriptionProperty$Builder instance using the provided configuration.
+  The function takes the CfnTargetGroup$TargetDescriptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
-| `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |"
-  [stack id config]
-  (let [builder (CfnTargetGroup$TargetDescriptionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :availability-zone)]
-      (. builder availabilityZone data))
-    (when-let [data (lookup-entry config id :id)]
-      (. builder id data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (.build builder)))
+| `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
+"
+  [^CfnTargetGroup$TargetDescriptionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :availability-zone)]
+    (. builder availabilityZone data))
+  (when-let [data (lookup-entry config id :id)]
+    (. builder id data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (.build builder))
 
 
-(defn cfn-target-group-target-group-attribute-property-builder
-  "The cfn-target-group-target-group-attribute-property-builder function buildes out new instances of 
-CfnTargetGroup$TargetGroupAttributeProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-target-group-target-group-attribute-property-builder
+  "The build-cfn-target-group-target-group-attribute-property-builder function updates a CfnTargetGroup$TargetGroupAttributeProperty$Builder instance using the provided configuration.
+  The function takes the CfnTargetGroup$TargetGroupAttributeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnTargetGroup$TargetGroupAttributeProperty$Builder.)]
-    (when-let [data (lookup-entry config id :key)]
-      (. builder key data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnTargetGroup$TargetGroupAttributeProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :key)]
+    (. builder key data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-trust-store-builder
-  "The cfn-trust-store-builder function buildes out new instances of 
-CfnTrustStore$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-trust-store-builder
+  "The build-cfn-trust-store-builder function updates a CfnTrustStore$Builder instance using the provided configuration.
+  The function takes the CfnTrustStore$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `caCertificatesBundleS3Bucket` | java.lang.String | [[cdk.support/lookup-entry]] | `:ca-certificates-bundle-s3-bucket` |
-| `caCertificatesBundleS3Key` | java.lang.String | [[cdk.support/lookup-entry]] | `:ca-certificates-bundle-s3-key` |
-| `caCertificatesBundleS3ObjectVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:ca-certificates-bundle-s3-object-version` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnTrustStore$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :ca-certificates-bundle-s3-bucket)]
-      (. builder caCertificatesBundleS3Bucket data))
-    (when-let [data (lookup-entry config id :ca-certificates-bundle-s3-key)]
-      (. builder caCertificatesBundleS3Key data))
-    (when-let [data (lookup-entry config id :ca-certificates-bundle-s3-object-version)]
-      (. builder caCertificatesBundleS3ObjectVersion data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
-
-
-(defn cfn-trust-store-props-builder
-  "The cfn-trust-store-props-builder function buildes out new instances of 
-CfnTrustStoreProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2479,136 +2669,186 @@ CfnTrustStoreProps$Builder using the provided configuration.  Each field is set 
 | `caCertificatesBundleS3Key` | java.lang.String | [[cdk.support/lookup-entry]] | `:ca-certificates-bundle-s3-key` |
 | `caCertificatesBundleS3ObjectVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:ca-certificates-bundle-s3-object-version` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnTrustStoreProps$Builder.)]
-    (when-let [data (lookup-entry config id :ca-certificates-bundle-s3-bucket)]
-      (. builder caCertificatesBundleS3Bucket data))
-    (when-let [data (lookup-entry config id :ca-certificates-bundle-s3-key)]
-      (. builder caCertificatesBundleS3Key data))
-    (when-let [data (lookup-entry config id :ca-certificates-bundle-s3-object-version)]
-      (. builder caCertificatesBundleS3ObjectVersion data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnTrustStore$Builder builder id config]
+  (when-let [data (lookup-entry config id :ca-certificates-bundle-s3-bucket)]
+    (. builder caCertificatesBundleS3Bucket data))
+  (when-let [data (lookup-entry config id :ca-certificates-bundle-s3-key)]
+    (. builder caCertificatesBundleS3Key data))
+  (when-let [data (lookup-entry config id :ca-certificates-bundle-s3-object-version)]
+    (. builder caCertificatesBundleS3ObjectVersion data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-trust-store-revocation-builder
-  "The cfn-trust-store-revocation-builder function buildes out new instances of 
-CfnTrustStoreRevocation$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-trust-store-props-builder
+  "The build-cfn-trust-store-props-builder function updates a CfnTrustStoreProps$Builder instance using the provided configuration.
+  The function takes the CfnTrustStoreProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `caCertificatesBundleS3Bucket` | java.lang.String | [[cdk.support/lookup-entry]] | `:ca-certificates-bundle-s3-bucket` |
+| `caCertificatesBundleS3Key` | java.lang.String | [[cdk.support/lookup-entry]] | `:ca-certificates-bundle-s3-key` |
+| `caCertificatesBundleS3ObjectVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:ca-certificates-bundle-s3-object-version` |
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnTrustStoreProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :ca-certificates-bundle-s3-bucket)]
+    (. builder caCertificatesBundleS3Bucket data))
+  (when-let [data (lookup-entry config id :ca-certificates-bundle-s3-key)]
+    (. builder caCertificatesBundleS3Key data))
+  (when-let [data (lookup-entry config id :ca-certificates-bundle-s3-object-version)]
+    (. builder caCertificatesBundleS3ObjectVersion data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
+
+
+(defn build-cfn-trust-store-revocation-builder
+  "The build-cfn-trust-store-revocation-builder function updates a CfnTrustStoreRevocation$Builder instance using the provided configuration.
+  The function takes the CfnTrustStoreRevocation$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `revocationContents` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:revocation-contents` |
-| `trustStoreArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trust-store-arn` |"
-  [stack id config]
-  (let [builder (CfnTrustStoreRevocation$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :revocation-contents)]
-      (. builder revocationContents data))
-    (when-let [data (lookup-entry config id :trust-store-arn)]
-      (. builder trustStoreArn data))
-    (.build builder)))
+| `trustStoreArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trust-store-arn` |
+"
+  [^CfnTrustStoreRevocation$Builder builder id config]
+  (when-let [data (lookup-entry config id :revocation-contents)]
+    (. builder revocationContents data))
+  (when-let [data (lookup-entry config id :trust-store-arn)]
+    (. builder trustStoreArn data))
+  (.build builder))
 
 
-(defn cfn-trust-store-revocation-props-builder
-  "The cfn-trust-store-revocation-props-builder function buildes out new instances of 
-CfnTrustStoreRevocationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-trust-store-revocation-props-builder
+  "The build-cfn-trust-store-revocation-props-builder function updates a CfnTrustStoreRevocationProps$Builder instance using the provided configuration.
+  The function takes the CfnTrustStoreRevocationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `revocationContents` | java.util.List | [[cdk.support/lookup-entry]] | `:revocation-contents` |
-| `trustStoreArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trust-store-arn` |"
-  [stack id config]
-  (let [builder (CfnTrustStoreRevocationProps$Builder.)]
-    (when-let [data (lookup-entry config id :revocation-contents)]
-      (. builder revocationContents data))
-    (when-let [data (lookup-entry config id :trust-store-arn)]
-      (. builder trustStoreArn data))
-    (.build builder)))
+| `trustStoreArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trust-store-arn` |
+"
+  [^CfnTrustStoreRevocationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :revocation-contents)]
+    (. builder revocationContents data))
+  (when-let [data (lookup-entry config id :trust-store-arn)]
+    (. builder trustStoreArn data))
+  (.build builder))
 
 
-(defn cfn-trust-store-revocation-revocation-content-property-builder
-  "The cfn-trust-store-revocation-revocation-content-property-builder function buildes out new instances of 
-CfnTrustStoreRevocation$RevocationContentProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-trust-store-revocation-revocation-content-property-builder
+  "The build-cfn-trust-store-revocation-revocation-content-property-builder function updates a CfnTrustStoreRevocation$RevocationContentProperty$Builder instance using the provided configuration.
+  The function takes the CfnTrustStoreRevocation$RevocationContentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `revocationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:revocation-type` |
 | `s3Bucket` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-bucket` |
 | `s3Key` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-key` |
-| `s3ObjectVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-object-version` |"
-  [stack id config]
-  (let [builder (CfnTrustStoreRevocation$RevocationContentProperty$Builder.)]
-    (when-let [data (lookup-entry config id :revocation-type)]
-      (. builder revocationType data))
-    (when-let [data (lookup-entry config id :s3-bucket)]
-      (. builder s3Bucket data))
-    (when-let [data (lookup-entry config id :s3-key)]
-      (. builder s3Key data))
-    (when-let [data (lookup-entry config id :s3-object-version)]
-      (. builder s3ObjectVersion data))
-    (.build builder)))
+| `s3ObjectVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-object-version` |
+"
+  [^CfnTrustStoreRevocation$RevocationContentProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :revocation-type)]
+    (. builder revocationType data))
+  (when-let [data (lookup-entry config id :s3-bucket)]
+    (. builder s3Bucket data))
+  (when-let [data (lookup-entry config id :s3-key)]
+    (. builder s3Key data))
+  (when-let [data (lookup-entry config id :s3-object-version)]
+    (. builder s3ObjectVersion data))
+  (.build builder))
 
 
-(defn cfn-trust-store-revocation-trust-store-revocation-property-builder
-  "The cfn-trust-store-revocation-trust-store-revocation-property-builder function buildes out new instances of 
-CfnTrustStoreRevocation$TrustStoreRevocationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-trust-store-revocation-trust-store-revocation-property-builder
+  "The build-cfn-trust-store-revocation-trust-store-revocation-property-builder function updates a CfnTrustStoreRevocation$TrustStoreRevocationProperty$Builder instance using the provided configuration.
+  The function takes the CfnTrustStoreRevocation$TrustStoreRevocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `numberOfRevokedEntries` | java.lang.Number | [[cdk.support/lookup-entry]] | `:number-of-revoked-entries` |
 | `revocationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:revocation-id` |
 | `revocationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:revocation-type` |
-| `trustStoreArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trust-store-arn` |"
-  [stack id config]
-  (let [builder (CfnTrustStoreRevocation$TrustStoreRevocationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :number-of-revoked-entries)]
-      (. builder numberOfRevokedEntries data))
-    (when-let [data (lookup-entry config id :revocation-id)]
-      (. builder revocationId data))
-    (when-let [data (lookup-entry config id :revocation-type)]
-      (. builder revocationType data))
-    (when-let [data (lookup-entry config id :trust-store-arn)]
-      (. builder trustStoreArn data))
-    (.build builder)))
+| `trustStoreArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trust-store-arn` |
+"
+  [^CfnTrustStoreRevocation$TrustStoreRevocationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :number-of-revoked-entries)]
+    (. builder numberOfRevokedEntries data))
+  (when-let [data (lookup-entry config id :revocation-id)]
+    (. builder revocationId data))
+  (when-let [data (lookup-entry config id :revocation-type)]
+    (. builder revocationType data))
+  (when-let [data (lookup-entry config id :trust-store-arn)]
+    (. builder trustStoreArn data))
+  (.build builder))
 
 
-(defn fixed-response-options-builder
-  "The fixed-response-options-builder function buildes out new instances of 
-FixedResponseOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-fixed-response-options-builder
+  "The build-fixed-response-options-builder function updates a FixedResponseOptions$Builder instance using the provided configuration.
+  The function takes the FixedResponseOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `contentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:content-type` |
-| `messageBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:message-body` |"
-  [stack id config]
-  (let [builder (FixedResponseOptions$Builder.)]
-    (when-let [data (lookup-entry config id :content-type)]
-      (. builder contentType data))
-    (when-let [data (lookup-entry config id :message-body)]
-      (. builder messageBody data))
-    (.build builder)))
+| `messageBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:message-body` |
+"
+  [^FixedResponseOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :content-type)]
+    (. builder contentType data))
+  (when-let [data (lookup-entry config id :message-body)]
+    (. builder messageBody data))
+  (.build builder))
 
 
-(defn forward-options-builder
-  "The forward-options-builder function buildes out new instances of 
-ForwardOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-forward-options-builder
+  "The build-forward-options-builder function updates a ForwardOptions$Builder instance using the provided configuration.
+  The function takes the ForwardOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `stickinessDuration` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:stickiness-duration` |"
-  [stack id config]
-  (let [builder (ForwardOptions$Builder.)]
-    (when-let [data (lookup-entry config id :stickiness-duration)]
-      (. builder stickinessDuration data))
-    (.build builder)))
+| `stickinessDuration` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:stickiness-duration` |
+"
+  [^ForwardOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :stickiness-duration)]
+    (. builder stickinessDuration data))
+  (.build builder))
 
 
-(defn health-check-builder
-  "The health-check-builder function buildes out new instances of 
-HealthCheck$Builder using the provided configuration.  Each field is set as follows:
+(defn build-health-check-builder
+  "The build-health-check-builder function updates a HealthCheck$Builder instance using the provided configuration.
+  The function takes the HealthCheck$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2621,66 +2861,75 @@ HealthCheck$Builder using the provided configuration.  Each field is set as foll
 | `port` | java.lang.String | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | software.amazon.awscdk.services.elasticloadbalancingv2.Protocol | [[cdk.api.services.elasticloadbalancingv2/protocol]] | `:protocol` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `unhealthyThresholdCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold-count` |"
-  [stack id config]
-  (let [builder (HealthCheck$Builder.)]
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :healthy-grpc-codes)]
-      (. builder healthyGrpcCodes data))
-    (when-let [data (lookup-entry config id :healthy-http-codes)]
-      (. builder healthyHttpCodes data))
-    (when-let [data (lookup-entry config id :healthy-threshold-count)]
-      (. builder healthyThresholdCount data))
-    (when-let [data (lookup-entry config id :interval)]
-      (. builder interval data))
-    (when-let [data (lookup-entry config id :path)]
-      (. builder path data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :unhealthy-threshold-count)]
-      (. builder unhealthyThresholdCount data))
-    (.build builder)))
+| `unhealthyThresholdCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold-count` |
+"
+  [^HealthCheck$Builder builder id config]
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :healthy-grpc-codes)]
+    (. builder healthyGrpcCodes data))
+  (when-let [data (lookup-entry config id :healthy-http-codes)]
+    (. builder healthyHttpCodes data))
+  (when-let [data (lookup-entry config id :healthy-threshold-count)]
+    (. builder healthyThresholdCount data))
+  (when-let [data (lookup-entry config id :interval)]
+    (. builder interval data))
+  (when-let [data (lookup-entry config id :path)]
+    (. builder path data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :unhealthy-threshold-count)]
+    (. builder unhealthyThresholdCount data))
+  (.build builder))
 
 
-(defn load-balancer-target-props-builder
-  "The load-balancer-target-props-builder function buildes out new instances of 
-LoadBalancerTargetProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-load-balancer-target-props-builder
+  "The build-load-balancer-target-props-builder function updates a LoadBalancerTargetProps$Builder instance using the provided configuration.
+  The function takes the LoadBalancerTargetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `targetJson` | java.lang.Object | [[cdk.support/lookup-entry]] | `:target-json` |
-| `targetType` | software.amazon.awscdk.services.elasticloadbalancingv2.TargetType | [[cdk.api.services.elasticloadbalancingv2/target-type]] | `:target-type` |"
-  [stack id config]
-  (let [builder (LoadBalancerTargetProps$Builder.)]
-    (when-let [data (lookup-entry config id :target-json)]
-      (. builder targetJson data))
-    (when-let [data (target-type config id :target-type)]
-      (. builder targetType data))
-    (.build builder)))
+| `targetType` | software.amazon.awscdk.services.elasticloadbalancingv2.TargetType | [[cdk.api.services.elasticloadbalancingv2/target-type]] | `:target-type` |
+"
+  [^LoadBalancerTargetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :target-json)]
+    (. builder targetJson data))
+  (when-let [data (target-type config id :target-type)]
+    (. builder targetType data))
+  (.build builder))
 
 
-(defn network-forward-options-builder
-  "The network-forward-options-builder function buildes out new instances of 
-NetworkForwardOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-forward-options-builder
+  "The build-network-forward-options-builder function updates a NetworkForwardOptions$Builder instance using the provided configuration.
+  The function takes the NetworkForwardOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `stickinessDuration` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:stickiness-duration` |"
-  [stack id config]
-  (let [builder (NetworkForwardOptions$Builder.)]
-    (when-let [data (lookup-entry config id :stickiness-duration)]
-      (. builder stickinessDuration data))
-    (.build builder)))
+| `stickinessDuration` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:stickiness-duration` |
+"
+  [^NetworkForwardOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :stickiness-duration)]
+    (. builder stickinessDuration data))
+  (.build builder))
 
 
-(defn network-listener-builder
-  "The network-listener-builder function buildes out new instances of 
-NetworkListener$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-listener-builder
+  "The build-network-listener-builder function updates a NetworkListener$Builder instance using the provided configuration.
+  The function takes the NetworkListener$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2691,54 +2940,60 @@ NetworkListener$Builder using the provided configuration.  Each field is set as 
 | `loadBalancer` | software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer | [[cdk.support/lookup-entry]] | `:load-balancer` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | software.amazon.awscdk.services.elasticloadbalancingv2.Protocol | [[cdk.api.services.elasticloadbalancingv2/protocol]] | `:protocol` |
-| `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |"
-  [stack id config]
-  (let [builder (NetworkListener$Builder/create stack id)]
-    (when-let [data (alpn-policy config id :alpn-policy)]
-      (. builder alpnPolicy data))
-    (when-let [data (lookup-entry config id :certificates)]
-      (. builder certificates data))
-    (when-let [data (lookup-entry config id :default-action)]
-      (. builder defaultAction data))
-    (when-let [data (lookup-entry config id :default-target-groups)]
-      (. builder defaultTargetGroups data))
-    (when-let [data (lookup-entry config id :load-balancer)]
-      (. builder loadBalancer data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (ssl-policy config id :ssl-policy)]
-      (. builder sslPolicy data))
-    (.build builder)))
+| `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |
+"
+  [^NetworkListener$Builder builder id config]
+  (when-let [data (alpn-policy config id :alpn-policy)]
+    (. builder alpnPolicy data))
+  (when-let [data (lookup-entry config id :certificates)]
+    (. builder certificates data))
+  (when-let [data (lookup-entry config id :default-action)]
+    (. builder defaultAction data))
+  (when-let [data (lookup-entry config id :default-target-groups)]
+    (. builder defaultTargetGroups data))
+  (when-let [data (lookup-entry config id :load-balancer)]
+    (. builder loadBalancer data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (ssl-policy config id :ssl-policy)]
+    (. builder sslPolicy data))
+  (.build builder))
 
 
-(defn network-listener-lookup-options-builder
-  "The network-listener-lookup-options-builder function buildes out new instances of 
-NetworkListenerLookupOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-listener-lookup-options-builder
+  "The build-network-listener-lookup-options-builder function updates a NetworkListenerLookupOptions$Builder instance using the provided configuration.
+  The function takes the NetworkListenerLookupOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `listenerPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:listener-port` |
 | `listenerProtocol` | software.amazon.awscdk.services.elasticloadbalancingv2.Protocol | [[cdk.api.services.elasticloadbalancingv2/protocol]] | `:listener-protocol` |
 | `loadBalancerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-arn` |
-| `loadBalancerTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:load-balancer-tags` |"
-  [stack id config]
-  (let [builder (NetworkListenerLookupOptions$Builder.)]
-    (when-let [data (lookup-entry config id :listener-port)]
-      (. builder listenerPort data))
-    (when-let [data (protocol config id :listener-protocol)]
-      (. builder listenerProtocol data))
-    (when-let [data (lookup-entry config id :load-balancer-arn)]
-      (. builder loadBalancerArn data))
-    (when-let [data (lookup-entry config id :load-balancer-tags)]
-      (. builder loadBalancerTags data))
-    (.build builder)))
+| `loadBalancerTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:load-balancer-tags` |
+"
+  [^NetworkListenerLookupOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :listener-port)]
+    (. builder listenerPort data))
+  (when-let [data (protocol config id :listener-protocol)]
+    (. builder listenerProtocol data))
+  (when-let [data (lookup-entry config id :load-balancer-arn)]
+    (. builder loadBalancerArn data))
+  (when-let [data (lookup-entry config id :load-balancer-tags)]
+    (. builder loadBalancerTags data))
+  (.build builder))
 
 
-(defn network-listener-props-builder
-  "The network-listener-props-builder function buildes out new instances of 
-NetworkListenerProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-listener-props-builder
+  "The build-network-listener-props-builder function updates a NetworkListenerProps$Builder instance using the provided configuration.
+  The function takes the NetworkListenerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2749,31 +3004,34 @@ NetworkListenerProps$Builder using the provided configuration.  Each field is se
 | `loadBalancer` | software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer | [[cdk.support/lookup-entry]] | `:load-balancer` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | software.amazon.awscdk.services.elasticloadbalancingv2.Protocol | [[cdk.api.services.elasticloadbalancingv2/protocol]] | `:protocol` |
-| `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |"
-  [stack id config]
-  (let [builder (NetworkListenerProps$Builder.)]
-    (when-let [data (alpn-policy config id :alpn-policy)]
-      (. builder alpnPolicy data))
-    (when-let [data (lookup-entry config id :certificates)]
-      (. builder certificates data))
-    (when-let [data (lookup-entry config id :default-action)]
-      (. builder defaultAction data))
-    (when-let [data (lookup-entry config id :default-target-groups)]
-      (. builder defaultTargetGroups data))
-    (when-let [data (lookup-entry config id :load-balancer)]
-      (. builder loadBalancer data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (ssl-policy config id :ssl-policy)]
-      (. builder sslPolicy data))
-    (.build builder)))
+| `sslPolicy` | software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy | [[cdk.api.services.elasticloadbalancingv2/ssl-policy]] | `:ssl-policy` |
+"
+  [^NetworkListenerProps$Builder builder id config]
+  (when-let [data (alpn-policy config id :alpn-policy)]
+    (. builder alpnPolicy data))
+  (when-let [data (lookup-entry config id :certificates)]
+    (. builder certificates data))
+  (when-let [data (lookup-entry config id :default-action)]
+    (. builder defaultAction data))
+  (when-let [data (lookup-entry config id :default-target-groups)]
+    (. builder defaultTargetGroups data))
+  (when-let [data (lookup-entry config id :load-balancer)]
+    (. builder loadBalancer data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (ssl-policy config id :ssl-policy)]
+    (. builder sslPolicy data))
+  (.build builder))
 
 
-(defn network-load-balancer-attributes-builder
-  "The network-load-balancer-attributes-builder function buildes out new instances of 
-NetworkLoadBalancerAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-load-balancer-attributes-builder
+  "The build-network-load-balancer-attributes-builder function updates a NetworkLoadBalancerAttributes$Builder instance using the provided configuration.
+  The function takes the NetworkLoadBalancerAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2781,25 +3039,28 @@ NetworkLoadBalancerAttributes$Builder using the provided configuration.  Each fi
 | `loadBalancerCanonicalHostedZoneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-canonical-hosted-zone-id` |
 | `loadBalancerDnsName` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-dns-name` |
 | `loadBalancerSecurityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:load-balancer-security-groups` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (NetworkLoadBalancerAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :load-balancer-arn)]
-      (. builder loadBalancerArn data))
-    (when-let [data (lookup-entry config id :load-balancer-canonical-hosted-zone-id)]
-      (. builder loadBalancerCanonicalHostedZoneId data))
-    (when-let [data (lookup-entry config id :load-balancer-dns-name)]
-      (. builder loadBalancerDnsName data))
-    (when-let [data (lookup-entry config id :load-balancer-security-groups)]
-      (. builder loadBalancerSecurityGroups data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^NetworkLoadBalancerAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :load-balancer-arn)]
+    (. builder loadBalancerArn data))
+  (when-let [data (lookup-entry config id :load-balancer-canonical-hosted-zone-id)]
+    (. builder loadBalancerCanonicalHostedZoneId data))
+  (when-let [data (lookup-entry config id :load-balancer-dns-name)]
+    (. builder loadBalancerDnsName data))
+  (when-let [data (lookup-entry config id :load-balancer-security-groups)]
+    (. builder loadBalancerSecurityGroups data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn network-load-balancer-builder
-  "The network-load-balancer-builder function buildes out new instances of 
-NetworkLoadBalancer$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-load-balancer-builder
+  "The build-network-load-balancer-builder function updates a NetworkLoadBalancer$Builder instance using the provided configuration.
+  The function takes the NetworkLoadBalancer$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2813,54 +3074,60 @@ NetworkLoadBalancer$Builder using the provided configuration.  Each field is set
 | `loadBalancerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-name` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |"
-  [stack id config]
-  (let [builder (NetworkLoadBalancer$Builder/create stack id)]
-    (when-let [data (client-routing-policy config id :client-routing-policy)]
-      (. builder clientRoutingPolicy data))
-    (when-let [data (lookup-entry config id :cross-zone-enabled)]
-      (. builder crossZoneEnabled data))
-    (when-let [data (lookup-entry config id :deletion-protection)]
-      (. builder deletionProtection data))
-    (when-let [data (lookup-entry config id :deny-all-igw-traffic)]
-      (. builder denyAllIgwTraffic data))
-    (when-let [data (lookup-entry config id :enforce-security-group-inbound-rules-on-private-link-traffic)]
-      (. builder enforceSecurityGroupInboundRulesOnPrivateLinkTraffic data))
-    (when-let [data (lookup-entry config id :internet-facing)]
-      (. builder internetFacing data))
-    (when-let [data (ip-address-type config id :ip-address-type)]
-      (. builder ipAddressType data))
-    (when-let [data (lookup-entry config id :load-balancer-name)]
-      (. builder loadBalancerName data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnets)]
-      (. builder vpcSubnets data))
-    (.build builder)))
+| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
+"
+  [^NetworkLoadBalancer$Builder builder id config]
+  (when-let [data (client-routing-policy config id :client-routing-policy)]
+    (. builder clientRoutingPolicy data))
+  (when-let [data (lookup-entry config id :cross-zone-enabled)]
+    (. builder crossZoneEnabled data))
+  (when-let [data (lookup-entry config id :deletion-protection)]
+    (. builder deletionProtection data))
+  (when-let [data (lookup-entry config id :deny-all-igw-traffic)]
+    (. builder denyAllIgwTraffic data))
+  (when-let [data (lookup-entry config id :enforce-security-group-inbound-rules-on-private-link-traffic)]
+    (. builder enforceSecurityGroupInboundRulesOnPrivateLinkTraffic data))
+  (when-let [data (lookup-entry config id :internet-facing)]
+    (. builder internetFacing data))
+  (when-let [data (ip-address-type config id :ip-address-type)]
+    (. builder ipAddressType data))
+  (when-let [data (lookup-entry config id :load-balancer-name)]
+    (. builder loadBalancerName data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnets)]
+    (. builder vpcSubnets data))
+  (.build builder))
 
 
-(defn network-load-balancer-lookup-options-builder
-  "The network-load-balancer-lookup-options-builder function buildes out new instances of 
-NetworkLoadBalancerLookupOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-load-balancer-lookup-options-builder
+  "The build-network-load-balancer-lookup-options-builder function updates a NetworkLoadBalancerLookupOptions$Builder instance using the provided configuration.
+  The function takes the NetworkLoadBalancerLookupOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `loadBalancerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-arn` |
-| `loadBalancerTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:load-balancer-tags` |"
-  [stack id config]
-  (let [builder (NetworkLoadBalancerLookupOptions$Builder.)]
-    (when-let [data (lookup-entry config id :load-balancer-arn)]
-      (. builder loadBalancerArn data))
-    (when-let [data (lookup-entry config id :load-balancer-tags)]
-      (. builder loadBalancerTags data))
-    (.build builder)))
+| `loadBalancerTags` | java.util.Map | [[cdk.support/lookup-entry]] | `:load-balancer-tags` |
+"
+  [^NetworkLoadBalancerLookupOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :load-balancer-arn)]
+    (. builder loadBalancerArn data))
+  (when-let [data (lookup-entry config id :load-balancer-tags)]
+    (. builder loadBalancerTags data))
+  (.build builder))
 
 
-(defn network-load-balancer-props-builder
-  "The network-load-balancer-props-builder function buildes out new instances of 
-NetworkLoadBalancerProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-load-balancer-props-builder
+  "The build-network-load-balancer-props-builder function updates a NetworkLoadBalancerProps$Builder instance using the provided configuration.
+  The function takes the NetworkLoadBalancerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2874,81 +3141,40 @@ NetworkLoadBalancerProps$Builder using the provided configuration.  Each field i
 | `loadBalancerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-name` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |"
-  [stack id config]
-  (let [builder (NetworkLoadBalancerProps$Builder.)]
-    (when-let [data (client-routing-policy config id :client-routing-policy)]
-      (. builder clientRoutingPolicy data))
-    (when-let [data (lookup-entry config id :cross-zone-enabled)]
-      (. builder crossZoneEnabled data))
-    (when-let [data (lookup-entry config id :deletion-protection)]
-      (. builder deletionProtection data))
-    (when-let [data (lookup-entry config id :deny-all-igw-traffic)]
-      (. builder denyAllIgwTraffic data))
-    (when-let [data (lookup-entry config id :enforce-security-group-inbound-rules-on-private-link-traffic)]
-      (. builder enforceSecurityGroupInboundRulesOnPrivateLinkTraffic data))
-    (when-let [data (lookup-entry config id :internet-facing)]
-      (. builder internetFacing data))
-    (when-let [data (ip-address-type config id :ip-address-type)]
-      (. builder ipAddressType data))
-    (when-let [data (lookup-entry config id :load-balancer-name)]
-      (. builder loadBalancerName data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnets)]
-      (. builder vpcSubnets data))
-    (.build builder)))
+| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
+"
+  [^NetworkLoadBalancerProps$Builder builder id config]
+  (when-let [data (client-routing-policy config id :client-routing-policy)]
+    (. builder clientRoutingPolicy data))
+  (when-let [data (lookup-entry config id :cross-zone-enabled)]
+    (. builder crossZoneEnabled data))
+  (when-let [data (lookup-entry config id :deletion-protection)]
+    (. builder deletionProtection data))
+  (when-let [data (lookup-entry config id :deny-all-igw-traffic)]
+    (. builder denyAllIgwTraffic data))
+  (when-let [data (lookup-entry config id :enforce-security-group-inbound-rules-on-private-link-traffic)]
+    (. builder enforceSecurityGroupInboundRulesOnPrivateLinkTraffic data))
+  (when-let [data (lookup-entry config id :internet-facing)]
+    (. builder internetFacing data))
+  (when-let [data (ip-address-type config id :ip-address-type)]
+    (. builder ipAddressType data))
+  (when-let [data (lookup-entry config id :load-balancer-name)]
+    (. builder loadBalancerName data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnets)]
+    (. builder vpcSubnets data))
+  (.build builder))
 
 
-(defn network-target-group-builder
-  "The network-target-group-builder function buildes out new instances of 
-NetworkTargetGroup$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-target-group-builder
+  "The build-network-target-group-builder function updates a NetworkTargetGroup$Builder instance using the provided configuration.
+  The function takes the NetworkTargetGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `connectionTermination` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:connection-termination` |
-| `deregistrationDelay` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:deregistration-delay` |
-| `healthCheck` | software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck | [[cdk.support/lookup-entry]] | `:health-check` |
-| `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
-| `preserveClientIp` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:preserve-client-ip` |
-| `protocol` | software.amazon.awscdk.services.elasticloadbalancingv2.Protocol | [[cdk.api.services.elasticloadbalancingv2/protocol]] | `:protocol` |
-| `proxyProtocolV2` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:proxy-protocol-v2` |
-| `targetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-group-name` |
-| `targetType` | software.amazon.awscdk.services.elasticloadbalancingv2.TargetType | [[cdk.api.services.elasticloadbalancingv2/target-type]] | `:target-type` |
-| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (NetworkTargetGroup$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :connection-termination)]
-      (. builder connectionTermination data))
-    (when-let [data (lookup-entry config id :deregistration-delay)]
-      (. builder deregistrationDelay data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :preserve-client-ip)]
-      (. builder preserveClientIp data))
-    (when-let [data (protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :proxy-protocol-v2)]
-      (. builder proxyProtocolV2 data))
-    (when-let [data (lookup-entry config id :target-group-name)]
-      (. builder targetGroupName data))
-    (when-let [data (target-type config id :target-type)]
-      (. builder targetType data))
-    (when-let [data (lookup-entry config id :targets)]
-      (. builder targets data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
-
-
-(defn network-target-group-props-builder
-  "The network-target-group-props-builder function buildes out new instances of 
-NetworkTargetGroupProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2962,71 +3188,127 @@ NetworkTargetGroupProps$Builder using the provided configuration.  Each field is
 | `targetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-group-name` |
 | `targetType` | software.amazon.awscdk.services.elasticloadbalancingv2.TargetType | [[cdk.api.services.elasticloadbalancingv2/target-type]] | `:target-type` |
 | `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (NetworkTargetGroupProps$Builder.)]
-    (when-let [data (lookup-entry config id :connection-termination)]
-      (. builder connectionTermination data))
-    (when-let [data (lookup-entry config id :deregistration-delay)]
-      (. builder deregistrationDelay data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :preserve-client-ip)]
-      (. builder preserveClientIp data))
-    (when-let [data (protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :proxy-protocol-v2)]
-      (. builder proxyProtocolV2 data))
-    (when-let [data (lookup-entry config id :target-group-name)]
-      (. builder targetGroupName data))
-    (when-let [data (target-type config id :target-type)]
-      (. builder targetType data))
-    (when-let [data (lookup-entry config id :targets)]
-      (. builder targets data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^NetworkTargetGroup$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-termination)]
+    (. builder connectionTermination data))
+  (when-let [data (lookup-entry config id :deregistration-delay)]
+    (. builder deregistrationDelay data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :preserve-client-ip)]
+    (. builder preserveClientIp data))
+  (when-let [data (protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :proxy-protocol-v2)]
+    (. builder proxyProtocolV2 data))
+  (when-let [data (lookup-entry config id :target-group-name)]
+    (. builder targetGroupName data))
+  (when-let [data (target-type config id :target-type)]
+    (. builder targetType data))
+  (when-let [data (lookup-entry config id :targets)]
+    (. builder targets data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn network-weighted-target-group-builder
-  "The network-weighted-target-group-builder function buildes out new instances of 
-NetworkWeightedTargetGroup$Builder using the provided configuration.  Each field is set as follows:
+(defn build-network-target-group-props-builder
+  "The build-network-target-group-props-builder function updates a NetworkTargetGroupProps$Builder instance using the provided configuration.
+  The function takes the NetworkTargetGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `connectionTermination` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:connection-termination` |
+| `deregistrationDelay` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:deregistration-delay` |
+| `healthCheck` | software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck | [[cdk.support/lookup-entry]] | `:health-check` |
+| `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
+| `preserveClientIp` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:preserve-client-ip` |
+| `protocol` | software.amazon.awscdk.services.elasticloadbalancingv2.Protocol | [[cdk.api.services.elasticloadbalancingv2/protocol]] | `:protocol` |
+| `proxyProtocolV2` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:proxy-protocol-v2` |
+| `targetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-group-name` |
+| `targetType` | software.amazon.awscdk.services.elasticloadbalancingv2.TargetType | [[cdk.api.services.elasticloadbalancingv2/target-type]] | `:target-type` |
+| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^NetworkTargetGroupProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-termination)]
+    (. builder connectionTermination data))
+  (when-let [data (lookup-entry config id :deregistration-delay)]
+    (. builder deregistrationDelay data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :preserve-client-ip)]
+    (. builder preserveClientIp data))
+  (when-let [data (protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :proxy-protocol-v2)]
+    (. builder proxyProtocolV2 data))
+  (when-let [data (lookup-entry config id :target-group-name)]
+    (. builder targetGroupName data))
+  (when-let [data (target-type config id :target-type)]
+    (. builder targetType data))
+  (when-let [data (lookup-entry config id :targets)]
+    (. builder targets data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
+
+
+(defn build-network-weighted-target-group-builder
+  "The build-network-weighted-target-group-builder function updates a NetworkWeightedTargetGroup$Builder instance using the provided configuration.
+  The function takes the NetworkWeightedTargetGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `targetGroup` | software.amazon.awscdk.services.elasticloadbalancingv2.INetworkTargetGroup | [[cdk.support/lookup-entry]] | `:target-group` |
-| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |"
-  [stack id config]
-  (let [builder (NetworkWeightedTargetGroup$Builder.)]
-    (when-let [data (lookup-entry config id :target-group)]
-      (. builder targetGroup data))
-    (when-let [data (lookup-entry config id :weight)]
-      (. builder weight data))
-    (.build builder)))
+| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
+"
+  [^NetworkWeightedTargetGroup$Builder builder id config]
+  (when-let [data (lookup-entry config id :target-group)]
+    (. builder targetGroup data))
+  (when-let [data (lookup-entry config id :weight)]
+    (. builder weight data))
+  (.build builder))
 
 
-(defn query-string-condition-builder
-  "The query-string-condition-builder function buildes out new instances of 
-QueryStringCondition$Builder using the provided configuration.  Each field is set as follows:
+(defn build-query-string-condition-builder
+  "The build-query-string-condition-builder function updates a QueryStringCondition$Builder instance using the provided configuration.
+  The function takes the QueryStringCondition$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (QueryStringCondition$Builder.)]
-    (when-let [data (lookup-entry config id :key)]
-      (. builder key data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^QueryStringCondition$Builder builder id config]
+  (when-let [data (lookup-entry config id :key)]
+    (. builder key data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn redirect-options-builder
-  "The redirect-options-builder function buildes out new instances of 
-RedirectOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-redirect-options-builder
+  "The build-redirect-options-builder function updates a RedirectOptions$Builder instance using the provided configuration.
+  The function takes the RedirectOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3035,53 +3317,59 @@ RedirectOptions$Builder using the provided configuration.  Each field is set as 
 | `permanent` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:permanent` |
 | `port` | java.lang.String | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
-| `query` | java.lang.String | [[cdk.support/lookup-entry]] | `:query` |"
-  [stack id config]
-  (let [builder (RedirectOptions$Builder.)]
-    (when-let [data (lookup-entry config id :host)]
-      (. builder host data))
-    (when-let [data (lookup-entry config id :path)]
-      (. builder path data))
-    (when-let [data (lookup-entry config id :permanent)]
-      (. builder permanent data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :query)]
-      (. builder query data))
-    (.build builder)))
+| `query` | java.lang.String | [[cdk.support/lookup-entry]] | `:query` |
+"
+  [^RedirectOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :host)]
+    (. builder host data))
+  (when-let [data (lookup-entry config id :path)]
+    (. builder path data))
+  (when-let [data (lookup-entry config id :permanent)]
+    (. builder permanent data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :query)]
+    (. builder query data))
+  (.build builder))
 
 
-(defn target-group-attributes-builder
-  "The target-group-attributes-builder function buildes out new instances of 
-TargetGroupAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-target-group-attributes-builder
+  "The build-target-group-attributes-builder function updates a TargetGroupAttributes$Builder instance using the provided configuration.
+  The function takes the TargetGroupAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `loadBalancerArns` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-arns` |
-| `targetGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-group-arn` |"
-  [stack id config]
-  (let [builder (TargetGroupAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :load-balancer-arns)]
-      (. builder loadBalancerArns data))
-    (when-let [data (lookup-entry config id :target-group-arn)]
-      (. builder targetGroupArn data))
-    (.build builder)))
+| `targetGroupArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-group-arn` |
+"
+  [^TargetGroupAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :load-balancer-arns)]
+    (. builder loadBalancerArns data))
+  (when-let [data (lookup-entry config id :target-group-arn)]
+    (. builder targetGroupArn data))
+  (.build builder))
 
 
-(defn weighted-target-group-builder
-  "The weighted-target-group-builder function buildes out new instances of 
-WeightedTargetGroup$Builder using the provided configuration.  Each field is set as follows:
+(defn build-weighted-target-group-builder
+  "The build-weighted-target-group-builder function updates a WeightedTargetGroup$Builder instance using the provided configuration.
+  The function takes the WeightedTargetGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `targetGroup` | software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationTargetGroup | [[cdk.support/lookup-entry]] | `:target-group` |
-| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |"
-  [stack id config]
-  (let [builder (WeightedTargetGroup$Builder.)]
-    (when-let [data (lookup-entry config id :target-group)]
-      (. builder targetGroup data))
-    (when-let [data (lookup-entry config id :weight)]
-      (. builder weight data))
-    (.build builder)))
+| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
+"
+  [^WeightedTargetGroup$Builder builder id config]
+  (when-let [data (lookup-entry config id :target-group)]
+    (. builder targetGroup data))
+  (when-let [data (lookup-entry config id :weight)]
+    (. builder weight data))
+  (.build builder))

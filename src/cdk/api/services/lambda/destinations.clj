@@ -5,29 +5,35 @@
                                                                 LambdaDestinationOptions$Builder]))
 
 
-(defn lambda-destination-builder
-  "The lambda-destination-builder function buildes out new instances of 
-LambdaDestination$Builder using the provided configuration.  Each field is set as follows:
+(defn build-lambda-destination-builder
+  "The build-lambda-destination-builder function updates a LambdaDestination$Builder instance using the provided configuration.
+  The function takes the LambdaDestination$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `responseOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:response-only` |"
-  [stack id config ^software.amazon.awscdk.services.lambda.IFunction software.amazon.awscdk.services.lambda.IFunction]
-  (let [builder (LambdaDestination$Builder/create ^software.amazon.awscdk.services.lambda.IFunction software.amazon.awscdk.services.lambda.IFunction)]
-    (when-let [data (lookup-entry config id :response-only)]
-      (. builder responseOnly data))
-    (.build builder)))
+| `responseOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:response-only` |
+"
+  [^LambdaDestination$Builder builder id config]
+  (when-let [data (lookup-entry config id :response-only)]
+    (. builder responseOnly data))
+  (.build builder))
 
 
-(defn lambda-destination-options-builder
-  "The lambda-destination-options-builder function buildes out new instances of 
-LambdaDestinationOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-lambda-destination-options-builder
+  "The build-lambda-destination-options-builder function updates a LambdaDestinationOptions$Builder instance using the provided configuration.
+  The function takes the LambdaDestinationOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `responseOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:response-only` |"
-  [stack id config]
-  (let [builder (LambdaDestinationOptions$Builder.)]
-    (when-let [data (lookup-entry config id :response-only)]
-      (. builder responseOnly data))
-    (.build builder)))
+| `responseOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:response-only` |
+"
+  [^LambdaDestinationOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :response-only)]
+    (. builder responseOnly data))
+  (.build builder))

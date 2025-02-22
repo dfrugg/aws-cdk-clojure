@@ -14,9 +14,12 @@
                                                            CfnLicenseProps$Builder]))
 
 
-(defn cfn-grant-builder
-  "The cfn-grant-builder function buildes out new instances of 
-CfnGrant$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-grant-builder
+  "The build-cfn-grant-builder function updates a CfnGrant$Builder instance using the provided configuration.
+  The function takes the CfnGrant$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -25,27 +28,30 @@ CfnGrant$Builder using the provided configuration.  Each field is set as follows
 | `homeRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:home-region` |
 | `licenseArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:license-arn` |
 | `principals` | java.util.List | [[cdk.support/lookup-entry]] | `:principals` |
-| `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |"
-  [stack id config]
-  (let [builder (CfnGrant$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :allowed-operations)]
-      (. builder allowedOperations data))
-    (when-let [data (lookup-entry config id :grant-name)]
-      (. builder grantName data))
-    (when-let [data (lookup-entry config id :home-region)]
-      (. builder homeRegion data))
-    (when-let [data (lookup-entry config id :license-arn)]
-      (. builder licenseArn data))
-    (when-let [data (lookup-entry config id :principals)]
-      (. builder principals data))
-    (when-let [data (lookup-entry config id :status)]
-      (. builder status data))
-    (.build builder)))
+| `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
+"
+  [^CfnGrant$Builder builder id config]
+  (when-let [data (lookup-entry config id :allowed-operations)]
+    (. builder allowedOperations data))
+  (when-let [data (lookup-entry config id :grant-name)]
+    (. builder grantName data))
+  (when-let [data (lookup-entry config id :home-region)]
+    (. builder homeRegion data))
+  (when-let [data (lookup-entry config id :license-arn)]
+    (. builder licenseArn data))
+  (when-let [data (lookup-entry config id :principals)]
+    (. builder principals data))
+  (when-let [data (lookup-entry config id :status)]
+    (. builder status data))
+  (.build builder))
 
 
-(defn cfn-grant-props-builder
-  "The cfn-grant-props-builder function buildes out new instances of 
-CfnGrantProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-grant-props-builder
+  "The build-cfn-grant-props-builder function updates a CfnGrantProps$Builder instance using the provided configuration.
+  The function takes the CfnGrantProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -54,44 +60,50 @@ CfnGrantProps$Builder using the provided configuration.  Each field is set as fo
 | `homeRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:home-region` |
 | `licenseArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:license-arn` |
 | `principals` | java.util.List | [[cdk.support/lookup-entry]] | `:principals` |
-| `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |"
-  [stack id config]
-  (let [builder (CfnGrantProps$Builder.)]
-    (when-let [data (lookup-entry config id :allowed-operations)]
-      (. builder allowedOperations data))
-    (when-let [data (lookup-entry config id :grant-name)]
-      (. builder grantName data))
-    (when-let [data (lookup-entry config id :home-region)]
-      (. builder homeRegion data))
-    (when-let [data (lookup-entry config id :license-arn)]
-      (. builder licenseArn data))
-    (when-let [data (lookup-entry config id :principals)]
-      (. builder principals data))
-    (when-let [data (lookup-entry config id :status)]
-      (. builder status data))
-    (.build builder)))
+| `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
+"
+  [^CfnGrantProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :allowed-operations)]
+    (. builder allowedOperations data))
+  (when-let [data (lookup-entry config id :grant-name)]
+    (. builder grantName data))
+  (when-let [data (lookup-entry config id :home-region)]
+    (. builder homeRegion data))
+  (when-let [data (lookup-entry config id :license-arn)]
+    (. builder licenseArn data))
+  (when-let [data (lookup-entry config id :principals)]
+    (. builder principals data))
+  (when-let [data (lookup-entry config id :status)]
+    (. builder status data))
+  (.build builder))
 
 
-(defn cfn-license-borrow-configuration-property-builder
-  "The cfn-license-borrow-configuration-property-builder function buildes out new instances of 
-CfnLicense$BorrowConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-license-borrow-configuration-property-builder
+  "The build-cfn-license-borrow-configuration-property-builder function updates a CfnLicense$BorrowConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnLicense$BorrowConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `allowEarlyCheckIn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:allow-early-check-in` |
-| `maxTimeToLiveInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-time-to-live-in-minutes` |"
-  [stack id config]
-  (let [builder (CfnLicense$BorrowConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :allow-early-check-in)]
-      (. builder allowEarlyCheckIn data))
-    (when-let [data (lookup-entry config id :max-time-to-live-in-minutes)]
-      (. builder maxTimeToLiveInMinutes data))
-    (.build builder)))
+| `maxTimeToLiveInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-time-to-live-in-minutes` |
+"
+  [^CfnLicense$BorrowConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :allow-early-check-in)]
+    (. builder allowEarlyCheckIn data))
+  (when-let [data (lookup-entry config id :max-time-to-live-in-minutes)]
+    (. builder maxTimeToLiveInMinutes data))
+  (.build builder))
 
 
-(defn cfn-license-builder
-  "The cfn-license-builder function buildes out new instances of 
-CfnLicense$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-license-builder
+  "The build-cfn-license-builder function updates a CfnLicense$Builder instance using the provided configuration.
+  The function takes the CfnLicense$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -105,57 +117,63 @@ CfnLicense$Builder using the provided configuration.  Each field is set as follo
 | `productName` | java.lang.String | [[cdk.support/lookup-entry]] | `:product-name` |
 | `productSku` | java.lang.String | [[cdk.support/lookup-entry]] | `:product-sku` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
-| `validity` | software.amazon.awscdk.services.licensemanager.CfnLicense$ValidityDateFormatProperty | [[cdk.support/lookup-entry]] | `:validity` |"
-  [stack id config]
-  (let [builder (CfnLicense$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :beneficiary)]
-      (. builder beneficiary data))
-    (when-let [data (lookup-entry config id :consumption-configuration)]
-      (. builder consumptionConfiguration data))
-    (when-let [data (lookup-entry config id :entitlements)]
-      (. builder entitlements data))
-    (when-let [data (lookup-entry config id :home-region)]
-      (. builder homeRegion data))
-    (when-let [data (lookup-entry config id :issuer)]
-      (. builder issuer data))
-    (when-let [data (lookup-entry config id :license-metadata)]
-      (. builder licenseMetadata data))
-    (when-let [data (lookup-entry config id :license-name)]
-      (. builder licenseName data))
-    (when-let [data (lookup-entry config id :product-name)]
-      (. builder productName data))
-    (when-let [data (lookup-entry config id :product-sku)]
-      (. builder productSku data))
-    (when-let [data (lookup-entry config id :status)]
-      (. builder status data))
-    (when-let [data (lookup-entry config id :validity)]
-      (. builder validity data))
-    (.build builder)))
+| `validity` | software.amazon.awscdk.services.licensemanager.CfnLicense$ValidityDateFormatProperty | [[cdk.support/lookup-entry]] | `:validity` |
+"
+  [^CfnLicense$Builder builder id config]
+  (when-let [data (lookup-entry config id :beneficiary)]
+    (. builder beneficiary data))
+  (when-let [data (lookup-entry config id :consumption-configuration)]
+    (. builder consumptionConfiguration data))
+  (when-let [data (lookup-entry config id :entitlements)]
+    (. builder entitlements data))
+  (when-let [data (lookup-entry config id :home-region)]
+    (. builder homeRegion data))
+  (when-let [data (lookup-entry config id :issuer)]
+    (. builder issuer data))
+  (when-let [data (lookup-entry config id :license-metadata)]
+    (. builder licenseMetadata data))
+  (when-let [data (lookup-entry config id :license-name)]
+    (. builder licenseName data))
+  (when-let [data (lookup-entry config id :product-name)]
+    (. builder productName data))
+  (when-let [data (lookup-entry config id :product-sku)]
+    (. builder productSku data))
+  (when-let [data (lookup-entry config id :status)]
+    (. builder status data))
+  (when-let [data (lookup-entry config id :validity)]
+    (. builder validity data))
+  (.build builder))
 
 
-(defn cfn-license-consumption-configuration-property-builder
-  "The cfn-license-consumption-configuration-property-builder function buildes out new instances of 
-CfnLicense$ConsumptionConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-license-consumption-configuration-property-builder
+  "The build-cfn-license-consumption-configuration-property-builder function updates a CfnLicense$ConsumptionConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnLicense$ConsumptionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `borrowConfiguration` | software.amazon.awscdk.services.licensemanager.CfnLicense$BorrowConfigurationProperty | [[cdk.support/lookup-entry]] | `:borrow-configuration` |
 | `provisionalConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provisional-configuration` |
-| `renewType` | java.lang.String | [[cdk.support/lookup-entry]] | `:renew-type` |"
-  [stack id config]
-  (let [builder (CfnLicense$ConsumptionConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :borrow-configuration)]
-      (. builder borrowConfiguration data))
-    (when-let [data (lookup-entry config id :provisional-configuration)]
-      (. builder provisionalConfiguration data))
-    (when-let [data (lookup-entry config id :renew-type)]
-      (. builder renewType data))
-    (.build builder)))
+| `renewType` | java.lang.String | [[cdk.support/lookup-entry]] | `:renew-type` |
+"
+  [^CfnLicense$ConsumptionConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :borrow-configuration)]
+    (. builder borrowConfiguration data))
+  (when-let [data (lookup-entry config id :provisional-configuration)]
+    (. builder provisionalConfiguration data))
+  (when-let [data (lookup-entry config id :renew-type)]
+    (. builder renewType data))
+  (.build builder))
 
 
-(defn cfn-license-entitlement-property-builder
-  "The cfn-license-entitlement-property-builder function buildes out new instances of 
-CfnLicense$EntitlementProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-license-entitlement-property-builder
+  "The build-cfn-license-entitlement-property-builder function updates a CfnLicense$EntitlementProperty$Builder instance using the provided configuration.
+  The function takes the CfnLicense$EntitlementProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -164,61 +182,70 @@ CfnLicense$EntitlementProperty$Builder using the provided configuration.  Each f
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `overage` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:overage` |
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnLicense$EntitlementProperty$Builder.)]
-    (when-let [data (lookup-entry config id :allow-check-in)]
-      (. builder allowCheckIn data))
-    (when-let [data (lookup-entry config id :max-count)]
-      (. builder maxCount data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :overage)]
-      (. builder overage data))
-    (when-let [data (lookup-entry config id :unit)]
-      (. builder unit data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnLicense$EntitlementProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :allow-check-in)]
+    (. builder allowCheckIn data))
+  (when-let [data (lookup-entry config id :max-count)]
+    (. builder maxCount data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :overage)]
+    (. builder overage data))
+  (when-let [data (lookup-entry config id :unit)]
+    (. builder unit data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-license-issuer-data-property-builder
-  "The cfn-license-issuer-data-property-builder function buildes out new instances of 
-CfnLicense$IssuerDataProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-license-issuer-data-property-builder
+  "The build-cfn-license-issuer-data-property-builder function updates a CfnLicense$IssuerDataProperty$Builder instance using the provided configuration.
+  The function takes the CfnLicense$IssuerDataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `signKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:sign-key` |"
-  [stack id config]
-  (let [builder (CfnLicense$IssuerDataProperty$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :sign-key)]
-      (. builder signKey data))
-    (.build builder)))
-
-
-(defn cfn-license-metadata-property-builder
-  "The cfn-license-metadata-property-builder function buildes out new instances of 
-CfnLicense$MetadataProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnLicense$MetadataProperty$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `signKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:sign-key` |
+"
+  [^CfnLicense$IssuerDataProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :sign-key)]
+    (. builder signKey data))
+  (.build builder))
 
 
-(defn cfn-license-props-builder
-  "The cfn-license-props-builder function buildes out new instances of 
-CfnLicenseProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-license-metadata-property-builder
+  "The build-cfn-license-metadata-property-builder function updates a CfnLicense$MetadataProperty$Builder instance using the provided configuration.
+  The function takes the CfnLicense$MetadataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnLicense$MetadataProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
+
+
+(defn build-cfn-license-props-builder
+  "The build-cfn-license-props-builder function updates a CfnLicenseProps$Builder instance using the provided configuration.
+  The function takes the CfnLicenseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -232,60 +259,66 @@ CfnLicenseProps$Builder using the provided configuration.  Each field is set as 
 | `productName` | java.lang.String | [[cdk.support/lookup-entry]] | `:product-name` |
 | `productSku` | java.lang.String | [[cdk.support/lookup-entry]] | `:product-sku` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
-| `validity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validity` |"
-  [stack id config]
-  (let [builder (CfnLicenseProps$Builder.)]
-    (when-let [data (lookup-entry config id :beneficiary)]
-      (. builder beneficiary data))
-    (when-let [data (lookup-entry config id :consumption-configuration)]
-      (. builder consumptionConfiguration data))
-    (when-let [data (lookup-entry config id :entitlements)]
-      (. builder entitlements data))
-    (when-let [data (lookup-entry config id :home-region)]
-      (. builder homeRegion data))
-    (when-let [data (lookup-entry config id :issuer)]
-      (. builder issuer data))
-    (when-let [data (lookup-entry config id :license-metadata)]
-      (. builder licenseMetadata data))
-    (when-let [data (lookup-entry config id :license-name)]
-      (. builder licenseName data))
-    (when-let [data (lookup-entry config id :product-name)]
-      (. builder productName data))
-    (when-let [data (lookup-entry config id :product-sku)]
-      (. builder productSku data))
-    (when-let [data (lookup-entry config id :status)]
-      (. builder status data))
-    (when-let [data (lookup-entry config id :validity)]
-      (. builder validity data))
-    (.build builder)))
+| `validity` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validity` |
+"
+  [^CfnLicenseProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :beneficiary)]
+    (. builder beneficiary data))
+  (when-let [data (lookup-entry config id :consumption-configuration)]
+    (. builder consumptionConfiguration data))
+  (when-let [data (lookup-entry config id :entitlements)]
+    (. builder entitlements data))
+  (when-let [data (lookup-entry config id :home-region)]
+    (. builder homeRegion data))
+  (when-let [data (lookup-entry config id :issuer)]
+    (. builder issuer data))
+  (when-let [data (lookup-entry config id :license-metadata)]
+    (. builder licenseMetadata data))
+  (when-let [data (lookup-entry config id :license-name)]
+    (. builder licenseName data))
+  (when-let [data (lookup-entry config id :product-name)]
+    (. builder productName data))
+  (when-let [data (lookup-entry config id :product-sku)]
+    (. builder productSku data))
+  (when-let [data (lookup-entry config id :status)]
+    (. builder status data))
+  (when-let [data (lookup-entry config id :validity)]
+    (. builder validity data))
+  (.build builder))
 
 
-(defn cfn-license-provisional-configuration-property-builder
-  "The cfn-license-provisional-configuration-property-builder function buildes out new instances of 
-CfnLicense$ProvisionalConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-license-provisional-configuration-property-builder
+  "The build-cfn-license-provisional-configuration-property-builder function updates a CfnLicense$ProvisionalConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnLicense$ProvisionalConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `maxTimeToLiveInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-time-to-live-in-minutes` |"
-  [stack id config]
-  (let [builder (CfnLicense$ProvisionalConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :max-time-to-live-in-minutes)]
-      (. builder maxTimeToLiveInMinutes data))
-    (.build builder)))
+| `maxTimeToLiveInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-time-to-live-in-minutes` |
+"
+  [^CfnLicense$ProvisionalConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-time-to-live-in-minutes)]
+    (. builder maxTimeToLiveInMinutes data))
+  (.build builder))
 
 
-(defn cfn-license-validity-date-format-property-builder
-  "The cfn-license-validity-date-format-property-builder function buildes out new instances of 
-CfnLicense$ValidityDateFormatProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-license-validity-date-format-property-builder
+  "The build-cfn-license-validity-date-format-property-builder function updates a CfnLicense$ValidityDateFormatProperty$Builder instance using the provided configuration.
+  The function takes the CfnLicense$ValidityDateFormatProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `begin` | java.lang.String | [[cdk.support/lookup-entry]] | `:begin` |
-| `end` | java.lang.String | [[cdk.support/lookup-entry]] | `:end` |"
-  [stack id config]
-  (let [builder (CfnLicense$ValidityDateFormatProperty$Builder.)]
-    (when-let [data (lookup-entry config id :begin)]
-      (. builder begin data))
-    (when-let [data (lookup-entry config id :end)]
-      (. builder end data))
-    (.build builder)))
+| `end` | java.lang.String | [[cdk.support/lookup-entry]] | `:end` |
+"
+  [^CfnLicense$ValidityDateFormatProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :begin)]
+    (. builder begin data))
+  (when-let [data (lookup-entry config id :end)]
+    (. builder end data))
+  (.build builder))

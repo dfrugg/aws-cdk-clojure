@@ -48,9 +48,12 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :sasl-scram-256-auth data) AuthenticationMethod/SASL_SCRAM_256_AUTH)))
 
 
-(defn api-event-source-builder
-  "The api-event-source-builder function buildes out new instances of 
-ApiEventSource$Builder using the provided configuration.  Each field is set as follows:
+(defn build-api-event-source-builder
+  "The build-api-event-source-builder function updates a ApiEventSource$Builder instance using the provided configuration.
+  The function takes the ApiEventSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -63,58 +66,64 @@ ApiEventSource$Builder using the provided configuration.  Each field is set as f
 | `requestModels` | java.util.Map | [[cdk.support/lookup-entry]] | `:request-models` |
 | `requestParameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:request-parameters` |
 | `requestValidator` | software.amazon.awscdk.services.apigateway.IRequestValidator | [[cdk.support/lookup-entry]] | `:request-validator` |
-| `requestValidatorOptions` | software.amazon.awscdk.services.apigateway.RequestValidatorOptions | [[cdk.support/lookup-entry]] | `:request-validator-options` |"
-  [stack id config ^java.lang.String String ^java.lang.String String]
-  (let [builder (ApiEventSource$Builder/create ^java.lang.String String ^java.lang.String String)]
-    (when-let [data (lookup-entry config id :api-key-required)]
-      (. builder apiKeyRequired data))
-    (when-let [data (lookup-entry config id :authorization-scopes)]
-      (. builder authorizationScopes data))
-    (when-let [data (authorization-type config id :authorization-type)]
-      (. builder authorizationType data))
-    (when-let [data (lookup-entry config id :authorizer)]
-      (. builder authorizer data))
-    (when-let [data (lookup-entry config id :method-responses)]
-      (. builder methodResponses data))
-    (when-let [data (lookup-entry config id :operation-name)]
-      (. builder operationName data))
-    (when-let [data (lookup-entry config id :request-models)]
-      (. builder requestModels data))
-    (when-let [data (lookup-entry config id :request-parameters)]
-      (. builder requestParameters data))
-    (when-let [data (lookup-entry config id :request-validator)]
-      (. builder requestValidator data))
-    (when-let [data (lookup-entry config id :request-validator-options)]
-      (. builder requestValidatorOptions data))
-    (.build builder)))
+| `requestValidatorOptions` | software.amazon.awscdk.services.apigateway.RequestValidatorOptions | [[cdk.support/lookup-entry]] | `:request-validator-options` |
+"
+  [^ApiEventSource$Builder builder id config]
+  (when-let [data (lookup-entry config id :api-key-required)]
+    (. builder apiKeyRequired data))
+  (when-let [data (lookup-entry config id :authorization-scopes)]
+    (. builder authorizationScopes data))
+  (when-let [data (authorization-type config id :authorization-type)]
+    (. builder authorizationType data))
+  (when-let [data (lookup-entry config id :authorizer)]
+    (. builder authorizer data))
+  (when-let [data (lookup-entry config id :method-responses)]
+    (. builder methodResponses data))
+  (when-let [data (lookup-entry config id :operation-name)]
+    (. builder operationName data))
+  (when-let [data (lookup-entry config id :request-models)]
+    (. builder requestModels data))
+  (when-let [data (lookup-entry config id :request-parameters)]
+    (. builder requestParameters data))
+  (when-let [data (lookup-entry config id :request-validator)]
+    (. builder requestValidator data))
+  (when-let [data (lookup-entry config id :request-validator-options)]
+    (. builder requestValidatorOptions data))
+  (.build builder))
 
 
-(defn base-stream-event-source-props-builder
-  "The base-stream-event-source-props-builder function buildes out new instances of 
-BaseStreamEventSourceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-base-stream-event-source-props-builder
+  "The build-base-stream-event-source-props-builder function updates a BaseStreamEventSourceProps$Builder instance using the provided configuration.
+  The function takes the BaseStreamEventSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `batchSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:batch-size` |
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `maxBatchingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:max-batching-window` |
-| `startingPosition` | software.amazon.awscdk.services.lambda.StartingPosition | [[cdk.api.services.lambda/starting-position]] | `:starting-position` |"
-  [stack id config]
-  (let [builder (BaseStreamEventSourceProps$Builder.)]
-    (when-let [data (lookup-entry config id :batch-size)]
-      (. builder batchSize data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :max-batching-window)]
-      (. builder maxBatchingWindow data))
-    (when-let [data (starting-position config id :starting-position)]
-      (. builder startingPosition data))
-    (.build builder)))
+| `startingPosition` | software.amazon.awscdk.services.lambda.StartingPosition | [[cdk.api.services.lambda/starting-position]] | `:starting-position` |
+"
+  [^BaseStreamEventSourceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :batch-size)]
+    (. builder batchSize data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :max-batching-window)]
+    (. builder maxBatchingWindow data))
+  (when-let [data (starting-position config id :starting-position)]
+    (. builder startingPosition data))
+  (.build builder))
 
 
-(defn dynamo-event-source-builder
-  "The dynamo-event-source-builder function buildes out new instances of 
-DynamoEventSource$Builder using the provided configuration.  Each field is set as follows:
+(defn build-dynamo-event-source-builder
+  "The build-dynamo-event-source-builder function updates a DynamoEventSource$Builder instance using the provided configuration.
+  The function takes the DynamoEventSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -129,39 +138,42 @@ DynamoEventSource$Builder using the provided configuration.  Each field is set a
 | `reportBatchItemFailures` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:report-batch-item-failures` |
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 | `startingPosition` | software.amazon.awscdk.services.lambda.StartingPosition | [[cdk.api.services.lambda/starting-position]] | `:starting-position` |
-| `tumblingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:tumbling-window` |"
-  [stack id config ^software.amazon.awscdk.services.dynamodb.ITable table]
-  (let [builder (DynamoEventSource$Builder/create ^software.amazon.awscdk.services.dynamodb.ITable table)]
-    (when-let [data (lookup-entry config id :batch-size)]
-      (. builder batchSize data))
-    (when-let [data (lookup-entry config id :bisect-batch-on-error)]
-      (. builder bisectBatchOnError data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :filters)]
-      (. builder filters data))
-    (when-let [data (lookup-entry config id :max-batching-window)]
-      (. builder maxBatchingWindow data))
-    (when-let [data (lookup-entry config id :max-record-age)]
-      (. builder maxRecordAge data))
-    (when-let [data (lookup-entry config id :on-failure)]
-      (. builder onFailure data))
-    (when-let [data (lookup-entry config id :parallelization-factor)]
-      (. builder parallelizationFactor data))
-    (when-let [data (lookup-entry config id :report-batch-item-failures)]
-      (. builder reportBatchItemFailures data))
-    (when-let [data (lookup-entry config id :retry-attempts)]
-      (. builder retryAttempts data))
-    (when-let [data (starting-position config id :starting-position)]
-      (. builder startingPosition data))
-    (when-let [data (lookup-entry config id :tumbling-window)]
-      (. builder tumblingWindow data))
-    (.build builder)))
+| `tumblingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:tumbling-window` |
+"
+  [^DynamoEventSource$Builder builder id config]
+  (when-let [data (lookup-entry config id :batch-size)]
+    (. builder batchSize data))
+  (when-let [data (lookup-entry config id :bisect-batch-on-error)]
+    (. builder bisectBatchOnError data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :filters)]
+    (. builder filters data))
+  (when-let [data (lookup-entry config id :max-batching-window)]
+    (. builder maxBatchingWindow data))
+  (when-let [data (lookup-entry config id :max-record-age)]
+    (. builder maxRecordAge data))
+  (when-let [data (lookup-entry config id :on-failure)]
+    (. builder onFailure data))
+  (when-let [data (lookup-entry config id :parallelization-factor)]
+    (. builder parallelizationFactor data))
+  (when-let [data (lookup-entry config id :report-batch-item-failures)]
+    (. builder reportBatchItemFailures data))
+  (when-let [data (lookup-entry config id :retry-attempts)]
+    (. builder retryAttempts data))
+  (when-let [data (starting-position config id :starting-position)]
+    (. builder startingPosition data))
+  (when-let [data (lookup-entry config id :tumbling-window)]
+    (. builder tumblingWindow data))
+  (.build builder))
 
 
-(defn dynamo-event-source-props-builder
-  "The dynamo-event-source-props-builder function buildes out new instances of 
-DynamoEventSourceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-dynamo-event-source-props-builder
+  "The build-dynamo-event-source-props-builder function updates a DynamoEventSourceProps$Builder instance using the provided configuration.
+  The function takes the DynamoEventSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -176,39 +188,42 @@ DynamoEventSourceProps$Builder using the provided configuration.  Each field is 
 | `reportBatchItemFailures` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:report-batch-item-failures` |
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 | `startingPosition` | software.amazon.awscdk.services.lambda.StartingPosition | [[cdk.api.services.lambda/starting-position]] | `:starting-position` |
-| `tumblingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:tumbling-window` |"
-  [stack id config]
-  (let [builder (DynamoEventSourceProps$Builder.)]
-    (when-let [data (lookup-entry config id :batch-size)]
-      (. builder batchSize data))
-    (when-let [data (lookup-entry config id :bisect-batch-on-error)]
-      (. builder bisectBatchOnError data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :filters)]
-      (. builder filters data))
-    (when-let [data (lookup-entry config id :max-batching-window)]
-      (. builder maxBatchingWindow data))
-    (when-let [data (lookup-entry config id :max-record-age)]
-      (. builder maxRecordAge data))
-    (when-let [data (lookup-entry config id :on-failure)]
-      (. builder onFailure data))
-    (when-let [data (lookup-entry config id :parallelization-factor)]
-      (. builder parallelizationFactor data))
-    (when-let [data (lookup-entry config id :report-batch-item-failures)]
-      (. builder reportBatchItemFailures data))
-    (when-let [data (lookup-entry config id :retry-attempts)]
-      (. builder retryAttempts data))
-    (when-let [data (starting-position config id :starting-position)]
-      (. builder startingPosition data))
-    (when-let [data (lookup-entry config id :tumbling-window)]
-      (. builder tumblingWindow data))
-    (.build builder)))
+| `tumblingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:tumbling-window` |
+"
+  [^DynamoEventSourceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :batch-size)]
+    (. builder batchSize data))
+  (when-let [data (lookup-entry config id :bisect-batch-on-error)]
+    (. builder bisectBatchOnError data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :filters)]
+    (. builder filters data))
+  (when-let [data (lookup-entry config id :max-batching-window)]
+    (. builder maxBatchingWindow data))
+  (when-let [data (lookup-entry config id :max-record-age)]
+    (. builder maxRecordAge data))
+  (when-let [data (lookup-entry config id :on-failure)]
+    (. builder onFailure data))
+  (when-let [data (lookup-entry config id :parallelization-factor)]
+    (. builder parallelizationFactor data))
+  (when-let [data (lookup-entry config id :report-batch-item-failures)]
+    (. builder reportBatchItemFailures data))
+  (when-let [data (lookup-entry config id :retry-attempts)]
+    (. builder retryAttempts data))
+  (when-let [data (starting-position config id :starting-position)]
+    (. builder startingPosition data))
+  (when-let [data (lookup-entry config id :tumbling-window)]
+    (. builder tumblingWindow data))
+  (.build builder))
 
 
-(defn kafka-event-source-props-builder
-  "The kafka-event-source-props-builder function buildes out new instances of 
-KafkaEventSourceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-kafka-event-source-props-builder
+  "The build-kafka-event-source-props-builder function updates a KafkaEventSourceProps$Builder instance using the provided configuration.
+  The function takes the KafkaEventSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -220,33 +235,36 @@ KafkaEventSourceProps$Builder using the provided configuration.  Each field is s
 | `onFailure` | software.amazon.awscdk.services.lambda.IEventSourceDlq | [[cdk.support/lookup-entry]] | `:on-failure` |
 | `secret` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:secret` |
 | `startingPosition` | software.amazon.awscdk.services.lambda.StartingPosition | [[cdk.api.services.lambda/starting-position]] | `:starting-position` |
-| `topic` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic` |"
-  [stack id config]
-  (let [builder (KafkaEventSourceProps$Builder.)]
-    (when-let [data (lookup-entry config id :batch-size)]
-      (. builder batchSize data))
-    (when-let [data (lookup-entry config id :consumer-group-id)]
-      (. builder consumerGroupId data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :filters)]
-      (. builder filters data))
-    (when-let [data (lookup-entry config id :max-batching-window)]
-      (. builder maxBatchingWindow data))
-    (when-let [data (lookup-entry config id :on-failure)]
-      (. builder onFailure data))
-    (when-let [data (lookup-entry config id :secret)]
-      (. builder secret data))
-    (when-let [data (starting-position config id :starting-position)]
-      (. builder startingPosition data))
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (.build builder)))
+| `topic` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic` |
+"
+  [^KafkaEventSourceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :batch-size)]
+    (. builder batchSize data))
+  (when-let [data (lookup-entry config id :consumer-group-id)]
+    (. builder consumerGroupId data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :filters)]
+    (. builder filters data))
+  (when-let [data (lookup-entry config id :max-batching-window)]
+    (. builder maxBatchingWindow data))
+  (when-let [data (lookup-entry config id :on-failure)]
+    (. builder onFailure data))
+  (when-let [data (lookup-entry config id :secret)]
+    (. builder secret data))
+  (when-let [data (starting-position config id :starting-position)]
+    (. builder startingPosition data))
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (.build builder))
 
 
-(defn kinesis-event-source-builder
-  "The kinesis-event-source-builder function buildes out new instances of 
-KinesisEventSource$Builder using the provided configuration.  Each field is set as follows:
+(defn build-kinesis-event-source-builder
+  "The build-kinesis-event-source-builder function updates a KinesisEventSource$Builder instance using the provided configuration.
+  The function takes the KinesisEventSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -262,41 +280,44 @@ KinesisEventSource$Builder using the provided configuration.  Each field is set 
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 | `startingPosition` | software.amazon.awscdk.services.lambda.StartingPosition | [[cdk.api.services.lambda/starting-position]] | `:starting-position` |
 | `startingPositionTimestamp` | java.lang.Number | [[cdk.support/lookup-entry]] | `:starting-position-timestamp` |
-| `tumblingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:tumbling-window` |"
-  [stack id config ^software.amazon.awscdk.services.kinesis.IStream stream]
-  (let [builder (KinesisEventSource$Builder/create ^software.amazon.awscdk.services.kinesis.IStream stream)]
-    (when-let [data (lookup-entry config id :batch-size)]
-      (. builder batchSize data))
-    (when-let [data (lookup-entry config id :bisect-batch-on-error)]
-      (. builder bisectBatchOnError data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :filters)]
-      (. builder filters data))
-    (when-let [data (lookup-entry config id :max-batching-window)]
-      (. builder maxBatchingWindow data))
-    (when-let [data (lookup-entry config id :max-record-age)]
-      (. builder maxRecordAge data))
-    (when-let [data (lookup-entry config id :on-failure)]
-      (. builder onFailure data))
-    (when-let [data (lookup-entry config id :parallelization-factor)]
-      (. builder parallelizationFactor data))
-    (when-let [data (lookup-entry config id :report-batch-item-failures)]
-      (. builder reportBatchItemFailures data))
-    (when-let [data (lookup-entry config id :retry-attempts)]
-      (. builder retryAttempts data))
-    (when-let [data (starting-position config id :starting-position)]
-      (. builder startingPosition data))
-    (when-let [data (lookup-entry config id :starting-position-timestamp)]
-      (. builder startingPositionTimestamp data))
-    (when-let [data (lookup-entry config id :tumbling-window)]
-      (. builder tumblingWindow data))
-    (.build builder)))
+| `tumblingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:tumbling-window` |
+"
+  [^KinesisEventSource$Builder builder id config]
+  (when-let [data (lookup-entry config id :batch-size)]
+    (. builder batchSize data))
+  (when-let [data (lookup-entry config id :bisect-batch-on-error)]
+    (. builder bisectBatchOnError data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :filters)]
+    (. builder filters data))
+  (when-let [data (lookup-entry config id :max-batching-window)]
+    (. builder maxBatchingWindow data))
+  (when-let [data (lookup-entry config id :max-record-age)]
+    (. builder maxRecordAge data))
+  (when-let [data (lookup-entry config id :on-failure)]
+    (. builder onFailure data))
+  (when-let [data (lookup-entry config id :parallelization-factor)]
+    (. builder parallelizationFactor data))
+  (when-let [data (lookup-entry config id :report-batch-item-failures)]
+    (. builder reportBatchItemFailures data))
+  (when-let [data (lookup-entry config id :retry-attempts)]
+    (. builder retryAttempts data))
+  (when-let [data (starting-position config id :starting-position)]
+    (. builder startingPosition data))
+  (when-let [data (lookup-entry config id :starting-position-timestamp)]
+    (. builder startingPositionTimestamp data))
+  (when-let [data (lookup-entry config id :tumbling-window)]
+    (. builder tumblingWindow data))
+  (.build builder))
 
 
-(defn kinesis-event-source-props-builder
-  "The kinesis-event-source-props-builder function buildes out new instances of 
-KinesisEventSourceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-kinesis-event-source-props-builder
+  "The build-kinesis-event-source-props-builder function updates a KinesisEventSourceProps$Builder instance using the provided configuration.
+  The function takes the KinesisEventSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -312,82 +333,44 @@ KinesisEventSourceProps$Builder using the provided configuration.  Each field is
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 | `startingPosition` | software.amazon.awscdk.services.lambda.StartingPosition | [[cdk.api.services.lambda/starting-position]] | `:starting-position` |
 | `startingPositionTimestamp` | java.lang.Number | [[cdk.support/lookup-entry]] | `:starting-position-timestamp` |
-| `tumblingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:tumbling-window` |"
-  [stack id config]
-  (let [builder (KinesisEventSourceProps$Builder.)]
-    (when-let [data (lookup-entry config id :batch-size)]
-      (. builder batchSize data))
-    (when-let [data (lookup-entry config id :bisect-batch-on-error)]
-      (. builder bisectBatchOnError data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :filters)]
-      (. builder filters data))
-    (when-let [data (lookup-entry config id :max-batching-window)]
-      (. builder maxBatchingWindow data))
-    (when-let [data (lookup-entry config id :max-record-age)]
-      (. builder maxRecordAge data))
-    (when-let [data (lookup-entry config id :on-failure)]
-      (. builder onFailure data))
-    (when-let [data (lookup-entry config id :parallelization-factor)]
-      (. builder parallelizationFactor data))
-    (when-let [data (lookup-entry config id :report-batch-item-failures)]
-      (. builder reportBatchItemFailures data))
-    (when-let [data (lookup-entry config id :retry-attempts)]
-      (. builder retryAttempts data))
-    (when-let [data (starting-position config id :starting-position)]
-      (. builder startingPosition data))
-    (when-let [data (lookup-entry config id :starting-position-timestamp)]
-      (. builder startingPositionTimestamp data))
-    (when-let [data (lookup-entry config id :tumbling-window)]
-      (. builder tumblingWindow data))
-    (.build builder)))
+| `tumblingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:tumbling-window` |
+"
+  [^KinesisEventSourceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :batch-size)]
+    (. builder batchSize data))
+  (when-let [data (lookup-entry config id :bisect-batch-on-error)]
+    (. builder bisectBatchOnError data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :filters)]
+    (. builder filters data))
+  (when-let [data (lookup-entry config id :max-batching-window)]
+    (. builder maxBatchingWindow data))
+  (when-let [data (lookup-entry config id :max-record-age)]
+    (. builder maxRecordAge data))
+  (when-let [data (lookup-entry config id :on-failure)]
+    (. builder onFailure data))
+  (when-let [data (lookup-entry config id :parallelization-factor)]
+    (. builder parallelizationFactor data))
+  (when-let [data (lookup-entry config id :report-batch-item-failures)]
+    (. builder reportBatchItemFailures data))
+  (when-let [data (lookup-entry config id :retry-attempts)]
+    (. builder retryAttempts data))
+  (when-let [data (starting-position config id :starting-position)]
+    (. builder startingPosition data))
+  (when-let [data (lookup-entry config id :starting-position-timestamp)]
+    (. builder startingPositionTimestamp data))
+  (when-let [data (lookup-entry config id :tumbling-window)]
+    (. builder tumblingWindow data))
+  (.build builder))
 
 
-(defn managed-kafka-event-source-builder
-  "The managed-kafka-event-source-builder function buildes out new instances of 
-ManagedKafkaEventSource$Builder using the provided configuration.  Each field is set as follows:
+(defn build-managed-kafka-event-source-builder
+  "The build-managed-kafka-event-source-builder function updates a ManagedKafkaEventSource$Builder instance using the provided configuration.
+  The function takes the ManagedKafkaEventSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `batchSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:batch-size` |
-| `clusterArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-arn` |
-| `consumerGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:consumer-group-id` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
-| `filters` | java.util.List | [[cdk.support/lookup-entry]] | `:filters` |
-| `maxBatchingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:max-batching-window` |
-| `onFailure` | software.amazon.awscdk.services.lambda.IEventSourceDlq | [[cdk.support/lookup-entry]] | `:on-failure` |
-| `secret` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:secret` |
-| `startingPosition` | software.amazon.awscdk.services.lambda.StartingPosition | [[cdk.api.services.lambda/starting-position]] | `:starting-position` |
-| `topic` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic` |"
-  [stack id config]
-  (let [builder (ManagedKafkaEventSource$Builder/create)]
-    (when-let [data (lookup-entry config id :batch-size)]
-      (. builder batchSize data))
-    (when-let [data (lookup-entry config id :cluster-arn)]
-      (. builder clusterArn data))
-    (when-let [data (lookup-entry config id :consumer-group-id)]
-      (. builder consumerGroupId data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :filters)]
-      (. builder filters data))
-    (when-let [data (lookup-entry config id :max-batching-window)]
-      (. builder maxBatchingWindow data))
-    (when-let [data (lookup-entry config id :on-failure)]
-      (. builder onFailure data))
-    (when-let [data (lookup-entry config id :secret)]
-      (. builder secret data))
-    (when-let [data (starting-position config id :starting-position)]
-      (. builder startingPosition data))
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (.build builder)))
-
-
-(defn managed-kafka-event-source-props-builder
-  "The managed-kafka-event-source-props-builder function buildes out new instances of 
-ManagedKafkaEventSourceProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -400,86 +383,142 @@ ManagedKafkaEventSourceProps$Builder using the provided configuration.  Each fie
 | `onFailure` | software.amazon.awscdk.services.lambda.IEventSourceDlq | [[cdk.support/lookup-entry]] | `:on-failure` |
 | `secret` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:secret` |
 | `startingPosition` | software.amazon.awscdk.services.lambda.StartingPosition | [[cdk.api.services.lambda/starting-position]] | `:starting-position` |
-| `topic` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic` |"
-  [stack id config]
-  (let [builder (ManagedKafkaEventSourceProps$Builder.)]
-    (when-let [data (lookup-entry config id :batch-size)]
-      (. builder batchSize data))
-    (when-let [data (lookup-entry config id :cluster-arn)]
-      (. builder clusterArn data))
-    (when-let [data (lookup-entry config id :consumer-group-id)]
-      (. builder consumerGroupId data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :filters)]
-      (. builder filters data))
-    (when-let [data (lookup-entry config id :max-batching-window)]
-      (. builder maxBatchingWindow data))
-    (when-let [data (lookup-entry config id :on-failure)]
-      (. builder onFailure data))
-    (when-let [data (lookup-entry config id :secret)]
-      (. builder secret data))
-    (when-let [data (starting-position config id :starting-position)]
-      (. builder startingPosition data))
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (.build builder)))
+| `topic` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic` |
+"
+  [^ManagedKafkaEventSource$Builder builder id config]
+  (when-let [data (lookup-entry config id :batch-size)]
+    (. builder batchSize data))
+  (when-let [data (lookup-entry config id :cluster-arn)]
+    (. builder clusterArn data))
+  (when-let [data (lookup-entry config id :consumer-group-id)]
+    (. builder consumerGroupId data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :filters)]
+    (. builder filters data))
+  (when-let [data (lookup-entry config id :max-batching-window)]
+    (. builder maxBatchingWindow data))
+  (when-let [data (lookup-entry config id :on-failure)]
+    (. builder onFailure data))
+  (when-let [data (lookup-entry config id :secret)]
+    (. builder secret data))
+  (when-let [data (starting-position config id :starting-position)]
+    (. builder startingPosition data))
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (.build builder))
 
 
-(defn s3-event-source-builder
-  "The s3-event-source-builder function buildes out new instances of 
-S3EventSource$Builder using the provided configuration.  Each field is set as follows:
+(defn build-managed-kafka-event-source-props-builder
+  "The build-managed-kafka-event-source-props-builder function updates a ManagedKafkaEventSourceProps$Builder instance using the provided configuration.
+  The function takes the ManagedKafkaEventSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `batchSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:batch-size` |
+| `clusterArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-arn` |
+| `consumerGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:consumer-group-id` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `filters` | java.util.List | [[cdk.support/lookup-entry]] | `:filters` |
+| `maxBatchingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:max-batching-window` |
+| `onFailure` | software.amazon.awscdk.services.lambda.IEventSourceDlq | [[cdk.support/lookup-entry]] | `:on-failure` |
+| `secret` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:secret` |
+| `startingPosition` | software.amazon.awscdk.services.lambda.StartingPosition | [[cdk.api.services.lambda/starting-position]] | `:starting-position` |
+| `topic` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic` |
+"
+  [^ManagedKafkaEventSourceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :batch-size)]
+    (. builder batchSize data))
+  (when-let [data (lookup-entry config id :cluster-arn)]
+    (. builder clusterArn data))
+  (when-let [data (lookup-entry config id :consumer-group-id)]
+    (. builder consumerGroupId data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :filters)]
+    (. builder filters data))
+  (when-let [data (lookup-entry config id :max-batching-window)]
+    (. builder maxBatchingWindow data))
+  (when-let [data (lookup-entry config id :on-failure)]
+    (. builder onFailure data))
+  (when-let [data (lookup-entry config id :secret)]
+    (. builder secret data))
+  (when-let [data (starting-position config id :starting-position)]
+    (. builder startingPosition data))
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (.build builder))
+
+
+(defn build-s3-event-source-builder
+  "The build-s3-event-source-builder function updates a S3EventSource$Builder instance using the provided configuration.
+  The function takes the S3EventSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
-| `filters` | java.util.List | [[cdk.support/lookup-entry]] | `:filters` |"
-  [stack id config ^software.amazon.awscdk.services.s3.Bucket bucket]
-  (let [builder (S3EventSource$Builder/create ^software.amazon.awscdk.services.s3.Bucket bucket)]
-    (when-let [data (lookup-entry config id :events)]
-      (. builder events data))
-    (when-let [data (lookup-entry config id :filters)]
-      (. builder filters data))
-    (.build builder)))
+| `filters` | java.util.List | [[cdk.support/lookup-entry]] | `:filters` |
+"
+  [^S3EventSource$Builder builder id config]
+  (when-let [data (lookup-entry config id :events)]
+    (. builder events data))
+  (when-let [data (lookup-entry config id :filters)]
+    (. builder filters data))
+  (.build builder))
 
 
-(defn s3-event-source-props-builder
-  "The s3-event-source-props-builder function buildes out new instances of 
-S3EventSourceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-s3-event-source-props-builder
+  "The build-s3-event-source-props-builder function updates a S3EventSourceProps$Builder instance using the provided configuration.
+  The function takes the S3EventSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
-| `filters` | java.util.List | [[cdk.support/lookup-entry]] | `:filters` |"
-  [stack id config]
-  (let [builder (S3EventSourceProps$Builder.)]
-    (when-let [data (lookup-entry config id :events)]
-      (. builder events data))
-    (when-let [data (lookup-entry config id :filters)]
-      (. builder filters data))
-    (.build builder)))
-
-
-(defn s3-event-source-v2-builder
-  "The s3-event-source-v2-builder function buildes out new instances of 
-S3EventSourceV2$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
-| `filters` | java.util.List | [[cdk.support/lookup-entry]] | `:filters` |"
-  [stack id config ^software.amazon.awscdk.services.s3.IBucket bucket]
-  (let [builder (S3EventSourceV2$Builder/create ^software.amazon.awscdk.services.s3.IBucket bucket)]
-    (when-let [data (lookup-entry config id :events)]
-      (. builder events data))
-    (when-let [data (lookup-entry config id :filters)]
-      (. builder filters data))
-    (.build builder)))
+| `filters` | java.util.List | [[cdk.support/lookup-entry]] | `:filters` |
+"
+  [^S3EventSourceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :events)]
+    (. builder events data))
+  (when-let [data (lookup-entry config id :filters)]
+    (. builder filters data))
+  (.build builder))
 
 
-(defn self-managed-kafka-event-source-builder
-  "The self-managed-kafka-event-source-builder function buildes out new instances of 
-SelfManagedKafkaEventSource$Builder using the provided configuration.  Each field is set as follows:
+(defn build-s3-event-source-v2-builder
+  "The build-s3-event-source-v2-builder function updates a S3EventSourceV2$Builder instance using the provided configuration.
+  The function takes the S3EventSourceV2$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
+| `filters` | java.util.List | [[cdk.support/lookup-entry]] | `:filters` |
+"
+  [^S3EventSourceV2$Builder builder id config]
+  (when-let [data (lookup-entry config id :events)]
+    (. builder events data))
+  (when-let [data (lookup-entry config id :filters)]
+    (. builder filters data))
+  (.build builder))
+
+
+(defn build-self-managed-kafka-event-source-builder
+  "The build-self-managed-kafka-event-source-builder function updates a SelfManagedKafkaEventSource$Builder instance using the provided configuration.
+  The function takes the SelfManagedKafkaEventSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -497,45 +536,48 @@ SelfManagedKafkaEventSource$Builder using the provided configuration.  Each fiel
 | `startingPosition` | software.amazon.awscdk.services.lambda.StartingPosition | [[cdk.api.services.lambda/starting-position]] | `:starting-position` |
 | `topic` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic` |
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |"
-  [stack id config]
-  (let [builder (SelfManagedKafkaEventSource$Builder/create)]
-    (when-let [data (authentication-method config id :authentication-method)]
-      (. builder authenticationMethod data))
-    (when-let [data (lookup-entry config id :batch-size)]
-      (. builder batchSize data))
-    (when-let [data (lookup-entry config id :bootstrap-servers)]
-      (. builder bootstrapServers data))
-    (when-let [data (lookup-entry config id :consumer-group-id)]
-      (. builder consumerGroupId data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :filters)]
-      (. builder filters data))
-    (when-let [data (lookup-entry config id :max-batching-window)]
-      (. builder maxBatchingWindow data))
-    (when-let [data (lookup-entry config id :on-failure)]
-      (. builder onFailure data))
-    (when-let [data (lookup-entry config id :root-ca-certificate)]
-      (. builder rootCaCertificate data))
-    (when-let [data (lookup-entry config id :secret)]
-      (. builder secret data))
-    (when-let [data (lookup-entry config id :security-group)]
-      (. builder securityGroup data))
-    (when-let [data (starting-position config id :starting-position)]
-      (. builder startingPosition data))
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnets)]
-      (. builder vpcSubnets data))
-    (.build builder)))
+| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
+"
+  [^SelfManagedKafkaEventSource$Builder builder id config]
+  (when-let [data (authentication-method config id :authentication-method)]
+    (. builder authenticationMethod data))
+  (when-let [data (lookup-entry config id :batch-size)]
+    (. builder batchSize data))
+  (when-let [data (lookup-entry config id :bootstrap-servers)]
+    (. builder bootstrapServers data))
+  (when-let [data (lookup-entry config id :consumer-group-id)]
+    (. builder consumerGroupId data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :filters)]
+    (. builder filters data))
+  (when-let [data (lookup-entry config id :max-batching-window)]
+    (. builder maxBatchingWindow data))
+  (when-let [data (lookup-entry config id :on-failure)]
+    (. builder onFailure data))
+  (when-let [data (lookup-entry config id :root-ca-certificate)]
+    (. builder rootCaCertificate data))
+  (when-let [data (lookup-entry config id :secret)]
+    (. builder secret data))
+  (when-let [data (lookup-entry config id :security-group)]
+    (. builder securityGroup data))
+  (when-let [data (starting-position config id :starting-position)]
+    (. builder startingPosition data))
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnets)]
+    (. builder vpcSubnets data))
+  (.build builder))
 
 
-(defn self-managed-kafka-event-source-props-builder
-  "The self-managed-kafka-event-source-props-builder function buildes out new instances of 
-SelfManagedKafkaEventSourceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-self-managed-kafka-event-source-props-builder
+  "The build-self-managed-kafka-event-source-props-builder function updates a SelfManagedKafkaEventSourceProps$Builder instance using the provided configuration.
+  The function takes the SelfManagedKafkaEventSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -553,85 +595,94 @@ SelfManagedKafkaEventSourceProps$Builder using the provided configuration.  Each
 | `startingPosition` | software.amazon.awscdk.services.lambda.StartingPosition | [[cdk.api.services.lambda/starting-position]] | `:starting-position` |
 | `topic` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic` |
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |"
-  [stack id config]
-  (let [builder (SelfManagedKafkaEventSourceProps$Builder.)]
-    (when-let [data (authentication-method config id :authentication-method)]
-      (. builder authenticationMethod data))
-    (when-let [data (lookup-entry config id :batch-size)]
-      (. builder batchSize data))
-    (when-let [data (lookup-entry config id :bootstrap-servers)]
-      (. builder bootstrapServers data))
-    (when-let [data (lookup-entry config id :consumer-group-id)]
-      (. builder consumerGroupId data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :filters)]
-      (. builder filters data))
-    (when-let [data (lookup-entry config id :max-batching-window)]
-      (. builder maxBatchingWindow data))
-    (when-let [data (lookup-entry config id :on-failure)]
-      (. builder onFailure data))
-    (when-let [data (lookup-entry config id :root-ca-certificate)]
-      (. builder rootCaCertificate data))
-    (when-let [data (lookup-entry config id :secret)]
-      (. builder secret data))
-    (when-let [data (lookup-entry config id :security-group)]
-      (. builder securityGroup data))
-    (when-let [data (starting-position config id :starting-position)]
-      (. builder startingPosition data))
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnets)]
-      (. builder vpcSubnets data))
-    (.build builder)))
+| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
+"
+  [^SelfManagedKafkaEventSourceProps$Builder builder id config]
+  (when-let [data (authentication-method config id :authentication-method)]
+    (. builder authenticationMethod data))
+  (when-let [data (lookup-entry config id :batch-size)]
+    (. builder batchSize data))
+  (when-let [data (lookup-entry config id :bootstrap-servers)]
+    (. builder bootstrapServers data))
+  (when-let [data (lookup-entry config id :consumer-group-id)]
+    (. builder consumerGroupId data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :filters)]
+    (. builder filters data))
+  (when-let [data (lookup-entry config id :max-batching-window)]
+    (. builder maxBatchingWindow data))
+  (when-let [data (lookup-entry config id :on-failure)]
+    (. builder onFailure data))
+  (when-let [data (lookup-entry config id :root-ca-certificate)]
+    (. builder rootCaCertificate data))
+  (when-let [data (lookup-entry config id :secret)]
+    (. builder secret data))
+  (when-let [data (lookup-entry config id :security-group)]
+    (. builder securityGroup data))
+  (when-let [data (starting-position config id :starting-position)]
+    (. builder startingPosition data))
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnets)]
+    (. builder vpcSubnets data))
+  (.build builder))
 
 
-(defn sns-event-source-builder
-  "The sns-event-source-builder function buildes out new instances of 
-SnsEventSource$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sns-event-source-builder
+  "The build-sns-event-source-builder function updates a SnsEventSource$Builder instance using the provided configuration.
+  The function takes the SnsEventSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `deadLetterQueue` | software.amazon.awscdk.services.sqs.IQueue | [[cdk.support/lookup-entry]] | `:dead-letter-queue` |
-| `filterPolicy` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy` |
-| `filterPolicyWithMessageBody` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy-with-message-body` |"
-  [stack id config ^software.amazon.awscdk.services.sns.ITopic topic]
-  (let [builder (SnsEventSource$Builder/create ^software.amazon.awscdk.services.sns.ITopic topic)]
-    (when-let [data (lookup-entry config id :dead-letter-queue)]
-      (. builder deadLetterQueue data))
-    (when-let [data (lookup-entry config id :filter-policy)]
-      (. builder filterPolicy data))
-    (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
-      (. builder filterPolicyWithMessageBody data))
-    (.build builder)))
-
-
-(defn sns-event-source-props-builder
-  "The sns-event-source-props-builder function buildes out new instances of 
-SnsEventSourceProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deadLetterQueue` | software.amazon.awscdk.services.sqs.IQueue | [[cdk.support/lookup-entry]] | `:dead-letter-queue` |
 | `filterPolicy` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy` |
-| `filterPolicyWithMessageBody` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy-with-message-body` |"
-  [stack id config]
-  (let [builder (SnsEventSourceProps$Builder.)]
-    (when-let [data (lookup-entry config id :dead-letter-queue)]
-      (. builder deadLetterQueue data))
-    (when-let [data (lookup-entry config id :filter-policy)]
-      (. builder filterPolicy data))
-    (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
-      (. builder filterPolicyWithMessageBody data))
-    (.build builder)))
+| `filterPolicyWithMessageBody` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy-with-message-body` |
+"
+  [^SnsEventSource$Builder builder id config]
+  (when-let [data (lookup-entry config id :dead-letter-queue)]
+    (. builder deadLetterQueue data))
+  (when-let [data (lookup-entry config id :filter-policy)]
+    (. builder filterPolicy data))
+  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+    (. builder filterPolicyWithMessageBody data))
+  (.build builder))
 
 
-(defn sqs-event-source-builder
-  "The sqs-event-source-builder function buildes out new instances of 
-SqsEventSource$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sns-event-source-props-builder
+  "The build-sns-event-source-props-builder function updates a SnsEventSourceProps$Builder instance using the provided configuration.
+  The function takes the SnsEventSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `deadLetterQueue` | software.amazon.awscdk.services.sqs.IQueue | [[cdk.support/lookup-entry]] | `:dead-letter-queue` |
+| `filterPolicy` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy` |
+| `filterPolicyWithMessageBody` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy-with-message-body` |
+"
+  [^SnsEventSourceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :dead-letter-queue)]
+    (. builder deadLetterQueue data))
+  (when-let [data (lookup-entry config id :filter-policy)]
+    (. builder filterPolicy data))
+  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+    (. builder filterPolicyWithMessageBody data))
+  (.build builder))
+
+
+(defn build-sqs-event-source-builder
+  "The build-sqs-event-source-builder function updates a SqsEventSource$Builder instance using the provided configuration.
+  The function takes the SqsEventSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -640,27 +691,30 @@ SqsEventSource$Builder using the provided configuration.  Each field is set as f
 | `filters` | java.util.List | [[cdk.support/lookup-entry]] | `:filters` |
 | `maxBatchingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:max-batching-window` |
 | `maxConcurrency` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-concurrency` |
-| `reportBatchItemFailures` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:report-batch-item-failures` |"
-  [stack id config ^software.amazon.awscdk.services.sqs.IQueue queue]
-  (let [builder (SqsEventSource$Builder/create ^software.amazon.awscdk.services.sqs.IQueue queue)]
-    (when-let [data (lookup-entry config id :batch-size)]
-      (. builder batchSize data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :filters)]
-      (. builder filters data))
-    (when-let [data (lookup-entry config id :max-batching-window)]
-      (. builder maxBatchingWindow data))
-    (when-let [data (lookup-entry config id :max-concurrency)]
-      (. builder maxConcurrency data))
-    (when-let [data (lookup-entry config id :report-batch-item-failures)]
-      (. builder reportBatchItemFailures data))
-    (.build builder)))
+| `reportBatchItemFailures` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:report-batch-item-failures` |
+"
+  [^SqsEventSource$Builder builder id config]
+  (when-let [data (lookup-entry config id :batch-size)]
+    (. builder batchSize data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :filters)]
+    (. builder filters data))
+  (when-let [data (lookup-entry config id :max-batching-window)]
+    (. builder maxBatchingWindow data))
+  (when-let [data (lookup-entry config id :max-concurrency)]
+    (. builder maxConcurrency data))
+  (when-let [data (lookup-entry config id :report-batch-item-failures)]
+    (. builder reportBatchItemFailures data))
+  (.build builder))
 
 
-(defn sqs-event-source-props-builder
-  "The sqs-event-source-props-builder function buildes out new instances of 
-SqsEventSourceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sqs-event-source-props-builder
+  "The build-sqs-event-source-props-builder function updates a SqsEventSourceProps$Builder instance using the provided configuration.
+  The function takes the SqsEventSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -669,27 +723,30 @@ SqsEventSourceProps$Builder using the provided configuration.  Each field is set
 | `filters` | java.util.List | [[cdk.support/lookup-entry]] | `:filters` |
 | `maxBatchingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:max-batching-window` |
 | `maxConcurrency` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-concurrency` |
-| `reportBatchItemFailures` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:report-batch-item-failures` |"
-  [stack id config]
-  (let [builder (SqsEventSourceProps$Builder.)]
-    (when-let [data (lookup-entry config id :batch-size)]
-      (. builder batchSize data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :filters)]
-      (. builder filters data))
-    (when-let [data (lookup-entry config id :max-batching-window)]
-      (. builder maxBatchingWindow data))
-    (when-let [data (lookup-entry config id :max-concurrency)]
-      (. builder maxConcurrency data))
-    (when-let [data (lookup-entry config id :report-batch-item-failures)]
-      (. builder reportBatchItemFailures data))
-    (.build builder)))
+| `reportBatchItemFailures` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:report-batch-item-failures` |
+"
+  [^SqsEventSourceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :batch-size)]
+    (. builder batchSize data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :filters)]
+    (. builder filters data))
+  (when-let [data (lookup-entry config id :max-batching-window)]
+    (. builder maxBatchingWindow data))
+  (when-let [data (lookup-entry config id :max-concurrency)]
+    (. builder maxConcurrency data))
+  (when-let [data (lookup-entry config id :report-batch-item-failures)]
+    (. builder reportBatchItemFailures data))
+  (.build builder))
 
 
-(defn stream-event-source-props-builder
-  "The stream-event-source-props-builder function buildes out new instances of 
-StreamEventSourceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-stream-event-source-props-builder
+  "The build-stream-event-source-props-builder function updates a StreamEventSourceProps$Builder instance using the provided configuration.
+  The function takes the StreamEventSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -704,31 +761,31 @@ StreamEventSourceProps$Builder using the provided configuration.  Each field is 
 | `reportBatchItemFailures` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:report-batch-item-failures` |
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 | `startingPosition` | software.amazon.awscdk.services.lambda.StartingPosition | [[cdk.api.services.lambda/starting-position]] | `:starting-position` |
-| `tumblingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:tumbling-window` |"
-  [stack id config]
-  (let [builder (StreamEventSourceProps$Builder.)]
-    (when-let [data (lookup-entry config id :batch-size)]
-      (. builder batchSize data))
-    (when-let [data (lookup-entry config id :bisect-batch-on-error)]
-      (. builder bisectBatchOnError data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :filters)]
-      (. builder filters data))
-    (when-let [data (lookup-entry config id :max-batching-window)]
-      (. builder maxBatchingWindow data))
-    (when-let [data (lookup-entry config id :max-record-age)]
-      (. builder maxRecordAge data))
-    (when-let [data (lookup-entry config id :on-failure)]
-      (. builder onFailure data))
-    (when-let [data (lookup-entry config id :parallelization-factor)]
-      (. builder parallelizationFactor data))
-    (when-let [data (lookup-entry config id :report-batch-item-failures)]
-      (. builder reportBatchItemFailures data))
-    (when-let [data (lookup-entry config id :retry-attempts)]
-      (. builder retryAttempts data))
-    (when-let [data (starting-position config id :starting-position)]
-      (. builder startingPosition data))
-    (when-let [data (lookup-entry config id :tumbling-window)]
-      (. builder tumblingWindow data))
-    (.build builder)))
+| `tumblingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:tumbling-window` |
+"
+  [^StreamEventSourceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :batch-size)]
+    (. builder batchSize data))
+  (when-let [data (lookup-entry config id :bisect-batch-on-error)]
+    (. builder bisectBatchOnError data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :filters)]
+    (. builder filters data))
+  (when-let [data (lookup-entry config id :max-batching-window)]
+    (. builder maxBatchingWindow data))
+  (when-let [data (lookup-entry config id :max-record-age)]
+    (. builder maxRecordAge data))
+  (when-let [data (lookup-entry config id :on-failure)]
+    (. builder onFailure data))
+  (when-let [data (lookup-entry config id :parallelization-factor)]
+    (. builder parallelizationFactor data))
+  (when-let [data (lookup-entry config id :report-batch-item-failures)]
+    (. builder reportBatchItemFailures data))
+  (when-let [data (lookup-entry config id :retry-attempts)]
+    (. builder retryAttempts data))
+  (when-let [data (starting-position config id :starting-position)]
+    (. builder startingPosition data))
+  (when-let [data (lookup-entry config id :tumbling-window)]
+    (. builder tumblingWindow data))
+  (.build builder))

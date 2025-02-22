@@ -12,26 +12,32 @@
                                                        TarballImageAssetProps$Builder]))
 
 
-(defn docker-cache-option-builder
-  "The docker-cache-option-builder function buildes out new instances of 
-DockerCacheOption$Builder using the provided configuration.  Each field is set as follows:
+(defn build-docker-cache-option-builder
+  "The build-docker-cache-option-builder function updates a DockerCacheOption$Builder instance using the provided configuration.
+  The function takes the DockerCacheOption$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `params` | java.util.Map | [[cdk.support/lookup-entry]] | `:params` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (DockerCacheOption$Builder.)]
-    (when-let [data (lookup-entry config id :params)]
-      (. builder params data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^DockerCacheOption$Builder builder id config]
+  (when-let [data (lookup-entry config id :params)]
+    (. builder params data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn docker-image-asset-builder
-  "The docker-image-asset-builder function buildes out new instances of 
-DockerImageAsset$Builder using the provided configuration.  Each field is set as follows:
+(defn build-docker-image-asset-builder
+  "The build-docker-image-asset-builder function updates a DockerImageAsset$Builder instance using the provided configuration.
+  The function takes the DockerImageAsset$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -52,51 +58,54 @@ DockerImageAsset$Builder using the provided configuration.  Each field is set as
 | `networkMode` | software.amazon.awscdk.services.ecr.assets.NetworkMode | [[cdk.support/lookup-entry]] | `:network-mode` |
 | `outputs` | java.util.List | [[cdk.support/lookup-entry]] | `:outputs` |
 | `platform` | software.amazon.awscdk.services.ecr.assets.Platform | [[cdk.support/lookup-entry]] | `:platform` |
-| `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |"
-  [stack id config]
-  (let [builder (DockerImageAsset$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :asset-name)]
-      (. builder assetName data))
-    (when-let [data (lookup-entry config id :build-args)]
-      (. builder buildArgs data))
-    (when-let [data (lookup-entry config id :build-secrets)]
-      (. builder buildSecrets data))
-    (when-let [data (lookup-entry config id :build-ssh)]
-      (. builder buildSsh data))
-    (when-let [data (lookup-entry config id :cache-disabled)]
-      (. builder cacheDisabled data))
-    (when-let [data (lookup-entry config id :cache-from)]
-      (. builder cacheFrom data))
-    (when-let [data (lookup-entry config id :cache-to)]
-      (. builder cacheTo data))
-    (when-let [data (lookup-entry config id :directory)]
-      (. builder directory data))
-    (when-let [data (lookup-entry config id :exclude)]
-      (. builder exclude data))
-    (when-let [data (lookup-entry config id :extra-hash)]
-      (. builder extraHash data))
-    (when-let [data (lookup-entry config id :file)]
-      (. builder file data))
-    (when-let [data (symlink-follow-mode config id :follow-symlinks)]
-      (. builder followSymlinks data))
-    (when-let [data (ignore-mode config id :ignore-mode)]
-      (. builder ignoreMode data))
-    (when-let [data (lookup-entry config id :invalidation)]
-      (. builder invalidation data))
-    (when-let [data (lookup-entry config id :network-mode)]
-      (. builder networkMode data))
-    (when-let [data (lookup-entry config id :outputs)]
-      (. builder outputs data))
-    (when-let [data (lookup-entry config id :platform)]
-      (. builder platform data))
-    (when-let [data (lookup-entry config id :target)]
-      (. builder target data))
-    (.build builder)))
+| `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |
+"
+  [^DockerImageAsset$Builder builder id config]
+  (when-let [data (lookup-entry config id :asset-name)]
+    (. builder assetName data))
+  (when-let [data (lookup-entry config id :build-args)]
+    (. builder buildArgs data))
+  (when-let [data (lookup-entry config id :build-secrets)]
+    (. builder buildSecrets data))
+  (when-let [data (lookup-entry config id :build-ssh)]
+    (. builder buildSsh data))
+  (when-let [data (lookup-entry config id :cache-disabled)]
+    (. builder cacheDisabled data))
+  (when-let [data (lookup-entry config id :cache-from)]
+    (. builder cacheFrom data))
+  (when-let [data (lookup-entry config id :cache-to)]
+    (. builder cacheTo data))
+  (when-let [data (lookup-entry config id :directory)]
+    (. builder directory data))
+  (when-let [data (lookup-entry config id :exclude)]
+    (. builder exclude data))
+  (when-let [data (lookup-entry config id :extra-hash)]
+    (. builder extraHash data))
+  (when-let [data (lookup-entry config id :file)]
+    (. builder file data))
+  (when-let [data (symlink-follow-mode config id :follow-symlinks)]
+    (. builder followSymlinks data))
+  (when-let [data (ignore-mode config id :ignore-mode)]
+    (. builder ignoreMode data))
+  (when-let [data (lookup-entry config id :invalidation)]
+    (. builder invalidation data))
+  (when-let [data (lookup-entry config id :network-mode)]
+    (. builder networkMode data))
+  (when-let [data (lookup-entry config id :outputs)]
+    (. builder outputs data))
+  (when-let [data (lookup-entry config id :platform)]
+    (. builder platform data))
+  (when-let [data (lookup-entry config id :target)]
+    (. builder target data))
+  (.build builder))
 
 
-(defn docker-image-asset-invalidation-options-builder
-  "The docker-image-asset-invalidation-options-builder function buildes out new instances of 
-DockerImageAssetInvalidationOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-docker-image-asset-invalidation-options-builder
+  "The build-docker-image-asset-invalidation-options-builder function updates a DockerImageAssetInvalidationOptions$Builder instance using the provided configuration.
+  The function takes the DockerImageAssetInvalidationOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -109,35 +118,38 @@ DockerImageAssetInvalidationOptions$Builder using the provided configuration.  E
 | `outputs` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:outputs` |
 | `platform` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:platform` |
 | `repositoryName` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:repository-name` |
-| `target` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:target` |"
-  [stack id config]
-  (let [builder (DockerImageAssetInvalidationOptions$Builder.)]
-    (when-let [data (lookup-entry config id :build-args)]
-      (. builder buildArgs data))
-    (when-let [data (lookup-entry config id :build-secrets)]
-      (. builder buildSecrets data))
-    (when-let [data (lookup-entry config id :build-ssh)]
-      (. builder buildSsh data))
-    (when-let [data (lookup-entry config id :extra-hash)]
-      (. builder extraHash data))
-    (when-let [data (lookup-entry config id :file)]
-      (. builder file data))
-    (when-let [data (lookup-entry config id :network-mode)]
-      (. builder networkMode data))
-    (when-let [data (lookup-entry config id :outputs)]
-      (. builder outputs data))
-    (when-let [data (lookup-entry config id :platform)]
-      (. builder platform data))
-    (when-let [data (lookup-entry config id :repository-name)]
-      (. builder repositoryName data))
-    (when-let [data (lookup-entry config id :target)]
-      (. builder target data))
-    (.build builder)))
+| `target` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:target` |
+"
+  [^DockerImageAssetInvalidationOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :build-args)]
+    (. builder buildArgs data))
+  (when-let [data (lookup-entry config id :build-secrets)]
+    (. builder buildSecrets data))
+  (when-let [data (lookup-entry config id :build-ssh)]
+    (. builder buildSsh data))
+  (when-let [data (lookup-entry config id :extra-hash)]
+    (. builder extraHash data))
+  (when-let [data (lookup-entry config id :file)]
+    (. builder file data))
+  (when-let [data (lookup-entry config id :network-mode)]
+    (. builder networkMode data))
+  (when-let [data (lookup-entry config id :outputs)]
+    (. builder outputs data))
+  (when-let [data (lookup-entry config id :platform)]
+    (. builder platform data))
+  (when-let [data (lookup-entry config id :repository-name)]
+    (. builder repositoryName data))
+  (when-let [data (lookup-entry config id :target)]
+    (. builder target data))
+  (.build builder))
 
 
-(defn docker-image-asset-options-builder
-  "The docker-image-asset-options-builder function buildes out new instances of 
-DockerImageAssetOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-docker-image-asset-options-builder
+  "The build-docker-image-asset-options-builder function updates a DockerImageAssetOptions$Builder instance using the provided configuration.
+  The function takes the DockerImageAssetOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -157,49 +169,52 @@ DockerImageAssetOptions$Builder using the provided configuration.  Each field is
 | `networkMode` | software.amazon.awscdk.services.ecr.assets.NetworkMode | [[cdk.support/lookup-entry]] | `:network-mode` |
 | `outputs` | java.util.List | [[cdk.support/lookup-entry]] | `:outputs` |
 | `platform` | software.amazon.awscdk.services.ecr.assets.Platform | [[cdk.support/lookup-entry]] | `:platform` |
-| `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |"
-  [stack id config]
-  (let [builder (DockerImageAssetOptions$Builder.)]
-    (when-let [data (lookup-entry config id :asset-name)]
-      (. builder assetName data))
-    (when-let [data (lookup-entry config id :build-args)]
-      (. builder buildArgs data))
-    (when-let [data (lookup-entry config id :build-secrets)]
-      (. builder buildSecrets data))
-    (when-let [data (lookup-entry config id :build-ssh)]
-      (. builder buildSsh data))
-    (when-let [data (lookup-entry config id :cache-disabled)]
-      (. builder cacheDisabled data))
-    (when-let [data (lookup-entry config id :cache-from)]
-      (. builder cacheFrom data))
-    (when-let [data (lookup-entry config id :cache-to)]
-      (. builder cacheTo data))
-    (when-let [data (lookup-entry config id :exclude)]
-      (. builder exclude data))
-    (when-let [data (lookup-entry config id :extra-hash)]
-      (. builder extraHash data))
-    (when-let [data (lookup-entry config id :file)]
-      (. builder file data))
-    (when-let [data (symlink-follow-mode config id :follow-symlinks)]
-      (. builder followSymlinks data))
-    (when-let [data (ignore-mode config id :ignore-mode)]
-      (. builder ignoreMode data))
-    (when-let [data (lookup-entry config id :invalidation)]
-      (. builder invalidation data))
-    (when-let [data (lookup-entry config id :network-mode)]
-      (. builder networkMode data))
-    (when-let [data (lookup-entry config id :outputs)]
-      (. builder outputs data))
-    (when-let [data (lookup-entry config id :platform)]
-      (. builder platform data))
-    (when-let [data (lookup-entry config id :target)]
-      (. builder target data))
-    (.build builder)))
+| `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |
+"
+  [^DockerImageAssetOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :asset-name)]
+    (. builder assetName data))
+  (when-let [data (lookup-entry config id :build-args)]
+    (. builder buildArgs data))
+  (when-let [data (lookup-entry config id :build-secrets)]
+    (. builder buildSecrets data))
+  (when-let [data (lookup-entry config id :build-ssh)]
+    (. builder buildSsh data))
+  (when-let [data (lookup-entry config id :cache-disabled)]
+    (. builder cacheDisabled data))
+  (when-let [data (lookup-entry config id :cache-from)]
+    (. builder cacheFrom data))
+  (when-let [data (lookup-entry config id :cache-to)]
+    (. builder cacheTo data))
+  (when-let [data (lookup-entry config id :exclude)]
+    (. builder exclude data))
+  (when-let [data (lookup-entry config id :extra-hash)]
+    (. builder extraHash data))
+  (when-let [data (lookup-entry config id :file)]
+    (. builder file data))
+  (when-let [data (symlink-follow-mode config id :follow-symlinks)]
+    (. builder followSymlinks data))
+  (when-let [data (ignore-mode config id :ignore-mode)]
+    (. builder ignoreMode data))
+  (when-let [data (lookup-entry config id :invalidation)]
+    (. builder invalidation data))
+  (when-let [data (lookup-entry config id :network-mode)]
+    (. builder networkMode data))
+  (when-let [data (lookup-entry config id :outputs)]
+    (. builder outputs data))
+  (when-let [data (lookup-entry config id :platform)]
+    (. builder platform data))
+  (when-let [data (lookup-entry config id :target)]
+    (. builder target data))
+  (.build builder))
 
 
-(defn docker-image-asset-props-builder
-  "The docker-image-asset-props-builder function buildes out new instances of 
-DockerImageAssetProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-docker-image-asset-props-builder
+  "The build-docker-image-asset-props-builder function updates a DockerImageAssetProps$Builder instance using the provided configuration.
+  The function takes the DockerImageAssetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -220,71 +235,77 @@ DockerImageAssetProps$Builder using the provided configuration.  Each field is s
 | `networkMode` | software.amazon.awscdk.services.ecr.assets.NetworkMode | [[cdk.support/lookup-entry]] | `:network-mode` |
 | `outputs` | java.util.List | [[cdk.support/lookup-entry]] | `:outputs` |
 | `platform` | software.amazon.awscdk.services.ecr.assets.Platform | [[cdk.support/lookup-entry]] | `:platform` |
-| `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |"
-  [stack id config]
-  (let [builder (DockerImageAssetProps$Builder.)]
-    (when-let [data (lookup-entry config id :asset-name)]
-      (. builder assetName data))
-    (when-let [data (lookup-entry config id :build-args)]
-      (. builder buildArgs data))
-    (when-let [data (lookup-entry config id :build-secrets)]
-      (. builder buildSecrets data))
-    (when-let [data (lookup-entry config id :build-ssh)]
-      (. builder buildSsh data))
-    (when-let [data (lookup-entry config id :cache-disabled)]
-      (. builder cacheDisabled data))
-    (when-let [data (lookup-entry config id :cache-from)]
-      (. builder cacheFrom data))
-    (when-let [data (lookup-entry config id :cache-to)]
-      (. builder cacheTo data))
-    (when-let [data (lookup-entry config id :directory)]
-      (. builder directory data))
-    (when-let [data (lookup-entry config id :exclude)]
-      (. builder exclude data))
-    (when-let [data (lookup-entry config id :extra-hash)]
-      (. builder extraHash data))
-    (when-let [data (lookup-entry config id :file)]
-      (. builder file data))
-    (when-let [data (symlink-follow-mode config id :follow-symlinks)]
-      (. builder followSymlinks data))
-    (when-let [data (ignore-mode config id :ignore-mode)]
-      (. builder ignoreMode data))
-    (when-let [data (lookup-entry config id :invalidation)]
-      (. builder invalidation data))
-    (when-let [data (lookup-entry config id :network-mode)]
-      (. builder networkMode data))
-    (when-let [data (lookup-entry config id :outputs)]
-      (. builder outputs data))
-    (when-let [data (lookup-entry config id :platform)]
-      (. builder platform data))
-    (when-let [data (lookup-entry config id :target)]
-      (. builder target data))
-    (.build builder)))
+| `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |
+"
+  [^DockerImageAssetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :asset-name)]
+    (. builder assetName data))
+  (when-let [data (lookup-entry config id :build-args)]
+    (. builder buildArgs data))
+  (when-let [data (lookup-entry config id :build-secrets)]
+    (. builder buildSecrets data))
+  (when-let [data (lookup-entry config id :build-ssh)]
+    (. builder buildSsh data))
+  (when-let [data (lookup-entry config id :cache-disabled)]
+    (. builder cacheDisabled data))
+  (when-let [data (lookup-entry config id :cache-from)]
+    (. builder cacheFrom data))
+  (when-let [data (lookup-entry config id :cache-to)]
+    (. builder cacheTo data))
+  (when-let [data (lookup-entry config id :directory)]
+    (. builder directory data))
+  (when-let [data (lookup-entry config id :exclude)]
+    (. builder exclude data))
+  (when-let [data (lookup-entry config id :extra-hash)]
+    (. builder extraHash data))
+  (when-let [data (lookup-entry config id :file)]
+    (. builder file data))
+  (when-let [data (symlink-follow-mode config id :follow-symlinks)]
+    (. builder followSymlinks data))
+  (when-let [data (ignore-mode config id :ignore-mode)]
+    (. builder ignoreMode data))
+  (when-let [data (lookup-entry config id :invalidation)]
+    (. builder invalidation data))
+  (when-let [data (lookup-entry config id :network-mode)]
+    (. builder networkMode data))
+  (when-let [data (lookup-entry config id :outputs)]
+    (. builder outputs data))
+  (when-let [data (lookup-entry config id :platform)]
+    (. builder platform data))
+  (when-let [data (lookup-entry config id :target)]
+    (. builder target data))
+  (.build builder))
 
 
-(defn tarball-image-asset-builder
-  "The tarball-image-asset-builder function buildes out new instances of 
-TarballImageAsset$Builder using the provided configuration.  Each field is set as follows:
+(defn build-tarball-image-asset-builder
+  "The build-tarball-image-asset-builder function updates a TarballImageAsset$Builder instance using the provided configuration.
+  The function takes the TarballImageAsset$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `tarballFile` | java.lang.String | [[cdk.support/lookup-entry]] | `:tarball-file` |"
-  [stack id config]
-  (let [builder (TarballImageAsset$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :tarball-file)]
-      (. builder tarballFile data))
-    (.build builder)))
-
-
-(defn tarball-image-asset-props-builder
-  "The tarball-image-asset-props-builder function buildes out new instances of 
-TarballImageAssetProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `tarballFile` | java.lang.String | [[cdk.support/lookup-entry]] | `:tarball-file` |"
-  [stack id config]
-  (let [builder (TarballImageAssetProps$Builder.)]
-    (when-let [data (lookup-entry config id :tarball-file)]
-      (. builder tarballFile data))
-    (.build builder)))
+| `tarballFile` | java.lang.String | [[cdk.support/lookup-entry]] | `:tarball-file` |
+"
+  [^TarballImageAsset$Builder builder id config]
+  (when-let [data (lookup-entry config id :tarball-file)]
+    (. builder tarballFile data))
+  (.build builder))
+
+
+(defn build-tarball-image-asset-props-builder
+  "The build-tarball-image-asset-props-builder function updates a TarballImageAssetProps$Builder instance using the provided configuration.
+  The function takes the TarballImageAssetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `tarballFile` | java.lang.String | [[cdk.support/lookup-entry]] | `:tarball-file` |
+"
+  [^TarballImageAssetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :tarball-file)]
+    (. builder tarballFile data))
+  (.build builder))

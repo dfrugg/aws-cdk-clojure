@@ -5,41 +5,47 @@
                                                           CfnDatastoreProps$Builder]))
 
 
-(defn cfn-datastore-builder
-  "The cfn-datastore-builder function buildes out new instances of 
-CfnDatastore$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-datastore-builder
+  "The build-cfn-datastore-builder function updates a CfnDatastore$Builder instance using the provided configuration.
+  The function takes the CfnDatastore$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `datastoreName` | java.lang.String | [[cdk.support/lookup-entry]] | `:datastore-name` |
 | `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDatastore$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :datastore-name)]
-      (. builder datastoreName data))
-    (when-let [data (lookup-entry config id :kms-key-arn)]
-      (. builder kmsKeyArn data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDatastore$Builder builder id config]
+  (when-let [data (lookup-entry config id :datastore-name)]
+    (. builder datastoreName data))
+  (when-let [data (lookup-entry config id :kms-key-arn)]
+    (. builder kmsKeyArn data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-datastore-props-builder
-  "The cfn-datastore-props-builder function buildes out new instances of 
-CfnDatastoreProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-datastore-props-builder
+  "The build-cfn-datastore-props-builder function updates a CfnDatastoreProps$Builder instance using the provided configuration.
+  The function takes the CfnDatastoreProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `datastoreName` | java.lang.String | [[cdk.support/lookup-entry]] | `:datastore-name` |
 | `kmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-arn` |
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDatastoreProps$Builder.)]
-    (when-let [data (lookup-entry config id :datastore-name)]
-      (. builder datastoreName data))
-    (when-let [data (lookup-entry config id :kms-key-arn)]
-      (. builder kmsKeyArn data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDatastoreProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :datastore-name)]
+    (. builder datastoreName data))
+  (when-let [data (lookup-entry config id :kms-key-arn)]
+    (. builder kmsKeyArn data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))

@@ -18,94 +18,112 @@
                                                         CfnStreamProcessorProps$Builder]))
 
 
-(defn cfn-collection-builder
-  "The cfn-collection-builder function buildes out new instances of 
-CfnCollection$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-collection-builder
+  "The build-cfn-collection-builder function updates a CfnCollection$Builder instance using the provided configuration.
+  The function takes the CfnCollection$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `collectionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:collection-id` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnCollection$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :collection-id)]
-      (. builder collectionId data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnCollection$Builder builder id config]
+  (when-let [data (lookup-entry config id :collection-id)]
+    (. builder collectionId data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-collection-props-builder
-  "The cfn-collection-props-builder function buildes out new instances of 
-CfnCollectionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-collection-props-builder
+  "The build-cfn-collection-props-builder function updates a CfnCollectionProps$Builder instance using the provided configuration.
+  The function takes the CfnCollectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `collectionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:collection-id` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnCollectionProps$Builder.)]
-    (when-let [data (lookup-entry config id :collection-id)]
-      (. builder collectionId data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnCollectionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :collection-id)]
+    (. builder collectionId data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-project-builder
-  "The cfn-project-builder function buildes out new instances of 
-CfnProject$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-project-builder
+  "The build-cfn-project-builder function updates a CfnProject$Builder instance using the provided configuration.
+  The function takes the CfnProject$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |"
-  [stack id config]
-  (let [builder (CfnProject$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :project-name)]
-      (. builder projectName data))
-    (.build builder)))
-
-
-(defn cfn-project-props-builder
-  "The cfn-project-props-builder function buildes out new instances of 
-CfnProjectProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |"
-  [stack id config]
-  (let [builder (CfnProjectProps$Builder.)]
-    (when-let [data (lookup-entry config id :project-name)]
-      (. builder projectName data))
-    (.build builder)))
+| `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |
+"
+  [^CfnProject$Builder builder id config]
+  (when-let [data (lookup-entry config id :project-name)]
+    (. builder projectName data))
+  (.build builder))
 
 
-(defn cfn-stream-processor-bounding-box-property-builder
-  "The cfn-stream-processor-bounding-box-property-builder function buildes out new instances of 
-CfnStreamProcessor$BoundingBoxProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-project-props-builder
+  "The build-cfn-project-props-builder function updates a CfnProjectProps$Builder instance using the provided configuration.
+  The function takes the CfnProjectProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |
+"
+  [^CfnProjectProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :project-name)]
+    (. builder projectName data))
+  (.build builder))
+
+
+(defn build-cfn-stream-processor-bounding-box-property-builder
+  "The build-cfn-stream-processor-bounding-box-property-builder function updates a CfnStreamProcessor$BoundingBoxProperty$Builder instance using the provided configuration.
+  The function takes the CfnStreamProcessor$BoundingBoxProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `height` | java.lang.Number | [[cdk.support/lookup-entry]] | `:height` |
 | `left` | java.lang.Number | [[cdk.support/lookup-entry]] | `:left` |
 | `top` | java.lang.Number | [[cdk.support/lookup-entry]] | `:top` |
-| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |"
-  [stack id config]
-  (let [builder (CfnStreamProcessor$BoundingBoxProperty$Builder.)]
-    (when-let [data (lookup-entry config id :height)]
-      (. builder height data))
-    (when-let [data (lookup-entry config id :left)]
-      (. builder left data))
-    (when-let [data (lookup-entry config id :top)]
-      (. builder top data))
-    (when-let [data (lookup-entry config id :width)]
-      (. builder width data))
-    (.build builder)))
+| `width` | java.lang.Number | [[cdk.support/lookup-entry]] | `:width` |
+"
+  [^CfnStreamProcessor$BoundingBoxProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :height)]
+    (. builder height data))
+  (when-let [data (lookup-entry config id :left)]
+    (. builder left data))
+  (when-let [data (lookup-entry config id :top)]
+    (. builder top data))
+  (when-let [data (lookup-entry config id :width)]
+    (. builder width data))
+  (.build builder))
 
 
-(defn cfn-stream-processor-builder
-  "The cfn-stream-processor-builder function buildes out new instances of 
-CfnStreamProcessor$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-stream-processor-builder
+  "The build-cfn-stream-processor-builder function updates a CfnStreamProcessor$Builder instance using the provided configuration.
+  The function takes the CfnStreamProcessor$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -121,148 +139,172 @@ CfnStreamProcessor$Builder using the provided configuration.  Each field is set 
 | `polygonRegionsOfInterest` | java.lang.Object | [[cdk.support/lookup-entry]] | `:polygon-regions-of-interest` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `s3Destination` | software.amazon.awscdk.services.rekognition.CfnStreamProcessor$S3DestinationProperty | [[cdk.support/lookup-entry]] | `:s3-destination` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnStreamProcessor$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :bounding-box-regions-of-interest)]
-      (. builder boundingBoxRegionsOfInterest data))
-    (when-let [data (lookup-entry config id :connected-home-settings)]
-      (. builder connectedHomeSettings data))
-    (when-let [data (lookup-entry config id :data-sharing-preference)]
-      (. builder dataSharingPreference data))
-    (when-let [data (lookup-entry config id :face-search-settings)]
-      (. builder faceSearchSettings data))
-    (when-let [data (lookup-entry config id :kinesis-data-stream)]
-      (. builder kinesisDataStream data))
-    (when-let [data (lookup-entry config id :kinesis-video-stream)]
-      (. builder kinesisVideoStream data))
-    (when-let [data (lookup-entry config id :kms-key-id)]
-      (. builder kmsKeyId data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :notification-channel)]
-      (. builder notificationChannel data))
-    (when-let [data (lookup-entry config id :polygon-regions-of-interest)]
-      (. builder polygonRegionsOfInterest data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :s3-destination)]
-      (. builder s3Destination data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnStreamProcessor$Builder builder id config]
+  (when-let [data (lookup-entry config id :bounding-box-regions-of-interest)]
+    (. builder boundingBoxRegionsOfInterest data))
+  (when-let [data (lookup-entry config id :connected-home-settings)]
+    (. builder connectedHomeSettings data))
+  (when-let [data (lookup-entry config id :data-sharing-preference)]
+    (. builder dataSharingPreference data))
+  (when-let [data (lookup-entry config id :face-search-settings)]
+    (. builder faceSearchSettings data))
+  (when-let [data (lookup-entry config id :kinesis-data-stream)]
+    (. builder kinesisDataStream data))
+  (when-let [data (lookup-entry config id :kinesis-video-stream)]
+    (. builder kinesisVideoStream data))
+  (when-let [data (lookup-entry config id :kms-key-id)]
+    (. builder kmsKeyId data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :notification-channel)]
+    (. builder notificationChannel data))
+  (when-let [data (lookup-entry config id :polygon-regions-of-interest)]
+    (. builder polygonRegionsOfInterest data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :s3-destination)]
+    (. builder s3Destination data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-stream-processor-connected-home-settings-property-builder
-  "The cfn-stream-processor-connected-home-settings-property-builder function buildes out new instances of 
-CfnStreamProcessor$ConnectedHomeSettingsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-stream-processor-connected-home-settings-property-builder
+  "The build-cfn-stream-processor-connected-home-settings-property-builder function updates a CfnStreamProcessor$ConnectedHomeSettingsProperty$Builder instance using the provided configuration.
+  The function takes the CfnStreamProcessor$ConnectedHomeSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `labels` | java.util.List | [[cdk.support/lookup-entry]] | `:labels` |
-| `minConfidence` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-confidence` |"
-  [stack id config]
-  (let [builder (CfnStreamProcessor$ConnectedHomeSettingsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :labels)]
-      (. builder labels data))
-    (when-let [data (lookup-entry config id :min-confidence)]
-      (. builder minConfidence data))
-    (.build builder)))
+| `minConfidence` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-confidence` |
+"
+  [^CfnStreamProcessor$ConnectedHomeSettingsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :labels)]
+    (. builder labels data))
+  (when-let [data (lookup-entry config id :min-confidence)]
+    (. builder minConfidence data))
+  (.build builder))
 
 
-(defn cfn-stream-processor-data-sharing-preference-property-builder
-  "The cfn-stream-processor-data-sharing-preference-property-builder function buildes out new instances of 
-CfnStreamProcessor$DataSharingPreferenceProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-stream-processor-data-sharing-preference-property-builder
+  "The build-cfn-stream-processor-data-sharing-preference-property-builder function updates a CfnStreamProcessor$DataSharingPreferenceProperty$Builder instance using the provided configuration.
+  The function takes the CfnStreamProcessor$DataSharingPreferenceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `optIn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:opt-in` |"
-  [stack id config]
-  (let [builder (CfnStreamProcessor$DataSharingPreferenceProperty$Builder.)]
-    (when-let [data (lookup-entry config id :opt-in)]
-      (. builder optIn data))
-    (.build builder)))
+| `optIn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:opt-in` |
+"
+  [^CfnStreamProcessor$DataSharingPreferenceProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :opt-in)]
+    (. builder optIn data))
+  (.build builder))
 
 
-(defn cfn-stream-processor-face-search-settings-property-builder
-  "The cfn-stream-processor-face-search-settings-property-builder function buildes out new instances of 
-CfnStreamProcessor$FaceSearchSettingsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-stream-processor-face-search-settings-property-builder
+  "The build-cfn-stream-processor-face-search-settings-property-builder function updates a CfnStreamProcessor$FaceSearchSettingsProperty$Builder instance using the provided configuration.
+  The function takes the CfnStreamProcessor$FaceSearchSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `collectionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:collection-id` |
-| `faceMatchThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:face-match-threshold` |"
-  [stack id config]
-  (let [builder (CfnStreamProcessor$FaceSearchSettingsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :collection-id)]
-      (. builder collectionId data))
-    (when-let [data (lookup-entry config id :face-match-threshold)]
-      (. builder faceMatchThreshold data))
-    (.build builder)))
+| `faceMatchThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:face-match-threshold` |
+"
+  [^CfnStreamProcessor$FaceSearchSettingsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :collection-id)]
+    (. builder collectionId data))
+  (when-let [data (lookup-entry config id :face-match-threshold)]
+    (. builder faceMatchThreshold data))
+  (.build builder))
 
 
-(defn cfn-stream-processor-kinesis-data-stream-property-builder
-  "The cfn-stream-processor-kinesis-data-stream-property-builder function buildes out new instances of 
-CfnStreamProcessor$KinesisDataStreamProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-stream-processor-kinesis-data-stream-property-builder
+  "The build-cfn-stream-processor-kinesis-data-stream-property-builder function updates a CfnStreamProcessor$KinesisDataStreamProperty$Builder instance using the provided configuration.
+  The function takes the CfnStreamProcessor$KinesisDataStreamProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |"
-  [stack id config]
-  (let [builder (CfnStreamProcessor$KinesisDataStreamProperty$Builder.)]
-    (when-let [data (lookup-entry config id :arn)]
-      (. builder arn data))
-    (.build builder)))
-
-
-(defn cfn-stream-processor-kinesis-video-stream-property-builder
-  "The cfn-stream-processor-kinesis-video-stream-property-builder function buildes out new instances of 
-CfnStreamProcessor$KinesisVideoStreamProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |"
-  [stack id config]
-  (let [builder (CfnStreamProcessor$KinesisVideoStreamProperty$Builder.)]
-    (when-let [data (lookup-entry config id :arn)]
-      (. builder arn data))
-    (.build builder)))
+| `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
+"
+  [^CfnStreamProcessor$KinesisDataStreamProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :arn)]
+    (. builder arn data))
+  (.build builder))
 
 
-(defn cfn-stream-processor-notification-channel-property-builder
-  "The cfn-stream-processor-notification-channel-property-builder function buildes out new instances of 
-CfnStreamProcessor$NotificationChannelProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-stream-processor-kinesis-video-stream-property-builder
+  "The build-cfn-stream-processor-kinesis-video-stream-property-builder function updates a CfnStreamProcessor$KinesisVideoStreamProperty$Builder instance using the provided configuration.
+  The function takes the CfnStreamProcessor$KinesisVideoStreamProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |"
-  [stack id config]
-  (let [builder (CfnStreamProcessor$NotificationChannelProperty$Builder.)]
-    (when-let [data (lookup-entry config id :arn)]
-      (. builder arn data))
-    (.build builder)))
+| `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
+"
+  [^CfnStreamProcessor$KinesisVideoStreamProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :arn)]
+    (. builder arn data))
+  (.build builder))
 
 
-(defn cfn-stream-processor-point-property-builder
-  "The cfn-stream-processor-point-property-builder function buildes out new instances of 
-CfnStreamProcessor$PointProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-stream-processor-notification-channel-property-builder
+  "The build-cfn-stream-processor-notification-channel-property-builder function updates a CfnStreamProcessor$NotificationChannelProperty$Builder instance using the provided configuration.
+  The function takes the CfnStreamProcessor$NotificationChannelProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `arn` | java.lang.String | [[cdk.support/lookup-entry]] | `:arn` |
+"
+  [^CfnStreamProcessor$NotificationChannelProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :arn)]
+    (. builder arn data))
+  (.build builder))
+
+
+(defn build-cfn-stream-processor-point-property-builder
+  "The build-cfn-stream-processor-point-property-builder function updates a CfnStreamProcessor$PointProperty$Builder instance using the provided configuration.
+  The function takes the CfnStreamProcessor$PointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `x` | java.lang.Number | [[cdk.support/lookup-entry]] | `:x` |
-| `y` | java.lang.Number | [[cdk.support/lookup-entry]] | `:y` |"
-  [stack id config]
-  (let [builder (CfnStreamProcessor$PointProperty$Builder.)]
-    (when-let [data (lookup-entry config id :x)]
-      (. builder x data))
-    (when-let [data (lookup-entry config id :y)]
-      (. builder y data))
-    (.build builder)))
+| `y` | java.lang.Number | [[cdk.support/lookup-entry]] | `:y` |
+"
+  [^CfnStreamProcessor$PointProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :x)]
+    (. builder x data))
+  (when-let [data (lookup-entry config id :y)]
+    (. builder y data))
+  (.build builder))
 
 
-(defn cfn-stream-processor-props-builder
-  "The cfn-stream-processor-props-builder function buildes out new instances of 
-CfnStreamProcessorProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-stream-processor-props-builder
+  "The build-cfn-stream-processor-props-builder function updates a CfnStreamProcessorProps$Builder instance using the provided configuration.
+  The function takes the CfnStreamProcessorProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -278,50 +320,53 @@ CfnStreamProcessorProps$Builder using the provided configuration.  Each field is
 | `polygonRegionsOfInterest` | java.lang.Object | [[cdk.support/lookup-entry]] | `:polygon-regions-of-interest` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `s3Destination` | software.amazon.awscdk.services.rekognition.CfnStreamProcessor$S3DestinationProperty | [[cdk.support/lookup-entry]] | `:s3-destination` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnStreamProcessorProps$Builder.)]
-    (when-let [data (lookup-entry config id :bounding-box-regions-of-interest)]
-      (. builder boundingBoxRegionsOfInterest data))
-    (when-let [data (lookup-entry config id :connected-home-settings)]
-      (. builder connectedHomeSettings data))
-    (when-let [data (lookup-entry config id :data-sharing-preference)]
-      (. builder dataSharingPreference data))
-    (when-let [data (lookup-entry config id :face-search-settings)]
-      (. builder faceSearchSettings data))
-    (when-let [data (lookup-entry config id :kinesis-data-stream)]
-      (. builder kinesisDataStream data))
-    (when-let [data (lookup-entry config id :kinesis-video-stream)]
-      (. builder kinesisVideoStream data))
-    (when-let [data (lookup-entry config id :kms-key-id)]
-      (. builder kmsKeyId data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :notification-channel)]
-      (. builder notificationChannel data))
-    (when-let [data (lookup-entry config id :polygon-regions-of-interest)]
-      (. builder polygonRegionsOfInterest data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :s3-destination)]
-      (. builder s3Destination data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnStreamProcessorProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :bounding-box-regions-of-interest)]
+    (. builder boundingBoxRegionsOfInterest data))
+  (when-let [data (lookup-entry config id :connected-home-settings)]
+    (. builder connectedHomeSettings data))
+  (when-let [data (lookup-entry config id :data-sharing-preference)]
+    (. builder dataSharingPreference data))
+  (when-let [data (lookup-entry config id :face-search-settings)]
+    (. builder faceSearchSettings data))
+  (when-let [data (lookup-entry config id :kinesis-data-stream)]
+    (. builder kinesisDataStream data))
+  (when-let [data (lookup-entry config id :kinesis-video-stream)]
+    (. builder kinesisVideoStream data))
+  (when-let [data (lookup-entry config id :kms-key-id)]
+    (. builder kmsKeyId data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :notification-channel)]
+    (. builder notificationChannel data))
+  (when-let [data (lookup-entry config id :polygon-regions-of-interest)]
+    (. builder polygonRegionsOfInterest data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :s3-destination)]
+    (. builder s3Destination data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-stream-processor-s3-destination-property-builder
-  "The cfn-stream-processor-s3-destination-property-builder function buildes out new instances of 
-CfnStreamProcessor$S3DestinationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-stream-processor-s3-destination-property-builder
+  "The build-cfn-stream-processor-s3-destination-property-builder function updates a CfnStreamProcessor$S3DestinationProperty$Builder instance using the provided configuration.
+  The function takes the CfnStreamProcessor$S3DestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-name` |
-| `objectKeyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-key-prefix` |"
-  [stack id config]
-  (let [builder (CfnStreamProcessor$S3DestinationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :bucket-name)]
-      (. builder bucketName data))
-    (when-let [data (lookup-entry config id :object-key-prefix)]
-      (. builder objectKeyPrefix data))
-    (.build builder)))
+| `objectKeyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-key-prefix` |
+"
+  [^CfnStreamProcessor$S3DestinationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :bucket-name)]
+    (. builder bucketName data))
+  (when-let [data (lookup-entry config id :object-key-prefix)]
+    (. builder objectKeyPrefix data))
+  (.build builder))

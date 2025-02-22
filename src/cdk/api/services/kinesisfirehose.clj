@@ -55,26 +55,32 @@
                                                             CfnDeliveryStreamProps$Builder]))
 
 
-(defn cfn-delivery-stream-amazon-open-search-serverless-buffering-hints-property-builder
-  "The cfn-delivery-stream-amazon-open-search-serverless-buffering-hints-property-builder function buildes out new instances of 
-CfnDeliveryStream$AmazonOpenSearchServerlessBufferingHintsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-amazon-open-search-serverless-buffering-hints-property-builder
+  "The build-cfn-delivery-stream-amazon-open-search-serverless-buffering-hints-property-builder function updates a CfnDeliveryStream$AmazonOpenSearchServerlessBufferingHintsProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$AmazonOpenSearchServerlessBufferingHintsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `intervalInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:interval-in-seconds` |
-| `sizeInMBs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size-in-m-bs` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$AmazonOpenSearchServerlessBufferingHintsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :interval-in-seconds)]
-      (. builder intervalInSeconds data))
-    (when-let [data (lookup-entry config id :size-in-m-bs)]
-      (. builder sizeInMBs data))
-    (.build builder)))
+| `sizeInMBs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size-in-m-bs` |
+"
+  [^CfnDeliveryStream$AmazonOpenSearchServerlessBufferingHintsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :interval-in-seconds)]
+    (. builder intervalInSeconds data))
+  (when-let [data (lookup-entry config id :size-in-m-bs)]
+    (. builder sizeInMBs data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-amazon-open-search-serverless-destination-configuration-property-builder
-  "The cfn-delivery-stream-amazon-open-search-serverless-destination-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$AmazonOpenSearchServerlessDestinationConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-amazon-open-search-serverless-destination-configuration-property-builder
+  "The build-cfn-delivery-stream-amazon-open-search-serverless-destination-configuration-property-builder function updates a CfnDeliveryStream$AmazonOpenSearchServerlessDestinationConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$AmazonOpenSearchServerlessDestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -87,66 +93,75 @@ CfnDeliveryStream$AmazonOpenSearchServerlessDestinationConfigurationProperty$Bui
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `s3BackupMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-backup-mode` |
 | `s3Configuration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |
-| `vpcConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-configuration` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$AmazonOpenSearchServerlessDestinationConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :buffering-hints)]
-      (. builder bufferingHints data))
-    (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
-      (. builder cloudWatchLoggingOptions data))
-    (when-let [data (lookup-entry config id :collection-endpoint)]
-      (. builder collectionEndpoint data))
-    (when-let [data (lookup-entry config id :index-name)]
-      (. builder indexName data))
-    (when-let [data (lookup-entry config id :processing-configuration)]
-      (. builder processingConfiguration data))
-    (when-let [data (lookup-entry config id :retry-options)]
-      (. builder retryOptions data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :s3-backup-mode)]
-      (. builder s3BackupMode data))
-    (when-let [data (lookup-entry config id :s3-configuration)]
-      (. builder s3Configuration data))
-    (when-let [data (lookup-entry config id :vpc-configuration)]
-      (. builder vpcConfiguration data))
-    (.build builder)))
+| `vpcConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
+"
+  [^CfnDeliveryStream$AmazonOpenSearchServerlessDestinationConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :buffering-hints)]
+    (. builder bufferingHints data))
+  (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
+    (. builder cloudWatchLoggingOptions data))
+  (when-let [data (lookup-entry config id :collection-endpoint)]
+    (. builder collectionEndpoint data))
+  (when-let [data (lookup-entry config id :index-name)]
+    (. builder indexName data))
+  (when-let [data (lookup-entry config id :processing-configuration)]
+    (. builder processingConfiguration data))
+  (when-let [data (lookup-entry config id :retry-options)]
+    (. builder retryOptions data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :s3-backup-mode)]
+    (. builder s3BackupMode data))
+  (when-let [data (lookup-entry config id :s3-configuration)]
+    (. builder s3Configuration data))
+  (when-let [data (lookup-entry config id :vpc-configuration)]
+    (. builder vpcConfiguration data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-amazon-open-search-serverless-retry-options-property-builder
-  "The cfn-delivery-stream-amazon-open-search-serverless-retry-options-property-builder function buildes out new instances of 
-CfnDeliveryStream$AmazonOpenSearchServerlessRetryOptionsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-amazon-open-search-serverless-retry-options-property-builder
+  "The build-cfn-delivery-stream-amazon-open-search-serverless-retry-options-property-builder function updates a CfnDeliveryStream$AmazonOpenSearchServerlessRetryOptionsProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$AmazonOpenSearchServerlessRetryOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$AmazonOpenSearchServerlessRetryOptionsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :duration-in-seconds)]
-      (. builder durationInSeconds data))
-    (.build builder)))
+| `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |
+"
+  [^CfnDeliveryStream$AmazonOpenSearchServerlessRetryOptionsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :duration-in-seconds)]
+    (. builder durationInSeconds data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-amazonopensearchservice-buffering-hints-property-builder
-  "The cfn-delivery-stream-amazonopensearchservice-buffering-hints-property-builder function buildes out new instances of 
-CfnDeliveryStream$AmazonopensearchserviceBufferingHintsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-amazonopensearchservice-buffering-hints-property-builder
+  "The build-cfn-delivery-stream-amazonopensearchservice-buffering-hints-property-builder function updates a CfnDeliveryStream$AmazonopensearchserviceBufferingHintsProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$AmazonopensearchserviceBufferingHintsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `intervalInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:interval-in-seconds` |
-| `sizeInMBs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size-in-m-bs` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$AmazonopensearchserviceBufferingHintsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :interval-in-seconds)]
-      (. builder intervalInSeconds data))
-    (when-let [data (lookup-entry config id :size-in-m-bs)]
-      (. builder sizeInMBs data))
-    (.build builder)))
+| `sizeInMBs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size-in-m-bs` |
+"
+  [^CfnDeliveryStream$AmazonopensearchserviceBufferingHintsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :interval-in-seconds)]
+    (. builder intervalInSeconds data))
+  (when-let [data (lookup-entry config id :size-in-m-bs)]
+    (. builder sizeInMBs data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-amazonopensearchservice-destination-configuration-property-builder
-  "The cfn-delivery-stream-amazonopensearchservice-destination-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$AmazonopensearchserviceDestinationConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-amazonopensearchservice-destination-configuration-property-builder
+  "The build-cfn-delivery-stream-amazonopensearchservice-destination-configuration-property-builder function updates a CfnDeliveryStream$AmazonopensearchserviceDestinationConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$AmazonopensearchserviceDestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -163,91 +178,103 @@ CfnDeliveryStream$AmazonopensearchserviceDestinationConfigurationProperty$Builde
 | `s3BackupMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-backup-mode` |
 | `s3Configuration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |
 | `typeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:type-name` |
-| `vpcConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-configuration` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$AmazonopensearchserviceDestinationConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :buffering-hints)]
-      (. builder bufferingHints data))
-    (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
-      (. builder cloudWatchLoggingOptions data))
-    (when-let [data (lookup-entry config id :cluster-endpoint)]
-      (. builder clusterEndpoint data))
-    (when-let [data (lookup-entry config id :document-id-options)]
-      (. builder documentIdOptions data))
-    (when-let [data (lookup-entry config id :domain-arn)]
-      (. builder domainArn data))
-    (when-let [data (lookup-entry config id :index-name)]
-      (. builder indexName data))
-    (when-let [data (lookup-entry config id :index-rotation-period)]
-      (. builder indexRotationPeriod data))
-    (when-let [data (lookup-entry config id :processing-configuration)]
-      (. builder processingConfiguration data))
-    (when-let [data (lookup-entry config id :retry-options)]
-      (. builder retryOptions data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :s3-backup-mode)]
-      (. builder s3BackupMode data))
-    (when-let [data (lookup-entry config id :s3-configuration)]
-      (. builder s3Configuration data))
-    (when-let [data (lookup-entry config id :type-name)]
-      (. builder typeName data))
-    (when-let [data (lookup-entry config id :vpc-configuration)]
-      (. builder vpcConfiguration data))
-    (.build builder)))
+| `vpcConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
+"
+  [^CfnDeliveryStream$AmazonopensearchserviceDestinationConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :buffering-hints)]
+    (. builder bufferingHints data))
+  (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
+    (. builder cloudWatchLoggingOptions data))
+  (when-let [data (lookup-entry config id :cluster-endpoint)]
+    (. builder clusterEndpoint data))
+  (when-let [data (lookup-entry config id :document-id-options)]
+    (. builder documentIdOptions data))
+  (when-let [data (lookup-entry config id :domain-arn)]
+    (. builder domainArn data))
+  (when-let [data (lookup-entry config id :index-name)]
+    (. builder indexName data))
+  (when-let [data (lookup-entry config id :index-rotation-period)]
+    (. builder indexRotationPeriod data))
+  (when-let [data (lookup-entry config id :processing-configuration)]
+    (. builder processingConfiguration data))
+  (when-let [data (lookup-entry config id :retry-options)]
+    (. builder retryOptions data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :s3-backup-mode)]
+    (. builder s3BackupMode data))
+  (when-let [data (lookup-entry config id :s3-configuration)]
+    (. builder s3Configuration data))
+  (when-let [data (lookup-entry config id :type-name)]
+    (. builder typeName data))
+  (when-let [data (lookup-entry config id :vpc-configuration)]
+    (. builder vpcConfiguration data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-amazonopensearchservice-retry-options-property-builder
-  "The cfn-delivery-stream-amazonopensearchservice-retry-options-property-builder function buildes out new instances of 
-CfnDeliveryStream$AmazonopensearchserviceRetryOptionsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-amazonopensearchservice-retry-options-property-builder
+  "The build-cfn-delivery-stream-amazonopensearchservice-retry-options-property-builder function updates a CfnDeliveryStream$AmazonopensearchserviceRetryOptionsProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$AmazonopensearchserviceRetryOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$AmazonopensearchserviceRetryOptionsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :duration-in-seconds)]
-      (. builder durationInSeconds data))
-    (.build builder)))
+| `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |
+"
+  [^CfnDeliveryStream$AmazonopensearchserviceRetryOptionsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :duration-in-seconds)]
+    (. builder durationInSeconds data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-authentication-configuration-property-builder
-  "The cfn-delivery-stream-authentication-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$AuthenticationConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-authentication-configuration-property-builder
+  "The build-cfn-delivery-stream-authentication-configuration-property-builder function updates a CfnDeliveryStream$AuthenticationConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$AuthenticationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `connectivity` | java.lang.String | [[cdk.support/lookup-entry]] | `:connectivity` |
-| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$AuthenticationConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :connectivity)]
-      (. builder connectivity data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (.build builder)))
+| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
+"
+  [^CfnDeliveryStream$AuthenticationConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :connectivity)]
+    (. builder connectivity data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-buffering-hints-property-builder
-  "The cfn-delivery-stream-buffering-hints-property-builder function buildes out new instances of 
-CfnDeliveryStream$BufferingHintsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-buffering-hints-property-builder
+  "The build-cfn-delivery-stream-buffering-hints-property-builder function updates a CfnDeliveryStream$BufferingHintsProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$BufferingHintsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `intervalInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:interval-in-seconds` |
-| `sizeInMBs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size-in-m-bs` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$BufferingHintsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :interval-in-seconds)]
-      (. builder intervalInSeconds data))
-    (when-let [data (lookup-entry config id :size-in-m-bs)]
-      (. builder sizeInMBs data))
-    (.build builder)))
+| `sizeInMBs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size-in-m-bs` |
+"
+  [^CfnDeliveryStream$BufferingHintsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :interval-in-seconds)]
+    (. builder intervalInSeconds data))
+  (when-let [data (lookup-entry config id :size-in-m-bs)]
+    (. builder sizeInMBs data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-builder
-  "The cfn-delivery-stream-builder function buildes out new instances of 
-CfnDeliveryStream$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-builder
+  "The build-cfn-delivery-stream-builder function updates a CfnDeliveryStream$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -265,190 +292,217 @@ CfnDeliveryStream$Builder using the provided configuration.  Each field is set a
 | `s3DestinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-destination-configuration` |
 | `snowflakeDestinationConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$SnowflakeDestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:snowflake-destination-configuration` |
 | `splunkDestinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:splunk-destination-configuration` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :amazon-open-search-serverless-destination-configuration)]
-      (. builder amazonOpenSearchServerlessDestinationConfiguration data))
-    (when-let [data (lookup-entry config id :amazonopensearchservice-destination-configuration)]
-      (. builder amazonopensearchserviceDestinationConfiguration data))
-    (when-let [data (lookup-entry config id :delivery-stream-encryption-configuration-input)]
-      (. builder deliveryStreamEncryptionConfigurationInput data))
-    (when-let [data (lookup-entry config id :delivery-stream-name)]
-      (. builder deliveryStreamName data))
-    (when-let [data (lookup-entry config id :delivery-stream-type)]
-      (. builder deliveryStreamType data))
-    (when-let [data (lookup-entry config id :elasticsearch-destination-configuration)]
-      (. builder elasticsearchDestinationConfiguration data))
-    (when-let [data (lookup-entry config id :extended-s3-destination-configuration)]
-      (. builder extendedS3DestinationConfiguration data))
-    (when-let [data (lookup-entry config id :http-endpoint-destination-configuration)]
-      (. builder httpEndpointDestinationConfiguration data))
-    (when-let [data (lookup-entry config id :kinesis-stream-source-configuration)]
-      (. builder kinesisStreamSourceConfiguration data))
-    (when-let [data (lookup-entry config id :msk-source-configuration)]
-      (. builder mskSourceConfiguration data))
-    (when-let [data (lookup-entry config id :redshift-destination-configuration)]
-      (. builder redshiftDestinationConfiguration data))
-    (when-let [data (lookup-entry config id :s3-destination-configuration)]
-      (. builder s3DestinationConfiguration data))
-    (when-let [data (lookup-entry config id :snowflake-destination-configuration)]
-      (. builder snowflakeDestinationConfiguration data))
-    (when-let [data (lookup-entry config id :splunk-destination-configuration)]
-      (. builder splunkDestinationConfiguration data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDeliveryStream$Builder builder id config]
+  (when-let [data (lookup-entry config id :amazon-open-search-serverless-destination-configuration)]
+    (. builder amazonOpenSearchServerlessDestinationConfiguration data))
+  (when-let [data (lookup-entry config id :amazonopensearchservice-destination-configuration)]
+    (. builder amazonopensearchserviceDestinationConfiguration data))
+  (when-let [data (lookup-entry config id :delivery-stream-encryption-configuration-input)]
+    (. builder deliveryStreamEncryptionConfigurationInput data))
+  (when-let [data (lookup-entry config id :delivery-stream-name)]
+    (. builder deliveryStreamName data))
+  (when-let [data (lookup-entry config id :delivery-stream-type)]
+    (. builder deliveryStreamType data))
+  (when-let [data (lookup-entry config id :elasticsearch-destination-configuration)]
+    (. builder elasticsearchDestinationConfiguration data))
+  (when-let [data (lookup-entry config id :extended-s3-destination-configuration)]
+    (. builder extendedS3DestinationConfiguration data))
+  (when-let [data (lookup-entry config id :http-endpoint-destination-configuration)]
+    (. builder httpEndpointDestinationConfiguration data))
+  (when-let [data (lookup-entry config id :kinesis-stream-source-configuration)]
+    (. builder kinesisStreamSourceConfiguration data))
+  (when-let [data (lookup-entry config id :msk-source-configuration)]
+    (. builder mskSourceConfiguration data))
+  (when-let [data (lookup-entry config id :redshift-destination-configuration)]
+    (. builder redshiftDestinationConfiguration data))
+  (when-let [data (lookup-entry config id :s3-destination-configuration)]
+    (. builder s3DestinationConfiguration data))
+  (when-let [data (lookup-entry config id :snowflake-destination-configuration)]
+    (. builder snowflakeDestinationConfiguration data))
+  (when-let [data (lookup-entry config id :splunk-destination-configuration)]
+    (. builder splunkDestinationConfiguration data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-cloud-watch-logging-options-property-builder
-  "The cfn-delivery-stream-cloud-watch-logging-options-property-builder function buildes out new instances of 
-CfnDeliveryStream$CloudWatchLoggingOptionsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-cloud-watch-logging-options-property-builder
+  "The build-cfn-delivery-stream-cloud-watch-logging-options-property-builder function updates a CfnDeliveryStream$CloudWatchLoggingOptionsProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$CloudWatchLoggingOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `logGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-group-name` |
-| `logStreamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-stream-name` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$CloudWatchLoggingOptionsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :log-group-name)]
-      (. builder logGroupName data))
-    (when-let [data (lookup-entry config id :log-stream-name)]
-      (. builder logStreamName data))
-    (.build builder)))
+| `logStreamName` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-stream-name` |
+"
+  [^CfnDeliveryStream$CloudWatchLoggingOptionsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :log-group-name)]
+    (. builder logGroupName data))
+  (when-let [data (lookup-entry config id :log-stream-name)]
+    (. builder logStreamName data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-copy-command-property-builder
-  "The cfn-delivery-stream-copy-command-property-builder function buildes out new instances of 
-CfnDeliveryStream$CopyCommandProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-copy-command-property-builder
+  "The build-cfn-delivery-stream-copy-command-property-builder function updates a CfnDeliveryStream$CopyCommandProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$CopyCommandProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `copyOptions` | java.lang.String | [[cdk.support/lookup-entry]] | `:copy-options` |
 | `dataTableColumns` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-table-columns` |
-| `dataTableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-table-name` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$CopyCommandProperty$Builder.)]
-    (when-let [data (lookup-entry config id :copy-options)]
-      (. builder copyOptions data))
-    (when-let [data (lookup-entry config id :data-table-columns)]
-      (. builder dataTableColumns data))
-    (when-let [data (lookup-entry config id :data-table-name)]
-      (. builder dataTableName data))
-    (.build builder)))
+| `dataTableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-table-name` |
+"
+  [^CfnDeliveryStream$CopyCommandProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :copy-options)]
+    (. builder copyOptions data))
+  (when-let [data (lookup-entry config id :data-table-columns)]
+    (. builder dataTableColumns data))
+  (when-let [data (lookup-entry config id :data-table-name)]
+    (. builder dataTableName data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-data-format-conversion-configuration-property-builder
-  "The cfn-delivery-stream-data-format-conversion-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$DataFormatConversionConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-data-format-conversion-configuration-property-builder
+  "The build-cfn-delivery-stream-data-format-conversion-configuration-property-builder function updates a CfnDeliveryStream$DataFormatConversionConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$DataFormatConversionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `inputFormatConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$InputFormatConfigurationProperty | [[cdk.support/lookup-entry]] | `:input-format-configuration` |
 | `outputFormatConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:output-format-configuration` |
-| `schemaConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$SchemaConfigurationProperty | [[cdk.support/lookup-entry]] | `:schema-configuration` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$DataFormatConversionConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :input-format-configuration)]
-      (. builder inputFormatConfiguration data))
-    (when-let [data (lookup-entry config id :output-format-configuration)]
-      (. builder outputFormatConfiguration data))
-    (when-let [data (lookup-entry config id :schema-configuration)]
-      (. builder schemaConfiguration data))
-    (.build builder)))
+| `schemaConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$SchemaConfigurationProperty | [[cdk.support/lookup-entry]] | `:schema-configuration` |
+"
+  [^CfnDeliveryStream$DataFormatConversionConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :input-format-configuration)]
+    (. builder inputFormatConfiguration data))
+  (when-let [data (lookup-entry config id :output-format-configuration)]
+    (. builder outputFormatConfiguration data))
+  (when-let [data (lookup-entry config id :schema-configuration)]
+    (. builder schemaConfiguration data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-delivery-stream-encryption-configuration-input-property-builder
-  "The cfn-delivery-stream-delivery-stream-encryption-configuration-input-property-builder function buildes out new instances of 
-CfnDeliveryStream$DeliveryStreamEncryptionConfigurationInputProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-delivery-stream-encryption-configuration-input-property-builder
+  "The build-cfn-delivery-stream-delivery-stream-encryption-configuration-input-property-builder function updates a CfnDeliveryStream$DeliveryStreamEncryptionConfigurationInputProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$DeliveryStreamEncryptionConfigurationInputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `keyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-arn` |
-| `keyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-type` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$DeliveryStreamEncryptionConfigurationInputProperty$Builder.)]
-    (when-let [data (lookup-entry config id :key-arn)]
-      (. builder keyArn data))
-    (when-let [data (lookup-entry config id :key-type)]
-      (. builder keyType data))
-    (.build builder)))
+| `keyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-type` |
+"
+  [^CfnDeliveryStream$DeliveryStreamEncryptionConfigurationInputProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :key-arn)]
+    (. builder keyArn data))
+  (when-let [data (lookup-entry config id :key-type)]
+    (. builder keyType data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-deserializer-property-builder
-  "The cfn-delivery-stream-deserializer-property-builder function buildes out new instances of 
-CfnDeliveryStream$DeserializerProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-deserializer-property-builder
+  "The build-cfn-delivery-stream-deserializer-property-builder function updates a CfnDeliveryStream$DeserializerProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$DeserializerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `hiveJsonSerDe` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$HiveJsonSerDeProperty | [[cdk.support/lookup-entry]] | `:hive-json-ser-de` |
-| `openXJsonSerDe` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:open-x-json-ser-de` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$DeserializerProperty$Builder.)]
-    (when-let [data (lookup-entry config id :hive-json-ser-de)]
-      (. builder hiveJsonSerDe data))
-    (when-let [data (lookup-entry config id :open-x-json-ser-de)]
-      (. builder openXJsonSerDe data))
-    (.build builder)))
+| `openXJsonSerDe` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:open-x-json-ser-de` |
+"
+  [^CfnDeliveryStream$DeserializerProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :hive-json-ser-de)]
+    (. builder hiveJsonSerDe data))
+  (when-let [data (lookup-entry config id :open-x-json-ser-de)]
+    (. builder openXJsonSerDe data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-document-id-options-property-builder
-  "The cfn-delivery-stream-document-id-options-property-builder function buildes out new instances of 
-CfnDeliveryStream$DocumentIdOptionsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-document-id-options-property-builder
+  "The build-cfn-delivery-stream-document-id-options-property-builder function updates a CfnDeliveryStream$DocumentIdOptionsProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$DocumentIdOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultDocumentIdFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-document-id-format` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$DocumentIdOptionsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :default-document-id-format)]
-      (. builder defaultDocumentIdFormat data))
-    (.build builder)))
+| `defaultDocumentIdFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-document-id-format` |
+"
+  [^CfnDeliveryStream$DocumentIdOptionsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :default-document-id-format)]
+    (. builder defaultDocumentIdFormat data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-dynamic-partitioning-configuration-property-builder
-  "The cfn-delivery-stream-dynamic-partitioning-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$DynamicPartitioningConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-dynamic-partitioning-configuration-property-builder
+  "The build-cfn-delivery-stream-dynamic-partitioning-configuration-property-builder function updates a CfnDeliveryStream$DynamicPartitioningConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$DynamicPartitioningConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
-| `retryOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retry-options` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$DynamicPartitioningConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :retry-options)]
-      (. builder retryOptions data))
-    (.build builder)))
+| `retryOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retry-options` |
+"
+  [^CfnDeliveryStream$DynamicPartitioningConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :retry-options)]
+    (. builder retryOptions data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-elasticsearch-buffering-hints-property-builder
-  "The cfn-delivery-stream-elasticsearch-buffering-hints-property-builder function buildes out new instances of 
-CfnDeliveryStream$ElasticsearchBufferingHintsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-elasticsearch-buffering-hints-property-builder
+  "The build-cfn-delivery-stream-elasticsearch-buffering-hints-property-builder function updates a CfnDeliveryStream$ElasticsearchBufferingHintsProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$ElasticsearchBufferingHintsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `intervalInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:interval-in-seconds` |
-| `sizeInMBs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size-in-m-bs` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$ElasticsearchBufferingHintsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :interval-in-seconds)]
-      (. builder intervalInSeconds data))
-    (when-let [data (lookup-entry config id :size-in-m-bs)]
-      (. builder sizeInMBs data))
-    (.build builder)))
+| `sizeInMBs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size-in-m-bs` |
+"
+  [^CfnDeliveryStream$ElasticsearchBufferingHintsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :interval-in-seconds)]
+    (. builder intervalInSeconds data))
+  (when-let [data (lookup-entry config id :size-in-m-bs)]
+    (. builder sizeInMBs data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-elasticsearch-destination-configuration-property-builder
-  "The cfn-delivery-stream-elasticsearch-destination-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$ElasticsearchDestinationConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-elasticsearch-destination-configuration-property-builder
+  "The build-cfn-delivery-stream-elasticsearch-destination-configuration-property-builder function updates a CfnDeliveryStream$ElasticsearchDestinationConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$ElasticsearchDestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -465,74 +519,83 @@ CfnDeliveryStream$ElasticsearchDestinationConfigurationProperty$Builder using th
 | `s3BackupMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-backup-mode` |
 | `s3Configuration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |
 | `typeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:type-name` |
-| `vpcConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$VpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:vpc-configuration` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$ElasticsearchDestinationConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :buffering-hints)]
-      (. builder bufferingHints data))
-    (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
-      (. builder cloudWatchLoggingOptions data))
-    (when-let [data (lookup-entry config id :cluster-endpoint)]
-      (. builder clusterEndpoint data))
-    (when-let [data (lookup-entry config id :document-id-options)]
-      (. builder documentIdOptions data))
-    (when-let [data (lookup-entry config id :domain-arn)]
-      (. builder domainArn data))
-    (when-let [data (lookup-entry config id :index-name)]
-      (. builder indexName data))
-    (when-let [data (lookup-entry config id :index-rotation-period)]
-      (. builder indexRotationPeriod data))
-    (when-let [data (lookup-entry config id :processing-configuration)]
-      (. builder processingConfiguration data))
-    (when-let [data (lookup-entry config id :retry-options)]
-      (. builder retryOptions data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :s3-backup-mode)]
-      (. builder s3BackupMode data))
-    (when-let [data (lookup-entry config id :s3-configuration)]
-      (. builder s3Configuration data))
-    (when-let [data (lookup-entry config id :type-name)]
-      (. builder typeName data))
-    (when-let [data (lookup-entry config id :vpc-configuration)]
-      (. builder vpcConfiguration data))
-    (.build builder)))
+| `vpcConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$VpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:vpc-configuration` |
+"
+  [^CfnDeliveryStream$ElasticsearchDestinationConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :buffering-hints)]
+    (. builder bufferingHints data))
+  (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
+    (. builder cloudWatchLoggingOptions data))
+  (when-let [data (lookup-entry config id :cluster-endpoint)]
+    (. builder clusterEndpoint data))
+  (when-let [data (lookup-entry config id :document-id-options)]
+    (. builder documentIdOptions data))
+  (when-let [data (lookup-entry config id :domain-arn)]
+    (. builder domainArn data))
+  (when-let [data (lookup-entry config id :index-name)]
+    (. builder indexName data))
+  (when-let [data (lookup-entry config id :index-rotation-period)]
+    (. builder indexRotationPeriod data))
+  (when-let [data (lookup-entry config id :processing-configuration)]
+    (. builder processingConfiguration data))
+  (when-let [data (lookup-entry config id :retry-options)]
+    (. builder retryOptions data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :s3-backup-mode)]
+    (. builder s3BackupMode data))
+  (when-let [data (lookup-entry config id :s3-configuration)]
+    (. builder s3Configuration data))
+  (when-let [data (lookup-entry config id :type-name)]
+    (. builder typeName data))
+  (when-let [data (lookup-entry config id :vpc-configuration)]
+    (. builder vpcConfiguration data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-elasticsearch-retry-options-property-builder
-  "The cfn-delivery-stream-elasticsearch-retry-options-property-builder function buildes out new instances of 
-CfnDeliveryStream$ElasticsearchRetryOptionsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-elasticsearch-retry-options-property-builder
+  "The build-cfn-delivery-stream-elasticsearch-retry-options-property-builder function updates a CfnDeliveryStream$ElasticsearchRetryOptionsProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$ElasticsearchRetryOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$ElasticsearchRetryOptionsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :duration-in-seconds)]
-      (. builder durationInSeconds data))
-    (.build builder)))
+| `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |
+"
+  [^CfnDeliveryStream$ElasticsearchRetryOptionsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :duration-in-seconds)]
+    (. builder durationInSeconds data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-encryption-configuration-property-builder
-  "The cfn-delivery-stream-encryption-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$EncryptionConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-encryption-configuration-property-builder
+  "The build-cfn-delivery-stream-encryption-configuration-property-builder function updates a CfnDeliveryStream$EncryptionConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$EncryptionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `kmsEncryptionConfig` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$KMSEncryptionConfigProperty | [[cdk.support/lookup-entry]] | `:kms-encryption-config` |
-| `noEncryptionConfig` | java.lang.String | [[cdk.support/lookup-entry]] | `:no-encryption-config` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$EncryptionConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :kms-encryption-config)]
-      (. builder kmsEncryptionConfig data))
-    (when-let [data (lookup-entry config id :no-encryption-config)]
-      (. builder noEncryptionConfig data))
-    (.build builder)))
+| `noEncryptionConfig` | java.lang.String | [[cdk.support/lookup-entry]] | `:no-encryption-config` |
+"
+  [^CfnDeliveryStream$EncryptionConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :kms-encryption-config)]
+    (. builder kmsEncryptionConfig data))
+  (when-let [data (lookup-entry config id :no-encryption-config)]
+    (. builder noEncryptionConfig data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-extended-s3-destination-configuration-property-builder
-  "The cfn-delivery-stream-extended-s3-destination-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$ExtendedS3DestinationConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-extended-s3-destination-configuration-property-builder
+  "The build-cfn-delivery-stream-extended-s3-destination-configuration-property-builder function updates a CfnDeliveryStream$ExtendedS3DestinationConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$ExtendedS3DestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -550,96 +613,108 @@ CfnDeliveryStream$ExtendedS3DestinationConfigurationProperty$Builder using the p
 | `processingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:processing-configuration` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `s3BackupConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-backup-configuration` |
-| `s3BackupMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-backup-mode` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$ExtendedS3DestinationConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :bucket-arn)]
-      (. builder bucketArn data))
-    (when-let [data (lookup-entry config id :buffering-hints)]
-      (. builder bufferingHints data))
-    (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
-      (. builder cloudWatchLoggingOptions data))
-    (when-let [data (lookup-entry config id :compression-format)]
-      (. builder compressionFormat data))
-    (when-let [data (lookup-entry config id :custom-time-zone)]
-      (. builder customTimeZone data))
-    (when-let [data (lookup-entry config id :data-format-conversion-configuration)]
-      (. builder dataFormatConversionConfiguration data))
-    (when-let [data (lookup-entry config id :dynamic-partitioning-configuration)]
-      (. builder dynamicPartitioningConfiguration data))
-    (when-let [data (lookup-entry config id :encryption-configuration)]
-      (. builder encryptionConfiguration data))
-    (when-let [data (lookup-entry config id :error-output-prefix)]
-      (. builder errorOutputPrefix data))
-    (when-let [data (lookup-entry config id :file-extension)]
-      (. builder fileExtension data))
-    (when-let [data (lookup-entry config id :prefix)]
-      (. builder prefix data))
-    (when-let [data (lookup-entry config id :processing-configuration)]
-      (. builder processingConfiguration data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :s3-backup-configuration)]
-      (. builder s3BackupConfiguration data))
-    (when-let [data (lookup-entry config id :s3-backup-mode)]
-      (. builder s3BackupMode data))
-    (.build builder)))
+| `s3BackupMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-backup-mode` |
+"
+  [^CfnDeliveryStream$ExtendedS3DestinationConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :bucket-arn)]
+    (. builder bucketArn data))
+  (when-let [data (lookup-entry config id :buffering-hints)]
+    (. builder bufferingHints data))
+  (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
+    (. builder cloudWatchLoggingOptions data))
+  (when-let [data (lookup-entry config id :compression-format)]
+    (. builder compressionFormat data))
+  (when-let [data (lookup-entry config id :custom-time-zone)]
+    (. builder customTimeZone data))
+  (when-let [data (lookup-entry config id :data-format-conversion-configuration)]
+    (. builder dataFormatConversionConfiguration data))
+  (when-let [data (lookup-entry config id :dynamic-partitioning-configuration)]
+    (. builder dynamicPartitioningConfiguration data))
+  (when-let [data (lookup-entry config id :encryption-configuration)]
+    (. builder encryptionConfiguration data))
+  (when-let [data (lookup-entry config id :error-output-prefix)]
+    (. builder errorOutputPrefix data))
+  (when-let [data (lookup-entry config id :file-extension)]
+    (. builder fileExtension data))
+  (when-let [data (lookup-entry config id :prefix)]
+    (. builder prefix data))
+  (when-let [data (lookup-entry config id :processing-configuration)]
+    (. builder processingConfiguration data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :s3-backup-configuration)]
+    (. builder s3BackupConfiguration data))
+  (when-let [data (lookup-entry config id :s3-backup-mode)]
+    (. builder s3BackupMode data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-hive-json-ser-de-property-builder
-  "The cfn-delivery-stream-hive-json-ser-de-property-builder function buildes out new instances of 
-CfnDeliveryStream$HiveJsonSerDeProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-hive-json-ser-de-property-builder
+  "The build-cfn-delivery-stream-hive-json-ser-de-property-builder function updates a CfnDeliveryStream$HiveJsonSerDeProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$HiveJsonSerDeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `timestampFormats` | java.util.List | [[cdk.support/lookup-entry]] | `:timestamp-formats` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$HiveJsonSerDeProperty$Builder.)]
-    (when-let [data (lookup-entry config id :timestamp-formats)]
-      (. builder timestampFormats data))
-    (.build builder)))
+| `timestampFormats` | java.util.List | [[cdk.support/lookup-entry]] | `:timestamp-formats` |
+"
+  [^CfnDeliveryStream$HiveJsonSerDeProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :timestamp-formats)]
+    (. builder timestampFormats data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-http-endpoint-common-attribute-property-builder
-  "The cfn-delivery-stream-http-endpoint-common-attribute-property-builder function buildes out new instances of 
-CfnDeliveryStream$HttpEndpointCommonAttributeProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-http-endpoint-common-attribute-property-builder
+  "The build-cfn-delivery-stream-http-endpoint-common-attribute-property-builder function updates a CfnDeliveryStream$HttpEndpointCommonAttributeProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$HttpEndpointCommonAttributeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attributeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-name` |
-| `attributeValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-value` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$HttpEndpointCommonAttributeProperty$Builder.)]
-    (when-let [data (lookup-entry config id :attribute-name)]
-      (. builder attributeName data))
-    (when-let [data (lookup-entry config id :attribute-value)]
-      (. builder attributeValue data))
-    (.build builder)))
+| `attributeValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-value` |
+"
+  [^CfnDeliveryStream$HttpEndpointCommonAttributeProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :attribute-name)]
+    (. builder attributeName data))
+  (when-let [data (lookup-entry config id :attribute-value)]
+    (. builder attributeValue data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-http-endpoint-configuration-property-builder
-  "The cfn-delivery-stream-http-endpoint-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$HttpEndpointConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-http-endpoint-configuration-property-builder
+  "The build-cfn-delivery-stream-http-endpoint-configuration-property-builder function updates a CfnDeliveryStream$HttpEndpointConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$HttpEndpointConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accessKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:access-key` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$HttpEndpointConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :access-key)]
-      (. builder accessKey data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :url)]
-      (. builder url data))
-    (.build builder)))
+| `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
+"
+  [^CfnDeliveryStream$HttpEndpointConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :access-key)]
+    (. builder accessKey data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :url)]
+    (. builder url data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-http-endpoint-destination-configuration-property-builder
-  "The cfn-delivery-stream-http-endpoint-destination-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$HttpEndpointDestinationConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-http-endpoint-destination-configuration-property-builder
+  "The build-cfn-delivery-stream-http-endpoint-destination-configuration-property-builder function updates a CfnDeliveryStream$HttpEndpointDestinationConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$HttpEndpointDestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -651,135 +726,156 @@ CfnDeliveryStream$HttpEndpointDestinationConfigurationProperty$Builder using the
 | `retryOptions` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$RetryOptionsProperty | [[cdk.support/lookup-entry]] | `:retry-options` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `s3BackupMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-backup-mode` |
-| `s3Configuration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$HttpEndpointDestinationConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :buffering-hints)]
-      (. builder bufferingHints data))
-    (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
-      (. builder cloudWatchLoggingOptions data))
-    (when-let [data (lookup-entry config id :endpoint-configuration)]
-      (. builder endpointConfiguration data))
-    (when-let [data (lookup-entry config id :processing-configuration)]
-      (. builder processingConfiguration data))
-    (when-let [data (lookup-entry config id :request-configuration)]
-      (. builder requestConfiguration data))
-    (when-let [data (lookup-entry config id :retry-options)]
-      (. builder retryOptions data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :s3-backup-mode)]
-      (. builder s3BackupMode data))
-    (when-let [data (lookup-entry config id :s3-configuration)]
-      (. builder s3Configuration data))
-    (.build builder)))
+| `s3Configuration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |
+"
+  [^CfnDeliveryStream$HttpEndpointDestinationConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :buffering-hints)]
+    (. builder bufferingHints data))
+  (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
+    (. builder cloudWatchLoggingOptions data))
+  (when-let [data (lookup-entry config id :endpoint-configuration)]
+    (. builder endpointConfiguration data))
+  (when-let [data (lookup-entry config id :processing-configuration)]
+    (. builder processingConfiguration data))
+  (when-let [data (lookup-entry config id :request-configuration)]
+    (. builder requestConfiguration data))
+  (when-let [data (lookup-entry config id :retry-options)]
+    (. builder retryOptions data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :s3-backup-mode)]
+    (. builder s3BackupMode data))
+  (when-let [data (lookup-entry config id :s3-configuration)]
+    (. builder s3Configuration data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-http-endpoint-request-configuration-property-builder
-  "The cfn-delivery-stream-http-endpoint-request-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$HttpEndpointRequestConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-http-endpoint-request-configuration-property-builder
+  "The build-cfn-delivery-stream-http-endpoint-request-configuration-property-builder function updates a CfnDeliveryStream$HttpEndpointRequestConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$HttpEndpointRequestConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `commonAttributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:common-attributes` |
-| `contentEncoding` | java.lang.String | [[cdk.support/lookup-entry]] | `:content-encoding` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$HttpEndpointRequestConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :common-attributes)]
-      (. builder commonAttributes data))
-    (when-let [data (lookup-entry config id :content-encoding)]
-      (. builder contentEncoding data))
-    (.build builder)))
+| `contentEncoding` | java.lang.String | [[cdk.support/lookup-entry]] | `:content-encoding` |
+"
+  [^CfnDeliveryStream$HttpEndpointRequestConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :common-attributes)]
+    (. builder commonAttributes data))
+  (when-let [data (lookup-entry config id :content-encoding)]
+    (. builder contentEncoding data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-input-format-configuration-property-builder
-  "The cfn-delivery-stream-input-format-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$InputFormatConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-input-format-configuration-property-builder
+  "The build-cfn-delivery-stream-input-format-configuration-property-builder function updates a CfnDeliveryStream$InputFormatConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$InputFormatConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `deserializer` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$DeserializerProperty | [[cdk.support/lookup-entry]] | `:deserializer` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$InputFormatConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :deserializer)]
-      (. builder deserializer data))
-    (.build builder)))
+| `deserializer` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$DeserializerProperty | [[cdk.support/lookup-entry]] | `:deserializer` |
+"
+  [^CfnDeliveryStream$InputFormatConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :deserializer)]
+    (. builder deserializer data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-kinesis-stream-source-configuration-property-builder
-  "The cfn-delivery-stream-kinesis-stream-source-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$KinesisStreamSourceConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-kinesis-stream-source-configuration-property-builder
+  "The build-cfn-delivery-stream-kinesis-stream-source-configuration-property-builder function updates a CfnDeliveryStream$KinesisStreamSourceConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$KinesisStreamSourceConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `kinesisStreamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:kinesis-stream-arn` |
-| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$KinesisStreamSourceConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :kinesis-stream-arn)]
-      (. builder kinesisStreamArn data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (.build builder)))
+| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
+"
+  [^CfnDeliveryStream$KinesisStreamSourceConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :kinesis-stream-arn)]
+    (. builder kinesisStreamArn data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-kms-encryption-config-property-builder
-  "The cfn-delivery-stream-kms-encryption-config-property-builder function buildes out new instances of 
-CfnDeliveryStream$KMSEncryptionConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-kms-encryption-config-property-builder
+  "The build-cfn-delivery-stream-kms-encryption-config-property-builder function updates a CfnDeliveryStream$KMSEncryptionConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$KMSEncryptionConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `awskmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:awskms-key-arn` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$KMSEncryptionConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :awskms-key-arn)]
-      (. builder awskmsKeyArn data))
-    (.build builder)))
+| `awskmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:awskms-key-arn` |
+"
+  [^CfnDeliveryStream$KMSEncryptionConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :awskms-key-arn)]
+    (. builder awskmsKeyArn data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-msk-source-configuration-property-builder
-  "The cfn-delivery-stream-msk-source-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$MSKSourceConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-msk-source-configuration-property-builder
+  "The build-cfn-delivery-stream-msk-source-configuration-property-builder function updates a CfnDeliveryStream$MSKSourceConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$MSKSourceConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `authenticationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:authentication-configuration` |
 | `mskClusterArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:msk-cluster-arn` |
-| `topicName` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-name` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$MSKSourceConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :authentication-configuration)]
-      (. builder authenticationConfiguration data))
-    (when-let [data (lookup-entry config id :msk-cluster-arn)]
-      (. builder mskClusterArn data))
-    (when-let [data (lookup-entry config id :topic-name)]
-      (. builder topicName data))
-    (.build builder)))
+| `topicName` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-name` |
+"
+  [^CfnDeliveryStream$MSKSourceConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :authentication-configuration)]
+    (. builder authenticationConfiguration data))
+  (when-let [data (lookup-entry config id :msk-cluster-arn)]
+    (. builder mskClusterArn data))
+  (when-let [data (lookup-entry config id :topic-name)]
+    (. builder topicName data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-open-x-json-ser-de-property-builder
-  "The cfn-delivery-stream-open-x-json-ser-de-property-builder function buildes out new instances of 
-CfnDeliveryStream$OpenXJsonSerDeProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-open-x-json-ser-de-property-builder
+  "The build-cfn-delivery-stream-open-x-json-ser-de-property-builder function updates a CfnDeliveryStream$OpenXJsonSerDeProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$OpenXJsonSerDeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `caseInsensitive` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:case-insensitive` |
 | `columnToJsonKeyMappings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:column-to-json-key-mappings` |
-| `convertDotsInJsonKeysToUnderscores` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:convert-dots-in-json-keys-to-underscores` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$OpenXJsonSerDeProperty$Builder.)]
-    (when-let [data (lookup-entry config id :case-insensitive)]
-      (. builder caseInsensitive data))
-    (when-let [data (lookup-entry config id :column-to-json-key-mappings)]
-      (. builder columnToJsonKeyMappings data))
-    (when-let [data (lookup-entry config id :convert-dots-in-json-keys-to-underscores)]
-      (. builder convertDotsInJsonKeysToUnderscores data))
-    (.build builder)))
+| `convertDotsInJsonKeysToUnderscores` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:convert-dots-in-json-keys-to-underscores` |
+"
+  [^CfnDeliveryStream$OpenXJsonSerDeProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :case-insensitive)]
+    (. builder caseInsensitive data))
+  (when-let [data (lookup-entry config id :column-to-json-key-mappings)]
+    (. builder columnToJsonKeyMappings data))
+  (when-let [data (lookup-entry config id :convert-dots-in-json-keys-to-underscores)]
+    (. builder convertDotsInJsonKeysToUnderscores data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-orc-ser-de-property-builder
-  "The cfn-delivery-stream-orc-ser-de-property-builder function buildes out new instances of 
-CfnDeliveryStream$OrcSerDeProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-orc-ser-de-property-builder
+  "The build-cfn-delivery-stream-orc-ser-de-property-builder function updates a CfnDeliveryStream$OrcSerDeProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$OrcSerDeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -792,49 +888,55 @@ CfnDeliveryStream$OrcSerDeProperty$Builder using the provided configuration.  Ea
 | `formatVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:format-version` |
 | `paddingTolerance` | java.lang.Number | [[cdk.support/lookup-entry]] | `:padding-tolerance` |
 | `rowIndexStride` | java.lang.Number | [[cdk.support/lookup-entry]] | `:row-index-stride` |
-| `stripeSizeBytes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:stripe-size-bytes` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$OrcSerDeProperty$Builder.)]
-    (when-let [data (lookup-entry config id :block-size-bytes)]
-      (. builder blockSizeBytes data))
-    (when-let [data (lookup-entry config id :bloom-filter-columns)]
-      (. builder bloomFilterColumns data))
-    (when-let [data (lookup-entry config id :bloom-filter-false-positive-probability)]
-      (. builder bloomFilterFalsePositiveProbability data))
-    (when-let [data (lookup-entry config id :compression)]
-      (. builder compression data))
-    (when-let [data (lookup-entry config id :dictionary-key-threshold)]
-      (. builder dictionaryKeyThreshold data))
-    (when-let [data (lookup-entry config id :enable-padding)]
-      (. builder enablePadding data))
-    (when-let [data (lookup-entry config id :format-version)]
-      (. builder formatVersion data))
-    (when-let [data (lookup-entry config id :padding-tolerance)]
-      (. builder paddingTolerance data))
-    (when-let [data (lookup-entry config id :row-index-stride)]
-      (. builder rowIndexStride data))
-    (when-let [data (lookup-entry config id :stripe-size-bytes)]
-      (. builder stripeSizeBytes data))
-    (.build builder)))
+| `stripeSizeBytes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:stripe-size-bytes` |
+"
+  [^CfnDeliveryStream$OrcSerDeProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :block-size-bytes)]
+    (. builder blockSizeBytes data))
+  (when-let [data (lookup-entry config id :bloom-filter-columns)]
+    (. builder bloomFilterColumns data))
+  (when-let [data (lookup-entry config id :bloom-filter-false-positive-probability)]
+    (. builder bloomFilterFalsePositiveProbability data))
+  (when-let [data (lookup-entry config id :compression)]
+    (. builder compression data))
+  (when-let [data (lookup-entry config id :dictionary-key-threshold)]
+    (. builder dictionaryKeyThreshold data))
+  (when-let [data (lookup-entry config id :enable-padding)]
+    (. builder enablePadding data))
+  (when-let [data (lookup-entry config id :format-version)]
+    (. builder formatVersion data))
+  (when-let [data (lookup-entry config id :padding-tolerance)]
+    (. builder paddingTolerance data))
+  (when-let [data (lookup-entry config id :row-index-stride)]
+    (. builder rowIndexStride data))
+  (when-let [data (lookup-entry config id :stripe-size-bytes)]
+    (. builder stripeSizeBytes data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-output-format-configuration-property-builder
-  "The cfn-delivery-stream-output-format-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$OutputFormatConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-output-format-configuration-property-builder
+  "The build-cfn-delivery-stream-output-format-configuration-property-builder function updates a CfnDeliveryStream$OutputFormatConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$OutputFormatConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `serializer` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:serializer` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$OutputFormatConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :serializer)]
-      (. builder serializer data))
-    (.build builder)))
+| `serializer` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:serializer` |
+"
+  [^CfnDeliveryStream$OutputFormatConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :serializer)]
+    (. builder serializer data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-parquet-ser-de-property-builder
-  "The cfn-delivery-stream-parquet-ser-de-property-builder function buildes out new instances of 
-CfnDeliveryStream$ParquetSerDeProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-parquet-ser-de-property-builder
+  "The build-cfn-delivery-stream-parquet-ser-de-property-builder function updates a CfnDeliveryStream$ParquetSerDeProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$ParquetSerDeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -843,78 +945,90 @@ CfnDeliveryStream$ParquetSerDeProperty$Builder using the provided configuration.
 | `enableDictionaryCompression` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-dictionary-compression` |
 | `maxPaddingBytes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-padding-bytes` |
 | `pageSizeBytes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:page-size-bytes` |
-| `writerVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:writer-version` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$ParquetSerDeProperty$Builder.)]
-    (when-let [data (lookup-entry config id :block-size-bytes)]
-      (. builder blockSizeBytes data))
-    (when-let [data (lookup-entry config id :compression)]
-      (. builder compression data))
-    (when-let [data (lookup-entry config id :enable-dictionary-compression)]
-      (. builder enableDictionaryCompression data))
-    (when-let [data (lookup-entry config id :max-padding-bytes)]
-      (. builder maxPaddingBytes data))
-    (when-let [data (lookup-entry config id :page-size-bytes)]
-      (. builder pageSizeBytes data))
-    (when-let [data (lookup-entry config id :writer-version)]
-      (. builder writerVersion data))
-    (.build builder)))
+| `writerVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:writer-version` |
+"
+  [^CfnDeliveryStream$ParquetSerDeProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :block-size-bytes)]
+    (. builder blockSizeBytes data))
+  (when-let [data (lookup-entry config id :compression)]
+    (. builder compression data))
+  (when-let [data (lookup-entry config id :enable-dictionary-compression)]
+    (. builder enableDictionaryCompression data))
+  (when-let [data (lookup-entry config id :max-padding-bytes)]
+    (. builder maxPaddingBytes data))
+  (when-let [data (lookup-entry config id :page-size-bytes)]
+    (. builder pageSizeBytes data))
+  (when-let [data (lookup-entry config id :writer-version)]
+    (. builder writerVersion data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-processing-configuration-property-builder
-  "The cfn-delivery-stream-processing-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$ProcessingConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-processing-configuration-property-builder
+  "The build-cfn-delivery-stream-processing-configuration-property-builder function updates a CfnDeliveryStream$ProcessingConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$ProcessingConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
-| `processors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:processors` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$ProcessingConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :processors)]
-      (. builder processors data))
-    (.build builder)))
+| `processors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:processors` |
+"
+  [^CfnDeliveryStream$ProcessingConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :processors)]
+    (. builder processors data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-processor-parameter-property-builder
-  "The cfn-delivery-stream-processor-parameter-property-builder function buildes out new instances of 
-CfnDeliveryStream$ProcessorParameterProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-processor-parameter-property-builder
+  "The build-cfn-delivery-stream-processor-parameter-property-builder function updates a CfnDeliveryStream$ProcessorParameterProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$ProcessorParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `parameterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-name` |
-| `parameterValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-value` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$ProcessorParameterProperty$Builder.)]
-    (when-let [data (lookup-entry config id :parameter-name)]
-      (. builder parameterName data))
-    (when-let [data (lookup-entry config id :parameter-value)]
-      (. builder parameterValue data))
-    (.build builder)))
+| `parameterValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-value` |
+"
+  [^CfnDeliveryStream$ProcessorParameterProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :parameter-name)]
+    (. builder parameterName data))
+  (when-let [data (lookup-entry config id :parameter-value)]
+    (. builder parameterValue data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-processor-property-builder
-  "The cfn-delivery-stream-processor-property-builder function buildes out new instances of 
-CfnDeliveryStream$ProcessorProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-processor-property-builder
+  "The build-cfn-delivery-stream-processor-property-builder function updates a CfnDeliveryStream$ProcessorProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$ProcessorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$ProcessorProperty$Builder.)]
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnDeliveryStream$ProcessorProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-props-builder
-  "The cfn-delivery-stream-props-builder function buildes out new instances of 
-CfnDeliveryStreamProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-props-builder
+  "The build-cfn-delivery-stream-props-builder function updates a CfnDeliveryStreamProps$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStreamProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -932,45 +1046,48 @@ CfnDeliveryStreamProps$Builder using the provided configuration.  Each field is 
 | `s3DestinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-destination-configuration` |
 | `snowflakeDestinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:snowflake-destination-configuration` |
 | `splunkDestinationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:splunk-destination-configuration` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStreamProps$Builder.)]
-    (when-let [data (lookup-entry config id :amazon-open-search-serverless-destination-configuration)]
-      (. builder amazonOpenSearchServerlessDestinationConfiguration data))
-    (when-let [data (lookup-entry config id :amazonopensearchservice-destination-configuration)]
-      (. builder amazonopensearchserviceDestinationConfiguration data))
-    (when-let [data (lookup-entry config id :delivery-stream-encryption-configuration-input)]
-      (. builder deliveryStreamEncryptionConfigurationInput data))
-    (when-let [data (lookup-entry config id :delivery-stream-name)]
-      (. builder deliveryStreamName data))
-    (when-let [data (lookup-entry config id :delivery-stream-type)]
-      (. builder deliveryStreamType data))
-    (when-let [data (lookup-entry config id :elasticsearch-destination-configuration)]
-      (. builder elasticsearchDestinationConfiguration data))
-    (when-let [data (lookup-entry config id :extended-s3-destination-configuration)]
-      (. builder extendedS3DestinationConfiguration data))
-    (when-let [data (lookup-entry config id :http-endpoint-destination-configuration)]
-      (. builder httpEndpointDestinationConfiguration data))
-    (when-let [data (lookup-entry config id :kinesis-stream-source-configuration)]
-      (. builder kinesisStreamSourceConfiguration data))
-    (when-let [data (lookup-entry config id :msk-source-configuration)]
-      (. builder mskSourceConfiguration data))
-    (when-let [data (lookup-entry config id :redshift-destination-configuration)]
-      (. builder redshiftDestinationConfiguration data))
-    (when-let [data (lookup-entry config id :s3-destination-configuration)]
-      (. builder s3DestinationConfiguration data))
-    (when-let [data (lookup-entry config id :snowflake-destination-configuration)]
-      (. builder snowflakeDestinationConfiguration data))
-    (when-let [data (lookup-entry config id :splunk-destination-configuration)]
-      (. builder splunkDestinationConfiguration data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDeliveryStreamProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :amazon-open-search-serverless-destination-configuration)]
+    (. builder amazonOpenSearchServerlessDestinationConfiguration data))
+  (when-let [data (lookup-entry config id :amazonopensearchservice-destination-configuration)]
+    (. builder amazonopensearchserviceDestinationConfiguration data))
+  (when-let [data (lookup-entry config id :delivery-stream-encryption-configuration-input)]
+    (. builder deliveryStreamEncryptionConfigurationInput data))
+  (when-let [data (lookup-entry config id :delivery-stream-name)]
+    (. builder deliveryStreamName data))
+  (when-let [data (lookup-entry config id :delivery-stream-type)]
+    (. builder deliveryStreamType data))
+  (when-let [data (lookup-entry config id :elasticsearch-destination-configuration)]
+    (. builder elasticsearchDestinationConfiguration data))
+  (when-let [data (lookup-entry config id :extended-s3-destination-configuration)]
+    (. builder extendedS3DestinationConfiguration data))
+  (when-let [data (lookup-entry config id :http-endpoint-destination-configuration)]
+    (. builder httpEndpointDestinationConfiguration data))
+  (when-let [data (lookup-entry config id :kinesis-stream-source-configuration)]
+    (. builder kinesisStreamSourceConfiguration data))
+  (when-let [data (lookup-entry config id :msk-source-configuration)]
+    (. builder mskSourceConfiguration data))
+  (when-let [data (lookup-entry config id :redshift-destination-configuration)]
+    (. builder redshiftDestinationConfiguration data))
+  (when-let [data (lookup-entry config id :s3-destination-configuration)]
+    (. builder s3DestinationConfiguration data))
+  (when-let [data (lookup-entry config id :snowflake-destination-configuration)]
+    (. builder snowflakeDestinationConfiguration data))
+  (when-let [data (lookup-entry config id :splunk-destination-configuration)]
+    (. builder splunkDestinationConfiguration data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-redshift-destination-configuration-property-builder
-  "The cfn-delivery-stream-redshift-destination-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$RedshiftDestinationConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-redshift-destination-configuration-property-builder
+  "The build-cfn-delivery-stream-redshift-destination-configuration-property-builder function updates a CfnDeliveryStream$RedshiftDestinationConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$RedshiftDestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -984,65 +1101,74 @@ CfnDeliveryStream$RedshiftDestinationConfigurationProperty$Builder using the pro
 | `s3BackupConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-backup-configuration` |
 | `s3BackupMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-backup-mode` |
 | `s3Configuration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |
-| `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$RedshiftDestinationConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
-      (. builder cloudWatchLoggingOptions data))
-    (when-let [data (lookup-entry config id :cluster-jdbcurl)]
-      (. builder clusterJdbcurl data))
-    (when-let [data (lookup-entry config id :copy-command)]
-      (. builder copyCommand data))
-    (when-let [data (lookup-entry config id :password)]
-      (. builder password data))
-    (when-let [data (lookup-entry config id :processing-configuration)]
-      (. builder processingConfiguration data))
-    (when-let [data (lookup-entry config id :retry-options)]
-      (. builder retryOptions data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :s3-backup-configuration)]
-      (. builder s3BackupConfiguration data))
-    (when-let [data (lookup-entry config id :s3-backup-mode)]
-      (. builder s3BackupMode data))
-    (when-let [data (lookup-entry config id :s3-configuration)]
-      (. builder s3Configuration data))
-    (when-let [data (lookup-entry config id :username)]
-      (. builder username data))
-    (.build builder)))
+| `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
+"
+  [^CfnDeliveryStream$RedshiftDestinationConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
+    (. builder cloudWatchLoggingOptions data))
+  (when-let [data (lookup-entry config id :cluster-jdbcurl)]
+    (. builder clusterJdbcurl data))
+  (when-let [data (lookup-entry config id :copy-command)]
+    (. builder copyCommand data))
+  (when-let [data (lookup-entry config id :password)]
+    (. builder password data))
+  (when-let [data (lookup-entry config id :processing-configuration)]
+    (. builder processingConfiguration data))
+  (when-let [data (lookup-entry config id :retry-options)]
+    (. builder retryOptions data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :s3-backup-configuration)]
+    (. builder s3BackupConfiguration data))
+  (when-let [data (lookup-entry config id :s3-backup-mode)]
+    (. builder s3BackupMode data))
+  (when-let [data (lookup-entry config id :s3-configuration)]
+    (. builder s3Configuration data))
+  (when-let [data (lookup-entry config id :username)]
+    (. builder username data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-redshift-retry-options-property-builder
-  "The cfn-delivery-stream-redshift-retry-options-property-builder function buildes out new instances of 
-CfnDeliveryStream$RedshiftRetryOptionsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-redshift-retry-options-property-builder
+  "The build-cfn-delivery-stream-redshift-retry-options-property-builder function updates a CfnDeliveryStream$RedshiftRetryOptionsProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$RedshiftRetryOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$RedshiftRetryOptionsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :duration-in-seconds)]
-      (. builder durationInSeconds data))
-    (.build builder)))
-
-
-(defn cfn-delivery-stream-retry-options-property-builder
-  "The cfn-delivery-stream-retry-options-property-builder function buildes out new instances of 
-CfnDeliveryStream$RetryOptionsProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$RetryOptionsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :duration-in-seconds)]
-      (. builder durationInSeconds data))
-    (.build builder)))
+| `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |
+"
+  [^CfnDeliveryStream$RedshiftRetryOptionsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :duration-in-seconds)]
+    (. builder durationInSeconds data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-s3-destination-configuration-property-builder
-  "The cfn-delivery-stream-s3-destination-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$S3DestinationConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-retry-options-property-builder
+  "The build-cfn-delivery-stream-retry-options-property-builder function updates a CfnDeliveryStream$RetryOptionsProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$RetryOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |
+"
+  [^CfnDeliveryStream$RetryOptionsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :duration-in-seconds)]
+    (. builder durationInSeconds data))
+  (.build builder))
+
+
+(defn build-cfn-delivery-stream-s3-destination-configuration-property-builder
+  "The build-cfn-delivery-stream-s3-destination-configuration-property-builder function updates a CfnDeliveryStream$S3DestinationConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$S3DestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1053,31 +1179,34 @@ CfnDeliveryStream$S3DestinationConfigurationProperty$Builder using the provided 
 | `encryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-configuration` |
 | `errorOutputPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:error-output-prefix` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
-| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$S3DestinationConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :bucket-arn)]
-      (. builder bucketArn data))
-    (when-let [data (lookup-entry config id :buffering-hints)]
-      (. builder bufferingHints data))
-    (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
-      (. builder cloudWatchLoggingOptions data))
-    (when-let [data (lookup-entry config id :compression-format)]
-      (. builder compressionFormat data))
-    (when-let [data (lookup-entry config id :encryption-configuration)]
-      (. builder encryptionConfiguration data))
-    (when-let [data (lookup-entry config id :error-output-prefix)]
-      (. builder errorOutputPrefix data))
-    (when-let [data (lookup-entry config id :prefix)]
-      (. builder prefix data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (.build builder)))
+| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
+"
+  [^CfnDeliveryStream$S3DestinationConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :bucket-arn)]
+    (. builder bucketArn data))
+  (when-let [data (lookup-entry config id :buffering-hints)]
+    (. builder bufferingHints data))
+  (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
+    (. builder cloudWatchLoggingOptions data))
+  (when-let [data (lookup-entry config id :compression-format)]
+    (. builder compressionFormat data))
+  (when-let [data (lookup-entry config id :encryption-configuration)]
+    (. builder encryptionConfiguration data))
+  (when-let [data (lookup-entry config id :error-output-prefix)]
+    (. builder errorOutputPrefix data))
+  (when-let [data (lookup-entry config id :prefix)]
+    (. builder prefix data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-schema-configuration-property-builder
-  "The cfn-delivery-stream-schema-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$SchemaConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-schema-configuration-property-builder
+  "The build-cfn-delivery-stream-schema-configuration-property-builder function updates a CfnDeliveryStream$SchemaConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$SchemaConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1086,44 +1215,50 @@ CfnDeliveryStream$SchemaConfigurationProperty$Builder using the provided configu
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
-| `versionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-id` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$SchemaConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :catalog-id)]
-      (. builder catalogId data))
-    (when-let [data (lookup-entry config id :database-name)]
-      (. builder databaseName data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :table-name)]
-      (. builder tableName data))
-    (when-let [data (lookup-entry config id :version-id)]
-      (. builder versionId data))
-    (.build builder)))
+| `versionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-id` |
+"
+  [^CfnDeliveryStream$SchemaConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :catalog-id)]
+    (. builder catalogId data))
+  (when-let [data (lookup-entry config id :database-name)]
+    (. builder databaseName data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :table-name)]
+    (. builder tableName data))
+  (when-let [data (lookup-entry config id :version-id)]
+    (. builder versionId data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-serializer-property-builder
-  "The cfn-delivery-stream-serializer-property-builder function buildes out new instances of 
-CfnDeliveryStream$SerializerProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-serializer-property-builder
+  "The build-cfn-delivery-stream-serializer-property-builder function updates a CfnDeliveryStream$SerializerProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$SerializerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `orcSerDe` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$OrcSerDeProperty | [[cdk.support/lookup-entry]] | `:orc-ser-de` |
-| `parquetSerDe` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parquet-ser-de` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$SerializerProperty$Builder.)]
-    (when-let [data (lookup-entry config id :orc-ser-de)]
-      (. builder orcSerDe data))
-    (when-let [data (lookup-entry config id :parquet-ser-de)]
-      (. builder parquetSerDe data))
-    (.build builder)))
+| `parquetSerDe` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parquet-ser-de` |
+"
+  [^CfnDeliveryStream$SerializerProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :orc-ser-de)]
+    (. builder orcSerDe data))
+  (when-let [data (lookup-entry config id :parquet-ser-de)]
+    (. builder parquetSerDe data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-snowflake-destination-configuration-property-builder
-  "The cfn-delivery-stream-snowflake-destination-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$SnowflakeDestinationConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-snowflake-destination-configuration-property-builder
+  "The build-cfn-delivery-stream-snowflake-destination-configuration-property-builder function updates a CfnDeliveryStream$SnowflakeDestinationConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$SnowflakeDestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1144,113 +1279,128 @@ CfnDeliveryStream$SnowflakeDestinationConfigurationProperty$Builder using the pr
 | `snowflakeRoleConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$SnowflakeRoleConfigurationProperty | [[cdk.support/lookup-entry]] | `:snowflake-role-configuration` |
 | `snowflakeVpcConfiguration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$SnowflakeVpcConfigurationProperty | [[cdk.support/lookup-entry]] | `:snowflake-vpc-configuration` |
 | `table` | java.lang.String | [[cdk.support/lookup-entry]] | `:table` |
-| `user` | java.lang.String | [[cdk.support/lookup-entry]] | `:user` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$SnowflakeDestinationConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :account-url)]
-      (. builder accountUrl data))
-    (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
-      (. builder cloudWatchLoggingOptions data))
-    (when-let [data (lookup-entry config id :content-column-name)]
-      (. builder contentColumnName data))
-    (when-let [data (lookup-entry config id :data-loading-option)]
-      (. builder dataLoadingOption data))
-    (when-let [data (lookup-entry config id :database)]
-      (. builder database data))
-    (when-let [data (lookup-entry config id :key-passphrase)]
-      (. builder keyPassphrase data))
-    (when-let [data (lookup-entry config id :meta-data-column-name)]
-      (. builder metaDataColumnName data))
-    (when-let [data (lookup-entry config id :private-key)]
-      (. builder privateKey data))
-    (when-let [data (lookup-entry config id :processing-configuration)]
-      (. builder processingConfiguration data))
-    (when-let [data (lookup-entry config id :retry-options)]
-      (. builder retryOptions data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :s3-backup-mode)]
-      (. builder s3BackupMode data))
-    (when-let [data (lookup-entry config id :s3-configuration)]
-      (. builder s3Configuration data))
-    (when-let [data (lookup-entry config id :schema)]
-      (. builder schema data))
-    (when-let [data (lookup-entry config id :snowflake-role-configuration)]
-      (. builder snowflakeRoleConfiguration data))
-    (when-let [data (lookup-entry config id :snowflake-vpc-configuration)]
-      (. builder snowflakeVpcConfiguration data))
-    (when-let [data (lookup-entry config id :table)]
-      (. builder table data))
-    (when-let [data (lookup-entry config id :user)]
-      (. builder user data))
-    (.build builder)))
+| `user` | java.lang.String | [[cdk.support/lookup-entry]] | `:user` |
+"
+  [^CfnDeliveryStream$SnowflakeDestinationConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :account-url)]
+    (. builder accountUrl data))
+  (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
+    (. builder cloudWatchLoggingOptions data))
+  (when-let [data (lookup-entry config id :content-column-name)]
+    (. builder contentColumnName data))
+  (when-let [data (lookup-entry config id :data-loading-option)]
+    (. builder dataLoadingOption data))
+  (when-let [data (lookup-entry config id :database)]
+    (. builder database data))
+  (when-let [data (lookup-entry config id :key-passphrase)]
+    (. builder keyPassphrase data))
+  (when-let [data (lookup-entry config id :meta-data-column-name)]
+    (. builder metaDataColumnName data))
+  (when-let [data (lookup-entry config id :private-key)]
+    (. builder privateKey data))
+  (when-let [data (lookup-entry config id :processing-configuration)]
+    (. builder processingConfiguration data))
+  (when-let [data (lookup-entry config id :retry-options)]
+    (. builder retryOptions data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :s3-backup-mode)]
+    (. builder s3BackupMode data))
+  (when-let [data (lookup-entry config id :s3-configuration)]
+    (. builder s3Configuration data))
+  (when-let [data (lookup-entry config id :schema)]
+    (. builder schema data))
+  (when-let [data (lookup-entry config id :snowflake-role-configuration)]
+    (. builder snowflakeRoleConfiguration data))
+  (when-let [data (lookup-entry config id :snowflake-vpc-configuration)]
+    (. builder snowflakeVpcConfiguration data))
+  (when-let [data (lookup-entry config id :table)]
+    (. builder table data))
+  (when-let [data (lookup-entry config id :user)]
+    (. builder user data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-snowflake-retry-options-property-builder
-  "The cfn-delivery-stream-snowflake-retry-options-property-builder function buildes out new instances of 
-CfnDeliveryStream$SnowflakeRetryOptionsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-snowflake-retry-options-property-builder
+  "The build-cfn-delivery-stream-snowflake-retry-options-property-builder function updates a CfnDeliveryStream$SnowflakeRetryOptionsProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$SnowflakeRetryOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$SnowflakeRetryOptionsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :duration-in-seconds)]
-      (. builder durationInSeconds data))
-    (.build builder)))
+| `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |
+"
+  [^CfnDeliveryStream$SnowflakeRetryOptionsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :duration-in-seconds)]
+    (. builder durationInSeconds data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-snowflake-role-configuration-property-builder
-  "The cfn-delivery-stream-snowflake-role-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$SnowflakeRoleConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-snowflake-role-configuration-property-builder
+  "The build-cfn-delivery-stream-snowflake-role-configuration-property-builder function updates a CfnDeliveryStream$SnowflakeRoleConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$SnowflakeRoleConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
-| `snowflakeRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:snowflake-role` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$SnowflakeRoleConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :snowflake-role)]
-      (. builder snowflakeRole data))
-    (.build builder)))
+| `snowflakeRole` | java.lang.String | [[cdk.support/lookup-entry]] | `:snowflake-role` |
+"
+  [^CfnDeliveryStream$SnowflakeRoleConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :snowflake-role)]
+    (. builder snowflakeRole data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-snowflake-vpc-configuration-property-builder
-  "The cfn-delivery-stream-snowflake-vpc-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$SnowflakeVpcConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-snowflake-vpc-configuration-property-builder
+  "The build-cfn-delivery-stream-snowflake-vpc-configuration-property-builder function updates a CfnDeliveryStream$SnowflakeVpcConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$SnowflakeVpcConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `privateLinkVpceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-link-vpce-id` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$SnowflakeVpcConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :private-link-vpce-id)]
-      (. builder privateLinkVpceId data))
-    (.build builder)))
+| `privateLinkVpceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-link-vpce-id` |
+"
+  [^CfnDeliveryStream$SnowflakeVpcConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :private-link-vpce-id)]
+    (. builder privateLinkVpceId data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-splunk-buffering-hints-property-builder
-  "The cfn-delivery-stream-splunk-buffering-hints-property-builder function buildes out new instances of 
-CfnDeliveryStream$SplunkBufferingHintsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-splunk-buffering-hints-property-builder
+  "The build-cfn-delivery-stream-splunk-buffering-hints-property-builder function updates a CfnDeliveryStream$SplunkBufferingHintsProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$SplunkBufferingHintsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `intervalInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:interval-in-seconds` |
-| `sizeInMBs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size-in-m-bs` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$SplunkBufferingHintsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :interval-in-seconds)]
-      (. builder intervalInSeconds data))
-    (when-let [data (lookup-entry config id :size-in-m-bs)]
-      (. builder sizeInMBs data))
-    (.build builder)))
+| `sizeInMBs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size-in-m-bs` |
+"
+  [^CfnDeliveryStream$SplunkBufferingHintsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :interval-in-seconds)]
+    (. builder intervalInSeconds data))
+  (when-let [data (lookup-entry config id :size-in-m-bs)]
+    (. builder sizeInMBs data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-splunk-destination-configuration-property-builder
-  "The cfn-delivery-stream-splunk-destination-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$SplunkDestinationConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-splunk-destination-configuration-property-builder
+  "The build-cfn-delivery-stream-splunk-destination-configuration-property-builder function updates a CfnDeliveryStream$SplunkDestinationConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$SplunkDestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1263,61 +1413,67 @@ CfnDeliveryStream$SplunkDestinationConfigurationProperty$Builder using the provi
 | `processingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:processing-configuration` |
 | `retryOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retry-options` |
 | `s3BackupMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-backup-mode` |
-| `s3Configuration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$SplunkDestinationConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :buffering-hints)]
-      (. builder bufferingHints data))
-    (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
-      (. builder cloudWatchLoggingOptions data))
-    (when-let [data (lookup-entry config id :hec-acknowledgment-timeout-in-seconds)]
-      (. builder hecAcknowledgmentTimeoutInSeconds data))
-    (when-let [data (lookup-entry config id :hec-endpoint)]
-      (. builder hecEndpoint data))
-    (when-let [data (lookup-entry config id :hec-endpoint-type)]
-      (. builder hecEndpointType data))
-    (when-let [data (lookup-entry config id :hec-token)]
-      (. builder hecToken data))
-    (when-let [data (lookup-entry config id :processing-configuration)]
-      (. builder processingConfiguration data))
-    (when-let [data (lookup-entry config id :retry-options)]
-      (. builder retryOptions data))
-    (when-let [data (lookup-entry config id :s3-backup-mode)]
-      (. builder s3BackupMode data))
-    (when-let [data (lookup-entry config id :s3-configuration)]
-      (. builder s3Configuration data))
-    (.build builder)))
+| `s3Configuration` | software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream$S3DestinationConfigurationProperty | [[cdk.support/lookup-entry]] | `:s3-configuration` |
+"
+  [^CfnDeliveryStream$SplunkDestinationConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :buffering-hints)]
+    (. builder bufferingHints data))
+  (when-let [data (lookup-entry config id :cloud-watch-logging-options)]
+    (. builder cloudWatchLoggingOptions data))
+  (when-let [data (lookup-entry config id :hec-acknowledgment-timeout-in-seconds)]
+    (. builder hecAcknowledgmentTimeoutInSeconds data))
+  (when-let [data (lookup-entry config id :hec-endpoint)]
+    (. builder hecEndpoint data))
+  (when-let [data (lookup-entry config id :hec-endpoint-type)]
+    (. builder hecEndpointType data))
+  (when-let [data (lookup-entry config id :hec-token)]
+    (. builder hecToken data))
+  (when-let [data (lookup-entry config id :processing-configuration)]
+    (. builder processingConfiguration data))
+  (when-let [data (lookup-entry config id :retry-options)]
+    (. builder retryOptions data))
+  (when-let [data (lookup-entry config id :s3-backup-mode)]
+    (. builder s3BackupMode data))
+  (when-let [data (lookup-entry config id :s3-configuration)]
+    (. builder s3Configuration data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-splunk-retry-options-property-builder
-  "The cfn-delivery-stream-splunk-retry-options-property-builder function buildes out new instances of 
-CfnDeliveryStream$SplunkRetryOptionsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-splunk-retry-options-property-builder
+  "The build-cfn-delivery-stream-splunk-retry-options-property-builder function updates a CfnDeliveryStream$SplunkRetryOptionsProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$SplunkRetryOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$SplunkRetryOptionsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :duration-in-seconds)]
-      (. builder durationInSeconds data))
-    (.build builder)))
+| `durationInSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:duration-in-seconds` |
+"
+  [^CfnDeliveryStream$SplunkRetryOptionsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :duration-in-seconds)]
+    (. builder durationInSeconds data))
+  (.build builder))
 
 
-(defn cfn-delivery-stream-vpc-configuration-property-builder
-  "The cfn-delivery-stream-vpc-configuration-property-builder function buildes out new instances of 
-CfnDeliveryStream$VpcConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-delivery-stream-vpc-configuration-property-builder
+  "The build-cfn-delivery-stream-vpc-configuration-property-builder function updates a CfnDeliveryStream$VpcConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeliveryStream$VpcConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
-| `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |"
-  [stack id config]
-  (let [builder (CfnDeliveryStream$VpcConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :security-group-ids)]
-      (. builder securityGroupIds data))
-    (when-let [data (lookup-entry config id :subnet-ids)]
-      (. builder subnetIds data))
-    (.build builder)))
+| `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
+"
+  [^CfnDeliveryStream$VpcConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :security-group-ids)]
+    (. builder securityGroupIds data))
+  (when-let [data (lookup-entry config id :subnet-ids)]
+    (. builder subnetIds data))
+  (.build builder))

@@ -35,9 +35,12 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :dns data) ValidationMethod/DNS)))
 
 
-(defn certificate-builder
-  "The certificate-builder function buildes out new instances of 
-Certificate$Builder using the provided configuration.  Each field is set as follows:
+(defn build-certificate-builder
+  "The build-certificate-builder function updates a Certificate$Builder instance using the provided configuration.
+  The function takes the Certificate$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -46,27 +49,30 @@ Certificate$Builder using the provided configuration.  Each field is set as foll
 | `keyAlgorithm` | software.amazon.awscdk.services.certificatemanager.KeyAlgorithm | [[cdk.support/lookup-entry]] | `:key-algorithm` |
 | `subjectAlternativeNames` | java.util.List | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
 | `transparencyLoggingEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:transparency-logging-enabled` |
-| `validation` | software.amazon.awscdk.services.certificatemanager.CertificateValidation | [[cdk.support/lookup-entry]] | `:validation` |"
-  [stack id config]
-  (let [builder (Certificate$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :certificate-name)]
-      (. builder certificateName data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :key-algorithm)]
-      (. builder keyAlgorithm data))
-    (when-let [data (lookup-entry config id :subject-alternative-names)]
-      (. builder subjectAlternativeNames data))
-    (when-let [data (lookup-entry config id :transparency-logging-enabled)]
-      (. builder transparencyLoggingEnabled data))
-    (when-let [data (lookup-entry config id :validation)]
-      (. builder validation data))
-    (.build builder)))
+| `validation` | software.amazon.awscdk.services.certificatemanager.CertificateValidation | [[cdk.support/lookup-entry]] | `:validation` |
+"
+  [^Certificate$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate-name)]
+    (. builder certificateName data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :key-algorithm)]
+    (. builder keyAlgorithm data))
+  (when-let [data (lookup-entry config id :subject-alternative-names)]
+    (. builder subjectAlternativeNames data))
+  (when-let [data (lookup-entry config id :transparency-logging-enabled)]
+    (. builder transparencyLoggingEnabled data))
+  (when-let [data (lookup-entry config id :validation)]
+    (. builder validation data))
+  (.build builder))
 
 
-(defn certificate-props-builder
-  "The certificate-props-builder function buildes out new instances of 
-CertificateProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-certificate-props-builder
+  "The build-certificate-props-builder function updates a CertificateProps$Builder instance using the provided configuration.
+  The function takes the CertificateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -75,92 +81,107 @@ CertificateProps$Builder using the provided configuration.  Each field is set as
 | `keyAlgorithm` | software.amazon.awscdk.services.certificatemanager.KeyAlgorithm | [[cdk.support/lookup-entry]] | `:key-algorithm` |
 | `subjectAlternativeNames` | java.util.List | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
 | `transparencyLoggingEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:transparency-logging-enabled` |
-| `validation` | software.amazon.awscdk.services.certificatemanager.CertificateValidation | [[cdk.support/lookup-entry]] | `:validation` |"
-  [stack id config]
-  (let [builder (CertificateProps$Builder.)]
-    (when-let [data (lookup-entry config id :certificate-name)]
-      (. builder certificateName data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :key-algorithm)]
-      (. builder keyAlgorithm data))
-    (when-let [data (lookup-entry config id :subject-alternative-names)]
-      (. builder subjectAlternativeNames data))
-    (when-let [data (lookup-entry config id :transparency-logging-enabled)]
-      (. builder transparencyLoggingEnabled data))
-    (when-let [data (lookup-entry config id :validation)]
-      (. builder validation data))
-    (.build builder)))
+| `validation` | software.amazon.awscdk.services.certificatemanager.CertificateValidation | [[cdk.support/lookup-entry]] | `:validation` |
+"
+  [^CertificateProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate-name)]
+    (. builder certificateName data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :key-algorithm)]
+    (. builder keyAlgorithm data))
+  (when-let [data (lookup-entry config id :subject-alternative-names)]
+    (. builder subjectAlternativeNames data))
+  (when-let [data (lookup-entry config id :transparency-logging-enabled)]
+    (. builder transparencyLoggingEnabled data))
+  (when-let [data (lookup-entry config id :validation)]
+    (. builder validation data))
+  (.build builder))
 
 
-(defn certification-validation-props-builder
-  "The certification-validation-props-builder function buildes out new instances of 
-CertificationValidationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-certification-validation-props-builder
+  "The build-certification-validation-props-builder function updates a CertificationValidationProps$Builder instance using the provided configuration.
+  The function takes the CertificationValidationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `hostedZone` | software.amazon.awscdk.services.route53.IHostedZone | [[cdk.support/lookup-entry]] | `:hosted-zone` |
 | `hostedZones` | java.util.Map | [[cdk.support/lookup-entry]] | `:hosted-zones` |
 | `method` | software.amazon.awscdk.services.certificatemanager.ValidationMethod | [[cdk.api.services.certificatemanager/validation-method]] | `:method` |
-| `validationDomains` | java.util.Map | [[cdk.support/lookup-entry]] | `:validation-domains` |"
-  [stack id config]
-  (let [builder (CertificationValidationProps$Builder.)]
-    (when-let [data (lookup-entry config id :hosted-zone)]
-      (. builder hostedZone data))
-    (when-let [data (lookup-entry config id :hosted-zones)]
-      (. builder hostedZones data))
-    (when-let [data (validation-method config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :validation-domains)]
-      (. builder validationDomains data))
-    (.build builder)))
+| `validationDomains` | java.util.Map | [[cdk.support/lookup-entry]] | `:validation-domains` |
+"
+  [^CertificationValidationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :hosted-zone)]
+    (. builder hostedZone data))
+  (when-let [data (lookup-entry config id :hosted-zones)]
+    (. builder hostedZones data))
+  (when-let [data (validation-method config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :validation-domains)]
+    (. builder validationDomains data))
+  (.build builder))
 
 
-(defn cfn-account-builder
-  "The cfn-account-builder function buildes out new instances of 
-CfnAccount$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-account-builder
+  "The build-cfn-account-builder function updates a CfnAccount$Builder instance using the provided configuration.
+  The function takes the CfnAccount$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `expiryEventsConfiguration` | software.amazon.awscdk.services.certificatemanager.CfnAccount$ExpiryEventsConfigurationProperty | [[cdk.support/lookup-entry]] | `:expiry-events-configuration` |"
-  [stack id config]
-  (let [builder (CfnAccount$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :expiry-events-configuration)]
-      (. builder expiryEventsConfiguration data))
-    (.build builder)))
-
-
-(defn cfn-account-expiry-events-configuration-property-builder
-  "The cfn-account-expiry-events-configuration-property-builder function buildes out new instances of 
-CfnAccount$ExpiryEventsConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `daysBeforeExpiry` | java.lang.Number | [[cdk.support/lookup-entry]] | `:days-before-expiry` |"
-  [stack id config]
-  (let [builder (CfnAccount$ExpiryEventsConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :days-before-expiry)]
-      (. builder daysBeforeExpiry data))
-    (.build builder)))
+| `expiryEventsConfiguration` | software.amazon.awscdk.services.certificatemanager.CfnAccount$ExpiryEventsConfigurationProperty | [[cdk.support/lookup-entry]] | `:expiry-events-configuration` |
+"
+  [^CfnAccount$Builder builder id config]
+  (when-let [data (lookup-entry config id :expiry-events-configuration)]
+    (. builder expiryEventsConfiguration data))
+  (.build builder))
 
 
-(defn cfn-account-props-builder
-  "The cfn-account-props-builder function buildes out new instances of 
-CfnAccountProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-account-expiry-events-configuration-property-builder
+  "The build-cfn-account-expiry-events-configuration-property-builder function updates a CfnAccount$ExpiryEventsConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnAccount$ExpiryEventsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `expiryEventsConfiguration` | software.amazon.awscdk.services.certificatemanager.CfnAccount$ExpiryEventsConfigurationProperty | [[cdk.support/lookup-entry]] | `:expiry-events-configuration` |"
-  [stack id config]
-  (let [builder (CfnAccountProps$Builder.)]
-    (when-let [data (lookup-entry config id :expiry-events-configuration)]
-      (. builder expiryEventsConfiguration data))
-    (.build builder)))
+| `daysBeforeExpiry` | java.lang.Number | [[cdk.support/lookup-entry]] | `:days-before-expiry` |
+"
+  [^CfnAccount$ExpiryEventsConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :days-before-expiry)]
+    (. builder daysBeforeExpiry data))
+  (.build builder))
 
 
-(defn cfn-certificate-builder
-  "The cfn-certificate-builder function buildes out new instances of 
-CfnCertificate$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-account-props-builder
+  "The build-cfn-account-props-builder function updates a CfnAccountProps$Builder instance using the provided configuration.
+  The function takes the CfnAccountProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `expiryEventsConfiguration` | software.amazon.awscdk.services.certificatemanager.CfnAccount$ExpiryEventsConfigurationProperty | [[cdk.support/lookup-entry]] | `:expiry-events-configuration` |
+"
+  [^CfnAccountProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :expiry-events-configuration)]
+    (. builder expiryEventsConfiguration data))
+  (.build builder))
+
+
+(defn build-cfn-certificate-builder
+  "The build-cfn-certificate-builder function updates a CfnCertificate$Builder instance using the provided configuration.
+  The function takes the CfnCertificate$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -171,51 +192,57 @@ CfnCertificate$Builder using the provided configuration.  Each field is set as f
 | `keyAlgorithm` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-algorithm` |
 | `subjectAlternativeNames` | java.util.List | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `validationMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:validation-method` |"
-  [stack id config]
-  (let [builder (CfnCertificate$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :certificate-authority-arn)]
-      (. builder certificateAuthorityArn data))
-    (when-let [data (lookup-entry config id :certificate-transparency-logging-preference)]
-      (. builder certificateTransparencyLoggingPreference data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :domain-validation-options)]
-      (. builder domainValidationOptions data))
-    (when-let [data (lookup-entry config id :key-algorithm)]
-      (. builder keyAlgorithm data))
-    (when-let [data (lookup-entry config id :subject-alternative-names)]
-      (. builder subjectAlternativeNames data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :validation-method)]
-      (. builder validationMethod data))
-    (.build builder)))
+| `validationMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:validation-method` |
+"
+  [^CfnCertificate$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate-authority-arn)]
+    (. builder certificateAuthorityArn data))
+  (when-let [data (lookup-entry config id :certificate-transparency-logging-preference)]
+    (. builder certificateTransparencyLoggingPreference data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :domain-validation-options)]
+    (. builder domainValidationOptions data))
+  (when-let [data (lookup-entry config id :key-algorithm)]
+    (. builder keyAlgorithm data))
+  (when-let [data (lookup-entry config id :subject-alternative-names)]
+    (. builder subjectAlternativeNames data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :validation-method)]
+    (. builder validationMethod data))
+  (.build builder))
 
 
-(defn cfn-certificate-domain-validation-option-property-builder
-  "The cfn-certificate-domain-validation-option-property-builder function buildes out new instances of 
-CfnCertificate$DomainValidationOptionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-certificate-domain-validation-option-property-builder
+  "The build-cfn-certificate-domain-validation-option-property-builder function updates a CfnCertificate$DomainValidationOptionProperty$Builder instance using the provided configuration.
+  The function takes the CfnCertificate$DomainValidationOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
 | `hostedZoneId` | java.lang.String | [[cdk.support/lookup-entry]] | `:hosted-zone-id` |
-| `validationDomain` | java.lang.String | [[cdk.support/lookup-entry]] | `:validation-domain` |"
-  [stack id config]
-  (let [builder (CfnCertificate$DomainValidationOptionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :hosted-zone-id)]
-      (. builder hostedZoneId data))
-    (when-let [data (lookup-entry config id :validation-domain)]
-      (. builder validationDomain data))
-    (.build builder)))
+| `validationDomain` | java.lang.String | [[cdk.support/lookup-entry]] | `:validation-domain` |
+"
+  [^CfnCertificate$DomainValidationOptionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :hosted-zone-id)]
+    (. builder hostedZoneId data))
+  (when-let [data (lookup-entry config id :validation-domain)]
+    (. builder validationDomain data))
+  (.build builder))
 
 
-(defn cfn-certificate-props-builder
-  "The cfn-certificate-props-builder function buildes out new instances of 
-CfnCertificateProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-certificate-props-builder
+  "The build-cfn-certificate-props-builder function updates a CfnCertificateProps$Builder instance using the provided configuration.
+  The function takes the CfnCertificateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -226,31 +253,34 @@ CfnCertificateProps$Builder using the provided configuration.  Each field is set
 | `keyAlgorithm` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-algorithm` |
 | `subjectAlternativeNames` | java.util.List | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `validationMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:validation-method` |"
-  [stack id config]
-  (let [builder (CfnCertificateProps$Builder.)]
-    (when-let [data (lookup-entry config id :certificate-authority-arn)]
-      (. builder certificateAuthorityArn data))
-    (when-let [data (lookup-entry config id :certificate-transparency-logging-preference)]
-      (. builder certificateTransparencyLoggingPreference data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :domain-validation-options)]
-      (. builder domainValidationOptions data))
-    (when-let [data (lookup-entry config id :key-algorithm)]
-      (. builder keyAlgorithm data))
-    (when-let [data (lookup-entry config id :subject-alternative-names)]
-      (. builder subjectAlternativeNames data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :validation-method)]
-      (. builder validationMethod data))
-    (.build builder)))
+| `validationMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:validation-method` |
+"
+  [^CfnCertificateProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate-authority-arn)]
+    (. builder certificateAuthorityArn data))
+  (when-let [data (lookup-entry config id :certificate-transparency-logging-preference)]
+    (. builder certificateTransparencyLoggingPreference data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :domain-validation-options)]
+    (. builder domainValidationOptions data))
+  (when-let [data (lookup-entry config id :key-algorithm)]
+    (. builder keyAlgorithm data))
+  (when-let [data (lookup-entry config id :subject-alternative-names)]
+    (. builder subjectAlternativeNames data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :validation-method)]
+    (. builder validationMethod data))
+  (.build builder))
 
 
-(defn dns-validated-certificate-props-builder
-  "The dns-validated-certificate-props-builder function buildes out new instances of 
-DnsValidatedCertificateProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-dns-validated-certificate-props-builder
+  "The build-dns-validated-certificate-props-builder function updates a DnsValidatedCertificateProps$Builder instance using the provided configuration.
+  The function takes the DnsValidatedCertificateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -264,75 +294,81 @@ DnsValidatedCertificateProps$Builder using the provided configuration.  Each fie
 | `route53Endpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:route53-endpoint` |
 | `subjectAlternativeNames` | java.util.List | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
 | `transparencyLoggingEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:transparency-logging-enabled` |
-| `validation` | software.amazon.awscdk.services.certificatemanager.CertificateValidation | [[cdk.support/lookup-entry]] | `:validation` |"
-  [stack id config]
-  (let [builder (DnsValidatedCertificateProps$Builder.)]
-    (when-let [data (lookup-entry config id :certificate-name)]
-      (. builder certificateName data))
-    (when-let [data (lookup-entry config id :cleanup-route53-records)]
-      (. builder cleanupRoute53Records data))
-    (when-let [data (lookup-entry config id :custom-resource-role)]
-      (. builder customResourceRole data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :hosted-zone)]
-      (. builder hostedZone data))
-    (when-let [data (lookup-entry config id :key-algorithm)]
-      (. builder keyAlgorithm data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :route53-endpoint)]
-      (. builder route53Endpoint data))
-    (when-let [data (lookup-entry config id :subject-alternative-names)]
-      (. builder subjectAlternativeNames data))
-    (when-let [data (lookup-entry config id :transparency-logging-enabled)]
-      (. builder transparencyLoggingEnabled data))
-    (when-let [data (lookup-entry config id :validation)]
-      (. builder validation data))
-    (.build builder)))
+| `validation` | software.amazon.awscdk.services.certificatemanager.CertificateValidation | [[cdk.support/lookup-entry]] | `:validation` |
+"
+  [^DnsValidatedCertificateProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate-name)]
+    (. builder certificateName data))
+  (when-let [data (lookup-entry config id :cleanup-route53-records)]
+    (. builder cleanupRoute53Records data))
+  (when-let [data (lookup-entry config id :custom-resource-role)]
+    (. builder customResourceRole data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :hosted-zone)]
+    (. builder hostedZone data))
+  (when-let [data (lookup-entry config id :key-algorithm)]
+    (. builder keyAlgorithm data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :route53-endpoint)]
+    (. builder route53Endpoint data))
+  (when-let [data (lookup-entry config id :subject-alternative-names)]
+    (. builder subjectAlternativeNames data))
+  (when-let [data (lookup-entry config id :transparency-logging-enabled)]
+    (. builder transparencyLoggingEnabled data))
+  (when-let [data (lookup-entry config id :validation)]
+    (. builder validation data))
+  (.build builder))
 
 
-(defn private-certificate-builder
-  "The private-certificate-builder function buildes out new instances of 
-PrivateCertificate$Builder using the provided configuration.  Each field is set as follows:
+(defn build-private-certificate-builder
+  "The build-private-certificate-builder function updates a PrivateCertificate$Builder instance using the provided configuration.
+  The function takes the PrivateCertificate$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `certificateAuthority` | software.amazon.awscdk.services.acmpca.ICertificateAuthority | [[cdk.support/lookup-entry]] | `:certificate-authority` |
-| `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
-| `keyAlgorithm` | software.amazon.awscdk.services.certificatemanager.KeyAlgorithm | [[cdk.support/lookup-entry]] | `:key-algorithm` |
-| `subjectAlternativeNames` | java.util.List | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |"
-  [stack id config]
-  (let [builder (PrivateCertificate$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :certificate-authority)]
-      (. builder certificateAuthority data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :key-algorithm)]
-      (. builder keyAlgorithm data))
-    (when-let [data (lookup-entry config id :subject-alternative-names)]
-      (. builder subjectAlternativeNames data))
-    (.build builder)))
-
-
-(defn private-certificate-props-builder
-  "The private-certificate-props-builder function buildes out new instances of 
-PrivateCertificateProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `certificateAuthority` | software.amazon.awscdk.services.acmpca.ICertificateAuthority | [[cdk.support/lookup-entry]] | `:certificate-authority` |
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
 | `keyAlgorithm` | software.amazon.awscdk.services.certificatemanager.KeyAlgorithm | [[cdk.support/lookup-entry]] | `:key-algorithm` |
-| `subjectAlternativeNames` | java.util.List | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |"
-  [stack id config]
-  (let [builder (PrivateCertificateProps$Builder.)]
-    (when-let [data (lookup-entry config id :certificate-authority)]
-      (. builder certificateAuthority data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :key-algorithm)]
-      (. builder keyAlgorithm data))
-    (when-let [data (lookup-entry config id :subject-alternative-names)]
-      (. builder subjectAlternativeNames data))
-    (.build builder)))
+| `subjectAlternativeNames` | java.util.List | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
+"
+  [^PrivateCertificate$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate-authority)]
+    (. builder certificateAuthority data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :key-algorithm)]
+    (. builder keyAlgorithm data))
+  (when-let [data (lookup-entry config id :subject-alternative-names)]
+    (. builder subjectAlternativeNames data))
+  (.build builder))
+
+
+(defn build-private-certificate-props-builder
+  "The build-private-certificate-props-builder function updates a PrivateCertificateProps$Builder instance using the provided configuration.
+  The function takes the PrivateCertificateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `certificateAuthority` | software.amazon.awscdk.services.acmpca.ICertificateAuthority | [[cdk.support/lookup-entry]] | `:certificate-authority` |
+| `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
+| `keyAlgorithm` | software.amazon.awscdk.services.certificatemanager.KeyAlgorithm | [[cdk.support/lookup-entry]] | `:key-algorithm` |
+| `subjectAlternativeNames` | java.util.List | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
+"
+  [^PrivateCertificateProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate-authority)]
+    (. builder certificateAuthority data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :key-algorithm)]
+    (. builder keyAlgorithm data))
+  (when-let [data (lookup-entry config id :subject-alternative-names)]
+    (. builder subjectAlternativeNames data))
+  (.build builder))

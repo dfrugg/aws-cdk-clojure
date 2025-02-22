@@ -7,75 +7,87 @@
                                                       CfnDirectoryBucketProps$Builder]))
 
 
-(defn cfn-bucket-policy-builder
-  "The cfn-bucket-policy-builder function buildes out new instances of 
-CfnBucketPolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-bucket-policy-builder
+  "The build-cfn-bucket-policy-builder function updates a CfnBucketPolicy$Builder instance using the provided configuration.
+  The function takes the CfnBucketPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bucket` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket` |
-| `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |"
-  [stack id config]
-  (let [builder (CfnBucketPolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :bucket)]
-      (. builder bucket data))
-    (when-let [data (lookup-entry config id :policy-document)]
-      (. builder policyDocument data))
-    (.build builder)))
+| `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
+"
+  [^CfnBucketPolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :bucket)]
+    (. builder bucket data))
+  (when-let [data (lookup-entry config id :policy-document)]
+    (. builder policyDocument data))
+  (.build builder))
 
 
-(defn cfn-bucket-policy-props-builder
-  "The cfn-bucket-policy-props-builder function buildes out new instances of 
-CfnBucketPolicyProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-bucket-policy-props-builder
+  "The build-cfn-bucket-policy-props-builder function updates a CfnBucketPolicyProps$Builder instance using the provided configuration.
+  The function takes the CfnBucketPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bucket` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket` |
-| `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |"
-  [stack id config]
-  (let [builder (CfnBucketPolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :bucket)]
-      (. builder bucket data))
-    (when-let [data (lookup-entry config id :policy-document)]
-      (. builder policyDocument data))
-    (.build builder)))
+| `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
+"
+  [^CfnBucketPolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :bucket)]
+    (. builder bucket data))
+  (when-let [data (lookup-entry config id :policy-document)]
+    (. builder policyDocument data))
+  (.build builder))
 
 
-(defn cfn-directory-bucket-builder
-  "The cfn-directory-bucket-builder function buildes out new instances of 
-CfnDirectoryBucket$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-directory-bucket-builder
+  "The build-cfn-directory-bucket-builder function updates a CfnDirectoryBucket$Builder instance using the provided configuration.
+  The function takes the CfnDirectoryBucket$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-name` |
 | `dataRedundancy` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-redundancy` |
-| `locationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:location-name` |"
-  [stack id config]
-  (let [builder (CfnDirectoryBucket$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :bucket-name)]
-      (. builder bucketName data))
-    (when-let [data (lookup-entry config id :data-redundancy)]
-      (. builder dataRedundancy data))
-    (when-let [data (lookup-entry config id :location-name)]
-      (. builder locationName data))
-    (.build builder)))
+| `locationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:location-name` |
+"
+  [^CfnDirectoryBucket$Builder builder id config]
+  (when-let [data (lookup-entry config id :bucket-name)]
+    (. builder bucketName data))
+  (when-let [data (lookup-entry config id :data-redundancy)]
+    (. builder dataRedundancy data))
+  (when-let [data (lookup-entry config id :location-name)]
+    (. builder locationName data))
+  (.build builder))
 
 
-(defn cfn-directory-bucket-props-builder
-  "The cfn-directory-bucket-props-builder function buildes out new instances of 
-CfnDirectoryBucketProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-directory-bucket-props-builder
+  "The build-cfn-directory-bucket-props-builder function updates a CfnDirectoryBucketProps$Builder instance using the provided configuration.
+  The function takes the CfnDirectoryBucketProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-name` |
 | `dataRedundancy` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-redundancy` |
-| `locationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:location-name` |"
-  [stack id config]
-  (let [builder (CfnDirectoryBucketProps$Builder.)]
-    (when-let [data (lookup-entry config id :bucket-name)]
-      (. builder bucketName data))
-    (when-let [data (lookup-entry config id :data-redundancy)]
-      (. builder dataRedundancy data))
-    (when-let [data (lookup-entry config id :location-name)]
-      (. builder locationName data))
-    (.build builder)))
+| `locationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:location-name` |
+"
+  [^CfnDirectoryBucketProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :bucket-name)]
+    (. builder bucketName data))
+  (when-let [data (lookup-entry config id :data-redundancy)]
+    (. builder dataRedundancy data))
+  (when-let [data (lookup-entry config id :location-name)]
+    (. builder locationName data))
+  (.build builder))

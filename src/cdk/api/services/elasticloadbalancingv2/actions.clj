@@ -6,9 +6,12 @@
                                                                            AuthenticateCognitoActionProps$Builder]))
 
 
-(defn authenticate-cognito-action-builder
-  "The authenticate-cognito-action-builder function buildes out new instances of 
-AuthenticateCognitoAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-authenticate-cognito-action-builder
+  "The build-authenticate-cognito-action-builder function updates a AuthenticateCognitoAction$Builder instance using the provided configuration.
+  The function takes the AuthenticateCognitoAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -21,35 +24,38 @@ AuthenticateCognitoAction$Builder using the provided configuration.  Each field 
 | `sessionTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:session-timeout` |
 | `userPool` | software.amazon.awscdk.services.cognito.IUserPool | [[cdk.support/lookup-entry]] | `:user-pool` |
 | `userPoolClient` | software.amazon.awscdk.services.cognito.IUserPoolClient | [[cdk.support/lookup-entry]] | `:user-pool-client` |
-| `userPoolDomain` | software.amazon.awscdk.services.cognito.IUserPoolDomain | [[cdk.support/lookup-entry]] | `:user-pool-domain` |"
-  [stack id config]
-  (let [builder (AuthenticateCognitoAction$Builder/create)]
-    (when-let [data (lookup-entry config id :allow-https-outbound)]
-      (. builder allowHttpsOutbound data))
-    (when-let [data (lookup-entry config id :authentication-request-extra-params)]
-      (. builder authenticationRequestExtraParams data))
-    (when-let [data (lookup-entry config id :next)]
-      (. builder next data))
-    (when-let [data (unauthenticated-action config id :on-unauthenticated-request)]
-      (. builder onUnauthenticatedRequest data))
-    (when-let [data (lookup-entry config id :scope)]
-      (. builder scope data))
-    (when-let [data (lookup-entry config id :session-cookie-name)]
-      (. builder sessionCookieName data))
-    (when-let [data (lookup-entry config id :session-timeout)]
-      (. builder sessionTimeout data))
-    (when-let [data (lookup-entry config id :user-pool)]
-      (. builder userPool data))
-    (when-let [data (lookup-entry config id :user-pool-client)]
-      (. builder userPoolClient data))
-    (when-let [data (lookup-entry config id :user-pool-domain)]
-      (. builder userPoolDomain data))
-    (.build builder)))
+| `userPoolDomain` | software.amazon.awscdk.services.cognito.IUserPoolDomain | [[cdk.support/lookup-entry]] | `:user-pool-domain` |
+"
+  [^AuthenticateCognitoAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :allow-https-outbound)]
+    (. builder allowHttpsOutbound data))
+  (when-let [data (lookup-entry config id :authentication-request-extra-params)]
+    (. builder authenticationRequestExtraParams data))
+  (when-let [data (lookup-entry config id :next)]
+    (. builder next data))
+  (when-let [data (unauthenticated-action config id :on-unauthenticated-request)]
+    (. builder onUnauthenticatedRequest data))
+  (when-let [data (lookup-entry config id :scope)]
+    (. builder scope data))
+  (when-let [data (lookup-entry config id :session-cookie-name)]
+    (. builder sessionCookieName data))
+  (when-let [data (lookup-entry config id :session-timeout)]
+    (. builder sessionTimeout data))
+  (when-let [data (lookup-entry config id :user-pool)]
+    (. builder userPool data))
+  (when-let [data (lookup-entry config id :user-pool-client)]
+    (. builder userPoolClient data))
+  (when-let [data (lookup-entry config id :user-pool-domain)]
+    (. builder userPoolDomain data))
+  (.build builder))
 
 
-(defn authenticate-cognito-action-props-builder
-  "The authenticate-cognito-action-props-builder function buildes out new instances of 
-AuthenticateCognitoActionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-authenticate-cognito-action-props-builder
+  "The build-authenticate-cognito-action-props-builder function updates a AuthenticateCognitoActionProps$Builder instance using the provided configuration.
+  The function takes the AuthenticateCognitoActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -62,27 +68,27 @@ AuthenticateCognitoActionProps$Builder using the provided configuration.  Each f
 | `sessionTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:session-timeout` |
 | `userPool` | software.amazon.awscdk.services.cognito.IUserPool | [[cdk.support/lookup-entry]] | `:user-pool` |
 | `userPoolClient` | software.amazon.awscdk.services.cognito.IUserPoolClient | [[cdk.support/lookup-entry]] | `:user-pool-client` |
-| `userPoolDomain` | software.amazon.awscdk.services.cognito.IUserPoolDomain | [[cdk.support/lookup-entry]] | `:user-pool-domain` |"
-  [stack id config]
-  (let [builder (AuthenticateCognitoActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :allow-https-outbound)]
-      (. builder allowHttpsOutbound data))
-    (when-let [data (lookup-entry config id :authentication-request-extra-params)]
-      (. builder authenticationRequestExtraParams data))
-    (when-let [data (lookup-entry config id :next)]
-      (. builder next data))
-    (when-let [data (unauthenticated-action config id :on-unauthenticated-request)]
-      (. builder onUnauthenticatedRequest data))
-    (when-let [data (lookup-entry config id :scope)]
-      (. builder scope data))
-    (when-let [data (lookup-entry config id :session-cookie-name)]
-      (. builder sessionCookieName data))
-    (when-let [data (lookup-entry config id :session-timeout)]
-      (. builder sessionTimeout data))
-    (when-let [data (lookup-entry config id :user-pool)]
-      (. builder userPool data))
-    (when-let [data (lookup-entry config id :user-pool-client)]
-      (. builder userPoolClient data))
-    (when-let [data (lookup-entry config id :user-pool-domain)]
-      (. builder userPoolDomain data))
-    (.build builder)))
+| `userPoolDomain` | software.amazon.awscdk.services.cognito.IUserPoolDomain | [[cdk.support/lookup-entry]] | `:user-pool-domain` |
+"
+  [^AuthenticateCognitoActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :allow-https-outbound)]
+    (. builder allowHttpsOutbound data))
+  (when-let [data (lookup-entry config id :authentication-request-extra-params)]
+    (. builder authenticationRequestExtraParams data))
+  (when-let [data (lookup-entry config id :next)]
+    (. builder next data))
+  (when-let [data (unauthenticated-action config id :on-unauthenticated-request)]
+    (. builder onUnauthenticatedRequest data))
+  (when-let [data (lookup-entry config id :scope)]
+    (. builder scope data))
+  (when-let [data (lookup-entry config id :session-cookie-name)]
+    (. builder sessionCookieName data))
+  (when-let [data (lookup-entry config id :session-timeout)]
+    (. builder sessionTimeout data))
+  (when-let [data (lookup-entry config id :user-pool)]
+    (. builder userPool data))
+  (when-let [data (lookup-entry config id :user-pool-client)]
+    (. builder userPoolClient data))
+  (when-let [data (lookup-entry config id :user-pool-domain)]
+    (. builder userPoolDomain data))
+  (.build builder))

@@ -14,131 +14,155 @@
                                                    CfnProtectionProps$Builder]))
 
 
-(defn cfn-drt-access-builder
-  "The cfn-drt-access-builder function buildes out new instances of 
-CfnDRTAccess$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-drt-access-builder
+  "The build-cfn-drt-access-builder function updates a CfnDRTAccess$Builder instance using the provided configuration.
+  The function takes the CfnDRTAccess$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `logBucketList` | java.util.List | [[cdk.support/lookup-entry]] | `:log-bucket-list` |
-| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |"
-  [stack id config]
-  (let [builder (CfnDRTAccess$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :log-bucket-list)]
-      (. builder logBucketList data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (.build builder)))
+| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
+"
+  [^CfnDRTAccess$Builder builder id config]
+  (when-let [data (lookup-entry config id :log-bucket-list)]
+    (. builder logBucketList data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (.build builder))
 
 
-(defn cfn-drt-access-props-builder
-  "The cfn-drt-access-props-builder function buildes out new instances of 
-CfnDRTAccessProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-drt-access-props-builder
+  "The build-cfn-drt-access-props-builder function updates a CfnDRTAccessProps$Builder instance using the provided configuration.
+  The function takes the CfnDRTAccessProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `logBucketList` | java.util.List | [[cdk.support/lookup-entry]] | `:log-bucket-list` |
-| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |"
-  [stack id config]
-  (let [builder (CfnDRTAccessProps$Builder.)]
-    (when-let [data (lookup-entry config id :log-bucket-list)]
-      (. builder logBucketList data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (.build builder)))
+| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
+"
+  [^CfnDRTAccessProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :log-bucket-list)]
+    (. builder logBucketList data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (.build builder))
 
 
-(defn cfn-proactive-engagement-builder
-  "The cfn-proactive-engagement-builder function buildes out new instances of 
-CfnProactiveEngagement$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-proactive-engagement-builder
+  "The build-cfn-proactive-engagement-builder function updates a CfnProactiveEngagement$Builder instance using the provided configuration.
+  The function takes the CfnProactiveEngagement$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `emergencyContactList` | java.util.List | [[cdk.support/lookup-entry]] | `:emergency-contact-list` |
-| `proactiveEngagementStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:proactive-engagement-status` |"
-  [stack id config]
-  (let [builder (CfnProactiveEngagement$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :emergency-contact-list)]
-      (. builder emergencyContactList data))
-    (when-let [data (lookup-entry config id :proactive-engagement-status)]
-      (. builder proactiveEngagementStatus data))
-    (.build builder)))
+| `proactiveEngagementStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:proactive-engagement-status` |
+"
+  [^CfnProactiveEngagement$Builder builder id config]
+  (when-let [data (lookup-entry config id :emergency-contact-list)]
+    (. builder emergencyContactList data))
+  (when-let [data (lookup-entry config id :proactive-engagement-status)]
+    (. builder proactiveEngagementStatus data))
+  (.build builder))
 
 
-(defn cfn-proactive-engagement-emergency-contact-property-builder
-  "The cfn-proactive-engagement-emergency-contact-property-builder function buildes out new instances of 
-CfnProactiveEngagement$EmergencyContactProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-proactive-engagement-emergency-contact-property-builder
+  "The build-cfn-proactive-engagement-emergency-contact-property-builder function updates a CfnProactiveEngagement$EmergencyContactProperty$Builder instance using the provided configuration.
+  The function takes the CfnProactiveEngagement$EmergencyContactProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `contactNotes` | java.lang.String | [[cdk.support/lookup-entry]] | `:contact-notes` |
 | `emailAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:email-address` |
-| `phoneNumber` | java.lang.String | [[cdk.support/lookup-entry]] | `:phone-number` |"
-  [stack id config]
-  (let [builder (CfnProactiveEngagement$EmergencyContactProperty$Builder.)]
-    (when-let [data (lookup-entry config id :contact-notes)]
-      (. builder contactNotes data))
-    (when-let [data (lookup-entry config id :email-address)]
-      (. builder emailAddress data))
-    (when-let [data (lookup-entry config id :phone-number)]
-      (. builder phoneNumber data))
-    (.build builder)))
+| `phoneNumber` | java.lang.String | [[cdk.support/lookup-entry]] | `:phone-number` |
+"
+  [^CfnProactiveEngagement$EmergencyContactProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :contact-notes)]
+    (. builder contactNotes data))
+  (when-let [data (lookup-entry config id :email-address)]
+    (. builder emailAddress data))
+  (when-let [data (lookup-entry config id :phone-number)]
+    (. builder phoneNumber data))
+  (.build builder))
 
 
-(defn cfn-proactive-engagement-props-builder
-  "The cfn-proactive-engagement-props-builder function buildes out new instances of 
-CfnProactiveEngagementProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-proactive-engagement-props-builder
+  "The build-cfn-proactive-engagement-props-builder function updates a CfnProactiveEngagementProps$Builder instance using the provided configuration.
+  The function takes the CfnProactiveEngagementProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `emergencyContactList` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:emergency-contact-list` |
-| `proactiveEngagementStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:proactive-engagement-status` |"
-  [stack id config]
-  (let [builder (CfnProactiveEngagementProps$Builder.)]
-    (when-let [data (lookup-entry config id :emergency-contact-list)]
-      (. builder emergencyContactList data))
-    (when-let [data (lookup-entry config id :proactive-engagement-status)]
-      (. builder proactiveEngagementStatus data))
-    (.build builder)))
+| `proactiveEngagementStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:proactive-engagement-status` |
+"
+  [^CfnProactiveEngagementProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :emergency-contact-list)]
+    (. builder emergencyContactList data))
+  (when-let [data (lookup-entry config id :proactive-engagement-status)]
+    (. builder proactiveEngagementStatus data))
+  (.build builder))
 
 
-(defn cfn-protection-action-property-builder
-  "The cfn-protection-action-property-builder function buildes out new instances of 
-CfnProtection$ActionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-protection-action-property-builder
+  "The build-cfn-protection-action-property-builder function updates a CfnProtection$ActionProperty$Builder instance using the provided configuration.
+  The function takes the CfnProtection$ActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `block` | java.lang.Object | [[cdk.support/lookup-entry]] | `:block` |
-| `count` | java.lang.Object | [[cdk.support/lookup-entry]] | `:count` |"
-  [stack id config]
-  (let [builder (CfnProtection$ActionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :block)]
-      (. builder block data))
-    (when-let [data (lookup-entry config id :count)]
-      (. builder count data))
-    (.build builder)))
+| `count` | java.lang.Object | [[cdk.support/lookup-entry]] | `:count` |
+"
+  [^CfnProtection$ActionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :block)]
+    (. builder block data))
+  (when-let [data (lookup-entry config id :count)]
+    (. builder count data))
+  (.build builder))
 
 
-(defn cfn-protection-application-layer-automatic-response-configuration-property-builder
-  "The cfn-protection-application-layer-automatic-response-configuration-property-builder function buildes out new instances of 
-CfnProtection$ApplicationLayerAutomaticResponseConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-protection-application-layer-automatic-response-configuration-property-builder
+  "The build-cfn-protection-application-layer-automatic-response-configuration-property-builder function updates a CfnProtection$ApplicationLayerAutomaticResponseConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnProtection$ApplicationLayerAutomaticResponseConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `action` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:action` |
-| `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |"
-  [stack id config]
-  (let [builder (CfnProtection$ApplicationLayerAutomaticResponseConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :status)]
-      (. builder status data))
-    (.build builder)))
+| `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
+"
+  [^CfnProtection$ApplicationLayerAutomaticResponseConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :status)]
+    (. builder status data))
+  (.build builder))
 
 
-(defn cfn-protection-builder
-  "The cfn-protection-builder function buildes out new instances of 
-CfnProtection$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-protection-builder
+  "The build-cfn-protection-builder function updates a CfnProtection$Builder instance using the provided configuration.
+  The function takes the CfnProtection$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -146,25 +170,28 @@ CfnProtection$Builder using the provided configuration.  Each field is set as fo
 | `healthCheckArns` | java.util.List | [[cdk.support/lookup-entry]] | `:health-check-arns` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnProtection$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application-layer-automatic-response-configuration)]
-      (. builder applicationLayerAutomaticResponseConfiguration data))
-    (when-let [data (lookup-entry config id :health-check-arns)]
-      (. builder healthCheckArns data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :resource-arn)]
-      (. builder resourceArn data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnProtection$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-layer-automatic-response-configuration)]
+    (. builder applicationLayerAutomaticResponseConfiguration data))
+  (when-let [data (lookup-entry config id :health-check-arns)]
+    (. builder healthCheckArns data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :resource-arn)]
+    (. builder resourceArn data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-protection-group-builder
-  "The cfn-protection-group-builder function buildes out new instances of 
-CfnProtectionGroup$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-protection-group-builder
+  "The build-cfn-protection-group-builder function updates a CfnProtectionGroup$Builder instance using the provided configuration.
+  The function takes the CfnProtectionGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -173,27 +200,30 @@ CfnProtectionGroup$Builder using the provided configuration.  Each field is set 
 | `pattern` | java.lang.String | [[cdk.support/lookup-entry]] | `:pattern` |
 | `protectionGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:protection-group-id` |
 | `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnProtectionGroup$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :aggregation)]
-      (. builder aggregation data))
-    (when-let [data (lookup-entry config id :members)]
-      (. builder members data))
-    (when-let [data (lookup-entry config id :pattern)]
-      (. builder pattern data))
-    (when-let [data (lookup-entry config id :protection-group-id)]
-      (. builder protectionGroupId data))
-    (when-let [data (lookup-entry config id :resource-type)]
-      (. builder resourceType data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnProtectionGroup$Builder builder id config]
+  (when-let [data (lookup-entry config id :aggregation)]
+    (. builder aggregation data))
+  (when-let [data (lookup-entry config id :members)]
+    (. builder members data))
+  (when-let [data (lookup-entry config id :pattern)]
+    (. builder pattern data))
+  (when-let [data (lookup-entry config id :protection-group-id)]
+    (. builder protectionGroupId data))
+  (when-let [data (lookup-entry config id :resource-type)]
+    (. builder resourceType data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-protection-group-props-builder
-  "The cfn-protection-group-props-builder function buildes out new instances of 
-CfnProtectionGroupProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-protection-group-props-builder
+  "The build-cfn-protection-group-props-builder function updates a CfnProtectionGroupProps$Builder instance using the provided configuration.
+  The function takes the CfnProtectionGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -202,27 +232,30 @@ CfnProtectionGroupProps$Builder using the provided configuration.  Each field is
 | `pattern` | java.lang.String | [[cdk.support/lookup-entry]] | `:pattern` |
 | `protectionGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:protection-group-id` |
 | `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnProtectionGroupProps$Builder.)]
-    (when-let [data (lookup-entry config id :aggregation)]
-      (. builder aggregation data))
-    (when-let [data (lookup-entry config id :members)]
-      (. builder members data))
-    (when-let [data (lookup-entry config id :pattern)]
-      (. builder pattern data))
-    (when-let [data (lookup-entry config id :protection-group-id)]
-      (. builder protectionGroupId data))
-    (when-let [data (lookup-entry config id :resource-type)]
-      (. builder resourceType data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnProtectionGroupProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :aggregation)]
+    (. builder aggregation data))
+  (when-let [data (lookup-entry config id :members)]
+    (. builder members data))
+  (when-let [data (lookup-entry config id :pattern)]
+    (. builder pattern data))
+  (when-let [data (lookup-entry config id :protection-group-id)]
+    (. builder protectionGroupId data))
+  (when-let [data (lookup-entry config id :resource-type)]
+    (. builder resourceType data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-protection-props-builder
-  "The cfn-protection-props-builder function buildes out new instances of 
-CfnProtectionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-protection-props-builder
+  "The build-cfn-protection-props-builder function updates a CfnProtectionProps$Builder instance using the provided configuration.
+  The function takes the CfnProtectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -230,17 +263,17 @@ CfnProtectionProps$Builder using the provided configuration.  Each field is set 
 | `healthCheckArns` | java.util.List | [[cdk.support/lookup-entry]] | `:health-check-arns` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnProtectionProps$Builder.)]
-    (when-let [data (lookup-entry config id :application-layer-automatic-response-configuration)]
-      (. builder applicationLayerAutomaticResponseConfiguration data))
-    (when-let [data (lookup-entry config id :health-check-arns)]
-      (. builder healthCheckArns data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :resource-arn)]
-      (. builder resourceArn data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnProtectionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-layer-automatic-response-configuration)]
+    (. builder applicationLayerAutomaticResponseConfiguration data))
+  (when-let [data (lookup-entry config id :health-check-arns)]
+    (. builder healthCheckArns data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :resource-arn)]
+    (. builder resourceArn data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))

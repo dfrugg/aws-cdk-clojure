@@ -9,9 +9,12 @@
                                                             CfnProfileResourceAssociationProps$Builder]))
 
 
-(defn cfn-profile-association-builder
-  "The cfn-profile-association-builder function buildes out new instances of 
-CfnProfileAssociation$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-profile-association-builder
+  "The build-cfn-profile-association-builder function updates a CfnProfileAssociation$Builder instance using the provided configuration.
+  The function takes the CfnProfileAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -19,25 +22,28 @@ CfnProfileAssociation$Builder using the provided configuration.  Each field is s
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `profileId` | java.lang.String | [[cdk.support/lookup-entry]] | `:profile-id` |
 | `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnProfileAssociation$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :arn)]
-      (. builder arn data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :profile-id)]
-      (. builder profileId data))
-    (when-let [data (lookup-entry config id :resource-id)]
-      (. builder resourceId data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnProfileAssociation$Builder builder id config]
+  (when-let [data (lookup-entry config id :arn)]
+    (. builder arn data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :profile-id)]
+    (. builder profileId data))
+  (when-let [data (lookup-entry config id :resource-id)]
+    (. builder resourceId data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-profile-association-props-builder
-  "The cfn-profile-association-props-builder function buildes out new instances of 
-CfnProfileAssociationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-profile-association-props-builder
+  "The build-cfn-profile-association-props-builder function updates a CfnProfileAssociationProps$Builder instance using the provided configuration.
+  The function takes the CfnProfileAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -45,97 +51,109 @@ CfnProfileAssociationProps$Builder using the provided configuration.  Each field
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `profileId` | java.lang.String | [[cdk.support/lookup-entry]] | `:profile-id` |
 | `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnProfileAssociationProps$Builder.)]
-    (when-let [data (lookup-entry config id :arn)]
-      (. builder arn data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :profile-id)]
-      (. builder profileId data))
-    (when-let [data (lookup-entry config id :resource-id)]
-      (. builder resourceId data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnProfileAssociationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :arn)]
+    (. builder arn data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :profile-id)]
+    (. builder profileId data))
+  (when-let [data (lookup-entry config id :resource-id)]
+    (. builder resourceId data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-profile-builder
-  "The cfn-profile-builder function buildes out new instances of 
-CfnProfile$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-profile-builder
+  "The build-cfn-profile-builder function updates a CfnProfile$Builder instance using the provided configuration.
+  The function takes the CfnProfile$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnProfile$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
-
-
-(defn cfn-profile-props-builder
-  "The cfn-profile-props-builder function buildes out new instances of 
-CfnProfileProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnProfileProps$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnProfile$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-profile-resource-association-builder
-  "The cfn-profile-resource-association-builder function buildes out new instances of 
-CfnProfileResourceAssociation$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-profile-props-builder
+  "The build-cfn-profile-props-builder function updates a CfnProfileProps$Builder instance using the provided configuration.
+  The function takes the CfnProfileProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `profileId` | java.lang.String | [[cdk.support/lookup-entry]] | `:profile-id` |
-| `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
-| `resourceProperties` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-properties` |"
-  [stack id config]
-  (let [builder (CfnProfileResourceAssociation$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :profile-id)]
-      (. builder profileId data))
-    (when-let [data (lookup-entry config id :resource-arn)]
-      (. builder resourceArn data))
-    (when-let [data (lookup-entry config id :resource-properties)]
-      (. builder resourceProperties data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnProfileProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-profile-resource-association-props-builder
-  "The cfn-profile-resource-association-props-builder function buildes out new instances of 
-CfnProfileResourceAssociationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-profile-resource-association-builder
+  "The build-cfn-profile-resource-association-builder function updates a CfnProfileResourceAssociation$Builder instance using the provided configuration.
+  The function takes the CfnProfileResourceAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `profileId` | java.lang.String | [[cdk.support/lookup-entry]] | `:profile-id` |
 | `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
-| `resourceProperties` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-properties` |"
-  [stack id config]
-  (let [builder (CfnProfileResourceAssociationProps$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :profile-id)]
-      (. builder profileId data))
-    (when-let [data (lookup-entry config id :resource-arn)]
-      (. builder resourceArn data))
-    (when-let [data (lookup-entry config id :resource-properties)]
-      (. builder resourceProperties data))
-    (.build builder)))
+| `resourceProperties` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-properties` |
+"
+  [^CfnProfileResourceAssociation$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :profile-id)]
+    (. builder profileId data))
+  (when-let [data (lookup-entry config id :resource-arn)]
+    (. builder resourceArn data))
+  (when-let [data (lookup-entry config id :resource-properties)]
+    (. builder resourceProperties data))
+  (.build builder))
+
+
+(defn build-cfn-profile-resource-association-props-builder
+  "The build-cfn-profile-resource-association-props-builder function updates a CfnProfileResourceAssociationProps$Builder instance using the provided configuration.
+  The function takes the CfnProfileResourceAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `profileId` | java.lang.String | [[cdk.support/lookup-entry]] | `:profile-id` |
+| `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
+| `resourceProperties` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-properties` |
+"
+  [^CfnProfileResourceAssociationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :profile-id)]
+    (. builder profileId data))
+  (when-let [data (lookup-entry config id :resource-arn)]
+    (. builder resourceArn data))
+  (when-let [data (lookup-entry config id :resource-properties)]
+    (. builder resourceProperties data))
+  (.build builder))

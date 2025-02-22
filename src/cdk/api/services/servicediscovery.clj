@@ -162,192 +162,222 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :weighted data) RoutingPolicy/WEIGHTED)))
 
 
-(defn alias-target-instance-builder
-  "The alias-target-instance-builder function buildes out new instances of 
-AliasTargetInstance$Builder using the provided configuration.  Each field is set as follows:
+(defn build-alias-target-instance-builder
+  "The build-alias-target-instance-builder function updates a AliasTargetInstance$Builder instance using the provided configuration.
+  The function takes the AliasTargetInstance$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `customAttributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-attributes` |
 | `dnsName` | java.lang.String | [[cdk.support/lookup-entry]] | `:dns-name` |
 | `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
-| `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |"
-  [stack id config]
-  (let [builder (AliasTargetInstance$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :custom-attributes)]
-      (. builder customAttributes data))
-    (when-let [data (lookup-entry config id :dns-name)]
-      (. builder dnsName data))
-    (when-let [data (lookup-entry config id :instance-id)]
-      (. builder instanceId data))
-    (when-let [data (lookup-entry config id :service)]
-      (. builder service data))
-    (.build builder)))
+| `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |
+"
+  [^AliasTargetInstance$Builder builder id config]
+  (when-let [data (lookup-entry config id :custom-attributes)]
+    (. builder customAttributes data))
+  (when-let [data (lookup-entry config id :dns-name)]
+    (. builder dnsName data))
+  (when-let [data (lookup-entry config id :instance-id)]
+    (. builder instanceId data))
+  (when-let [data (lookup-entry config id :service)]
+    (. builder service data))
+  (.build builder))
 
 
-(defn alias-target-instance-props-builder
-  "The alias-target-instance-props-builder function buildes out new instances of 
-AliasTargetInstanceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-alias-target-instance-props-builder
+  "The build-alias-target-instance-props-builder function updates a AliasTargetInstanceProps$Builder instance using the provided configuration.
+  The function takes the AliasTargetInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `customAttributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-attributes` |
 | `dnsName` | java.lang.String | [[cdk.support/lookup-entry]] | `:dns-name` |
 | `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
-| `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |"
-  [stack id config]
-  (let [builder (AliasTargetInstanceProps$Builder.)]
-    (when-let [data (lookup-entry config id :custom-attributes)]
-      (. builder customAttributes data))
-    (when-let [data (lookup-entry config id :dns-name)]
-      (. builder dnsName data))
-    (when-let [data (lookup-entry config id :instance-id)]
-      (. builder instanceId data))
-    (when-let [data (lookup-entry config id :service)]
-      (. builder service data))
-    (.build builder)))
+| `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |
+"
+  [^AliasTargetInstanceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :custom-attributes)]
+    (. builder customAttributes data))
+  (when-let [data (lookup-entry config id :dns-name)]
+    (. builder dnsName data))
+  (when-let [data (lookup-entry config id :instance-id)]
+    (. builder instanceId data))
+  (when-let [data (lookup-entry config id :service)]
+    (. builder service data))
+  (.build builder))
 
 
-(defn base-instance-props-builder
-  "The base-instance-props-builder function buildes out new instances of 
-BaseInstanceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-base-instance-props-builder
+  "The build-base-instance-props-builder function updates a BaseInstanceProps$Builder instance using the provided configuration.
+  The function takes the BaseInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `customAttributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-attributes` |
-| `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |"
-  [stack id config]
-  (let [builder (BaseInstanceProps$Builder.)]
-    (when-let [data (lookup-entry config id :custom-attributes)]
-      (. builder customAttributes data))
-    (when-let [data (lookup-entry config id :instance-id)]
-      (. builder instanceId data))
-    (.build builder)))
+| `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
+"
+  [^BaseInstanceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :custom-attributes)]
+    (. builder customAttributes data))
+  (when-let [data (lookup-entry config id :instance-id)]
+    (. builder instanceId data))
+  (.build builder))
 
 
-(defn base-namespace-props-builder
-  "The base-namespace-props-builder function buildes out new instances of 
-BaseNamespaceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-base-namespace-props-builder
+  "The build-base-namespace-props-builder function updates a BaseNamespaceProps$Builder instance using the provided configuration.
+  The function takes the BaseNamespaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (BaseNamespaceProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^BaseNamespaceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn base-service-props-builder
-  "The base-service-props-builder function buildes out new instances of 
-BaseServiceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-base-service-props-builder
+  "The build-base-service-props-builder function updates a BaseServiceProps$Builder instance using the provided configuration.
+  The function takes the BaseServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `customHealthCheck` | software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig | [[cdk.support/lookup-entry]] | `:custom-health-check` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `healthCheck` | software.amazon.awscdk.services.servicediscovery.HealthCheckConfig | [[cdk.support/lookup-entry]] | `:health-check` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (BaseServiceProps$Builder.)]
-    (when-let [data (lookup-entry config id :custom-health-check)]
-      (. builder customHealthCheck data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^BaseServiceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :custom-health-check)]
+    (. builder customHealthCheck data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn cfn-http-namespace-builder
-  "The cfn-http-namespace-builder function buildes out new instances of 
-CfnHttpNamespace$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-http-namespace-builder
+  "The build-cfn-http-namespace-builder function updates a CfnHttpNamespace$Builder instance using the provided configuration.
+  The function takes the CfnHttpNamespace$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnHttpNamespace$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnHttpNamespace$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-http-namespace-props-builder
-  "The cfn-http-namespace-props-builder function buildes out new instances of 
-CfnHttpNamespaceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-http-namespace-props-builder
+  "The build-cfn-http-namespace-props-builder function updates a CfnHttpNamespaceProps$Builder instance using the provided configuration.
+  The function takes the CfnHttpNamespaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnHttpNamespaceProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnHttpNamespaceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-instance-builder
-  "The cfn-instance-builder function buildes out new instances of 
-CfnInstance$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-instance-builder
+  "The build-cfn-instance-builder function updates a CfnInstance$Builder instance using the provided configuration.
+  The function takes the CfnInstance$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `instanceAttributes` | java.lang.Object | [[cdk.support/lookup-entry]] | `:instance-attributes` |
-| `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
-| `serviceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-id` |"
-  [stack id config]
-  (let [builder (CfnInstance$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :instance-attributes)]
-      (. builder instanceAttributes data))
-    (when-let [data (lookup-entry config id :instance-id)]
-      (. builder instanceId data))
-    (when-let [data (lookup-entry config id :service-id)]
-      (. builder serviceId data))
-    (.build builder)))
-
-
-(defn cfn-instance-props-builder
-  "The cfn-instance-props-builder function buildes out new instances of 
-CfnInstanceProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `instanceAttributes` | java.lang.Object | [[cdk.support/lookup-entry]] | `:instance-attributes` |
 | `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
-| `serviceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-id` |"
-  [stack id config]
-  (let [builder (CfnInstanceProps$Builder.)]
-    (when-let [data (lookup-entry config id :instance-attributes)]
-      (. builder instanceAttributes data))
-    (when-let [data (lookup-entry config id :instance-id)]
-      (. builder instanceId data))
-    (when-let [data (lookup-entry config id :service-id)]
-      (. builder serviceId data))
-    (.build builder)))
+| `serviceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-id` |
+"
+  [^CfnInstance$Builder builder id config]
+  (when-let [data (lookup-entry config id :instance-attributes)]
+    (. builder instanceAttributes data))
+  (when-let [data (lookup-entry config id :instance-id)]
+    (. builder instanceId data))
+  (when-let [data (lookup-entry config id :service-id)]
+    (. builder serviceId data))
+  (.build builder))
 
 
-(defn cfn-private-dns-namespace-builder
-  "The cfn-private-dns-namespace-builder function buildes out new instances of 
-CfnPrivateDnsNamespace$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-instance-props-builder
+  "The build-cfn-instance-props-builder function updates a CfnInstanceProps$Builder instance using the provided configuration.
+  The function takes the CfnInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `instanceAttributes` | java.lang.Object | [[cdk.support/lookup-entry]] | `:instance-attributes` |
+| `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
+| `serviceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-id` |
+"
+  [^CfnInstanceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :instance-attributes)]
+    (. builder instanceAttributes data))
+  (when-let [data (lookup-entry config id :instance-id)]
+    (. builder instanceId data))
+  (when-let [data (lookup-entry config id :service-id)]
+    (. builder serviceId data))
+  (.build builder))
+
+
+(defn build-cfn-private-dns-namespace-builder
+  "The build-cfn-private-dns-namespace-builder function updates a CfnPrivateDnsNamespace$Builder instance using the provided configuration.
+  The function takes the CfnPrivateDnsNamespace$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -355,53 +385,62 @@ CfnPrivateDnsNamespace$Builder using the provided configuration.  Each field is 
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `properties` | software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace$PropertiesProperty | [[cdk.support/lookup-entry]] | `:properties` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpc` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (CfnPrivateDnsNamespace$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :properties)]
-      (. builder properties data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^CfnPrivateDnsNamespace$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :properties)]
+    (. builder properties data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn cfn-private-dns-namespace-private-dns-properties-mutable-property-builder
-  "The cfn-private-dns-namespace-private-dns-properties-mutable-property-builder function buildes out new instances of 
-CfnPrivateDnsNamespace$PrivateDnsPropertiesMutableProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-private-dns-namespace-private-dns-properties-mutable-property-builder
+  "The build-cfn-private-dns-namespace-private-dns-properties-mutable-property-builder function updates a CfnPrivateDnsNamespace$PrivateDnsPropertiesMutableProperty$Builder instance using the provided configuration.
+  The function takes the CfnPrivateDnsNamespace$PrivateDnsPropertiesMutableProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `soa` | software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace$SOAProperty | [[cdk.support/lookup-entry]] | `:soa` |"
-  [stack id config]
-  (let [builder (CfnPrivateDnsNamespace$PrivateDnsPropertiesMutableProperty$Builder.)]
-    (when-let [data (lookup-entry config id :soa)]
-      (. builder soa data))
-    (.build builder)))
-
-
-(defn cfn-private-dns-namespace-properties-property-builder
-  "The cfn-private-dns-namespace-properties-property-builder function buildes out new instances of 
-CfnPrivateDnsNamespace$PropertiesProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dnsProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dns-properties` |"
-  [stack id config]
-  (let [builder (CfnPrivateDnsNamespace$PropertiesProperty$Builder.)]
-    (when-let [data (lookup-entry config id :dns-properties)]
-      (. builder dnsProperties data))
-    (.build builder)))
+| `soa` | software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace$SOAProperty | [[cdk.support/lookup-entry]] | `:soa` |
+"
+  [^CfnPrivateDnsNamespace$PrivateDnsPropertiesMutableProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :soa)]
+    (. builder soa data))
+  (.build builder))
 
 
-(defn cfn-private-dns-namespace-props-builder
-  "The cfn-private-dns-namespace-props-builder function buildes out new instances of 
-CfnPrivateDnsNamespaceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-private-dns-namespace-properties-property-builder
+  "The build-cfn-private-dns-namespace-properties-property-builder function updates a CfnPrivateDnsNamespace$PropertiesProperty$Builder instance using the provided configuration.
+  The function takes the CfnPrivateDnsNamespace$PropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `dnsProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dns-properties` |
+"
+  [^CfnPrivateDnsNamespace$PropertiesProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :dns-properties)]
+    (. builder dnsProperties data))
+  (.build builder))
+
+
+(defn build-cfn-private-dns-namespace-props-builder
+  "The build-cfn-private-dns-namespace-props-builder function updates a CfnPrivateDnsNamespaceProps$Builder instance using the provided configuration.
+  The function takes the CfnPrivateDnsNamespaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -409,127 +448,148 @@ CfnPrivateDnsNamespaceProps$Builder using the provided configuration.  Each fiel
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `properties` | software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace$PropertiesProperty | [[cdk.support/lookup-entry]] | `:properties` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpc` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (CfnPrivateDnsNamespaceProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :properties)]
-      (. builder properties data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^CfnPrivateDnsNamespaceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :properties)]
+    (. builder properties data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn cfn-private-dns-namespace-soa-property-builder
-  "The cfn-private-dns-namespace-soa-property-builder function buildes out new instances of 
-CfnPrivateDnsNamespace$SOAProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-private-dns-namespace-soa-property-builder
+  "The build-cfn-private-dns-namespace-soa-property-builder function updates a CfnPrivateDnsNamespace$SOAProperty$Builder instance using the provided configuration.
+  The function takes the CfnPrivateDnsNamespace$SOAProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ttl` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ttl` |"
-  [stack id config]
-  (let [builder (CfnPrivateDnsNamespace$SOAProperty$Builder.)]
-    (when-let [data (lookup-entry config id :ttl)]
-      (. builder ttl data))
-    (.build builder)))
+| `ttl` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ttl` |
+"
+  [^CfnPrivateDnsNamespace$SOAProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :ttl)]
+    (. builder ttl data))
+  (.build builder))
 
 
-(defn cfn-public-dns-namespace-builder
-  "The cfn-public-dns-namespace-builder function buildes out new instances of 
-CfnPublicDnsNamespace$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-public-dns-namespace-builder
+  "The build-cfn-public-dns-namespace-builder function updates a CfnPublicDnsNamespace$Builder instance using the provided configuration.
+  The function takes the CfnPublicDnsNamespace$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `properties` | software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace$PropertiesProperty | [[cdk.support/lookup-entry]] | `:properties` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnPublicDnsNamespace$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :properties)]
-      (. builder properties data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnPublicDnsNamespace$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :properties)]
+    (. builder properties data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-public-dns-namespace-properties-property-builder
-  "The cfn-public-dns-namespace-properties-property-builder function buildes out new instances of 
-CfnPublicDnsNamespace$PropertiesProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-public-dns-namespace-properties-property-builder
+  "The build-cfn-public-dns-namespace-properties-property-builder function updates a CfnPublicDnsNamespace$PropertiesProperty$Builder instance using the provided configuration.
+  The function takes the CfnPublicDnsNamespace$PropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `dnsProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dns-properties` |"
-  [stack id config]
-  (let [builder (CfnPublicDnsNamespace$PropertiesProperty$Builder.)]
-    (when-let [data (lookup-entry config id :dns-properties)]
-      (. builder dnsProperties data))
-    (.build builder)))
+| `dnsProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dns-properties` |
+"
+  [^CfnPublicDnsNamespace$PropertiesProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :dns-properties)]
+    (. builder dnsProperties data))
+  (.build builder))
 
 
-(defn cfn-public-dns-namespace-props-builder
-  "The cfn-public-dns-namespace-props-builder function buildes out new instances of 
-CfnPublicDnsNamespaceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-public-dns-namespace-props-builder
+  "The build-cfn-public-dns-namespace-props-builder function updates a CfnPublicDnsNamespaceProps$Builder instance using the provided configuration.
+  The function takes the CfnPublicDnsNamespaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `properties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:properties` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnPublicDnsNamespaceProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :properties)]
-      (. builder properties data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnPublicDnsNamespaceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :properties)]
+    (. builder properties data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-public-dns-namespace-public-dns-properties-mutable-property-builder
-  "The cfn-public-dns-namespace-public-dns-properties-mutable-property-builder function buildes out new instances of 
-CfnPublicDnsNamespace$PublicDnsPropertiesMutableProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-public-dns-namespace-public-dns-properties-mutable-property-builder
+  "The build-cfn-public-dns-namespace-public-dns-properties-mutable-property-builder function updates a CfnPublicDnsNamespace$PublicDnsPropertiesMutableProperty$Builder instance using the provided configuration.
+  The function takes the CfnPublicDnsNamespace$PublicDnsPropertiesMutableProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `soa` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:soa` |"
-  [stack id config]
-  (let [builder (CfnPublicDnsNamespace$PublicDnsPropertiesMutableProperty$Builder.)]
-    (when-let [data (lookup-entry config id :soa)]
-      (. builder soa data))
-    (.build builder)))
-
-
-(defn cfn-public-dns-namespace-soa-property-builder
-  "The cfn-public-dns-namespace-soa-property-builder function buildes out new instances of 
-CfnPublicDnsNamespace$SOAProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ttl` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ttl` |"
-  [stack id config]
-  (let [builder (CfnPublicDnsNamespace$SOAProperty$Builder.)]
-    (when-let [data (lookup-entry config id :ttl)]
-      (. builder ttl data))
-    (.build builder)))
+| `soa` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:soa` |
+"
+  [^CfnPublicDnsNamespace$PublicDnsPropertiesMutableProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :soa)]
+    (. builder soa data))
+  (.build builder))
 
 
-(defn cfn-service-builder
-  "The cfn-service-builder function buildes out new instances of 
-CfnService$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-public-dns-namespace-soa-property-builder
+  "The build-cfn-public-dns-namespace-soa-property-builder function updates a CfnPublicDnsNamespace$SOAProperty$Builder instance using the provided configuration.
+  The function takes the CfnPublicDnsNamespace$SOAProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `ttl` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ttl` |
+"
+  [^CfnPublicDnsNamespace$SOAProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :ttl)]
+    (. builder ttl data))
+  (.build builder))
+
+
+(defn build-cfn-service-builder
+  "The build-cfn-service-builder function updates a CfnService$Builder instance using the provided configuration.
+  The function takes the CfnService$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -540,102 +600,117 @@ CfnService$Builder using the provided configuration.  Each field is set as follo
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `namespaceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-id` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnService$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :dns-config)]
-      (. builder dnsConfig data))
-    (when-let [data (lookup-entry config id :health-check-config)]
-      (. builder healthCheckConfig data))
-    (when-let [data (lookup-entry config id :health-check-custom-config)]
-      (. builder healthCheckCustomConfig data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :namespace-id)]
-      (. builder namespaceId data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnService$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :dns-config)]
+    (. builder dnsConfig data))
+  (when-let [data (lookup-entry config id :health-check-config)]
+    (. builder healthCheckConfig data))
+  (when-let [data (lookup-entry config id :health-check-custom-config)]
+    (. builder healthCheckCustomConfig data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :namespace-id)]
+    (. builder namespaceId data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-service-dns-config-property-builder
-  "The cfn-service-dns-config-property-builder function buildes out new instances of 
-CfnService$DnsConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-service-dns-config-property-builder
+  "The build-cfn-service-dns-config-property-builder function updates a CfnService$DnsConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnService$DnsConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dnsRecords` | java.util.List | [[cdk.support/lookup-entry]] | `:dns-records` |
 | `namespaceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-id` |
-| `routingPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:routing-policy` |"
-  [stack id config]
-  (let [builder (CfnService$DnsConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :dns-records)]
-      (. builder dnsRecords data))
-    (when-let [data (lookup-entry config id :namespace-id)]
-      (. builder namespaceId data))
-    (when-let [data (lookup-entry config id :routing-policy)]
-      (. builder routingPolicy data))
-    (.build builder)))
+| `routingPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:routing-policy` |
+"
+  [^CfnService$DnsConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :dns-records)]
+    (. builder dnsRecords data))
+  (when-let [data (lookup-entry config id :namespace-id)]
+    (. builder namespaceId data))
+  (when-let [data (lookup-entry config id :routing-policy)]
+    (. builder routingPolicy data))
+  (.build builder))
 
 
-(defn cfn-service-dns-record-property-builder
-  "The cfn-service-dns-record-property-builder function buildes out new instances of 
-CfnService$DnsRecordProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-service-dns-record-property-builder
+  "The build-cfn-service-dns-record-property-builder function updates a CfnService$DnsRecordProperty$Builder instance using the provided configuration.
+  The function takes the CfnService$DnsRecordProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `ttl` | java.lang.Number | [[cdk.support/lookup-entry]] | `:ttl` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnService$DnsRecordProperty$Builder.)]
-    (when-let [data (lookup-entry config id :ttl)]
-      (. builder ttl data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnService$DnsRecordProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :ttl)]
+    (. builder ttl data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-service-health-check-config-property-builder
-  "The cfn-service-health-check-config-property-builder function buildes out new instances of 
-CfnService$HealthCheckConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-service-health-check-config-property-builder
+  "The build-cfn-service-health-check-config-property-builder function updates a CfnService$HealthCheckConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnService$HealthCheckConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `failureThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:failure-threshold` |
 | `resourcePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-path` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnService$HealthCheckConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :failure-threshold)]
-      (. builder failureThreshold data))
-    (when-let [data (lookup-entry config id :resource-path)]
-      (. builder resourcePath data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnService$HealthCheckConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :failure-threshold)]
+    (. builder failureThreshold data))
+  (when-let [data (lookup-entry config id :resource-path)]
+    (. builder resourcePath data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-service-health-check-custom-config-property-builder
-  "The cfn-service-health-check-custom-config-property-builder function buildes out new instances of 
-CfnService$HealthCheckCustomConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-service-health-check-custom-config-property-builder
+  "The build-cfn-service-health-check-custom-config-property-builder function updates a CfnService$HealthCheckCustomConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnService$HealthCheckCustomConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `failureThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:failure-threshold` |"
-  [stack id config]
-  (let [builder (CfnService$HealthCheckCustomConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :failure-threshold)]
-      (. builder failureThreshold data))
-    (.build builder)))
+| `failureThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:failure-threshold` |
+"
+  [^CfnService$HealthCheckCustomConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :failure-threshold)]
+    (. builder failureThreshold data))
+  (.build builder))
 
 
-(defn cfn-service-props-builder
-  "The cfn-service-props-builder function buildes out new instances of 
-CfnServiceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-service-props-builder
+  "The build-cfn-service-props-builder function updates a CfnServiceProps$Builder instance using the provided configuration.
+  The function takes the CfnServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -646,97 +721,109 @@ CfnServiceProps$Builder using the provided configuration.  Each field is set as 
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `namespaceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-id` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnServiceProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :dns-config)]
-      (. builder dnsConfig data))
-    (when-let [data (lookup-entry config id :health-check-config)]
-      (. builder healthCheckConfig data))
-    (when-let [data (lookup-entry config id :health-check-custom-config)]
-      (. builder healthCheckCustomConfig data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :namespace-id)]
-      (. builder namespaceId data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnServiceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :dns-config)]
+    (. builder dnsConfig data))
+  (when-let [data (lookup-entry config id :health-check-config)]
+    (. builder healthCheckConfig data))
+  (when-let [data (lookup-entry config id :health-check-custom-config)]
+    (. builder healthCheckCustomConfig data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :namespace-id)]
+    (. builder namespaceId data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cname-instance-base-props-builder
-  "The cname-instance-base-props-builder function buildes out new instances of 
-CnameInstanceBaseProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cname-instance-base-props-builder
+  "The build-cname-instance-base-props-builder function updates a CnameInstanceBaseProps$Builder instance using the provided configuration.
+  The function takes the CnameInstanceBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `customAttributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-attributes` |
-| `instanceCname` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-cname` |
-| `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |"
-  [stack id config]
-  (let [builder (CnameInstanceBaseProps$Builder.)]
-    (when-let [data (lookup-entry config id :custom-attributes)]
-      (. builder customAttributes data))
-    (when-let [data (lookup-entry config id :instance-cname)]
-      (. builder instanceCname data))
-    (when-let [data (lookup-entry config id :instance-id)]
-      (. builder instanceId data))
-    (.build builder)))
-
-
-(defn cname-instance-builder
-  "The cname-instance-builder function buildes out new instances of 
-CnameInstance$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `customAttributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-attributes` |
 | `instanceCname` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-cname` |
 | `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
-| `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |"
-  [stack id config]
-  (let [builder (CnameInstance$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :custom-attributes)]
-      (. builder customAttributes data))
-    (when-let [data (lookup-entry config id :instance-cname)]
-      (. builder instanceCname data))
-    (when-let [data (lookup-entry config id :instance-id)]
-      (. builder instanceId data))
-    (when-let [data (lookup-entry config id :service)]
-      (. builder service data))
-    (.build builder)))
+"
+  [^CnameInstanceBaseProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :custom-attributes)]
+    (. builder customAttributes data))
+  (when-let [data (lookup-entry config id :instance-cname)]
+    (. builder instanceCname data))
+  (when-let [data (lookup-entry config id :instance-id)]
+    (. builder instanceId data))
+  (.build builder))
 
 
-(defn cname-instance-props-builder
-  "The cname-instance-props-builder function buildes out new instances of 
-CnameInstanceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cname-instance-builder
+  "The build-cname-instance-builder function updates a CnameInstance$Builder instance using the provided configuration.
+  The function takes the CnameInstance$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `customAttributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-attributes` |
 | `instanceCname` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-cname` |
 | `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
-| `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |"
-  [stack id config]
-  (let [builder (CnameInstanceProps$Builder.)]
-    (when-let [data (lookup-entry config id :custom-attributes)]
-      (. builder customAttributes data))
-    (when-let [data (lookup-entry config id :instance-cname)]
-      (. builder instanceCname data))
-    (when-let [data (lookup-entry config id :instance-id)]
-      (. builder instanceId data))
-    (when-let [data (lookup-entry config id :service)]
-      (. builder service data))
-    (.build builder)))
+| `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |
+"
+  [^CnameInstance$Builder builder id config]
+  (when-let [data (lookup-entry config id :custom-attributes)]
+    (. builder customAttributes data))
+  (when-let [data (lookup-entry config id :instance-cname)]
+    (. builder instanceCname data))
+  (when-let [data (lookup-entry config id :instance-id)]
+    (. builder instanceId data))
+  (when-let [data (lookup-entry config id :service)]
+    (. builder service data))
+  (.build builder))
 
 
-(defn dns-service-props-builder
-  "The dns-service-props-builder function buildes out new instances of 
-DnsServiceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cname-instance-props-builder
+  "The build-cname-instance-props-builder function updates a CnameInstanceProps$Builder instance using the provided configuration.
+  The function takes the CnameInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `customAttributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-attributes` |
+| `instanceCname` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-cname` |
+| `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
+| `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |
+"
+  [^CnameInstanceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :custom-attributes)]
+    (. builder customAttributes data))
+  (when-let [data (lookup-entry config id :instance-cname)]
+    (. builder instanceCname data))
+  (when-let [data (lookup-entry config id :instance-id)]
+    (. builder instanceId data))
+  (when-let [data (lookup-entry config id :service)]
+    (. builder service data))
+  (.build builder))
+
+
+(defn build-dns-service-props-builder
+  "The build-dns-service-props-builder function updates a DnsServiceProps$Builder instance using the provided configuration.
+  The function takes the DnsServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -748,147 +835,139 @@ DnsServiceProps$Builder using the provided configuration.  Each field is set as 
 | `healthCheck` | software.amazon.awscdk.services.servicediscovery.HealthCheckConfig | [[cdk.support/lookup-entry]] | `:health-check` |
 | `loadBalancer` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:load-balancer` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `routingPolicy` | software.amazon.awscdk.services.servicediscovery.RoutingPolicy | [[cdk.api.services.servicediscovery/routing-policy]] | `:routing-policy` |"
-  [stack id config]
-  (let [builder (DnsServiceProps$Builder.)]
-    (when-let [data (lookup-entry config id :custom-health-check)]
-      (. builder customHealthCheck data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (discovery-type config id :discovery-type)]
-      (. builder discoveryType data))
-    (when-let [data (dns-record-type config id :dns-record-type)]
-      (. builder dnsRecordType data))
-    (when-let [data (lookup-entry config id :dns-ttl)]
-      (. builder dnsTtl data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :load-balancer)]
-      (. builder loadBalancer data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (routing-policy config id :routing-policy)]
-      (. builder routingPolicy data))
-    (.build builder)))
+| `routingPolicy` | software.amazon.awscdk.services.servicediscovery.RoutingPolicy | [[cdk.api.services.servicediscovery/routing-policy]] | `:routing-policy` |
+"
+  [^DnsServiceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :custom-health-check)]
+    (. builder customHealthCheck data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (discovery-type config id :discovery-type)]
+    (. builder discoveryType data))
+  (when-let [data (dns-record-type config id :dns-record-type)]
+    (. builder dnsRecordType data))
+  (when-let [data (lookup-entry config id :dns-ttl)]
+    (. builder dnsTtl data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :load-balancer)]
+    (. builder loadBalancer data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (routing-policy config id :routing-policy)]
+    (. builder routingPolicy data))
+  (.build builder))
 
 
-(defn health-check-config-builder
-  "The health-check-config-builder function buildes out new instances of 
-HealthCheckConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-health-check-config-builder
+  "The build-health-check-config-builder function updates a HealthCheckConfig$Builder instance using the provided configuration.
+  The function takes the HealthCheckConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `failureThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:failure-threshold` |
 | `resourcePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-path` |
-| `type` | software.amazon.awscdk.services.servicediscovery.HealthCheckType | [[cdk.api.services.servicediscovery/health-check-type]] | `:type` |"
-  [stack id config]
-  (let [builder (HealthCheckConfig$Builder.)]
-    (when-let [data (lookup-entry config id :failure-threshold)]
-      (. builder failureThreshold data))
-    (when-let [data (lookup-entry config id :resource-path)]
-      (. builder resourcePath data))
-    (when-let [data (health-check-type config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | software.amazon.awscdk.services.servicediscovery.HealthCheckType | [[cdk.api.services.servicediscovery/health-check-type]] | `:type` |
+"
+  [^HealthCheckConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :failure-threshold)]
+    (. builder failureThreshold data))
+  (when-let [data (lookup-entry config id :resource-path)]
+    (. builder resourcePath data))
+  (when-let [data (health-check-type config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn health-check-custom-config-builder
-  "The health-check-custom-config-builder function buildes out new instances of 
-HealthCheckCustomConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-health-check-custom-config-builder
+  "The build-health-check-custom-config-builder function updates a HealthCheckCustomConfig$Builder instance using the provided configuration.
+  The function takes the HealthCheckCustomConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `failureThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:failure-threshold` |"
-  [stack id config]
-  (let [builder (HealthCheckCustomConfig$Builder.)]
-    (when-let [data (lookup-entry config id :failure-threshold)]
-      (. builder failureThreshold data))
-    (.build builder)))
+| `failureThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:failure-threshold` |
+"
+  [^HealthCheckCustomConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :failure-threshold)]
+    (. builder failureThreshold data))
+  (.build builder))
 
 
-(defn http-namespace-attributes-builder
-  "The http-namespace-attributes-builder function buildes out new instances of 
-HttpNamespaceAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-namespace-attributes-builder
+  "The build-http-namespace-attributes-builder function updates a HttpNamespaceAttributes$Builder instance using the provided configuration.
+  The function takes the HttpNamespaceAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `namespaceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-arn` |
 | `namespaceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-id` |
-| `namespaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-name` |"
-  [stack id config]
-  (let [builder (HttpNamespaceAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :namespace-arn)]
-      (. builder namespaceArn data))
-    (when-let [data (lookup-entry config id :namespace-id)]
-      (. builder namespaceId data))
-    (when-let [data (lookup-entry config id :namespace-name)]
-      (. builder namespaceName data))
-    (.build builder)))
+| `namespaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-name` |
+"
+  [^HttpNamespaceAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :namespace-arn)]
+    (. builder namespaceArn data))
+  (when-let [data (lookup-entry config id :namespace-id)]
+    (. builder namespaceId data))
+  (when-let [data (lookup-entry config id :namespace-name)]
+    (. builder namespaceName data))
+  (.build builder))
 
 
-(defn http-namespace-builder
-  "The http-namespace-builder function buildes out new instances of 
-HttpNamespace$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-namespace-builder
+  "The build-http-namespace-builder function updates a HttpNamespace$Builder instance using the provided configuration.
+  The function takes the HttpNamespace$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (HttpNamespace$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
-
-
-(defn http-namespace-props-builder
-  "The http-namespace-props-builder function buildes out new instances of 
-HttpNamespaceProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (HttpNamespaceProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^HttpNamespace$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn ip-instance-base-props-builder
-  "The ip-instance-base-props-builder function buildes out new instances of 
-IpInstanceBaseProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-namespace-props-builder
+  "The build-http-namespace-props-builder function updates a HttpNamespaceProps$Builder instance using the provided configuration.
+  The function takes the HttpNamespaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `customAttributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-attributes` |
-| `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
-| `ipv4` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipv4` |
-| `ipv6` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipv6` |
-| `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |"
-  [stack id config]
-  (let [builder (IpInstanceBaseProps$Builder.)]
-    (when-let [data (lookup-entry config id :custom-attributes)]
-      (. builder customAttributes data))
-    (when-let [data (lookup-entry config id :instance-id)]
-      (. builder instanceId data))
-    (when-let [data (lookup-entry config id :ipv4)]
-      (. builder ipv4 data))
-    (when-let [data (lookup-entry config id :ipv6)]
-      (. builder ipv6 data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (.build builder)))
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^HttpNamespaceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn ip-instance-builder
-  "The ip-instance-builder function buildes out new instances of 
-IpInstance$Builder using the provided configuration.  Each field is set as follows:
+(defn build-ip-instance-base-props-builder
+  "The build-ip-instance-base-props-builder function updates a IpInstanceBaseProps$Builder instance using the provided configuration.
+  The function takes the IpInstanceBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -897,27 +976,27 @@ IpInstance$Builder using the provided configuration.  Each field is set as follo
 | `ipv4` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipv4` |
 | `ipv6` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipv6` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
-| `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |"
-  [stack id config]
-  (let [builder (IpInstance$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :custom-attributes)]
-      (. builder customAttributes data))
-    (when-let [data (lookup-entry config id :instance-id)]
-      (. builder instanceId data))
-    (when-let [data (lookup-entry config id :ipv4)]
-      (. builder ipv4 data))
-    (when-let [data (lookup-entry config id :ipv6)]
-      (. builder ipv6 data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :service)]
-      (. builder service data))
-    (.build builder)))
+"
+  [^IpInstanceBaseProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :custom-attributes)]
+    (. builder customAttributes data))
+  (when-let [data (lookup-entry config id :instance-id)]
+    (. builder instanceId data))
+  (when-let [data (lookup-entry config id :ipv4)]
+    (. builder ipv4 data))
+  (when-let [data (lookup-entry config id :ipv6)]
+    (. builder ipv6 data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (.build builder))
 
 
-(defn ip-instance-props-builder
-  "The ip-instance-props-builder function buildes out new instances of 
-IpInstanceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-ip-instance-builder
+  "The build-ip-instance-builder function updates a IpInstance$Builder instance using the provided configuration.
+  The function takes the IpInstance$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -926,198 +1005,260 @@ IpInstanceProps$Builder using the provided configuration.  Each field is set as 
 | `ipv4` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipv4` |
 | `ipv6` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipv6` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
-| `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |"
-  [stack id config]
-  (let [builder (IpInstanceProps$Builder.)]
-    (when-let [data (lookup-entry config id :custom-attributes)]
-      (. builder customAttributes data))
-    (when-let [data (lookup-entry config id :instance-id)]
-      (. builder instanceId data))
-    (when-let [data (lookup-entry config id :ipv4)]
-      (. builder ipv4 data))
-    (when-let [data (lookup-entry config id :ipv6)]
-      (. builder ipv6 data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :service)]
-      (. builder service data))
-    (.build builder)))
+| `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |
+"
+  [^IpInstance$Builder builder id config]
+  (when-let [data (lookup-entry config id :custom-attributes)]
+    (. builder customAttributes data))
+  (when-let [data (lookup-entry config id :instance-id)]
+    (. builder instanceId data))
+  (when-let [data (lookup-entry config id :ipv4)]
+    (. builder ipv4 data))
+  (when-let [data (lookup-entry config id :ipv6)]
+    (. builder ipv6 data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :service)]
+    (. builder service data))
+  (.build builder))
 
 
-(defn non-ip-instance-base-props-builder
-  "The non-ip-instance-base-props-builder function buildes out new instances of 
-NonIpInstanceBaseProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-ip-instance-props-builder
+  "The build-ip-instance-props-builder function updates a IpInstanceProps$Builder instance using the provided configuration.
+  The function takes the IpInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `customAttributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-attributes` |
-| `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |"
-  [stack id config]
-  (let [builder (NonIpInstanceBaseProps$Builder.)]
-    (when-let [data (lookup-entry config id :custom-attributes)]
-      (. builder customAttributes data))
-    (when-let [data (lookup-entry config id :instance-id)]
-      (. builder instanceId data))
-    (.build builder)))
-
-
-(defn non-ip-instance-builder
-  "The non-ip-instance-builder function buildes out new instances of 
-NonIpInstance$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `customAttributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-attributes` |
 | `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
-| `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |"
-  [stack id config]
-  (let [builder (NonIpInstance$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :custom-attributes)]
-      (. builder customAttributes data))
-    (when-let [data (lookup-entry config id :instance-id)]
-      (. builder instanceId data))
-    (when-let [data (lookup-entry config id :service)]
-      (. builder service data))
-    (.build builder)))
+| `ipv4` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipv4` |
+| `ipv6` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipv6` |
+| `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
+| `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |
+"
+  [^IpInstanceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :custom-attributes)]
+    (. builder customAttributes data))
+  (when-let [data (lookup-entry config id :instance-id)]
+    (. builder instanceId data))
+  (when-let [data (lookup-entry config id :ipv4)]
+    (. builder ipv4 data))
+  (when-let [data (lookup-entry config id :ipv6)]
+    (. builder ipv6 data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :service)]
+    (. builder service data))
+  (.build builder))
 
 
-(defn non-ip-instance-props-builder
-  "The non-ip-instance-props-builder function buildes out new instances of 
-NonIpInstanceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-non-ip-instance-base-props-builder
+  "The build-non-ip-instance-base-props-builder function updates a NonIpInstanceBaseProps$Builder instance using the provided configuration.
+  The function takes the NonIpInstanceBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `customAttributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-attributes` |
 | `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
-| `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |"
-  [stack id config]
-  (let [builder (NonIpInstanceProps$Builder.)]
-    (when-let [data (lookup-entry config id :custom-attributes)]
-      (. builder customAttributes data))
-    (when-let [data (lookup-entry config id :instance-id)]
-      (. builder instanceId data))
-    (when-let [data (lookup-entry config id :service)]
-      (. builder service data))
-    (.build builder)))
+"
+  [^NonIpInstanceBaseProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :custom-attributes)]
+    (. builder customAttributes data))
+  (when-let [data (lookup-entry config id :instance-id)]
+    (. builder instanceId data))
+  (.build builder))
 
 
-(defn private-dns-namespace-attributes-builder
-  "The private-dns-namespace-attributes-builder function buildes out new instances of 
-PrivateDnsNamespaceAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-non-ip-instance-builder
+  "The build-non-ip-instance-builder function updates a NonIpInstance$Builder instance using the provided configuration.
+  The function takes the NonIpInstance$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `customAttributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-attributes` |
+| `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
+| `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |
+"
+  [^NonIpInstance$Builder builder id config]
+  (when-let [data (lookup-entry config id :custom-attributes)]
+    (. builder customAttributes data))
+  (when-let [data (lookup-entry config id :instance-id)]
+    (. builder instanceId data))
+  (when-let [data (lookup-entry config id :service)]
+    (. builder service data))
+  (.build builder))
+
+
+(defn build-non-ip-instance-props-builder
+  "The build-non-ip-instance-props-builder function updates a NonIpInstanceProps$Builder instance using the provided configuration.
+  The function takes the NonIpInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `customAttributes` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-attributes` |
+| `instanceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-id` |
+| `service` | software.amazon.awscdk.services.servicediscovery.IService | [[cdk.support/lookup-entry]] | `:service` |
+"
+  [^NonIpInstanceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :custom-attributes)]
+    (. builder customAttributes data))
+  (when-let [data (lookup-entry config id :instance-id)]
+    (. builder instanceId data))
+  (when-let [data (lookup-entry config id :service)]
+    (. builder service data))
+  (.build builder))
+
+
+(defn build-private-dns-namespace-attributes-builder
+  "The build-private-dns-namespace-attributes-builder function updates a PrivateDnsNamespaceAttributes$Builder instance using the provided configuration.
+  The function takes the PrivateDnsNamespaceAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `namespaceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-arn` |
 | `namespaceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-id` |
-| `namespaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-name` |"
-  [stack id config]
-  (let [builder (PrivateDnsNamespaceAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :namespace-arn)]
-      (. builder namespaceArn data))
-    (when-let [data (lookup-entry config id :namespace-id)]
-      (. builder namespaceId data))
-    (when-let [data (lookup-entry config id :namespace-name)]
-      (. builder namespaceName data))
-    (.build builder)))
+| `namespaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-name` |
+"
+  [^PrivateDnsNamespaceAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :namespace-arn)]
+    (. builder namespaceArn data))
+  (when-let [data (lookup-entry config id :namespace-id)]
+    (. builder namespaceId data))
+  (when-let [data (lookup-entry config id :namespace-name)]
+    (. builder namespaceName data))
+  (.build builder))
 
 
-(defn private-dns-namespace-builder
-  "The private-dns-namespace-builder function buildes out new instances of 
-PrivateDnsNamespace$Builder using the provided configuration.  Each field is set as follows:
+(defn build-private-dns-namespace-builder
+  "The build-private-dns-namespace-builder function updates a PrivateDnsNamespace$Builder instance using the provided configuration.
+  The function takes the PrivateDnsNamespace$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (PrivateDnsNamespace$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
-
-
-(defn private-dns-namespace-props-builder
-  "The private-dns-namespace-props-builder function buildes out new instances of 
-PrivateDnsNamespaceProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (PrivateDnsNamespaceProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^PrivateDnsNamespace$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn public-dns-namespace-attributes-builder
-  "The public-dns-namespace-attributes-builder function buildes out new instances of 
-PublicDnsNamespaceAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-private-dns-namespace-props-builder
+  "The build-private-dns-namespace-props-builder function updates a PrivateDnsNamespaceProps$Builder instance using the provided configuration.
+  The function takes the PrivateDnsNamespaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^PrivateDnsNamespaceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
+
+
+(defn build-public-dns-namespace-attributes-builder
+  "The build-public-dns-namespace-attributes-builder function updates a PublicDnsNamespaceAttributes$Builder instance using the provided configuration.
+  The function takes the PublicDnsNamespaceAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `namespaceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-arn` |
 | `namespaceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-id` |
-| `namespaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-name` |"
-  [stack id config]
-  (let [builder (PublicDnsNamespaceAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :namespace-arn)]
-      (. builder namespaceArn data))
-    (when-let [data (lookup-entry config id :namespace-id)]
-      (. builder namespaceId data))
-    (when-let [data (lookup-entry config id :namespace-name)]
-      (. builder namespaceName data))
-    (.build builder)))
+| `namespaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-name` |
+"
+  [^PublicDnsNamespaceAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :namespace-arn)]
+    (. builder namespaceArn data))
+  (when-let [data (lookup-entry config id :namespace-id)]
+    (. builder namespaceId data))
+  (when-let [data (lookup-entry config id :namespace-name)]
+    (. builder namespaceName data))
+  (.build builder))
 
 
-(defn public-dns-namespace-builder
-  "The public-dns-namespace-builder function buildes out new instances of 
-PublicDnsNamespace$Builder using the provided configuration.  Each field is set as follows:
+(defn build-public-dns-namespace-builder
+  "The build-public-dns-namespace-builder function updates a PublicDnsNamespace$Builder instance using the provided configuration.
+  The function takes the PublicDnsNamespace$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (PublicDnsNamespace$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
-
-
-(defn public-dns-namespace-props-builder
-  "The public-dns-namespace-props-builder function buildes out new instances of 
-PublicDnsNamespaceProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (PublicDnsNamespaceProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^PublicDnsNamespace$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn service-attributes-builder
-  "The service-attributes-builder function buildes out new instances of 
-ServiceAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-public-dns-namespace-props-builder
+  "The build-public-dns-namespace-props-builder function updates a PublicDnsNamespaceProps$Builder instance using the provided configuration.
+  The function takes the PublicDnsNamespaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^PublicDnsNamespaceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
+
+
+(defn build-service-attributes-builder
+  "The build-service-attributes-builder function updates a ServiceAttributes$Builder instance using the provided configuration.
+  The function takes the ServiceAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1127,70 +1268,32 @@ ServiceAttributes$Builder using the provided configuration.  Each field is set a
 | `routingPolicy` | software.amazon.awscdk.services.servicediscovery.RoutingPolicy | [[cdk.api.services.servicediscovery/routing-policy]] | `:routing-policy` |
 | `serviceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-arn` |
 | `serviceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-id` |
-| `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |"
-  [stack id config]
-  (let [builder (ServiceAttributes$Builder.)]
-    (when-let [data (discovery-type config id :discovery-type)]
-      (. builder discoveryType data))
-    (when-let [data (dns-record-type config id :dns-record-type)]
-      (. builder dnsRecordType data))
-    (when-let [data (lookup-entry config id :namespace)]
-      (. builder namespace data))
-    (when-let [data (routing-policy config id :routing-policy)]
-      (. builder routingPolicy data))
-    (when-let [data (lookup-entry config id :service-arn)]
-      (. builder serviceArn data))
-    (when-let [data (lookup-entry config id :service-id)]
-      (. builder serviceId data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (.build builder)))
+| `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
+"
+  [^ServiceAttributes$Builder builder id config]
+  (when-let [data (discovery-type config id :discovery-type)]
+    (. builder discoveryType data))
+  (when-let [data (dns-record-type config id :dns-record-type)]
+    (. builder dnsRecordType data))
+  (when-let [data (lookup-entry config id :namespace)]
+    (. builder namespace data))
+  (when-let [data (routing-policy config id :routing-policy)]
+    (. builder routingPolicy data))
+  (when-let [data (lookup-entry config id :service-arn)]
+    (. builder serviceArn data))
+  (when-let [data (lookup-entry config id :service-id)]
+    (. builder serviceId data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (.build builder))
 
 
-(defn service-builder
-  "The service-builder function buildes out new instances of 
-Service$Builder using the provided configuration.  Each field is set as follows:
+(defn build-service-builder
+  "The build-service-builder function updates a Service$Builder instance using the provided configuration.
+  The function takes the Service$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `customHealthCheck` | software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig | [[cdk.support/lookup-entry]] | `:custom-health-check` |
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `discoveryType` | software.amazon.awscdk.services.servicediscovery.DiscoveryType | [[cdk.api.services.servicediscovery/discovery-type]] | `:discovery-type` |
-| `dnsRecordType` | software.amazon.awscdk.services.servicediscovery.DnsRecordType | [[cdk.api.services.servicediscovery/dns-record-type]] | `:dns-record-type` |
-| `dnsTtl` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:dns-ttl` |
-| `healthCheck` | software.amazon.awscdk.services.servicediscovery.HealthCheckConfig | [[cdk.support/lookup-entry]] | `:health-check` |
-| `loadBalancer` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:load-balancer` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `namespace` | software.amazon.awscdk.services.servicediscovery.INamespace | [[cdk.support/lookup-entry]] | `:namespace` |
-| `routingPolicy` | software.amazon.awscdk.services.servicediscovery.RoutingPolicy | [[cdk.api.services.servicediscovery/routing-policy]] | `:routing-policy` |"
-  [stack id config]
-  (let [builder (Service$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :custom-health-check)]
-      (. builder customHealthCheck data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (discovery-type config id :discovery-type)]
-      (. builder discoveryType data))
-    (when-let [data (dns-record-type config id :dns-record-type)]
-      (. builder dnsRecordType data))
-    (when-let [data (lookup-entry config id :dns-ttl)]
-      (. builder dnsTtl data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :load-balancer)]
-      (. builder loadBalancer data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :namespace)]
-      (. builder namespace data))
-    (when-let [data (routing-policy config id :routing-policy)]
-      (. builder routingPolicy data))
-    (.build builder)))
-
-
-(defn service-props-builder
-  "The service-props-builder function buildes out new instances of 
-ServiceProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1203,27 +1306,71 @@ ServiceProps$Builder using the provided configuration.  Each field is set as fol
 | `loadBalancer` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:load-balancer` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `namespace` | software.amazon.awscdk.services.servicediscovery.INamespace | [[cdk.support/lookup-entry]] | `:namespace` |
-| `routingPolicy` | software.amazon.awscdk.services.servicediscovery.RoutingPolicy | [[cdk.api.services.servicediscovery/routing-policy]] | `:routing-policy` |"
-  [stack id config]
-  (let [builder (ServiceProps$Builder.)]
-    (when-let [data (lookup-entry config id :custom-health-check)]
-      (. builder customHealthCheck data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (discovery-type config id :discovery-type)]
-      (. builder discoveryType data))
-    (when-let [data (dns-record-type config id :dns-record-type)]
-      (. builder dnsRecordType data))
-    (when-let [data (lookup-entry config id :dns-ttl)]
-      (. builder dnsTtl data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :load-balancer)]
-      (. builder loadBalancer data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :namespace)]
-      (. builder namespace data))
-    (when-let [data (routing-policy config id :routing-policy)]
-      (. builder routingPolicy data))
-    (.build builder)))
+| `routingPolicy` | software.amazon.awscdk.services.servicediscovery.RoutingPolicy | [[cdk.api.services.servicediscovery/routing-policy]] | `:routing-policy` |
+"
+  [^Service$Builder builder id config]
+  (when-let [data (lookup-entry config id :custom-health-check)]
+    (. builder customHealthCheck data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (discovery-type config id :discovery-type)]
+    (. builder discoveryType data))
+  (when-let [data (dns-record-type config id :dns-record-type)]
+    (. builder dnsRecordType data))
+  (when-let [data (lookup-entry config id :dns-ttl)]
+    (. builder dnsTtl data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :load-balancer)]
+    (. builder loadBalancer data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :namespace)]
+    (. builder namespace data))
+  (when-let [data (routing-policy config id :routing-policy)]
+    (. builder routingPolicy data))
+  (.build builder))
+
+
+(defn build-service-props-builder
+  "The build-service-props-builder function updates a ServiceProps$Builder instance using the provided configuration.
+  The function takes the ServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `customHealthCheck` | software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig | [[cdk.support/lookup-entry]] | `:custom-health-check` |
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `discoveryType` | software.amazon.awscdk.services.servicediscovery.DiscoveryType | [[cdk.api.services.servicediscovery/discovery-type]] | `:discovery-type` |
+| `dnsRecordType` | software.amazon.awscdk.services.servicediscovery.DnsRecordType | [[cdk.api.services.servicediscovery/dns-record-type]] | `:dns-record-type` |
+| `dnsTtl` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:dns-ttl` |
+| `healthCheck` | software.amazon.awscdk.services.servicediscovery.HealthCheckConfig | [[cdk.support/lookup-entry]] | `:health-check` |
+| `loadBalancer` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:load-balancer` |
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `namespace` | software.amazon.awscdk.services.servicediscovery.INamespace | [[cdk.support/lookup-entry]] | `:namespace` |
+| `routingPolicy` | software.amazon.awscdk.services.servicediscovery.RoutingPolicy | [[cdk.api.services.servicediscovery/routing-policy]] | `:routing-policy` |
+"
+  [^ServiceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :custom-health-check)]
+    (. builder customHealthCheck data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (discovery-type config id :discovery-type)]
+    (. builder discoveryType data))
+  (when-let [data (dns-record-type config id :dns-record-type)]
+    (. builder dnsRecordType data))
+  (when-let [data (lookup-entry config id :dns-ttl)]
+    (. builder dnsTtl data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :load-balancer)]
+    (. builder loadBalancer data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :namespace)]
+    (. builder namespace data))
+  (when-let [data (routing-policy config id :routing-policy)]
+    (. builder routingPolicy data))
+  (.build builder))

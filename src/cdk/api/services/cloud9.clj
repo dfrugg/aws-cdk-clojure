@@ -6,9 +6,12 @@
                                                    CfnEnvironmentEC2Props$Builder]))
 
 
-(defn cfn-environment-ec2-builder
-  "The cfn-environment-ec2-builder function buildes out new instances of 
-CfnEnvironmentEC2$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-environment-ec2-builder
+  "The build-cfn-environment-ec2-builder function updates a CfnEnvironmentEC2$Builder instance using the provided configuration.
+  The function takes the CfnEnvironmentEC2$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -21,35 +24,38 @@ CfnEnvironmentEC2$Builder using the provided configuration.  Each field is set a
 | `ownerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:owner-arn` |
 | `repositories` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:repositories` |
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnEnvironmentEC2$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :automatic-stop-time-minutes)]
-      (. builder automaticStopTimeMinutes data))
-    (when-let [data (lookup-entry config id :connection-type)]
-      (. builder connectionType data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :image-id)]
-      (. builder imageId data))
-    (when-let [data (lookup-entry config id :instance-type)]
-      (. builder instanceType data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :owner-arn)]
-      (. builder ownerArn data))
-    (when-let [data (lookup-entry config id :repositories)]
-      (. builder repositories data))
-    (when-let [data (lookup-entry config id :subnet-id)]
-      (. builder subnetId data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnEnvironmentEC2$Builder builder id config]
+  (when-let [data (lookup-entry config id :automatic-stop-time-minutes)]
+    (. builder automaticStopTimeMinutes data))
+  (when-let [data (lookup-entry config id :connection-type)]
+    (. builder connectionType data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :image-id)]
+    (. builder imageId data))
+  (when-let [data (lookup-entry config id :instance-type)]
+    (. builder instanceType data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :owner-arn)]
+    (. builder ownerArn data))
+  (when-let [data (lookup-entry config id :repositories)]
+    (. builder repositories data))
+  (when-let [data (lookup-entry config id :subnet-id)]
+    (. builder subnetId data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-environment-ec2-props-builder
-  "The cfn-environment-ec2-props-builder function buildes out new instances of 
-CfnEnvironmentEC2Props$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-environment-ec2-props-builder
+  "The build-cfn-environment-ec2-props-builder function updates a CfnEnvironmentEC2Props$Builder instance using the provided configuration.
+  The function takes the CfnEnvironmentEC2Props$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -62,44 +68,47 @@ CfnEnvironmentEC2Props$Builder using the provided configuration.  Each field is 
 | `ownerArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:owner-arn` |
 | `repositories` | java.util.List | [[cdk.support/lookup-entry]] | `:repositories` |
 | `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnEnvironmentEC2Props$Builder.)]
-    (when-let [data (lookup-entry config id :automatic-stop-time-minutes)]
-      (. builder automaticStopTimeMinutes data))
-    (when-let [data (lookup-entry config id :connection-type)]
-      (. builder connectionType data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :image-id)]
-      (. builder imageId data))
-    (when-let [data (lookup-entry config id :instance-type)]
-      (. builder instanceType data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :owner-arn)]
-      (. builder ownerArn data))
-    (when-let [data (lookup-entry config id :repositories)]
-      (. builder repositories data))
-    (when-let [data (lookup-entry config id :subnet-id)]
-      (. builder subnetId data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnEnvironmentEC2Props$Builder builder id config]
+  (when-let [data (lookup-entry config id :automatic-stop-time-minutes)]
+    (. builder automaticStopTimeMinutes data))
+  (when-let [data (lookup-entry config id :connection-type)]
+    (. builder connectionType data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :image-id)]
+    (. builder imageId data))
+  (when-let [data (lookup-entry config id :instance-type)]
+    (. builder instanceType data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :owner-arn)]
+    (. builder ownerArn data))
+  (when-let [data (lookup-entry config id :repositories)]
+    (. builder repositories data))
+  (when-let [data (lookup-entry config id :subnet-id)]
+    (. builder subnetId data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-environment-ec2-repository-property-builder
-  "The cfn-environment-ec2-repository-property-builder function buildes out new instances of 
-CfnEnvironmentEC2$RepositoryProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-environment-ec2-repository-property-builder
+  "The build-cfn-environment-ec2-repository-property-builder function updates a CfnEnvironmentEC2$RepositoryProperty$Builder instance using the provided configuration.
+  The function takes the CfnEnvironmentEC2$RepositoryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `pathComponent` | java.lang.String | [[cdk.support/lookup-entry]] | `:path-component` |
-| `repositoryUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-url` |"
-  [stack id config]
-  (let [builder (CfnEnvironmentEC2$RepositoryProperty$Builder.)]
-    (when-let [data (lookup-entry config id :path-component)]
-      (. builder pathComponent data))
-    (when-let [data (lookup-entry config id :repository-url)]
-      (. builder repositoryUrl data))
-    (.build builder)))
+| `repositoryUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-url` |
+"
+  [^CfnEnvironmentEC2$RepositoryProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :path-component)]
+    (. builder pathComponent data))
+  (when-let [data (lookup-entry config id :repository-url)]
+    (. builder repositoryUrl data))
+  (.build builder))

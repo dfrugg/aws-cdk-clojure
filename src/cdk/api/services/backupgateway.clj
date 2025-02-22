@@ -5,9 +5,12 @@
                                                           CfnHypervisorProps$Builder]))
 
 
-(defn cfn-hypervisor-builder
-  "The cfn-hypervisor-builder function buildes out new instances of 
-CfnHypervisor$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-hypervisor-builder
+  "The build-cfn-hypervisor-builder function updates a CfnHypervisor$Builder instance using the provided configuration.
+  The function takes the CfnHypervisor$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -17,29 +20,32 @@ CfnHypervisor$Builder using the provided configuration.  Each field is set as fo
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `password` | java.lang.String | [[cdk.support/lookup-entry]] | `:password` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |"
-  [stack id config]
-  (let [builder (CfnHypervisor$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :host)]
-      (. builder host data))
-    (when-let [data (lookup-entry config id :kms-key-arn)]
-      (. builder kmsKeyArn data))
-    (when-let [data (lookup-entry config id :log-group-arn)]
-      (. builder logGroupArn data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :password)]
-      (. builder password data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :username)]
-      (. builder username data))
-    (.build builder)))
+| `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
+"
+  [^CfnHypervisor$Builder builder id config]
+  (when-let [data (lookup-entry config id :host)]
+    (. builder host data))
+  (when-let [data (lookup-entry config id :kms-key-arn)]
+    (. builder kmsKeyArn data))
+  (when-let [data (lookup-entry config id :log-group-arn)]
+    (. builder logGroupArn data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :password)]
+    (. builder password data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :username)]
+    (. builder username data))
+  (.build builder))
 
 
-(defn cfn-hypervisor-props-builder
-  "The cfn-hypervisor-props-builder function buildes out new instances of 
-CfnHypervisorProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-hypervisor-props-builder
+  "The build-cfn-hypervisor-props-builder function updates a CfnHypervisorProps$Builder instance using the provided configuration.
+  The function takes the CfnHypervisorProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -49,21 +55,21 @@ CfnHypervisorProps$Builder using the provided configuration.  Each field is set 
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `password` | java.lang.String | [[cdk.support/lookup-entry]] | `:password` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |"
-  [stack id config]
-  (let [builder (CfnHypervisorProps$Builder.)]
-    (when-let [data (lookup-entry config id :host)]
-      (. builder host data))
-    (when-let [data (lookup-entry config id :kms-key-arn)]
-      (. builder kmsKeyArn data))
-    (when-let [data (lookup-entry config id :log-group-arn)]
-      (. builder logGroupArn data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :password)]
-      (. builder password data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :username)]
-      (. builder username data))
-    (.build builder)))
+| `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
+"
+  [^CfnHypervisorProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :host)]
+    (. builder host data))
+  (when-let [data (lookup-entry config id :kms-key-arn)]
+    (. builder kmsKeyArn data))
+  (when-let [data (lookup-entry config id :log-group-arn)]
+    (. builder logGroupArn data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :password)]
+    (. builder password data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :username)]
+    (. builder username data))
+  (.build builder))

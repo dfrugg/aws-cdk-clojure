@@ -24,152 +24,176 @@
                                                            CfnOriginEndpointProps$Builder]))
 
 
-(defn cfn-channel-builder
-  "The cfn-channel-builder function buildes out new instances of 
-CfnChannel$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-channel-builder
+  "The build-cfn-channel-builder function updates a CfnChannel$Builder instance using the provided configuration.
+  The function takes the CfnChannel$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `channelGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-group-name` |
 | `channelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-name` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnChannel$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :channel-group-name)]
-      (. builder channelGroupName data))
-    (when-let [data (lookup-entry config id :channel-name)]
-      (. builder channelName data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnChannel$Builder builder id config]
+  (when-let [data (lookup-entry config id :channel-group-name)]
+    (. builder channelGroupName data))
+  (when-let [data (lookup-entry config id :channel-name)]
+    (. builder channelName data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-channel-group-builder
-  "The cfn-channel-group-builder function buildes out new instances of 
-CfnChannelGroup$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-channel-group-builder
+  "The build-cfn-channel-group-builder function updates a CfnChannelGroup$Builder instance using the provided configuration.
+  The function takes the CfnChannelGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `channelGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-group-name` |
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnChannelGroup$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :channel-group-name)]
-      (. builder channelGroupName data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
-
-
-(defn cfn-channel-group-props-builder
-  "The cfn-channel-group-props-builder function buildes out new instances of 
-CfnChannelGroupProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `channelGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-group-name` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnChannelGroupProps$Builder.)]
-    (when-let [data (lookup-entry config id :channel-group-name)]
-      (. builder channelGroupName data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnChannelGroup$Builder builder id config]
+  (when-let [data (lookup-entry config id :channel-group-name)]
+    (. builder channelGroupName data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-channel-ingest-endpoint-property-builder
-  "The cfn-channel-ingest-endpoint-property-builder function buildes out new instances of 
-CfnChannel$IngestEndpointProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-channel-group-props-builder
+  "The build-cfn-channel-group-props-builder function updates a CfnChannelGroupProps$Builder instance using the provided configuration.
+  The function takes the CfnChannelGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `channelGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-group-name` |
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnChannelGroupProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :channel-group-name)]
+    (. builder channelGroupName data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
+
+
+(defn build-cfn-channel-ingest-endpoint-property-builder
+  "The build-cfn-channel-ingest-endpoint-property-builder function updates a CfnChannel$IngestEndpointProperty$Builder instance using the provided configuration.
+  The function takes the CfnChannel$IngestEndpointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
-| `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |"
-  [stack id config]
-  (let [builder (CfnChannel$IngestEndpointProperty$Builder.)]
-    (when-let [data (lookup-entry config id :id)]
-      (. builder id data))
-    (when-let [data (lookup-entry config id :url)]
-      (. builder url data))
-    (.build builder)))
+| `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
+"
+  [^CfnChannel$IngestEndpointProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :id)]
+    (. builder id data))
+  (when-let [data (lookup-entry config id :url)]
+    (. builder url data))
+  (.build builder))
 
 
-(defn cfn-channel-policy-builder
-  "The cfn-channel-policy-builder function buildes out new instances of 
-CfnChannelPolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-channel-policy-builder
+  "The build-cfn-channel-policy-builder function updates a CfnChannelPolicy$Builder instance using the provided configuration.
+  The function takes the CfnChannelPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `channelGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-group-name` |
-| `channelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-name` |
-| `policy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy` |"
-  [stack id config]
-  (let [builder (CfnChannelPolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :channel-group-name)]
-      (. builder channelGroupName data))
-    (when-let [data (lookup-entry config id :channel-name)]
-      (. builder channelName data))
-    (when-let [data (lookup-entry config id :policy)]
-      (. builder policy data))
-    (.build builder)))
-
-
-(defn cfn-channel-policy-props-builder
-  "The cfn-channel-policy-props-builder function buildes out new instances of 
-CfnChannelPolicyProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `channelGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-group-name` |
 | `channelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-name` |
-| `policy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy` |"
-  [stack id config]
-  (let [builder (CfnChannelPolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :channel-group-name)]
-      (. builder channelGroupName data))
-    (when-let [data (lookup-entry config id :channel-name)]
-      (. builder channelName data))
-    (when-let [data (lookup-entry config id :policy)]
-      (. builder policy data))
-    (.build builder)))
+| `policy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy` |
+"
+  [^CfnChannelPolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :channel-group-name)]
+    (. builder channelGroupName data))
+  (when-let [data (lookup-entry config id :channel-name)]
+    (. builder channelName data))
+  (when-let [data (lookup-entry config id :policy)]
+    (. builder policy data))
+  (.build builder))
 
 
-(defn cfn-channel-props-builder
-  "The cfn-channel-props-builder function buildes out new instances of 
-CfnChannelProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-channel-policy-props-builder
+  "The build-cfn-channel-policy-props-builder function updates a CfnChannelPolicyProps$Builder instance using the provided configuration.
+  The function takes the CfnChannelPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `channelGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-group-name` |
+| `channelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-name` |
+| `policy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy` |
+"
+  [^CfnChannelPolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :channel-group-name)]
+    (. builder channelGroupName data))
+  (when-let [data (lookup-entry config id :channel-name)]
+    (. builder channelName data))
+  (when-let [data (lookup-entry config id :policy)]
+    (. builder policy data))
+  (.build builder))
+
+
+(defn build-cfn-channel-props-builder
+  "The build-cfn-channel-props-builder function updates a CfnChannelProps$Builder instance using the provided configuration.
+  The function takes the CfnChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `channelGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-group-name` |
 | `channelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-name` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnChannelProps$Builder.)]
-    (when-let [data (lookup-entry config id :channel-group-name)]
-      (. builder channelGroupName data))
-    (when-let [data (lookup-entry config id :channel-name)]
-      (. builder channelName data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnChannelProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :channel-group-name)]
+    (. builder channelGroupName data))
+  (when-let [data (lookup-entry config id :channel-name)]
+    (. builder channelName data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-origin-endpoint-builder
-  "The cfn-origin-endpoint-builder function buildes out new instances of 
-CfnOriginEndpoint$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-origin-endpoint-builder
+  "The build-cfn-origin-endpoint-builder function updates a CfnOriginEndpoint$Builder instance using the provided configuration.
+  The function takes the CfnOriginEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -182,115 +206,130 @@ CfnOriginEndpoint$Builder using the provided configuration.  Each field is set a
 | `originEndpointName` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-endpoint-name` |
 | `segment` | software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint$SegmentProperty | [[cdk.support/lookup-entry]] | `:segment` |
 | `startoverWindowSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:startover-window-seconds` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnOriginEndpoint$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :channel-group-name)]
-      (. builder channelGroupName data))
-    (when-let [data (lookup-entry config id :channel-name)]
-      (. builder channelName data))
-    (when-let [data (lookup-entry config id :container-type)]
-      (. builder containerType data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :hls-manifests)]
-      (. builder hlsManifests data))
-    (when-let [data (lookup-entry config id :low-latency-hls-manifests)]
-      (. builder lowLatencyHlsManifests data))
-    (when-let [data (lookup-entry config id :origin-endpoint-name)]
-      (. builder originEndpointName data))
-    (when-let [data (lookup-entry config id :segment)]
-      (. builder segment data))
-    (when-let [data (lookup-entry config id :startover-window-seconds)]
-      (. builder startoverWindowSeconds data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnOriginEndpoint$Builder builder id config]
+  (when-let [data (lookup-entry config id :channel-group-name)]
+    (. builder channelGroupName data))
+  (when-let [data (lookup-entry config id :channel-name)]
+    (. builder channelName data))
+  (when-let [data (lookup-entry config id :container-type)]
+    (. builder containerType data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :hls-manifests)]
+    (. builder hlsManifests data))
+  (when-let [data (lookup-entry config id :low-latency-hls-manifests)]
+    (. builder lowLatencyHlsManifests data))
+  (when-let [data (lookup-entry config id :origin-endpoint-name)]
+    (. builder originEndpointName data))
+  (when-let [data (lookup-entry config id :segment)]
+    (. builder segment data))
+  (when-let [data (lookup-entry config id :startover-window-seconds)]
+    (. builder startoverWindowSeconds data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-origin-endpoint-encryption-contract-configuration-property-builder
-  "The cfn-origin-endpoint-encryption-contract-configuration-property-builder function buildes out new instances of 
-CfnOriginEndpoint$EncryptionContractConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-origin-endpoint-encryption-contract-configuration-property-builder
+  "The build-cfn-origin-endpoint-encryption-contract-configuration-property-builder function updates a CfnOriginEndpoint$EncryptionContractConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnOriginEndpoint$EncryptionContractConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `presetSpeke20Audio` | java.lang.String | [[cdk.support/lookup-entry]] | `:preset-speke20-audio` |
-| `presetSpeke20Video` | java.lang.String | [[cdk.support/lookup-entry]] | `:preset-speke20-video` |"
-  [stack id config]
-  (let [builder (CfnOriginEndpoint$EncryptionContractConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :preset-speke20-audio)]
-      (. builder presetSpeke20Audio data))
-    (when-let [data (lookup-entry config id :preset-speke20-video)]
-      (. builder presetSpeke20Video data))
-    (.build builder)))
+| `presetSpeke20Video` | java.lang.String | [[cdk.support/lookup-entry]] | `:preset-speke20-video` |
+"
+  [^CfnOriginEndpoint$EncryptionContractConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :preset-speke20-audio)]
+    (. builder presetSpeke20Audio data))
+  (when-let [data (lookup-entry config id :preset-speke20-video)]
+    (. builder presetSpeke20Video data))
+  (.build builder))
 
 
-(defn cfn-origin-endpoint-encryption-method-property-builder
-  "The cfn-origin-endpoint-encryption-method-property-builder function buildes out new instances of 
-CfnOriginEndpoint$EncryptionMethodProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-origin-endpoint-encryption-method-property-builder
+  "The build-cfn-origin-endpoint-encryption-method-property-builder function updates a CfnOriginEndpoint$EncryptionMethodProperty$Builder instance using the provided configuration.
+  The function takes the CfnOriginEndpoint$EncryptionMethodProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `cmafEncryptionMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:cmaf-encryption-method` |
-| `tsEncryptionMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:ts-encryption-method` |"
-  [stack id config]
-  (let [builder (CfnOriginEndpoint$EncryptionMethodProperty$Builder.)]
-    (when-let [data (lookup-entry config id :cmaf-encryption-method)]
-      (. builder cmafEncryptionMethod data))
-    (when-let [data (lookup-entry config id :ts-encryption-method)]
-      (. builder tsEncryptionMethod data))
-    (.build builder)))
+| `tsEncryptionMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:ts-encryption-method` |
+"
+  [^CfnOriginEndpoint$EncryptionMethodProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :cmaf-encryption-method)]
+    (. builder cmafEncryptionMethod data))
+  (when-let [data (lookup-entry config id :ts-encryption-method)]
+    (. builder tsEncryptionMethod data))
+  (.build builder))
 
 
-(defn cfn-origin-endpoint-encryption-property-builder
-  "The cfn-origin-endpoint-encryption-property-builder function buildes out new instances of 
-CfnOriginEndpoint$EncryptionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-origin-endpoint-encryption-property-builder
+  "The build-cfn-origin-endpoint-encryption-property-builder function updates a CfnOriginEndpoint$EncryptionProperty$Builder instance using the provided configuration.
+  The function takes the CfnOriginEndpoint$EncryptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `constantInitializationVector` | java.lang.String | [[cdk.support/lookup-entry]] | `:constant-initialization-vector` |
 | `encryptionMethod` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encryption-method` |
 | `keyRotationIntervalSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:key-rotation-interval-seconds` |
-| `spekeKeyProvider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:speke-key-provider` |"
-  [stack id config]
-  (let [builder (CfnOriginEndpoint$EncryptionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :constant-initialization-vector)]
-      (. builder constantInitializationVector data))
-    (when-let [data (lookup-entry config id :encryption-method)]
-      (. builder encryptionMethod data))
-    (when-let [data (lookup-entry config id :key-rotation-interval-seconds)]
-      (. builder keyRotationIntervalSeconds data))
-    (when-let [data (lookup-entry config id :speke-key-provider)]
-      (. builder spekeKeyProvider data))
-    (.build builder)))
+| `spekeKeyProvider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:speke-key-provider` |
+"
+  [^CfnOriginEndpoint$EncryptionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :constant-initialization-vector)]
+    (. builder constantInitializationVector data))
+  (when-let [data (lookup-entry config id :encryption-method)]
+    (. builder encryptionMethod data))
+  (when-let [data (lookup-entry config id :key-rotation-interval-seconds)]
+    (. builder keyRotationIntervalSeconds data))
+  (when-let [data (lookup-entry config id :speke-key-provider)]
+    (. builder spekeKeyProvider data))
+  (.build builder))
 
 
-(defn cfn-origin-endpoint-filter-configuration-property-builder
-  "The cfn-origin-endpoint-filter-configuration-property-builder function buildes out new instances of 
-CfnOriginEndpoint$FilterConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-origin-endpoint-filter-configuration-property-builder
+  "The build-cfn-origin-endpoint-filter-configuration-property-builder function updates a CfnOriginEndpoint$FilterConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnOriginEndpoint$FilterConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `end` | java.lang.String | [[cdk.support/lookup-entry]] | `:end` |
 | `manifestFilter` | java.lang.String | [[cdk.support/lookup-entry]] | `:manifest-filter` |
 | `start` | java.lang.String | [[cdk.support/lookup-entry]] | `:start` |
-| `timeDelaySeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:time-delay-seconds` |"
-  [stack id config]
-  (let [builder (CfnOriginEndpoint$FilterConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :end)]
-      (. builder end data))
-    (when-let [data (lookup-entry config id :manifest-filter)]
-      (. builder manifestFilter data))
-    (when-let [data (lookup-entry config id :start)]
-      (. builder start data))
-    (when-let [data (lookup-entry config id :time-delay-seconds)]
-      (. builder timeDelaySeconds data))
-    (.build builder)))
+| `timeDelaySeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:time-delay-seconds` |
+"
+  [^CfnOriginEndpoint$FilterConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :end)]
+    (. builder end data))
+  (when-let [data (lookup-entry config id :manifest-filter)]
+    (. builder manifestFilter data))
+  (when-let [data (lookup-entry config id :start)]
+    (. builder start data))
+  (when-let [data (lookup-entry config id :time-delay-seconds)]
+    (. builder timeDelaySeconds data))
+  (.build builder))
 
 
-(defn cfn-origin-endpoint-hls-manifest-configuration-property-builder
-  "The cfn-origin-endpoint-hls-manifest-configuration-property-builder function buildes out new instances of 
-CfnOriginEndpoint$HlsManifestConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-origin-endpoint-hls-manifest-configuration-property-builder
+  "The build-cfn-origin-endpoint-hls-manifest-configuration-property-builder function updates a CfnOriginEndpoint$HlsManifestConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnOriginEndpoint$HlsManifestConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -300,29 +339,32 @@ CfnOriginEndpoint$HlsManifestConfigurationProperty$Builder using the provided co
 | `manifestWindowSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:manifest-window-seconds` |
 | `programDateTimeIntervalSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:program-date-time-interval-seconds` |
 | `scteHls` | software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint$ScteHlsProperty | [[cdk.support/lookup-entry]] | `:scte-hls` |
-| `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |"
-  [stack id config]
-  (let [builder (CfnOriginEndpoint$HlsManifestConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :child-manifest-name)]
-      (. builder childManifestName data))
-    (when-let [data (lookup-entry config id :filter-configuration)]
-      (. builder filterConfiguration data))
-    (when-let [data (lookup-entry config id :manifest-name)]
-      (. builder manifestName data))
-    (when-let [data (lookup-entry config id :manifest-window-seconds)]
-      (. builder manifestWindowSeconds data))
-    (when-let [data (lookup-entry config id :program-date-time-interval-seconds)]
-      (. builder programDateTimeIntervalSeconds data))
-    (when-let [data (lookup-entry config id :scte-hls)]
-      (. builder scteHls data))
-    (when-let [data (lookup-entry config id :url)]
-      (. builder url data))
-    (.build builder)))
+| `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
+"
+  [^CfnOriginEndpoint$HlsManifestConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :child-manifest-name)]
+    (. builder childManifestName data))
+  (when-let [data (lookup-entry config id :filter-configuration)]
+    (. builder filterConfiguration data))
+  (when-let [data (lookup-entry config id :manifest-name)]
+    (. builder manifestName data))
+  (when-let [data (lookup-entry config id :manifest-window-seconds)]
+    (. builder manifestWindowSeconds data))
+  (when-let [data (lookup-entry config id :program-date-time-interval-seconds)]
+    (. builder programDateTimeIntervalSeconds data))
+  (when-let [data (lookup-entry config id :scte-hls)]
+    (. builder scteHls data))
+  (when-let [data (lookup-entry config id :url)]
+    (. builder url data))
+  (.build builder))
 
 
-(defn cfn-origin-endpoint-low-latency-hls-manifest-configuration-property-builder
-  "The cfn-origin-endpoint-low-latency-hls-manifest-configuration-property-builder function buildes out new instances of 
-CfnOriginEndpoint$LowLatencyHlsManifestConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-origin-endpoint-low-latency-hls-manifest-configuration-property-builder
+  "The build-cfn-origin-endpoint-low-latency-hls-manifest-configuration-property-builder function updates a CfnOriginEndpoint$LowLatencyHlsManifestConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnOriginEndpoint$LowLatencyHlsManifestConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -332,75 +374,84 @@ CfnOriginEndpoint$LowLatencyHlsManifestConfigurationProperty$Builder using the p
 | `manifestWindowSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:manifest-window-seconds` |
 | `programDateTimeIntervalSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:program-date-time-interval-seconds` |
 | `scteHls` | software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint$ScteHlsProperty | [[cdk.support/lookup-entry]] | `:scte-hls` |
-| `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |"
-  [stack id config]
-  (let [builder (CfnOriginEndpoint$LowLatencyHlsManifestConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :child-manifest-name)]
-      (. builder childManifestName data))
-    (when-let [data (lookup-entry config id :filter-configuration)]
-      (. builder filterConfiguration data))
-    (when-let [data (lookup-entry config id :manifest-name)]
-      (. builder manifestName data))
-    (when-let [data (lookup-entry config id :manifest-window-seconds)]
-      (. builder manifestWindowSeconds data))
-    (when-let [data (lookup-entry config id :program-date-time-interval-seconds)]
-      (. builder programDateTimeIntervalSeconds data))
-    (when-let [data (lookup-entry config id :scte-hls)]
-      (. builder scteHls data))
-    (when-let [data (lookup-entry config id :url)]
-      (. builder url data))
-    (.build builder)))
+| `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
+"
+  [^CfnOriginEndpoint$LowLatencyHlsManifestConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :child-manifest-name)]
+    (. builder childManifestName data))
+  (when-let [data (lookup-entry config id :filter-configuration)]
+    (. builder filterConfiguration data))
+  (when-let [data (lookup-entry config id :manifest-name)]
+    (. builder manifestName data))
+  (when-let [data (lookup-entry config id :manifest-window-seconds)]
+    (. builder manifestWindowSeconds data))
+  (when-let [data (lookup-entry config id :program-date-time-interval-seconds)]
+    (. builder programDateTimeIntervalSeconds data))
+  (when-let [data (lookup-entry config id :scte-hls)]
+    (. builder scteHls data))
+  (when-let [data (lookup-entry config id :url)]
+    (. builder url data))
+  (.build builder))
 
 
-(defn cfn-origin-endpoint-policy-builder
-  "The cfn-origin-endpoint-policy-builder function buildes out new instances of 
-CfnOriginEndpointPolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-origin-endpoint-policy-builder
+  "The build-cfn-origin-endpoint-policy-builder function updates a CfnOriginEndpointPolicy$Builder instance using the provided configuration.
+  The function takes the CfnOriginEndpointPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `channelGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-group-name` |
-| `channelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-name` |
-| `originEndpointName` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-endpoint-name` |
-| `policy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy` |"
-  [stack id config]
-  (let [builder (CfnOriginEndpointPolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :channel-group-name)]
-      (. builder channelGroupName data))
-    (when-let [data (lookup-entry config id :channel-name)]
-      (. builder channelName data))
-    (when-let [data (lookup-entry config id :origin-endpoint-name)]
-      (. builder originEndpointName data))
-    (when-let [data (lookup-entry config id :policy)]
-      (. builder policy data))
-    (.build builder)))
-
-
-(defn cfn-origin-endpoint-policy-props-builder
-  "The cfn-origin-endpoint-policy-props-builder function buildes out new instances of 
-CfnOriginEndpointPolicyProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `channelGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-group-name` |
 | `channelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-name` |
 | `originEndpointName` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-endpoint-name` |
-| `policy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy` |"
-  [stack id config]
-  (let [builder (CfnOriginEndpointPolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :channel-group-name)]
-      (. builder channelGroupName data))
-    (when-let [data (lookup-entry config id :channel-name)]
-      (. builder channelName data))
-    (when-let [data (lookup-entry config id :origin-endpoint-name)]
-      (. builder originEndpointName data))
-    (when-let [data (lookup-entry config id :policy)]
-      (. builder policy data))
-    (.build builder)))
+| `policy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy` |
+"
+  [^CfnOriginEndpointPolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :channel-group-name)]
+    (. builder channelGroupName data))
+  (when-let [data (lookup-entry config id :channel-name)]
+    (. builder channelName data))
+  (when-let [data (lookup-entry config id :origin-endpoint-name)]
+    (. builder originEndpointName data))
+  (when-let [data (lookup-entry config id :policy)]
+    (. builder policy data))
+  (.build builder))
 
 
-(defn cfn-origin-endpoint-props-builder
-  "The cfn-origin-endpoint-props-builder function buildes out new instances of 
-CfnOriginEndpointProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-origin-endpoint-policy-props-builder
+  "The build-cfn-origin-endpoint-policy-props-builder function updates a CfnOriginEndpointPolicyProps$Builder instance using the provided configuration.
+  The function takes the CfnOriginEndpointPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `channelGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-group-name` |
+| `channelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-name` |
+| `originEndpointName` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-endpoint-name` |
+| `policy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy` |
+"
+  [^CfnOriginEndpointPolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :channel-group-name)]
+    (. builder channelGroupName data))
+  (when-let [data (lookup-entry config id :channel-name)]
+    (. builder channelName data))
+  (when-let [data (lookup-entry config id :origin-endpoint-name)]
+    (. builder originEndpointName data))
+  (when-let [data (lookup-entry config id :policy)]
+    (. builder policy data))
+  (.build builder))
+
+
+(defn build-cfn-origin-endpoint-props-builder
+  "The build-cfn-origin-endpoint-props-builder function updates a CfnOriginEndpointProps$Builder instance using the provided configuration.
+  The function takes the CfnOriginEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -413,63 +464,72 @@ CfnOriginEndpointProps$Builder using the provided configuration.  Each field is 
 | `originEndpointName` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-endpoint-name` |
 | `segment` | software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint$SegmentProperty | [[cdk.support/lookup-entry]] | `:segment` |
 | `startoverWindowSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:startover-window-seconds` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnOriginEndpointProps$Builder.)]
-    (when-let [data (lookup-entry config id :channel-group-name)]
-      (. builder channelGroupName data))
-    (when-let [data (lookup-entry config id :channel-name)]
-      (. builder channelName data))
-    (when-let [data (lookup-entry config id :container-type)]
-      (. builder containerType data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :hls-manifests)]
-      (. builder hlsManifests data))
-    (when-let [data (lookup-entry config id :low-latency-hls-manifests)]
-      (. builder lowLatencyHlsManifests data))
-    (when-let [data (lookup-entry config id :origin-endpoint-name)]
-      (. builder originEndpointName data))
-    (when-let [data (lookup-entry config id :segment)]
-      (. builder segment data))
-    (when-let [data (lookup-entry config id :startover-window-seconds)]
-      (. builder startoverWindowSeconds data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnOriginEndpointProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :channel-group-name)]
+    (. builder channelGroupName data))
+  (when-let [data (lookup-entry config id :channel-name)]
+    (. builder channelName data))
+  (when-let [data (lookup-entry config id :container-type)]
+    (. builder containerType data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :hls-manifests)]
+    (. builder hlsManifests data))
+  (when-let [data (lookup-entry config id :low-latency-hls-manifests)]
+    (. builder lowLatencyHlsManifests data))
+  (when-let [data (lookup-entry config id :origin-endpoint-name)]
+    (. builder originEndpointName data))
+  (when-let [data (lookup-entry config id :segment)]
+    (. builder segment data))
+  (when-let [data (lookup-entry config id :startover-window-seconds)]
+    (. builder startoverWindowSeconds data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-origin-endpoint-scte-hls-property-builder
-  "The cfn-origin-endpoint-scte-hls-property-builder function buildes out new instances of 
-CfnOriginEndpoint$ScteHlsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-origin-endpoint-scte-hls-property-builder
+  "The build-cfn-origin-endpoint-scte-hls-property-builder function updates a CfnOriginEndpoint$ScteHlsProperty$Builder instance using the provided configuration.
+  The function takes the CfnOriginEndpoint$ScteHlsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `adMarkerHls` | java.lang.String | [[cdk.support/lookup-entry]] | `:ad-marker-hls` |"
-  [stack id config]
-  (let [builder (CfnOriginEndpoint$ScteHlsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :ad-marker-hls)]
-      (. builder adMarkerHls data))
-    (.build builder)))
-
-
-(defn cfn-origin-endpoint-scte-property-builder
-  "The cfn-origin-endpoint-scte-property-builder function buildes out new instances of 
-CfnOriginEndpoint$ScteProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `scteFilter` | java.util.List | [[cdk.support/lookup-entry]] | `:scte-filter` |"
-  [stack id config]
-  (let [builder (CfnOriginEndpoint$ScteProperty$Builder.)]
-    (when-let [data (lookup-entry config id :scte-filter)]
-      (. builder scteFilter data))
-    (.build builder)))
+| `adMarkerHls` | java.lang.String | [[cdk.support/lookup-entry]] | `:ad-marker-hls` |
+"
+  [^CfnOriginEndpoint$ScteHlsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :ad-marker-hls)]
+    (. builder adMarkerHls data))
+  (.build builder))
 
 
-(defn cfn-origin-endpoint-segment-property-builder
-  "The cfn-origin-endpoint-segment-property-builder function buildes out new instances of 
-CfnOriginEndpoint$SegmentProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-origin-endpoint-scte-property-builder
+  "The build-cfn-origin-endpoint-scte-property-builder function updates a CfnOriginEndpoint$ScteProperty$Builder instance using the provided configuration.
+  The function takes the CfnOriginEndpoint$ScteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `scteFilter` | java.util.List | [[cdk.support/lookup-entry]] | `:scte-filter` |
+"
+  [^CfnOriginEndpoint$ScteProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :scte-filter)]
+    (. builder scteFilter data))
+  (.build builder))
+
+
+(defn build-cfn-origin-endpoint-segment-property-builder
+  "The build-cfn-origin-endpoint-segment-property-builder function updates a CfnOriginEndpoint$SegmentProperty$Builder instance using the provided configuration.
+  The function takes the CfnOriginEndpoint$SegmentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -479,29 +539,32 @@ CfnOriginEndpoint$SegmentProperty$Builder using the provided configuration.  Eac
 | `segmentDurationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:segment-duration-seconds` |
 | `segmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:segment-name` |
 | `tsIncludeDvbSubtitles` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ts-include-dvb-subtitles` |
-| `tsUseAudioRenditionGroup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ts-use-audio-rendition-group` |"
-  [stack id config]
-  (let [builder (CfnOriginEndpoint$SegmentProperty$Builder.)]
-    (when-let [data (lookup-entry config id :encryption)]
-      (. builder encryption data))
-    (when-let [data (lookup-entry config id :include-iframe-only-streams)]
-      (. builder includeIframeOnlyStreams data))
-    (when-let [data (lookup-entry config id :scte)]
-      (. builder scte data))
-    (when-let [data (lookup-entry config id :segment-duration-seconds)]
-      (. builder segmentDurationSeconds data))
-    (when-let [data (lookup-entry config id :segment-name)]
-      (. builder segmentName data))
-    (when-let [data (lookup-entry config id :ts-include-dvb-subtitles)]
-      (. builder tsIncludeDvbSubtitles data))
-    (when-let [data (lookup-entry config id :ts-use-audio-rendition-group)]
-      (. builder tsUseAudioRenditionGroup data))
-    (.build builder)))
+| `tsUseAudioRenditionGroup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ts-use-audio-rendition-group` |
+"
+  [^CfnOriginEndpoint$SegmentProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :encryption)]
+    (. builder encryption data))
+  (when-let [data (lookup-entry config id :include-iframe-only-streams)]
+    (. builder includeIframeOnlyStreams data))
+  (when-let [data (lookup-entry config id :scte)]
+    (. builder scte data))
+  (when-let [data (lookup-entry config id :segment-duration-seconds)]
+    (. builder segmentDurationSeconds data))
+  (when-let [data (lookup-entry config id :segment-name)]
+    (. builder segmentName data))
+  (when-let [data (lookup-entry config id :ts-include-dvb-subtitles)]
+    (. builder tsIncludeDvbSubtitles data))
+  (when-let [data (lookup-entry config id :ts-use-audio-rendition-group)]
+    (. builder tsUseAudioRenditionGroup data))
+  (.build builder))
 
 
-(defn cfn-origin-endpoint-speke-key-provider-property-builder
-  "The cfn-origin-endpoint-speke-key-provider-property-builder function buildes out new instances of 
-CfnOriginEndpoint$SpekeKeyProviderProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-origin-endpoint-speke-key-provider-property-builder
+  "The build-cfn-origin-endpoint-speke-key-provider-property-builder function updates a CfnOriginEndpoint$SpekeKeyProviderProperty$Builder instance using the provided configuration.
+  The function takes the CfnOriginEndpoint$SpekeKeyProviderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -509,17 +572,17 @@ CfnOriginEndpoint$SpekeKeyProviderProperty$Builder using the provided configurat
 | `encryptionContractConfiguration` | software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint$EncryptionContractConfigurationProperty | [[cdk.support/lookup-entry]] | `:encryption-contract-configuration` |
 | `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |"
-  [stack id config]
-  (let [builder (CfnOriginEndpoint$SpekeKeyProviderProperty$Builder.)]
-    (when-let [data (lookup-entry config id :drm-systems)]
-      (. builder drmSystems data))
-    (when-let [data (lookup-entry config id :encryption-contract-configuration)]
-      (. builder encryptionContractConfiguration data))
-    (when-let [data (lookup-entry config id :resource-id)]
-      (. builder resourceId data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :url)]
-      (. builder url data))
-    (.build builder)))
+| `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
+"
+  [^CfnOriginEndpoint$SpekeKeyProviderProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :drm-systems)]
+    (. builder drmSystems data))
+  (when-let [data (lookup-entry config id :encryption-contract-configuration)]
+    (. builder encryptionContractConfiguration data))
+  (when-let [data (lookup-entry config id :resource-id)]
+    (. builder resourceId data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :url)]
+    (. builder url data))
+  (.build builder))

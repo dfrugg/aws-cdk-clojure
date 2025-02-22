@@ -11,161 +11,185 @@
                                                                       CfnResourceAssociationProps$Builder]))
 
 
-(defn cfn-application-builder
-  "The cfn-application-builder function buildes out new instances of 
-CfnApplication$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-application-builder
+  "The build-cfn-application-builder function updates a CfnApplication$Builder instance using the provided configuration.
+  The function takes the CfnApplication$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnApplication$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnApplication$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-application-props-builder
-  "The cfn-application-props-builder function buildes out new instances of 
-CfnApplicationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-application-props-builder
+  "The build-cfn-application-props-builder function updates a CfnApplicationProps$Builder instance using the provided configuration.
+  The function takes the CfnApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnApplicationProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnApplicationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-attribute-group-association-builder
-  "The cfn-attribute-group-association-builder function buildes out new instances of 
-CfnAttributeGroupAssociation$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-attribute-group-association-builder
+  "The build-cfn-attribute-group-association-builder function updates a CfnAttributeGroupAssociation$Builder instance using the provided configuration.
+  The function takes the CfnAttributeGroupAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `application` | java.lang.String | [[cdk.support/lookup-entry]] | `:application` |
-| `attributeGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-group` |"
-  [stack id config]
-  (let [builder (CfnAttributeGroupAssociation$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application)]
-      (. builder application data))
-    (when-let [data (lookup-entry config id :attribute-group)]
-      (. builder attributeGroup data))
-    (.build builder)))
-
-
-(defn cfn-attribute-group-association-props-builder
-  "The cfn-attribute-group-association-props-builder function buildes out new instances of 
-CfnAttributeGroupAssociationProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `application` | java.lang.String | [[cdk.support/lookup-entry]] | `:application` |
-| `attributeGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-group` |"
-  [stack id config]
-  (let [builder (CfnAttributeGroupAssociationProps$Builder.)]
-    (when-let [data (lookup-entry config id :application)]
-      (. builder application data))
-    (when-let [data (lookup-entry config id :attribute-group)]
-      (. builder attributeGroup data))
-    (.build builder)))
+| `attributeGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-group` |
+"
+  [^CfnAttributeGroupAssociation$Builder builder id config]
+  (when-let [data (lookup-entry config id :application)]
+    (. builder application data))
+  (when-let [data (lookup-entry config id :attribute-group)]
+    (. builder attributeGroup data))
+  (.build builder))
 
 
-(defn cfn-attribute-group-builder
-  "The cfn-attribute-group-builder function buildes out new instances of 
-CfnAttributeGroup$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-attribute-group-association-props-builder
+  "The build-cfn-attribute-group-association-props-builder function updates a CfnAttributeGroupAssociationProps$Builder instance using the provided configuration.
+  The function takes the CfnAttributeGroupAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `application` | java.lang.String | [[cdk.support/lookup-entry]] | `:application` |
+| `attributeGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-group` |
+"
+  [^CfnAttributeGroupAssociationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application)]
+    (. builder application data))
+  (when-let [data (lookup-entry config id :attribute-group)]
+    (. builder attributeGroup data))
+  (.build builder))
+
+
+(defn build-cfn-attribute-group-builder
+  "The build-cfn-attribute-group-builder function updates a CfnAttributeGroup$Builder instance using the provided configuration.
+  The function takes the CfnAttributeGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attributes` | java.lang.Object | [[cdk.support/lookup-entry]] | `:attributes` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnAttributeGroup$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :attributes)]
-      (. builder attributes data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnAttributeGroup$Builder builder id config]
+  (when-let [data (lookup-entry config id :attributes)]
+    (. builder attributes data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-attribute-group-props-builder
-  "The cfn-attribute-group-props-builder function buildes out new instances of 
-CfnAttributeGroupProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-attribute-group-props-builder
+  "The build-cfn-attribute-group-props-builder function updates a CfnAttributeGroupProps$Builder instance using the provided configuration.
+  The function takes the CfnAttributeGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attributes` | java.lang.Object | [[cdk.support/lookup-entry]] | `:attributes` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnAttributeGroupProps$Builder.)]
-    (when-let [data (lookup-entry config id :attributes)]
-      (. builder attributes data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnAttributeGroupProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :attributes)]
+    (. builder attributes data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-resource-association-builder
-  "The cfn-resource-association-builder function buildes out new instances of 
-CfnResourceAssociation$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resource-association-builder
+  "The build-cfn-resource-association-builder function updates a CfnResourceAssociation$Builder instance using the provided configuration.
+  The function takes the CfnResourceAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `application` | java.lang.String | [[cdk.support/lookup-entry]] | `:application` |
-| `resource` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource` |
-| `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |"
-  [stack id config]
-  (let [builder (CfnResourceAssociation$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application)]
-      (. builder application data))
-    (when-let [data (lookup-entry config id :resource)]
-      (. builder resource data))
-    (when-let [data (lookup-entry config id :resource-type)]
-      (. builder resourceType data))
-    (.build builder)))
-
-
-(defn cfn-resource-association-props-builder
-  "The cfn-resource-association-props-builder function buildes out new instances of 
-CfnResourceAssociationProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `application` | java.lang.String | [[cdk.support/lookup-entry]] | `:application` |
 | `resource` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource` |
-| `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |"
-  [stack id config]
-  (let [builder (CfnResourceAssociationProps$Builder.)]
-    (when-let [data (lookup-entry config id :application)]
-      (. builder application data))
-    (when-let [data (lookup-entry config id :resource)]
-      (. builder resource data))
-    (when-let [data (lookup-entry config id :resource-type)]
-      (. builder resourceType data))
-    (.build builder)))
+| `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |
+"
+  [^CfnResourceAssociation$Builder builder id config]
+  (when-let [data (lookup-entry config id :application)]
+    (. builder application data))
+  (when-let [data (lookup-entry config id :resource)]
+    (. builder resource data))
+  (when-let [data (lookup-entry config id :resource-type)]
+    (. builder resourceType data))
+  (.build builder))
+
+
+(defn build-cfn-resource-association-props-builder
+  "The build-cfn-resource-association-props-builder function updates a CfnResourceAssociationProps$Builder instance using the provided configuration.
+  The function takes the CfnResourceAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `application` | java.lang.String | [[cdk.support/lookup-entry]] | `:application` |
+| `resource` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource` |
+| `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |
+"
+  [^CfnResourceAssociationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application)]
+    (. builder application data))
+  (when-let [data (lookup-entry config id :resource)]
+    (. builder resource data))
+  (when-let [data (lookup-entry config id :resource-type)]
+    (. builder resourceType data))
+  (.build builder))

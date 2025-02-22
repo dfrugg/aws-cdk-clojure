@@ -59,297 +59,345 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :request-response data) LambdaInvocationType/REQUEST_RESPONSE)))
 
 
-(defn add-header-builder
-  "The add-header-builder function buildes out new instances of 
-AddHeader$Builder using the provided configuration.  Each field is set as follows:
+(defn build-add-header-builder
+  "The build-add-header-builder function updates a AddHeader$Builder instance using the provided configuration.
+  The function takes the AddHeader$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (AddHeader$Builder/create)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^AddHeader$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn add-header-props-builder
-  "The add-header-props-builder function buildes out new instances of 
-AddHeaderProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-add-header-props-builder
+  "The build-add-header-props-builder function updates a AddHeaderProps$Builder instance using the provided configuration.
+  The function takes the AddHeaderProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (AddHeaderProps$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^AddHeaderProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn bounce-builder
-  "The bounce-builder function buildes out new instances of 
-Bounce$Builder using the provided configuration.  Each field is set as follows:
+(defn build-bounce-builder
+  "The build-bounce-builder function updates a Bounce$Builder instance using the provided configuration.
+  The function takes the Bounce$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `sender` | java.lang.String | [[cdk.support/lookup-entry]] | `:sender` |
 | `template` | software.amazon.awscdk.services.ses.actions.BounceTemplate | [[cdk.support/lookup-entry]] | `:template` |
-| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |"
-  [stack id config]
-  (let [builder (Bounce$Builder/create)]
-    (when-let [data (lookup-entry config id :sender)]
-      (. builder sender data))
-    (when-let [data (lookup-entry config id :template)]
-      (. builder template data))
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (.build builder)))
+| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
+"
+  [^Bounce$Builder builder id config]
+  (when-let [data (lookup-entry config id :sender)]
+    (. builder sender data))
+  (when-let [data (lookup-entry config id :template)]
+    (. builder template data))
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (.build builder))
 
 
-(defn bounce-props-builder
-  "The bounce-props-builder function buildes out new instances of 
-BounceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-bounce-props-builder
+  "The build-bounce-props-builder function updates a BounceProps$Builder instance using the provided configuration.
+  The function takes the BounceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `sender` | java.lang.String | [[cdk.support/lookup-entry]] | `:sender` |
 | `template` | software.amazon.awscdk.services.ses.actions.BounceTemplate | [[cdk.support/lookup-entry]] | `:template` |
-| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |"
-  [stack id config]
-  (let [builder (BounceProps$Builder.)]
-    (when-let [data (lookup-entry config id :sender)]
-      (. builder sender data))
-    (when-let [data (lookup-entry config id :template)]
-      (. builder template data))
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (.build builder)))
+| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
+"
+  [^BounceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :sender)]
+    (. builder sender data))
+  (when-let [data (lookup-entry config id :template)]
+    (. builder template data))
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (.build builder))
 
 
-(defn bounce-template-builder
-  "The bounce-template-builder function buildes out new instances of 
-BounceTemplate$Builder using the provided configuration.  Each field is set as follows:
+(defn build-bounce-template-builder
+  "The build-bounce-template-builder function updates a BounceTemplate$Builder instance using the provided configuration.
+  The function takes the BounceTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `message` | java.lang.String | [[cdk.support/lookup-entry]] | `:message` |
-| `smtpReplyCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:smtp-reply-code` |
-| `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |"
-  [stack id config]
-  (let [builder (BounceTemplate$Builder/create)]
-    (when-let [data (lookup-entry config id :message)]
-      (. builder message data))
-    (when-let [data (lookup-entry config id :smtp-reply-code)]
-      (. builder smtpReplyCode data))
-    (when-let [data (lookup-entry config id :status-code)]
-      (. builder statusCode data))
-    (.build builder)))
-
-
-(defn bounce-template-props-builder
-  "The bounce-template-props-builder function buildes out new instances of 
-BounceTemplateProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `message` | java.lang.String | [[cdk.support/lookup-entry]] | `:message` |
 | `smtpReplyCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:smtp-reply-code` |
-| `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |"
-  [stack id config]
-  (let [builder (BounceTemplateProps$Builder.)]
-    (when-let [data (lookup-entry config id :message)]
-      (. builder message data))
-    (when-let [data (lookup-entry config id :smtp-reply-code)]
-      (. builder smtpReplyCode data))
-    (when-let [data (lookup-entry config id :status-code)]
-      (. builder statusCode data))
-    (.build builder)))
+| `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
+"
+  [^BounceTemplate$Builder builder id config]
+  (when-let [data (lookup-entry config id :message)]
+    (. builder message data))
+  (when-let [data (lookup-entry config id :smtp-reply-code)]
+    (. builder smtpReplyCode data))
+  (when-let [data (lookup-entry config id :status-code)]
+    (. builder statusCode data))
+  (.build builder))
 
 
-(defn lambda-builder
-  "The lambda-builder function buildes out new instances of 
-Lambda$Builder using the provided configuration.  Each field is set as follows:
+(defn build-bounce-template-props-builder
+  "The build-bounce-template-props-builder function updates a BounceTemplateProps$Builder instance using the provided configuration.
+  The function takes the BounceTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `message` | java.lang.String | [[cdk.support/lookup-entry]] | `:message` |
+| `smtpReplyCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:smtp-reply-code` |
+| `statusCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:status-code` |
+"
+  [^BounceTemplateProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :message)]
+    (. builder message data))
+  (when-let [data (lookup-entry config id :smtp-reply-code)]
+    (. builder smtpReplyCode data))
+  (when-let [data (lookup-entry config id :status-code)]
+    (. builder statusCode data))
+  (.build builder))
+
+
+(defn build-lambda-builder
+  "The build-lambda-builder function updates a Lambda$Builder instance using the provided configuration.
+  The function takes the Lambda$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `function` | software.amazon.awscdk.services.lambda.IFunction | [[cdk.support/lookup-entry]] | `:function` |
 | `invocationType` | software.amazon.awscdk.services.ses.actions.LambdaInvocationType | [[cdk.api.services.ses.actions/lambda-invocation-type]] | `:invocation-type` |
-| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |"
-  [stack id config]
-  (let [builder (Lambda$Builder/create)]
-    (when-let [data (lookup-entry config id :function)]
-      (. builder function data))
-    (when-let [data (lambda-invocation-type config id :invocation-type)]
-      (. builder invocationType data))
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (.build builder)))
+| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
+"
+  [^Lambda$Builder builder id config]
+  (when-let [data (lookup-entry config id :function)]
+    (. builder function data))
+  (when-let [data (lambda-invocation-type config id :invocation-type)]
+    (. builder invocationType data))
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (.build builder))
 
 
-(defn lambda-props-builder
-  "The lambda-props-builder function buildes out new instances of 
-LambdaProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-lambda-props-builder
+  "The build-lambda-props-builder function updates a LambdaProps$Builder instance using the provided configuration.
+  The function takes the LambdaProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `function` | software.amazon.awscdk.services.lambda.IFunction | [[cdk.support/lookup-entry]] | `:function` |
 | `invocationType` | software.amazon.awscdk.services.ses.actions.LambdaInvocationType | [[cdk.api.services.ses.actions/lambda-invocation-type]] | `:invocation-type` |
-| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |"
-  [stack id config]
-  (let [builder (LambdaProps$Builder.)]
-    (when-let [data (lookup-entry config id :function)]
-      (. builder function data))
-    (when-let [data (lambda-invocation-type config id :invocation-type)]
-      (. builder invocationType data))
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (.build builder)))
+| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
+"
+  [^LambdaProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :function)]
+    (. builder function data))
+  (when-let [data (lambda-invocation-type config id :invocation-type)]
+    (. builder invocationType data))
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (.build builder))
 
 
-(defn s3-builder
-  "The s3-builder function buildes out new instances of 
-S3$Builder using the provided configuration.  Each field is set as follows:
+(defn build-s3-builder
+  "The build-s3-builder function updates a S3$Builder instance using the provided configuration.
+  The function takes the S3$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bucket` | software.amazon.awscdk.services.s3.IBucket | [[cdk.support/lookup-entry]] | `:bucket` |
 | `kmsKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:kms-key` |
 | `objectKeyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-key-prefix` |
-| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |"
-  [stack id config]
-  (let [builder (S3$Builder/create)]
-    (when-let [data (lookup-entry config id :bucket)]
-      (. builder bucket data))
-    (when-let [data (lookup-entry config id :kms-key)]
-      (. builder kmsKey data))
-    (when-let [data (lookup-entry config id :object-key-prefix)]
-      (. builder objectKeyPrefix data))
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (.build builder)))
+| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
+"
+  [^S3$Builder builder id config]
+  (when-let [data (lookup-entry config id :bucket)]
+    (. builder bucket data))
+  (when-let [data (lookup-entry config id :kms-key)]
+    (. builder kmsKey data))
+  (when-let [data (lookup-entry config id :object-key-prefix)]
+    (. builder objectKeyPrefix data))
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (.build builder))
 
 
-(defn s3-props-builder
-  "The s3-props-builder function buildes out new instances of 
-S3Props$Builder using the provided configuration.  Each field is set as follows:
+(defn build-s3-props-builder
+  "The build-s3-props-builder function updates a S3Props$Builder instance using the provided configuration.
+  The function takes the S3Props$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bucket` | software.amazon.awscdk.services.s3.IBucket | [[cdk.support/lookup-entry]] | `:bucket` |
 | `kmsKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:kms-key` |
 | `objectKeyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-key-prefix` |
-| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |"
-  [stack id config]
-  (let [builder (S3Props$Builder.)]
-    (when-let [data (lookup-entry config id :bucket)]
-      (. builder bucket data))
-    (when-let [data (lookup-entry config id :kms-key)]
-      (. builder kmsKey data))
-    (when-let [data (lookup-entry config id :object-key-prefix)]
-      (. builder objectKeyPrefix data))
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (.build builder)))
+| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
+"
+  [^S3Props$Builder builder id config]
+  (when-let [data (lookup-entry config id :bucket)]
+    (. builder bucket data))
+  (when-let [data (lookup-entry config id :kms-key)]
+    (. builder kmsKey data))
+  (when-let [data (lookup-entry config id :object-key-prefix)]
+    (. builder objectKeyPrefix data))
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (.build builder))
 
 
-(defn sns-builder
-  "The sns-builder function buildes out new instances of 
-Sns$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sns-builder
+  "The build-sns-builder function updates a Sns$Builder instance using the provided configuration.
+  The function takes the Sns$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `encoding` | software.amazon.awscdk.services.ses.actions.EmailEncoding | [[cdk.api.services.ses.actions/email-encoding]] | `:encoding` |
-| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |"
-  [stack id config]
-  (let [builder (Sns$Builder/create)]
-    (when-let [data (email-encoding config id :encoding)]
-      (. builder encoding data))
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (.build builder)))
-
-
-(defn sns-props-builder
-  "The sns-props-builder function buildes out new instances of 
-SnsProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `encoding` | software.amazon.awscdk.services.ses.actions.EmailEncoding | [[cdk.api.services.ses.actions/email-encoding]] | `:encoding` |
-| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |"
-  [stack id config]
-  (let [builder (SnsProps$Builder.)]
-    (when-let [data (email-encoding config id :encoding)]
-      (. builder encoding data))
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (.build builder)))
+| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
+"
+  [^Sns$Builder builder id config]
+  (when-let [data (email-encoding config id :encoding)]
+    (. builder encoding data))
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (.build builder))
 
 
-(defn stop-builder
-  "The stop-builder function buildes out new instances of 
-Stop$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sns-props-builder
+  "The build-sns-props-builder function updates a SnsProps$Builder instance using the provided configuration.
+  The function takes the SnsProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |"
-  [stack id config]
-  (let [builder (Stop$Builder/create)]
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (.build builder)))
-
-
-(defn stop-props-builder
-  "The stop-props-builder function buildes out new instances of 
-StopProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |"
-  [stack id config]
-  (let [builder (StopProps$Builder.)]
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (.build builder)))
+| `encoding` | software.amazon.awscdk.services.ses.actions.EmailEncoding | [[cdk.api.services.ses.actions/email-encoding]] | `:encoding` |
+| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
+"
+  [^SnsProps$Builder builder id config]
+  (when-let [data (email-encoding config id :encoding)]
+    (. builder encoding data))
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (.build builder))
 
 
-(defn work-mail-builder
-  "The work-mail-builder function buildes out new instances of 
-WorkMail$Builder using the provided configuration.  Each field is set as follows:
+(defn build-stop-builder
+  "The build-stop-builder function updates a Stop$Builder instance using the provided configuration.
+  The function takes the Stop$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
+"
+  [^Stop$Builder builder id config]
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (.build builder))
+
+
+(defn build-stop-props-builder
+  "The build-stop-props-builder function updates a StopProps$Builder instance using the provided configuration.
+  The function takes the StopProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
+"
+  [^StopProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (.build builder))
+
+
+(defn build-work-mail-builder
+  "The build-work-mail-builder function updates a WorkMail$Builder instance using the provided configuration.
+  The function takes the WorkMail$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `organizationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:organization-arn` |
-| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |"
-  [stack id config]
-  (let [builder (WorkMail$Builder/create)]
-    (when-let [data (lookup-entry config id :organization-arn)]
-      (. builder organizationArn data))
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (.build builder)))
+| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
+"
+  [^WorkMail$Builder builder id config]
+  (when-let [data (lookup-entry config id :organization-arn)]
+    (. builder organizationArn data))
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (.build builder))
 
 
-(defn work-mail-props-builder
-  "The work-mail-props-builder function buildes out new instances of 
-WorkMailProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-work-mail-props-builder
+  "The build-work-mail-props-builder function updates a WorkMailProps$Builder instance using the provided configuration.
+  The function takes the WorkMailProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `organizationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:organization-arn` |
-| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |"
-  [stack id config]
-  (let [builder (WorkMailProps$Builder.)]
-    (when-let [data (lookup-entry config id :organization-arn)]
-      (. builder organizationArn data))
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (.build builder)))
+| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
+"
+  [^WorkMailProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :organization-arn)]
+    (. builder organizationArn data))
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (.build builder))

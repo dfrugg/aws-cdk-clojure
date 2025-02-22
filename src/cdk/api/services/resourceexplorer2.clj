@@ -12,71 +12,86 @@
                                                               CfnViewProps$Builder]))
 
 
-(defn cfn-default-view-association-builder
-  "The cfn-default-view-association-builder function buildes out new instances of 
-CfnDefaultViewAssociation$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-default-view-association-builder
+  "The build-cfn-default-view-association-builder function updates a CfnDefaultViewAssociation$Builder instance using the provided configuration.
+  The function takes the CfnDefaultViewAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `viewArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:view-arn` |"
-  [stack id config]
-  (let [builder (CfnDefaultViewAssociation$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :view-arn)]
-      (. builder viewArn data))
-    (.build builder)))
+| `viewArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:view-arn` |
+"
+  [^CfnDefaultViewAssociation$Builder builder id config]
+  (when-let [data (lookup-entry config id :view-arn)]
+    (. builder viewArn data))
+  (.build builder))
 
 
-(defn cfn-default-view-association-props-builder
-  "The cfn-default-view-association-props-builder function buildes out new instances of 
-CfnDefaultViewAssociationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-default-view-association-props-builder
+  "The build-cfn-default-view-association-props-builder function updates a CfnDefaultViewAssociationProps$Builder instance using the provided configuration.
+  The function takes the CfnDefaultViewAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `viewArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:view-arn` |"
-  [stack id config]
-  (let [builder (CfnDefaultViewAssociationProps$Builder.)]
-    (when-let [data (lookup-entry config id :view-arn)]
-      (. builder viewArn data))
-    (.build builder)))
-
-
-(defn cfn-index-builder
-  "The cfn-index-builder function buildes out new instances of 
-CfnIndex$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnIndex$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `viewArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:view-arn` |
+"
+  [^CfnDefaultViewAssociationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :view-arn)]
+    (. builder viewArn data))
+  (.build builder))
 
 
-(defn cfn-index-props-builder
-  "The cfn-index-props-builder function buildes out new instances of 
-CfnIndexProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-index-builder
+  "The build-cfn-index-builder function updates a CfnIndex$Builder instance using the provided configuration.
+  The function takes the CfnIndex$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnIndexProps$Builder.)]
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnIndex$Builder builder id config]
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-view-builder
-  "The cfn-view-builder function buildes out new instances of 
-CfnView$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-index-props-builder
+  "The build-cfn-index-props-builder function updates a CfnIndexProps$Builder instance using the provided configuration.
+  The function takes the CfnIndexProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnIndexProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
+
+
+(defn build-cfn-view-builder
+  "The build-cfn-view-builder function updates a CfnView$Builder instance using the provided configuration.
+  The function takes the CfnView$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -84,53 +99,62 @@ CfnView$Builder using the provided configuration.  Each field is set as follows:
 | `includedProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:included-properties` |
 | `scope` | java.lang.String | [[cdk.support/lookup-entry]] | `:scope` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
-| `viewName` | java.lang.String | [[cdk.support/lookup-entry]] | `:view-name` |"
-  [stack id config]
-  (let [builder (CfnView$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :filters)]
-      (. builder filters data))
-    (when-let [data (lookup-entry config id :included-properties)]
-      (. builder includedProperties data))
-    (when-let [data (lookup-entry config id :scope)]
-      (. builder scope data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :view-name)]
-      (. builder viewName data))
-    (.build builder)))
+| `viewName` | java.lang.String | [[cdk.support/lookup-entry]] | `:view-name` |
+"
+  [^CfnView$Builder builder id config]
+  (when-let [data (lookup-entry config id :filters)]
+    (. builder filters data))
+  (when-let [data (lookup-entry config id :included-properties)]
+    (. builder includedProperties data))
+  (when-let [data (lookup-entry config id :scope)]
+    (. builder scope data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :view-name)]
+    (. builder viewName data))
+  (.build builder))
 
 
-(defn cfn-view-filters-property-builder
-  "The cfn-view-filters-property-builder function buildes out new instances of 
-CfnView$FiltersProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-view-filters-property-builder
+  "The build-cfn-view-filters-property-builder function updates a CfnView$FiltersProperty$Builder instance using the provided configuration.
+  The function takes the CfnView$FiltersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `filterString` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-string` |"
-  [stack id config]
-  (let [builder (CfnView$FiltersProperty$Builder.)]
-    (when-let [data (lookup-entry config id :filter-string)]
-      (. builder filterString data))
-    (.build builder)))
-
-
-(defn cfn-view-included-property-property-builder
-  "The cfn-view-included-property-property-builder function buildes out new instances of 
-CfnView$IncludedPropertyProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (CfnView$IncludedPropertyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `filterString` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-string` |
+"
+  [^CfnView$FiltersProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :filter-string)]
+    (. builder filterString data))
+  (.build builder))
 
 
-(defn cfn-view-props-builder
-  "The cfn-view-props-builder function buildes out new instances of 
-CfnViewProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-view-included-property-property-builder
+  "The build-cfn-view-included-property-property-builder function updates a CfnView$IncludedPropertyProperty$Builder instance using the provided configuration.
+  The function takes the CfnView$IncludedPropertyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^CfnView$IncludedPropertyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
+
+
+(defn build-cfn-view-props-builder
+  "The build-cfn-view-props-builder function updates a CfnViewProps$Builder instance using the provided configuration.
+  The function takes the CfnViewProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -138,31 +162,34 @@ CfnViewProps$Builder using the provided configuration.  Each field is set as fol
 | `includedProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:included-properties` |
 | `scope` | java.lang.String | [[cdk.support/lookup-entry]] | `:scope` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
-| `viewName` | java.lang.String | [[cdk.support/lookup-entry]] | `:view-name` |"
-  [stack id config]
-  (let [builder (CfnViewProps$Builder.)]
-    (when-let [data (lookup-entry config id :filters)]
-      (. builder filters data))
-    (when-let [data (lookup-entry config id :included-properties)]
-      (. builder includedProperties data))
-    (when-let [data (lookup-entry config id :scope)]
-      (. builder scope data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :view-name)]
-      (. builder viewName data))
-    (.build builder)))
+| `viewName` | java.lang.String | [[cdk.support/lookup-entry]] | `:view-name` |
+"
+  [^CfnViewProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :filters)]
+    (. builder filters data))
+  (when-let [data (lookup-entry config id :included-properties)]
+    (. builder includedProperties data))
+  (when-let [data (lookup-entry config id :scope)]
+    (. builder scope data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :view-name)]
+    (. builder viewName data))
+  (.build builder))
 
 
-(defn cfn-view-search-filter-property-builder
-  "The cfn-view-search-filter-property-builder function buildes out new instances of 
-CfnView$SearchFilterProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-view-search-filter-property-builder
+  "The build-cfn-view-search-filter-property-builder function updates a CfnView$SearchFilterProperty$Builder instance using the provided configuration.
+  The function takes the CfnView$SearchFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `filterString` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-string` |"
-  [stack id config]
-  (let [builder (CfnView$SearchFilterProperty$Builder.)]
-    (when-let [data (lookup-entry config id :filter-string)]
-      (. builder filterString data))
-    (.build builder)))
+| `filterString` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-string` |
+"
+  [^CfnView$SearchFilterProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :filter-string)]
+    (. builder filterString data))
+  (.build builder))

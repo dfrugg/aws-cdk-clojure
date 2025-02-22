@@ -7,75 +7,87 @@
                                                                ScalingInterval$Builder]))
 
 
-(defn alarms-builder
-  "The alarms-builder function buildes out new instances of 
-Alarms$Builder using the provided configuration.  Each field is set as follows:
+(defn build-alarms-builder
+  "The build-alarms-builder function updates a Alarms$Builder instance using the provided configuration.
+  The function takes the Alarms$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `lowerAlarmIntervalIndex` | java.lang.Number | [[cdk.support/lookup-entry]] | `:lower-alarm-interval-index` |
-| `upperAlarmIntervalIndex` | java.lang.Number | [[cdk.support/lookup-entry]] | `:upper-alarm-interval-index` |"
-  [stack id config]
-  (let [builder (Alarms$Builder.)]
-    (when-let [data (lookup-entry config id :lower-alarm-interval-index)]
-      (. builder lowerAlarmIntervalIndex data))
-    (when-let [data (lookup-entry config id :upper-alarm-interval-index)]
-      (. builder upperAlarmIntervalIndex data))
-    (.build builder)))
+| `upperAlarmIntervalIndex` | java.lang.Number | [[cdk.support/lookup-entry]] | `:upper-alarm-interval-index` |
+"
+  [^Alarms$Builder builder id config]
+  (when-let [data (lookup-entry config id :lower-alarm-interval-index)]
+    (. builder lowerAlarmIntervalIndex data))
+  (when-let [data (lookup-entry config id :upper-alarm-interval-index)]
+    (. builder upperAlarmIntervalIndex data))
+  (.build builder))
 
 
-(defn arbitrary-intervals-builder
-  "The arbitrary-intervals-builder function buildes out new instances of 
-ArbitraryIntervals$Builder using the provided configuration.  Each field is set as follows:
+(defn build-arbitrary-intervals-builder
+  "The build-arbitrary-intervals-builder function updates a ArbitraryIntervals$Builder instance using the provided configuration.
+  The function takes the ArbitraryIntervals$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `absolute` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:absolute` |
-| `intervals` | java.util.List | [[cdk.support/lookup-entry]] | `:intervals` |"
-  [stack id config]
-  (let [builder (ArbitraryIntervals$Builder.)]
-    (when-let [data (lookup-entry config id :absolute)]
-      (. builder absolute data))
-    (when-let [data (lookup-entry config id :intervals)]
-      (. builder intervals data))
-    (.build builder)))
+| `intervals` | java.util.List | [[cdk.support/lookup-entry]] | `:intervals` |
+"
+  [^ArbitraryIntervals$Builder builder id config]
+  (when-let [data (lookup-entry config id :absolute)]
+    (. builder absolute data))
+  (when-let [data (lookup-entry config id :intervals)]
+    (. builder intervals data))
+  (.build builder))
 
 
-(defn complete-scaling-interval-builder
-  "The complete-scaling-interval-builder function buildes out new instances of 
-CompleteScalingInterval$Builder using the provided configuration.  Each field is set as follows:
+(defn build-complete-scaling-interval-builder
+  "The build-complete-scaling-interval-builder function updates a CompleteScalingInterval$Builder instance using the provided configuration.
+  The function takes the CompleteScalingInterval$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `change` | java.lang.Number | [[cdk.support/lookup-entry]] | `:change` |
-| `lower` | java.lang.Number | [[cdk.support/lookup-entry]] | `:lower` |
-| `upper` | java.lang.Number | [[cdk.support/lookup-entry]] | `:upper` |"
-  [stack id config]
-  (let [builder (CompleteScalingInterval$Builder.)]
-    (when-let [data (lookup-entry config id :change)]
-      (. builder change data))
-    (when-let [data (lookup-entry config id :lower)]
-      (. builder lower data))
-    (when-let [data (lookup-entry config id :upper)]
-      (. builder upper data))
-    (.build builder)))
-
-
-(defn scaling-interval-builder
-  "The scaling-interval-builder function buildes out new instances of 
-ScalingInterval$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `change` | java.lang.Number | [[cdk.support/lookup-entry]] | `:change` |
 | `lower` | java.lang.Number | [[cdk.support/lookup-entry]] | `:lower` |
-| `upper` | java.lang.Number | [[cdk.support/lookup-entry]] | `:upper` |"
-  [stack id config]
-  (let [builder (ScalingInterval$Builder.)]
-    (when-let [data (lookup-entry config id :change)]
-      (. builder change data))
-    (when-let [data (lookup-entry config id :lower)]
-      (. builder lower data))
-    (when-let [data (lookup-entry config id :upper)]
-      (. builder upper data))
-    (.build builder)))
+| `upper` | java.lang.Number | [[cdk.support/lookup-entry]] | `:upper` |
+"
+  [^CompleteScalingInterval$Builder builder id config]
+  (when-let [data (lookup-entry config id :change)]
+    (. builder change data))
+  (when-let [data (lookup-entry config id :lower)]
+    (. builder lower data))
+  (when-let [data (lookup-entry config id :upper)]
+    (. builder upper data))
+  (.build builder))
+
+
+(defn build-scaling-interval-builder
+  "The build-scaling-interval-builder function updates a ScalingInterval$Builder instance using the provided configuration.
+  The function takes the ScalingInterval$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `change` | java.lang.Number | [[cdk.support/lookup-entry]] | `:change` |
+| `lower` | java.lang.Number | [[cdk.support/lookup-entry]] | `:lower` |
+| `upper` | java.lang.Number | [[cdk.support/lookup-entry]] | `:upper` |
+"
+  [^ScalingInterval$Builder builder id config]
+  (when-let [data (lookup-entry config id :change)]
+    (. builder change data))
+  (when-let [data (lookup-entry config id :lower)]
+    (. builder lower data))
+  (when-let [data (lookup-entry config id :upper)]
+    (. builder upper data))
+  (.build builder))

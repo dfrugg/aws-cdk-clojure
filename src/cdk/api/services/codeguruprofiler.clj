@@ -29,23 +29,29 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :default data) ComputePlatform/DEFAULT)))
 
 
-(defn cfn-profiling-group-agent-permissions-property-builder
-  "The cfn-profiling-group-agent-permissions-property-builder function buildes out new instances of 
-CfnProfilingGroup$AgentPermissionsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-profiling-group-agent-permissions-property-builder
+  "The build-cfn-profiling-group-agent-permissions-property-builder function updates a CfnProfilingGroup$AgentPermissionsProperty$Builder instance using the provided configuration.
+  The function takes the CfnProfilingGroup$AgentPermissionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `principals` | java.util.List | [[cdk.support/lookup-entry]] | `:principals` |"
-  [stack id config]
-  (let [builder (CfnProfilingGroup$AgentPermissionsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :principals)]
-      (. builder principals data))
-    (.build builder)))
+| `principals` | java.util.List | [[cdk.support/lookup-entry]] | `:principals` |
+"
+  [^CfnProfilingGroup$AgentPermissionsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :principals)]
+    (. builder principals data))
+  (.build builder))
 
 
-(defn cfn-profiling-group-builder
-  "The cfn-profiling-group-builder function buildes out new instances of 
-CfnProfilingGroup$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-profiling-group-builder
+  "The build-cfn-profiling-group-builder function updates a CfnProfilingGroup$Builder instance using the provided configuration.
+  The function takes the CfnProfilingGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -53,42 +59,48 @@ CfnProfilingGroup$Builder using the provided configuration.  Each field is set a
 | `anomalyDetectionNotificationConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:anomaly-detection-notification-configuration` |
 | `computePlatform` | java.lang.String | [[cdk.support/lookup-entry]] | `:compute-platform` |
 | `profilingGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:profiling-group-name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnProfilingGroup$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :agent-permissions)]
-      (. builder agentPermissions data))
-    (when-let [data (lookup-entry config id :anomaly-detection-notification-configuration)]
-      (. builder anomalyDetectionNotificationConfiguration data))
-    (when-let [data (lookup-entry config id :compute-platform)]
-      (. builder computePlatform data))
-    (when-let [data (lookup-entry config id :profiling-group-name)]
-      (. builder profilingGroupName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnProfilingGroup$Builder builder id config]
+  (when-let [data (lookup-entry config id :agent-permissions)]
+    (. builder agentPermissions data))
+  (when-let [data (lookup-entry config id :anomaly-detection-notification-configuration)]
+    (. builder anomalyDetectionNotificationConfiguration data))
+  (when-let [data (lookup-entry config id :compute-platform)]
+    (. builder computePlatform data))
+  (when-let [data (lookup-entry config id :profiling-group-name)]
+    (. builder profilingGroupName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-profiling-group-channel-property-builder
-  "The cfn-profiling-group-channel-property-builder function buildes out new instances of 
-CfnProfilingGroup$ChannelProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-profiling-group-channel-property-builder
+  "The build-cfn-profiling-group-channel-property-builder function updates a CfnProfilingGroup$ChannelProperty$Builder instance using the provided configuration.
+  The function takes the CfnProfilingGroup$ChannelProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `channelId` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-id` |
-| `channelUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-uri` |"
-  [stack id config]
-  (let [builder (CfnProfilingGroup$ChannelProperty$Builder.)]
-    (when-let [data (lookup-entry config id :channel-id)]
-      (. builder channelId data))
-    (when-let [data (lookup-entry config id :channel-uri)]
-      (. builder channelUri data))
-    (.build builder)))
+| `channelUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel-uri` |
+"
+  [^CfnProfilingGroup$ChannelProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :channel-id)]
+    (. builder channelId data))
+  (when-let [data (lookup-entry config id :channel-uri)]
+    (. builder channelUri data))
+  (.build builder))
 
 
-(defn cfn-profiling-group-props-builder
-  "The cfn-profiling-group-props-builder function buildes out new instances of 
-CfnProfilingGroupProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-profiling-group-props-builder
+  "The build-cfn-profiling-group-props-builder function updates a CfnProfilingGroupProps$Builder instance using the provided configuration.
+  The function takes the CfnProfilingGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -96,51 +108,57 @@ CfnProfilingGroupProps$Builder using the provided configuration.  Each field is 
 | `anomalyDetectionNotificationConfiguration` | java.util.List | [[cdk.support/lookup-entry]] | `:anomaly-detection-notification-configuration` |
 | `computePlatform` | java.lang.String | [[cdk.support/lookup-entry]] | `:compute-platform` |
 | `profilingGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:profiling-group-name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnProfilingGroupProps$Builder.)]
-    (when-let [data (lookup-entry config id :agent-permissions)]
-      (. builder agentPermissions data))
-    (when-let [data (lookup-entry config id :anomaly-detection-notification-configuration)]
-      (. builder anomalyDetectionNotificationConfiguration data))
-    (when-let [data (lookup-entry config id :compute-platform)]
-      (. builder computePlatform data))
-    (when-let [data (lookup-entry config id :profiling-group-name)]
-      (. builder profilingGroupName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnProfilingGroupProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :agent-permissions)]
+    (. builder agentPermissions data))
+  (when-let [data (lookup-entry config id :anomaly-detection-notification-configuration)]
+    (. builder anomalyDetectionNotificationConfiguration data))
+  (when-let [data (lookup-entry config id :compute-platform)]
+    (. builder computePlatform data))
+  (when-let [data (lookup-entry config id :profiling-group-name)]
+    (. builder profilingGroupName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn profiling-group-builder
-  "The profiling-group-builder function buildes out new instances of 
-ProfilingGroup$Builder using the provided configuration.  Each field is set as follows:
+(defn build-profiling-group-builder
+  "The build-profiling-group-builder function updates a ProfilingGroup$Builder instance using the provided configuration.
+  The function takes the ProfilingGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `computePlatform` | software.amazon.awscdk.services.codeguruprofiler.ComputePlatform | [[cdk.api.services.codeguruprofiler/compute-platform]] | `:compute-platform` |
-| `profilingGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:profiling-group-name` |"
-  [stack id config]
-  (let [builder (ProfilingGroup$Builder/create stack id)]
-    (when-let [data (compute-platform config id :compute-platform)]
-      (. builder computePlatform data))
-    (when-let [data (lookup-entry config id :profiling-group-name)]
-      (. builder profilingGroupName data))
-    (.build builder)))
-
-
-(defn profiling-group-props-builder
-  "The profiling-group-props-builder function buildes out new instances of 
-ProfilingGroupProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `computePlatform` | software.amazon.awscdk.services.codeguruprofiler.ComputePlatform | [[cdk.api.services.codeguruprofiler/compute-platform]] | `:compute-platform` |
-| `profilingGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:profiling-group-name` |"
-  [stack id config]
-  (let [builder (ProfilingGroupProps$Builder.)]
-    (when-let [data (compute-platform config id :compute-platform)]
-      (. builder computePlatform data))
-    (when-let [data (lookup-entry config id :profiling-group-name)]
-      (. builder profilingGroupName data))
-    (.build builder)))
+| `profilingGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:profiling-group-name` |
+"
+  [^ProfilingGroup$Builder builder id config]
+  (when-let [data (compute-platform config id :compute-platform)]
+    (. builder computePlatform data))
+  (when-let [data (lookup-entry config id :profiling-group-name)]
+    (. builder profilingGroupName data))
+  (.build builder))
+
+
+(defn build-profiling-group-props-builder
+  "The build-profiling-group-props-builder function updates a ProfilingGroupProps$Builder instance using the provided configuration.
+  The function takes the ProfilingGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `computePlatform` | software.amazon.awscdk.services.codeguruprofiler.ComputePlatform | [[cdk.api.services.codeguruprofiler/compute-platform]] | `:compute-platform` |
+| `profilingGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:profiling-group-name` |
+"
+  [^ProfilingGroupProps$Builder builder id config]
+  (when-let [data (compute-platform config id :compute-platform)]
+    (. builder computePlatform data))
+  (when-let [data (lookup-entry config id :profiling-group-name)]
+    (. builder profilingGroupName data))
+  (.build builder))

@@ -103,9 +103,12 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :deny-all data) RedrivePermission/DENY_ALL)))
 
 
-(defn cfn-queue-builder
-  "The cfn-queue-builder function buildes out new instances of 
-CfnQueue$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-queue-builder
+  "The build-cfn-queue-builder function updates a CfnQueue$Builder instance using the provided configuration.
+  The function takes the CfnQueue$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -124,115 +127,130 @@ CfnQueue$Builder using the provided configuration.  Each field is set as follows
 | `redrivePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:redrive-policy` |
 | `sqsManagedSseEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sqs-managed-sse-enabled` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `visibilityTimeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:visibility-timeout` |"
-  [stack id config]
-  (let [builder (CfnQueue$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :content-based-deduplication)]
-      (. builder contentBasedDeduplication data))
-    (when-let [data (lookup-entry config id :deduplication-scope)]
-      (. builder deduplicationScope data))
-    (when-let [data (lookup-entry config id :delay-seconds)]
-      (. builder delaySeconds data))
-    (when-let [data (lookup-entry config id :fifo-queue)]
-      (. builder fifoQueue data))
-    (when-let [data (lookup-entry config id :fifo-throughput-limit)]
-      (. builder fifoThroughputLimit data))
-    (when-let [data (lookup-entry config id :kms-data-key-reuse-period-seconds)]
-      (. builder kmsDataKeyReusePeriodSeconds data))
-    (when-let [data (lookup-entry config id :kms-master-key-id)]
-      (. builder kmsMasterKeyId data))
-    (when-let [data (lookup-entry config id :maximum-message-size)]
-      (. builder maximumMessageSize data))
-    (when-let [data (lookup-entry config id :message-retention-period)]
-      (. builder messageRetentionPeriod data))
-    (when-let [data (lookup-entry config id :queue-name)]
-      (. builder queueName data))
-    (when-let [data (lookup-entry config id :receive-message-wait-time-seconds)]
-      (. builder receiveMessageWaitTimeSeconds data))
-    (when-let [data (lookup-entry config id :redrive-allow-policy)]
-      (. builder redriveAllowPolicy data))
-    (when-let [data (lookup-entry config id :redrive-policy)]
-      (. builder redrivePolicy data))
-    (when-let [data (lookup-entry config id :sqs-managed-sse-enabled)]
-      (. builder sqsManagedSseEnabled data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :visibility-timeout)]
-      (. builder visibilityTimeout data))
-    (.build builder)))
+| `visibilityTimeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:visibility-timeout` |
+"
+  [^CfnQueue$Builder builder id config]
+  (when-let [data (lookup-entry config id :content-based-deduplication)]
+    (. builder contentBasedDeduplication data))
+  (when-let [data (lookup-entry config id :deduplication-scope)]
+    (. builder deduplicationScope data))
+  (when-let [data (lookup-entry config id :delay-seconds)]
+    (. builder delaySeconds data))
+  (when-let [data (lookup-entry config id :fifo-queue)]
+    (. builder fifoQueue data))
+  (when-let [data (lookup-entry config id :fifo-throughput-limit)]
+    (. builder fifoThroughputLimit data))
+  (when-let [data (lookup-entry config id :kms-data-key-reuse-period-seconds)]
+    (. builder kmsDataKeyReusePeriodSeconds data))
+  (when-let [data (lookup-entry config id :kms-master-key-id)]
+    (. builder kmsMasterKeyId data))
+  (when-let [data (lookup-entry config id :maximum-message-size)]
+    (. builder maximumMessageSize data))
+  (when-let [data (lookup-entry config id :message-retention-period)]
+    (. builder messageRetentionPeriod data))
+  (when-let [data (lookup-entry config id :queue-name)]
+    (. builder queueName data))
+  (when-let [data (lookup-entry config id :receive-message-wait-time-seconds)]
+    (. builder receiveMessageWaitTimeSeconds data))
+  (when-let [data (lookup-entry config id :redrive-allow-policy)]
+    (. builder redriveAllowPolicy data))
+  (when-let [data (lookup-entry config id :redrive-policy)]
+    (. builder redrivePolicy data))
+  (when-let [data (lookup-entry config id :sqs-managed-sse-enabled)]
+    (. builder sqsManagedSseEnabled data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :visibility-timeout)]
+    (. builder visibilityTimeout data))
+  (.build builder))
 
 
-(defn cfn-queue-inline-policy-builder
-  "The cfn-queue-inline-policy-builder function buildes out new instances of 
-CfnQueueInlinePolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-queue-inline-policy-builder
+  "The build-cfn-queue-inline-policy-builder function updates a CfnQueueInlinePolicy$Builder instance using the provided configuration.
+  The function takes the CfnQueueInlinePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
-| `queue` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue` |"
-  [stack id config]
-  (let [builder (CfnQueueInlinePolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :policy-document)]
-      (. builder policyDocument data))
-    (when-let [data (lookup-entry config id :queue)]
-      (. builder queue data))
-    (.build builder)))
-
-
-(defn cfn-queue-inline-policy-props-builder
-  "The cfn-queue-inline-policy-props-builder function buildes out new instances of 
-CfnQueueInlinePolicyProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
-| `queue` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue` |"
-  [stack id config]
-  (let [builder (CfnQueueInlinePolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :policy-document)]
-      (. builder policyDocument data))
-    (when-let [data (lookup-entry config id :queue)]
-      (. builder queue data))
-    (.build builder)))
+| `queue` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue` |
+"
+  [^CfnQueueInlinePolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :policy-document)]
+    (. builder policyDocument data))
+  (when-let [data (lookup-entry config id :queue)]
+    (. builder queue data))
+  (.build builder))
 
 
-(defn cfn-queue-policy-builder
-  "The cfn-queue-policy-builder function buildes out new instances of 
-CfnQueuePolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-queue-inline-policy-props-builder
+  "The build-cfn-queue-inline-policy-props-builder function updates a CfnQueueInlinePolicyProps$Builder instance using the provided configuration.
+  The function takes the CfnQueueInlinePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
-| `queues` | java.util.List | [[cdk.support/lookup-entry]] | `:queues` |"
-  [stack id config]
-  (let [builder (CfnQueuePolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :policy-document)]
-      (. builder policyDocument data))
-    (when-let [data (lookup-entry config id :queues)]
-      (. builder queues data))
-    (.build builder)))
-
-
-(defn cfn-queue-policy-props-builder
-  "The cfn-queue-policy-props-builder function buildes out new instances of 
-CfnQueuePolicyProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
-| `queues` | java.util.List | [[cdk.support/lookup-entry]] | `:queues` |"
-  [stack id config]
-  (let [builder (CfnQueuePolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :policy-document)]
-      (. builder policyDocument data))
-    (when-let [data (lookup-entry config id :queues)]
-      (. builder queues data))
-    (.build builder)))
+| `queue` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue` |
+"
+  [^CfnQueueInlinePolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :policy-document)]
+    (. builder policyDocument data))
+  (when-let [data (lookup-entry config id :queue)]
+    (. builder queue data))
+  (.build builder))
 
 
-(defn cfn-queue-props-builder
-  "The cfn-queue-props-builder function buildes out new instances of 
-CfnQueueProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-queue-policy-builder
+  "The build-cfn-queue-policy-builder function updates a CfnQueuePolicy$Builder instance using the provided configuration.
+  The function takes the CfnQueuePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
+| `queues` | java.util.List | [[cdk.support/lookup-entry]] | `:queues` |
+"
+  [^CfnQueuePolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :policy-document)]
+    (. builder policyDocument data))
+  (when-let [data (lookup-entry config id :queues)]
+    (. builder queues data))
+  (.build builder))
+
+
+(defn build-cfn-queue-policy-props-builder
+  "The build-cfn-queue-policy-props-builder function updates a CfnQueuePolicyProps$Builder instance using the provided configuration.
+  The function takes the CfnQueuePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
+| `queues` | java.util.List | [[cdk.support/lookup-entry]] | `:queues` |
+"
+  [^CfnQueuePolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :policy-document)]
+    (. builder policyDocument data))
+  (when-let [data (lookup-entry config id :queues)]
+    (. builder queues data))
+  (.build builder))
+
+
+(defn build-cfn-queue-props-builder
+  "The build-cfn-queue-props-builder function updates a CfnQueueProps$Builder instance using the provided configuration.
+  The function takes the CfnQueueProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -251,64 +269,70 @@ CfnQueueProps$Builder using the provided configuration.  Each field is set as fo
 | `redrivePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:redrive-policy` |
 | `sqsManagedSseEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:sqs-managed-sse-enabled` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `visibilityTimeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:visibility-timeout` |"
-  [stack id config]
-  (let [builder (CfnQueueProps$Builder.)]
-    (when-let [data (lookup-entry config id :content-based-deduplication)]
-      (. builder contentBasedDeduplication data))
-    (when-let [data (lookup-entry config id :deduplication-scope)]
-      (. builder deduplicationScope data))
-    (when-let [data (lookup-entry config id :delay-seconds)]
-      (. builder delaySeconds data))
-    (when-let [data (lookup-entry config id :fifo-queue)]
-      (. builder fifoQueue data))
-    (when-let [data (lookup-entry config id :fifo-throughput-limit)]
-      (. builder fifoThroughputLimit data))
-    (when-let [data (lookup-entry config id :kms-data-key-reuse-period-seconds)]
-      (. builder kmsDataKeyReusePeriodSeconds data))
-    (when-let [data (lookup-entry config id :kms-master-key-id)]
-      (. builder kmsMasterKeyId data))
-    (when-let [data (lookup-entry config id :maximum-message-size)]
-      (. builder maximumMessageSize data))
-    (when-let [data (lookup-entry config id :message-retention-period)]
-      (. builder messageRetentionPeriod data))
-    (when-let [data (lookup-entry config id :queue-name)]
-      (. builder queueName data))
-    (when-let [data (lookup-entry config id :receive-message-wait-time-seconds)]
-      (. builder receiveMessageWaitTimeSeconds data))
-    (when-let [data (lookup-entry config id :redrive-allow-policy)]
-      (. builder redriveAllowPolicy data))
-    (when-let [data (lookup-entry config id :redrive-policy)]
-      (. builder redrivePolicy data))
-    (when-let [data (lookup-entry config id :sqs-managed-sse-enabled)]
-      (. builder sqsManagedSseEnabled data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :visibility-timeout)]
-      (. builder visibilityTimeout data))
-    (.build builder)))
+| `visibilityTimeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:visibility-timeout` |
+"
+  [^CfnQueueProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :content-based-deduplication)]
+    (. builder contentBasedDeduplication data))
+  (when-let [data (lookup-entry config id :deduplication-scope)]
+    (. builder deduplicationScope data))
+  (when-let [data (lookup-entry config id :delay-seconds)]
+    (. builder delaySeconds data))
+  (when-let [data (lookup-entry config id :fifo-queue)]
+    (. builder fifoQueue data))
+  (when-let [data (lookup-entry config id :fifo-throughput-limit)]
+    (. builder fifoThroughputLimit data))
+  (when-let [data (lookup-entry config id :kms-data-key-reuse-period-seconds)]
+    (. builder kmsDataKeyReusePeriodSeconds data))
+  (when-let [data (lookup-entry config id :kms-master-key-id)]
+    (. builder kmsMasterKeyId data))
+  (when-let [data (lookup-entry config id :maximum-message-size)]
+    (. builder maximumMessageSize data))
+  (when-let [data (lookup-entry config id :message-retention-period)]
+    (. builder messageRetentionPeriod data))
+  (when-let [data (lookup-entry config id :queue-name)]
+    (. builder queueName data))
+  (when-let [data (lookup-entry config id :receive-message-wait-time-seconds)]
+    (. builder receiveMessageWaitTimeSeconds data))
+  (when-let [data (lookup-entry config id :redrive-allow-policy)]
+    (. builder redriveAllowPolicy data))
+  (when-let [data (lookup-entry config id :redrive-policy)]
+    (. builder redrivePolicy data))
+  (when-let [data (lookup-entry config id :sqs-managed-sse-enabled)]
+    (. builder sqsManagedSseEnabled data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :visibility-timeout)]
+    (. builder visibilityTimeout data))
+  (.build builder))
 
 
-(defn dead-letter-queue-builder
-  "The dead-letter-queue-builder function buildes out new instances of 
-DeadLetterQueue$Builder using the provided configuration.  Each field is set as follows:
+(defn build-dead-letter-queue-builder
+  "The build-dead-letter-queue-builder function updates a DeadLetterQueue$Builder instance using the provided configuration.
+  The function takes the DeadLetterQueue$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `maxReceiveCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-receive-count` |
-| `queue` | software.amazon.awscdk.services.sqs.IQueue | [[cdk.support/lookup-entry]] | `:queue` |"
-  [stack id config]
-  (let [builder (DeadLetterQueue$Builder.)]
-    (when-let [data (lookup-entry config id :max-receive-count)]
-      (. builder maxReceiveCount data))
-    (when-let [data (lookup-entry config id :queue)]
-      (. builder queue data))
-    (.build builder)))
+| `queue` | software.amazon.awscdk.services.sqs.IQueue | [[cdk.support/lookup-entry]] | `:queue` |
+"
+  [^DeadLetterQueue$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-receive-count)]
+    (. builder maxReceiveCount data))
+  (when-let [data (lookup-entry config id :queue)]
+    (. builder queue data))
+  (.build builder))
 
 
-(defn queue-attributes-builder
-  "The queue-attributes-builder function buildes out new instances of 
-QueueAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-queue-attributes-builder
+  "The build-queue-attributes-builder function updates a QueueAttributes$Builder instance using the provided configuration.
+  The function takes the QueueAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -316,115 +340,28 @@ QueueAttributes$Builder using the provided configuration.  Each field is set as 
 | `keyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-arn` |
 | `queueArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue-arn` |
 | `queueName` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue-name` |
-| `queueUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue-url` |"
-  [stack id config]
-  (let [builder (QueueAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :fifo)]
-      (. builder fifo data))
-    (when-let [data (lookup-entry config id :key-arn)]
-      (. builder keyArn data))
-    (when-let [data (lookup-entry config id :queue-arn)]
-      (. builder queueArn data))
-    (when-let [data (lookup-entry config id :queue-name)]
-      (. builder queueName data))
-    (when-let [data (lookup-entry config id :queue-url)]
-      (. builder queueUrl data))
-    (.build builder)))
+| `queueUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue-url` |
+"
+  [^QueueAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :fifo)]
+    (. builder fifo data))
+  (when-let [data (lookup-entry config id :key-arn)]
+    (. builder keyArn data))
+  (when-let [data (lookup-entry config id :queue-arn)]
+    (. builder queueArn data))
+  (when-let [data (lookup-entry config id :queue-name)]
+    (. builder queueName data))
+  (when-let [data (lookup-entry config id :queue-url)]
+    (. builder queueUrl data))
+  (.build builder))
 
 
-(defn queue-builder
-  "The queue-builder function buildes out new instances of 
-Queue$Builder using the provided configuration.  Each field is set as follows:
+(defn build-queue-builder
+  "The build-queue-builder function updates a Queue$Builder instance using the provided configuration.
+  The function takes the Queue$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `contentBasedDeduplication` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:content-based-deduplication` |
-| `dataKeyReuse` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:data-key-reuse` |
-| `deadLetterQueue` | software.amazon.awscdk.services.sqs.DeadLetterQueue | [[cdk.support/lookup-entry]] | `:dead-letter-queue` |
-| `deduplicationScope` | software.amazon.awscdk.services.sqs.DeduplicationScope | [[cdk.api.services.sqs/deduplication-scope]] | `:deduplication-scope` |
-| `deliveryDelay` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:delivery-delay` |
-| `encryption` | software.amazon.awscdk.services.sqs.QueueEncryption | [[cdk.api.services.sqs/queue-encryption]] | `:encryption` |
-| `encryptionMasterKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:encryption-master-key` |
-| `enforceSsl` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enforce-ssl` |
-| `fifo` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:fifo` |
-| `fifoThroughputLimit` | software.amazon.awscdk.services.sqs.FifoThroughputLimit | [[cdk.api.services.sqs/fifo-throughput-limit]] | `:fifo-throughput-limit` |
-| `maxMessageSizeBytes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-message-size-bytes` |
-| `queueName` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue-name` |
-| `receiveMessageWaitTime` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:receive-message-wait-time` |
-| `redriveAllowPolicy` | software.amazon.awscdk.services.sqs.RedriveAllowPolicy | [[cdk.support/lookup-entry]] | `:redrive-allow-policy` |
-| `removalPolicy` | software.amazon.awscdk.RemovalPolicy | [[cdk.api/removal-policy]] | `:removal-policy` |
-| `retentionPeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:retention-period` |
-| `visibilityTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:visibility-timeout` |"
-  [stack id config]
-  (let [builder (Queue$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :content-based-deduplication)]
-      (. builder contentBasedDeduplication data))
-    (when-let [data (lookup-entry config id :data-key-reuse)]
-      (. builder dataKeyReuse data))
-    (when-let [data (lookup-entry config id :dead-letter-queue)]
-      (. builder deadLetterQueue data))
-    (when-let [data (deduplication-scope config id :deduplication-scope)]
-      (. builder deduplicationScope data))
-    (when-let [data (lookup-entry config id :delivery-delay)]
-      (. builder deliveryDelay data))
-    (when-let [data (queue-encryption config id :encryption)]
-      (. builder encryption data))
-    (when-let [data (lookup-entry config id :encryption-master-key)]
-      (. builder encryptionMasterKey data))
-    (when-let [data (lookup-entry config id :enforce-ssl)]
-      (. builder enforceSsl data))
-    (when-let [data (lookup-entry config id :fifo)]
-      (. builder fifo data))
-    (when-let [data (fifo-throughput-limit config id :fifo-throughput-limit)]
-      (. builder fifoThroughputLimit data))
-    (when-let [data (lookup-entry config id :max-message-size-bytes)]
-      (. builder maxMessageSizeBytes data))
-    (when-let [data (lookup-entry config id :queue-name)]
-      (. builder queueName data))
-    (when-let [data (lookup-entry config id :receive-message-wait-time)]
-      (. builder receiveMessageWaitTime data))
-    (when-let [data (lookup-entry config id :redrive-allow-policy)]
-      (. builder redriveAllowPolicy data))
-    (when-let [data (removal-policy config id :removal-policy)]
-      (. builder removalPolicy data))
-    (when-let [data (lookup-entry config id :retention-period)]
-      (. builder retentionPeriod data))
-    (when-let [data (lookup-entry config id :visibility-timeout)]
-      (. builder visibilityTimeout data))
-    (.build builder)))
-
-
-(defn queue-policy-builder
-  "The queue-policy-builder function buildes out new instances of 
-QueuePolicy$Builder using the provided configuration.  Each field is set as follows:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `queues` | java.util.List | [[cdk.support/lookup-entry]] | `:queues` |"
-  [stack id config]
-  (let [builder (QueuePolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :queues)]
-      (. builder queues data))
-    (.build builder)))
-
-
-(defn queue-policy-props-builder
-  "The queue-policy-props-builder function buildes out new instances of 
-QueuePolicyProps$Builder using the provided configuration.  Each field is set as follows:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `queues` | java.util.List | [[cdk.support/lookup-entry]] | `:queues` |"
-  [stack id config]
-  (let [builder (QueuePolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :queues)]
-      (. builder queues data))
-    (.build builder)))
-
-
-(defn queue-props-builder
-  "The queue-props-builder function buildes out new instances of 
-QueueProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -444,58 +381,160 @@ QueueProps$Builder using the provided configuration.  Each field is set as follo
 | `redriveAllowPolicy` | software.amazon.awscdk.services.sqs.RedriveAllowPolicy | [[cdk.support/lookup-entry]] | `:redrive-allow-policy` |
 | `removalPolicy` | software.amazon.awscdk.RemovalPolicy | [[cdk.api/removal-policy]] | `:removal-policy` |
 | `retentionPeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:retention-period` |
-| `visibilityTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:visibility-timeout` |"
-  [stack id config]
-  (let [builder (QueueProps$Builder.)]
-    (when-let [data (lookup-entry config id :content-based-deduplication)]
-      (. builder contentBasedDeduplication data))
-    (when-let [data (lookup-entry config id :data-key-reuse)]
-      (. builder dataKeyReuse data))
-    (when-let [data (lookup-entry config id :dead-letter-queue)]
-      (. builder deadLetterQueue data))
-    (when-let [data (deduplication-scope config id :deduplication-scope)]
-      (. builder deduplicationScope data))
-    (when-let [data (lookup-entry config id :delivery-delay)]
-      (. builder deliveryDelay data))
-    (when-let [data (queue-encryption config id :encryption)]
-      (. builder encryption data))
-    (when-let [data (lookup-entry config id :encryption-master-key)]
-      (. builder encryptionMasterKey data))
-    (when-let [data (lookup-entry config id :enforce-ssl)]
-      (. builder enforceSsl data))
-    (when-let [data (lookup-entry config id :fifo)]
-      (. builder fifo data))
-    (when-let [data (fifo-throughput-limit config id :fifo-throughput-limit)]
-      (. builder fifoThroughputLimit data))
-    (when-let [data (lookup-entry config id :max-message-size-bytes)]
-      (. builder maxMessageSizeBytes data))
-    (when-let [data (lookup-entry config id :queue-name)]
-      (. builder queueName data))
-    (when-let [data (lookup-entry config id :receive-message-wait-time)]
-      (. builder receiveMessageWaitTime data))
-    (when-let [data (lookup-entry config id :redrive-allow-policy)]
-      (. builder redriveAllowPolicy data))
-    (when-let [data (removal-policy config id :removal-policy)]
-      (. builder removalPolicy data))
-    (when-let [data (lookup-entry config id :retention-period)]
-      (. builder retentionPeriod data))
-    (when-let [data (lookup-entry config id :visibility-timeout)]
-      (. builder visibilityTimeout data))
-    (.build builder)))
+| `visibilityTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:visibility-timeout` |
+"
+  [^Queue$Builder builder id config]
+  (when-let [data (lookup-entry config id :content-based-deduplication)]
+    (. builder contentBasedDeduplication data))
+  (when-let [data (lookup-entry config id :data-key-reuse)]
+    (. builder dataKeyReuse data))
+  (when-let [data (lookup-entry config id :dead-letter-queue)]
+    (. builder deadLetterQueue data))
+  (when-let [data (deduplication-scope config id :deduplication-scope)]
+    (. builder deduplicationScope data))
+  (when-let [data (lookup-entry config id :delivery-delay)]
+    (. builder deliveryDelay data))
+  (when-let [data (queue-encryption config id :encryption)]
+    (. builder encryption data))
+  (when-let [data (lookup-entry config id :encryption-master-key)]
+    (. builder encryptionMasterKey data))
+  (when-let [data (lookup-entry config id :enforce-ssl)]
+    (. builder enforceSsl data))
+  (when-let [data (lookup-entry config id :fifo)]
+    (. builder fifo data))
+  (when-let [data (fifo-throughput-limit config id :fifo-throughput-limit)]
+    (. builder fifoThroughputLimit data))
+  (when-let [data (lookup-entry config id :max-message-size-bytes)]
+    (. builder maxMessageSizeBytes data))
+  (when-let [data (lookup-entry config id :queue-name)]
+    (. builder queueName data))
+  (when-let [data (lookup-entry config id :receive-message-wait-time)]
+    (. builder receiveMessageWaitTime data))
+  (when-let [data (lookup-entry config id :redrive-allow-policy)]
+    (. builder redriveAllowPolicy data))
+  (when-let [data (removal-policy config id :removal-policy)]
+    (. builder removalPolicy data))
+  (when-let [data (lookup-entry config id :retention-period)]
+    (. builder retentionPeriod data))
+  (when-let [data (lookup-entry config id :visibility-timeout)]
+    (. builder visibilityTimeout data))
+  (.build builder))
 
 
-(defn redrive-allow-policy-builder
-  "The redrive-allow-policy-builder function buildes out new instances of 
-RedriveAllowPolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-queue-policy-builder
+  "The build-queue-policy-builder function updates a QueuePolicy$Builder instance using the provided configuration.
+  The function takes the QueuePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `queues` | java.util.List | [[cdk.support/lookup-entry]] | `:queues` |
+"
+  [^QueuePolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :queues)]
+    (. builder queues data))
+  (.build builder))
+
+
+(defn build-queue-policy-props-builder
+  "The build-queue-policy-props-builder function updates a QueuePolicyProps$Builder instance using the provided configuration.
+  The function takes the QueuePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `queues` | java.util.List | [[cdk.support/lookup-entry]] | `:queues` |
+"
+  [^QueuePolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :queues)]
+    (. builder queues data))
+  (.build builder))
+
+
+(defn build-queue-props-builder
+  "The build-queue-props-builder function updates a QueueProps$Builder instance using the provided configuration.
+  The function takes the QueueProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `contentBasedDeduplication` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:content-based-deduplication` |
+| `dataKeyReuse` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:data-key-reuse` |
+| `deadLetterQueue` | software.amazon.awscdk.services.sqs.DeadLetterQueue | [[cdk.support/lookup-entry]] | `:dead-letter-queue` |
+| `deduplicationScope` | software.amazon.awscdk.services.sqs.DeduplicationScope | [[cdk.api.services.sqs/deduplication-scope]] | `:deduplication-scope` |
+| `deliveryDelay` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:delivery-delay` |
+| `encryption` | software.amazon.awscdk.services.sqs.QueueEncryption | [[cdk.api.services.sqs/queue-encryption]] | `:encryption` |
+| `encryptionMasterKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:encryption-master-key` |
+| `enforceSsl` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enforce-ssl` |
+| `fifo` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:fifo` |
+| `fifoThroughputLimit` | software.amazon.awscdk.services.sqs.FifoThroughputLimit | [[cdk.api.services.sqs/fifo-throughput-limit]] | `:fifo-throughput-limit` |
+| `maxMessageSizeBytes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-message-size-bytes` |
+| `queueName` | java.lang.String | [[cdk.support/lookup-entry]] | `:queue-name` |
+| `receiveMessageWaitTime` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:receive-message-wait-time` |
+| `redriveAllowPolicy` | software.amazon.awscdk.services.sqs.RedriveAllowPolicy | [[cdk.support/lookup-entry]] | `:redrive-allow-policy` |
+| `removalPolicy` | software.amazon.awscdk.RemovalPolicy | [[cdk.api/removal-policy]] | `:removal-policy` |
+| `retentionPeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:retention-period` |
+| `visibilityTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:visibility-timeout` |
+"
+  [^QueueProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :content-based-deduplication)]
+    (. builder contentBasedDeduplication data))
+  (when-let [data (lookup-entry config id :data-key-reuse)]
+    (. builder dataKeyReuse data))
+  (when-let [data (lookup-entry config id :dead-letter-queue)]
+    (. builder deadLetterQueue data))
+  (when-let [data (deduplication-scope config id :deduplication-scope)]
+    (. builder deduplicationScope data))
+  (when-let [data (lookup-entry config id :delivery-delay)]
+    (. builder deliveryDelay data))
+  (when-let [data (queue-encryption config id :encryption)]
+    (. builder encryption data))
+  (when-let [data (lookup-entry config id :encryption-master-key)]
+    (. builder encryptionMasterKey data))
+  (when-let [data (lookup-entry config id :enforce-ssl)]
+    (. builder enforceSsl data))
+  (when-let [data (lookup-entry config id :fifo)]
+    (. builder fifo data))
+  (when-let [data (fifo-throughput-limit config id :fifo-throughput-limit)]
+    (. builder fifoThroughputLimit data))
+  (when-let [data (lookup-entry config id :max-message-size-bytes)]
+    (. builder maxMessageSizeBytes data))
+  (when-let [data (lookup-entry config id :queue-name)]
+    (. builder queueName data))
+  (when-let [data (lookup-entry config id :receive-message-wait-time)]
+    (. builder receiveMessageWaitTime data))
+  (when-let [data (lookup-entry config id :redrive-allow-policy)]
+    (. builder redriveAllowPolicy data))
+  (when-let [data (removal-policy config id :removal-policy)]
+    (. builder removalPolicy data))
+  (when-let [data (lookup-entry config id :retention-period)]
+    (. builder retentionPeriod data))
+  (when-let [data (lookup-entry config id :visibility-timeout)]
+    (. builder visibilityTimeout data))
+  (.build builder))
+
+
+(defn build-redrive-allow-policy-builder
+  "The build-redrive-allow-policy-builder function updates a RedriveAllowPolicy$Builder instance using the provided configuration.
+  The function takes the RedriveAllowPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `redrivePermission` | software.amazon.awscdk.services.sqs.RedrivePermission | [[cdk.api.services.sqs/redrive-permission]] | `:redrive-permission` |
-| `sourceQueues` | java.util.List | [[cdk.support/lookup-entry]] | `:source-queues` |"
-  [stack id config]
-  (let [builder (RedriveAllowPolicy$Builder.)]
-    (when-let [data (redrive-permission config id :redrive-permission)]
-      (. builder redrivePermission data))
-    (when-let [data (lookup-entry config id :source-queues)]
-      (. builder sourceQueues data))
-    (.build builder)))
+| `sourceQueues` | java.util.List | [[cdk.support/lookup-entry]] | `:source-queues` |
+"
+  [^RedriveAllowPolicy$Builder builder id config]
+  (when-let [data (redrive-permission config id :redrive-permission)]
+    (. builder redrivePermission data))
+  (when-let [data (lookup-entry config id :source-queues)]
+    (. builder sourceQueues data))
+  (.build builder))

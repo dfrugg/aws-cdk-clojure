@@ -10,9 +10,12 @@
                                                          CfnTrainingDatasetProps$Builder]))
 
 
-(defn cfn-training-dataset-builder
-  "The cfn-training-dataset-builder function buildes out new instances of 
-CfnTrainingDataset$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-training-dataset-builder
+  "The build-cfn-training-dataset-builder function updates a CfnTrainingDataset$Builder instance using the provided configuration.
+  The function takes the CfnTrainingDataset$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -20,110 +23,128 @@ CfnTrainingDataset$Builder using the provided configuration.  Each field is set 
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `trainingData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:training-data` |"
-  [stack id config]
-  (let [builder (CfnTrainingDataset$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :training-data)]
-      (. builder trainingData data))
-    (.build builder)))
+| `trainingData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:training-data` |
+"
+  [^CfnTrainingDataset$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :training-data)]
+    (. builder trainingData data))
+  (.build builder))
 
 
-(defn cfn-training-dataset-column-schema-property-builder
-  "The cfn-training-dataset-column-schema-property-builder function buildes out new instances of 
-CfnTrainingDataset$ColumnSchemaProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-training-dataset-column-schema-property-builder
+  "The build-cfn-training-dataset-column-schema-property-builder function updates a CfnTrainingDataset$ColumnSchemaProperty$Builder instance using the provided configuration.
+  The function takes the CfnTrainingDataset$ColumnSchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `columnName` | java.lang.String | [[cdk.support/lookup-entry]] | `:column-name` |
-| `columnTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:column-types` |"
-  [stack id config]
-  (let [builder (CfnTrainingDataset$ColumnSchemaProperty$Builder.)]
-    (when-let [data (lookup-entry config id :column-name)]
-      (. builder columnName data))
-    (when-let [data (lookup-entry config id :column-types)]
-      (. builder columnTypes data))
-    (.build builder)))
+| `columnTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:column-types` |
+"
+  [^CfnTrainingDataset$ColumnSchemaProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :column-name)]
+    (. builder columnName data))
+  (when-let [data (lookup-entry config id :column-types)]
+    (. builder columnTypes data))
+  (.build builder))
 
 
-(defn cfn-training-dataset-data-source-property-builder
-  "The cfn-training-dataset-data-source-property-builder function buildes out new instances of 
-CfnTrainingDataset$DataSourceProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-training-dataset-data-source-property-builder
+  "The build-cfn-training-dataset-data-source-property-builder function updates a CfnTrainingDataset$DataSourceProperty$Builder instance using the provided configuration.
+  The function takes the CfnTrainingDataset$DataSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `glueDataSource` | software.amazon.awscdk.services.cleanroomsml.CfnTrainingDataset$GlueDataSourceProperty | [[cdk.support/lookup-entry]] | `:glue-data-source` |"
-  [stack id config]
-  (let [builder (CfnTrainingDataset$DataSourceProperty$Builder.)]
-    (when-let [data (lookup-entry config id :glue-data-source)]
-      (. builder glueDataSource data))
-    (.build builder)))
+| `glueDataSource` | software.amazon.awscdk.services.cleanroomsml.CfnTrainingDataset$GlueDataSourceProperty | [[cdk.support/lookup-entry]] | `:glue-data-source` |
+"
+  [^CfnTrainingDataset$DataSourceProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :glue-data-source)]
+    (. builder glueDataSource data))
+  (.build builder))
 
 
-(defn cfn-training-dataset-dataset-input-config-property-builder
-  "The cfn-training-dataset-dataset-input-config-property-builder function buildes out new instances of 
-CfnTrainingDataset$DatasetInputConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-training-dataset-dataset-input-config-property-builder
+  "The build-cfn-training-dataset-dataset-input-config-property-builder function updates a CfnTrainingDataset$DatasetInputConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnTrainingDataset$DatasetInputConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:data-source` |
-| `schema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schema` |"
-  [stack id config]
-  (let [builder (CfnTrainingDataset$DatasetInputConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :data-source)]
-      (. builder dataSource data))
-    (when-let [data (lookup-entry config id :schema)]
-      (. builder schema data))
-    (.build builder)))
+| `schema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schema` |
+"
+  [^CfnTrainingDataset$DatasetInputConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :data-source)]
+    (. builder dataSource data))
+  (when-let [data (lookup-entry config id :schema)]
+    (. builder schema data))
+  (.build builder))
 
 
-(defn cfn-training-dataset-dataset-property-builder
-  "The cfn-training-dataset-dataset-property-builder function buildes out new instances of 
-CfnTrainingDataset$DatasetProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-training-dataset-dataset-property-builder
+  "The build-cfn-training-dataset-dataset-property-builder function updates a CfnTrainingDataset$DatasetProperty$Builder instance using the provided configuration.
+  The function takes the CfnTrainingDataset$DatasetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `inputConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-config` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnTrainingDataset$DatasetProperty$Builder.)]
-    (when-let [data (lookup-entry config id :input-config)]
-      (. builder inputConfig data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnTrainingDataset$DatasetProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :input-config)]
+    (. builder inputConfig data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-training-dataset-glue-data-source-property-builder
-  "The cfn-training-dataset-glue-data-source-property-builder function buildes out new instances of 
-CfnTrainingDataset$GlueDataSourceProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-training-dataset-glue-data-source-property-builder
+  "The build-cfn-training-dataset-glue-data-source-property-builder function updates a CfnTrainingDataset$GlueDataSourceProperty$Builder instance using the provided configuration.
+  The function takes the CfnTrainingDataset$GlueDataSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `catalogId` | java.lang.String | [[cdk.support/lookup-entry]] | `:catalog-id` |
 | `databaseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-name` |
-| `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |"
-  [stack id config]
-  (let [builder (CfnTrainingDataset$GlueDataSourceProperty$Builder.)]
-    (when-let [data (lookup-entry config id :catalog-id)]
-      (. builder catalogId data))
-    (when-let [data (lookup-entry config id :database-name)]
-      (. builder databaseName data))
-    (when-let [data (lookup-entry config id :table-name)]
-      (. builder tableName data))
-    (.build builder)))
+| `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
+"
+  [^CfnTrainingDataset$GlueDataSourceProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :catalog-id)]
+    (. builder catalogId data))
+  (when-let [data (lookup-entry config id :database-name)]
+    (. builder databaseName data))
+  (when-let [data (lookup-entry config id :table-name)]
+    (. builder tableName data))
+  (.build builder))
 
 
-(defn cfn-training-dataset-props-builder
-  "The cfn-training-dataset-props-builder function buildes out new instances of 
-CfnTrainingDatasetProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-training-dataset-props-builder
+  "The build-cfn-training-dataset-props-builder function updates a CfnTrainingDatasetProps$Builder instance using the provided configuration.
+  The function takes the CfnTrainingDatasetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -131,17 +152,17 @@ CfnTrainingDatasetProps$Builder using the provided configuration.  Each field is
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `trainingData` | java.util.List | [[cdk.support/lookup-entry]] | `:training-data` |"
-  [stack id config]
-  (let [builder (CfnTrainingDatasetProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :training-data)]
-      (. builder trainingData data))
-    (.build builder)))
+| `trainingData` | java.util.List | [[cdk.support/lookup-entry]] | `:training-data` |
+"
+  [^CfnTrainingDatasetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :training-data)]
+    (. builder trainingData data))
+  (.build builder))

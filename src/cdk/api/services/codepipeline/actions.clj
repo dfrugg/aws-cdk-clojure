@@ -190,9 +190,12 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :enabled data) StackSetOrganizationsAutoDeployment/ENABLED)))
 
 
-(defn alexa-skill-deploy-action-builder
-  "The alexa-skill-deploy-action-builder function buildes out new instances of 
-AlexaSkillDeployAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-alexa-skill-deploy-action-builder
+  "The build-alexa-skill-deploy-action-builder function updates a AlexaSkillDeployAction$Builder instance using the provided configuration.
+  The function takes the AlexaSkillDeployAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -204,33 +207,36 @@ AlexaSkillDeployAction$Builder using the provided configuration.  Each field is 
 | `refreshToken` | software.amazon.awscdk.SecretValue | [[cdk.support/lookup-entry]] | `:refresh-token` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `skillId` | java.lang.String | [[cdk.support/lookup-entry]] | `:skill-id` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (AlexaSkillDeployAction$Builder/create)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :client-id)]
-      (. builder clientId data))
-    (when-let [data (lookup-entry config id :client-secret)]
-      (. builder clientSecret data))
-    (when-let [data (lookup-entry config id :input)]
-      (. builder input data))
-    (when-let [data (lookup-entry config id :parameter-overrides-artifact)]
-      (. builder parameterOverridesArtifact data))
-    (when-let [data (lookup-entry config id :refresh-token)]
-      (. builder refreshToken data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :skill-id)]
-      (. builder skillId data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^AlexaSkillDeployAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :client-id)]
+    (. builder clientId data))
+  (when-let [data (lookup-entry config id :client-secret)]
+    (. builder clientSecret data))
+  (when-let [data (lookup-entry config id :input)]
+    (. builder input data))
+  (when-let [data (lookup-entry config id :parameter-overrides-artifact)]
+    (. builder parameterOverridesArtifact data))
+  (when-let [data (lookup-entry config id :refresh-token)]
+    (. builder refreshToken data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :skill-id)]
+    (. builder skillId data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn alexa-skill-deploy-action-props-builder
-  "The alexa-skill-deploy-action-props-builder function buildes out new instances of 
-AlexaSkillDeployActionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-alexa-skill-deploy-action-props-builder
+  "The build-alexa-skill-deploy-action-props-builder function updates a AlexaSkillDeployActionProps$Builder instance using the provided configuration.
+  The function takes the AlexaSkillDeployActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -242,33 +248,36 @@ AlexaSkillDeployActionProps$Builder using the provided configuration.  Each fiel
 | `refreshToken` | software.amazon.awscdk.SecretValue | [[cdk.support/lookup-entry]] | `:refresh-token` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `skillId` | java.lang.String | [[cdk.support/lookup-entry]] | `:skill-id` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (AlexaSkillDeployActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :client-id)]
-      (. builder clientId data))
-    (when-let [data (lookup-entry config id :client-secret)]
-      (. builder clientSecret data))
-    (when-let [data (lookup-entry config id :input)]
-      (. builder input data))
-    (when-let [data (lookup-entry config id :parameter-overrides-artifact)]
-      (. builder parameterOverridesArtifact data))
-    (when-let [data (lookup-entry config id :refresh-token)]
-      (. builder refreshToken data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :skill-id)]
-      (. builder skillId data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^AlexaSkillDeployActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :client-id)]
+    (. builder clientId data))
+  (when-let [data (lookup-entry config id :client-secret)]
+    (. builder clientSecret data))
+  (when-let [data (lookup-entry config id :input)]
+    (. builder input data))
+  (when-let [data (lookup-entry config id :parameter-overrides-artifact)]
+    (. builder parameterOverridesArtifact data))
+  (when-let [data (lookup-entry config id :refresh-token)]
+    (. builder refreshToken data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :skill-id)]
+    (. builder skillId data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn cloud-formation-create-replace-change-set-action-builder
-  "The cloud-formation-create-replace-change-set-action-builder function buildes out new instances of 
-CloudFormationCreateReplaceChangeSetAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cloud-formation-create-replace-change-set-action-builder
+  "The build-cloud-formation-create-replace-change-set-action-builder function updates a CloudFormationCreateReplaceChangeSetAction$Builder instance using the provided configuration.
+  The function takes the CloudFormationCreateReplaceChangeSetAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -288,49 +297,52 @@ CloudFormationCreateReplaceChangeSetAction$Builder using the provided configurat
 | `stackName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-name` |
 | `templateConfiguration` | software.amazon.awscdk.services.codepipeline.ArtifactPath | [[cdk.support/lookup-entry]] | `:template-configuration` |
 | `templatePath` | software.amazon.awscdk.services.codepipeline.ArtifactPath | [[cdk.support/lookup-entry]] | `:template-path` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CloudFormationCreateReplaceChangeSetAction$Builder/create)]
-    (when-let [data (lookup-entry config id :account)]
-      (. builder account data))
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :admin-permissions)]
-      (. builder adminPermissions data))
-    (when-let [data (lookup-entry config id :cfn-capabilities)]
-      (. builder cfnCapabilities data))
-    (when-let [data (lookup-entry config id :change-set-name)]
-      (. builder changeSetName data))
-    (when-let [data (lookup-entry config id :deployment-role)]
-      (. builder deploymentRole data))
-    (when-let [data (lookup-entry config id :extra-inputs)]
-      (. builder extraInputs data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :output-file-name)]
-      (. builder outputFileName data))
-    (when-let [data (lookup-entry config id :parameter-overrides)]
-      (. builder parameterOverrides data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :stack-name)]
-      (. builder stackName data))
-    (when-let [data (lookup-entry config id :template-configuration)]
-      (. builder templateConfiguration data))
-    (when-let [data (lookup-entry config id :template-path)]
-      (. builder templatePath data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CloudFormationCreateReplaceChangeSetAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :account)]
+    (. builder account data))
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :admin-permissions)]
+    (. builder adminPermissions data))
+  (when-let [data (lookup-entry config id :cfn-capabilities)]
+    (. builder cfnCapabilities data))
+  (when-let [data (lookup-entry config id :change-set-name)]
+    (. builder changeSetName data))
+  (when-let [data (lookup-entry config id :deployment-role)]
+    (. builder deploymentRole data))
+  (when-let [data (lookup-entry config id :extra-inputs)]
+    (. builder extraInputs data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :output-file-name)]
+    (. builder outputFileName data))
+  (when-let [data (lookup-entry config id :parameter-overrides)]
+    (. builder parameterOverrides data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :stack-name)]
+    (. builder stackName data))
+  (when-let [data (lookup-entry config id :template-configuration)]
+    (. builder templateConfiguration data))
+  (when-let [data (lookup-entry config id :template-path)]
+    (. builder templatePath data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn cloud-formation-create-replace-change-set-action-props-builder
-  "The cloud-formation-create-replace-change-set-action-props-builder function buildes out new instances of 
-CloudFormationCreateReplaceChangeSetActionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cloud-formation-create-replace-change-set-action-props-builder
+  "The build-cloud-formation-create-replace-change-set-action-props-builder function updates a CloudFormationCreateReplaceChangeSetActionProps$Builder instance using the provided configuration.
+  The function takes the CloudFormationCreateReplaceChangeSetActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -350,49 +362,52 @@ CloudFormationCreateReplaceChangeSetActionProps$Builder using the provided confi
 | `stackName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-name` |
 | `templateConfiguration` | software.amazon.awscdk.services.codepipeline.ArtifactPath | [[cdk.support/lookup-entry]] | `:template-configuration` |
 | `templatePath` | software.amazon.awscdk.services.codepipeline.ArtifactPath | [[cdk.support/lookup-entry]] | `:template-path` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CloudFormationCreateReplaceChangeSetActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :account)]
-      (. builder account data))
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :admin-permissions)]
-      (. builder adminPermissions data))
-    (when-let [data (lookup-entry config id :cfn-capabilities)]
-      (. builder cfnCapabilities data))
-    (when-let [data (lookup-entry config id :change-set-name)]
-      (. builder changeSetName data))
-    (when-let [data (lookup-entry config id :deployment-role)]
-      (. builder deploymentRole data))
-    (when-let [data (lookup-entry config id :extra-inputs)]
-      (. builder extraInputs data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :output-file-name)]
-      (. builder outputFileName data))
-    (when-let [data (lookup-entry config id :parameter-overrides)]
-      (. builder parameterOverrides data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :stack-name)]
-      (. builder stackName data))
-    (when-let [data (lookup-entry config id :template-configuration)]
-      (. builder templateConfiguration data))
-    (when-let [data (lookup-entry config id :template-path)]
-      (. builder templatePath data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CloudFormationCreateReplaceChangeSetActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :account)]
+    (. builder account data))
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :admin-permissions)]
+    (. builder adminPermissions data))
+  (when-let [data (lookup-entry config id :cfn-capabilities)]
+    (. builder cfnCapabilities data))
+  (when-let [data (lookup-entry config id :change-set-name)]
+    (. builder changeSetName data))
+  (when-let [data (lookup-entry config id :deployment-role)]
+    (. builder deploymentRole data))
+  (when-let [data (lookup-entry config id :extra-inputs)]
+    (. builder extraInputs data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :output-file-name)]
+    (. builder outputFileName data))
+  (when-let [data (lookup-entry config id :parameter-overrides)]
+    (. builder parameterOverrides data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :stack-name)]
+    (. builder stackName data))
+  (when-let [data (lookup-entry config id :template-configuration)]
+    (. builder templateConfiguration data))
+  (when-let [data (lookup-entry config id :template-path)]
+    (. builder templatePath data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn cloud-formation-create-update-stack-action-builder
-  "The cloud-formation-create-update-stack-action-builder function buildes out new instances of 
-CloudFormationCreateUpdateStackAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cloud-formation-create-update-stack-action-builder
+  "The build-cloud-formation-create-update-stack-action-builder function updates a CloudFormationCreateUpdateStackAction$Builder instance using the provided configuration.
+  The function takes the CloudFormationCreateUpdateStackAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -412,49 +427,52 @@ CloudFormationCreateUpdateStackAction$Builder using the provided configuration. 
 | `stackName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-name` |
 | `templateConfiguration` | software.amazon.awscdk.services.codepipeline.ArtifactPath | [[cdk.support/lookup-entry]] | `:template-configuration` |
 | `templatePath` | software.amazon.awscdk.services.codepipeline.ArtifactPath | [[cdk.support/lookup-entry]] | `:template-path` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CloudFormationCreateUpdateStackAction$Builder/create)]
-    (when-let [data (lookup-entry config id :account)]
-      (. builder account data))
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :admin-permissions)]
-      (. builder adminPermissions data))
-    (when-let [data (lookup-entry config id :cfn-capabilities)]
-      (. builder cfnCapabilities data))
-    (when-let [data (lookup-entry config id :deployment-role)]
-      (. builder deploymentRole data))
-    (when-let [data (lookup-entry config id :extra-inputs)]
-      (. builder extraInputs data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :output-file-name)]
-      (. builder outputFileName data))
-    (when-let [data (lookup-entry config id :parameter-overrides)]
-      (. builder parameterOverrides data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :replace-on-failure)]
-      (. builder replaceOnFailure data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :stack-name)]
-      (. builder stackName data))
-    (when-let [data (lookup-entry config id :template-configuration)]
-      (. builder templateConfiguration data))
-    (when-let [data (lookup-entry config id :template-path)]
-      (. builder templatePath data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CloudFormationCreateUpdateStackAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :account)]
+    (. builder account data))
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :admin-permissions)]
+    (. builder adminPermissions data))
+  (when-let [data (lookup-entry config id :cfn-capabilities)]
+    (. builder cfnCapabilities data))
+  (when-let [data (lookup-entry config id :deployment-role)]
+    (. builder deploymentRole data))
+  (when-let [data (lookup-entry config id :extra-inputs)]
+    (. builder extraInputs data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :output-file-name)]
+    (. builder outputFileName data))
+  (when-let [data (lookup-entry config id :parameter-overrides)]
+    (. builder parameterOverrides data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :replace-on-failure)]
+    (. builder replaceOnFailure data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :stack-name)]
+    (. builder stackName data))
+  (when-let [data (lookup-entry config id :template-configuration)]
+    (. builder templateConfiguration data))
+  (when-let [data (lookup-entry config id :template-path)]
+    (. builder templatePath data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn cloud-formation-create-update-stack-action-props-builder
-  "The cloud-formation-create-update-stack-action-props-builder function buildes out new instances of 
-CloudFormationCreateUpdateStackActionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cloud-formation-create-update-stack-action-props-builder
+  "The build-cloud-formation-create-update-stack-action-props-builder function updates a CloudFormationCreateUpdateStackActionProps$Builder instance using the provided configuration.
+  The function takes the CloudFormationCreateUpdateStackActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -474,105 +492,52 @@ CloudFormationCreateUpdateStackActionProps$Builder using the provided configurat
 | `stackName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-name` |
 | `templateConfiguration` | software.amazon.awscdk.services.codepipeline.ArtifactPath | [[cdk.support/lookup-entry]] | `:template-configuration` |
 | `templatePath` | software.amazon.awscdk.services.codepipeline.ArtifactPath | [[cdk.support/lookup-entry]] | `:template-path` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CloudFormationCreateUpdateStackActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :account)]
-      (. builder account data))
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :admin-permissions)]
-      (. builder adminPermissions data))
-    (when-let [data (lookup-entry config id :cfn-capabilities)]
-      (. builder cfnCapabilities data))
-    (when-let [data (lookup-entry config id :deployment-role)]
-      (. builder deploymentRole data))
-    (when-let [data (lookup-entry config id :extra-inputs)]
-      (. builder extraInputs data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :output-file-name)]
-      (. builder outputFileName data))
-    (when-let [data (lookup-entry config id :parameter-overrides)]
-      (. builder parameterOverrides data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :replace-on-failure)]
-      (. builder replaceOnFailure data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :stack-name)]
-      (. builder stackName data))
-    (when-let [data (lookup-entry config id :template-configuration)]
-      (. builder templateConfiguration data))
-    (when-let [data (lookup-entry config id :template-path)]
-      (. builder templatePath data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CloudFormationCreateUpdateStackActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :account)]
+    (. builder account data))
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :admin-permissions)]
+    (. builder adminPermissions data))
+  (when-let [data (lookup-entry config id :cfn-capabilities)]
+    (. builder cfnCapabilities data))
+  (when-let [data (lookup-entry config id :deployment-role)]
+    (. builder deploymentRole data))
+  (when-let [data (lookup-entry config id :extra-inputs)]
+    (. builder extraInputs data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :output-file-name)]
+    (. builder outputFileName data))
+  (when-let [data (lookup-entry config id :parameter-overrides)]
+    (. builder parameterOverrides data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :replace-on-failure)]
+    (. builder replaceOnFailure data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :stack-name)]
+    (. builder stackName data))
+  (when-let [data (lookup-entry config id :template-configuration)]
+    (. builder templateConfiguration data))
+  (when-let [data (lookup-entry config id :template-path)]
+    (. builder templatePath data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn cloud-formation-delete-stack-action-builder
-  "The cloud-formation-delete-stack-action-builder function buildes out new instances of 
-CloudFormationDeleteStackAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cloud-formation-delete-stack-action-builder
+  "The build-cloud-formation-delete-stack-action-builder function updates a CloudFormationDeleteStackAction$Builder instance using the provided configuration.
+  The function takes the CloudFormationDeleteStackAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `account` | java.lang.String | [[cdk.support/lookup-entry]] | `:account` |
-| `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
-| `adminPermissions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:admin-permissions` |
-| `cfnCapabilities` | java.util.List | [[cdk.support/lookup-entry]] | `:cfn-capabilities` |
-| `deploymentRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:deployment-role` |
-| `extraInputs` | java.util.List | [[cdk.support/lookup-entry]] | `:extra-inputs` |
-| `output` | software.amazon.awscdk.services.codepipeline.Artifact | [[cdk.support/lookup-entry]] | `:output` |
-| `outputFileName` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-file-name` |
-| `parameterOverrides` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameter-overrides` |
-| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
-| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
-| `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
-| `stackName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-name` |
-| `templateConfiguration` | software.amazon.awscdk.services.codepipeline.ArtifactPath | [[cdk.support/lookup-entry]] | `:template-configuration` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CloudFormationDeleteStackAction$Builder/create)]
-    (when-let [data (lookup-entry config id :account)]
-      (. builder account data))
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :admin-permissions)]
-      (. builder adminPermissions data))
-    (when-let [data (lookup-entry config id :cfn-capabilities)]
-      (. builder cfnCapabilities data))
-    (when-let [data (lookup-entry config id :deployment-role)]
-      (. builder deploymentRole data))
-    (when-let [data (lookup-entry config id :extra-inputs)]
-      (. builder extraInputs data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :output-file-name)]
-      (. builder outputFileName data))
-    (when-let [data (lookup-entry config id :parameter-overrides)]
-      (. builder parameterOverrides data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :stack-name)]
-      (. builder stackName data))
-    (when-let [data (lookup-entry config id :template-configuration)]
-      (. builder templateConfiguration data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
-
-
-(defn cloud-formation-delete-stack-action-props-builder
-  "The cloud-formation-delete-stack-action-props-builder function buildes out new instances of 
-CloudFormationDeleteStackActionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -590,45 +555,107 @@ CloudFormationDeleteStackActionProps$Builder using the provided configuration.  
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `stackName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-name` |
 | `templateConfiguration` | software.amazon.awscdk.services.codepipeline.ArtifactPath | [[cdk.support/lookup-entry]] | `:template-configuration` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CloudFormationDeleteStackActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :account)]
-      (. builder account data))
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :admin-permissions)]
-      (. builder adminPermissions data))
-    (when-let [data (lookup-entry config id :cfn-capabilities)]
-      (. builder cfnCapabilities data))
-    (when-let [data (lookup-entry config id :deployment-role)]
-      (. builder deploymentRole data))
-    (when-let [data (lookup-entry config id :extra-inputs)]
-      (. builder extraInputs data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :output-file-name)]
-      (. builder outputFileName data))
-    (when-let [data (lookup-entry config id :parameter-overrides)]
-      (. builder parameterOverrides data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :stack-name)]
-      (. builder stackName data))
-    (when-let [data (lookup-entry config id :template-configuration)]
-      (. builder templateConfiguration data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CloudFormationDeleteStackAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :account)]
+    (. builder account data))
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :admin-permissions)]
+    (. builder adminPermissions data))
+  (when-let [data (lookup-entry config id :cfn-capabilities)]
+    (. builder cfnCapabilities data))
+  (when-let [data (lookup-entry config id :deployment-role)]
+    (. builder deploymentRole data))
+  (when-let [data (lookup-entry config id :extra-inputs)]
+    (. builder extraInputs data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :output-file-name)]
+    (. builder outputFileName data))
+  (when-let [data (lookup-entry config id :parameter-overrides)]
+    (. builder parameterOverrides data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :stack-name)]
+    (. builder stackName data))
+  (when-let [data (lookup-entry config id :template-configuration)]
+    (. builder templateConfiguration data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn cloud-formation-deploy-stack-instances-action-builder
-  "The cloud-formation-deploy-stack-instances-action-builder function buildes out new instances of 
-CloudFormationDeployStackInstancesAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cloud-formation-delete-stack-action-props-builder
+  "The build-cloud-formation-delete-stack-action-props-builder function updates a CloudFormationDeleteStackActionProps$Builder instance using the provided configuration.
+  The function takes the CloudFormationDeleteStackActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `account` | java.lang.String | [[cdk.support/lookup-entry]] | `:account` |
+| `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
+| `adminPermissions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:admin-permissions` |
+| `cfnCapabilities` | java.util.List | [[cdk.support/lookup-entry]] | `:cfn-capabilities` |
+| `deploymentRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:deployment-role` |
+| `extraInputs` | java.util.List | [[cdk.support/lookup-entry]] | `:extra-inputs` |
+| `output` | software.amazon.awscdk.services.codepipeline.Artifact | [[cdk.support/lookup-entry]] | `:output` |
+| `outputFileName` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-file-name` |
+| `parameterOverrides` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameter-overrides` |
+| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
+| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
+| `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
+| `stackName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-name` |
+| `templateConfiguration` | software.amazon.awscdk.services.codepipeline.ArtifactPath | [[cdk.support/lookup-entry]] | `:template-configuration` |
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CloudFormationDeleteStackActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :account)]
+    (. builder account data))
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :admin-permissions)]
+    (. builder adminPermissions data))
+  (when-let [data (lookup-entry config id :cfn-capabilities)]
+    (. builder cfnCapabilities data))
+  (when-let [data (lookup-entry config id :deployment-role)]
+    (. builder deploymentRole data))
+  (when-let [data (lookup-entry config id :extra-inputs)]
+    (. builder extraInputs data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :output-file-name)]
+    (. builder outputFileName data))
+  (when-let [data (lookup-entry config id :parameter-overrides)]
+    (. builder parameterOverrides data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :stack-name)]
+    (. builder stackName data))
+  (when-let [data (lookup-entry config id :template-configuration)]
+    (. builder templateConfiguration data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
+
+
+(defn build-cloud-formation-deploy-stack-instances-action-builder
+  "The build-cloud-formation-deploy-stack-instances-action-builder function updates a CloudFormationDeployStackInstancesAction$Builder instance using the provided configuration.
+  The function takes the CloudFormationDeployStackInstancesAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -641,35 +668,38 @@ CloudFormationDeployStackInstancesAction$Builder using the provided configuratio
 | `stackInstances` | software.amazon.awscdk.services.codepipeline.actions.StackInstances | [[cdk.support/lookup-entry]] | `:stack-instances` |
 | `stackSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-set-name` |
 | `stackSetRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-set-region` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CloudFormationDeployStackInstancesAction$Builder/create)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :failure-tolerance-percentage)]
-      (. builder failureTolerancePercentage data))
-    (when-let [data (lookup-entry config id :max-account-concurrency-percentage)]
-      (. builder maxAccountConcurrencyPercentage data))
-    (when-let [data (lookup-entry config id :parameter-overrides)]
-      (. builder parameterOverrides data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :stack-instances)]
-      (. builder stackInstances data))
-    (when-let [data (lookup-entry config id :stack-set-name)]
-      (. builder stackSetName data))
-    (when-let [data (lookup-entry config id :stack-set-region)]
-      (. builder stackSetRegion data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CloudFormationDeployStackInstancesAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :failure-tolerance-percentage)]
+    (. builder failureTolerancePercentage data))
+  (when-let [data (lookup-entry config id :max-account-concurrency-percentage)]
+    (. builder maxAccountConcurrencyPercentage data))
+  (when-let [data (lookup-entry config id :parameter-overrides)]
+    (. builder parameterOverrides data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :stack-instances)]
+    (. builder stackInstances data))
+  (when-let [data (lookup-entry config id :stack-set-name)]
+    (. builder stackSetName data))
+  (when-let [data (lookup-entry config id :stack-set-region)]
+    (. builder stackSetRegion data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn cloud-formation-deploy-stack-instances-action-props-builder
-  "The cloud-formation-deploy-stack-instances-action-props-builder function buildes out new instances of 
-CloudFormationDeployStackInstancesActionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cloud-formation-deploy-stack-instances-action-props-builder
+  "The build-cloud-formation-deploy-stack-instances-action-props-builder function updates a CloudFormationDeployStackInstancesActionProps$Builder instance using the provided configuration.
+  The function takes the CloudFormationDeployStackInstancesActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -682,35 +712,38 @@ CloudFormationDeployStackInstancesActionProps$Builder using the provided configu
 | `stackInstances` | software.amazon.awscdk.services.codepipeline.actions.StackInstances | [[cdk.support/lookup-entry]] | `:stack-instances` |
 | `stackSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-set-name` |
 | `stackSetRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-set-region` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CloudFormationDeployStackInstancesActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :failure-tolerance-percentage)]
-      (. builder failureTolerancePercentage data))
-    (when-let [data (lookup-entry config id :max-account-concurrency-percentage)]
-      (. builder maxAccountConcurrencyPercentage data))
-    (when-let [data (lookup-entry config id :parameter-overrides)]
-      (. builder parameterOverrides data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :stack-instances)]
-      (. builder stackInstances data))
-    (when-let [data (lookup-entry config id :stack-set-name)]
-      (. builder stackSetName data))
-    (when-let [data (lookup-entry config id :stack-set-region)]
-      (. builder stackSetRegion data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CloudFormationDeployStackInstancesActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :failure-tolerance-percentage)]
+    (. builder failureTolerancePercentage data))
+  (when-let [data (lookup-entry config id :max-account-concurrency-percentage)]
+    (. builder maxAccountConcurrencyPercentage data))
+  (when-let [data (lookup-entry config id :parameter-overrides)]
+    (. builder parameterOverrides data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :stack-instances)]
+    (. builder stackInstances data))
+  (when-let [data (lookup-entry config id :stack-set-name)]
+    (. builder stackSetName data))
+  (when-let [data (lookup-entry config id :stack-set-region)]
+    (. builder stackSetRegion data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn cloud-formation-deploy-stack-set-action-builder
-  "The cloud-formation-deploy-stack-set-action-builder function buildes out new instances of 
-CloudFormationDeployStackSetAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cloud-formation-deploy-stack-set-action-builder
+  "The build-cloud-formation-deploy-stack-set-action-builder function updates a CloudFormationDeployStackSetAction$Builder instance using the provided configuration.
+  The function takes the CloudFormationDeployStackSetAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -727,43 +760,46 @@ CloudFormationDeployStackSetAction$Builder using the provided configuration.  Ea
 | `stackSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-set-name` |
 | `stackSetRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-set-region` |
 | `template` | software.amazon.awscdk.services.codepipeline.actions.StackSetTemplate | [[cdk.support/lookup-entry]] | `:template` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CloudFormationDeployStackSetAction$Builder/create)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :cfn-capabilities)]
-      (. builder cfnCapabilities data))
-    (when-let [data (lookup-entry config id :deployment-model)]
-      (. builder deploymentModel data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :failure-tolerance-percentage)]
-      (. builder failureTolerancePercentage data))
-    (when-let [data (lookup-entry config id :max-account-concurrency-percentage)]
-      (. builder maxAccountConcurrencyPercentage data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :stack-instances)]
-      (. builder stackInstances data))
-    (when-let [data (lookup-entry config id :stack-set-name)]
-      (. builder stackSetName data))
-    (when-let [data (lookup-entry config id :stack-set-region)]
-      (. builder stackSetRegion data))
-    (when-let [data (lookup-entry config id :template)]
-      (. builder template data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CloudFormationDeployStackSetAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :cfn-capabilities)]
+    (. builder cfnCapabilities data))
+  (when-let [data (lookup-entry config id :deployment-model)]
+    (. builder deploymentModel data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :failure-tolerance-percentage)]
+    (. builder failureTolerancePercentage data))
+  (when-let [data (lookup-entry config id :max-account-concurrency-percentage)]
+    (. builder maxAccountConcurrencyPercentage data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :stack-instances)]
+    (. builder stackInstances data))
+  (when-let [data (lookup-entry config id :stack-set-name)]
+    (. builder stackSetName data))
+  (when-let [data (lookup-entry config id :stack-set-region)]
+    (. builder stackSetRegion data))
+  (when-let [data (lookup-entry config id :template)]
+    (. builder template data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn cloud-formation-deploy-stack-set-action-props-builder
-  "The cloud-formation-deploy-stack-set-action-props-builder function buildes out new instances of 
-CloudFormationDeployStackSetActionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cloud-formation-deploy-stack-set-action-props-builder
+  "The build-cloud-formation-deploy-stack-set-action-props-builder function updates a CloudFormationDeployStackSetActionProps$Builder instance using the provided configuration.
+  The function takes the CloudFormationDeployStackSetActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -780,84 +816,46 @@ CloudFormationDeployStackSetActionProps$Builder using the provided configuration
 | `stackSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-set-name` |
 | `stackSetRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-set-region` |
 | `template` | software.amazon.awscdk.services.codepipeline.actions.StackSetTemplate | [[cdk.support/lookup-entry]] | `:template` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CloudFormationDeployStackSetActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :cfn-capabilities)]
-      (. builder cfnCapabilities data))
-    (when-let [data (lookup-entry config id :deployment-model)]
-      (. builder deploymentModel data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :failure-tolerance-percentage)]
-      (. builder failureTolerancePercentage data))
-    (when-let [data (lookup-entry config id :max-account-concurrency-percentage)]
-      (. builder maxAccountConcurrencyPercentage data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :stack-instances)]
-      (. builder stackInstances data))
-    (when-let [data (lookup-entry config id :stack-set-name)]
-      (. builder stackSetName data))
-    (when-let [data (lookup-entry config id :stack-set-region)]
-      (. builder stackSetRegion data))
-    (when-let [data (lookup-entry config id :template)]
-      (. builder template data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CloudFormationDeployStackSetActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :cfn-capabilities)]
+    (. builder cfnCapabilities data))
+  (when-let [data (lookup-entry config id :deployment-model)]
+    (. builder deploymentModel data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :failure-tolerance-percentage)]
+    (. builder failureTolerancePercentage data))
+  (when-let [data (lookup-entry config id :max-account-concurrency-percentage)]
+    (. builder maxAccountConcurrencyPercentage data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :stack-instances)]
+    (. builder stackInstances data))
+  (when-let [data (lookup-entry config id :stack-set-name)]
+    (. builder stackSetName data))
+  (when-let [data (lookup-entry config id :stack-set-region)]
+    (. builder stackSetRegion data))
+  (when-let [data (lookup-entry config id :template)]
+    (. builder template data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn cloud-formation-execute-change-set-action-builder
-  "The cloud-formation-execute-change-set-action-builder function buildes out new instances of 
-CloudFormationExecuteChangeSetAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cloud-formation-execute-change-set-action-builder
+  "The build-cloud-formation-execute-change-set-action-builder function updates a CloudFormationExecuteChangeSetAction$Builder instance using the provided configuration.
+  The function takes the CloudFormationExecuteChangeSetAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `account` | java.lang.String | [[cdk.support/lookup-entry]] | `:account` |
-| `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
-| `changeSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:change-set-name` |
-| `output` | software.amazon.awscdk.services.codepipeline.Artifact | [[cdk.support/lookup-entry]] | `:output` |
-| `outputFileName` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-file-name` |
-| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
-| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
-| `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
-| `stackName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-name` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CloudFormationExecuteChangeSetAction$Builder/create)]
-    (when-let [data (lookup-entry config id :account)]
-      (. builder account data))
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :change-set-name)]
-      (. builder changeSetName data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :output-file-name)]
-      (. builder outputFileName data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :stack-name)]
-      (. builder stackName data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
-
-
-(defn cloud-formation-execute-change-set-action-props-builder
-  "The cloud-formation-execute-change-set-action-props-builder function buildes out new instances of 
-CloudFormationExecuteChangeSetActionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -870,35 +868,82 @@ CloudFormationExecuteChangeSetActionProps$Builder using the provided configurati
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `stackName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-name` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CloudFormationExecuteChangeSetActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :account)]
-      (. builder account data))
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :change-set-name)]
-      (. builder changeSetName data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :output-file-name)]
-      (. builder outputFileName data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :stack-name)]
-      (. builder stackName data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CloudFormationExecuteChangeSetAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :account)]
+    (. builder account data))
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :change-set-name)]
+    (. builder changeSetName data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :output-file-name)]
+    (. builder outputFileName data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :stack-name)]
+    (. builder stackName data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn code-build-action-builder
-  "The code-build-action-builder function buildes out new instances of 
-CodeBuildAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cloud-formation-execute-change-set-action-props-builder
+  "The build-cloud-formation-execute-change-set-action-props-builder function updates a CloudFormationExecuteChangeSetActionProps$Builder instance using the provided configuration.
+  The function takes the CloudFormationExecuteChangeSetActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `account` | java.lang.String | [[cdk.support/lookup-entry]] | `:account` |
+| `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
+| `changeSetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:change-set-name` |
+| `output` | software.amazon.awscdk.services.codepipeline.Artifact | [[cdk.support/lookup-entry]] | `:output` |
+| `outputFileName` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-file-name` |
+| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
+| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
+| `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
+| `stackName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-name` |
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CloudFormationExecuteChangeSetActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :account)]
+    (. builder account data))
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :change-set-name)]
+    (. builder changeSetName data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :output-file-name)]
+    (. builder outputFileName data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :stack-name)]
+    (. builder stackName data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
+
+
+(defn build-code-build-action-builder
+  "The build-code-build-action-builder function updates a CodeBuildAction$Builder instance using the provided configuration.
+  The function takes the CodeBuildAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -914,41 +959,44 @@ CodeBuildAction$Builder using the provided configuration.  Each field is set as 
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `type` | software.amazon.awscdk.services.codepipeline.actions.CodeBuildActionType | [[cdk.api.services.codepipeline.actions/code-build-action-type]] | `:type` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CodeBuildAction$Builder/create)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :check-secrets-in-plain-text-env-variables)]
-      (. builder checkSecretsInPlainTextEnvVariables data))
-    (when-let [data (lookup-entry config id :combine-batch-build-artifacts)]
-      (. builder combineBatchBuildArtifacts data))
-    (when-let [data (lookup-entry config id :environment-variables)]
-      (. builder environmentVariables data))
-    (when-let [data (lookup-entry config id :execute-batch-build)]
-      (. builder executeBatchBuild data))
-    (when-let [data (lookup-entry config id :extra-inputs)]
-      (. builder extraInputs data))
-    (when-let [data (lookup-entry config id :input)]
-      (. builder input data))
-    (when-let [data (lookup-entry config id :outputs)]
-      (. builder outputs data))
-    (when-let [data (lookup-entry config id :project)]
-      (. builder project data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (code-build-action-type config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CodeBuildAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :check-secrets-in-plain-text-env-variables)]
+    (. builder checkSecretsInPlainTextEnvVariables data))
+  (when-let [data (lookup-entry config id :combine-batch-build-artifacts)]
+    (. builder combineBatchBuildArtifacts data))
+  (when-let [data (lookup-entry config id :environment-variables)]
+    (. builder environmentVariables data))
+  (when-let [data (lookup-entry config id :execute-batch-build)]
+    (. builder executeBatchBuild data))
+  (when-let [data (lookup-entry config id :extra-inputs)]
+    (. builder extraInputs data))
+  (when-let [data (lookup-entry config id :input)]
+    (. builder input data))
+  (when-let [data (lookup-entry config id :outputs)]
+    (. builder outputs data))
+  (when-let [data (lookup-entry config id :project)]
+    (. builder project data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (code-build-action-type config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn code-build-action-props-builder
-  "The code-build-action-props-builder function buildes out new instances of 
-CodeBuildActionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-code-build-action-props-builder
+  "The build-code-build-action-props-builder function updates a CodeBuildActionProps$Builder instance using the provided configuration.
+  The function takes the CodeBuildActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -964,85 +1012,44 @@ CodeBuildActionProps$Builder using the provided configuration.  Each field is se
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `type` | software.amazon.awscdk.services.codepipeline.actions.CodeBuildActionType | [[cdk.api.services.codepipeline.actions/code-build-action-type]] | `:type` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CodeBuildActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :check-secrets-in-plain-text-env-variables)]
-      (. builder checkSecretsInPlainTextEnvVariables data))
-    (when-let [data (lookup-entry config id :combine-batch-build-artifacts)]
-      (. builder combineBatchBuildArtifacts data))
-    (when-let [data (lookup-entry config id :environment-variables)]
-      (. builder environmentVariables data))
-    (when-let [data (lookup-entry config id :execute-batch-build)]
-      (. builder executeBatchBuild data))
-    (when-let [data (lookup-entry config id :extra-inputs)]
-      (. builder extraInputs data))
-    (when-let [data (lookup-entry config id :input)]
-      (. builder input data))
-    (when-let [data (lookup-entry config id :outputs)]
-      (. builder outputs data))
-    (when-let [data (lookup-entry config id :project)]
-      (. builder project data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (code-build-action-type config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CodeBuildActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :check-secrets-in-plain-text-env-variables)]
+    (. builder checkSecretsInPlainTextEnvVariables data))
+  (when-let [data (lookup-entry config id :combine-batch-build-artifacts)]
+    (. builder combineBatchBuildArtifacts data))
+  (when-let [data (lookup-entry config id :environment-variables)]
+    (. builder environmentVariables data))
+  (when-let [data (lookup-entry config id :execute-batch-build)]
+    (. builder executeBatchBuild data))
+  (when-let [data (lookup-entry config id :extra-inputs)]
+    (. builder extraInputs data))
+  (when-let [data (lookup-entry config id :input)]
+    (. builder input data))
+  (when-let [data (lookup-entry config id :outputs)]
+    (. builder outputs data))
+  (when-let [data (lookup-entry config id :project)]
+    (. builder project data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (code-build-action-type config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn code-commit-source-action-builder
-  "The code-commit-source-action-builder function buildes out new instances of 
-CodeCommitSourceAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-code-commit-source-action-builder
+  "The build-code-commit-source-action-builder function updates a CodeCommitSourceAction$Builder instance using the provided configuration.
+  The function takes the CodeCommitSourceAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
-| `branch` | java.lang.String | [[cdk.support/lookup-entry]] | `:branch` |
-| `codeBuildCloneOutput` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:code-build-clone-output` |
-| `customEventRule` | software.amazon.awscdk.services.codepipeline.actions.ICustomEventRule | [[cdk.support/lookup-entry]] | `:custom-event-rule` |
-| `eventRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:event-role` |
-| `output` | software.amazon.awscdk.services.codepipeline.Artifact | [[cdk.support/lookup-entry]] | `:output` |
-| `repository` | software.amazon.awscdk.services.codecommit.IRepository | [[cdk.support/lookup-entry]] | `:repository` |
-| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
-| `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
-| `trigger` | software.amazon.awscdk.services.codepipeline.actions.CodeCommitTrigger | [[cdk.api.services.codepipeline.actions/code-commit-trigger]] | `:trigger` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CodeCommitSourceAction$Builder/create)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :branch)]
-      (. builder branch data))
-    (when-let [data (lookup-entry config id :code-build-clone-output)]
-      (. builder codeBuildCloneOutput data))
-    (when-let [data (lookup-entry config id :custom-event-rule)]
-      (. builder customEventRule data))
-    (when-let [data (lookup-entry config id :event-role)]
-      (. builder eventRole data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :repository)]
-      (. builder repository data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (code-commit-trigger config id :trigger)]
-      (. builder trigger data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
-
-
-(defn code-commit-source-action-props-builder
-  "The code-commit-source-action-props-builder function buildes out new instances of 
-CodeCommitSourceActionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1056,37 +1063,87 @@ CodeCommitSourceActionProps$Builder using the provided configuration.  Each fiel
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `trigger` | software.amazon.awscdk.services.codepipeline.actions.CodeCommitTrigger | [[cdk.api.services.codepipeline.actions/code-commit-trigger]] | `:trigger` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CodeCommitSourceActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :branch)]
-      (. builder branch data))
-    (when-let [data (lookup-entry config id :code-build-clone-output)]
-      (. builder codeBuildCloneOutput data))
-    (when-let [data (lookup-entry config id :custom-event-rule)]
-      (. builder customEventRule data))
-    (when-let [data (lookup-entry config id :event-role)]
-      (. builder eventRole data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :repository)]
-      (. builder repository data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (code-commit-trigger config id :trigger)]
-      (. builder trigger data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CodeCommitSourceAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :branch)]
+    (. builder branch data))
+  (when-let [data (lookup-entry config id :code-build-clone-output)]
+    (. builder codeBuildCloneOutput data))
+  (when-let [data (lookup-entry config id :custom-event-rule)]
+    (. builder customEventRule data))
+  (when-let [data (lookup-entry config id :event-role)]
+    (. builder eventRole data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :repository)]
+    (. builder repository data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (code-commit-trigger config id :trigger)]
+    (. builder trigger data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn code-commit-source-variables-builder
-  "The code-commit-source-variables-builder function buildes out new instances of 
-CodeCommitSourceVariables$Builder using the provided configuration.  Each field is set as follows:
+(defn build-code-commit-source-action-props-builder
+  "The build-code-commit-source-action-props-builder function updates a CodeCommitSourceActionProps$Builder instance using the provided configuration.
+  The function takes the CodeCommitSourceActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
+| `branch` | java.lang.String | [[cdk.support/lookup-entry]] | `:branch` |
+| `codeBuildCloneOutput` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:code-build-clone-output` |
+| `customEventRule` | software.amazon.awscdk.services.codepipeline.actions.ICustomEventRule | [[cdk.support/lookup-entry]] | `:custom-event-rule` |
+| `eventRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:event-role` |
+| `output` | software.amazon.awscdk.services.codepipeline.Artifact | [[cdk.support/lookup-entry]] | `:output` |
+| `repository` | software.amazon.awscdk.services.codecommit.IRepository | [[cdk.support/lookup-entry]] | `:repository` |
+| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
+| `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
+| `trigger` | software.amazon.awscdk.services.codepipeline.actions.CodeCommitTrigger | [[cdk.api.services.codepipeline.actions/code-commit-trigger]] | `:trigger` |
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CodeCommitSourceActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :branch)]
+    (. builder branch data))
+  (when-let [data (lookup-entry config id :code-build-clone-output)]
+    (. builder codeBuildCloneOutput data))
+  (when-let [data (lookup-entry config id :custom-event-rule)]
+    (. builder customEventRule data))
+  (when-let [data (lookup-entry config id :event-role)]
+    (. builder eventRole data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :repository)]
+    (. builder repository data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (code-commit-trigger config id :trigger)]
+    (. builder trigger data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
+
+
+(defn build-code-commit-source-variables-builder
+  "The build-code-commit-source-variables-builder function updates a CodeCommitSourceVariables$Builder instance using the provided configuration.
+  The function takes the CodeCommitSourceVariables$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1095,44 +1152,50 @@ CodeCommitSourceVariables$Builder using the provided configuration.  Each field 
 | `commitId` | java.lang.String | [[cdk.support/lookup-entry]] | `:commit-id` |
 | `commitMessage` | java.lang.String | [[cdk.support/lookup-entry]] | `:commit-message` |
 | `committerDate` | java.lang.String | [[cdk.support/lookup-entry]] | `:committer-date` |
-| `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |"
-  [stack id config]
-  (let [builder (CodeCommitSourceVariables$Builder.)]
-    (when-let [data (lookup-entry config id :author-date)]
-      (. builder authorDate data))
-    (when-let [data (lookup-entry config id :branch-name)]
-      (. builder branchName data))
-    (when-let [data (lookup-entry config id :commit-id)]
-      (. builder commitId data))
-    (when-let [data (lookup-entry config id :commit-message)]
-      (. builder commitMessage data))
-    (when-let [data (lookup-entry config id :committer-date)]
-      (. builder committerDate data))
-    (when-let [data (lookup-entry config id :repository-name)]
-      (. builder repositoryName data))
-    (.build builder)))
+| `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
+"
+  [^CodeCommitSourceVariables$Builder builder id config]
+  (when-let [data (lookup-entry config id :author-date)]
+    (. builder authorDate data))
+  (when-let [data (lookup-entry config id :branch-name)]
+    (. builder branchName data))
+  (when-let [data (lookup-entry config id :commit-id)]
+    (. builder commitId data))
+  (when-let [data (lookup-entry config id :commit-message)]
+    (. builder commitMessage data))
+  (when-let [data (lookup-entry config id :committer-date)]
+    (. builder committerDate data))
+  (when-let [data (lookup-entry config id :repository-name)]
+    (. builder repositoryName data))
+  (.build builder))
 
 
-(defn code-deploy-ecs-container-image-input-builder
-  "The code-deploy-ecs-container-image-input-builder function buildes out new instances of 
-CodeDeployEcsContainerImageInput$Builder using the provided configuration.  Each field is set as follows:
+(defn build-code-deploy-ecs-container-image-input-builder
+  "The build-code-deploy-ecs-container-image-input-builder function updates a CodeDeployEcsContainerImageInput$Builder instance using the provided configuration.
+  The function takes the CodeDeployEcsContainerImageInput$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `input` | software.amazon.awscdk.services.codepipeline.Artifact | [[cdk.support/lookup-entry]] | `:input` |
-| `taskDefinitionPlaceholder` | java.lang.String | [[cdk.support/lookup-entry]] | `:task-definition-placeholder` |"
-  [stack id config]
-  (let [builder (CodeDeployEcsContainerImageInput$Builder.)]
-    (when-let [data (lookup-entry config id :input)]
-      (. builder input data))
-    (when-let [data (lookup-entry config id :task-definition-placeholder)]
-      (. builder taskDefinitionPlaceholder data))
-    (.build builder)))
+| `taskDefinitionPlaceholder` | java.lang.String | [[cdk.support/lookup-entry]] | `:task-definition-placeholder` |
+"
+  [^CodeDeployEcsContainerImageInput$Builder builder id config]
+  (when-let [data (lookup-entry config id :input)]
+    (. builder input data))
+  (when-let [data (lookup-entry config id :task-definition-placeholder)]
+    (. builder taskDefinitionPlaceholder data))
+  (.build builder))
 
 
-(defn code-deploy-ecs-deploy-action-builder
-  "The code-deploy-ecs-deploy-action-builder function buildes out new instances of 
-CodeDeployEcsDeployAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-code-deploy-ecs-deploy-action-builder
+  "The build-code-deploy-ecs-deploy-action-builder function updates a CodeDeployEcsDeployAction$Builder instance using the provided configuration.
+  The function takes the CodeDeployEcsDeployAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1145,35 +1208,38 @@ CodeDeployEcsDeployAction$Builder using the provided configuration.  Each field 
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `taskDefinitionTemplateFile` | software.amazon.awscdk.services.codepipeline.ArtifactPath | [[cdk.support/lookup-entry]] | `:task-definition-template-file` |
 | `taskDefinitionTemplateInput` | software.amazon.awscdk.services.codepipeline.Artifact | [[cdk.support/lookup-entry]] | `:task-definition-template-input` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CodeDeployEcsDeployAction$Builder/create)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :app-spec-template-file)]
-      (. builder appSpecTemplateFile data))
-    (when-let [data (lookup-entry config id :app-spec-template-input)]
-      (. builder appSpecTemplateInput data))
-    (when-let [data (lookup-entry config id :container-image-inputs)]
-      (. builder containerImageInputs data))
-    (when-let [data (lookup-entry config id :deployment-group)]
-      (. builder deploymentGroup data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :task-definition-template-file)]
-      (. builder taskDefinitionTemplateFile data))
-    (when-let [data (lookup-entry config id :task-definition-template-input)]
-      (. builder taskDefinitionTemplateInput data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CodeDeployEcsDeployAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :app-spec-template-file)]
+    (. builder appSpecTemplateFile data))
+  (when-let [data (lookup-entry config id :app-spec-template-input)]
+    (. builder appSpecTemplateInput data))
+  (when-let [data (lookup-entry config id :container-image-inputs)]
+    (. builder containerImageInputs data))
+  (when-let [data (lookup-entry config id :deployment-group)]
+    (. builder deploymentGroup data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :task-definition-template-file)]
+    (. builder taskDefinitionTemplateFile data))
+  (when-let [data (lookup-entry config id :task-definition-template-input)]
+    (. builder taskDefinitionTemplateInput data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn code-deploy-ecs-deploy-action-props-builder
-  "The code-deploy-ecs-deploy-action-props-builder function buildes out new instances of 
-CodeDeployEcsDeployActionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-code-deploy-ecs-deploy-action-props-builder
+  "The build-code-deploy-ecs-deploy-action-props-builder function updates a CodeDeployEcsDeployActionProps$Builder instance using the provided configuration.
+  The function takes the CodeDeployEcsDeployActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1186,64 +1252,38 @@ CodeDeployEcsDeployActionProps$Builder using the provided configuration.  Each f
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `taskDefinitionTemplateFile` | software.amazon.awscdk.services.codepipeline.ArtifactPath | [[cdk.support/lookup-entry]] | `:task-definition-template-file` |
 | `taskDefinitionTemplateInput` | software.amazon.awscdk.services.codepipeline.Artifact | [[cdk.support/lookup-entry]] | `:task-definition-template-input` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CodeDeployEcsDeployActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :app-spec-template-file)]
-      (. builder appSpecTemplateFile data))
-    (when-let [data (lookup-entry config id :app-spec-template-input)]
-      (. builder appSpecTemplateInput data))
-    (when-let [data (lookup-entry config id :container-image-inputs)]
-      (. builder containerImageInputs data))
-    (when-let [data (lookup-entry config id :deployment-group)]
-      (. builder deploymentGroup data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :task-definition-template-file)]
-      (. builder taskDefinitionTemplateFile data))
-    (when-let [data (lookup-entry config id :task-definition-template-input)]
-      (. builder taskDefinitionTemplateInput data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CodeDeployEcsDeployActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :app-spec-template-file)]
+    (. builder appSpecTemplateFile data))
+  (when-let [data (lookup-entry config id :app-spec-template-input)]
+    (. builder appSpecTemplateInput data))
+  (when-let [data (lookup-entry config id :container-image-inputs)]
+    (. builder containerImageInputs data))
+  (when-let [data (lookup-entry config id :deployment-group)]
+    (. builder deploymentGroup data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :task-definition-template-file)]
+    (. builder taskDefinitionTemplateFile data))
+  (when-let [data (lookup-entry config id :task-definition-template-input)]
+    (. builder taskDefinitionTemplateInput data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn code-deploy-server-deploy-action-builder
-  "The code-deploy-server-deploy-action-builder function buildes out new instances of 
-CodeDeployServerDeployAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-code-deploy-server-deploy-action-builder
+  "The build-code-deploy-server-deploy-action-builder function updates a CodeDeployServerDeployAction$Builder instance using the provided configuration.
+  The function takes the CodeDeployServerDeployAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
-| `deploymentGroup` | software.amazon.awscdk.services.codedeploy.IServerDeploymentGroup | [[cdk.support/lookup-entry]] | `:deployment-group` |
-| `input` | software.amazon.awscdk.services.codepipeline.Artifact | [[cdk.support/lookup-entry]] | `:input` |
-| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
-| `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CodeDeployServerDeployAction$Builder/create)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :deployment-group)]
-      (. builder deploymentGroup data))
-    (when-let [data (lookup-entry config id :input)]
-      (. builder input data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
-
-
-(defn code-deploy-server-deploy-action-props-builder
-  "The code-deploy-server-deploy-action-props-builder function buildes out new instances of 
-CodeDeployServerDeployActionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1252,27 +1292,62 @@ CodeDeployServerDeployActionProps$Builder using the provided configuration.  Eac
 | `input` | software.amazon.awscdk.services.codepipeline.Artifact | [[cdk.support/lookup-entry]] | `:input` |
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CodeDeployServerDeployActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :deployment-group)]
-      (. builder deploymentGroup data))
-    (when-let [data (lookup-entry config id :input)]
-      (. builder input data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CodeDeployServerDeployAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :deployment-group)]
+    (. builder deploymentGroup data))
+  (when-let [data (lookup-entry config id :input)]
+    (. builder input data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn code-star-connections-source-action-builder
-  "The code-star-connections-source-action-builder function buildes out new instances of 
-CodeStarConnectionsSourceAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-code-deploy-server-deploy-action-props-builder
+  "The build-code-deploy-server-deploy-action-props-builder function updates a CodeDeployServerDeployActionProps$Builder instance using the provided configuration.
+  The function takes the CodeDeployServerDeployActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
+| `deploymentGroup` | software.amazon.awscdk.services.codedeploy.IServerDeploymentGroup | [[cdk.support/lookup-entry]] | `:deployment-group` |
+| `input` | software.amazon.awscdk.services.codepipeline.Artifact | [[cdk.support/lookup-entry]] | `:input` |
+| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
+| `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CodeDeployServerDeployActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :deployment-group)]
+    (. builder deploymentGroup data))
+  (when-let [data (lookup-entry config id :input)]
+    (. builder input data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
+
+
+(defn build-code-star-connections-source-action-builder
+  "The build-code-star-connections-source-action-builder function updates a CodeStarConnectionsSourceAction$Builder instance using the provided configuration.
+  The function takes the CodeStarConnectionsSourceAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1286,37 +1361,40 @@ CodeStarConnectionsSourceAction$Builder using the provided configuration.  Each 
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `triggerOnPush` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:trigger-on-push` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CodeStarConnectionsSourceAction$Builder/create)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :branch)]
-      (. builder branch data))
-    (when-let [data (lookup-entry config id :code-build-clone-output)]
-      (. builder codeBuildCloneOutput data))
-    (when-let [data (lookup-entry config id :connection-arn)]
-      (. builder connectionArn data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :owner)]
-      (. builder owner data))
-    (when-let [data (lookup-entry config id :repo)]
-      (. builder repo data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :trigger-on-push)]
-      (. builder triggerOnPush data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CodeStarConnectionsSourceAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :branch)]
+    (. builder branch data))
+  (when-let [data (lookup-entry config id :code-build-clone-output)]
+    (. builder codeBuildCloneOutput data))
+  (when-let [data (lookup-entry config id :connection-arn)]
+    (. builder connectionArn data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :owner)]
+    (. builder owner data))
+  (when-let [data (lookup-entry config id :repo)]
+    (. builder repo data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :trigger-on-push)]
+    (. builder triggerOnPush data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn code-star-connections-source-action-props-builder
-  "The code-star-connections-source-action-props-builder function buildes out new instances of 
-CodeStarConnectionsSourceActionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-code-star-connections-source-action-props-builder
+  "The build-code-star-connections-source-action-props-builder function updates a CodeStarConnectionsSourceActionProps$Builder instance using the provided configuration.
+  The function takes the CodeStarConnectionsSourceActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1330,37 +1408,40 @@ CodeStarConnectionsSourceActionProps$Builder using the provided configuration.  
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `triggerOnPush` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:trigger-on-push` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (CodeStarConnectionsSourceActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :branch)]
-      (. builder branch data))
-    (when-let [data (lookup-entry config id :code-build-clone-output)]
-      (. builder codeBuildCloneOutput data))
-    (when-let [data (lookup-entry config id :connection-arn)]
-      (. builder connectionArn data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :owner)]
-      (. builder owner data))
-    (when-let [data (lookup-entry config id :repo)]
-      (. builder repo data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :trigger-on-push)]
-      (. builder triggerOnPush data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^CodeStarConnectionsSourceActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :branch)]
+    (. builder branch data))
+  (when-let [data (lookup-entry config id :code-build-clone-output)]
+    (. builder codeBuildCloneOutput data))
+  (when-let [data (lookup-entry config id :connection-arn)]
+    (. builder connectionArn data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :owner)]
+    (. builder owner data))
+  (when-let [data (lookup-entry config id :repo)]
+    (. builder repo data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :trigger-on-push)]
+    (. builder triggerOnPush data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn code-star-source-variables-builder
-  "The code-star-source-variables-builder function buildes out new instances of 
-CodeStarSourceVariables$Builder using the provided configuration.  Each field is set as follows:
+(defn build-code-star-source-variables-builder
+  "The build-code-star-source-variables-builder function updates a CodeStarSourceVariables$Builder instance using the provided configuration.
+  The function takes the CodeStarSourceVariables$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1369,79 +1450,53 @@ CodeStarSourceVariables$Builder using the provided configuration.  Each field is
 | `commitId` | java.lang.String | [[cdk.support/lookup-entry]] | `:commit-id` |
 | `commitMessage` | java.lang.String | [[cdk.support/lookup-entry]] | `:commit-message` |
 | `connectionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:connection-arn` |
-| `fullRepositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:full-repository-name` |"
-  [stack id config]
-  (let [builder (CodeStarSourceVariables$Builder.)]
-    (when-let [data (lookup-entry config id :author-date)]
-      (. builder authorDate data))
-    (when-let [data (lookup-entry config id :branch-name)]
-      (. builder branchName data))
-    (when-let [data (lookup-entry config id :commit-id)]
-      (. builder commitId data))
-    (when-let [data (lookup-entry config id :commit-message)]
-      (. builder commitMessage data))
-    (when-let [data (lookup-entry config id :connection-arn)]
-      (. builder connectionArn data))
-    (when-let [data (lookup-entry config id :full-repository-name)]
-      (. builder fullRepositoryName data))
-    (.build builder)))
+| `fullRepositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:full-repository-name` |
+"
+  [^CodeStarSourceVariables$Builder builder id config]
+  (when-let [data (lookup-entry config id :author-date)]
+    (. builder authorDate data))
+  (when-let [data (lookup-entry config id :branch-name)]
+    (. builder branchName data))
+  (when-let [data (lookup-entry config id :commit-id)]
+    (. builder commitId data))
+  (when-let [data (lookup-entry config id :commit-message)]
+    (. builder commitMessage data))
+  (when-let [data (lookup-entry config id :connection-arn)]
+    (. builder connectionArn data))
+  (when-let [data (lookup-entry config id :full-repository-name)]
+    (. builder fullRepositoryName data))
+  (.build builder))
 
 
-(defn common-cloud-formation-stack-set-options-builder
-  "The common-cloud-formation-stack-set-options-builder function buildes out new instances of 
-CommonCloudFormationStackSetOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-common-cloud-formation-stack-set-options-builder
+  "The build-common-cloud-formation-stack-set-options-builder function updates a CommonCloudFormationStackSetOptions$Builder instance using the provided configuration.
+  The function takes the CommonCloudFormationStackSetOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `failureTolerancePercentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:failure-tolerance-percentage` |
 | `maxAccountConcurrencyPercentage` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-account-concurrency-percentage` |
-| `stackSetRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-set-region` |"
-  [stack id config]
-  (let [builder (CommonCloudFormationStackSetOptions$Builder.)]
-    (when-let [data (lookup-entry config id :failure-tolerance-percentage)]
-      (. builder failureTolerancePercentage data))
-    (when-let [data (lookup-entry config id :max-account-concurrency-percentage)]
-      (. builder maxAccountConcurrencyPercentage data))
-    (when-let [data (lookup-entry config id :stack-set-region)]
-      (. builder stackSetRegion data))
-    (.build builder)))
+| `stackSetRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-set-region` |
+"
+  [^CommonCloudFormationStackSetOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :failure-tolerance-percentage)]
+    (. builder failureTolerancePercentage data))
+  (when-let [data (lookup-entry config id :max-account-concurrency-percentage)]
+    (. builder maxAccountConcurrencyPercentage data))
+  (when-let [data (lookup-entry config id :stack-set-region)]
+    (. builder stackSetRegion data))
+  (.build builder))
 
 
-(defn ecr-source-action-builder
-  "The ecr-source-action-builder function buildes out new instances of 
-EcrSourceAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-ecr-source-action-builder
+  "The build-ecr-source-action-builder function updates a EcrSourceAction$Builder instance using the provided configuration.
+  The function takes the EcrSourceAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
-| `imageTag` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-tag` |
-| `output` | software.amazon.awscdk.services.codepipeline.Artifact | [[cdk.support/lookup-entry]] | `:output` |
-| `repository` | software.amazon.awscdk.services.ecr.IRepository | [[cdk.support/lookup-entry]] | `:repository` |
-| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
-| `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (EcrSourceAction$Builder/create)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :image-tag)]
-      (. builder imageTag data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :repository)]
-      (. builder repository data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
-
-
-(defn ecr-source-action-props-builder
-  "The ecr-source-action-props-builder function buildes out new instances of 
-EcrSourceActionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1451,29 +1506,67 @@ EcrSourceActionProps$Builder using the provided configuration.  Each field is se
 | `repository` | software.amazon.awscdk.services.ecr.IRepository | [[cdk.support/lookup-entry]] | `:repository` |
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (EcrSourceActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :image-tag)]
-      (. builder imageTag data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :repository)]
-      (. builder repository data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^EcrSourceAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :image-tag)]
+    (. builder imageTag data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :repository)]
+    (. builder repository data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn ecr-source-variables-builder
-  "The ecr-source-variables-builder function buildes out new instances of 
-EcrSourceVariables$Builder using the provided configuration.  Each field is set as follows:
+(defn build-ecr-source-action-props-builder
+  "The build-ecr-source-action-props-builder function updates a EcrSourceActionProps$Builder instance using the provided configuration.
+  The function takes the EcrSourceActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
+| `imageTag` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-tag` |
+| `output` | software.amazon.awscdk.services.codepipeline.Artifact | [[cdk.support/lookup-entry]] | `:output` |
+| `repository` | software.amazon.awscdk.services.ecr.IRepository | [[cdk.support/lookup-entry]] | `:repository` |
+| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
+| `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^EcrSourceActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :image-tag)]
+    (. builder imageTag data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :repository)]
+    (. builder repository data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
+
+
+(defn build-ecr-source-variables-builder
+  "The build-ecr-source-variables-builder function updates a EcrSourceVariables$Builder instance using the provided configuration.
+  The function takes the EcrSourceVariables$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1481,60 +1574,28 @@ EcrSourceVariables$Builder using the provided configuration.  Each field is set 
 | `imageTag` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-tag` |
 | `imageUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-uri` |
 | `registryId` | java.lang.String | [[cdk.support/lookup-entry]] | `:registry-id` |
-| `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |"
-  [stack id config]
-  (let [builder (EcrSourceVariables$Builder.)]
-    (when-let [data (lookup-entry config id :image-digest)]
-      (. builder imageDigest data))
-    (when-let [data (lookup-entry config id :image-tag)]
-      (. builder imageTag data))
-    (when-let [data (lookup-entry config id :image-uri)]
-      (. builder imageUri data))
-    (when-let [data (lookup-entry config id :registry-id)]
-      (. builder registryId data))
-    (when-let [data (lookup-entry config id :repository-name)]
-      (. builder repositoryName data))
-    (.build builder)))
+| `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
+"
+  [^EcrSourceVariables$Builder builder id config]
+  (when-let [data (lookup-entry config id :image-digest)]
+    (. builder imageDigest data))
+  (when-let [data (lookup-entry config id :image-tag)]
+    (. builder imageTag data))
+  (when-let [data (lookup-entry config id :image-uri)]
+    (. builder imageUri data))
+  (when-let [data (lookup-entry config id :registry-id)]
+    (. builder registryId data))
+  (when-let [data (lookup-entry config id :repository-name)]
+    (. builder repositoryName data))
+  (.build builder))
 
 
-(defn ecs-deploy-action-builder
-  "The ecs-deploy-action-builder function buildes out new instances of 
-EcsDeployAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-ecs-deploy-action-builder
+  "The build-ecs-deploy-action-builder function updates a EcsDeployAction$Builder instance using the provided configuration.
+  The function takes the EcsDeployAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
-| `deploymentTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:deployment-timeout` |
-| `imageFile` | software.amazon.awscdk.services.codepipeline.ArtifactPath | [[cdk.support/lookup-entry]] | `:image-file` |
-| `input` | software.amazon.awscdk.services.codepipeline.Artifact | [[cdk.support/lookup-entry]] | `:input` |
-| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
-| `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
-| `service` | software.amazon.awscdk.services.ecs.IBaseService | [[cdk.support/lookup-entry]] | `:service` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (EcsDeployAction$Builder/create)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :deployment-timeout)]
-      (. builder deploymentTimeout data))
-    (when-let [data (lookup-entry config id :image-file)]
-      (. builder imageFile data))
-    (when-let [data (lookup-entry config id :input)]
-      (. builder input data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :service)]
-      (. builder service data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
-
-
-(defn ecs-deploy-action-props-builder
-  "The ecs-deploy-action-props-builder function buildes out new instances of 
-EcsDeployActionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1545,31 +1606,72 @@ EcsDeployActionProps$Builder using the provided configuration.  Each field is se
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `service` | software.amazon.awscdk.services.ecs.IBaseService | [[cdk.support/lookup-entry]] | `:service` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (EcsDeployActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :deployment-timeout)]
-      (. builder deploymentTimeout data))
-    (when-let [data (lookup-entry config id :image-file)]
-      (. builder imageFile data))
-    (when-let [data (lookup-entry config id :input)]
-      (. builder input data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :service)]
-      (. builder service data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^EcsDeployAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :deployment-timeout)]
+    (. builder deploymentTimeout data))
+  (when-let [data (lookup-entry config id :image-file)]
+    (. builder imageFile data))
+  (when-let [data (lookup-entry config id :input)]
+    (. builder input data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :service)]
+    (. builder service data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn elastic-beanstalk-deploy-action-builder
-  "The elastic-beanstalk-deploy-action-builder function buildes out new instances of 
-ElasticBeanstalkDeployAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-ecs-deploy-action-props-builder
+  "The build-ecs-deploy-action-props-builder function updates a EcsDeployActionProps$Builder instance using the provided configuration.
+  The function takes the EcsDeployActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
+| `deploymentTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:deployment-timeout` |
+| `imageFile` | software.amazon.awscdk.services.codepipeline.ArtifactPath | [[cdk.support/lookup-entry]] | `:image-file` |
+| `input` | software.amazon.awscdk.services.codepipeline.Artifact | [[cdk.support/lookup-entry]] | `:input` |
+| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
+| `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
+| `service` | software.amazon.awscdk.services.ecs.IBaseService | [[cdk.support/lookup-entry]] | `:service` |
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^EcsDeployActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :deployment-timeout)]
+    (. builder deploymentTimeout data))
+  (when-let [data (lookup-entry config id :image-file)]
+    (. builder imageFile data))
+  (when-let [data (lookup-entry config id :input)]
+    (. builder input data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :service)]
+    (. builder service data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
+
+
+(defn build-elastic-beanstalk-deploy-action-builder
+  "The build-elastic-beanstalk-deploy-action-builder function updates a ElasticBeanstalkDeployAction$Builder instance using the provided configuration.
+  The function takes the ElasticBeanstalkDeployAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1579,29 +1681,32 @@ ElasticBeanstalkDeployAction$Builder using the provided configuration.  Each fie
 | `input` | software.amazon.awscdk.services.codepipeline.Artifact | [[cdk.support/lookup-entry]] | `:input` |
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (ElasticBeanstalkDeployAction$Builder/create)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :application-name)]
-      (. builder applicationName data))
-    (when-let [data (lookup-entry config id :environment-name)]
-      (. builder environmentName data))
-    (when-let [data (lookup-entry config id :input)]
-      (. builder input data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^ElasticBeanstalkDeployAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :application-name)]
+    (. builder applicationName data))
+  (when-let [data (lookup-entry config id :environment-name)]
+    (. builder environmentName data))
+  (when-let [data (lookup-entry config id :input)]
+    (. builder input data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn elastic-beanstalk-deploy-action-props-builder
-  "The elastic-beanstalk-deploy-action-props-builder function buildes out new instances of 
-ElasticBeanstalkDeployActionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-elastic-beanstalk-deploy-action-props-builder
+  "The build-elastic-beanstalk-deploy-action-props-builder function updates a ElasticBeanstalkDeployActionProps$Builder instance using the provided configuration.
+  The function takes the ElasticBeanstalkDeployActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1611,29 +1716,32 @@ ElasticBeanstalkDeployActionProps$Builder using the provided configuration.  Eac
 | `input` | software.amazon.awscdk.services.codepipeline.Artifact | [[cdk.support/lookup-entry]] | `:input` |
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (ElasticBeanstalkDeployActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :application-name)]
-      (. builder applicationName data))
-    (when-let [data (lookup-entry config id :environment-name)]
-      (. builder environmentName data))
-    (when-let [data (lookup-entry config id :input)]
-      (. builder input data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^ElasticBeanstalkDeployActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :application-name)]
+    (. builder applicationName data))
+  (when-let [data (lookup-entry config id :environment-name)]
+    (. builder environmentName data))
+  (when-let [data (lookup-entry config id :input)]
+    (. builder input data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn git-hub-source-action-builder
-  "The git-hub-source-action-builder function buildes out new instances of 
-GitHubSourceAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-git-hub-source-action-builder
+  "The build-git-hub-source-action-builder function updates a GitHubSourceAction$Builder instance using the provided configuration.
+  The function takes the GitHubSourceAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1645,33 +1753,36 @@ GitHubSourceAction$Builder using the provided configuration.  Each field is set 
 | `repo` | java.lang.String | [[cdk.support/lookup-entry]] | `:repo` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `trigger` | software.amazon.awscdk.services.codepipeline.actions.GitHubTrigger | [[cdk.api.services.codepipeline.actions/git-hub-trigger]] | `:trigger` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (GitHubSourceAction$Builder/create)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :branch)]
-      (. builder branch data))
-    (when-let [data (lookup-entry config id :oauth-token)]
-      (. builder oauthToken data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :owner)]
-      (. builder owner data))
-    (when-let [data (lookup-entry config id :repo)]
-      (. builder repo data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (git-hub-trigger config id :trigger)]
-      (. builder trigger data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^GitHubSourceAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :branch)]
+    (. builder branch data))
+  (when-let [data (lookup-entry config id :oauth-token)]
+    (. builder oauthToken data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :owner)]
+    (. builder owner data))
+  (when-let [data (lookup-entry config id :repo)]
+    (. builder repo data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (git-hub-trigger config id :trigger)]
+    (. builder trigger data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn git-hub-source-action-props-builder
-  "The git-hub-source-action-props-builder function buildes out new instances of 
-GitHubSourceActionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-git-hub-source-action-props-builder
+  "The build-git-hub-source-action-props-builder function updates a GitHubSourceActionProps$Builder instance using the provided configuration.
+  The function takes the GitHubSourceActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1683,33 +1794,36 @@ GitHubSourceActionProps$Builder using the provided configuration.  Each field is
 | `repo` | java.lang.String | [[cdk.support/lookup-entry]] | `:repo` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `trigger` | software.amazon.awscdk.services.codepipeline.actions.GitHubTrigger | [[cdk.api.services.codepipeline.actions/git-hub-trigger]] | `:trigger` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (GitHubSourceActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :branch)]
-      (. builder branch data))
-    (when-let [data (lookup-entry config id :oauth-token)]
-      (. builder oauthToken data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :owner)]
-      (. builder owner data))
-    (when-let [data (lookup-entry config id :repo)]
-      (. builder repo data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (git-hub-trigger config id :trigger)]
-      (. builder trigger data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^GitHubSourceActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :branch)]
+    (. builder branch data))
+  (when-let [data (lookup-entry config id :oauth-token)]
+    (. builder oauthToken data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :owner)]
+    (. builder owner data))
+  (when-let [data (lookup-entry config id :repo)]
+    (. builder repo data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (git-hub-trigger config id :trigger)]
+    (. builder trigger data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn git-hub-source-variables-builder
-  "The git-hub-source-variables-builder function buildes out new instances of 
-GitHubSourceVariables$Builder using the provided configuration.  Each field is set as follows:
+(defn build-git-hub-source-variables-builder
+  "The build-git-hub-source-variables-builder function updates a GitHubSourceVariables$Builder instance using the provided configuration.
+  The function takes the GitHubSourceVariables$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1719,64 +1833,32 @@ GitHubSourceVariables$Builder using the provided configuration.  Each field is s
 | `commitMessage` | java.lang.String | [[cdk.support/lookup-entry]] | `:commit-message` |
 | `commitUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:commit-url` |
 | `committerDate` | java.lang.String | [[cdk.support/lookup-entry]] | `:committer-date` |
-| `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |"
-  [stack id config]
-  (let [builder (GitHubSourceVariables$Builder.)]
-    (when-let [data (lookup-entry config id :author-date)]
-      (. builder authorDate data))
-    (when-let [data (lookup-entry config id :branch-name)]
-      (. builder branchName data))
-    (when-let [data (lookup-entry config id :commit-id)]
-      (. builder commitId data))
-    (when-let [data (lookup-entry config id :commit-message)]
-      (. builder commitMessage data))
-    (when-let [data (lookup-entry config id :commit-url)]
-      (. builder commitUrl data))
-    (when-let [data (lookup-entry config id :committer-date)]
-      (. builder committerDate data))
-    (when-let [data (lookup-entry config id :repository-name)]
-      (. builder repositoryName data))
-    (.build builder)))
+| `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
+"
+  [^GitHubSourceVariables$Builder builder id config]
+  (when-let [data (lookup-entry config id :author-date)]
+    (. builder authorDate data))
+  (when-let [data (lookup-entry config id :branch-name)]
+    (. builder branchName data))
+  (when-let [data (lookup-entry config id :commit-id)]
+    (. builder commitId data))
+  (when-let [data (lookup-entry config id :commit-message)]
+    (. builder commitMessage data))
+  (when-let [data (lookup-entry config id :commit-url)]
+    (. builder commitUrl data))
+  (when-let [data (lookup-entry config id :committer-date)]
+    (. builder committerDate data))
+  (when-let [data (lookup-entry config id :repository-name)]
+    (. builder repositoryName data))
+  (.build builder))
 
 
-(defn jenkins-action-builder
-  "The jenkins-action-builder function buildes out new instances of 
-JenkinsAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-jenkins-action-builder
+  "The build-jenkins-action-builder function updates a JenkinsAction$Builder instance using the provided configuration.
+  The function takes the JenkinsAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
-| `inputs` | java.util.List | [[cdk.support/lookup-entry]] | `:inputs` |
-| `jenkinsProvider` | software.amazon.awscdk.services.codepipeline.actions.IJenkinsProvider | [[cdk.support/lookup-entry]] | `:jenkins-provider` |
-| `outputs` | java.util.List | [[cdk.support/lookup-entry]] | `:outputs` |
-| `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |
-| `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
-| `type` | software.amazon.awscdk.services.codepipeline.actions.JenkinsActionType | [[cdk.api.services.codepipeline.actions/jenkins-action-type]] | `:type` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (JenkinsAction$Builder/create)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :inputs)]
-      (. builder inputs data))
-    (when-let [data (lookup-entry config id :jenkins-provider)]
-      (. builder jenkinsProvider data))
-    (when-let [data (lookup-entry config id :outputs)]
-      (. builder outputs data))
-    (when-let [data (lookup-entry config id :project-name)]
-      (. builder projectName data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (jenkins-action-type config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
-
-
-(defn jenkins-action-props-builder
-  "The jenkins-action-props-builder function buildes out new instances of 
-JenkinsActionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1787,51 +1869,95 @@ JenkinsActionProps$Builder using the provided configuration.  Each field is set 
 | `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `type` | software.amazon.awscdk.services.codepipeline.actions.JenkinsActionType | [[cdk.api.services.codepipeline.actions/jenkins-action-type]] | `:type` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (JenkinsActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :inputs)]
-      (. builder inputs data))
-    (when-let [data (lookup-entry config id :jenkins-provider)]
-      (. builder jenkinsProvider data))
-    (when-let [data (lookup-entry config id :outputs)]
-      (. builder outputs data))
-    (when-let [data (lookup-entry config id :project-name)]
-      (. builder projectName data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (jenkins-action-type config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^JenkinsAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :inputs)]
+    (. builder inputs data))
+  (when-let [data (lookup-entry config id :jenkins-provider)]
+    (. builder jenkinsProvider data))
+  (when-let [data (lookup-entry config id :outputs)]
+    (. builder outputs data))
+  (when-let [data (lookup-entry config id :project-name)]
+    (. builder projectName data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (jenkins-action-type config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn jenkins-provider-attributes-builder
-  "The jenkins-provider-attributes-builder function buildes out new instances of 
-JenkinsProviderAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-jenkins-action-props-builder
+  "The build-jenkins-action-props-builder function updates a JenkinsActionProps$Builder instance using the provided configuration.
+  The function takes the JenkinsActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
+| `inputs` | java.util.List | [[cdk.support/lookup-entry]] | `:inputs` |
+| `jenkinsProvider` | software.amazon.awscdk.services.codepipeline.actions.IJenkinsProvider | [[cdk.support/lookup-entry]] | `:jenkins-provider` |
+| `outputs` | java.util.List | [[cdk.support/lookup-entry]] | `:outputs` |
+| `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |
+| `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
+| `type` | software.amazon.awscdk.services.codepipeline.actions.JenkinsActionType | [[cdk.api.services.codepipeline.actions/jenkins-action-type]] | `:type` |
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^JenkinsActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :inputs)]
+    (. builder inputs data))
+  (when-let [data (lookup-entry config id :jenkins-provider)]
+    (. builder jenkinsProvider data))
+  (when-let [data (lookup-entry config id :outputs)]
+    (. builder outputs data))
+  (when-let [data (lookup-entry config id :project-name)]
+    (. builder projectName data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (jenkins-action-type config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
+
+
+(defn build-jenkins-provider-attributes-builder
+  "The build-jenkins-provider-attributes-builder function updates a JenkinsProviderAttributes$Builder instance using the provided configuration.
+  The function takes the JenkinsProviderAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `providerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:provider-name` |
 | `serverUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:server-url` |
-| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |"
-  [stack id config]
-  (let [builder (JenkinsProviderAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :provider-name)]
-      (. builder providerName data))
-    (when-let [data (lookup-entry config id :server-url)]
-      (. builder serverUrl data))
-    (when-let [data (lookup-entry config id :version)]
-      (. builder version data))
-    (.build builder)))
+| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
+"
+  [^JenkinsProviderAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :provider-name)]
+    (. builder providerName data))
+  (when-let [data (lookup-entry config id :server-url)]
+    (. builder serverUrl data))
+  (when-let [data (lookup-entry config id :version)]
+    (. builder version data))
+  (.build builder))
 
 
-(defn jenkins-provider-builder
-  "The jenkins-provider-builder function buildes out new instances of 
-JenkinsProvider$Builder using the provided configuration.  Each field is set as follows:
+(defn build-jenkins-provider-builder
+  "The build-jenkins-provider-builder function updates a JenkinsProvider$Builder instance using the provided configuration.
+  The function takes the JenkinsProvider$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1839,25 +1965,28 @@ JenkinsProvider$Builder using the provided configuration.  Each field is set as 
 | `forTest` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:for-test` |
 | `providerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:provider-name` |
 | `serverUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:server-url` |
-| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |"
-  [stack id config]
-  (let [builder (JenkinsProvider$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :for-build)]
-      (. builder forBuild data))
-    (when-let [data (lookup-entry config id :for-test)]
-      (. builder forTest data))
-    (when-let [data (lookup-entry config id :provider-name)]
-      (. builder providerName data))
-    (when-let [data (lookup-entry config id :server-url)]
-      (. builder serverUrl data))
-    (when-let [data (lookup-entry config id :version)]
-      (. builder version data))
-    (.build builder)))
+| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
+"
+  [^JenkinsProvider$Builder builder id config]
+  (when-let [data (lookup-entry config id :for-build)]
+    (. builder forBuild data))
+  (when-let [data (lookup-entry config id :for-test)]
+    (. builder forTest data))
+  (when-let [data (lookup-entry config id :provider-name)]
+    (. builder providerName data))
+  (when-let [data (lookup-entry config id :server-url)]
+    (. builder serverUrl data))
+  (when-let [data (lookup-entry config id :version)]
+    (. builder version data))
+  (.build builder))
 
 
-(defn jenkins-provider-props-builder
-  "The jenkins-provider-props-builder function buildes out new instances of 
-JenkinsProviderProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-jenkins-provider-props-builder
+  "The build-jenkins-provider-props-builder function updates a JenkinsProviderProps$Builder instance using the provided configuration.
+  The function takes the JenkinsProviderProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1865,25 +1994,28 @@ JenkinsProviderProps$Builder using the provided configuration.  Each field is se
 | `forTest` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:for-test` |
 | `providerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:provider-name` |
 | `serverUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:server-url` |
-| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |"
-  [stack id config]
-  (let [builder (JenkinsProviderProps$Builder.)]
-    (when-let [data (lookup-entry config id :for-build)]
-      (. builder forBuild data))
-    (when-let [data (lookup-entry config id :for-test)]
-      (. builder forTest data))
-    (when-let [data (lookup-entry config id :provider-name)]
-      (. builder providerName data))
-    (when-let [data (lookup-entry config id :server-url)]
-      (. builder serverUrl data))
-    (when-let [data (lookup-entry config id :version)]
-      (. builder version data))
-    (.build builder)))
+| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
+"
+  [^JenkinsProviderProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :for-build)]
+    (. builder forBuild data))
+  (when-let [data (lookup-entry config id :for-test)]
+    (. builder forTest data))
+  (when-let [data (lookup-entry config id :provider-name)]
+    (. builder providerName data))
+  (when-let [data (lookup-entry config id :server-url)]
+    (. builder serverUrl data))
+  (when-let [data (lookup-entry config id :version)]
+    (. builder version data))
+  (.build builder))
 
 
-(defn lambda-invoke-action-builder
-  "The lambda-invoke-action-builder function buildes out new instances of 
-LambdaInvokeAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-lambda-invoke-action-builder
+  "The build-lambda-invoke-action-builder function updates a LambdaInvokeAction$Builder instance using the provided configuration.
+  The function takes the LambdaInvokeAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1895,33 +2027,36 @@ LambdaInvokeAction$Builder using the provided configuration.  Each field is set 
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `userParameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:user-parameters` |
 | `userParametersString` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-parameters-string` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (LambdaInvokeAction$Builder/create)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :inputs)]
-      (. builder inputs data))
-    (when-let [data (lookup-entry config id :lambda)]
-      (. builder lambda data))
-    (when-let [data (lookup-entry config id :outputs)]
-      (. builder outputs data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :user-parameters)]
-      (. builder userParameters data))
-    (when-let [data (lookup-entry config id :user-parameters-string)]
-      (. builder userParametersString data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^LambdaInvokeAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :inputs)]
+    (. builder inputs data))
+  (when-let [data (lookup-entry config id :lambda)]
+    (. builder lambda data))
+  (when-let [data (lookup-entry config id :outputs)]
+    (. builder outputs data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :user-parameters)]
+    (. builder userParameters data))
+  (when-let [data (lookup-entry config id :user-parameters-string)]
+    (. builder userParametersString data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn lambda-invoke-action-props-builder
-  "The lambda-invoke-action-props-builder function buildes out new instances of 
-LambdaInvokeActionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-lambda-invoke-action-props-builder
+  "The build-lambda-invoke-action-props-builder function updates a LambdaInvokeActionProps$Builder instance using the provided configuration.
+  The function takes the LambdaInvokeActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1933,68 +2068,36 @@ LambdaInvokeActionProps$Builder using the provided configuration.  Each field is
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `userParameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:user-parameters` |
 | `userParametersString` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-parameters-string` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (LambdaInvokeActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :inputs)]
-      (. builder inputs data))
-    (when-let [data (lookup-entry config id :lambda)]
-      (. builder lambda data))
-    (when-let [data (lookup-entry config id :outputs)]
-      (. builder outputs data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :user-parameters)]
-      (. builder userParameters data))
-    (when-let [data (lookup-entry config id :user-parameters-string)]
-      (. builder userParametersString data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^LambdaInvokeActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :inputs)]
+    (. builder inputs data))
+  (when-let [data (lookup-entry config id :lambda)]
+    (. builder lambda data))
+  (when-let [data (lookup-entry config id :outputs)]
+    (. builder outputs data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :user-parameters)]
+    (. builder userParameters data))
+  (when-let [data (lookup-entry config id :user-parameters-string)]
+    (. builder userParametersString data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn manual-approval-action-builder
-  "The manual-approval-action-builder function buildes out new instances of 
-ManualApprovalAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-manual-approval-action-builder
+  "The build-manual-approval-action-builder function updates a ManualApprovalAction$Builder instance using the provided configuration.
+  The function takes the ManualApprovalAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
-| `additionalInformation` | java.lang.String | [[cdk.support/lookup-entry]] | `:additional-information` |
-| `externalEntityLink` | java.lang.String | [[cdk.support/lookup-entry]] | `:external-entity-link` |
-| `notificationTopic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:notification-topic` |
-| `notifyEmails` | java.util.List | [[cdk.support/lookup-entry]] | `:notify-emails` |
-| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
-| `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (ManualApprovalAction$Builder/create)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :additional-information)]
-      (. builder additionalInformation data))
-    (when-let [data (lookup-entry config id :external-entity-link)]
-      (. builder externalEntityLink data))
-    (when-let [data (lookup-entry config id :notification-topic)]
-      (. builder notificationTopic data))
-    (when-let [data (lookup-entry config id :notify-emails)]
-      (. builder notifyEmails data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
-
-
-(defn manual-approval-action-props-builder
-  "The manual-approval-action-props-builder function buildes out new instances of 
-ManualApprovalActionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2005,45 +2108,89 @@ ManualApprovalActionProps$Builder using the provided configuration.  Each field 
 | `notifyEmails` | java.util.List | [[cdk.support/lookup-entry]] | `:notify-emails` |
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (ManualApprovalActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :additional-information)]
-      (. builder additionalInformation data))
-    (when-let [data (lookup-entry config id :external-entity-link)]
-      (. builder externalEntityLink data))
-    (when-let [data (lookup-entry config id :notification-topic)]
-      (. builder notificationTopic data))
-    (when-let [data (lookup-entry config id :notify-emails)]
-      (. builder notifyEmails data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^ManualApprovalAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :additional-information)]
+    (. builder additionalInformation data))
+  (when-let [data (lookup-entry config id :external-entity-link)]
+    (. builder externalEntityLink data))
+  (when-let [data (lookup-entry config id :notification-topic)]
+    (. builder notificationTopic data))
+  (when-let [data (lookup-entry config id :notify-emails)]
+    (. builder notifyEmails data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn organizations-deployment-props-builder
-  "The organizations-deployment-props-builder function buildes out new instances of 
-OrganizationsDeploymentProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-manual-approval-action-props-builder
+  "The build-manual-approval-action-props-builder function updates a ManualApprovalActionProps$Builder instance using the provided configuration.
+  The function takes the ManualApprovalActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `autoDeployment` | software.amazon.awscdk.services.codepipeline.actions.StackSetOrganizationsAutoDeployment | [[cdk.api.services.codepipeline.actions/stack-set-organizations-auto-deployment]] | `:auto-deployment` |"
-  [stack id config]
-  (let [builder (OrganizationsDeploymentProps$Builder.)]
-    (when-let [data (stack-set-organizations-auto-deployment config id :auto-deployment)]
-      (. builder autoDeployment data))
-    (.build builder)))
+| `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
+| `additionalInformation` | java.lang.String | [[cdk.support/lookup-entry]] | `:additional-information` |
+| `externalEntityLink` | java.lang.String | [[cdk.support/lookup-entry]] | `:external-entity-link` |
+| `notificationTopic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:notification-topic` |
+| `notifyEmails` | java.util.List | [[cdk.support/lookup-entry]] | `:notify-emails` |
+| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
+| `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^ManualApprovalActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :additional-information)]
+    (. builder additionalInformation data))
+  (when-let [data (lookup-entry config id :external-entity-link)]
+    (. builder externalEntityLink data))
+  (when-let [data (lookup-entry config id :notification-topic)]
+    (. builder notificationTopic data))
+  (when-let [data (lookup-entry config id :notify-emails)]
+    (. builder notifyEmails data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn s3-deploy-action-builder
-  "The s3-deploy-action-builder function buildes out new instances of 
-S3DeployAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-organizations-deployment-props-builder
+  "The build-organizations-deployment-props-builder function updates a OrganizationsDeploymentProps$Builder instance using the provided configuration.
+  The function takes the OrganizationsDeploymentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `autoDeployment` | software.amazon.awscdk.services.codepipeline.actions.StackSetOrganizationsAutoDeployment | [[cdk.api.services.codepipeline.actions/stack-set-organizations-auto-deployment]] | `:auto-deployment` |
+"
+  [^OrganizationsDeploymentProps$Builder builder id config]
+  (when-let [data (stack-set-organizations-auto-deployment config id :auto-deployment)]
+    (. builder autoDeployment data))
+  (.build builder))
+
+
+(defn build-s3-deploy-action-builder
+  "The build-s3-deploy-action-builder function updates a S3DeployAction$Builder instance using the provided configuration.
+  The function takes the S3DeployAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2057,37 +2204,40 @@ S3DeployAction$Builder using the provided configuration.  Each field is set as f
 | `objectKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-key` |
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (S3DeployAction$Builder/create)]
-    (when-let [data (bucket-access-control config id :access-control)]
-      (. builder accessControl data))
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :bucket)]
-      (. builder bucket data))
-    (when-let [data (lookup-entry config id :cache-control)]
-      (. builder cacheControl data))
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (lookup-entry config id :extract)]
-      (. builder extract data))
-    (when-let [data (lookup-entry config id :input)]
-      (. builder input data))
-    (when-let [data (lookup-entry config id :object-key)]
-      (. builder objectKey data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^S3DeployAction$Builder builder id config]
+  (when-let [data (bucket-access-control config id :access-control)]
+    (. builder accessControl data))
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :bucket)]
+    (. builder bucket data))
+  (when-let [data (lookup-entry config id :cache-control)]
+    (. builder cacheControl data))
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (lookup-entry config id :extract)]
+    (. builder extract data))
+  (when-let [data (lookup-entry config id :input)]
+    (. builder input data))
+  (when-let [data (lookup-entry config id :object-key)]
+    (. builder objectKey data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn s3-deploy-action-props-builder
-  "The s3-deploy-action-props-builder function buildes out new instances of 
-S3DeployActionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-s3-deploy-action-props-builder
+  "The build-s3-deploy-action-props-builder function updates a S3DeployActionProps$Builder instance using the provided configuration.
+  The function takes the S3DeployActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2101,72 +2251,40 @@ S3DeployActionProps$Builder using the provided configuration.  Each field is set
 | `objectKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-key` |
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (S3DeployActionProps$Builder.)]
-    (when-let [data (bucket-access-control config id :access-control)]
-      (. builder accessControl data))
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :bucket)]
-      (. builder bucket data))
-    (when-let [data (lookup-entry config id :cache-control)]
-      (. builder cacheControl data))
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (lookup-entry config id :extract)]
-      (. builder extract data))
-    (when-let [data (lookup-entry config id :input)]
-      (. builder input data))
-    (when-let [data (lookup-entry config id :object-key)]
-      (. builder objectKey data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^S3DeployActionProps$Builder builder id config]
+  (when-let [data (bucket-access-control config id :access-control)]
+    (. builder accessControl data))
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :bucket)]
+    (. builder bucket data))
+  (when-let [data (lookup-entry config id :cache-control)]
+    (. builder cacheControl data))
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (lookup-entry config id :extract)]
+    (. builder extract data))
+  (when-let [data (lookup-entry config id :input)]
+    (. builder input data))
+  (when-let [data (lookup-entry config id :object-key)]
+    (. builder objectKey data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn s3-source-action-builder
-  "The s3-source-action-builder function buildes out new instances of 
-S3SourceAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-s3-source-action-builder
+  "The build-s3-source-action-builder function updates a S3SourceAction$Builder instance using the provided configuration.
+  The function takes the S3SourceAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
-| `bucket` | software.amazon.awscdk.services.s3.IBucket | [[cdk.support/lookup-entry]] | `:bucket` |
-| `bucketKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-key` |
-| `output` | software.amazon.awscdk.services.codepipeline.Artifact | [[cdk.support/lookup-entry]] | `:output` |
-| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
-| `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
-| `trigger` | software.amazon.awscdk.services.codepipeline.actions.S3Trigger | [[cdk.api.services.codepipeline.actions/s3-trigger]] | `:trigger` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (S3SourceAction$Builder/create)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :bucket)]
-      (. builder bucket data))
-    (when-let [data (lookup-entry config id :bucket-key)]
-      (. builder bucketKey data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (s3-trigger config id :trigger)]
-      (. builder trigger data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
-
-
-(defn s3-source-action-props-builder
-  "The s3-source-action-props-builder function buildes out new instances of 
-S3SourceActionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2177,100 +2295,112 @@ S3SourceActionProps$Builder using the provided configuration.  Each field is set
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `trigger` | software.amazon.awscdk.services.codepipeline.actions.S3Trigger | [[cdk.api.services.codepipeline.actions/s3-trigger]] | `:trigger` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (S3SourceActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :bucket)]
-      (. builder bucket data))
-    (when-let [data (lookup-entry config id :bucket-key)]
-      (. builder bucketKey data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (s3-trigger config id :trigger)]
-      (. builder trigger data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^S3SourceAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :bucket)]
+    (. builder bucket data))
+  (when-let [data (lookup-entry config id :bucket-key)]
+    (. builder bucketKey data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (s3-trigger config id :trigger)]
+    (. builder trigger data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn s3-source-variables-builder
-  "The s3-source-variables-builder function buildes out new instances of 
-S3SourceVariables$Builder using the provided configuration.  Each field is set as follows:
+(defn build-s3-source-action-props-builder
+  "The build-s3-source-action-props-builder function updates a S3SourceActionProps$Builder instance using the provided configuration.
+  The function takes the S3SourceActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
+| `bucket` | software.amazon.awscdk.services.s3.IBucket | [[cdk.support/lookup-entry]] | `:bucket` |
+| `bucketKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-key` |
+| `output` | software.amazon.awscdk.services.codepipeline.Artifact | [[cdk.support/lookup-entry]] | `:output` |
+| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
+| `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
+| `trigger` | software.amazon.awscdk.services.codepipeline.actions.S3Trigger | [[cdk.api.services.codepipeline.actions/s3-trigger]] | `:trigger` |
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^S3SourceActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :bucket)]
+    (. builder bucket data))
+  (when-let [data (lookup-entry config id :bucket-key)]
+    (. builder bucketKey data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (s3-trigger config id :trigger)]
+    (. builder trigger data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
+
+
+(defn build-s3-source-variables-builder
+  "The build-s3-source-variables-builder function updates a S3SourceVariables$Builder instance using the provided configuration.
+  The function takes the S3SourceVariables$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `eTag` | java.lang.String | [[cdk.support/lookup-entry]] | `:e-tag` |
-| `versionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-id` |"
-  [stack id config]
-  (let [builder (S3SourceVariables$Builder.)]
-    (when-let [data (lookup-entry config id :e-tag)]
-      (. builder eTag data))
-    (when-let [data (lookup-entry config id :version-id)]
-      (. builder versionId data))
-    (.build builder)))
+| `versionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-id` |
+"
+  [^S3SourceVariables$Builder builder id config]
+  (when-let [data (lookup-entry config id :e-tag)]
+    (. builder eTag data))
+  (when-let [data (lookup-entry config id :version-id)]
+    (. builder versionId data))
+  (.build builder))
 
 
-(defn self-managed-deployment-props-builder
-  "The self-managed-deployment-props-builder function buildes out new instances of 
-SelfManagedDeploymentProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-self-managed-deployment-props-builder
+  "The build-self-managed-deployment-props-builder function updates a SelfManagedDeploymentProps$Builder instance using the provided configuration.
+  The function takes the SelfManagedDeploymentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `administrationRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:administration-role` |
-| `executionRoleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-name` |"
-  [stack id config]
-  (let [builder (SelfManagedDeploymentProps$Builder.)]
-    (when-let [data (lookup-entry config id :administration-role)]
-      (. builder administrationRole data))
-    (when-let [data (lookup-entry config id :execution-role-name)]
-      (. builder executionRoleName data))
-    (.build builder)))
+| `executionRoleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-role-name` |
+"
+  [^SelfManagedDeploymentProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :administration-role)]
+    (. builder administrationRole data))
+  (when-let [data (lookup-entry config id :execution-role-name)]
+    (. builder executionRoleName data))
+  (.build builder))
 
 
-(defn service-catalog-deploy-action-beta1-builder
-  "The service-catalog-deploy-action-beta1-builder function buildes out new instances of 
-ServiceCatalogDeployActionBeta1$Builder using the provided configuration.  Each field is set as follows:
+(defn build-service-catalog-deploy-action-beta1-builder
+  "The build-service-catalog-deploy-action-beta1-builder function updates a ServiceCatalogDeployActionBeta1$Builder instance using the provided configuration.
+  The function takes the ServiceCatalogDeployActionBeta1$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
-| `productId` | java.lang.String | [[cdk.support/lookup-entry]] | `:product-id` |
-| `productVersionDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:product-version-description` |
-| `productVersionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:product-version-name` |
-| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
-| `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
-| `templatePath` | software.amazon.awscdk.services.codepipeline.ArtifactPath | [[cdk.support/lookup-entry]] | `:template-path` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (ServiceCatalogDeployActionBeta1$Builder/create)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :product-id)]
-      (. builder productId data))
-    (when-let [data (lookup-entry config id :product-version-description)]
-      (. builder productVersionDescription data))
-    (when-let [data (lookup-entry config id :product-version-name)]
-      (. builder productVersionName data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :template-path)]
-      (. builder templatePath data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
-
-
-(defn service-catalog-deploy-action-beta1-props-builder
-  "The service-catalog-deploy-action-beta1-props-builder function buildes out new instances of 
-ServiceCatalogDeployActionBeta1Props$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2281,31 +2411,72 @@ ServiceCatalogDeployActionBeta1Props$Builder using the provided configuration.  
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `templatePath` | software.amazon.awscdk.services.codepipeline.ArtifactPath | [[cdk.support/lookup-entry]] | `:template-path` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (ServiceCatalogDeployActionBeta1Props$Builder.)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :product-id)]
-      (. builder productId data))
-    (when-let [data (lookup-entry config id :product-version-description)]
-      (. builder productVersionDescription data))
-    (when-let [data (lookup-entry config id :product-version-name)]
-      (. builder productVersionName data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :template-path)]
-      (. builder templatePath data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^ServiceCatalogDeployActionBeta1$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :product-id)]
+    (. builder productId data))
+  (when-let [data (lookup-entry config id :product-version-description)]
+    (. builder productVersionDescription data))
+  (when-let [data (lookup-entry config id :product-version-name)]
+    (. builder productVersionName data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :template-path)]
+    (. builder templatePath data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn step-function-invoke-action-builder
-  "The step-function-invoke-action-builder function buildes out new instances of 
-StepFunctionInvokeAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-service-catalog-deploy-action-beta1-props-builder
+  "The build-service-catalog-deploy-action-beta1-props-builder function updates a ServiceCatalogDeployActionBeta1Props$Builder instance using the provided configuration.
+  The function takes the ServiceCatalogDeployActionBeta1Props$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `actionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:action-name` |
+| `productId` | java.lang.String | [[cdk.support/lookup-entry]] | `:product-id` |
+| `productVersionDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:product-version-description` |
+| `productVersionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:product-version-name` |
+| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
+| `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
+| `templatePath` | software.amazon.awscdk.services.codepipeline.ArtifactPath | [[cdk.support/lookup-entry]] | `:template-path` |
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^ServiceCatalogDeployActionBeta1Props$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :product-id)]
+    (. builder productId data))
+  (when-let [data (lookup-entry config id :product-version-description)]
+    (. builder productVersionDescription data))
+  (when-let [data (lookup-entry config id :product-version-name)]
+    (. builder productVersionName data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :template-path)]
+    (. builder templatePath data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
+
+
+(defn build-step-function-invoke-action-builder
+  "The build-step-function-invoke-action-builder function updates a StepFunctionInvokeAction$Builder instance using the provided configuration.
+  The function takes the StepFunctionInvokeAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2316,31 +2487,34 @@ StepFunctionInvokeAction$Builder using the provided configuration.  Each field i
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `stateMachine` | software.amazon.awscdk.services.stepfunctions.IStateMachine | [[cdk.support/lookup-entry]] | `:state-machine` |
 | `stateMachineInput` | software.amazon.awscdk.services.codepipeline.actions.StateMachineInput | [[cdk.support/lookup-entry]] | `:state-machine-input` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (StepFunctionInvokeAction$Builder/create)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :execution-name-prefix)]
-      (. builder executionNamePrefix data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :state-machine)]
-      (. builder stateMachine data))
-    (when-let [data (lookup-entry config id :state-machine-input)]
-      (. builder stateMachineInput data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^StepFunctionInvokeAction$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :execution-name-prefix)]
+    (. builder executionNamePrefix data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :state-machine)]
+    (. builder stateMachine data))
+  (when-let [data (lookup-entry config id :state-machine-input)]
+    (. builder stateMachineInput data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))
 
 
-(defn step-functions-invoke-action-props-builder
-  "The step-functions-invoke-action-props-builder function buildes out new instances of 
-StepFunctionsInvokeActionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-step-functions-invoke-action-props-builder
+  "The build-step-functions-invoke-action-props-builder function updates a StepFunctionsInvokeActionProps$Builder instance using the provided configuration.
+  The function takes the StepFunctionsInvokeActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2351,23 +2525,23 @@ StepFunctionsInvokeActionProps$Builder using the provided configuration.  Each f
 | `runOrder` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-order` |
 | `stateMachine` | software.amazon.awscdk.services.stepfunctions.IStateMachine | [[cdk.support/lookup-entry]] | `:state-machine` |
 | `stateMachineInput` | software.amazon.awscdk.services.codepipeline.actions.StateMachineInput | [[cdk.support/lookup-entry]] | `:state-machine-input` |
-| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |"
-  [stack id config]
-  (let [builder (StepFunctionsInvokeActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :action-name)]
-      (. builder actionName data))
-    (when-let [data (lookup-entry config id :execution-name-prefix)]
-      (. builder executionNamePrefix data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :run-order)]
-      (. builder runOrder data))
-    (when-let [data (lookup-entry config id :state-machine)]
-      (. builder stateMachine data))
-    (when-let [data (lookup-entry config id :state-machine-input)]
-      (. builder stateMachineInput data))
-    (when-let [data (lookup-entry config id :variables-namespace)]
-      (. builder variablesNamespace data))
-    (.build builder)))
+| `variablesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:variables-namespace` |
+"
+  [^StepFunctionsInvokeActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-name)]
+    (. builder actionName data))
+  (when-let [data (lookup-entry config id :execution-name-prefix)]
+    (. builder executionNamePrefix data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :run-order)]
+    (. builder runOrder data))
+  (when-let [data (lookup-entry config id :state-machine)]
+    (. builder stateMachine data))
+  (when-let [data (lookup-entry config id :state-machine-input)]
+    (. builder stateMachineInput data))
+  (when-let [data (lookup-entry config id :variables-namespace)]
+    (. builder variablesNamespace data))
+  (.build builder))

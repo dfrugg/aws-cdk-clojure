@@ -18,9 +18,12 @@
                                                        CfnVPCEConfigurationProps$Builder]))
 
 
-(defn cfn-device-pool-builder
-  "The cfn-device-pool-builder function buildes out new instances of 
-CfnDevicePool$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-device-pool-builder
+  "The build-cfn-device-pool-builder function updates a CfnDevicePool$Builder instance using the provided configuration.
+  The function takes the CfnDevicePool$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -29,27 +32,30 @@ CfnDevicePool$Builder using the provided configuration.  Each field is set as fo
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `projectArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-arn` |
 | `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDevicePool$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :max-devices)]
-      (. builder maxDevices data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :project-arn)]
-      (. builder projectArn data))
-    (when-let [data (lookup-entry config id :rules)]
-      (. builder rules data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDevicePool$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :max-devices)]
+    (. builder maxDevices data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :project-arn)]
+    (. builder projectArn data))
+  (when-let [data (lookup-entry config id :rules)]
+    (. builder rules data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-device-pool-props-builder
-  "The cfn-device-pool-props-builder function buildes out new instances of 
-CfnDevicePoolProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-device-pool-props-builder
+  "The build-cfn-device-pool-props-builder function updates a CfnDevicePoolProps$Builder instance using the provided configuration.
+  The function takes the CfnDevicePoolProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -58,76 +64,53 @@ CfnDevicePoolProps$Builder using the provided configuration.  Each field is set 
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `projectArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-arn` |
 | `rules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rules` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDevicePoolProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :max-devices)]
-      (. builder maxDevices data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :project-arn)]
-      (. builder projectArn data))
-    (when-let [data (lookup-entry config id :rules)]
-      (. builder rules data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDevicePoolProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :max-devices)]
+    (. builder maxDevices data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :project-arn)]
+    (. builder projectArn data))
+  (when-let [data (lookup-entry config id :rules)]
+    (. builder rules data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-device-pool-rule-property-builder
-  "The cfn-device-pool-rule-property-builder function buildes out new instances of 
-CfnDevicePool$RuleProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-device-pool-rule-property-builder
+  "The build-cfn-device-pool-rule-property-builder function updates a CfnDevicePool$RuleProperty$Builder instance using the provided configuration.
+  The function takes the CfnDevicePool$RuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attribute` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute` |
 | `operator` | java.lang.String | [[cdk.support/lookup-entry]] | `:operator` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnDevicePool$RuleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :attribute)]
-      (. builder attribute data))
-    (when-let [data (lookup-entry config id :operator)]
-      (. builder operator data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnDevicePool$RuleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :attribute)]
+    (. builder attribute data))
+  (when-let [data (lookup-entry config id :operator)]
+    (. builder operator data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-instance-profile-builder
-  "The cfn-instance-profile-builder function buildes out new instances of 
-CfnInstanceProfile$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-instance-profile-builder
+  "The build-cfn-instance-profile-builder function updates a CfnInstanceProfile$Builder instance using the provided configuration.
+  The function takes the CfnInstanceProfile$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `excludeAppPackagesFromCleanup` | java.util.List | [[cdk.support/lookup-entry]] | `:exclude-app-packages-from-cleanup` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `packageCleanup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:package-cleanup` |
-| `rebootAfterUse` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:reboot-after-use` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnInstanceProfile$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :exclude-app-packages-from-cleanup)]
-      (. builder excludeAppPackagesFromCleanup data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :package-cleanup)]
-      (. builder packageCleanup data))
-    (when-let [data (lookup-entry config id :reboot-after-use)]
-      (. builder rebootAfterUse data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
-
-
-(defn cfn-instance-profile-props-builder
-  "The cfn-instance-profile-props-builder function buildes out new instances of 
-CfnInstanceProfileProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -136,27 +119,62 @@ CfnInstanceProfileProps$Builder using the provided configuration.  Each field is
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `packageCleanup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:package-cleanup` |
 | `rebootAfterUse` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:reboot-after-use` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnInstanceProfileProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :exclude-app-packages-from-cleanup)]
-      (. builder excludeAppPackagesFromCleanup data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :package-cleanup)]
-      (. builder packageCleanup data))
-    (when-let [data (lookup-entry config id :reboot-after-use)]
-      (. builder rebootAfterUse data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnInstanceProfile$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :exclude-app-packages-from-cleanup)]
+    (. builder excludeAppPackagesFromCleanup data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :package-cleanup)]
+    (. builder packageCleanup data))
+  (when-let [data (lookup-entry config id :reboot-after-use)]
+    (. builder rebootAfterUse data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-network-profile-builder
-  "The cfn-network-profile-builder function buildes out new instances of 
-CfnNetworkProfile$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-instance-profile-props-builder
+  "The build-cfn-instance-profile-props-builder function updates a CfnInstanceProfileProps$Builder instance using the provided configuration.
+  The function takes the CfnInstanceProfileProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `excludeAppPackagesFromCleanup` | java.util.List | [[cdk.support/lookup-entry]] | `:exclude-app-packages-from-cleanup` |
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `packageCleanup` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:package-cleanup` |
+| `rebootAfterUse` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:reboot-after-use` |
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnInstanceProfileProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :exclude-app-packages-from-cleanup)]
+    (. builder excludeAppPackagesFromCleanup data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :package-cleanup)]
+    (. builder packageCleanup data))
+  (when-let [data (lookup-entry config id :reboot-after-use)]
+    (. builder rebootAfterUse data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
+
+
+(defn build-cfn-network-profile-builder
+  "The build-cfn-network-profile-builder function updates a CfnNetworkProfile$Builder instance using the provided configuration.
+  The function takes the CfnNetworkProfile$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -171,39 +189,42 @@ CfnNetworkProfile$Builder using the provided configuration.  Each field is set a
 | `uplinkBandwidthBits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:uplink-bandwidth-bits` |
 | `uplinkDelayMs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:uplink-delay-ms` |
 | `uplinkJitterMs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:uplink-jitter-ms` |
-| `uplinkLossPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:uplink-loss-percent` |"
-  [stack id config]
-  (let [builder (CfnNetworkProfile$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :downlink-bandwidth-bits)]
-      (. builder downlinkBandwidthBits data))
-    (when-let [data (lookup-entry config id :downlink-delay-ms)]
-      (. builder downlinkDelayMs data))
-    (when-let [data (lookup-entry config id :downlink-jitter-ms)]
-      (. builder downlinkJitterMs data))
-    (when-let [data (lookup-entry config id :downlink-loss-percent)]
-      (. builder downlinkLossPercent data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :project-arn)]
-      (. builder projectArn data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :uplink-bandwidth-bits)]
-      (. builder uplinkBandwidthBits data))
-    (when-let [data (lookup-entry config id :uplink-delay-ms)]
-      (. builder uplinkDelayMs data))
-    (when-let [data (lookup-entry config id :uplink-jitter-ms)]
-      (. builder uplinkJitterMs data))
-    (when-let [data (lookup-entry config id :uplink-loss-percent)]
-      (. builder uplinkLossPercent data))
-    (.build builder)))
+| `uplinkLossPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:uplink-loss-percent` |
+"
+  [^CfnNetworkProfile$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :downlink-bandwidth-bits)]
+    (. builder downlinkBandwidthBits data))
+  (when-let [data (lookup-entry config id :downlink-delay-ms)]
+    (. builder downlinkDelayMs data))
+  (when-let [data (lookup-entry config id :downlink-jitter-ms)]
+    (. builder downlinkJitterMs data))
+  (when-let [data (lookup-entry config id :downlink-loss-percent)]
+    (. builder downlinkLossPercent data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :project-arn)]
+    (. builder projectArn data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :uplink-bandwidth-bits)]
+    (. builder uplinkBandwidthBits data))
+  (when-let [data (lookup-entry config id :uplink-delay-ms)]
+    (. builder uplinkDelayMs data))
+  (when-let [data (lookup-entry config id :uplink-jitter-ms)]
+    (. builder uplinkJitterMs data))
+  (when-let [data (lookup-entry config id :uplink-loss-percent)]
+    (. builder uplinkLossPercent data))
+  (.build builder))
 
 
-(defn cfn-network-profile-props-builder
-  "The cfn-network-profile-props-builder function buildes out new instances of 
-CfnNetworkProfileProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-network-profile-props-builder
+  "The build-cfn-network-profile-props-builder function updates a CfnNetworkProfileProps$Builder instance using the provided configuration.
+  The function takes the CfnNetworkProfileProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -218,171 +239,192 @@ CfnNetworkProfileProps$Builder using the provided configuration.  Each field is 
 | `uplinkBandwidthBits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:uplink-bandwidth-bits` |
 | `uplinkDelayMs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:uplink-delay-ms` |
 | `uplinkJitterMs` | java.lang.Number | [[cdk.support/lookup-entry]] | `:uplink-jitter-ms` |
-| `uplinkLossPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:uplink-loss-percent` |"
-  [stack id config]
-  (let [builder (CfnNetworkProfileProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :downlink-bandwidth-bits)]
-      (. builder downlinkBandwidthBits data))
-    (when-let [data (lookup-entry config id :downlink-delay-ms)]
-      (. builder downlinkDelayMs data))
-    (when-let [data (lookup-entry config id :downlink-jitter-ms)]
-      (. builder downlinkJitterMs data))
-    (when-let [data (lookup-entry config id :downlink-loss-percent)]
-      (. builder downlinkLossPercent data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :project-arn)]
-      (. builder projectArn data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :uplink-bandwidth-bits)]
-      (. builder uplinkBandwidthBits data))
-    (when-let [data (lookup-entry config id :uplink-delay-ms)]
-      (. builder uplinkDelayMs data))
-    (when-let [data (lookup-entry config id :uplink-jitter-ms)]
-      (. builder uplinkJitterMs data))
-    (when-let [data (lookup-entry config id :uplink-loss-percent)]
-      (. builder uplinkLossPercent data))
-    (.build builder)))
+| `uplinkLossPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:uplink-loss-percent` |
+"
+  [^CfnNetworkProfileProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :downlink-bandwidth-bits)]
+    (. builder downlinkBandwidthBits data))
+  (when-let [data (lookup-entry config id :downlink-delay-ms)]
+    (. builder downlinkDelayMs data))
+  (when-let [data (lookup-entry config id :downlink-jitter-ms)]
+    (. builder downlinkJitterMs data))
+  (when-let [data (lookup-entry config id :downlink-loss-percent)]
+    (. builder downlinkLossPercent data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :project-arn)]
+    (. builder projectArn data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :uplink-bandwidth-bits)]
+    (. builder uplinkBandwidthBits data))
+  (when-let [data (lookup-entry config id :uplink-delay-ms)]
+    (. builder uplinkDelayMs data))
+  (when-let [data (lookup-entry config id :uplink-jitter-ms)]
+    (. builder uplinkJitterMs data))
+  (when-let [data (lookup-entry config id :uplink-loss-percent)]
+    (. builder uplinkLossPercent data))
+  (.build builder))
 
 
-(defn cfn-project-builder
-  "The cfn-project-builder function buildes out new instances of 
-CfnProject$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-project-builder
+  "The build-cfn-project-builder function updates a CfnProject$Builder instance using the provided configuration.
+  The function takes the CfnProject$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `defaultJobTimeoutMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:default-job-timeout-minutes` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcConfig` | software.amazon.awscdk.services.devicefarm.CfnProject$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |"
-  [stack id config]
-  (let [builder (CfnProject$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :default-job-timeout-minutes)]
-      (. builder defaultJobTimeoutMinutes data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :vpc-config)]
-      (. builder vpcConfig data))
-    (.build builder)))
-
-
-(defn cfn-project-props-builder
-  "The cfn-project-props-builder function buildes out new instances of 
-CfnProjectProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `defaultJobTimeoutMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:default-job-timeout-minutes` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |"
-  [stack id config]
-  (let [builder (CfnProjectProps$Builder.)]
-    (when-let [data (lookup-entry config id :default-job-timeout-minutes)]
-      (. builder defaultJobTimeoutMinutes data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :vpc-config)]
-      (. builder vpcConfig data))
-    (.build builder)))
+| `vpcConfig` | software.amazon.awscdk.services.devicefarm.CfnProject$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
+"
+  [^CfnProject$Builder builder id config]
+  (when-let [data (lookup-entry config id :default-job-timeout-minutes)]
+    (. builder defaultJobTimeoutMinutes data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :vpc-config)]
+    (. builder vpcConfig data))
+  (.build builder))
 
 
-(defn cfn-project-vpc-config-property-builder
-  "The cfn-project-vpc-config-property-builder function buildes out new instances of 
-CfnProject$VpcConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-project-props-builder
+  "The build-cfn-project-props-builder function updates a CfnProjectProps$Builder instance using the provided configuration.
+  The function takes the CfnProjectProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `defaultJobTimeoutMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:default-job-timeout-minutes` |
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
+"
+  [^CfnProjectProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :default-job-timeout-minutes)]
+    (. builder defaultJobTimeoutMinutes data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :vpc-config)]
+    (. builder vpcConfig data))
+  (.build builder))
+
+
+(defn build-cfn-project-vpc-config-property-builder
+  "The build-cfn-project-vpc-config-property-builder function updates a CfnProject$VpcConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnProject$VpcConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
-| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |"
-  [stack id config]
-  (let [builder (CfnProject$VpcConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :security-group-ids)]
-      (. builder securityGroupIds data))
-    (when-let [data (lookup-entry config id :subnet-ids)]
-      (. builder subnetIds data))
-    (when-let [data (lookup-entry config id :vpc-id)]
-      (. builder vpcId data))
-    (.build builder)))
+| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
+"
+  [^CfnProject$VpcConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :security-group-ids)]
+    (. builder securityGroupIds data))
+  (when-let [data (lookup-entry config id :subnet-ids)]
+    (. builder subnetIds data))
+  (when-let [data (lookup-entry config id :vpc-id)]
+    (. builder vpcId data))
+  (.build builder))
 
 
-(defn cfn-test-grid-project-builder
-  "The cfn-test-grid-project-builder function buildes out new instances of 
-CfnTestGridProject$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-test-grid-project-builder
+  "The build-cfn-test-grid-project-builder function updates a CfnTestGridProject$Builder instance using the provided configuration.
+  The function takes the CfnTestGridProject$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcConfig` | software.amazon.awscdk.services.devicefarm.CfnTestGridProject$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |"
-  [stack id config]
-  (let [builder (CfnTestGridProject$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :vpc-config)]
-      (. builder vpcConfig data))
-    (.build builder)))
+| `vpcConfig` | software.amazon.awscdk.services.devicefarm.CfnTestGridProject$VpcConfigProperty | [[cdk.support/lookup-entry]] | `:vpc-config` |
+"
+  [^CfnTestGridProject$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :vpc-config)]
+    (. builder vpcConfig data))
+  (.build builder))
 
 
-(defn cfn-test-grid-project-props-builder
-  "The cfn-test-grid-project-props-builder function buildes out new instances of 
-CfnTestGridProjectProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-test-grid-project-props-builder
+  "The build-cfn-test-grid-project-props-builder function updates a CfnTestGridProjectProps$Builder instance using the provided configuration.
+  The function takes the CfnTestGridProjectProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |"
-  [stack id config]
-  (let [builder (CfnTestGridProjectProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :vpc-config)]
-      (. builder vpcConfig data))
-    (.build builder)))
+| `vpcConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:vpc-config` |
+"
+  [^CfnTestGridProjectProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :vpc-config)]
+    (. builder vpcConfig data))
+  (.build builder))
 
 
-(defn cfn-test-grid-project-vpc-config-property-builder
-  "The cfn-test-grid-project-vpc-config-property-builder function buildes out new instances of 
-CfnTestGridProject$VpcConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-test-grid-project-vpc-config-property-builder
+  "The build-cfn-test-grid-project-vpc-config-property-builder function updates a CfnTestGridProject$VpcConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnTestGridProject$VpcConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
-| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |"
-  [stack id config]
-  (let [builder (CfnTestGridProject$VpcConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :security-group-ids)]
-      (. builder securityGroupIds data))
-    (when-let [data (lookup-entry config id :subnet-ids)]
-      (. builder subnetIds data))
-    (when-let [data (lookup-entry config id :vpc-id)]
-      (. builder vpcId data))
-    (.build builder)))
+| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
+"
+  [^CfnTestGridProject$VpcConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :security-group-ids)]
+    (. builder securityGroupIds data))
+  (when-let [data (lookup-entry config id :subnet-ids)]
+    (. builder subnetIds data))
+  (when-let [data (lookup-entry config id :vpc-id)]
+    (. builder vpcId data))
+  (.build builder))
 
 
-(defn cfn-vpce-configuration-builder
-  "The cfn-vpce-configuration-builder function buildes out new instances of 
-CfnVPCEConfiguration$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-vpce-configuration-builder
+  "The build-cfn-vpce-configuration-builder function updates a CfnVPCEConfiguration$Builder instance using the provided configuration.
+  The function takes the CfnVPCEConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -390,25 +432,28 @@ CfnVPCEConfiguration$Builder using the provided configuration.  Each field is se
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `vpceConfigurationDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpce-configuration-description` |
 | `vpceConfigurationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpce-configuration-name` |
-| `vpceServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpce-service-name` |"
-  [stack id config]
-  (let [builder (CfnVPCEConfiguration$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :service-dns-name)]
-      (. builder serviceDnsName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :vpce-configuration-description)]
-      (. builder vpceConfigurationDescription data))
-    (when-let [data (lookup-entry config id :vpce-configuration-name)]
-      (. builder vpceConfigurationName data))
-    (when-let [data (lookup-entry config id :vpce-service-name)]
-      (. builder vpceServiceName data))
-    (.build builder)))
+| `vpceServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpce-service-name` |
+"
+  [^CfnVPCEConfiguration$Builder builder id config]
+  (when-let [data (lookup-entry config id :service-dns-name)]
+    (. builder serviceDnsName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :vpce-configuration-description)]
+    (. builder vpceConfigurationDescription data))
+  (when-let [data (lookup-entry config id :vpce-configuration-name)]
+    (. builder vpceConfigurationName data))
+  (when-let [data (lookup-entry config id :vpce-service-name)]
+    (. builder vpceServiceName data))
+  (.build builder))
 
 
-(defn cfn-vpce-configuration-props-builder
-  "The cfn-vpce-configuration-props-builder function buildes out new instances of 
-CfnVPCEConfigurationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-vpce-configuration-props-builder
+  "The build-cfn-vpce-configuration-props-builder function updates a CfnVPCEConfigurationProps$Builder instance using the provided configuration.
+  The function takes the CfnVPCEConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -416,17 +461,17 @@ CfnVPCEConfigurationProps$Builder using the provided configuration.  Each field 
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `vpceConfigurationDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpce-configuration-description` |
 | `vpceConfigurationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpce-configuration-name` |
-| `vpceServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpce-service-name` |"
-  [stack id config]
-  (let [builder (CfnVPCEConfigurationProps$Builder.)]
-    (when-let [data (lookup-entry config id :service-dns-name)]
-      (. builder serviceDnsName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :vpce-configuration-description)]
-      (. builder vpceConfigurationDescription data))
-    (when-let [data (lookup-entry config id :vpce-configuration-name)]
-      (. builder vpceConfigurationName data))
-    (when-let [data (lookup-entry config id :vpce-service-name)]
-      (. builder vpceServiceName data))
-    (.build builder)))
+| `vpceServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpce-service-name` |
+"
+  [^CfnVPCEConfigurationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :service-dns-name)]
+    (. builder serviceDnsName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :vpce-configuration-description)]
+    (. builder vpceConfigurationDescription data))
+  (when-let [data (lookup-entry config id :vpce-configuration-name)]
+    (. builder vpceConfigurationName data))
+  (when-let [data (lookup-entry config id :vpce-service-name)]
+    (. builder vpceServiceName data))
+  (.build builder))

@@ -6,9 +6,12 @@
                                                                  CfnEnvironmentProps$Builder]))
 
 
-(defn cfn-environment-builder
-  "The cfn-environment-builder function buildes out new instances of 
-CfnEnvironment$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-environment-builder
+  "The build-cfn-environment-builder function updates a CfnEnvironment$Builder instance using the provided configuration.
+  The function takes the CfnEnvironment$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -20,33 +23,36 @@ CfnEnvironment$Builder using the provided configuration.  Each field is set as f
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `softwareSetUpdateMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:software-set-update-mode` |
 | `softwareSetUpdateSchedule` | java.lang.String | [[cdk.support/lookup-entry]] | `:software-set-update-schedule` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnEnvironment$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :desired-software-set-id)]
-      (. builder desiredSoftwareSetId data))
-    (when-let [data (lookup-entry config id :desktop-arn)]
-      (. builder desktopArn data))
-    (when-let [data (lookup-entry config id :desktop-endpoint)]
-      (. builder desktopEndpoint data))
-    (when-let [data (lookup-entry config id :kms-key-arn)]
-      (. builder kmsKeyArn data))
-    (when-let [data (lookup-entry config id :maintenance-window)]
-      (. builder maintenanceWindow data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :software-set-update-mode)]
-      (. builder softwareSetUpdateMode data))
-    (when-let [data (lookup-entry config id :software-set-update-schedule)]
-      (. builder softwareSetUpdateSchedule data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnEnvironment$Builder builder id config]
+  (when-let [data (lookup-entry config id :desired-software-set-id)]
+    (. builder desiredSoftwareSetId data))
+  (when-let [data (lookup-entry config id :desktop-arn)]
+    (. builder desktopArn data))
+  (when-let [data (lookup-entry config id :desktop-endpoint)]
+    (. builder desktopEndpoint data))
+  (when-let [data (lookup-entry config id :kms-key-arn)]
+    (. builder kmsKeyArn data))
+  (when-let [data (lookup-entry config id :maintenance-window)]
+    (. builder maintenanceWindow data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :software-set-update-mode)]
+    (. builder softwareSetUpdateMode data))
+  (when-let [data (lookup-entry config id :software-set-update-schedule)]
+    (. builder softwareSetUpdateSchedule data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-environment-maintenance-window-property-builder
-  "The cfn-environment-maintenance-window-property-builder function buildes out new instances of 
-CfnEnvironment$MaintenanceWindowProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-environment-maintenance-window-property-builder
+  "The build-cfn-environment-maintenance-window-property-builder function updates a CfnEnvironment$MaintenanceWindowProperty$Builder instance using the provided configuration.
+  The function takes the CfnEnvironment$MaintenanceWindowProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -56,29 +62,32 @@ CfnEnvironment$MaintenanceWindowProperty$Builder using the provided configuratio
 | `endTimeMinute` | java.lang.Number | [[cdk.support/lookup-entry]] | `:end-time-minute` |
 | `startTimeHour` | java.lang.Number | [[cdk.support/lookup-entry]] | `:start-time-hour` |
 | `startTimeMinute` | java.lang.Number | [[cdk.support/lookup-entry]] | `:start-time-minute` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnEnvironment$MaintenanceWindowProperty$Builder.)]
-    (when-let [data (lookup-entry config id :apply-time-of)]
-      (. builder applyTimeOf data))
-    (when-let [data (lookup-entry config id :days-of-the-week)]
-      (. builder daysOfTheWeek data))
-    (when-let [data (lookup-entry config id :end-time-hour)]
-      (. builder endTimeHour data))
-    (when-let [data (lookup-entry config id :end-time-minute)]
-      (. builder endTimeMinute data))
-    (when-let [data (lookup-entry config id :start-time-hour)]
-      (. builder startTimeHour data))
-    (when-let [data (lookup-entry config id :start-time-minute)]
-      (. builder startTimeMinute data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnEnvironment$MaintenanceWindowProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :apply-time-of)]
+    (. builder applyTimeOf data))
+  (when-let [data (lookup-entry config id :days-of-the-week)]
+    (. builder daysOfTheWeek data))
+  (when-let [data (lookup-entry config id :end-time-hour)]
+    (. builder endTimeHour data))
+  (when-let [data (lookup-entry config id :end-time-minute)]
+    (. builder endTimeMinute data))
+  (when-let [data (lookup-entry config id :start-time-hour)]
+    (. builder startTimeHour data))
+  (when-let [data (lookup-entry config id :start-time-minute)]
+    (. builder startTimeMinute data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-environment-props-builder
-  "The cfn-environment-props-builder function buildes out new instances of 
-CfnEnvironmentProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-environment-props-builder
+  "The build-cfn-environment-props-builder function updates a CfnEnvironmentProps$Builder instance using the provided configuration.
+  The function takes the CfnEnvironmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -90,25 +99,25 @@ CfnEnvironmentProps$Builder using the provided configuration.  Each field is set
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `softwareSetUpdateMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:software-set-update-mode` |
 | `softwareSetUpdateSchedule` | java.lang.String | [[cdk.support/lookup-entry]] | `:software-set-update-schedule` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnEnvironmentProps$Builder.)]
-    (when-let [data (lookup-entry config id :desired-software-set-id)]
-      (. builder desiredSoftwareSetId data))
-    (when-let [data (lookup-entry config id :desktop-arn)]
-      (. builder desktopArn data))
-    (when-let [data (lookup-entry config id :desktop-endpoint)]
-      (. builder desktopEndpoint data))
-    (when-let [data (lookup-entry config id :kms-key-arn)]
-      (. builder kmsKeyArn data))
-    (when-let [data (lookup-entry config id :maintenance-window)]
-      (. builder maintenanceWindow data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :software-set-update-mode)]
-      (. builder softwareSetUpdateMode data))
-    (when-let [data (lookup-entry config id :software-set-update-schedule)]
-      (. builder softwareSetUpdateSchedule data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnEnvironmentProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :desired-software-set-id)]
+    (. builder desiredSoftwareSetId data))
+  (when-let [data (lookup-entry config id :desktop-arn)]
+    (. builder desktopArn data))
+  (when-let [data (lookup-entry config id :desktop-endpoint)]
+    (. builder desktopEndpoint data))
+  (when-let [data (lookup-entry config id :kms-key-arn)]
+    (. builder kmsKeyArn data))
+  (when-let [data (lookup-entry config id :maintenance-window)]
+    (. builder maintenanceWindow data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :software-set-update-mode)]
+    (. builder softwareSetUpdateMode data))
+  (when-let [data (lookup-entry config id :software-set-update-schedule)]
+    (. builder softwareSetUpdateSchedule data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))

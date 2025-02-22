@@ -15,69 +15,81 @@
                                                    CfnKnowledgeBaseProps$Builder]))
 
 
-(defn cfn-assistant-association-association-data-property-builder
-  "The cfn-assistant-association-association-data-property-builder function buildes out new instances of 
-CfnAssistantAssociation$AssociationDataProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-assistant-association-association-data-property-builder
+  "The build-cfn-assistant-association-association-data-property-builder function updates a CfnAssistantAssociation$AssociationDataProperty$Builder instance using the provided configuration.
+  The function takes the CfnAssistantAssociation$AssociationDataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `knowledgeBaseId` | java.lang.String | [[cdk.support/lookup-entry]] | `:knowledge-base-id` |"
-  [stack id config]
-  (let [builder (CfnAssistantAssociation$AssociationDataProperty$Builder.)]
-    (when-let [data (lookup-entry config id :knowledge-base-id)]
-      (. builder knowledgeBaseId data))
-    (.build builder)))
+| `knowledgeBaseId` | java.lang.String | [[cdk.support/lookup-entry]] | `:knowledge-base-id` |
+"
+  [^CfnAssistantAssociation$AssociationDataProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :knowledge-base-id)]
+    (. builder knowledgeBaseId data))
+  (.build builder))
 
 
-(defn cfn-assistant-association-builder
-  "The cfn-assistant-association-builder function buildes out new instances of 
-CfnAssistantAssociation$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-assistant-association-builder
+  "The build-cfn-assistant-association-builder function updates a CfnAssistantAssociation$Builder instance using the provided configuration.
+  The function takes the CfnAssistantAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `assistantId` | java.lang.String | [[cdk.support/lookup-entry]] | `:assistant-id` |
-| `association` | software.amazon.awscdk.services.wisdom.CfnAssistantAssociation$AssociationDataProperty | [[cdk.support/lookup-entry]] | `:association` |
-| `associationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:association-type` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnAssistantAssociation$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :assistant-id)]
-      (. builder assistantId data))
-    (when-let [data (lookup-entry config id :association)]
-      (. builder association data))
-    (when-let [data (lookup-entry config id :association-type)]
-      (. builder associationType data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
-
-
-(defn cfn-assistant-association-props-builder
-  "The cfn-assistant-association-props-builder function buildes out new instances of 
-CfnAssistantAssociationProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `assistantId` | java.lang.String | [[cdk.support/lookup-entry]] | `:assistant-id` |
 | `association` | software.amazon.awscdk.services.wisdom.CfnAssistantAssociation$AssociationDataProperty | [[cdk.support/lookup-entry]] | `:association` |
 | `associationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:association-type` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnAssistantAssociationProps$Builder.)]
-    (when-let [data (lookup-entry config id :assistant-id)]
-      (. builder assistantId data))
-    (when-let [data (lookup-entry config id :association)]
-      (. builder association data))
-    (when-let [data (lookup-entry config id :association-type)]
-      (. builder associationType data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnAssistantAssociation$Builder builder id config]
+  (when-let [data (lookup-entry config id :assistant-id)]
+    (. builder assistantId data))
+  (when-let [data (lookup-entry config id :association)]
+    (. builder association data))
+  (when-let [data (lookup-entry config id :association-type)]
+    (. builder associationType data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-assistant-builder
-  "The cfn-assistant-builder function buildes out new instances of 
-CfnAssistant$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-assistant-association-props-builder
+  "The build-cfn-assistant-association-props-builder function updates a CfnAssistantAssociationProps$Builder instance using the provided configuration.
+  The function takes the CfnAssistantAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `assistantId` | java.lang.String | [[cdk.support/lookup-entry]] | `:assistant-id` |
+| `association` | software.amazon.awscdk.services.wisdom.CfnAssistantAssociation$AssociationDataProperty | [[cdk.support/lookup-entry]] | `:association` |
+| `associationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:association-type` |
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnAssistantAssociationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :assistant-id)]
+    (. builder assistantId data))
+  (when-let [data (lookup-entry config id :association)]
+    (. builder association data))
+  (when-let [data (lookup-entry config id :association-type)]
+    (. builder associationType data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
+
+
+(defn build-cfn-assistant-builder
+  "The build-cfn-assistant-builder function updates a CfnAssistant$Builder instance using the provided configuration.
+  The function takes the CfnAssistant$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -85,25 +97,28 @@ CfnAssistant$Builder using the provided configuration.  Each field is set as fol
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `serverSideEncryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:server-side-encryption-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnAssistant$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :server-side-encryption-configuration)]
-      (. builder serverSideEncryptionConfiguration data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnAssistant$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :server-side-encryption-configuration)]
+    (. builder serverSideEncryptionConfiguration data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-assistant-props-builder
-  "The cfn-assistant-props-builder function buildes out new instances of 
-CfnAssistantProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-assistant-props-builder
+  "The build-cfn-assistant-props-builder function updates a CfnAssistantProps$Builder instance using the provided configuration.
+  The function takes the CfnAssistantProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -111,56 +126,65 @@ CfnAssistantProps$Builder using the provided configuration.  Each field is set a
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `serverSideEncryptionConfiguration` | software.amazon.awscdk.services.wisdom.CfnAssistant$ServerSideEncryptionConfigurationProperty | [[cdk.support/lookup-entry]] | `:server-side-encryption-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnAssistantProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :server-side-encryption-configuration)]
-      (. builder serverSideEncryptionConfiguration data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnAssistantProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :server-side-encryption-configuration)]
+    (. builder serverSideEncryptionConfiguration data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-assistant-server-side-encryption-configuration-property-builder
-  "The cfn-assistant-server-side-encryption-configuration-property-builder function buildes out new instances of 
-CfnAssistant$ServerSideEncryptionConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-assistant-server-side-encryption-configuration-property-builder
+  "The build-cfn-assistant-server-side-encryption-configuration-property-builder function updates a CfnAssistant$ServerSideEncryptionConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnAssistant$ServerSideEncryptionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |"
-  [stack id config]
-  (let [builder (CfnAssistant$ServerSideEncryptionConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :kms-key-id)]
-      (. builder kmsKeyId data))
-    (.build builder)))
+| `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
+"
+  [^CfnAssistant$ServerSideEncryptionConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :kms-key-id)]
+    (. builder kmsKeyId data))
+  (.build builder))
 
 
-(defn cfn-knowledge-base-app-integrations-configuration-property-builder
-  "The cfn-knowledge-base-app-integrations-configuration-property-builder function buildes out new instances of 
-CfnKnowledgeBase$AppIntegrationsConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-knowledge-base-app-integrations-configuration-property-builder
+  "The build-cfn-knowledge-base-app-integrations-configuration-property-builder function updates a CfnKnowledgeBase$AppIntegrationsConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnKnowledgeBase$AppIntegrationsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `appIntegrationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:app-integration-arn` |
-| `objectFields` | java.util.List | [[cdk.support/lookup-entry]] | `:object-fields` |"
-  [stack id config]
-  (let [builder (CfnKnowledgeBase$AppIntegrationsConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :app-integration-arn)]
-      (. builder appIntegrationArn data))
-    (when-let [data (lookup-entry config id :object-fields)]
-      (. builder objectFields data))
-    (.build builder)))
+| `objectFields` | java.util.List | [[cdk.support/lookup-entry]] | `:object-fields` |
+"
+  [^CfnKnowledgeBase$AppIntegrationsConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :app-integration-arn)]
+    (. builder appIntegrationArn data))
+  (when-let [data (lookup-entry config id :object-fields)]
+    (. builder objectFields data))
+  (.build builder))
 
 
-(defn cfn-knowledge-base-builder
-  "The cfn-knowledge-base-builder function buildes out new instances of 
-CfnKnowledgeBase$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-knowledge-base-builder
+  "The build-cfn-knowledge-base-builder function updates a CfnKnowledgeBase$Builder instance using the provided configuration.
+  The function takes the CfnKnowledgeBase$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -170,29 +194,32 @@ CfnKnowledgeBase$Builder using the provided configuration.  Each field is set as
 | `renderingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rendering-configuration` |
 | `serverSideEncryptionConfiguration` | software.amazon.awscdk.services.wisdom.CfnKnowledgeBase$ServerSideEncryptionConfigurationProperty | [[cdk.support/lookup-entry]] | `:server-side-encryption-configuration` |
 | `sourceConfiguration` | software.amazon.awscdk.services.wisdom.CfnKnowledgeBase$SourceConfigurationProperty | [[cdk.support/lookup-entry]] | `:source-configuration` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnKnowledgeBase$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :knowledge-base-type)]
-      (. builder knowledgeBaseType data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :rendering-configuration)]
-      (. builder renderingConfiguration data))
-    (when-let [data (lookup-entry config id :server-side-encryption-configuration)]
-      (. builder serverSideEncryptionConfiguration data))
-    (when-let [data (lookup-entry config id :source-configuration)]
-      (. builder sourceConfiguration data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnKnowledgeBase$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :knowledge-base-type)]
+    (. builder knowledgeBaseType data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :rendering-configuration)]
+    (. builder renderingConfiguration data))
+  (when-let [data (lookup-entry config id :server-side-encryption-configuration)]
+    (. builder serverSideEncryptionConfiguration data))
+  (when-let [data (lookup-entry config id :source-configuration)]
+    (. builder sourceConfiguration data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-knowledge-base-props-builder
-  "The cfn-knowledge-base-props-builder function buildes out new instances of 
-CfnKnowledgeBaseProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-knowledge-base-props-builder
+  "The build-cfn-knowledge-base-props-builder function updates a CfnKnowledgeBaseProps$Builder instance using the provided configuration.
+  The function takes the CfnKnowledgeBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -202,63 +229,72 @@ CfnKnowledgeBaseProps$Builder using the provided configuration.  Each field is s
 | `renderingConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rendering-configuration` |
 | `serverSideEncryptionConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:server-side-encryption-configuration` |
 | `sourceConfiguration` | software.amazon.awscdk.services.wisdom.CfnKnowledgeBase$SourceConfigurationProperty | [[cdk.support/lookup-entry]] | `:source-configuration` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnKnowledgeBaseProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :knowledge-base-type)]
-      (. builder knowledgeBaseType data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :rendering-configuration)]
-      (. builder renderingConfiguration data))
-    (when-let [data (lookup-entry config id :server-side-encryption-configuration)]
-      (. builder serverSideEncryptionConfiguration data))
-    (when-let [data (lookup-entry config id :source-configuration)]
-      (. builder sourceConfiguration data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnKnowledgeBaseProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :knowledge-base-type)]
+    (. builder knowledgeBaseType data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :rendering-configuration)]
+    (. builder renderingConfiguration data))
+  (when-let [data (lookup-entry config id :server-side-encryption-configuration)]
+    (. builder serverSideEncryptionConfiguration data))
+  (when-let [data (lookup-entry config id :source-configuration)]
+    (. builder sourceConfiguration data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-knowledge-base-rendering-configuration-property-builder
-  "The cfn-knowledge-base-rendering-configuration-property-builder function buildes out new instances of 
-CfnKnowledgeBase$RenderingConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-knowledge-base-rendering-configuration-property-builder
+  "The build-cfn-knowledge-base-rendering-configuration-property-builder function updates a CfnKnowledgeBase$RenderingConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnKnowledgeBase$RenderingConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `templateUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-uri` |"
-  [stack id config]
-  (let [builder (CfnKnowledgeBase$RenderingConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :template-uri)]
-      (. builder templateUri data))
-    (.build builder)))
-
-
-(defn cfn-knowledge-base-server-side-encryption-configuration-property-builder
-  "The cfn-knowledge-base-server-side-encryption-configuration-property-builder function buildes out new instances of 
-CfnKnowledgeBase$ServerSideEncryptionConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |"
-  [stack id config]
-  (let [builder (CfnKnowledgeBase$ServerSideEncryptionConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :kms-key-id)]
-      (. builder kmsKeyId data))
-    (.build builder)))
+| `templateUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-uri` |
+"
+  [^CfnKnowledgeBase$RenderingConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :template-uri)]
+    (. builder templateUri data))
+  (.build builder))
 
 
-(defn cfn-knowledge-base-source-configuration-property-builder
-  "The cfn-knowledge-base-source-configuration-property-builder function buildes out new instances of 
-CfnKnowledgeBase$SourceConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-knowledge-base-server-side-encryption-configuration-property-builder
+  "The build-cfn-knowledge-base-server-side-encryption-configuration-property-builder function updates a CfnKnowledgeBase$ServerSideEncryptionConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnKnowledgeBase$ServerSideEncryptionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `appIntegrations` | software.amazon.awscdk.services.wisdom.CfnKnowledgeBase$AppIntegrationsConfigurationProperty | [[cdk.support/lookup-entry]] | `:app-integrations` |"
-  [stack id config]
-  (let [builder (CfnKnowledgeBase$SourceConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :app-integrations)]
-      (. builder appIntegrations data))
-    (.build builder)))
+| `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
+"
+  [^CfnKnowledgeBase$ServerSideEncryptionConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :kms-key-id)]
+    (. builder kmsKeyId data))
+  (.build builder))
+
+
+(defn build-cfn-knowledge-base-source-configuration-property-builder
+  "The build-cfn-knowledge-base-source-configuration-property-builder function updates a CfnKnowledgeBase$SourceConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnKnowledgeBase$SourceConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `appIntegrations` | software.amazon.awscdk.services.wisdom.CfnKnowledgeBase$AppIntegrationsConfigurationProperty | [[cdk.support/lookup-entry]] | `:app-integrations` |
+"
+  [^CfnKnowledgeBase$SourceConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :app-integrations)]
+    (. builder appIntegrations data))
+  (.build builder))

@@ -31,9 +31,12 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :full data) DetailType/FULL)))
 
 
-(defn cfn-notification-rule-builder
-  "The cfn-notification-rule-builder function buildes out new instances of 
-CfnNotificationRule$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-notification-rule-builder
+  "The build-cfn-notification-rule-builder function updates a CfnNotificationRule$Builder instance using the provided configuration.
+  The function takes the CfnNotificationRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -46,35 +49,38 @@ CfnNotificationRule$Builder using the provided configuration.  Each field is set
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `targetAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-address` |
-| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |"
-  [stack id config]
-  (let [builder (CfnNotificationRule$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :created-by)]
-      (. builder createdBy data))
-    (when-let [data (lookup-entry config id :detail-type)]
-      (. builder detailType data))
-    (when-let [data (lookup-entry config id :event-type-id)]
-      (. builder eventTypeId data))
-    (when-let [data (lookup-entry config id :event-type-ids)]
-      (. builder eventTypeIds data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :resource)]
-      (. builder resource data))
-    (when-let [data (lookup-entry config id :status)]
-      (. builder status data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :target-address)]
-      (. builder targetAddress data))
-    (when-let [data (lookup-entry config id :targets)]
-      (. builder targets data))
-    (.build builder)))
+| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
+"
+  [^CfnNotificationRule$Builder builder id config]
+  (when-let [data (lookup-entry config id :created-by)]
+    (. builder createdBy data))
+  (when-let [data (lookup-entry config id :detail-type)]
+    (. builder detailType data))
+  (when-let [data (lookup-entry config id :event-type-id)]
+    (. builder eventTypeId data))
+  (when-let [data (lookup-entry config id :event-type-ids)]
+    (. builder eventTypeIds data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :resource)]
+    (. builder resource data))
+  (when-let [data (lookup-entry config id :status)]
+    (. builder status data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :target-address)]
+    (. builder targetAddress data))
+  (when-let [data (lookup-entry config id :targets)]
+    (. builder targets data))
+  (.build builder))
 
 
-(defn cfn-notification-rule-props-builder
-  "The cfn-notification-rule-props-builder function buildes out new instances of 
-CfnNotificationRuleProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-notification-rule-props-builder
+  "The build-cfn-notification-rule-props-builder function updates a CfnNotificationRuleProps$Builder instance using the provided configuration.
+  The function takes the CfnNotificationRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -87,52 +93,58 @@ CfnNotificationRuleProps$Builder using the provided configuration.  Each field i
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `targetAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-address` |
-| `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |"
-  [stack id config]
-  (let [builder (CfnNotificationRuleProps$Builder.)]
-    (when-let [data (lookup-entry config id :created-by)]
-      (. builder createdBy data))
-    (when-let [data (lookup-entry config id :detail-type)]
-      (. builder detailType data))
-    (when-let [data (lookup-entry config id :event-type-id)]
-      (. builder eventTypeId data))
-    (when-let [data (lookup-entry config id :event-type-ids)]
-      (. builder eventTypeIds data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :resource)]
-      (. builder resource data))
-    (when-let [data (lookup-entry config id :status)]
-      (. builder status data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :target-address)]
-      (. builder targetAddress data))
-    (when-let [data (lookup-entry config id :targets)]
-      (. builder targets data))
-    (.build builder)))
+| `targets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:targets` |
+"
+  [^CfnNotificationRuleProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :created-by)]
+    (. builder createdBy data))
+  (when-let [data (lookup-entry config id :detail-type)]
+    (. builder detailType data))
+  (when-let [data (lookup-entry config id :event-type-id)]
+    (. builder eventTypeId data))
+  (when-let [data (lookup-entry config id :event-type-ids)]
+    (. builder eventTypeIds data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :resource)]
+    (. builder resource data))
+  (when-let [data (lookup-entry config id :status)]
+    (. builder status data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :target-address)]
+    (. builder targetAddress data))
+  (when-let [data (lookup-entry config id :targets)]
+    (. builder targets data))
+  (.build builder))
 
 
-(defn cfn-notification-rule-target-property-builder
-  "The cfn-notification-rule-target-property-builder function buildes out new instances of 
-CfnNotificationRule$TargetProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-notification-rule-target-property-builder
+  "The build-cfn-notification-rule-target-property-builder function updates a CfnNotificationRule$TargetProperty$Builder instance using the provided configuration.
+  The function takes the CfnNotificationRule$TargetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `targetAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-address` |
-| `targetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-type` |"
-  [stack id config]
-  (let [builder (CfnNotificationRule$TargetProperty$Builder.)]
-    (when-let [data (lookup-entry config id :target-address)]
-      (. builder targetAddress data))
-    (when-let [data (lookup-entry config id :target-type)]
-      (. builder targetType data))
-    (.build builder)))
+| `targetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-type` |
+"
+  [^CfnNotificationRule$TargetProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :target-address)]
+    (. builder targetAddress data))
+  (when-let [data (lookup-entry config id :target-type)]
+    (. builder targetType data))
+  (.build builder))
 
 
-(defn notification-rule-builder
-  "The notification-rule-builder function buildes out new instances of 
-NotificationRule$Builder using the provided configuration.  Each field is set as follows:
+(defn build-notification-rule-builder
+  "The build-notification-rule-builder function updates a NotificationRule$Builder instance using the provided configuration.
+  The function takes the NotificationRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -141,47 +153,53 @@ NotificationRule$Builder using the provided configuration.  Each field is set as
 | `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
 | `notificationRuleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:notification-rule-name` |
 | `source` | software.amazon.awscdk.services.codestarnotifications.INotificationRuleSource | [[cdk.support/lookup-entry]] | `:source` |
-| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |"
-  [stack id config]
-  (let [builder (NotificationRule$Builder/create stack id)]
-    (when-let [data (detail-type config id :detail-type)]
-      (. builder detailType data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :events)]
-      (. builder events data))
-    (when-let [data (lookup-entry config id :notification-rule-name)]
-      (. builder notificationRuleName data))
-    (when-let [data (lookup-entry config id :source)]
-      (. builder source data))
-    (when-let [data (lookup-entry config id :targets)]
-      (. builder targets data))
-    (.build builder)))
+| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
+"
+  [^NotificationRule$Builder builder id config]
+  (when-let [data (detail-type config id :detail-type)]
+    (. builder detailType data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :events)]
+    (. builder events data))
+  (when-let [data (lookup-entry config id :notification-rule-name)]
+    (. builder notificationRuleName data))
+  (when-let [data (lookup-entry config id :source)]
+    (. builder source data))
+  (when-let [data (lookup-entry config id :targets)]
+    (. builder targets data))
+  (.build builder))
 
 
-(defn notification-rule-options-builder
-  "The notification-rule-options-builder function buildes out new instances of 
-NotificationRuleOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-notification-rule-options-builder
+  "The build-notification-rule-options-builder function updates a NotificationRuleOptions$Builder instance using the provided configuration.
+  The function takes the NotificationRuleOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `detailType` | software.amazon.awscdk.services.codestarnotifications.DetailType | [[cdk.api.services.codestarnotifications/detail-type]] | `:detail-type` |
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
-| `notificationRuleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:notification-rule-name` |"
-  [stack id config]
-  (let [builder (NotificationRuleOptions$Builder.)]
-    (when-let [data (detail-type config id :detail-type)]
-      (. builder detailType data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :notification-rule-name)]
-      (. builder notificationRuleName data))
-    (.build builder)))
+| `notificationRuleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:notification-rule-name` |
+"
+  [^NotificationRuleOptions$Builder builder id config]
+  (when-let [data (detail-type config id :detail-type)]
+    (. builder detailType data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :notification-rule-name)]
+    (. builder notificationRuleName data))
+  (.build builder))
 
 
-(defn notification-rule-props-builder
-  "The notification-rule-props-builder function buildes out new instances of 
-NotificationRuleProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-notification-rule-props-builder
+  "The build-notification-rule-props-builder function updates a NotificationRuleProps$Builder instance using the provided configuration.
+  The function takes the NotificationRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -190,50 +208,56 @@ NotificationRuleProps$Builder using the provided configuration.  Each field is s
 | `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
 | `notificationRuleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:notification-rule-name` |
 | `source` | software.amazon.awscdk.services.codestarnotifications.INotificationRuleSource | [[cdk.support/lookup-entry]] | `:source` |
-| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |"
-  [stack id config]
-  (let [builder (NotificationRuleProps$Builder.)]
-    (when-let [data (detail-type config id :detail-type)]
-      (. builder detailType data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :events)]
-      (. builder events data))
-    (when-let [data (lookup-entry config id :notification-rule-name)]
-      (. builder notificationRuleName data))
-    (when-let [data (lookup-entry config id :source)]
-      (. builder source data))
-    (when-let [data (lookup-entry config id :targets)]
-      (. builder targets data))
-    (.build builder)))
+| `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
+"
+  [^NotificationRuleProps$Builder builder id config]
+  (when-let [data (detail-type config id :detail-type)]
+    (. builder detailType data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :events)]
+    (. builder events data))
+  (when-let [data (lookup-entry config id :notification-rule-name)]
+    (. builder notificationRuleName data))
+  (when-let [data (lookup-entry config id :source)]
+    (. builder source data))
+  (when-let [data (lookup-entry config id :targets)]
+    (. builder targets data))
+  (.build builder))
 
 
-(defn notification-rule-source-config-builder
-  "The notification-rule-source-config-builder function buildes out new instances of 
-NotificationRuleSourceConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-notification-rule-source-config-builder
+  "The build-notification-rule-source-config-builder function updates a NotificationRuleSourceConfig$Builder instance using the provided configuration.
+  The function takes the NotificationRuleSourceConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-arn` |"
-  [stack id config]
-  (let [builder (NotificationRuleSourceConfig$Builder.)]
-    (when-let [data (lookup-entry config id :source-arn)]
-      (. builder sourceArn data))
-    (.build builder)))
+| `sourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-arn` |
+"
+  [^NotificationRuleSourceConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :source-arn)]
+    (. builder sourceArn data))
+  (.build builder))
 
 
-(defn notification-rule-target-config-builder
-  "The notification-rule-target-config-builder function buildes out new instances of 
-NotificationRuleTargetConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-notification-rule-target-config-builder
+  "The build-notification-rule-target-config-builder function updates a NotificationRuleTargetConfig$Builder instance using the provided configuration.
+  The function takes the NotificationRuleTargetConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `targetAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-address` |
-| `targetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-type` |"
-  [stack id config]
-  (let [builder (NotificationRuleTargetConfig$Builder.)]
-    (when-let [data (lookup-entry config id :target-address)]
-      (. builder targetAddress data))
-    (when-let [data (lookup-entry config id :target-type)]
-      (. builder targetType data))
-    (.build builder)))
+| `targetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-type` |
+"
+  [^NotificationRuleTargetConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :target-address)]
+    (. builder targetAddress data))
+  (when-let [data (lookup-entry config id :target-type)]
+    (. builder targetType data))
+  (.build builder))

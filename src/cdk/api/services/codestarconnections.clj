@@ -9,55 +9,64 @@
                                                                 CfnSyncConfigurationProps$Builder]))
 
 
-(defn cfn-connection-builder
-  "The cfn-connection-builder function buildes out new instances of 
-CfnConnection$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-connection-builder
+  "The build-cfn-connection-builder function updates a CfnConnection$Builder instance using the provided configuration.
+  The function takes the CfnConnection$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `connectionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:connection-name` |
 | `hostArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:host-arn` |
 | `providerType` | java.lang.String | [[cdk.support/lookup-entry]] | `:provider-type` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnConnection$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :connection-name)]
-      (. builder connectionName data))
-    (when-let [data (lookup-entry config id :host-arn)]
-      (. builder hostArn data))
-    (when-let [data (lookup-entry config id :provider-type)]
-      (. builder providerType data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnConnection$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-name)]
+    (. builder connectionName data))
+  (when-let [data (lookup-entry config id :host-arn)]
+    (. builder hostArn data))
+  (when-let [data (lookup-entry config id :provider-type)]
+    (. builder providerType data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-connection-props-builder
-  "The cfn-connection-props-builder function buildes out new instances of 
-CfnConnectionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-connection-props-builder
+  "The build-cfn-connection-props-builder function updates a CfnConnectionProps$Builder instance using the provided configuration.
+  The function takes the CfnConnectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `connectionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:connection-name` |
 | `hostArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:host-arn` |
 | `providerType` | java.lang.String | [[cdk.support/lookup-entry]] | `:provider-type` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnConnectionProps$Builder.)]
-    (when-let [data (lookup-entry config id :connection-name)]
-      (. builder connectionName data))
-    (when-let [data (lookup-entry config id :host-arn)]
-      (. builder hostArn data))
-    (when-let [data (lookup-entry config id :provider-type)]
-      (. builder providerType data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnConnectionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-name)]
+    (. builder connectionName data))
+  (when-let [data (lookup-entry config id :host-arn)]
+    (. builder hostArn data))
+  (when-let [data (lookup-entry config id :provider-type)]
+    (. builder providerType data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-repository-link-builder
-  "The cfn-repository-link-builder function buildes out new instances of 
-CfnRepositoryLink$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-repository-link-builder
+  "The build-cfn-repository-link-builder function updates a CfnRepositoryLink$Builder instance using the provided configuration.
+  The function takes the CfnRepositoryLink$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -65,25 +74,28 @@ CfnRepositoryLink$Builder using the provided configuration.  Each field is set a
 | `encryptionKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:encryption-key-arn` |
 | `ownerId` | java.lang.String | [[cdk.support/lookup-entry]] | `:owner-id` |
 | `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnRepositoryLink$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :connection-arn)]
-      (. builder connectionArn data))
-    (when-let [data (lookup-entry config id :encryption-key-arn)]
-      (. builder encryptionKeyArn data))
-    (when-let [data (lookup-entry config id :owner-id)]
-      (. builder ownerId data))
-    (when-let [data (lookup-entry config id :repository-name)]
-      (. builder repositoryName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnRepositoryLink$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-arn)]
+    (. builder connectionArn data))
+  (when-let [data (lookup-entry config id :encryption-key-arn)]
+    (. builder encryptionKeyArn data))
+  (when-let [data (lookup-entry config id :owner-id)]
+    (. builder ownerId data))
+  (when-let [data (lookup-entry config id :repository-name)]
+    (. builder repositoryName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-repository-link-props-builder
-  "The cfn-repository-link-props-builder function buildes out new instances of 
-CfnRepositoryLinkProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-repository-link-props-builder
+  "The build-cfn-repository-link-props-builder function updates a CfnRepositoryLinkProps$Builder instance using the provided configuration.
+  The function takes the CfnRepositoryLinkProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -91,25 +103,28 @@ CfnRepositoryLinkProps$Builder using the provided configuration.  Each field is 
 | `encryptionKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:encryption-key-arn` |
 | `ownerId` | java.lang.String | [[cdk.support/lookup-entry]] | `:owner-id` |
 | `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnRepositoryLinkProps$Builder.)]
-    (when-let [data (lookup-entry config id :connection-arn)]
-      (. builder connectionArn data))
-    (when-let [data (lookup-entry config id :encryption-key-arn)]
-      (. builder encryptionKeyArn data))
-    (when-let [data (lookup-entry config id :owner-id)]
-      (. builder ownerId data))
-    (when-let [data (lookup-entry config id :repository-name)]
-      (. builder repositoryName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnRepositoryLinkProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-arn)]
+    (. builder connectionArn data))
+  (when-let [data (lookup-entry config id :encryption-key-arn)]
+    (. builder encryptionKeyArn data))
+  (when-let [data (lookup-entry config id :owner-id)]
+    (. builder ownerId data))
+  (when-let [data (lookup-entry config id :repository-name)]
+    (. builder repositoryName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-sync-configuration-builder
-  "The cfn-sync-configuration-builder function buildes out new instances of 
-CfnSyncConfiguration$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-sync-configuration-builder
+  "The build-cfn-sync-configuration-builder function updates a CfnSyncConfiguration$Builder instance using the provided configuration.
+  The function takes the CfnSyncConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -120,31 +135,34 @@ CfnSyncConfiguration$Builder using the provided configuration.  Each field is se
 | `resourceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `syncType` | java.lang.String | [[cdk.support/lookup-entry]] | `:sync-type` |
-| `triggerResourceUpdateOn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trigger-resource-update-on` |"
-  [stack id config]
-  (let [builder (CfnSyncConfiguration$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :branch)]
-      (. builder branch data))
-    (when-let [data (lookup-entry config id :config-file)]
-      (. builder configFile data))
-    (when-let [data (lookup-entry config id :publish-deployment-status)]
-      (. builder publishDeploymentStatus data))
-    (when-let [data (lookup-entry config id :repository-link-id)]
-      (. builder repositoryLinkId data))
-    (when-let [data (lookup-entry config id :resource-name)]
-      (. builder resourceName data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :sync-type)]
-      (. builder syncType data))
-    (when-let [data (lookup-entry config id :trigger-resource-update-on)]
-      (. builder triggerResourceUpdateOn data))
-    (.build builder)))
+| `triggerResourceUpdateOn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trigger-resource-update-on` |
+"
+  [^CfnSyncConfiguration$Builder builder id config]
+  (when-let [data (lookup-entry config id :branch)]
+    (. builder branch data))
+  (when-let [data (lookup-entry config id :config-file)]
+    (. builder configFile data))
+  (when-let [data (lookup-entry config id :publish-deployment-status)]
+    (. builder publishDeploymentStatus data))
+  (when-let [data (lookup-entry config id :repository-link-id)]
+    (. builder repositoryLinkId data))
+  (when-let [data (lookup-entry config id :resource-name)]
+    (. builder resourceName data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :sync-type)]
+    (. builder syncType data))
+  (when-let [data (lookup-entry config id :trigger-resource-update-on)]
+    (. builder triggerResourceUpdateOn data))
+  (.build builder))
 
 
-(defn cfn-sync-configuration-props-builder
-  "The cfn-sync-configuration-props-builder function buildes out new instances of 
-CfnSyncConfigurationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-sync-configuration-props-builder
+  "The build-cfn-sync-configuration-props-builder function updates a CfnSyncConfigurationProps$Builder instance using the provided configuration.
+  The function takes the CfnSyncConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -155,23 +173,23 @@ CfnSyncConfigurationProps$Builder using the provided configuration.  Each field 
 | `resourceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
 | `syncType` | java.lang.String | [[cdk.support/lookup-entry]] | `:sync-type` |
-| `triggerResourceUpdateOn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trigger-resource-update-on` |"
-  [stack id config]
-  (let [builder (CfnSyncConfigurationProps$Builder.)]
-    (when-let [data (lookup-entry config id :branch)]
-      (. builder branch data))
-    (when-let [data (lookup-entry config id :config-file)]
-      (. builder configFile data))
-    (when-let [data (lookup-entry config id :publish-deployment-status)]
-      (. builder publishDeploymentStatus data))
-    (when-let [data (lookup-entry config id :repository-link-id)]
-      (. builder repositoryLinkId data))
-    (when-let [data (lookup-entry config id :resource-name)]
-      (. builder resourceName data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :sync-type)]
-      (. builder syncType data))
-    (when-let [data (lookup-entry config id :trigger-resource-update-on)]
-      (. builder triggerResourceUpdateOn data))
-    (.build builder)))
+| `triggerResourceUpdateOn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trigger-resource-update-on` |
+"
+  [^CfnSyncConfigurationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :branch)]
+    (. builder branch data))
+  (when-let [data (lookup-entry config id :config-file)]
+    (. builder configFile data))
+  (when-let [data (lookup-entry config id :publish-deployment-status)]
+    (. builder publishDeploymentStatus data))
+  (when-let [data (lookup-entry config id :repository-link-id)]
+    (. builder repositoryLinkId data))
+  (when-let [data (lookup-entry config id :resource-name)]
+    (. builder resourceName data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :sync-type)]
+    (. builder syncType data))
+  (when-let [data (lookup-entry config id :trigger-resource-update-on)]
+    (. builder triggerResourceUpdateOn data))
+  (.build builder))

@@ -28,55 +28,64 @@
                                                             CfnResolverRuleProps$Builder]))
 
 
-(defn cfn-firewall-domain-list-builder
-  "The cfn-firewall-domain-list-builder function buildes out new instances of 
-CfnFirewallDomainList$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-firewall-domain-list-builder
+  "The build-cfn-firewall-domain-list-builder function updates a CfnFirewallDomainList$Builder instance using the provided configuration.
+  The function takes the CfnFirewallDomainList$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `domainFileUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-file-url` |
 | `domains` | java.util.List | [[cdk.support/lookup-entry]] | `:domains` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnFirewallDomainList$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :domain-file-url)]
-      (. builder domainFileUrl data))
-    (when-let [data (lookup-entry config id :domains)]
-      (. builder domains data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnFirewallDomainList$Builder builder id config]
+  (when-let [data (lookup-entry config id :domain-file-url)]
+    (. builder domainFileUrl data))
+  (when-let [data (lookup-entry config id :domains)]
+    (. builder domains data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-firewall-domain-list-props-builder
-  "The cfn-firewall-domain-list-props-builder function buildes out new instances of 
-CfnFirewallDomainListProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-firewall-domain-list-props-builder
+  "The build-cfn-firewall-domain-list-props-builder function updates a CfnFirewallDomainListProps$Builder instance using the provided configuration.
+  The function takes the CfnFirewallDomainListProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `domainFileUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-file-url` |
 | `domains` | java.util.List | [[cdk.support/lookup-entry]] | `:domains` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnFirewallDomainListProps$Builder.)]
-    (when-let [data (lookup-entry config id :domain-file-url)]
-      (. builder domainFileUrl data))
-    (when-let [data (lookup-entry config id :domains)]
-      (. builder domains data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnFirewallDomainListProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :domain-file-url)]
+    (. builder domainFileUrl data))
+  (when-let [data (lookup-entry config id :domains)]
+    (. builder domains data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-firewall-rule-group-association-builder
-  "The cfn-firewall-rule-group-association-builder function buildes out new instances of 
-CfnFirewallRuleGroupAssociation$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-firewall-rule-group-association-builder
+  "The build-cfn-firewall-rule-group-association-builder function updates a CfnFirewallRuleGroupAssociation$Builder instance using the provided configuration.
+  The function takes the CfnFirewallRuleGroupAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -85,27 +94,30 @@ CfnFirewallRuleGroupAssociation$Builder using the provided configuration.  Each 
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |"
-  [stack id config]
-  (let [builder (CfnFirewallRuleGroupAssociation$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :firewall-rule-group-id)]
-      (. builder firewallRuleGroupId data))
-    (when-let [data (lookup-entry config id :mutation-protection)]
-      (. builder mutationProtection data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :vpc-id)]
-      (. builder vpcId data))
-    (.build builder)))
+| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
+"
+  [^CfnFirewallRuleGroupAssociation$Builder builder id config]
+  (when-let [data (lookup-entry config id :firewall-rule-group-id)]
+    (. builder firewallRuleGroupId data))
+  (when-let [data (lookup-entry config id :mutation-protection)]
+    (. builder mutationProtection data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :vpc-id)]
+    (. builder vpcId data))
+  (.build builder))
 
 
-(defn cfn-firewall-rule-group-association-props-builder
-  "The cfn-firewall-rule-group-association-props-builder function buildes out new instances of 
-CfnFirewallRuleGroupAssociationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-firewall-rule-group-association-props-builder
+  "The build-cfn-firewall-rule-group-association-props-builder function updates a CfnFirewallRuleGroupAssociationProps$Builder instance using the provided configuration.
+  The function takes the CfnFirewallRuleGroupAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -114,47 +126,53 @@ CfnFirewallRuleGroupAssociationProps$Builder using the provided configuration.  
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |"
-  [stack id config]
-  (let [builder (CfnFirewallRuleGroupAssociationProps$Builder.)]
-    (when-let [data (lookup-entry config id :firewall-rule-group-id)]
-      (. builder firewallRuleGroupId data))
-    (when-let [data (lookup-entry config id :mutation-protection)]
-      (. builder mutationProtection data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :vpc-id)]
-      (. builder vpcId data))
-    (.build builder)))
+| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
+"
+  [^CfnFirewallRuleGroupAssociationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :firewall-rule-group-id)]
+    (. builder firewallRuleGroupId data))
+  (when-let [data (lookup-entry config id :mutation-protection)]
+    (. builder mutationProtection data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :vpc-id)]
+    (. builder vpcId data))
+  (.build builder))
 
 
-(defn cfn-firewall-rule-group-builder
-  "The cfn-firewall-rule-group-builder function buildes out new instances of 
-CfnFirewallRuleGroup$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-firewall-rule-group-builder
+  "The build-cfn-firewall-rule-group-builder function updates a CfnFirewallRuleGroup$Builder instance using the provided configuration.
+  The function takes the CfnFirewallRuleGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `firewallRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:firewall-rules` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnFirewallRuleGroup$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :firewall-rules)]
-      (. builder firewallRules data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnFirewallRuleGroup$Builder builder id config]
+  (when-let [data (lookup-entry config id :firewall-rules)]
+    (. builder firewallRules data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-firewall-rule-group-firewall-rule-property-builder
-  "The cfn-firewall-rule-group-firewall-rule-property-builder function buildes out new instances of 
-CfnFirewallRuleGroup$FirewallRuleProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-firewall-rule-group-firewall-rule-property-builder
+  "The build-cfn-firewall-rule-group-firewall-rule-property-builder function updates a CfnFirewallRuleGroup$FirewallRuleProperty$Builder instance using the provided configuration.
+  The function takes the CfnFirewallRuleGroup$FirewallRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -166,79 +184,59 @@ CfnFirewallRuleGroup$FirewallRuleProperty$Builder using the provided configurati
 | `firewallDomainListId` | java.lang.String | [[cdk.support/lookup-entry]] | `:firewall-domain-list-id` |
 | `firewallDomainRedirectionAction` | java.lang.String | [[cdk.support/lookup-entry]] | `:firewall-domain-redirection-action` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
-| `qtype` | java.lang.String | [[cdk.support/lookup-entry]] | `:qtype` |"
-  [stack id config]
-  (let [builder (CfnFirewallRuleGroup$FirewallRuleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :block-override-dns-type)]
-      (. builder blockOverrideDnsType data))
-    (when-let [data (lookup-entry config id :block-override-domain)]
-      (. builder blockOverrideDomain data))
-    (when-let [data (lookup-entry config id :block-override-ttl)]
-      (. builder blockOverrideTtl data))
-    (when-let [data (lookup-entry config id :block-response)]
-      (. builder blockResponse data))
-    (when-let [data (lookup-entry config id :firewall-domain-list-id)]
-      (. builder firewallDomainListId data))
-    (when-let [data (lookup-entry config id :firewall-domain-redirection-action)]
-      (. builder firewallDomainRedirectionAction data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :qtype)]
-      (. builder qtype data))
-    (.build builder)))
+| `qtype` | java.lang.String | [[cdk.support/lookup-entry]] | `:qtype` |
+"
+  [^CfnFirewallRuleGroup$FirewallRuleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :block-override-dns-type)]
+    (. builder blockOverrideDnsType data))
+  (when-let [data (lookup-entry config id :block-override-domain)]
+    (. builder blockOverrideDomain data))
+  (when-let [data (lookup-entry config id :block-override-ttl)]
+    (. builder blockOverrideTtl data))
+  (when-let [data (lookup-entry config id :block-response)]
+    (. builder blockResponse data))
+  (when-let [data (lookup-entry config id :firewall-domain-list-id)]
+    (. builder firewallDomainListId data))
+  (when-let [data (lookup-entry config id :firewall-domain-redirection-action)]
+    (. builder firewallDomainRedirectionAction data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :qtype)]
+    (. builder qtype data))
+  (.build builder))
 
 
-(defn cfn-firewall-rule-group-props-builder
-  "The cfn-firewall-rule-group-props-builder function buildes out new instances of 
-CfnFirewallRuleGroupProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-firewall-rule-group-props-builder
+  "The build-cfn-firewall-rule-group-props-builder function updates a CfnFirewallRuleGroupProps$Builder instance using the provided configuration.
+  The function takes the CfnFirewallRuleGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `firewallRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:firewall-rules` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnFirewallRuleGroupProps$Builder.)]
-    (when-let [data (lookup-entry config id :firewall-rules)]
-      (. builder firewallRules data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnFirewallRuleGroupProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :firewall-rules)]
+    (. builder firewallRules data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-outpost-resolver-builder
-  "The cfn-outpost-resolver-builder function buildes out new instances of 
-CfnOutpostResolver$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-outpost-resolver-builder
+  "The build-cfn-outpost-resolver-builder function updates a CfnOutpostResolver$Builder instance using the provided configuration.
+  The function takes the CfnOutpostResolver$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `instanceCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:instance-count` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `outpostArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:outpost-arn` |
-| `preferredInstanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-instance-type` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnOutpostResolver$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :instance-count)]
-      (. builder instanceCount data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :outpost-arn)]
-      (. builder outpostArn data))
-    (when-let [data (lookup-entry config id :preferred-instance-type)]
-      (. builder preferredInstanceType data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
-
-
-(defn cfn-outpost-resolver-props-builder
-  "The cfn-outpost-resolver-props-builder function buildes out new instances of 
-CfnOutpostResolverProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -246,87 +244,131 @@ CfnOutpostResolverProps$Builder using the provided configuration.  Each field is
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `outpostArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:outpost-arn` |
 | `preferredInstanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-instance-type` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnOutpostResolverProps$Builder.)]
-    (when-let [data (lookup-entry config id :instance-count)]
-      (. builder instanceCount data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :outpost-arn)]
-      (. builder outpostArn data))
-    (when-let [data (lookup-entry config id :preferred-instance-type)]
-      (. builder preferredInstanceType data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnOutpostResolver$Builder builder id config]
+  (when-let [data (lookup-entry config id :instance-count)]
+    (. builder instanceCount data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :outpost-arn)]
+    (. builder outpostArn data))
+  (when-let [data (lookup-entry config id :preferred-instance-type)]
+    (. builder preferredInstanceType data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-resolver-config-builder
-  "The cfn-resolver-config-builder function buildes out new instances of 
-CfnResolverConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-outpost-resolver-props-builder
+  "The build-cfn-outpost-resolver-props-builder function updates a CfnOutpostResolverProps$Builder instance using the provided configuration.
+  The function takes the CfnOutpostResolverProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `instanceCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:instance-count` |
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `outpostArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:outpost-arn` |
+| `preferredInstanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-instance-type` |
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnOutpostResolverProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :instance-count)]
+    (. builder instanceCount data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :outpost-arn)]
+    (. builder outpostArn data))
+  (when-let [data (lookup-entry config id :preferred-instance-type)]
+    (. builder preferredInstanceType data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
+
+
+(defn build-cfn-resolver-config-builder
+  "The build-cfn-resolver-config-builder function updates a CfnResolverConfig$Builder instance using the provided configuration.
+  The function takes the CfnResolverConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `autodefinedReverseFlag` | java.lang.String | [[cdk.support/lookup-entry]] | `:autodefined-reverse-flag` |
-| `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |"
-  [stack id config]
-  (let [builder (CfnResolverConfig$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :autodefined-reverse-flag)]
-      (. builder autodefinedReverseFlag data))
-    (when-let [data (lookup-entry config id :resource-id)]
-      (. builder resourceId data))
-    (.build builder)))
+| `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
+"
+  [^CfnResolverConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :autodefined-reverse-flag)]
+    (. builder autodefinedReverseFlag data))
+  (when-let [data (lookup-entry config id :resource-id)]
+    (. builder resourceId data))
+  (.build builder))
 
 
-(defn cfn-resolver-config-props-builder
-  "The cfn-resolver-config-props-builder function buildes out new instances of 
-CfnResolverConfigProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resolver-config-props-builder
+  "The build-cfn-resolver-config-props-builder function updates a CfnResolverConfigProps$Builder instance using the provided configuration.
+  The function takes the CfnResolverConfigProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `autodefinedReverseFlag` | java.lang.String | [[cdk.support/lookup-entry]] | `:autodefined-reverse-flag` |
-| `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |"
-  [stack id config]
-  (let [builder (CfnResolverConfigProps$Builder.)]
-    (when-let [data (lookup-entry config id :autodefined-reverse-flag)]
-      (. builder autodefinedReverseFlag data))
-    (when-let [data (lookup-entry config id :resource-id)]
-      (. builder resourceId data))
-    (.build builder)))
+| `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
+"
+  [^CfnResolverConfigProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :autodefined-reverse-flag)]
+    (. builder autodefinedReverseFlag data))
+  (when-let [data (lookup-entry config id :resource-id)]
+    (. builder resourceId data))
+  (.build builder))
 
 
-(defn cfn-resolver-dnssec-config-builder
-  "The cfn-resolver-dnssec-config-builder function buildes out new instances of 
-CfnResolverDNSSECConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resolver-dnssec-config-builder
+  "The build-cfn-resolver-dnssec-config-builder function updates a CfnResolverDNSSECConfig$Builder instance using the provided configuration.
+  The function takes the CfnResolverDNSSECConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |"
-  [stack id config]
-  (let [builder (CfnResolverDNSSECConfig$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :resource-id)]
-      (. builder resourceId data))
-    (.build builder)))
-
-
-(defn cfn-resolver-dnssec-config-props-builder
-  "The cfn-resolver-dnssec-config-props-builder function buildes out new instances of 
-CfnResolverDNSSECConfigProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |"
-  [stack id config]
-  (let [builder (CfnResolverDNSSECConfigProps$Builder.)]
-    (when-let [data (lookup-entry config id :resource-id)]
-      (. builder resourceId data))
-    (.build builder)))
+| `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
+"
+  [^CfnResolverDNSSECConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :resource-id)]
+    (. builder resourceId data))
+  (.build builder))
 
 
-(defn cfn-resolver-endpoint-builder
-  "The cfn-resolver-endpoint-builder function buildes out new instances of 
-CfnResolverEndpoint$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resolver-dnssec-config-props-builder
+  "The build-cfn-resolver-dnssec-config-props-builder function updates a CfnResolverDNSSECConfigProps$Builder instance using the provided configuration.
+  The function takes the CfnResolverDNSSECConfigProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
+"
+  [^CfnResolverDNSSECConfigProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :resource-id)]
+    (. builder resourceId data))
+  (.build builder))
+
+
+(defn build-cfn-resolver-endpoint-builder
+  "The build-cfn-resolver-endpoint-builder function updates a CfnResolverEndpoint$Builder instance using the provided configuration.
+  The function takes the CfnResolverEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -338,53 +380,59 @@ CfnResolverEndpoint$Builder using the provided configuration.  Each field is set
 | `protocols` | java.util.List | [[cdk.support/lookup-entry]] | `:protocols` |
 | `resolverEndpointType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resolver-endpoint-type` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnResolverEndpoint$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :direction)]
-      (. builder direction data))
-    (when-let [data (lookup-entry config id :ip-addresses)]
-      (. builder ipAddresses data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :outpost-arn)]
-      (. builder outpostArn data))
-    (when-let [data (lookup-entry config id :preferred-instance-type)]
-      (. builder preferredInstanceType data))
-    (when-let [data (lookup-entry config id :protocols)]
-      (. builder protocols data))
-    (when-let [data (lookup-entry config id :resolver-endpoint-type)]
-      (. builder resolverEndpointType data))
-    (when-let [data (lookup-entry config id :security-group-ids)]
-      (. builder securityGroupIds data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnResolverEndpoint$Builder builder id config]
+  (when-let [data (lookup-entry config id :direction)]
+    (. builder direction data))
+  (when-let [data (lookup-entry config id :ip-addresses)]
+    (. builder ipAddresses data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :outpost-arn)]
+    (. builder outpostArn data))
+  (when-let [data (lookup-entry config id :preferred-instance-type)]
+    (. builder preferredInstanceType data))
+  (when-let [data (lookup-entry config id :protocols)]
+    (. builder protocols data))
+  (when-let [data (lookup-entry config id :resolver-endpoint-type)]
+    (. builder resolverEndpointType data))
+  (when-let [data (lookup-entry config id :security-group-ids)]
+    (. builder securityGroupIds data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-resolver-endpoint-ip-address-request-property-builder
-  "The cfn-resolver-endpoint-ip-address-request-property-builder function buildes out new instances of 
-CfnResolverEndpoint$IpAddressRequestProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resolver-endpoint-ip-address-request-property-builder
+  "The build-cfn-resolver-endpoint-ip-address-request-property-builder function updates a CfnResolverEndpoint$IpAddressRequestProperty$Builder instance using the provided configuration.
+  The function takes the CfnResolverEndpoint$IpAddressRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `ip` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip` |
 | `ipv6` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipv6` |
-| `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |"
-  [stack id config]
-  (let [builder (CfnResolverEndpoint$IpAddressRequestProperty$Builder.)]
-    (when-let [data (lookup-entry config id :ip)]
-      (. builder ip data))
-    (when-let [data (lookup-entry config id :ipv6)]
-      (. builder ipv6 data))
-    (when-let [data (lookup-entry config id :subnet-id)]
-      (. builder subnetId data))
-    (.build builder)))
+| `subnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subnet-id` |
+"
+  [^CfnResolverEndpoint$IpAddressRequestProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :ip)]
+    (. builder ip data))
+  (when-let [data (lookup-entry config id :ipv6)]
+    (. builder ipv6 data))
+  (when-let [data (lookup-entry config id :subnet-id)]
+    (. builder subnetId data))
+  (.build builder))
 
 
-(defn cfn-resolver-endpoint-props-builder
-  "The cfn-resolver-endpoint-props-builder function buildes out new instances of 
-CfnResolverEndpointProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resolver-endpoint-props-builder
+  "The build-cfn-resolver-endpoint-props-builder function updates a CfnResolverEndpointProps$Builder instance using the provided configuration.
+  The function takes the CfnResolverEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -396,141 +444,162 @@ CfnResolverEndpointProps$Builder using the provided configuration.  Each field i
 | `protocols` | java.util.List | [[cdk.support/lookup-entry]] | `:protocols` |
 | `resolverEndpointType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resolver-endpoint-type` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnResolverEndpointProps$Builder.)]
-    (when-let [data (lookup-entry config id :direction)]
-      (. builder direction data))
-    (when-let [data (lookup-entry config id :ip-addresses)]
-      (. builder ipAddresses data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :outpost-arn)]
-      (. builder outpostArn data))
-    (when-let [data (lookup-entry config id :preferred-instance-type)]
-      (. builder preferredInstanceType data))
-    (when-let [data (lookup-entry config id :protocols)]
-      (. builder protocols data))
-    (when-let [data (lookup-entry config id :resolver-endpoint-type)]
-      (. builder resolverEndpointType data))
-    (when-let [data (lookup-entry config id :security-group-ids)]
-      (. builder securityGroupIds data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnResolverEndpointProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :direction)]
+    (. builder direction data))
+  (when-let [data (lookup-entry config id :ip-addresses)]
+    (. builder ipAddresses data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :outpost-arn)]
+    (. builder outpostArn data))
+  (when-let [data (lookup-entry config id :preferred-instance-type)]
+    (. builder preferredInstanceType data))
+  (when-let [data (lookup-entry config id :protocols)]
+    (. builder protocols data))
+  (when-let [data (lookup-entry config id :resolver-endpoint-type)]
+    (. builder resolverEndpointType data))
+  (when-let [data (lookup-entry config id :security-group-ids)]
+    (. builder securityGroupIds data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-resolver-query-logging-config-association-builder
-  "The cfn-resolver-query-logging-config-association-builder function buildes out new instances of 
-CfnResolverQueryLoggingConfigAssociation$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resolver-query-logging-config-association-builder
+  "The build-cfn-resolver-query-logging-config-association-builder function updates a CfnResolverQueryLoggingConfigAssociation$Builder instance using the provided configuration.
+  The function takes the CfnResolverQueryLoggingConfigAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `resolverQueryLogConfigId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resolver-query-log-config-id` |
-| `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |"
-  [stack id config]
-  (let [builder (CfnResolverQueryLoggingConfigAssociation$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :resolver-query-log-config-id)]
-      (. builder resolverQueryLogConfigId data))
-    (when-let [data (lookup-entry config id :resource-id)]
-      (. builder resourceId data))
-    (.build builder)))
-
-
-(defn cfn-resolver-query-logging-config-association-props-builder
-  "The cfn-resolver-query-logging-config-association-props-builder function buildes out new instances of 
-CfnResolverQueryLoggingConfigAssociationProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `resolverQueryLogConfigId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resolver-query-log-config-id` |
-| `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |"
-  [stack id config]
-  (let [builder (CfnResolverQueryLoggingConfigAssociationProps$Builder.)]
-    (when-let [data (lookup-entry config id :resolver-query-log-config-id)]
-      (. builder resolverQueryLogConfigId data))
-    (when-let [data (lookup-entry config id :resource-id)]
-      (. builder resourceId data))
-    (.build builder)))
+| `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
+"
+  [^CfnResolverQueryLoggingConfigAssociation$Builder builder id config]
+  (when-let [data (lookup-entry config id :resolver-query-log-config-id)]
+    (. builder resolverQueryLogConfigId data))
+  (when-let [data (lookup-entry config id :resource-id)]
+    (. builder resourceId data))
+  (.build builder))
 
 
-(defn cfn-resolver-query-logging-config-builder
-  "The cfn-resolver-query-logging-config-builder function buildes out new instances of 
-CfnResolverQueryLoggingConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resolver-query-logging-config-association-props-builder
+  "The build-cfn-resolver-query-logging-config-association-props-builder function updates a CfnResolverQueryLoggingConfigAssociationProps$Builder instance using the provided configuration.
+  The function takes the CfnResolverQueryLoggingConfigAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `resolverQueryLogConfigId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resolver-query-log-config-id` |
+| `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
+"
+  [^CfnResolverQueryLoggingConfigAssociationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :resolver-query-log-config-id)]
+    (. builder resolverQueryLogConfigId data))
+  (when-let [data (lookup-entry config id :resource-id)]
+    (. builder resourceId data))
+  (.build builder))
+
+
+(defn build-cfn-resolver-query-logging-config-builder
+  "The build-cfn-resolver-query-logging-config-builder function updates a CfnResolverQueryLoggingConfig$Builder instance using the provided configuration.
+  The function takes the CfnResolverQueryLoggingConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `destinationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-arn` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (CfnResolverQueryLoggingConfig$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :destination-arn)]
-      (. builder destinationArn data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^CfnResolverQueryLoggingConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :destination-arn)]
+    (. builder destinationArn data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn cfn-resolver-query-logging-config-props-builder
-  "The cfn-resolver-query-logging-config-props-builder function buildes out new instances of 
-CfnResolverQueryLoggingConfigProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resolver-query-logging-config-props-builder
+  "The build-cfn-resolver-query-logging-config-props-builder function updates a CfnResolverQueryLoggingConfigProps$Builder instance using the provided configuration.
+  The function takes the CfnResolverQueryLoggingConfigProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `destinationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-arn` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (CfnResolverQueryLoggingConfigProps$Builder.)]
-    (when-let [data (lookup-entry config id :destination-arn)]
-      (. builder destinationArn data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^CfnResolverQueryLoggingConfigProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :destination-arn)]
+    (. builder destinationArn data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn cfn-resolver-rule-association-builder
-  "The cfn-resolver-rule-association-builder function buildes out new instances of 
-CfnResolverRuleAssociation$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resolver-rule-association-builder
+  "The build-cfn-resolver-rule-association-builder function updates a CfnResolverRuleAssociation$Builder instance using the provided configuration.
+  The function takes the CfnResolverRuleAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `resolverRuleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resolver-rule-id` |
-| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |"
-  [stack id config]
-  (let [builder (CfnResolverRuleAssociation$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :resolver-rule-id)]
-      (. builder resolverRuleId data))
-    (when-let [data (lookup-entry config id :vpc-id)]
-      (. builder vpcId data))
-    (.build builder)))
+| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
+"
+  [^CfnResolverRuleAssociation$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :resolver-rule-id)]
+    (. builder resolverRuleId data))
+  (when-let [data (lookup-entry config id :vpc-id)]
+    (. builder vpcId data))
+  (.build builder))
 
 
-(defn cfn-resolver-rule-association-props-builder
-  "The cfn-resolver-rule-association-props-builder function buildes out new instances of 
-CfnResolverRuleAssociationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resolver-rule-association-props-builder
+  "The build-cfn-resolver-rule-association-props-builder function updates a CfnResolverRuleAssociationProps$Builder instance using the provided configuration.
+  The function takes the CfnResolverRuleAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `resolverRuleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resolver-rule-id` |
-| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |"
-  [stack id config]
-  (let [builder (CfnResolverRuleAssociationProps$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :resolver-rule-id)]
-      (. builder resolverRuleId data))
-    (when-let [data (lookup-entry config id :vpc-id)]
-      (. builder vpcId data))
-    (.build builder)))
+| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
+"
+  [^CfnResolverRuleAssociationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :resolver-rule-id)]
+    (. builder resolverRuleId data))
+  (when-let [data (lookup-entry config id :vpc-id)]
+    (. builder vpcId data))
+  (.build builder))
 
 
-(defn cfn-resolver-rule-builder
-  "The cfn-resolver-rule-builder function buildes out new instances of 
-CfnResolverRule$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resolver-rule-builder
+  "The build-cfn-resolver-rule-builder function updates a CfnResolverRule$Builder instance using the provided configuration.
+  The function takes the CfnResolverRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -539,27 +608,30 @@ CfnResolverRule$Builder using the provided configuration.  Each field is set as 
 | `resolverEndpointId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resolver-endpoint-id` |
 | `ruleType` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-type` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `targetIps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-ips` |"
-  [stack id config]
-  (let [builder (CfnResolverRule$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :resolver-endpoint-id)]
-      (. builder resolverEndpointId data))
-    (when-let [data (lookup-entry config id :rule-type)]
-      (. builder ruleType data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :target-ips)]
-      (. builder targetIps data))
-    (.build builder)))
+| `targetIps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-ips` |
+"
+  [^CfnResolverRule$Builder builder id config]
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :resolver-endpoint-id)]
+    (. builder resolverEndpointId data))
+  (when-let [data (lookup-entry config id :rule-type)]
+    (. builder ruleType data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :target-ips)]
+    (. builder targetIps data))
+  (.build builder))
 
 
-(defn cfn-resolver-rule-props-builder
-  "The cfn-resolver-rule-props-builder function buildes out new instances of 
-CfnResolverRuleProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resolver-rule-props-builder
+  "The build-cfn-resolver-rule-props-builder function updates a CfnResolverRuleProps$Builder instance using the provided configuration.
+  The function takes the CfnResolverRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -568,42 +640,45 @@ CfnResolverRuleProps$Builder using the provided configuration.  Each field is se
 | `resolverEndpointId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resolver-endpoint-id` |
 | `ruleType` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-type` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `targetIps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-ips` |"
-  [stack id config]
-  (let [builder (CfnResolverRuleProps$Builder.)]
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :resolver-endpoint-id)]
-      (. builder resolverEndpointId data))
-    (when-let [data (lookup-entry config id :rule-type)]
-      (. builder ruleType data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :target-ips)]
-      (. builder targetIps data))
-    (.build builder)))
+| `targetIps` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-ips` |
+"
+  [^CfnResolverRuleProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :resolver-endpoint-id)]
+    (. builder resolverEndpointId data))
+  (when-let [data (lookup-entry config id :rule-type)]
+    (. builder ruleType data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :target-ips)]
+    (. builder targetIps data))
+  (.build builder))
 
 
-(defn cfn-resolver-rule-target-address-property-builder
-  "The cfn-resolver-rule-target-address-property-builder function buildes out new instances of 
-CfnResolverRule$TargetAddressProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resolver-rule-target-address-property-builder
+  "The build-cfn-resolver-rule-target-address-property-builder function updates a CfnResolverRule$TargetAddressProperty$Builder instance using the provided configuration.
+  The function takes the CfnResolverRule$TargetAddressProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `ip` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip` |
 | `ipv6` | java.lang.String | [[cdk.support/lookup-entry]] | `:ipv6` |
 | `port` | java.lang.String | [[cdk.support/lookup-entry]] | `:port` |
-| `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |"
-  [stack id config]
-  (let [builder (CfnResolverRule$TargetAddressProperty$Builder.)]
-    (when-let [data (lookup-entry config id :ip)]
-      (. builder ip data))
-    (when-let [data (lookup-entry config id :ipv6)]
-      (. builder ipv6 data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :protocol)]
-      (. builder protocol data))
-    (.build builder)))
+| `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
+"
+  [^CfnResolverRule$TargetAddressProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :ip)]
+    (. builder ip data))
+  (when-let [data (lookup-entry config id :ipv6)]
+    (. builder ipv6 data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :protocol)]
+    (. builder protocol data))
+  (.build builder))

@@ -12,55 +12,64 @@
                                                          CfnRepositoryProps$Builder]))
 
 
-(defn cfn-domain-builder
-  "The cfn-domain-builder function buildes out new instances of 
-CfnDomain$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-domain-builder
+  "The build-cfn-domain-builder function updates a CfnDomain$Builder instance using the provided configuration.
+  The function takes the CfnDomain$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
 | `encryptionKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:encryption-key` |
 | `permissionsPolicyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:permissions-policy-document` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDomain$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (lookup-entry config id :permissions-policy-document)]
-      (. builder permissionsPolicyDocument data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDomain$Builder builder id config]
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (lookup-entry config id :permissions-policy-document)]
+    (. builder permissionsPolicyDocument data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-domain-props-builder
-  "The cfn-domain-props-builder function buildes out new instances of 
-CfnDomainProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-domain-props-builder
+  "The build-cfn-domain-props-builder function updates a CfnDomainProps$Builder instance using the provided configuration.
+  The function takes the CfnDomainProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
 | `encryptionKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:encryption-key` |
 | `permissionsPolicyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:permissions-policy-document` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDomainProps$Builder.)]
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (lookup-entry config id :permissions-policy-document)]
-      (. builder permissionsPolicyDocument data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDomainProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (lookup-entry config id :permissions-policy-document)]
+    (. builder permissionsPolicyDocument data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-package-group-builder
-  "The cfn-package-group-builder function buildes out new instances of 
-CfnPackageGroup$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-package-group-builder
+  "The build-cfn-package-group-builder function updates a CfnPackageGroup$Builder instance using the provided configuration.
+  The function takes the CfnPackageGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -70,43 +79,49 @@ CfnPackageGroup$Builder using the provided configuration.  Each field is set as 
 | `domainOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-owner` |
 | `originConfiguration` | software.amazon.awscdk.services.codeartifact.CfnPackageGroup$OriginConfigurationProperty | [[cdk.support/lookup-entry]] | `:origin-configuration` |
 | `pattern` | java.lang.String | [[cdk.support/lookup-entry]] | `:pattern` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnPackageGroup$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :contact-info)]
-      (. builder contactInfo data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :domain-owner)]
-      (. builder domainOwner data))
-    (when-let [data (lookup-entry config id :origin-configuration)]
-      (. builder originConfiguration data))
-    (when-let [data (lookup-entry config id :pattern)]
-      (. builder pattern data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnPackageGroup$Builder builder id config]
+  (when-let [data (lookup-entry config id :contact-info)]
+    (. builder contactInfo data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :domain-owner)]
+    (. builder domainOwner data))
+  (when-let [data (lookup-entry config id :origin-configuration)]
+    (. builder originConfiguration data))
+  (when-let [data (lookup-entry config id :pattern)]
+    (. builder pattern data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-package-group-origin-configuration-property-builder
-  "The cfn-package-group-origin-configuration-property-builder function buildes out new instances of 
-CfnPackageGroup$OriginConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-package-group-origin-configuration-property-builder
+  "The build-cfn-package-group-origin-configuration-property-builder function updates a CfnPackageGroup$OriginConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnPackageGroup$OriginConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `restrictions` | software.amazon.awscdk.services.codeartifact.CfnPackageGroup$RestrictionsProperty | [[cdk.support/lookup-entry]] | `:restrictions` |"
-  [stack id config]
-  (let [builder (CfnPackageGroup$OriginConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :restrictions)]
-      (. builder restrictions data))
-    (.build builder)))
+| `restrictions` | software.amazon.awscdk.services.codeartifact.CfnPackageGroup$RestrictionsProperty | [[cdk.support/lookup-entry]] | `:restrictions` |
+"
+  [^CfnPackageGroup$OriginConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :restrictions)]
+    (. builder restrictions data))
+  (.build builder))
 
 
-(defn cfn-package-group-props-builder
-  "The cfn-package-group-props-builder function buildes out new instances of 
-CfnPackageGroupProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-package-group-props-builder
+  "The build-cfn-package-group-props-builder function updates a CfnPackageGroupProps$Builder instance using the provided configuration.
+  The function takes the CfnPackageGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -116,101 +131,75 @@ CfnPackageGroupProps$Builder using the provided configuration.  Each field is se
 | `domainOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-owner` |
 | `originConfiguration` | software.amazon.awscdk.services.codeartifact.CfnPackageGroup$OriginConfigurationProperty | [[cdk.support/lookup-entry]] | `:origin-configuration` |
 | `pattern` | java.lang.String | [[cdk.support/lookup-entry]] | `:pattern` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnPackageGroupProps$Builder.)]
-    (when-let [data (lookup-entry config id :contact-info)]
-      (. builder contactInfo data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :domain-owner)]
-      (. builder domainOwner data))
-    (when-let [data (lookup-entry config id :origin-configuration)]
-      (. builder originConfiguration data))
-    (when-let [data (lookup-entry config id :pattern)]
-      (. builder pattern data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnPackageGroupProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :contact-info)]
+    (. builder contactInfo data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :domain-owner)]
+    (. builder domainOwner data))
+  (when-let [data (lookup-entry config id :origin-configuration)]
+    (. builder originConfiguration data))
+  (when-let [data (lookup-entry config id :pattern)]
+    (. builder pattern data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-package-group-restriction-type-property-builder
-  "The cfn-package-group-restriction-type-property-builder function buildes out new instances of 
-CfnPackageGroup$RestrictionTypeProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-package-group-restriction-type-property-builder
+  "The build-cfn-package-group-restriction-type-property-builder function updates a CfnPackageGroup$RestrictionTypeProperty$Builder instance using the provided configuration.
+  The function takes the CfnPackageGroup$RestrictionTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `repositories` | java.util.List | [[cdk.support/lookup-entry]] | `:repositories` |
-| `restrictionMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:restriction-mode` |"
-  [stack id config]
-  (let [builder (CfnPackageGroup$RestrictionTypeProperty$Builder.)]
-    (when-let [data (lookup-entry config id :repositories)]
-      (. builder repositories data))
-    (when-let [data (lookup-entry config id :restriction-mode)]
-      (. builder restrictionMode data))
-    (.build builder)))
+| `restrictionMode` | java.lang.String | [[cdk.support/lookup-entry]] | `:restriction-mode` |
+"
+  [^CfnPackageGroup$RestrictionTypeProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :repositories)]
+    (. builder repositories data))
+  (when-let [data (lookup-entry config id :restriction-mode)]
+    (. builder restrictionMode data))
+  (.build builder))
 
 
-(defn cfn-package-group-restrictions-property-builder
-  "The cfn-package-group-restrictions-property-builder function buildes out new instances of 
-CfnPackageGroup$RestrictionsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-package-group-restrictions-property-builder
+  "The build-cfn-package-group-restrictions-property-builder function updates a CfnPackageGroup$RestrictionsProperty$Builder instance using the provided configuration.
+  The function takes the CfnPackageGroup$RestrictionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `externalUpstream` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:external-upstream` |
 | `internalUpstream` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:internal-upstream` |
-| `publish` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:publish` |"
-  [stack id config]
-  (let [builder (CfnPackageGroup$RestrictionsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :external-upstream)]
-      (. builder externalUpstream data))
-    (when-let [data (lookup-entry config id :internal-upstream)]
-      (. builder internalUpstream data))
-    (when-let [data (lookup-entry config id :publish)]
-      (. builder publish data))
-    (.build builder)))
+| `publish` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:publish` |
+"
+  [^CfnPackageGroup$RestrictionsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :external-upstream)]
+    (. builder externalUpstream data))
+  (when-let [data (lookup-entry config id :internal-upstream)]
+    (. builder internalUpstream data))
+  (when-let [data (lookup-entry config id :publish)]
+    (. builder publish data))
+  (.build builder))
 
 
-(defn cfn-repository-builder
-  "The cfn-repository-builder function buildes out new instances of 
-CfnRepository$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-repository-builder
+  "The build-cfn-repository-builder function updates a CfnRepository$Builder instance using the provided configuration.
+  The function takes the CfnRepository$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
-| `domainOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-owner` |
-| `externalConnections` | java.util.List | [[cdk.support/lookup-entry]] | `:external-connections` |
-| `permissionsPolicyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:permissions-policy-document` |
-| `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `upstreams` | java.util.List | [[cdk.support/lookup-entry]] | `:upstreams` |"
-  [stack id config]
-  (let [builder (CfnRepository$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :domain-owner)]
-      (. builder domainOwner data))
-    (when-let [data (lookup-entry config id :external-connections)]
-      (. builder externalConnections data))
-    (when-let [data (lookup-entry config id :permissions-policy-document)]
-      (. builder permissionsPolicyDocument data))
-    (when-let [data (lookup-entry config id :repository-name)]
-      (. builder repositoryName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :upstreams)]
-      (. builder upstreams data))
-    (.build builder)))
-
-
-(defn cfn-repository-props-builder
-  "The cfn-repository-props-builder function buildes out new instances of 
-CfnRepositoryProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -221,23 +210,61 @@ CfnRepositoryProps$Builder using the provided configuration.  Each field is set 
 | `permissionsPolicyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:permissions-policy-document` |
 | `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `upstreams` | java.util.List | [[cdk.support/lookup-entry]] | `:upstreams` |"
-  [stack id config]
-  (let [builder (CfnRepositoryProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :domain-owner)]
-      (. builder domainOwner data))
-    (when-let [data (lookup-entry config id :external-connections)]
-      (. builder externalConnections data))
-    (when-let [data (lookup-entry config id :permissions-policy-document)]
-      (. builder permissionsPolicyDocument data))
-    (when-let [data (lookup-entry config id :repository-name)]
-      (. builder repositoryName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :upstreams)]
-      (. builder upstreams data))
-    (.build builder)))
+| `upstreams` | java.util.List | [[cdk.support/lookup-entry]] | `:upstreams` |
+"
+  [^CfnRepository$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :domain-owner)]
+    (. builder domainOwner data))
+  (when-let [data (lookup-entry config id :external-connections)]
+    (. builder externalConnections data))
+  (when-let [data (lookup-entry config id :permissions-policy-document)]
+    (. builder permissionsPolicyDocument data))
+  (when-let [data (lookup-entry config id :repository-name)]
+    (. builder repositoryName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :upstreams)]
+    (. builder upstreams data))
+  (.build builder))
+
+
+(defn build-cfn-repository-props-builder
+  "The build-cfn-repository-props-builder function updates a CfnRepositoryProps$Builder instance using the provided configuration.
+  The function takes the CfnRepositoryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
+| `domainOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-owner` |
+| `externalConnections` | java.util.List | [[cdk.support/lookup-entry]] | `:external-connections` |
+| `permissionsPolicyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:permissions-policy-document` |
+| `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+| `upstreams` | java.util.List | [[cdk.support/lookup-entry]] | `:upstreams` |
+"
+  [^CfnRepositoryProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :domain-owner)]
+    (. builder domainOwner data))
+  (when-let [data (lookup-entry config id :external-connections)]
+    (. builder externalConnections data))
+  (when-let [data (lookup-entry config id :permissions-policy-document)]
+    (. builder permissionsPolicyDocument data))
+  (when-let [data (lookup-entry config id :repository-name)]
+    (. builder repositoryName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :upstreams)]
+    (. builder upstreams data))
+  (.build builder))

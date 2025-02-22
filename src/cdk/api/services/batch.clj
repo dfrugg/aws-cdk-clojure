@@ -483,9 +483,12 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :rss data) UlimitName/RSS)))
 
 
-(defn cfn-compute-environment-builder
-  "The cfn-compute-environment-builder function buildes out new instances of 
-CfnComputeEnvironment$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-compute-environment-builder
+  "The build-cfn-compute-environment-builder function updates a CfnComputeEnvironment$Builder instance using the provided configuration.
+  The function takes the CfnComputeEnvironment$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -498,35 +501,38 @@ CfnComputeEnvironment$Builder using the provided configuration.  Each field is s
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 | `unmanagedvCpus` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unmanagedv-cpus` |
-| `updatePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:update-policy` |"
-  [stack id config]
-  (let [builder (CfnComputeEnvironment$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :compute-environment-name)]
-      (. builder computeEnvironmentName data))
-    (when-let [data (lookup-entry config id :compute-resources)]
-      (. builder computeResources data))
-    (when-let [data (lookup-entry config id :eks-configuration)]
-      (. builder eksConfiguration data))
-    (when-let [data (lookup-entry config id :replace-compute-environment)]
-      (. builder replaceComputeEnvironment data))
-    (when-let [data (lookup-entry config id :service-role)]
-      (. builder serviceRole data))
-    (when-let [data (lookup-entry config id :state)]
-      (. builder state data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :unmanagedv-cpus)]
-      (. builder unmanagedvCpus data))
-    (when-let [data (lookup-entry config id :update-policy)]
-      (. builder updatePolicy data))
-    (.build builder)))
+| `updatePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:update-policy` |
+"
+  [^CfnComputeEnvironment$Builder builder id config]
+  (when-let [data (lookup-entry config id :compute-environment-name)]
+    (. builder computeEnvironmentName data))
+  (when-let [data (lookup-entry config id :compute-resources)]
+    (. builder computeResources data))
+  (when-let [data (lookup-entry config id :eks-configuration)]
+    (. builder eksConfiguration data))
+  (when-let [data (lookup-entry config id :replace-compute-environment)]
+    (. builder replaceComputeEnvironment data))
+  (when-let [data (lookup-entry config id :service-role)]
+    (. builder serviceRole data))
+  (when-let [data (lookup-entry config id :state)]
+    (. builder state data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :unmanagedv-cpus)]
+    (. builder unmanagedvCpus data))
+  (when-let [data (lookup-entry config id :update-policy)]
+    (. builder updatePolicy data))
+  (.build builder))
 
 
-(defn cfn-compute-environment-compute-resources-property-builder
-  "The cfn-compute-environment-compute-resources-property-builder function buildes out new instances of 
-CfnComputeEnvironment$ComputeResourcesProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-compute-environment-compute-resources-property-builder
+  "The build-cfn-compute-environment-compute-resources-property-builder function updates a CfnComputeEnvironment$ComputeResourcesProperty$Builder instance using the provided configuration.
+  The function takes the CfnComputeEnvironment$ComputeResourcesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -547,108 +553,120 @@ CfnComputeEnvironment$ComputeResourcesProperty$Builder using the provided config
 | `subnets` | java.util.List | [[cdk.support/lookup-entry]] | `:subnets` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
-| `updateToLatestImageVersion` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:update-to-latest-image-version` |"
-  [stack id config]
-  (let [builder (CfnComputeEnvironment$ComputeResourcesProperty$Builder.)]
-    (when-let [data (lookup-entry config id :allocation-strategy)]
-      (. builder allocationStrategy data))
-    (when-let [data (lookup-entry config id :bid-percentage)]
-      (. builder bidPercentage data))
-    (when-let [data (lookup-entry config id :desiredv-cpus)]
-      (. builder desiredvCpus data))
-    (when-let [data (lookup-entry config id :ec2-configuration)]
-      (. builder ec2Configuration data))
-    (when-let [data (lookup-entry config id :ec2-key-pair)]
-      (. builder ec2KeyPair data))
-    (when-let [data (lookup-entry config id :image-id)]
-      (. builder imageId data))
-    (when-let [data (lookup-entry config id :instance-role)]
-      (. builder instanceRole data))
-    (when-let [data (lookup-entry config id :instance-types)]
-      (. builder instanceTypes data))
-    (when-let [data (lookup-entry config id :launch-template)]
-      (. builder launchTemplate data))
-    (when-let [data (lookup-entry config id :maxv-cpus)]
-      (. builder maxvCpus data))
-    (when-let [data (lookup-entry config id :minv-cpus)]
-      (. builder minvCpus data))
-    (when-let [data (lookup-entry config id :placement-group)]
-      (. builder placementGroup data))
-    (when-let [data (lookup-entry config id :security-group-ids)]
-      (. builder securityGroupIds data))
-    (when-let [data (lookup-entry config id :spot-iam-fleet-role)]
-      (. builder spotIamFleetRole data))
-    (when-let [data (lookup-entry config id :subnets)]
-      (. builder subnets data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :update-to-latest-image-version)]
-      (. builder updateToLatestImageVersion data))
-    (.build builder)))
+| `updateToLatestImageVersion` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:update-to-latest-image-version` |
+"
+  [^CfnComputeEnvironment$ComputeResourcesProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :allocation-strategy)]
+    (. builder allocationStrategy data))
+  (when-let [data (lookup-entry config id :bid-percentage)]
+    (. builder bidPercentage data))
+  (when-let [data (lookup-entry config id :desiredv-cpus)]
+    (. builder desiredvCpus data))
+  (when-let [data (lookup-entry config id :ec2-configuration)]
+    (. builder ec2Configuration data))
+  (when-let [data (lookup-entry config id :ec2-key-pair)]
+    (. builder ec2KeyPair data))
+  (when-let [data (lookup-entry config id :image-id)]
+    (. builder imageId data))
+  (when-let [data (lookup-entry config id :instance-role)]
+    (. builder instanceRole data))
+  (when-let [data (lookup-entry config id :instance-types)]
+    (. builder instanceTypes data))
+  (when-let [data (lookup-entry config id :launch-template)]
+    (. builder launchTemplate data))
+  (when-let [data (lookup-entry config id :maxv-cpus)]
+    (. builder maxvCpus data))
+  (when-let [data (lookup-entry config id :minv-cpus)]
+    (. builder minvCpus data))
+  (when-let [data (lookup-entry config id :placement-group)]
+    (. builder placementGroup data))
+  (when-let [data (lookup-entry config id :security-group-ids)]
+    (. builder securityGroupIds data))
+  (when-let [data (lookup-entry config id :spot-iam-fleet-role)]
+    (. builder spotIamFleetRole data))
+  (when-let [data (lookup-entry config id :subnets)]
+    (. builder subnets data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :update-to-latest-image-version)]
+    (. builder updateToLatestImageVersion data))
+  (.build builder))
 
 
-(defn cfn-compute-environment-ec2-configuration-object-property-builder
-  "The cfn-compute-environment-ec2-configuration-object-property-builder function buildes out new instances of 
-CfnComputeEnvironment$Ec2ConfigurationObjectProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-compute-environment-ec2-configuration-object-property-builder
+  "The build-cfn-compute-environment-ec2-configuration-object-property-builder function updates a CfnComputeEnvironment$Ec2ConfigurationObjectProperty$Builder instance using the provided configuration.
+  The function takes the CfnComputeEnvironment$Ec2ConfigurationObjectProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `imageIdOverride` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-id-override` |
 | `imageKubernetesVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-kubernetes-version` |
-| `imageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-type` |"
-  [stack id config]
-  (let [builder (CfnComputeEnvironment$Ec2ConfigurationObjectProperty$Builder.)]
-    (when-let [data (lookup-entry config id :image-id-override)]
-      (. builder imageIdOverride data))
-    (when-let [data (lookup-entry config id :image-kubernetes-version)]
-      (. builder imageKubernetesVersion data))
-    (when-let [data (lookup-entry config id :image-type)]
-      (. builder imageType data))
-    (.build builder)))
+| `imageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-type` |
+"
+  [^CfnComputeEnvironment$Ec2ConfigurationObjectProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :image-id-override)]
+    (. builder imageIdOverride data))
+  (when-let [data (lookup-entry config id :image-kubernetes-version)]
+    (. builder imageKubernetesVersion data))
+  (when-let [data (lookup-entry config id :image-type)]
+    (. builder imageType data))
+  (.build builder))
 
 
-(defn cfn-compute-environment-eks-configuration-property-builder
-  "The cfn-compute-environment-eks-configuration-property-builder function buildes out new instances of 
-CfnComputeEnvironment$EksConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-compute-environment-eks-configuration-property-builder
+  "The build-cfn-compute-environment-eks-configuration-property-builder function updates a CfnComputeEnvironment$EksConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnComputeEnvironment$EksConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `eksClusterArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:eks-cluster-arn` |
-| `kubernetesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:kubernetes-namespace` |"
-  [stack id config]
-  (let [builder (CfnComputeEnvironment$EksConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :eks-cluster-arn)]
-      (. builder eksClusterArn data))
-    (when-let [data (lookup-entry config id :kubernetes-namespace)]
-      (. builder kubernetesNamespace data))
-    (.build builder)))
+| `kubernetesNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:kubernetes-namespace` |
+"
+  [^CfnComputeEnvironment$EksConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :eks-cluster-arn)]
+    (. builder eksClusterArn data))
+  (when-let [data (lookup-entry config id :kubernetes-namespace)]
+    (. builder kubernetesNamespace data))
+  (.build builder))
 
 
-(defn cfn-compute-environment-launch-template-specification-property-builder
-  "The cfn-compute-environment-launch-template-specification-property-builder function buildes out new instances of 
-CfnComputeEnvironment$LaunchTemplateSpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-compute-environment-launch-template-specification-property-builder
+  "The build-cfn-compute-environment-launch-template-specification-property-builder function updates a CfnComputeEnvironment$LaunchTemplateSpecificationProperty$Builder instance using the provided configuration.
+  The function takes the CfnComputeEnvironment$LaunchTemplateSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `launchTemplateId` | java.lang.String | [[cdk.support/lookup-entry]] | `:launch-template-id` |
 | `launchTemplateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:launch-template-name` |
-| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |"
-  [stack id config]
-  (let [builder (CfnComputeEnvironment$LaunchTemplateSpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :launch-template-id)]
-      (. builder launchTemplateId data))
-    (when-let [data (lookup-entry config id :launch-template-name)]
-      (. builder launchTemplateName data))
-    (when-let [data (lookup-entry config id :version)]
-      (. builder version data))
-    (.build builder)))
+| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
+"
+  [^CfnComputeEnvironment$LaunchTemplateSpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :launch-template-id)]
+    (. builder launchTemplateId data))
+  (when-let [data (lookup-entry config id :launch-template-name)]
+    (. builder launchTemplateName data))
+  (when-let [data (lookup-entry config id :version)]
+    (. builder version data))
+  (.build builder))
 
 
-(defn cfn-compute-environment-props-builder
-  "The cfn-compute-environment-props-builder function buildes out new instances of 
-CfnComputeEnvironmentProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-compute-environment-props-builder
+  "The build-cfn-compute-environment-props-builder function updates a CfnComputeEnvironmentProps$Builder instance using the provided configuration.
+  The function takes the CfnComputeEnvironmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -661,69 +679,78 @@ CfnComputeEnvironmentProps$Builder using the provided configuration.  Each field
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
 | `unmanagedvCpus` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unmanagedv-cpus` |
-| `updatePolicy` | software.amazon.awscdk.services.batch.CfnComputeEnvironment$UpdatePolicyProperty | [[cdk.support/lookup-entry]] | `:update-policy` |"
-  [stack id config]
-  (let [builder (CfnComputeEnvironmentProps$Builder.)]
-    (when-let [data (lookup-entry config id :compute-environment-name)]
-      (. builder computeEnvironmentName data))
-    (when-let [data (lookup-entry config id :compute-resources)]
-      (. builder computeResources data))
-    (when-let [data (lookup-entry config id :eks-configuration)]
-      (. builder eksConfiguration data))
-    (when-let [data (lookup-entry config id :replace-compute-environment)]
-      (. builder replaceComputeEnvironment data))
-    (when-let [data (lookup-entry config id :service-role)]
-      (. builder serviceRole data))
-    (when-let [data (lookup-entry config id :state)]
-      (. builder state data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :unmanagedv-cpus)]
-      (. builder unmanagedvCpus data))
-    (when-let [data (lookup-entry config id :update-policy)]
-      (. builder updatePolicy data))
-    (.build builder)))
+| `updatePolicy` | software.amazon.awscdk.services.batch.CfnComputeEnvironment$UpdatePolicyProperty | [[cdk.support/lookup-entry]] | `:update-policy` |
+"
+  [^CfnComputeEnvironmentProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :compute-environment-name)]
+    (. builder computeEnvironmentName data))
+  (when-let [data (lookup-entry config id :compute-resources)]
+    (. builder computeResources data))
+  (when-let [data (lookup-entry config id :eks-configuration)]
+    (. builder eksConfiguration data))
+  (when-let [data (lookup-entry config id :replace-compute-environment)]
+    (. builder replaceComputeEnvironment data))
+  (when-let [data (lookup-entry config id :service-role)]
+    (. builder serviceRole data))
+  (when-let [data (lookup-entry config id :state)]
+    (. builder state data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :unmanagedv-cpus)]
+    (. builder unmanagedvCpus data))
+  (when-let [data (lookup-entry config id :update-policy)]
+    (. builder updatePolicy data))
+  (.build builder))
 
 
-(defn cfn-compute-environment-update-policy-property-builder
-  "The cfn-compute-environment-update-policy-property-builder function buildes out new instances of 
-CfnComputeEnvironment$UpdatePolicyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-compute-environment-update-policy-property-builder
+  "The build-cfn-compute-environment-update-policy-property-builder function updates a CfnComputeEnvironment$UpdatePolicyProperty$Builder instance using the provided configuration.
+  The function takes the CfnComputeEnvironment$UpdatePolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `jobExecutionTimeoutMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:job-execution-timeout-minutes` |
-| `terminateJobsOnUpdate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:terminate-jobs-on-update` |"
-  [stack id config]
-  (let [builder (CfnComputeEnvironment$UpdatePolicyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :job-execution-timeout-minutes)]
-      (. builder jobExecutionTimeoutMinutes data))
-    (when-let [data (lookup-entry config id :terminate-jobs-on-update)]
-      (. builder terminateJobsOnUpdate data))
-    (.build builder)))
+| `terminateJobsOnUpdate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:terminate-jobs-on-update` |
+"
+  [^CfnComputeEnvironment$UpdatePolicyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :job-execution-timeout-minutes)]
+    (. builder jobExecutionTimeoutMinutes data))
+  (when-let [data (lookup-entry config id :terminate-jobs-on-update)]
+    (. builder terminateJobsOnUpdate data))
+  (.build builder))
 
 
-(defn cfn-job-definition-authorization-config-property-builder
-  "The cfn-job-definition-authorization-config-property-builder function buildes out new instances of 
-CfnJobDefinition$AuthorizationConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-authorization-config-property-builder
+  "The build-cfn-job-definition-authorization-config-property-builder function updates a CfnJobDefinition$AuthorizationConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$AuthorizationConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accessPointId` | java.lang.String | [[cdk.support/lookup-entry]] | `:access-point-id` |
-| `iam` | java.lang.String | [[cdk.support/lookup-entry]] | `:iam` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$AuthorizationConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :access-point-id)]
-      (. builder accessPointId data))
-    (when-let [data (lookup-entry config id :iam)]
-      (. builder iam data))
-    (.build builder)))
+| `iam` | java.lang.String | [[cdk.support/lookup-entry]] | `:iam` |
+"
+  [^CfnJobDefinition$AuthorizationConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :access-point-id)]
+    (. builder accessPointId data))
+  (when-let [data (lookup-entry config id :iam)]
+    (. builder iam data))
+  (.build builder))
 
 
-(defn cfn-job-definition-builder
-  "The cfn-job-definition-builder function buildes out new instances of 
-CfnJobDefinition$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-builder
+  "The build-cfn-job-definition-builder function updates a CfnJobDefinition$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -739,41 +766,44 @@ CfnJobDefinition$Builder using the provided configuration.  Each field is set as
 | `schedulingPriority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scheduling-priority` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 | `timeout` | software.amazon.awscdk.services.batch.CfnJobDefinition$TimeoutProperty | [[cdk.support/lookup-entry]] | `:timeout` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :container-properties)]
-      (. builder containerProperties data))
-    (when-let [data (lookup-entry config id :ecs-properties)]
-      (. builder ecsProperties data))
-    (when-let [data (lookup-entry config id :eks-properties)]
-      (. builder eksProperties data))
-    (when-let [data (lookup-entry config id :job-definition-name)]
-      (. builder jobDefinitionName data))
-    (when-let [data (lookup-entry config id :node-properties)]
-      (. builder nodeProperties data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :platform-capabilities)]
-      (. builder platformCapabilities data))
-    (when-let [data (lookup-entry config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :retry-strategy)]
-      (. builder retryStrategy data))
-    (when-let [data (lookup-entry config id :scheduling-priority)]
-      (. builder schedulingPriority data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnJobDefinition$Builder builder id config]
+  (when-let [data (lookup-entry config id :container-properties)]
+    (. builder containerProperties data))
+  (when-let [data (lookup-entry config id :ecs-properties)]
+    (. builder ecsProperties data))
+  (when-let [data (lookup-entry config id :eks-properties)]
+    (. builder eksProperties data))
+  (when-let [data (lookup-entry config id :job-definition-name)]
+    (. builder jobDefinitionName data))
+  (when-let [data (lookup-entry config id :node-properties)]
+    (. builder nodeProperties data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :platform-capabilities)]
+    (. builder platformCapabilities data))
+  (when-let [data (lookup-entry config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :retry-strategy)]
+    (. builder retryStrategy data))
+  (when-let [data (lookup-entry config id :scheduling-priority)]
+    (. builder schedulingPriority data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-job-definition-container-properties-property-builder
-  "The cfn-job-definition-container-properties-property-builder function buildes out new instances of 
-CfnJobDefinition$ContainerPropertiesProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-container-properties-property-builder
+  "The build-cfn-job-definition-container-properties-property-builder function updates a CfnJobDefinition$ContainerPropertiesProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$ContainerPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -799,95 +829,104 @@ CfnJobDefinition$ContainerPropertiesProperty$Builder using the provided configur
 | `ulimits` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ulimits` |
 | `user` | java.lang.String | [[cdk.support/lookup-entry]] | `:user` |
 | `vcpus` | java.lang.Number | [[cdk.support/lookup-entry]] | `:vcpus` |
-| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$ContainerPropertiesProperty$Builder.)]
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :ephemeral-storage)]
-      (. builder ephemeralStorage data))
-    (when-let [data (lookup-entry config id :execution-role-arn)]
-      (. builder executionRoleArn data))
-    (when-let [data (lookup-entry config id :fargate-platform-configuration)]
-      (. builder fargatePlatformConfiguration data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (lookup-entry config id :instance-type)]
-      (. builder instanceType data))
-    (when-let [data (lookup-entry config id :job-role-arn)]
-      (. builder jobRoleArn data))
-    (when-let [data (lookup-entry config id :linux-parameters)]
-      (. builder linuxParameters data))
-    (when-let [data (lookup-entry config id :log-configuration)]
-      (. builder logConfiguration data))
-    (when-let [data (lookup-entry config id :memory)]
-      (. builder memory data))
-    (when-let [data (lookup-entry config id :mount-points)]
-      (. builder mountPoints data))
-    (when-let [data (lookup-entry config id :network-configuration)]
-      (. builder networkConfiguration data))
-    (when-let [data (lookup-entry config id :privileged)]
-      (. builder privileged data))
-    (when-let [data (lookup-entry config id :readonly-root-filesystem)]
-      (. builder readonlyRootFilesystem data))
-    (when-let [data (lookup-entry config id :repository-credentials)]
-      (. builder repositoryCredentials data))
-    (when-let [data (lookup-entry config id :resource-requirements)]
-      (. builder resourceRequirements data))
-    (when-let [data (lookup-entry config id :runtime-platform)]
-      (. builder runtimePlatform data))
-    (when-let [data (lookup-entry config id :secrets)]
-      (. builder secrets data))
-    (when-let [data (lookup-entry config id :ulimits)]
-      (. builder ulimits data))
-    (when-let [data (lookup-entry config id :user)]
-      (. builder user data))
-    (when-let [data (lookup-entry config id :vcpus)]
-      (. builder vcpus data))
-    (when-let [data (lookup-entry config id :volumes)]
-      (. builder volumes data))
-    (.build builder)))
+| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |
+"
+  [^CfnJobDefinition$ContainerPropertiesProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :ephemeral-storage)]
+    (. builder ephemeralStorage data))
+  (when-let [data (lookup-entry config id :execution-role-arn)]
+    (. builder executionRoleArn data))
+  (when-let [data (lookup-entry config id :fargate-platform-configuration)]
+    (. builder fargatePlatformConfiguration data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (lookup-entry config id :instance-type)]
+    (. builder instanceType data))
+  (when-let [data (lookup-entry config id :job-role-arn)]
+    (. builder jobRoleArn data))
+  (when-let [data (lookup-entry config id :linux-parameters)]
+    (. builder linuxParameters data))
+  (when-let [data (lookup-entry config id :log-configuration)]
+    (. builder logConfiguration data))
+  (when-let [data (lookup-entry config id :memory)]
+    (. builder memory data))
+  (when-let [data (lookup-entry config id :mount-points)]
+    (. builder mountPoints data))
+  (when-let [data (lookup-entry config id :network-configuration)]
+    (. builder networkConfiguration data))
+  (when-let [data (lookup-entry config id :privileged)]
+    (. builder privileged data))
+  (when-let [data (lookup-entry config id :readonly-root-filesystem)]
+    (. builder readonlyRootFilesystem data))
+  (when-let [data (lookup-entry config id :repository-credentials)]
+    (. builder repositoryCredentials data))
+  (when-let [data (lookup-entry config id :resource-requirements)]
+    (. builder resourceRequirements data))
+  (when-let [data (lookup-entry config id :runtime-platform)]
+    (. builder runtimePlatform data))
+  (when-let [data (lookup-entry config id :secrets)]
+    (. builder secrets data))
+  (when-let [data (lookup-entry config id :ulimits)]
+    (. builder ulimits data))
+  (when-let [data (lookup-entry config id :user)]
+    (. builder user data))
+  (when-let [data (lookup-entry config id :vcpus)]
+    (. builder vcpus data))
+  (when-let [data (lookup-entry config id :volumes)]
+    (. builder volumes data))
+  (.build builder))
 
 
-(defn cfn-job-definition-device-property-builder
-  "The cfn-job-definition-device-property-builder function buildes out new instances of 
-CfnJobDefinition$DeviceProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-device-property-builder
+  "The build-cfn-job-definition-device-property-builder function updates a CfnJobDefinition$DeviceProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$DeviceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `containerPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-path` |
 | `hostPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:host-path` |
-| `permissions` | java.util.List | [[cdk.support/lookup-entry]] | `:permissions` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$DeviceProperty$Builder.)]
-    (when-let [data (lookup-entry config id :container-path)]
-      (. builder containerPath data))
-    (when-let [data (lookup-entry config id :host-path)]
-      (. builder hostPath data))
-    (when-let [data (lookup-entry config id :permissions)]
-      (. builder permissions data))
-    (.build builder)))
+| `permissions` | java.util.List | [[cdk.support/lookup-entry]] | `:permissions` |
+"
+  [^CfnJobDefinition$DeviceProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :container-path)]
+    (. builder containerPath data))
+  (when-let [data (lookup-entry config id :host-path)]
+    (. builder hostPath data))
+  (when-let [data (lookup-entry config id :permissions)]
+    (. builder permissions data))
+  (.build builder))
 
 
-(defn cfn-job-definition-ecs-properties-property-builder
-  "The cfn-job-definition-ecs-properties-property-builder function buildes out new instances of 
-CfnJobDefinition$EcsPropertiesProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-ecs-properties-property-builder
+  "The build-cfn-job-definition-ecs-properties-property-builder function updates a CfnJobDefinition$EcsPropertiesProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$EcsPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `taskProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:task-properties` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$EcsPropertiesProperty$Builder.)]
-    (when-let [data (lookup-entry config id :task-properties)]
-      (. builder taskProperties data))
-    (.build builder)))
+| `taskProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:task-properties` |
+"
+  [^CfnJobDefinition$EcsPropertiesProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :task-properties)]
+    (. builder taskProperties data))
+  (.build builder))
 
 
-(defn cfn-job-definition-ecs-task-properties-property-builder
-  "The cfn-job-definition-ecs-task-properties-property-builder function buildes out new instances of 
-CfnJobDefinition$EcsTaskPropertiesProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-ecs-task-properties-property-builder
+  "The build-cfn-job-definition-ecs-task-properties-property-builder function updates a CfnJobDefinition$EcsTaskPropertiesProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$EcsTaskPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -900,35 +939,38 @@ CfnJobDefinition$EcsTaskPropertiesProperty$Builder using the provided configurat
 | `platformVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:platform-version` |
 | `runtimePlatform` | software.amazon.awscdk.services.batch.CfnJobDefinition$RuntimePlatformProperty | [[cdk.support/lookup-entry]] | `:runtime-platform` |
 | `taskRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:task-role-arn` |
-| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$EcsTaskPropertiesProperty$Builder.)]
-    (when-let [data (lookup-entry config id :containers)]
-      (. builder containers data))
-    (when-let [data (lookup-entry config id :ephemeral-storage)]
-      (. builder ephemeralStorage data))
-    (when-let [data (lookup-entry config id :execution-role-arn)]
-      (. builder executionRoleArn data))
-    (when-let [data (lookup-entry config id :ipc-mode)]
-      (. builder ipcMode data))
-    (when-let [data (lookup-entry config id :network-configuration)]
-      (. builder networkConfiguration data))
-    (when-let [data (lookup-entry config id :pid-mode)]
-      (. builder pidMode data))
-    (when-let [data (lookup-entry config id :platform-version)]
-      (. builder platformVersion data))
-    (when-let [data (lookup-entry config id :runtime-platform)]
-      (. builder runtimePlatform data))
-    (when-let [data (lookup-entry config id :task-role-arn)]
-      (. builder taskRoleArn data))
-    (when-let [data (lookup-entry config id :volumes)]
-      (. builder volumes data))
-    (.build builder)))
+| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |
+"
+  [^CfnJobDefinition$EcsTaskPropertiesProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :containers)]
+    (. builder containers data))
+  (when-let [data (lookup-entry config id :ephemeral-storage)]
+    (. builder ephemeralStorage data))
+  (when-let [data (lookup-entry config id :execution-role-arn)]
+    (. builder executionRoleArn data))
+  (when-let [data (lookup-entry config id :ipc-mode)]
+    (. builder ipcMode data))
+  (when-let [data (lookup-entry config id :network-configuration)]
+    (. builder networkConfiguration data))
+  (when-let [data (lookup-entry config id :pid-mode)]
+    (. builder pidMode data))
+  (when-let [data (lookup-entry config id :platform-version)]
+    (. builder platformVersion data))
+  (when-let [data (lookup-entry config id :runtime-platform)]
+    (. builder runtimePlatform data))
+  (when-let [data (lookup-entry config id :task-role-arn)]
+    (. builder taskRoleArn data))
+  (when-let [data (lookup-entry config id :volumes)]
+    (. builder volumes data))
+  (.build builder))
 
 
-(defn cfn-job-definition-efs-volume-configuration-property-builder
-  "The cfn-job-definition-efs-volume-configuration-property-builder function buildes out new instances of 
-CfnJobDefinition$EfsVolumeConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-efs-volume-configuration-property-builder
+  "The build-cfn-job-definition-efs-volume-configuration-property-builder function updates a CfnJobDefinition$EfsVolumeConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$EfsVolumeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -936,42 +978,48 @@ CfnJobDefinition$EfsVolumeConfigurationProperty$Builder using the provided confi
 | `fileSystemId` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-system-id` |
 | `rootDirectory` | java.lang.String | [[cdk.support/lookup-entry]] | `:root-directory` |
 | `transitEncryption` | java.lang.String | [[cdk.support/lookup-entry]] | `:transit-encryption` |
-| `transitEncryptionPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:transit-encryption-port` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$EfsVolumeConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :authorization-config)]
-      (. builder authorizationConfig data))
-    (when-let [data (lookup-entry config id :file-system-id)]
-      (. builder fileSystemId data))
-    (when-let [data (lookup-entry config id :root-directory)]
-      (. builder rootDirectory data))
-    (when-let [data (lookup-entry config id :transit-encryption)]
-      (. builder transitEncryption data))
-    (when-let [data (lookup-entry config id :transit-encryption-port)]
-      (. builder transitEncryptionPort data))
-    (.build builder)))
+| `transitEncryptionPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:transit-encryption-port` |
+"
+  [^CfnJobDefinition$EfsVolumeConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :authorization-config)]
+    (. builder authorizationConfig data))
+  (when-let [data (lookup-entry config id :file-system-id)]
+    (. builder fileSystemId data))
+  (when-let [data (lookup-entry config id :root-directory)]
+    (. builder rootDirectory data))
+  (when-let [data (lookup-entry config id :transit-encryption)]
+    (. builder transitEncryption data))
+  (when-let [data (lookup-entry config id :transit-encryption-port)]
+    (. builder transitEncryptionPort data))
+  (.build builder))
 
 
-(defn cfn-job-definition-eks-container-environment-variable-property-builder
-  "The cfn-job-definition-eks-container-environment-variable-property-builder function buildes out new instances of 
-CfnJobDefinition$EksContainerEnvironmentVariableProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-eks-container-environment-variable-property-builder
+  "The build-cfn-job-definition-eks-container-environment-variable-property-builder function updates a CfnJobDefinition$EksContainerEnvironmentVariableProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$EksContainerEnvironmentVariableProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$EksContainerEnvironmentVariableProperty$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnJobDefinition$EksContainerEnvironmentVariableProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-job-definition-eks-container-property-builder
-  "The cfn-job-definition-eks-container-property-builder function buildes out new instances of 
-CfnJobDefinition$EksContainerProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-eks-container-property-builder
+  "The build-cfn-job-definition-eks-container-property-builder function updates a CfnJobDefinition$EksContainerProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$EksContainerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -983,220 +1031,256 @@ CfnJobDefinition$EksContainerProperty$Builder using the provided configuration. 
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `resources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resources` |
 | `securityContext` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:security-context` |
-| `volumeMounts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:volume-mounts` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$EksContainerProperty$Builder.)]
-    (when-let [data (lookup-entry config id :args)]
-      (. builder args data))
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :env)]
-      (. builder env data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (lookup-entry config id :image-pull-policy)]
-      (. builder imagePullPolicy data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :resources)]
-      (. builder resources data))
-    (when-let [data (lookup-entry config id :security-context)]
-      (. builder securityContext data))
-    (when-let [data (lookup-entry config id :volume-mounts)]
-      (. builder volumeMounts data))
-    (.build builder)))
+| `volumeMounts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:volume-mounts` |
+"
+  [^CfnJobDefinition$EksContainerProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :args)]
+    (. builder args data))
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :env)]
+    (. builder env data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (lookup-entry config id :image-pull-policy)]
+    (. builder imagePullPolicy data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :resources)]
+    (. builder resources data))
+  (when-let [data (lookup-entry config id :security-context)]
+    (. builder securityContext data))
+  (when-let [data (lookup-entry config id :volume-mounts)]
+    (. builder volumeMounts data))
+  (.build builder))
 
 
-(defn cfn-job-definition-eks-container-volume-mount-property-builder
-  "The cfn-job-definition-eks-container-volume-mount-property-builder function buildes out new instances of 
-CfnJobDefinition$EksContainerVolumeMountProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-eks-container-volume-mount-property-builder
+  "The build-cfn-job-definition-eks-container-volume-mount-property-builder function updates a CfnJobDefinition$EksContainerVolumeMountProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$EksContainerVolumeMountProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `mountPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:mount-path` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `readOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:read-only` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$EksContainerVolumeMountProperty$Builder.)]
-    (when-let [data (lookup-entry config id :mount-path)]
-      (. builder mountPath data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :read-only)]
-      (. builder readOnly data))
-    (.build builder)))
+| `readOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:read-only` |
+"
+  [^CfnJobDefinition$EksContainerVolumeMountProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :mount-path)]
+    (. builder mountPath data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :read-only)]
+    (. builder readOnly data))
+  (.build builder))
 
 
-(defn cfn-job-definition-eks-properties-property-builder
-  "The cfn-job-definition-eks-properties-property-builder function buildes out new instances of 
-CfnJobDefinition$EksPropertiesProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-eks-properties-property-builder
+  "The build-cfn-job-definition-eks-properties-property-builder function updates a CfnJobDefinition$EksPropertiesProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$EksPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `podProperties` | software.amazon.awscdk.services.batch.CfnJobDefinition$PodPropertiesProperty | [[cdk.support/lookup-entry]] | `:pod-properties` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$EksPropertiesProperty$Builder.)]
-    (when-let [data (lookup-entry config id :pod-properties)]
-      (. builder podProperties data))
-    (.build builder)))
+| `podProperties` | software.amazon.awscdk.services.batch.CfnJobDefinition$PodPropertiesProperty | [[cdk.support/lookup-entry]] | `:pod-properties` |
+"
+  [^CfnJobDefinition$EksPropertiesProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :pod-properties)]
+    (. builder podProperties data))
+  (.build builder))
 
 
-(defn cfn-job-definition-eks-secret-property-builder
-  "The cfn-job-definition-eks-secret-property-builder function buildes out new instances of 
-CfnJobDefinition$EksSecretProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-eks-secret-property-builder
+  "The build-cfn-job-definition-eks-secret-property-builder function updates a CfnJobDefinition$EksSecretProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$EksSecretProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `optional` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:optional` |
-| `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$EksSecretProperty$Builder.)]
-    (when-let [data (lookup-entry config id :optional)]
-      (. builder optional data))
-    (when-let [data (lookup-entry config id :secret-name)]
-      (. builder secretName data))
-    (.build builder)))
+| `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |
+"
+  [^CfnJobDefinition$EksSecretProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :optional)]
+    (. builder optional data))
+  (when-let [data (lookup-entry config id :secret-name)]
+    (. builder secretName data))
+  (.build builder))
 
 
-(defn cfn-job-definition-eks-volume-property-builder
-  "The cfn-job-definition-eks-volume-property-builder function buildes out new instances of 
-CfnJobDefinition$EksVolumeProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-eks-volume-property-builder
+  "The build-cfn-job-definition-eks-volume-property-builder function updates a CfnJobDefinition$EksVolumeProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$EksVolumeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `emptyDir` | software.amazon.awscdk.services.batch.CfnJobDefinition$EmptyDirProperty | [[cdk.support/lookup-entry]] | `:empty-dir` |
 | `hostPath` | software.amazon.awscdk.services.batch.CfnJobDefinition$HostPathProperty | [[cdk.support/lookup-entry]] | `:host-path` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `secret` | software.amazon.awscdk.services.batch.CfnJobDefinition$EksSecretProperty | [[cdk.support/lookup-entry]] | `:secret` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$EksVolumeProperty$Builder.)]
-    (when-let [data (lookup-entry config id :empty-dir)]
-      (. builder emptyDir data))
-    (when-let [data (lookup-entry config id :host-path)]
-      (. builder hostPath data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :secret)]
-      (. builder secret data))
-    (.build builder)))
+| `secret` | software.amazon.awscdk.services.batch.CfnJobDefinition$EksSecretProperty | [[cdk.support/lookup-entry]] | `:secret` |
+"
+  [^CfnJobDefinition$EksVolumeProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :empty-dir)]
+    (. builder emptyDir data))
+  (when-let [data (lookup-entry config id :host-path)]
+    (. builder hostPath data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :secret)]
+    (. builder secret data))
+  (.build builder))
 
 
-(defn cfn-job-definition-empty-dir-property-builder
-  "The cfn-job-definition-empty-dir-property-builder function buildes out new instances of 
-CfnJobDefinition$EmptyDirProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-empty-dir-property-builder
+  "The build-cfn-job-definition-empty-dir-property-builder function updates a CfnJobDefinition$EmptyDirProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$EmptyDirProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `medium` | java.lang.String | [[cdk.support/lookup-entry]] | `:medium` |
-| `sizeLimit` | java.lang.String | [[cdk.support/lookup-entry]] | `:size-limit` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$EmptyDirProperty$Builder.)]
-    (when-let [data (lookup-entry config id :medium)]
-      (. builder medium data))
-    (when-let [data (lookup-entry config id :size-limit)]
-      (. builder sizeLimit data))
-    (.build builder)))
+| `sizeLimit` | java.lang.String | [[cdk.support/lookup-entry]] | `:size-limit` |
+"
+  [^CfnJobDefinition$EmptyDirProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :medium)]
+    (. builder medium data))
+  (when-let [data (lookup-entry config id :size-limit)]
+    (. builder sizeLimit data))
+  (.build builder))
 
 
-(defn cfn-job-definition-environment-property-builder
-  "The cfn-job-definition-environment-property-builder function buildes out new instances of 
-CfnJobDefinition$EnvironmentProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-environment-property-builder
+  "The build-cfn-job-definition-environment-property-builder function updates a CfnJobDefinition$EnvironmentProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$EnvironmentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$EnvironmentProperty$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnJobDefinition$EnvironmentProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-job-definition-ephemeral-storage-property-builder
-  "The cfn-job-definition-ephemeral-storage-property-builder function buildes out new instances of 
-CfnJobDefinition$EphemeralStorageProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-ephemeral-storage-property-builder
+  "The build-cfn-job-definition-ephemeral-storage-property-builder function updates a CfnJobDefinition$EphemeralStorageProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$EphemeralStorageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sizeInGiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size-in-gi-b` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$EphemeralStorageProperty$Builder.)]
-    (when-let [data (lookup-entry config id :size-in-gi-b)]
-      (. builder sizeInGiB data))
-    (.build builder)))
+| `sizeInGiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size-in-gi-b` |
+"
+  [^CfnJobDefinition$EphemeralStorageProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :size-in-gi-b)]
+    (. builder sizeInGiB data))
+  (.build builder))
 
 
-(defn cfn-job-definition-evaluate-on-exit-property-builder
-  "The cfn-job-definition-evaluate-on-exit-property-builder function buildes out new instances of 
-CfnJobDefinition$EvaluateOnExitProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-evaluate-on-exit-property-builder
+  "The build-cfn-job-definition-evaluate-on-exit-property-builder function updates a CfnJobDefinition$EvaluateOnExitProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$EvaluateOnExitProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `action` | java.lang.String | [[cdk.support/lookup-entry]] | `:action` |
 | `onExitCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:on-exit-code` |
 | `onReason` | java.lang.String | [[cdk.support/lookup-entry]] | `:on-reason` |
-| `onStatusReason` | java.lang.String | [[cdk.support/lookup-entry]] | `:on-status-reason` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$EvaluateOnExitProperty$Builder.)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :on-exit-code)]
-      (. builder onExitCode data))
-    (when-let [data (lookup-entry config id :on-reason)]
-      (. builder onReason data))
-    (when-let [data (lookup-entry config id :on-status-reason)]
-      (. builder onStatusReason data))
-    (.build builder)))
+| `onStatusReason` | java.lang.String | [[cdk.support/lookup-entry]] | `:on-status-reason` |
+"
+  [^CfnJobDefinition$EvaluateOnExitProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :on-exit-code)]
+    (. builder onExitCode data))
+  (when-let [data (lookup-entry config id :on-reason)]
+    (. builder onReason data))
+  (when-let [data (lookup-entry config id :on-status-reason)]
+    (. builder onStatusReason data))
+  (.build builder))
 
 
-(defn cfn-job-definition-fargate-platform-configuration-property-builder
-  "The cfn-job-definition-fargate-platform-configuration-property-builder function buildes out new instances of 
-CfnJobDefinition$FargatePlatformConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-fargate-platform-configuration-property-builder
+  "The build-cfn-job-definition-fargate-platform-configuration-property-builder function updates a CfnJobDefinition$FargatePlatformConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$FargatePlatformConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `platformVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:platform-version` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$FargatePlatformConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :platform-version)]
-      (. builder platformVersion data))
-    (.build builder)))
-
-
-(defn cfn-job-definition-host-path-property-builder
-  "The cfn-job-definition-host-path-property-builder function buildes out new instances of 
-CfnJobDefinition$HostPathProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$HostPathProperty$Builder.)]
-    (when-let [data (lookup-entry config id :path)]
-      (. builder path data))
-    (.build builder)))
+| `platformVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:platform-version` |
+"
+  [^CfnJobDefinition$FargatePlatformConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :platform-version)]
+    (. builder platformVersion data))
+  (.build builder))
 
 
-(defn cfn-job-definition-image-pull-secret-property-builder
-  "The cfn-job-definition-image-pull-secret-property-builder function buildes out new instances of 
-CfnJobDefinition$ImagePullSecretProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-host-path-property-builder
+  "The build-cfn-job-definition-host-path-property-builder function updates a CfnJobDefinition$HostPathProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$HostPathProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$ImagePullSecretProperty$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
+"
+  [^CfnJobDefinition$HostPathProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :path)]
+    (. builder path data))
+  (.build builder))
 
 
-(defn cfn-job-definition-linux-parameters-property-builder
-  "The cfn-job-definition-linux-parameters-property-builder function buildes out new instances of 
-CfnJobDefinition$LinuxParametersProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-image-pull-secret-property-builder
+  "The build-cfn-job-definition-image-pull-secret-property-builder function updates a CfnJobDefinition$ImagePullSecretProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$ImagePullSecretProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^CfnJobDefinition$ImagePullSecretProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
+
+
+(defn build-cfn-job-definition-linux-parameters-property-builder
+  "The build-cfn-job-definition-linux-parameters-property-builder function updates a CfnJobDefinition$LinuxParametersProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$LinuxParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1205,138 +1289,159 @@ CfnJobDefinition$LinuxParametersProperty$Builder using the provided configuratio
 | `maxSwap` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-swap` |
 | `sharedMemorySize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:shared-memory-size` |
 | `swappiness` | java.lang.Number | [[cdk.support/lookup-entry]] | `:swappiness` |
-| `tmpfs` | java.util.List | [[cdk.support/lookup-entry]] | `:tmpfs` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$LinuxParametersProperty$Builder.)]
-    (when-let [data (lookup-entry config id :devices)]
-      (. builder devices data))
-    (when-let [data (lookup-entry config id :init-process-enabled)]
-      (. builder initProcessEnabled data))
-    (when-let [data (lookup-entry config id :max-swap)]
-      (. builder maxSwap data))
-    (when-let [data (lookup-entry config id :shared-memory-size)]
-      (. builder sharedMemorySize data))
-    (when-let [data (lookup-entry config id :swappiness)]
-      (. builder swappiness data))
-    (when-let [data (lookup-entry config id :tmpfs)]
-      (. builder tmpfs data))
-    (.build builder)))
+| `tmpfs` | java.util.List | [[cdk.support/lookup-entry]] | `:tmpfs` |
+"
+  [^CfnJobDefinition$LinuxParametersProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :devices)]
+    (. builder devices data))
+  (when-let [data (lookup-entry config id :init-process-enabled)]
+    (. builder initProcessEnabled data))
+  (when-let [data (lookup-entry config id :max-swap)]
+    (. builder maxSwap data))
+  (when-let [data (lookup-entry config id :shared-memory-size)]
+    (. builder sharedMemorySize data))
+  (when-let [data (lookup-entry config id :swappiness)]
+    (. builder swappiness data))
+  (when-let [data (lookup-entry config id :tmpfs)]
+    (. builder tmpfs data))
+  (.build builder))
 
 
-(defn cfn-job-definition-log-configuration-property-builder
-  "The cfn-job-definition-log-configuration-property-builder function buildes out new instances of 
-CfnJobDefinition$LogConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-log-configuration-property-builder
+  "The build-cfn-job-definition-log-configuration-property-builder function updates a CfnJobDefinition$LogConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$LogConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `logDriver` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-driver` |
 | `options` | java.lang.Object | [[cdk.support/lookup-entry]] | `:options` |
-| `secretOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:secret-options` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$LogConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :log-driver)]
-      (. builder logDriver data))
-    (when-let [data (lookup-entry config id :options)]
-      (. builder options data))
-    (when-let [data (lookup-entry config id :secret-options)]
-      (. builder secretOptions data))
-    (.build builder)))
+| `secretOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:secret-options` |
+"
+  [^CfnJobDefinition$LogConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :log-driver)]
+    (. builder logDriver data))
+  (when-let [data (lookup-entry config id :options)]
+    (. builder options data))
+  (when-let [data (lookup-entry config id :secret-options)]
+    (. builder secretOptions data))
+  (.build builder))
 
 
-(defn cfn-job-definition-metadata-property-builder
-  "The cfn-job-definition-metadata-property-builder function buildes out new instances of 
-CfnJobDefinition$MetadataProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-metadata-property-builder
+  "The build-cfn-job-definition-metadata-property-builder function updates a CfnJobDefinition$MetadataProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$MetadataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `labels` | java.lang.Object | [[cdk.support/lookup-entry]] | `:labels` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$MetadataProperty$Builder.)]
-    (when-let [data (lookup-entry config id :labels)]
-      (. builder labels data))
-    (.build builder)))
+| `labels` | java.lang.Object | [[cdk.support/lookup-entry]] | `:labels` |
+"
+  [^CfnJobDefinition$MetadataProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :labels)]
+    (. builder labels data))
+  (.build builder))
 
 
-(defn cfn-job-definition-mount-points-property-builder
-  "The cfn-job-definition-mount-points-property-builder function buildes out new instances of 
-CfnJobDefinition$MountPointsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-mount-points-property-builder
+  "The build-cfn-job-definition-mount-points-property-builder function updates a CfnJobDefinition$MountPointsProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$MountPointsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `containerPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-path` |
 | `readOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:read-only` |
-| `sourceVolume` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-volume` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$MountPointsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :container-path)]
-      (. builder containerPath data))
-    (when-let [data (lookup-entry config id :read-only)]
-      (. builder readOnly data))
-    (when-let [data (lookup-entry config id :source-volume)]
-      (. builder sourceVolume data))
-    (.build builder)))
+| `sourceVolume` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-volume` |
+"
+  [^CfnJobDefinition$MountPointsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :container-path)]
+    (. builder containerPath data))
+  (when-let [data (lookup-entry config id :read-only)]
+    (. builder readOnly data))
+  (when-let [data (lookup-entry config id :source-volume)]
+    (. builder sourceVolume data))
+  (.build builder))
 
 
-(defn cfn-job-definition-network-configuration-property-builder
-  "The cfn-job-definition-network-configuration-property-builder function buildes out new instances of 
-CfnJobDefinition$NetworkConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-network-configuration-property-builder
+  "The build-cfn-job-definition-network-configuration-property-builder function updates a CfnJobDefinition$NetworkConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$NetworkConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `assignPublicIp` | java.lang.String | [[cdk.support/lookup-entry]] | `:assign-public-ip` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$NetworkConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :assign-public-ip)]
-      (. builder assignPublicIp data))
-    (.build builder)))
+| `assignPublicIp` | java.lang.String | [[cdk.support/lookup-entry]] | `:assign-public-ip` |
+"
+  [^CfnJobDefinition$NetworkConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :assign-public-ip)]
+    (. builder assignPublicIp data))
+  (.build builder))
 
 
-(defn cfn-job-definition-node-properties-property-builder
-  "The cfn-job-definition-node-properties-property-builder function buildes out new instances of 
-CfnJobDefinition$NodePropertiesProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-node-properties-property-builder
+  "The build-cfn-job-definition-node-properties-property-builder function updates a CfnJobDefinition$NodePropertiesProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$NodePropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `mainNode` | java.lang.Number | [[cdk.support/lookup-entry]] | `:main-node` |
 | `nodeRangeProperties` | java.util.List | [[cdk.support/lookup-entry]] | `:node-range-properties` |
-| `numNodes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:num-nodes` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$NodePropertiesProperty$Builder.)]
-    (when-let [data (lookup-entry config id :main-node)]
-      (. builder mainNode data))
-    (when-let [data (lookup-entry config id :node-range-properties)]
-      (. builder nodeRangeProperties data))
-    (when-let [data (lookup-entry config id :num-nodes)]
-      (. builder numNodes data))
-    (.build builder)))
+| `numNodes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:num-nodes` |
+"
+  [^CfnJobDefinition$NodePropertiesProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :main-node)]
+    (. builder mainNode data))
+  (when-let [data (lookup-entry config id :node-range-properties)]
+    (. builder nodeRangeProperties data))
+  (when-let [data (lookup-entry config id :num-nodes)]
+    (. builder numNodes data))
+  (.build builder))
 
 
-(defn cfn-job-definition-node-range-property-property-builder
-  "The cfn-job-definition-node-range-property-property-builder function buildes out new instances of 
-CfnJobDefinition$NodeRangePropertyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-node-range-property-property-builder
+  "The build-cfn-job-definition-node-range-property-property-builder function updates a CfnJobDefinition$NodeRangePropertyProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$NodeRangePropertyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `container` | software.amazon.awscdk.services.batch.CfnJobDefinition$ContainerPropertiesProperty | [[cdk.support/lookup-entry]] | `:container` |
 | `ecsProperties` | software.amazon.awscdk.services.batch.CfnJobDefinition$EcsPropertiesProperty | [[cdk.support/lookup-entry]] | `:ecs-properties` |
 | `instanceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:instance-types` |
-| `targetNodes` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-nodes` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$NodeRangePropertyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :container)]
-      (. builder container data))
-    (when-let [data (lookup-entry config id :ecs-properties)]
-      (. builder ecsProperties data))
-    (when-let [data (lookup-entry config id :instance-types)]
-      (. builder instanceTypes data))
-    (when-let [data (lookup-entry config id :target-nodes)]
-      (. builder targetNodes data))
-    (.build builder)))
+| `targetNodes` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-nodes` |
+"
+  [^CfnJobDefinition$NodeRangePropertyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :container)]
+    (. builder container data))
+  (when-let [data (lookup-entry config id :ecs-properties)]
+    (. builder ecsProperties data))
+  (when-let [data (lookup-entry config id :instance-types)]
+    (. builder instanceTypes data))
+  (when-let [data (lookup-entry config id :target-nodes)]
+    (. builder targetNodes data))
+  (.build builder))
 
 
-(defn cfn-job-definition-pod-properties-property-builder
-  "The cfn-job-definition-pod-properties-property-builder function buildes out new instances of 
-CfnJobDefinition$PodPropertiesProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-pod-properties-property-builder
+  "The build-cfn-job-definition-pod-properties-property-builder function updates a CfnJobDefinition$PodPropertiesProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$PodPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1348,33 +1453,36 @@ CfnJobDefinition$PodPropertiesProperty$Builder using the provided configuration.
 | `metadata` | software.amazon.awscdk.services.batch.CfnJobDefinition$MetadataProperty | [[cdk.support/lookup-entry]] | `:metadata` |
 | `serviceAccountName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-account-name` |
 | `shareProcessNamespace` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:share-process-namespace` |
-| `volumes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:volumes` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$PodPropertiesProperty$Builder.)]
-    (when-let [data (lookup-entry config id :containers)]
-      (. builder containers data))
-    (when-let [data (lookup-entry config id :dns-policy)]
-      (. builder dnsPolicy data))
-    (when-let [data (lookup-entry config id :host-network)]
-      (. builder hostNetwork data))
-    (when-let [data (lookup-entry config id :image-pull-secrets)]
-      (. builder imagePullSecrets data))
-    (when-let [data (lookup-entry config id :init-containers)]
-      (. builder initContainers data))
-    (when-let [data (lookup-entry config id :metadata)]
-      (. builder metadata data))
-    (when-let [data (lookup-entry config id :service-account-name)]
-      (. builder serviceAccountName data))
-    (when-let [data (lookup-entry config id :share-process-namespace)]
-      (. builder shareProcessNamespace data))
-    (when-let [data (lookup-entry config id :volumes)]
-      (. builder volumes data))
-    (.build builder)))
+| `volumes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:volumes` |
+"
+  [^CfnJobDefinition$PodPropertiesProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :containers)]
+    (. builder containers data))
+  (when-let [data (lookup-entry config id :dns-policy)]
+    (. builder dnsPolicy data))
+  (when-let [data (lookup-entry config id :host-network)]
+    (. builder hostNetwork data))
+  (when-let [data (lookup-entry config id :image-pull-secrets)]
+    (. builder imagePullSecrets data))
+  (when-let [data (lookup-entry config id :init-containers)]
+    (. builder initContainers data))
+  (when-let [data (lookup-entry config id :metadata)]
+    (. builder metadata data))
+  (when-let [data (lookup-entry config id :service-account-name)]
+    (. builder serviceAccountName data))
+  (when-let [data (lookup-entry config id :share-process-namespace)]
+    (. builder shareProcessNamespace data))
+  (when-let [data (lookup-entry config id :volumes)]
+    (. builder volumes data))
+  (.build builder))
 
 
-(defn cfn-job-definition-props-builder
-  "The cfn-job-definition-props-builder function buildes out new instances of 
-CfnJobDefinitionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-props-builder
+  "The build-cfn-job-definition-props-builder function updates a CfnJobDefinitionProps$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1390,140 +1498,161 @@ CfnJobDefinitionProps$Builder using the provided configuration.  Each field is s
 | `schedulingPriority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scheduling-priority` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 | `timeout` | software.amazon.awscdk.services.batch.CfnJobDefinition$TimeoutProperty | [[cdk.support/lookup-entry]] | `:timeout` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnJobDefinitionProps$Builder.)]
-    (when-let [data (lookup-entry config id :container-properties)]
-      (. builder containerProperties data))
-    (when-let [data (lookup-entry config id :ecs-properties)]
-      (. builder ecsProperties data))
-    (when-let [data (lookup-entry config id :eks-properties)]
-      (. builder eksProperties data))
-    (when-let [data (lookup-entry config id :job-definition-name)]
-      (. builder jobDefinitionName data))
-    (when-let [data (lookup-entry config id :node-properties)]
-      (. builder nodeProperties data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :platform-capabilities)]
-      (. builder platformCapabilities data))
-    (when-let [data (lookup-entry config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :retry-strategy)]
-      (. builder retryStrategy data))
-    (when-let [data (lookup-entry config id :scheduling-priority)]
-      (. builder schedulingPriority data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnJobDefinitionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :container-properties)]
+    (. builder containerProperties data))
+  (when-let [data (lookup-entry config id :ecs-properties)]
+    (. builder ecsProperties data))
+  (when-let [data (lookup-entry config id :eks-properties)]
+    (. builder eksProperties data))
+  (when-let [data (lookup-entry config id :job-definition-name)]
+    (. builder jobDefinitionName data))
+  (when-let [data (lookup-entry config id :node-properties)]
+    (. builder nodeProperties data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :platform-capabilities)]
+    (. builder platformCapabilities data))
+  (when-let [data (lookup-entry config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :retry-strategy)]
+    (. builder retryStrategy data))
+  (when-let [data (lookup-entry config id :scheduling-priority)]
+    (. builder schedulingPriority data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-job-definition-repository-credentials-property-builder
-  "The cfn-job-definition-repository-credentials-property-builder function buildes out new instances of 
-CfnJobDefinition$RepositoryCredentialsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-repository-credentials-property-builder
+  "The build-cfn-job-definition-repository-credentials-property-builder function updates a CfnJobDefinition$RepositoryCredentialsProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$RepositoryCredentialsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `credentialsParameter` | java.lang.String | [[cdk.support/lookup-entry]] | `:credentials-parameter` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$RepositoryCredentialsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :credentials-parameter)]
-      (. builder credentialsParameter data))
-    (.build builder)))
+| `credentialsParameter` | java.lang.String | [[cdk.support/lookup-entry]] | `:credentials-parameter` |
+"
+  [^CfnJobDefinition$RepositoryCredentialsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :credentials-parameter)]
+    (. builder credentialsParameter data))
+  (.build builder))
 
 
-(defn cfn-job-definition-resource-requirement-property-builder
-  "The cfn-job-definition-resource-requirement-property-builder function buildes out new instances of 
-CfnJobDefinition$ResourceRequirementProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-resource-requirement-property-builder
+  "The build-cfn-job-definition-resource-requirement-property-builder function updates a CfnJobDefinition$ResourceRequirementProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$ResourceRequirementProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$ResourceRequirementProperty$Builder.)]
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnJobDefinition$ResourceRequirementProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-job-definition-resources-property-builder
-  "The cfn-job-definition-resources-property-builder function buildes out new instances of 
-CfnJobDefinition$ResourcesProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-resources-property-builder
+  "The build-cfn-job-definition-resources-property-builder function updates a CfnJobDefinition$ResourcesProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$ResourcesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `limits` | java.lang.Object | [[cdk.support/lookup-entry]] | `:limits` |
-| `requests` | java.lang.Object | [[cdk.support/lookup-entry]] | `:requests` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$ResourcesProperty$Builder.)]
-    (when-let [data (lookup-entry config id :limits)]
-      (. builder limits data))
-    (when-let [data (lookup-entry config id :requests)]
-      (. builder requests data))
-    (.build builder)))
+| `requests` | java.lang.Object | [[cdk.support/lookup-entry]] | `:requests` |
+"
+  [^CfnJobDefinition$ResourcesProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :limits)]
+    (. builder limits data))
+  (when-let [data (lookup-entry config id :requests)]
+    (. builder requests data))
+  (.build builder))
 
 
-(defn cfn-job-definition-retry-strategy-property-builder
-  "The cfn-job-definition-retry-strategy-property-builder function buildes out new instances of 
-CfnJobDefinition$RetryStrategyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-retry-strategy-property-builder
+  "The build-cfn-job-definition-retry-strategy-property-builder function updates a CfnJobDefinition$RetryStrategyProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$RetryStrategyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:attempts` |
-| `evaluateOnExit` | java.util.List | [[cdk.support/lookup-entry]] | `:evaluate-on-exit` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$RetryStrategyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :attempts)]
-      (. builder attempts data))
-    (when-let [data (lookup-entry config id :evaluate-on-exit)]
-      (. builder evaluateOnExit data))
-    (.build builder)))
+| `evaluateOnExit` | java.util.List | [[cdk.support/lookup-entry]] | `:evaluate-on-exit` |
+"
+  [^CfnJobDefinition$RetryStrategyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :attempts)]
+    (. builder attempts data))
+  (when-let [data (lookup-entry config id :evaluate-on-exit)]
+    (. builder evaluateOnExit data))
+  (.build builder))
 
 
-(defn cfn-job-definition-runtime-platform-property-builder
-  "The cfn-job-definition-runtime-platform-property-builder function buildes out new instances of 
-CfnJobDefinition$RuntimePlatformProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-runtime-platform-property-builder
+  "The build-cfn-job-definition-runtime-platform-property-builder function updates a CfnJobDefinition$RuntimePlatformProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$RuntimePlatformProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `cpuArchitecture` | java.lang.String | [[cdk.support/lookup-entry]] | `:cpu-architecture` |
-| `operatingSystemFamily` | java.lang.String | [[cdk.support/lookup-entry]] | `:operating-system-family` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$RuntimePlatformProperty$Builder.)]
-    (when-let [data (lookup-entry config id :cpu-architecture)]
-      (. builder cpuArchitecture data))
-    (when-let [data (lookup-entry config id :operating-system-family)]
-      (. builder operatingSystemFamily data))
-    (.build builder)))
+| `operatingSystemFamily` | java.lang.String | [[cdk.support/lookup-entry]] | `:operating-system-family` |
+"
+  [^CfnJobDefinition$RuntimePlatformProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :cpu-architecture)]
+    (. builder cpuArchitecture data))
+  (when-let [data (lookup-entry config id :operating-system-family)]
+    (. builder operatingSystemFamily data))
+  (.build builder))
 
 
-(defn cfn-job-definition-secret-property-builder
-  "The cfn-job-definition-secret-property-builder function buildes out new instances of 
-CfnJobDefinition$SecretProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-secret-property-builder
+  "The build-cfn-job-definition-secret-property-builder function updates a CfnJobDefinition$SecretProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$SecretProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `valueFrom` | java.lang.String | [[cdk.support/lookup-entry]] | `:value-from` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$SecretProperty$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :value-from)]
-      (. builder valueFrom data))
-    (.build builder)))
+| `valueFrom` | java.lang.String | [[cdk.support/lookup-entry]] | `:value-from` |
+"
+  [^CfnJobDefinition$SecretProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :value-from)]
+    (. builder valueFrom data))
+  (.build builder))
 
 
-(defn cfn-job-definition-security-context-property-builder
-  "The cfn-job-definition-security-context-property-builder function buildes out new instances of 
-CfnJobDefinition$SecurityContextProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-security-context-property-builder
+  "The build-cfn-job-definition-security-context-property-builder function updates a CfnJobDefinition$SecurityContextProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$SecurityContextProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1532,44 +1661,50 @@ CfnJobDefinition$SecurityContextProperty$Builder using the provided configuratio
 | `readOnlyRootFilesystem` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:read-only-root-filesystem` |
 | `runAsGroup` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-as-group` |
 | `runAsNonRoot` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:run-as-non-root` |
-| `runAsUser` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-as-user` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$SecurityContextProperty$Builder.)]
-    (when-let [data (lookup-entry config id :allow-privilege-escalation)]
-      (. builder allowPrivilegeEscalation data))
-    (when-let [data (lookup-entry config id :privileged)]
-      (. builder privileged data))
-    (when-let [data (lookup-entry config id :read-only-root-filesystem)]
-      (. builder readOnlyRootFilesystem data))
-    (when-let [data (lookup-entry config id :run-as-group)]
-      (. builder runAsGroup data))
-    (when-let [data (lookup-entry config id :run-as-non-root)]
-      (. builder runAsNonRoot data))
-    (when-let [data (lookup-entry config id :run-as-user)]
-      (. builder runAsUser data))
-    (.build builder)))
+| `runAsUser` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-as-user` |
+"
+  [^CfnJobDefinition$SecurityContextProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :allow-privilege-escalation)]
+    (. builder allowPrivilegeEscalation data))
+  (when-let [data (lookup-entry config id :privileged)]
+    (. builder privileged data))
+  (when-let [data (lookup-entry config id :read-only-root-filesystem)]
+    (. builder readOnlyRootFilesystem data))
+  (when-let [data (lookup-entry config id :run-as-group)]
+    (. builder runAsGroup data))
+  (when-let [data (lookup-entry config id :run-as-non-root)]
+    (. builder runAsNonRoot data))
+  (when-let [data (lookup-entry config id :run-as-user)]
+    (. builder runAsUser data))
+  (.build builder))
 
 
-(defn cfn-job-definition-task-container-dependency-property-builder
-  "The cfn-job-definition-task-container-dependency-property-builder function buildes out new instances of 
-CfnJobDefinition$TaskContainerDependencyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-task-container-dependency-property-builder
+  "The build-cfn-job-definition-task-container-dependency-property-builder function updates a CfnJobDefinition$TaskContainerDependencyProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$TaskContainerDependencyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `condition` | java.lang.String | [[cdk.support/lookup-entry]] | `:condition` |
-| `containerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-name` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$TaskContainerDependencyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :condition)]
-      (. builder condition data))
-    (when-let [data (lookup-entry config id :container-name)]
-      (. builder containerName data))
-    (.build builder)))
+| `containerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-name` |
+"
+  [^CfnJobDefinition$TaskContainerDependencyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :condition)]
+    (. builder condition data))
+  (when-let [data (lookup-entry config id :container-name)]
+    (. builder containerName data))
+  (.build builder))
 
 
-(defn cfn-job-definition-task-container-properties-property-builder
-  "The cfn-job-definition-task-container-properties-property-builder function buildes out new instances of 
-CfnJobDefinition$TaskContainerPropertiesProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-task-container-properties-property-builder
+  "The build-cfn-job-definition-task-container-properties-property-builder function updates a CfnJobDefinition$TaskContainerPropertiesProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$TaskContainerPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1588,135 +1723,153 @@ CfnJobDefinition$TaskContainerPropertiesProperty$Builder using the provided conf
 | `resourceRequirements` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-requirements` |
 | `secrets` | java.util.List | [[cdk.support/lookup-entry]] | `:secrets` |
 | `ulimits` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ulimits` |
-| `user` | java.lang.String | [[cdk.support/lookup-entry]] | `:user` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$TaskContainerPropertiesProperty$Builder.)]
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :depends-on)]
-      (. builder dependsOn data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :essential)]
-      (. builder essential data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (lookup-entry config id :linux-parameters)]
-      (. builder linuxParameters data))
-    (when-let [data (lookup-entry config id :log-configuration)]
-      (. builder logConfiguration data))
-    (when-let [data (lookup-entry config id :mount-points)]
-      (. builder mountPoints data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :privileged)]
-      (. builder privileged data))
-    (when-let [data (lookup-entry config id :readonly-root-filesystem)]
-      (. builder readonlyRootFilesystem data))
-    (when-let [data (lookup-entry config id :repository-credentials)]
-      (. builder repositoryCredentials data))
-    (when-let [data (lookup-entry config id :resource-requirements)]
-      (. builder resourceRequirements data))
-    (when-let [data (lookup-entry config id :secrets)]
-      (. builder secrets data))
-    (when-let [data (lookup-entry config id :ulimits)]
-      (. builder ulimits data))
-    (when-let [data (lookup-entry config id :user)]
-      (. builder user data))
-    (.build builder)))
+| `user` | java.lang.String | [[cdk.support/lookup-entry]] | `:user` |
+"
+  [^CfnJobDefinition$TaskContainerPropertiesProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :depends-on)]
+    (. builder dependsOn data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :essential)]
+    (. builder essential data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (lookup-entry config id :linux-parameters)]
+    (. builder linuxParameters data))
+  (when-let [data (lookup-entry config id :log-configuration)]
+    (. builder logConfiguration data))
+  (when-let [data (lookup-entry config id :mount-points)]
+    (. builder mountPoints data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :privileged)]
+    (. builder privileged data))
+  (when-let [data (lookup-entry config id :readonly-root-filesystem)]
+    (. builder readonlyRootFilesystem data))
+  (when-let [data (lookup-entry config id :repository-credentials)]
+    (. builder repositoryCredentials data))
+  (when-let [data (lookup-entry config id :resource-requirements)]
+    (. builder resourceRequirements data))
+  (when-let [data (lookup-entry config id :secrets)]
+    (. builder secrets data))
+  (when-let [data (lookup-entry config id :ulimits)]
+    (. builder ulimits data))
+  (when-let [data (lookup-entry config id :user)]
+    (. builder user data))
+  (.build builder))
 
 
-(defn cfn-job-definition-timeout-property-builder
-  "The cfn-job-definition-timeout-property-builder function buildes out new instances of 
-CfnJobDefinition$TimeoutProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-timeout-property-builder
+  "The build-cfn-job-definition-timeout-property-builder function updates a CfnJobDefinition$TimeoutProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$TimeoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `attemptDurationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:attempt-duration-seconds` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$TimeoutProperty$Builder.)]
-    (when-let [data (lookup-entry config id :attempt-duration-seconds)]
-      (. builder attemptDurationSeconds data))
-    (.build builder)))
+| `attemptDurationSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:attempt-duration-seconds` |
+"
+  [^CfnJobDefinition$TimeoutProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :attempt-duration-seconds)]
+    (. builder attemptDurationSeconds data))
+  (.build builder))
 
 
-(defn cfn-job-definition-tmpfs-property-builder
-  "The cfn-job-definition-tmpfs-property-builder function buildes out new instances of 
-CfnJobDefinition$TmpfsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-tmpfs-property-builder
+  "The build-cfn-job-definition-tmpfs-property-builder function updates a CfnJobDefinition$TmpfsProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$TmpfsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `containerPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-path` |
 | `mountOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:mount-options` |
-| `size` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$TmpfsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :container-path)]
-      (. builder containerPath data))
-    (when-let [data (lookup-entry config id :mount-options)]
-      (. builder mountOptions data))
-    (when-let [data (lookup-entry config id :size)]
-      (. builder size data))
-    (.build builder)))
+| `size` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size` |
+"
+  [^CfnJobDefinition$TmpfsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :container-path)]
+    (. builder containerPath data))
+  (when-let [data (lookup-entry config id :mount-options)]
+    (. builder mountOptions data))
+  (when-let [data (lookup-entry config id :size)]
+    (. builder size data))
+  (.build builder))
 
 
-(defn cfn-job-definition-ulimit-property-builder
-  "The cfn-job-definition-ulimit-property-builder function buildes out new instances of 
-CfnJobDefinition$UlimitProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-ulimit-property-builder
+  "The build-cfn-job-definition-ulimit-property-builder function updates a CfnJobDefinition$UlimitProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$UlimitProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `hardLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:hard-limit` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `softLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:soft-limit` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$UlimitProperty$Builder.)]
-    (when-let [data (lookup-entry config id :hard-limit)]
-      (. builder hardLimit data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :soft-limit)]
-      (. builder softLimit data))
-    (.build builder)))
+| `softLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:soft-limit` |
+"
+  [^CfnJobDefinition$UlimitProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :hard-limit)]
+    (. builder hardLimit data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :soft-limit)]
+    (. builder softLimit data))
+  (.build builder))
 
 
-(defn cfn-job-definition-volumes-host-property-builder
-  "The cfn-job-definition-volumes-host-property-builder function buildes out new instances of 
-CfnJobDefinition$VolumesHostProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-volumes-host-property-builder
+  "The build-cfn-job-definition-volumes-host-property-builder function updates a CfnJobDefinition$VolumesHostProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$VolumesHostProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `sourcePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-path` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$VolumesHostProperty$Builder.)]
-    (when-let [data (lookup-entry config id :source-path)]
-      (. builder sourcePath data))
-    (.build builder)))
+| `sourcePath` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-path` |
+"
+  [^CfnJobDefinition$VolumesHostProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :source-path)]
+    (. builder sourcePath data))
+  (.build builder))
 
 
-(defn cfn-job-definition-volumes-property-builder
-  "The cfn-job-definition-volumes-property-builder function buildes out new instances of 
-CfnJobDefinition$VolumesProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-definition-volumes-property-builder
+  "The build-cfn-job-definition-volumes-property-builder function updates a CfnJobDefinition$VolumesProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobDefinition$VolumesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `efsVolumeConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:efs-volume-configuration` |
 | `host` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:host` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (CfnJobDefinition$VolumesProperty$Builder.)]
-    (when-let [data (lookup-entry config id :efs-volume-configuration)]
-      (. builder efsVolumeConfiguration data))
-    (when-let [data (lookup-entry config id :host)]
-      (. builder host data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^CfnJobDefinition$VolumesProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :efs-volume-configuration)]
+    (. builder efsVolumeConfiguration data))
+  (when-let [data (lookup-entry config id :host)]
+    (. builder host data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn cfn-job-queue-builder
-  "The cfn-job-queue-builder function buildes out new instances of 
-CfnJobQueue$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-queue-builder
+  "The build-cfn-job-queue-builder function updates a CfnJobQueue$Builder instance using the provided configuration.
+  The function takes the CfnJobQueue$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1726,69 +1879,78 @@ CfnJobQueue$Builder using the provided configuration.  Each field is set as foll
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 | `schedulingPolicyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheduling-policy-arn` |
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnJobQueue$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :compute-environment-order)]
-      (. builder computeEnvironmentOrder data))
-    (when-let [data (lookup-entry config id :job-queue-name)]
-      (. builder jobQueueName data))
-    (when-let [data (lookup-entry config id :job-state-time-limit-actions)]
-      (. builder jobStateTimeLimitActions data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :scheduling-policy-arn)]
-      (. builder schedulingPolicyArn data))
-    (when-let [data (lookup-entry config id :state)]
-      (. builder state data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnJobQueue$Builder builder id config]
+  (when-let [data (lookup-entry config id :compute-environment-order)]
+    (. builder computeEnvironmentOrder data))
+  (when-let [data (lookup-entry config id :job-queue-name)]
+    (. builder jobQueueName data))
+  (when-let [data (lookup-entry config id :job-state-time-limit-actions)]
+    (. builder jobStateTimeLimitActions data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :scheduling-policy-arn)]
+    (. builder schedulingPolicyArn data))
+  (when-let [data (lookup-entry config id :state)]
+    (. builder state data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-job-queue-compute-environment-order-property-builder
-  "The cfn-job-queue-compute-environment-order-property-builder function buildes out new instances of 
-CfnJobQueue$ComputeEnvironmentOrderProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-queue-compute-environment-order-property-builder
+  "The build-cfn-job-queue-compute-environment-order-property-builder function updates a CfnJobQueue$ComputeEnvironmentOrderProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobQueue$ComputeEnvironmentOrderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `computeEnvironment` | java.lang.String | [[cdk.support/lookup-entry]] | `:compute-environment` |
-| `order` | java.lang.Number | [[cdk.support/lookup-entry]] | `:order` |"
-  [stack id config]
-  (let [builder (CfnJobQueue$ComputeEnvironmentOrderProperty$Builder.)]
-    (when-let [data (lookup-entry config id :compute-environment)]
-      (. builder computeEnvironment data))
-    (when-let [data (lookup-entry config id :order)]
-      (. builder order data))
-    (.build builder)))
+| `order` | java.lang.Number | [[cdk.support/lookup-entry]] | `:order` |
+"
+  [^CfnJobQueue$ComputeEnvironmentOrderProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :compute-environment)]
+    (. builder computeEnvironment data))
+  (when-let [data (lookup-entry config id :order)]
+    (. builder order data))
+  (.build builder))
 
 
-(defn cfn-job-queue-job-state-time-limit-action-property-builder
-  "The cfn-job-queue-job-state-time-limit-action-property-builder function buildes out new instances of 
-CfnJobQueue$JobStateTimeLimitActionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-queue-job-state-time-limit-action-property-builder
+  "The build-cfn-job-queue-job-state-time-limit-action-property-builder function updates a CfnJobQueue$JobStateTimeLimitActionProperty$Builder instance using the provided configuration.
+  The function takes the CfnJobQueue$JobStateTimeLimitActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `action` | java.lang.String | [[cdk.support/lookup-entry]] | `:action` |
 | `maxTimeSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-time-seconds` |
 | `reason` | java.lang.String | [[cdk.support/lookup-entry]] | `:reason` |
-| `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |"
-  [stack id config]
-  (let [builder (CfnJobQueue$JobStateTimeLimitActionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :max-time-seconds)]
-      (. builder maxTimeSeconds data))
-    (when-let [data (lookup-entry config id :reason)]
-      (. builder reason data))
-    (when-let [data (lookup-entry config id :state)]
-      (. builder state data))
-    (.build builder)))
+| `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
+"
+  [^CfnJobQueue$JobStateTimeLimitActionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :max-time-seconds)]
+    (. builder maxTimeSeconds data))
+  (when-let [data (lookup-entry config id :reason)]
+    (. builder reason data))
+  (when-let [data (lookup-entry config id :state)]
+    (. builder state data))
+  (.build builder))
 
 
-(defn cfn-job-queue-props-builder
-  "The cfn-job-queue-props-builder function buildes out new instances of 
-CfnJobQueueProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-job-queue-props-builder
+  "The build-cfn-job-queue-props-builder function updates a CfnJobQueueProps$Builder instance using the provided configuration.
+  The function takes the CfnJobQueueProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1798,166 +1960,190 @@ CfnJobQueueProps$Builder using the provided configuration.  Each field is set as
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 | `schedulingPolicyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheduling-policy-arn` |
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnJobQueueProps$Builder.)]
-    (when-let [data (lookup-entry config id :compute-environment-order)]
-      (. builder computeEnvironmentOrder data))
-    (when-let [data (lookup-entry config id :job-queue-name)]
-      (. builder jobQueueName data))
-    (when-let [data (lookup-entry config id :job-state-time-limit-actions)]
-      (. builder jobStateTimeLimitActions data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :scheduling-policy-arn)]
-      (. builder schedulingPolicyArn data))
-    (when-let [data (lookup-entry config id :state)]
-      (. builder state data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnJobQueueProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :compute-environment-order)]
+    (. builder computeEnvironmentOrder data))
+  (when-let [data (lookup-entry config id :job-queue-name)]
+    (. builder jobQueueName data))
+  (when-let [data (lookup-entry config id :job-state-time-limit-actions)]
+    (. builder jobStateTimeLimitActions data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :scheduling-policy-arn)]
+    (. builder schedulingPolicyArn data))
+  (when-let [data (lookup-entry config id :state)]
+    (. builder state data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-scheduling-policy-builder
-  "The cfn-scheduling-policy-builder function buildes out new instances of 
-CfnSchedulingPolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-scheduling-policy-builder
+  "The build-cfn-scheduling-policy-builder function updates a CfnSchedulingPolicy$Builder instance using the provided configuration.
+  The function takes the CfnSchedulingPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `fairsharePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:fairshare-policy` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnSchedulingPolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :fairshare-policy)]
-      (. builder fairsharePolicy data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnSchedulingPolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :fairshare-policy)]
+    (. builder fairsharePolicy data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-scheduling-policy-fairshare-policy-property-builder
-  "The cfn-scheduling-policy-fairshare-policy-property-builder function buildes out new instances of 
-CfnSchedulingPolicy$FairsharePolicyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-scheduling-policy-fairshare-policy-property-builder
+  "The build-cfn-scheduling-policy-fairshare-policy-property-builder function updates a CfnSchedulingPolicy$FairsharePolicyProperty$Builder instance using the provided configuration.
+  The function takes the CfnSchedulingPolicy$FairsharePolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `computeReservation` | java.lang.Number | [[cdk.support/lookup-entry]] | `:compute-reservation` |
 | `shareDecaySeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:share-decay-seconds` |
-| `shareDistribution` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:share-distribution` |"
-  [stack id config]
-  (let [builder (CfnSchedulingPolicy$FairsharePolicyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :compute-reservation)]
-      (. builder computeReservation data))
-    (when-let [data (lookup-entry config id :share-decay-seconds)]
-      (. builder shareDecaySeconds data))
-    (when-let [data (lookup-entry config id :share-distribution)]
-      (. builder shareDistribution data))
-    (.build builder)))
+| `shareDistribution` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:share-distribution` |
+"
+  [^CfnSchedulingPolicy$FairsharePolicyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :compute-reservation)]
+    (. builder computeReservation data))
+  (when-let [data (lookup-entry config id :share-decay-seconds)]
+    (. builder shareDecaySeconds data))
+  (when-let [data (lookup-entry config id :share-distribution)]
+    (. builder shareDistribution data))
+  (.build builder))
 
 
-(defn cfn-scheduling-policy-props-builder
-  "The cfn-scheduling-policy-props-builder function buildes out new instances of 
-CfnSchedulingPolicyProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-scheduling-policy-props-builder
+  "The build-cfn-scheduling-policy-props-builder function updates a CfnSchedulingPolicyProps$Builder instance using the provided configuration.
+  The function takes the CfnSchedulingPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `fairsharePolicy` | software.amazon.awscdk.services.batch.CfnSchedulingPolicy$FairsharePolicyProperty | [[cdk.support/lookup-entry]] | `:fairshare-policy` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnSchedulingPolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :fairshare-policy)]
-      (. builder fairsharePolicy data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnSchedulingPolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :fairshare-policy)]
+    (. builder fairsharePolicy data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-scheduling-policy-share-attributes-property-builder
-  "The cfn-scheduling-policy-share-attributes-property-builder function buildes out new instances of 
-CfnSchedulingPolicy$ShareAttributesProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-scheduling-policy-share-attributes-property-builder
+  "The build-cfn-scheduling-policy-share-attributes-property-builder function updates a CfnSchedulingPolicy$ShareAttributesProperty$Builder instance using the provided configuration.
+  The function takes the CfnSchedulingPolicy$ShareAttributesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `shareIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:share-identifier` |
-| `weightFactor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight-factor` |"
-  [stack id config]
-  (let [builder (CfnSchedulingPolicy$ShareAttributesProperty$Builder.)]
-    (when-let [data (lookup-entry config id :share-identifier)]
-      (. builder shareIdentifier data))
-    (when-let [data (lookup-entry config id :weight-factor)]
-      (. builder weightFactor data))
-    (.build builder)))
+| `weightFactor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight-factor` |
+"
+  [^CfnSchedulingPolicy$ShareAttributesProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :share-identifier)]
+    (. builder shareIdentifier data))
+  (when-let [data (lookup-entry config id :weight-factor)]
+    (. builder weightFactor data))
+  (.build builder))
 
 
-(defn compute-environment-props-builder
-  "The compute-environment-props-builder function buildes out new instances of 
-ComputeEnvironmentProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-compute-environment-props-builder
+  "The build-compute-environment-props-builder function updates a ComputeEnvironmentProps$Builder instance using the provided configuration.
+  The function takes the ComputeEnvironmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `computeEnvironmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:compute-environment-name` |
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
-| `serviceRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:service-role` |"
-  [stack id config]
-  (let [builder (ComputeEnvironmentProps$Builder.)]
-    (when-let [data (lookup-entry config id :compute-environment-name)]
-      (. builder computeEnvironmentName data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :service-role)]
-      (. builder serviceRole data))
-    (.build builder)))
+| `serviceRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:service-role` |
+"
+  [^ComputeEnvironmentProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :compute-environment-name)]
+    (. builder computeEnvironmentName data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :service-role)]
+    (. builder serviceRole data))
+  (.build builder))
 
 
-(defn custom-reason-builder
-  "The custom-reason-builder function buildes out new instances of 
-CustomReason$Builder using the provided configuration.  Each field is set as follows:
+(defn build-custom-reason-builder
+  "The build-custom-reason-builder function updates a CustomReason$Builder instance using the provided configuration.
+  The function takes the CustomReason$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `onExitCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:on-exit-code` |
 | `onReason` | java.lang.String | [[cdk.support/lookup-entry]] | `:on-reason` |
-| `onStatusReason` | java.lang.String | [[cdk.support/lookup-entry]] | `:on-status-reason` |"
-  [stack id config]
-  (let [builder (CustomReason$Builder.)]
-    (when-let [data (lookup-entry config id :on-exit-code)]
-      (. builder onExitCode data))
-    (when-let [data (lookup-entry config id :on-reason)]
-      (. builder onReason data))
-    (when-let [data (lookup-entry config id :on-status-reason)]
-      (. builder onStatusReason data))
-    (.build builder)))
+| `onStatusReason` | java.lang.String | [[cdk.support/lookup-entry]] | `:on-status-reason` |
+"
+  [^CustomReason$Builder builder id config]
+  (when-let [data (lookup-entry config id :on-exit-code)]
+    (. builder onExitCode data))
+  (when-let [data (lookup-entry config id :on-reason)]
+    (. builder onReason data))
+  (when-let [data (lookup-entry config id :on-status-reason)]
+    (. builder onStatusReason data))
+  (.build builder))
 
 
-(defn device-builder
-  "The device-builder function buildes out new instances of 
-Device$Builder using the provided configuration.  Each field is set as follows:
+(defn build-device-builder
+  "The build-device-builder function updates a Device$Builder instance using the provided configuration.
+  The function takes the Device$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `containerPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-path` |
 | `hostPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:host-path` |
-| `permissions` | java.util.List | [[cdk.support/lookup-entry]] | `:permissions` |"
-  [stack id config]
-  (let [builder (Device$Builder.)]
-    (when-let [data (lookup-entry config id :container-path)]
-      (. builder containerPath data))
-    (when-let [data (lookup-entry config id :host-path)]
-      (. builder hostPath data))
-    (when-let [data (lookup-entry config id :permissions)]
-      (. builder permissions data))
-    (.build builder)))
+| `permissions` | java.util.List | [[cdk.support/lookup-entry]] | `:permissions` |
+"
+  [^Device$Builder builder id config]
+  (when-let [data (lookup-entry config id :container-path)]
+    (. builder containerPath data))
+  (when-let [data (lookup-entry config id :host-path)]
+    (. builder hostPath data))
+  (when-let [data (lookup-entry config id :permissions)]
+    (. builder permissions data))
+  (.build builder))
 
 
-(defn ecs-container-definition-props-builder
-  "The ecs-container-definition-props-builder function buildes out new instances of 
-EcsContainerDefinitionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-ecs-container-definition-props-builder
+  "The build-ecs-container-definition-props-builder function updates a EcsContainerDefinitionProps$Builder instance using the provided configuration.
+  The function takes the EcsContainerDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1973,100 +2159,44 @@ EcsContainerDefinitionProps$Builder using the provided configuration.  Each fiel
 | `readonlyRootFilesystem` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly-root-filesystem` |
 | `secrets` | java.util.Map | [[cdk.support/lookup-entry]] | `:secrets` |
 | `user` | java.lang.String | [[cdk.support/lookup-entry]] | `:user` |
-| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |"
-  [stack id config]
-  (let [builder (EcsContainerDefinitionProps$Builder.)]
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :execution-role)]
-      (. builder executionRole data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (lookup-entry config id :job-role)]
-      (. builder jobRole data))
-    (when-let [data (lookup-entry config id :linux-parameters)]
-      (. builder linuxParameters data))
-    (when-let [data (lookup-entry config id :logging)]
-      (. builder logging data))
-    (when-let [data (lookup-entry config id :memory)]
-      (. builder memory data))
-    (when-let [data (lookup-entry config id :readonly-root-filesystem)]
-      (. builder readonlyRootFilesystem data))
-    (when-let [data (lookup-entry config id :secrets)]
-      (. builder secrets data))
-    (when-let [data (lookup-entry config id :user)]
-      (. builder user data))
-    (when-let [data (lookup-entry config id :volumes)]
-      (. builder volumes data))
-    (.build builder)))
+| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |
+"
+  [^EcsContainerDefinitionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :execution-role)]
+    (. builder executionRole data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (lookup-entry config id :job-role)]
+    (. builder jobRole data))
+  (when-let [data (lookup-entry config id :linux-parameters)]
+    (. builder linuxParameters data))
+  (when-let [data (lookup-entry config id :logging)]
+    (. builder logging data))
+  (when-let [data (lookup-entry config id :memory)]
+    (. builder memory data))
+  (when-let [data (lookup-entry config id :readonly-root-filesystem)]
+    (. builder readonlyRootFilesystem data))
+  (when-let [data (lookup-entry config id :secrets)]
+    (. builder secrets data))
+  (when-let [data (lookup-entry config id :user)]
+    (. builder user data))
+  (when-let [data (lookup-entry config id :volumes)]
+    (. builder volumes data))
+  (.build builder))
 
 
-(defn ecs-ec2-container-definition-builder
-  "The ecs-ec2-container-definition-builder function buildes out new instances of 
-EcsEc2ContainerDefinition$Builder using the provided configuration.  Each field is set as follows:
+(defn build-ecs-ec2-container-definition-builder
+  "The build-ecs-ec2-container-definition-builder function updates a EcsEc2ContainerDefinition$Builder instance using the provided configuration.
+  The function takes the EcsEc2ContainerDefinition$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `command` | java.util.List | [[cdk.support/lookup-entry]] | `:command` |
-| `cpu` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cpu` |
-| `environment` | java.util.Map | [[cdk.support/lookup-entry]] | `:environment` |
-| `executionRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:execution-role` |
-| `gpu` | java.lang.Number | [[cdk.support/lookup-entry]] | `:gpu` |
-| `image` | software.amazon.awscdk.services.ecs.ContainerImage | [[cdk.support/lookup-entry]] | `:image` |
-| `jobRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:job-role` |
-| `linuxParameters` | software.amazon.awscdk.services.batch.LinuxParameters | [[cdk.support/lookup-entry]] | `:linux-parameters` |
-| `logging` | software.amazon.awscdk.services.ecs.LogDriver | [[cdk.support/lookup-entry]] | `:logging` |
-| `memory` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:memory` |
-| `privileged` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:privileged` |
-| `readonlyRootFilesystem` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly-root-filesystem` |
-| `secrets` | java.util.Map | [[cdk.support/lookup-entry]] | `:secrets` |
-| `ulimits` | java.util.List | [[cdk.support/lookup-entry]] | `:ulimits` |
-| `user` | java.lang.String | [[cdk.support/lookup-entry]] | `:user` |
-| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |"
-  [stack id config]
-  (let [builder (EcsEc2ContainerDefinition$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :execution-role)]
-      (. builder executionRole data))
-    (when-let [data (lookup-entry config id :gpu)]
-      (. builder gpu data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (lookup-entry config id :job-role)]
-      (. builder jobRole data))
-    (when-let [data (lookup-entry config id :linux-parameters)]
-      (. builder linuxParameters data))
-    (when-let [data (lookup-entry config id :logging)]
-      (. builder logging data))
-    (when-let [data (lookup-entry config id :memory)]
-      (. builder memory data))
-    (when-let [data (lookup-entry config id :privileged)]
-      (. builder privileged data))
-    (when-let [data (lookup-entry config id :readonly-root-filesystem)]
-      (. builder readonlyRootFilesystem data))
-    (when-let [data (lookup-entry config id :secrets)]
-      (. builder secrets data))
-    (when-let [data (lookup-entry config id :ulimits)]
-      (. builder ulimits data))
-    (when-let [data (lookup-entry config id :user)]
-      (. builder user data))
-    (when-let [data (lookup-entry config id :volumes)]
-      (. builder volumes data))
-    (.build builder)))
-
-
-(defn ecs-ec2-container-definition-props-builder
-  "The ecs-ec2-container-definition-props-builder function buildes out new instances of 
-EcsEc2ContainerDefinitionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2085,47 +2215,112 @@ EcsEc2ContainerDefinitionProps$Builder using the provided configuration.  Each f
 | `secrets` | java.util.Map | [[cdk.support/lookup-entry]] | `:secrets` |
 | `ulimits` | java.util.List | [[cdk.support/lookup-entry]] | `:ulimits` |
 | `user` | java.lang.String | [[cdk.support/lookup-entry]] | `:user` |
-| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |"
-  [stack id config]
-  (let [builder (EcsEc2ContainerDefinitionProps$Builder.)]
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :execution-role)]
-      (. builder executionRole data))
-    (when-let [data (lookup-entry config id :gpu)]
-      (. builder gpu data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (lookup-entry config id :job-role)]
-      (. builder jobRole data))
-    (when-let [data (lookup-entry config id :linux-parameters)]
-      (. builder linuxParameters data))
-    (when-let [data (lookup-entry config id :logging)]
-      (. builder logging data))
-    (when-let [data (lookup-entry config id :memory)]
-      (. builder memory data))
-    (when-let [data (lookup-entry config id :privileged)]
-      (. builder privileged data))
-    (when-let [data (lookup-entry config id :readonly-root-filesystem)]
-      (. builder readonlyRootFilesystem data))
-    (when-let [data (lookup-entry config id :secrets)]
-      (. builder secrets data))
-    (when-let [data (lookup-entry config id :ulimits)]
-      (. builder ulimits data))
-    (when-let [data (lookup-entry config id :user)]
-      (. builder user data))
-    (when-let [data (lookup-entry config id :volumes)]
-      (. builder volumes data))
-    (.build builder)))
+| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |
+"
+  [^EcsEc2ContainerDefinition$Builder builder id config]
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :execution-role)]
+    (. builder executionRole data))
+  (when-let [data (lookup-entry config id :gpu)]
+    (. builder gpu data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (lookup-entry config id :job-role)]
+    (. builder jobRole data))
+  (when-let [data (lookup-entry config id :linux-parameters)]
+    (. builder linuxParameters data))
+  (when-let [data (lookup-entry config id :logging)]
+    (. builder logging data))
+  (when-let [data (lookup-entry config id :memory)]
+    (. builder memory data))
+  (when-let [data (lookup-entry config id :privileged)]
+    (. builder privileged data))
+  (when-let [data (lookup-entry config id :readonly-root-filesystem)]
+    (. builder readonlyRootFilesystem data))
+  (when-let [data (lookup-entry config id :secrets)]
+    (. builder secrets data))
+  (when-let [data (lookup-entry config id :ulimits)]
+    (. builder ulimits data))
+  (when-let [data (lookup-entry config id :user)]
+    (. builder user data))
+  (when-let [data (lookup-entry config id :volumes)]
+    (. builder volumes data))
+  (.build builder))
 
 
-(defn ecs-fargate-container-definition-builder
-  "The ecs-fargate-container-definition-builder function buildes out new instances of 
-EcsFargateContainerDefinition$Builder using the provided configuration.  Each field is set as follows:
+(defn build-ecs-ec2-container-definition-props-builder
+  "The build-ecs-ec2-container-definition-props-builder function updates a EcsEc2ContainerDefinitionProps$Builder instance using the provided configuration.
+  The function takes the EcsEc2ContainerDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `command` | java.util.List | [[cdk.support/lookup-entry]] | `:command` |
+| `cpu` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cpu` |
+| `environment` | java.util.Map | [[cdk.support/lookup-entry]] | `:environment` |
+| `executionRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:execution-role` |
+| `gpu` | java.lang.Number | [[cdk.support/lookup-entry]] | `:gpu` |
+| `image` | software.amazon.awscdk.services.ecs.ContainerImage | [[cdk.support/lookup-entry]] | `:image` |
+| `jobRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:job-role` |
+| `linuxParameters` | software.amazon.awscdk.services.batch.LinuxParameters | [[cdk.support/lookup-entry]] | `:linux-parameters` |
+| `logging` | software.amazon.awscdk.services.ecs.LogDriver | [[cdk.support/lookup-entry]] | `:logging` |
+| `memory` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:memory` |
+| `privileged` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:privileged` |
+| `readonlyRootFilesystem` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly-root-filesystem` |
+| `secrets` | java.util.Map | [[cdk.support/lookup-entry]] | `:secrets` |
+| `ulimits` | java.util.List | [[cdk.support/lookup-entry]] | `:ulimits` |
+| `user` | java.lang.String | [[cdk.support/lookup-entry]] | `:user` |
+| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |
+"
+  [^EcsEc2ContainerDefinitionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :execution-role)]
+    (. builder executionRole data))
+  (when-let [data (lookup-entry config id :gpu)]
+    (. builder gpu data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (lookup-entry config id :job-role)]
+    (. builder jobRole data))
+  (when-let [data (lookup-entry config id :linux-parameters)]
+    (. builder linuxParameters data))
+  (when-let [data (lookup-entry config id :logging)]
+    (. builder logging data))
+  (when-let [data (lookup-entry config id :memory)]
+    (. builder memory data))
+  (when-let [data (lookup-entry config id :privileged)]
+    (. builder privileged data))
+  (when-let [data (lookup-entry config id :readonly-root-filesystem)]
+    (. builder readonlyRootFilesystem data))
+  (when-let [data (lookup-entry config id :secrets)]
+    (. builder secrets data))
+  (when-let [data (lookup-entry config id :ulimits)]
+    (. builder ulimits data))
+  (when-let [data (lookup-entry config id :user)]
+    (. builder user data))
+  (when-let [data (lookup-entry config id :volumes)]
+    (. builder volumes data))
+  (.build builder))
+
+
+(defn build-ecs-fargate-container-definition-builder
+  "The build-ecs-fargate-container-definition-builder function updates a EcsFargateContainerDefinition$Builder instance using the provided configuration.
+  The function takes the EcsFargateContainerDefinition$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2146,51 +2341,54 @@ EcsFargateContainerDefinition$Builder using the provided configuration.  Each fi
 | `readonlyRootFilesystem` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly-root-filesystem` |
 | `secrets` | java.util.Map | [[cdk.support/lookup-entry]] | `:secrets` |
 | `user` | java.lang.String | [[cdk.support/lookup-entry]] | `:user` |
-| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |"
-  [stack id config]
-  (let [builder (EcsFargateContainerDefinition$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :assign-public-ip)]
-      (. builder assignPublicIp data))
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :ephemeral-storage-size)]
-      (. builder ephemeralStorageSize data))
-    (when-let [data (lookup-entry config id :execution-role)]
-      (. builder executionRole data))
-    (when-let [data (lookup-entry config id :fargate-cpu-architecture)]
-      (. builder fargateCpuArchitecture data))
-    (when-let [data (lookup-entry config id :fargate-operating-system-family)]
-      (. builder fargateOperatingSystemFamily data))
-    (when-let [data (fargate-platform-version config id :fargate-platform-version)]
-      (. builder fargatePlatformVersion data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (lookup-entry config id :job-role)]
-      (. builder jobRole data))
-    (when-let [data (lookup-entry config id :linux-parameters)]
-      (. builder linuxParameters data))
-    (when-let [data (lookup-entry config id :logging)]
-      (. builder logging data))
-    (when-let [data (lookup-entry config id :memory)]
-      (. builder memory data))
-    (when-let [data (lookup-entry config id :readonly-root-filesystem)]
-      (. builder readonlyRootFilesystem data))
-    (when-let [data (lookup-entry config id :secrets)]
-      (. builder secrets data))
-    (when-let [data (lookup-entry config id :user)]
-      (. builder user data))
-    (when-let [data (lookup-entry config id :volumes)]
-      (. builder volumes data))
-    (.build builder)))
+| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |
+"
+  [^EcsFargateContainerDefinition$Builder builder id config]
+  (when-let [data (lookup-entry config id :assign-public-ip)]
+    (. builder assignPublicIp data))
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :ephemeral-storage-size)]
+    (. builder ephemeralStorageSize data))
+  (when-let [data (lookup-entry config id :execution-role)]
+    (. builder executionRole data))
+  (when-let [data (lookup-entry config id :fargate-cpu-architecture)]
+    (. builder fargateCpuArchitecture data))
+  (when-let [data (lookup-entry config id :fargate-operating-system-family)]
+    (. builder fargateOperatingSystemFamily data))
+  (when-let [data (fargate-platform-version config id :fargate-platform-version)]
+    (. builder fargatePlatformVersion data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (lookup-entry config id :job-role)]
+    (. builder jobRole data))
+  (when-let [data (lookup-entry config id :linux-parameters)]
+    (. builder linuxParameters data))
+  (when-let [data (lookup-entry config id :logging)]
+    (. builder logging data))
+  (when-let [data (lookup-entry config id :memory)]
+    (. builder memory data))
+  (when-let [data (lookup-entry config id :readonly-root-filesystem)]
+    (. builder readonlyRootFilesystem data))
+  (when-let [data (lookup-entry config id :secrets)]
+    (. builder secrets data))
+  (when-let [data (lookup-entry config id :user)]
+    (. builder user data))
+  (when-let [data (lookup-entry config id :volumes)]
+    (. builder volumes data))
+  (.build builder))
 
 
-(defn ecs-fargate-container-definition-props-builder
-  "The ecs-fargate-container-definition-props-builder function buildes out new instances of 
-EcsFargateContainerDefinitionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-ecs-fargate-container-definition-props-builder
+  "The build-ecs-fargate-container-definition-props-builder function updates a EcsFargateContainerDefinitionProps$Builder instance using the provided configuration.
+  The function takes the EcsFargateContainerDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2211,86 +2409,54 @@ EcsFargateContainerDefinitionProps$Builder using the provided configuration.  Ea
 | `readonlyRootFilesystem` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly-root-filesystem` |
 | `secrets` | java.util.Map | [[cdk.support/lookup-entry]] | `:secrets` |
 | `user` | java.lang.String | [[cdk.support/lookup-entry]] | `:user` |
-| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |"
-  [stack id config]
-  (let [builder (EcsFargateContainerDefinitionProps$Builder.)]
-    (when-let [data (lookup-entry config id :assign-public-ip)]
-      (. builder assignPublicIp data))
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :ephemeral-storage-size)]
-      (. builder ephemeralStorageSize data))
-    (when-let [data (lookup-entry config id :execution-role)]
-      (. builder executionRole data))
-    (when-let [data (lookup-entry config id :fargate-cpu-architecture)]
-      (. builder fargateCpuArchitecture data))
-    (when-let [data (lookup-entry config id :fargate-operating-system-family)]
-      (. builder fargateOperatingSystemFamily data))
-    (when-let [data (fargate-platform-version config id :fargate-platform-version)]
-      (. builder fargatePlatformVersion data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (lookup-entry config id :job-role)]
-      (. builder jobRole data))
-    (when-let [data (lookup-entry config id :linux-parameters)]
-      (. builder linuxParameters data))
-    (when-let [data (lookup-entry config id :logging)]
-      (. builder logging data))
-    (when-let [data (lookup-entry config id :memory)]
-      (. builder memory data))
-    (when-let [data (lookup-entry config id :readonly-root-filesystem)]
-      (. builder readonlyRootFilesystem data))
-    (when-let [data (lookup-entry config id :secrets)]
-      (. builder secrets data))
-    (when-let [data (lookup-entry config id :user)]
-      (. builder user data))
-    (when-let [data (lookup-entry config id :volumes)]
-      (. builder volumes data))
-    (.build builder)))
+| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |
+"
+  [^EcsFargateContainerDefinitionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :assign-public-ip)]
+    (. builder assignPublicIp data))
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :ephemeral-storage-size)]
+    (. builder ephemeralStorageSize data))
+  (when-let [data (lookup-entry config id :execution-role)]
+    (. builder executionRole data))
+  (when-let [data (lookup-entry config id :fargate-cpu-architecture)]
+    (. builder fargateCpuArchitecture data))
+  (when-let [data (lookup-entry config id :fargate-operating-system-family)]
+    (. builder fargateOperatingSystemFamily data))
+  (when-let [data (fargate-platform-version config id :fargate-platform-version)]
+    (. builder fargatePlatformVersion data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (lookup-entry config id :job-role)]
+    (. builder jobRole data))
+  (when-let [data (lookup-entry config id :linux-parameters)]
+    (. builder linuxParameters data))
+  (when-let [data (lookup-entry config id :logging)]
+    (. builder logging data))
+  (when-let [data (lookup-entry config id :memory)]
+    (. builder memory data))
+  (when-let [data (lookup-entry config id :readonly-root-filesystem)]
+    (. builder readonlyRootFilesystem data))
+  (when-let [data (lookup-entry config id :secrets)]
+    (. builder secrets data))
+  (when-let [data (lookup-entry config id :user)]
+    (. builder user data))
+  (when-let [data (lookup-entry config id :volumes)]
+    (. builder volumes data))
+  (.build builder))
 
 
-(defn ecs-job-definition-builder
-  "The ecs-job-definition-builder function buildes out new instances of 
-EcsJobDefinition$Builder using the provided configuration.  Each field is set as follows:
+(defn build-ecs-job-definition-builder
+  "The build-ecs-job-definition-builder function updates a EcsJobDefinition$Builder instance using the provided configuration.
+  The function takes the EcsJobDefinition$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `container` | software.amazon.awscdk.services.batch.IEcsContainerDefinition | [[cdk.support/lookup-entry]] | `:container` |
-| `jobDefinitionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-definition-name` |
-| `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
-| `propagateTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:propagate-tags` |
-| `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
-| `retryStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:retry-strategies` |
-| `schedulingPriority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scheduling-priority` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EcsJobDefinition$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :container)]
-      (. builder container data))
-    (when-let [data (lookup-entry config id :job-definition-name)]
-      (. builder jobDefinitionName data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :retry-attempts)]
-      (. builder retryAttempts data))
-    (when-let [data (lookup-entry config id :retry-strategies)]
-      (. builder retryStrategies data))
-    (when-let [data (lookup-entry config id :scheduling-priority)]
-      (. builder schedulingPriority data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn ecs-job-definition-props-builder
-  "The ecs-job-definition-props-builder function buildes out new instances of 
-EcsJobDefinitionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2301,68 +2467,115 @@ EcsJobDefinitionProps$Builder using the provided configuration.  Each field is s
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 | `retryStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:retry-strategies` |
 | `schedulingPriority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scheduling-priority` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EcsJobDefinitionProps$Builder.)]
-    (when-let [data (lookup-entry config id :container)]
-      (. builder container data))
-    (when-let [data (lookup-entry config id :job-definition-name)]
-      (. builder jobDefinitionName data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :retry-attempts)]
-      (. builder retryAttempts data))
-    (when-let [data (lookup-entry config id :retry-strategies)]
-      (. builder retryStrategies data))
-    (when-let [data (lookup-entry config id :scheduling-priority)]
-      (. builder schedulingPriority data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EcsJobDefinition$Builder builder id config]
+  (when-let [data (lookup-entry config id :container)]
+    (. builder container data))
+  (when-let [data (lookup-entry config id :job-definition-name)]
+    (. builder jobDefinitionName data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :retry-attempts)]
+    (. builder retryAttempts data))
+  (when-let [data (lookup-entry config id :retry-strategies)]
+    (. builder retryStrategies data))
+  (when-let [data (lookup-entry config id :scheduling-priority)]
+    (. builder schedulingPriority data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn ecs-machine-image-builder
-  "The ecs-machine-image-builder function buildes out new instances of 
-EcsMachineImage$Builder using the provided configuration.  Each field is set as follows:
+(defn build-ecs-job-definition-props-builder
+  "The build-ecs-job-definition-props-builder function updates a EcsJobDefinitionProps$Builder instance using the provided configuration.
+  The function takes the EcsJobDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `container` | software.amazon.awscdk.services.batch.IEcsContainerDefinition | [[cdk.support/lookup-entry]] | `:container` |
+| `jobDefinitionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-definition-name` |
+| `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
+| `propagateTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:propagate-tags` |
+| `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
+| `retryStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:retry-strategies` |
+| `schedulingPriority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scheduling-priority` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EcsJobDefinitionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :container)]
+    (. builder container data))
+  (when-let [data (lookup-entry config id :job-definition-name)]
+    (. builder jobDefinitionName data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :retry-attempts)]
+    (. builder retryAttempts data))
+  (when-let [data (lookup-entry config id :retry-strategies)]
+    (. builder retryStrategies data))
+  (when-let [data (lookup-entry config id :scheduling-priority)]
+    (. builder schedulingPriority data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-ecs-machine-image-builder
+  "The build-ecs-machine-image-builder function updates a EcsMachineImage$Builder instance using the provided configuration.
+  The function takes the EcsMachineImage$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `image` | software.amazon.awscdk.services.ec2.IMachineImage | [[cdk.support/lookup-entry]] | `:image` |
-| `imageType` | software.amazon.awscdk.services.batch.EcsMachineImageType | [[cdk.api.services.batch/ecs-machine-image-type]] | `:image-type` |"
-  [stack id config]
-  (let [builder (EcsMachineImage$Builder.)]
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (ecs-machine-image-type config id :image-type)]
-      (. builder imageType data))
-    (.build builder)))
+| `imageType` | software.amazon.awscdk.services.batch.EcsMachineImageType | [[cdk.api.services.batch/ecs-machine-image-type]] | `:image-type` |
+"
+  [^EcsMachineImage$Builder builder id config]
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (ecs-machine-image-type config id :image-type)]
+    (. builder imageType data))
+  (.build builder))
 
 
-(defn ecs-volume-options-builder
-  "The ecs-volume-options-builder function buildes out new instances of 
-EcsVolumeOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-ecs-volume-options-builder
+  "The build-ecs-volume-options-builder function updates a EcsVolumeOptions$Builder instance using the provided configuration.
+  The function takes the EcsVolumeOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `containerPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-path` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `readonly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly` |"
-  [stack id config]
-  (let [builder (EcsVolumeOptions$Builder.)]
-    (when-let [data (lookup-entry config id :container-path)]
-      (. builder containerPath data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :readonly)]
-      (. builder readonly data))
-    (.build builder)))
+| `readonly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly` |
+"
+  [^EcsVolumeOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :container-path)]
+    (. builder containerPath data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :readonly)]
+    (. builder readonly data))
+  (.build builder))
 
 
-(defn efs-volume-builder
-  "The efs-volume-builder function buildes out new instances of 
-EfsVolume$Builder using the provided configuration.  Each field is set as follows:
+(defn build-efs-volume-builder
+  "The build-efs-volume-builder function updates a EfsVolume$Builder instance using the provided configuration.
+  The function takes the EfsVolume$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2374,33 +2587,36 @@ EfsVolume$Builder using the provided configuration.  Each field is set as follow
 | `readonly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly` |
 | `rootDirectory` | java.lang.String | [[cdk.support/lookup-entry]] | `:root-directory` |
 | `transitEncryptionPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:transit-encryption-port` |
-| `useJobRole` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-job-role` |"
-  [stack id config]
-  (let [builder (EfsVolume$Builder/create)]
-    (when-let [data (lookup-entry config id :access-point-id)]
-      (. builder accessPointId data))
-    (when-let [data (lookup-entry config id :container-path)]
-      (. builder containerPath data))
-    (when-let [data (lookup-entry config id :enable-transit-encryption)]
-      (. builder enableTransitEncryption data))
-    (when-let [data (lookup-entry config id :file-system)]
-      (. builder fileSystem data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :readonly)]
-      (. builder readonly data))
-    (when-let [data (lookup-entry config id :root-directory)]
-      (. builder rootDirectory data))
-    (when-let [data (lookup-entry config id :transit-encryption-port)]
-      (. builder transitEncryptionPort data))
-    (when-let [data (lookup-entry config id :use-job-role)]
-      (. builder useJobRole data))
-    (.build builder)))
+| `useJobRole` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-job-role` |
+"
+  [^EfsVolume$Builder builder id config]
+  (when-let [data (lookup-entry config id :access-point-id)]
+    (. builder accessPointId data))
+  (when-let [data (lookup-entry config id :container-path)]
+    (. builder containerPath data))
+  (when-let [data (lookup-entry config id :enable-transit-encryption)]
+    (. builder enableTransitEncryption data))
+  (when-let [data (lookup-entry config id :file-system)]
+    (. builder fileSystem data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :readonly)]
+    (. builder readonly data))
+  (when-let [data (lookup-entry config id :root-directory)]
+    (. builder rootDirectory data))
+  (when-let [data (lookup-entry config id :transit-encryption-port)]
+    (. builder transitEncryptionPort data))
+  (when-let [data (lookup-entry config id :use-job-role)]
+    (. builder useJobRole data))
+  (.build builder))
 
 
-(defn efs-volume-options-builder
-  "The efs-volume-options-builder function buildes out new instances of 
-EfsVolumeOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-efs-volume-options-builder
+  "The build-efs-volume-options-builder function updates a EfsVolumeOptions$Builder instance using the provided configuration.
+  The function takes the EfsVolumeOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2412,33 +2628,36 @@ EfsVolumeOptions$Builder using the provided configuration.  Each field is set as
 | `readonly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly` |
 | `rootDirectory` | java.lang.String | [[cdk.support/lookup-entry]] | `:root-directory` |
 | `transitEncryptionPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:transit-encryption-port` |
-| `useJobRole` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-job-role` |"
-  [stack id config]
-  (let [builder (EfsVolumeOptions$Builder.)]
-    (when-let [data (lookup-entry config id :access-point-id)]
-      (. builder accessPointId data))
-    (when-let [data (lookup-entry config id :container-path)]
-      (. builder containerPath data))
-    (when-let [data (lookup-entry config id :enable-transit-encryption)]
-      (. builder enableTransitEncryption data))
-    (when-let [data (lookup-entry config id :file-system)]
-      (. builder fileSystem data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :readonly)]
-      (. builder readonly data))
-    (when-let [data (lookup-entry config id :root-directory)]
-      (. builder rootDirectory data))
-    (when-let [data (lookup-entry config id :transit-encryption-port)]
-      (. builder transitEncryptionPort data))
-    (when-let [data (lookup-entry config id :use-job-role)]
-      (. builder useJobRole data))
-    (.build builder)))
+| `useJobRole` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-job-role` |
+"
+  [^EfsVolumeOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :access-point-id)]
+    (. builder accessPointId data))
+  (when-let [data (lookup-entry config id :container-path)]
+    (. builder containerPath data))
+  (when-let [data (lookup-entry config id :enable-transit-encryption)]
+    (. builder enableTransitEncryption data))
+  (when-let [data (lookup-entry config id :file-system)]
+    (. builder fileSystem data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :readonly)]
+    (. builder readonly data))
+  (when-let [data (lookup-entry config id :root-directory)]
+    (. builder rootDirectory data))
+  (when-let [data (lookup-entry config id :transit-encryption-port)]
+    (. builder transitEncryptionPort data))
+  (when-let [data (lookup-entry config id :use-job-role)]
+    (. builder useJobRole data))
+  (.build builder))
 
 
-(defn eks-container-definition-builder
-  "The eks-container-definition-builder function buildes out new instances of 
-EksContainerDefinition$Builder using the provided configuration.  Each field is set as follows:
+(defn build-eks-container-definition-builder
+  "The build-eks-container-definition-builder function updates a EksContainerDefinition$Builder instance using the provided configuration.
+  The function takes the EksContainerDefinition$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2459,51 +2678,54 @@ EksContainerDefinition$Builder using the provided configuration.  Each field is 
 | `runAsGroup` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-as-group` |
 | `runAsRoot` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:run-as-root` |
 | `runAsUser` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-as-user` |
-| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |"
-  [stack id config]
-  (let [builder (EksContainerDefinition$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :args)]
-      (. builder args data))
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :cpu-limit)]
-      (. builder cpuLimit data))
-    (when-let [data (lookup-entry config id :cpu-reservation)]
-      (. builder cpuReservation data))
-    (when-let [data (lookup-entry config id :env)]
-      (. builder env data))
-    (when-let [data (lookup-entry config id :gpu-limit)]
-      (. builder gpuLimit data))
-    (when-let [data (lookup-entry config id :gpu-reservation)]
-      (. builder gpuReservation data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (image-pull-policy config id :image-pull-policy)]
-      (. builder imagePullPolicy data))
-    (when-let [data (lookup-entry config id :memory-limit)]
-      (. builder memoryLimit data))
-    (when-let [data (lookup-entry config id :memory-reservation)]
-      (. builder memoryReservation data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :privileged)]
-      (. builder privileged data))
-    (when-let [data (lookup-entry config id :readonly-root-filesystem)]
-      (. builder readonlyRootFilesystem data))
-    (when-let [data (lookup-entry config id :run-as-group)]
-      (. builder runAsGroup data))
-    (when-let [data (lookup-entry config id :run-as-root)]
-      (. builder runAsRoot data))
-    (when-let [data (lookup-entry config id :run-as-user)]
-      (. builder runAsUser data))
-    (when-let [data (lookup-entry config id :volumes)]
-      (. builder volumes data))
-    (.build builder)))
+| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |
+"
+  [^EksContainerDefinition$Builder builder id config]
+  (when-let [data (lookup-entry config id :args)]
+    (. builder args data))
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :cpu-limit)]
+    (. builder cpuLimit data))
+  (when-let [data (lookup-entry config id :cpu-reservation)]
+    (. builder cpuReservation data))
+  (when-let [data (lookup-entry config id :env)]
+    (. builder env data))
+  (when-let [data (lookup-entry config id :gpu-limit)]
+    (. builder gpuLimit data))
+  (when-let [data (lookup-entry config id :gpu-reservation)]
+    (. builder gpuReservation data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (image-pull-policy config id :image-pull-policy)]
+    (. builder imagePullPolicy data))
+  (when-let [data (lookup-entry config id :memory-limit)]
+    (. builder memoryLimit data))
+  (when-let [data (lookup-entry config id :memory-reservation)]
+    (. builder memoryReservation data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :privileged)]
+    (. builder privileged data))
+  (when-let [data (lookup-entry config id :readonly-root-filesystem)]
+    (. builder readonlyRootFilesystem data))
+  (when-let [data (lookup-entry config id :run-as-group)]
+    (. builder runAsGroup data))
+  (when-let [data (lookup-entry config id :run-as-root)]
+    (. builder runAsRoot data))
+  (when-let [data (lookup-entry config id :run-as-user)]
+    (. builder runAsUser data))
+  (when-let [data (lookup-entry config id :volumes)]
+    (. builder volumes data))
+  (.build builder))
 
 
-(defn eks-container-definition-props-builder
-  "The eks-container-definition-props-builder function buildes out new instances of 
-EksContainerDefinitionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-eks-container-definition-props-builder
+  "The build-eks-container-definition-props-builder function updates a EksContainerDefinitionProps$Builder instance using the provided configuration.
+  The function takes the EksContainerDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2524,92 +2746,54 @@ EksContainerDefinitionProps$Builder using the provided configuration.  Each fiel
 | `runAsGroup` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-as-group` |
 | `runAsRoot` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:run-as-root` |
 | `runAsUser` | java.lang.Number | [[cdk.support/lookup-entry]] | `:run-as-user` |
-| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |"
-  [stack id config]
-  (let [builder (EksContainerDefinitionProps$Builder.)]
-    (when-let [data (lookup-entry config id :args)]
-      (. builder args data))
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :cpu-limit)]
-      (. builder cpuLimit data))
-    (when-let [data (lookup-entry config id :cpu-reservation)]
-      (. builder cpuReservation data))
-    (when-let [data (lookup-entry config id :env)]
-      (. builder env data))
-    (when-let [data (lookup-entry config id :gpu-limit)]
-      (. builder gpuLimit data))
-    (when-let [data (lookup-entry config id :gpu-reservation)]
-      (. builder gpuReservation data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (image-pull-policy config id :image-pull-policy)]
-      (. builder imagePullPolicy data))
-    (when-let [data (lookup-entry config id :memory-limit)]
-      (. builder memoryLimit data))
-    (when-let [data (lookup-entry config id :memory-reservation)]
-      (. builder memoryReservation data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :privileged)]
-      (. builder privileged data))
-    (when-let [data (lookup-entry config id :readonly-root-filesystem)]
-      (. builder readonlyRootFilesystem data))
-    (when-let [data (lookup-entry config id :run-as-group)]
-      (. builder runAsGroup data))
-    (when-let [data (lookup-entry config id :run-as-root)]
-      (. builder runAsRoot data))
-    (when-let [data (lookup-entry config id :run-as-user)]
-      (. builder runAsUser data))
-    (when-let [data (lookup-entry config id :volumes)]
-      (. builder volumes data))
-    (.build builder)))
+| `volumes` | java.util.List | [[cdk.support/lookup-entry]] | `:volumes` |
+"
+  [^EksContainerDefinitionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :args)]
+    (. builder args data))
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :cpu-limit)]
+    (. builder cpuLimit data))
+  (when-let [data (lookup-entry config id :cpu-reservation)]
+    (. builder cpuReservation data))
+  (when-let [data (lookup-entry config id :env)]
+    (. builder env data))
+  (when-let [data (lookup-entry config id :gpu-limit)]
+    (. builder gpuLimit data))
+  (when-let [data (lookup-entry config id :gpu-reservation)]
+    (. builder gpuReservation data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (image-pull-policy config id :image-pull-policy)]
+    (. builder imagePullPolicy data))
+  (when-let [data (lookup-entry config id :memory-limit)]
+    (. builder memoryLimit data))
+  (when-let [data (lookup-entry config id :memory-reservation)]
+    (. builder memoryReservation data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :privileged)]
+    (. builder privileged data))
+  (when-let [data (lookup-entry config id :readonly-root-filesystem)]
+    (. builder readonlyRootFilesystem data))
+  (when-let [data (lookup-entry config id :run-as-group)]
+    (. builder runAsGroup data))
+  (when-let [data (lookup-entry config id :run-as-root)]
+    (. builder runAsRoot data))
+  (when-let [data (lookup-entry config id :run-as-user)]
+    (. builder runAsUser data))
+  (when-let [data (lookup-entry config id :volumes)]
+    (. builder volumes data))
+  (.build builder))
 
 
-(defn eks-job-definition-builder
-  "The eks-job-definition-builder function buildes out new instances of 
-EksJobDefinition$Builder using the provided configuration.  Each field is set as follows:
+(defn build-eks-job-definition-builder
+  "The build-eks-job-definition-builder function updates a EksJobDefinition$Builder instance using the provided configuration.
+  The function takes the EksJobDefinition$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `container` | software.amazon.awscdk.services.batch.EksContainerDefinition | [[cdk.support/lookup-entry]] | `:container` |
-| `dnsPolicy` | software.amazon.awscdk.services.batch.DnsPolicy | [[cdk.api.services.batch/dns-policy]] | `:dns-policy` |
-| `jobDefinitionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-definition-name` |
-| `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
-| `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
-| `retryStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:retry-strategies` |
-| `schedulingPriority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scheduling-priority` |
-| `serviceAccount` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-account` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `useHostNetwork` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-host-network` |"
-  [stack id config]
-  (let [builder (EksJobDefinition$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :container)]
-      (. builder container data))
-    (when-let [data (dns-policy config id :dns-policy)]
-      (. builder dnsPolicy data))
-    (when-let [data (lookup-entry config id :job-definition-name)]
-      (. builder jobDefinitionName data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :retry-attempts)]
-      (. builder retryAttempts data))
-    (when-let [data (lookup-entry config id :retry-strategies)]
-      (. builder retryStrategies data))
-    (when-let [data (lookup-entry config id :scheduling-priority)]
-      (. builder schedulingPriority data))
-    (when-let [data (lookup-entry config id :service-account)]
-      (. builder serviceAccount data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :use-host-network)]
-      (. builder useHostNetwork data))
-    (.build builder)))
-
-
-(defn eks-job-definition-props-builder
-  "The eks-job-definition-props-builder function buildes out new instances of 
-EksJobDefinitionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2622,72 +2806,125 @@ EksJobDefinitionProps$Builder using the provided configuration.  Each field is s
 | `schedulingPriority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scheduling-priority` |
 | `serviceAccount` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-account` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `useHostNetwork` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-host-network` |"
-  [stack id config]
-  (let [builder (EksJobDefinitionProps$Builder.)]
-    (when-let [data (lookup-entry config id :container)]
-      (. builder container data))
-    (when-let [data (dns-policy config id :dns-policy)]
-      (. builder dnsPolicy data))
-    (when-let [data (lookup-entry config id :job-definition-name)]
-      (. builder jobDefinitionName data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :retry-attempts)]
-      (. builder retryAttempts data))
-    (when-let [data (lookup-entry config id :retry-strategies)]
-      (. builder retryStrategies data))
-    (when-let [data (lookup-entry config id :scheduling-priority)]
-      (. builder schedulingPriority data))
-    (when-let [data (lookup-entry config id :service-account)]
-      (. builder serviceAccount data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :use-host-network)]
-      (. builder useHostNetwork data))
-    (.build builder)))
+| `useHostNetwork` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-host-network` |
+"
+  [^EksJobDefinition$Builder builder id config]
+  (when-let [data (lookup-entry config id :container)]
+    (. builder container data))
+  (when-let [data (dns-policy config id :dns-policy)]
+    (. builder dnsPolicy data))
+  (when-let [data (lookup-entry config id :job-definition-name)]
+    (. builder jobDefinitionName data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :retry-attempts)]
+    (. builder retryAttempts data))
+  (when-let [data (lookup-entry config id :retry-strategies)]
+    (. builder retryStrategies data))
+  (when-let [data (lookup-entry config id :scheduling-priority)]
+    (. builder schedulingPriority data))
+  (when-let [data (lookup-entry config id :service-account)]
+    (. builder serviceAccount data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :use-host-network)]
+    (. builder useHostNetwork data))
+  (.build builder))
 
 
-(defn eks-machine-image-builder
-  "The eks-machine-image-builder function buildes out new instances of 
-EksMachineImage$Builder using the provided configuration.  Each field is set as follows:
+(defn build-eks-job-definition-props-builder
+  "The build-eks-job-definition-props-builder function updates a EksJobDefinitionProps$Builder instance using the provided configuration.
+  The function takes the EksJobDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `container` | software.amazon.awscdk.services.batch.EksContainerDefinition | [[cdk.support/lookup-entry]] | `:container` |
+| `dnsPolicy` | software.amazon.awscdk.services.batch.DnsPolicy | [[cdk.api.services.batch/dns-policy]] | `:dns-policy` |
+| `jobDefinitionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-definition-name` |
+| `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
+| `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
+| `retryStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:retry-strategies` |
+| `schedulingPriority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scheduling-priority` |
+| `serviceAccount` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-account` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+| `useHostNetwork` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-host-network` |
+"
+  [^EksJobDefinitionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :container)]
+    (. builder container data))
+  (when-let [data (dns-policy config id :dns-policy)]
+    (. builder dnsPolicy data))
+  (when-let [data (lookup-entry config id :job-definition-name)]
+    (. builder jobDefinitionName data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :retry-attempts)]
+    (. builder retryAttempts data))
+  (when-let [data (lookup-entry config id :retry-strategies)]
+    (. builder retryStrategies data))
+  (when-let [data (lookup-entry config id :scheduling-priority)]
+    (. builder schedulingPriority data))
+  (when-let [data (lookup-entry config id :service-account)]
+    (. builder serviceAccount data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :use-host-network)]
+    (. builder useHostNetwork data))
+  (.build builder))
+
+
+(defn build-eks-machine-image-builder
+  "The build-eks-machine-image-builder function updates a EksMachineImage$Builder instance using the provided configuration.
+  The function takes the EksMachineImage$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `image` | software.amazon.awscdk.services.ec2.IMachineImage | [[cdk.support/lookup-entry]] | `:image` |
-| `imageType` | software.amazon.awscdk.services.batch.EksMachineImageType | [[cdk.api.services.batch/eks-machine-image-type]] | `:image-type` |"
-  [stack id config]
-  (let [builder (EksMachineImage$Builder.)]
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (eks-machine-image-type config id :image-type)]
-      (. builder imageType data))
-    (.build builder)))
+| `imageType` | software.amazon.awscdk.services.batch.EksMachineImageType | [[cdk.api.services.batch/eks-machine-image-type]] | `:image-type` |
+"
+  [^EksMachineImage$Builder builder id config]
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (eks-machine-image-type config id :image-type)]
+    (. builder imageType data))
+  (.build builder))
 
 
-(defn eks-volume-options-builder
-  "The eks-volume-options-builder function buildes out new instances of 
-EksVolumeOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-eks-volume-options-builder
+  "The build-eks-volume-options-builder function updates a EksVolumeOptions$Builder instance using the provided configuration.
+  The function takes the EksVolumeOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `mountPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:mount-path` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `readonly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly` |"
-  [stack id config]
-  (let [builder (EksVolumeOptions$Builder.)]
-    (when-let [data (lookup-entry config id :mount-path)]
-      (. builder mountPath data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :readonly)]
-      (. builder readonly data))
-    (.build builder)))
+| `readonly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly` |
+"
+  [^EksVolumeOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :mount-path)]
+    (. builder mountPath data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :readonly)]
+    (. builder readonly data))
+  (.build builder))
 
 
-(defn empty-dir-volume-builder
-  "The empty-dir-volume-builder function buildes out new instances of 
-EmptyDirVolume$Builder using the provided configuration.  Each field is set as follows:
+(defn build-empty-dir-volume-builder
+  "The build-empty-dir-volume-builder function updates a EmptyDirVolume$Builder instance using the provided configuration.
+  The function takes the EmptyDirVolume$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2695,25 +2932,28 @@ EmptyDirVolume$Builder using the provided configuration.  Each field is set as f
 | `mountPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:mount-path` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `readonly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly` |
-| `sizeLimit` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:size-limit` |"
-  [stack id config]
-  (let [builder (EmptyDirVolume$Builder/create)]
-    (when-let [data (empty-dir-medium-type config id :medium)]
-      (. builder medium data))
-    (when-let [data (lookup-entry config id :mount-path)]
-      (. builder mountPath data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :readonly)]
-      (. builder readonly data))
-    (when-let [data (lookup-entry config id :size-limit)]
-      (. builder sizeLimit data))
-    (.build builder)))
+| `sizeLimit` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:size-limit` |
+"
+  [^EmptyDirVolume$Builder builder id config]
+  (when-let [data (empty-dir-medium-type config id :medium)]
+    (. builder medium data))
+  (when-let [data (lookup-entry config id :mount-path)]
+    (. builder mountPath data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :readonly)]
+    (. builder readonly data))
+  (when-let [data (lookup-entry config id :size-limit)]
+    (. builder sizeLimit data))
+  (.build builder))
 
 
-(defn empty-dir-volume-options-builder
-  "The empty-dir-volume-options-builder function buildes out new instances of 
-EmptyDirVolumeOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-empty-dir-volume-options-builder
+  "The build-empty-dir-volume-options-builder function updates a EmptyDirVolumeOptions$Builder instance using the provided configuration.
+  The function takes the EmptyDirVolumeOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2721,71 +2961,80 @@ EmptyDirVolumeOptions$Builder using the provided configuration.  Each field is s
 | `mountPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:mount-path` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `readonly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly` |
-| `sizeLimit` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:size-limit` |"
-  [stack id config]
-  (let [builder (EmptyDirVolumeOptions$Builder.)]
-    (when-let [data (empty-dir-medium-type config id :medium)]
-      (. builder medium data))
-    (when-let [data (lookup-entry config id :mount-path)]
-      (. builder mountPath data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :readonly)]
-      (. builder readonly data))
-    (when-let [data (lookup-entry config id :size-limit)]
-      (. builder sizeLimit data))
-    (.build builder)))
+| `sizeLimit` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:size-limit` |
+"
+  [^EmptyDirVolumeOptions$Builder builder id config]
+  (when-let [data (empty-dir-medium-type config id :medium)]
+    (. builder medium data))
+  (when-let [data (lookup-entry config id :mount-path)]
+    (. builder mountPath data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :readonly)]
+    (. builder readonly data))
+  (when-let [data (lookup-entry config id :size-limit)]
+    (. builder sizeLimit data))
+  (.build builder))
 
 
-(defn fairshare-scheduling-policy-builder
-  "The fairshare-scheduling-policy-builder function buildes out new instances of 
-FairshareSchedulingPolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-fairshare-scheduling-policy-builder
+  "The build-fairshare-scheduling-policy-builder function updates a FairshareSchedulingPolicy$Builder instance using the provided configuration.
+  The function takes the FairshareSchedulingPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `computeReservation` | java.lang.Number | [[cdk.support/lookup-entry]] | `:compute-reservation` |
-| `schedulingPolicyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheduling-policy-name` |
-| `shareDecay` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:share-decay` |
-| `shares` | java.util.List | [[cdk.support/lookup-entry]] | `:shares` |"
-  [stack id config]
-  (let [builder (FairshareSchedulingPolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :compute-reservation)]
-      (. builder computeReservation data))
-    (when-let [data (lookup-entry config id :scheduling-policy-name)]
-      (. builder schedulingPolicyName data))
-    (when-let [data (lookup-entry config id :share-decay)]
-      (. builder shareDecay data))
-    (when-let [data (lookup-entry config id :shares)]
-      (. builder shares data))
-    (.build builder)))
-
-
-(defn fairshare-scheduling-policy-props-builder
-  "The fairshare-scheduling-policy-props-builder function buildes out new instances of 
-FairshareSchedulingPolicyProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `computeReservation` | java.lang.Number | [[cdk.support/lookup-entry]] | `:compute-reservation` |
 | `schedulingPolicyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheduling-policy-name` |
 | `shareDecay` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:share-decay` |
-| `shares` | java.util.List | [[cdk.support/lookup-entry]] | `:shares` |"
-  [stack id config]
-  (let [builder (FairshareSchedulingPolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :compute-reservation)]
-      (. builder computeReservation data))
-    (when-let [data (lookup-entry config id :scheduling-policy-name)]
-      (. builder schedulingPolicyName data))
-    (when-let [data (lookup-entry config id :share-decay)]
-      (. builder shareDecay data))
-    (when-let [data (lookup-entry config id :shares)]
-      (. builder shares data))
-    (.build builder)))
+| `shares` | java.util.List | [[cdk.support/lookup-entry]] | `:shares` |
+"
+  [^FairshareSchedulingPolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :compute-reservation)]
+    (. builder computeReservation data))
+  (when-let [data (lookup-entry config id :scheduling-policy-name)]
+    (. builder schedulingPolicyName data))
+  (when-let [data (lookup-entry config id :share-decay)]
+    (. builder shareDecay data))
+  (when-let [data (lookup-entry config id :shares)]
+    (. builder shares data))
+  (.build builder))
 
 
-(defn fargate-compute-environment-builder
-  "The fargate-compute-environment-builder function buildes out new instances of 
-FargateComputeEnvironment$Builder using the provided configuration.  Each field is set as follows:
+(defn build-fairshare-scheduling-policy-props-builder
+  "The build-fairshare-scheduling-policy-props-builder function updates a FairshareSchedulingPolicyProps$Builder instance using the provided configuration.
+  The function takes the FairshareSchedulingPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `computeReservation` | java.lang.Number | [[cdk.support/lookup-entry]] | `:compute-reservation` |
+| `schedulingPolicyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheduling-policy-name` |
+| `shareDecay` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:share-decay` |
+| `shares` | java.util.List | [[cdk.support/lookup-entry]] | `:shares` |
+"
+  [^FairshareSchedulingPolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :compute-reservation)]
+    (. builder computeReservation data))
+  (when-let [data (lookup-entry config id :scheduling-policy-name)]
+    (. builder schedulingPolicyName data))
+  (when-let [data (lookup-entry config id :share-decay)]
+    (. builder shareDecay data))
+  (when-let [data (lookup-entry config id :shares)]
+    (. builder shares data))
+  (.build builder))
+
+
+(defn build-fargate-compute-environment-builder
+  "The build-fargate-compute-environment-builder function updates a FargateComputeEnvironment$Builder instance using the provided configuration.
+  The function takes the FargateComputeEnvironment$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2800,39 +3049,42 @@ FargateComputeEnvironment$Builder using the provided configuration.  Each field 
 | `updateTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:update-timeout` |
 | `updateToLatestImageVersion` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:update-to-latest-image-version` |
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |"
-  [stack id config]
-  (let [builder (FargateComputeEnvironment$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :compute-environment-name)]
-      (. builder computeEnvironmentName data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :maxv-cpus)]
-      (. builder maxvCpus data))
-    (when-let [data (lookup-entry config id :replace-compute-environment)]
-      (. builder replaceComputeEnvironment data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :service-role)]
-      (. builder serviceRole data))
-    (when-let [data (lookup-entry config id :spot)]
-      (. builder spot data))
-    (when-let [data (lookup-entry config id :terminate-on-update)]
-      (. builder terminateOnUpdate data))
-    (when-let [data (lookup-entry config id :update-timeout)]
-      (. builder updateTimeout data))
-    (when-let [data (lookup-entry config id :update-to-latest-image-version)]
-      (. builder updateToLatestImageVersion data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnets)]
-      (. builder vpcSubnets data))
-    (.build builder)))
+| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
+"
+  [^FargateComputeEnvironment$Builder builder id config]
+  (when-let [data (lookup-entry config id :compute-environment-name)]
+    (. builder computeEnvironmentName data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :maxv-cpus)]
+    (. builder maxvCpus data))
+  (when-let [data (lookup-entry config id :replace-compute-environment)]
+    (. builder replaceComputeEnvironment data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :service-role)]
+    (. builder serviceRole data))
+  (when-let [data (lookup-entry config id :spot)]
+    (. builder spot data))
+  (when-let [data (lookup-entry config id :terminate-on-update)]
+    (. builder terminateOnUpdate data))
+  (when-let [data (lookup-entry config id :update-timeout)]
+    (. builder updateTimeout data))
+  (when-let [data (lookup-entry config id :update-to-latest-image-version)]
+    (. builder updateToLatestImageVersion data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnets)]
+    (. builder vpcSubnets data))
+  (.build builder))
 
 
-(defn fargate-compute-environment-props-builder
-  "The fargate-compute-environment-props-builder function buildes out new instances of 
-FargateComputeEnvironmentProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-fargate-compute-environment-props-builder
+  "The build-fargate-compute-environment-props-builder function updates a FargateComputeEnvironmentProps$Builder instance using the provided configuration.
+  The function takes the FargateComputeEnvironmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2847,131 +3099,146 @@ FargateComputeEnvironmentProps$Builder using the provided configuration.  Each f
 | `updateTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:update-timeout` |
 | `updateToLatestImageVersion` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:update-to-latest-image-version` |
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |"
-  [stack id config]
-  (let [builder (FargateComputeEnvironmentProps$Builder.)]
-    (when-let [data (lookup-entry config id :compute-environment-name)]
-      (. builder computeEnvironmentName data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :maxv-cpus)]
-      (. builder maxvCpus data))
-    (when-let [data (lookup-entry config id :replace-compute-environment)]
-      (. builder replaceComputeEnvironment data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :service-role)]
-      (. builder serviceRole data))
-    (when-let [data (lookup-entry config id :spot)]
-      (. builder spot data))
-    (when-let [data (lookup-entry config id :terminate-on-update)]
-      (. builder terminateOnUpdate data))
-    (when-let [data (lookup-entry config id :update-timeout)]
-      (. builder updateTimeout data))
-    (when-let [data (lookup-entry config id :update-to-latest-image-version)]
-      (. builder updateToLatestImageVersion data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnets)]
-      (. builder vpcSubnets data))
-    (.build builder)))
+| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
+"
+  [^FargateComputeEnvironmentProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :compute-environment-name)]
+    (. builder computeEnvironmentName data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :maxv-cpus)]
+    (. builder maxvCpus data))
+  (when-let [data (lookup-entry config id :replace-compute-environment)]
+    (. builder replaceComputeEnvironment data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :service-role)]
+    (. builder serviceRole data))
+  (when-let [data (lookup-entry config id :spot)]
+    (. builder spot data))
+  (when-let [data (lookup-entry config id :terminate-on-update)]
+    (. builder terminateOnUpdate data))
+  (when-let [data (lookup-entry config id :update-timeout)]
+    (. builder updateTimeout data))
+  (when-let [data (lookup-entry config id :update-to-latest-image-version)]
+    (. builder updateToLatestImageVersion data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnets)]
+    (. builder vpcSubnets data))
+  (.build builder))
 
 
-(defn host-path-volume-builder
-  "The host-path-volume-builder function buildes out new instances of 
-HostPathVolume$Builder using the provided configuration.  Each field is set as follows:
+(defn build-host-path-volume-builder
+  "The build-host-path-volume-builder function updates a HostPathVolume$Builder instance using the provided configuration.
+  The function takes the HostPathVolume$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `hostPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:host-path` |
-| `mountPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:mount-path` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `readonly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly` |"
-  [stack id config]
-  (let [builder (HostPathVolume$Builder/create)]
-    (when-let [data (lookup-entry config id :host-path)]
-      (. builder hostPath data))
-    (when-let [data (lookup-entry config id :mount-path)]
-      (. builder mountPath data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :readonly)]
-      (. builder readonly data))
-    (.build builder)))
-
-
-(defn host-path-volume-options-builder
-  "The host-path-volume-options-builder function buildes out new instances of 
-HostPathVolumeOptions$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `hostPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:host-path` |
 | `mountPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:mount-path` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `readonly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly` |"
-  [stack id config]
-  (let [builder (HostPathVolumeOptions$Builder.)]
-    (when-let [data (lookup-entry config id :host-path)]
-      (. builder hostPath data))
-    (when-let [data (lookup-entry config id :mount-path)]
-      (. builder mountPath data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :readonly)]
-      (. builder readonly data))
-    (.build builder)))
+| `readonly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly` |
+"
+  [^HostPathVolume$Builder builder id config]
+  (when-let [data (lookup-entry config id :host-path)]
+    (. builder hostPath data))
+  (when-let [data (lookup-entry config id :mount-path)]
+    (. builder mountPath data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :readonly)]
+    (. builder readonly data))
+  (.build builder))
 
 
-(defn host-volume-builder
-  "The host-volume-builder function buildes out new instances of 
-HostVolume$Builder using the provided configuration.  Each field is set as follows:
+(defn build-host-path-volume-options-builder
+  "The build-host-path-volume-options-builder function updates a HostPathVolumeOptions$Builder instance using the provided configuration.
+  The function takes the HostPathVolumeOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `hostPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:host-path` |
+| `mountPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:mount-path` |
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `readonly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly` |
+"
+  [^HostPathVolumeOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :host-path)]
+    (. builder hostPath data))
+  (when-let [data (lookup-entry config id :mount-path)]
+    (. builder mountPath data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :readonly)]
+    (. builder readonly data))
+  (.build builder))
+
+
+(defn build-host-volume-builder
+  "The build-host-volume-builder function updates a HostVolume$Builder instance using the provided configuration.
+  The function takes the HostVolume$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `containerPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-path` |
 | `hostPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:host-path` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `readonly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly` |"
-  [stack id config]
-  (let [builder (HostVolume$Builder/create)]
-    (when-let [data (lookup-entry config id :container-path)]
-      (. builder containerPath data))
-    (when-let [data (lookup-entry config id :host-path)]
-      (. builder hostPath data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :readonly)]
-      (. builder readonly data))
-    (.build builder)))
+| `readonly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly` |
+"
+  [^HostVolume$Builder builder id config]
+  (when-let [data (lookup-entry config id :container-path)]
+    (. builder containerPath data))
+  (when-let [data (lookup-entry config id :host-path)]
+    (. builder hostPath data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :readonly)]
+    (. builder readonly data))
+  (.build builder))
 
 
-(defn host-volume-options-builder
-  "The host-volume-options-builder function buildes out new instances of 
-HostVolumeOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-host-volume-options-builder
+  "The build-host-volume-options-builder function updates a HostVolumeOptions$Builder instance using the provided configuration.
+  The function takes the HostVolumeOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `containerPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-path` |
 | `hostPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:host-path` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `readonly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly` |"
-  [stack id config]
-  (let [builder (HostVolumeOptions$Builder.)]
-    (when-let [data (lookup-entry config id :container-path)]
-      (. builder containerPath data))
-    (when-let [data (lookup-entry config id :host-path)]
-      (. builder hostPath data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :readonly)]
-      (. builder readonly data))
-    (.build builder)))
+| `readonly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly` |
+"
+  [^HostVolumeOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :container-path)]
+    (. builder containerPath data))
+  (when-let [data (lookup-entry config id :host-path)]
+    (. builder hostPath data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :readonly)]
+    (. builder readonly data))
+  (.build builder))
 
 
-(defn job-definition-props-builder
-  "The job-definition-props-builder function buildes out new instances of 
-JobDefinitionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-job-definition-props-builder
+  "The build-job-definition-props-builder function updates a JobDefinitionProps$Builder instance using the provided configuration.
+  The function takes the JobDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2980,56 +3247,30 @@ JobDefinitionProps$Builder using the provided configuration.  Each field is set 
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 | `retryStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:retry-strategies` |
 | `schedulingPriority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scheduling-priority` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (JobDefinitionProps$Builder.)]
-    (when-let [data (lookup-entry config id :job-definition-name)]
-      (. builder jobDefinitionName data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :retry-attempts)]
-      (. builder retryAttempts data))
-    (when-let [data (lookup-entry config id :retry-strategies)]
-      (. builder retryStrategies data))
-    (when-let [data (lookup-entry config id :scheduling-priority)]
-      (. builder schedulingPriority data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^JobDefinitionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :job-definition-name)]
+    (. builder jobDefinitionName data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :retry-attempts)]
+    (. builder retryAttempts data))
+  (when-let [data (lookup-entry config id :retry-strategies)]
+    (. builder retryStrategies data))
+  (when-let [data (lookup-entry config id :scheduling-priority)]
+    (. builder schedulingPriority data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn job-queue-builder
-  "The job-queue-builder function buildes out new instances of 
-JobQueue$Builder using the provided configuration.  Each field is set as follows:
+(defn build-job-queue-builder
+  "The build-job-queue-builder function updates a JobQueue$Builder instance using the provided configuration.
+  The function takes the JobQueue$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `computeEnvironments` | java.util.List | [[cdk.support/lookup-entry]] | `:compute-environments` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
-| `jobQueueName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-queue-name` |
-| `jobStateTimeLimitActions` | java.util.List | [[cdk.support/lookup-entry]] | `:job-state-time-limit-actions` |
-| `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
-| `schedulingPolicy` | software.amazon.awscdk.services.batch.ISchedulingPolicy | [[cdk.support/lookup-entry]] | `:scheduling-policy` |"
-  [stack id config]
-  (let [builder (JobQueue$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :compute-environments)]
-      (. builder computeEnvironments data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :job-queue-name)]
-      (. builder jobQueueName data))
-    (when-let [data (lookup-entry config id :job-state-time-limit-actions)]
-      (. builder jobStateTimeLimitActions data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :scheduling-policy)]
-      (. builder schedulingPolicy data))
-    (.build builder)))
-
-
-(defn job-queue-props-builder
-  "The job-queue-props-builder function buildes out new instances of 
-JobQueueProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3038,96 +3279,140 @@ JobQueueProps$Builder using the provided configuration.  Each field is set as fo
 | `jobQueueName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-queue-name` |
 | `jobStateTimeLimitActions` | java.util.List | [[cdk.support/lookup-entry]] | `:job-state-time-limit-actions` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
-| `schedulingPolicy` | software.amazon.awscdk.services.batch.ISchedulingPolicy | [[cdk.support/lookup-entry]] | `:scheduling-policy` |"
-  [stack id config]
-  (let [builder (JobQueueProps$Builder.)]
-    (when-let [data (lookup-entry config id :compute-environments)]
-      (. builder computeEnvironments data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :job-queue-name)]
-      (. builder jobQueueName data))
-    (when-let [data (lookup-entry config id :job-state-time-limit-actions)]
-      (. builder jobStateTimeLimitActions data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :scheduling-policy)]
-      (. builder schedulingPolicy data))
-    (.build builder)))
+| `schedulingPolicy` | software.amazon.awscdk.services.batch.ISchedulingPolicy | [[cdk.support/lookup-entry]] | `:scheduling-policy` |
+"
+  [^JobQueue$Builder builder id config]
+  (when-let [data (lookup-entry config id :compute-environments)]
+    (. builder computeEnvironments data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :job-queue-name)]
+    (. builder jobQueueName data))
+  (when-let [data (lookup-entry config id :job-state-time-limit-actions)]
+    (. builder jobStateTimeLimitActions data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :scheduling-policy)]
+    (. builder schedulingPolicy data))
+  (.build builder))
 
 
-(defn job-state-time-limit-action-builder
-  "The job-state-time-limit-action-builder function buildes out new instances of 
-JobStateTimeLimitAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-job-queue-props-builder
+  "The build-job-queue-props-builder function updates a JobQueueProps$Builder instance using the provided configuration.
+  The function takes the JobQueueProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `computeEnvironments` | java.util.List | [[cdk.support/lookup-entry]] | `:compute-environments` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `jobQueueName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-queue-name` |
+| `jobStateTimeLimitActions` | java.util.List | [[cdk.support/lookup-entry]] | `:job-state-time-limit-actions` |
+| `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
+| `schedulingPolicy` | software.amazon.awscdk.services.batch.ISchedulingPolicy | [[cdk.support/lookup-entry]] | `:scheduling-policy` |
+"
+  [^JobQueueProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :compute-environments)]
+    (. builder computeEnvironments data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :job-queue-name)]
+    (. builder jobQueueName data))
+  (when-let [data (lookup-entry config id :job-state-time-limit-actions)]
+    (. builder jobStateTimeLimitActions data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :scheduling-policy)]
+    (. builder schedulingPolicy data))
+  (.build builder))
+
+
+(defn build-job-state-time-limit-action-builder
+  "The build-job-state-time-limit-action-builder function updates a JobStateTimeLimitAction$Builder instance using the provided configuration.
+  The function takes the JobStateTimeLimitAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `action` | software.amazon.awscdk.services.batch.JobStateTimeLimitActionsAction | [[cdk.api.services.batch/job-state-time-limit-actions-action]] | `:action` |
 | `maxTime` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:max-time` |
 | `reason` | software.amazon.awscdk.services.batch.JobStateTimeLimitActionsReason | [[cdk.api.services.batch/job-state-time-limit-actions-reason]] | `:reason` |
-| `state` | software.amazon.awscdk.services.batch.JobStateTimeLimitActionsState | [[cdk.api.services.batch/job-state-time-limit-actions-state]] | `:state` |"
-  [stack id config]
-  (let [builder (JobStateTimeLimitAction$Builder.)]
-    (when-let [data (job-state-time-limit-actions-action config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :max-time)]
-      (. builder maxTime data))
-    (when-let [data (job-state-time-limit-actions-reason config id :reason)]
-      (. builder reason data))
-    (when-let [data (job-state-time-limit-actions-state config id :state)]
-      (. builder state data))
-    (.build builder)))
+| `state` | software.amazon.awscdk.services.batch.JobStateTimeLimitActionsState | [[cdk.api.services.batch/job-state-time-limit-actions-state]] | `:state` |
+"
+  [^JobStateTimeLimitAction$Builder builder id config]
+  (when-let [data (job-state-time-limit-actions-action config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :max-time)]
+    (. builder maxTime data))
+  (when-let [data (job-state-time-limit-actions-reason config id :reason)]
+    (. builder reason data))
+  (when-let [data (job-state-time-limit-actions-state config id :state)]
+    (. builder state data))
+  (.build builder))
 
 
-(defn linux-parameters-builder
-  "The linux-parameters-builder function buildes out new instances of 
-LinuxParameters$Builder using the provided configuration.  Each field is set as follows:
+(defn build-linux-parameters-builder
+  "The build-linux-parameters-builder function updates a LinuxParameters$Builder instance using the provided configuration.
+  The function takes the LinuxParameters$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `initProcessEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:init-process-enabled` |
-| `maxSwap` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:max-swap` |
-| `sharedMemorySize` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:shared-memory-size` |
-| `swappiness` | java.lang.Number | [[cdk.support/lookup-entry]] | `:swappiness` |"
-  [stack id config]
-  (let [builder (LinuxParameters$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :init-process-enabled)]
-      (. builder initProcessEnabled data))
-    (when-let [data (lookup-entry config id :max-swap)]
-      (. builder maxSwap data))
-    (when-let [data (lookup-entry config id :shared-memory-size)]
-      (. builder sharedMemorySize data))
-    (when-let [data (lookup-entry config id :swappiness)]
-      (. builder swappiness data))
-    (.build builder)))
-
-
-(defn linux-parameters-props-builder
-  "The linux-parameters-props-builder function buildes out new instances of 
-LinuxParametersProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `initProcessEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:init-process-enabled` |
 | `maxSwap` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:max-swap` |
 | `sharedMemorySize` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:shared-memory-size` |
-| `swappiness` | java.lang.Number | [[cdk.support/lookup-entry]] | `:swappiness` |"
-  [stack id config]
-  (let [builder (LinuxParametersProps$Builder.)]
-    (when-let [data (lookup-entry config id :init-process-enabled)]
-      (. builder initProcessEnabled data))
-    (when-let [data (lookup-entry config id :max-swap)]
-      (. builder maxSwap data))
-    (when-let [data (lookup-entry config id :shared-memory-size)]
-      (. builder sharedMemorySize data))
-    (when-let [data (lookup-entry config id :swappiness)]
-      (. builder swappiness data))
-    (.build builder)))
+| `swappiness` | java.lang.Number | [[cdk.support/lookup-entry]] | `:swappiness` |
+"
+  [^LinuxParameters$Builder builder id config]
+  (when-let [data (lookup-entry config id :init-process-enabled)]
+    (. builder initProcessEnabled data))
+  (when-let [data (lookup-entry config id :max-swap)]
+    (. builder maxSwap data))
+  (when-let [data (lookup-entry config id :shared-memory-size)]
+    (. builder sharedMemorySize data))
+  (when-let [data (lookup-entry config id :swappiness)]
+    (. builder swappiness data))
+  (.build builder))
 
 
-(defn managed-compute-environment-props-builder
-  "The managed-compute-environment-props-builder function buildes out new instances of 
-ManagedComputeEnvironmentProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-linux-parameters-props-builder
+  "The build-linux-parameters-props-builder function updates a LinuxParametersProps$Builder instance using the provided configuration.
+  The function takes the LinuxParametersProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `initProcessEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:init-process-enabled` |
+| `maxSwap` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:max-swap` |
+| `sharedMemorySize` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:shared-memory-size` |
+| `swappiness` | java.lang.Number | [[cdk.support/lookup-entry]] | `:swappiness` |
+"
+  [^LinuxParametersProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :init-process-enabled)]
+    (. builder initProcessEnabled data))
+  (when-let [data (lookup-entry config id :max-swap)]
+    (. builder maxSwap data))
+  (when-let [data (lookup-entry config id :shared-memory-size)]
+    (. builder sharedMemorySize data))
+  (when-let [data (lookup-entry config id :swappiness)]
+    (. builder swappiness data))
+  (.build builder))
+
+
+(defn build-managed-compute-environment-props-builder
+  "The build-managed-compute-environment-props-builder function updates a ManagedComputeEnvironmentProps$Builder instance using the provided configuration.
+  The function takes the ManagedComputeEnvironmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3142,39 +3427,42 @@ ManagedComputeEnvironmentProps$Builder using the provided configuration.  Each f
 | `updateTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:update-timeout` |
 | `updateToLatestImageVersion` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:update-to-latest-image-version` |
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |"
-  [stack id config]
-  (let [builder (ManagedComputeEnvironmentProps$Builder.)]
-    (when-let [data (lookup-entry config id :compute-environment-name)]
-      (. builder computeEnvironmentName data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :maxv-cpus)]
-      (. builder maxvCpus data))
-    (when-let [data (lookup-entry config id :replace-compute-environment)]
-      (. builder replaceComputeEnvironment data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :service-role)]
-      (. builder serviceRole data))
-    (when-let [data (lookup-entry config id :spot)]
-      (. builder spot data))
-    (when-let [data (lookup-entry config id :terminate-on-update)]
-      (. builder terminateOnUpdate data))
-    (when-let [data (lookup-entry config id :update-timeout)]
-      (. builder updateTimeout data))
-    (when-let [data (lookup-entry config id :update-to-latest-image-version)]
-      (. builder updateToLatestImageVersion data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnets)]
-      (. builder vpcSubnets data))
-    (.build builder)))
+| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
+"
+  [^ManagedComputeEnvironmentProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :compute-environment-name)]
+    (. builder computeEnvironmentName data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :maxv-cpus)]
+    (. builder maxvCpus data))
+  (when-let [data (lookup-entry config id :replace-compute-environment)]
+    (. builder replaceComputeEnvironment data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :service-role)]
+    (. builder serviceRole data))
+  (when-let [data (lookup-entry config id :spot)]
+    (. builder spot data))
+  (when-let [data (lookup-entry config id :terminate-on-update)]
+    (. builder terminateOnUpdate data))
+  (when-let [data (lookup-entry config id :update-timeout)]
+    (. builder updateTimeout data))
+  (when-let [data (lookup-entry config id :update-to-latest-image-version)]
+    (. builder updateToLatestImageVersion data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnets)]
+    (. builder vpcSubnets data))
+  (.build builder))
 
 
-(defn managed-ec2-ecs-compute-environment-builder
-  "The managed-ec2-ecs-compute-environment-builder function buildes out new instances of 
-ManagedEc2EcsComputeEnvironment$Builder using the provided configuration.  Each field is set as follows:
+(defn build-managed-ec2-ecs-compute-environment-builder
+  "The build-managed-ec2-ecs-compute-environment-builder function updates a ManagedEc2EcsComputeEnvironment$Builder instance using the provided configuration.
+  The function takes the ManagedEc2EcsComputeEnvironment$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3200,61 +3488,64 @@ ManagedEc2EcsComputeEnvironment$Builder using the provided configuration.  Each 
 | `updateToLatestImageVersion` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:update-to-latest-image-version` |
 | `useOptimalInstanceClasses` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-optimal-instance-classes` |
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |"
-  [stack id config]
-  (let [builder (ManagedEc2EcsComputeEnvironment$Builder/create stack id)]
-    (when-let [data (allocation-strategy config id :allocation-strategy)]
-      (. builder allocationStrategy data))
-    (when-let [data (lookup-entry config id :compute-environment-name)]
-      (. builder computeEnvironmentName data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :images)]
-      (. builder images data))
-    (when-let [data (lookup-entry config id :instance-classes)]
-      (. builder instanceClasses data))
-    (when-let [data (lookup-entry config id :instance-role)]
-      (. builder instanceRole data))
-    (when-let [data (lookup-entry config id :instance-types)]
-      (. builder instanceTypes data))
-    (when-let [data (lookup-entry config id :launch-template)]
-      (. builder launchTemplate data))
-    (when-let [data (lookup-entry config id :maxv-cpus)]
-      (. builder maxvCpus data))
-    (when-let [data (lookup-entry config id :minv-cpus)]
-      (. builder minvCpus data))
-    (when-let [data (lookup-entry config id :placement-group)]
-      (. builder placementGroup data))
-    (when-let [data (lookup-entry config id :replace-compute-environment)]
-      (. builder replaceComputeEnvironment data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :service-role)]
-      (. builder serviceRole data))
-    (when-let [data (lookup-entry config id :spot)]
-      (. builder spot data))
-    (when-let [data (lookup-entry config id :spot-bid-percentage)]
-      (. builder spotBidPercentage data))
-    (when-let [data (lookup-entry config id :spot-fleet-role)]
-      (. builder spotFleetRole data))
-    (when-let [data (lookup-entry config id :terminate-on-update)]
-      (. builder terminateOnUpdate data))
-    (when-let [data (lookup-entry config id :update-timeout)]
-      (. builder updateTimeout data))
-    (when-let [data (lookup-entry config id :update-to-latest-image-version)]
-      (. builder updateToLatestImageVersion data))
-    (when-let [data (lookup-entry config id :use-optimal-instance-classes)]
-      (. builder useOptimalInstanceClasses data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnets)]
-      (. builder vpcSubnets data))
-    (.build builder)))
+| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
+"
+  [^ManagedEc2EcsComputeEnvironment$Builder builder id config]
+  (when-let [data (allocation-strategy config id :allocation-strategy)]
+    (. builder allocationStrategy data))
+  (when-let [data (lookup-entry config id :compute-environment-name)]
+    (. builder computeEnvironmentName data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :images)]
+    (. builder images data))
+  (when-let [data (lookup-entry config id :instance-classes)]
+    (. builder instanceClasses data))
+  (when-let [data (lookup-entry config id :instance-role)]
+    (. builder instanceRole data))
+  (when-let [data (lookup-entry config id :instance-types)]
+    (. builder instanceTypes data))
+  (when-let [data (lookup-entry config id :launch-template)]
+    (. builder launchTemplate data))
+  (when-let [data (lookup-entry config id :maxv-cpus)]
+    (. builder maxvCpus data))
+  (when-let [data (lookup-entry config id :minv-cpus)]
+    (. builder minvCpus data))
+  (when-let [data (lookup-entry config id :placement-group)]
+    (. builder placementGroup data))
+  (when-let [data (lookup-entry config id :replace-compute-environment)]
+    (. builder replaceComputeEnvironment data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :service-role)]
+    (. builder serviceRole data))
+  (when-let [data (lookup-entry config id :spot)]
+    (. builder spot data))
+  (when-let [data (lookup-entry config id :spot-bid-percentage)]
+    (. builder spotBidPercentage data))
+  (when-let [data (lookup-entry config id :spot-fleet-role)]
+    (. builder spotFleetRole data))
+  (when-let [data (lookup-entry config id :terminate-on-update)]
+    (. builder terminateOnUpdate data))
+  (when-let [data (lookup-entry config id :update-timeout)]
+    (. builder updateTimeout data))
+  (when-let [data (lookup-entry config id :update-to-latest-image-version)]
+    (. builder updateToLatestImageVersion data))
+  (when-let [data (lookup-entry config id :use-optimal-instance-classes)]
+    (. builder useOptimalInstanceClasses data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnets)]
+    (. builder vpcSubnets data))
+  (.build builder))
 
 
-(defn managed-ec2-ecs-compute-environment-props-builder
-  "The managed-ec2-ecs-compute-environment-props-builder function buildes out new instances of 
-ManagedEc2EcsComputeEnvironmentProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-managed-ec2-ecs-compute-environment-props-builder
+  "The build-managed-ec2-ecs-compute-environment-props-builder function updates a ManagedEc2EcsComputeEnvironmentProps$Builder instance using the provided configuration.
+  The function takes the ManagedEc2EcsComputeEnvironmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3280,61 +3571,64 @@ ManagedEc2EcsComputeEnvironmentProps$Builder using the provided configuration.  
 | `updateToLatestImageVersion` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:update-to-latest-image-version` |
 | `useOptimalInstanceClasses` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-optimal-instance-classes` |
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |"
-  [stack id config]
-  (let [builder (ManagedEc2EcsComputeEnvironmentProps$Builder.)]
-    (when-let [data (allocation-strategy config id :allocation-strategy)]
-      (. builder allocationStrategy data))
-    (when-let [data (lookup-entry config id :compute-environment-name)]
-      (. builder computeEnvironmentName data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :images)]
-      (. builder images data))
-    (when-let [data (lookup-entry config id :instance-classes)]
-      (. builder instanceClasses data))
-    (when-let [data (lookup-entry config id :instance-role)]
-      (. builder instanceRole data))
-    (when-let [data (lookup-entry config id :instance-types)]
-      (. builder instanceTypes data))
-    (when-let [data (lookup-entry config id :launch-template)]
-      (. builder launchTemplate data))
-    (when-let [data (lookup-entry config id :maxv-cpus)]
-      (. builder maxvCpus data))
-    (when-let [data (lookup-entry config id :minv-cpus)]
-      (. builder minvCpus data))
-    (when-let [data (lookup-entry config id :placement-group)]
-      (. builder placementGroup data))
-    (when-let [data (lookup-entry config id :replace-compute-environment)]
-      (. builder replaceComputeEnvironment data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :service-role)]
-      (. builder serviceRole data))
-    (when-let [data (lookup-entry config id :spot)]
-      (. builder spot data))
-    (when-let [data (lookup-entry config id :spot-bid-percentage)]
-      (. builder spotBidPercentage data))
-    (when-let [data (lookup-entry config id :spot-fleet-role)]
-      (. builder spotFleetRole data))
-    (when-let [data (lookup-entry config id :terminate-on-update)]
-      (. builder terminateOnUpdate data))
-    (when-let [data (lookup-entry config id :update-timeout)]
-      (. builder updateTimeout data))
-    (when-let [data (lookup-entry config id :update-to-latest-image-version)]
-      (. builder updateToLatestImageVersion data))
-    (when-let [data (lookup-entry config id :use-optimal-instance-classes)]
-      (. builder useOptimalInstanceClasses data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnets)]
-      (. builder vpcSubnets data))
-    (.build builder)))
+| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
+"
+  [^ManagedEc2EcsComputeEnvironmentProps$Builder builder id config]
+  (when-let [data (allocation-strategy config id :allocation-strategy)]
+    (. builder allocationStrategy data))
+  (when-let [data (lookup-entry config id :compute-environment-name)]
+    (. builder computeEnvironmentName data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :images)]
+    (. builder images data))
+  (when-let [data (lookup-entry config id :instance-classes)]
+    (. builder instanceClasses data))
+  (when-let [data (lookup-entry config id :instance-role)]
+    (. builder instanceRole data))
+  (when-let [data (lookup-entry config id :instance-types)]
+    (. builder instanceTypes data))
+  (when-let [data (lookup-entry config id :launch-template)]
+    (. builder launchTemplate data))
+  (when-let [data (lookup-entry config id :maxv-cpus)]
+    (. builder maxvCpus data))
+  (when-let [data (lookup-entry config id :minv-cpus)]
+    (. builder minvCpus data))
+  (when-let [data (lookup-entry config id :placement-group)]
+    (. builder placementGroup data))
+  (when-let [data (lookup-entry config id :replace-compute-environment)]
+    (. builder replaceComputeEnvironment data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :service-role)]
+    (. builder serviceRole data))
+  (when-let [data (lookup-entry config id :spot)]
+    (. builder spot data))
+  (when-let [data (lookup-entry config id :spot-bid-percentage)]
+    (. builder spotBidPercentage data))
+  (when-let [data (lookup-entry config id :spot-fleet-role)]
+    (. builder spotFleetRole data))
+  (when-let [data (lookup-entry config id :terminate-on-update)]
+    (. builder terminateOnUpdate data))
+  (when-let [data (lookup-entry config id :update-timeout)]
+    (. builder updateTimeout data))
+  (when-let [data (lookup-entry config id :update-to-latest-image-version)]
+    (. builder updateToLatestImageVersion data))
+  (when-let [data (lookup-entry config id :use-optimal-instance-classes)]
+    (. builder useOptimalInstanceClasses data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnets)]
+    (. builder vpcSubnets data))
+  (.build builder))
 
 
-(defn managed-ec2-eks-compute-environment-builder
-  "The managed-ec2-eks-compute-environment-builder function buildes out new instances of 
-ManagedEc2EksComputeEnvironment$Builder using the provided configuration.  Each field is set as follows:
+(defn build-managed-ec2-eks-compute-environment-builder
+  "The build-managed-ec2-eks-compute-environment-builder function updates a ManagedEc2EksComputeEnvironment$Builder instance using the provided configuration.
+  The function takes the ManagedEc2EksComputeEnvironment$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3361,63 +3655,66 @@ ManagedEc2EksComputeEnvironment$Builder using the provided configuration.  Each 
 | `updateToLatestImageVersion` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:update-to-latest-image-version` |
 | `useOptimalInstanceClasses` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-optimal-instance-classes` |
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |"
-  [stack id config]
-  (let [builder (ManagedEc2EksComputeEnvironment$Builder/create stack id)]
-    (when-let [data (allocation-strategy config id :allocation-strategy)]
-      (. builder allocationStrategy data))
-    (when-let [data (lookup-entry config id :compute-environment-name)]
-      (. builder computeEnvironmentName data))
-    (when-let [data (lookup-entry config id :eks-cluster)]
-      (. builder eksCluster data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :images)]
-      (. builder images data))
-    (when-let [data (lookup-entry config id :instance-classes)]
-      (. builder instanceClasses data))
-    (when-let [data (lookup-entry config id :instance-role)]
-      (. builder instanceRole data))
-    (when-let [data (lookup-entry config id :instance-types)]
-      (. builder instanceTypes data))
-    (when-let [data (lookup-entry config id :kubernetes-namespace)]
-      (. builder kubernetesNamespace data))
-    (when-let [data (lookup-entry config id :launch-template)]
-      (. builder launchTemplate data))
-    (when-let [data (lookup-entry config id :maxv-cpus)]
-      (. builder maxvCpus data))
-    (when-let [data (lookup-entry config id :minv-cpus)]
-      (. builder minvCpus data))
-    (when-let [data (lookup-entry config id :placement-group)]
-      (. builder placementGroup data))
-    (when-let [data (lookup-entry config id :replace-compute-environment)]
-      (. builder replaceComputeEnvironment data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :service-role)]
-      (. builder serviceRole data))
-    (when-let [data (lookup-entry config id :spot)]
-      (. builder spot data))
-    (when-let [data (lookup-entry config id :spot-bid-percentage)]
-      (. builder spotBidPercentage data))
-    (when-let [data (lookup-entry config id :terminate-on-update)]
-      (. builder terminateOnUpdate data))
-    (when-let [data (lookup-entry config id :update-timeout)]
-      (. builder updateTimeout data))
-    (when-let [data (lookup-entry config id :update-to-latest-image-version)]
-      (. builder updateToLatestImageVersion data))
-    (when-let [data (lookup-entry config id :use-optimal-instance-classes)]
-      (. builder useOptimalInstanceClasses data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnets)]
-      (. builder vpcSubnets data))
-    (.build builder)))
+| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
+"
+  [^ManagedEc2EksComputeEnvironment$Builder builder id config]
+  (when-let [data (allocation-strategy config id :allocation-strategy)]
+    (. builder allocationStrategy data))
+  (when-let [data (lookup-entry config id :compute-environment-name)]
+    (. builder computeEnvironmentName data))
+  (when-let [data (lookup-entry config id :eks-cluster)]
+    (. builder eksCluster data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :images)]
+    (. builder images data))
+  (when-let [data (lookup-entry config id :instance-classes)]
+    (. builder instanceClasses data))
+  (when-let [data (lookup-entry config id :instance-role)]
+    (. builder instanceRole data))
+  (when-let [data (lookup-entry config id :instance-types)]
+    (. builder instanceTypes data))
+  (when-let [data (lookup-entry config id :kubernetes-namespace)]
+    (. builder kubernetesNamespace data))
+  (when-let [data (lookup-entry config id :launch-template)]
+    (. builder launchTemplate data))
+  (when-let [data (lookup-entry config id :maxv-cpus)]
+    (. builder maxvCpus data))
+  (when-let [data (lookup-entry config id :minv-cpus)]
+    (. builder minvCpus data))
+  (when-let [data (lookup-entry config id :placement-group)]
+    (. builder placementGroup data))
+  (when-let [data (lookup-entry config id :replace-compute-environment)]
+    (. builder replaceComputeEnvironment data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :service-role)]
+    (. builder serviceRole data))
+  (when-let [data (lookup-entry config id :spot)]
+    (. builder spot data))
+  (when-let [data (lookup-entry config id :spot-bid-percentage)]
+    (. builder spotBidPercentage data))
+  (when-let [data (lookup-entry config id :terminate-on-update)]
+    (. builder terminateOnUpdate data))
+  (when-let [data (lookup-entry config id :update-timeout)]
+    (. builder updateTimeout data))
+  (when-let [data (lookup-entry config id :update-to-latest-image-version)]
+    (. builder updateToLatestImageVersion data))
+  (when-let [data (lookup-entry config id :use-optimal-instance-classes)]
+    (. builder useOptimalInstanceClasses data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnets)]
+    (. builder vpcSubnets data))
+  (.build builder))
 
 
-(defn managed-ec2-eks-compute-environment-props-builder
-  "The managed-ec2-eks-compute-environment-props-builder function buildes out new instances of 
-ManagedEc2EksComputeEnvironmentProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-managed-ec2-eks-compute-environment-props-builder
+  "The build-managed-ec2-eks-compute-environment-props-builder function updates a ManagedEc2EksComputeEnvironmentProps$Builder instance using the provided configuration.
+  The function takes the ManagedEc2EksComputeEnvironmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3444,124 +3741,89 @@ ManagedEc2EksComputeEnvironmentProps$Builder using the provided configuration.  
 | `updateToLatestImageVersion` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:update-to-latest-image-version` |
 | `useOptimalInstanceClasses` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-optimal-instance-classes` |
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |"
-  [stack id config]
-  (let [builder (ManagedEc2EksComputeEnvironmentProps$Builder.)]
-    (when-let [data (allocation-strategy config id :allocation-strategy)]
-      (. builder allocationStrategy data))
-    (when-let [data (lookup-entry config id :compute-environment-name)]
-      (. builder computeEnvironmentName data))
-    (when-let [data (lookup-entry config id :eks-cluster)]
-      (. builder eksCluster data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :images)]
-      (. builder images data))
-    (when-let [data (lookup-entry config id :instance-classes)]
-      (. builder instanceClasses data))
-    (when-let [data (lookup-entry config id :instance-role)]
-      (. builder instanceRole data))
-    (when-let [data (lookup-entry config id :instance-types)]
-      (. builder instanceTypes data))
-    (when-let [data (lookup-entry config id :kubernetes-namespace)]
-      (. builder kubernetesNamespace data))
-    (when-let [data (lookup-entry config id :launch-template)]
-      (. builder launchTemplate data))
-    (when-let [data (lookup-entry config id :maxv-cpus)]
-      (. builder maxvCpus data))
-    (when-let [data (lookup-entry config id :minv-cpus)]
-      (. builder minvCpus data))
-    (when-let [data (lookup-entry config id :placement-group)]
-      (. builder placementGroup data))
-    (when-let [data (lookup-entry config id :replace-compute-environment)]
-      (. builder replaceComputeEnvironment data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :service-role)]
-      (. builder serviceRole data))
-    (when-let [data (lookup-entry config id :spot)]
-      (. builder spot data))
-    (when-let [data (lookup-entry config id :spot-bid-percentage)]
-      (. builder spotBidPercentage data))
-    (when-let [data (lookup-entry config id :terminate-on-update)]
-      (. builder terminateOnUpdate data))
-    (when-let [data (lookup-entry config id :update-timeout)]
-      (. builder updateTimeout data))
-    (when-let [data (lookup-entry config id :update-to-latest-image-version)]
-      (. builder updateToLatestImageVersion data))
-    (when-let [data (lookup-entry config id :use-optimal-instance-classes)]
-      (. builder useOptimalInstanceClasses data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnets)]
-      (. builder vpcSubnets data))
-    (.build builder)))
+| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
+"
+  [^ManagedEc2EksComputeEnvironmentProps$Builder builder id config]
+  (when-let [data (allocation-strategy config id :allocation-strategy)]
+    (. builder allocationStrategy data))
+  (when-let [data (lookup-entry config id :compute-environment-name)]
+    (. builder computeEnvironmentName data))
+  (when-let [data (lookup-entry config id :eks-cluster)]
+    (. builder eksCluster data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :images)]
+    (. builder images data))
+  (when-let [data (lookup-entry config id :instance-classes)]
+    (. builder instanceClasses data))
+  (when-let [data (lookup-entry config id :instance-role)]
+    (. builder instanceRole data))
+  (when-let [data (lookup-entry config id :instance-types)]
+    (. builder instanceTypes data))
+  (when-let [data (lookup-entry config id :kubernetes-namespace)]
+    (. builder kubernetesNamespace data))
+  (when-let [data (lookup-entry config id :launch-template)]
+    (. builder launchTemplate data))
+  (when-let [data (lookup-entry config id :maxv-cpus)]
+    (. builder maxvCpus data))
+  (when-let [data (lookup-entry config id :minv-cpus)]
+    (. builder minvCpus data))
+  (when-let [data (lookup-entry config id :placement-group)]
+    (. builder placementGroup data))
+  (when-let [data (lookup-entry config id :replace-compute-environment)]
+    (. builder replaceComputeEnvironment data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :service-role)]
+    (. builder serviceRole data))
+  (when-let [data (lookup-entry config id :spot)]
+    (. builder spot data))
+  (when-let [data (lookup-entry config id :spot-bid-percentage)]
+    (. builder spotBidPercentage data))
+  (when-let [data (lookup-entry config id :terminate-on-update)]
+    (. builder terminateOnUpdate data))
+  (when-let [data (lookup-entry config id :update-timeout)]
+    (. builder updateTimeout data))
+  (when-let [data (lookup-entry config id :update-to-latest-image-version)]
+    (. builder updateToLatestImageVersion data))
+  (when-let [data (lookup-entry config id :use-optimal-instance-classes)]
+    (. builder useOptimalInstanceClasses data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnets)]
+    (. builder vpcSubnets data))
+  (.build builder))
 
 
-(defn multi-node-container-builder
-  "The multi-node-container-builder function buildes out new instances of 
-MultiNodeContainer$Builder using the provided configuration.  Each field is set as follows:
+(defn build-multi-node-container-builder
+  "The build-multi-node-container-builder function updates a MultiNodeContainer$Builder instance using the provided configuration.
+  The function takes the MultiNodeContainer$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `container` | software.amazon.awscdk.services.batch.IEcsContainerDefinition | [[cdk.support/lookup-entry]] | `:container` |
 | `endNode` | java.lang.Number | [[cdk.support/lookup-entry]] | `:end-node` |
-| `startNode` | java.lang.Number | [[cdk.support/lookup-entry]] | `:start-node` |"
-  [stack id config]
-  (let [builder (MultiNodeContainer$Builder.)]
-    (when-let [data (lookup-entry config id :container)]
-      (. builder container data))
-    (when-let [data (lookup-entry config id :end-node)]
-      (. builder endNode data))
-    (when-let [data (lookup-entry config id :start-node)]
-      (. builder startNode data))
-    (.build builder)))
+| `startNode` | java.lang.Number | [[cdk.support/lookup-entry]] | `:start-node` |
+"
+  [^MultiNodeContainer$Builder builder id config]
+  (when-let [data (lookup-entry config id :container)]
+    (. builder container data))
+  (when-let [data (lookup-entry config id :end-node)]
+    (. builder endNode data))
+  (when-let [data (lookup-entry config id :start-node)]
+    (. builder startNode data))
+  (.build builder))
 
 
-(defn multi-node-job-definition-builder
-  "The multi-node-job-definition-builder function buildes out new instances of 
-MultiNodeJobDefinition$Builder using the provided configuration.  Each field is set as follows:
+(defn build-multi-node-job-definition-builder
+  "The build-multi-node-job-definition-builder function updates a MultiNodeJobDefinition$Builder instance using the provided configuration.
+  The function takes the MultiNodeJobDefinition$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `containers` | java.util.List | [[cdk.support/lookup-entry]] | `:containers` |
-| `instanceType` | software.amazon.awscdk.services.ec2.InstanceType | [[cdk.support/lookup-entry]] | `:instance-type` |
-| `jobDefinitionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-definition-name` |
-| `mainNode` | java.lang.Number | [[cdk.support/lookup-entry]] | `:main-node` |
-| `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
-| `propagateTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:propagate-tags` |
-| `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
-| `retryStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:retry-strategies` |
-| `schedulingPriority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scheduling-priority` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (MultiNodeJobDefinition$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :containers)]
-      (. builder containers data))
-    (when-let [data (lookup-entry config id :instance-type)]
-      (. builder instanceType data))
-    (when-let [data (lookup-entry config id :job-definition-name)]
-      (. builder jobDefinitionName data))
-    (when-let [data (lookup-entry config id :main-node)]
-      (. builder mainNode data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :retry-attempts)]
-      (. builder retryAttempts data))
-    (when-let [data (lookup-entry config id :retry-strategies)]
-      (. builder retryStrategies data))
-    (when-let [data (lookup-entry config id :scheduling-priority)]
-      (. builder schedulingPriority data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn multi-node-job-definition-props-builder
-  "The multi-node-job-definition-props-builder function buildes out new instances of 
-MultiNodeJobDefinitionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3574,78 +3836,102 @@ MultiNodeJobDefinitionProps$Builder using the provided configuration.  Each fiel
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 | `retryStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:retry-strategies` |
 | `schedulingPriority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scheduling-priority` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (MultiNodeJobDefinitionProps$Builder.)]
-    (when-let [data (lookup-entry config id :containers)]
-      (. builder containers data))
-    (when-let [data (lookup-entry config id :instance-type)]
-      (. builder instanceType data))
-    (when-let [data (lookup-entry config id :job-definition-name)]
-      (. builder jobDefinitionName data))
-    (when-let [data (lookup-entry config id :main-node)]
-      (. builder mainNode data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :propagate-tags)]
-      (. builder propagateTags data))
-    (when-let [data (lookup-entry config id :retry-attempts)]
-      (. builder retryAttempts data))
-    (when-let [data (lookup-entry config id :retry-strategies)]
-      (. builder retryStrategies data))
-    (when-let [data (lookup-entry config id :scheduling-priority)]
-      (. builder schedulingPriority data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^MultiNodeJobDefinition$Builder builder id config]
+  (when-let [data (lookup-entry config id :containers)]
+    (. builder containers data))
+  (when-let [data (lookup-entry config id :instance-type)]
+    (. builder instanceType data))
+  (when-let [data (lookup-entry config id :job-definition-name)]
+    (. builder jobDefinitionName data))
+  (when-let [data (lookup-entry config id :main-node)]
+    (. builder mainNode data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :retry-attempts)]
+    (. builder retryAttempts data))
+  (when-let [data (lookup-entry config id :retry-strategies)]
+    (. builder retryStrategies data))
+  (when-let [data (lookup-entry config id :scheduling-priority)]
+    (. builder schedulingPriority data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn ordered-compute-environment-builder
-  "The ordered-compute-environment-builder function buildes out new instances of 
-OrderedComputeEnvironment$Builder using the provided configuration.  Each field is set as follows:
+(defn build-multi-node-job-definition-props-builder
+  "The build-multi-node-job-definition-props-builder function updates a MultiNodeJobDefinitionProps$Builder instance using the provided configuration.
+  The function takes the MultiNodeJobDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `containers` | java.util.List | [[cdk.support/lookup-entry]] | `:containers` |
+| `instanceType` | software.amazon.awscdk.services.ec2.InstanceType | [[cdk.support/lookup-entry]] | `:instance-type` |
+| `jobDefinitionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-definition-name` |
+| `mainNode` | java.lang.Number | [[cdk.support/lookup-entry]] | `:main-node` |
+| `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
+| `propagateTags` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:propagate-tags` |
+| `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
+| `retryStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:retry-strategies` |
+| `schedulingPriority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scheduling-priority` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^MultiNodeJobDefinitionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :containers)]
+    (. builder containers data))
+  (when-let [data (lookup-entry config id :instance-type)]
+    (. builder instanceType data))
+  (when-let [data (lookup-entry config id :job-definition-name)]
+    (. builder jobDefinitionName data))
+  (when-let [data (lookup-entry config id :main-node)]
+    (. builder mainNode data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :propagate-tags)]
+    (. builder propagateTags data))
+  (when-let [data (lookup-entry config id :retry-attempts)]
+    (. builder retryAttempts data))
+  (when-let [data (lookup-entry config id :retry-strategies)]
+    (. builder retryStrategies data))
+  (when-let [data (lookup-entry config id :scheduling-priority)]
+    (. builder schedulingPriority data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-ordered-compute-environment-builder
+  "The build-ordered-compute-environment-builder function updates a OrderedComputeEnvironment$Builder instance using the provided configuration.
+  The function takes the OrderedComputeEnvironment$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `computeEnvironment` | software.amazon.awscdk.services.batch.IComputeEnvironment | [[cdk.support/lookup-entry]] | `:compute-environment` |
-| `order` | java.lang.Number | [[cdk.support/lookup-entry]] | `:order` |"
-  [stack id config]
-  (let [builder (OrderedComputeEnvironment$Builder.)]
-    (when-let [data (lookup-entry config id :compute-environment)]
-      (. builder computeEnvironment data))
-    (when-let [data (lookup-entry config id :order)]
-      (. builder order data))
-    (.build builder)))
+| `order` | java.lang.Number | [[cdk.support/lookup-entry]] | `:order` |
+"
+  [^OrderedComputeEnvironment$Builder builder id config]
+  (when-let [data (lookup-entry config id :compute-environment)]
+    (. builder computeEnvironment data))
+  (when-let [data (lookup-entry config id :order)]
+    (. builder order data))
+  (.build builder))
 
 
-(defn secret-path-volume-builder
-  "The secret-path-volume-builder function buildes out new instances of 
-SecretPathVolume$Builder using the provided configuration.  Each field is set as follows:
+(defn build-secret-path-volume-builder
+  "The build-secret-path-volume-builder function updates a SecretPathVolume$Builder instance using the provided configuration.
+  The function takes the SecretPathVolume$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `mountPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:mount-path` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `optional` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:optional` |
-| `readonly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly` |
-| `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |"
-  [stack id config]
-  (let [builder (SecretPathVolume$Builder/create)]
-    (when-let [data (lookup-entry config id :mount-path)]
-      (. builder mountPath data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :optional)]
-      (. builder optional data))
-    (when-let [data (lookup-entry config id :readonly)]
-      (. builder readonly data))
-    (when-let [data (lookup-entry config id :secret-name)]
-      (. builder secretName data))
-    (.build builder)))
-
-
-(defn secret-path-volume-options-builder
-  "The secret-path-volume-options-builder function buildes out new instances of 
-SecretPathVolumeOptions$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3653,137 +3939,184 @@ SecretPathVolumeOptions$Builder using the provided configuration.  Each field is
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `optional` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:optional` |
 | `readonly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly` |
-| `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |"
-  [stack id config]
-  (let [builder (SecretPathVolumeOptions$Builder.)]
-    (when-let [data (lookup-entry config id :mount-path)]
-      (. builder mountPath data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :optional)]
-      (. builder optional data))
-    (when-let [data (lookup-entry config id :readonly)]
-      (. builder readonly data))
-    (when-let [data (lookup-entry config id :secret-name)]
-      (. builder secretName data))
-    (.build builder)))
+| `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |
+"
+  [^SecretPathVolume$Builder builder id config]
+  (when-let [data (lookup-entry config id :mount-path)]
+    (. builder mountPath data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :optional)]
+    (. builder optional data))
+  (when-let [data (lookup-entry config id :readonly)]
+    (. builder readonly data))
+  (when-let [data (lookup-entry config id :secret-name)]
+    (. builder secretName data))
+  (.build builder))
 
 
-(defn secret-version-info-builder
-  "The secret-version-info-builder function buildes out new instances of 
-SecretVersionInfo$Builder using the provided configuration.  Each field is set as follows:
+(defn build-secret-path-volume-options-builder
+  "The build-secret-path-volume-options-builder function updates a SecretPathVolumeOptions$Builder instance using the provided configuration.
+  The function takes the SecretPathVolumeOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `mountPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:mount-path` |
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `optional` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:optional` |
+| `readonly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:readonly` |
+| `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |
+"
+  [^SecretPathVolumeOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :mount-path)]
+    (. builder mountPath data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :optional)]
+    (. builder optional data))
+  (when-let [data (lookup-entry config id :readonly)]
+    (. builder readonly data))
+  (when-let [data (lookup-entry config id :secret-name)]
+    (. builder secretName data))
+  (.build builder))
+
+
+(defn build-secret-version-info-builder
+  "The build-secret-version-info-builder function updates a SecretVersionInfo$Builder instance using the provided configuration.
+  The function takes the SecretVersionInfo$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `versionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-id` |
-| `versionStage` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-stage` |"
-  [stack id config]
-  (let [builder (SecretVersionInfo$Builder.)]
-    (when-let [data (lookup-entry config id :version-id)]
-      (. builder versionId data))
-    (when-let [data (lookup-entry config id :version-stage)]
-      (. builder versionStage data))
-    (.build builder)))
+| `versionStage` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-stage` |
+"
+  [^SecretVersionInfo$Builder builder id config]
+  (when-let [data (lookup-entry config id :version-id)]
+    (. builder versionId data))
+  (when-let [data (lookup-entry config id :version-stage)]
+    (. builder versionStage data))
+  (.build builder))
 
 
-(defn share-builder
-  "The share-builder function buildes out new instances of 
-Share$Builder using the provided configuration.  Each field is set as follows:
+(defn build-share-builder
+  "The build-share-builder function updates a Share$Builder instance using the provided configuration.
+  The function takes the Share$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `shareIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:share-identifier` |
-| `weightFactor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight-factor` |"
-  [stack id config]
-  (let [builder (Share$Builder.)]
-    (when-let [data (lookup-entry config id :share-identifier)]
-      (. builder shareIdentifier data))
-    (when-let [data (lookup-entry config id :weight-factor)]
-      (. builder weightFactor data))
-    (.build builder)))
+| `weightFactor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight-factor` |
+"
+  [^Share$Builder builder id config]
+  (when-let [data (lookup-entry config id :share-identifier)]
+    (. builder shareIdentifier data))
+  (when-let [data (lookup-entry config id :weight-factor)]
+    (. builder weightFactor data))
+  (.build builder))
 
 
-(defn tmpfs-builder
-  "The tmpfs-builder function buildes out new instances of 
-Tmpfs$Builder using the provided configuration.  Each field is set as follows:
+(defn build-tmpfs-builder
+  "The build-tmpfs-builder function updates a Tmpfs$Builder instance using the provided configuration.
+  The function takes the Tmpfs$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `containerPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-path` |
 | `mountOptions` | java.util.List | [[cdk.support/lookup-entry]] | `:mount-options` |
-| `size` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:size` |"
-  [stack id config]
-  (let [builder (Tmpfs$Builder.)]
-    (when-let [data (lookup-entry config id :container-path)]
-      (. builder containerPath data))
-    (when-let [data (lookup-entry config id :mount-options)]
-      (. builder mountOptions data))
-    (when-let [data (lookup-entry config id :size)]
-      (. builder size data))
-    (.build builder)))
+| `size` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:size` |
+"
+  [^Tmpfs$Builder builder id config]
+  (when-let [data (lookup-entry config id :container-path)]
+    (. builder containerPath data))
+  (when-let [data (lookup-entry config id :mount-options)]
+    (. builder mountOptions data))
+  (when-let [data (lookup-entry config id :size)]
+    (. builder size data))
+  (.build builder))
 
 
-(defn ulimit-builder
-  "The ulimit-builder function buildes out new instances of 
-Ulimit$Builder using the provided configuration.  Each field is set as follows:
+(defn build-ulimit-builder
+  "The build-ulimit-builder function updates a Ulimit$Builder instance using the provided configuration.
+  The function takes the Ulimit$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `hardLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:hard-limit` |
 | `name` | software.amazon.awscdk.services.batch.UlimitName | [[cdk.api.services.batch/ulimit-name]] | `:name` |
-| `softLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:soft-limit` |"
-  [stack id config]
-  (let [builder (Ulimit$Builder.)]
-    (when-let [data (lookup-entry config id :hard-limit)]
-      (. builder hardLimit data))
-    (when-let [data (ulimit-name config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :soft-limit)]
-      (. builder softLimit data))
-    (.build builder)))
+| `softLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:soft-limit` |
+"
+  [^Ulimit$Builder builder id config]
+  (when-let [data (lookup-entry config id :hard-limit)]
+    (. builder hardLimit data))
+  (when-let [data (ulimit-name config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :soft-limit)]
+    (. builder softLimit data))
+  (.build builder))
 
 
-(defn unmanaged-compute-environment-builder
-  "The unmanaged-compute-environment-builder function buildes out new instances of 
-UnmanagedComputeEnvironment$Builder using the provided configuration.  Each field is set as follows:
+(defn build-unmanaged-compute-environment-builder
+  "The build-unmanaged-compute-environment-builder function updates a UnmanagedComputeEnvironment$Builder instance using the provided configuration.
+  The function takes the UnmanagedComputeEnvironment$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `computeEnvironmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:compute-environment-name` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
-| `serviceRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:service-role` |
-| `unmanagedvCpus` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unmanagedv-cpus` |"
-  [stack id config]
-  (let [builder (UnmanagedComputeEnvironment$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :compute-environment-name)]
-      (. builder computeEnvironmentName data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :service-role)]
-      (. builder serviceRole data))
-    (when-let [data (lookup-entry config id :unmanagedv-cpus)]
-      (. builder unmanagedvCpus data))
-    (.build builder)))
-
-
-(defn unmanaged-compute-environment-props-builder
-  "The unmanaged-compute-environment-props-builder function buildes out new instances of 
-UnmanagedComputeEnvironmentProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `computeEnvironmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:compute-environment-name` |
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `serviceRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:service-role` |
-| `unmanagedvCpus` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unmanagedv-cpus` |"
-  [stack id config]
-  (let [builder (UnmanagedComputeEnvironmentProps$Builder.)]
-    (when-let [data (lookup-entry config id :compute-environment-name)]
-      (. builder computeEnvironmentName data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :service-role)]
-      (. builder serviceRole data))
-    (when-let [data (lookup-entry config id :unmanagedv-cpus)]
-      (. builder unmanagedvCpus data))
-    (.build builder)))
+| `unmanagedvCpus` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unmanagedv-cpus` |
+"
+  [^UnmanagedComputeEnvironment$Builder builder id config]
+  (when-let [data (lookup-entry config id :compute-environment-name)]
+    (. builder computeEnvironmentName data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :service-role)]
+    (. builder serviceRole data))
+  (when-let [data (lookup-entry config id :unmanagedv-cpus)]
+    (. builder unmanagedvCpus data))
+  (.build builder))
+
+
+(defn build-unmanaged-compute-environment-props-builder
+  "The build-unmanaged-compute-environment-props-builder function updates a UnmanagedComputeEnvironmentProps$Builder instance using the provided configuration.
+  The function takes the UnmanagedComputeEnvironmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `computeEnvironmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:compute-environment-name` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `serviceRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:service-role` |
+| `unmanagedvCpus` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unmanagedv-cpus` |
+"
+  [^UnmanagedComputeEnvironmentProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :compute-environment-name)]
+    (. builder computeEnvironmentName data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :service-role)]
+    (. builder serviceRole data))
+  (when-let [data (lookup-entry config id :unmanagedv-cpus)]
+    (. builder unmanagedvCpus data))
+  (.build builder))

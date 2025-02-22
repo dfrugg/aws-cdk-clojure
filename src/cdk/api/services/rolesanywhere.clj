@@ -12,9 +12,12 @@
                                                           CfnTrustAnchorProps$Builder]))
 
 
-(defn cfn-crl-builder
-  "The cfn-crl-builder function buildes out new instances of 
-CfnCRL$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-crl-builder
+  "The build-cfn-crl-builder function updates a CfnCRL$Builder instance using the provided configuration.
+  The function takes the CfnCRL$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -22,25 +25,28 @@ CfnCRL$Builder using the provided configuration.  Each field is set as follows:
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `trustAnchorArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trust-anchor-arn` |"
-  [stack id config]
-  (let [builder (CfnCRL$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :crl-data)]
-      (. builder crlData data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :trust-anchor-arn)]
-      (. builder trustAnchorArn data))
-    (.build builder)))
+| `trustAnchorArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trust-anchor-arn` |
+"
+  [^CfnCRL$Builder builder id config]
+  (when-let [data (lookup-entry config id :crl-data)]
+    (. builder crlData data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :trust-anchor-arn)]
+    (. builder trustAnchorArn data))
+  (.build builder))
 
 
-(defn cfn-crl-props-builder
-  "The cfn-crl-props-builder function buildes out new instances of 
-CfnCRLProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-crl-props-builder
+  "The build-cfn-crl-props-builder function updates a CfnCRLProps$Builder instance using the provided configuration.
+  The function takes the CfnCRLProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -48,25 +54,28 @@ CfnCRLProps$Builder using the provided configuration.  Each field is set as foll
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `trustAnchorArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trust-anchor-arn` |"
-  [stack id config]
-  (let [builder (CfnCRLProps$Builder.)]
-    (when-let [data (lookup-entry config id :crl-data)]
-      (. builder crlData data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :trust-anchor-arn)]
-      (. builder trustAnchorArn data))
-    (.build builder)))
+| `trustAnchorArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:trust-anchor-arn` |
+"
+  [^CfnCRLProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :crl-data)]
+    (. builder crlData data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :trust-anchor-arn)]
+    (. builder trustAnchorArn data))
+  (.build builder))
 
 
-(defn cfn-profile-builder
-  "The cfn-profile-builder function buildes out new instances of 
-CfnProfile$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-profile-builder
+  "The build-cfn-profile-builder function updates a CfnProfile$Builder instance using the provided configuration.
+  The function takes the CfnProfile$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -77,31 +86,34 @@ CfnProfile$Builder using the provided configuration.  Each field is set as follo
 | `requireInstanceProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:require-instance-properties` |
 | `roleArns` | java.util.List | [[cdk.support/lookup-entry]] | `:role-arns` |
 | `sessionPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:session-policy` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnProfile$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :duration-seconds)]
-      (. builder durationSeconds data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :managed-policy-arns)]
-      (. builder managedPolicyArns data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :require-instance-properties)]
-      (. builder requireInstanceProperties data))
-    (when-let [data (lookup-entry config id :role-arns)]
-      (. builder roleArns data))
-    (when-let [data (lookup-entry config id :session-policy)]
-      (. builder sessionPolicy data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnProfile$Builder builder id config]
+  (when-let [data (lookup-entry config id :duration-seconds)]
+    (. builder durationSeconds data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :managed-policy-arns)]
+    (. builder managedPolicyArns data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :require-instance-properties)]
+    (. builder requireInstanceProperties data))
+  (when-let [data (lookup-entry config id :role-arns)]
+    (. builder roleArns data))
+  (when-let [data (lookup-entry config id :session-policy)]
+    (. builder sessionPolicy data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-profile-props-builder
-  "The cfn-profile-props-builder function buildes out new instances of 
-CfnProfileProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-profile-props-builder
+  "The build-cfn-profile-props-builder function updates a CfnProfileProps$Builder instance using the provided configuration.
+  The function takes the CfnProfileProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -112,31 +124,34 @@ CfnProfileProps$Builder using the provided configuration.  Each field is set as 
 | `requireInstanceProperties` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:require-instance-properties` |
 | `roleArns` | java.util.List | [[cdk.support/lookup-entry]] | `:role-arns` |
 | `sessionPolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:session-policy` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnProfileProps$Builder.)]
-    (when-let [data (lookup-entry config id :duration-seconds)]
-      (. builder durationSeconds data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :managed-policy-arns)]
-      (. builder managedPolicyArns data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :require-instance-properties)]
-      (. builder requireInstanceProperties data))
-    (when-let [data (lookup-entry config id :role-arns)]
-      (. builder roleArns data))
-    (when-let [data (lookup-entry config id :session-policy)]
-      (. builder sessionPolicy data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnProfileProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :duration-seconds)]
+    (. builder durationSeconds data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :managed-policy-arns)]
+    (. builder managedPolicyArns data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :require-instance-properties)]
+    (. builder requireInstanceProperties data))
+  (when-let [data (lookup-entry config id :role-arns)]
+    (. builder roleArns data))
+  (when-let [data (lookup-entry config id :session-policy)]
+    (. builder sessionPolicy data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-trust-anchor-builder
-  "The cfn-trust-anchor-builder function buildes out new instances of 
-CfnTrustAnchor$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-trust-anchor-builder
+  "The build-cfn-trust-anchor-builder function updates a CfnTrustAnchor$Builder instance using the provided configuration.
+  The function takes the CfnTrustAnchor$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -144,48 +159,54 @@ CfnTrustAnchor$Builder using the provided configuration.  Each field is set as f
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `notificationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notification-settings` |
 | `source` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnTrustAnchor$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :notification-settings)]
-      (. builder notificationSettings data))
-    (when-let [data (lookup-entry config id :source)]
-      (. builder source data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnTrustAnchor$Builder builder id config]
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :notification-settings)]
+    (. builder notificationSettings data))
+  (when-let [data (lookup-entry config id :source)]
+    (. builder source data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-trust-anchor-notification-setting-property-builder
-  "The cfn-trust-anchor-notification-setting-property-builder function buildes out new instances of 
-CfnTrustAnchor$NotificationSettingProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-trust-anchor-notification-setting-property-builder
+  "The build-cfn-trust-anchor-notification-setting-property-builder function updates a CfnTrustAnchor$NotificationSettingProperty$Builder instance using the provided configuration.
+  The function takes the CfnTrustAnchor$NotificationSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `channel` | java.lang.String | [[cdk.support/lookup-entry]] | `:channel` |
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `event` | java.lang.String | [[cdk.support/lookup-entry]] | `:event` |
-| `threshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:threshold` |"
-  [stack id config]
-  (let [builder (CfnTrustAnchor$NotificationSettingProperty$Builder.)]
-    (when-let [data (lookup-entry config id :channel)]
-      (. builder channel data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :event)]
-      (. builder event data))
-    (when-let [data (lookup-entry config id :threshold)]
-      (. builder threshold data))
-    (.build builder)))
+| `threshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:threshold` |
+"
+  [^CfnTrustAnchor$NotificationSettingProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :channel)]
+    (. builder channel data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :event)]
+    (. builder event data))
+  (when-let [data (lookup-entry config id :threshold)]
+    (. builder threshold data))
+  (.build builder))
 
 
-(defn cfn-trust-anchor-props-builder
-  "The cfn-trust-anchor-props-builder function buildes out new instances of 
-CfnTrustAnchorProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-trust-anchor-props-builder
+  "The build-cfn-trust-anchor-props-builder function updates a CfnTrustAnchorProps$Builder instance using the provided configuration.
+  The function takes the CfnTrustAnchorProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -193,51 +214,57 @@ CfnTrustAnchorProps$Builder using the provided configuration.  Each field is set
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `notificationSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:notification-settings` |
 | `source` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnTrustAnchorProps$Builder.)]
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :notification-settings)]
-      (. builder notificationSettings data))
-    (when-let [data (lookup-entry config id :source)]
-      (. builder source data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnTrustAnchorProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :notification-settings)]
+    (. builder notificationSettings data))
+  (when-let [data (lookup-entry config id :source)]
+    (. builder source data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-trust-anchor-source-data-property-builder
-  "The cfn-trust-anchor-source-data-property-builder function buildes out new instances of 
-CfnTrustAnchor$SourceDataProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-trust-anchor-source-data-property-builder
+  "The build-cfn-trust-anchor-source-data-property-builder function updates a CfnTrustAnchor$SourceDataProperty$Builder instance using the provided configuration.
+  The function takes the CfnTrustAnchor$SourceDataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `acmPcaArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:acm-pca-arn` |
-| `x509CertificateData` | java.lang.String | [[cdk.support/lookup-entry]] | `:x509-certificate-data` |"
-  [stack id config]
-  (let [builder (CfnTrustAnchor$SourceDataProperty$Builder.)]
-    (when-let [data (lookup-entry config id :acm-pca-arn)]
-      (. builder acmPcaArn data))
-    (when-let [data (lookup-entry config id :x509-certificate-data)]
-      (. builder x509CertificateData data))
-    (.build builder)))
+| `x509CertificateData` | java.lang.String | [[cdk.support/lookup-entry]] | `:x509-certificate-data` |
+"
+  [^CfnTrustAnchor$SourceDataProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :acm-pca-arn)]
+    (. builder acmPcaArn data))
+  (when-let [data (lookup-entry config id :x509-certificate-data)]
+    (. builder x509CertificateData data))
+  (.build builder))
 
 
-(defn cfn-trust-anchor-source-property-builder
-  "The cfn-trust-anchor-source-property-builder function buildes out new instances of 
-CfnTrustAnchor$SourceProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-trust-anchor-source-property-builder
+  "The build-cfn-trust-anchor-source-property-builder function updates a CfnTrustAnchor$SourceProperty$Builder instance using the provided configuration.
+  The function takes the CfnTrustAnchor$SourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `sourceData` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-data` |
-| `sourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-type` |"
-  [stack id config]
-  (let [builder (CfnTrustAnchor$SourceProperty$Builder.)]
-    (when-let [data (lookup-entry config id :source-data)]
-      (. builder sourceData data))
-    (when-let [data (lookup-entry config id :source-type)]
-      (. builder sourceType data))
-    (.build builder)))
+| `sourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-type` |
+"
+  [^CfnTrustAnchor$SourceProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :source-data)]
+    (. builder sourceData data))
+  (when-let [data (lookup-entry config id :source-type)]
+    (. builder sourceType data))
+  (.build builder))

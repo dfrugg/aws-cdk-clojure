@@ -8,9 +8,12 @@
                                                        CfnContainerProps$Builder]))
 
 
-(defn cfn-container-builder
-  "The cfn-container-builder function buildes out new instances of 
-CfnContainer$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-container-builder
+  "The build-cfn-container-builder function updates a CfnContainer$Builder instance using the provided configuration.
+  The function takes the CfnContainer$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -20,29 +23,32 @@ CfnContainer$Builder using the provided configuration.  Each field is set as fol
 | `lifecyclePolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:lifecycle-policy` |
 | `metricPolicy` | software.amazon.awscdk.services.mediastore.CfnContainer$MetricPolicyProperty | [[cdk.support/lookup-entry]] | `:metric-policy` |
 | `policy` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnContainer$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :access-logging-enabled)]
-      (. builder accessLoggingEnabled data))
-    (when-let [data (lookup-entry config id :container-name)]
-      (. builder containerName data))
-    (when-let [data (lookup-entry config id :cors-policy)]
-      (. builder corsPolicy data))
-    (when-let [data (lookup-entry config id :lifecycle-policy)]
-      (. builder lifecyclePolicy data))
-    (when-let [data (lookup-entry config id :metric-policy)]
-      (. builder metricPolicy data))
-    (when-let [data (lookup-entry config id :policy)]
-      (. builder policy data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnContainer$Builder builder id config]
+  (when-let [data (lookup-entry config id :access-logging-enabled)]
+    (. builder accessLoggingEnabled data))
+  (when-let [data (lookup-entry config id :container-name)]
+    (. builder containerName data))
+  (when-let [data (lookup-entry config id :cors-policy)]
+    (. builder corsPolicy data))
+  (when-let [data (lookup-entry config id :lifecycle-policy)]
+    (. builder lifecyclePolicy data))
+  (when-let [data (lookup-entry config id :metric-policy)]
+    (. builder metricPolicy data))
+  (when-let [data (lookup-entry config id :policy)]
+    (. builder policy data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-container-cors-rule-property-builder
-  "The cfn-container-cors-rule-property-builder function buildes out new instances of 
-CfnContainer$CorsRuleProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-container-cors-rule-property-builder
+  "The build-cfn-container-cors-rule-property-builder function updates a CfnContainer$CorsRuleProperty$Builder instance using the provided configuration.
+  The function takes the CfnContainer$CorsRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -50,59 +56,68 @@ CfnContainer$CorsRuleProperty$Builder using the provided configuration.  Each fi
 | `allowedMethods` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-methods` |
 | `allowedOrigins` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-origins` |
 | `exposeHeaders` | java.util.List | [[cdk.support/lookup-entry]] | `:expose-headers` |
-| `maxAgeSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-age-seconds` |"
-  [stack id config]
-  (let [builder (CfnContainer$CorsRuleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :allowed-headers)]
-      (. builder allowedHeaders data))
-    (when-let [data (lookup-entry config id :allowed-methods)]
-      (. builder allowedMethods data))
-    (when-let [data (lookup-entry config id :allowed-origins)]
-      (. builder allowedOrigins data))
-    (when-let [data (lookup-entry config id :expose-headers)]
-      (. builder exposeHeaders data))
-    (when-let [data (lookup-entry config id :max-age-seconds)]
-      (. builder maxAgeSeconds data))
-    (.build builder)))
+| `maxAgeSeconds` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-age-seconds` |
+"
+  [^CfnContainer$CorsRuleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :allowed-headers)]
+    (. builder allowedHeaders data))
+  (when-let [data (lookup-entry config id :allowed-methods)]
+    (. builder allowedMethods data))
+  (when-let [data (lookup-entry config id :allowed-origins)]
+    (. builder allowedOrigins data))
+  (when-let [data (lookup-entry config id :expose-headers)]
+    (. builder exposeHeaders data))
+  (when-let [data (lookup-entry config id :max-age-seconds)]
+    (. builder maxAgeSeconds data))
+  (.build builder))
 
 
-(defn cfn-container-metric-policy-property-builder
-  "The cfn-container-metric-policy-property-builder function buildes out new instances of 
-CfnContainer$MetricPolicyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-container-metric-policy-property-builder
+  "The build-cfn-container-metric-policy-property-builder function updates a CfnContainer$MetricPolicyProperty$Builder instance using the provided configuration.
+  The function takes the CfnContainer$MetricPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `containerLevelMetrics` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-level-metrics` |
-| `metricPolicyRules` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-policy-rules` |"
-  [stack id config]
-  (let [builder (CfnContainer$MetricPolicyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :container-level-metrics)]
-      (. builder containerLevelMetrics data))
-    (when-let [data (lookup-entry config id :metric-policy-rules)]
-      (. builder metricPolicyRules data))
-    (.build builder)))
+| `metricPolicyRules` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-policy-rules` |
+"
+  [^CfnContainer$MetricPolicyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :container-level-metrics)]
+    (. builder containerLevelMetrics data))
+  (when-let [data (lookup-entry config id :metric-policy-rules)]
+    (. builder metricPolicyRules data))
+  (.build builder))
 
 
-(defn cfn-container-metric-policy-rule-property-builder
-  "The cfn-container-metric-policy-rule-property-builder function buildes out new instances of 
-CfnContainer$MetricPolicyRuleProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-container-metric-policy-rule-property-builder
+  "The build-cfn-container-metric-policy-rule-property-builder function updates a CfnContainer$MetricPolicyRuleProperty$Builder instance using the provided configuration.
+  The function takes the CfnContainer$MetricPolicyRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `objectGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-group` |
-| `objectGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-group-name` |"
-  [stack id config]
-  (let [builder (CfnContainer$MetricPolicyRuleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :object-group)]
-      (. builder objectGroup data))
-    (when-let [data (lookup-entry config id :object-group-name)]
-      (. builder objectGroupName data))
-    (.build builder)))
+| `objectGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-group-name` |
+"
+  [^CfnContainer$MetricPolicyRuleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :object-group)]
+    (. builder objectGroup data))
+  (when-let [data (lookup-entry config id :object-group-name)]
+    (. builder objectGroupName data))
+  (.build builder))
 
 
-(defn cfn-container-props-builder
-  "The cfn-container-props-builder function buildes out new instances of 
-CfnContainerProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-container-props-builder
+  "The build-cfn-container-props-builder function updates a CfnContainerProps$Builder instance using the provided configuration.
+  The function takes the CfnContainerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -112,21 +127,21 @@ CfnContainerProps$Builder using the provided configuration.  Each field is set a
 | `lifecyclePolicy` | java.lang.String | [[cdk.support/lookup-entry]] | `:lifecycle-policy` |
 | `metricPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric-policy` |
 | `policy` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnContainerProps$Builder.)]
-    (when-let [data (lookup-entry config id :access-logging-enabled)]
-      (. builder accessLoggingEnabled data))
-    (when-let [data (lookup-entry config id :container-name)]
-      (. builder containerName data))
-    (when-let [data (lookup-entry config id :cors-policy)]
-      (. builder corsPolicy data))
-    (when-let [data (lookup-entry config id :lifecycle-policy)]
-      (. builder lifecyclePolicy data))
-    (when-let [data (lookup-entry config id :metric-policy)]
-      (. builder metricPolicy data))
-    (when-let [data (lookup-entry config id :policy)]
-      (. builder policy data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnContainerProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :access-logging-enabled)]
+    (. builder accessLoggingEnabled data))
+  (when-let [data (lookup-entry config id :container-name)]
+    (. builder containerName data))
+  (when-let [data (lookup-entry config id :cors-policy)]
+    (. builder corsPolicy data))
+  (when-let [data (lookup-entry config id :lifecycle-policy)]
+    (. builder lifecyclePolicy data))
+  (when-let [data (lookup-entry config id :metric-policy)]
+    (. builder metricPolicy data))
+  (when-let [data (lookup-entry config id :policy)]
+    (. builder policy data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))

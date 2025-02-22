@@ -228,9 +228,12 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :lambda data) ValidatorType/LAMBDA)))
 
 
-(defn action-builder
-  "The action-builder function buildes out new instances of 
-Action$Builder using the provided configuration.  Each field is set as follows:
+(defn build-action-builder
+  "The build-action-builder function updates a Action$Builder instance using the provided configuration.
+  The function takes the Action$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -239,27 +242,30 @@ Action$Builder using the provided configuration.  Each field is set as follows:
 | `eventDestination` | software.amazon.awscdk.services.appconfig.IEventDestination | [[cdk.support/lookup-entry]] | `:event-destination` |
 | `executionRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:execution-role` |
 | `invokeWithoutExecutionRole` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:invoke-without-execution-role` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (Action$Builder/create)]
-    (when-let [data (lookup-entry config id :action-points)]
-      (. builder actionPoints data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :event-destination)]
-      (. builder eventDestination data))
-    (when-let [data (lookup-entry config id :execution-role)]
-      (. builder executionRole data))
-    (when-let [data (lookup-entry config id :invoke-without-execution-role)]
-      (. builder invokeWithoutExecutionRole data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^Action$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-points)]
+    (. builder actionPoints data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :event-destination)]
+    (. builder eventDestination data))
+  (when-let [data (lookup-entry config id :execution-role)]
+    (. builder executionRole data))
+  (when-let [data (lookup-entry config id :invoke-without-execution-role)]
+    (. builder invokeWithoutExecutionRole data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn action-props-builder
-  "The action-props-builder function buildes out new instances of 
-ActionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-action-props-builder
+  "The build-action-props-builder function updates a ActionProps$Builder instance using the provided configuration.
+  The function takes the ActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -268,101 +274,116 @@ ActionProps$Builder using the provided configuration.  Each field is set as foll
 | `eventDestination` | software.amazon.awscdk.services.appconfig.IEventDestination | [[cdk.support/lookup-entry]] | `:event-destination` |
 | `executionRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:execution-role` |
 | `invokeWithoutExecutionRole` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:invoke-without-execution-role` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (ActionProps$Builder.)]
-    (when-let [data (lookup-entry config id :action-points)]
-      (. builder actionPoints data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :event-destination)]
-      (. builder eventDestination data))
-    (when-let [data (lookup-entry config id :execution-role)]
-      (. builder executionRole data))
-    (when-let [data (lookup-entry config id :invoke-without-execution-role)]
-      (. builder invokeWithoutExecutionRole data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^ActionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action-points)]
+    (. builder actionPoints data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :event-destination)]
+    (. builder eventDestination data))
+  (when-let [data (lookup-entry config id :execution-role)]
+    (. builder executionRole data))
+  (when-let [data (lookup-entry config id :invoke-without-execution-role)]
+    (. builder invokeWithoutExecutionRole data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn application-builder
-  "The application-builder function buildes out new instances of 
-Application$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-builder
+  "The build-application-builder function updates a Application$Builder instance using the provided configuration.
+  The function takes the Application$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |"
-  [stack id config]
-  (let [builder (Application$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application-name)]
-      (. builder applicationName data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (.build builder)))
-
-
-(defn application-props-builder
-  "The application-props-builder function buildes out new instances of 
-ApplicationProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |"
-  [stack id config]
-  (let [builder (ApplicationProps$Builder.)]
-    (when-let [data (lookup-entry config id :application-name)]
-      (. builder applicationName data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (.build builder)))
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+"
+  [^Application$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-name)]
+    (. builder applicationName data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (.build builder))
 
 
-(defn cfn-application-builder
-  "The cfn-application-builder function buildes out new instances of 
-CfnApplication$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-props-builder
+  "The build-application-props-builder function updates a ApplicationProps$Builder instance using the provided configuration.
+  The function takes the ApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `applicationName` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-name` |
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+"
+  [^ApplicationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-name)]
+    (. builder applicationName data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (.build builder))
+
+
+(defn build-cfn-application-builder
+  "The build-cfn-application-builder function updates a CfnApplication$Builder instance using the provided configuration.
+  The function takes the CfnApplication$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnApplication$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnApplication$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-application-props-builder
-  "The cfn-application-props-builder function buildes out new instances of 
-CfnApplicationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-application-props-builder
+  "The build-cfn-application-props-builder function updates a CfnApplicationProps$Builder instance using the provided configuration.
+  The function takes the CfnApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnApplicationProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnApplicationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-configuration-profile-builder
-  "The cfn-configuration-profile-builder function buildes out new instances of 
-CfnConfigurationProfile$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-configuration-profile-builder
+  "The build-cfn-configuration-profile-builder function updates a CfnConfigurationProfile$Builder instance using the provided configuration.
+  The function takes the CfnConfigurationProfile$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -374,33 +395,36 @@ CfnConfigurationProfile$Builder using the provided configuration.  Each field is
 | `retrievalRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:retrieval-role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
-| `validators` | java.util.List | [[cdk.support/lookup-entry]] | `:validators` |"
-  [stack id config]
-  (let [builder (CfnConfigurationProfile$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :kms-key-identifier)]
-      (. builder kmsKeyIdentifier data))
-    (when-let [data (lookup-entry config id :location-uri)]
-      (. builder locationUri data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :retrieval-role-arn)]
-      (. builder retrievalRoleArn data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :validators)]
-      (. builder validators data))
-    (.build builder)))
+| `validators` | java.util.List | [[cdk.support/lookup-entry]] | `:validators` |
+"
+  [^CfnConfigurationProfile$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :kms-key-identifier)]
+    (. builder kmsKeyIdentifier data))
+  (when-let [data (lookup-entry config id :location-uri)]
+    (. builder locationUri data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :retrieval-role-arn)]
+    (. builder retrievalRoleArn data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :validators)]
+    (. builder validators data))
+  (.build builder))
 
 
-(defn cfn-configuration-profile-props-builder
-  "The cfn-configuration-profile-props-builder function buildes out new instances of 
-CfnConfigurationProfileProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-configuration-profile-props-builder
+  "The build-cfn-configuration-profile-props-builder function updates a CfnConfigurationProfileProps$Builder instance using the provided configuration.
+  The function takes the CfnConfigurationProfileProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -412,50 +436,56 @@ CfnConfigurationProfileProps$Builder using the provided configuration.  Each fie
 | `retrievalRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:retrieval-role-arn` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
-| `validators` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validators` |"
-  [stack id config]
-  (let [builder (CfnConfigurationProfileProps$Builder.)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :kms-key-identifier)]
-      (. builder kmsKeyIdentifier data))
-    (when-let [data (lookup-entry config id :location-uri)]
-      (. builder locationUri data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :retrieval-role-arn)]
-      (. builder retrievalRoleArn data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :validators)]
-      (. builder validators data))
-    (.build builder)))
+| `validators` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validators` |
+"
+  [^CfnConfigurationProfileProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :kms-key-identifier)]
+    (. builder kmsKeyIdentifier data))
+  (when-let [data (lookup-entry config id :location-uri)]
+    (. builder locationUri data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :retrieval-role-arn)]
+    (. builder retrievalRoleArn data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :validators)]
+    (. builder validators data))
+  (.build builder))
 
 
-(defn cfn-configuration-profile-validators-property-builder
-  "The cfn-configuration-profile-validators-property-builder function buildes out new instances of 
-CfnConfigurationProfile$ValidatorsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-configuration-profile-validators-property-builder
+  "The build-cfn-configuration-profile-validators-property-builder function updates a CfnConfigurationProfile$ValidatorsProperty$Builder instance using the provided configuration.
+  The function takes the CfnConfigurationProfile$ValidatorsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `content` | java.lang.String | [[cdk.support/lookup-entry]] | `:content` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnConfigurationProfile$ValidatorsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :content)]
-      (. builder content data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnConfigurationProfile$ValidatorsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :content)]
+    (. builder content data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-deployment-builder
-  "The cfn-deployment-builder function buildes out new instances of 
-CfnDeployment$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-deployment-builder
+  "The build-cfn-deployment-builder function updates a CfnDeployment$Builder instance using the provided configuration.
+  The function takes the CfnDeployment$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -467,53 +497,59 @@ CfnDeployment$Builder using the provided configuration.  Each field is set as fo
 | `dynamicExtensionParameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamic-extension-parameters` |
 | `environmentId` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-id` |
 | `kmsKeyIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-identifier` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDeployment$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :configuration-profile-id)]
-      (. builder configurationProfileId data))
-    (when-let [data (lookup-entry config id :configuration-version)]
-      (. builder configurationVersion data))
-    (when-let [data (lookup-entry config id :deployment-strategy-id)]
-      (. builder deploymentStrategyId data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :dynamic-extension-parameters)]
-      (. builder dynamicExtensionParameters data))
-    (when-let [data (lookup-entry config id :environment-id)]
-      (. builder environmentId data))
-    (when-let [data (lookup-entry config id :kms-key-identifier)]
-      (. builder kmsKeyIdentifier data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDeployment$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :configuration-profile-id)]
+    (. builder configurationProfileId data))
+  (when-let [data (lookup-entry config id :configuration-version)]
+    (. builder configurationVersion data))
+  (when-let [data (lookup-entry config id :deployment-strategy-id)]
+    (. builder deploymentStrategyId data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :dynamic-extension-parameters)]
+    (. builder dynamicExtensionParameters data))
+  (when-let [data (lookup-entry config id :environment-id)]
+    (. builder environmentId data))
+  (when-let [data (lookup-entry config id :kms-key-identifier)]
+    (. builder kmsKeyIdentifier data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-deployment-dynamic-extension-parameters-property-builder
-  "The cfn-deployment-dynamic-extension-parameters-property-builder function buildes out new instances of 
-CfnDeployment$DynamicExtensionParametersProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-deployment-dynamic-extension-parameters-property-builder
+  "The build-cfn-deployment-dynamic-extension-parameters-property-builder function updates a CfnDeployment$DynamicExtensionParametersProperty$Builder instance using the provided configuration.
+  The function takes the CfnDeployment$DynamicExtensionParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `extensionReference` | java.lang.String | [[cdk.support/lookup-entry]] | `:extension-reference` |
 | `parameterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-name` |
-| `parameterValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-value` |"
-  [stack id config]
-  (let [builder (CfnDeployment$DynamicExtensionParametersProperty$Builder.)]
-    (when-let [data (lookup-entry config id :extension-reference)]
-      (. builder extensionReference data))
-    (when-let [data (lookup-entry config id :parameter-name)]
-      (. builder parameterName data))
-    (when-let [data (lookup-entry config id :parameter-value)]
-      (. builder parameterValue data))
-    (.build builder)))
+| `parameterValue` | java.lang.String | [[cdk.support/lookup-entry]] | `:parameter-value` |
+"
+  [^CfnDeployment$DynamicExtensionParametersProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :extension-reference)]
+    (. builder extensionReference data))
+  (when-let [data (lookup-entry config id :parameter-name)]
+    (. builder parameterName data))
+  (when-let [data (lookup-entry config id :parameter-value)]
+    (. builder parameterValue data))
+  (.build builder))
 
 
-(defn cfn-deployment-props-builder
-  "The cfn-deployment-props-builder function buildes out new instances of 
-CfnDeploymentProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-deployment-props-builder
+  "The build-cfn-deployment-props-builder function updates a CfnDeploymentProps$Builder instance using the provided configuration.
+  The function takes the CfnDeploymentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -525,68 +561,36 @@ CfnDeploymentProps$Builder using the provided configuration.  Each field is set 
 | `dynamicExtensionParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:dynamic-extension-parameters` |
 | `environmentId` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-id` |
 | `kmsKeyIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-identifier` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDeploymentProps$Builder.)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :configuration-profile-id)]
-      (. builder configurationProfileId data))
-    (when-let [data (lookup-entry config id :configuration-version)]
-      (. builder configurationVersion data))
-    (when-let [data (lookup-entry config id :deployment-strategy-id)]
-      (. builder deploymentStrategyId data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :dynamic-extension-parameters)]
-      (. builder dynamicExtensionParameters data))
-    (when-let [data (lookup-entry config id :environment-id)]
-      (. builder environmentId data))
-    (when-let [data (lookup-entry config id :kms-key-identifier)]
-      (. builder kmsKeyIdentifier data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDeploymentProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :configuration-profile-id)]
+    (. builder configurationProfileId data))
+  (when-let [data (lookup-entry config id :configuration-version)]
+    (. builder configurationVersion data))
+  (when-let [data (lookup-entry config id :deployment-strategy-id)]
+    (. builder deploymentStrategyId data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :dynamic-extension-parameters)]
+    (. builder dynamicExtensionParameters data))
+  (when-let [data (lookup-entry config id :environment-id)]
+    (. builder environmentId data))
+  (when-let [data (lookup-entry config id :kms-key-identifier)]
+    (. builder kmsKeyIdentifier data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-deployment-strategy-builder
-  "The cfn-deployment-strategy-builder function buildes out new instances of 
-CfnDeploymentStrategy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-deployment-strategy-builder
+  "The build-cfn-deployment-strategy-builder function updates a CfnDeploymentStrategy$Builder instance using the provided configuration.
+  The function takes the CfnDeploymentStrategy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `deploymentDurationInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:deployment-duration-in-minutes` |
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `finalBakeTimeInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:final-bake-time-in-minutes` |
-| `growthFactor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:growth-factor` |
-| `growthType` | java.lang.String | [[cdk.support/lookup-entry]] | `:growth-type` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `replicateTo` | java.lang.String | [[cdk.support/lookup-entry]] | `:replicate-to` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDeploymentStrategy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :deployment-duration-in-minutes)]
-      (. builder deploymentDurationInMinutes data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :final-bake-time-in-minutes)]
-      (. builder finalBakeTimeInMinutes data))
-    (when-let [data (lookup-entry config id :growth-factor)]
-      (. builder growthFactor data))
-    (when-let [data (lookup-entry config id :growth-type)]
-      (. builder growthType data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :replicate-to)]
-      (. builder replicateTo data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
-
-
-(defn cfn-deployment-strategy-props-builder
-  "The cfn-deployment-strategy-props-builder function buildes out new instances of 
-CfnDeploymentStrategyProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -597,31 +601,72 @@ CfnDeploymentStrategyProps$Builder using the provided configuration.  Each field
 | `growthType` | java.lang.String | [[cdk.support/lookup-entry]] | `:growth-type` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `replicateTo` | java.lang.String | [[cdk.support/lookup-entry]] | `:replicate-to` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDeploymentStrategyProps$Builder.)]
-    (when-let [data (lookup-entry config id :deployment-duration-in-minutes)]
-      (. builder deploymentDurationInMinutes data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :final-bake-time-in-minutes)]
-      (. builder finalBakeTimeInMinutes data))
-    (when-let [data (lookup-entry config id :growth-factor)]
-      (. builder growthFactor data))
-    (when-let [data (lookup-entry config id :growth-type)]
-      (. builder growthType data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :replicate-to)]
-      (. builder replicateTo data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDeploymentStrategy$Builder builder id config]
+  (when-let [data (lookup-entry config id :deployment-duration-in-minutes)]
+    (. builder deploymentDurationInMinutes data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :final-bake-time-in-minutes)]
+    (. builder finalBakeTimeInMinutes data))
+  (when-let [data (lookup-entry config id :growth-factor)]
+    (. builder growthFactor data))
+  (when-let [data (lookup-entry config id :growth-type)]
+    (. builder growthType data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :replicate-to)]
+    (. builder replicateTo data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-environment-builder
-  "The cfn-environment-builder function buildes out new instances of 
-CfnEnvironment$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-deployment-strategy-props-builder
+  "The build-cfn-deployment-strategy-props-builder function updates a CfnDeploymentStrategyProps$Builder instance using the provided configuration.
+  The function takes the CfnDeploymentStrategyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `deploymentDurationInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:deployment-duration-in-minutes` |
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `finalBakeTimeInMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:final-bake-time-in-minutes` |
+| `growthFactor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:growth-factor` |
+| `growthType` | java.lang.String | [[cdk.support/lookup-entry]] | `:growth-type` |
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `replicateTo` | java.lang.String | [[cdk.support/lookup-entry]] | `:replicate-to` |
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDeploymentStrategyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :deployment-duration-in-minutes)]
+    (. builder deploymentDurationInMinutes data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :final-bake-time-in-minutes)]
+    (. builder finalBakeTimeInMinutes data))
+  (when-let [data (lookup-entry config id :growth-factor)]
+    (. builder growthFactor data))
+  (when-let [data (lookup-entry config id :growth-type)]
+    (. builder growthType data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :replicate-to)]
+    (. builder replicateTo data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
+
+
+(defn build-cfn-environment-builder
+  "The build-cfn-environment-builder function updates a CfnEnvironment$Builder instance using the provided configuration.
+  The function takes the CfnEnvironment$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -629,59 +674,68 @@ CfnEnvironment$Builder using the provided configuration.  Each field is set as f
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `monitors` | java.util.List | [[cdk.support/lookup-entry]] | `:monitors` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnEnvironment$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :monitors)]
-      (. builder monitors data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnEnvironment$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :monitors)]
+    (. builder monitors data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-environment-monitor-property-builder
-  "The cfn-environment-monitor-property-builder function buildes out new instances of 
-CfnEnvironment$MonitorProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-environment-monitor-property-builder
+  "The build-cfn-environment-monitor-property-builder function updates a CfnEnvironment$MonitorProperty$Builder instance using the provided configuration.
+  The function takes the CfnEnvironment$MonitorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `alarmArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-arn` |
-| `alarmRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-role-arn` |"
-  [stack id config]
-  (let [builder (CfnEnvironment$MonitorProperty$Builder.)]
-    (when-let [data (lookup-entry config id :alarm-arn)]
-      (. builder alarmArn data))
-    (when-let [data (lookup-entry config id :alarm-role-arn)]
-      (. builder alarmRoleArn data))
-    (.build builder)))
-
-
-(defn cfn-environment-monitors-property-builder
-  "The cfn-environment-monitors-property-builder function buildes out new instances of 
-CfnEnvironment$MonitorsProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `alarmArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-arn` |
-| `alarmRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-role-arn` |"
-  [stack id config]
-  (let [builder (CfnEnvironment$MonitorsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :alarm-arn)]
-      (. builder alarmArn data))
-    (when-let [data (lookup-entry config id :alarm-role-arn)]
-      (. builder alarmRoleArn data))
-    (.build builder)))
+| `alarmRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-role-arn` |
+"
+  [^CfnEnvironment$MonitorProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :alarm-arn)]
+    (. builder alarmArn data))
+  (when-let [data (lookup-entry config id :alarm-role-arn)]
+    (. builder alarmRoleArn data))
+  (.build builder))
 
 
-(defn cfn-environment-props-builder
-  "The cfn-environment-props-builder function buildes out new instances of 
-CfnEnvironmentProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-environment-monitors-property-builder
+  "The build-cfn-environment-monitors-property-builder function updates a CfnEnvironment$MonitorsProperty$Builder instance using the provided configuration.
+  The function takes the CfnEnvironment$MonitorsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `alarmArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-arn` |
+| `alarmRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:alarm-role-arn` |
+"
+  [^CfnEnvironment$MonitorsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :alarm-arn)]
+    (. builder alarmArn data))
+  (when-let [data (lookup-entry config id :alarm-role-arn)]
+    (. builder alarmRoleArn data))
+  (.build builder))
+
+
+(defn build-cfn-environment-props-builder
+  "The build-cfn-environment-props-builder function updates a CfnEnvironmentProps$Builder instance using the provided configuration.
+  The function takes the CfnEnvironmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -689,48 +743,54 @@ CfnEnvironmentProps$Builder using the provided configuration.  Each field is set
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `monitors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:monitors` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnEnvironmentProps$Builder.)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :monitors)]
-      (. builder monitors data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnEnvironmentProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :monitors)]
+    (. builder monitors data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-extension-action-property-builder
-  "The cfn-extension-action-property-builder function buildes out new instances of 
-CfnExtension$ActionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-extension-action-property-builder
+  "The build-cfn-extension-action-property-builder function updates a CfnExtension$ActionProperty$Builder instance using the provided configuration.
+  The function takes the CfnExtension$ActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:uri` |"
-  [stack id config]
-  (let [builder (CfnExtension$ActionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :uri)]
-      (. builder uri data))
-    (.build builder)))
+| `uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:uri` |
+"
+  [^CfnExtension$ActionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :uri)]
+    (. builder uri data))
+  (.build builder))
 
 
-(defn cfn-extension-association-builder
-  "The cfn-extension-association-builder function buildes out new instances of 
-CfnExtensionAssociation$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-extension-association-builder
+  "The build-cfn-extension-association-builder function updates a CfnExtensionAssociation$Builder instance using the provided configuration.
+  The function takes the CfnExtensionAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -738,25 +798,28 @@ CfnExtensionAssociation$Builder using the provided configuration.  Each field is
 | `extensionVersionNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:extension-version-number` |
 | `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
 | `resourceIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-identifier` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnExtensionAssociation$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :extension-identifier)]
-      (. builder extensionIdentifier data))
-    (when-let [data (lookup-entry config id :extension-version-number)]
-      (. builder extensionVersionNumber data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :resource-identifier)]
-      (. builder resourceIdentifier data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnExtensionAssociation$Builder builder id config]
+  (when-let [data (lookup-entry config id :extension-identifier)]
+    (. builder extensionIdentifier data))
+  (when-let [data (lookup-entry config id :extension-version-number)]
+    (. builder extensionVersionNumber data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :resource-identifier)]
+    (. builder resourceIdentifier data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-extension-association-props-builder
-  "The cfn-extension-association-props-builder function buildes out new instances of 
-CfnExtensionAssociationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-extension-association-props-builder
+  "The build-cfn-extension-association-props-builder function updates a CfnExtensionAssociationProps$Builder instance using the provided configuration.
+  The function takes the CfnExtensionAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -764,25 +827,28 @@ CfnExtensionAssociationProps$Builder using the provided configuration.  Each fie
 | `extensionVersionNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:extension-version-number` |
 | `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
 | `resourceIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-identifier` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnExtensionAssociationProps$Builder.)]
-    (when-let [data (lookup-entry config id :extension-identifier)]
-      (. builder extensionIdentifier data))
-    (when-let [data (lookup-entry config id :extension-version-number)]
-      (. builder extensionVersionNumber data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :resource-identifier)]
-      (. builder resourceIdentifier data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnExtensionAssociationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :extension-identifier)]
+    (. builder extensionIdentifier data))
+  (when-let [data (lookup-entry config id :extension-version-number)]
+    (. builder extensionVersionNumber data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :resource-identifier)]
+    (. builder resourceIdentifier data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-extension-builder
-  "The cfn-extension-builder function buildes out new instances of 
-CfnExtension$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-extension-builder
+  "The build-cfn-extension-builder function updates a CfnExtension$Builder instance using the provided configuration.
+  The function takes the CfnExtension$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -791,47 +857,53 @@ CfnExtension$Builder using the provided configuration.  Each field is set as fol
 | `latestVersionNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:latest-version-number` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnExtension$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :actions)]
-      (. builder actions data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :latest-version-number)]
-      (. builder latestVersionNumber data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnExtension$Builder builder id config]
+  (when-let [data (lookup-entry config id :actions)]
+    (. builder actions data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :latest-version-number)]
+    (. builder latestVersionNumber data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-extension-parameter-property-builder
-  "The cfn-extension-parameter-property-builder function buildes out new instances of 
-CfnExtension$ParameterProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-extension-parameter-property-builder
+  "The build-cfn-extension-parameter-property-builder function updates a CfnExtension$ParameterProperty$Builder instance using the provided configuration.
+  The function takes the CfnExtension$ParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `dynamic` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamic` |
-| `required` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:required` |"
-  [stack id config]
-  (let [builder (CfnExtension$ParameterProperty$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :dynamic)]
-      (. builder dynamic data))
-    (when-let [data (lookup-entry config id :required)]
-      (. builder required data))
-    (.build builder)))
+| `required` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:required` |
+"
+  [^CfnExtension$ParameterProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :dynamic)]
+    (. builder dynamic data))
+  (when-let [data (lookup-entry config id :required)]
+    (. builder required data))
+  (.build builder))
 
 
-(defn cfn-extension-props-builder
-  "The cfn-extension-props-builder function buildes out new instances of 
-CfnExtensionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-extension-props-builder
+  "The build-cfn-extension-props-builder function updates a CfnExtensionProps$Builder instance using the provided configuration.
+  The function takes the CfnExtensionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -840,59 +912,30 @@ CfnExtensionProps$Builder using the provided configuration.  Each field is set a
 | `latestVersionNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:latest-version-number` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `parameters` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:parameters` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnExtensionProps$Builder.)]
-    (when-let [data (lookup-entry config id :actions)]
-      (. builder actions data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :latest-version-number)]
-      (. builder latestVersionNumber data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnExtensionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :actions)]
+    (. builder actions data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :latest-version-number)]
+    (. builder latestVersionNumber data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-hosted-configuration-version-builder
-  "The cfn-hosted-configuration-version-builder function buildes out new instances of 
-CfnHostedConfigurationVersion$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-hosted-configuration-version-builder
+  "The build-cfn-hosted-configuration-version-builder function updates a CfnHostedConfigurationVersion$Builder instance using the provided configuration.
+  The function takes the CfnHostedConfigurationVersion$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
-| `configurationProfileId` | java.lang.String | [[cdk.support/lookup-entry]] | `:configuration-profile-id` |
-| `content` | java.lang.String | [[cdk.support/lookup-entry]] | `:content` |
-| `contentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:content-type` |
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `latestVersionNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:latest-version-number` |
-| `versionLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-label` |"
-  [stack id config]
-  (let [builder (CfnHostedConfigurationVersion$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :configuration-profile-id)]
-      (. builder configurationProfileId data))
-    (when-let [data (lookup-entry config id :content)]
-      (. builder content data))
-    (when-let [data (lookup-entry config id :content-type)]
-      (. builder contentType data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :latest-version-number)]
-      (. builder latestVersionNumber data))
-    (when-let [data (lookup-entry config id :version-label)]
-      (. builder versionLabel data))
-    (.build builder)))
-
-
-(defn cfn-hosted-configuration-version-props-builder
-  "The cfn-hosted-configuration-version-props-builder function buildes out new instances of 
-CfnHostedConfigurationVersionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -902,29 +945,67 @@ CfnHostedConfigurationVersionProps$Builder using the provided configuration.  Ea
 | `contentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:content-type` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `latestVersionNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:latest-version-number` |
-| `versionLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-label` |"
-  [stack id config]
-  (let [builder (CfnHostedConfigurationVersionProps$Builder.)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :configuration-profile-id)]
-      (. builder configurationProfileId data))
-    (when-let [data (lookup-entry config id :content)]
-      (. builder content data))
-    (when-let [data (lookup-entry config id :content-type)]
-      (. builder contentType data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :latest-version-number)]
-      (. builder latestVersionNumber data))
-    (when-let [data (lookup-entry config id :version-label)]
-      (. builder versionLabel data))
-    (.build builder)))
+| `versionLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-label` |
+"
+  [^CfnHostedConfigurationVersion$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :configuration-profile-id)]
+    (. builder configurationProfileId data))
+  (when-let [data (lookup-entry config id :content)]
+    (. builder content data))
+  (when-let [data (lookup-entry config id :content-type)]
+    (. builder contentType data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :latest-version-number)]
+    (. builder latestVersionNumber data))
+  (when-let [data (lookup-entry config id :version-label)]
+    (. builder versionLabel data))
+  (.build builder))
 
 
-(defn configuration-options-builder
-  "The configuration-options-builder function buildes out new instances of 
-ConfigurationOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-hosted-configuration-version-props-builder
+  "The build-cfn-hosted-configuration-version-props-builder function updates a CfnHostedConfigurationVersionProps$Builder instance using the provided configuration.
+  The function takes the CfnHostedConfigurationVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
+| `configurationProfileId` | java.lang.String | [[cdk.support/lookup-entry]] | `:configuration-profile-id` |
+| `content` | java.lang.String | [[cdk.support/lookup-entry]] | `:content` |
+| `contentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:content-type` |
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `latestVersionNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:latest-version-number` |
+| `versionLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-label` |
+"
+  [^CfnHostedConfigurationVersionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :configuration-profile-id)]
+    (. builder configurationProfileId data))
+  (when-let [data (lookup-entry config id :content)]
+    (. builder content data))
+  (when-let [data (lookup-entry config id :content-type)]
+    (. builder contentType data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :latest-version-number)]
+    (. builder latestVersionNumber data))
+  (when-let [data (lookup-entry config id :version-label)]
+    (. builder versionLabel data))
+  (.build builder))
+
+
+(defn build-configuration-options-builder
+  "The build-configuration-options-builder function updates a ConfigurationOptions$Builder instance using the provided configuration.
+  The function takes the ConfigurationOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -934,29 +1015,32 @@ ConfigurationOptions$Builder using the provided configuration.  Each field is se
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `type` | software.amazon.awscdk.services.appconfig.ConfigurationType | [[cdk.api.services.appconfig/configuration-type]] | `:type` |
-| `validators` | java.util.List | [[cdk.support/lookup-entry]] | `:validators` |"
-  [stack id config]
-  (let [builder (ConfigurationOptions$Builder.)]
-    (when-let [data (lookup-entry config id :deploy-to)]
-      (. builder deployTo data))
-    (when-let [data (lookup-entry config id :deployment-key)]
-      (. builder deploymentKey data))
-    (when-let [data (lookup-entry config id :deployment-strategy)]
-      (. builder deploymentStrategy data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (configuration-type config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :validators)]
-      (. builder validators data))
-    (.build builder)))
+| `validators` | java.util.List | [[cdk.support/lookup-entry]] | `:validators` |
+"
+  [^ConfigurationOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :deploy-to)]
+    (. builder deployTo data))
+  (when-let [data (lookup-entry config id :deployment-key)]
+    (. builder deploymentKey data))
+  (when-let [data (lookup-entry config id :deployment-strategy)]
+    (. builder deploymentStrategy data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (configuration-type config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :validators)]
+    (. builder validators data))
+  (.build builder))
 
 
-(defn configuration-props-builder
-  "The configuration-props-builder function buildes out new instances of 
-ConfigurationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-configuration-props-builder
+  "The build-configuration-props-builder function updates a ConfigurationProps$Builder instance using the provided configuration.
+  The function takes the ConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -967,71 +1051,80 @@ ConfigurationProps$Builder using the provided configuration.  Each field is set 
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `type` | software.amazon.awscdk.services.appconfig.ConfigurationType | [[cdk.api.services.appconfig/configuration-type]] | `:type` |
-| `validators` | java.util.List | [[cdk.support/lookup-entry]] | `:validators` |"
-  [stack id config]
-  (let [builder (ConfigurationProps$Builder.)]
-    (when-let [data (lookup-entry config id :application)]
-      (. builder application data))
-    (when-let [data (lookup-entry config id :deploy-to)]
-      (. builder deployTo data))
-    (when-let [data (lookup-entry config id :deployment-key)]
-      (. builder deploymentKey data))
-    (when-let [data (lookup-entry config id :deployment-strategy)]
-      (. builder deploymentStrategy data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (configuration-type config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :validators)]
-      (. builder validators data))
-    (.build builder)))
+| `validators` | java.util.List | [[cdk.support/lookup-entry]] | `:validators` |
+"
+  [^ConfigurationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application)]
+    (. builder application data))
+  (when-let [data (lookup-entry config id :deploy-to)]
+    (. builder deployTo data))
+  (when-let [data (lookup-entry config id :deployment-key)]
+    (. builder deploymentKey data))
+  (when-let [data (lookup-entry config id :deployment-strategy)]
+    (. builder deploymentStrategy data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (configuration-type config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :validators)]
+    (. builder validators data))
+  (.build builder))
 
 
-(defn deployment-strategy-builder
-  "The deployment-strategy-builder function buildes out new instances of 
-DeploymentStrategy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-deployment-strategy-builder
+  "The build-deployment-strategy-builder function updates a DeploymentStrategy$Builder instance using the provided configuration.
+  The function takes the DeploymentStrategy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `deploymentStrategyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-strategy-name` |
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `rolloutStrategy` | software.amazon.awscdk.services.appconfig.RolloutStrategy | [[cdk.support/lookup-entry]] | `:rollout-strategy` |"
-  [stack id config]
-  (let [builder (DeploymentStrategy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :deployment-strategy-name)]
-      (. builder deploymentStrategyName data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :rollout-strategy)]
-      (. builder rolloutStrategy data))
-    (.build builder)))
-
-
-(defn deployment-strategy-props-builder
-  "The deployment-strategy-props-builder function buildes out new instances of 
-DeploymentStrategyProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deploymentStrategyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-strategy-name` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `rolloutStrategy` | software.amazon.awscdk.services.appconfig.RolloutStrategy | [[cdk.support/lookup-entry]] | `:rollout-strategy` |"
-  [stack id config]
-  (let [builder (DeploymentStrategyProps$Builder.)]
-    (when-let [data (lookup-entry config id :deployment-strategy-name)]
-      (. builder deploymentStrategyName data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :rollout-strategy)]
-      (. builder rolloutStrategy data))
-    (.build builder)))
+| `rolloutStrategy` | software.amazon.awscdk.services.appconfig.RolloutStrategy | [[cdk.support/lookup-entry]] | `:rollout-strategy` |
+"
+  [^DeploymentStrategy$Builder builder id config]
+  (when-let [data (lookup-entry config id :deployment-strategy-name)]
+    (. builder deploymentStrategyName data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :rollout-strategy)]
+    (. builder rolloutStrategy data))
+  (.build builder))
 
 
-(defn environment-attributes-builder
-  "The environment-attributes-builder function buildes out new instances of 
-EnvironmentAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-deployment-strategy-props-builder
+  "The build-deployment-strategy-props-builder function updates a DeploymentStrategyProps$Builder instance using the provided configuration.
+  The function takes the DeploymentStrategyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `deploymentStrategyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:deployment-strategy-name` |
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `rolloutStrategy` | software.amazon.awscdk.services.appconfig.RolloutStrategy | [[cdk.support/lookup-entry]] | `:rollout-strategy` |
+"
+  [^DeploymentStrategyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :deployment-strategy-name)]
+    (. builder deploymentStrategyName data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :rollout-strategy)]
+    (. builder rolloutStrategy data))
+  (.build builder))
+
+
+(defn build-environment-attributes-builder
+  "The build-environment-attributes-builder function updates a EnvironmentAttributes$Builder instance using the provided configuration.
+  The function takes the EnvironmentAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1039,91 +1132,103 @@ EnvironmentAttributes$Builder using the provided configuration.  Each field is s
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `environmentId` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-id` |
 | `monitors` | java.util.List | [[cdk.support/lookup-entry]] | `:monitors` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (EnvironmentAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :application)]
-      (. builder application data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :environment-id)]
-      (. builder environmentId data))
-    (when-let [data (lookup-entry config id :monitors)]
-      (. builder monitors data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^EnvironmentAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :application)]
+    (. builder application data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :environment-id)]
+    (. builder environmentId data))
+  (when-let [data (lookup-entry config id :monitors)]
+    (. builder monitors data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn environment-builder
-  "The environment-builder function buildes out new instances of 
-Environment$Builder using the provided configuration.  Each field is set as follows:
+(defn build-environment-builder
+  "The build-environment-builder function updates a Environment$Builder instance using the provided configuration.
+  The function takes the Environment$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `application` | software.amazon.awscdk.services.appconfig.IApplication | [[cdk.support/lookup-entry]] | `:application` |
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `environmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-name` |
-| `monitors` | java.util.List | [[cdk.support/lookup-entry]] | `:monitors` |"
-  [stack id config]
-  (let [builder (Environment$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application)]
-      (. builder application data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :environment-name)]
-      (. builder environmentName data))
-    (when-let [data (lookup-entry config id :monitors)]
-      (. builder monitors data))
-    (.build builder)))
-
-
-(defn environment-options-builder
-  "The environment-options-builder function buildes out new instances of 
-EnvironmentOptions$Builder using the provided configuration.  Each field is set as follows:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `environmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-name` |
-| `monitors` | java.util.List | [[cdk.support/lookup-entry]] | `:monitors` |"
-  [stack id config]
-  (let [builder (EnvironmentOptions$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :environment-name)]
-      (. builder environmentName data))
-    (when-let [data (lookup-entry config id :monitors)]
-      (. builder monitors data))
-    (.build builder)))
-
-
-(defn environment-props-builder
-  "The environment-props-builder function buildes out new instances of 
-EnvironmentProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `application` | software.amazon.awscdk.services.appconfig.IApplication | [[cdk.support/lookup-entry]] | `:application` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `environmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-name` |
-| `monitors` | java.util.List | [[cdk.support/lookup-entry]] | `:monitors` |"
-  [stack id config]
-  (let [builder (EnvironmentProps$Builder.)]
-    (when-let [data (lookup-entry config id :application)]
-      (. builder application data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :environment-name)]
-      (. builder environmentName data))
-    (when-let [data (lookup-entry config id :monitors)]
-      (. builder monitors data))
-    (.build builder)))
+| `monitors` | java.util.List | [[cdk.support/lookup-entry]] | `:monitors` |
+"
+  [^Environment$Builder builder id config]
+  (when-let [data (lookup-entry config id :application)]
+    (. builder application data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :environment-name)]
+    (. builder environmentName data))
+  (when-let [data (lookup-entry config id :monitors)]
+    (. builder monitors data))
+  (.build builder))
 
 
-(defn extension-attributes-builder
-  "The extension-attributes-builder function buildes out new instances of 
-ExtensionAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-environment-options-builder
+  "The build-environment-options-builder function updates a EnvironmentOptions$Builder instance using the provided configuration.
+  The function takes the EnvironmentOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `environmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-name` |
+| `monitors` | java.util.List | [[cdk.support/lookup-entry]] | `:monitors` |
+"
+  [^EnvironmentOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :environment-name)]
+    (. builder environmentName data))
+  (when-let [data (lookup-entry config id :monitors)]
+    (. builder monitors data))
+  (.build builder))
+
+
+(defn build-environment-props-builder
+  "The build-environment-props-builder function updates a EnvironmentProps$Builder instance using the provided configuration.
+  The function takes the EnvironmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `application` | software.amazon.awscdk.services.appconfig.IApplication | [[cdk.support/lookup-entry]] | `:application` |
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `environmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:environment-name` |
+| `monitors` | java.util.List | [[cdk.support/lookup-entry]] | `:monitors` |
+"
+  [^EnvironmentProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application)]
+    (. builder application data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :environment-name)]
+    (. builder environmentName data))
+  (when-let [data (lookup-entry config id :monitors)]
+    (. builder monitors data))
+  (.build builder))
+
+
+(defn build-extension-attributes-builder
+  "The build-extension-attributes-builder function updates a ExtensionAttributes$Builder instance using the provided configuration.
+  The function takes the ExtensionAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1132,76 +1237,30 @@ ExtensionAttributes$Builder using the provided configuration.  Each field is set
 | `extensionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:extension-arn` |
 | `extensionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:extension-id` |
 | `extensionVersionNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:extension-version-number` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (ExtensionAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :actions)]
-      (. builder actions data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :extension-arn)]
-      (. builder extensionArn data))
-    (when-let [data (lookup-entry config id :extension-id)]
-      (. builder extensionId data))
-    (when-let [data (lookup-entry config id :extension-version-number)]
-      (. builder extensionVersionNumber data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^ExtensionAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :actions)]
+    (. builder actions data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :extension-arn)]
+    (. builder extensionArn data))
+  (when-let [data (lookup-entry config id :extension-id)]
+    (. builder extensionId data))
+  (when-let [data (lookup-entry config id :extension-version-number)]
+    (. builder extensionVersionNumber data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn extension-builder
-  "The extension-builder function buildes out new instances of 
-Extension$Builder using the provided configuration.  Each field is set as follows:
+(defn build-extension-builder
+  "The build-extension-builder function updates a Extension$Builder instance using the provided configuration.
+  The function takes the Extension$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `extensionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:extension-name` |
-| `latestVersionNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:latest-version-number` |
-| `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |"
-  [stack id config]
-  (let [builder (Extension$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :actions)]
-      (. builder actions data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :extension-name)]
-      (. builder extensionName data))
-    (when-let [data (lookup-entry config id :latest-version-number)]
-      (. builder latestVersionNumber data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (.build builder)))
-
-
-(defn extension-options-builder
-  "The extension-options-builder function buildes out new instances of 
-ExtensionOptions$Builder using the provided configuration.  Each field is set as follows:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `extensionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:extension-name` |
-| `latestVersionNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:latest-version-number` |
-| `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |"
-  [stack id config]
-  (let [builder (ExtensionOptions$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :extension-name)]
-      (. builder extensionName data))
-    (when-let [data (lookup-entry config id :latest-version-number)]
-      (. builder latestVersionNumber data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (.build builder)))
-
-
-(defn extension-props-builder
-  "The extension-props-builder function buildes out new instances of 
-ExtensionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1209,25 +1268,83 @@ ExtensionProps$Builder using the provided configuration.  Each field is set as f
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `extensionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:extension-name` |
 | `latestVersionNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:latest-version-number` |
-| `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |"
-  [stack id config]
-  (let [builder (ExtensionProps$Builder.)]
-    (when-let [data (lookup-entry config id :actions)]
-      (. builder actions data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :extension-name)]
-      (. builder extensionName data))
-    (when-let [data (lookup-entry config id :latest-version-number)]
-      (. builder latestVersionNumber data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (.build builder)))
+| `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |
+"
+  [^Extension$Builder builder id config]
+  (when-let [data (lookup-entry config id :actions)]
+    (. builder actions data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :extension-name)]
+    (. builder extensionName data))
+  (when-let [data (lookup-entry config id :latest-version-number)]
+    (. builder latestVersionNumber data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (.build builder))
 
 
-(defn hosted-configuration-builder
-  "The hosted-configuration-builder function buildes out new instances of 
-HostedConfiguration$Builder using the provided configuration.  Each field is set as follows:
+(defn build-extension-options-builder
+  "The build-extension-options-builder function updates a ExtensionOptions$Builder instance using the provided configuration.
+  The function takes the ExtensionOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `extensionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:extension-name` |
+| `latestVersionNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:latest-version-number` |
+| `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |
+"
+  [^ExtensionOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :extension-name)]
+    (. builder extensionName data))
+  (when-let [data (lookup-entry config id :latest-version-number)]
+    (. builder latestVersionNumber data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (.build builder))
+
+
+(defn build-extension-props-builder
+  "The build-extension-props-builder function updates a ExtensionProps$Builder instance using the provided configuration.
+  The function takes the ExtensionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `extensionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:extension-name` |
+| `latestVersionNumber` | java.lang.Number | [[cdk.support/lookup-entry]] | `:latest-version-number` |
+| `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |
+"
+  [^ExtensionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :actions)]
+    (. builder actions data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :extension-name)]
+    (. builder extensionName data))
+  (when-let [data (lookup-entry config id :latest-version-number)]
+    (. builder latestVersionNumber data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (.build builder))
+
+
+(defn build-hosted-configuration-builder
+  "The build-hosted-configuration-builder function updates a HostedConfiguration$Builder instance using the provided configuration.
+  The function takes the HostedConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1241,37 +1358,40 @@ HostedConfiguration$Builder using the provided configuration.  Each field is set
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `type` | software.amazon.awscdk.services.appconfig.ConfigurationType | [[cdk.api.services.appconfig/configuration-type]] | `:type` |
 | `validators` | java.util.List | [[cdk.support/lookup-entry]] | `:validators` |
-| `versionLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-label` |"
-  [stack id config]
-  (let [builder (HostedConfiguration$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application)]
-      (. builder application data))
-    (when-let [data (lookup-entry config id :content)]
-      (. builder content data))
-    (when-let [data (lookup-entry config id :deploy-to)]
-      (. builder deployTo data))
-    (when-let [data (lookup-entry config id :deployment-key)]
-      (. builder deploymentKey data))
-    (when-let [data (lookup-entry config id :deployment-strategy)]
-      (. builder deploymentStrategy data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :latest-version-number)]
-      (. builder latestVersionNumber data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (configuration-type config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :validators)]
-      (. builder validators data))
-    (when-let [data (lookup-entry config id :version-label)]
-      (. builder versionLabel data))
-    (.build builder)))
+| `versionLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-label` |
+"
+  [^HostedConfiguration$Builder builder id config]
+  (when-let [data (lookup-entry config id :application)]
+    (. builder application data))
+  (when-let [data (lookup-entry config id :content)]
+    (. builder content data))
+  (when-let [data (lookup-entry config id :deploy-to)]
+    (. builder deployTo data))
+  (when-let [data (lookup-entry config id :deployment-key)]
+    (. builder deploymentKey data))
+  (when-let [data (lookup-entry config id :deployment-strategy)]
+    (. builder deploymentStrategy data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :latest-version-number)]
+    (. builder latestVersionNumber data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (configuration-type config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :validators)]
+    (. builder validators data))
+  (when-let [data (lookup-entry config id :version-label)]
+    (. builder versionLabel data))
+  (.build builder))
 
 
-(defn hosted-configuration-options-builder
-  "The hosted-configuration-options-builder function buildes out new instances of 
-HostedConfigurationOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-hosted-configuration-options-builder
+  "The build-hosted-configuration-options-builder function updates a HostedConfigurationOptions$Builder instance using the provided configuration.
+  The function takes the HostedConfigurationOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1284,35 +1404,38 @@ HostedConfigurationOptions$Builder using the provided configuration.  Each field
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `type` | software.amazon.awscdk.services.appconfig.ConfigurationType | [[cdk.api.services.appconfig/configuration-type]] | `:type` |
 | `validators` | java.util.List | [[cdk.support/lookup-entry]] | `:validators` |
-| `versionLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-label` |"
-  [stack id config]
-  (let [builder (HostedConfigurationOptions$Builder.)]
-    (when-let [data (lookup-entry config id :content)]
-      (. builder content data))
-    (when-let [data (lookup-entry config id :deploy-to)]
-      (. builder deployTo data))
-    (when-let [data (lookup-entry config id :deployment-key)]
-      (. builder deploymentKey data))
-    (when-let [data (lookup-entry config id :deployment-strategy)]
-      (. builder deploymentStrategy data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :latest-version-number)]
-      (. builder latestVersionNumber data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (configuration-type config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :validators)]
-      (. builder validators data))
-    (when-let [data (lookup-entry config id :version-label)]
-      (. builder versionLabel data))
-    (.build builder)))
+| `versionLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-label` |
+"
+  [^HostedConfigurationOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :content)]
+    (. builder content data))
+  (when-let [data (lookup-entry config id :deploy-to)]
+    (. builder deployTo data))
+  (when-let [data (lookup-entry config id :deployment-key)]
+    (. builder deploymentKey data))
+  (when-let [data (lookup-entry config id :deployment-strategy)]
+    (. builder deploymentStrategy data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :latest-version-number)]
+    (. builder latestVersionNumber data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (configuration-type config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :validators)]
+    (. builder validators data))
+  (when-let [data (lookup-entry config id :version-label)]
+    (. builder versionLabel data))
+  (.build builder))
 
 
-(defn hosted-configuration-props-builder
-  "The hosted-configuration-props-builder function buildes out new instances of 
-HostedConfigurationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-hosted-configuration-props-builder
+  "The build-hosted-configuration-props-builder function updates a HostedConfigurationProps$Builder instance using the provided configuration.
+  The function takes the HostedConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1326,142 +1449,63 @@ HostedConfigurationProps$Builder using the provided configuration.  Each field i
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `type` | software.amazon.awscdk.services.appconfig.ConfigurationType | [[cdk.api.services.appconfig/configuration-type]] | `:type` |
 | `validators` | java.util.List | [[cdk.support/lookup-entry]] | `:validators` |
-| `versionLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-label` |"
-  [stack id config]
-  (let [builder (HostedConfigurationProps$Builder.)]
-    (when-let [data (lookup-entry config id :application)]
-      (. builder application data))
-    (when-let [data (lookup-entry config id :content)]
-      (. builder content data))
-    (when-let [data (lookup-entry config id :deploy-to)]
-      (. builder deployTo data))
-    (when-let [data (lookup-entry config id :deployment-key)]
-      (. builder deploymentKey data))
-    (when-let [data (lookup-entry config id :deployment-strategy)]
-      (. builder deploymentStrategy data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :latest-version-number)]
-      (. builder latestVersionNumber data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (configuration-type config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :validators)]
-      (. builder validators data))
-    (when-let [data (lookup-entry config id :version-label)]
-      (. builder versionLabel data))
-    (.build builder)))
+| `versionLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-label` |
+"
+  [^HostedConfigurationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application)]
+    (. builder application data))
+  (when-let [data (lookup-entry config id :content)]
+    (. builder content data))
+  (when-let [data (lookup-entry config id :deploy-to)]
+    (. builder deployTo data))
+  (when-let [data (lookup-entry config id :deployment-key)]
+    (. builder deploymentKey data))
+  (when-let [data (lookup-entry config id :deployment-strategy)]
+    (. builder deploymentStrategy data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :latest-version-number)]
+    (. builder latestVersionNumber data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (configuration-type config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :validators)]
+    (. builder validators data))
+  (when-let [data (lookup-entry config id :version-label)]
+    (. builder versionLabel data))
+  (.build builder))
 
 
-(defn rollout-strategy-props-builder
-  "The rollout-strategy-props-builder function buildes out new instances of 
-RolloutStrategyProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-rollout-strategy-props-builder
+  "The build-rollout-strategy-props-builder function updates a RolloutStrategyProps$Builder instance using the provided configuration.
+  The function takes the RolloutStrategyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deploymentDuration` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:deployment-duration` |
 | `finalBakeTime` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:final-bake-time` |
-| `growthFactor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:growth-factor` |"
-  [stack id config]
-  (let [builder (RolloutStrategyProps$Builder.)]
-    (when-let [data (lookup-entry config id :deployment-duration)]
-      (. builder deploymentDuration data))
-    (when-let [data (lookup-entry config id :final-bake-time)]
-      (. builder finalBakeTime data))
-    (when-let [data (lookup-entry config id :growth-factor)]
-      (. builder growthFactor data))
-    (.build builder)))
+| `growthFactor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:growth-factor` |
+"
+  [^RolloutStrategyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :deployment-duration)]
+    (. builder deploymentDuration data))
+  (when-let [data (lookup-entry config id :final-bake-time)]
+    (. builder finalBakeTime data))
+  (when-let [data (lookup-entry config id :growth-factor)]
+    (. builder growthFactor data))
+  (.build builder))
 
 
-(defn sourced-configuration-builder
-  "The sourced-configuration-builder function buildes out new instances of 
-SourcedConfiguration$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sourced-configuration-builder
+  "The build-sourced-configuration-builder function updates a SourcedConfiguration$Builder instance using the provided configuration.
+  The function takes the SourcedConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `application` | software.amazon.awscdk.services.appconfig.IApplication | [[cdk.support/lookup-entry]] | `:application` |
-| `deployTo` | java.util.List | [[cdk.support/lookup-entry]] | `:deploy-to` |
-| `deploymentKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:deployment-key` |
-| `deploymentStrategy` | software.amazon.awscdk.services.appconfig.IDeploymentStrategy | [[cdk.support/lookup-entry]] | `:deployment-strategy` |
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `location` | software.amazon.awscdk.services.appconfig.ConfigurationSource | [[cdk.support/lookup-entry]] | `:location` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `retrievalRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:retrieval-role` |
-| `type` | software.amazon.awscdk.services.appconfig.ConfigurationType | [[cdk.api.services.appconfig/configuration-type]] | `:type` |
-| `validators` | java.util.List | [[cdk.support/lookup-entry]] | `:validators` |
-| `versionNumber` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-number` |"
-  [stack id config]
-  (let [builder (SourcedConfiguration$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application)]
-      (. builder application data))
-    (when-let [data (lookup-entry config id :deploy-to)]
-      (. builder deployTo data))
-    (when-let [data (lookup-entry config id :deployment-key)]
-      (. builder deploymentKey data))
-    (when-let [data (lookup-entry config id :deployment-strategy)]
-      (. builder deploymentStrategy data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :location)]
-      (. builder location data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :retrieval-role)]
-      (. builder retrievalRole data))
-    (when-let [data (configuration-type config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :validators)]
-      (. builder validators data))
-    (when-let [data (lookup-entry config id :version-number)]
-      (. builder versionNumber data))
-    (.build builder)))
-
-
-(defn sourced-configuration-options-builder
-  "The sourced-configuration-options-builder function buildes out new instances of 
-SourcedConfigurationOptions$Builder using the provided configuration.  Each field is set as follows:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `deployTo` | java.util.List | [[cdk.support/lookup-entry]] | `:deploy-to` |
-| `deploymentKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:deployment-key` |
-| `deploymentStrategy` | software.amazon.awscdk.services.appconfig.IDeploymentStrategy | [[cdk.support/lookup-entry]] | `:deployment-strategy` |
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `location` | software.amazon.awscdk.services.appconfig.ConfigurationSource | [[cdk.support/lookup-entry]] | `:location` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `retrievalRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:retrieval-role` |
-| `type` | software.amazon.awscdk.services.appconfig.ConfigurationType | [[cdk.api.services.appconfig/configuration-type]] | `:type` |
-| `validators` | java.util.List | [[cdk.support/lookup-entry]] | `:validators` |
-| `versionNumber` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-number` |"
-  [stack id config]
-  (let [builder (SourcedConfigurationOptions$Builder.)]
-    (when-let [data (lookup-entry config id :deploy-to)]
-      (. builder deployTo data))
-    (when-let [data (lookup-entry config id :deployment-key)]
-      (. builder deploymentKey data))
-    (when-let [data (lookup-entry config id :deployment-strategy)]
-      (. builder deploymentStrategy data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :location)]
-      (. builder location data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :retrieval-role)]
-      (. builder retrievalRole data))
-    (when-let [data (configuration-type config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :validators)]
-      (. builder validators data))
-    (when-let [data (lookup-entry config id :version-number)]
-      (. builder versionNumber data))
-    (.build builder)))
-
-
-(defn sourced-configuration-props-builder
-  "The sourced-configuration-props-builder function buildes out new instances of 
-SourcedConfigurationProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1475,29 +1519,120 @@ SourcedConfigurationProps$Builder using the provided configuration.  Each field 
 | `retrievalRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:retrieval-role` |
 | `type` | software.amazon.awscdk.services.appconfig.ConfigurationType | [[cdk.api.services.appconfig/configuration-type]] | `:type` |
 | `validators` | java.util.List | [[cdk.support/lookup-entry]] | `:validators` |
-| `versionNumber` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-number` |"
-  [stack id config]
-  (let [builder (SourcedConfigurationProps$Builder.)]
-    (when-let [data (lookup-entry config id :application)]
-      (. builder application data))
-    (when-let [data (lookup-entry config id :deploy-to)]
-      (. builder deployTo data))
-    (when-let [data (lookup-entry config id :deployment-key)]
-      (. builder deploymentKey data))
-    (when-let [data (lookup-entry config id :deployment-strategy)]
-      (. builder deploymentStrategy data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :location)]
-      (. builder location data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :retrieval-role)]
-      (. builder retrievalRole data))
-    (when-let [data (configuration-type config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :validators)]
-      (. builder validators data))
-    (when-let [data (lookup-entry config id :version-number)]
-      (. builder versionNumber data))
-    (.build builder)))
+| `versionNumber` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-number` |
+"
+  [^SourcedConfiguration$Builder builder id config]
+  (when-let [data (lookup-entry config id :application)]
+    (. builder application data))
+  (when-let [data (lookup-entry config id :deploy-to)]
+    (. builder deployTo data))
+  (when-let [data (lookup-entry config id :deployment-key)]
+    (. builder deploymentKey data))
+  (when-let [data (lookup-entry config id :deployment-strategy)]
+    (. builder deploymentStrategy data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :location)]
+    (. builder location data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :retrieval-role)]
+    (. builder retrievalRole data))
+  (when-let [data (configuration-type config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :validators)]
+    (. builder validators data))
+  (when-let [data (lookup-entry config id :version-number)]
+    (. builder versionNumber data))
+  (.build builder))
+
+
+(defn build-sourced-configuration-options-builder
+  "The build-sourced-configuration-options-builder function updates a SourcedConfigurationOptions$Builder instance using the provided configuration.
+  The function takes the SourcedConfigurationOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `deployTo` | java.util.List | [[cdk.support/lookup-entry]] | `:deploy-to` |
+| `deploymentKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:deployment-key` |
+| `deploymentStrategy` | software.amazon.awscdk.services.appconfig.IDeploymentStrategy | [[cdk.support/lookup-entry]] | `:deployment-strategy` |
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `location` | software.amazon.awscdk.services.appconfig.ConfigurationSource | [[cdk.support/lookup-entry]] | `:location` |
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `retrievalRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:retrieval-role` |
+| `type` | software.amazon.awscdk.services.appconfig.ConfigurationType | [[cdk.api.services.appconfig/configuration-type]] | `:type` |
+| `validators` | java.util.List | [[cdk.support/lookup-entry]] | `:validators` |
+| `versionNumber` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-number` |
+"
+  [^SourcedConfigurationOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :deploy-to)]
+    (. builder deployTo data))
+  (when-let [data (lookup-entry config id :deployment-key)]
+    (. builder deploymentKey data))
+  (when-let [data (lookup-entry config id :deployment-strategy)]
+    (. builder deploymentStrategy data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :location)]
+    (. builder location data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :retrieval-role)]
+    (. builder retrievalRole data))
+  (when-let [data (configuration-type config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :validators)]
+    (. builder validators data))
+  (when-let [data (lookup-entry config id :version-number)]
+    (. builder versionNumber data))
+  (.build builder))
+
+
+(defn build-sourced-configuration-props-builder
+  "The build-sourced-configuration-props-builder function updates a SourcedConfigurationProps$Builder instance using the provided configuration.
+  The function takes the SourcedConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `application` | software.amazon.awscdk.services.appconfig.IApplication | [[cdk.support/lookup-entry]] | `:application` |
+| `deployTo` | java.util.List | [[cdk.support/lookup-entry]] | `:deploy-to` |
+| `deploymentKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:deployment-key` |
+| `deploymentStrategy` | software.amazon.awscdk.services.appconfig.IDeploymentStrategy | [[cdk.support/lookup-entry]] | `:deployment-strategy` |
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `location` | software.amazon.awscdk.services.appconfig.ConfigurationSource | [[cdk.support/lookup-entry]] | `:location` |
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `retrievalRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:retrieval-role` |
+| `type` | software.amazon.awscdk.services.appconfig.ConfigurationType | [[cdk.api.services.appconfig/configuration-type]] | `:type` |
+| `validators` | java.util.List | [[cdk.support/lookup-entry]] | `:validators` |
+| `versionNumber` | java.lang.String | [[cdk.support/lookup-entry]] | `:version-number` |
+"
+  [^SourcedConfigurationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application)]
+    (. builder application data))
+  (when-let [data (lookup-entry config id :deploy-to)]
+    (. builder deployTo data))
+  (when-let [data (lookup-entry config id :deployment-key)]
+    (. builder deploymentKey data))
+  (when-let [data (lookup-entry config id :deployment-strategy)]
+    (. builder deploymentStrategy data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :location)]
+    (. builder location data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :retrieval-role)]
+    (. builder retrievalRole data))
+  (when-let [data (configuration-type config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :validators)]
+    (. builder validators data))
+  (when-let [data (lookup-entry config id :version-number)]
+    (. builder versionNumber data))
+  (.build builder))

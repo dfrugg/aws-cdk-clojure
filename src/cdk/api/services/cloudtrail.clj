@@ -89,109 +89,127 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :none data) ReadWriteType/NONE)))
 
 
-(defn add-event-selector-options-builder
-  "The add-event-selector-options-builder function buildes out new instances of 
-AddEventSelectorOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-add-event-selector-options-builder
+  "The build-add-event-selector-options-builder function updates a AddEventSelectorOptions$Builder instance using the provided configuration.
+  The function takes the AddEventSelectorOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `excludeManagementEventSources` | java.util.List | [[cdk.support/lookup-entry]] | `:exclude-management-event-sources` |
 | `includeManagementEvents` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-management-events` |
-| `readWriteType` | software.amazon.awscdk.services.cloudtrail.ReadWriteType | [[cdk.api.services.cloudtrail/read-write-type]] | `:read-write-type` |"
-  [stack id config]
-  (let [builder (AddEventSelectorOptions$Builder.)]
-    (when-let [data (lookup-entry config id :exclude-management-event-sources)]
-      (. builder excludeManagementEventSources data))
-    (when-let [data (lookup-entry config id :include-management-events)]
-      (. builder includeManagementEvents data))
-    (when-let [data (read-write-type config id :read-write-type)]
-      (. builder readWriteType data))
-    (.build builder)))
+| `readWriteType` | software.amazon.awscdk.services.cloudtrail.ReadWriteType | [[cdk.api.services.cloudtrail/read-write-type]] | `:read-write-type` |
+"
+  [^AddEventSelectorOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :exclude-management-event-sources)]
+    (. builder excludeManagementEventSources data))
+  (when-let [data (lookup-entry config id :include-management-events)]
+    (. builder includeManagementEvents data))
+  (when-let [data (read-write-type config id :read-write-type)]
+    (. builder readWriteType data))
+  (.build builder))
 
 
-(defn cfn-channel-builder
-  "The cfn-channel-builder function buildes out new instances of 
-CfnChannel$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-channel-builder
+  "The build-cfn-channel-builder function updates a CfnChannel$Builder instance using the provided configuration.
+  The function takes the CfnChannel$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `destinations` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:destinations` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `source` | java.lang.String | [[cdk.support/lookup-entry]] | `:source` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnChannel$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :destinations)]
-      (. builder destinations data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :source)]
-      (. builder source data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnChannel$Builder builder id config]
+  (when-let [data (lookup-entry config id :destinations)]
+    (. builder destinations data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :source)]
+    (. builder source data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-channel-destination-property-builder
-  "The cfn-channel-destination-property-builder function buildes out new instances of 
-CfnChannel$DestinationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-channel-destination-property-builder
+  "The build-cfn-channel-destination-property-builder function updates a CfnChannel$DestinationProperty$Builder instance using the provided configuration.
+  The function takes the CfnChannel$DestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `location` | java.lang.String | [[cdk.support/lookup-entry]] | `:location` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnChannel$DestinationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :location)]
-      (. builder location data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnChannel$DestinationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :location)]
+    (. builder location data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-channel-props-builder
-  "The cfn-channel-props-builder function buildes out new instances of 
-CfnChannelProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-channel-props-builder
+  "The build-cfn-channel-props-builder function updates a CfnChannelProps$Builder instance using the provided configuration.
+  The function takes the CfnChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `destinations` | java.util.List | [[cdk.support/lookup-entry]] | `:destinations` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `source` | java.lang.String | [[cdk.support/lookup-entry]] | `:source` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnChannelProps$Builder.)]
-    (when-let [data (lookup-entry config id :destinations)]
-      (. builder destinations data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :source)]
-      (. builder source data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnChannelProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :destinations)]
+    (. builder destinations data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :source)]
+    (. builder source data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-event-data-store-advanced-event-selector-property-builder
-  "The cfn-event-data-store-advanced-event-selector-property-builder function buildes out new instances of 
-CfnEventDataStore$AdvancedEventSelectorProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-event-data-store-advanced-event-selector-property-builder
+  "The build-cfn-event-data-store-advanced-event-selector-property-builder function updates a CfnEventDataStore$AdvancedEventSelectorProperty$Builder instance using the provided configuration.
+  The function takes the CfnEventDataStore$AdvancedEventSelectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `fieldSelectors` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:field-selectors` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (CfnEventDataStore$AdvancedEventSelectorProperty$Builder.)]
-    (when-let [data (lookup-entry config id :field-selectors)]
-      (. builder fieldSelectors data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^CfnEventDataStore$AdvancedEventSelectorProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :field-selectors)]
+    (. builder fieldSelectors data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn cfn-event-data-store-advanced-field-selector-property-builder
-  "The cfn-event-data-store-advanced-field-selector-property-builder function buildes out new instances of 
-CfnEventDataStore$AdvancedFieldSelectorProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-event-data-store-advanced-field-selector-property-builder
+  "The build-cfn-event-data-store-advanced-field-selector-property-builder function updates a CfnEventDataStore$AdvancedFieldSelectorProperty$Builder instance using the provided configuration.
+  The function takes the CfnEventDataStore$AdvancedFieldSelectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -201,29 +219,32 @@ CfnEventDataStore$AdvancedFieldSelectorProperty$Builder using the provided confi
 | `notEndsWith` | java.util.List | [[cdk.support/lookup-entry]] | `:not-ends-with` |
 | `notEquals` | java.util.List | [[cdk.support/lookup-entry]] | `:not-equals` |
 | `notStartsWith` | java.util.List | [[cdk.support/lookup-entry]] | `:not-starts-with` |
-| `startsWith` | java.util.List | [[cdk.support/lookup-entry]] | `:starts-with` |"
-  [stack id config]
-  (let [builder (CfnEventDataStore$AdvancedFieldSelectorProperty$Builder.)]
-    (when-let [data (lookup-entry config id :ends-with)]
-      (. builder endsWith data))
-    (when-let [data (lookup-entry config id :equal-to)]
-      (. builder equalTo data))
-    (when-let [data (lookup-entry config id :field)]
-      (. builder field data))
-    (when-let [data (lookup-entry config id :not-ends-with)]
-      (. builder notEndsWith data))
-    (when-let [data (lookup-entry config id :not-equals)]
-      (. builder notEquals data))
-    (when-let [data (lookup-entry config id :not-starts-with)]
-      (. builder notStartsWith data))
-    (when-let [data (lookup-entry config id :starts-with)]
-      (. builder startsWith data))
-    (.build builder)))
+| `startsWith` | java.util.List | [[cdk.support/lookup-entry]] | `:starts-with` |
+"
+  [^CfnEventDataStore$AdvancedFieldSelectorProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :ends-with)]
+    (. builder endsWith data))
+  (when-let [data (lookup-entry config id :equal-to)]
+    (. builder equalTo data))
+  (when-let [data (lookup-entry config id :field)]
+    (. builder field data))
+  (when-let [data (lookup-entry config id :not-ends-with)]
+    (. builder notEndsWith data))
+  (when-let [data (lookup-entry config id :not-equals)]
+    (. builder notEquals data))
+  (when-let [data (lookup-entry config id :not-starts-with)]
+    (. builder notStartsWith data))
+  (when-let [data (lookup-entry config id :starts-with)]
+    (. builder startsWith data))
+  (.build builder))
 
 
-(defn cfn-event-data-store-builder
-  "The cfn-event-data-store-builder function buildes out new instances of 
-CfnEventDataStore$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-event-data-store-builder
+  "The build-cfn-event-data-store-builder function updates a CfnEventDataStore$Builder instance using the provided configuration.
+  The function takes the CfnEventDataStore$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -240,57 +261,63 @@ CfnEventDataStore$Builder using the provided configuration.  Each field is set a
 | `organizationEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:organization-enabled` |
 | `retentionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retention-period` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `terminationProtectionEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:termination-protection-enabled` |"
-  [stack id config]
-  (let [builder (CfnEventDataStore$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :advanced-event-selectors)]
-      (. builder advancedEventSelectors data))
-    (when-let [data (lookup-entry config id :billing-mode)]
-      (. builder billingMode data))
-    (when-let [data (lookup-entry config id :federation-enabled)]
-      (. builder federationEnabled data))
-    (when-let [data (lookup-entry config id :federation-role-arn)]
-      (. builder federationRoleArn data))
-    (when-let [data (lookup-entry config id :ingestion-enabled)]
-      (. builder ingestionEnabled data))
-    (when-let [data (lookup-entry config id :insight-selectors)]
-      (. builder insightSelectors data))
-    (when-let [data (lookup-entry config id :insights-destination)]
-      (. builder insightsDestination data))
-    (when-let [data (lookup-entry config id :kms-key-id)]
-      (. builder kmsKeyId data))
-    (when-let [data (lookup-entry config id :multi-region-enabled)]
-      (. builder multiRegionEnabled data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :organization-enabled)]
-      (. builder organizationEnabled data))
-    (when-let [data (lookup-entry config id :retention-period)]
-      (. builder retentionPeriod data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :termination-protection-enabled)]
-      (. builder terminationProtectionEnabled data))
-    (.build builder)))
+| `terminationProtectionEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:termination-protection-enabled` |
+"
+  [^CfnEventDataStore$Builder builder id config]
+  (when-let [data (lookup-entry config id :advanced-event-selectors)]
+    (. builder advancedEventSelectors data))
+  (when-let [data (lookup-entry config id :billing-mode)]
+    (. builder billingMode data))
+  (when-let [data (lookup-entry config id :federation-enabled)]
+    (. builder federationEnabled data))
+  (when-let [data (lookup-entry config id :federation-role-arn)]
+    (. builder federationRoleArn data))
+  (when-let [data (lookup-entry config id :ingestion-enabled)]
+    (. builder ingestionEnabled data))
+  (when-let [data (lookup-entry config id :insight-selectors)]
+    (. builder insightSelectors data))
+  (when-let [data (lookup-entry config id :insights-destination)]
+    (. builder insightsDestination data))
+  (when-let [data (lookup-entry config id :kms-key-id)]
+    (. builder kmsKeyId data))
+  (when-let [data (lookup-entry config id :multi-region-enabled)]
+    (. builder multiRegionEnabled data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :organization-enabled)]
+    (. builder organizationEnabled data))
+  (when-let [data (lookup-entry config id :retention-period)]
+    (. builder retentionPeriod data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :termination-protection-enabled)]
+    (. builder terminationProtectionEnabled data))
+  (.build builder))
 
 
-(defn cfn-event-data-store-insight-selector-property-builder
-  "The cfn-event-data-store-insight-selector-property-builder function buildes out new instances of 
-CfnEventDataStore$InsightSelectorProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-event-data-store-insight-selector-property-builder
+  "The build-cfn-event-data-store-insight-selector-property-builder function updates a CfnEventDataStore$InsightSelectorProperty$Builder instance using the provided configuration.
+  The function takes the CfnEventDataStore$InsightSelectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `insightType` | java.lang.String | [[cdk.support/lookup-entry]] | `:insight-type` |"
-  [stack id config]
-  (let [builder (CfnEventDataStore$InsightSelectorProperty$Builder.)]
-    (when-let [data (lookup-entry config id :insight-type)]
-      (. builder insightType data))
-    (.build builder)))
+| `insightType` | java.lang.String | [[cdk.support/lookup-entry]] | `:insight-type` |
+"
+  [^CfnEventDataStore$InsightSelectorProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :insight-type)]
+    (. builder insightType data))
+  (.build builder))
 
 
-(defn cfn-event-data-store-props-builder
-  "The cfn-event-data-store-props-builder function buildes out new instances of 
-CfnEventDataStoreProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-event-data-store-props-builder
+  "The build-cfn-event-data-store-props-builder function updates a CfnEventDataStoreProps$Builder instance using the provided configuration.
+  The function takes the CfnEventDataStoreProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -307,94 +334,106 @@ CfnEventDataStoreProps$Builder using the provided configuration.  Each field is 
 | `organizationEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:organization-enabled` |
 | `retentionPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retention-period` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `terminationProtectionEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:termination-protection-enabled` |"
-  [stack id config]
-  (let [builder (CfnEventDataStoreProps$Builder.)]
-    (when-let [data (lookup-entry config id :advanced-event-selectors)]
-      (. builder advancedEventSelectors data))
-    (when-let [data (lookup-entry config id :billing-mode)]
-      (. builder billingMode data))
-    (when-let [data (lookup-entry config id :federation-enabled)]
-      (. builder federationEnabled data))
-    (when-let [data (lookup-entry config id :federation-role-arn)]
-      (. builder federationRoleArn data))
-    (when-let [data (lookup-entry config id :ingestion-enabled)]
-      (. builder ingestionEnabled data))
-    (when-let [data (lookup-entry config id :insight-selectors)]
-      (. builder insightSelectors data))
-    (when-let [data (lookup-entry config id :insights-destination)]
-      (. builder insightsDestination data))
-    (when-let [data (lookup-entry config id :kms-key-id)]
-      (. builder kmsKeyId data))
-    (when-let [data (lookup-entry config id :multi-region-enabled)]
-      (. builder multiRegionEnabled data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :organization-enabled)]
-      (. builder organizationEnabled data))
-    (when-let [data (lookup-entry config id :retention-period)]
-      (. builder retentionPeriod data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :termination-protection-enabled)]
-      (. builder terminationProtectionEnabled data))
-    (.build builder)))
+| `terminationProtectionEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:termination-protection-enabled` |
+"
+  [^CfnEventDataStoreProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :advanced-event-selectors)]
+    (. builder advancedEventSelectors data))
+  (when-let [data (lookup-entry config id :billing-mode)]
+    (. builder billingMode data))
+  (when-let [data (lookup-entry config id :federation-enabled)]
+    (. builder federationEnabled data))
+  (when-let [data (lookup-entry config id :federation-role-arn)]
+    (. builder federationRoleArn data))
+  (when-let [data (lookup-entry config id :ingestion-enabled)]
+    (. builder ingestionEnabled data))
+  (when-let [data (lookup-entry config id :insight-selectors)]
+    (. builder insightSelectors data))
+  (when-let [data (lookup-entry config id :insights-destination)]
+    (. builder insightsDestination data))
+  (when-let [data (lookup-entry config id :kms-key-id)]
+    (. builder kmsKeyId data))
+  (when-let [data (lookup-entry config id :multi-region-enabled)]
+    (. builder multiRegionEnabled data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :organization-enabled)]
+    (. builder organizationEnabled data))
+  (when-let [data (lookup-entry config id :retention-period)]
+    (. builder retentionPeriod data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :termination-protection-enabled)]
+    (. builder terminationProtectionEnabled data))
+  (.build builder))
 
 
-(defn cfn-resource-policy-builder
-  "The cfn-resource-policy-builder function buildes out new instances of 
-CfnResourcePolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resource-policy-builder
+  "The build-cfn-resource-policy-builder function updates a CfnResourcePolicy$Builder instance using the provided configuration.
+  The function takes the CfnResourcePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
-| `resourcePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:resource-policy` |"
-  [stack id config]
-  (let [builder (CfnResourcePolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :resource-arn)]
-      (. builder resourceArn data))
-    (when-let [data (lookup-entry config id :resource-policy)]
-      (. builder resourcePolicy data))
-    (.build builder)))
-
-
-(defn cfn-resource-policy-props-builder
-  "The cfn-resource-policy-props-builder function buildes out new instances of 
-CfnResourcePolicyProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
-| `resourcePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:resource-policy` |"
-  [stack id config]
-  (let [builder (CfnResourcePolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :resource-arn)]
-      (. builder resourceArn data))
-    (when-let [data (lookup-entry config id :resource-policy)]
-      (. builder resourcePolicy data))
-    (.build builder)))
+| `resourcePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:resource-policy` |
+"
+  [^CfnResourcePolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :resource-arn)]
+    (. builder resourceArn data))
+  (when-let [data (lookup-entry config id :resource-policy)]
+    (. builder resourcePolicy data))
+  (.build builder))
 
 
-(defn cfn-trail-advanced-event-selector-property-builder
-  "The cfn-trail-advanced-event-selector-property-builder function buildes out new instances of 
-CfnTrail$AdvancedEventSelectorProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resource-policy-props-builder
+  "The build-cfn-resource-policy-props-builder function updates a CfnResourcePolicyProps$Builder instance using the provided configuration.
+  The function takes the CfnResourcePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `resourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-arn` |
+| `resourcePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:resource-policy` |
+"
+  [^CfnResourcePolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :resource-arn)]
+    (. builder resourceArn data))
+  (when-let [data (lookup-entry config id :resource-policy)]
+    (. builder resourcePolicy data))
+  (.build builder))
+
+
+(defn build-cfn-trail-advanced-event-selector-property-builder
+  "The build-cfn-trail-advanced-event-selector-property-builder function updates a CfnTrail$AdvancedEventSelectorProperty$Builder instance using the provided configuration.
+  The function takes the CfnTrail$AdvancedEventSelectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `fieldSelectors` | java.util.List | [[cdk.support/lookup-entry]] | `:field-selectors` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (CfnTrail$AdvancedEventSelectorProperty$Builder.)]
-    (when-let [data (lookup-entry config id :field-selectors)]
-      (. builder fieldSelectors data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^CfnTrail$AdvancedEventSelectorProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :field-selectors)]
+    (. builder fieldSelectors data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn cfn-trail-advanced-field-selector-property-builder
-  "The cfn-trail-advanced-field-selector-property-builder function buildes out new instances of 
-CfnTrail$AdvancedFieldSelectorProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-trail-advanced-field-selector-property-builder
+  "The build-cfn-trail-advanced-field-selector-property-builder function updates a CfnTrail$AdvancedFieldSelectorProperty$Builder instance using the provided configuration.
+  The function takes the CfnTrail$AdvancedFieldSelectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -404,29 +443,32 @@ CfnTrail$AdvancedFieldSelectorProperty$Builder using the provided configuration.
 | `notEndsWith` | java.util.List | [[cdk.support/lookup-entry]] | `:not-ends-with` |
 | `notEquals` | java.util.List | [[cdk.support/lookup-entry]] | `:not-equals` |
 | `notStartsWith` | java.util.List | [[cdk.support/lookup-entry]] | `:not-starts-with` |
-| `startsWith` | java.util.List | [[cdk.support/lookup-entry]] | `:starts-with` |"
-  [stack id config]
-  (let [builder (CfnTrail$AdvancedFieldSelectorProperty$Builder.)]
-    (when-let [data (lookup-entry config id :ends-with)]
-      (. builder endsWith data))
-    (when-let [data (lookup-entry config id :equal-to)]
-      (. builder equalTo data))
-    (when-let [data (lookup-entry config id :field)]
-      (. builder field data))
-    (when-let [data (lookup-entry config id :not-ends-with)]
-      (. builder notEndsWith data))
-    (when-let [data (lookup-entry config id :not-equals)]
-      (. builder notEquals data))
-    (when-let [data (lookup-entry config id :not-starts-with)]
-      (. builder notStartsWith data))
-    (when-let [data (lookup-entry config id :starts-with)]
-      (. builder startsWith data))
-    (.build builder)))
+| `startsWith` | java.util.List | [[cdk.support/lookup-entry]] | `:starts-with` |
+"
+  [^CfnTrail$AdvancedFieldSelectorProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :ends-with)]
+    (. builder endsWith data))
+  (when-let [data (lookup-entry config id :equal-to)]
+    (. builder equalTo data))
+  (when-let [data (lookup-entry config id :field)]
+    (. builder field data))
+  (when-let [data (lookup-entry config id :not-ends-with)]
+    (. builder notEndsWith data))
+  (when-let [data (lookup-entry config id :not-equals)]
+    (. builder notEquals data))
+  (when-let [data (lookup-entry config id :not-starts-with)]
+    (. builder notStartsWith data))
+  (when-let [data (lookup-entry config id :starts-with)]
+    (. builder startsWith data))
+  (.build builder))
 
 
-(defn cfn-trail-builder
-  "The cfn-trail-builder function buildes out new instances of 
-CfnTrail$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-trail-builder
+  "The build-cfn-trail-builder function updates a CfnTrail$Builder instance using the provided configuration.
+  The function takes the CfnTrail$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -445,101 +487,113 @@ CfnTrail$Builder using the provided configuration.  Each field is set as follows
 | `s3KeyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-key-prefix` |
 | `snsTopicName` | java.lang.String | [[cdk.support/lookup-entry]] | `:sns-topic-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `trailName` | java.lang.String | [[cdk.support/lookup-entry]] | `:trail-name` |"
-  [stack id config]
-  (let [builder (CfnTrail$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :advanced-event-selectors)]
-      (. builder advancedEventSelectors data))
-    (when-let [data (lookup-entry config id :cloud-watch-logs-log-group-arn)]
-      (. builder cloudWatchLogsLogGroupArn data))
-    (when-let [data (lookup-entry config id :cloud-watch-logs-role-arn)]
-      (. builder cloudWatchLogsRoleArn data))
-    (when-let [data (lookup-entry config id :enable-log-file-validation)]
-      (. builder enableLogFileValidation data))
-    (when-let [data (lookup-entry config id :event-selectors)]
-      (. builder eventSelectors data))
-    (when-let [data (lookup-entry config id :include-global-service-events)]
-      (. builder includeGlobalServiceEvents data))
-    (when-let [data (lookup-entry config id :insight-selectors)]
-      (. builder insightSelectors data))
-    (when-let [data (lookup-entry config id :is-logging)]
-      (. builder isLogging data))
-    (when-let [data (lookup-entry config id :is-multi-region-trail)]
-      (. builder isMultiRegionTrail data))
-    (when-let [data (lookup-entry config id :is-organization-trail)]
-      (. builder isOrganizationTrail data))
-    (when-let [data (lookup-entry config id :kms-key-id)]
-      (. builder kmsKeyId data))
-    (when-let [data (lookup-entry config id :s3-bucket-name)]
-      (. builder s3BucketName data))
-    (when-let [data (lookup-entry config id :s3-key-prefix)]
-      (. builder s3KeyPrefix data))
-    (when-let [data (lookup-entry config id :sns-topic-name)]
-      (. builder snsTopicName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :trail-name)]
-      (. builder trailName data))
-    (.build builder)))
+| `trailName` | java.lang.String | [[cdk.support/lookup-entry]] | `:trail-name` |
+"
+  [^CfnTrail$Builder builder id config]
+  (when-let [data (lookup-entry config id :advanced-event-selectors)]
+    (. builder advancedEventSelectors data))
+  (when-let [data (lookup-entry config id :cloud-watch-logs-log-group-arn)]
+    (. builder cloudWatchLogsLogGroupArn data))
+  (when-let [data (lookup-entry config id :cloud-watch-logs-role-arn)]
+    (. builder cloudWatchLogsRoleArn data))
+  (when-let [data (lookup-entry config id :enable-log-file-validation)]
+    (. builder enableLogFileValidation data))
+  (when-let [data (lookup-entry config id :event-selectors)]
+    (. builder eventSelectors data))
+  (when-let [data (lookup-entry config id :include-global-service-events)]
+    (. builder includeGlobalServiceEvents data))
+  (when-let [data (lookup-entry config id :insight-selectors)]
+    (. builder insightSelectors data))
+  (when-let [data (lookup-entry config id :is-logging)]
+    (. builder isLogging data))
+  (when-let [data (lookup-entry config id :is-multi-region-trail)]
+    (. builder isMultiRegionTrail data))
+  (when-let [data (lookup-entry config id :is-organization-trail)]
+    (. builder isOrganizationTrail data))
+  (when-let [data (lookup-entry config id :kms-key-id)]
+    (. builder kmsKeyId data))
+  (when-let [data (lookup-entry config id :s3-bucket-name)]
+    (. builder s3BucketName data))
+  (when-let [data (lookup-entry config id :s3-key-prefix)]
+    (. builder s3KeyPrefix data))
+  (when-let [data (lookup-entry config id :sns-topic-name)]
+    (. builder snsTopicName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :trail-name)]
+    (. builder trailName data))
+  (.build builder))
 
 
-(defn cfn-trail-data-resource-property-builder
-  "The cfn-trail-data-resource-property-builder function buildes out new instances of 
-CfnTrail$DataResourceProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-trail-data-resource-property-builder
+  "The build-cfn-trail-data-resource-property-builder function updates a CfnTrail$DataResourceProperty$Builder instance using the provided configuration.
+  The function takes the CfnTrail$DataResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |"
-  [stack id config]
-  (let [builder (CfnTrail$DataResourceProperty$Builder.)]
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :values)]
-      (. builder values data))
-    (.build builder)))
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+"
+  [^CfnTrail$DataResourceProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :values)]
+    (. builder values data))
+  (.build builder))
 
 
-(defn cfn-trail-event-selector-property-builder
-  "The cfn-trail-event-selector-property-builder function buildes out new instances of 
-CfnTrail$EventSelectorProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-trail-event-selector-property-builder
+  "The build-cfn-trail-event-selector-property-builder function updates a CfnTrail$EventSelectorProperty$Builder instance using the provided configuration.
+  The function takes the CfnTrail$EventSelectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataResources` | java.util.List | [[cdk.support/lookup-entry]] | `:data-resources` |
 | `excludeManagementEventSources` | java.util.List | [[cdk.support/lookup-entry]] | `:exclude-management-event-sources` |
 | `includeManagementEvents` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-management-events` |
-| `readWriteType` | java.lang.String | [[cdk.support/lookup-entry]] | `:read-write-type` |"
-  [stack id config]
-  (let [builder (CfnTrail$EventSelectorProperty$Builder.)]
-    (when-let [data (lookup-entry config id :data-resources)]
-      (. builder dataResources data))
-    (when-let [data (lookup-entry config id :exclude-management-event-sources)]
-      (. builder excludeManagementEventSources data))
-    (when-let [data (lookup-entry config id :include-management-events)]
-      (. builder includeManagementEvents data))
-    (when-let [data (lookup-entry config id :read-write-type)]
-      (. builder readWriteType data))
-    (.build builder)))
+| `readWriteType` | java.lang.String | [[cdk.support/lookup-entry]] | `:read-write-type` |
+"
+  [^CfnTrail$EventSelectorProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :data-resources)]
+    (. builder dataResources data))
+  (when-let [data (lookup-entry config id :exclude-management-event-sources)]
+    (. builder excludeManagementEventSources data))
+  (when-let [data (lookup-entry config id :include-management-events)]
+    (. builder includeManagementEvents data))
+  (when-let [data (lookup-entry config id :read-write-type)]
+    (. builder readWriteType data))
+  (.build builder))
 
 
-(defn cfn-trail-insight-selector-property-builder
-  "The cfn-trail-insight-selector-property-builder function buildes out new instances of 
-CfnTrail$InsightSelectorProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-trail-insight-selector-property-builder
+  "The build-cfn-trail-insight-selector-property-builder function updates a CfnTrail$InsightSelectorProperty$Builder instance using the provided configuration.
+  The function takes the CfnTrail$InsightSelectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `insightType` | java.lang.String | [[cdk.support/lookup-entry]] | `:insight-type` |"
-  [stack id config]
-  (let [builder (CfnTrail$InsightSelectorProperty$Builder.)]
-    (when-let [data (lookup-entry config id :insight-type)]
-      (. builder insightType data))
-    (.build builder)))
+| `insightType` | java.lang.String | [[cdk.support/lookup-entry]] | `:insight-type` |
+"
+  [^CfnTrail$InsightSelectorProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :insight-type)]
+    (. builder insightType data))
+  (.build builder))
 
 
-(defn cfn-trail-props-builder
-  "The cfn-trail-props-builder function buildes out new instances of 
-CfnTrailProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-trail-props-builder
+  "The build-cfn-trail-props-builder function updates a CfnTrailProps$Builder instance using the provided configuration.
+  The function takes the CfnTrailProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -558,120 +612,70 @@ CfnTrailProps$Builder using the provided configuration.  Each field is set as fo
 | `s3KeyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-key-prefix` |
 | `snsTopicName` | java.lang.String | [[cdk.support/lookup-entry]] | `:sns-topic-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `trailName` | java.lang.String | [[cdk.support/lookup-entry]] | `:trail-name` |"
-  [stack id config]
-  (let [builder (CfnTrailProps$Builder.)]
-    (when-let [data (lookup-entry config id :advanced-event-selectors)]
-      (. builder advancedEventSelectors data))
-    (when-let [data (lookup-entry config id :cloud-watch-logs-log-group-arn)]
-      (. builder cloudWatchLogsLogGroupArn data))
-    (when-let [data (lookup-entry config id :cloud-watch-logs-role-arn)]
-      (. builder cloudWatchLogsRoleArn data))
-    (when-let [data (lookup-entry config id :enable-log-file-validation)]
-      (. builder enableLogFileValidation data))
-    (when-let [data (lookup-entry config id :event-selectors)]
-      (. builder eventSelectors data))
-    (when-let [data (lookup-entry config id :include-global-service-events)]
-      (. builder includeGlobalServiceEvents data))
-    (when-let [data (lookup-entry config id :insight-selectors)]
-      (. builder insightSelectors data))
-    (when-let [data (lookup-entry config id :is-logging)]
-      (. builder isLogging data))
-    (when-let [data (lookup-entry config id :is-multi-region-trail)]
-      (. builder isMultiRegionTrail data))
-    (when-let [data (lookup-entry config id :is-organization-trail)]
-      (. builder isOrganizationTrail data))
-    (when-let [data (lookup-entry config id :kms-key-id)]
-      (. builder kmsKeyId data))
-    (when-let [data (lookup-entry config id :s3-bucket-name)]
-      (. builder s3BucketName data))
-    (when-let [data (lookup-entry config id :s3-key-prefix)]
-      (. builder s3KeyPrefix data))
-    (when-let [data (lookup-entry config id :sns-topic-name)]
-      (. builder snsTopicName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :trail-name)]
-      (. builder trailName data))
-    (.build builder)))
+| `trailName` | java.lang.String | [[cdk.support/lookup-entry]] | `:trail-name` |
+"
+  [^CfnTrailProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :advanced-event-selectors)]
+    (. builder advancedEventSelectors data))
+  (when-let [data (lookup-entry config id :cloud-watch-logs-log-group-arn)]
+    (. builder cloudWatchLogsLogGroupArn data))
+  (when-let [data (lookup-entry config id :cloud-watch-logs-role-arn)]
+    (. builder cloudWatchLogsRoleArn data))
+  (when-let [data (lookup-entry config id :enable-log-file-validation)]
+    (. builder enableLogFileValidation data))
+  (when-let [data (lookup-entry config id :event-selectors)]
+    (. builder eventSelectors data))
+  (when-let [data (lookup-entry config id :include-global-service-events)]
+    (. builder includeGlobalServiceEvents data))
+  (when-let [data (lookup-entry config id :insight-selectors)]
+    (. builder insightSelectors data))
+  (when-let [data (lookup-entry config id :is-logging)]
+    (. builder isLogging data))
+  (when-let [data (lookup-entry config id :is-multi-region-trail)]
+    (. builder isMultiRegionTrail data))
+  (when-let [data (lookup-entry config id :is-organization-trail)]
+    (. builder isOrganizationTrail data))
+  (when-let [data (lookup-entry config id :kms-key-id)]
+    (. builder kmsKeyId data))
+  (when-let [data (lookup-entry config id :s3-bucket-name)]
+    (. builder s3BucketName data))
+  (when-let [data (lookup-entry config id :s3-key-prefix)]
+    (. builder s3KeyPrefix data))
+  (when-let [data (lookup-entry config id :sns-topic-name)]
+    (. builder snsTopicName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :trail-name)]
+    (. builder trailName data))
+  (.build builder))
 
 
-(defn s3-event-selector-builder
-  "The s3-event-selector-builder function buildes out new instances of 
-S3EventSelector$Builder using the provided configuration.  Each field is set as follows:
+(defn build-s3-event-selector-builder
+  "The build-s3-event-selector-builder function updates a S3EventSelector$Builder instance using the provided configuration.
+  The function takes the S3EventSelector$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `bucket` | software.amazon.awscdk.services.s3.IBucket | [[cdk.support/lookup-entry]] | `:bucket` |
-| `objectPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-prefix` |"
-  [stack id config]
-  (let [builder (S3EventSelector$Builder.)]
-    (when-let [data (lookup-entry config id :bucket)]
-      (. builder bucket data))
-    (when-let [data (lookup-entry config id :object-prefix)]
-      (. builder objectPrefix data))
-    (.build builder)))
-
-
-(defn trail-builder
-  "The trail-builder function buildes out new instances of 
-Trail$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bucket` | software.amazon.awscdk.services.s3.IBucket | [[cdk.support/lookup-entry]] | `:bucket` |
-| `cloudWatchLogGroup` | software.amazon.awscdk.services.logs.ILogGroup | [[cdk.support/lookup-entry]] | `:cloud-watch-log-group` |
-| `cloudWatchLogsRetention` | software.amazon.awscdk.services.logs.RetentionDays | [[cdk.api.services.logs/retention-days]] | `:cloud-watch-logs-retention` |
-| `enableFileValidation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-file-validation` |
-| `encryptionKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:encryption-key` |
-| `includeGlobalServiceEvents` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-global-service-events` |
-| `insightTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:insight-types` |
-| `isMultiRegionTrail` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-multi-region-trail` |
-| `isOrganizationTrail` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-organization-trail` |
-| `managementEvents` | software.amazon.awscdk.services.cloudtrail.ReadWriteType | [[cdk.api.services.cloudtrail/read-write-type]] | `:management-events` |
-| `orgId` | java.lang.String | [[cdk.support/lookup-entry]] | `:org-id` |
-| `s3KeyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-key-prefix` |
-| `sendToCloudWatchLogs` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:send-to-cloud-watch-logs` |
-| `snsTopic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:sns-topic` |
-| `trailName` | java.lang.String | [[cdk.support/lookup-entry]] | `:trail-name` |"
-  [stack id config]
-  (let [builder (Trail$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :bucket)]
-      (. builder bucket data))
-    (when-let [data (lookup-entry config id :cloud-watch-log-group)]
-      (. builder cloudWatchLogGroup data))
-    (when-let [data (retention-days config id :cloud-watch-logs-retention)]
-      (. builder cloudWatchLogsRetention data))
-    (when-let [data (lookup-entry config id :enable-file-validation)]
-      (. builder enableFileValidation data))
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (lookup-entry config id :include-global-service-events)]
-      (. builder includeGlobalServiceEvents data))
-    (when-let [data (lookup-entry config id :insight-types)]
-      (. builder insightTypes data))
-    (when-let [data (lookup-entry config id :is-multi-region-trail)]
-      (. builder isMultiRegionTrail data))
-    (when-let [data (lookup-entry config id :is-organization-trail)]
-      (. builder isOrganizationTrail data))
-    (when-let [data (read-write-type config id :management-events)]
-      (. builder managementEvents data))
-    (when-let [data (lookup-entry config id :org-id)]
-      (. builder orgId data))
-    (when-let [data (lookup-entry config id :s3-key-prefix)]
-      (. builder s3KeyPrefix data))
-    (when-let [data (lookup-entry config id :send-to-cloud-watch-logs)]
-      (. builder sendToCloudWatchLogs data))
-    (when-let [data (lookup-entry config id :sns-topic)]
-      (. builder snsTopic data))
-    (when-let [data (lookup-entry config id :trail-name)]
-      (. builder trailName data))
-    (.build builder)))
+| `objectPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-prefix` |
+"
+  [^S3EventSelector$Builder builder id config]
+  (when-let [data (lookup-entry config id :bucket)]
+    (. builder bucket data))
+  (when-let [data (lookup-entry config id :object-prefix)]
+    (. builder objectPrefix data))
+  (.build builder))
 
 
-(defn trail-props-builder
-  "The trail-props-builder function buildes out new instances of 
-TrailProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-trail-builder
+  "The build-trail-builder function updates a Trail$Builder instance using the provided configuration.
+  The function takes the Trail$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -689,37 +693,96 @@ TrailProps$Builder using the provided configuration.  Each field is set as follo
 | `s3KeyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-key-prefix` |
 | `sendToCloudWatchLogs` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:send-to-cloud-watch-logs` |
 | `snsTopic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:sns-topic` |
-| `trailName` | java.lang.String | [[cdk.support/lookup-entry]] | `:trail-name` |"
-  [stack id config]
-  (let [builder (TrailProps$Builder.)]
-    (when-let [data (lookup-entry config id :bucket)]
-      (. builder bucket data))
-    (when-let [data (lookup-entry config id :cloud-watch-log-group)]
-      (. builder cloudWatchLogGroup data))
-    (when-let [data (retention-days config id :cloud-watch-logs-retention)]
-      (. builder cloudWatchLogsRetention data))
-    (when-let [data (lookup-entry config id :enable-file-validation)]
-      (. builder enableFileValidation data))
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (lookup-entry config id :include-global-service-events)]
-      (. builder includeGlobalServiceEvents data))
-    (when-let [data (lookup-entry config id :insight-types)]
-      (. builder insightTypes data))
-    (when-let [data (lookup-entry config id :is-multi-region-trail)]
-      (. builder isMultiRegionTrail data))
-    (when-let [data (lookup-entry config id :is-organization-trail)]
-      (. builder isOrganizationTrail data))
-    (when-let [data (read-write-type config id :management-events)]
-      (. builder managementEvents data))
-    (when-let [data (lookup-entry config id :org-id)]
-      (. builder orgId data))
-    (when-let [data (lookup-entry config id :s3-key-prefix)]
-      (. builder s3KeyPrefix data))
-    (when-let [data (lookup-entry config id :send-to-cloud-watch-logs)]
-      (. builder sendToCloudWatchLogs data))
-    (when-let [data (lookup-entry config id :sns-topic)]
-      (. builder snsTopic data))
-    (when-let [data (lookup-entry config id :trail-name)]
-      (. builder trailName data))
-    (.build builder)))
+| `trailName` | java.lang.String | [[cdk.support/lookup-entry]] | `:trail-name` |
+"
+  [^Trail$Builder builder id config]
+  (when-let [data (lookup-entry config id :bucket)]
+    (. builder bucket data))
+  (when-let [data (lookup-entry config id :cloud-watch-log-group)]
+    (. builder cloudWatchLogGroup data))
+  (when-let [data (retention-days config id :cloud-watch-logs-retention)]
+    (. builder cloudWatchLogsRetention data))
+  (when-let [data (lookup-entry config id :enable-file-validation)]
+    (. builder enableFileValidation data))
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (lookup-entry config id :include-global-service-events)]
+    (. builder includeGlobalServiceEvents data))
+  (when-let [data (lookup-entry config id :insight-types)]
+    (. builder insightTypes data))
+  (when-let [data (lookup-entry config id :is-multi-region-trail)]
+    (. builder isMultiRegionTrail data))
+  (when-let [data (lookup-entry config id :is-organization-trail)]
+    (. builder isOrganizationTrail data))
+  (when-let [data (read-write-type config id :management-events)]
+    (. builder managementEvents data))
+  (when-let [data (lookup-entry config id :org-id)]
+    (. builder orgId data))
+  (when-let [data (lookup-entry config id :s3-key-prefix)]
+    (. builder s3KeyPrefix data))
+  (when-let [data (lookup-entry config id :send-to-cloud-watch-logs)]
+    (. builder sendToCloudWatchLogs data))
+  (when-let [data (lookup-entry config id :sns-topic)]
+    (. builder snsTopic data))
+  (when-let [data (lookup-entry config id :trail-name)]
+    (. builder trailName data))
+  (.build builder))
+
+
+(defn build-trail-props-builder
+  "The build-trail-props-builder function updates a TrailProps$Builder instance using the provided configuration.
+  The function takes the TrailProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `bucket` | software.amazon.awscdk.services.s3.IBucket | [[cdk.support/lookup-entry]] | `:bucket` |
+| `cloudWatchLogGroup` | software.amazon.awscdk.services.logs.ILogGroup | [[cdk.support/lookup-entry]] | `:cloud-watch-log-group` |
+| `cloudWatchLogsRetention` | software.amazon.awscdk.services.logs.RetentionDays | [[cdk.api.services.logs/retention-days]] | `:cloud-watch-logs-retention` |
+| `enableFileValidation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-file-validation` |
+| `encryptionKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:encryption-key` |
+| `includeGlobalServiceEvents` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-global-service-events` |
+| `insightTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:insight-types` |
+| `isMultiRegionTrail` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-multi-region-trail` |
+| `isOrganizationTrail` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-organization-trail` |
+| `managementEvents` | software.amazon.awscdk.services.cloudtrail.ReadWriteType | [[cdk.api.services.cloudtrail/read-write-type]] | `:management-events` |
+| `orgId` | java.lang.String | [[cdk.support/lookup-entry]] | `:org-id` |
+| `s3KeyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-key-prefix` |
+| `sendToCloudWatchLogs` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:send-to-cloud-watch-logs` |
+| `snsTopic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:sns-topic` |
+| `trailName` | java.lang.String | [[cdk.support/lookup-entry]] | `:trail-name` |
+"
+  [^TrailProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :bucket)]
+    (. builder bucket data))
+  (when-let [data (lookup-entry config id :cloud-watch-log-group)]
+    (. builder cloudWatchLogGroup data))
+  (when-let [data (retention-days config id :cloud-watch-logs-retention)]
+    (. builder cloudWatchLogsRetention data))
+  (when-let [data (lookup-entry config id :enable-file-validation)]
+    (. builder enableFileValidation data))
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (lookup-entry config id :include-global-service-events)]
+    (. builder includeGlobalServiceEvents data))
+  (when-let [data (lookup-entry config id :insight-types)]
+    (. builder insightTypes data))
+  (when-let [data (lookup-entry config id :is-multi-region-trail)]
+    (. builder isMultiRegionTrail data))
+  (when-let [data (lookup-entry config id :is-organization-trail)]
+    (. builder isOrganizationTrail data))
+  (when-let [data (read-write-type config id :management-events)]
+    (. builder managementEvents data))
+  (when-let [data (lookup-entry config id :org-id)]
+    (. builder orgId data))
+  (when-let [data (lookup-entry config id :s3-key-prefix)]
+    (. builder s3KeyPrefix data))
+  (when-let [data (lookup-entry config id :send-to-cloud-watch-logs)]
+    (. builder sendToCloudWatchLogs data))
+  (when-let [data (lookup-entry config id :sns-topic)]
+    (. builder snsTopic data))
+  (when-let [data (lookup-entry config id :trail-name)]
+    (. builder trailName data))
+  (.build builder))

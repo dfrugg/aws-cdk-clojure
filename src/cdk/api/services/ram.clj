@@ -7,55 +7,64 @@
                                                 CfnResourceShareProps$Builder]))
 
 
-(defn cfn-permission-builder
-  "The cfn-permission-builder function buildes out new instances of 
-CfnPermission$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-permission-builder
+  "The build-cfn-permission-builder function updates a CfnPermission$Builder instance using the provided configuration.
+  The function takes the CfnPermission$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `policyTemplate` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-template` |
 | `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnPermission$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :policy-template)]
-      (. builder policyTemplate data))
-    (when-let [data (lookup-entry config id :resource-type)]
-      (. builder resourceType data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnPermission$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :policy-template)]
+    (. builder policyTemplate data))
+  (when-let [data (lookup-entry config id :resource-type)]
+    (. builder resourceType data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-permission-props-builder
-  "The cfn-permission-props-builder function buildes out new instances of 
-CfnPermissionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-permission-props-builder
+  "The build-cfn-permission-props-builder function updates a CfnPermissionProps$Builder instance using the provided configuration.
+  The function takes the CfnPermissionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `policyTemplate` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-template` |
 | `resourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-type` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnPermissionProps$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :policy-template)]
-      (. builder policyTemplate data))
-    (when-let [data (lookup-entry config id :resource-type)]
-      (. builder resourceType data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnPermissionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :policy-template)]
+    (. builder policyTemplate data))
+  (when-let [data (lookup-entry config id :resource-type)]
+    (. builder resourceType data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-resource-share-builder
-  "The cfn-resource-share-builder function buildes out new instances of 
-CfnResourceShare$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resource-share-builder
+  "The build-cfn-resource-share-builder function updates a CfnResourceShare$Builder instance using the provided configuration.
+  The function takes the CfnResourceShare$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -65,29 +74,32 @@ CfnResourceShare$Builder using the provided configuration.  Each field is set as
 | `principals` | java.util.List | [[cdk.support/lookup-entry]] | `:principals` |
 | `resourceArns` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-arns` |
 | `sources` | java.util.List | [[cdk.support/lookup-entry]] | `:sources` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnResourceShare$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :allow-external-principals)]
-      (. builder allowExternalPrincipals data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :permission-arns)]
-      (. builder permissionArns data))
-    (when-let [data (lookup-entry config id :principals)]
-      (. builder principals data))
-    (when-let [data (lookup-entry config id :resource-arns)]
-      (. builder resourceArns data))
-    (when-let [data (lookup-entry config id :sources)]
-      (. builder sources data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnResourceShare$Builder builder id config]
+  (when-let [data (lookup-entry config id :allow-external-principals)]
+    (. builder allowExternalPrincipals data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :permission-arns)]
+    (. builder permissionArns data))
+  (when-let [data (lookup-entry config id :principals)]
+    (. builder principals data))
+  (when-let [data (lookup-entry config id :resource-arns)]
+    (. builder resourceArns data))
+  (when-let [data (lookup-entry config id :sources)]
+    (. builder sources data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-resource-share-props-builder
-  "The cfn-resource-share-props-builder function buildes out new instances of 
-CfnResourceShareProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resource-share-props-builder
+  "The build-cfn-resource-share-props-builder function updates a CfnResourceShareProps$Builder instance using the provided configuration.
+  The function takes the CfnResourceShareProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -97,21 +109,21 @@ CfnResourceShareProps$Builder using the provided configuration.  Each field is s
 | `principals` | java.util.List | [[cdk.support/lookup-entry]] | `:principals` |
 | `resourceArns` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-arns` |
 | `sources` | java.util.List | [[cdk.support/lookup-entry]] | `:sources` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnResourceShareProps$Builder.)]
-    (when-let [data (lookup-entry config id :allow-external-principals)]
-      (. builder allowExternalPrincipals data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :permission-arns)]
-      (. builder permissionArns data))
-    (when-let [data (lookup-entry config id :principals)]
-      (. builder principals data))
-    (when-let [data (lookup-entry config id :resource-arns)]
-      (. builder resourceArns data))
-    (when-let [data (lookup-entry config id :sources)]
-      (. builder sources data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnResourceShareProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :allow-external-principals)]
+    (. builder allowExternalPrincipals data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :permission-arns)]
+    (. builder permissionArns data))
+  (when-let [data (lookup-entry config id :principals)]
+    (. builder principals data))
+  (when-let [data (lookup-entry config id :resource-arns)]
+    (. builder resourceArns data))
+  (when-let [data (lookup-entry config id :sources)]
+    (. builder sources data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))

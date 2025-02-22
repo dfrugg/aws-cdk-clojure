@@ -11,9 +11,12 @@
                                                          CfnLandingZoneProps$Builder]))
 
 
-(defn cfn-enabled-baseline-builder
-  "The cfn-enabled-baseline-builder function buildes out new instances of 
-CfnEnabledBaseline$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-enabled-baseline-builder
+  "The build-cfn-enabled-baseline-builder function updates a CfnEnabledBaseline$Builder instance using the provided configuration.
+  The function takes the CfnEnabledBaseline$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -21,42 +24,48 @@ CfnEnabledBaseline$Builder using the provided configuration.  Each field is set 
 | `baselineVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:baseline-version` |
 | `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `targetIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-identifier` |"
-  [stack id config]
-  (let [builder (CfnEnabledBaseline$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :baseline-identifier)]
-      (. builder baselineIdentifier data))
-    (when-let [data (lookup-entry config id :baseline-version)]
-      (. builder baselineVersion data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :target-identifier)]
-      (. builder targetIdentifier data))
-    (.build builder)))
+| `targetIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-identifier` |
+"
+  [^CfnEnabledBaseline$Builder builder id config]
+  (when-let [data (lookup-entry config id :baseline-identifier)]
+    (. builder baselineIdentifier data))
+  (when-let [data (lookup-entry config id :baseline-version)]
+    (. builder baselineVersion data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :target-identifier)]
+    (. builder targetIdentifier data))
+  (.build builder))
 
 
-(defn cfn-enabled-baseline-parameter-property-builder
-  "The cfn-enabled-baseline-parameter-property-builder function buildes out new instances of 
-CfnEnabledBaseline$ParameterProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-enabled-baseline-parameter-property-builder
+  "The build-cfn-enabled-baseline-parameter-property-builder function updates a CfnEnabledBaseline$ParameterProperty$Builder instance using the provided configuration.
+  The function takes the CfnEnabledBaseline$ParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
-| `value` | java.lang.Object | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnEnabledBaseline$ParameterProperty$Builder.)]
-    (when-let [data (lookup-entry config id :key)]
-      (. builder key data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.Object | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnEnabledBaseline$ParameterProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :key)]
+    (. builder key data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-enabled-baseline-props-builder
-  "The cfn-enabled-baseline-props-builder function buildes out new instances of 
-CfnEnabledBaselineProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-enabled-baseline-props-builder
+  "The build-cfn-enabled-baseline-props-builder function updates a CfnEnabledBaselineProps$Builder instance using the provided configuration.
+  The function takes the CfnEnabledBaselineProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -64,120 +73,135 @@ CfnEnabledBaselineProps$Builder using the provided configuration.  Each field is
 | `baselineVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:baseline-version` |
 | `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `targetIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-identifier` |"
-  [stack id config]
-  (let [builder (CfnEnabledBaselineProps$Builder.)]
-    (when-let [data (lookup-entry config id :baseline-identifier)]
-      (. builder baselineIdentifier data))
-    (when-let [data (lookup-entry config id :baseline-version)]
-      (. builder baselineVersion data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :target-identifier)]
-      (. builder targetIdentifier data))
-    (.build builder)))
+| `targetIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-identifier` |
+"
+  [^CfnEnabledBaselineProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :baseline-identifier)]
+    (. builder baselineIdentifier data))
+  (when-let [data (lookup-entry config id :baseline-version)]
+    (. builder baselineVersion data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :target-identifier)]
+    (. builder targetIdentifier data))
+  (.build builder))
 
 
-(defn cfn-enabled-control-builder
-  "The cfn-enabled-control-builder function buildes out new instances of 
-CfnEnabledControl$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-enabled-control-builder
+  "The build-cfn-enabled-control-builder function updates a CfnEnabledControl$Builder instance using the provided configuration.
+  The function takes the CfnEnabledControl$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `controlIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:control-identifier` |
 | `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `targetIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-identifier` |"
-  [stack id config]
-  (let [builder (CfnEnabledControl$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :control-identifier)]
-      (. builder controlIdentifier data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :target-identifier)]
-      (. builder targetIdentifier data))
-    (.build builder)))
+| `targetIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-identifier` |
+"
+  [^CfnEnabledControl$Builder builder id config]
+  (when-let [data (lookup-entry config id :control-identifier)]
+    (. builder controlIdentifier data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :target-identifier)]
+    (. builder targetIdentifier data))
+  (.build builder))
 
 
-(defn cfn-enabled-control-enabled-control-parameter-property-builder
-  "The cfn-enabled-control-enabled-control-parameter-property-builder function buildes out new instances of 
-CfnEnabledControl$EnabledControlParameterProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-enabled-control-enabled-control-parameter-property-builder
+  "The build-cfn-enabled-control-enabled-control-parameter-property-builder function updates a CfnEnabledControl$EnabledControlParameterProperty$Builder instance using the provided configuration.
+  The function takes the CfnEnabledControl$EnabledControlParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
-| `value` | java.lang.Object | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnEnabledControl$EnabledControlParameterProperty$Builder.)]
-    (when-let [data (lookup-entry config id :key)]
-      (. builder key data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.Object | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnEnabledControl$EnabledControlParameterProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :key)]
+    (. builder key data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-enabled-control-props-builder
-  "The cfn-enabled-control-props-builder function buildes out new instances of 
-CfnEnabledControlProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-enabled-control-props-builder
+  "The build-cfn-enabled-control-props-builder function updates a CfnEnabledControlProps$Builder instance using the provided configuration.
+  The function takes the CfnEnabledControlProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `controlIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:control-identifier` |
 | `parameters` | java.util.List | [[cdk.support/lookup-entry]] | `:parameters` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `targetIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-identifier` |"
-  [stack id config]
-  (let [builder (CfnEnabledControlProps$Builder.)]
-    (when-let [data (lookup-entry config id :control-identifier)]
-      (. builder controlIdentifier data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :target-identifier)]
-      (. builder targetIdentifier data))
-    (.build builder)))
+| `targetIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-identifier` |
+"
+  [^CfnEnabledControlProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :control-identifier)]
+    (. builder controlIdentifier data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :target-identifier)]
+    (. builder targetIdentifier data))
+  (.build builder))
 
 
-(defn cfn-landing-zone-builder
-  "The cfn-landing-zone-builder function buildes out new instances of 
-CfnLandingZone$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-landing-zone-builder
+  "The build-cfn-landing-zone-builder function updates a CfnLandingZone$Builder instance using the provided configuration.
+  The function takes the CfnLandingZone$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `manifest` | java.lang.Object | [[cdk.support/lookup-entry]] | `:manifest` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |"
-  [stack id config]
-  (let [builder (CfnLandingZone$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :manifest)]
-      (. builder manifest data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :version)]
-      (. builder version data))
-    (.build builder)))
-
-
-(defn cfn-landing-zone-props-builder
-  "The cfn-landing-zone-props-builder function buildes out new instances of 
-CfnLandingZoneProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `manifest` | java.lang.Object | [[cdk.support/lookup-entry]] | `:manifest` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |"
-  [stack id config]
-  (let [builder (CfnLandingZoneProps$Builder.)]
-    (when-let [data (lookup-entry config id :manifest)]
-      (. builder manifest data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :version)]
-      (. builder version data))
-    (.build builder)))
+| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
+"
+  [^CfnLandingZone$Builder builder id config]
+  (when-let [data (lookup-entry config id :manifest)]
+    (. builder manifest data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :version)]
+    (. builder version data))
+  (.build builder))
+
+
+(defn build-cfn-landing-zone-props-builder
+  "The build-cfn-landing-zone-props-builder function updates a CfnLandingZoneProps$Builder instance using the provided configuration.
+  The function takes the CfnLandingZoneProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `manifest` | java.lang.Object | [[cdk.support/lookup-entry]] | `:manifest` |
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
+"
+  [^CfnLandingZoneProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :manifest)]
+    (. builder manifest data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :version)]
+    (. builder version data))
+  (.build builder))

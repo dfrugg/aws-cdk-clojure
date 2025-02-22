@@ -189,29 +189,35 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :custom-resource data) ServiceNamespace/CUSTOM_RESOURCE)))
 
 
-(defn adjustment-tier-builder
-  "The adjustment-tier-builder function buildes out new instances of 
-AdjustmentTier$Builder using the provided configuration.  Each field is set as follows:
+(defn build-adjustment-tier-builder
+  "The build-adjustment-tier-builder function updates a AdjustmentTier$Builder instance using the provided configuration.
+  The function takes the AdjustmentTier$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `adjustment` | java.lang.Number | [[cdk.support/lookup-entry]] | `:adjustment` |
 | `lowerBound` | java.lang.Number | [[cdk.support/lookup-entry]] | `:lower-bound` |
-| `upperBound` | java.lang.Number | [[cdk.support/lookup-entry]] | `:upper-bound` |"
-  [stack id config]
-  (let [builder (AdjustmentTier$Builder.)]
-    (when-let [data (lookup-entry config id :adjustment)]
-      (. builder adjustment data))
-    (when-let [data (lookup-entry config id :lower-bound)]
-      (. builder lowerBound data))
-    (when-let [data (lookup-entry config id :upper-bound)]
-      (. builder upperBound data))
-    (.build builder)))
+| `upperBound` | java.lang.Number | [[cdk.support/lookup-entry]] | `:upper-bound` |
+"
+  [^AdjustmentTier$Builder builder id config]
+  (when-let [data (lookup-entry config id :adjustment)]
+    (. builder adjustment data))
+  (when-let [data (lookup-entry config id :lower-bound)]
+    (. builder lowerBound data))
+  (when-let [data (lookup-entry config id :upper-bound)]
+    (. builder upperBound data))
+  (.build builder))
 
 
-(defn base-scalable-attribute-props-builder
-  "The base-scalable-attribute-props-builder function buildes out new instances of 
-BaseScalableAttributeProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-base-scalable-attribute-props-builder
+  "The build-base-scalable-attribute-props-builder function updates a BaseScalableAttributeProps$Builder instance using the provided configuration.
+  The function takes the BaseScalableAttributeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -220,50 +226,56 @@ BaseScalableAttributeProps$Builder using the provided configuration.  Each field
 | `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |
 | `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
-| `serviceNamespace` | software.amazon.awscdk.services.applicationautoscaling.ServiceNamespace | [[cdk.api.services.applicationautoscaling/service-namespace]] | `:service-namespace` |"
-  [stack id config]
-  (let [builder (BaseScalableAttributeProps$Builder.)]
-    (when-let [data (lookup-entry config id :dimension)]
-      (. builder dimension data))
-    (when-let [data (lookup-entry config id :max-capacity)]
-      (. builder maxCapacity data))
-    (when-let [data (lookup-entry config id :min-capacity)]
-      (. builder minCapacity data))
-    (when-let [data (lookup-entry config id :resource-id)]
-      (. builder resourceId data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (service-namespace config id :service-namespace)]
-      (. builder serviceNamespace data))
-    (.build builder)))
+| `serviceNamespace` | software.amazon.awscdk.services.applicationautoscaling.ServiceNamespace | [[cdk.api.services.applicationautoscaling/service-namespace]] | `:service-namespace` |
+"
+  [^BaseScalableAttributeProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :dimension)]
+    (. builder dimension data))
+  (when-let [data (lookup-entry config id :max-capacity)]
+    (. builder maxCapacity data))
+  (when-let [data (lookup-entry config id :min-capacity)]
+    (. builder minCapacity data))
+  (when-let [data (lookup-entry config id :resource-id)]
+    (. builder resourceId data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (service-namespace config id :service-namespace)]
+    (. builder serviceNamespace data))
+  (.build builder))
 
 
-(defn base-target-tracking-props-builder
-  "The base-target-tracking-props-builder function buildes out new instances of 
-BaseTargetTrackingProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-base-target-tracking-props-builder
+  "The build-base-target-tracking-props-builder function updates a BaseTargetTrackingProps$Builder instance using the provided configuration.
+  The function takes the BaseTargetTrackingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `disableScaleIn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-scale-in` |
 | `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
 | `scaleInCooldown` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:scale-in-cooldown` |
-| `scaleOutCooldown` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:scale-out-cooldown` |"
-  [stack id config]
-  (let [builder (BaseTargetTrackingProps$Builder.)]
-    (when-let [data (lookup-entry config id :disable-scale-in)]
-      (. builder disableScaleIn data))
-    (when-let [data (lookup-entry config id :policy-name)]
-      (. builder policyName data))
-    (when-let [data (lookup-entry config id :scale-in-cooldown)]
-      (. builder scaleInCooldown data))
-    (when-let [data (lookup-entry config id :scale-out-cooldown)]
-      (. builder scaleOutCooldown data))
-    (.build builder)))
+| `scaleOutCooldown` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:scale-out-cooldown` |
+"
+  [^BaseTargetTrackingProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :disable-scale-in)]
+    (. builder disableScaleIn data))
+  (when-let [data (lookup-entry config id :policy-name)]
+    (. builder policyName data))
+  (when-let [data (lookup-entry config id :scale-in-cooldown)]
+    (. builder scaleInCooldown data))
+  (when-let [data (lookup-entry config id :scale-out-cooldown)]
+    (. builder scaleOutCooldown data))
+  (.build builder))
 
 
-(defn basic-step-scaling-policy-props-builder
-  "The basic-step-scaling-policy-props-builder function buildes out new instances of 
-BasicStepScalingPolicyProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-basic-step-scaling-policy-props-builder
+  "The build-basic-step-scaling-policy-props-builder function updates a BasicStepScalingPolicyProps$Builder instance using the provided configuration.
+  The function takes the BasicStepScalingPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -274,31 +286,34 @@ BasicStepScalingPolicyProps$Builder using the provided configuration.  Each fiel
 | `metric` | software.amazon.awscdk.services.cloudwatch.IMetric | [[cdk.support/lookup-entry]] | `:metric` |
 | `metricAggregationType` | software.amazon.awscdk.services.applicationautoscaling.MetricAggregationType | [[cdk.api.services.applicationautoscaling/metric-aggregation-type]] | `:metric-aggregation-type` |
 | `minAdjustmentMagnitude` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-adjustment-magnitude` |
-| `scalingSteps` | java.util.List | [[cdk.support/lookup-entry]] | `:scaling-steps` |"
-  [stack id config]
-  (let [builder (BasicStepScalingPolicyProps$Builder.)]
-    (when-let [data (adjustment-type config id :adjustment-type)]
-      (. builder adjustmentType data))
-    (when-let [data (lookup-entry config id :cooldown)]
-      (. builder cooldown data))
-    (when-let [data (lookup-entry config id :datapoints-to-alarm)]
-      (. builder datapointsToAlarm data))
-    (when-let [data (lookup-entry config id :evaluation-periods)]
-      (. builder evaluationPeriods data))
-    (when-let [data (lookup-entry config id :metric)]
-      (. builder metric data))
-    (when-let [data (metric-aggregation-type config id :metric-aggregation-type)]
-      (. builder metricAggregationType data))
-    (when-let [data (lookup-entry config id :min-adjustment-magnitude)]
-      (. builder minAdjustmentMagnitude data))
-    (when-let [data (lookup-entry config id :scaling-steps)]
-      (. builder scalingSteps data))
-    (.build builder)))
+| `scalingSteps` | java.util.List | [[cdk.support/lookup-entry]] | `:scaling-steps` |
+"
+  [^BasicStepScalingPolicyProps$Builder builder id config]
+  (when-let [data (adjustment-type config id :adjustment-type)]
+    (. builder adjustmentType data))
+  (when-let [data (lookup-entry config id :cooldown)]
+    (. builder cooldown data))
+  (when-let [data (lookup-entry config id :datapoints-to-alarm)]
+    (. builder datapointsToAlarm data))
+  (when-let [data (lookup-entry config id :evaluation-periods)]
+    (. builder evaluationPeriods data))
+  (when-let [data (lookup-entry config id :metric)]
+    (. builder metric data))
+  (when-let [data (metric-aggregation-type config id :metric-aggregation-type)]
+    (. builder metricAggregationType data))
+  (when-let [data (lookup-entry config id :min-adjustment-magnitude)]
+    (. builder minAdjustmentMagnitude data))
+  (when-let [data (lookup-entry config id :scaling-steps)]
+    (. builder scalingSteps data))
+  (.build builder))
 
 
-(defn basic-target-tracking-scaling-policy-props-builder
-  "The basic-target-tracking-scaling-policy-props-builder function buildes out new instances of 
-BasicTargetTrackingScalingPolicyProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-basic-target-tracking-scaling-policy-props-builder
+  "The build-basic-target-tracking-scaling-policy-props-builder function updates a BasicTargetTrackingScalingPolicyProps$Builder instance using the provided configuration.
+  The function takes the BasicTargetTrackingScalingPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -309,66 +324,34 @@ BasicTargetTrackingScalingPolicyProps$Builder using the provided configuration. 
 | `resourceLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-label` |
 | `scaleInCooldown` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:scale-in-cooldown` |
 | `scaleOutCooldown` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:scale-out-cooldown` |
-| `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |"
-  [stack id config]
-  (let [builder (BasicTargetTrackingScalingPolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :custom-metric)]
-      (. builder customMetric data))
-    (when-let [data (lookup-entry config id :disable-scale-in)]
-      (. builder disableScaleIn data))
-    (when-let [data (lookup-entry config id :policy-name)]
-      (. builder policyName data))
-    (when-let [data (predefined-metric config id :predefined-metric)]
-      (. builder predefinedMetric data))
-    (when-let [data (lookup-entry config id :resource-label)]
-      (. builder resourceLabel data))
-    (when-let [data (lookup-entry config id :scale-in-cooldown)]
-      (. builder scaleInCooldown data))
-    (when-let [data (lookup-entry config id :scale-out-cooldown)]
-      (. builder scaleOutCooldown data))
-    (when-let [data (lookup-entry config id :target-value)]
-      (. builder targetValue data))
-    (.build builder)))
+| `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |
+"
+  [^BasicTargetTrackingScalingPolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :custom-metric)]
+    (. builder customMetric data))
+  (when-let [data (lookup-entry config id :disable-scale-in)]
+    (. builder disableScaleIn data))
+  (when-let [data (lookup-entry config id :policy-name)]
+    (. builder policyName data))
+  (when-let [data (predefined-metric config id :predefined-metric)]
+    (. builder predefinedMetric data))
+  (when-let [data (lookup-entry config id :resource-label)]
+    (. builder resourceLabel data))
+  (when-let [data (lookup-entry config id :scale-in-cooldown)]
+    (. builder scaleInCooldown data))
+  (when-let [data (lookup-entry config id :scale-out-cooldown)]
+    (. builder scaleOutCooldown data))
+  (when-let [data (lookup-entry config id :target-value)]
+    (. builder targetValue data))
+  (.build builder))
 
 
-(defn cfn-scalable-target-builder
-  "The cfn-scalable-target-builder function buildes out new instances of 
-CfnScalableTarget$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-scalable-target-builder
+  "The build-cfn-scalable-target-builder function updates a CfnScalableTarget$Builder instance using the provided configuration.
+  The function takes the CfnScalableTarget$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `maxCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-capacity` |
-| `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |
-| `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
-| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
-| `scalableDimension` | java.lang.String | [[cdk.support/lookup-entry]] | `:scalable-dimension` |
-| `scheduledActions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scheduled-actions` |
-| `serviceNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-namespace` |
-| `suspendedState` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:suspended-state` |"
-  [stack id config]
-  (let [builder (CfnScalableTarget$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :max-capacity)]
-      (. builder maxCapacity data))
-    (when-let [data (lookup-entry config id :min-capacity)]
-      (. builder minCapacity data))
-    (when-let [data (lookup-entry config id :resource-id)]
-      (. builder resourceId data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :scalable-dimension)]
-      (. builder scalableDimension data))
-    (when-let [data (lookup-entry config id :scheduled-actions)]
-      (. builder scheduledActions data))
-    (when-let [data (lookup-entry config id :service-namespace)]
-      (. builder serviceNamespace data))
-    (when-let [data (lookup-entry config id :suspended-state)]
-      (. builder suspendedState data))
-    (.build builder)))
-
-
-(defn cfn-scalable-target-props-builder
-  "The cfn-scalable-target-props-builder function buildes out new instances of 
-CfnScalableTargetProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -379,48 +362,92 @@ CfnScalableTargetProps$Builder using the provided configuration.  Each field is 
 | `scalableDimension` | java.lang.String | [[cdk.support/lookup-entry]] | `:scalable-dimension` |
 | `scheduledActions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scheduled-actions` |
 | `serviceNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-namespace` |
-| `suspendedState` | software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget$SuspendedStateProperty | [[cdk.support/lookup-entry]] | `:suspended-state` |"
-  [stack id config]
-  (let [builder (CfnScalableTargetProps$Builder.)]
-    (when-let [data (lookup-entry config id :max-capacity)]
-      (. builder maxCapacity data))
-    (when-let [data (lookup-entry config id :min-capacity)]
-      (. builder minCapacity data))
-    (when-let [data (lookup-entry config id :resource-id)]
-      (. builder resourceId data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (when-let [data (lookup-entry config id :scalable-dimension)]
-      (. builder scalableDimension data))
-    (when-let [data (lookup-entry config id :scheduled-actions)]
-      (. builder scheduledActions data))
-    (when-let [data (lookup-entry config id :service-namespace)]
-      (. builder serviceNamespace data))
-    (when-let [data (lookup-entry config id :suspended-state)]
-      (. builder suspendedState data))
-    (.build builder)))
+| `suspendedState` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:suspended-state` |
+"
+  [^CfnScalableTarget$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-capacity)]
+    (. builder maxCapacity data))
+  (when-let [data (lookup-entry config id :min-capacity)]
+    (. builder minCapacity data))
+  (when-let [data (lookup-entry config id :resource-id)]
+    (. builder resourceId data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :scalable-dimension)]
+    (. builder scalableDimension data))
+  (when-let [data (lookup-entry config id :scheduled-actions)]
+    (. builder scheduledActions data))
+  (when-let [data (lookup-entry config id :service-namespace)]
+    (. builder serviceNamespace data))
+  (when-let [data (lookup-entry config id :suspended-state)]
+    (. builder suspendedState data))
+  (.build builder))
 
 
-(defn cfn-scalable-target-scalable-target-action-property-builder
-  "The cfn-scalable-target-scalable-target-action-property-builder function buildes out new instances of 
-CfnScalableTarget$ScalableTargetActionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-scalable-target-props-builder
+  "The build-cfn-scalable-target-props-builder function updates a CfnScalableTargetProps$Builder instance using the provided configuration.
+  The function takes the CfnScalableTargetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `maxCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-capacity` |
-| `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |"
-  [stack id config]
-  (let [builder (CfnScalableTarget$ScalableTargetActionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :max-capacity)]
-      (. builder maxCapacity data))
-    (when-let [data (lookup-entry config id :min-capacity)]
-      (. builder minCapacity data))
-    (.build builder)))
+| `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |
+| `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
+| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
+| `scalableDimension` | java.lang.String | [[cdk.support/lookup-entry]] | `:scalable-dimension` |
+| `scheduledActions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scheduled-actions` |
+| `serviceNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-namespace` |
+| `suspendedState` | software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget$SuspendedStateProperty | [[cdk.support/lookup-entry]] | `:suspended-state` |
+"
+  [^CfnScalableTargetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-capacity)]
+    (. builder maxCapacity data))
+  (when-let [data (lookup-entry config id :min-capacity)]
+    (. builder minCapacity data))
+  (when-let [data (lookup-entry config id :resource-id)]
+    (. builder resourceId data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (when-let [data (lookup-entry config id :scalable-dimension)]
+    (. builder scalableDimension data))
+  (when-let [data (lookup-entry config id :scheduled-actions)]
+    (. builder scheduledActions data))
+  (when-let [data (lookup-entry config id :service-namespace)]
+    (. builder serviceNamespace data))
+  (when-let [data (lookup-entry config id :suspended-state)]
+    (. builder suspendedState data))
+  (.build builder))
 
 
-(defn cfn-scalable-target-scheduled-action-property-builder
-  "The cfn-scalable-target-scheduled-action-property-builder function buildes out new instances of 
-CfnScalableTarget$ScheduledActionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-scalable-target-scalable-target-action-property-builder
+  "The build-cfn-scalable-target-scalable-target-action-property-builder function updates a CfnScalableTarget$ScalableTargetActionProperty$Builder instance using the provided configuration.
+  The function takes the CfnScalableTarget$ScalableTargetActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `maxCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-capacity` |
+| `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |
+"
+  [^CfnScalableTarget$ScalableTargetActionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-capacity)]
+    (. builder maxCapacity data))
+  (when-let [data (lookup-entry config id :min-capacity)]
+    (. builder minCapacity data))
+  (.build builder))
+
+
+(defn build-cfn-scalable-target-scheduled-action-property-builder
+  "The build-cfn-scalable-target-scheduled-action-property-builder function updates a CfnScalableTarget$ScheduledActionProperty$Builder instance using the provided configuration.
+  The function takes the CfnScalableTarget$ScheduledActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -429,47 +456,53 @@ CfnScalableTarget$ScheduledActionProperty$Builder using the provided configurati
 | `schedule` | java.lang.String | [[cdk.support/lookup-entry]] | `:schedule` |
 | `scheduledActionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheduled-action-name` |
 | `startTime` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:start-time` |
-| `timezone` | java.lang.String | [[cdk.support/lookup-entry]] | `:timezone` |"
-  [stack id config]
-  (let [builder (CfnScalableTarget$ScheduledActionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :end-time)]
-      (. builder endTime data))
-    (when-let [data (lookup-entry config id :scalable-target-action)]
-      (. builder scalableTargetAction data))
-    (when-let [data (lookup-entry config id :schedule)]
-      (. builder schedule data))
-    (when-let [data (lookup-entry config id :scheduled-action-name)]
-      (. builder scheduledActionName data))
-    (when-let [data (lookup-entry config id :start-time)]
-      (. builder startTime data))
-    (when-let [data (lookup-entry config id :timezone)]
-      (. builder timezone data))
-    (.build builder)))
+| `timezone` | java.lang.String | [[cdk.support/lookup-entry]] | `:timezone` |
+"
+  [^CfnScalableTarget$ScheduledActionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :end-time)]
+    (. builder endTime data))
+  (when-let [data (lookup-entry config id :scalable-target-action)]
+    (. builder scalableTargetAction data))
+  (when-let [data (lookup-entry config id :schedule)]
+    (. builder schedule data))
+  (when-let [data (lookup-entry config id :scheduled-action-name)]
+    (. builder scheduledActionName data))
+  (when-let [data (lookup-entry config id :start-time)]
+    (. builder startTime data))
+  (when-let [data (lookup-entry config id :timezone)]
+    (. builder timezone data))
+  (.build builder))
 
 
-(defn cfn-scalable-target-suspended-state-property-builder
-  "The cfn-scalable-target-suspended-state-property-builder function buildes out new instances of 
-CfnScalableTarget$SuspendedStateProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-scalable-target-suspended-state-property-builder
+  "The build-cfn-scalable-target-suspended-state-property-builder function updates a CfnScalableTarget$SuspendedStateProperty$Builder instance using the provided configuration.
+  The function takes the CfnScalableTarget$SuspendedStateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dynamicScalingInSuspended` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dynamic-scaling-in-suspended` |
 | `dynamicScalingOutSuspended` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:dynamic-scaling-out-suspended` |
-| `scheduledScalingSuspended` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:scheduled-scaling-suspended` |"
-  [stack id config]
-  (let [builder (CfnScalableTarget$SuspendedStateProperty$Builder.)]
-    (when-let [data (lookup-entry config id :dynamic-scaling-in-suspended)]
-      (. builder dynamicScalingInSuspended data))
-    (when-let [data (lookup-entry config id :dynamic-scaling-out-suspended)]
-      (. builder dynamicScalingOutSuspended data))
-    (when-let [data (lookup-entry config id :scheduled-scaling-suspended)]
-      (. builder scheduledScalingSuspended data))
-    (.build builder)))
+| `scheduledScalingSuspended` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:scheduled-scaling-suspended` |
+"
+  [^CfnScalableTarget$SuspendedStateProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :dynamic-scaling-in-suspended)]
+    (. builder dynamicScalingInSuspended data))
+  (when-let [data (lookup-entry config id :dynamic-scaling-out-suspended)]
+    (. builder dynamicScalingOutSuspended data))
+  (when-let [data (lookup-entry config id :scheduled-scaling-suspended)]
+    (. builder scheduledScalingSuspended data))
+  (.build builder))
 
 
-(defn cfn-scaling-policy-builder
-  "The cfn-scaling-policy-builder function buildes out new instances of 
-CfnScalingPolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-scaling-policy-builder
+  "The build-cfn-scaling-policy-builder function updates a CfnScalingPolicy$Builder instance using the provided configuration.
+  The function takes the CfnScalingPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -480,31 +513,34 @@ CfnScalingPolicy$Builder using the provided configuration.  Each field is set as
 | `scalingTargetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:scaling-target-id` |
 | `serviceNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-namespace` |
 | `stepScalingPolicyConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:step-scaling-policy-configuration` |
-| `targetTrackingScalingPolicyConfiguration` | software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty | [[cdk.support/lookup-entry]] | `:target-tracking-scaling-policy-configuration` |"
-  [stack id config]
-  (let [builder (CfnScalingPolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :policy-name)]
-      (. builder policyName data))
-    (when-let [data (lookup-entry config id :policy-type)]
-      (. builder policyType data))
-    (when-let [data (lookup-entry config id :resource-id)]
-      (. builder resourceId data))
-    (when-let [data (lookup-entry config id :scalable-dimension)]
-      (. builder scalableDimension data))
-    (when-let [data (lookup-entry config id :scaling-target-id)]
-      (. builder scalingTargetId data))
-    (when-let [data (lookup-entry config id :service-namespace)]
-      (. builder serviceNamespace data))
-    (when-let [data (lookup-entry config id :step-scaling-policy-configuration)]
-      (. builder stepScalingPolicyConfiguration data))
-    (when-let [data (lookup-entry config id :target-tracking-scaling-policy-configuration)]
-      (. builder targetTrackingScalingPolicyConfiguration data))
-    (.build builder)))
+| `targetTrackingScalingPolicyConfiguration` | software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty | [[cdk.support/lookup-entry]] | `:target-tracking-scaling-policy-configuration` |
+"
+  [^CfnScalingPolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :policy-name)]
+    (. builder policyName data))
+  (when-let [data (lookup-entry config id :policy-type)]
+    (. builder policyType data))
+  (when-let [data (lookup-entry config id :resource-id)]
+    (. builder resourceId data))
+  (when-let [data (lookup-entry config id :scalable-dimension)]
+    (. builder scalableDimension data))
+  (when-let [data (lookup-entry config id :scaling-target-id)]
+    (. builder scalingTargetId data))
+  (when-let [data (lookup-entry config id :service-namespace)]
+    (. builder serviceNamespace data))
+  (when-let [data (lookup-entry config id :step-scaling-policy-configuration)]
+    (. builder stepScalingPolicyConfiguration data))
+  (when-let [data (lookup-entry config id :target-tracking-scaling-policy-configuration)]
+    (. builder targetTrackingScalingPolicyConfiguration data))
+  (.build builder))
 
 
-(defn cfn-scaling-policy-customized-metric-specification-property-builder
-  "The cfn-scaling-policy-customized-metric-specification-property-builder function buildes out new instances of 
-CfnScalingPolicy$CustomizedMetricSpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-scaling-policy-customized-metric-specification-property-builder
+  "The build-cfn-scaling-policy-customized-metric-specification-property-builder function updates a CfnScalingPolicy$CustomizedMetricSpecificationProperty$Builder instance using the provided configuration.
+  The function takes the CfnScalingPolicy$CustomizedMetricSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -513,61 +549,70 @@ CfnScalingPolicy$CustomizedMetricSpecificationProperty$Builder using the provide
 | `metrics` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metrics` |
 | `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
 | `statistic` | java.lang.String | [[cdk.support/lookup-entry]] | `:statistic` |
-| `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |"
-  [stack id config]
-  (let [builder (CfnScalingPolicy$CustomizedMetricSpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :dimensions)]
-      (. builder dimensions data))
-    (when-let [data (lookup-entry config id :metric-name)]
-      (. builder metricName data))
-    (when-let [data (lookup-entry config id :metrics)]
-      (. builder metrics data))
-    (when-let [data (lookup-entry config id :namespace)]
-      (. builder namespace data))
-    (when-let [data (lookup-entry config id :statistic)]
-      (. builder statistic data))
-    (when-let [data (lookup-entry config id :unit)]
-      (. builder unit data))
-    (.build builder)))
+| `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
+"
+  [^CfnScalingPolicy$CustomizedMetricSpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :dimensions)]
+    (. builder dimensions data))
+  (when-let [data (lookup-entry config id :metric-name)]
+    (. builder metricName data))
+  (when-let [data (lookup-entry config id :metrics)]
+    (. builder metrics data))
+  (when-let [data (lookup-entry config id :namespace)]
+    (. builder namespace data))
+  (when-let [data (lookup-entry config id :statistic)]
+    (. builder statistic data))
+  (when-let [data (lookup-entry config id :unit)]
+    (. builder unit data))
+  (.build builder))
 
 
-(defn cfn-scaling-policy-metric-dimension-property-builder
-  "The cfn-scaling-policy-metric-dimension-property-builder function buildes out new instances of 
-CfnScalingPolicy$MetricDimensionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-scaling-policy-metric-dimension-property-builder
+  "The build-cfn-scaling-policy-metric-dimension-property-builder function updates a CfnScalingPolicy$MetricDimensionProperty$Builder instance using the provided configuration.
+  The function takes the CfnScalingPolicy$MetricDimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnScalingPolicy$MetricDimensionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnScalingPolicy$MetricDimensionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-scaling-policy-predefined-metric-specification-property-builder
-  "The cfn-scaling-policy-predefined-metric-specification-property-builder function buildes out new instances of 
-CfnScalingPolicy$PredefinedMetricSpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-scaling-policy-predefined-metric-specification-property-builder
+  "The build-cfn-scaling-policy-predefined-metric-specification-property-builder function updates a CfnScalingPolicy$PredefinedMetricSpecificationProperty$Builder instance using the provided configuration.
+  The function takes the CfnScalingPolicy$PredefinedMetricSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `predefinedMetricType` | java.lang.String | [[cdk.support/lookup-entry]] | `:predefined-metric-type` |
-| `resourceLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-label` |"
-  [stack id config]
-  (let [builder (CfnScalingPolicy$PredefinedMetricSpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :predefined-metric-type)]
-      (. builder predefinedMetricType data))
-    (when-let [data (lookup-entry config id :resource-label)]
-      (. builder resourceLabel data))
-    (.build builder)))
+| `resourceLabel` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-label` |
+"
+  [^CfnScalingPolicy$PredefinedMetricSpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :predefined-metric-type)]
+    (. builder predefinedMetricType data))
+  (when-let [data (lookup-entry config id :resource-label)]
+    (. builder resourceLabel data))
+  (.build builder))
 
 
-(defn cfn-scaling-policy-props-builder
-  "The cfn-scaling-policy-props-builder function buildes out new instances of 
-CfnScalingPolicyProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-scaling-policy-props-builder
+  "The build-cfn-scaling-policy-props-builder function updates a CfnScalingPolicyProps$Builder instance using the provided configuration.
+  The function takes the CfnScalingPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -578,51 +623,57 @@ CfnScalingPolicyProps$Builder using the provided configuration.  Each field is s
 | `scalingTargetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:scaling-target-id` |
 | `serviceNamespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-namespace` |
 | `stepScalingPolicyConfiguration` | software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy$StepScalingPolicyConfigurationProperty | [[cdk.support/lookup-entry]] | `:step-scaling-policy-configuration` |
-| `targetTrackingScalingPolicyConfiguration` | software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty | [[cdk.support/lookup-entry]] | `:target-tracking-scaling-policy-configuration` |"
-  [stack id config]
-  (let [builder (CfnScalingPolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :policy-name)]
-      (. builder policyName data))
-    (when-let [data (lookup-entry config id :policy-type)]
-      (. builder policyType data))
-    (when-let [data (lookup-entry config id :resource-id)]
-      (. builder resourceId data))
-    (when-let [data (lookup-entry config id :scalable-dimension)]
-      (. builder scalableDimension data))
-    (when-let [data (lookup-entry config id :scaling-target-id)]
-      (. builder scalingTargetId data))
-    (when-let [data (lookup-entry config id :service-namespace)]
-      (. builder serviceNamespace data))
-    (when-let [data (lookup-entry config id :step-scaling-policy-configuration)]
-      (. builder stepScalingPolicyConfiguration data))
-    (when-let [data (lookup-entry config id :target-tracking-scaling-policy-configuration)]
-      (. builder targetTrackingScalingPolicyConfiguration data))
-    (.build builder)))
+| `targetTrackingScalingPolicyConfiguration` | software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty | [[cdk.support/lookup-entry]] | `:target-tracking-scaling-policy-configuration` |
+"
+  [^CfnScalingPolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :policy-name)]
+    (. builder policyName data))
+  (when-let [data (lookup-entry config id :policy-type)]
+    (. builder policyType data))
+  (when-let [data (lookup-entry config id :resource-id)]
+    (. builder resourceId data))
+  (when-let [data (lookup-entry config id :scalable-dimension)]
+    (. builder scalableDimension data))
+  (when-let [data (lookup-entry config id :scaling-target-id)]
+    (. builder scalingTargetId data))
+  (when-let [data (lookup-entry config id :service-namespace)]
+    (. builder serviceNamespace data))
+  (when-let [data (lookup-entry config id :step-scaling-policy-configuration)]
+    (. builder stepScalingPolicyConfiguration data))
+  (when-let [data (lookup-entry config id :target-tracking-scaling-policy-configuration)]
+    (. builder targetTrackingScalingPolicyConfiguration data))
+  (.build builder))
 
 
-(defn cfn-scaling-policy-step-adjustment-property-builder
-  "The cfn-scaling-policy-step-adjustment-property-builder function buildes out new instances of 
-CfnScalingPolicy$StepAdjustmentProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-scaling-policy-step-adjustment-property-builder
+  "The build-cfn-scaling-policy-step-adjustment-property-builder function updates a CfnScalingPolicy$StepAdjustmentProperty$Builder instance using the provided configuration.
+  The function takes the CfnScalingPolicy$StepAdjustmentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `metricIntervalLowerBound` | java.lang.Number | [[cdk.support/lookup-entry]] | `:metric-interval-lower-bound` |
 | `metricIntervalUpperBound` | java.lang.Number | [[cdk.support/lookup-entry]] | `:metric-interval-upper-bound` |
-| `scalingAdjustment` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scaling-adjustment` |"
-  [stack id config]
-  (let [builder (CfnScalingPolicy$StepAdjustmentProperty$Builder.)]
-    (when-let [data (lookup-entry config id :metric-interval-lower-bound)]
-      (. builder metricIntervalLowerBound data))
-    (when-let [data (lookup-entry config id :metric-interval-upper-bound)]
-      (. builder metricIntervalUpperBound data))
-    (when-let [data (lookup-entry config id :scaling-adjustment)]
-      (. builder scalingAdjustment data))
-    (.build builder)))
+| `scalingAdjustment` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scaling-adjustment` |
+"
+  [^CfnScalingPolicy$StepAdjustmentProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :metric-interval-lower-bound)]
+    (. builder metricIntervalLowerBound data))
+  (when-let [data (lookup-entry config id :metric-interval-upper-bound)]
+    (. builder metricIntervalUpperBound data))
+  (when-let [data (lookup-entry config id :scaling-adjustment)]
+    (. builder scalingAdjustment data))
+  (.build builder))
 
 
-(defn cfn-scaling-policy-step-scaling-policy-configuration-property-builder
-  "The cfn-scaling-policy-step-scaling-policy-configuration-property-builder function buildes out new instances of 
-CfnScalingPolicy$StepScalingPolicyConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-scaling-policy-step-scaling-policy-configuration-property-builder
+  "The build-cfn-scaling-policy-step-scaling-policy-configuration-property-builder function updates a CfnScalingPolicy$StepScalingPolicyConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnScalingPolicy$StepScalingPolicyConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -630,25 +681,28 @@ CfnScalingPolicy$StepScalingPolicyConfigurationProperty$Builder using the provid
 | `cooldown` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cooldown` |
 | `metricAggregationType` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-aggregation-type` |
 | `minAdjustmentMagnitude` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-adjustment-magnitude` |
-| `stepAdjustments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:step-adjustments` |"
-  [stack id config]
-  (let [builder (CfnScalingPolicy$StepScalingPolicyConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :adjustment-type)]
-      (. builder adjustmentType data))
-    (when-let [data (lookup-entry config id :cooldown)]
-      (. builder cooldown data))
-    (when-let [data (lookup-entry config id :metric-aggregation-type)]
-      (. builder metricAggregationType data))
-    (when-let [data (lookup-entry config id :min-adjustment-magnitude)]
-      (. builder minAdjustmentMagnitude data))
-    (when-let [data (lookup-entry config id :step-adjustments)]
-      (. builder stepAdjustments data))
-    (.build builder)))
+| `stepAdjustments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:step-adjustments` |
+"
+  [^CfnScalingPolicy$StepScalingPolicyConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :adjustment-type)]
+    (. builder adjustmentType data))
+  (when-let [data (lookup-entry config id :cooldown)]
+    (. builder cooldown data))
+  (when-let [data (lookup-entry config id :metric-aggregation-type)]
+    (. builder metricAggregationType data))
+  (when-let [data (lookup-entry config id :min-adjustment-magnitude)]
+    (. builder minAdjustmentMagnitude data))
+  (when-let [data (lookup-entry config id :step-adjustments)]
+    (. builder stepAdjustments data))
+  (.build builder))
 
 
-(defn cfn-scaling-policy-target-tracking-metric-data-query-property-builder
-  "The cfn-scaling-policy-target-tracking-metric-data-query-property-builder function buildes out new instances of 
-CfnScalingPolicy$TargetTrackingMetricDataQueryProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-scaling-policy-target-tracking-metric-data-query-property-builder
+  "The build-cfn-scaling-policy-target-tracking-metric-data-query-property-builder function updates a CfnScalingPolicy$TargetTrackingMetricDataQueryProperty$Builder instance using the provided configuration.
+  The function takes the CfnScalingPolicy$TargetTrackingMetricDataQueryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -656,82 +710,94 @@ CfnScalingPolicy$TargetTrackingMetricDataQueryProperty$Builder using the provide
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
 | `label` | java.lang.String | [[cdk.support/lookup-entry]] | `:label` |
 | `metricStat` | software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy$TargetTrackingMetricStatProperty | [[cdk.support/lookup-entry]] | `:metric-stat` |
-| `returnData` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:return-data` |"
-  [stack id config]
-  (let [builder (CfnScalingPolicy$TargetTrackingMetricDataQueryProperty$Builder.)]
-    (when-let [data (lookup-entry config id :expression)]
-      (. builder expression data))
-    (when-let [data (lookup-entry config id :id)]
-      (. builder id data))
-    (when-let [data (lookup-entry config id :label)]
-      (. builder label data))
-    (when-let [data (lookup-entry config id :metric-stat)]
-      (. builder metricStat data))
-    (when-let [data (lookup-entry config id :return-data)]
-      (. builder returnData data))
-    (.build builder)))
+| `returnData` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:return-data` |
+"
+  [^CfnScalingPolicy$TargetTrackingMetricDataQueryProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :expression)]
+    (. builder expression data))
+  (when-let [data (lookup-entry config id :id)]
+    (. builder id data))
+  (when-let [data (lookup-entry config id :label)]
+    (. builder label data))
+  (when-let [data (lookup-entry config id :metric-stat)]
+    (. builder metricStat data))
+  (when-let [data (lookup-entry config id :return-data)]
+    (. builder returnData data))
+  (.build builder))
 
 
-(defn cfn-scaling-policy-target-tracking-metric-dimension-property-builder
-  "The cfn-scaling-policy-target-tracking-metric-dimension-property-builder function buildes out new instances of 
-CfnScalingPolicy$TargetTrackingMetricDimensionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-scaling-policy-target-tracking-metric-dimension-property-builder
+  "The build-cfn-scaling-policy-target-tracking-metric-dimension-property-builder function updates a CfnScalingPolicy$TargetTrackingMetricDimensionProperty$Builder instance using the provided configuration.
+  The function takes the CfnScalingPolicy$TargetTrackingMetricDimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnScalingPolicy$TargetTrackingMetricDimensionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnScalingPolicy$TargetTrackingMetricDimensionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-scaling-policy-target-tracking-metric-property-builder
-  "The cfn-scaling-policy-target-tracking-metric-property-builder function buildes out new instances of 
-CfnScalingPolicy$TargetTrackingMetricProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-scaling-policy-target-tracking-metric-property-builder
+  "The build-cfn-scaling-policy-target-tracking-metric-property-builder function updates a CfnScalingPolicy$TargetTrackingMetricProperty$Builder instance using the provided configuration.
+  The function takes the CfnScalingPolicy$TargetTrackingMetricProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dimensions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dimensions` |
 | `metricName` | java.lang.String | [[cdk.support/lookup-entry]] | `:metric-name` |
-| `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |"
-  [stack id config]
-  (let [builder (CfnScalingPolicy$TargetTrackingMetricProperty$Builder.)]
-    (when-let [data (lookup-entry config id :dimensions)]
-      (. builder dimensions data))
-    (when-let [data (lookup-entry config id :metric-name)]
-      (. builder metricName data))
-    (when-let [data (lookup-entry config id :namespace)]
-      (. builder namespace data))
-    (.build builder)))
+| `namespace` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace` |
+"
+  [^CfnScalingPolicy$TargetTrackingMetricProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :dimensions)]
+    (. builder dimensions data))
+  (when-let [data (lookup-entry config id :metric-name)]
+    (. builder metricName data))
+  (when-let [data (lookup-entry config id :namespace)]
+    (. builder namespace data))
+  (.build builder))
 
 
-(defn cfn-scaling-policy-target-tracking-metric-stat-property-builder
-  "The cfn-scaling-policy-target-tracking-metric-stat-property-builder function buildes out new instances of 
-CfnScalingPolicy$TargetTrackingMetricStatProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-scaling-policy-target-tracking-metric-stat-property-builder
+  "The build-cfn-scaling-policy-target-tracking-metric-stat-property-builder function updates a CfnScalingPolicy$TargetTrackingMetricStatProperty$Builder instance using the provided configuration.
+  The function takes the CfnScalingPolicy$TargetTrackingMetricStatProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `metric` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metric` |
 | `stat` | java.lang.String | [[cdk.support/lookup-entry]] | `:stat` |
-| `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |"
-  [stack id config]
-  (let [builder (CfnScalingPolicy$TargetTrackingMetricStatProperty$Builder.)]
-    (when-let [data (lookup-entry config id :metric)]
-      (. builder metric data))
-    (when-let [data (lookup-entry config id :stat)]
-      (. builder stat data))
-    (when-let [data (lookup-entry config id :unit)]
-      (. builder unit data))
-    (.build builder)))
+| `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
+"
+  [^CfnScalingPolicy$TargetTrackingMetricStatProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :metric)]
+    (. builder metric data))
+  (when-let [data (lookup-entry config id :stat)]
+    (. builder stat data))
+  (when-let [data (lookup-entry config id :unit)]
+    (. builder unit data))
+  (.build builder))
 
 
-(defn cfn-scaling-policy-target-tracking-scaling-policy-configuration-property-builder
-  "The cfn-scaling-policy-target-tracking-scaling-policy-configuration-property-builder function buildes out new instances of 
-CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-scaling-policy-target-tracking-scaling-policy-configuration-property-builder
+  "The build-cfn-scaling-policy-target-tracking-scaling-policy-configuration-property-builder function updates a CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -740,27 +806,30 @@ CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty$Builder using 
 | `predefinedMetricSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:predefined-metric-specification` |
 | `scaleInCooldown` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scale-in-cooldown` |
 | `scaleOutCooldown` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scale-out-cooldown` |
-| `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |"
-  [stack id config]
-  (let [builder (CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :customized-metric-specification)]
-      (. builder customizedMetricSpecification data))
-    (when-let [data (lookup-entry config id :disable-scale-in)]
-      (. builder disableScaleIn data))
-    (when-let [data (lookup-entry config id :predefined-metric-specification)]
-      (. builder predefinedMetricSpecification data))
-    (when-let [data (lookup-entry config id :scale-in-cooldown)]
-      (. builder scaleInCooldown data))
-    (when-let [data (lookup-entry config id :scale-out-cooldown)]
-      (. builder scaleOutCooldown data))
-    (when-let [data (lookup-entry config id :target-value)]
-      (. builder targetValue data))
-    (.build builder)))
+| `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |
+"
+  [^CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :customized-metric-specification)]
+    (. builder customizedMetricSpecification data))
+  (when-let [data (lookup-entry config id :disable-scale-in)]
+    (. builder disableScaleIn data))
+  (when-let [data (lookup-entry config id :predefined-metric-specification)]
+    (. builder predefinedMetricSpecification data))
+  (when-let [data (lookup-entry config id :scale-in-cooldown)]
+    (. builder scaleInCooldown data))
+  (when-let [data (lookup-entry config id :scale-out-cooldown)]
+    (. builder scaleOutCooldown data))
+  (when-let [data (lookup-entry config id :target-value)]
+    (. builder targetValue data))
+  (.build builder))
 
 
-(defn cron-options-builder
-  "The cron-options-builder function buildes out new instances of 
-CronOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cron-options-builder
+  "The build-cron-options-builder function updates a CronOptions$Builder instance using the provided configuration.
+  The function takes the CronOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -769,44 +838,50 @@ CronOptions$Builder using the provided configuration.  Each field is set as foll
 | `minute` | java.lang.String | [[cdk.support/lookup-entry]] | `:minute` |
 | `month` | java.lang.String | [[cdk.support/lookup-entry]] | `:month` |
 | `weekDay` | java.lang.String | [[cdk.support/lookup-entry]] | `:week-day` |
-| `year` | java.lang.String | [[cdk.support/lookup-entry]] | `:year` |"
-  [stack id config]
-  (let [builder (CronOptions$Builder.)]
-    (when-let [data (lookup-entry config id :day)]
-      (. builder day data))
-    (when-let [data (lookup-entry config id :hour)]
-      (. builder hour data))
-    (when-let [data (lookup-entry config id :minute)]
-      (. builder minute data))
-    (when-let [data (lookup-entry config id :month)]
-      (. builder month data))
-    (when-let [data (lookup-entry config id :week-day)]
-      (. builder weekDay data))
-    (when-let [data (lookup-entry config id :year)]
-      (. builder year data))
-    (.build builder)))
+| `year` | java.lang.String | [[cdk.support/lookup-entry]] | `:year` |
+"
+  [^CronOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :day)]
+    (. builder day data))
+  (when-let [data (lookup-entry config id :hour)]
+    (. builder hour data))
+  (when-let [data (lookup-entry config id :minute)]
+    (. builder minute data))
+  (when-let [data (lookup-entry config id :month)]
+    (. builder month data))
+  (when-let [data (lookup-entry config id :week-day)]
+    (. builder weekDay data))
+  (when-let [data (lookup-entry config id :year)]
+    (. builder year data))
+  (.build builder))
 
 
-(defn enable-scaling-props-builder
-  "The enable-scaling-props-builder function buildes out new instances of 
-EnableScalingProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-enable-scaling-props-builder
+  "The build-enable-scaling-props-builder function updates a EnableScalingProps$Builder instance using the provided configuration.
+  The function takes the EnableScalingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `maxCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-capacity` |
-| `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |"
-  [stack id config]
-  (let [builder (EnableScalingProps$Builder.)]
-    (when-let [data (lookup-entry config id :max-capacity)]
-      (. builder maxCapacity data))
-    (when-let [data (lookup-entry config id :min-capacity)]
-      (. builder minCapacity data))
-    (.build builder)))
+| `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |
+"
+  [^EnableScalingProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-capacity)]
+    (. builder maxCapacity data))
+  (when-let [data (lookup-entry config id :min-capacity)]
+    (. builder minCapacity data))
+  (.build builder))
 
 
-(defn scalable-target-builder
-  "The scalable-target-builder function buildes out new instances of 
-ScalableTarget$Builder using the provided configuration.  Each field is set as follows:
+(defn build-scalable-target-builder
+  "The build-scalable-target-builder function updates a ScalableTarget$Builder instance using the provided configuration.
+  The function takes the ScalableTarget$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -815,27 +890,30 @@ ScalableTarget$Builder using the provided configuration.  Each field is set as f
 | `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 | `scalableDimension` | java.lang.String | [[cdk.support/lookup-entry]] | `:scalable-dimension` |
-| `serviceNamespace` | software.amazon.awscdk.services.applicationautoscaling.ServiceNamespace | [[cdk.api.services.applicationautoscaling/service-namespace]] | `:service-namespace` |"
-  [stack id config]
-  (let [builder (ScalableTarget$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :max-capacity)]
-      (. builder maxCapacity data))
-    (when-let [data (lookup-entry config id :min-capacity)]
-      (. builder minCapacity data))
-    (when-let [data (lookup-entry config id :resource-id)]
-      (. builder resourceId data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :scalable-dimension)]
-      (. builder scalableDimension data))
-    (when-let [data (service-namespace config id :service-namespace)]
-      (. builder serviceNamespace data))
-    (.build builder)))
+| `serviceNamespace` | software.amazon.awscdk.services.applicationautoscaling.ServiceNamespace | [[cdk.api.services.applicationautoscaling/service-namespace]] | `:service-namespace` |
+"
+  [^ScalableTarget$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-capacity)]
+    (. builder maxCapacity data))
+  (when-let [data (lookup-entry config id :min-capacity)]
+    (. builder minCapacity data))
+  (when-let [data (lookup-entry config id :resource-id)]
+    (. builder resourceId data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :scalable-dimension)]
+    (. builder scalableDimension data))
+  (when-let [data (service-namespace config id :service-namespace)]
+    (. builder serviceNamespace data))
+  (.build builder))
 
 
-(defn scalable-target-props-builder
-  "The scalable-target-props-builder function buildes out new instances of 
-ScalableTargetProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-scalable-target-props-builder
+  "The build-scalable-target-props-builder function updates a ScalableTargetProps$Builder instance using the provided configuration.
+  The function takes the ScalableTargetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -844,47 +922,53 @@ ScalableTargetProps$Builder using the provided configuration.  Each field is set
 | `resourceId` | java.lang.String | [[cdk.support/lookup-entry]] | `:resource-id` |
 | `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
 | `scalableDimension` | java.lang.String | [[cdk.support/lookup-entry]] | `:scalable-dimension` |
-| `serviceNamespace` | software.amazon.awscdk.services.applicationautoscaling.ServiceNamespace | [[cdk.api.services.applicationautoscaling/service-namespace]] | `:service-namespace` |"
-  [stack id config]
-  (let [builder (ScalableTargetProps$Builder.)]
-    (when-let [data (lookup-entry config id :max-capacity)]
-      (. builder maxCapacity data))
-    (when-let [data (lookup-entry config id :min-capacity)]
-      (. builder minCapacity data))
-    (when-let [data (lookup-entry config id :resource-id)]
-      (. builder resourceId data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :scalable-dimension)]
-      (. builder scalableDimension data))
-    (when-let [data (service-namespace config id :service-namespace)]
-      (. builder serviceNamespace data))
-    (.build builder)))
+| `serviceNamespace` | software.amazon.awscdk.services.applicationautoscaling.ServiceNamespace | [[cdk.api.services.applicationautoscaling/service-namespace]] | `:service-namespace` |
+"
+  [^ScalableTargetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-capacity)]
+    (. builder maxCapacity data))
+  (when-let [data (lookup-entry config id :min-capacity)]
+    (. builder minCapacity data))
+  (when-let [data (lookup-entry config id :resource-id)]
+    (. builder resourceId data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :scalable-dimension)]
+    (. builder scalableDimension data))
+  (when-let [data (service-namespace config id :service-namespace)]
+    (. builder serviceNamespace data))
+  (.build builder))
 
 
-(defn scaling-interval-builder
-  "The scaling-interval-builder function buildes out new instances of 
-ScalingInterval$Builder using the provided configuration.  Each field is set as follows:
+(defn build-scaling-interval-builder
+  "The build-scaling-interval-builder function updates a ScalingInterval$Builder instance using the provided configuration.
+  The function takes the ScalingInterval$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `change` | java.lang.Number | [[cdk.support/lookup-entry]] | `:change` |
 | `lower` | java.lang.Number | [[cdk.support/lookup-entry]] | `:lower` |
-| `upper` | java.lang.Number | [[cdk.support/lookup-entry]] | `:upper` |"
-  [stack id config]
-  (let [builder (ScalingInterval$Builder.)]
-    (when-let [data (lookup-entry config id :change)]
-      (. builder change data))
-    (when-let [data (lookup-entry config id :lower)]
-      (. builder lower data))
-    (when-let [data (lookup-entry config id :upper)]
-      (. builder upper data))
-    (.build builder)))
+| `upper` | java.lang.Number | [[cdk.support/lookup-entry]] | `:upper` |
+"
+  [^ScalingInterval$Builder builder id config]
+  (when-let [data (lookup-entry config id :change)]
+    (. builder change data))
+  (when-let [data (lookup-entry config id :lower)]
+    (. builder lower data))
+  (when-let [data (lookup-entry config id :upper)]
+    (. builder upper data))
+  (.build builder))
 
 
-(defn scaling-schedule-builder
-  "The scaling-schedule-builder function buildes out new instances of 
-ScalingSchedule$Builder using the provided configuration.  Each field is set as follows:
+(defn build-scaling-schedule-builder
+  "The build-scaling-schedule-builder function updates a ScalingSchedule$Builder instance using the provided configuration.
+  The function takes the ScalingSchedule$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -893,56 +977,30 @@ ScalingSchedule$Builder using the provided configuration.  Each field is set as 
 | `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |
 | `schedule` | software.amazon.awscdk.services.applicationautoscaling.Schedule | [[cdk.support/lookup-entry]] | `:schedule` |
 | `startTime` | java.time.Instant | [[cdk.support/lookup-entry]] | `:start-time` |
-| `timeZone` | software.amazon.awscdk.TimeZone | [[cdk.support/lookup-entry]] | `:time-zone` |"
-  [stack id config]
-  (let [builder (ScalingSchedule$Builder.)]
-    (when-let [data (lookup-entry config id :end-time)]
-      (. builder endTime data))
-    (when-let [data (lookup-entry config id :max-capacity)]
-      (. builder maxCapacity data))
-    (when-let [data (lookup-entry config id :min-capacity)]
-      (. builder minCapacity data))
-    (when-let [data (lookup-entry config id :schedule)]
-      (. builder schedule data))
-    (when-let [data (lookup-entry config id :start-time)]
-      (. builder startTime data))
-    (when-let [data (lookup-entry config id :time-zone)]
-      (. builder timeZone data))
-    (.build builder)))
+| `timeZone` | software.amazon.awscdk.TimeZone | [[cdk.support/lookup-entry]] | `:time-zone` |
+"
+  [^ScalingSchedule$Builder builder id config]
+  (when-let [data (lookup-entry config id :end-time)]
+    (. builder endTime data))
+  (when-let [data (lookup-entry config id :max-capacity)]
+    (. builder maxCapacity data))
+  (when-let [data (lookup-entry config id :min-capacity)]
+    (. builder minCapacity data))
+  (when-let [data (lookup-entry config id :schedule)]
+    (. builder schedule data))
+  (when-let [data (lookup-entry config id :start-time)]
+    (. builder startTime data))
+  (when-let [data (lookup-entry config id :time-zone)]
+    (. builder timeZone data))
+  (.build builder))
 
 
-(defn step-scaling-action-builder
-  "The step-scaling-action-builder function buildes out new instances of 
-StepScalingAction$Builder using the provided configuration.  Each field is set as follows:
+(defn build-step-scaling-action-builder
+  "The build-step-scaling-action-builder function updates a StepScalingAction$Builder instance using the provided configuration.
+  The function takes the StepScalingAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `adjustmentType` | software.amazon.awscdk.services.applicationautoscaling.AdjustmentType | [[cdk.api.services.applicationautoscaling/adjustment-type]] | `:adjustment-type` |
-| `cooldown` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:cooldown` |
-| `metricAggregationType` | software.amazon.awscdk.services.applicationautoscaling.MetricAggregationType | [[cdk.api.services.applicationautoscaling/metric-aggregation-type]] | `:metric-aggregation-type` |
-| `minAdjustmentMagnitude` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-adjustment-magnitude` |
-| `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
-| `scalingTarget` | software.amazon.awscdk.services.applicationautoscaling.IScalableTarget | [[cdk.support/lookup-entry]] | `:scaling-target` |"
-  [stack id config]
-  (let [builder (StepScalingAction$Builder/create stack id)]
-    (when-let [data (adjustment-type config id :adjustment-type)]
-      (. builder adjustmentType data))
-    (when-let [data (lookup-entry config id :cooldown)]
-      (. builder cooldown data))
-    (when-let [data (metric-aggregation-type config id :metric-aggregation-type)]
-      (. builder metricAggregationType data))
-    (when-let [data (lookup-entry config id :min-adjustment-magnitude)]
-      (. builder minAdjustmentMagnitude data))
-    (when-let [data (lookup-entry config id :policy-name)]
-      (. builder policyName data))
-    (when-let [data (lookup-entry config id :scaling-target)]
-      (. builder scalingTarget data))
-    (.build builder)))
-
-
-(defn step-scaling-action-props-builder
-  "The step-scaling-action-props-builder function buildes out new instances of 
-StepScalingActionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -951,27 +1009,62 @@ StepScalingActionProps$Builder using the provided configuration.  Each field is 
 | `metricAggregationType` | software.amazon.awscdk.services.applicationautoscaling.MetricAggregationType | [[cdk.api.services.applicationautoscaling/metric-aggregation-type]] | `:metric-aggregation-type` |
 | `minAdjustmentMagnitude` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-adjustment-magnitude` |
 | `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
-| `scalingTarget` | software.amazon.awscdk.services.applicationautoscaling.IScalableTarget | [[cdk.support/lookup-entry]] | `:scaling-target` |"
-  [stack id config]
-  (let [builder (StepScalingActionProps$Builder.)]
-    (when-let [data (adjustment-type config id :adjustment-type)]
-      (. builder adjustmentType data))
-    (when-let [data (lookup-entry config id :cooldown)]
-      (. builder cooldown data))
-    (when-let [data (metric-aggregation-type config id :metric-aggregation-type)]
-      (. builder metricAggregationType data))
-    (when-let [data (lookup-entry config id :min-adjustment-magnitude)]
-      (. builder minAdjustmentMagnitude data))
-    (when-let [data (lookup-entry config id :policy-name)]
-      (. builder policyName data))
-    (when-let [data (lookup-entry config id :scaling-target)]
-      (. builder scalingTarget data))
-    (.build builder)))
+| `scalingTarget` | software.amazon.awscdk.services.applicationautoscaling.IScalableTarget | [[cdk.support/lookup-entry]] | `:scaling-target` |
+"
+  [^StepScalingAction$Builder builder id config]
+  (when-let [data (adjustment-type config id :adjustment-type)]
+    (. builder adjustmentType data))
+  (when-let [data (lookup-entry config id :cooldown)]
+    (. builder cooldown data))
+  (when-let [data (metric-aggregation-type config id :metric-aggregation-type)]
+    (. builder metricAggregationType data))
+  (when-let [data (lookup-entry config id :min-adjustment-magnitude)]
+    (. builder minAdjustmentMagnitude data))
+  (when-let [data (lookup-entry config id :policy-name)]
+    (. builder policyName data))
+  (when-let [data (lookup-entry config id :scaling-target)]
+    (. builder scalingTarget data))
+  (.build builder))
 
 
-(defn step-scaling-policy-builder
-  "The step-scaling-policy-builder function buildes out new instances of 
-StepScalingPolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-step-scaling-action-props-builder
+  "The build-step-scaling-action-props-builder function updates a StepScalingActionProps$Builder instance using the provided configuration.
+  The function takes the StepScalingActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `adjustmentType` | software.amazon.awscdk.services.applicationautoscaling.AdjustmentType | [[cdk.api.services.applicationautoscaling/adjustment-type]] | `:adjustment-type` |
+| `cooldown` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:cooldown` |
+| `metricAggregationType` | software.amazon.awscdk.services.applicationautoscaling.MetricAggregationType | [[cdk.api.services.applicationautoscaling/metric-aggregation-type]] | `:metric-aggregation-type` |
+| `minAdjustmentMagnitude` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-adjustment-magnitude` |
+| `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
+| `scalingTarget` | software.amazon.awscdk.services.applicationautoscaling.IScalableTarget | [[cdk.support/lookup-entry]] | `:scaling-target` |
+"
+  [^StepScalingActionProps$Builder builder id config]
+  (when-let [data (adjustment-type config id :adjustment-type)]
+    (. builder adjustmentType data))
+  (when-let [data (lookup-entry config id :cooldown)]
+    (. builder cooldown data))
+  (when-let [data (metric-aggregation-type config id :metric-aggregation-type)]
+    (. builder metricAggregationType data))
+  (when-let [data (lookup-entry config id :min-adjustment-magnitude)]
+    (. builder minAdjustmentMagnitude data))
+  (when-let [data (lookup-entry config id :policy-name)]
+    (. builder policyName data))
+  (when-let [data (lookup-entry config id :scaling-target)]
+    (. builder scalingTarget data))
+  (.build builder))
+
+
+(defn build-step-scaling-policy-builder
+  "The build-step-scaling-policy-builder function updates a StepScalingPolicy$Builder instance using the provided configuration.
+  The function takes the StepScalingPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -983,33 +1076,36 @@ StepScalingPolicy$Builder using the provided configuration.  Each field is set a
 | `metricAggregationType` | software.amazon.awscdk.services.applicationautoscaling.MetricAggregationType | [[cdk.api.services.applicationautoscaling/metric-aggregation-type]] | `:metric-aggregation-type` |
 | `minAdjustmentMagnitude` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-adjustment-magnitude` |
 | `scalingSteps` | java.util.List | [[cdk.support/lookup-entry]] | `:scaling-steps` |
-| `scalingTarget` | software.amazon.awscdk.services.applicationautoscaling.IScalableTarget | [[cdk.support/lookup-entry]] | `:scaling-target` |"
-  [stack id config]
-  (let [builder (StepScalingPolicy$Builder/create stack id)]
-    (when-let [data (adjustment-type config id :adjustment-type)]
-      (. builder adjustmentType data))
-    (when-let [data (lookup-entry config id :cooldown)]
-      (. builder cooldown data))
-    (when-let [data (lookup-entry config id :datapoints-to-alarm)]
-      (. builder datapointsToAlarm data))
-    (when-let [data (lookup-entry config id :evaluation-periods)]
-      (. builder evaluationPeriods data))
-    (when-let [data (lookup-entry config id :metric)]
-      (. builder metric data))
-    (when-let [data (metric-aggregation-type config id :metric-aggregation-type)]
-      (. builder metricAggregationType data))
-    (when-let [data (lookup-entry config id :min-adjustment-magnitude)]
-      (. builder minAdjustmentMagnitude data))
-    (when-let [data (lookup-entry config id :scaling-steps)]
-      (. builder scalingSteps data))
-    (when-let [data (lookup-entry config id :scaling-target)]
-      (. builder scalingTarget data))
-    (.build builder)))
+| `scalingTarget` | software.amazon.awscdk.services.applicationautoscaling.IScalableTarget | [[cdk.support/lookup-entry]] | `:scaling-target` |
+"
+  [^StepScalingPolicy$Builder builder id config]
+  (when-let [data (adjustment-type config id :adjustment-type)]
+    (. builder adjustmentType data))
+  (when-let [data (lookup-entry config id :cooldown)]
+    (. builder cooldown data))
+  (when-let [data (lookup-entry config id :datapoints-to-alarm)]
+    (. builder datapointsToAlarm data))
+  (when-let [data (lookup-entry config id :evaluation-periods)]
+    (. builder evaluationPeriods data))
+  (when-let [data (lookup-entry config id :metric)]
+    (. builder metric data))
+  (when-let [data (metric-aggregation-type config id :metric-aggregation-type)]
+    (. builder metricAggregationType data))
+  (when-let [data (lookup-entry config id :min-adjustment-magnitude)]
+    (. builder minAdjustmentMagnitude data))
+  (when-let [data (lookup-entry config id :scaling-steps)]
+    (. builder scalingSteps data))
+  (when-let [data (lookup-entry config id :scaling-target)]
+    (. builder scalingTarget data))
+  (.build builder))
 
 
-(defn step-scaling-policy-props-builder
-  "The step-scaling-policy-props-builder function buildes out new instances of 
-StepScalingPolicyProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-step-scaling-policy-props-builder
+  "The build-step-scaling-policy-props-builder function updates a StepScalingPolicyProps$Builder instance using the provided configuration.
+  The function takes the StepScalingPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1021,33 +1117,36 @@ StepScalingPolicyProps$Builder using the provided configuration.  Each field is 
 | `metricAggregationType` | software.amazon.awscdk.services.applicationautoscaling.MetricAggregationType | [[cdk.api.services.applicationautoscaling/metric-aggregation-type]] | `:metric-aggregation-type` |
 | `minAdjustmentMagnitude` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-adjustment-magnitude` |
 | `scalingSteps` | java.util.List | [[cdk.support/lookup-entry]] | `:scaling-steps` |
-| `scalingTarget` | software.amazon.awscdk.services.applicationautoscaling.IScalableTarget | [[cdk.support/lookup-entry]] | `:scaling-target` |"
-  [stack id config]
-  (let [builder (StepScalingPolicyProps$Builder.)]
-    (when-let [data (adjustment-type config id :adjustment-type)]
-      (. builder adjustmentType data))
-    (when-let [data (lookup-entry config id :cooldown)]
-      (. builder cooldown data))
-    (when-let [data (lookup-entry config id :datapoints-to-alarm)]
-      (. builder datapointsToAlarm data))
-    (when-let [data (lookup-entry config id :evaluation-periods)]
-      (. builder evaluationPeriods data))
-    (when-let [data (lookup-entry config id :metric)]
-      (. builder metric data))
-    (when-let [data (metric-aggregation-type config id :metric-aggregation-type)]
-      (. builder metricAggregationType data))
-    (when-let [data (lookup-entry config id :min-adjustment-magnitude)]
-      (. builder minAdjustmentMagnitude data))
-    (when-let [data (lookup-entry config id :scaling-steps)]
-      (. builder scalingSteps data))
-    (when-let [data (lookup-entry config id :scaling-target)]
-      (. builder scalingTarget data))
-    (.build builder)))
+| `scalingTarget` | software.amazon.awscdk.services.applicationautoscaling.IScalableTarget | [[cdk.support/lookup-entry]] | `:scaling-target` |
+"
+  [^StepScalingPolicyProps$Builder builder id config]
+  (when-let [data (adjustment-type config id :adjustment-type)]
+    (. builder adjustmentType data))
+  (when-let [data (lookup-entry config id :cooldown)]
+    (. builder cooldown data))
+  (when-let [data (lookup-entry config id :datapoints-to-alarm)]
+    (. builder datapointsToAlarm data))
+  (when-let [data (lookup-entry config id :evaluation-periods)]
+    (. builder evaluationPeriods data))
+  (when-let [data (lookup-entry config id :metric)]
+    (. builder metric data))
+  (when-let [data (metric-aggregation-type config id :metric-aggregation-type)]
+    (. builder metricAggregationType data))
+  (when-let [data (lookup-entry config id :min-adjustment-magnitude)]
+    (. builder minAdjustmentMagnitude data))
+  (when-let [data (lookup-entry config id :scaling-steps)]
+    (. builder scalingSteps data))
+  (when-let [data (lookup-entry config id :scaling-target)]
+    (. builder scalingTarget data))
+  (.build builder))
 
 
-(defn target-tracking-scaling-policy-builder
-  "The target-tracking-scaling-policy-builder function buildes out new instances of 
-TargetTrackingScalingPolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-target-tracking-scaling-policy-builder
+  "The build-target-tracking-scaling-policy-builder function updates a TargetTrackingScalingPolicy$Builder instance using the provided configuration.
+  The function takes the TargetTrackingScalingPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1059,33 +1158,36 @@ TargetTrackingScalingPolicy$Builder using the provided configuration.  Each fiel
 | `scaleInCooldown` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:scale-in-cooldown` |
 | `scaleOutCooldown` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:scale-out-cooldown` |
 | `scalingTarget` | software.amazon.awscdk.services.applicationautoscaling.IScalableTarget | [[cdk.support/lookup-entry]] | `:scaling-target` |
-| `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |"
-  [stack id config]
-  (let [builder (TargetTrackingScalingPolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :custom-metric)]
-      (. builder customMetric data))
-    (when-let [data (lookup-entry config id :disable-scale-in)]
-      (. builder disableScaleIn data))
-    (when-let [data (lookup-entry config id :policy-name)]
-      (. builder policyName data))
-    (when-let [data (predefined-metric config id :predefined-metric)]
-      (. builder predefinedMetric data))
-    (when-let [data (lookup-entry config id :resource-label)]
-      (. builder resourceLabel data))
-    (when-let [data (lookup-entry config id :scale-in-cooldown)]
-      (. builder scaleInCooldown data))
-    (when-let [data (lookup-entry config id :scale-out-cooldown)]
-      (. builder scaleOutCooldown data))
-    (when-let [data (lookup-entry config id :scaling-target)]
-      (. builder scalingTarget data))
-    (when-let [data (lookup-entry config id :target-value)]
-      (. builder targetValue data))
-    (.build builder)))
+| `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |
+"
+  [^TargetTrackingScalingPolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :custom-metric)]
+    (. builder customMetric data))
+  (when-let [data (lookup-entry config id :disable-scale-in)]
+    (. builder disableScaleIn data))
+  (when-let [data (lookup-entry config id :policy-name)]
+    (. builder policyName data))
+  (when-let [data (predefined-metric config id :predefined-metric)]
+    (. builder predefinedMetric data))
+  (when-let [data (lookup-entry config id :resource-label)]
+    (. builder resourceLabel data))
+  (when-let [data (lookup-entry config id :scale-in-cooldown)]
+    (. builder scaleInCooldown data))
+  (when-let [data (lookup-entry config id :scale-out-cooldown)]
+    (. builder scaleOutCooldown data))
+  (when-let [data (lookup-entry config id :scaling-target)]
+    (. builder scalingTarget data))
+  (when-let [data (lookup-entry config id :target-value)]
+    (. builder targetValue data))
+  (.build builder))
 
 
-(defn target-tracking-scaling-policy-props-builder
-  "The target-tracking-scaling-policy-props-builder function buildes out new instances of 
-TargetTrackingScalingPolicyProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-target-tracking-scaling-policy-props-builder
+  "The build-target-tracking-scaling-policy-props-builder function updates a TargetTrackingScalingPolicyProps$Builder instance using the provided configuration.
+  The function takes the TargetTrackingScalingPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1097,25 +1199,25 @@ TargetTrackingScalingPolicyProps$Builder using the provided configuration.  Each
 | `scaleInCooldown` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:scale-in-cooldown` |
 | `scaleOutCooldown` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:scale-out-cooldown` |
 | `scalingTarget` | software.amazon.awscdk.services.applicationautoscaling.IScalableTarget | [[cdk.support/lookup-entry]] | `:scaling-target` |
-| `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |"
-  [stack id config]
-  (let [builder (TargetTrackingScalingPolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :custom-metric)]
-      (. builder customMetric data))
-    (when-let [data (lookup-entry config id :disable-scale-in)]
-      (. builder disableScaleIn data))
-    (when-let [data (lookup-entry config id :policy-name)]
-      (. builder policyName data))
-    (when-let [data (predefined-metric config id :predefined-metric)]
-      (. builder predefinedMetric data))
-    (when-let [data (lookup-entry config id :resource-label)]
-      (. builder resourceLabel data))
-    (when-let [data (lookup-entry config id :scale-in-cooldown)]
-      (. builder scaleInCooldown data))
-    (when-let [data (lookup-entry config id :scale-out-cooldown)]
-      (. builder scaleOutCooldown data))
-    (when-let [data (lookup-entry config id :scaling-target)]
-      (. builder scalingTarget data))
-    (when-let [data (lookup-entry config id :target-value)]
-      (. builder targetValue data))
-    (.build builder)))
+| `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |
+"
+  [^TargetTrackingScalingPolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :custom-metric)]
+    (. builder customMetric data))
+  (when-let [data (lookup-entry config id :disable-scale-in)]
+    (. builder disableScaleIn data))
+  (when-let [data (lookup-entry config id :policy-name)]
+    (. builder policyName data))
+  (when-let [data (predefined-metric config id :predefined-metric)]
+    (. builder predefinedMetric data))
+  (when-let [data (lookup-entry config id :resource-label)]
+    (. builder resourceLabel data))
+  (when-let [data (lookup-entry config id :scale-in-cooldown)]
+    (. builder scaleInCooldown data))
+  (when-let [data (lookup-entry config id :scale-out-cooldown)]
+    (. builder scaleOutCooldown data))
+  (when-let [data (lookup-entry config id :scaling-target)]
+    (. builder scalingTarget data))
+  (when-let [data (lookup-entry config id :target-value)]
+    (. builder targetValue data))
+  (.build builder))

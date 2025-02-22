@@ -77,9 +77,12 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :pull-request-comment data) RepositoryNotificationEvents/PULL_REQUEST_COMMENT)))
 
 
-(defn cfn-repository-builder
-  "The cfn-repository-builder function buildes out new instances of 
-CfnRepository$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-repository-builder
+  "The build-cfn-repository-builder function updates a CfnRepository$Builder instance using the provided configuration.
+  The function takes the CfnRepository$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -88,44 +91,50 @@ CfnRepository$Builder using the provided configuration.  Each field is set as fo
 | `repositoryDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-description` |
 | `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `triggers` | java.util.List | [[cdk.support/lookup-entry]] | `:triggers` |"
-  [stack id config]
-  (let [builder (CfnRepository$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :code)]
-      (. builder code data))
-    (when-let [data (lookup-entry config id :kms-key-id)]
-      (. builder kmsKeyId data))
-    (when-let [data (lookup-entry config id :repository-description)]
-      (. builder repositoryDescription data))
-    (when-let [data (lookup-entry config id :repository-name)]
-      (. builder repositoryName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :triggers)]
-      (. builder triggers data))
-    (.build builder)))
+| `triggers` | java.util.List | [[cdk.support/lookup-entry]] | `:triggers` |
+"
+  [^CfnRepository$Builder builder id config]
+  (when-let [data (lookup-entry config id :code)]
+    (. builder code data))
+  (when-let [data (lookup-entry config id :kms-key-id)]
+    (. builder kmsKeyId data))
+  (when-let [data (lookup-entry config id :repository-description)]
+    (. builder repositoryDescription data))
+  (when-let [data (lookup-entry config id :repository-name)]
+    (. builder repositoryName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :triggers)]
+    (. builder triggers data))
+  (.build builder))
 
 
-(defn cfn-repository-code-property-builder
-  "The cfn-repository-code-property-builder function buildes out new instances of 
-CfnRepository$CodeProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-repository-code-property-builder
+  "The build-cfn-repository-code-property-builder function updates a CfnRepository$CodeProperty$Builder instance using the provided configuration.
+  The function takes the CfnRepository$CodeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `branchName` | java.lang.String | [[cdk.support/lookup-entry]] | `:branch-name` |
-| `s3` | software.amazon.awscdk.services.codecommit.CfnRepository$S3Property | [[cdk.support/lookup-entry]] | `:s3` |"
-  [stack id config]
-  (let [builder (CfnRepository$CodeProperty$Builder.)]
-    (when-let [data (lookup-entry config id :branch-name)]
-      (. builder branchName data))
-    (when-let [data (lookup-entry config id :s3)]
-      (. builder s3 data))
-    (.build builder)))
+| `s3` | software.amazon.awscdk.services.codecommit.CfnRepository$S3Property | [[cdk.support/lookup-entry]] | `:s3` |
+"
+  [^CfnRepository$CodeProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :branch-name)]
+    (. builder branchName data))
+  (when-let [data (lookup-entry config id :s3)]
+    (. builder s3 data))
+  (.build builder))
 
 
-(defn cfn-repository-props-builder
-  "The cfn-repository-props-builder function buildes out new instances of 
-CfnRepositoryProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-repository-props-builder
+  "The build-cfn-repository-props-builder function updates a CfnRepositoryProps$Builder instance using the provided configuration.
+  The function takes the CfnRepositoryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -134,27 +143,30 @@ CfnRepositoryProps$Builder using the provided configuration.  Each field is set 
 | `repositoryDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-description` |
 | `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `triggers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:triggers` |"
-  [stack id config]
-  (let [builder (CfnRepositoryProps$Builder.)]
-    (when-let [data (lookup-entry config id :code)]
-      (. builder code data))
-    (when-let [data (lookup-entry config id :kms-key-id)]
-      (. builder kmsKeyId data))
-    (when-let [data (lookup-entry config id :repository-description)]
-      (. builder repositoryDescription data))
-    (when-let [data (lookup-entry config id :repository-name)]
-      (. builder repositoryName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :triggers)]
-      (. builder triggers data))
-    (.build builder)))
+| `triggers` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:triggers` |
+"
+  [^CfnRepositoryProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :code)]
+    (. builder code data))
+  (when-let [data (lookup-entry config id :kms-key-id)]
+    (. builder kmsKeyId data))
+  (when-let [data (lookup-entry config id :repository-description)]
+    (. builder repositoryDescription data))
+  (when-let [data (lookup-entry config id :repository-name)]
+    (. builder repositoryName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :triggers)]
+    (. builder triggers data))
+  (.build builder))
 
 
-(defn cfn-repository-repository-trigger-property-builder
-  "The cfn-repository-repository-trigger-property-builder function buildes out new instances of 
-CfnRepository$RepositoryTriggerProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-repository-repository-trigger-property-builder
+  "The build-cfn-repository-repository-trigger-property-builder function updates a CfnRepository$RepositoryTriggerProperty$Builder instance using the provided configuration.
+  The function takes the CfnRepository$RepositoryTriggerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -162,59 +174,68 @@ CfnRepository$RepositoryTriggerProperty$Builder using the provided configuration
 | `customData` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-data` |
 | `destinationArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-arn` |
 | `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (CfnRepository$RepositoryTriggerProperty$Builder.)]
-    (when-let [data (lookup-entry config id :branches)]
-      (. builder branches data))
-    (when-let [data (lookup-entry config id :custom-data)]
-      (. builder customData data))
-    (when-let [data (lookup-entry config id :destination-arn)]
-      (. builder destinationArn data))
-    (when-let [data (lookup-entry config id :events)]
-      (. builder events data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^CfnRepository$RepositoryTriggerProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :branches)]
+    (. builder branches data))
+  (when-let [data (lookup-entry config id :custom-data)]
+    (. builder customData data))
+  (when-let [data (lookup-entry config id :destination-arn)]
+    (. builder destinationArn data))
+  (when-let [data (lookup-entry config id :events)]
+    (. builder events data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn cfn-repository-s3-property-builder
-  "The cfn-repository-s3-property-builder function buildes out new instances of 
-CfnRepository$S3Property$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-repository-s3-property-builder
+  "The build-cfn-repository-s3-property-builder function updates a CfnRepository$S3Property$Builder instance using the provided configuration.
+  The function takes the CfnRepository$S3Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bucket` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket` |
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
-| `objectVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-version` |"
-  [stack id config]
-  (let [builder (CfnRepository$S3Property$Builder.)]
-    (when-let [data (lookup-entry config id :bucket)]
-      (. builder bucket data))
-    (when-let [data (lookup-entry config id :key)]
-      (. builder key data))
-    (when-let [data (lookup-entry config id :object-version)]
-      (. builder objectVersion data))
-    (.build builder)))
+| `objectVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-version` |
+"
+  [^CfnRepository$S3Property$Builder builder id config]
+  (when-let [data (lookup-entry config id :bucket)]
+    (. builder bucket data))
+  (when-let [data (lookup-entry config id :key)]
+    (. builder key data))
+  (when-let [data (lookup-entry config id :object-version)]
+    (. builder objectVersion data))
+  (.build builder))
 
 
-(defn code-config-builder
-  "The code-config-builder function buildes out new instances of 
-CodeConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-code-config-builder
+  "The build-code-config-builder function updates a CodeConfig$Builder instance using the provided configuration.
+  The function takes the CodeConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `code` | software.amazon.awscdk.services.codecommit.CfnRepository$CodeProperty | [[cdk.support/lookup-entry]] | `:code` |"
-  [stack id config]
-  (let [builder (CodeConfig$Builder.)]
-    (when-let [data (lookup-entry config id :code)]
-      (. builder code data))
-    (.build builder)))
+| `code` | software.amazon.awscdk.services.codecommit.CfnRepository$CodeProperty | [[cdk.support/lookup-entry]] | `:code` |
+"
+  [^CodeConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :code)]
+    (. builder code data))
+  (.build builder))
 
 
-(defn on-commit-options-builder
-  "The on-commit-options-builder function buildes out new instances of 
-OnCommitOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-on-commit-options-builder
+  "The build-on-commit-options-builder function updates a OnCommitOptions$Builder instance using the provided configuration.
+  The function takes the OnCommitOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -223,111 +244,123 @@ OnCommitOptions$Builder using the provided configuration.  Each field is set as 
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `eventPattern` | software.amazon.awscdk.services.events.EventPattern | [[cdk.support/lookup-entry]] | `:event-pattern` |
 | `ruleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:rule-name` |
-| `target` | software.amazon.awscdk.services.events.IRuleTarget | [[cdk.support/lookup-entry]] | `:target` |"
-  [stack id config]
-  (let [builder (OnCommitOptions$Builder.)]
-    (when-let [data (lookup-entry config id :branches)]
-      (. builder branches data))
-    (when-let [data (lookup-entry config id :cross-stack-scope)]
-      (. builder crossStackScope data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :event-pattern)]
-      (. builder eventPattern data))
-    (when-let [data (lookup-entry config id :rule-name)]
-      (. builder ruleName data))
-    (when-let [data (lookup-entry config id :target)]
-      (. builder target data))
-    (.build builder)))
+| `target` | software.amazon.awscdk.services.events.IRuleTarget | [[cdk.support/lookup-entry]] | `:target` |
+"
+  [^OnCommitOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :branches)]
+    (. builder branches data))
+  (when-let [data (lookup-entry config id :cross-stack-scope)]
+    (. builder crossStackScope data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :event-pattern)]
+    (. builder eventPattern data))
+  (when-let [data (lookup-entry config id :rule-name)]
+    (. builder ruleName data))
+  (when-let [data (lookup-entry config id :target)]
+    (. builder target data))
+  (.build builder))
 
 
-(defn repository-builder
-  "The repository-builder function buildes out new instances of 
-Repository$Builder using the provided configuration.  Each field is set as follows:
+(defn build-repository-builder
+  "The build-repository-builder function updates a Repository$Builder instance using the provided configuration.
+  The function takes the Repository$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `code` | software.amazon.awscdk.services.codecommit.Code | [[cdk.support/lookup-entry]] | `:code` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `kmsKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:kms-key` |
-| `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |"
-  [stack id config]
-  (let [builder (Repository$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :code)]
-      (. builder code data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :kms-key)]
-      (. builder kmsKey data))
-    (when-let [data (lookup-entry config id :repository-name)]
-      (. builder repositoryName data))
-    (.build builder)))
+| `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
+"
+  [^Repository$Builder builder id config]
+  (when-let [data (lookup-entry config id :code)]
+    (. builder code data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :kms-key)]
+    (. builder kmsKey data))
+  (when-let [data (lookup-entry config id :repository-name)]
+    (. builder repositoryName data))
+  (.build builder))
 
 
-(defn repository-notify-on-options-builder
-  "The repository-notify-on-options-builder function buildes out new instances of 
-RepositoryNotifyOnOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-repository-notify-on-options-builder
+  "The build-repository-notify-on-options-builder function updates a RepositoryNotifyOnOptions$Builder instance using the provided configuration.
+  The function takes the RepositoryNotifyOnOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `detailType` | software.amazon.awscdk.services.codestarnotifications.DetailType | [[cdk.api.services.codestarnotifications/detail-type]] | `:detail-type` |
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
-| `notificationRuleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:notification-rule-name` |"
-  [stack id config]
-  (let [builder (RepositoryNotifyOnOptions$Builder.)]
-    (when-let [data (detail-type config id :detail-type)]
-      (. builder detailType data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :events)]
-      (. builder events data))
-    (when-let [data (lookup-entry config id :notification-rule-name)]
-      (. builder notificationRuleName data))
-    (.build builder)))
+| `notificationRuleName` | java.lang.String | [[cdk.support/lookup-entry]] | `:notification-rule-name` |
+"
+  [^RepositoryNotifyOnOptions$Builder builder id config]
+  (when-let [data (detail-type config id :detail-type)]
+    (. builder detailType data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :events)]
+    (. builder events data))
+  (when-let [data (lookup-entry config id :notification-rule-name)]
+    (. builder notificationRuleName data))
+  (.build builder))
 
 
-(defn repository-props-builder
-  "The repository-props-builder function buildes out new instances of 
-RepositoryProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-repository-props-builder
+  "The build-repository-props-builder function updates a RepositoryProps$Builder instance using the provided configuration.
+  The function takes the RepositoryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `code` | software.amazon.awscdk.services.codecommit.Code | [[cdk.support/lookup-entry]] | `:code` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `kmsKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:kms-key` |
-| `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |"
-  [stack id config]
-  (let [builder (RepositoryProps$Builder.)]
-    (when-let [data (lookup-entry config id :code)]
-      (. builder code data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :kms-key)]
-      (. builder kmsKey data))
-    (when-let [data (lookup-entry config id :repository-name)]
-      (. builder repositoryName data))
-    (.build builder)))
+| `repositoryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository-name` |
+"
+  [^RepositoryProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :code)]
+    (. builder code data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :kms-key)]
+    (. builder kmsKey data))
+  (when-let [data (lookup-entry config id :repository-name)]
+    (. builder repositoryName data))
+  (.build builder))
 
 
-(defn repository-trigger-options-builder
-  "The repository-trigger-options-builder function buildes out new instances of 
-RepositoryTriggerOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-repository-trigger-options-builder
+  "The build-repository-trigger-options-builder function updates a RepositoryTriggerOptions$Builder instance using the provided configuration.
+  The function takes the RepositoryTriggerOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `branches` | java.util.List | [[cdk.support/lookup-entry]] | `:branches` |
 | `customData` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-data` |
 | `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (RepositoryTriggerOptions$Builder.)]
-    (when-let [data (lookup-entry config id :branches)]
-      (. builder branches data))
-    (when-let [data (lookup-entry config id :custom-data)]
-      (. builder customData data))
-    (when-let [data (lookup-entry config id :events)]
-      (. builder events data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^RepositoryTriggerOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :branches)]
+    (. builder branches data))
+  (when-let [data (lookup-entry config id :custom-data)]
+    (. builder customData data))
+  (when-let [data (lookup-entry config id :events)]
+    (. builder events data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))

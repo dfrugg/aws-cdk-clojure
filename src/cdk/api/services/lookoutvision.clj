@@ -5,29 +5,35 @@
                                                           CfnProjectProps$Builder]))
 
 
-(defn cfn-project-builder
-  "The cfn-project-builder function buildes out new instances of 
-CfnProject$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-project-builder
+  "The build-cfn-project-builder function updates a CfnProject$Builder instance using the provided configuration.
+  The function takes the CfnProject$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |"
-  [stack id config]
-  (let [builder (CfnProject$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :project-name)]
-      (. builder projectName data))
-    (.build builder)))
+| `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |
+"
+  [^CfnProject$Builder builder id config]
+  (when-let [data (lookup-entry config id :project-name)]
+    (. builder projectName data))
+  (.build builder))
 
 
-(defn cfn-project-props-builder
-  "The cfn-project-props-builder function buildes out new instances of 
-CfnProjectProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-project-props-builder
+  "The build-cfn-project-props-builder function updates a CfnProjectProps$Builder instance using the provided configuration.
+  The function takes the CfnProjectProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |"
-  [stack id config]
-  (let [builder (CfnProjectProps$Builder.)]
-    (when-let [data (lookup-entry config id :project-name)]
-      (. builder projectName data))
-    (.build builder)))
+| `projectName` | java.lang.String | [[cdk.support/lookup-entry]] | `:project-name` |
+"
+  [^CfnProjectProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :project-name)]
+    (. builder projectName data))
+  (.build builder))

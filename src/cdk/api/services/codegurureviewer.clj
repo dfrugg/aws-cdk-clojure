@@ -5,9 +5,12 @@
                                                              CfnRepositoryAssociationProps$Builder]))
 
 
-(defn cfn-repository-association-builder
-  "The cfn-repository-association-builder function buildes out new instances of 
-CfnRepositoryAssociation$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-repository-association-builder
+  "The build-cfn-repository-association-builder function updates a CfnRepositoryAssociation$Builder instance using the provided configuration.
+  The function takes the CfnRepositoryAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -16,27 +19,30 @@ CfnRepositoryAssociation$Builder using the provided configuration.  Each field i
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `owner` | java.lang.String | [[cdk.support/lookup-entry]] | `:owner` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnRepositoryAssociation$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :bucket-name)]
-      (. builder bucketName data))
-    (when-let [data (lookup-entry config id :connection-arn)]
-      (. builder connectionArn data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :owner)]
-      (. builder owner data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnRepositoryAssociation$Builder builder id config]
+  (when-let [data (lookup-entry config id :bucket-name)]
+    (. builder bucketName data))
+  (when-let [data (lookup-entry config id :connection-arn)]
+    (. builder connectionArn data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :owner)]
+    (. builder owner data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-repository-association-props-builder
-  "The cfn-repository-association-props-builder function buildes out new instances of 
-CfnRepositoryAssociationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-repository-association-props-builder
+  "The build-cfn-repository-association-props-builder function updates a CfnRepositoryAssociationProps$Builder instance using the provided configuration.
+  The function takes the CfnRepositoryAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -45,19 +51,19 @@ CfnRepositoryAssociationProps$Builder using the provided configuration.  Each fi
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `owner` | java.lang.String | [[cdk.support/lookup-entry]] | `:owner` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnRepositoryAssociationProps$Builder.)]
-    (when-let [data (lookup-entry config id :bucket-name)]
-      (. builder bucketName data))
-    (when-let [data (lookup-entry config id :connection-arn)]
-      (. builder connectionArn data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :owner)]
-      (. builder owner data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnRepositoryAssociationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :bucket-name)]
+    (. builder bucketName data))
+  (when-let [data (lookup-entry config id :connection-arn)]
+    (. builder connectionArn data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :owner)]
+    (. builder owner data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))

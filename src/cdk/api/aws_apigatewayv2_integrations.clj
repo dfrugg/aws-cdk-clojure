@@ -24,278 +24,320 @@
                                                                  WebSocketLambdaIntegrationProps$Builder]))
 
 
-(defn http-alb-integration-builder
-  "The http-alb-integration-builder function buildes out new instances of 
-HttpAlbIntegration$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-alb-integration-builder
+  "The build-http-alb-integration-builder function updates a HttpAlbIntegration$Builder instance using the provided configuration.
+  The function takes the HttpAlbIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `method` | software.amazon.awscdk.services.apigatewayv2.HttpMethod | [[cdk.api.services.apigatewayv2/http-method]] | `:method` |
 | `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |
 | `secureServerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secure-server-name` |
-| `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |"
-  [stack id config ^software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListener listener]
-  (let [builder (HttpAlbIntegration$Builder/create ^java.lang.String id ^software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListener listener)]
-    (when-let [data (http-method config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :parameter-mapping)]
-      (. builder parameterMapping data))
-    (when-let [data (lookup-entry config id :secure-server-name)]
-      (. builder secureServerName data))
-    (when-let [data (lookup-entry config id :vpc-link)]
-      (. builder vpcLink data))
-    (.build builder)))
+| `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
+"
+  [^HttpAlbIntegration$Builder builder id config]
+  (when-let [data (http-method config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :parameter-mapping)]
+    (. builder parameterMapping data))
+  (when-let [data (lookup-entry config id :secure-server-name)]
+    (. builder secureServerName data))
+  (when-let [data (lookup-entry config id :vpc-link)]
+    (. builder vpcLink data))
+  (.build builder))
 
 
-(defn http-alb-integration-props-builder
-  "The http-alb-integration-props-builder function buildes out new instances of 
-HttpAlbIntegrationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-alb-integration-props-builder
+  "The build-http-alb-integration-props-builder function updates a HttpAlbIntegrationProps$Builder instance using the provided configuration.
+  The function takes the HttpAlbIntegrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `method` | software.amazon.awscdk.services.apigatewayv2.HttpMethod | [[cdk.api.services.apigatewayv2/http-method]] | `:method` |
-| `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |
-| `secureServerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secure-server-name` |
-| `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |"
-  [stack id config]
-  (let [builder (HttpAlbIntegrationProps$Builder.)]
-    (when-let [data (http-method config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :parameter-mapping)]
-      (. builder parameterMapping data))
-    (when-let [data (lookup-entry config id :secure-server-name)]
-      (. builder secureServerName data))
-    (when-let [data (lookup-entry config id :vpc-link)]
-      (. builder vpcLink data))
-    (.build builder)))
-
-
-(defn http-lambda-integration-builder
-  "The http-lambda-integration-builder function buildes out new instances of 
-HttpLambdaIntegration$Builder using the provided configuration.  Each field is set as follows:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |
-| `payloadFormatVersion` | software.amazon.awscdk.services.apigatewayv2.PayloadFormatVersion | [[cdk.support/lookup-entry]] | `:payload-format-version` |"
-  [stack id config ^software.amazon.awscdk.services.lambda.IFunction handler-function]
-  (let [builder (HttpLambdaIntegration$Builder/create ^java.lang.String id ^software.amazon.awscdk.services.lambda.IFunction handler-function)]
-    (when-let [data (lookup-entry config id :parameter-mapping)]
-      (. builder parameterMapping data))
-    (when-let [data (lookup-entry config id :payload-format-version)]
-      (. builder payloadFormatVersion data))
-    (.build builder)))
-
-
-(defn http-lambda-integration-props-builder
-  "The http-lambda-integration-props-builder function buildes out new instances of 
-HttpLambdaIntegrationProps$Builder using the provided configuration.  Each field is set as follows:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |
-| `payloadFormatVersion` | software.amazon.awscdk.services.apigatewayv2.PayloadFormatVersion | [[cdk.support/lookup-entry]] | `:payload-format-version` |"
-  [stack id config]
-  (let [builder (HttpLambdaIntegrationProps$Builder.)]
-    (when-let [data (lookup-entry config id :parameter-mapping)]
-      (. builder parameterMapping data))
-    (when-let [data (lookup-entry config id :payload-format-version)]
-      (. builder payloadFormatVersion data))
-    (.build builder)))
-
-
-(defn http-nlb-integration-builder
-  "The http-nlb-integration-builder function buildes out new instances of 
-HttpNlbIntegration$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `method` | software.amazon.awscdk.services.apigatewayv2.HttpMethod | [[cdk.api.services.apigatewayv2/http-method]] | `:method` |
 | `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |
 | `secureServerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secure-server-name` |
-| `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |"
-  [stack id config ^software.amazon.awscdk.services.elasticloadbalancingv2.INetworkListener listener]
-  (let [builder (HttpNlbIntegration$Builder/create ^java.lang.String id ^software.amazon.awscdk.services.elasticloadbalancingv2.INetworkListener listener)]
-    (when-let [data (http-method config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :parameter-mapping)]
-      (. builder parameterMapping data))
-    (when-let [data (lookup-entry config id :secure-server-name)]
-      (. builder secureServerName data))
-    (when-let [data (lookup-entry config id :vpc-link)]
-      (. builder vpcLink data))
-    (.build builder)))
+| `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
+"
+  [^HttpAlbIntegrationProps$Builder builder id config]
+  (when-let [data (http-method config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :parameter-mapping)]
+    (. builder parameterMapping data))
+  (when-let [data (lookup-entry config id :secure-server-name)]
+    (. builder secureServerName data))
+  (when-let [data (lookup-entry config id :vpc-link)]
+    (. builder vpcLink data))
+  (.build builder))
 
 
-(defn http-nlb-integration-props-builder
-  "The http-nlb-integration-props-builder function buildes out new instances of 
-HttpNlbIntegrationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-lambda-integration-builder
+  "The build-http-lambda-integration-builder function updates a HttpLambdaIntegration$Builder instance using the provided configuration.
+  The function takes the HttpLambdaIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |
+| `payloadFormatVersion` | software.amazon.awscdk.services.apigatewayv2.PayloadFormatVersion | [[cdk.support/lookup-entry]] | `:payload-format-version` |
+"
+  [^HttpLambdaIntegration$Builder builder id config]
+  (when-let [data (lookup-entry config id :parameter-mapping)]
+    (. builder parameterMapping data))
+  (when-let [data (lookup-entry config id :payload-format-version)]
+    (. builder payloadFormatVersion data))
+  (.build builder))
+
+
+(defn build-http-lambda-integration-props-builder
+  "The build-http-lambda-integration-props-builder function updates a HttpLambdaIntegrationProps$Builder instance using the provided configuration.
+  The function takes the HttpLambdaIntegrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |
+| `payloadFormatVersion` | software.amazon.awscdk.services.apigatewayv2.PayloadFormatVersion | [[cdk.support/lookup-entry]] | `:payload-format-version` |
+"
+  [^HttpLambdaIntegrationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :parameter-mapping)]
+    (. builder parameterMapping data))
+  (when-let [data (lookup-entry config id :payload-format-version)]
+    (. builder payloadFormatVersion data))
+  (.build builder))
+
+
+(defn build-http-nlb-integration-builder
+  "The build-http-nlb-integration-builder function updates a HttpNlbIntegration$Builder instance using the provided configuration.
+  The function takes the HttpNlbIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `method` | software.amazon.awscdk.services.apigatewayv2.HttpMethod | [[cdk.api.services.apigatewayv2/http-method]] | `:method` |
 | `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |
 | `secureServerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secure-server-name` |
-| `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |"
-  [stack id config]
-  (let [builder (HttpNlbIntegrationProps$Builder.)]
-    (when-let [data (http-method config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :parameter-mapping)]
-      (. builder parameterMapping data))
-    (when-let [data (lookup-entry config id :secure-server-name)]
-      (. builder secureServerName data))
-    (when-let [data (lookup-entry config id :vpc-link)]
-      (. builder vpcLink data))
-    (.build builder)))
+| `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
+"
+  [^HttpNlbIntegration$Builder builder id config]
+  (when-let [data (http-method config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :parameter-mapping)]
+    (. builder parameterMapping data))
+  (when-let [data (lookup-entry config id :secure-server-name)]
+    (. builder secureServerName data))
+  (when-let [data (lookup-entry config id :vpc-link)]
+    (. builder vpcLink data))
+  (.build builder))
 
 
-(defn http-private-integration-options-builder
-  "The http-private-integration-options-builder function buildes out new instances of 
-HttpPrivateIntegrationOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-nlb-integration-props-builder
+  "The build-http-nlb-integration-props-builder function updates a HttpNlbIntegrationProps$Builder instance using the provided configuration.
+  The function takes the HttpNlbIntegrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `method` | software.amazon.awscdk.services.apigatewayv2.HttpMethod | [[cdk.api.services.apigatewayv2/http-method]] | `:method` |
-| `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |
-| `secureServerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secure-server-name` |
-| `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |"
-  [stack id config]
-  (let [builder (HttpPrivateIntegrationOptions$Builder.)]
-    (when-let [data (http-method config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :parameter-mapping)]
-      (. builder parameterMapping data))
-    (when-let [data (lookup-entry config id :secure-server-name)]
-      (. builder secureServerName data))
-    (when-let [data (lookup-entry config id :vpc-link)]
-      (. builder vpcLink data))
-    (.build builder)))
-
-
-(defn http-service-discovery-integration-builder
-  "The http-service-discovery-integration-builder function buildes out new instances of 
-HttpServiceDiscoveryIntegration$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `method` | software.amazon.awscdk.services.apigatewayv2.HttpMethod | [[cdk.api.services.apigatewayv2/http-method]] | `:method` |
 | `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |
 | `secureServerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secure-server-name` |
-| `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |"
-  [stack id config ^software.amazon.awscdk.services.servicediscovery.IService service]
-  (let [builder (HttpServiceDiscoveryIntegration$Builder/create ^java.lang.String id ^software.amazon.awscdk.services.servicediscovery.IService service)]
-    (when-let [data (http-method config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :parameter-mapping)]
-      (. builder parameterMapping data))
-    (when-let [data (lookup-entry config id :secure-server-name)]
-      (. builder secureServerName data))
-    (when-let [data (lookup-entry config id :vpc-link)]
-      (. builder vpcLink data))
-    (.build builder)))
+| `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
+"
+  [^HttpNlbIntegrationProps$Builder builder id config]
+  (when-let [data (http-method config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :parameter-mapping)]
+    (. builder parameterMapping data))
+  (when-let [data (lookup-entry config id :secure-server-name)]
+    (. builder secureServerName data))
+  (when-let [data (lookup-entry config id :vpc-link)]
+    (. builder vpcLink data))
+  (.build builder))
 
 
-(defn http-service-discovery-integration-props-builder
-  "The http-service-discovery-integration-props-builder function buildes out new instances of 
-HttpServiceDiscoveryIntegrationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-private-integration-options-builder
+  "The build-http-private-integration-options-builder function updates a HttpPrivateIntegrationOptions$Builder instance using the provided configuration.
+  The function takes the HttpPrivateIntegrationOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `method` | software.amazon.awscdk.services.apigatewayv2.HttpMethod | [[cdk.api.services.apigatewayv2/http-method]] | `:method` |
 | `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |
 | `secureServerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secure-server-name` |
-| `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |"
-  [stack id config]
-  (let [builder (HttpServiceDiscoveryIntegrationProps$Builder.)]
-    (when-let [data (http-method config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :parameter-mapping)]
-      (. builder parameterMapping data))
-    (when-let [data (lookup-entry config id :secure-server-name)]
-      (. builder secureServerName data))
-    (when-let [data (lookup-entry config id :vpc-link)]
-      (. builder vpcLink data))
-    (.build builder)))
+| `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
+"
+  [^HttpPrivateIntegrationOptions$Builder builder id config]
+  (when-let [data (http-method config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :parameter-mapping)]
+    (. builder parameterMapping data))
+  (when-let [data (lookup-entry config id :secure-server-name)]
+    (. builder secureServerName data))
+  (when-let [data (lookup-entry config id :vpc-link)]
+    (. builder vpcLink data))
+  (.build builder))
 
 
-(defn http-step-functions-integration-builder
-  "The http-step-functions-integration-builder function buildes out new instances of 
-HttpStepFunctionsIntegration$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-service-discovery-integration-builder
+  "The build-http-service-discovery-integration-builder function updates a HttpServiceDiscoveryIntegration$Builder instance using the provided configuration.
+  The function takes the HttpServiceDiscoveryIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `method` | software.amazon.awscdk.services.apigatewayv2.HttpMethod | [[cdk.api.services.apigatewayv2/http-method]] | `:method` |
+| `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |
+| `secureServerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secure-server-name` |
+| `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
+"
+  [^HttpServiceDiscoveryIntegration$Builder builder id config]
+  (when-let [data (http-method config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :parameter-mapping)]
+    (. builder parameterMapping data))
+  (when-let [data (lookup-entry config id :secure-server-name)]
+    (. builder secureServerName data))
+  (when-let [data (lookup-entry config id :vpc-link)]
+    (. builder vpcLink data))
+  (.build builder))
+
+
+(defn build-http-service-discovery-integration-props-builder
+  "The build-http-service-discovery-integration-props-builder function updates a HttpServiceDiscoveryIntegrationProps$Builder instance using the provided configuration.
+  The function takes the HttpServiceDiscoveryIntegrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `method` | software.amazon.awscdk.services.apigatewayv2.HttpMethod | [[cdk.api.services.apigatewayv2/http-method]] | `:method` |
+| `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |
+| `secureServerName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secure-server-name` |
+| `vpcLink` | software.amazon.awscdk.services.apigatewayv2.IVpcLink | [[cdk.support/lookup-entry]] | `:vpc-link` |
+"
+  [^HttpServiceDiscoveryIntegrationProps$Builder builder id config]
+  (when-let [data (http-method config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :parameter-mapping)]
+    (. builder parameterMapping data))
+  (when-let [data (lookup-entry config id :secure-server-name)]
+    (. builder secureServerName data))
+  (when-let [data (lookup-entry config id :vpc-link)]
+    (. builder vpcLink data))
+  (.build builder))
+
+
+(defn build-http-step-functions-integration-builder
+  "The build-http-step-functions-integration-builder function updates a HttpStepFunctionsIntegration$Builder instance using the provided configuration.
+  The function takes the HttpStepFunctionsIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |
 | `stateMachine` | software.amazon.awscdk.services.stepfunctions.StateMachine | [[cdk.support/lookup-entry]] | `:state-machine` |
-| `subtype` | software.amazon.awscdk.services.apigatewayv2.HttpIntegrationSubtype | [[cdk.api.services.apigatewayv2/http-integration-subtype]] | `:subtype` |"
-  [stack id config]
-  (let [builder (HttpStepFunctionsIntegration$Builder/create ^java.lang.String id)]
-    (when-let [data (lookup-entry config id :parameter-mapping)]
-      (. builder parameterMapping data))
-    (when-let [data (lookup-entry config id :state-machine)]
-      (. builder stateMachine data))
-    (when-let [data (http-integration-subtype config id :subtype)]
-      (. builder subtype data))
-    (.build builder)))
+| `subtype` | software.amazon.awscdk.services.apigatewayv2.HttpIntegrationSubtype | [[cdk.api.services.apigatewayv2/http-integration-subtype]] | `:subtype` |
+"
+  [^HttpStepFunctionsIntegration$Builder builder id config]
+  (when-let [data (lookup-entry config id :parameter-mapping)]
+    (. builder parameterMapping data))
+  (when-let [data (lookup-entry config id :state-machine)]
+    (. builder stateMachine data))
+  (when-let [data (http-integration-subtype config id :subtype)]
+    (. builder subtype data))
+  (.build builder))
 
 
-(defn http-step-functions-integration-props-builder
-  "The http-step-functions-integration-props-builder function buildes out new instances of 
-HttpStepFunctionsIntegrationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-step-functions-integration-props-builder
+  "The build-http-step-functions-integration-props-builder function updates a HttpStepFunctionsIntegrationProps$Builder instance using the provided configuration.
+  The function takes the HttpStepFunctionsIntegrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |
 | `stateMachine` | software.amazon.awscdk.services.stepfunctions.StateMachine | [[cdk.support/lookup-entry]] | `:state-machine` |
-| `subtype` | software.amazon.awscdk.services.apigatewayv2.HttpIntegrationSubtype | [[cdk.api.services.apigatewayv2/http-integration-subtype]] | `:subtype` |"
-  [stack id config]
-  (let [builder (HttpStepFunctionsIntegrationProps$Builder.)]
-    (when-let [data (lookup-entry config id :parameter-mapping)]
-      (. builder parameterMapping data))
-    (when-let [data (lookup-entry config id :state-machine)]
-      (. builder stateMachine data))
-    (when-let [data (http-integration-subtype config id :subtype)]
-      (. builder subtype data))
-    (.build builder)))
+| `subtype` | software.amazon.awscdk.services.apigatewayv2.HttpIntegrationSubtype | [[cdk.api.services.apigatewayv2/http-integration-subtype]] | `:subtype` |
+"
+  [^HttpStepFunctionsIntegrationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :parameter-mapping)]
+    (. builder parameterMapping data))
+  (when-let [data (lookup-entry config id :state-machine)]
+    (. builder stateMachine data))
+  (when-let [data (http-integration-subtype config id :subtype)]
+    (. builder subtype data))
+  (.build builder))
 
 
-(defn http-url-integration-builder
-  "The http-url-integration-builder function buildes out new instances of 
-HttpUrlIntegration$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-url-integration-builder
+  "The build-http-url-integration-builder function updates a HttpUrlIntegration$Builder instance using the provided configuration.
+  The function takes the HttpUrlIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `method` | software.amazon.awscdk.services.apigatewayv2.HttpMethod | [[cdk.api.services.apigatewayv2/http-method]] | `:method` |
-| `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |"
-  [stack id config ^java.lang.String url]
-  (let [builder (HttpUrlIntegration$Builder/create ^java.lang.String id ^java.lang.String url)]
-    (when-let [data (http-method config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :parameter-mapping)]
-      (. builder parameterMapping data))
-    (.build builder)))
-
-
-(defn http-url-integration-props-builder
-  "The http-url-integration-props-builder function buildes out new instances of 
-HttpUrlIntegrationProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `method` | software.amazon.awscdk.services.apigatewayv2.HttpMethod | [[cdk.api.services.apigatewayv2/http-method]] | `:method` |
-| `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |"
-  [stack id config]
-  (let [builder (HttpUrlIntegrationProps$Builder.)]
-    (when-let [data (http-method config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :parameter-mapping)]
-      (. builder parameterMapping data))
-    (.build builder)))
+| `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |
+"
+  [^HttpUrlIntegration$Builder builder id config]
+  (when-let [data (http-method config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :parameter-mapping)]
+    (. builder parameterMapping data))
+  (.build builder))
 
 
-(defn web-socket-aws-integration-builder
-  "The web-socket-aws-integration-builder function buildes out new instances of 
-WebSocketAwsIntegration$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-url-integration-props-builder
+  "The build-http-url-integration-props-builder function updates a HttpUrlIntegrationProps$Builder instance using the provided configuration.
+  The function takes the HttpUrlIntegrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `method` | software.amazon.awscdk.services.apigatewayv2.HttpMethod | [[cdk.api.services.apigatewayv2/http-method]] | `:method` |
+| `parameterMapping` | software.amazon.awscdk.services.apigatewayv2.ParameterMapping | [[cdk.support/lookup-entry]] | `:parameter-mapping` |
+"
+  [^HttpUrlIntegrationProps$Builder builder id config]
+  (when-let [data (http-method config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :parameter-mapping)]
+    (. builder parameterMapping data))
+  (.build builder))
+
+
+(defn build-web-socket-aws-integration-builder
+  "The build-web-socket-aws-integration-builder function updates a WebSocketAwsIntegration$Builder instance using the provided configuration.
+  The function takes the WebSocketAwsIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -307,33 +349,36 @@ WebSocketAwsIntegration$Builder using the provided configuration.  Each field is
 | `requestParameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:request-parameters` |
 | `requestTemplates` | java.util.Map | [[cdk.support/lookup-entry]] | `:request-templates` |
 | `templateSelectionExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-selection-expression` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (WebSocketAwsIntegration$Builder/create ^java.lang.String id)]
-    (when-let [data (content-handling config id :content-handling)]
-      (. builder contentHandling data))
-    (when-let [data (lookup-entry config id :credentials-role)]
-      (. builder credentialsRole data))
-    (when-let [data (lookup-entry config id :integration-method)]
-      (. builder integrationMethod data))
-    (when-let [data (lookup-entry config id :integration-uri)]
-      (. builder integrationUri data))
-    (when-let [data (passthrough-behavior config id :passthrough-behavior)]
-      (. builder passthroughBehavior data))
-    (when-let [data (lookup-entry config id :request-parameters)]
-      (. builder requestParameters data))
-    (when-let [data (lookup-entry config id :request-templates)]
-      (. builder requestTemplates data))
-    (when-let [data (lookup-entry config id :template-selection-expression)]
-      (. builder templateSelectionExpression data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^WebSocketAwsIntegration$Builder builder id config]
+  (when-let [data (content-handling config id :content-handling)]
+    (. builder contentHandling data))
+  (when-let [data (lookup-entry config id :credentials-role)]
+    (. builder credentialsRole data))
+  (when-let [data (lookup-entry config id :integration-method)]
+    (. builder integrationMethod data))
+  (when-let [data (lookup-entry config id :integration-uri)]
+    (. builder integrationUri data))
+  (when-let [data (passthrough-behavior config id :passthrough-behavior)]
+    (. builder passthroughBehavior data))
+  (when-let [data (lookup-entry config id :request-parameters)]
+    (. builder requestParameters data))
+  (when-let [data (lookup-entry config id :request-templates)]
+    (. builder requestTemplates data))
+  (when-let [data (lookup-entry config id :template-selection-expression)]
+    (. builder templateSelectionExpression data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn web-socket-aws-integration-props-builder
-  "The web-socket-aws-integration-props-builder function buildes out new instances of 
-WebSocketAwsIntegrationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-web-socket-aws-integration-props-builder
+  "The build-web-socket-aws-integration-props-builder function updates a WebSocketAwsIntegrationProps$Builder instance using the provided configuration.
+  The function takes the WebSocketAwsIntegrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -345,59 +390,65 @@ WebSocketAwsIntegrationProps$Builder using the provided configuration.  Each fie
 | `requestParameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:request-parameters` |
 | `requestTemplates` | java.util.Map | [[cdk.support/lookup-entry]] | `:request-templates` |
 | `templateSelectionExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-selection-expression` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (WebSocketAwsIntegrationProps$Builder.)]
-    (when-let [data (content-handling config id :content-handling)]
-      (. builder contentHandling data))
-    (when-let [data (lookup-entry config id :credentials-role)]
-      (. builder credentialsRole data))
-    (when-let [data (lookup-entry config id :integration-method)]
-      (. builder integrationMethod data))
-    (when-let [data (lookup-entry config id :integration-uri)]
-      (. builder integrationUri data))
-    (when-let [data (passthrough-behavior config id :passthrough-behavior)]
-      (. builder passthroughBehavior data))
-    (when-let [data (lookup-entry config id :request-parameters)]
-      (. builder requestParameters data))
-    (when-let [data (lookup-entry config id :request-templates)]
-      (. builder requestTemplates data))
-    (when-let [data (lookup-entry config id :template-selection-expression)]
-      (. builder templateSelectionExpression data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^WebSocketAwsIntegrationProps$Builder builder id config]
+  (when-let [data (content-handling config id :content-handling)]
+    (. builder contentHandling data))
+  (when-let [data (lookup-entry config id :credentials-role)]
+    (. builder credentialsRole data))
+  (when-let [data (lookup-entry config id :integration-method)]
+    (. builder integrationMethod data))
+  (when-let [data (lookup-entry config id :integration-uri)]
+    (. builder integrationUri data))
+  (when-let [data (passthrough-behavior config id :passthrough-behavior)]
+    (. builder passthroughBehavior data))
+  (when-let [data (lookup-entry config id :request-parameters)]
+    (. builder requestParameters data))
+  (when-let [data (lookup-entry config id :request-templates)]
+    (. builder requestTemplates data))
+  (when-let [data (lookup-entry config id :template-selection-expression)]
+    (. builder templateSelectionExpression data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn web-socket-lambda-integration-builder
-  "The web-socket-lambda-integration-builder function buildes out new instances of 
-WebSocketLambdaIntegration$Builder using the provided configuration.  Each field is set as follows:
+(defn build-web-socket-lambda-integration-builder
+  "The build-web-socket-lambda-integration-builder function updates a WebSocketLambdaIntegration$Builder instance using the provided configuration.
+  The function takes the WebSocketLambdaIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `contentHandling` | software.amazon.awscdk.services.apigatewayv2.ContentHandling | [[cdk.api.services.apigatewayv2/content-handling]] | `:content-handling` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config ^software.amazon.awscdk.services.lambda.IFunction handler-function]
-  (let [builder (WebSocketLambdaIntegration$Builder/create ^java.lang.String id ^software.amazon.awscdk.services.lambda.IFunction handler-function)]
-    (when-let [data (content-handling config id :content-handling)]
-      (. builder contentHandling data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn web-socket-lambda-integration-props-builder
-  "The web-socket-lambda-integration-props-builder function buildes out new instances of 
-WebSocketLambdaIntegrationProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `contentHandling` | software.amazon.awscdk.services.apigatewayv2.ContentHandling | [[cdk.api.services.apigatewayv2/content-handling]] | `:content-handling` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (WebSocketLambdaIntegrationProps$Builder.)]
-    (when-let [data (content-handling config id :content-handling)]
-      (. builder contentHandling data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^WebSocketLambdaIntegration$Builder builder id config]
+  (when-let [data (content-handling config id :content-handling)]
+    (. builder contentHandling data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-web-socket-lambda-integration-props-builder
+  "The build-web-socket-lambda-integration-props-builder function updates a WebSocketLambdaIntegrationProps$Builder instance using the provided configuration.
+  The function takes the WebSocketLambdaIntegrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `contentHandling` | software.amazon.awscdk.services.apigatewayv2.ContentHandling | [[cdk.api.services.apigatewayv2/content-handling]] | `:content-handling` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^WebSocketLambdaIntegrationProps$Builder builder id config]
+  (when-let [data (content-handling config id :content-handling)]
+    (. builder contentHandling data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))

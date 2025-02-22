@@ -6,9 +6,12 @@
                                                        CfnServerProps$Builder]))
 
 
-(defn cfn-server-builder
-  "The cfn-server-builder function buildes out new instances of 
-CfnServer$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-server-builder
+  "The build-cfn-server-builder function updates a CfnServer$Builder instance using the provided configuration.
+  The function takes the CfnServer$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -32,74 +35,80 @@ CfnServer$Builder using the provided configuration.  Each field is set as follow
 | `serverName` | java.lang.String | [[cdk.support/lookup-entry]] | `:server-name` |
 | `serviceRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-role-arn` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnServer$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :associate-public-ip-address)]
-      (. builder associatePublicIpAddress data))
-    (when-let [data (lookup-entry config id :backup-id)]
-      (. builder backupId data))
-    (when-let [data (lookup-entry config id :backup-retention-count)]
-      (. builder backupRetentionCount data))
-    (when-let [data (lookup-entry config id :custom-certificate)]
-      (. builder customCertificate data))
-    (when-let [data (lookup-entry config id :custom-domain)]
-      (. builder customDomain data))
-    (when-let [data (lookup-entry config id :custom-private-key)]
-      (. builder customPrivateKey data))
-    (when-let [data (lookup-entry config id :disable-automated-backup)]
-      (. builder disableAutomatedBackup data))
-    (when-let [data (lookup-entry config id :engine)]
-      (. builder engine data))
-    (when-let [data (lookup-entry config id :engine-attributes)]
-      (. builder engineAttributes data))
-    (when-let [data (lookup-entry config id :engine-model)]
-      (. builder engineModel data))
-    (when-let [data (lookup-entry config id :engine-version)]
-      (. builder engineVersion data))
-    (when-let [data (lookup-entry config id :instance-profile-arn)]
-      (. builder instanceProfileArn data))
-    (when-let [data (lookup-entry config id :instance-type)]
-      (. builder instanceType data))
-    (when-let [data (lookup-entry config id :key-pair)]
-      (. builder keyPair data))
-    (when-let [data (lookup-entry config id :preferred-backup-window)]
-      (. builder preferredBackupWindow data))
-    (when-let [data (lookup-entry config id :preferred-maintenance-window)]
-      (. builder preferredMaintenanceWindow data))
-    (when-let [data (lookup-entry config id :security-group-ids)]
-      (. builder securityGroupIds data))
-    (when-let [data (lookup-entry config id :server-name)]
-      (. builder serverName data))
-    (when-let [data (lookup-entry config id :service-role-arn)]
-      (. builder serviceRoleArn data))
-    (when-let [data (lookup-entry config id :subnet-ids)]
-      (. builder subnetIds data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnServer$Builder builder id config]
+  (when-let [data (lookup-entry config id :associate-public-ip-address)]
+    (. builder associatePublicIpAddress data))
+  (when-let [data (lookup-entry config id :backup-id)]
+    (. builder backupId data))
+  (when-let [data (lookup-entry config id :backup-retention-count)]
+    (. builder backupRetentionCount data))
+  (when-let [data (lookup-entry config id :custom-certificate)]
+    (. builder customCertificate data))
+  (when-let [data (lookup-entry config id :custom-domain)]
+    (. builder customDomain data))
+  (when-let [data (lookup-entry config id :custom-private-key)]
+    (. builder customPrivateKey data))
+  (when-let [data (lookup-entry config id :disable-automated-backup)]
+    (. builder disableAutomatedBackup data))
+  (when-let [data (lookup-entry config id :engine)]
+    (. builder engine data))
+  (when-let [data (lookup-entry config id :engine-attributes)]
+    (. builder engineAttributes data))
+  (when-let [data (lookup-entry config id :engine-model)]
+    (. builder engineModel data))
+  (when-let [data (lookup-entry config id :engine-version)]
+    (. builder engineVersion data))
+  (when-let [data (lookup-entry config id :instance-profile-arn)]
+    (. builder instanceProfileArn data))
+  (when-let [data (lookup-entry config id :instance-type)]
+    (. builder instanceType data))
+  (when-let [data (lookup-entry config id :key-pair)]
+    (. builder keyPair data))
+  (when-let [data (lookup-entry config id :preferred-backup-window)]
+    (. builder preferredBackupWindow data))
+  (when-let [data (lookup-entry config id :preferred-maintenance-window)]
+    (. builder preferredMaintenanceWindow data))
+  (when-let [data (lookup-entry config id :security-group-ids)]
+    (. builder securityGroupIds data))
+  (when-let [data (lookup-entry config id :server-name)]
+    (. builder serverName data))
+  (when-let [data (lookup-entry config id :service-role-arn)]
+    (. builder serviceRoleArn data))
+  (when-let [data (lookup-entry config id :subnet-ids)]
+    (. builder subnetIds data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-server-engine-attribute-property-builder
-  "The cfn-server-engine-attribute-property-builder function buildes out new instances of 
-CfnServer$EngineAttributeProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-server-engine-attribute-property-builder
+  "The build-cfn-server-engine-attribute-property-builder function updates a CfnServer$EngineAttributeProperty$Builder instance using the provided configuration.
+  The function takes the CfnServer$EngineAttributeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnServer$EngineAttributeProperty$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnServer$EngineAttributeProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-server-props-builder
-  "The cfn-server-props-builder function buildes out new instances of 
-CfnServerProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-server-props-builder
+  "The build-cfn-server-props-builder function updates a CfnServerProps$Builder instance using the provided configuration.
+  The function takes the CfnServerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -123,49 +132,49 @@ CfnServerProps$Builder using the provided configuration.  Each field is set as f
 | `serverName` | java.lang.String | [[cdk.support/lookup-entry]] | `:server-name` |
 | `serviceRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-role-arn` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnServerProps$Builder.)]
-    (when-let [data (lookup-entry config id :associate-public-ip-address)]
-      (. builder associatePublicIpAddress data))
-    (when-let [data (lookup-entry config id :backup-id)]
-      (. builder backupId data))
-    (when-let [data (lookup-entry config id :backup-retention-count)]
-      (. builder backupRetentionCount data))
-    (when-let [data (lookup-entry config id :custom-certificate)]
-      (. builder customCertificate data))
-    (when-let [data (lookup-entry config id :custom-domain)]
-      (. builder customDomain data))
-    (when-let [data (lookup-entry config id :custom-private-key)]
-      (. builder customPrivateKey data))
-    (when-let [data (lookup-entry config id :disable-automated-backup)]
-      (. builder disableAutomatedBackup data))
-    (when-let [data (lookup-entry config id :engine)]
-      (. builder engine data))
-    (when-let [data (lookup-entry config id :engine-attributes)]
-      (. builder engineAttributes data))
-    (when-let [data (lookup-entry config id :engine-model)]
-      (. builder engineModel data))
-    (when-let [data (lookup-entry config id :engine-version)]
-      (. builder engineVersion data))
-    (when-let [data (lookup-entry config id :instance-profile-arn)]
-      (. builder instanceProfileArn data))
-    (when-let [data (lookup-entry config id :instance-type)]
-      (. builder instanceType data))
-    (when-let [data (lookup-entry config id :key-pair)]
-      (. builder keyPair data))
-    (when-let [data (lookup-entry config id :preferred-backup-window)]
-      (. builder preferredBackupWindow data))
-    (when-let [data (lookup-entry config id :preferred-maintenance-window)]
-      (. builder preferredMaintenanceWindow data))
-    (when-let [data (lookup-entry config id :security-group-ids)]
-      (. builder securityGroupIds data))
-    (when-let [data (lookup-entry config id :server-name)]
-      (. builder serverName data))
-    (when-let [data (lookup-entry config id :service-role-arn)]
-      (. builder serviceRoleArn data))
-    (when-let [data (lookup-entry config id :subnet-ids)]
-      (. builder subnetIds data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnServerProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :associate-public-ip-address)]
+    (. builder associatePublicIpAddress data))
+  (when-let [data (lookup-entry config id :backup-id)]
+    (. builder backupId data))
+  (when-let [data (lookup-entry config id :backup-retention-count)]
+    (. builder backupRetentionCount data))
+  (when-let [data (lookup-entry config id :custom-certificate)]
+    (. builder customCertificate data))
+  (when-let [data (lookup-entry config id :custom-domain)]
+    (. builder customDomain data))
+  (when-let [data (lookup-entry config id :custom-private-key)]
+    (. builder customPrivateKey data))
+  (when-let [data (lookup-entry config id :disable-automated-backup)]
+    (. builder disableAutomatedBackup data))
+  (when-let [data (lookup-entry config id :engine)]
+    (. builder engine data))
+  (when-let [data (lookup-entry config id :engine-attributes)]
+    (. builder engineAttributes data))
+  (when-let [data (lookup-entry config id :engine-model)]
+    (. builder engineModel data))
+  (when-let [data (lookup-entry config id :engine-version)]
+    (. builder engineVersion data))
+  (when-let [data (lookup-entry config id :instance-profile-arn)]
+    (. builder instanceProfileArn data))
+  (when-let [data (lookup-entry config id :instance-type)]
+    (. builder instanceType data))
+  (when-let [data (lookup-entry config id :key-pair)]
+    (. builder keyPair data))
+  (when-let [data (lookup-entry config id :preferred-backup-window)]
+    (. builder preferredBackupWindow data))
+  (when-let [data (lookup-entry config id :preferred-maintenance-window)]
+    (. builder preferredMaintenanceWindow data))
+  (when-let [data (lookup-entry config id :security-group-ids)]
+    (. builder securityGroupIds data))
+  (when-let [data (lookup-entry config id :server-name)]
+    (. builder serverName data))
+  (when-let [data (lookup-entry config id :service-role-arn)]
+    (. builder serviceRoleArn data))
+  (when-let [data (lookup-entry config id :subnet-ids)]
+    (. builder subnetIds data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))

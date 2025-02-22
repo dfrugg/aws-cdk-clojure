@@ -5,29 +5,35 @@
                                                 CfnDomainProps$Builder]))
 
 
-(defn cfn-domain-builder
-  "The cfn-domain-builder function buildes out new instances of 
-CfnDomain$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-domain-builder
+  "The build-cfn-domain-builder function updates a CfnDomain$Builder instance using the provided configuration.
+  The function takes the CfnDomain$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |"
-  [stack id config]
-  (let [builder (CfnDomain$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (.build builder)))
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+"
+  [^CfnDomain$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (.build builder))
 
 
-(defn cfn-domain-props-builder
-  "The cfn-domain-props-builder function buildes out new instances of 
-CfnDomainProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-domain-props-builder
+  "The build-cfn-domain-props-builder function updates a CfnDomainProps$Builder instance using the provided configuration.
+  The function takes the CfnDomainProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |"
-  [stack id config]
-  (let [builder (CfnDomainProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (.build builder)))
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+"
+  [^CfnDomainProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (.build builder))

@@ -6,55 +6,64 @@
                                               TemplateParsingOptions$Builder]))
 
 
-(defn match-capture-builder
-  "The match-capture-builder function buildes out new instances of 
-MatchCapture$Builder using the provided configuration.  Each field is set as follows:
+(defn build-match-capture-builder
+  "The build-match-capture-builder function updates a MatchCapture$Builder instance using the provided configuration.
+  The function takes the MatchCapture$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `capture` | software.amazon.awscdk.assertions.Capture | [[cdk.support/lookup-entry]] | `:capture` |
-| `value` | java.lang.Object | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (MatchCapture$Builder.)]
-    (when-let [data (lookup-entry config id :capture)]
-      (. builder capture data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.Object | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^MatchCapture$Builder builder id config]
+  (when-let [data (lookup-entry config id :capture)]
+    (. builder capture data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn match-failure-builder
-  "The match-failure-builder function buildes out new instances of 
-MatchFailure$Builder using the provided configuration.  Each field is set as follows:
+(defn build-match-failure-builder
+  "The build-match-failure-builder function updates a MatchFailure$Builder instance using the provided configuration.
+  The function takes the MatchFailure$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `cost` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cost` |
 | `matcher` | software.amazon.awscdk.assertions.Matcher | [[cdk.support/lookup-entry]] | `:matcher` |
 | `message` | java.lang.String | [[cdk.support/lookup-entry]] | `:message` |
-| `path` | java.util.List | [[cdk.support/lookup-entry]] | `:path` |"
-  [stack id config]
-  (let [builder (MatchFailure$Builder.)]
-    (when-let [data (lookup-entry config id :cost)]
-      (. builder cost data))
-    (when-let [data (lookup-entry config id :matcher)]
-      (. builder matcher data))
-    (when-let [data (lookup-entry config id :message)]
-      (. builder message data))
-    (when-let [data (lookup-entry config id :path)]
-      (. builder path data))
-    (.build builder)))
+| `path` | java.util.List | [[cdk.support/lookup-entry]] | `:path` |
+"
+  [^MatchFailure$Builder builder id config]
+  (when-let [data (lookup-entry config id :cost)]
+    (. builder cost data))
+  (when-let [data (lookup-entry config id :matcher)]
+    (. builder matcher data))
+  (when-let [data (lookup-entry config id :message)]
+    (. builder message data))
+  (when-let [data (lookup-entry config id :path)]
+    (. builder path data))
+  (.build builder))
 
 
-(defn template-parsing-options-builder
-  "The template-parsing-options-builder function buildes out new instances of 
-TemplateParsingOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-template-parsing-options-builder
+  "The build-template-parsing-options-builder function updates a TemplateParsingOptions$Builder instance using the provided configuration.
+  The function takes the TemplateParsingOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `skipCyclicalDependenciesCheck` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:skip-cyclical-dependencies-check` |"
-  [stack id config]
-  (let [builder (TemplateParsingOptions$Builder.)]
-    (when-let [data (lookup-entry config id :skip-cyclical-dependencies-check)]
-      (. builder skipCyclicalDependenciesCheck data))
-    (.build builder)))
+| `skipCyclicalDependenciesCheck` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:skip-cyclical-dependencies-check` |
+"
+  [^TemplateParsingOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :skip-cyclical-dependencies-check)]
+    (. builder skipCyclicalDependenciesCheck data))
+  (.build builder))

@@ -5,47 +5,53 @@
                                                             CfnConnectionProps$Builder]))
 
 
-(defn cfn-connection-builder
-  "The cfn-connection-builder function buildes out new instances of 
-CfnConnection$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-connection-builder
+  "The build-cfn-connection-builder function updates a CfnConnection$Builder instance using the provided configuration.
+  The function takes the CfnConnection$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `connectionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:connection-name` |
 | `hostArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:host-arn` |
 | `providerType` | java.lang.String | [[cdk.support/lookup-entry]] | `:provider-type` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnConnection$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :connection-name)]
-      (. builder connectionName data))
-    (when-let [data (lookup-entry config id :host-arn)]
-      (. builder hostArn data))
-    (when-let [data (lookup-entry config id :provider-type)]
-      (. builder providerType data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnConnection$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-name)]
+    (. builder connectionName data))
+  (when-let [data (lookup-entry config id :host-arn)]
+    (. builder hostArn data))
+  (when-let [data (lookup-entry config id :provider-type)]
+    (. builder providerType data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-connection-props-builder
-  "The cfn-connection-props-builder function buildes out new instances of 
-CfnConnectionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-connection-props-builder
+  "The build-cfn-connection-props-builder function updates a CfnConnectionProps$Builder instance using the provided configuration.
+  The function takes the CfnConnectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `connectionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:connection-name` |
 | `hostArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:host-arn` |
 | `providerType` | java.lang.String | [[cdk.support/lookup-entry]] | `:provider-type` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnConnectionProps$Builder.)]
-    (when-let [data (lookup-entry config id :connection-name)]
-      (. builder connectionName data))
-    (when-let [data (lookup-entry config id :host-arn)]
-      (. builder hostArn data))
-    (when-let [data (lookup-entry config id :provider-type)]
-      (. builder providerType data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnConnectionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-name)]
+    (. builder connectionName data))
+  (when-let [data (lookup-entry config id :host-arn)]
+    (. builder hostArn data))
+  (when-let [data (lookup-entry config id :provider-type)]
+    (. builder providerType data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))

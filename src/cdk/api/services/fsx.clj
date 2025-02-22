@@ -147,69 +147,46 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :saturday data) Weekday/SATURDAY)))
 
 
-(defn cfn-data-repository-association-auto-export-policy-property-builder
-  "The cfn-data-repository-association-auto-export-policy-property-builder function buildes out new instances of 
-CfnDataRepositoryAssociation$AutoExportPolicyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-data-repository-association-auto-export-policy-property-builder
+  "The build-cfn-data-repository-association-auto-export-policy-property-builder function updates a CfnDataRepositoryAssociation$AutoExportPolicyProperty$Builder instance using the provided configuration.
+  The function takes the CfnDataRepositoryAssociation$AutoExportPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |"
-  [stack id config]
-  (let [builder (CfnDataRepositoryAssociation$AutoExportPolicyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :events)]
-      (. builder events data))
-    (.build builder)))
+| `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
+"
+  [^CfnDataRepositoryAssociation$AutoExportPolicyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :events)]
+    (. builder events data))
+  (.build builder))
 
 
-(defn cfn-data-repository-association-auto-import-policy-property-builder
-  "The cfn-data-repository-association-auto-import-policy-property-builder function buildes out new instances of 
-CfnDataRepositoryAssociation$AutoImportPolicyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-data-repository-association-auto-import-policy-property-builder
+  "The build-cfn-data-repository-association-auto-import-policy-property-builder function updates a CfnDataRepositoryAssociation$AutoImportPolicyProperty$Builder instance using the provided configuration.
+  The function takes the CfnDataRepositoryAssociation$AutoImportPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |"
-  [stack id config]
-  (let [builder (CfnDataRepositoryAssociation$AutoImportPolicyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :events)]
-      (. builder events data))
-    (.build builder)))
-
-
-(defn cfn-data-repository-association-builder
-  "The cfn-data-repository-association-builder function buildes out new instances of 
-CfnDataRepositoryAssociation$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `batchImportMetaDataOnCreate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:batch-import-meta-data-on-create` |
-| `dataRepositoryPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-repository-path` |
-| `fileSystemId` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-system-id` |
-| `fileSystemPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-system-path` |
-| `importedFileChunkSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:imported-file-chunk-size` |
-| `s3` | software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation$S3Property | [[cdk.support/lookup-entry]] | `:s3` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDataRepositoryAssociation$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :batch-import-meta-data-on-create)]
-      (. builder batchImportMetaDataOnCreate data))
-    (when-let [data (lookup-entry config id :data-repository-path)]
-      (. builder dataRepositoryPath data))
-    (when-let [data (lookup-entry config id :file-system-id)]
-      (. builder fileSystemId data))
-    (when-let [data (lookup-entry config id :file-system-path)]
-      (. builder fileSystemPath data))
-    (when-let [data (lookup-entry config id :imported-file-chunk-size)]
-      (. builder importedFileChunkSize data))
-    (when-let [data (lookup-entry config id :s3)]
-      (. builder s3 data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `events` | java.util.List | [[cdk.support/lookup-entry]] | `:events` |
+"
+  [^CfnDataRepositoryAssociation$AutoImportPolicyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :events)]
+    (. builder events data))
+  (.build builder))
 
 
-(defn cfn-data-repository-association-props-builder
-  "The cfn-data-repository-association-props-builder function buildes out new instances of 
-CfnDataRepositoryAssociationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-data-repository-association-builder
+  "The build-cfn-data-repository-association-builder function updates a CfnDataRepositoryAssociation$Builder instance using the provided configuration.
+  The function takes the CfnDataRepositoryAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -219,66 +196,110 @@ CfnDataRepositoryAssociationProps$Builder using the provided configuration.  Eac
 | `fileSystemPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-system-path` |
 | `importedFileChunkSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:imported-file-chunk-size` |
 | `s3` | software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation$S3Property | [[cdk.support/lookup-entry]] | `:s3` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDataRepositoryAssociationProps$Builder.)]
-    (when-let [data (lookup-entry config id :batch-import-meta-data-on-create)]
-      (. builder batchImportMetaDataOnCreate data))
-    (when-let [data (lookup-entry config id :data-repository-path)]
-      (. builder dataRepositoryPath data))
-    (when-let [data (lookup-entry config id :file-system-id)]
-      (. builder fileSystemId data))
-    (when-let [data (lookup-entry config id :file-system-path)]
-      (. builder fileSystemPath data))
-    (when-let [data (lookup-entry config id :imported-file-chunk-size)]
-      (. builder importedFileChunkSize data))
-    (when-let [data (lookup-entry config id :s3)]
-      (. builder s3 data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDataRepositoryAssociation$Builder builder id config]
+  (when-let [data (lookup-entry config id :batch-import-meta-data-on-create)]
+    (. builder batchImportMetaDataOnCreate data))
+  (when-let [data (lookup-entry config id :data-repository-path)]
+    (. builder dataRepositoryPath data))
+  (when-let [data (lookup-entry config id :file-system-id)]
+    (. builder fileSystemId data))
+  (when-let [data (lookup-entry config id :file-system-path)]
+    (. builder fileSystemPath data))
+  (when-let [data (lookup-entry config id :imported-file-chunk-size)]
+    (. builder importedFileChunkSize data))
+  (when-let [data (lookup-entry config id :s3)]
+    (. builder s3 data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-data-repository-association-s3-property-builder
-  "The cfn-data-repository-association-s3-property-builder function buildes out new instances of 
-CfnDataRepositoryAssociation$S3Property$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-data-repository-association-props-builder
+  "The build-cfn-data-repository-association-props-builder function updates a CfnDataRepositoryAssociationProps$Builder instance using the provided configuration.
+  The function takes the CfnDataRepositoryAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `batchImportMetaDataOnCreate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:batch-import-meta-data-on-create` |
+| `dataRepositoryPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:data-repository-path` |
+| `fileSystemId` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-system-id` |
+| `fileSystemPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-system-path` |
+| `importedFileChunkSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:imported-file-chunk-size` |
+| `s3` | software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation$S3Property | [[cdk.support/lookup-entry]] | `:s3` |
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDataRepositoryAssociationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :batch-import-meta-data-on-create)]
+    (. builder batchImportMetaDataOnCreate data))
+  (when-let [data (lookup-entry config id :data-repository-path)]
+    (. builder dataRepositoryPath data))
+  (when-let [data (lookup-entry config id :file-system-id)]
+    (. builder fileSystemId data))
+  (when-let [data (lookup-entry config id :file-system-path)]
+    (. builder fileSystemPath data))
+  (when-let [data (lookup-entry config id :imported-file-chunk-size)]
+    (. builder importedFileChunkSize data))
+  (when-let [data (lookup-entry config id :s3)]
+    (. builder s3 data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
+
+
+(defn build-cfn-data-repository-association-s3-property-builder
+  "The build-cfn-data-repository-association-s3-property-builder function updates a CfnDataRepositoryAssociation$S3Property$Builder instance using the provided configuration.
+  The function takes the CfnDataRepositoryAssociation$S3Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `autoExportPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-export-policy` |
-| `autoImportPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-import-policy` |"
-  [stack id config]
-  (let [builder (CfnDataRepositoryAssociation$S3Property$Builder.)]
-    (when-let [data (lookup-entry config id :auto-export-policy)]
-      (. builder autoExportPolicy data))
-    (when-let [data (lookup-entry config id :auto-import-policy)]
-      (. builder autoImportPolicy data))
-    (.build builder)))
+| `autoImportPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:auto-import-policy` |
+"
+  [^CfnDataRepositoryAssociation$S3Property$Builder builder id config]
+  (when-let [data (lookup-entry config id :auto-export-policy)]
+    (. builder autoExportPolicy data))
+  (when-let [data (lookup-entry config id :auto-import-policy)]
+    (. builder autoImportPolicy data))
+  (.build builder))
 
 
-(defn cfn-file-system-audit-log-configuration-property-builder
-  "The cfn-file-system-audit-log-configuration-property-builder function buildes out new instances of 
-CfnFileSystem$AuditLogConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-file-system-audit-log-configuration-property-builder
+  "The build-cfn-file-system-audit-log-configuration-property-builder function updates a CfnFileSystem$AuditLogConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnFileSystem$AuditLogConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `auditLogDestination` | java.lang.String | [[cdk.support/lookup-entry]] | `:audit-log-destination` |
 | `fileAccessAuditLogLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-access-audit-log-level` |
-| `fileShareAccessAuditLogLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-share-access-audit-log-level` |"
-  [stack id config]
-  (let [builder (CfnFileSystem$AuditLogConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :audit-log-destination)]
-      (. builder auditLogDestination data))
-    (when-let [data (lookup-entry config id :file-access-audit-log-level)]
-      (. builder fileAccessAuditLogLevel data))
-    (when-let [data (lookup-entry config id :file-share-access-audit-log-level)]
-      (. builder fileShareAccessAuditLogLevel data))
-    (.build builder)))
+| `fileShareAccessAuditLogLevel` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-share-access-audit-log-level` |
+"
+  [^CfnFileSystem$AuditLogConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :audit-log-destination)]
+    (. builder auditLogDestination data))
+  (when-let [data (lookup-entry config id :file-access-audit-log-level)]
+    (. builder fileAccessAuditLogLevel data))
+  (when-let [data (lookup-entry config id :file-share-access-audit-log-level)]
+    (. builder fileShareAccessAuditLogLevel data))
+  (.build builder))
 
 
-(defn cfn-file-system-builder
-  "The cfn-file-system-builder function buildes out new instances of 
-CfnFileSystem$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-file-system-builder
+  "The build-cfn-file-system-builder function updates a CfnFileSystem$Builder instance using the provided configuration.
+  The function takes the CfnFileSystem$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -294,75 +315,84 @@ CfnFileSystem$Builder using the provided configuration.  Each field is set as fo
 | `storageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-type` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `windowsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:windows-configuration` |"
-  [stack id config]
-  (let [builder (CfnFileSystem$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :backup-id)]
-      (. builder backupId data))
-    (when-let [data (lookup-entry config id :file-system-type)]
-      (. builder fileSystemType data))
-    (when-let [data (lookup-entry config id :file-system-type-version)]
-      (. builder fileSystemTypeVersion data))
-    (when-let [data (lookup-entry config id :kms-key-id)]
-      (. builder kmsKeyId data))
-    (when-let [data (lookup-entry config id :lustre-configuration)]
-      (. builder lustreConfiguration data))
-    (when-let [data (lookup-entry config id :ontap-configuration)]
-      (. builder ontapConfiguration data))
-    (when-let [data (lookup-entry config id :open-zfs-configuration)]
-      (. builder openZfsConfiguration data))
-    (when-let [data (lookup-entry config id :security-group-ids)]
-      (. builder securityGroupIds data))
-    (when-let [data (lookup-entry config id :storage-capacity)]
-      (. builder storageCapacity data))
-    (when-let [data (lookup-entry config id :storage-type)]
-      (. builder storageType data))
-    (when-let [data (lookup-entry config id :subnet-ids)]
-      (. builder subnetIds data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :windows-configuration)]
-      (. builder windowsConfiguration data))
-    (.build builder)))
+| `windowsConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:windows-configuration` |
+"
+  [^CfnFileSystem$Builder builder id config]
+  (when-let [data (lookup-entry config id :backup-id)]
+    (. builder backupId data))
+  (when-let [data (lookup-entry config id :file-system-type)]
+    (. builder fileSystemType data))
+  (when-let [data (lookup-entry config id :file-system-type-version)]
+    (. builder fileSystemTypeVersion data))
+  (when-let [data (lookup-entry config id :kms-key-id)]
+    (. builder kmsKeyId data))
+  (when-let [data (lookup-entry config id :lustre-configuration)]
+    (. builder lustreConfiguration data))
+  (when-let [data (lookup-entry config id :ontap-configuration)]
+    (. builder ontapConfiguration data))
+  (when-let [data (lookup-entry config id :open-zfs-configuration)]
+    (. builder openZfsConfiguration data))
+  (when-let [data (lookup-entry config id :security-group-ids)]
+    (. builder securityGroupIds data))
+  (when-let [data (lookup-entry config id :storage-capacity)]
+    (. builder storageCapacity data))
+  (when-let [data (lookup-entry config id :storage-type)]
+    (. builder storageType data))
+  (when-let [data (lookup-entry config id :subnet-ids)]
+    (. builder subnetIds data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :windows-configuration)]
+    (. builder windowsConfiguration data))
+  (.build builder))
 
 
-(defn cfn-file-system-client-configurations-property-builder
-  "The cfn-file-system-client-configurations-property-builder function buildes out new instances of 
-CfnFileSystem$ClientConfigurationsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-file-system-client-configurations-property-builder
+  "The build-cfn-file-system-client-configurations-property-builder function updates a CfnFileSystem$ClientConfigurationsProperty$Builder instance using the provided configuration.
+  The function takes the CfnFileSystem$ClientConfigurationsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `clients` | java.lang.String | [[cdk.support/lookup-entry]] | `:clients` |
-| `options` | java.util.List | [[cdk.support/lookup-entry]] | `:options` |"
-  [stack id config]
-  (let [builder (CfnFileSystem$ClientConfigurationsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :clients)]
-      (. builder clients data))
-    (when-let [data (lookup-entry config id :options)]
-      (. builder options data))
-    (.build builder)))
+| `options` | java.util.List | [[cdk.support/lookup-entry]] | `:options` |
+"
+  [^CfnFileSystem$ClientConfigurationsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :clients)]
+    (. builder clients data))
+  (when-let [data (lookup-entry config id :options)]
+    (. builder options data))
+  (.build builder))
 
 
-(defn cfn-file-system-disk-iops-configuration-property-builder
-  "The cfn-file-system-disk-iops-configuration-property-builder function buildes out new instances of 
-CfnFileSystem$DiskIopsConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-file-system-disk-iops-configuration-property-builder
+  "The build-cfn-file-system-disk-iops-configuration-property-builder function updates a CfnFileSystem$DiskIopsConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnFileSystem$DiskIopsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `iops` | java.lang.Number | [[cdk.support/lookup-entry]] | `:iops` |
-| `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |"
-  [stack id config]
-  (let [builder (CfnFileSystem$DiskIopsConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :iops)]
-      (. builder iops data))
-    (when-let [data (lookup-entry config id :mode)]
-      (. builder mode data))
-    (.build builder)))
+| `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
+"
+  [^CfnFileSystem$DiskIopsConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :iops)]
+    (. builder iops data))
+  (when-let [data (lookup-entry config id :mode)]
+    (. builder mode data))
+  (.build builder))
 
 
-(defn cfn-file-system-lustre-configuration-property-builder
-  "The cfn-file-system-lustre-configuration-property-builder function buildes out new instances of 
-CfnFileSystem$LustreConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-file-system-lustre-configuration-property-builder
+  "The build-cfn-file-system-lustre-configuration-property-builder function updates a CfnFileSystem$LustreConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnFileSystem$LustreConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -377,53 +407,59 @@ CfnFileSystem$LustreConfigurationProperty$Builder using the provided configurati
 | `importPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:import-path` |
 | `importedFileChunkSize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:imported-file-chunk-size` |
 | `perUnitStorageThroughput` | java.lang.Number | [[cdk.support/lookup-entry]] | `:per-unit-storage-throughput` |
-| `weeklyMaintenanceStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:weekly-maintenance-start-time` |"
-  [stack id config]
-  (let [builder (CfnFileSystem$LustreConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :auto-import-policy)]
-      (. builder autoImportPolicy data))
-    (when-let [data (lookup-entry config id :automatic-backup-retention-days)]
-      (. builder automaticBackupRetentionDays data))
-    (when-let [data (lookup-entry config id :copy-tags-to-backups)]
-      (. builder copyTagsToBackups data))
-    (when-let [data (lookup-entry config id :daily-automatic-backup-start-time)]
-      (. builder dailyAutomaticBackupStartTime data))
-    (when-let [data (lookup-entry config id :data-compression-type)]
-      (. builder dataCompressionType data))
-    (when-let [data (lookup-entry config id :deployment-type)]
-      (. builder deploymentType data))
-    (when-let [data (lookup-entry config id :drive-cache-type)]
-      (. builder driveCacheType data))
-    (when-let [data (lookup-entry config id :export-path)]
-      (. builder exportPath data))
-    (when-let [data (lookup-entry config id :import-path)]
-      (. builder importPath data))
-    (when-let [data (lookup-entry config id :imported-file-chunk-size)]
-      (. builder importedFileChunkSize data))
-    (when-let [data (lookup-entry config id :per-unit-storage-throughput)]
-      (. builder perUnitStorageThroughput data))
-    (when-let [data (lookup-entry config id :weekly-maintenance-start-time)]
-      (. builder weeklyMaintenanceStartTime data))
-    (.build builder)))
+| `weeklyMaintenanceStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:weekly-maintenance-start-time` |
+"
+  [^CfnFileSystem$LustreConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :auto-import-policy)]
+    (. builder autoImportPolicy data))
+  (when-let [data (lookup-entry config id :automatic-backup-retention-days)]
+    (. builder automaticBackupRetentionDays data))
+  (when-let [data (lookup-entry config id :copy-tags-to-backups)]
+    (. builder copyTagsToBackups data))
+  (when-let [data (lookup-entry config id :daily-automatic-backup-start-time)]
+    (. builder dailyAutomaticBackupStartTime data))
+  (when-let [data (lookup-entry config id :data-compression-type)]
+    (. builder dataCompressionType data))
+  (when-let [data (lookup-entry config id :deployment-type)]
+    (. builder deploymentType data))
+  (when-let [data (lookup-entry config id :drive-cache-type)]
+    (. builder driveCacheType data))
+  (when-let [data (lookup-entry config id :export-path)]
+    (. builder exportPath data))
+  (when-let [data (lookup-entry config id :import-path)]
+    (. builder importPath data))
+  (when-let [data (lookup-entry config id :imported-file-chunk-size)]
+    (. builder importedFileChunkSize data))
+  (when-let [data (lookup-entry config id :per-unit-storage-throughput)]
+    (. builder perUnitStorageThroughput data))
+  (when-let [data (lookup-entry config id :weekly-maintenance-start-time)]
+    (. builder weeklyMaintenanceStartTime data))
+  (.build builder))
 
 
-(defn cfn-file-system-nfs-exports-property-builder
-  "The cfn-file-system-nfs-exports-property-builder function buildes out new instances of 
-CfnFileSystem$NfsExportsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-file-system-nfs-exports-property-builder
+  "The build-cfn-file-system-nfs-exports-property-builder function updates a CfnFileSystem$NfsExportsProperty$Builder instance using the provided configuration.
+  The function takes the CfnFileSystem$NfsExportsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `clientConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:client-configurations` |"
-  [stack id config]
-  (let [builder (CfnFileSystem$NfsExportsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :client-configurations)]
-      (. builder clientConfigurations data))
-    (.build builder)))
+| `clientConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:client-configurations` |
+"
+  [^CfnFileSystem$NfsExportsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :client-configurations)]
+    (. builder clientConfigurations data))
+  (.build builder))
 
 
-(defn cfn-file-system-ontap-configuration-property-builder
-  "The cfn-file-system-ontap-configuration-property-builder function buildes out new instances of 
-CfnFileSystem$OntapConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-file-system-ontap-configuration-property-builder
+  "The build-cfn-file-system-ontap-configuration-property-builder function updates a CfnFileSystem$OntapConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnFileSystem$OntapConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -438,39 +474,42 @@ CfnFileSystem$OntapConfigurationProperty$Builder using the provided configuratio
 | `routeTableIds` | java.util.List | [[cdk.support/lookup-entry]] | `:route-table-ids` |
 | `throughputCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:throughput-capacity` |
 | `throughputCapacityPerHaPair` | java.lang.Number | [[cdk.support/lookup-entry]] | `:throughput-capacity-per-ha-pair` |
-| `weeklyMaintenanceStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:weekly-maintenance-start-time` |"
-  [stack id config]
-  (let [builder (CfnFileSystem$OntapConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :automatic-backup-retention-days)]
-      (. builder automaticBackupRetentionDays data))
-    (when-let [data (lookup-entry config id :daily-automatic-backup-start-time)]
-      (. builder dailyAutomaticBackupStartTime data))
-    (when-let [data (lookup-entry config id :deployment-type)]
-      (. builder deploymentType data))
-    (when-let [data (lookup-entry config id :disk-iops-configuration)]
-      (. builder diskIopsConfiguration data))
-    (when-let [data (lookup-entry config id :endpoint-ip-address-range)]
-      (. builder endpointIpAddressRange data))
-    (when-let [data (lookup-entry config id :fsx-admin-password)]
-      (. builder fsxAdminPassword data))
-    (when-let [data (lookup-entry config id :ha-pairs)]
-      (. builder haPairs data))
-    (when-let [data (lookup-entry config id :preferred-subnet-id)]
-      (. builder preferredSubnetId data))
-    (when-let [data (lookup-entry config id :route-table-ids)]
-      (. builder routeTableIds data))
-    (when-let [data (lookup-entry config id :throughput-capacity)]
-      (. builder throughputCapacity data))
-    (when-let [data (lookup-entry config id :throughput-capacity-per-ha-pair)]
-      (. builder throughputCapacityPerHaPair data))
-    (when-let [data (lookup-entry config id :weekly-maintenance-start-time)]
-      (. builder weeklyMaintenanceStartTime data))
-    (.build builder)))
+| `weeklyMaintenanceStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:weekly-maintenance-start-time` |
+"
+  [^CfnFileSystem$OntapConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :automatic-backup-retention-days)]
+    (. builder automaticBackupRetentionDays data))
+  (when-let [data (lookup-entry config id :daily-automatic-backup-start-time)]
+    (. builder dailyAutomaticBackupStartTime data))
+  (when-let [data (lookup-entry config id :deployment-type)]
+    (. builder deploymentType data))
+  (when-let [data (lookup-entry config id :disk-iops-configuration)]
+    (. builder diskIopsConfiguration data))
+  (when-let [data (lookup-entry config id :endpoint-ip-address-range)]
+    (. builder endpointIpAddressRange data))
+  (when-let [data (lookup-entry config id :fsx-admin-password)]
+    (. builder fsxAdminPassword data))
+  (when-let [data (lookup-entry config id :ha-pairs)]
+    (. builder haPairs data))
+  (when-let [data (lookup-entry config id :preferred-subnet-id)]
+    (. builder preferredSubnetId data))
+  (when-let [data (lookup-entry config id :route-table-ids)]
+    (. builder routeTableIds data))
+  (when-let [data (lookup-entry config id :throughput-capacity)]
+    (. builder throughputCapacity data))
+  (when-let [data (lookup-entry config id :throughput-capacity-per-ha-pair)]
+    (. builder throughputCapacityPerHaPair data))
+  (when-let [data (lookup-entry config id :weekly-maintenance-start-time)]
+    (. builder weeklyMaintenanceStartTime data))
+  (.build builder))
 
 
-(defn cfn-file-system-open-zfs-configuration-property-builder
-  "The cfn-file-system-open-zfs-configuration-property-builder function buildes out new instances of 
-CfnFileSystem$OpenZFSConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-file-system-open-zfs-configuration-property-builder
+  "The build-cfn-file-system-open-zfs-configuration-property-builder function updates a CfnFileSystem$OpenZFSConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnFileSystem$OpenZFSConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -486,41 +525,44 @@ CfnFileSystem$OpenZFSConfigurationProperty$Builder using the provided configurat
 | `rootVolumeConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:root-volume-configuration` |
 | `routeTableIds` | java.util.List | [[cdk.support/lookup-entry]] | `:route-table-ids` |
 | `throughputCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:throughput-capacity` |
-| `weeklyMaintenanceStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:weekly-maintenance-start-time` |"
-  [stack id config]
-  (let [builder (CfnFileSystem$OpenZFSConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :automatic-backup-retention-days)]
-      (. builder automaticBackupRetentionDays data))
-    (when-let [data (lookup-entry config id :copy-tags-to-backups)]
-      (. builder copyTagsToBackups data))
-    (when-let [data (lookup-entry config id :copy-tags-to-volumes)]
-      (. builder copyTagsToVolumes data))
-    (when-let [data (lookup-entry config id :daily-automatic-backup-start-time)]
-      (. builder dailyAutomaticBackupStartTime data))
-    (when-let [data (lookup-entry config id :deployment-type)]
-      (. builder deploymentType data))
-    (when-let [data (lookup-entry config id :disk-iops-configuration)]
-      (. builder diskIopsConfiguration data))
-    (when-let [data (lookup-entry config id :endpoint-ip-address-range)]
-      (. builder endpointIpAddressRange data))
-    (when-let [data (lookup-entry config id :options)]
-      (. builder options data))
-    (when-let [data (lookup-entry config id :preferred-subnet-id)]
-      (. builder preferredSubnetId data))
-    (when-let [data (lookup-entry config id :root-volume-configuration)]
-      (. builder rootVolumeConfiguration data))
-    (when-let [data (lookup-entry config id :route-table-ids)]
-      (. builder routeTableIds data))
-    (when-let [data (lookup-entry config id :throughput-capacity)]
-      (. builder throughputCapacity data))
-    (when-let [data (lookup-entry config id :weekly-maintenance-start-time)]
-      (. builder weeklyMaintenanceStartTime data))
-    (.build builder)))
+| `weeklyMaintenanceStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:weekly-maintenance-start-time` |
+"
+  [^CfnFileSystem$OpenZFSConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :automatic-backup-retention-days)]
+    (. builder automaticBackupRetentionDays data))
+  (when-let [data (lookup-entry config id :copy-tags-to-backups)]
+    (. builder copyTagsToBackups data))
+  (when-let [data (lookup-entry config id :copy-tags-to-volumes)]
+    (. builder copyTagsToVolumes data))
+  (when-let [data (lookup-entry config id :daily-automatic-backup-start-time)]
+    (. builder dailyAutomaticBackupStartTime data))
+  (when-let [data (lookup-entry config id :deployment-type)]
+    (. builder deploymentType data))
+  (when-let [data (lookup-entry config id :disk-iops-configuration)]
+    (. builder diskIopsConfiguration data))
+  (when-let [data (lookup-entry config id :endpoint-ip-address-range)]
+    (. builder endpointIpAddressRange data))
+  (when-let [data (lookup-entry config id :options)]
+    (. builder options data))
+  (when-let [data (lookup-entry config id :preferred-subnet-id)]
+    (. builder preferredSubnetId data))
+  (when-let [data (lookup-entry config id :root-volume-configuration)]
+    (. builder rootVolumeConfiguration data))
+  (when-let [data (lookup-entry config id :route-table-ids)]
+    (. builder routeTableIds data))
+  (when-let [data (lookup-entry config id :throughput-capacity)]
+    (. builder throughputCapacity data))
+  (when-let [data (lookup-entry config id :weekly-maintenance-start-time)]
+    (. builder weeklyMaintenanceStartTime data))
+  (.build builder))
 
 
-(defn cfn-file-system-props-builder
-  "The cfn-file-system-props-builder function buildes out new instances of 
-CfnFileSystemProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-file-system-props-builder
+  "The build-cfn-file-system-props-builder function updates a CfnFileSystemProps$Builder instance using the provided configuration.
+  The function takes the CfnFileSystemProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -536,41 +578,44 @@ CfnFileSystemProps$Builder using the provided configuration.  Each field is set 
 | `storageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-type` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `windowsConfiguration` | software.amazon.awscdk.services.fsx.CfnFileSystem$WindowsConfigurationProperty | [[cdk.support/lookup-entry]] | `:windows-configuration` |"
-  [stack id config]
-  (let [builder (CfnFileSystemProps$Builder.)]
-    (when-let [data (lookup-entry config id :backup-id)]
-      (. builder backupId data))
-    (when-let [data (lookup-entry config id :file-system-type)]
-      (. builder fileSystemType data))
-    (when-let [data (lookup-entry config id :file-system-type-version)]
-      (. builder fileSystemTypeVersion data))
-    (when-let [data (lookup-entry config id :kms-key-id)]
-      (. builder kmsKeyId data))
-    (when-let [data (lookup-entry config id :lustre-configuration)]
-      (. builder lustreConfiguration data))
-    (when-let [data (lookup-entry config id :ontap-configuration)]
-      (. builder ontapConfiguration data))
-    (when-let [data (lookup-entry config id :open-zfs-configuration)]
-      (. builder openZfsConfiguration data))
-    (when-let [data (lookup-entry config id :security-group-ids)]
-      (. builder securityGroupIds data))
-    (when-let [data (lookup-entry config id :storage-capacity)]
-      (. builder storageCapacity data))
-    (when-let [data (lookup-entry config id :storage-type)]
-      (. builder storageType data))
-    (when-let [data (lookup-entry config id :subnet-ids)]
-      (. builder subnetIds data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :windows-configuration)]
-      (. builder windowsConfiguration data))
-    (.build builder)))
+| `windowsConfiguration` | software.amazon.awscdk.services.fsx.CfnFileSystem$WindowsConfigurationProperty | [[cdk.support/lookup-entry]] | `:windows-configuration` |
+"
+  [^CfnFileSystemProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :backup-id)]
+    (. builder backupId data))
+  (when-let [data (lookup-entry config id :file-system-type)]
+    (. builder fileSystemType data))
+  (when-let [data (lookup-entry config id :file-system-type-version)]
+    (. builder fileSystemTypeVersion data))
+  (when-let [data (lookup-entry config id :kms-key-id)]
+    (. builder kmsKeyId data))
+  (when-let [data (lookup-entry config id :lustre-configuration)]
+    (. builder lustreConfiguration data))
+  (when-let [data (lookup-entry config id :ontap-configuration)]
+    (. builder ontapConfiguration data))
+  (when-let [data (lookup-entry config id :open-zfs-configuration)]
+    (. builder openZfsConfiguration data))
+  (when-let [data (lookup-entry config id :security-group-ids)]
+    (. builder securityGroupIds data))
+  (when-let [data (lookup-entry config id :storage-capacity)]
+    (. builder storageCapacity data))
+  (when-let [data (lookup-entry config id :storage-type)]
+    (. builder storageType data))
+  (when-let [data (lookup-entry config id :subnet-ids)]
+    (. builder subnetIds data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :windows-configuration)]
+    (. builder windowsConfiguration data))
+  (.build builder))
 
 
-(defn cfn-file-system-root-volume-configuration-property-builder
-  "The cfn-file-system-root-volume-configuration-property-builder function buildes out new instances of 
-CfnFileSystem$RootVolumeConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-file-system-root-volume-configuration-property-builder
+  "The build-cfn-file-system-root-volume-configuration-property-builder function updates a CfnFileSystem$RootVolumeConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnFileSystem$RootVolumeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -579,27 +624,30 @@ CfnFileSystem$RootVolumeConfigurationProperty$Builder using the provided configu
 | `nfsExports` | java.util.List | [[cdk.support/lookup-entry]] | `:nfs-exports` |
 | `readOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:read-only` |
 | `recordSizeKiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:record-size-ki-b` |
-| `userAndGroupQuotas` | java.util.List | [[cdk.support/lookup-entry]] | `:user-and-group-quotas` |"
-  [stack id config]
-  (let [builder (CfnFileSystem$RootVolumeConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :copy-tags-to-snapshots)]
-      (. builder copyTagsToSnapshots data))
-    (when-let [data (lookup-entry config id :data-compression-type)]
-      (. builder dataCompressionType data))
-    (when-let [data (lookup-entry config id :nfs-exports)]
-      (. builder nfsExports data))
-    (when-let [data (lookup-entry config id :read-only)]
-      (. builder readOnly data))
-    (when-let [data (lookup-entry config id :record-size-ki-b)]
-      (. builder recordSizeKiB data))
-    (when-let [data (lookup-entry config id :user-and-group-quotas)]
-      (. builder userAndGroupQuotas data))
-    (.build builder)))
+| `userAndGroupQuotas` | java.util.List | [[cdk.support/lookup-entry]] | `:user-and-group-quotas` |
+"
+  [^CfnFileSystem$RootVolumeConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :copy-tags-to-snapshots)]
+    (. builder copyTagsToSnapshots data))
+  (when-let [data (lookup-entry config id :data-compression-type)]
+    (. builder dataCompressionType data))
+  (when-let [data (lookup-entry config id :nfs-exports)]
+    (. builder nfsExports data))
+  (when-let [data (lookup-entry config id :read-only)]
+    (. builder readOnly data))
+  (when-let [data (lookup-entry config id :record-size-ki-b)]
+    (. builder recordSizeKiB data))
+  (when-let [data (lookup-entry config id :user-and-group-quotas)]
+    (. builder userAndGroupQuotas data))
+  (.build builder))
 
 
-(defn cfn-file-system-self-managed-active-directory-configuration-property-builder
-  "The cfn-file-system-self-managed-active-directory-configuration-property-builder function buildes out new instances of 
-CfnFileSystem$SelfManagedActiveDirectoryConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-file-system-self-managed-active-directory-configuration-property-builder
+  "The build-cfn-file-system-self-managed-active-directory-configuration-property-builder function updates a CfnFileSystem$SelfManagedActiveDirectoryConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnFileSystem$SelfManagedActiveDirectoryConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -608,47 +656,53 @@ CfnFileSystem$SelfManagedActiveDirectoryConfigurationProperty$Builder using the 
 | `fileSystemAdministratorsGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-system-administrators-group` |
 | `organizationalUnitDistinguishedName` | java.lang.String | [[cdk.support/lookup-entry]] | `:organizational-unit-distinguished-name` |
 | `password` | java.lang.String | [[cdk.support/lookup-entry]] | `:password` |
-| `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |"
-  [stack id config]
-  (let [builder (CfnFileSystem$SelfManagedActiveDirectoryConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :dns-ips)]
-      (. builder dnsIps data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :file-system-administrators-group)]
-      (. builder fileSystemAdministratorsGroup data))
-    (when-let [data (lookup-entry config id :organizational-unit-distinguished-name)]
-      (. builder organizationalUnitDistinguishedName data))
-    (when-let [data (lookup-entry config id :password)]
-      (. builder password data))
-    (when-let [data (lookup-entry config id :user-name)]
-      (. builder userName data))
-    (.build builder)))
+| `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
+"
+  [^CfnFileSystem$SelfManagedActiveDirectoryConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :dns-ips)]
+    (. builder dnsIps data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :file-system-administrators-group)]
+    (. builder fileSystemAdministratorsGroup data))
+  (when-let [data (lookup-entry config id :organizational-unit-distinguished-name)]
+    (. builder organizationalUnitDistinguishedName data))
+  (when-let [data (lookup-entry config id :password)]
+    (. builder password data))
+  (when-let [data (lookup-entry config id :user-name)]
+    (. builder userName data))
+  (.build builder))
 
 
-(defn cfn-file-system-user-and-group-quotas-property-builder
-  "The cfn-file-system-user-and-group-quotas-property-builder function buildes out new instances of 
-CfnFileSystem$UserAndGroupQuotasProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-file-system-user-and-group-quotas-property-builder
+  "The build-cfn-file-system-user-and-group-quotas-property-builder function updates a CfnFileSystem$UserAndGroupQuotasProperty$Builder instance using the provided configuration.
+  The function takes the CfnFileSystem$UserAndGroupQuotasProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `id` | java.lang.Number | [[cdk.support/lookup-entry]] | `:id` |
 | `storageCapacityQuotaGiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:storage-capacity-quota-gi-b` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnFileSystem$UserAndGroupQuotasProperty$Builder.)]
-    (when-let [data (lookup-entry config id :id)]
-      (. builder id data))
-    (when-let [data (lookup-entry config id :storage-capacity-quota-gi-b)]
-      (. builder storageCapacityQuotaGiB data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnFileSystem$UserAndGroupQuotasProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :id)]
+    (. builder id data))
+  (when-let [data (lookup-entry config id :storage-capacity-quota-gi-b)]
+    (. builder storageCapacityQuotaGiB data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-file-system-windows-configuration-property-builder
-  "The cfn-file-system-windows-configuration-property-builder function buildes out new instances of 
-CfnFileSystem$WindowsConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-file-system-windows-configuration-property-builder
+  "The build-cfn-file-system-windows-configuration-property-builder function updates a CfnFileSystem$WindowsConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnFileSystem$WindowsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -663,125 +717,108 @@ CfnFileSystem$WindowsConfigurationProperty$Builder using the provided configurat
 | `preferredSubnetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-subnet-id` |
 | `selfManagedActiveDirectoryConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:self-managed-active-directory-configuration` |
 | `throughputCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:throughput-capacity` |
-| `weeklyMaintenanceStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:weekly-maintenance-start-time` |"
-  [stack id config]
-  (let [builder (CfnFileSystem$WindowsConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :active-directory-id)]
-      (. builder activeDirectoryId data))
-    (when-let [data (lookup-entry config id :aliases)]
-      (. builder aliases data))
-    (when-let [data (lookup-entry config id :audit-log-configuration)]
-      (. builder auditLogConfiguration data))
-    (when-let [data (lookup-entry config id :automatic-backup-retention-days)]
-      (. builder automaticBackupRetentionDays data))
-    (when-let [data (lookup-entry config id :copy-tags-to-backups)]
-      (. builder copyTagsToBackups data))
-    (when-let [data (lookup-entry config id :daily-automatic-backup-start-time)]
-      (. builder dailyAutomaticBackupStartTime data))
-    (when-let [data (lookup-entry config id :deployment-type)]
-      (. builder deploymentType data))
-    (when-let [data (lookup-entry config id :disk-iops-configuration)]
-      (. builder diskIopsConfiguration data))
-    (when-let [data (lookup-entry config id :preferred-subnet-id)]
-      (. builder preferredSubnetId data))
-    (when-let [data (lookup-entry config id :self-managed-active-directory-configuration)]
-      (. builder selfManagedActiveDirectoryConfiguration data))
-    (when-let [data (lookup-entry config id :throughput-capacity)]
-      (. builder throughputCapacity data))
-    (when-let [data (lookup-entry config id :weekly-maintenance-start-time)]
-      (. builder weeklyMaintenanceStartTime data))
-    (.build builder)))
+| `weeklyMaintenanceStartTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:weekly-maintenance-start-time` |
+"
+  [^CfnFileSystem$WindowsConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :active-directory-id)]
+    (. builder activeDirectoryId data))
+  (when-let [data (lookup-entry config id :aliases)]
+    (. builder aliases data))
+  (when-let [data (lookup-entry config id :audit-log-configuration)]
+    (. builder auditLogConfiguration data))
+  (when-let [data (lookup-entry config id :automatic-backup-retention-days)]
+    (. builder automaticBackupRetentionDays data))
+  (when-let [data (lookup-entry config id :copy-tags-to-backups)]
+    (. builder copyTagsToBackups data))
+  (when-let [data (lookup-entry config id :daily-automatic-backup-start-time)]
+    (. builder dailyAutomaticBackupStartTime data))
+  (when-let [data (lookup-entry config id :deployment-type)]
+    (. builder deploymentType data))
+  (when-let [data (lookup-entry config id :disk-iops-configuration)]
+    (. builder diskIopsConfiguration data))
+  (when-let [data (lookup-entry config id :preferred-subnet-id)]
+    (. builder preferredSubnetId data))
+  (when-let [data (lookup-entry config id :self-managed-active-directory-configuration)]
+    (. builder selfManagedActiveDirectoryConfiguration data))
+  (when-let [data (lookup-entry config id :throughput-capacity)]
+    (. builder throughputCapacity data))
+  (when-let [data (lookup-entry config id :weekly-maintenance-start-time)]
+    (. builder weeklyMaintenanceStartTime data))
+  (.build builder))
 
 
-(defn cfn-snapshot-builder
-  "The cfn-snapshot-builder function buildes out new instances of 
-CfnSnapshot$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-snapshot-builder
+  "The build-cfn-snapshot-builder function updates a CfnSnapshot$Builder instance using the provided configuration.
+  The function takes the CfnSnapshot$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `volumeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-id` |"
-  [stack id config]
-  (let [builder (CfnSnapshot$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :volume-id)]
-      (. builder volumeId data))
-    (.build builder)))
-
-
-(defn cfn-snapshot-props-builder
-  "The cfn-snapshot-props-builder function buildes out new instances of 
-CfnSnapshotProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `volumeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-id` |"
-  [stack id config]
-  (let [builder (CfnSnapshotProps$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :volume-id)]
-      (. builder volumeId data))
-    (.build builder)))
+| `volumeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-id` |
+"
+  [^CfnSnapshot$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :volume-id)]
+    (. builder volumeId data))
+  (.build builder))
 
 
-(defn cfn-storage-virtual-machine-active-directory-configuration-property-builder
-  "The cfn-storage-virtual-machine-active-directory-configuration-property-builder function buildes out new instances of 
-CfnStorageVirtualMachine$ActiveDirectoryConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-snapshot-props-builder
+  "The build-cfn-snapshot-props-builder function updates a CfnSnapshotProps$Builder instance using the provided configuration.
+  The function takes the CfnSnapshotProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+| `volumeId` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-id` |
+"
+  [^CfnSnapshotProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :volume-id)]
+    (. builder volumeId data))
+  (.build builder))
+
+
+(defn build-cfn-storage-virtual-machine-active-directory-configuration-property-builder
+  "The build-cfn-storage-virtual-machine-active-directory-configuration-property-builder function updates a CfnStorageVirtualMachine$ActiveDirectoryConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnStorageVirtualMachine$ActiveDirectoryConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `netBiosName` | java.lang.String | [[cdk.support/lookup-entry]] | `:net-bios-name` |
-| `selfManagedActiveDirectoryConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:self-managed-active-directory-configuration` |"
-  [stack id config]
-  (let [builder (CfnStorageVirtualMachine$ActiveDirectoryConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :net-bios-name)]
-      (. builder netBiosName data))
-    (when-let [data (lookup-entry config id :self-managed-active-directory-configuration)]
-      (. builder selfManagedActiveDirectoryConfiguration data))
-    (.build builder)))
+| `selfManagedActiveDirectoryConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:self-managed-active-directory-configuration` |
+"
+  [^CfnStorageVirtualMachine$ActiveDirectoryConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :net-bios-name)]
+    (. builder netBiosName data))
+  (when-let [data (lookup-entry config id :self-managed-active-directory-configuration)]
+    (. builder selfManagedActiveDirectoryConfiguration data))
+  (.build builder))
 
 
-(defn cfn-storage-virtual-machine-builder
-  "The cfn-storage-virtual-machine-builder function buildes out new instances of 
-CfnStorageVirtualMachine$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-storage-virtual-machine-builder
+  "The build-cfn-storage-virtual-machine-builder function updates a CfnStorageVirtualMachine$Builder instance using the provided configuration.
+  The function takes the CfnStorageVirtualMachine$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `activeDirectoryConfiguration` | software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine$ActiveDirectoryConfigurationProperty | [[cdk.support/lookup-entry]] | `:active-directory-configuration` |
-| `fileSystemId` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-system-id` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `rootVolumeSecurityStyle` | java.lang.String | [[cdk.support/lookup-entry]] | `:root-volume-security-style` |
-| `svmAdminPassword` | java.lang.String | [[cdk.support/lookup-entry]] | `:svm-admin-password` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnStorageVirtualMachine$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :active-directory-configuration)]
-      (. builder activeDirectoryConfiguration data))
-    (when-let [data (lookup-entry config id :file-system-id)]
-      (. builder fileSystemId data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :root-volume-security-style)]
-      (. builder rootVolumeSecurityStyle data))
-    (when-let [data (lookup-entry config id :svm-admin-password)]
-      (. builder svmAdminPassword data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
-
-
-(defn cfn-storage-virtual-machine-props-builder
-  "The cfn-storage-virtual-machine-props-builder function buildes out new instances of 
-CfnStorageVirtualMachineProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -790,27 +827,62 @@ CfnStorageVirtualMachineProps$Builder using the provided configuration.  Each fi
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `rootVolumeSecurityStyle` | java.lang.String | [[cdk.support/lookup-entry]] | `:root-volume-security-style` |
 | `svmAdminPassword` | java.lang.String | [[cdk.support/lookup-entry]] | `:svm-admin-password` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnStorageVirtualMachineProps$Builder.)]
-    (when-let [data (lookup-entry config id :active-directory-configuration)]
-      (. builder activeDirectoryConfiguration data))
-    (when-let [data (lookup-entry config id :file-system-id)]
-      (. builder fileSystemId data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :root-volume-security-style)]
-      (. builder rootVolumeSecurityStyle data))
-    (when-let [data (lookup-entry config id :svm-admin-password)]
-      (. builder svmAdminPassword data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnStorageVirtualMachine$Builder builder id config]
+  (when-let [data (lookup-entry config id :active-directory-configuration)]
+    (. builder activeDirectoryConfiguration data))
+  (when-let [data (lookup-entry config id :file-system-id)]
+    (. builder fileSystemId data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :root-volume-security-style)]
+    (. builder rootVolumeSecurityStyle data))
+  (when-let [data (lookup-entry config id :svm-admin-password)]
+    (. builder svmAdminPassword data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-storage-virtual-machine-self-managed-active-directory-configuration-property-builder
-  "The cfn-storage-virtual-machine-self-managed-active-directory-configuration-property-builder function buildes out new instances of 
-CfnStorageVirtualMachine$SelfManagedActiveDirectoryConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-storage-virtual-machine-props-builder
+  "The build-cfn-storage-virtual-machine-props-builder function updates a CfnStorageVirtualMachineProps$Builder instance using the provided configuration.
+  The function takes the CfnStorageVirtualMachineProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `activeDirectoryConfiguration` | software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine$ActiveDirectoryConfigurationProperty | [[cdk.support/lookup-entry]] | `:active-directory-configuration` |
+| `fileSystemId` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-system-id` |
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `rootVolumeSecurityStyle` | java.lang.String | [[cdk.support/lookup-entry]] | `:root-volume-security-style` |
+| `svmAdminPassword` | java.lang.String | [[cdk.support/lookup-entry]] | `:svm-admin-password` |
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnStorageVirtualMachineProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :active-directory-configuration)]
+    (. builder activeDirectoryConfiguration data))
+  (when-let [data (lookup-entry config id :file-system-id)]
+    (. builder fileSystemId data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :root-volume-security-style)]
+    (. builder rootVolumeSecurityStyle data))
+  (when-let [data (lookup-entry config id :svm-admin-password)]
+    (. builder svmAdminPassword data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
+
+
+(defn build-cfn-storage-virtual-machine-self-managed-active-directory-configuration-property-builder
+  "The build-cfn-storage-virtual-machine-self-managed-active-directory-configuration-property-builder function updates a CfnStorageVirtualMachine$SelfManagedActiveDirectoryConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnStorageVirtualMachine$SelfManagedActiveDirectoryConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -819,61 +891,70 @@ CfnStorageVirtualMachine$SelfManagedActiveDirectoryConfigurationProperty$Builder
 | `fileSystemAdministratorsGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-system-administrators-group` |
 | `organizationalUnitDistinguishedName` | java.lang.String | [[cdk.support/lookup-entry]] | `:organizational-unit-distinguished-name` |
 | `password` | java.lang.String | [[cdk.support/lookup-entry]] | `:password` |
-| `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |"
-  [stack id config]
-  (let [builder (CfnStorageVirtualMachine$SelfManagedActiveDirectoryConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :dns-ips)]
-      (. builder dnsIps data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :file-system-administrators-group)]
-      (. builder fileSystemAdministratorsGroup data))
-    (when-let [data (lookup-entry config id :organizational-unit-distinguished-name)]
-      (. builder organizationalUnitDistinguishedName data))
-    (when-let [data (lookup-entry config id :password)]
-      (. builder password data))
-    (when-let [data (lookup-entry config id :user-name)]
-      (. builder userName data))
-    (.build builder)))
+| `userName` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-name` |
+"
+  [^CfnStorageVirtualMachine$SelfManagedActiveDirectoryConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :dns-ips)]
+    (. builder dnsIps data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :file-system-administrators-group)]
+    (. builder fileSystemAdministratorsGroup data))
+  (when-let [data (lookup-entry config id :organizational-unit-distinguished-name)]
+    (. builder organizationalUnitDistinguishedName data))
+  (when-let [data (lookup-entry config id :password)]
+    (. builder password data))
+  (when-let [data (lookup-entry config id :user-name)]
+    (. builder userName data))
+  (.build builder))
 
 
-(defn cfn-volume-aggregate-configuration-property-builder
-  "The cfn-volume-aggregate-configuration-property-builder function buildes out new instances of 
-CfnVolume$AggregateConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-volume-aggregate-configuration-property-builder
+  "The build-cfn-volume-aggregate-configuration-property-builder function updates a CfnVolume$AggregateConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnVolume$AggregateConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aggregates` | java.util.List | [[cdk.support/lookup-entry]] | `:aggregates` |
-| `constituentsPerAggregate` | java.lang.Number | [[cdk.support/lookup-entry]] | `:constituents-per-aggregate` |"
-  [stack id config]
-  (let [builder (CfnVolume$AggregateConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :aggregates)]
-      (. builder aggregates data))
-    (when-let [data (lookup-entry config id :constituents-per-aggregate)]
-      (. builder constituentsPerAggregate data))
-    (.build builder)))
+| `constituentsPerAggregate` | java.lang.Number | [[cdk.support/lookup-entry]] | `:constituents-per-aggregate` |
+"
+  [^CfnVolume$AggregateConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :aggregates)]
+    (. builder aggregates data))
+  (when-let [data (lookup-entry config id :constituents-per-aggregate)]
+    (. builder constituentsPerAggregate data))
+  (.build builder))
 
 
-(defn cfn-volume-autocommit-period-property-builder
-  "The cfn-volume-autocommit-period-property-builder function buildes out new instances of 
-CfnVolume$AutocommitPeriodProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-volume-autocommit-period-property-builder
+  "The build-cfn-volume-autocommit-period-property-builder function updates a CfnVolume$AutocommitPeriodProperty$Builder instance using the provided configuration.
+  The function takes the CfnVolume$AutocommitPeriodProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
-| `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnVolume$AutocommitPeriodProperty$Builder.)]
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnVolume$AutocommitPeriodProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-volume-builder
-  "The cfn-volume-builder function buildes out new instances of 
-CfnVolume$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-volume-builder
+  "The build-cfn-volume-builder function updates a CfnVolume$Builder instance using the provided configuration.
+  The function takes the CfnVolume$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -882,58 +963,67 @@ CfnVolume$Builder using the provided configuration.  Each field is set as follow
 | `ontapConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ontap-configuration` |
 | `openZfsConfiguration` | software.amazon.awscdk.services.fsx.CfnVolume$OpenZFSConfigurationProperty | [[cdk.support/lookup-entry]] | `:open-zfs-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `volumeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-type` |"
-  [stack id config]
-  (let [builder (CfnVolume$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :backup-id)]
-      (. builder backupId data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :ontap-configuration)]
-      (. builder ontapConfiguration data))
-    (when-let [data (lookup-entry config id :open-zfs-configuration)]
-      (. builder openZfsConfiguration data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :volume-type)]
-      (. builder volumeType data))
-    (.build builder)))
+| `volumeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-type` |
+"
+  [^CfnVolume$Builder builder id config]
+  (when-let [data (lookup-entry config id :backup-id)]
+    (. builder backupId data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :ontap-configuration)]
+    (. builder ontapConfiguration data))
+  (when-let [data (lookup-entry config id :open-zfs-configuration)]
+    (. builder openZfsConfiguration data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :volume-type)]
+    (. builder volumeType data))
+  (.build builder))
 
 
-(defn cfn-volume-client-configurations-property-builder
-  "The cfn-volume-client-configurations-property-builder function buildes out new instances of 
-CfnVolume$ClientConfigurationsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-volume-client-configurations-property-builder
+  "The build-cfn-volume-client-configurations-property-builder function updates a CfnVolume$ClientConfigurationsProperty$Builder instance using the provided configuration.
+  The function takes the CfnVolume$ClientConfigurationsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `clients` | java.lang.String | [[cdk.support/lookup-entry]] | `:clients` |
-| `options` | java.util.List | [[cdk.support/lookup-entry]] | `:options` |"
-  [stack id config]
-  (let [builder (CfnVolume$ClientConfigurationsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :clients)]
-      (. builder clients data))
-    (when-let [data (lookup-entry config id :options)]
-      (. builder options data))
-    (.build builder)))
+| `options` | java.util.List | [[cdk.support/lookup-entry]] | `:options` |
+"
+  [^CfnVolume$ClientConfigurationsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :clients)]
+    (. builder clients data))
+  (when-let [data (lookup-entry config id :options)]
+    (. builder options data))
+  (.build builder))
 
 
-(defn cfn-volume-nfs-exports-property-builder
-  "The cfn-volume-nfs-exports-property-builder function buildes out new instances of 
-CfnVolume$NfsExportsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-volume-nfs-exports-property-builder
+  "The build-cfn-volume-nfs-exports-property-builder function updates a CfnVolume$NfsExportsProperty$Builder instance using the provided configuration.
+  The function takes the CfnVolume$NfsExportsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `clientConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:client-configurations` |"
-  [stack id config]
-  (let [builder (CfnVolume$NfsExportsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :client-configurations)]
-      (. builder clientConfigurations data))
-    (.build builder)))
+| `clientConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:client-configurations` |
+"
+  [^CfnVolume$NfsExportsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :client-configurations)]
+    (. builder clientConfigurations data))
+  (.build builder))
 
 
-(defn cfn-volume-ontap-configuration-property-builder
-  "The cfn-volume-ontap-configuration-property-builder function buildes out new instances of 
-CfnVolume$OntapConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-volume-ontap-configuration-property-builder
+  "The build-cfn-volume-ontap-configuration-property-builder function updates a CfnVolume$OntapConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnVolume$OntapConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -949,41 +1039,44 @@ CfnVolume$OntapConfigurationProperty$Builder using the provided configuration.  
 | `storageEfficiencyEnabled` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-efficiency-enabled` |
 | `storageVirtualMachineId` | java.lang.String | [[cdk.support/lookup-entry]] | `:storage-virtual-machine-id` |
 | `tieringPolicy` | software.amazon.awscdk.services.fsx.CfnVolume$TieringPolicyProperty | [[cdk.support/lookup-entry]] | `:tiering-policy` |
-| `volumeStyle` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-style` |"
-  [stack id config]
-  (let [builder (CfnVolume$OntapConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :aggregate-configuration)]
-      (. builder aggregateConfiguration data))
-    (when-let [data (lookup-entry config id :copy-tags-to-backups)]
-      (. builder copyTagsToBackups data))
-    (when-let [data (lookup-entry config id :junction-path)]
-      (. builder junctionPath data))
-    (when-let [data (lookup-entry config id :ontap-volume-type)]
-      (. builder ontapVolumeType data))
-    (when-let [data (lookup-entry config id :security-style)]
-      (. builder securityStyle data))
-    (when-let [data (lookup-entry config id :size-in-bytes)]
-      (. builder sizeInBytes data))
-    (when-let [data (lookup-entry config id :size-in-megabytes)]
-      (. builder sizeInMegabytes data))
-    (when-let [data (lookup-entry config id :snaplock-configuration)]
-      (. builder snaplockConfiguration data))
-    (when-let [data (lookup-entry config id :snapshot-policy)]
-      (. builder snapshotPolicy data))
-    (when-let [data (lookup-entry config id :storage-efficiency-enabled)]
-      (. builder storageEfficiencyEnabled data))
-    (when-let [data (lookup-entry config id :storage-virtual-machine-id)]
-      (. builder storageVirtualMachineId data))
-    (when-let [data (lookup-entry config id :tiering-policy)]
-      (. builder tieringPolicy data))
-    (when-let [data (lookup-entry config id :volume-style)]
-      (. builder volumeStyle data))
-    (.build builder)))
+| `volumeStyle` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-style` |
+"
+  [^CfnVolume$OntapConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :aggregate-configuration)]
+    (. builder aggregateConfiguration data))
+  (when-let [data (lookup-entry config id :copy-tags-to-backups)]
+    (. builder copyTagsToBackups data))
+  (when-let [data (lookup-entry config id :junction-path)]
+    (. builder junctionPath data))
+  (when-let [data (lookup-entry config id :ontap-volume-type)]
+    (. builder ontapVolumeType data))
+  (when-let [data (lookup-entry config id :security-style)]
+    (. builder securityStyle data))
+  (when-let [data (lookup-entry config id :size-in-bytes)]
+    (. builder sizeInBytes data))
+  (when-let [data (lookup-entry config id :size-in-megabytes)]
+    (. builder sizeInMegabytes data))
+  (when-let [data (lookup-entry config id :snaplock-configuration)]
+    (. builder snaplockConfiguration data))
+  (when-let [data (lookup-entry config id :snapshot-policy)]
+    (. builder snapshotPolicy data))
+  (when-let [data (lookup-entry config id :storage-efficiency-enabled)]
+    (. builder storageEfficiencyEnabled data))
+  (when-let [data (lookup-entry config id :storage-virtual-machine-id)]
+    (. builder storageVirtualMachineId data))
+  (when-let [data (lookup-entry config id :tiering-policy)]
+    (. builder tieringPolicy data))
+  (when-let [data (lookup-entry config id :volume-style)]
+    (. builder volumeStyle data))
+  (.build builder))
 
 
-(defn cfn-volume-open-zfs-configuration-property-builder
-  "The cfn-volume-open-zfs-configuration-property-builder function buildes out new instances of 
-CfnVolume$OpenZFSConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-volume-open-zfs-configuration-property-builder
+  "The build-cfn-volume-open-zfs-configuration-property-builder function updates a CfnVolume$OpenZFSConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnVolume$OpenZFSConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -997,54 +1090,60 @@ CfnVolume$OpenZFSConfigurationProperty$Builder using the provided configuration.
 | `recordSizeKiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:record-size-ki-b` |
 | `storageCapacityQuotaGiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:storage-capacity-quota-gi-b` |
 | `storageCapacityReservationGiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:storage-capacity-reservation-gi-b` |
-| `userAndGroupQuotas` | java.util.List | [[cdk.support/lookup-entry]] | `:user-and-group-quotas` |"
-  [stack id config]
-  (let [builder (CfnVolume$OpenZFSConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :copy-tags-to-snapshots)]
-      (. builder copyTagsToSnapshots data))
-    (when-let [data (lookup-entry config id :data-compression-type)]
-      (. builder dataCompressionType data))
-    (when-let [data (lookup-entry config id :nfs-exports)]
-      (. builder nfsExports data))
-    (when-let [data (lookup-entry config id :options)]
-      (. builder options data))
-    (when-let [data (lookup-entry config id :origin-snapshot)]
-      (. builder originSnapshot data))
-    (when-let [data (lookup-entry config id :parent-volume-id)]
-      (. builder parentVolumeId data))
-    (when-let [data (lookup-entry config id :read-only)]
-      (. builder readOnly data))
-    (when-let [data (lookup-entry config id :record-size-ki-b)]
-      (. builder recordSizeKiB data))
-    (when-let [data (lookup-entry config id :storage-capacity-quota-gi-b)]
-      (. builder storageCapacityQuotaGiB data))
-    (when-let [data (lookup-entry config id :storage-capacity-reservation-gi-b)]
-      (. builder storageCapacityReservationGiB data))
-    (when-let [data (lookup-entry config id :user-and-group-quotas)]
-      (. builder userAndGroupQuotas data))
-    (.build builder)))
+| `userAndGroupQuotas` | java.util.List | [[cdk.support/lookup-entry]] | `:user-and-group-quotas` |
+"
+  [^CfnVolume$OpenZFSConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :copy-tags-to-snapshots)]
+    (. builder copyTagsToSnapshots data))
+  (when-let [data (lookup-entry config id :data-compression-type)]
+    (. builder dataCompressionType data))
+  (when-let [data (lookup-entry config id :nfs-exports)]
+    (. builder nfsExports data))
+  (when-let [data (lookup-entry config id :options)]
+    (. builder options data))
+  (when-let [data (lookup-entry config id :origin-snapshot)]
+    (. builder originSnapshot data))
+  (when-let [data (lookup-entry config id :parent-volume-id)]
+    (. builder parentVolumeId data))
+  (when-let [data (lookup-entry config id :read-only)]
+    (. builder readOnly data))
+  (when-let [data (lookup-entry config id :record-size-ki-b)]
+    (. builder recordSizeKiB data))
+  (when-let [data (lookup-entry config id :storage-capacity-quota-gi-b)]
+    (. builder storageCapacityQuotaGiB data))
+  (when-let [data (lookup-entry config id :storage-capacity-reservation-gi-b)]
+    (. builder storageCapacityReservationGiB data))
+  (when-let [data (lookup-entry config id :user-and-group-quotas)]
+    (. builder userAndGroupQuotas data))
+  (.build builder))
 
 
-(defn cfn-volume-origin-snapshot-property-builder
-  "The cfn-volume-origin-snapshot-property-builder function buildes out new instances of 
-CfnVolume$OriginSnapshotProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-volume-origin-snapshot-property-builder
+  "The build-cfn-volume-origin-snapshot-property-builder function updates a CfnVolume$OriginSnapshotProperty$Builder instance using the provided configuration.
+  The function takes the CfnVolume$OriginSnapshotProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `copyStrategy` | java.lang.String | [[cdk.support/lookup-entry]] | `:copy-strategy` |
-| `snapshotArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:snapshot-arn` |"
-  [stack id config]
-  (let [builder (CfnVolume$OriginSnapshotProperty$Builder.)]
-    (when-let [data (lookup-entry config id :copy-strategy)]
-      (. builder copyStrategy data))
-    (when-let [data (lookup-entry config id :snapshot-arn)]
-      (. builder snapshotArn data))
-    (.build builder)))
+| `snapshotArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:snapshot-arn` |
+"
+  [^CfnVolume$OriginSnapshotProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :copy-strategy)]
+    (. builder copyStrategy data))
+  (when-let [data (lookup-entry config id :snapshot-arn)]
+    (. builder snapshotArn data))
+  (.build builder))
 
 
-(defn cfn-volume-props-builder
-  "The cfn-volume-props-builder function buildes out new instances of 
-CfnVolumeProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-volume-props-builder
+  "The build-cfn-volume-props-builder function updates a CfnVolumeProps$Builder instance using the provided configuration.
+  The function takes the CfnVolumeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1053,44 +1152,50 @@ CfnVolumeProps$Builder using the provided configuration.  Each field is set as f
 | `ontapConfiguration` | software.amazon.awscdk.services.fsx.CfnVolume$OntapConfigurationProperty | [[cdk.support/lookup-entry]] | `:ontap-configuration` |
 | `openZfsConfiguration` | software.amazon.awscdk.services.fsx.CfnVolume$OpenZFSConfigurationProperty | [[cdk.support/lookup-entry]] | `:open-zfs-configuration` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `volumeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-type` |"
-  [stack id config]
-  (let [builder (CfnVolumeProps$Builder.)]
-    (when-let [data (lookup-entry config id :backup-id)]
-      (. builder backupId data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :ontap-configuration)]
-      (. builder ontapConfiguration data))
-    (when-let [data (lookup-entry config id :open-zfs-configuration)]
-      (. builder openZfsConfiguration data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :volume-type)]
-      (. builder volumeType data))
-    (.build builder)))
+| `volumeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-type` |
+"
+  [^CfnVolumeProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :backup-id)]
+    (. builder backupId data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :ontap-configuration)]
+    (. builder ontapConfiguration data))
+  (when-let [data (lookup-entry config id :open-zfs-configuration)]
+    (. builder openZfsConfiguration data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :volume-type)]
+    (. builder volumeType data))
+  (.build builder))
 
 
-(defn cfn-volume-retention-period-property-builder
-  "The cfn-volume-retention-period-property-builder function buildes out new instances of 
-CfnVolume$RetentionPeriodProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-volume-retention-period-property-builder
+  "The build-cfn-volume-retention-period-property-builder function updates a CfnVolume$RetentionPeriodProperty$Builder instance using the provided configuration.
+  The function takes the CfnVolume$RetentionPeriodProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
-| `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnVolume$RetentionPeriodProperty$Builder.)]
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnVolume$RetentionPeriodProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-volume-snaplock-configuration-property-builder
-  "The cfn-volume-snaplock-configuration-property-builder function buildes out new instances of 
-CfnVolume$SnaplockConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-volume-snaplock-configuration-property-builder
+  "The build-cfn-volume-snaplock-configuration-property-builder function updates a CfnVolume$SnaplockConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnVolume$SnaplockConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1099,104 +1204,119 @@ CfnVolume$SnaplockConfigurationProperty$Builder using the provided configuration
 | `privilegedDelete` | java.lang.String | [[cdk.support/lookup-entry]] | `:privileged-delete` |
 | `retentionPeriod` | software.amazon.awscdk.services.fsx.CfnVolume$SnaplockRetentionPeriodProperty | [[cdk.support/lookup-entry]] | `:retention-period` |
 | `snaplockType` | java.lang.String | [[cdk.support/lookup-entry]] | `:snaplock-type` |
-| `volumeAppendModeEnabled` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-append-mode-enabled` |"
-  [stack id config]
-  (let [builder (CfnVolume$SnaplockConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :audit-log-volume)]
-      (. builder auditLogVolume data))
-    (when-let [data (lookup-entry config id :autocommit-period)]
-      (. builder autocommitPeriod data))
-    (when-let [data (lookup-entry config id :privileged-delete)]
-      (. builder privilegedDelete data))
-    (when-let [data (lookup-entry config id :retention-period)]
-      (. builder retentionPeriod data))
-    (when-let [data (lookup-entry config id :snaplock-type)]
-      (. builder snaplockType data))
-    (when-let [data (lookup-entry config id :volume-append-mode-enabled)]
-      (. builder volumeAppendModeEnabled data))
-    (.build builder)))
+| `volumeAppendModeEnabled` | java.lang.String | [[cdk.support/lookup-entry]] | `:volume-append-mode-enabled` |
+"
+  [^CfnVolume$SnaplockConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :audit-log-volume)]
+    (. builder auditLogVolume data))
+  (when-let [data (lookup-entry config id :autocommit-period)]
+    (. builder autocommitPeriod data))
+  (when-let [data (lookup-entry config id :privileged-delete)]
+    (. builder privilegedDelete data))
+  (when-let [data (lookup-entry config id :retention-period)]
+    (. builder retentionPeriod data))
+  (when-let [data (lookup-entry config id :snaplock-type)]
+    (. builder snaplockType data))
+  (when-let [data (lookup-entry config id :volume-append-mode-enabled)]
+    (. builder volumeAppendModeEnabled data))
+  (.build builder))
 
 
-(defn cfn-volume-snaplock-retention-period-property-builder
-  "The cfn-volume-snaplock-retention-period-property-builder function buildes out new instances of 
-CfnVolume$SnaplockRetentionPeriodProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-volume-snaplock-retention-period-property-builder
+  "The build-cfn-volume-snaplock-retention-period-property-builder function updates a CfnVolume$SnaplockRetentionPeriodProperty$Builder instance using the provided configuration.
+  The function takes the CfnVolume$SnaplockRetentionPeriodProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `defaultRetention` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-retention` |
 | `maximumRetention` | software.amazon.awscdk.services.fsx.CfnVolume$RetentionPeriodProperty | [[cdk.support/lookup-entry]] | `:maximum-retention` |
-| `minimumRetention` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:minimum-retention` |"
-  [stack id config]
-  (let [builder (CfnVolume$SnaplockRetentionPeriodProperty$Builder.)]
-    (when-let [data (lookup-entry config id :default-retention)]
-      (. builder defaultRetention data))
-    (when-let [data (lookup-entry config id :maximum-retention)]
-      (. builder maximumRetention data))
-    (when-let [data (lookup-entry config id :minimum-retention)]
-      (. builder minimumRetention data))
-    (.build builder)))
+| `minimumRetention` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:minimum-retention` |
+"
+  [^CfnVolume$SnaplockRetentionPeriodProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :default-retention)]
+    (. builder defaultRetention data))
+  (when-let [data (lookup-entry config id :maximum-retention)]
+    (. builder maximumRetention data))
+  (when-let [data (lookup-entry config id :minimum-retention)]
+    (. builder minimumRetention data))
+  (.build builder))
 
 
-(defn cfn-volume-tiering-policy-property-builder
-  "The cfn-volume-tiering-policy-property-builder function buildes out new instances of 
-CfnVolume$TieringPolicyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-volume-tiering-policy-property-builder
+  "The build-cfn-volume-tiering-policy-property-builder function updates a CfnVolume$TieringPolicyProperty$Builder instance using the provided configuration.
+  The function takes the CfnVolume$TieringPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `coolingPeriod` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cooling-period` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (CfnVolume$TieringPolicyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :cooling-period)]
-      (. builder coolingPeriod data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^CfnVolume$TieringPolicyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :cooling-period)]
+    (. builder coolingPeriod data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn cfn-volume-user-and-group-quotas-property-builder
-  "The cfn-volume-user-and-group-quotas-property-builder function buildes out new instances of 
-CfnVolume$UserAndGroupQuotasProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-volume-user-and-group-quotas-property-builder
+  "The build-cfn-volume-user-and-group-quotas-property-builder function updates a CfnVolume$UserAndGroupQuotasProperty$Builder instance using the provided configuration.
+  The function takes the CfnVolume$UserAndGroupQuotasProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `id` | java.lang.Number | [[cdk.support/lookup-entry]] | `:id` |
 | `storageCapacityQuotaGiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:storage-capacity-quota-gi-b` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnVolume$UserAndGroupQuotasProperty$Builder.)]
-    (when-let [data (lookup-entry config id :id)]
-      (. builder id data))
-    (when-let [data (lookup-entry config id :storage-capacity-quota-gi-b)]
-      (. builder storageCapacityQuotaGiB data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnVolume$UserAndGroupQuotasProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :id)]
+    (. builder id data))
+  (when-let [data (lookup-entry config id :storage-capacity-quota-gi-b)]
+    (. builder storageCapacityQuotaGiB data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn file-system-attributes-builder
-  "The file-system-attributes-builder function buildes out new instances of 
-FileSystemAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-file-system-attributes-builder
+  "The build-file-system-attributes-builder function updates a FileSystemAttributes$Builder instance using the provided configuration.
+  The function takes the FileSystemAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dnsName` | java.lang.String | [[cdk.support/lookup-entry]] | `:dns-name` |
 | `fileSystemId` | java.lang.String | [[cdk.support/lookup-entry]] | `:file-system-id` |
-| `securityGroup` | software.amazon.awscdk.services.ec2.ISecurityGroup | [[cdk.support/lookup-entry]] | `:security-group` |"
-  [stack id config]
-  (let [builder (FileSystemAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :dns-name)]
-      (. builder dnsName data))
-    (when-let [data (lookup-entry config id :file-system-id)]
-      (. builder fileSystemId data))
-    (when-let [data (lookup-entry config id :security-group)]
-      (. builder securityGroup data))
-    (.build builder)))
+| `securityGroup` | software.amazon.awscdk.services.ec2.ISecurityGroup | [[cdk.support/lookup-entry]] | `:security-group` |
+"
+  [^FileSystemAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :dns-name)]
+    (. builder dnsName data))
+  (when-let [data (lookup-entry config id :file-system-id)]
+    (. builder fileSystemId data))
+  (when-let [data (lookup-entry config id :security-group)]
+    (. builder securityGroup data))
+  (.build builder))
 
 
-(defn file-system-props-builder
-  "The file-system-props-builder function buildes out new instances of 
-FileSystemProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-file-system-props-builder
+  "The build-file-system-props-builder function updates a FileSystemProps$Builder instance using the provided configuration.
+  The function takes the FileSystemProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1205,27 +1325,30 @@ FileSystemProps$Builder using the provided configuration.  Each field is set as 
 | `removalPolicy` | software.amazon.awscdk.RemovalPolicy | [[cdk.api/removal-policy]] | `:removal-policy` |
 | `securityGroup` | software.amazon.awscdk.services.ec2.ISecurityGroup | [[cdk.support/lookup-entry]] | `:security-group` |
 | `storageCapacityGiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:storage-capacity-gi-b` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (FileSystemProps$Builder.)]
-    (when-let [data (lookup-entry config id :backup-id)]
-      (. builder backupId data))
-    (when-let [data (lookup-entry config id :kms-key)]
-      (. builder kmsKey data))
-    (when-let [data (removal-policy config id :removal-policy)]
-      (. builder removalPolicy data))
-    (when-let [data (lookup-entry config id :security-group)]
-      (. builder securityGroup data))
-    (when-let [data (lookup-entry config id :storage-capacity-gi-b)]
-      (. builder storageCapacityGiB data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^FileSystemProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :backup-id)]
+    (. builder backupId data))
+  (when-let [data (lookup-entry config id :kms-key)]
+    (. builder kmsKey data))
+  (when-let [data (removal-policy config id :removal-policy)]
+    (. builder removalPolicy data))
+  (when-let [data (lookup-entry config id :security-group)]
+    (. builder securityGroup data))
+  (when-let [data (lookup-entry config id :storage-capacity-gi-b)]
+    (. builder storageCapacityGiB data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn lustre-configuration-builder
-  "The lustre-configuration-builder function buildes out new instances of 
-LustreConfiguration$Builder using the provided configuration.  Each field is set as follows:
+(defn build-lustre-configuration-builder
+  "The build-lustre-configuration-builder function updates a LustreConfiguration$Builder instance using the provided configuration.
+  The function takes the LustreConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1236,66 +1359,34 @@ LustreConfiguration$Builder using the provided configuration.  Each field is set
 | `importPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:import-path` |
 | `importedFileChunkSizeMiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:imported-file-chunk-size-mi-b` |
 | `perUnitStorageThroughput` | java.lang.Number | [[cdk.support/lookup-entry]] | `:per-unit-storage-throughput` |
-| `weeklyMaintenanceStartTime` | software.amazon.awscdk.services.fsx.LustreMaintenanceTime | [[cdk.support/lookup-entry]] | `:weekly-maintenance-start-time` |"
-  [stack id config]
-  (let [builder (LustreConfiguration$Builder.)]
-    (when-let [data (lustre-auto-import-policy config id :auto-import-policy)]
-      (. builder autoImportPolicy data))
-    (when-let [data (lustre-data-compression-type config id :data-compression-type)]
-      (. builder dataCompressionType data))
-    (when-let [data (lustre-deployment-type config id :deployment-type)]
-      (. builder deploymentType data))
-    (when-let [data (lookup-entry config id :export-path)]
-      (. builder exportPath data))
-    (when-let [data (lookup-entry config id :import-path)]
-      (. builder importPath data))
-    (when-let [data (lookup-entry config id :imported-file-chunk-size-mi-b)]
-      (. builder importedFileChunkSizeMiB data))
-    (when-let [data (lookup-entry config id :per-unit-storage-throughput)]
-      (. builder perUnitStorageThroughput data))
-    (when-let [data (lookup-entry config id :weekly-maintenance-start-time)]
-      (. builder weeklyMaintenanceStartTime data))
-    (.build builder)))
+| `weeklyMaintenanceStartTime` | software.amazon.awscdk.services.fsx.LustreMaintenanceTime | [[cdk.support/lookup-entry]] | `:weekly-maintenance-start-time` |
+"
+  [^LustreConfiguration$Builder builder id config]
+  (when-let [data (lustre-auto-import-policy config id :auto-import-policy)]
+    (. builder autoImportPolicy data))
+  (when-let [data (lustre-data-compression-type config id :data-compression-type)]
+    (. builder dataCompressionType data))
+  (when-let [data (lustre-deployment-type config id :deployment-type)]
+    (. builder deploymentType data))
+  (when-let [data (lookup-entry config id :export-path)]
+    (. builder exportPath data))
+  (when-let [data (lookup-entry config id :import-path)]
+    (. builder importPath data))
+  (when-let [data (lookup-entry config id :imported-file-chunk-size-mi-b)]
+    (. builder importedFileChunkSizeMiB data))
+  (when-let [data (lookup-entry config id :per-unit-storage-throughput)]
+    (. builder perUnitStorageThroughput data))
+  (when-let [data (lookup-entry config id :weekly-maintenance-start-time)]
+    (. builder weeklyMaintenanceStartTime data))
+  (.build builder))
 
 
-(defn lustre-file-system-builder
-  "The lustre-file-system-builder function buildes out new instances of 
-LustreFileSystem$Builder using the provided configuration.  Each field is set as follows:
+(defn build-lustre-file-system-builder
+  "The build-lustre-file-system-builder function updates a LustreFileSystem$Builder instance using the provided configuration.
+  The function takes the LustreFileSystem$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `backupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:backup-id` |
-| `kmsKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:kms-key` |
-| `lustreConfiguration` | software.amazon.awscdk.services.fsx.LustreConfiguration | [[cdk.support/lookup-entry]] | `:lustre-configuration` |
-| `removalPolicy` | software.amazon.awscdk.RemovalPolicy | [[cdk.api/removal-policy]] | `:removal-policy` |
-| `securityGroup` | software.amazon.awscdk.services.ec2.ISecurityGroup | [[cdk.support/lookup-entry]] | `:security-group` |
-| `storageCapacityGiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:storage-capacity-gi-b` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcSubnet` | software.amazon.awscdk.services.ec2.ISubnet | [[cdk.support/lookup-entry]] | `:vpc-subnet` |"
-  [stack id config]
-  (let [builder (LustreFileSystem$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :backup-id)]
-      (. builder backupId data))
-    (when-let [data (lookup-entry config id :kms-key)]
-      (. builder kmsKey data))
-    (when-let [data (lookup-entry config id :lustre-configuration)]
-      (. builder lustreConfiguration data))
-    (when-let [data (removal-policy config id :removal-policy)]
-      (. builder removalPolicy data))
-    (when-let [data (lookup-entry config id :security-group)]
-      (. builder securityGroup data))
-    (when-let [data (lookup-entry config id :storage-capacity-gi-b)]
-      (. builder storageCapacityGiB data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnet)]
-      (. builder vpcSubnet data))
-    (.build builder)))
-
-
-(defn lustre-file-system-props-builder
-  "The lustre-file-system-props-builder function buildes out new instances of 
-LustreFileSystemProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1306,63 +1397,107 @@ LustreFileSystemProps$Builder using the provided configuration.  Each field is s
 | `securityGroup` | software.amazon.awscdk.services.ec2.ISecurityGroup | [[cdk.support/lookup-entry]] | `:security-group` |
 | `storageCapacityGiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:storage-capacity-gi-b` |
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcSubnet` | software.amazon.awscdk.services.ec2.ISubnet | [[cdk.support/lookup-entry]] | `:vpc-subnet` |"
-  [stack id config]
-  (let [builder (LustreFileSystemProps$Builder.)]
-    (when-let [data (lookup-entry config id :backup-id)]
-      (. builder backupId data))
-    (when-let [data (lookup-entry config id :kms-key)]
-      (. builder kmsKey data))
-    (when-let [data (lookup-entry config id :lustre-configuration)]
-      (. builder lustreConfiguration data))
-    (when-let [data (removal-policy config id :removal-policy)]
-      (. builder removalPolicy data))
-    (when-let [data (lookup-entry config id :security-group)]
-      (. builder securityGroup data))
-    (when-let [data (lookup-entry config id :storage-capacity-gi-b)]
-      (. builder storageCapacityGiB data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnet)]
-      (. builder vpcSubnet data))
-    (.build builder)))
+| `vpcSubnet` | software.amazon.awscdk.services.ec2.ISubnet | [[cdk.support/lookup-entry]] | `:vpc-subnet` |
+"
+  [^LustreFileSystem$Builder builder id config]
+  (when-let [data (lookup-entry config id :backup-id)]
+    (. builder backupId data))
+  (when-let [data (lookup-entry config id :kms-key)]
+    (. builder kmsKey data))
+  (when-let [data (lookup-entry config id :lustre-configuration)]
+    (. builder lustreConfiguration data))
+  (when-let [data (removal-policy config id :removal-policy)]
+    (. builder removalPolicy data))
+  (when-let [data (lookup-entry config id :security-group)]
+    (. builder securityGroup data))
+  (when-let [data (lookup-entry config id :storage-capacity-gi-b)]
+    (. builder storageCapacityGiB data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnet)]
+    (. builder vpcSubnet data))
+  (.build builder))
 
 
-(defn lustre-maintenance-time-builder
-  "The lustre-maintenance-time-builder function buildes out new instances of 
-LustreMaintenanceTime$Builder using the provided configuration.  Each field is set as follows:
+(defn build-lustre-file-system-props-builder
+  "The build-lustre-file-system-props-builder function updates a LustreFileSystemProps$Builder instance using the provided configuration.
+  The function takes the LustreFileSystemProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `backupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:backup-id` |
+| `kmsKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:kms-key` |
+| `lustreConfiguration` | software.amazon.awscdk.services.fsx.LustreConfiguration | [[cdk.support/lookup-entry]] | `:lustre-configuration` |
+| `removalPolicy` | software.amazon.awscdk.RemovalPolicy | [[cdk.api/removal-policy]] | `:removal-policy` |
+| `securityGroup` | software.amazon.awscdk.services.ec2.ISecurityGroup | [[cdk.support/lookup-entry]] | `:security-group` |
+| `storageCapacityGiB` | java.lang.Number | [[cdk.support/lookup-entry]] | `:storage-capacity-gi-b` |
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+| `vpcSubnet` | software.amazon.awscdk.services.ec2.ISubnet | [[cdk.support/lookup-entry]] | `:vpc-subnet` |
+"
+  [^LustreFileSystemProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :backup-id)]
+    (. builder backupId data))
+  (when-let [data (lookup-entry config id :kms-key)]
+    (. builder kmsKey data))
+  (when-let [data (lookup-entry config id :lustre-configuration)]
+    (. builder lustreConfiguration data))
+  (when-let [data (removal-policy config id :removal-policy)]
+    (. builder removalPolicy data))
+  (when-let [data (lookup-entry config id :security-group)]
+    (. builder securityGroup data))
+  (when-let [data (lookup-entry config id :storage-capacity-gi-b)]
+    (. builder storageCapacityGiB data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnet)]
+    (. builder vpcSubnet data))
+  (.build builder))
+
+
+(defn build-lustre-maintenance-time-builder
+  "The build-lustre-maintenance-time-builder function updates a LustreMaintenanceTime$Builder instance using the provided configuration.
+  The function takes the LustreMaintenanceTime$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `day` | software.amazon.awscdk.services.fsx.Weekday | [[cdk.api.services.fsx/weekday]] | `:day` |
 | `hour` | java.lang.Number | [[cdk.support/lookup-entry]] | `:hour` |
-| `minute` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minute` |"
-  [stack id config]
-  (let [builder (LustreMaintenanceTime$Builder/create)]
-    (when-let [data (weekday config id :day)]
-      (. builder day data))
-    (when-let [data (lookup-entry config id :hour)]
-      (. builder hour data))
-    (when-let [data (lookup-entry config id :minute)]
-      (. builder minute data))
-    (.build builder)))
+| `minute` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minute` |
+"
+  [^LustreMaintenanceTime$Builder builder id config]
+  (when-let [data (weekday config id :day)]
+    (. builder day data))
+  (when-let [data (lookup-entry config id :hour)]
+    (. builder hour data))
+  (when-let [data (lookup-entry config id :minute)]
+    (. builder minute data))
+  (.build builder))
 
 
-(defn lustre-maintenance-time-props-builder
-  "The lustre-maintenance-time-props-builder function buildes out new instances of 
-LustreMaintenanceTimeProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-lustre-maintenance-time-props-builder
+  "The build-lustre-maintenance-time-props-builder function updates a LustreMaintenanceTimeProps$Builder instance using the provided configuration.
+  The function takes the LustreMaintenanceTimeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `day` | software.amazon.awscdk.services.fsx.Weekday | [[cdk.api.services.fsx/weekday]] | `:day` |
 | `hour` | java.lang.Number | [[cdk.support/lookup-entry]] | `:hour` |
-| `minute` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minute` |"
-  [stack id config]
-  (let [builder (LustreMaintenanceTimeProps$Builder.)]
-    (when-let [data (weekday config id :day)]
-      (. builder day data))
-    (when-let [data (lookup-entry config id :hour)]
-      (. builder hour data))
-    (when-let [data (lookup-entry config id :minute)]
-      (. builder minute data))
-    (.build builder)))
+| `minute` | java.lang.Number | [[cdk.support/lookup-entry]] | `:minute` |
+"
+  [^LustreMaintenanceTimeProps$Builder builder id config]
+  (when-let [data (weekday config id :day)]
+    (. builder day data))
+  (when-let [data (lookup-entry config id :hour)]
+    (. builder hour data))
+  (when-let [data (lookup-entry config id :minute)]
+    (. builder minute data))
+  (.build builder))

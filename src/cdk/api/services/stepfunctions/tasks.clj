@@ -951,102 +951,61 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :g-4x data) WorkerType/G_4X)))
 
 
-(defn algorithm-specification-builder
-  "The algorithm-specification-builder function buildes out new instances of 
-AlgorithmSpecification$Builder using the provided configuration.  Each field is set as follows:
+(defn build-algorithm-specification-builder
+  "The build-algorithm-specification-builder function updates a AlgorithmSpecification$Builder instance using the provided configuration.
+  The function takes the AlgorithmSpecification$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `algorithmName` | java.lang.String | [[cdk.support/lookup-entry]] | `:algorithm-name` |
 | `metricDefinitions` | java.util.List | [[cdk.support/lookup-entry]] | `:metric-definitions` |
 | `trainingImage` | software.amazon.awscdk.services.stepfunctions.tasks.DockerImage | [[cdk.support/lookup-entry]] | `:training-image` |
-| `trainingInputMode` | software.amazon.awscdk.services.stepfunctions.tasks.InputMode | [[cdk.api.services.stepfunctions.tasks/input-mode]] | `:training-input-mode` |"
-  [stack id config]
-  (let [builder (AlgorithmSpecification$Builder.)]
-    (when-let [data (lookup-entry config id :algorithm-name)]
-      (. builder algorithmName data))
-    (when-let [data (lookup-entry config id :metric-definitions)]
-      (. builder metricDefinitions data))
-    (when-let [data (lookup-entry config id :training-image)]
-      (. builder trainingImage data))
-    (when-let [data (input-mode config id :training-input-mode)]
-      (. builder trainingInputMode data))
-    (.build builder)))
+| `trainingInputMode` | software.amazon.awscdk.services.stepfunctions.tasks.InputMode | [[cdk.api.services.stepfunctions.tasks/input-mode]] | `:training-input-mode` |
+"
+  [^AlgorithmSpecification$Builder builder id config]
+  (when-let [data (lookup-entry config id :algorithm-name)]
+    (. builder algorithmName data))
+  (when-let [data (lookup-entry config id :metric-definitions)]
+    (. builder metricDefinitions data))
+  (when-let [data (lookup-entry config id :training-image)]
+    (. builder trainingImage data))
+  (when-let [data (input-mode config id :training-input-mode)]
+    (. builder trainingInputMode data))
+  (.build builder))
 
 
-(defn application-configuration-builder
-  "The application-configuration-builder function buildes out new instances of 
-ApplicationConfiguration$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-configuration-builder
+  "The build-application-configuration-builder function updates a ApplicationConfiguration$Builder instance using the provided configuration.
+  The function takes the ApplicationConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `classification` | software.amazon.awscdk.services.stepfunctions.tasks.Classification | [[cdk.support/lookup-entry]] | `:classification` |
 | `nestedConfig` | java.util.List | [[cdk.support/lookup-entry]] | `:nested-config` |
-| `properties` | java.util.Map | [[cdk.support/lookup-entry]] | `:properties` |"
-  [stack id config]
-  (let [builder (ApplicationConfiguration$Builder.)]
-    (when-let [data (lookup-entry config id :classification)]
-      (. builder classification data))
-    (when-let [data (lookup-entry config id :nested-config)]
-      (. builder nestedConfig data))
-    (when-let [data (lookup-entry config id :properties)]
-      (. builder properties data))
-    (.build builder)))
+| `properties` | java.util.Map | [[cdk.support/lookup-entry]] | `:properties` |
+"
+  [^ApplicationConfiguration$Builder builder id config]
+  (when-let [data (lookup-entry config id :classification)]
+    (. builder classification data))
+  (when-let [data (lookup-entry config id :nested-config)]
+    (. builder nestedConfig data))
+  (when-let [data (lookup-entry config id :properties)]
+    (. builder properties data))
+  (.build builder))
 
 
-(defn athena-get-query-execution-builder
-  "The athena-get-query-execution-builder function buildes out new instances of 
-AthenaGetQueryExecution$Builder using the provided configuration.  Each field is set as follows:
+(defn build-athena-get-query-execution-builder
+  "The build-athena-get-query-execution-builder function updates a AthenaGetQueryExecution$Builder instance using the provided configuration.
+  The function takes the AthenaGetQueryExecution$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `queryExecutionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:query-execution-id` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (AthenaGetQueryExecution$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :query-execution-id)]
-      (. builder queryExecutionId data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn athena-get-query-execution-props-builder
-  "The athena-get-query-execution-props-builder function buildes out new instances of 
-AthenaGetQueryExecutionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1062,41 +1021,44 @@ AthenaGetQueryExecutionProps$Builder using the provided configuration.  Each fie
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (AthenaGetQueryExecutionProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :query-execution-id)]
-      (. builder queryExecutionId data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^AthenaGetQueryExecution$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :query-execution-id)]
+    (. builder queryExecutionId data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn athena-get-query-results-builder
-  "The athena-get-query-results-builder function buildes out new instances of 
-AthenaGetQueryResults$Builder using the provided configuration.  Each field is set as follows:
+(defn build-athena-get-query-execution-props-builder
+  "The build-athena-get-query-execution-props-builder function updates a AthenaGetQueryExecutionProps$Builder instance using the provided configuration.
+  The function takes the AthenaGetQueryExecutionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1106,53 +1068,50 @@ AthenaGetQueryResults$Builder using the provided configuration.  Each field is s
 | `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
 | `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
 | `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `maxResults` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-results` |
-| `nextToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:next-token` |
 | `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
 | `queryExecutionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:query-execution-id` |
 | `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (AthenaGetQueryResults$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :max-results)]
-      (. builder maxResults data))
-    (when-let [data (lookup-entry config id :next-token)]
-      (. builder nextToken data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :query-execution-id)]
-      (. builder queryExecutionId data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^AthenaGetQueryExecutionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :query-execution-id)]
+    (. builder queryExecutionId data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn athena-get-query-results-props-builder
-  "The athena-get-query-results-props-builder function buildes out new instances of 
-AthenaGetQueryResultsProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-athena-get-query-results-builder
+  "The build-athena-get-query-results-builder function updates a AthenaGetQueryResults$Builder instance using the provided configuration.
+  The function takes the AthenaGetQueryResults$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1170,45 +1129,107 @@ AthenaGetQueryResultsProps$Builder using the provided configuration.  Each field
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (AthenaGetQueryResultsProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :max-results)]
-      (. builder maxResults data))
-    (when-let [data (lookup-entry config id :next-token)]
-      (. builder nextToken data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :query-execution-id)]
-      (. builder queryExecutionId data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^AthenaGetQueryResults$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :max-results)]
+    (. builder maxResults data))
+  (when-let [data (lookup-entry config id :next-token)]
+    (. builder nextToken data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :query-execution-id)]
+    (. builder queryExecutionId data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn athena-start-query-execution-builder
-  "The athena-start-query-execution-builder function buildes out new instances of 
-AthenaStartQueryExecution$Builder using the provided configuration.  Each field is set as follows:
+(defn build-athena-get-query-results-props-builder
+  "The build-athena-get-query-results-props-builder function updates a AthenaGetQueryResultsProps$Builder instance using the provided configuration.
+  The function takes the AthenaGetQueryResultsProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `maxResults` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-results` |
+| `nextToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:next-token` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `queryExecutionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:query-execution-id` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^AthenaGetQueryResultsProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :max-results)]
+    (. builder maxResults data))
+  (when-let [data (lookup-entry config id :next-token)]
+    (. builder nextToken data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :query-execution-id)]
+    (. builder queryExecutionId data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-athena-start-query-execution-builder
+  "The build-athena-start-query-execution-builder function updates a AthenaStartQueryExecution$Builder instance using the provided configuration.
+  The function takes the AthenaStartQueryExecution$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1229,51 +1250,54 @@ AthenaStartQueryExecution$Builder using the provided configuration.  Each field 
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `workGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:work-group` |"
-  [stack id config]
-  (let [builder (AthenaStartQueryExecution$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :client-request-token)]
-      (. builder clientRequestToken data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :execution-parameters)]
-      (. builder executionParameters data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :query-execution-context)]
-      (. builder queryExecutionContext data))
-    (when-let [data (lookup-entry config id :query-string)]
-      (. builder queryString data))
-    (when-let [data (lookup-entry config id :result-configuration)]
-      (. builder resultConfiguration data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :work-group)]
-      (. builder workGroup data))
-    (.build builder)))
+| `workGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:work-group` |
+"
+  [^AthenaStartQueryExecution$Builder builder id config]
+  (when-let [data (lookup-entry config id :client-request-token)]
+    (. builder clientRequestToken data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :execution-parameters)]
+    (. builder executionParameters data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :query-execution-context)]
+    (. builder queryExecutionContext data))
+  (when-let [data (lookup-entry config id :query-string)]
+    (. builder queryString data))
+  (when-let [data (lookup-entry config id :result-configuration)]
+    (. builder resultConfiguration data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :work-group)]
+    (. builder workGroup data))
+  (.build builder))
 
 
-(defn athena-start-query-execution-props-builder
-  "The athena-start-query-execution-props-builder function buildes out new instances of 
-AthenaStartQueryExecutionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-athena-start-query-execution-props-builder
+  "The build-athena-start-query-execution-props-builder function updates a AthenaStartQueryExecutionProps$Builder instance using the provided configuration.
+  The function takes the AthenaStartQueryExecutionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1294,101 +1318,54 @@ AthenaStartQueryExecutionProps$Builder using the provided configuration.  Each f
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `workGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:work-group` |"
-  [stack id config]
-  (let [builder (AthenaStartQueryExecutionProps$Builder.)]
-    (when-let [data (lookup-entry config id :client-request-token)]
-      (. builder clientRequestToken data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :execution-parameters)]
-      (. builder executionParameters data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :query-execution-context)]
-      (. builder queryExecutionContext data))
-    (when-let [data (lookup-entry config id :query-string)]
-      (. builder queryString data))
-    (when-let [data (lookup-entry config id :result-configuration)]
-      (. builder resultConfiguration data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :work-group)]
-      (. builder workGroup data))
-    (.build builder)))
+| `workGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:work-group` |
+"
+  [^AthenaStartQueryExecutionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :client-request-token)]
+    (. builder clientRequestToken data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :execution-parameters)]
+    (. builder executionParameters data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :query-execution-context)]
+    (. builder queryExecutionContext data))
+  (when-let [data (lookup-entry config id :query-string)]
+    (. builder queryString data))
+  (when-let [data (lookup-entry config id :result-configuration)]
+    (. builder resultConfiguration data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :work-group)]
+    (. builder workGroup data))
+  (.build builder))
 
 
-(defn athena-stop-query-execution-builder
-  "The athena-stop-query-execution-builder function buildes out new instances of 
-AthenaStopQueryExecution$Builder using the provided configuration.  Each field is set as follows:
+(defn build-athena-stop-query-execution-builder
+  "The build-athena-stop-query-execution-builder function updates a AthenaStopQueryExecution$Builder instance using the provided configuration.
+  The function takes the AthenaStopQueryExecution$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `queryExecutionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:query-execution-id` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (AthenaStopQueryExecution$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :query-execution-id)]
-      (. builder queryExecutionId data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn athena-stop-query-execution-props-builder
-  "The athena-stop-query-execution-props-builder function buildes out new instances of 
-AthenaStopQueryExecutionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1404,41 +1381,97 @@ AthenaStopQueryExecutionProps$Builder using the provided configuration.  Each fi
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (AthenaStopQueryExecutionProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :query-execution-id)]
-      (. builder queryExecutionId data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^AthenaStopQueryExecution$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :query-execution-id)]
+    (. builder queryExecutionId data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn batch-container-overrides-builder
-  "The batch-container-overrides-builder function buildes out new instances of 
-BatchContainerOverrides$Builder using the provided configuration.  Each field is set as follows:
+(defn build-athena-stop-query-execution-props-builder
+  "The build-athena-stop-query-execution-props-builder function updates a AthenaStopQueryExecutionProps$Builder instance using the provided configuration.
+  The function takes the AthenaStopQueryExecutionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `queryExecutionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:query-execution-id` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^AthenaStopQueryExecutionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :query-execution-id)]
+    (. builder queryExecutionId data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-batch-container-overrides-builder
+  "The build-batch-container-overrides-builder function updates a BatchContainerOverrides$Builder instance using the provided configuration.
+  The function takes the BatchContainerOverrides$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1447,118 +1480,50 @@ BatchContainerOverrides$Builder using the provided configuration.  Each field is
 | `gpuCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:gpu-count` |
 | `instanceType` | software.amazon.awscdk.services.ec2.InstanceType | [[cdk.support/lookup-entry]] | `:instance-type` |
 | `memory` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:memory` |
-| `vcpus` | java.lang.Number | [[cdk.support/lookup-entry]] | `:vcpus` |"
-  [stack id config]
-  (let [builder (BatchContainerOverrides$Builder.)]
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :gpu-count)]
-      (. builder gpuCount data))
-    (when-let [data (lookup-entry config id :instance-type)]
-      (. builder instanceType data))
-    (when-let [data (lookup-entry config id :memory)]
-      (. builder memory data))
-    (when-let [data (lookup-entry config id :vcpus)]
-      (. builder vcpus data))
-    (.build builder)))
+| `vcpus` | java.lang.Number | [[cdk.support/lookup-entry]] | `:vcpus` |
+"
+  [^BatchContainerOverrides$Builder builder id config]
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :gpu-count)]
+    (. builder gpuCount data))
+  (when-let [data (lookup-entry config id :instance-type)]
+    (. builder instanceType data))
+  (when-let [data (lookup-entry config id :memory)]
+    (. builder memory data))
+  (when-let [data (lookup-entry config id :vcpus)]
+    (. builder vcpus data))
+  (.build builder))
 
 
-(defn batch-job-dependency-builder
-  "The batch-job-dependency-builder function buildes out new instances of 
-BatchJobDependency$Builder using the provided configuration.  Each field is set as follows:
+(defn build-batch-job-dependency-builder
+  "The build-batch-job-dependency-builder function updates a BatchJobDependency$Builder instance using the provided configuration.
+  The function takes the BatchJobDependency$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `jobId` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-id` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (BatchJobDependency$Builder.)]
-    (when-let [data (lookup-entry config id :job-id)]
-      (. builder jobId data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^BatchJobDependency$Builder builder id config]
+  (when-let [data (lookup-entry config id :job-id)]
+    (. builder jobId data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn batch-submit-job-builder
-  "The batch-submit-job-builder function buildes out new instances of 
-BatchSubmitJob$Builder using the provided configuration.  Each field is set as follows:
+(defn build-batch-submit-job-builder
+  "The build-batch-submit-job-builder function updates a BatchSubmitJob$Builder instance using the provided configuration.
+  The function takes the BatchSubmitJob$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `arraySize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:array-size` |
-| `attempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:attempts` |
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `containerOverrides` | software.amazon.awscdk.services.stepfunctions.tasks.BatchContainerOverrides | [[cdk.support/lookup-entry]] | `:container-overrides` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `dependsOn` | java.util.List | [[cdk.support/lookup-entry]] | `:depends-on` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `jobDefinitionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-definition-arn` |
-| `jobName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-name` |
-| `jobQueueArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-queue-arn` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `payload` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:payload` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (BatchSubmitJob$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :array-size)]
-      (. builder arraySize data))
-    (when-let [data (lookup-entry config id :attempts)]
-      (. builder attempts data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :container-overrides)]
-      (. builder containerOverrides data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :depends-on)]
-      (. builder dependsOn data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :job-definition-arn)]
-      (. builder jobDefinitionArn data))
-    (when-let [data (lookup-entry config id :job-name)]
-      (. builder jobName data))
-    (when-let [data (lookup-entry config id :job-queue-arn)]
-      (. builder jobQueueArn data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :payload)]
-      (. builder payload data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn batch-submit-job-props-builder
-  "The batch-submit-job-props-builder function buildes out new instances of 
-BatchSubmitJobProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1582,57 +1547,137 @@ BatchSubmitJobProps$Builder using the provided configuration.  Each field is set
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (BatchSubmitJobProps$Builder.)]
-    (when-let [data (lookup-entry config id :array-size)]
-      (. builder arraySize data))
-    (when-let [data (lookup-entry config id :attempts)]
-      (. builder attempts data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :container-overrides)]
-      (. builder containerOverrides data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :depends-on)]
-      (. builder dependsOn data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :job-definition-arn)]
-      (. builder jobDefinitionArn data))
-    (when-let [data (lookup-entry config id :job-name)]
-      (. builder jobName data))
-    (when-let [data (lookup-entry config id :job-queue-arn)]
-      (. builder jobQueueArn data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :payload)]
-      (. builder payload data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^BatchSubmitJob$Builder builder id config]
+  (when-let [data (lookup-entry config id :array-size)]
+    (. builder arraySize data))
+  (when-let [data (lookup-entry config id :attempts)]
+    (. builder attempts data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :container-overrides)]
+    (. builder containerOverrides data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :depends-on)]
+    (. builder dependsOn data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :job-definition-arn)]
+    (. builder jobDefinitionArn data))
+  (when-let [data (lookup-entry config id :job-name)]
+    (. builder jobName data))
+  (when-let [data (lookup-entry config id :job-queue-arn)]
+    (. builder jobQueueArn data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :payload)]
+    (. builder payload data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn bedrock-invoke-model-builder
-  "The bedrock-invoke-model-builder function buildes out new instances of 
-BedrockInvokeModel$Builder using the provided configuration.  Each field is set as follows:
+(defn build-batch-submit-job-props-builder
+  "The build-batch-submit-job-props-builder function updates a BatchSubmitJobProps$Builder instance using the provided configuration.
+  The function takes the BatchSubmitJobProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `arraySize` | java.lang.Number | [[cdk.support/lookup-entry]] | `:array-size` |
+| `attempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:attempts` |
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `containerOverrides` | software.amazon.awscdk.services.stepfunctions.tasks.BatchContainerOverrides | [[cdk.support/lookup-entry]] | `:container-overrides` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `dependsOn` | java.util.List | [[cdk.support/lookup-entry]] | `:depends-on` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `jobDefinitionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-definition-arn` |
+| `jobName` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-name` |
+| `jobQueueArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-queue-arn` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `payload` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:payload` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^BatchSubmitJobProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :array-size)]
+    (. builder arraySize data))
+  (when-let [data (lookup-entry config id :attempts)]
+    (. builder attempts data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :container-overrides)]
+    (. builder containerOverrides data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :depends-on)]
+    (. builder dependsOn data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :job-definition-arn)]
+    (. builder jobDefinitionArn data))
+  (when-let [data (lookup-entry config id :job-name)]
+    (. builder jobName data))
+  (when-let [data (lookup-entry config id :job-queue-arn)]
+    (. builder jobQueueArn data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :payload)]
+    (. builder payload data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-bedrock-invoke-model-builder
+  "The build-bedrock-invoke-model-builder function updates a BedrockInvokeModel$Builder instance using the provided configuration.
+  The function takes the BedrockInvokeModel$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1653,79 +1698,88 @@ BedrockInvokeModel$Builder using the provided configuration.  Each field is set 
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (BedrockInvokeModel$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :accept)]
-      (. builder accept data))
-    (when-let [data (lookup-entry config id :body)]
-      (. builder body data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :content-type)]
-      (. builder contentType data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input)]
-      (. builder input data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :model)]
-      (. builder model data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^BedrockInvokeModel$Builder builder id config]
+  (when-let [data (lookup-entry config id :accept)]
+    (. builder accept data))
+  (when-let [data (lookup-entry config id :body)]
+    (. builder body data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :content-type)]
+    (. builder contentType data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input)]
+    (. builder input data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :model)]
+    (. builder model data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn bedrock-invoke-model-input-props-builder
-  "The bedrock-invoke-model-input-props-builder function buildes out new instances of 
-BedrockInvokeModelInputProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-bedrock-invoke-model-input-props-builder
+  "The build-bedrock-invoke-model-input-props-builder function updates a BedrockInvokeModelInputProps$Builder instance using the provided configuration.
+  The function takes the BedrockInvokeModelInputProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `s3Location` | software.amazon.awscdk.services.s3.Location | [[cdk.support/lookup-entry]] | `:s3-location` |"
-  [stack id config]
-  (let [builder (BedrockInvokeModelInputProps$Builder.)]
-    (when-let [data (lookup-entry config id :s3-location)]
-      (. builder s3Location data))
-    (.build builder)))
-
-
-(defn bedrock-invoke-model-output-props-builder
-  "The bedrock-invoke-model-output-props-builder function buildes out new instances of 
-BedrockInvokeModelOutputProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3Location` | software.amazon.awscdk.services.s3.Location | [[cdk.support/lookup-entry]] | `:s3-location` |"
-  [stack id config]
-  (let [builder (BedrockInvokeModelOutputProps$Builder.)]
-    (when-let [data (lookup-entry config id :s3-location)]
-      (. builder s3Location data))
-    (.build builder)))
+| `s3Location` | software.amazon.awscdk.services.s3.Location | [[cdk.support/lookup-entry]] | `:s3-location` |
+"
+  [^BedrockInvokeModelInputProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :s3-location)]
+    (. builder s3Location data))
+  (.build builder))
 
 
-(defn bedrock-invoke-model-props-builder
-  "The bedrock-invoke-model-props-builder function buildes out new instances of 
-BedrockInvokeModelProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-bedrock-invoke-model-output-props-builder
+  "The build-bedrock-invoke-model-output-props-builder function updates a BedrockInvokeModelOutputProps$Builder instance using the provided configuration.
+  The function takes the BedrockInvokeModelOutputProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `s3Location` | software.amazon.awscdk.services.s3.Location | [[cdk.support/lookup-entry]] | `:s3-location` |
+"
+  [^BedrockInvokeModelOutputProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :s3-location)]
+    (. builder s3Location data))
+  (.build builder))
+
+
+(defn build-bedrock-invoke-model-props-builder
+  "The build-bedrock-invoke-model-props-builder function updates a BedrockInvokeModelProps$Builder instance using the provided configuration.
+  The function takes the BedrockInvokeModelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1746,51 +1800,54 @@ BedrockInvokeModelProps$Builder using the provided configuration.  Each field is
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (BedrockInvokeModelProps$Builder.)]
-    (when-let [data (lookup-entry config id :accept)]
-      (. builder accept data))
-    (when-let [data (lookup-entry config id :body)]
-      (. builder body data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :content-type)]
-      (. builder contentType data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input)]
-      (. builder input data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :model)]
-      (. builder model data))
-    (when-let [data (lookup-entry config id :output)]
-      (. builder output data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^BedrockInvokeModelProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :accept)]
+    (. builder accept data))
+  (when-let [data (lookup-entry config id :body)]
+    (. builder body data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :content-type)]
+    (. builder contentType data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input)]
+    (. builder input data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :model)]
+    (. builder model data))
+  (when-let [data (lookup-entry config id :output)]
+    (. builder output data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn call-api-gateway-endpoint-base-props-builder
-  "The call-api-gateway-endpoint-base-props-builder function buildes out new instances of 
-CallApiGatewayEndpointBaseProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-call-api-gateway-endpoint-base-props-builder
+  "The build-call-api-gateway-endpoint-base-props-builder function updates a CallApiGatewayEndpointBaseProps$Builder instance using the provided configuration.
+  The function takes the CallApiGatewayEndpointBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1811,51 +1868,54 @@ CallApiGatewayEndpointBaseProps$Builder using the provided configuration.  Each 
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (CallApiGatewayEndpointBaseProps$Builder.)]
-    (when-let [data (lookup-entry config id :api-path)]
-      (. builder apiPath data))
-    (when-let [data (auth-type config id :auth-type)]
-      (. builder authType data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :headers)]
-      (. builder headers data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (http-method config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :query-parameters)]
-      (. builder queryParameters data))
-    (when-let [data (lookup-entry config id :request-body)]
-      (. builder requestBody data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^CallApiGatewayEndpointBaseProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :api-path)]
+    (. builder apiPath data))
+  (when-let [data (auth-type config id :auth-type)]
+    (. builder authType data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :headers)]
+    (. builder headers data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (http-method config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :query-parameters)]
+    (. builder queryParameters data))
+  (when-let [data (lookup-entry config id :request-body)]
+    (. builder requestBody data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn call-api-gateway-http-api-endpoint-builder
-  "The call-api-gateway-http-api-endpoint-builder function buildes out new instances of 
-CallApiGatewayHttpApiEndpoint$Builder using the provided configuration.  Each field is set as follows:
+(defn build-call-api-gateway-http-api-endpoint-builder
+  "The build-call-api-gateway-http-api-endpoint-builder function updates a CallApiGatewayHttpApiEndpoint$Builder instance using the provided configuration.
+  The function takes the CallApiGatewayHttpApiEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1879,57 +1939,60 @@ CallApiGatewayHttpApiEndpoint$Builder using the provided configuration.  Each fi
 | `stageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage-name` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (CallApiGatewayHttpApiEndpoint$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :api-id)]
-      (. builder apiId data))
-    (when-let [data (lookup-entry config id :api-path)]
-      (. builder apiPath data))
-    (when-let [data (lookup-entry config id :api-stack)]
-      (. builder apiStack data))
-    (when-let [data (auth-type config id :auth-type)]
-      (. builder authType data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :headers)]
-      (. builder headers data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (http-method config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :query-parameters)]
-      (. builder queryParameters data))
-    (when-let [data (lookup-entry config id :request-body)]
-      (. builder requestBody data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :stage-name)]
-      (. builder stageName data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^CallApiGatewayHttpApiEndpoint$Builder builder id config]
+  (when-let [data (lookup-entry config id :api-id)]
+    (. builder apiId data))
+  (when-let [data (lookup-entry config id :api-path)]
+    (. builder apiPath data))
+  (when-let [data (lookup-entry config id :api-stack)]
+    (. builder apiStack data))
+  (when-let [data (auth-type config id :auth-type)]
+    (. builder authType data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :headers)]
+    (. builder headers data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (http-method config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :query-parameters)]
+    (. builder queryParameters data))
+  (when-let [data (lookup-entry config id :request-body)]
+    (. builder requestBody data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :stage-name)]
+    (. builder stageName data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn call-api-gateway-http-api-endpoint-props-builder
-  "The call-api-gateway-http-api-endpoint-props-builder function buildes out new instances of 
-CallApiGatewayHttpApiEndpointProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-call-api-gateway-http-api-endpoint-props-builder
+  "The build-call-api-gateway-http-api-endpoint-props-builder function updates a CallApiGatewayHttpApiEndpointProps$Builder instance using the provided configuration.
+  The function takes the CallApiGatewayHttpApiEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1953,128 +2016,60 @@ CallApiGatewayHttpApiEndpointProps$Builder using the provided configuration.  Ea
 | `stageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage-name` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (CallApiGatewayHttpApiEndpointProps$Builder.)]
-    (when-let [data (lookup-entry config id :api-id)]
-      (. builder apiId data))
-    (when-let [data (lookup-entry config id :api-path)]
-      (. builder apiPath data))
-    (when-let [data (lookup-entry config id :api-stack)]
-      (. builder apiStack data))
-    (when-let [data (auth-type config id :auth-type)]
-      (. builder authType data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :headers)]
-      (. builder headers data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (http-method config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :query-parameters)]
-      (. builder queryParameters data))
-    (when-let [data (lookup-entry config id :request-body)]
-      (. builder requestBody data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :stage-name)]
-      (. builder stageName data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^CallApiGatewayHttpApiEndpointProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :api-id)]
+    (. builder apiId data))
+  (when-let [data (lookup-entry config id :api-path)]
+    (. builder apiPath data))
+  (when-let [data (lookup-entry config id :api-stack)]
+    (. builder apiStack data))
+  (when-let [data (auth-type config id :auth-type)]
+    (. builder authType data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :headers)]
+    (. builder headers data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (http-method config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :query-parameters)]
+    (. builder queryParameters data))
+  (when-let [data (lookup-entry config id :request-body)]
+    (. builder requestBody data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :stage-name)]
+    (. builder stageName data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn call-api-gateway-rest-api-endpoint-builder
-  "The call-api-gateway-rest-api-endpoint-builder function buildes out new instances of 
-CallApiGatewayRestApiEndpoint$Builder using the provided configuration.  Each field is set as follows:
+(defn build-call-api-gateway-rest-api-endpoint-builder
+  "The build-call-api-gateway-rest-api-endpoint-builder function updates a CallApiGatewayRestApiEndpoint$Builder instance using the provided configuration.
+  The function takes the CallApiGatewayRestApiEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `api` | software.amazon.awscdk.services.apigateway.IRestApi | [[cdk.support/lookup-entry]] | `:api` |
-| `apiPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-path` |
-| `authType` | software.amazon.awscdk.services.stepfunctions.tasks.AuthType | [[cdk.api.services.stepfunctions.tasks/auth-type]] | `:auth-type` |
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `headers` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:headers` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `method` | software.amazon.awscdk.services.stepfunctions.tasks.HttpMethod | [[cdk.api.services.stepfunctions.tasks/http-method]] | `:method` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `queryParameters` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:query-parameters` |
-| `requestBody` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:request-body` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `stageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage-name` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (CallApiGatewayRestApiEndpoint$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :api)]
-      (. builder api data))
-    (when-let [data (lookup-entry config id :api-path)]
-      (. builder apiPath data))
-    (when-let [data (auth-type config id :auth-type)]
-      (. builder authType data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :headers)]
-      (. builder headers data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (http-method config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :query-parameters)]
-      (. builder queryParameters data))
-    (when-let [data (lookup-entry config id :request-body)]
-      (. builder requestBody data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :stage-name)]
-      (. builder stageName data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn call-api-gateway-rest-api-endpoint-props-builder
-  "The call-api-gateway-rest-api-endpoint-props-builder function buildes out new instances of 
-CallApiGatewayRestApiEndpointProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2097,55 +2092,132 @@ CallApiGatewayRestApiEndpointProps$Builder using the provided configuration.  Ea
 | `stageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage-name` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (CallApiGatewayRestApiEndpointProps$Builder.)]
-    (when-let [data (lookup-entry config id :api)]
-      (. builder api data))
-    (when-let [data (lookup-entry config id :api-path)]
-      (. builder apiPath data))
-    (when-let [data (auth-type config id :auth-type)]
-      (. builder authType data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :headers)]
-      (. builder headers data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (http-method config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :query-parameters)]
-      (. builder queryParameters data))
-    (when-let [data (lookup-entry config id :request-body)]
-      (. builder requestBody data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :stage-name)]
-      (. builder stageName data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^CallApiGatewayRestApiEndpoint$Builder builder id config]
+  (when-let [data (lookup-entry config id :api)]
+    (. builder api data))
+  (when-let [data (lookup-entry config id :api-path)]
+    (. builder apiPath data))
+  (when-let [data (auth-type config id :auth-type)]
+    (. builder authType data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :headers)]
+    (. builder headers data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (http-method config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :query-parameters)]
+    (. builder queryParameters data))
+  (when-let [data (lookup-entry config id :request-body)]
+    (. builder requestBody data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :stage-name)]
+    (. builder stageName data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn call-aws-service-builder
-  "The call-aws-service-builder function buildes out new instances of 
-CallAwsService$Builder using the provided configuration.  Each field is set as follows:
+(defn build-call-api-gateway-rest-api-endpoint-props-builder
+  "The build-call-api-gateway-rest-api-endpoint-props-builder function updates a CallApiGatewayRestApiEndpointProps$Builder instance using the provided configuration.
+  The function takes the CallApiGatewayRestApiEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `api` | software.amazon.awscdk.services.apigateway.IRestApi | [[cdk.support/lookup-entry]] | `:api` |
+| `apiPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-path` |
+| `authType` | software.amazon.awscdk.services.stepfunctions.tasks.AuthType | [[cdk.api.services.stepfunctions.tasks/auth-type]] | `:auth-type` |
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `headers` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:headers` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `method` | software.amazon.awscdk.services.stepfunctions.tasks.HttpMethod | [[cdk.api.services.stepfunctions.tasks/http-method]] | `:method` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `queryParameters` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:query-parameters` |
+| `requestBody` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:request-body` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `stageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage-name` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^CallApiGatewayRestApiEndpointProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :api)]
+    (. builder api data))
+  (when-let [data (lookup-entry config id :api-path)]
+    (. builder apiPath data))
+  (when-let [data (auth-type config id :auth-type)]
+    (. builder authType data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :headers)]
+    (. builder headers data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (http-method config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :query-parameters)]
+    (. builder queryParameters data))
+  (when-let [data (lookup-entry config id :request-body)]
+    (. builder requestBody data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :stage-name)]
+    (. builder stageName data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-call-aws-service-builder
+  "The build-call-aws-service-builder function updates a CallAwsService$Builder instance using the provided configuration.
+  The function takes the CallAwsService$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2166,51 +2238,54 @@ CallAwsService$Builder using the provided configuration.  Each field is set as f
 | `service` | java.lang.String | [[cdk.support/lookup-entry]] | `:service` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (CallAwsService$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :additional-iam-statements)]
-      (. builder additionalIamStatements data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :iam-action)]
-      (. builder iamAction data))
-    (when-let [data (lookup-entry config id :iam-resources)]
-      (. builder iamResources data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :service)]
-      (. builder service data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^CallAwsService$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :additional-iam-statements)]
+    (. builder additionalIamStatements data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :iam-action)]
+    (. builder iamAction data))
+  (when-let [data (lookup-entry config id :iam-resources)]
+    (. builder iamResources data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :service)]
+    (. builder service data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn call-aws-service-props-builder
-  "The call-aws-service-props-builder function buildes out new instances of 
-CallAwsServiceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-call-aws-service-props-builder
+  "The build-call-aws-service-props-builder function updates a CallAwsServiceProps$Builder instance using the provided configuration.
+  The function takes the CallAwsServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2231,51 +2306,54 @@ CallAwsServiceProps$Builder using the provided configuration.  Each field is set
 | `service` | java.lang.String | [[cdk.support/lookup-entry]] | `:service` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (CallAwsServiceProps$Builder.)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :additional-iam-statements)]
-      (. builder additionalIamStatements data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :iam-action)]
-      (. builder iamAction data))
-    (when-let [data (lookup-entry config id :iam-resources)]
-      (. builder iamResources data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :service)]
-      (. builder service data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^CallAwsServiceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :additional-iam-statements)]
+    (. builder additionalIamStatements data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :iam-action)]
+    (. builder iamAction data))
+  (when-let [data (lookup-entry config id :iam-resources)]
+    (. builder iamResources data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :service)]
+    (. builder service data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn channel-builder
-  "The channel-builder function buildes out new instances of 
-Channel$Builder using the provided configuration.  Each field is set as follows:
+(defn build-channel-builder
+  "The build-channel-builder function updates a Channel$Builder instance using the provided configuration.
+  The function takes the Channel$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2285,82 +2363,32 @@ Channel$Builder using the provided configuration.  Each field is set as follows:
 | `dataSource` | software.amazon.awscdk.services.stepfunctions.tasks.DataSource | [[cdk.support/lookup-entry]] | `:data-source` |
 | `inputMode` | software.amazon.awscdk.services.stepfunctions.tasks.InputMode | [[cdk.api.services.stepfunctions.tasks/input-mode]] | `:input-mode` |
 | `recordWrapperType` | software.amazon.awscdk.services.stepfunctions.tasks.RecordWrapperType | [[cdk.api.services.stepfunctions.tasks/record-wrapper-type]] | `:record-wrapper-type` |
-| `shuffleConfig` | software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig | [[cdk.support/lookup-entry]] | `:shuffle-config` |"
-  [stack id config]
-  (let [builder (Channel$Builder.)]
-    (when-let [data (lookup-entry config id :channel-name)]
-      (. builder channelName data))
-    (when-let [data (compression-type config id :compression-type)]
-      (. builder compressionType data))
-    (when-let [data (lookup-entry config id :content-type)]
-      (. builder contentType data))
-    (when-let [data (lookup-entry config id :data-source)]
-      (. builder dataSource data))
-    (when-let [data (input-mode config id :input-mode)]
-      (. builder inputMode data))
-    (when-let [data (record-wrapper-type config id :record-wrapper-type)]
-      (. builder recordWrapperType data))
-    (when-let [data (lookup-entry config id :shuffle-config)]
-      (. builder shuffleConfig data))
-    (.build builder)))
+| `shuffleConfig` | software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig | [[cdk.support/lookup-entry]] | `:shuffle-config` |
+"
+  [^Channel$Builder builder id config]
+  (when-let [data (lookup-entry config id :channel-name)]
+    (. builder channelName data))
+  (when-let [data (compression-type config id :compression-type)]
+    (. builder compressionType data))
+  (when-let [data (lookup-entry config id :content-type)]
+    (. builder contentType data))
+  (when-let [data (lookup-entry config id :data-source)]
+    (. builder dataSource data))
+  (when-let [data (input-mode config id :input-mode)]
+    (. builder inputMode data))
+  (when-let [data (record-wrapper-type config id :record-wrapper-type)]
+    (. builder recordWrapperType data))
+  (when-let [data (lookup-entry config id :shuffle-config)]
+    (. builder shuffleConfig data))
+  (.build builder))
 
 
-(defn code-build-start-build-batch-builder
-  "The code-build-start-build-batch-builder function buildes out new instances of 
-CodeBuildStartBuildBatch$Builder using the provided configuration.  Each field is set as follows:
+(defn build-code-build-start-build-batch-builder
+  "The build-code-build-start-build-batch-builder function updates a CodeBuildStartBuildBatch$Builder instance using the provided configuration.
+  The function takes the CodeBuildStartBuildBatch$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `environmentVariablesOverride` | java.util.Map | [[cdk.support/lookup-entry]] | `:environment-variables-override` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `project` | software.amazon.awscdk.services.codebuild.IProject | [[cdk.support/lookup-entry]] | `:project` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (CodeBuildStartBuildBatch$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :environment-variables-override)]
-      (. builder environmentVariablesOverride data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :project)]
-      (. builder project data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn code-build-start-build-batch-props-builder
-  "The code-build-start-build-batch-props-builder function buildes out new instances of 
-CodeBuildStartBuildBatchProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2377,96 +2405,46 @@ CodeBuildStartBuildBatchProps$Builder using the provided configuration.  Each fi
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (CodeBuildStartBuildBatchProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :environment-variables-override)]
-      (. builder environmentVariablesOverride data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :project)]
-      (. builder project data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^CodeBuildStartBuildBatch$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :environment-variables-override)]
+    (. builder environmentVariablesOverride data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :project)]
+    (. builder project data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn code-build-start-build-builder
-  "The code-build-start-build-builder function buildes out new instances of 
-CodeBuildStartBuild$Builder using the provided configuration.  Each field is set as follows:
+(defn build-code-build-start-build-batch-props-builder
+  "The build-code-build-start-build-batch-props-builder function updates a CodeBuildStartBuildBatchProps$Builder instance using the provided configuration.
+  The function takes the CodeBuildStartBuildBatchProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `environmentVariablesOverride` | java.util.Map | [[cdk.support/lookup-entry]] | `:environment-variables-override` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `project` | software.amazon.awscdk.services.codebuild.IProject | [[cdk.support/lookup-entry]] | `:project` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (CodeBuildStartBuild$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :environment-variables-override)]
-      (. builder environmentVariablesOverride data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :project)]
-      (. builder project data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn code-build-start-build-props-builder
-  "The code-build-start-build-props-builder function buildes out new instances of 
-CodeBuildStartBuildProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2483,109 +2461,184 @@ CodeBuildStartBuildProps$Builder using the provided configuration.  Each field i
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (CodeBuildStartBuildProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :environment-variables-override)]
-      (. builder environmentVariablesOverride data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :project)]
-      (. builder project data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^CodeBuildStartBuildBatchProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :environment-variables-override)]
+    (. builder environmentVariablesOverride data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :project)]
+    (. builder project data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn common-ecs-run-task-props-builder
-  "The common-ecs-run-task-props-builder function buildes out new instances of 
-CommonEcsRunTaskProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-code-build-start-build-builder
+  "The build-code-build-start-build-builder function updates a CodeBuildStartBuild$Builder instance using the provided configuration.
+  The function takes the CodeBuildStartBuild$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `environmentVariablesOverride` | java.util.Map | [[cdk.support/lookup-entry]] | `:environment-variables-override` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `project` | software.amazon.awscdk.services.codebuild.IProject | [[cdk.support/lookup-entry]] | `:project` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^CodeBuildStartBuild$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :environment-variables-override)]
+    (. builder environmentVariablesOverride data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :project)]
+    (. builder project data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-code-build-start-build-props-builder
+  "The build-code-build-start-build-props-builder function updates a CodeBuildStartBuildProps$Builder instance using the provided configuration.
+  The function takes the CodeBuildStartBuildProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `environmentVariablesOverride` | java.util.Map | [[cdk.support/lookup-entry]] | `:environment-variables-override` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `project` | software.amazon.awscdk.services.codebuild.IProject | [[cdk.support/lookup-entry]] | `:project` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^CodeBuildStartBuildProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :environment-variables-override)]
+    (. builder environmentVariablesOverride data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :project)]
+    (. builder project data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-common-ecs-run-task-props-builder
+  "The build-common-ecs-run-task-props-builder function updates a CommonEcsRunTaskProps$Builder instance using the provided configuration.
+  The function takes the CommonEcsRunTaskProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `cluster` | software.amazon.awscdk.services.ecs.ICluster | [[cdk.support/lookup-entry]] | `:cluster` |
 | `containerOverrides` | java.util.List | [[cdk.support/lookup-entry]] | `:container-overrides` |
 | `integrationPattern` | software.amazon.awscdk.services.stepfunctions.ServiceIntegrationPattern | [[cdk.api.services.stepfunctions/service-integration-pattern]] | `:integration-pattern` |
-| `taskDefinition` | software.amazon.awscdk.services.ecs.TaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |"
-  [stack id config]
-  (let [builder (CommonEcsRunTaskProps$Builder.)]
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :container-overrides)]
-      (. builder containerOverrides data))
-    (when-let [data (service-integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (.build builder)))
+| `taskDefinition` | software.amazon.awscdk.services.ecs.TaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
+"
+  [^CommonEcsRunTaskProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :container-overrides)]
+    (. builder containerOverrides data))
+  (when-let [data (service-integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (.build builder))
 
 
-(defn container-definition-builder
-  "The container-definition-builder function buildes out new instances of 
-ContainerDefinition$Builder using the provided configuration.  Each field is set as follows:
+(defn build-container-definition-builder
+  "The build-container-definition-builder function updates a ContainerDefinition$Builder instance using the provided configuration.
+  The function takes the ContainerDefinition$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `containerHostName` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-host-name` |
-| `environmentVariables` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:environment-variables` |
-| `image` | software.amazon.awscdk.services.stepfunctions.tasks.DockerImage | [[cdk.support/lookup-entry]] | `:image` |
-| `mode` | software.amazon.awscdk.services.stepfunctions.tasks.Mode | [[cdk.api.services.stepfunctions.tasks/mode]] | `:mode` |
-| `modelPackageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-package-name` |
-| `modelS3Location` | software.amazon.awscdk.services.stepfunctions.tasks.S3Location | [[cdk.support/lookup-entry]] | `:model-s3-location` |"
-  [stack id config]
-  (let [builder (ContainerDefinition$Builder/create)]
-    (when-let [data (lookup-entry config id :container-host-name)]
-      (. builder containerHostName data))
-    (when-let [data (lookup-entry config id :environment-variables)]
-      (. builder environmentVariables data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (mode config id :mode)]
-      (. builder mode data))
-    (when-let [data (lookup-entry config id :model-package-name)]
-      (. builder modelPackageName data))
-    (when-let [data (lookup-entry config id :model-s3-location)]
-      (. builder modelS3Location data))
-    (.build builder)))
-
-
-(defn container-definition-config-builder
-  "The container-definition-config-builder function buildes out new instances of 
-ContainerDefinitionConfig$Builder using the provided configuration.  Each field is set as follows:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |"
-  [stack id config]
-  (let [builder (ContainerDefinitionConfig$Builder.)]
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (.build builder)))
-
-
-(defn container-definition-options-builder
-  "The container-definition-options-builder function buildes out new instances of 
-ContainerDefinitionOptions$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2594,27 +2647,79 @@ ContainerDefinitionOptions$Builder using the provided configuration.  Each field
 | `image` | software.amazon.awscdk.services.stepfunctions.tasks.DockerImage | [[cdk.support/lookup-entry]] | `:image` |
 | `mode` | software.amazon.awscdk.services.stepfunctions.tasks.Mode | [[cdk.api.services.stepfunctions.tasks/mode]] | `:mode` |
 | `modelPackageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-package-name` |
-| `modelS3Location` | software.amazon.awscdk.services.stepfunctions.tasks.S3Location | [[cdk.support/lookup-entry]] | `:model-s3-location` |"
-  [stack id config]
-  (let [builder (ContainerDefinitionOptions$Builder.)]
-    (when-let [data (lookup-entry config id :container-host-name)]
-      (. builder containerHostName data))
-    (when-let [data (lookup-entry config id :environment-variables)]
-      (. builder environmentVariables data))
-    (when-let [data (lookup-entry config id :image)]
-      (. builder image data))
-    (when-let [data (mode config id :mode)]
-      (. builder mode data))
-    (when-let [data (lookup-entry config id :model-package-name)]
-      (. builder modelPackageName data))
-    (when-let [data (lookup-entry config id :model-s3-location)]
-      (. builder modelS3Location data))
-    (.build builder)))
+| `modelS3Location` | software.amazon.awscdk.services.stepfunctions.tasks.S3Location | [[cdk.support/lookup-entry]] | `:model-s3-location` |
+"
+  [^ContainerDefinition$Builder builder id config]
+  (when-let [data (lookup-entry config id :container-host-name)]
+    (. builder containerHostName data))
+  (when-let [data (lookup-entry config id :environment-variables)]
+    (. builder environmentVariables data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (mode config id :mode)]
+    (. builder mode data))
+  (when-let [data (lookup-entry config id :model-package-name)]
+    (. builder modelPackageName data))
+  (when-let [data (lookup-entry config id :model-s3-location)]
+    (. builder modelS3Location data))
+  (.build builder))
 
 
-(defn container-override-builder
-  "The container-override-builder function buildes out new instances of 
-ContainerOverride$Builder using the provided configuration.  Each field is set as follows:
+(defn build-container-definition-config-builder
+  "The build-container-definition-config-builder function updates a ContainerDefinitionConfig$Builder instance using the provided configuration.
+  The function takes the ContainerDefinitionConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
+"
+  [^ContainerDefinitionConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (.build builder))
+
+
+(defn build-container-definition-options-builder
+  "The build-container-definition-options-builder function updates a ContainerDefinitionOptions$Builder instance using the provided configuration.
+  The function takes the ContainerDefinitionOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `containerHostName` | java.lang.String | [[cdk.support/lookup-entry]] | `:container-host-name` |
+| `environmentVariables` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:environment-variables` |
+| `image` | software.amazon.awscdk.services.stepfunctions.tasks.DockerImage | [[cdk.support/lookup-entry]] | `:image` |
+| `mode` | software.amazon.awscdk.services.stepfunctions.tasks.Mode | [[cdk.api.services.stepfunctions.tasks/mode]] | `:mode` |
+| `modelPackageName` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-package-name` |
+| `modelS3Location` | software.amazon.awscdk.services.stepfunctions.tasks.S3Location | [[cdk.support/lookup-entry]] | `:model-s3-location` |
+"
+  [^ContainerDefinitionOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :container-host-name)]
+    (. builder containerHostName data))
+  (when-let [data (lookup-entry config id :environment-variables)]
+    (. builder environmentVariables data))
+  (when-let [data (lookup-entry config id :image)]
+    (. builder image data))
+  (when-let [data (mode config id :mode)]
+    (. builder mode data))
+  (when-let [data (lookup-entry config id :model-package-name)]
+    (. builder modelPackageName data))
+  (when-let [data (lookup-entry config id :model-s3-location)]
+    (. builder modelS3Location data))
+  (.build builder))
+
+
+(defn build-container-override-builder
+  "The build-container-override-builder function updates a ContainerOverride$Builder instance using the provided configuration.
+  The function takes the ContainerOverride$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2623,27 +2728,30 @@ ContainerOverride$Builder using the provided configuration.  Each field is set a
 | `cpu` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cpu` |
 | `environment` | java.util.List | [[cdk.support/lookup-entry]] | `:environment` |
 | `memoryLimit` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-limit` |
-| `memoryReservation` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-reservation` |"
-  [stack id config]
-  (let [builder (ContainerOverride$Builder.)]
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :container-definition)]
-      (. builder containerDefinition data))
-    (when-let [data (lookup-entry config id :cpu)]
-      (. builder cpu data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :memory-limit)]
-      (. builder memoryLimit data))
-    (when-let [data (lookup-entry config id :memory-reservation)]
-      (. builder memoryReservation data))
-    (.build builder)))
+| `memoryReservation` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory-reservation` |
+"
+  [^ContainerOverride$Builder builder id config]
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :container-definition)]
+    (. builder containerDefinition data))
+  (when-let [data (lookup-entry config id :cpu)]
+    (. builder cpu data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :memory-limit)]
+    (. builder memoryLimit data))
+  (when-let [data (lookup-entry config id :memory-reservation)]
+    (. builder memoryReservation data))
+  (.build builder))
 
 
-(defn container-overrides-builder
-  "The container-overrides-builder function buildes out new instances of 
-ContainerOverrides$Builder using the provided configuration.  Each field is set as follows:
+(defn build-container-overrides-builder
+  "The build-container-overrides-builder function updates a ContainerOverrides$Builder instance using the provided configuration.
+  The function takes the ContainerOverrides$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2652,469 +2760,64 @@ ContainerOverrides$Builder using the provided configuration.  Each field is set 
 | `gpuCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:gpu-count` |
 | `instanceType` | software.amazon.awscdk.services.ec2.InstanceType | [[cdk.support/lookup-entry]] | `:instance-type` |
 | `memory` | java.lang.Number | [[cdk.support/lookup-entry]] | `:memory` |
-| `vcpus` | java.lang.Number | [[cdk.support/lookup-entry]] | `:vcpus` |"
-  [stack id config]
-  (let [builder (ContainerOverrides$Builder.)]
-    (when-let [data (lookup-entry config id :command)]
-      (. builder command data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :gpu-count)]
-      (. builder gpuCount data))
-    (when-let [data (lookup-entry config id :instance-type)]
-      (. builder instanceType data))
-    (when-let [data (lookup-entry config id :memory)]
-      (. builder memory data))
-    (when-let [data (lookup-entry config id :vcpus)]
-      (. builder vcpus data))
-    (.build builder)))
+| `vcpus` | java.lang.Number | [[cdk.support/lookup-entry]] | `:vcpus` |
+"
+  [^ContainerOverrides$Builder builder id config]
+  (when-let [data (lookup-entry config id :command)]
+    (. builder command data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :gpu-count)]
+    (. builder gpuCount data))
+  (when-let [data (lookup-entry config id :instance-type)]
+    (. builder instanceType data))
+  (when-let [data (lookup-entry config id :memory)]
+    (. builder memory data))
+  (when-let [data (lookup-entry config id :vcpus)]
+    (. builder vcpus data))
+  (.build builder))
 
 
-(defn data-source-builder
-  "The data-source-builder function buildes out new instances of 
-DataSource$Builder using the provided configuration.  Each field is set as follows:
+(defn build-data-source-builder
+  "The build-data-source-builder function updates a DataSource$Builder instance using the provided configuration.
+  The function takes the DataSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `s3DataSource` | software.amazon.awscdk.services.stepfunctions.tasks.S3DataSource | [[cdk.support/lookup-entry]] | `:s3-data-source` |"
-  [stack id config]
-  (let [builder (DataSource$Builder.)]
-    (when-let [data (lookup-entry config id :s3-data-source)]
-      (. builder s3DataSource data))
-    (.build builder)))
-
-
-(defn docker-image-config-builder
-  "The docker-image-config-builder function buildes out new instances of 
-DockerImageConfig$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `imageUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-uri` |"
-  [stack id config]
-  (let [builder (DockerImageConfig$Builder.)]
-    (when-let [data (lookup-entry config id :image-uri)]
-      (. builder imageUri data))
-    (.build builder)))
+| `s3DataSource` | software.amazon.awscdk.services.stepfunctions.tasks.S3DataSource | [[cdk.support/lookup-entry]] | `:s3-data-source` |
+"
+  [^DataSource$Builder builder id config]
+  (when-let [data (lookup-entry config id :s3-data-source)]
+    (. builder s3DataSource data))
+  (.build builder))
 
 
-(defn dynamo-delete-item-builder
-  "The dynamo-delete-item-builder function buildes out new instances of 
-DynamoDeleteItem$Builder using the provided configuration.  Each field is set as follows:
+(defn build-docker-image-config-builder
+  "The build-docker-image-config-builder function updates a DockerImageConfig$Builder instance using the provided configuration.
+  The function takes the DockerImageConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `conditionExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:condition-expression` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `expressionAttributeNames` | java.util.Map | [[cdk.support/lookup-entry]] | `:expression-attribute-names` |
-| `expressionAttributeValues` | java.util.Map | [[cdk.support/lookup-entry]] | `:expression-attribute-values` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `key` | java.util.Map | [[cdk.support/lookup-entry]] | `:key` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `returnConsumedCapacity` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoConsumedCapacity | [[cdk.api.services.stepfunctions.tasks/dynamo-consumed-capacity]] | `:return-consumed-capacity` |
-| `returnItemCollectionMetrics` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoItemCollectionMetrics | [[cdk.api.services.stepfunctions.tasks/dynamo-item-collection-metrics]] | `:return-item-collection-metrics` |
-| `returnValues` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoReturnValues | [[cdk.api.services.stepfunctions.tasks/dynamo-return-values]] | `:return-values` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `table` | software.amazon.awscdk.services.dynamodb.ITable | [[cdk.support/lookup-entry]] | `:table` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (DynamoDeleteItem$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :condition-expression)]
-      (. builder conditionExpression data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :expression-attribute-names)]
-      (. builder expressionAttributeNames data))
-    (when-let [data (lookup-entry config id :expression-attribute-values)]
-      (. builder expressionAttributeValues data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :key)]
-      (. builder key data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
-      (. builder returnConsumedCapacity data))
-    (when-let [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
-      (. builder returnItemCollectionMetrics data))
-    (when-let [data (dynamo-return-values config id :return-values)]
-      (. builder returnValues data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :table)]
-      (. builder table data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn dynamo-delete-item-props-builder
-  "The dynamo-delete-item-props-builder function buildes out new instances of 
-DynamoDeleteItemProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `conditionExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:condition-expression` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `expressionAttributeNames` | java.util.Map | [[cdk.support/lookup-entry]] | `:expression-attribute-names` |
-| `expressionAttributeValues` | java.util.Map | [[cdk.support/lookup-entry]] | `:expression-attribute-values` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `key` | java.util.Map | [[cdk.support/lookup-entry]] | `:key` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `returnConsumedCapacity` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoConsumedCapacity | [[cdk.api.services.stepfunctions.tasks/dynamo-consumed-capacity]] | `:return-consumed-capacity` |
-| `returnItemCollectionMetrics` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoItemCollectionMetrics | [[cdk.api.services.stepfunctions.tasks/dynamo-item-collection-metrics]] | `:return-item-collection-metrics` |
-| `returnValues` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoReturnValues | [[cdk.api.services.stepfunctions.tasks/dynamo-return-values]] | `:return-values` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `table` | software.amazon.awscdk.services.dynamodb.ITable | [[cdk.support/lookup-entry]] | `:table` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (DynamoDeleteItemProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :condition-expression)]
-      (. builder conditionExpression data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :expression-attribute-names)]
-      (. builder expressionAttributeNames data))
-    (when-let [data (lookup-entry config id :expression-attribute-values)]
-      (. builder expressionAttributeValues data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :key)]
-      (. builder key data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
-      (. builder returnConsumedCapacity data))
-    (when-let [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
-      (. builder returnItemCollectionMetrics data))
-    (when-let [data (dynamo-return-values config id :return-values)]
-      (. builder returnValues data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :table)]
-      (. builder table data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `imageUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-uri` |
+"
+  [^DockerImageConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :image-uri)]
+    (. builder imageUri data))
+  (.build builder))
 
 
-(defn dynamo-get-item-builder
-  "The dynamo-get-item-builder function buildes out new instances of 
-DynamoGetItem$Builder using the provided configuration.  Each field is set as follows:
+(defn build-dynamo-delete-item-builder
+  "The build-dynamo-delete-item-builder function updates a DynamoDeleteItem$Builder instance using the provided configuration.
+  The function takes the DynamoDeleteItem$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `consistentRead` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:consistent-read` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `expressionAttributeNames` | java.util.Map | [[cdk.support/lookup-entry]] | `:expression-attribute-names` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `key` | java.util.Map | [[cdk.support/lookup-entry]] | `:key` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `projectionExpression` | java.util.List | [[cdk.support/lookup-entry]] | `:projection-expression` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `returnConsumedCapacity` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoConsumedCapacity | [[cdk.api.services.stepfunctions.tasks/dynamo-consumed-capacity]] | `:return-consumed-capacity` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `table` | software.amazon.awscdk.services.dynamodb.ITable | [[cdk.support/lookup-entry]] | `:table` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (DynamoGetItem$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :consistent-read)]
-      (. builder consistentRead data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :expression-attribute-names)]
-      (. builder expressionAttributeNames data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :key)]
-      (. builder key data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :projection-expression)]
-      (. builder projectionExpression data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
-      (. builder returnConsumedCapacity data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :table)]
-      (. builder table data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn dynamo-get-item-props-builder
-  "The dynamo-get-item-props-builder function buildes out new instances of 
-DynamoGetItemProps$Builder using the provided configuration.  Each field is set as follows:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `consistentRead` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:consistent-read` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `expressionAttributeNames` | java.util.Map | [[cdk.support/lookup-entry]] | `:expression-attribute-names` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `key` | java.util.Map | [[cdk.support/lookup-entry]] | `:key` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `projectionExpression` | java.util.List | [[cdk.support/lookup-entry]] | `:projection-expression` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `returnConsumedCapacity` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoConsumedCapacity | [[cdk.api.services.stepfunctions.tasks/dynamo-consumed-capacity]] | `:return-consumed-capacity` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `table` | software.amazon.awscdk.services.dynamodb.ITable | [[cdk.support/lookup-entry]] | `:table` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (DynamoGetItemProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :consistent-read)]
-      (. builder consistentRead data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :expression-attribute-names)]
-      (. builder expressionAttributeNames data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :key)]
-      (. builder key data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :projection-expression)]
-      (. builder projectionExpression data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
-      (. builder returnConsumedCapacity data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :table)]
-      (. builder table data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn dynamo-put-item-builder
-  "The dynamo-put-item-builder function buildes out new instances of 
-DynamoPutItem$Builder using the provided configuration.  Each field is set as follows:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `conditionExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:condition-expression` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `expressionAttributeNames` | java.util.Map | [[cdk.support/lookup-entry]] | `:expression-attribute-names` |
-| `expressionAttributeValues` | java.util.Map | [[cdk.support/lookup-entry]] | `:expression-attribute-values` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `item` | java.util.Map | [[cdk.support/lookup-entry]] | `:item` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `returnConsumedCapacity` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoConsumedCapacity | [[cdk.api.services.stepfunctions.tasks/dynamo-consumed-capacity]] | `:return-consumed-capacity` |
-| `returnItemCollectionMetrics` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoItemCollectionMetrics | [[cdk.api.services.stepfunctions.tasks/dynamo-item-collection-metrics]] | `:return-item-collection-metrics` |
-| `returnValues` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoReturnValues | [[cdk.api.services.stepfunctions.tasks/dynamo-return-values]] | `:return-values` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `table` | software.amazon.awscdk.services.dynamodb.ITable | [[cdk.support/lookup-entry]] | `:table` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (DynamoPutItem$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :condition-expression)]
-      (. builder conditionExpression data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :expression-attribute-names)]
-      (. builder expressionAttributeNames data))
-    (when-let [data (lookup-entry config id :expression-attribute-values)]
-      (. builder expressionAttributeValues data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :item)]
-      (. builder item data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
-      (. builder returnConsumedCapacity data))
-    (when-let [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
-      (. builder returnItemCollectionMetrics data))
-    (when-let [data (dynamo-return-values config id :return-values)]
-      (. builder returnValues data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :table)]
-      (. builder table data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn dynamo-put-item-props-builder
-  "The dynamo-put-item-props-builder function buildes out new instances of 
-DynamoPutItemProps$Builder using the provided configuration.  Each field is set as follows:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `conditionExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:condition-expression` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `expressionAttributeNames` | java.util.Map | [[cdk.support/lookup-entry]] | `:expression-attribute-names` |
-| `expressionAttributeValues` | java.util.Map | [[cdk.support/lookup-entry]] | `:expression-attribute-values` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `item` | java.util.Map | [[cdk.support/lookup-entry]] | `:item` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `returnConsumedCapacity` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoConsumedCapacity | [[cdk.api.services.stepfunctions.tasks/dynamo-consumed-capacity]] | `:return-consumed-capacity` |
-| `returnItemCollectionMetrics` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoItemCollectionMetrics | [[cdk.api.services.stepfunctions.tasks/dynamo-item-collection-metrics]] | `:return-item-collection-metrics` |
-| `returnValues` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoReturnValues | [[cdk.api.services.stepfunctions.tasks/dynamo-return-values]] | `:return-values` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `table` | software.amazon.awscdk.services.dynamodb.ITable | [[cdk.support/lookup-entry]] | `:table` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (DynamoPutItemProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :condition-expression)]
-      (. builder conditionExpression data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :expression-attribute-names)]
-      (. builder expressionAttributeNames data))
-    (when-let [data (lookup-entry config id :expression-attribute-values)]
-      (. builder expressionAttributeValues data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :item)]
-      (. builder item data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
-      (. builder returnConsumedCapacity data))
-    (when-let [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
-      (. builder returnItemCollectionMetrics data))
-    (when-let [data (dynamo-return-values config id :return-values)]
-      (. builder returnValues data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :table)]
-      (. builder table data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn dynamo-update-item-builder
-  "The dynamo-update-item-builder function buildes out new instances of 
-DynamoUpdateItem$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3138,57 +2841,57 @@ DynamoUpdateItem$Builder using the provided configuration.  Each field is set as
 | `table` | software.amazon.awscdk.services.dynamodb.ITable | [[cdk.support/lookup-entry]] | `:table` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `updateExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:update-expression` |"
-  [stack id config]
-  (let [builder (DynamoUpdateItem$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :condition-expression)]
-      (. builder conditionExpression data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :expression-attribute-names)]
-      (. builder expressionAttributeNames data))
-    (when-let [data (lookup-entry config id :expression-attribute-values)]
-      (. builder expressionAttributeValues data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :key)]
-      (. builder key data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
-      (. builder returnConsumedCapacity data))
-    (when-let [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
-      (. builder returnItemCollectionMetrics data))
-    (when-let [data (dynamo-return-values config id :return-values)]
-      (. builder returnValues data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :table)]
-      (. builder table data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :update-expression)]
-      (. builder updateExpression data))
-    (.build builder)))
+"
+  [^DynamoDeleteItem$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :condition-expression)]
+    (. builder conditionExpression data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :expression-attribute-names)]
+    (. builder expressionAttributeNames data))
+  (when-let [data (lookup-entry config id :expression-attribute-values)]
+    (. builder expressionAttributeValues data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :key)]
+    (. builder key data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
+    (. builder returnConsumedCapacity data))
+  (when-let [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
+    (. builder returnItemCollectionMetrics data))
+  (when-let [data (dynamo-return-values config id :return-values)]
+    (. builder returnValues data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :table)]
+    (. builder table data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn dynamo-update-item-props-builder
-  "The dynamo-update-item-props-builder function buildes out new instances of 
-DynamoUpdateItemProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-dynamo-delete-item-props-builder
+  "The build-dynamo-delete-item-props-builder function updates a DynamoDeleteItemProps$Builder instance using the provided configuration.
+  The function takes the DynamoDeleteItemProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3212,133 +2915,586 @@ DynamoUpdateItemProps$Builder using the provided configuration.  Each field is s
 | `table` | software.amazon.awscdk.services.dynamodb.ITable | [[cdk.support/lookup-entry]] | `:table` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `updateExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:update-expression` |"
-  [stack id config]
-  (let [builder (DynamoUpdateItemProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :condition-expression)]
-      (. builder conditionExpression data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :expression-attribute-names)]
-      (. builder expressionAttributeNames data))
-    (when-let [data (lookup-entry config id :expression-attribute-values)]
-      (. builder expressionAttributeValues data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :key)]
-      (. builder key data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
-      (. builder returnConsumedCapacity data))
-    (when-let [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
-      (. builder returnItemCollectionMetrics data))
-    (when-let [data (dynamo-return-values config id :return-values)]
-      (. builder returnValues data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :table)]
-      (. builder table data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :update-expression)]
-      (. builder updateExpression data))
-    (.build builder)))
+"
+  [^DynamoDeleteItemProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :condition-expression)]
+    (. builder conditionExpression data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :expression-attribute-names)]
+    (. builder expressionAttributeNames data))
+  (when-let [data (lookup-entry config id :expression-attribute-values)]
+    (. builder expressionAttributeValues data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :key)]
+    (. builder key data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
+    (. builder returnConsumedCapacity data))
+  (when-let [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
+    (. builder returnItemCollectionMetrics data))
+  (when-let [data (dynamo-return-values config id :return-values)]
+    (. builder returnValues data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :table)]
+    (. builder table data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn ecs-ec2-launch-target-builder
-  "The ecs-ec2-launch-target-builder function buildes out new instances of 
-EcsEc2LaunchTarget$Builder using the provided configuration.  Each field is set as follows:
+(defn build-dynamo-get-item-builder
+  "The build-dynamo-get-item-builder function updates a DynamoGetItem$Builder instance using the provided configuration.
+  The function takes the DynamoGetItem$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `consistentRead` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:consistent-read` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `expressionAttributeNames` | java.util.Map | [[cdk.support/lookup-entry]] | `:expression-attribute-names` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `key` | java.util.Map | [[cdk.support/lookup-entry]] | `:key` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `projectionExpression` | java.util.List | [[cdk.support/lookup-entry]] | `:projection-expression` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `returnConsumedCapacity` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoConsumedCapacity | [[cdk.api.services.stepfunctions.tasks/dynamo-consumed-capacity]] | `:return-consumed-capacity` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `table` | software.amazon.awscdk.services.dynamodb.ITable | [[cdk.support/lookup-entry]] | `:table` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^DynamoGetItem$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :consistent-read)]
+    (. builder consistentRead data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :expression-attribute-names)]
+    (. builder expressionAttributeNames data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :key)]
+    (. builder key data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :projection-expression)]
+    (. builder projectionExpression data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
+    (. builder returnConsumedCapacity data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :table)]
+    (. builder table data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-dynamo-get-item-props-builder
+  "The build-dynamo-get-item-props-builder function updates a DynamoGetItemProps$Builder instance using the provided configuration.
+  The function takes the DynamoGetItemProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `consistentRead` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:consistent-read` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `expressionAttributeNames` | java.util.Map | [[cdk.support/lookup-entry]] | `:expression-attribute-names` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `key` | java.util.Map | [[cdk.support/lookup-entry]] | `:key` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `projectionExpression` | java.util.List | [[cdk.support/lookup-entry]] | `:projection-expression` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `returnConsumedCapacity` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoConsumedCapacity | [[cdk.api.services.stepfunctions.tasks/dynamo-consumed-capacity]] | `:return-consumed-capacity` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `table` | software.amazon.awscdk.services.dynamodb.ITable | [[cdk.support/lookup-entry]] | `:table` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^DynamoGetItemProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :consistent-read)]
+    (. builder consistentRead data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :expression-attribute-names)]
+    (. builder expressionAttributeNames data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :key)]
+    (. builder key data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :projection-expression)]
+    (. builder projectionExpression data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
+    (. builder returnConsumedCapacity data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :table)]
+    (. builder table data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-dynamo-put-item-builder
+  "The build-dynamo-put-item-builder function updates a DynamoPutItem$Builder instance using the provided configuration.
+  The function takes the DynamoPutItem$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `conditionExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:condition-expression` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `expressionAttributeNames` | java.util.Map | [[cdk.support/lookup-entry]] | `:expression-attribute-names` |
+| `expressionAttributeValues` | java.util.Map | [[cdk.support/lookup-entry]] | `:expression-attribute-values` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `item` | java.util.Map | [[cdk.support/lookup-entry]] | `:item` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `returnConsumedCapacity` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoConsumedCapacity | [[cdk.api.services.stepfunctions.tasks/dynamo-consumed-capacity]] | `:return-consumed-capacity` |
+| `returnItemCollectionMetrics` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoItemCollectionMetrics | [[cdk.api.services.stepfunctions.tasks/dynamo-item-collection-metrics]] | `:return-item-collection-metrics` |
+| `returnValues` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoReturnValues | [[cdk.api.services.stepfunctions.tasks/dynamo-return-values]] | `:return-values` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `table` | software.amazon.awscdk.services.dynamodb.ITable | [[cdk.support/lookup-entry]] | `:table` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^DynamoPutItem$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :condition-expression)]
+    (. builder conditionExpression data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :expression-attribute-names)]
+    (. builder expressionAttributeNames data))
+  (when-let [data (lookup-entry config id :expression-attribute-values)]
+    (. builder expressionAttributeValues data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :item)]
+    (. builder item data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
+    (. builder returnConsumedCapacity data))
+  (when-let [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
+    (. builder returnItemCollectionMetrics data))
+  (when-let [data (dynamo-return-values config id :return-values)]
+    (. builder returnValues data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :table)]
+    (. builder table data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-dynamo-put-item-props-builder
+  "The build-dynamo-put-item-props-builder function updates a DynamoPutItemProps$Builder instance using the provided configuration.
+  The function takes the DynamoPutItemProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `conditionExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:condition-expression` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `expressionAttributeNames` | java.util.Map | [[cdk.support/lookup-entry]] | `:expression-attribute-names` |
+| `expressionAttributeValues` | java.util.Map | [[cdk.support/lookup-entry]] | `:expression-attribute-values` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `item` | java.util.Map | [[cdk.support/lookup-entry]] | `:item` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `returnConsumedCapacity` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoConsumedCapacity | [[cdk.api.services.stepfunctions.tasks/dynamo-consumed-capacity]] | `:return-consumed-capacity` |
+| `returnItemCollectionMetrics` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoItemCollectionMetrics | [[cdk.api.services.stepfunctions.tasks/dynamo-item-collection-metrics]] | `:return-item-collection-metrics` |
+| `returnValues` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoReturnValues | [[cdk.api.services.stepfunctions.tasks/dynamo-return-values]] | `:return-values` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `table` | software.amazon.awscdk.services.dynamodb.ITable | [[cdk.support/lookup-entry]] | `:table` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^DynamoPutItemProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :condition-expression)]
+    (. builder conditionExpression data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :expression-attribute-names)]
+    (. builder expressionAttributeNames data))
+  (when-let [data (lookup-entry config id :expression-attribute-values)]
+    (. builder expressionAttributeValues data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :item)]
+    (. builder item data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
+    (. builder returnConsumedCapacity data))
+  (when-let [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
+    (. builder returnItemCollectionMetrics data))
+  (when-let [data (dynamo-return-values config id :return-values)]
+    (. builder returnValues data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :table)]
+    (. builder table data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-dynamo-update-item-builder
+  "The build-dynamo-update-item-builder function updates a DynamoUpdateItem$Builder instance using the provided configuration.
+  The function takes the DynamoUpdateItem$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `conditionExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:condition-expression` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `expressionAttributeNames` | java.util.Map | [[cdk.support/lookup-entry]] | `:expression-attribute-names` |
+| `expressionAttributeValues` | java.util.Map | [[cdk.support/lookup-entry]] | `:expression-attribute-values` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `key` | java.util.Map | [[cdk.support/lookup-entry]] | `:key` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `returnConsumedCapacity` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoConsumedCapacity | [[cdk.api.services.stepfunctions.tasks/dynamo-consumed-capacity]] | `:return-consumed-capacity` |
+| `returnItemCollectionMetrics` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoItemCollectionMetrics | [[cdk.api.services.stepfunctions.tasks/dynamo-item-collection-metrics]] | `:return-item-collection-metrics` |
+| `returnValues` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoReturnValues | [[cdk.api.services.stepfunctions.tasks/dynamo-return-values]] | `:return-values` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `table` | software.amazon.awscdk.services.dynamodb.ITable | [[cdk.support/lookup-entry]] | `:table` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+| `updateExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:update-expression` |
+"
+  [^DynamoUpdateItem$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :condition-expression)]
+    (. builder conditionExpression data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :expression-attribute-names)]
+    (. builder expressionAttributeNames data))
+  (when-let [data (lookup-entry config id :expression-attribute-values)]
+    (. builder expressionAttributeValues data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :key)]
+    (. builder key data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
+    (. builder returnConsumedCapacity data))
+  (when-let [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
+    (. builder returnItemCollectionMetrics data))
+  (when-let [data (dynamo-return-values config id :return-values)]
+    (. builder returnValues data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :table)]
+    (. builder table data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :update-expression)]
+    (. builder updateExpression data))
+  (.build builder))
+
+
+(defn build-dynamo-update-item-props-builder
+  "The build-dynamo-update-item-props-builder function updates a DynamoUpdateItemProps$Builder instance using the provided configuration.
+  The function takes the DynamoUpdateItemProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `conditionExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:condition-expression` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `expressionAttributeNames` | java.util.Map | [[cdk.support/lookup-entry]] | `:expression-attribute-names` |
+| `expressionAttributeValues` | java.util.Map | [[cdk.support/lookup-entry]] | `:expression-attribute-values` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `key` | java.util.Map | [[cdk.support/lookup-entry]] | `:key` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `returnConsumedCapacity` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoConsumedCapacity | [[cdk.api.services.stepfunctions.tasks/dynamo-consumed-capacity]] | `:return-consumed-capacity` |
+| `returnItemCollectionMetrics` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoItemCollectionMetrics | [[cdk.api.services.stepfunctions.tasks/dynamo-item-collection-metrics]] | `:return-item-collection-metrics` |
+| `returnValues` | software.amazon.awscdk.services.stepfunctions.tasks.DynamoReturnValues | [[cdk.api.services.stepfunctions.tasks/dynamo-return-values]] | `:return-values` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `table` | software.amazon.awscdk.services.dynamodb.ITable | [[cdk.support/lookup-entry]] | `:table` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+| `updateExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:update-expression` |
+"
+  [^DynamoUpdateItemProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :condition-expression)]
+    (. builder conditionExpression data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :expression-attribute-names)]
+    (. builder expressionAttributeNames data))
+  (when-let [data (lookup-entry config id :expression-attribute-values)]
+    (. builder expressionAttributeValues data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :key)]
+    (. builder key data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (dynamo-consumed-capacity config id :return-consumed-capacity)]
+    (. builder returnConsumedCapacity data))
+  (when-let [data (dynamo-item-collection-metrics config id :return-item-collection-metrics)]
+    (. builder returnItemCollectionMetrics data))
+  (when-let [data (dynamo-return-values config id :return-values)]
+    (. builder returnValues data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :table)]
+    (. builder table data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :update-expression)]
+    (. builder updateExpression data))
+  (.build builder))
+
+
+(defn build-ecs-ec2-launch-target-builder
+  "The build-ecs-ec2-launch-target-builder function updates a EcsEc2LaunchTarget$Builder instance using the provided configuration.
+  The function takes the EcsEc2LaunchTarget$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `placementConstraints` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-constraints` |
-| `placementStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-strategies` |"
-  [stack id config]
-  (let [builder (EcsEc2LaunchTarget$Builder/create)]
-    (when-let [data (lookup-entry config id :placement-constraints)]
-      (. builder placementConstraints data))
-    (when-let [data (lookup-entry config id :placement-strategies)]
-      (. builder placementStrategies data))
-    (.build builder)))
+| `placementStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-strategies` |
+"
+  [^EcsEc2LaunchTarget$Builder builder id config]
+  (when-let [data (lookup-entry config id :placement-constraints)]
+    (. builder placementConstraints data))
+  (when-let [data (lookup-entry config id :placement-strategies)]
+    (. builder placementStrategies data))
+  (.build builder))
 
 
-(defn ecs-ec2-launch-target-options-builder
-  "The ecs-ec2-launch-target-options-builder function buildes out new instances of 
-EcsEc2LaunchTargetOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-ecs-ec2-launch-target-options-builder
+  "The build-ecs-ec2-launch-target-options-builder function updates a EcsEc2LaunchTargetOptions$Builder instance using the provided configuration.
+  The function takes the EcsEc2LaunchTargetOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `placementConstraints` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-constraints` |
-| `placementStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-strategies` |"
-  [stack id config]
-  (let [builder (EcsEc2LaunchTargetOptions$Builder.)]
-    (when-let [data (lookup-entry config id :placement-constraints)]
-      (. builder placementConstraints data))
-    (when-let [data (lookup-entry config id :placement-strategies)]
-      (. builder placementStrategies data))
-    (.build builder)))
+| `placementStrategies` | java.util.List | [[cdk.support/lookup-entry]] | `:placement-strategies` |
+"
+  [^EcsEc2LaunchTargetOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :placement-constraints)]
+    (. builder placementConstraints data))
+  (when-let [data (lookup-entry config id :placement-strategies)]
+    (. builder placementStrategies data))
+  (.build builder))
 
 
-(defn ecs-fargate-launch-target-builder
-  "The ecs-fargate-launch-target-builder function buildes out new instances of 
-EcsFargateLaunchTarget$Builder using the provided configuration.  Each field is set as follows:
+(defn build-ecs-fargate-launch-target-builder
+  "The build-ecs-fargate-launch-target-builder function updates a EcsFargateLaunchTarget$Builder instance using the provided configuration.
+  The function takes the EcsFargateLaunchTarget$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `platformVersion` | software.amazon.awscdk.services.ecs.FargatePlatformVersion | [[cdk.api.services.ecs/fargate-platform-version]] | `:platform-version` |"
-  [stack id config]
-  (let [builder (EcsFargateLaunchTarget$Builder/create)]
-    (when-let [data (fargate-platform-version config id :platform-version)]
-      (. builder platformVersion data))
-    (.build builder)))
-
-
-(defn ecs-fargate-launch-target-options-builder
-  "The ecs-fargate-launch-target-options-builder function buildes out new instances of 
-EcsFargateLaunchTargetOptions$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `platformVersion` | software.amazon.awscdk.services.ecs.FargatePlatformVersion | [[cdk.api.services.ecs/fargate-platform-version]] | `:platform-version` |"
-  [stack id config]
-  (let [builder (EcsFargateLaunchTargetOptions$Builder.)]
-    (when-let [data (fargate-platform-version config id :platform-version)]
-      (. builder platformVersion data))
-    (.build builder)))
+| `platformVersion` | software.amazon.awscdk.services.ecs.FargatePlatformVersion | [[cdk.api.services.ecs/fargate-platform-version]] | `:platform-version` |
+"
+  [^EcsFargateLaunchTarget$Builder builder id config]
+  (when-let [data (fargate-platform-version config id :platform-version)]
+    (. builder platformVersion data))
+  (.build builder))
 
 
-(defn ecs-launch-target-config-builder
-  "The ecs-launch-target-config-builder function buildes out new instances of 
-EcsLaunchTargetConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-ecs-fargate-launch-target-options-builder
+  "The build-ecs-fargate-launch-target-options-builder function updates a EcsFargateLaunchTargetOptions$Builder instance using the provided configuration.
+  The function takes the EcsFargateLaunchTargetOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |"
-  [stack id config]
-  (let [builder (EcsLaunchTargetConfig$Builder.)]
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (.build builder)))
+| `platformVersion` | software.amazon.awscdk.services.ecs.FargatePlatformVersion | [[cdk.api.services.ecs/fargate-platform-version]] | `:platform-version` |
+"
+  [^EcsFargateLaunchTargetOptions$Builder builder id config]
+  (when-let [data (fargate-platform-version config id :platform-version)]
+    (. builder platformVersion data))
+  (.build builder))
 
 
-(defn ecs-run-task-builder
-  "The ecs-run-task-builder function buildes out new instances of 
-EcsRunTask$Builder using the provided configuration.  Each field is set as follows:
+(defn build-ecs-launch-target-config-builder
+  "The build-ecs-launch-target-config-builder function updates a EcsLaunchTargetConfig$Builder instance using the provided configuration.
+  The function takes the EcsLaunchTargetConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `parameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:parameters` |
+"
+  [^EcsLaunchTargetConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (.build builder))
+
+
+(defn build-ecs-run-task-builder
+  "The build-ecs-run-task-builder function updates a EcsRunTask$Builder instance using the provided configuration.
+  The function takes the EcsRunTask$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3363,59 +3519,62 @@ EcsRunTask$Builder using the provided configuration.  Each field is set as follo
 | `subnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:subnets` |
 | `taskDefinition` | software.amazon.awscdk.services.ecs.TaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EcsRunTask$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :assign-public-ip)]
-      (. builder assignPublicIp data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :container-overrides)]
-      (. builder containerOverrides data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :launch-target)]
-      (. builder launchTarget data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (propagated-tag-source config id :propagated-tag-source)]
-      (. builder propagatedTagSource data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :revision-number)]
-      (. builder revisionNumber data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :subnets)]
-      (. builder subnets data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EcsRunTask$Builder builder id config]
+  (when-let [data (lookup-entry config id :assign-public-ip)]
+    (. builder assignPublicIp data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :container-overrides)]
+    (. builder containerOverrides data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :launch-target)]
+    (. builder launchTarget data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (propagated-tag-source config id :propagated-tag-source)]
+    (. builder propagatedTagSource data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :revision-number)]
+    (. builder revisionNumber data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :subnets)]
+    (. builder subnets data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn ecs-run-task-props-builder
-  "The ecs-run-task-props-builder function buildes out new instances of 
-EcsRunTaskProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-ecs-run-task-props-builder
+  "The build-ecs-run-task-props-builder function updates a EcsRunTaskProps$Builder instance using the provided configuration.
+  The function takes the EcsRunTaskProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3440,121 +3599,62 @@ EcsRunTaskProps$Builder using the provided configuration.  Each field is set as 
 | `subnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:subnets` |
 | `taskDefinition` | software.amazon.awscdk.services.ecs.TaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EcsRunTaskProps$Builder.)]
-    (when-let [data (lookup-entry config id :assign-public-ip)]
-      (. builder assignPublicIp data))
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :container-overrides)]
-      (. builder containerOverrides data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :enable-execute-command)]
-      (. builder enableExecuteCommand data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :launch-target)]
-      (. builder launchTarget data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (propagated-tag-source config id :propagated-tag-source)]
-      (. builder propagatedTagSource data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :revision-number)]
-      (. builder revisionNumber data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :subnets)]
-      (. builder subnets data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EcsRunTaskProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :assign-public-ip)]
+    (. builder assignPublicIp data))
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :container-overrides)]
+    (. builder containerOverrides data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :enable-execute-command)]
+    (. builder enableExecuteCommand data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :launch-target)]
+    (. builder launchTarget data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (propagated-tag-source config id :propagated-tag-source)]
+    (. builder propagatedTagSource data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :revision-number)]
+    (. builder revisionNumber data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :subnets)]
+    (. builder subnets data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn eks-call-builder
-  "The eks-call-builder function buildes out new instances of 
-EksCall$Builder using the provided configuration.  Each field is set as follows:
+(defn build-eks-call-builder
+  "The build-eks-call-builder function updates a EksCall$Builder instance using the provided configuration.
+  The function takes the EksCall$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `cluster` | software.amazon.awscdk.services.eks.ICluster | [[cdk.support/lookup-entry]] | `:cluster` |
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `httpMethod` | software.amazon.awscdk.services.stepfunctions.tasks.HttpMethods | [[cdk.api.services.stepfunctions.tasks/http-methods]] | `:http-method` |
-| `httpPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:http-path` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `queryParameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:query-parameters` |
-| `requestBody` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:request-body` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EksCall$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (http-methods config id :http-method)]
-      (. builder httpMethod data))
-    (when-let [data (lookup-entry config id :http-path)]
-      (. builder httpPath data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :query-parameters)]
-      (. builder queryParameters data))
-    (when-let [data (lookup-entry config id :request-body)]
-      (. builder requestBody data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn eks-call-props-builder
-  "The eks-call-props-builder function buildes out new instances of 
-EksCallProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3574,49 +3674,117 @@ EksCallProps$Builder using the provided configuration.  Each field is set as fol
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EksCallProps$Builder.)]
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (http-methods config id :http-method)]
-      (. builder httpMethod data))
-    (when-let [data (lookup-entry config id :http-path)]
-      (. builder httpPath data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :query-parameters)]
-      (. builder queryParameters data))
-    (when-let [data (lookup-entry config id :request-body)]
-      (. builder requestBody data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EksCall$Builder builder id config]
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (http-methods config id :http-method)]
+    (. builder httpMethod data))
+  (when-let [data (lookup-entry config id :http-path)]
+    (. builder httpPath data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :query-parameters)]
+    (. builder queryParameters data))
+  (when-let [data (lookup-entry config id :request-body)]
+    (. builder requestBody data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn emr-add-step-builder
-  "The emr-add-step-builder function buildes out new instances of 
-EmrAddStep$Builder using the provided configuration.  Each field is set as follows:
+(defn build-eks-call-props-builder
+  "The build-eks-call-props-builder function updates a EksCallProps$Builder instance using the provided configuration.
+  The function takes the EksCallProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `cluster` | software.amazon.awscdk.services.eks.ICluster | [[cdk.support/lookup-entry]] | `:cluster` |
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `httpMethod` | software.amazon.awscdk.services.stepfunctions.tasks.HttpMethods | [[cdk.api.services.stepfunctions.tasks/http-methods]] | `:http-method` |
+| `httpPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:http-path` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `queryParameters` | java.util.Map | [[cdk.support/lookup-entry]] | `:query-parameters` |
+| `requestBody` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:request-body` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EksCallProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (http-methods config id :http-method)]
+    (. builder httpMethod data))
+  (when-let [data (lookup-entry config id :http-path)]
+    (. builder httpPath data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :query-parameters)]
+    (. builder queryParameters data))
+  (when-let [data (lookup-entry config id :request-body)]
+    (. builder requestBody data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-emr-add-step-builder
+  "The build-emr-add-step-builder function updates a EmrAddStep$Builder instance using the provided configuration.
+  The function takes the EmrAddStep$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3639,55 +3807,58 @@ EmrAddStep$Builder using the provided configuration.  Each field is set as follo
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EmrAddStep$Builder/create stack id)]
-    (when-let [data (action-on-failure config id :action-on-failure)]
-      (. builder actionOnFailure data))
-    (when-let [data (lookup-entry config id :args)]
-      (. builder args data))
-    (when-let [data (lookup-entry config id :cluster-id)]
-      (. builder clusterId data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :execution-role-arn)]
-      (. builder executionRoleArn data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :jar)]
-      (. builder jar data))
-    (when-let [data (lookup-entry config id :main-class)]
-      (. builder mainClass data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :properties)]
-      (. builder properties data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EmrAddStep$Builder builder id config]
+  (when-let [data (action-on-failure config id :action-on-failure)]
+    (. builder actionOnFailure data))
+  (when-let [data (lookup-entry config id :args)]
+    (. builder args data))
+  (when-let [data (lookup-entry config id :cluster-id)]
+    (. builder clusterId data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :execution-role-arn)]
+    (. builder executionRoleArn data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :jar)]
+    (. builder jar data))
+  (when-let [data (lookup-entry config id :main-class)]
+    (. builder mainClass data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :properties)]
+    (. builder properties data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn emr-add-step-props-builder
-  "The emr-add-step-props-builder function buildes out new instances of 
-EmrAddStepProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-add-step-props-builder
+  "The build-emr-add-step-props-builder function updates a EmrAddStepProps$Builder instance using the provided configuration.
+  The function takes the EmrAddStepProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3710,108 +3881,58 @@ EmrAddStepProps$Builder using the provided configuration.  Each field is set as 
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EmrAddStepProps$Builder.)]
-    (when-let [data (action-on-failure config id :action-on-failure)]
-      (. builder actionOnFailure data))
-    (when-let [data (lookup-entry config id :args)]
-      (. builder args data))
-    (when-let [data (lookup-entry config id :cluster-id)]
-      (. builder clusterId data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :execution-role-arn)]
-      (. builder executionRoleArn data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :jar)]
-      (. builder jar data))
-    (when-let [data (lookup-entry config id :main-class)]
-      (. builder mainClass data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :properties)]
-      (. builder properties data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EmrAddStepProps$Builder builder id config]
+  (when-let [data (action-on-failure config id :action-on-failure)]
+    (. builder actionOnFailure data))
+  (when-let [data (lookup-entry config id :args)]
+    (. builder args data))
+  (when-let [data (lookup-entry config id :cluster-id)]
+    (. builder clusterId data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :execution-role-arn)]
+    (. builder executionRoleArn data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :jar)]
+    (. builder jar data))
+  (when-let [data (lookup-entry config id :main-class)]
+    (. builder mainClass data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :properties)]
+    (. builder properties data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn emr-cancel-step-builder
-  "The emr-cancel-step-builder function buildes out new instances of 
-EmrCancelStep$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-cancel-step-builder
+  "The build-emr-cancel-step-builder function updates a EmrCancelStep$Builder instance using the provided configuration.
+  The function takes the EmrCancelStep$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `clusterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-id` |
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `stepId` | java.lang.String | [[cdk.support/lookup-entry]] | `:step-id` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EmrCancelStep$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :cluster-id)]
-      (. builder clusterId data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :step-id)]
-      (. builder stepId data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn emr-cancel-step-props-builder
-  "The emr-cancel-step-props-builder function buildes out new instances of 
-EmrCancelStepProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3828,43 +3949,102 @@ EmrCancelStepProps$Builder using the provided configuration.  Each field is set 
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `stepId` | java.lang.String | [[cdk.support/lookup-entry]] | `:step-id` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EmrCancelStepProps$Builder.)]
-    (when-let [data (lookup-entry config id :cluster-id)]
-      (. builder clusterId data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :step-id)]
-      (. builder stepId data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EmrCancelStep$Builder builder id config]
+  (when-let [data (lookup-entry config id :cluster-id)]
+    (. builder clusterId data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :step-id)]
+    (. builder stepId data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn emr-containers-create-virtual-cluster-builder
-  "The emr-containers-create-virtual-cluster-builder function buildes out new instances of 
-EmrContainersCreateVirtualCluster$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-cancel-step-props-builder
+  "The build-emr-cancel-step-props-builder function updates a EmrCancelStepProps$Builder instance using the provided configuration.
+  The function takes the EmrCancelStepProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `clusterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-id` |
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `stepId` | java.lang.String | [[cdk.support/lookup-entry]] | `:step-id` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EmrCancelStepProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :cluster-id)]
+    (. builder clusterId data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :step-id)]
+    (. builder stepId data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-emr-containers-create-virtual-cluster-builder
+  "The build-emr-containers-create-virtual-cluster-builder function updates a EmrContainersCreateVirtualCluster$Builder instance using the provided configuration.
+  The function takes the EmrContainersCreateVirtualCluster$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3883,47 +4063,50 @@ EmrContainersCreateVirtualCluster$Builder using the provided configuration.  Eac
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `virtualClusterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-cluster-name` |"
-  [stack id config]
-  (let [builder (EmrContainersCreateVirtualCluster$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :eks-cluster)]
-      (. builder eksCluster data))
-    (when-let [data (lookup-entry config id :eks-namespace)]
-      (. builder eksNamespace data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :virtual-cluster-name)]
-      (. builder virtualClusterName data))
-    (.build builder)))
+| `virtualClusterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-cluster-name` |
+"
+  [^EmrContainersCreateVirtualCluster$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :eks-cluster)]
+    (. builder eksCluster data))
+  (when-let [data (lookup-entry config id :eks-namespace)]
+    (. builder eksNamespace data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :virtual-cluster-name)]
+    (. builder virtualClusterName data))
+  (.build builder))
 
 
-(defn emr-containers-create-virtual-cluster-props-builder
-  "The emr-containers-create-virtual-cluster-props-builder function buildes out new instances of 
-EmrContainersCreateVirtualClusterProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-containers-create-virtual-cluster-props-builder
+  "The build-emr-containers-create-virtual-cluster-props-builder function updates a EmrContainersCreateVirtualClusterProps$Builder instance using the provided configuration.
+  The function takes the EmrContainersCreateVirtualClusterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3942,97 +4125,50 @@ EmrContainersCreateVirtualClusterProps$Builder using the provided configuration.
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `virtualClusterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-cluster-name` |"
-  [stack id config]
-  (let [builder (EmrContainersCreateVirtualClusterProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :eks-cluster)]
-      (. builder eksCluster data))
-    (when-let [data (lookup-entry config id :eks-namespace)]
-      (. builder eksNamespace data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :virtual-cluster-name)]
-      (. builder virtualClusterName data))
-    (.build builder)))
+| `virtualClusterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-cluster-name` |
+"
+  [^EmrContainersCreateVirtualClusterProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :eks-cluster)]
+    (. builder eksCluster data))
+  (when-let [data (lookup-entry config id :eks-namespace)]
+    (. builder eksNamespace data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :virtual-cluster-name)]
+    (. builder virtualClusterName data))
+  (.build builder))
 
 
-(defn emr-containers-delete-virtual-cluster-builder
-  "The emr-containers-delete-virtual-cluster-builder function buildes out new instances of 
-EmrContainersDeleteVirtualCluster$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-containers-delete-virtual-cluster-builder
+  "The build-emr-containers-delete-virtual-cluster-builder function updates a EmrContainersDeleteVirtualCluster$Builder instance using the provided configuration.
+  The function takes the EmrContainersDeleteVirtualCluster$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `virtualClusterId` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:virtual-cluster-id` |"
-  [stack id config]
-  (let [builder (EmrContainersDeleteVirtualCluster$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :virtual-cluster-id)]
-      (. builder virtualClusterId data))
-    (.build builder)))
-
-
-(defn emr-containers-delete-virtual-cluster-props-builder
-  "The emr-containers-delete-virtual-cluster-props-builder function buildes out new instances of 
-EmrContainersDeleteVirtualClusterProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -4048,41 +4184,97 @@ EmrContainersDeleteVirtualClusterProps$Builder using the provided configuration.
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `virtualClusterId` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:virtual-cluster-id` |"
-  [stack id config]
-  (let [builder (EmrContainersDeleteVirtualClusterProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :virtual-cluster-id)]
-      (. builder virtualClusterId data))
-    (.build builder)))
+| `virtualClusterId` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:virtual-cluster-id` |
+"
+  [^EmrContainersDeleteVirtualCluster$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :virtual-cluster-id)]
+    (. builder virtualClusterId data))
+  (.build builder))
 
 
-(defn emr-containers-start-job-run-builder
-  "The emr-containers-start-job-run-builder function buildes out new instances of 
-EmrContainersStartJobRun$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-containers-delete-virtual-cluster-props-builder
+  "The build-emr-containers-delete-virtual-cluster-props-builder function updates a EmrContainersDeleteVirtualClusterProps$Builder instance using the provided configuration.
+  The function takes the EmrContainersDeleteVirtualClusterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+| `virtualClusterId` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:virtual-cluster-id` |
+"
+  [^EmrContainersDeleteVirtualClusterProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :virtual-cluster-id)]
+    (. builder virtualClusterId data))
+  (.build builder))
+
+
+(defn build-emr-containers-start-job-run-builder
+  "The build-emr-containers-start-job-run-builder function updates a EmrContainersStartJobRun$Builder instance using the provided configuration.
+  The function takes the EmrContainersStartJobRun$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -4105,55 +4297,58 @@ EmrContainersStartJobRun$Builder using the provided configuration.  Each field i
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `virtualCluster` | software.amazon.awscdk.services.stepfunctions.tasks.VirtualClusterInput | [[cdk.support/lookup-entry]] | `:virtual-cluster` |"
-  [stack id config]
-  (let [builder (EmrContainersStartJobRun$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application-config)]
-      (. builder applicationConfig data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :execution-role)]
-      (. builder executionRole data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :job-driver)]
-      (. builder jobDriver data))
-    (when-let [data (lookup-entry config id :job-name)]
-      (. builder jobName data))
-    (when-let [data (lookup-entry config id :monitoring)]
-      (. builder monitoring data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :release-label)]
-      (. builder releaseLabel data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :virtual-cluster)]
-      (. builder virtualCluster data))
-    (.build builder)))
+| `virtualCluster` | software.amazon.awscdk.services.stepfunctions.tasks.VirtualClusterInput | [[cdk.support/lookup-entry]] | `:virtual-cluster` |
+"
+  [^EmrContainersStartJobRun$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-config)]
+    (. builder applicationConfig data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :execution-role)]
+    (. builder executionRole data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :job-driver)]
+    (. builder jobDriver data))
+  (when-let [data (lookup-entry config id :job-name)]
+    (. builder jobName data))
+  (when-let [data (lookup-entry config id :monitoring)]
+    (. builder monitoring data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :release-label)]
+    (. builder releaseLabel data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :virtual-cluster)]
+    (. builder virtualCluster data))
+  (.build builder))
 
 
-(defn emr-containers-start-job-run-props-builder
-  "The emr-containers-start-job-run-props-builder function buildes out new instances of 
-EmrContainersStartJobRunProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-containers-start-job-run-props-builder
+  "The build-emr-containers-start-job-run-props-builder function updates a EmrContainersStartJobRunProps$Builder instance using the provided configuration.
+  The function takes the EmrContainersStartJobRunProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -4176,112 +4371,124 @@ EmrContainersStartJobRunProps$Builder using the provided configuration.  Each fi
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `virtualCluster` | software.amazon.awscdk.services.stepfunctions.tasks.VirtualClusterInput | [[cdk.support/lookup-entry]] | `:virtual-cluster` |"
-  [stack id config]
-  (let [builder (EmrContainersStartJobRunProps$Builder.)]
-    (when-let [data (lookup-entry config id :application-config)]
-      (. builder applicationConfig data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :execution-role)]
-      (. builder executionRole data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :job-driver)]
-      (. builder jobDriver data))
-    (when-let [data (lookup-entry config id :job-name)]
-      (. builder jobName data))
-    (when-let [data (lookup-entry config id :monitoring)]
-      (. builder monitoring data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :release-label)]
-      (. builder releaseLabel data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :virtual-cluster)]
-      (. builder virtualCluster data))
-    (.build builder)))
+| `virtualCluster` | software.amazon.awscdk.services.stepfunctions.tasks.VirtualClusterInput | [[cdk.support/lookup-entry]] | `:virtual-cluster` |
+"
+  [^EmrContainersStartJobRunProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-config)]
+    (. builder applicationConfig data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :execution-role)]
+    (. builder executionRole data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :job-driver)]
+    (. builder jobDriver data))
+  (when-let [data (lookup-entry config id :job-name)]
+    (. builder jobName data))
+  (when-let [data (lookup-entry config id :monitoring)]
+    (. builder monitoring data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :release-label)]
+    (. builder releaseLabel data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :virtual-cluster)]
+    (. builder virtualCluster data))
+  (.build builder))
 
 
-(defn emr-create-cluster-application-config-property-builder
-  "The emr-create-cluster-application-config-property-builder function buildes out new instances of 
-EmrCreateCluster$ApplicationConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-application-config-property-builder
+  "The build-emr-create-cluster-application-config-property-builder function updates a EmrCreateCluster$ApplicationConfigProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$ApplicationConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `additionalInfo` | java.util.Map | [[cdk.support/lookup-entry]] | `:additional-info` |
 | `args` | java.util.List | [[cdk.support/lookup-entry]] | `:args` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$ApplicationConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :additional-info)]
-      (. builder additionalInfo data))
-    (when-let [data (lookup-entry config id :args)]
-      (. builder args data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :version)]
-      (. builder version data))
-    (.build builder)))
+| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
+"
+  [^EmrCreateCluster$ApplicationConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :additional-info)]
+    (. builder additionalInfo data))
+  (when-let [data (lookup-entry config id :args)]
+    (. builder args data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :version)]
+    (. builder version data))
+  (.build builder))
 
 
-(defn emr-create-cluster-auto-scaling-policy-property-builder
-  "The emr-create-cluster-auto-scaling-policy-property-builder function buildes out new instances of 
-EmrCreateCluster$AutoScalingPolicyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-auto-scaling-policy-property-builder
+  "The build-emr-create-cluster-auto-scaling-policy-property-builder function updates a EmrCreateCluster$AutoScalingPolicyProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$AutoScalingPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `constraints` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$ScalingConstraintsProperty | [[cdk.support/lookup-entry]] | `:constraints` |
-| `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$AutoScalingPolicyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :constraints)]
-      (. builder constraints data))
-    (when-let [data (lookup-entry config id :rules)]
-      (. builder rules data))
-    (.build builder)))
+| `rules` | java.util.List | [[cdk.support/lookup-entry]] | `:rules` |
+"
+  [^EmrCreateCluster$AutoScalingPolicyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :constraints)]
+    (. builder constraints data))
+  (when-let [data (lookup-entry config id :rules)]
+    (. builder rules data))
+  (.build builder))
 
 
-(defn emr-create-cluster-bootstrap-action-config-property-builder
-  "The emr-create-cluster-bootstrap-action-config-property-builder function buildes out new instances of 
-EmrCreateCluster$BootstrapActionConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-bootstrap-action-config-property-builder
+  "The build-emr-create-cluster-bootstrap-action-config-property-builder function updates a EmrCreateCluster$BootstrapActionConfigProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$BootstrapActionConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `scriptBootstrapAction` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$ScriptBootstrapActionConfigProperty | [[cdk.support/lookup-entry]] | `:script-bootstrap-action` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$BootstrapActionConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :script-bootstrap-action)]
-      (. builder scriptBootstrapAction data))
-    (.build builder)))
+| `scriptBootstrapAction` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$ScriptBootstrapActionConfigProperty | [[cdk.support/lookup-entry]] | `:script-bootstrap-action` |
+"
+  [^EmrCreateCluster$BootstrapActionConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :script-bootstrap-action)]
+    (. builder scriptBootstrapAction data))
+  (.build builder))
 
 
-(defn emr-create-cluster-builder
-  "The emr-create-cluster-builder function buildes out new instances of 
-EmrCreateCluster$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-builder
+  "The build-emr-create-cluster-builder function updates a EmrCreateCluster$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -4315,77 +4522,80 @@ EmrCreateCluster$Builder using the provided configuration.  Each field is set as
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `visibleToAllUsers` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:visible-to-all-users` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :additional-info)]
-      (. builder additionalInfo data))
-    (when-let [data (lookup-entry config id :applications)]
-      (. builder applications data))
-    (when-let [data (lookup-entry config id :auto-scaling-role)]
-      (. builder autoScalingRole data))
-    (when-let [data (lookup-entry config id :bootstrap-actions)]
-      (. builder bootstrapActions data))
-    (when-let [data (lookup-entry config id :cluster-role)]
-      (. builder clusterRole data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :configurations)]
-      (. builder configurations data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :custom-ami-id)]
-      (. builder customAmiId data))
-    (when-let [data (lookup-entry config id :ebs-root-volume-size)]
-      (. builder ebsRootVolumeSize data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (lookup-entry config id :instances)]
-      (. builder instances data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :kerberos-attributes)]
-      (. builder kerberosAttributes data))
-    (when-let [data (lookup-entry config id :log-uri)]
-      (. builder logUri data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :release-label)]
-      (. builder releaseLabel data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (emr-create-cluster-emr-cluster-scale-down-behavior config id :scale-down-behavior)]
-      (. builder scaleDownBehavior data))
-    (when-let [data (lookup-entry config id :security-configuration)]
-      (. builder securityConfiguration data))
-    (when-let [data (lookup-entry config id :service-role)]
-      (. builder serviceRole data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :step-concurrency-level)]
-      (. builder stepConcurrencyLevel data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :visible-to-all-users)]
-      (. builder visibleToAllUsers data))
-    (.build builder)))
+| `visibleToAllUsers` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:visible-to-all-users` |
+"
+  [^EmrCreateCluster$Builder builder id config]
+  (when-let [data (lookup-entry config id :additional-info)]
+    (. builder additionalInfo data))
+  (when-let [data (lookup-entry config id :applications)]
+    (. builder applications data))
+  (when-let [data (lookup-entry config id :auto-scaling-role)]
+    (. builder autoScalingRole data))
+  (when-let [data (lookup-entry config id :bootstrap-actions)]
+    (. builder bootstrapActions data))
+  (when-let [data (lookup-entry config id :cluster-role)]
+    (. builder clusterRole data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :configurations)]
+    (. builder configurations data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :custom-ami-id)]
+    (. builder customAmiId data))
+  (when-let [data (lookup-entry config id :ebs-root-volume-size)]
+    (. builder ebsRootVolumeSize data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (lookup-entry config id :instances)]
+    (. builder instances data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :kerberos-attributes)]
+    (. builder kerberosAttributes data))
+  (when-let [data (lookup-entry config id :log-uri)]
+    (. builder logUri data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :release-label)]
+    (. builder releaseLabel data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (emr-create-cluster-emr-cluster-scale-down-behavior config id :scale-down-behavior)]
+    (. builder scaleDownBehavior data))
+  (when-let [data (lookup-entry config id :security-configuration)]
+    (. builder securityConfiguration data))
+  (when-let [data (lookup-entry config id :service-role)]
+    (. builder serviceRole data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :step-concurrency-level)]
+    (. builder stepConcurrencyLevel data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :visible-to-all-users)]
+    (. builder visibleToAllUsers data))
+  (.build builder))
 
 
-(defn emr-create-cluster-cloud-watch-alarm-definition-property-builder
-  "The emr-create-cluster-cloud-watch-alarm-definition-property-builder function buildes out new instances of 
-EmrCreateCluster$CloudWatchAlarmDefinitionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-cloud-watch-alarm-definition-property-builder
+  "The build-emr-create-cluster-cloud-watch-alarm-definition-property-builder function updates a EmrCreateCluster$CloudWatchAlarmDefinitionProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$CloudWatchAlarmDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -4397,87 +4607,99 @@ EmrCreateCluster$CloudWatchAlarmDefinitionProperty$Builder using the provided co
 | `period` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:period` |
 | `statistic` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$CloudWatchAlarmStatistic | [[cdk.api.services.stepfunctions.tasks/emr-create-cluster-cloud-watch-alarm-statistic]] | `:statistic` |
 | `threshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:threshold` |
-| `unit` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$CloudWatchAlarmUnit | [[cdk.api.services.stepfunctions.tasks/emr-create-cluster-cloud-watch-alarm-unit]] | `:unit` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$CloudWatchAlarmDefinitionProperty$Builder.)]
-    (when-let [data (emr-create-cluster-cloud-watch-alarm-comparison-operator config id :comparison-operator)]
-      (. builder comparisonOperator data))
-    (when-let [data (lookup-entry config id :dimensions)]
-      (. builder dimensions data))
-    (when-let [data (lookup-entry config id :evaluation-periods)]
-      (. builder evaluationPeriods data))
-    (when-let [data (lookup-entry config id :metric-name)]
-      (. builder metricName data))
-    (when-let [data (lookup-entry config id :namespace)]
-      (. builder namespace data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (emr-create-cluster-cloud-watch-alarm-statistic config id :statistic)]
-      (. builder statistic data))
-    (when-let [data (lookup-entry config id :threshold)]
-      (. builder threshold data))
-    (when-let [data (emr-create-cluster-cloud-watch-alarm-unit config id :unit)]
-      (. builder unit data))
-    (.build builder)))
+| `unit` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$CloudWatchAlarmUnit | [[cdk.api.services.stepfunctions.tasks/emr-create-cluster-cloud-watch-alarm-unit]] | `:unit` |
+"
+  [^EmrCreateCluster$CloudWatchAlarmDefinitionProperty$Builder builder id config]
+  (when-let [data (emr-create-cluster-cloud-watch-alarm-comparison-operator config id :comparison-operator)]
+    (. builder comparisonOperator data))
+  (when-let [data (lookup-entry config id :dimensions)]
+    (. builder dimensions data))
+  (when-let [data (lookup-entry config id :evaluation-periods)]
+    (. builder evaluationPeriods data))
+  (when-let [data (lookup-entry config id :metric-name)]
+    (. builder metricName data))
+  (when-let [data (lookup-entry config id :namespace)]
+    (. builder namespace data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (emr-create-cluster-cloud-watch-alarm-statistic config id :statistic)]
+    (. builder statistic data))
+  (when-let [data (lookup-entry config id :threshold)]
+    (. builder threshold data))
+  (when-let [data (emr-create-cluster-cloud-watch-alarm-unit config id :unit)]
+    (. builder unit data))
+  (.build builder))
 
 
-(defn emr-create-cluster-configuration-property-builder
-  "The emr-create-cluster-configuration-property-builder function buildes out new instances of 
-EmrCreateCluster$ConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-configuration-property-builder
+  "The build-emr-create-cluster-configuration-property-builder function updates a EmrCreateCluster$ConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$ConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `classification` | java.lang.String | [[cdk.support/lookup-entry]] | `:classification` |
 | `configurations` | java.util.List | [[cdk.support/lookup-entry]] | `:configurations` |
-| `properties` | java.util.Map | [[cdk.support/lookup-entry]] | `:properties` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$ConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :classification)]
-      (. builder classification data))
-    (when-let [data (lookup-entry config id :configurations)]
-      (. builder configurations data))
-    (when-let [data (lookup-entry config id :properties)]
-      (. builder properties data))
-    (.build builder)))
+| `properties` | java.util.Map | [[cdk.support/lookup-entry]] | `:properties` |
+"
+  [^EmrCreateCluster$ConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :classification)]
+    (. builder classification data))
+  (when-let [data (lookup-entry config id :configurations)]
+    (. builder configurations data))
+  (when-let [data (lookup-entry config id :properties)]
+    (. builder properties data))
+  (.build builder))
 
 
-(defn emr-create-cluster-ebs-block-device-config-property-builder
-  "The emr-create-cluster-ebs-block-device-config-property-builder function buildes out new instances of 
-EmrCreateCluster$EbsBlockDeviceConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-ebs-block-device-config-property-builder
+  "The build-emr-create-cluster-ebs-block-device-config-property-builder function updates a EmrCreateCluster$EbsBlockDeviceConfigProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$EbsBlockDeviceConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `volumeSpecification` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$VolumeSpecificationProperty | [[cdk.support/lookup-entry]] | `:volume-specification` |
-| `volumesPerInstance` | java.lang.Number | [[cdk.support/lookup-entry]] | `:volumes-per-instance` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$EbsBlockDeviceConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :volume-specification)]
-      (. builder volumeSpecification data))
-    (when-let [data (lookup-entry config id :volumes-per-instance)]
-      (. builder volumesPerInstance data))
-    (.build builder)))
+| `volumesPerInstance` | java.lang.Number | [[cdk.support/lookup-entry]] | `:volumes-per-instance` |
+"
+  [^EmrCreateCluster$EbsBlockDeviceConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :volume-specification)]
+    (. builder volumeSpecification data))
+  (when-let [data (lookup-entry config id :volumes-per-instance)]
+    (. builder volumesPerInstance data))
+  (.build builder))
 
 
-(defn emr-create-cluster-ebs-configuration-property-builder
-  "The emr-create-cluster-ebs-configuration-property-builder function buildes out new instances of 
-EmrCreateCluster$EbsConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-ebs-configuration-property-builder
+  "The build-emr-create-cluster-ebs-configuration-property-builder function updates a EmrCreateCluster$EbsConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$EbsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `ebsBlockDeviceConfigs` | java.util.List | [[cdk.support/lookup-entry]] | `:ebs-block-device-configs` |
-| `ebsOptimized` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ebs-optimized` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$EbsConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :ebs-block-device-configs)]
-      (. builder ebsBlockDeviceConfigs data))
-    (when-let [data (lookup-entry config id :ebs-optimized)]
-      (. builder ebsOptimized data))
-    (.build builder)))
+| `ebsOptimized` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ebs-optimized` |
+"
+  [^EmrCreateCluster$EbsConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :ebs-block-device-configs)]
+    (. builder ebsBlockDeviceConfigs data))
+  (when-let [data (lookup-entry config id :ebs-optimized)]
+    (. builder ebsOptimized data))
+  (.build builder))
 
 
-(defn emr-create-cluster-instance-fleet-config-property-builder
-  "The emr-create-cluster-instance-fleet-config-property-builder function buildes out new instances of 
-EmrCreateCluster$InstanceFleetConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-instance-fleet-config-property-builder
+  "The build-emr-create-cluster-instance-fleet-config-property-builder function updates a EmrCreateCluster$InstanceFleetConfigProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$InstanceFleetConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -4486,44 +4708,50 @@ EmrCreateCluster$InstanceFleetConfigProperty$Builder using the provided configur
 | `launchSpecifications` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$InstanceFleetProvisioningSpecificationsProperty | [[cdk.support/lookup-entry]] | `:launch-specifications` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `targetOnDemandCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-on-demand-capacity` |
-| `targetSpotCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-spot-capacity` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$InstanceFleetConfigProperty$Builder.)]
-    (when-let [data (emr-create-cluster-instance-role-type config id :instance-fleet-type)]
-      (. builder instanceFleetType data))
-    (when-let [data (lookup-entry config id :instance-type-configs)]
-      (. builder instanceTypeConfigs data))
-    (when-let [data (lookup-entry config id :launch-specifications)]
-      (. builder launchSpecifications data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :target-on-demand-capacity)]
-      (. builder targetOnDemandCapacity data))
-    (when-let [data (lookup-entry config id :target-spot-capacity)]
-      (. builder targetSpotCapacity data))
-    (.build builder)))
+| `targetSpotCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-spot-capacity` |
+"
+  [^EmrCreateCluster$InstanceFleetConfigProperty$Builder builder id config]
+  (when-let [data (emr-create-cluster-instance-role-type config id :instance-fleet-type)]
+    (. builder instanceFleetType data))
+  (when-let [data (lookup-entry config id :instance-type-configs)]
+    (. builder instanceTypeConfigs data))
+  (when-let [data (lookup-entry config id :launch-specifications)]
+    (. builder launchSpecifications data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :target-on-demand-capacity)]
+    (. builder targetOnDemandCapacity data))
+  (when-let [data (lookup-entry config id :target-spot-capacity)]
+    (. builder targetSpotCapacity data))
+  (.build builder))
 
 
-(defn emr-create-cluster-instance-fleet-provisioning-specifications-property-builder
-  "The emr-create-cluster-instance-fleet-provisioning-specifications-property-builder function buildes out new instances of 
-EmrCreateCluster$InstanceFleetProvisioningSpecificationsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-instance-fleet-provisioning-specifications-property-builder
+  "The build-emr-create-cluster-instance-fleet-provisioning-specifications-property-builder function updates a EmrCreateCluster$InstanceFleetProvisioningSpecificationsProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$InstanceFleetProvisioningSpecificationsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `onDemandSpecification` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$OnDemandProvisioningSpecificationProperty | [[cdk.support/lookup-entry]] | `:on-demand-specification` |
-| `spotSpecification` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$SpotProvisioningSpecificationProperty | [[cdk.support/lookup-entry]] | `:spot-specification` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$InstanceFleetProvisioningSpecificationsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :on-demand-specification)]
-      (. builder onDemandSpecification data))
-    (when-let [data (lookup-entry config id :spot-specification)]
-      (. builder spotSpecification data))
-    (.build builder)))
+| `spotSpecification` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$SpotProvisioningSpecificationProperty | [[cdk.support/lookup-entry]] | `:spot-specification` |
+"
+  [^EmrCreateCluster$InstanceFleetProvisioningSpecificationsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :on-demand-specification)]
+    (. builder onDemandSpecification data))
+  (when-let [data (lookup-entry config id :spot-specification)]
+    (. builder spotSpecification data))
+  (.build builder))
 
 
-(defn emr-create-cluster-instance-group-config-property-builder
-  "The emr-create-cluster-instance-group-config-property-builder function buildes out new instances of 
-EmrCreateCluster$InstanceGroupConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-instance-group-config-property-builder
+  "The build-emr-create-cluster-instance-group-config-property-builder function updates a EmrCreateCluster$InstanceGroupConfigProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$InstanceGroupConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -4535,33 +4763,36 @@ EmrCreateCluster$InstanceGroupConfigProperty$Builder using the provided configur
 | `instanceRole` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$InstanceRoleType | [[cdk.api.services.stepfunctions.tasks/emr-create-cluster-instance-role-type]] | `:instance-role` |
 | `instanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-type` |
 | `market` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$InstanceMarket | [[cdk.api.services.stepfunctions.tasks/emr-create-cluster-instance-market]] | `:market` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$InstanceGroupConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :auto-scaling-policy)]
-      (. builder autoScalingPolicy data))
-    (when-let [data (lookup-entry config id :bid-price)]
-      (. builder bidPrice data))
-    (when-let [data (lookup-entry config id :configurations)]
-      (. builder configurations data))
-    (when-let [data (lookup-entry config id :ebs-configuration)]
-      (. builder ebsConfiguration data))
-    (when-let [data (lookup-entry config id :instance-count)]
-      (. builder instanceCount data))
-    (when-let [data (emr-create-cluster-instance-role-type config id :instance-role)]
-      (. builder instanceRole data))
-    (when-let [data (lookup-entry config id :instance-type)]
-      (. builder instanceType data))
-    (when-let [data (emr-create-cluster-instance-market config id :market)]
-      (. builder market data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^EmrCreateCluster$InstanceGroupConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :auto-scaling-policy)]
+    (. builder autoScalingPolicy data))
+  (when-let [data (lookup-entry config id :bid-price)]
+    (. builder bidPrice data))
+  (when-let [data (lookup-entry config id :configurations)]
+    (. builder configurations data))
+  (when-let [data (lookup-entry config id :ebs-configuration)]
+    (. builder ebsConfiguration data))
+  (when-let [data (lookup-entry config id :instance-count)]
+    (. builder instanceCount data))
+  (when-let [data (emr-create-cluster-instance-role-type config id :instance-role)]
+    (. builder instanceRole data))
+  (when-let [data (lookup-entry config id :instance-type)]
+    (. builder instanceType data))
+  (when-let [data (emr-create-cluster-instance-market config id :market)]
+    (. builder market data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn emr-create-cluster-instance-type-config-property-builder
-  "The emr-create-cluster-instance-type-config-property-builder function buildes out new instances of 
-EmrCreateCluster$InstanceTypeConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-instance-type-config-property-builder
+  "The build-emr-create-cluster-instance-type-config-property-builder function updates a EmrCreateCluster$InstanceTypeConfigProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$InstanceTypeConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -4570,27 +4801,30 @@ EmrCreateCluster$InstanceTypeConfigProperty$Builder using the provided configura
 | `configurations` | java.util.List | [[cdk.support/lookup-entry]] | `:configurations` |
 | `ebsConfiguration` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$EbsConfigurationProperty | [[cdk.support/lookup-entry]] | `:ebs-configuration` |
 | `instanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-type` |
-| `weightedCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weighted-capacity` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$InstanceTypeConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :bid-price)]
-      (. builder bidPrice data))
-    (when-let [data (lookup-entry config id :bid-price-as-percentage-of-on-demand-price)]
-      (. builder bidPriceAsPercentageOfOnDemandPrice data))
-    (when-let [data (lookup-entry config id :configurations)]
-      (. builder configurations data))
-    (when-let [data (lookup-entry config id :ebs-configuration)]
-      (. builder ebsConfiguration data))
-    (when-let [data (lookup-entry config id :instance-type)]
-      (. builder instanceType data))
-    (when-let [data (lookup-entry config id :weighted-capacity)]
-      (. builder weightedCapacity data))
-    (.build builder)))
+| `weightedCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weighted-capacity` |
+"
+  [^EmrCreateCluster$InstanceTypeConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :bid-price)]
+    (. builder bidPrice data))
+  (when-let [data (lookup-entry config id :bid-price-as-percentage-of-on-demand-price)]
+    (. builder bidPriceAsPercentageOfOnDemandPrice data))
+  (when-let [data (lookup-entry config id :configurations)]
+    (. builder configurations data))
+  (when-let [data (lookup-entry config id :ebs-configuration)]
+    (. builder ebsConfiguration data))
+  (when-let [data (lookup-entry config id :instance-type)]
+    (. builder instanceType data))
+  (when-let [data (lookup-entry config id :weighted-capacity)]
+    (. builder weightedCapacity data))
+  (.build builder))
 
 
-(defn emr-create-cluster-instances-config-property-builder
-  "The emr-create-cluster-instances-config-property-builder function buildes out new instances of 
-EmrCreateCluster$InstancesConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-instances-config-property-builder
+  "The build-emr-create-cluster-instances-config-property-builder function updates a EmrCreateCluster$InstancesConfigProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$InstancesConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -4609,47 +4843,50 @@ EmrCreateCluster$InstancesConfigProperty$Builder using the provided configuratio
 | `placement` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$PlacementTypeProperty | [[cdk.support/lookup-entry]] | `:placement` |
 | `serviceAccessSecurityGroup` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-access-security-group` |
 | `slaveInstanceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:slave-instance-type` |
-| `terminationProtected` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:termination-protected` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$InstancesConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :additional-master-security-groups)]
-      (. builder additionalMasterSecurityGroups data))
-    (when-let [data (lookup-entry config id :additional-slave-security-groups)]
-      (. builder additionalSlaveSecurityGroups data))
-    (when-let [data (lookup-entry config id :ec2-key-name)]
-      (. builder ec2KeyName data))
-    (when-let [data (lookup-entry config id :ec2-subnet-id)]
-      (. builder ec2SubnetId data))
-    (when-let [data (lookup-entry config id :ec2-subnet-ids)]
-      (. builder ec2SubnetIds data))
-    (when-let [data (lookup-entry config id :emr-managed-master-security-group)]
-      (. builder emrManagedMasterSecurityGroup data))
-    (when-let [data (lookup-entry config id :emr-managed-slave-security-group)]
-      (. builder emrManagedSlaveSecurityGroup data))
-    (when-let [data (lookup-entry config id :hadoop-version)]
-      (. builder hadoopVersion data))
-    (when-let [data (lookup-entry config id :instance-count)]
-      (. builder instanceCount data))
-    (when-let [data (lookup-entry config id :instance-fleets)]
-      (. builder instanceFleets data))
-    (when-let [data (lookup-entry config id :instance-groups)]
-      (. builder instanceGroups data))
-    (when-let [data (lookup-entry config id :master-instance-type)]
-      (. builder masterInstanceType data))
-    (when-let [data (lookup-entry config id :placement)]
-      (. builder placement data))
-    (when-let [data (lookup-entry config id :service-access-security-group)]
-      (. builder serviceAccessSecurityGroup data))
-    (when-let [data (lookup-entry config id :slave-instance-type)]
-      (. builder slaveInstanceType data))
-    (when-let [data (lookup-entry config id :termination-protected)]
-      (. builder terminationProtected data))
-    (.build builder)))
+| `terminationProtected` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:termination-protected` |
+"
+  [^EmrCreateCluster$InstancesConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :additional-master-security-groups)]
+    (. builder additionalMasterSecurityGroups data))
+  (when-let [data (lookup-entry config id :additional-slave-security-groups)]
+    (. builder additionalSlaveSecurityGroups data))
+  (when-let [data (lookup-entry config id :ec2-key-name)]
+    (. builder ec2KeyName data))
+  (when-let [data (lookup-entry config id :ec2-subnet-id)]
+    (. builder ec2SubnetId data))
+  (when-let [data (lookup-entry config id :ec2-subnet-ids)]
+    (. builder ec2SubnetIds data))
+  (when-let [data (lookup-entry config id :emr-managed-master-security-group)]
+    (. builder emrManagedMasterSecurityGroup data))
+  (when-let [data (lookup-entry config id :emr-managed-slave-security-group)]
+    (. builder emrManagedSlaveSecurityGroup data))
+  (when-let [data (lookup-entry config id :hadoop-version)]
+    (. builder hadoopVersion data))
+  (when-let [data (lookup-entry config id :instance-count)]
+    (. builder instanceCount data))
+  (when-let [data (lookup-entry config id :instance-fleets)]
+    (. builder instanceFleets data))
+  (when-let [data (lookup-entry config id :instance-groups)]
+    (. builder instanceGroups data))
+  (when-let [data (lookup-entry config id :master-instance-type)]
+    (. builder masterInstanceType data))
+  (when-let [data (lookup-entry config id :placement)]
+    (. builder placement data))
+  (when-let [data (lookup-entry config id :service-access-security-group)]
+    (. builder serviceAccessSecurityGroup data))
+  (when-let [data (lookup-entry config id :slave-instance-type)]
+    (. builder slaveInstanceType data))
+  (when-let [data (lookup-entry config id :termination-protected)]
+    (. builder terminationProtected data))
+  (.build builder))
 
 
-(defn emr-create-cluster-kerberos-attributes-property-builder
-  "The emr-create-cluster-kerberos-attributes-property-builder function buildes out new instances of 
-EmrCreateCluster$KerberosAttributesProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-kerberos-attributes-property-builder
+  "The build-emr-create-cluster-kerberos-attributes-property-builder function updates a EmrCreateCluster$KerberosAttributesProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$KerberosAttributesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -4657,73 +4894,85 @@ EmrCreateCluster$KerberosAttributesProperty$Builder using the provided configura
 | `adDomainJoinUser` | java.lang.String | [[cdk.support/lookup-entry]] | `:ad-domain-join-user` |
 | `crossRealmTrustPrincipalPassword` | java.lang.String | [[cdk.support/lookup-entry]] | `:cross-realm-trust-principal-password` |
 | `kdcAdminPassword` | java.lang.String | [[cdk.support/lookup-entry]] | `:kdc-admin-password` |
-| `realm` | java.lang.String | [[cdk.support/lookup-entry]] | `:realm` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$KerberosAttributesProperty$Builder.)]
-    (when-let [data (lookup-entry config id :ad-domain-join-password)]
-      (. builder adDomainJoinPassword data))
-    (when-let [data (lookup-entry config id :ad-domain-join-user)]
-      (. builder adDomainJoinUser data))
-    (when-let [data (lookup-entry config id :cross-realm-trust-principal-password)]
-      (. builder crossRealmTrustPrincipalPassword data))
-    (when-let [data (lookup-entry config id :kdc-admin-password)]
-      (. builder kdcAdminPassword data))
-    (when-let [data (lookup-entry config id :realm)]
-      (. builder realm data))
-    (.build builder)))
+| `realm` | java.lang.String | [[cdk.support/lookup-entry]] | `:realm` |
+"
+  [^EmrCreateCluster$KerberosAttributesProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :ad-domain-join-password)]
+    (. builder adDomainJoinPassword data))
+  (when-let [data (lookup-entry config id :ad-domain-join-user)]
+    (. builder adDomainJoinUser data))
+  (when-let [data (lookup-entry config id :cross-realm-trust-principal-password)]
+    (. builder crossRealmTrustPrincipalPassword data))
+  (when-let [data (lookup-entry config id :kdc-admin-password)]
+    (. builder kdcAdminPassword data))
+  (when-let [data (lookup-entry config id :realm)]
+    (. builder realm data))
+  (.build builder))
 
 
-(defn emr-create-cluster-metric-dimension-property-builder
-  "The emr-create-cluster-metric-dimension-property-builder function buildes out new instances of 
-EmrCreateCluster$MetricDimensionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-metric-dimension-property-builder
+  "The build-emr-create-cluster-metric-dimension-property-builder function updates a EmrCreateCluster$MetricDimensionProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$MetricDimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$MetricDimensionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :key)]
-      (. builder key data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^EmrCreateCluster$MetricDimensionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :key)]
+    (. builder key data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn emr-create-cluster-on-demand-provisioning-specification-property-builder
-  "The emr-create-cluster-on-demand-provisioning-specification-property-builder function buildes out new instances of 
-EmrCreateCluster$OnDemandProvisioningSpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-on-demand-provisioning-specification-property-builder
+  "The build-emr-create-cluster-on-demand-provisioning-specification-property-builder function updates a EmrCreateCluster$OnDemandProvisioningSpecificationProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$OnDemandProvisioningSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `allocationStrategy` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$OnDemandAllocationStrategy | [[cdk.api.services.stepfunctions.tasks/emr-create-cluster-on-demand-allocation-strategy]] | `:allocation-strategy` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$OnDemandProvisioningSpecificationProperty$Builder.)]
-    (when-let [data (emr-create-cluster-on-demand-allocation-strategy config id :allocation-strategy)]
-      (. builder allocationStrategy data))
-    (.build builder)))
+| `allocationStrategy` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$OnDemandAllocationStrategy | [[cdk.api.services.stepfunctions.tasks/emr-create-cluster-on-demand-allocation-strategy]] | `:allocation-strategy` |
+"
+  [^EmrCreateCluster$OnDemandProvisioningSpecificationProperty$Builder builder id config]
+  (when-let [data (emr-create-cluster-on-demand-allocation-strategy config id :allocation-strategy)]
+    (. builder allocationStrategy data))
+  (.build builder))
 
 
-(defn emr-create-cluster-placement-type-property-builder
-  "The emr-create-cluster-placement-type-property-builder function buildes out new instances of 
-EmrCreateCluster$PlacementTypeProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-placement-type-property-builder
+  "The build-emr-create-cluster-placement-type-property-builder function updates a EmrCreateCluster$PlacementTypeProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$PlacementTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `availabilityZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:availability-zone` |
-| `availabilityZones` | java.util.List | [[cdk.support/lookup-entry]] | `:availability-zones` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$PlacementTypeProperty$Builder.)]
-    (when-let [data (lookup-entry config id :availability-zone)]
-      (. builder availabilityZone data))
-    (when-let [data (lookup-entry config id :availability-zones)]
-      (. builder availabilityZones data))
-    (.build builder)))
+| `availabilityZones` | java.util.List | [[cdk.support/lookup-entry]] | `:availability-zones` |
+"
+  [^EmrCreateCluster$PlacementTypeProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :availability-zone)]
+    (. builder availabilityZone data))
+  (when-let [data (lookup-entry config id :availability-zones)]
+    (. builder availabilityZones data))
+  (.build builder))
 
 
-(defn emr-create-cluster-props-builder
-  "The emr-create-cluster-props-builder function buildes out new instances of 
-EmrCreateClusterProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-props-builder
+  "The build-emr-create-cluster-props-builder function updates a EmrCreateClusterProps$Builder instance using the provided configuration.
+  The function takes the EmrCreateClusterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -4757,185 +5006,206 @@ EmrCreateClusterProps$Builder using the provided configuration.  Each field is s
 | `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `visibleToAllUsers` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:visible-to-all-users` |"
-  [stack id config]
-  (let [builder (EmrCreateClusterProps$Builder.)]
-    (when-let [data (lookup-entry config id :additional-info)]
-      (. builder additionalInfo data))
-    (when-let [data (lookup-entry config id :applications)]
-      (. builder applications data))
-    (when-let [data (lookup-entry config id :auto-scaling-role)]
-      (. builder autoScalingRole data))
-    (when-let [data (lookup-entry config id :bootstrap-actions)]
-      (. builder bootstrapActions data))
-    (when-let [data (lookup-entry config id :cluster-role)]
-      (. builder clusterRole data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :configurations)]
-      (. builder configurations data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :custom-ami-id)]
-      (. builder customAmiId data))
-    (when-let [data (lookup-entry config id :ebs-root-volume-size)]
-      (. builder ebsRootVolumeSize data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (lookup-entry config id :instances)]
-      (. builder instances data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :kerberos-attributes)]
-      (. builder kerberosAttributes data))
-    (when-let [data (lookup-entry config id :log-uri)]
-      (. builder logUri data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :release-label)]
-      (. builder releaseLabel data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (emr-create-cluster-emr-cluster-scale-down-behavior config id :scale-down-behavior)]
-      (. builder scaleDownBehavior data))
-    (when-let [data (lookup-entry config id :security-configuration)]
-      (. builder securityConfiguration data))
-    (when-let [data (lookup-entry config id :service-role)]
-      (. builder serviceRole data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :step-concurrency-level)]
-      (. builder stepConcurrencyLevel data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :visible-to-all-users)]
-      (. builder visibleToAllUsers data))
-    (.build builder)))
+| `visibleToAllUsers` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:visible-to-all-users` |
+"
+  [^EmrCreateClusterProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :additional-info)]
+    (. builder additionalInfo data))
+  (when-let [data (lookup-entry config id :applications)]
+    (. builder applications data))
+  (when-let [data (lookup-entry config id :auto-scaling-role)]
+    (. builder autoScalingRole data))
+  (when-let [data (lookup-entry config id :bootstrap-actions)]
+    (. builder bootstrapActions data))
+  (when-let [data (lookup-entry config id :cluster-role)]
+    (. builder clusterRole data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :configurations)]
+    (. builder configurations data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :custom-ami-id)]
+    (. builder customAmiId data))
+  (when-let [data (lookup-entry config id :ebs-root-volume-size)]
+    (. builder ebsRootVolumeSize data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (lookup-entry config id :instances)]
+    (. builder instances data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :kerberos-attributes)]
+    (. builder kerberosAttributes data))
+  (when-let [data (lookup-entry config id :log-uri)]
+    (. builder logUri data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :release-label)]
+    (. builder releaseLabel data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (emr-create-cluster-emr-cluster-scale-down-behavior config id :scale-down-behavior)]
+    (. builder scaleDownBehavior data))
+  (when-let [data (lookup-entry config id :security-configuration)]
+    (. builder securityConfiguration data))
+  (when-let [data (lookup-entry config id :service-role)]
+    (. builder serviceRole data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :step-concurrency-level)]
+    (. builder stepConcurrencyLevel data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :visible-to-all-users)]
+    (. builder visibleToAllUsers data))
+  (.build builder))
 
 
-(defn emr-create-cluster-scaling-action-property-builder
-  "The emr-create-cluster-scaling-action-property-builder function buildes out new instances of 
-EmrCreateCluster$ScalingActionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-scaling-action-property-builder
+  "The build-emr-create-cluster-scaling-action-property-builder function updates a EmrCreateCluster$ScalingActionProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$ScalingActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `market` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$InstanceMarket | [[cdk.api.services.stepfunctions.tasks/emr-create-cluster-instance-market]] | `:market` |
-| `simpleScalingPolicyConfiguration` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$SimpleScalingPolicyConfigurationProperty | [[cdk.support/lookup-entry]] | `:simple-scaling-policy-configuration` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$ScalingActionProperty$Builder.)]
-    (when-let [data (emr-create-cluster-instance-market config id :market)]
-      (. builder market data))
-    (when-let [data (lookup-entry config id :simple-scaling-policy-configuration)]
-      (. builder simpleScalingPolicyConfiguration data))
-    (.build builder)))
+| `simpleScalingPolicyConfiguration` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$SimpleScalingPolicyConfigurationProperty | [[cdk.support/lookup-entry]] | `:simple-scaling-policy-configuration` |
+"
+  [^EmrCreateCluster$ScalingActionProperty$Builder builder id config]
+  (when-let [data (emr-create-cluster-instance-market config id :market)]
+    (. builder market data))
+  (when-let [data (lookup-entry config id :simple-scaling-policy-configuration)]
+    (. builder simpleScalingPolicyConfiguration data))
+  (.build builder))
 
 
-(defn emr-create-cluster-scaling-constraints-property-builder
-  "The emr-create-cluster-scaling-constraints-property-builder function buildes out new instances of 
-EmrCreateCluster$ScalingConstraintsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-scaling-constraints-property-builder
+  "The build-emr-create-cluster-scaling-constraints-property-builder function updates a EmrCreateCluster$ScalingConstraintsProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$ScalingConstraintsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `maxCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-capacity` |
-| `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$ScalingConstraintsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :max-capacity)]
-      (. builder maxCapacity data))
-    (when-let [data (lookup-entry config id :min-capacity)]
-      (. builder minCapacity data))
-    (.build builder)))
+| `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |
+"
+  [^EmrCreateCluster$ScalingConstraintsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-capacity)]
+    (. builder maxCapacity data))
+  (when-let [data (lookup-entry config id :min-capacity)]
+    (. builder minCapacity data))
+  (.build builder))
 
 
-(defn emr-create-cluster-scaling-rule-property-builder
-  "The emr-create-cluster-scaling-rule-property-builder function buildes out new instances of 
-EmrCreateCluster$ScalingRuleProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-scaling-rule-property-builder
+  "The build-emr-create-cluster-scaling-rule-property-builder function updates a EmrCreateCluster$ScalingRuleProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$ScalingRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `action` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$ScalingActionProperty | [[cdk.support/lookup-entry]] | `:action` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `trigger` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$ScalingTriggerProperty | [[cdk.support/lookup-entry]] | `:trigger` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$ScalingRuleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :trigger)]
-      (. builder trigger data))
-    (.build builder)))
+| `trigger` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$ScalingTriggerProperty | [[cdk.support/lookup-entry]] | `:trigger` |
+"
+  [^EmrCreateCluster$ScalingRuleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :trigger)]
+    (. builder trigger data))
+  (.build builder))
 
 
-(defn emr-create-cluster-scaling-trigger-property-builder
-  "The emr-create-cluster-scaling-trigger-property-builder function buildes out new instances of 
-EmrCreateCluster$ScalingTriggerProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-scaling-trigger-property-builder
+  "The build-emr-create-cluster-scaling-trigger-property-builder function updates a EmrCreateCluster$ScalingTriggerProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$ScalingTriggerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `cloudWatchAlarmDefinition` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$CloudWatchAlarmDefinitionProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-alarm-definition` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$ScalingTriggerProperty$Builder.)]
-    (when-let [data (lookup-entry config id :cloud-watch-alarm-definition)]
-      (. builder cloudWatchAlarmDefinition data))
-    (.build builder)))
+| `cloudWatchAlarmDefinition` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$CloudWatchAlarmDefinitionProperty | [[cdk.support/lookup-entry]] | `:cloud-watch-alarm-definition` |
+"
+  [^EmrCreateCluster$ScalingTriggerProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :cloud-watch-alarm-definition)]
+    (. builder cloudWatchAlarmDefinition data))
+  (.build builder))
 
 
-(defn emr-create-cluster-script-bootstrap-action-config-property-builder
-  "The emr-create-cluster-script-bootstrap-action-config-property-builder function buildes out new instances of 
-EmrCreateCluster$ScriptBootstrapActionConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-script-bootstrap-action-config-property-builder
+  "The build-emr-create-cluster-script-bootstrap-action-config-property-builder function updates a EmrCreateCluster$ScriptBootstrapActionConfigProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$ScriptBootstrapActionConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `args` | java.util.List | [[cdk.support/lookup-entry]] | `:args` |
-| `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$ScriptBootstrapActionConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :args)]
-      (. builder args data))
-    (when-let [data (lookup-entry config id :path)]
-      (. builder path data))
-    (.build builder)))
+| `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
+"
+  [^EmrCreateCluster$ScriptBootstrapActionConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :args)]
+    (. builder args data))
+  (when-let [data (lookup-entry config id :path)]
+    (. builder path data))
+  (.build builder))
 
 
-(defn emr-create-cluster-simple-scaling-policy-configuration-property-builder
-  "The emr-create-cluster-simple-scaling-policy-configuration-property-builder function buildes out new instances of 
-EmrCreateCluster$SimpleScalingPolicyConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-simple-scaling-policy-configuration-property-builder
+  "The build-emr-create-cluster-simple-scaling-policy-configuration-property-builder function updates a EmrCreateCluster$SimpleScalingPolicyConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$SimpleScalingPolicyConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `adjustmentType` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$ScalingAdjustmentType | [[cdk.api.services.stepfunctions.tasks/emr-create-cluster-scaling-adjustment-type]] | `:adjustment-type` |
 | `coolDown` | java.lang.Number | [[cdk.support/lookup-entry]] | `:cool-down` |
-| `scalingAdjustment` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scaling-adjustment` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$SimpleScalingPolicyConfigurationProperty$Builder.)]
-    (when-let [data (emr-create-cluster-scaling-adjustment-type config id :adjustment-type)]
-      (. builder adjustmentType data))
-    (when-let [data (lookup-entry config id :cool-down)]
-      (. builder coolDown data))
-    (when-let [data (lookup-entry config id :scaling-adjustment)]
-      (. builder scalingAdjustment data))
-    (.build builder)))
+| `scalingAdjustment` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scaling-adjustment` |
+"
+  [^EmrCreateCluster$SimpleScalingPolicyConfigurationProperty$Builder builder id config]
+  (when-let [data (emr-create-cluster-scaling-adjustment-type config id :adjustment-type)]
+    (. builder adjustmentType data))
+  (when-let [data (lookup-entry config id :cool-down)]
+    (. builder coolDown data))
+  (when-let [data (lookup-entry config id :scaling-adjustment)]
+    (. builder scalingAdjustment data))
+  (.build builder))
 
 
-(defn emr-create-cluster-spot-provisioning-specification-property-builder
-  "The emr-create-cluster-spot-provisioning-specification-property-builder function buildes out new instances of 
-EmrCreateCluster$SpotProvisioningSpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-spot-provisioning-specification-property-builder
+  "The build-emr-create-cluster-spot-provisioning-specification-property-builder function updates a EmrCreateCluster$SpotProvisioningSpecificationProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$SpotProvisioningSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -4943,104 +5213,51 @@ EmrCreateCluster$SpotProvisioningSpecificationProperty$Builder using the provide
 | `blockDurationMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:block-duration-minutes` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 | `timeoutAction` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$SpotTimeoutAction | [[cdk.api.services.stepfunctions.tasks/emr-create-cluster-spot-timeout-action]] | `:timeout-action` |
-| `timeoutDurationMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-duration-minutes` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$SpotProvisioningSpecificationProperty$Builder.)]
-    (when-let [data (emr-create-cluster-spot-allocation-strategy config id :allocation-strategy)]
-      (. builder allocationStrategy data))
-    (when-let [data (lookup-entry config id :block-duration-minutes)]
-      (. builder blockDurationMinutes data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (emr-create-cluster-spot-timeout-action config id :timeout-action)]
-      (. builder timeoutAction data))
-    (when-let [data (lookup-entry config id :timeout-duration-minutes)]
-      (. builder timeoutDurationMinutes data))
-    (.build builder)))
+| `timeoutDurationMinutes` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-duration-minutes` |
+"
+  [^EmrCreateCluster$SpotProvisioningSpecificationProperty$Builder builder id config]
+  (when-let [data (emr-create-cluster-spot-allocation-strategy config id :allocation-strategy)]
+    (. builder allocationStrategy data))
+  (when-let [data (lookup-entry config id :block-duration-minutes)]
+    (. builder blockDurationMinutes data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (emr-create-cluster-spot-timeout-action config id :timeout-action)]
+    (. builder timeoutAction data))
+  (when-let [data (lookup-entry config id :timeout-duration-minutes)]
+    (. builder timeoutDurationMinutes data))
+  (.build builder))
 
 
-(defn emr-create-cluster-volume-specification-property-builder
-  "The emr-create-cluster-volume-specification-property-builder function buildes out new instances of 
-EmrCreateCluster$VolumeSpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-create-cluster-volume-specification-property-builder
+  "The build-emr-create-cluster-volume-specification-property-builder function updates a EmrCreateCluster$VolumeSpecificationProperty$Builder instance using the provided configuration.
+  The function takes the EmrCreateCluster$VolumeSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `iops` | java.lang.Number | [[cdk.support/lookup-entry]] | `:iops` |
 | `volumeSize` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:volume-size` |
-| `volumeType` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$EbsBlockDeviceVolumeType | [[cdk.api.services.stepfunctions.tasks/emr-create-cluster-ebs-block-device-volume-type]] | `:volume-type` |"
-  [stack id config]
-  (let [builder (EmrCreateCluster$VolumeSpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :iops)]
-      (. builder iops data))
-    (when-let [data (lookup-entry config id :volume-size)]
-      (. builder volumeSize data))
-    (when-let [data (emr-create-cluster-ebs-block-device-volume-type config id :volume-type)]
-      (. builder volumeType data))
-    (.build builder)))
+| `volumeType` | software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster$EbsBlockDeviceVolumeType | [[cdk.api.services.stepfunctions.tasks/emr-create-cluster-ebs-block-device-volume-type]] | `:volume-type` |
+"
+  [^EmrCreateCluster$VolumeSpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :iops)]
+    (. builder iops data))
+  (when-let [data (lookup-entry config id :volume-size)]
+    (. builder volumeSize data))
+  (when-let [data (emr-create-cluster-ebs-block-device-volume-type config id :volume-type)]
+    (. builder volumeType data))
+  (.build builder))
 
 
-(defn emr-modify-instance-fleet-by-name-builder
-  "The emr-modify-instance-fleet-by-name-builder function buildes out new instances of 
-EmrModifyInstanceFleetByName$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-modify-instance-fleet-by-name-builder
+  "The build-emr-modify-instance-fleet-by-name-builder function updates a EmrModifyInstanceFleetByName$Builder instance using the provided configuration.
+  The function takes the EmrModifyInstanceFleetByName$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `clusterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-id` |
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `instanceFleetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-fleet-name` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `targetOnDemandCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-on-demand-capacity` |
-| `targetSpotCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-spot-capacity` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EmrModifyInstanceFleetByName$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :cluster-id)]
-      (. builder clusterId data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (lookup-entry config id :instance-fleet-name)]
-      (. builder instanceFleetName data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :target-on-demand-capacity)]
-      (. builder targetOnDemandCapacity data))
-    (when-let [data (lookup-entry config id :target-spot-capacity)]
-      (. builder targetSpotCapacity data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn emr-modify-instance-fleet-by-name-props-builder
-  "The emr-modify-instance-fleet-by-name-props-builder function buildes out new instances of 
-EmrModifyInstanceFleetByNameProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -5059,47 +5276,112 @@ EmrModifyInstanceFleetByNameProps$Builder using the provided configuration.  Eac
 | `targetOnDemandCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-on-demand-capacity` |
 | `targetSpotCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-spot-capacity` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EmrModifyInstanceFleetByNameProps$Builder.)]
-    (when-let [data (lookup-entry config id :cluster-id)]
-      (. builder clusterId data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (lookup-entry config id :instance-fleet-name)]
-      (. builder instanceFleetName data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :target-on-demand-capacity)]
-      (. builder targetOnDemandCapacity data))
-    (when-let [data (lookup-entry config id :target-spot-capacity)]
-      (. builder targetSpotCapacity data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EmrModifyInstanceFleetByName$Builder builder id config]
+  (when-let [data (lookup-entry config id :cluster-id)]
+    (. builder clusterId data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (lookup-entry config id :instance-fleet-name)]
+    (. builder instanceFleetName data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :target-on-demand-capacity)]
+    (. builder targetOnDemandCapacity data))
+  (when-let [data (lookup-entry config id :target-spot-capacity)]
+    (. builder targetSpotCapacity data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn emr-modify-instance-group-by-name-builder
-  "The emr-modify-instance-group-by-name-builder function buildes out new instances of 
-EmrModifyInstanceGroupByName$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-modify-instance-fleet-by-name-props-builder
+  "The build-emr-modify-instance-fleet-by-name-props-builder function updates a EmrModifyInstanceFleetByNameProps$Builder instance using the provided configuration.
+  The function takes the EmrModifyInstanceFleetByNameProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `clusterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-id` |
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `instanceFleetName` | java.lang.String | [[cdk.support/lookup-entry]] | `:instance-fleet-name` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `targetOnDemandCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-on-demand-capacity` |
+| `targetSpotCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-spot-capacity` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EmrModifyInstanceFleetByNameProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :cluster-id)]
+    (. builder clusterId data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (lookup-entry config id :instance-fleet-name)]
+    (. builder instanceFleetName data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :target-on-demand-capacity)]
+    (. builder targetOnDemandCapacity data))
+  (when-let [data (lookup-entry config id :target-spot-capacity)]
+    (. builder targetSpotCapacity data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-emr-modify-instance-group-by-name-builder
+  "The build-emr-modify-instance-group-by-name-builder function updates a EmrModifyInstanceGroupByName$Builder instance using the provided configuration.
+  The function takes the EmrModifyInstanceGroupByName$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -5117,88 +5399,97 @@ EmrModifyInstanceGroupByName$Builder using the provided configuration.  Each fie
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EmrModifyInstanceGroupByName$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :cluster-id)]
-      (. builder clusterId data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (lookup-entry config id :instance-group)]
-      (. builder instanceGroup data))
-    (when-let [data (lookup-entry config id :instance-group-name)]
-      (. builder instanceGroupName data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EmrModifyInstanceGroupByName$Builder builder id config]
+  (when-let [data (lookup-entry config id :cluster-id)]
+    (. builder clusterId data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (lookup-entry config id :instance-group)]
+    (. builder instanceGroup data))
+  (when-let [data (lookup-entry config id :instance-group-name)]
+    (. builder instanceGroupName data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn emr-modify-instance-group-by-name-instance-group-modify-config-property-builder
-  "The emr-modify-instance-group-by-name-instance-group-modify-config-property-builder function buildes out new instances of 
-EmrModifyInstanceGroupByName$InstanceGroupModifyConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-modify-instance-group-by-name-instance-group-modify-config-property-builder
+  "The build-emr-modify-instance-group-by-name-instance-group-modify-config-property-builder function updates a EmrModifyInstanceGroupByName$InstanceGroupModifyConfigProperty$Builder instance using the provided configuration.
+  The function takes the EmrModifyInstanceGroupByName$InstanceGroupModifyConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `configurations` | java.util.List | [[cdk.support/lookup-entry]] | `:configurations` |
 | `eC2InstanceIdsToTerminate` | java.util.List | [[cdk.support/lookup-entry]] | `:e-c2-instance-ids-to-terminate` |
 | `instanceCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:instance-count` |
-| `shrinkPolicy` | software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName$ShrinkPolicyProperty | [[cdk.support/lookup-entry]] | `:shrink-policy` |"
-  [stack id config]
-  (let [builder (EmrModifyInstanceGroupByName$InstanceGroupModifyConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :configurations)]
-      (. builder configurations data))
-    (when-let [data (lookup-entry config id :e-c2-instance-ids-to-terminate)]
-      (. builder eC2InstanceIdsToTerminate data))
-    (when-let [data (lookup-entry config id :instance-count)]
-      (. builder instanceCount data))
-    (when-let [data (lookup-entry config id :shrink-policy)]
-      (. builder shrinkPolicy data))
-    (.build builder)))
+| `shrinkPolicy` | software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName$ShrinkPolicyProperty | [[cdk.support/lookup-entry]] | `:shrink-policy` |
+"
+  [^EmrModifyInstanceGroupByName$InstanceGroupModifyConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :configurations)]
+    (. builder configurations data))
+  (when-let [data (lookup-entry config id :e-c2-instance-ids-to-terminate)]
+    (. builder eC2InstanceIdsToTerminate data))
+  (when-let [data (lookup-entry config id :instance-count)]
+    (. builder instanceCount data))
+  (when-let [data (lookup-entry config id :shrink-policy)]
+    (. builder shrinkPolicy data))
+  (.build builder))
 
 
-(defn emr-modify-instance-group-by-name-instance-resize-policy-property-builder
-  "The emr-modify-instance-group-by-name-instance-resize-policy-property-builder function buildes out new instances of 
-EmrModifyInstanceGroupByName$InstanceResizePolicyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-modify-instance-group-by-name-instance-resize-policy-property-builder
+  "The build-emr-modify-instance-group-by-name-instance-resize-policy-property-builder function updates a EmrModifyInstanceGroupByName$InstanceResizePolicyProperty$Builder instance using the provided configuration.
+  The function takes the EmrModifyInstanceGroupByName$InstanceResizePolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `instanceTerminationTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:instance-termination-timeout` |
 | `instancesToProtect` | java.util.List | [[cdk.support/lookup-entry]] | `:instances-to-protect` |
-| `instancesToTerminate` | java.util.List | [[cdk.support/lookup-entry]] | `:instances-to-terminate` |"
-  [stack id config]
-  (let [builder (EmrModifyInstanceGroupByName$InstanceResizePolicyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :instance-termination-timeout)]
-      (. builder instanceTerminationTimeout data))
-    (when-let [data (lookup-entry config id :instances-to-protect)]
-      (. builder instancesToProtect data))
-    (when-let [data (lookup-entry config id :instances-to-terminate)]
-      (. builder instancesToTerminate data))
-    (.build builder)))
+| `instancesToTerminate` | java.util.List | [[cdk.support/lookup-entry]] | `:instances-to-terminate` |
+"
+  [^EmrModifyInstanceGroupByName$InstanceResizePolicyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :instance-termination-timeout)]
+    (. builder instanceTerminationTimeout data))
+  (when-let [data (lookup-entry config id :instances-to-protect)]
+    (. builder instancesToProtect data))
+  (when-let [data (lookup-entry config id :instances-to-terminate)]
+    (. builder instancesToTerminate data))
+  (.build builder))
 
 
-(defn emr-modify-instance-group-by-name-props-builder
-  "The emr-modify-instance-group-by-name-props-builder function buildes out new instances of 
-EmrModifyInstanceGroupByNameProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-modify-instance-group-by-name-props-builder
+  "The build-emr-modify-instance-group-by-name-props-builder function updates a EmrModifyInstanceGroupByNameProps$Builder instance using the provided configuration.
+  The function takes the EmrModifyInstanceGroupByNameProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -5216,115 +5507,68 @@ EmrModifyInstanceGroupByNameProps$Builder using the provided configuration.  Eac
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EmrModifyInstanceGroupByNameProps$Builder.)]
-    (when-let [data (lookup-entry config id :cluster-id)]
-      (. builder clusterId data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (lookup-entry config id :instance-group)]
-      (. builder instanceGroup data))
-    (when-let [data (lookup-entry config id :instance-group-name)]
-      (. builder instanceGroupName data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EmrModifyInstanceGroupByNameProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :cluster-id)]
+    (. builder clusterId data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (lookup-entry config id :instance-group)]
+    (. builder instanceGroup data))
+  (when-let [data (lookup-entry config id :instance-group-name)]
+    (. builder instanceGroupName data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn emr-modify-instance-group-by-name-shrink-policy-property-builder
-  "The emr-modify-instance-group-by-name-shrink-policy-property-builder function buildes out new instances of 
-EmrModifyInstanceGroupByName$ShrinkPolicyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-modify-instance-group-by-name-shrink-policy-property-builder
+  "The build-emr-modify-instance-group-by-name-shrink-policy-property-builder function updates a EmrModifyInstanceGroupByName$ShrinkPolicyProperty$Builder instance using the provided configuration.
+  The function takes the EmrModifyInstanceGroupByName$ShrinkPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `decommissionTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:decommission-timeout` |
-| `instanceResizePolicy` | software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName$InstanceResizePolicyProperty | [[cdk.support/lookup-entry]] | `:instance-resize-policy` |"
-  [stack id config]
-  (let [builder (EmrModifyInstanceGroupByName$ShrinkPolicyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :decommission-timeout)]
-      (. builder decommissionTimeout data))
-    (when-let [data (lookup-entry config id :instance-resize-policy)]
-      (. builder instanceResizePolicy data))
-    (.build builder)))
+| `instanceResizePolicy` | software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName$InstanceResizePolicyProperty | [[cdk.support/lookup-entry]] | `:instance-resize-policy` |
+"
+  [^EmrModifyInstanceGroupByName$ShrinkPolicyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :decommission-timeout)]
+    (. builder decommissionTimeout data))
+  (when-let [data (lookup-entry config id :instance-resize-policy)]
+    (. builder instanceResizePolicy data))
+  (.build builder))
 
 
-(defn emr-set-cluster-termination-protection-builder
-  "The emr-set-cluster-termination-protection-builder function buildes out new instances of 
-EmrSetClusterTerminationProtection$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-set-cluster-termination-protection-builder
+  "The build-emr-set-cluster-termination-protection-builder function updates a EmrSetClusterTerminationProtection$Builder instance using the provided configuration.
+  The function takes the EmrSetClusterTerminationProtection$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `clusterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-id` |
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `terminationProtected` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:termination-protected` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EmrSetClusterTerminationProtection$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :cluster-id)]
-      (. builder clusterId data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :termination-protected)]
-      (. builder terminationProtected data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn emr-set-cluster-termination-protection-props-builder
-  "The emr-set-cluster-termination-protection-props-builder function buildes out new instances of 
-EmrSetClusterTerminationProtectionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -5341,93 +5585,46 @@ EmrSetClusterTerminationProtectionProps$Builder using the provided configuration
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `terminationProtected` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:termination-protected` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EmrSetClusterTerminationProtectionProps$Builder.)]
-    (when-let [data (lookup-entry config id :cluster-id)]
-      (. builder clusterId data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :termination-protected)]
-      (. builder terminationProtected data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EmrSetClusterTerminationProtection$Builder builder id config]
+  (when-let [data (lookup-entry config id :cluster-id)]
+    (. builder clusterId data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :termination-protected)]
+    (. builder terminationProtected data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn emr-terminate-cluster-builder
-  "The emr-terminate-cluster-builder function buildes out new instances of 
-EmrTerminateCluster$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-set-cluster-termination-protection-props-builder
+  "The build-emr-set-cluster-termination-protection-props-builder function updates a EmrSetClusterTerminationProtectionProps$Builder instance using the provided configuration.
+  The function takes the EmrSetClusterTerminationProtectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `clusterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-id` |
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EmrTerminateCluster$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :cluster-id)]
-      (. builder clusterId data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn emr-terminate-cluster-props-builder
-  "The emr-terminate-cluster-props-builder function buildes out new instances of 
-EmrTerminateClusterProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -5443,111 +5640,173 @@ EmrTerminateClusterProps$Builder using the provided configuration.  Each field i
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EmrTerminateClusterProps$Builder.)]
-    (when-let [data (lookup-entry config id :cluster-id)]
-      (. builder clusterId data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `terminationProtected` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:termination-protected` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EmrSetClusterTerminationProtectionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :cluster-id)]
+    (. builder clusterId data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :termination-protected)]
+    (. builder terminationProtected data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn encryption-configuration-builder
-  "The encryption-configuration-builder function buildes out new instances of 
-EncryptionConfiguration$Builder using the provided configuration.  Each field is set as follows:
+(defn build-emr-terminate-cluster-builder
+  "The build-emr-terminate-cluster-builder function updates a EmrTerminateCluster$Builder instance using the provided configuration.
+  The function takes the EmrTerminateCluster$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `clusterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-id` |
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EmrTerminateCluster$Builder builder id config]
+  (when-let [data (lookup-entry config id :cluster-id)]
+    (. builder clusterId data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-emr-terminate-cluster-props-builder
+  "The build-emr-terminate-cluster-props-builder function updates a EmrTerminateClusterProps$Builder instance using the provided configuration.
+  The function takes the EmrTerminateClusterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `clusterId` | java.lang.String | [[cdk.support/lookup-entry]] | `:cluster-id` |
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EmrTerminateClusterProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :cluster-id)]
+    (. builder clusterId data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-encryption-configuration-builder
+  "The build-encryption-configuration-builder function updates a EncryptionConfiguration$Builder instance using the provided configuration.
+  The function takes the EncryptionConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `encryptionKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:encryption-key` |
-| `encryptionOption` | software.amazon.awscdk.services.stepfunctions.tasks.EncryptionOption | [[cdk.api.services.stepfunctions.tasks/encryption-option]] | `:encryption-option` |"
-  [stack id config]
-  (let [builder (EncryptionConfiguration$Builder.)]
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (encryption-option config id :encryption-option)]
-      (. builder encryptionOption data))
-    (.build builder)))
+| `encryptionOption` | software.amazon.awscdk.services.stepfunctions.tasks.EncryptionOption | [[cdk.api.services.stepfunctions.tasks/encryption-option]] | `:encryption-option` |
+"
+  [^EncryptionConfiguration$Builder builder id config]
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (encryption-option config id :encryption-option)]
+    (. builder encryptionOption data))
+  (.build builder))
 
 
-(defn evaluate-expression-builder
-  "The evaluate-expression-builder function buildes out new instances of 
-EvaluateExpression$Builder using the provided configuration.  Each field is set as follows:
+(defn build-evaluate-expression-builder
+  "The build-evaluate-expression-builder function updates a EvaluateExpression$Builder instance using the provided configuration.
+  The function takes the EvaluateExpression$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `expression` | java.lang.String | [[cdk.support/lookup-entry]] | `:expression` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `runtime` | software.amazon.awscdk.services.lambda.Runtime | [[cdk.support/lookup-entry]] | `:runtime` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EvaluateExpression$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :expression)]
-      (. builder expression data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :runtime)]
-      (. builder runtime data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn evaluate-expression-props-builder
-  "The evaluate-expression-props-builder function buildes out new instances of 
-EvaluateExpressionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -5564,43 +5823,102 @@ EvaluateExpressionProps$Builder using the provided configuration.  Each field is
 | `runtime` | software.amazon.awscdk.services.lambda.Runtime | [[cdk.support/lookup-entry]] | `:runtime` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EvaluateExpressionProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :expression)]
-      (. builder expression data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :runtime)]
-      (. builder runtime data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EvaluateExpression$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :expression)]
+    (. builder expression data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :runtime)]
+    (. builder runtime data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn event-bridge-put-events-builder
-  "The event-bridge-put-events-builder function buildes out new instances of 
-EventBridgePutEvents$Builder using the provided configuration.  Each field is set as follows:
+(defn build-evaluate-expression-props-builder
+  "The build-evaluate-expression-props-builder function updates a EvaluateExpressionProps$Builder instance using the provided configuration.
+  The function takes the EvaluateExpressionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `expression` | java.lang.String | [[cdk.support/lookup-entry]] | `:expression` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `runtime` | software.amazon.awscdk.services.lambda.Runtime | [[cdk.support/lookup-entry]] | `:runtime` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EvaluateExpressionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :expression)]
+    (. builder expression data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :runtime)]
+    (. builder runtime data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-event-bridge-put-events-builder
+  "The build-event-bridge-put-events-builder function updates a EventBridgePutEvents$Builder instance using the provided configuration.
+  The function takes the EventBridgePutEvents$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -5616,64 +5934,70 @@ EventBridgePutEvents$Builder using the provided configuration.  Each field is se
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EventBridgePutEvents$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :entries)]
-      (. builder entries data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EventBridgePutEvents$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :entries)]
+    (. builder entries data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn event-bridge-put-events-entry-builder
-  "The event-bridge-put-events-entry-builder function buildes out new instances of 
-EventBridgePutEventsEntry$Builder using the provided configuration.  Each field is set as follows:
+(defn build-event-bridge-put-events-entry-builder
+  "The build-event-bridge-put-events-entry-builder function updates a EventBridgePutEventsEntry$Builder instance using the provided configuration.
+  The function takes the EventBridgePutEventsEntry$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `detail` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:detail` |
 | `detailType` | java.lang.String | [[cdk.support/lookup-entry]] | `:detail-type` |
 | `eventBus` | software.amazon.awscdk.services.events.IEventBus | [[cdk.support/lookup-entry]] | `:event-bus` |
-| `source` | java.lang.String | [[cdk.support/lookup-entry]] | `:source` |"
-  [stack id config]
-  (let [builder (EventBridgePutEventsEntry$Builder.)]
-    (when-let [data (lookup-entry config id :detail)]
-      (. builder detail data))
-    (when-let [data (lookup-entry config id :detail-type)]
-      (. builder detailType data))
-    (when-let [data (lookup-entry config id :event-bus)]
-      (. builder eventBus data))
-    (when-let [data (lookup-entry config id :source)]
-      (. builder source data))
-    (.build builder)))
+| `source` | java.lang.String | [[cdk.support/lookup-entry]] | `:source` |
+"
+  [^EventBridgePutEventsEntry$Builder builder id config]
+  (when-let [data (lookup-entry config id :detail)]
+    (. builder detail data))
+  (when-let [data (lookup-entry config id :detail-type)]
+    (. builder detailType data))
+  (when-let [data (lookup-entry config id :event-bus)]
+    (. builder eventBus data))
+  (when-let [data (lookup-entry config id :source)]
+    (. builder source data))
+  (.build builder))
 
 
-(defn event-bridge-put-events-props-builder
-  "The event-bridge-put-events-props-builder function buildes out new instances of 
-EventBridgePutEventsProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-event-bridge-put-events-props-builder
+  "The build-event-bridge-put-events-props-builder function updates a EventBridgePutEventsProps$Builder instance using the provided configuration.
+  The function takes the EventBridgePutEventsProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -5689,91 +6013,44 @@ EventBridgePutEventsProps$Builder using the provided configuration.  Each field 
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (EventBridgePutEventsProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :entries)]
-      (. builder entries data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^EventBridgePutEventsProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :entries)]
+    (. builder entries data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn glue-data-brew-start-job-run-builder
-  "The glue-data-brew-start-job-run-builder function buildes out new instances of 
-GlueDataBrewStartJobRun$Builder using the provided configuration.  Each field is set as follows:
+(defn build-glue-data-brew-start-job-run-builder
+  "The build-glue-data-brew-start-job-run-builder function updates a GlueDataBrewStartJobRun$Builder instance using the provided configuration.
+  The function takes the GlueDataBrewStartJobRun$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (GlueDataBrewStartJobRun$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn glue-data-brew-start-job-run-props-builder
-  "The glue-data-brew-start-job-run-props-builder function buildes out new instances of 
-GlueDataBrewStartJobRunProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -5789,41 +6066,97 @@ GlueDataBrewStartJobRunProps$Builder using the provided configuration.  Each fie
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (GlueDataBrewStartJobRunProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^GlueDataBrewStartJobRun$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn glue-start-crawler-run-builder
-  "The glue-start-crawler-run-builder function buildes out new instances of 
-GlueStartCrawlerRun$Builder using the provided configuration.  Each field is set as follows:
+(defn build-glue-data-brew-start-job-run-props-builder
+  "The build-glue-data-brew-start-job-run-props-builder function updates a GlueDataBrewStartJobRunProps$Builder instance using the provided configuration.
+  The function takes the GlueDataBrewStartJobRunProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^GlueDataBrewStartJobRunProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-glue-start-crawler-run-builder
+  "The build-glue-start-crawler-run-builder function updates a GlueStartCrawlerRun$Builder instance using the provided configuration.
+  The function takes the GlueStartCrawlerRun$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -5839,41 +6172,44 @@ GlueStartCrawlerRun$Builder using the provided configuration.  Each field is set
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (GlueStartCrawlerRun$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :crawler-name)]
-      (. builder crawlerName data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^GlueStartCrawlerRun$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :crawler-name)]
+    (. builder crawlerName data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn glue-start-crawler-run-props-builder
-  "The glue-start-crawler-run-props-builder function buildes out new instances of 
-GlueStartCrawlerRunProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-glue-start-crawler-run-props-builder
+  "The build-glue-start-crawler-run-props-builder function updates a GlueStartCrawlerRunProps$Builder instance using the provided configuration.
+  The function takes the GlueStartCrawlerRunProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -5889,41 +6225,44 @@ GlueStartCrawlerRunProps$Builder using the provided configuration.  Each field i
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (GlueStartCrawlerRunProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :crawler-name)]
-      (. builder crawlerName data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^GlueStartCrawlerRunProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :crawler-name)]
+    (. builder crawlerName data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn glue-start-job-run-builder
-  "The glue-start-job-run-builder function buildes out new instances of 
-GlueStartJobRun$Builder using the provided configuration.  Each field is set as follows:
+(defn build-glue-start-job-run-builder
+  "The build-glue-start-job-run-builder function updates a GlueStartJobRun$Builder instance using the provided configuration.
+  The function takes the GlueStartJobRun$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -5943,49 +6282,52 @@ GlueStartJobRun$Builder using the provided configuration.  Each field is set as 
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `workerConfiguration` | software.amazon.awscdk.services.stepfunctions.tasks.WorkerConfigurationProperty | [[cdk.support/lookup-entry]] | `:worker-configuration` |"
-  [stack id config]
-  (let [builder (GlueStartJobRun$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :arguments)]
-      (. builder arguments data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :glue-job-name)]
-      (. builder glueJobName data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :notify-delay-after)]
-      (. builder notifyDelayAfter data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :security-configuration)]
-      (. builder securityConfiguration data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :worker-configuration)]
-      (. builder workerConfiguration data))
-    (.build builder)))
+| `workerConfiguration` | software.amazon.awscdk.services.stepfunctions.tasks.WorkerConfigurationProperty | [[cdk.support/lookup-entry]] | `:worker-configuration` |
+"
+  [^GlueStartJobRun$Builder builder id config]
+  (when-let [data (lookup-entry config id :arguments)]
+    (. builder arguments data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :glue-job-name)]
+    (. builder glueJobName data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :notify-delay-after)]
+    (. builder notifyDelayAfter data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :security-configuration)]
+    (. builder securityConfiguration data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :worker-configuration)]
+    (. builder workerConfiguration data))
+  (.build builder))
 
 
-(defn glue-start-job-run-props-builder
-  "The glue-start-job-run-props-builder function buildes out new instances of 
-GlueStartJobRunProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-glue-start-job-run-props-builder
+  "The build-glue-start-job-run-props-builder function updates a GlueStartJobRunProps$Builder instance using the provided configuration.
+  The function takes the GlueStartJobRunProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -6005,49 +6347,52 @@ GlueStartJobRunProps$Builder using the provided configuration.  Each field is se
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `workerConfiguration` | software.amazon.awscdk.services.stepfunctions.tasks.WorkerConfigurationProperty | [[cdk.support/lookup-entry]] | `:worker-configuration` |"
-  [stack id config]
-  (let [builder (GlueStartJobRunProps$Builder.)]
-    (when-let [data (lookup-entry config id :arguments)]
-      (. builder arguments data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :glue-job-name)]
-      (. builder glueJobName data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :notify-delay-after)]
-      (. builder notifyDelayAfter data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :security-configuration)]
-      (. builder securityConfiguration data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :worker-configuration)]
-      (. builder workerConfiguration data))
-    (.build builder)))
+| `workerConfiguration` | software.amazon.awscdk.services.stepfunctions.tasks.WorkerConfigurationProperty | [[cdk.support/lookup-entry]] | `:worker-configuration` |
+"
+  [^GlueStartJobRunProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :arguments)]
+    (. builder arguments data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :glue-job-name)]
+    (. builder glueJobName data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :notify-delay-after)]
+    (. builder notifyDelayAfter data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :security-configuration)]
+    (. builder securityConfiguration data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :worker-configuration)]
+    (. builder workerConfiguration data))
+  (.build builder))
 
 
-(defn http-invoke-builder
-  "The http-invoke-builder function buildes out new instances of 
-HttpInvoke$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-invoke-builder
+  "The build-http-invoke-builder function updates a HttpInvoke$Builder instance using the provided configuration.
+  The function takes the HttpInvoke$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -6070,55 +6415,58 @@ HttpInvoke$Builder using the provided configuration.  Each field is set as follo
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `urlEncodingFormat` | software.amazon.awscdk.services.stepfunctions.tasks.URLEncodingFormat | [[cdk.api.services.stepfunctions.tasks/url-encoding-format]] | `:url-encoding-format` |"
-  [stack id config]
-  (let [builder (HttpInvoke$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :api-endpoint)]
-      (. builder apiEndpoint data))
-    (when-let [data (lookup-entry config id :api-root)]
-      (. builder apiRoot data))
-    (when-let [data (lookup-entry config id :body)]
-      (. builder body data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :connection)]
-      (. builder connection data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :headers)]
-      (. builder headers data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :query-string-parameters)]
-      (. builder queryStringParameters data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (url-encoding-format config id :url-encoding-format)]
-      (. builder urlEncodingFormat data))
-    (.build builder)))
+| `urlEncodingFormat` | software.amazon.awscdk.services.stepfunctions.tasks.URLEncodingFormat | [[cdk.api.services.stepfunctions.tasks/url-encoding-format]] | `:url-encoding-format` |
+"
+  [^HttpInvoke$Builder builder id config]
+  (when-let [data (lookup-entry config id :api-endpoint)]
+    (. builder apiEndpoint data))
+  (when-let [data (lookup-entry config id :api-root)]
+    (. builder apiRoot data))
+  (when-let [data (lookup-entry config id :body)]
+    (. builder body data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :connection)]
+    (. builder connection data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :headers)]
+    (. builder headers data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :query-string-parameters)]
+    (. builder queryStringParameters data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (url-encoding-format config id :url-encoding-format)]
+    (. builder urlEncodingFormat data))
+  (.build builder))
 
 
-(defn http-invoke-props-builder
-  "The http-invoke-props-builder function buildes out new instances of 
-HttpInvokeProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-invoke-props-builder
+  "The build-http-invoke-props-builder function updates a HttpInvokeProps$Builder instance using the provided configuration.
+  The function takes the HttpInvokeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -6141,154 +6489,95 @@ HttpInvokeProps$Builder using the provided configuration.  Each field is set as 
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `urlEncodingFormat` | software.amazon.awscdk.services.stepfunctions.tasks.URLEncodingFormat | [[cdk.api.services.stepfunctions.tasks/url-encoding-format]] | `:url-encoding-format` |"
-  [stack id config]
-  (let [builder (HttpInvokeProps$Builder.)]
-    (when-let [data (lookup-entry config id :api-endpoint)]
-      (. builder apiEndpoint data))
-    (when-let [data (lookup-entry config id :api-root)]
-      (. builder apiRoot data))
-    (when-let [data (lookup-entry config id :body)]
-      (. builder body data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :connection)]
-      (. builder connection data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :headers)]
-      (. builder headers data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :query-string-parameters)]
-      (. builder queryStringParameters data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (url-encoding-format config id :url-encoding-format)]
-      (. builder urlEncodingFormat data))
-    (.build builder)))
+| `urlEncodingFormat` | software.amazon.awscdk.services.stepfunctions.tasks.URLEncodingFormat | [[cdk.api.services.stepfunctions.tasks/url-encoding-format]] | `:url-encoding-format` |
+"
+  [^HttpInvokeProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :api-endpoint)]
+    (. builder apiEndpoint data))
+  (when-let [data (lookup-entry config id :api-root)]
+    (. builder apiRoot data))
+  (when-let [data (lookup-entry config id :body)]
+    (. builder body data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :connection)]
+    (. builder connection data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :headers)]
+    (. builder headers data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :query-string-parameters)]
+    (. builder queryStringParameters data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (url-encoding-format config id :url-encoding-format)]
+    (. builder urlEncodingFormat data))
+  (.build builder))
 
 
-(defn job-dependency-builder
-  "The job-dependency-builder function buildes out new instances of 
-JobDependency$Builder using the provided configuration.  Each field is set as follows:
+(defn build-job-dependency-builder
+  "The build-job-dependency-builder function updates a JobDependency$Builder instance using the provided configuration.
+  The function takes the JobDependency$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `jobId` | java.lang.String | [[cdk.support/lookup-entry]] | `:job-id` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (JobDependency$Builder.)]
-    (when-let [data (lookup-entry config id :job-id)]
-      (. builder jobId data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^JobDependency$Builder builder id config]
+  (when-let [data (lookup-entry config id :job-id)]
+    (. builder jobId data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn job-driver-builder
-  "The job-driver-builder function buildes out new instances of 
-JobDriver$Builder using the provided configuration.  Each field is set as follows:
+(defn build-job-driver-builder
+  "The build-job-driver-builder function updates a JobDriver$Builder instance using the provided configuration.
+  The function takes the JobDriver$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `sparkSubmitJobDriver` | software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver | [[cdk.support/lookup-entry]] | `:spark-submit-job-driver` |"
-  [stack id config]
-  (let [builder (JobDriver$Builder.)]
-    (when-let [data (lookup-entry config id :spark-submit-job-driver)]
-      (. builder sparkSubmitJobDriver data))
-    (.build builder)))
-
-
-(defn lambda-invoke-builder
-  "The lambda-invoke-builder function buildes out new instances of 
-LambdaInvoke$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `clientContext` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-context` |
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `invocationType` | software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvocationType | [[cdk.api.services.stepfunctions.tasks/lambda-invocation-type]] | `:invocation-type` |
-| `lambdaFunction` | software.amazon.awscdk.services.lambda.IFunction | [[cdk.support/lookup-entry]] | `:lambda-function` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `payload` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:payload` |
-| `payloadResponseOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:payload-response-only` |
-| `qualifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:qualifier` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `retryOnServiceExceptions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:retry-on-service-exceptions` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (LambdaInvoke$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :client-context)]
-      (. builder clientContext data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lambda-invocation-type config id :invocation-type)]
-      (. builder invocationType data))
-    (when-let [data (lookup-entry config id :lambda-function)]
-      (. builder lambdaFunction data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :payload)]
-      (. builder payload data))
-    (when-let [data (lookup-entry config id :payload-response-only)]
-      (. builder payloadResponseOnly data))
-    (when-let [data (lookup-entry config id :qualifier)]
-      (. builder qualifier data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :retry-on-service-exceptions)]
-      (. builder retryOnServiceExceptions data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `sparkSubmitJobDriver` | software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver | [[cdk.support/lookup-entry]] | `:spark-submit-job-driver` |
+"
+  [^JobDriver$Builder builder id config]
+  (when-let [data (lookup-entry config id :spark-submit-job-driver)]
+    (. builder sparkSubmitJobDriver data))
+  (.build builder))
 
 
-(defn lambda-invoke-props-builder
-  "The lambda-invoke-props-builder function buildes out new instances of 
-LambdaInvokeProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-lambda-invoke-builder
+  "The build-lambda-invoke-builder function updates a LambdaInvoke$Builder instance using the provided configuration.
+  The function takes the LambdaInvoke$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -6310,120 +6599,147 @@ LambdaInvokeProps$Builder using the provided configuration.  Each field is set a
 | `retryOnServiceExceptions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:retry-on-service-exceptions` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (LambdaInvokeProps$Builder.)]
-    (when-let [data (lookup-entry config id :client-context)]
-      (. builder clientContext data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lambda-invocation-type config id :invocation-type)]
-      (. builder invocationType data))
-    (when-let [data (lookup-entry config id :lambda-function)]
-      (. builder lambdaFunction data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :payload)]
-      (. builder payload data))
-    (when-let [data (lookup-entry config id :payload-response-only)]
-      (. builder payloadResponseOnly data))
-    (when-let [data (lookup-entry config id :qualifier)]
-      (. builder qualifier data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :retry-on-service-exceptions)]
-      (. builder retryOnServiceExceptions data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^LambdaInvoke$Builder builder id config]
+  (when-let [data (lookup-entry config id :client-context)]
+    (. builder clientContext data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lambda-invocation-type config id :invocation-type)]
+    (. builder invocationType data))
+  (when-let [data (lookup-entry config id :lambda-function)]
+    (. builder lambdaFunction data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :payload)]
+    (. builder payload data))
+  (when-let [data (lookup-entry config id :payload-response-only)]
+    (. builder payloadResponseOnly data))
+  (when-let [data (lookup-entry config id :qualifier)]
+    (. builder qualifier data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :retry-on-service-exceptions)]
+    (. builder retryOnServiceExceptions data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn launch-target-bind-options-builder
-  "The launch-target-bind-options-builder function buildes out new instances of 
-LaunchTargetBindOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-lambda-invoke-props-builder
+  "The build-lambda-invoke-props-builder function updates a LambdaInvokeProps$Builder instance using the provided configuration.
+  The function takes the LambdaInvokeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `clientContext` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-context` |
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `invocationType` | software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvocationType | [[cdk.api.services.stepfunctions.tasks/lambda-invocation-type]] | `:invocation-type` |
+| `lambdaFunction` | software.amazon.awscdk.services.lambda.IFunction | [[cdk.support/lookup-entry]] | `:lambda-function` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `payload` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:payload` |
+| `payloadResponseOnly` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:payload-response-only` |
+| `qualifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:qualifier` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `retryOnServiceExceptions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:retry-on-service-exceptions` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^LambdaInvokeProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :client-context)]
+    (. builder clientContext data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lambda-invocation-type config id :invocation-type)]
+    (. builder invocationType data))
+  (when-let [data (lookup-entry config id :lambda-function)]
+    (. builder lambdaFunction data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :payload)]
+    (. builder payload data))
+  (when-let [data (lookup-entry config id :payload-response-only)]
+    (. builder payloadResponseOnly data))
+  (when-let [data (lookup-entry config id :qualifier)]
+    (. builder qualifier data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :retry-on-service-exceptions)]
+    (. builder retryOnServiceExceptions data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-launch-target-bind-options-builder
+  "The build-launch-target-bind-options-builder function updates a LaunchTargetBindOptions$Builder instance using the provided configuration.
+  The function takes the LaunchTargetBindOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `cluster` | software.amazon.awscdk.services.ecs.ICluster | [[cdk.support/lookup-entry]] | `:cluster` |
-| `taskDefinition` | software.amazon.awscdk.services.ecs.ITaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |"
-  [stack id config]
-  (let [builder (LaunchTargetBindOptions$Builder.)]
-    (when-let [data (lookup-entry config id :cluster)]
-      (. builder cluster data))
-    (when-let [data (lookup-entry config id :task-definition)]
-      (. builder taskDefinition data))
-    (.build builder)))
+| `taskDefinition` | software.amazon.awscdk.services.ecs.ITaskDefinition | [[cdk.support/lookup-entry]] | `:task-definition` |
+"
+  [^LaunchTargetBindOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :cluster)]
+    (. builder cluster data))
+  (when-let [data (lookup-entry config id :task-definition)]
+    (. builder taskDefinition data))
+  (.build builder))
 
 
-(defn media-convert-create-job-builder
-  "The media-convert-create-job-builder function buildes out new instances of 
-MediaConvertCreateJob$Builder using the provided configuration.  Each field is set as follows:
+(defn build-media-convert-create-job-builder
+  "The build-media-convert-create-job-builder function updates a MediaConvertCreateJob$Builder instance using the provided configuration.
+  The function takes the MediaConvertCreateJob$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `createJobRequest` | java.util.Map | [[cdk.support/lookup-entry]] | `:create-job-request` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (MediaConvertCreateJob$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :create-job-request)]
-      (. builder createJobRequest data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn media-convert-create-job-props-builder
-  "The media-convert-create-job-props-builder function buildes out new instances of 
-MediaConvertCreateJobProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -6439,92 +6755,157 @@ MediaConvertCreateJobProps$Builder using the provided configuration.  Each field
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (MediaConvertCreateJobProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :create-job-request)]
-      (. builder createJobRequest data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^MediaConvertCreateJob$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :create-job-request)]
+    (. builder createJobRequest data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn message-attribute-builder
-  "The message-attribute-builder function buildes out new instances of 
-MessageAttribute$Builder using the provided configuration.  Each field is set as follows:
+(defn build-media-convert-create-job-props-builder
+  "The build-media-convert-create-job-props-builder function updates a MediaConvertCreateJobProps$Builder instance using the provided configuration.
+  The function takes the MediaConvertCreateJobProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `createJobRequest` | java.util.Map | [[cdk.support/lookup-entry]] | `:create-job-request` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^MediaConvertCreateJobProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :create-job-request)]
+    (. builder createJobRequest data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-message-attribute-builder
+  "The build-message-attribute-builder function updates a MessageAttribute$Builder instance using the provided configuration.
+  The function takes the MessageAttribute$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dataType` | software.amazon.awscdk.services.stepfunctions.tasks.MessageAttributeDataType | [[cdk.api.services.stepfunctions.tasks/message-attribute-data-type]] | `:data-type` |
-| `value` | java.lang.Object | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (MessageAttribute$Builder.)]
-    (when-let [data (message-attribute-data-type config id :data-type)]
-      (. builder dataType data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.Object | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^MessageAttribute$Builder builder id config]
+  (when-let [data (message-attribute-data-type config id :data-type)]
+    (. builder dataType data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn metric-definition-builder
-  "The metric-definition-builder function buildes out new instances of 
-MetricDefinition$Builder using the provided configuration.  Each field is set as follows:
+(defn build-metric-definition-builder
+  "The build-metric-definition-builder function updates a MetricDefinition$Builder instance using the provided configuration.
+  The function takes the MetricDefinition$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `regex` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex` |"
-  [stack id config]
-  (let [builder (MetricDefinition$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :regex)]
-      (. builder regex data))
-    (.build builder)))
+| `regex` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex` |
+"
+  [^MetricDefinition$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :regex)]
+    (. builder regex data))
+  (.build builder))
 
 
-(defn model-client-options-builder
-  "The model-client-options-builder function buildes out new instances of 
-ModelClientOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-model-client-options-builder
+  "The build-model-client-options-builder function updates a ModelClientOptions$Builder instance using the provided configuration.
+  The function takes the ModelClientOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `invocationsMaxRetries` | java.lang.Number | [[cdk.support/lookup-entry]] | `:invocations-max-retries` |
-| `invocationsTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:invocations-timeout` |"
-  [stack id config]
-  (let [builder (ModelClientOptions$Builder.)]
-    (when-let [data (lookup-entry config id :invocations-max-retries)]
-      (. builder invocationsMaxRetries data))
-    (when-let [data (lookup-entry config id :invocations-timeout)]
-      (. builder invocationsTimeout data))
-    (.build builder)))
+| `invocationsTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:invocations-timeout` |
+"
+  [^ModelClientOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :invocations-max-retries)]
+    (. builder invocationsMaxRetries data))
+  (when-let [data (lookup-entry config id :invocations-timeout)]
+    (. builder invocationsTimeout data))
+  (.build builder))
 
 
-(defn monitoring-builder
-  "The monitoring-builder function buildes out new instances of 
-Monitoring$Builder using the provided configuration.  Each field is set as follows:
+(defn build-monitoring-builder
+  "The build-monitoring-builder function updates a Monitoring$Builder instance using the provided configuration.
+  The function takes the Monitoring$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -6532,42 +6913,48 @@ Monitoring$Builder using the provided configuration.  Each field is set as follo
 | `logGroup` | software.amazon.awscdk.services.logs.ILogGroup | [[cdk.support/lookup-entry]] | `:log-group` |
 | `logStreamNamePrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-stream-name-prefix` |
 | `logging` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:logging` |
-| `persistentAppUi` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:persistent-app-ui` |"
-  [stack id config]
-  (let [builder (Monitoring$Builder.)]
-    (when-let [data (lookup-entry config id :log-bucket)]
-      (. builder logBucket data))
-    (when-let [data (lookup-entry config id :log-group)]
-      (. builder logGroup data))
-    (when-let [data (lookup-entry config id :log-stream-name-prefix)]
-      (. builder logStreamNamePrefix data))
-    (when-let [data (lookup-entry config id :logging)]
-      (. builder logging data))
-    (when-let [data (lookup-entry config id :persistent-app-ui)]
-      (. builder persistentAppUi data))
-    (.build builder)))
+| `persistentAppUi` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:persistent-app-ui` |
+"
+  [^Monitoring$Builder builder id config]
+  (when-let [data (lookup-entry config id :log-bucket)]
+    (. builder logBucket data))
+  (when-let [data (lookup-entry config id :log-group)]
+    (. builder logGroup data))
+  (when-let [data (lookup-entry config id :log-stream-name-prefix)]
+    (. builder logStreamNamePrefix data))
+  (when-let [data (lookup-entry config id :logging)]
+    (. builder logging data))
+  (when-let [data (lookup-entry config id :persistent-app-ui)]
+    (. builder persistentAppUi data))
+  (.build builder))
 
 
-(defn output-data-config-builder
-  "The output-data-config-builder function buildes out new instances of 
-OutputDataConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-output-data-config-builder
+  "The build-output-data-config-builder function updates a OutputDataConfig$Builder instance using the provided configuration.
+  The function takes the OutputDataConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `encryptionKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:encryption-key` |
-| `s3OutputLocation` | software.amazon.awscdk.services.stepfunctions.tasks.S3Location | [[cdk.support/lookup-entry]] | `:s3-output-location` |"
-  [stack id config]
-  (let [builder (OutputDataConfig$Builder.)]
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (lookup-entry config id :s3-output-location)]
-      (. builder s3OutputLocation data))
-    (.build builder)))
+| `s3OutputLocation` | software.amazon.awscdk.services.stepfunctions.tasks.S3Location | [[cdk.support/lookup-entry]] | `:s3-output-location` |
+"
+  [^OutputDataConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (lookup-entry config id :s3-output-location)]
+    (. builder s3OutputLocation data))
+  (.build builder))
 
 
-(defn production-variant-builder
-  "The production-variant-builder function buildes out new instances of 
-ProductionVariant$Builder using the provided configuration.  Each field is set as follows:
+(defn build-production-variant-builder
+  "The build-production-variant-builder function updates a ProductionVariant$Builder instance using the provided configuration.
+  The function takes the ProductionVariant$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -6576,138 +6963,159 @@ ProductionVariant$Builder using the provided configuration.  Each field is set a
 | `initialVariantWeight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:initial-variant-weight` |
 | `instanceType` | software.amazon.awscdk.services.ec2.InstanceType | [[cdk.support/lookup-entry]] | `:instance-type` |
 | `modelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-name` |
-| `variantName` | java.lang.String | [[cdk.support/lookup-entry]] | `:variant-name` |"
-  [stack id config]
-  (let [builder (ProductionVariant$Builder.)]
-    (when-let [data (lookup-entry config id :accelerator-type)]
-      (. builder acceleratorType data))
-    (when-let [data (lookup-entry config id :initial-instance-count)]
-      (. builder initialInstanceCount data))
-    (when-let [data (lookup-entry config id :initial-variant-weight)]
-      (. builder initialVariantWeight data))
-    (when-let [data (lookup-entry config id :instance-type)]
-      (. builder instanceType data))
-    (when-let [data (lookup-entry config id :model-name)]
-      (. builder modelName data))
-    (when-let [data (lookup-entry config id :variant-name)]
-      (. builder variantName data))
-    (.build builder)))
+| `variantName` | java.lang.String | [[cdk.support/lookup-entry]] | `:variant-name` |
+"
+  [^ProductionVariant$Builder builder id config]
+  (when-let [data (lookup-entry config id :accelerator-type)]
+    (. builder acceleratorType data))
+  (when-let [data (lookup-entry config id :initial-instance-count)]
+    (. builder initialInstanceCount data))
+  (when-let [data (lookup-entry config id :initial-variant-weight)]
+    (. builder initialVariantWeight data))
+  (when-let [data (lookup-entry config id :instance-type)]
+    (. builder instanceType data))
+  (when-let [data (lookup-entry config id :model-name)]
+    (. builder modelName data))
+  (when-let [data (lookup-entry config id :variant-name)]
+    (. builder variantName data))
+  (.build builder))
 
 
-(defn query-execution-context-builder
-  "The query-execution-context-builder function buildes out new instances of 
-QueryExecutionContext$Builder using the provided configuration.  Each field is set as follows:
+(defn build-query-execution-context-builder
+  "The build-query-execution-context-builder function updates a QueryExecutionContext$Builder instance using the provided configuration.
+  The function takes the QueryExecutionContext$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `catalogName` | java.lang.String | [[cdk.support/lookup-entry]] | `:catalog-name` |
-| `databaseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-name` |"
-  [stack id config]
-  (let [builder (QueryExecutionContext$Builder.)]
-    (when-let [data (lookup-entry config id :catalog-name)]
-      (. builder catalogName data))
-    (when-let [data (lookup-entry config id :database-name)]
-      (. builder databaseName data))
-    (.build builder)))
+| `databaseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-name` |
+"
+  [^QueryExecutionContext$Builder builder id config]
+  (when-let [data (lookup-entry config id :catalog-name)]
+    (. builder catalogName data))
+  (when-let [data (lookup-entry config id :database-name)]
+    (. builder databaseName data))
+  (.build builder))
 
 
-(defn resource-config-builder
-  "The resource-config-builder function buildes out new instances of 
-ResourceConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-resource-config-builder
+  "The build-resource-config-builder function updates a ResourceConfig$Builder instance using the provided configuration.
+  The function takes the ResourceConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `instanceCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:instance-count` |
 | `instanceType` | software.amazon.awscdk.services.ec2.InstanceType | [[cdk.support/lookup-entry]] | `:instance-type` |
 | `volumeEncryptionKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:volume-encryption-key` |
-| `volumeSize` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:volume-size` |"
-  [stack id config]
-  (let [builder (ResourceConfig$Builder.)]
-    (when-let [data (lookup-entry config id :instance-count)]
-      (. builder instanceCount data))
-    (when-let [data (lookup-entry config id :instance-type)]
-      (. builder instanceType data))
-    (when-let [data (lookup-entry config id :volume-encryption-key)]
-      (. builder volumeEncryptionKey data))
-    (when-let [data (lookup-entry config id :volume-size)]
-      (. builder volumeSize data))
-    (.build builder)))
+| `volumeSize` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:volume-size` |
+"
+  [^ResourceConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :instance-count)]
+    (. builder instanceCount data))
+  (when-let [data (lookup-entry config id :instance-type)]
+    (. builder instanceType data))
+  (when-let [data (lookup-entry config id :volume-encryption-key)]
+    (. builder volumeEncryptionKey data))
+  (when-let [data (lookup-entry config id :volume-size)]
+    (. builder volumeSize data))
+  (.build builder))
 
 
-(defn result-configuration-builder
-  "The result-configuration-builder function buildes out new instances of 
-ResultConfiguration$Builder using the provided configuration.  Each field is set as follows:
+(defn build-result-configuration-builder
+  "The build-result-configuration-builder function updates a ResultConfiguration$Builder instance using the provided configuration.
+  The function takes the ResultConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `encryptionConfiguration` | software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration | [[cdk.support/lookup-entry]] | `:encryption-configuration` |
-| `outputLocation` | software.amazon.awscdk.services.s3.Location | [[cdk.support/lookup-entry]] | `:output-location` |"
-  [stack id config]
-  (let [builder (ResultConfiguration$Builder.)]
-    (when-let [data (lookup-entry config id :encryption-configuration)]
-      (. builder encryptionConfiguration data))
-    (when-let [data (lookup-entry config id :output-location)]
-      (. builder outputLocation data))
-    (.build builder)))
+| `outputLocation` | software.amazon.awscdk.services.s3.Location | [[cdk.support/lookup-entry]] | `:output-location` |
+"
+  [^ResultConfiguration$Builder builder id config]
+  (when-let [data (lookup-entry config id :encryption-configuration)]
+    (. builder encryptionConfiguration data))
+  (when-let [data (lookup-entry config id :output-location)]
+    (. builder outputLocation data))
+  (.build builder))
 
 
-(defn s3-data-source-builder
-  "The s3-data-source-builder function buildes out new instances of 
-S3DataSource$Builder using the provided configuration.  Each field is set as follows:
+(defn build-s3-data-source-builder
+  "The build-s3-data-source-builder function updates a S3DataSource$Builder instance using the provided configuration.
+  The function takes the S3DataSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attributeNames` | java.util.List | [[cdk.support/lookup-entry]] | `:attribute-names` |
 | `s3DataDistributionType` | software.amazon.awscdk.services.stepfunctions.tasks.S3DataDistributionType | [[cdk.api.services.stepfunctions.tasks/s3-data-distribution-type]] | `:s3-data-distribution-type` |
 | `s3DataType` | software.amazon.awscdk.services.stepfunctions.tasks.S3DataType | [[cdk.api.services.stepfunctions.tasks/s3-data-type]] | `:s3-data-type` |
-| `s3Location` | software.amazon.awscdk.services.stepfunctions.tasks.S3Location | [[cdk.support/lookup-entry]] | `:s3-location` |"
-  [stack id config]
-  (let [builder (S3DataSource$Builder.)]
-    (when-let [data (lookup-entry config id :attribute-names)]
-      (. builder attributeNames data))
-    (when-let [data (s3-data-distribution-type config id :s3-data-distribution-type)]
-      (. builder s3DataDistributionType data))
-    (when-let [data (s3-data-type config id :s3-data-type)]
-      (. builder s3DataType data))
-    (when-let [data (lookup-entry config id :s3-location)]
-      (. builder s3Location data))
-    (.build builder)))
+| `s3Location` | software.amazon.awscdk.services.stepfunctions.tasks.S3Location | [[cdk.support/lookup-entry]] | `:s3-location` |
+"
+  [^S3DataSource$Builder builder id config]
+  (when-let [data (lookup-entry config id :attribute-names)]
+    (. builder attributeNames data))
+  (when-let [data (s3-data-distribution-type config id :s3-data-distribution-type)]
+    (. builder s3DataDistributionType data))
+  (when-let [data (s3-data-type config id :s3-data-type)]
+    (. builder s3DataType data))
+  (when-let [data (lookup-entry config id :s3-location)]
+    (. builder s3Location data))
+  (.build builder))
 
 
-(defn s3-location-bind-options-builder
-  "The s3-location-bind-options-builder function buildes out new instances of 
-S3LocationBindOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-s3-location-bind-options-builder
+  "The build-s3-location-bind-options-builder function updates a S3LocationBindOptions$Builder instance using the provided configuration.
+  The function takes the S3LocationBindOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `forReading` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:for-reading` |
-| `forWriting` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:for-writing` |"
-  [stack id config]
-  (let [builder (S3LocationBindOptions$Builder.)]
-    (when-let [data (lookup-entry config id :for-reading)]
-      (. builder forReading data))
-    (when-let [data (lookup-entry config id :for-writing)]
-      (. builder forWriting data))
-    (.build builder)))
+| `forWriting` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:for-writing` |
+"
+  [^S3LocationBindOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :for-reading)]
+    (. builder forReading data))
+  (when-let [data (lookup-entry config id :for-writing)]
+    (. builder forWriting data))
+  (.build builder))
 
 
-(defn s3-location-config-builder
-  "The s3-location-config-builder function buildes out new instances of 
-S3LocationConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-s3-location-config-builder
+  "The build-s3-location-config-builder function updates a S3LocationConfig$Builder instance using the provided configuration.
+  The function takes the S3LocationConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:uri` |"
-  [stack id config]
-  (let [builder (S3LocationConfig$Builder.)]
-    (when-let [data (lookup-entry config id :uri)]
-      (. builder uri data))
-    (.build builder)))
+| `uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:uri` |
+"
+  [^S3LocationConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :uri)]
+    (. builder uri data))
+  (.build builder))
 
 
-(defn sage-maker-create-endpoint-builder
-  "The sage-maker-create-endpoint-builder function buildes out new instances of 
-SageMakerCreateEndpoint$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sage-maker-create-endpoint-builder
+  "The build-sage-maker-create-endpoint-builder function updates a SageMakerCreateEndpoint$Builder instance using the provided configuration.
+  The function takes the SageMakerCreateEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -6725,45 +7133,48 @@ SageMakerCreateEndpoint$Builder using the provided configuration.  Each field is
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `tags` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (SageMakerCreateEndpoint$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :endpoint-config-name)]
-      (. builder endpointConfigName data))
-    (when-let [data (lookup-entry config id :endpoint-name)]
-      (. builder endpointName data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^SageMakerCreateEndpoint$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :endpoint-config-name)]
+    (. builder endpointConfigName data))
+  (when-let [data (lookup-entry config id :endpoint-name)]
+    (. builder endpointName data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn sage-maker-create-endpoint-config-builder
-  "The sage-maker-create-endpoint-config-builder function buildes out new instances of 
-SageMakerCreateEndpointConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sage-maker-create-endpoint-config-builder
+  "The build-sage-maker-create-endpoint-config-builder function updates a SageMakerCreateEndpointConfig$Builder instance using the provided configuration.
+  The function takes the SageMakerCreateEndpointConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -6782,47 +7193,50 @@ SageMakerCreateEndpointConfig$Builder using the provided configuration.  Each fi
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `tags` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (SageMakerCreateEndpointConfig$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :endpoint-config-name)]
-      (. builder endpointConfigName data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :kms-key)]
-      (. builder kmsKey data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :production-variants)]
-      (. builder productionVariants data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^SageMakerCreateEndpointConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :endpoint-config-name)]
+    (. builder endpointConfigName data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :kms-key)]
+    (. builder kmsKey data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :production-variants)]
+    (. builder productionVariants data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn sage-maker-create-endpoint-config-props-builder
-  "The sage-maker-create-endpoint-config-props-builder function buildes out new instances of 
-SageMakerCreateEndpointConfigProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sage-maker-create-endpoint-config-props-builder
+  "The build-sage-maker-create-endpoint-config-props-builder function updates a SageMakerCreateEndpointConfigProps$Builder instance using the provided configuration.
+  The function takes the SageMakerCreateEndpointConfigProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -6841,47 +7255,50 @@ SageMakerCreateEndpointConfigProps$Builder using the provided configuration.  Ea
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `tags` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (SageMakerCreateEndpointConfigProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :endpoint-config-name)]
-      (. builder endpointConfigName data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :kms-key)]
-      (. builder kmsKey data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :production-variants)]
-      (. builder productionVariants data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^SageMakerCreateEndpointConfigProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :endpoint-config-name)]
+    (. builder endpointConfigName data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :kms-key)]
+    (. builder kmsKey data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :production-variants)]
+    (. builder productionVariants data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn sage-maker-create-endpoint-props-builder
-  "The sage-maker-create-endpoint-props-builder function buildes out new instances of 
-SageMakerCreateEndpointProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sage-maker-create-endpoint-props-builder
+  "The build-sage-maker-create-endpoint-props-builder function updates a SageMakerCreateEndpointProps$Builder instance using the provided configuration.
+  The function takes the SageMakerCreateEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -6899,45 +7316,48 @@ SageMakerCreateEndpointProps$Builder using the provided configuration.  Each fie
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `tags` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (SageMakerCreateEndpointProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :endpoint-config-name)]
-      (. builder endpointConfigName data))
-    (when-let [data (lookup-entry config id :endpoint-name)]
-      (. builder endpointName data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^SageMakerCreateEndpointProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :endpoint-config-name)]
+    (. builder endpointConfigName data))
+  (when-let [data (lookup-entry config id :endpoint-name)]
+    (. builder endpointName data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn sage-maker-create-model-builder
-  "The sage-maker-create-model-builder function buildes out new instances of 
-SageMakerCreateModel$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sage-maker-create-model-builder
+  "The build-sage-maker-create-model-builder function updates a SageMakerCreateModel$Builder instance using the provided configuration.
+  The function takes the SageMakerCreateModel$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -6960,55 +7380,58 @@ SageMakerCreateModel$Builder using the provided configuration.  Each field is se
 | `tags` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (SageMakerCreateModel$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :containers)]
-      (. builder containers data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :enable-network-isolation)]
-      (. builder enableNetworkIsolation data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :model-name)]
-      (. builder modelName data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :primary-container)]
-      (. builder primaryContainer data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :subnet-selection)]
-      (. builder subnetSelection data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^SageMakerCreateModel$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :containers)]
+    (. builder containers data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :enable-network-isolation)]
+    (. builder enableNetworkIsolation data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :model-name)]
+    (. builder modelName data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :primary-container)]
+    (. builder primaryContainer data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :subnet-selection)]
+    (. builder subnetSelection data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn sage-maker-create-model-props-builder
-  "The sage-maker-create-model-props-builder function buildes out new instances of 
-SageMakerCreateModelProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sage-maker-create-model-props-builder
+  "The build-sage-maker-create-model-props-builder function updates a SageMakerCreateModelProps$Builder instance using the provided configuration.
+  The function takes the SageMakerCreateModelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -7031,55 +7454,58 @@ SageMakerCreateModelProps$Builder using the provided configuration.  Each field 
 | `tags` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:tags` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (SageMakerCreateModelProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :containers)]
-      (. builder containers data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :enable-network-isolation)]
-      (. builder enableNetworkIsolation data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :model-name)]
-      (. builder modelName data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :primary-container)]
-      (. builder primaryContainer data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :subnet-selection)]
-      (. builder subnetSelection data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^SageMakerCreateModelProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :containers)]
+    (. builder containers data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :enable-network-isolation)]
+    (. builder enableNetworkIsolation data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :model-name)]
+    (. builder modelName data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :primary-container)]
+    (. builder primaryContainer data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :subnet-selection)]
+    (. builder subnetSelection data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn sage-maker-create-training-job-builder
-  "The sage-maker-create-training-job-builder function buildes out new instances of 
-SageMakerCreateTrainingJob$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sage-maker-create-training-job-builder
+  "The build-sage-maker-create-training-job-builder function updates a SageMakerCreateTrainingJob$Builder instance using the provided configuration.
+  The function takes the SageMakerCreateTrainingJob$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -7106,63 +7532,66 @@ SageMakerCreateTrainingJob$Builder using the provided configuration.  Each field
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 | `trainingJobName` | java.lang.String | [[cdk.support/lookup-entry]] | `:training-job-name` |
-| `vpcConfig` | software.amazon.awscdk.services.stepfunctions.tasks.VpcConfig | [[cdk.support/lookup-entry]] | `:vpc-config` |"
-  [stack id config]
-  (let [builder (SageMakerCreateTrainingJob$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :algorithm-specification)]
-      (. builder algorithmSpecification data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :enable-network-isolation)]
-      (. builder enableNetworkIsolation data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :hyperparameters)]
-      (. builder hyperparameters data))
-    (when-let [data (lookup-entry config id :input-data-config)]
-      (. builder inputDataConfig data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-data-config)]
-      (. builder outputDataConfig data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :resource-config)]
-      (. builder resourceConfig data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :stopping-condition)]
-      (. builder stoppingCondition data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :training-job-name)]
-      (. builder trainingJobName data))
-    (when-let [data (lookup-entry config id :vpc-config)]
-      (. builder vpcConfig data))
-    (.build builder)))
+| `vpcConfig` | software.amazon.awscdk.services.stepfunctions.tasks.VpcConfig | [[cdk.support/lookup-entry]] | `:vpc-config` |
+"
+  [^SageMakerCreateTrainingJob$Builder builder id config]
+  (when-let [data (lookup-entry config id :algorithm-specification)]
+    (. builder algorithmSpecification data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :enable-network-isolation)]
+    (. builder enableNetworkIsolation data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :hyperparameters)]
+    (. builder hyperparameters data))
+  (when-let [data (lookup-entry config id :input-data-config)]
+    (. builder inputDataConfig data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-data-config)]
+    (. builder outputDataConfig data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :resource-config)]
+    (. builder resourceConfig data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :stopping-condition)]
+    (. builder stoppingCondition data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :training-job-name)]
+    (. builder trainingJobName data))
+  (when-let [data (lookup-entry config id :vpc-config)]
+    (. builder vpcConfig data))
+  (.build builder))
 
 
-(defn sage-maker-create-training-job-props-builder
-  "The sage-maker-create-training-job-props-builder function buildes out new instances of 
-SageMakerCreateTrainingJobProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sage-maker-create-training-job-props-builder
+  "The build-sage-maker-create-training-job-props-builder function updates a SageMakerCreateTrainingJobProps$Builder instance using the provided configuration.
+  The function takes the SageMakerCreateTrainingJobProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -7189,146 +7618,66 @@ SageMakerCreateTrainingJobProps$Builder using the provided configuration.  Each 
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
 | `trainingJobName` | java.lang.String | [[cdk.support/lookup-entry]] | `:training-job-name` |
-| `vpcConfig` | software.amazon.awscdk.services.stepfunctions.tasks.VpcConfig | [[cdk.support/lookup-entry]] | `:vpc-config` |"
-  [stack id config]
-  (let [builder (SageMakerCreateTrainingJobProps$Builder.)]
-    (when-let [data (lookup-entry config id :algorithm-specification)]
-      (. builder algorithmSpecification data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :enable-network-isolation)]
-      (. builder enableNetworkIsolation data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :hyperparameters)]
-      (. builder hyperparameters data))
-    (when-let [data (lookup-entry config id :input-data-config)]
-      (. builder inputDataConfig data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-data-config)]
-      (. builder outputDataConfig data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :resource-config)]
-      (. builder resourceConfig data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :stopping-condition)]
-      (. builder stoppingCondition data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :training-job-name)]
-      (. builder trainingJobName data))
-    (when-let [data (lookup-entry config id :vpc-config)]
-      (. builder vpcConfig data))
-    (.build builder)))
+| `vpcConfig` | software.amazon.awscdk.services.stepfunctions.tasks.VpcConfig | [[cdk.support/lookup-entry]] | `:vpc-config` |
+"
+  [^SageMakerCreateTrainingJobProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :algorithm-specification)]
+    (. builder algorithmSpecification data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :enable-network-isolation)]
+    (. builder enableNetworkIsolation data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :hyperparameters)]
+    (. builder hyperparameters data))
+  (when-let [data (lookup-entry config id :input-data-config)]
+    (. builder inputDataConfig data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-data-config)]
+    (. builder outputDataConfig data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :resource-config)]
+    (. builder resourceConfig data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :stopping-condition)]
+    (. builder stoppingCondition data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :training-job-name)]
+    (. builder trainingJobName data))
+  (when-let [data (lookup-entry config id :vpc-config)]
+    (. builder vpcConfig data))
+  (.build builder))
 
 
-(defn sage-maker-create-transform-job-builder
-  "The sage-maker-create-transform-job-builder function buildes out new instances of 
-SageMakerCreateTransformJob$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sage-maker-create-transform-job-builder
+  "The build-sage-maker-create-transform-job-builder function updates a SageMakerCreateTransformJob$Builder instance using the provided configuration.
+  The function takes the SageMakerCreateTransformJob$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `batchStrategy` | software.amazon.awscdk.services.stepfunctions.tasks.BatchStrategy | [[cdk.api.services.stepfunctions.tasks/batch-strategy]] | `:batch-strategy` |
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `environment` | java.util.Map | [[cdk.support/lookup-entry]] | `:environment` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `maxConcurrentTransforms` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-concurrent-transforms` |
-| `maxPayload` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:max-payload` |
-| `modelClientOptions` | software.amazon.awscdk.services.stepfunctions.tasks.ModelClientOptions | [[cdk.support/lookup-entry]] | `:model-client-options` |
-| `modelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-name` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `transformInput` | software.amazon.awscdk.services.stepfunctions.tasks.TransformInput | [[cdk.support/lookup-entry]] | `:transform-input` |
-| `transformJobName` | java.lang.String | [[cdk.support/lookup-entry]] | `:transform-job-name` |
-| `transformOutput` | software.amazon.awscdk.services.stepfunctions.tasks.TransformOutput | [[cdk.support/lookup-entry]] | `:transform-output` |
-| `transformResources` | software.amazon.awscdk.services.stepfunctions.tasks.TransformResources | [[cdk.support/lookup-entry]] | `:transform-resources` |"
-  [stack id config]
-  (let [builder (SageMakerCreateTransformJob$Builder/create stack id)]
-    (when-let [data (batch-strategy config id :batch-strategy)]
-      (. builder batchStrategy data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :max-concurrent-transforms)]
-      (. builder maxConcurrentTransforms data))
-    (when-let [data (lookup-entry config id :max-payload)]
-      (. builder maxPayload data))
-    (when-let [data (lookup-entry config id :model-client-options)]
-      (. builder modelClientOptions data))
-    (when-let [data (lookup-entry config id :model-name)]
-      (. builder modelName data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :transform-input)]
-      (. builder transformInput data))
-    (when-let [data (lookup-entry config id :transform-job-name)]
-      (. builder transformJobName data))
-    (when-let [data (lookup-entry config id :transform-output)]
-      (. builder transformOutput data))
-    (when-let [data (lookup-entry config id :transform-resources)]
-      (. builder transformResources data))
-    (.build builder)))
-
-
-(defn sage-maker-create-transform-job-props-builder
-  "The sage-maker-create-transform-job-props-builder function buildes out new instances of 
-SageMakerCreateTransformJobProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -7355,63 +7704,152 @@ SageMakerCreateTransformJobProps$Builder using the provided configuration.  Each
 | `transformInput` | software.amazon.awscdk.services.stepfunctions.tasks.TransformInput | [[cdk.support/lookup-entry]] | `:transform-input` |
 | `transformJobName` | java.lang.String | [[cdk.support/lookup-entry]] | `:transform-job-name` |
 | `transformOutput` | software.amazon.awscdk.services.stepfunctions.tasks.TransformOutput | [[cdk.support/lookup-entry]] | `:transform-output` |
-| `transformResources` | software.amazon.awscdk.services.stepfunctions.tasks.TransformResources | [[cdk.support/lookup-entry]] | `:transform-resources` |"
-  [stack id config]
-  (let [builder (SageMakerCreateTransformJobProps$Builder.)]
-    (when-let [data (batch-strategy config id :batch-strategy)]
-      (. builder batchStrategy data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :max-concurrent-transforms)]
-      (. builder maxConcurrentTransforms data))
-    (when-let [data (lookup-entry config id :max-payload)]
-      (. builder maxPayload data))
-    (when-let [data (lookup-entry config id :model-client-options)]
-      (. builder modelClientOptions data))
-    (when-let [data (lookup-entry config id :model-name)]
-      (. builder modelName data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :transform-input)]
-      (. builder transformInput data))
-    (when-let [data (lookup-entry config id :transform-job-name)]
-      (. builder transformJobName data))
-    (when-let [data (lookup-entry config id :transform-output)]
-      (. builder transformOutput data))
-    (when-let [data (lookup-entry config id :transform-resources)]
-      (. builder transformResources data))
-    (.build builder)))
+| `transformResources` | software.amazon.awscdk.services.stepfunctions.tasks.TransformResources | [[cdk.support/lookup-entry]] | `:transform-resources` |
+"
+  [^SageMakerCreateTransformJob$Builder builder id config]
+  (when-let [data (batch-strategy config id :batch-strategy)]
+    (. builder batchStrategy data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :max-concurrent-transforms)]
+    (. builder maxConcurrentTransforms data))
+  (when-let [data (lookup-entry config id :max-payload)]
+    (. builder maxPayload data))
+  (when-let [data (lookup-entry config id :model-client-options)]
+    (. builder modelClientOptions data))
+  (when-let [data (lookup-entry config id :model-name)]
+    (. builder modelName data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :transform-input)]
+    (. builder transformInput data))
+  (when-let [data (lookup-entry config id :transform-job-name)]
+    (. builder transformJobName data))
+  (when-let [data (lookup-entry config id :transform-output)]
+    (. builder transformOutput data))
+  (when-let [data (lookup-entry config id :transform-resources)]
+    (. builder transformResources data))
+  (.build builder))
 
 
-(defn sage-maker-update-endpoint-builder
-  "The sage-maker-update-endpoint-builder function buildes out new instances of 
-SageMakerUpdateEndpoint$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sage-maker-create-transform-job-props-builder
+  "The build-sage-maker-create-transform-job-props-builder function updates a SageMakerCreateTransformJobProps$Builder instance using the provided configuration.
+  The function takes the SageMakerCreateTransformJobProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `batchStrategy` | software.amazon.awscdk.services.stepfunctions.tasks.BatchStrategy | [[cdk.api.services.stepfunctions.tasks/batch-strategy]] | `:batch-strategy` |
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `environment` | java.util.Map | [[cdk.support/lookup-entry]] | `:environment` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `maxConcurrentTransforms` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-concurrent-transforms` |
+| `maxPayload` | software.amazon.awscdk.Size | [[cdk.support/lookup-entry]] | `:max-payload` |
+| `modelClientOptions` | software.amazon.awscdk.services.stepfunctions.tasks.ModelClientOptions | [[cdk.support/lookup-entry]] | `:model-client-options` |
+| `modelName` | java.lang.String | [[cdk.support/lookup-entry]] | `:model-name` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+| `transformInput` | software.amazon.awscdk.services.stepfunctions.tasks.TransformInput | [[cdk.support/lookup-entry]] | `:transform-input` |
+| `transformJobName` | java.lang.String | [[cdk.support/lookup-entry]] | `:transform-job-name` |
+| `transformOutput` | software.amazon.awscdk.services.stepfunctions.tasks.TransformOutput | [[cdk.support/lookup-entry]] | `:transform-output` |
+| `transformResources` | software.amazon.awscdk.services.stepfunctions.tasks.TransformResources | [[cdk.support/lookup-entry]] | `:transform-resources` |
+"
+  [^SageMakerCreateTransformJobProps$Builder builder id config]
+  (when-let [data (batch-strategy config id :batch-strategy)]
+    (. builder batchStrategy data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :max-concurrent-transforms)]
+    (. builder maxConcurrentTransforms data))
+  (when-let [data (lookup-entry config id :max-payload)]
+    (. builder maxPayload data))
+  (when-let [data (lookup-entry config id :model-client-options)]
+    (. builder modelClientOptions data))
+  (when-let [data (lookup-entry config id :model-name)]
+    (. builder modelName data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :transform-input)]
+    (. builder transformInput data))
+  (when-let [data (lookup-entry config id :transform-job-name)]
+    (. builder transformJobName data))
+  (when-let [data (lookup-entry config id :transform-output)]
+    (. builder transformOutput data))
+  (when-let [data (lookup-entry config id :transform-resources)]
+    (. builder transformResources data))
+  (.build builder))
+
+
+(defn build-sage-maker-update-endpoint-builder
+  "The build-sage-maker-update-endpoint-builder function updates a SageMakerUpdateEndpoint$Builder instance using the provided configuration.
+  The function takes the SageMakerUpdateEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -7428,43 +7866,46 @@ SageMakerUpdateEndpoint$Builder using the provided configuration.  Each field is
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (SageMakerUpdateEndpoint$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :endpoint-config-name)]
-      (. builder endpointConfigName data))
-    (when-let [data (lookup-entry config id :endpoint-name)]
-      (. builder endpointName data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^SageMakerUpdateEndpoint$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :endpoint-config-name)]
+    (. builder endpointConfigName data))
+  (when-let [data (lookup-entry config id :endpoint-name)]
+    (. builder endpointName data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn sage-maker-update-endpoint-props-builder
-  "The sage-maker-update-endpoint-props-builder function buildes out new instances of 
-SageMakerUpdateEndpointProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sage-maker-update-endpoint-props-builder
+  "The build-sage-maker-update-endpoint-props-builder function updates a SageMakerUpdateEndpointProps$Builder instance using the provided configuration.
+  The function takes the SageMakerUpdateEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -7481,57 +7922,63 @@ SageMakerUpdateEndpointProps$Builder using the provided configuration.  Each fie
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (SageMakerUpdateEndpointProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :endpoint-config-name)]
-      (. builder endpointConfigName data))
-    (when-let [data (lookup-entry config id :endpoint-name)]
-      (. builder endpointName data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^SageMakerUpdateEndpointProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :endpoint-config-name)]
+    (. builder endpointConfigName data))
+  (when-let [data (lookup-entry config id :endpoint-name)]
+    (. builder endpointName data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn shuffle-config-builder
-  "The shuffle-config-builder function buildes out new instances of 
-ShuffleConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-shuffle-config-builder
+  "The build-shuffle-config-builder function updates a ShuffleConfig$Builder instance using the provided configuration.
+  The function takes the ShuffleConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `seed` | java.lang.Number | [[cdk.support/lookup-entry]] | `:seed` |"
-  [stack id config]
-  (let [builder (ShuffleConfig$Builder.)]
-    (when-let [data (lookup-entry config id :seed)]
-      (. builder seed data))
-    (.build builder)))
+| `seed` | java.lang.Number | [[cdk.support/lookup-entry]] | `:seed` |
+"
+  [^ShuffleConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :seed)]
+    (. builder seed data))
+  (.build builder))
 
 
-(defn sns-publish-builder
-  "The sns-publish-builder function buildes out new instances of 
-SnsPublish$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sns-publish-builder
+  "The build-sns-publish-builder function updates a SnsPublish$Builder instance using the provided configuration.
+  The function takes the SnsPublish$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -7553,53 +8000,56 @@ SnsPublish$Builder using the provided configuration.  Each field is set as follo
 | `subject` | java.lang.String | [[cdk.support/lookup-entry]] | `:subject` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |"
-  [stack id config]
-  (let [builder (SnsPublish$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :message)]
-      (. builder message data))
-    (when-let [data (lookup-entry config id :message-attributes)]
-      (. builder messageAttributes data))
-    (when-let [data (lookup-entry config id :message-deduplication-id)]
-      (. builder messageDeduplicationId data))
-    (when-let [data (lookup-entry config id :message-group-id)]
-      (. builder messageGroupId data))
-    (when-let [data (lookup-entry config id :message-per-subscription-type)]
-      (. builder messagePerSubscriptionType data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :subject)]
-      (. builder subject data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (.build builder)))
+| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
+"
+  [^SnsPublish$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :message)]
+    (. builder message data))
+  (when-let [data (lookup-entry config id :message-attributes)]
+    (. builder messageAttributes data))
+  (when-let [data (lookup-entry config id :message-deduplication-id)]
+    (. builder messageDeduplicationId data))
+  (when-let [data (lookup-entry config id :message-group-id)]
+    (. builder messageGroupId data))
+  (when-let [data (lookup-entry config id :message-per-subscription-type)]
+    (. builder messagePerSubscriptionType data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :subject)]
+    (. builder subject data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (.build builder))
 
 
-(defn sns-publish-props-builder
-  "The sns-publish-props-builder function buildes out new instances of 
-SnsPublishProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sns-publish-props-builder
+  "The build-sns-publish-props-builder function updates a SnsPublishProps$Builder instance using the provided configuration.
+  The function takes the SnsPublishProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -7621,135 +8071,79 @@ SnsPublishProps$Builder using the provided configuration.  Each field is set as 
 | `subject` | java.lang.String | [[cdk.support/lookup-entry]] | `:subject` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |"
-  [stack id config]
-  (let [builder (SnsPublishProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :message)]
-      (. builder message data))
-    (when-let [data (lookup-entry config id :message-attributes)]
-      (. builder messageAttributes data))
-    (when-let [data (lookup-entry config id :message-deduplication-id)]
-      (. builder messageDeduplicationId data))
-    (when-let [data (lookup-entry config id :message-group-id)]
-      (. builder messageGroupId data))
-    (when-let [data (lookup-entry config id :message-per-subscription-type)]
-      (. builder messagePerSubscriptionType data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :subject)]
-      (. builder subject data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (.build builder)))
+| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
+"
+  [^SnsPublishProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :message)]
+    (. builder message data))
+  (when-let [data (lookup-entry config id :message-attributes)]
+    (. builder messageAttributes data))
+  (when-let [data (lookup-entry config id :message-deduplication-id)]
+    (. builder messageDeduplicationId data))
+  (when-let [data (lookup-entry config id :message-group-id)]
+    (. builder messageGroupId data))
+  (when-let [data (lookup-entry config id :message-per-subscription-type)]
+    (. builder messagePerSubscriptionType data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :subject)]
+    (. builder subject data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (.build builder))
 
 
-(defn spark-submit-job-driver-builder
-  "The spark-submit-job-driver-builder function buildes out new instances of 
-SparkSubmitJobDriver$Builder using the provided configuration.  Each field is set as follows:
+(defn build-spark-submit-job-driver-builder
+  "The build-spark-submit-job-driver-builder function updates a SparkSubmitJobDriver$Builder instance using the provided configuration.
+  The function takes the SparkSubmitJobDriver$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `entryPoint` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:entry-point` |
 | `entryPointArguments` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:entry-point-arguments` |
-| `sparkSubmitParameters` | java.lang.String | [[cdk.support/lookup-entry]] | `:spark-submit-parameters` |"
-  [stack id config]
-  (let [builder (SparkSubmitJobDriver$Builder.)]
-    (when-let [data (lookup-entry config id :entry-point)]
-      (. builder entryPoint data))
-    (when-let [data (lookup-entry config id :entry-point-arguments)]
-      (. builder entryPointArguments data))
-    (when-let [data (lookup-entry config id :spark-submit-parameters)]
-      (. builder sparkSubmitParameters data))
-    (.build builder)))
+| `sparkSubmitParameters` | java.lang.String | [[cdk.support/lookup-entry]] | `:spark-submit-parameters` |
+"
+  [^SparkSubmitJobDriver$Builder builder id config]
+  (when-let [data (lookup-entry config id :entry-point)]
+    (. builder entryPoint data))
+  (when-let [data (lookup-entry config id :entry-point-arguments)]
+    (. builder entryPointArguments data))
+  (when-let [data (lookup-entry config id :spark-submit-parameters)]
+    (. builder sparkSubmitParameters data))
+  (.build builder))
 
 
-(defn sqs-send-message-builder
-  "The sqs-send-message-builder function buildes out new instances of 
-SqsSendMessage$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sqs-send-message-builder
+  "The build-sqs-send-message-builder function updates a SqsSendMessage$Builder instance using the provided configuration.
+  The function takes the SqsSendMessage$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
-| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
-| `delay` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:delay` |
-| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
-| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
-| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
-| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
-| `messageBody` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:message-body` |
-| `messageDeduplicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:message-deduplication-id` |
-| `messageGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:message-group-id` |
-| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
-| `queue` | software.amazon.awscdk.services.sqs.IQueue | [[cdk.support/lookup-entry]] | `:queue` |
-| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
-| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
-| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
-| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (SqsSendMessage$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :delay)]
-      (. builder delay data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :message-body)]
-      (. builder messageBody data))
-    (when-let [data (lookup-entry config id :message-deduplication-id)]
-      (. builder messageDeduplicationId data))
-    (when-let [data (lookup-entry config id :message-group-id)]
-      (. builder messageGroupId data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :queue)]
-      (. builder queue data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
-
-
-(defn sqs-send-message-props-builder
-  "The sqs-send-message-props-builder function buildes out new instances of 
-SqsSendMessageProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -7769,49 +8163,117 @@ SqsSendMessageProps$Builder using the provided configuration.  Each field is set
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (SqsSendMessageProps$Builder.)]
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :delay)]
-      (. builder delay data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :message-body)]
-      (. builder messageBody data))
-    (when-let [data (lookup-entry config id :message-deduplication-id)]
-      (. builder messageDeduplicationId data))
-    (when-let [data (lookup-entry config id :message-group-id)]
-      (. builder messageGroupId data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :queue)]
-      (. builder queue data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^SqsSendMessage$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :delay)]
+    (. builder delay data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :message-body)]
+    (. builder messageBody data))
+  (when-let [data (lookup-entry config id :message-deduplication-id)]
+    (. builder messageDeduplicationId data))
+  (when-let [data (lookup-entry config id :message-group-id)]
+    (. builder messageGroupId data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :queue)]
+    (. builder queue data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn step-functions-invoke-activity-builder
-  "The step-functions-invoke-activity-builder function buildes out new instances of 
-StepFunctionsInvokeActivity$Builder using the provided configuration.  Each field is set as follows:
+(defn build-sqs-send-message-props-builder
+  "The build-sqs-send-message-props-builder function updates a SqsSendMessageProps$Builder instance using the provided configuration.
+  The function takes the SqsSendMessageProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `comment` | java.lang.String | [[cdk.support/lookup-entry]] | `:comment` |
+| `credentials` | software.amazon.awscdk.services.stepfunctions.Credentials | [[cdk.support/lookup-entry]] | `:credentials` |
+| `delay` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:delay` |
+| `heartbeat` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:heartbeat` |
+| `heartbeatTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:heartbeat-timeout` |
+| `inputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-path` |
+| `integrationPattern` | software.amazon.awscdk.services.stepfunctions.IntegrationPattern | [[cdk.api.services.stepfunctions/integration-pattern]] | `:integration-pattern` |
+| `messageBody` | software.amazon.awscdk.services.stepfunctions.TaskInput | [[cdk.support/lookup-entry]] | `:message-body` |
+| `messageDeduplicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:message-deduplication-id` |
+| `messageGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:message-group-id` |
+| `outputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:output-path` |
+| `queue` | software.amazon.awscdk.services.sqs.IQueue | [[cdk.support/lookup-entry]] | `:queue` |
+| `resultPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:result-path` |
+| `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
+| `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
+| `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^SqsSendMessageProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :delay)]
+    (. builder delay data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :message-body)]
+    (. builder messageBody data))
+  (when-let [data (lookup-entry config id :message-deduplication-id)]
+    (. builder messageDeduplicationId data))
+  (when-let [data (lookup-entry config id :message-group-id)]
+    (. builder messageGroupId data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :queue)]
+    (. builder queue data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
+
+
+(defn build-step-functions-invoke-activity-builder
+  "The build-step-functions-invoke-activity-builder function updates a StepFunctionsInvokeActivity$Builder instance using the provided configuration.
+  The function takes the StepFunctionsInvokeActivity$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -7828,43 +8290,46 @@ StepFunctionsInvokeActivity$Builder using the provided configuration.  Each fiel
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (StepFunctionsInvokeActivity$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :activity)]
-      (. builder activity data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^StepFunctionsInvokeActivity$Builder builder id config]
+  (when-let [data (lookup-entry config id :activity)]
+    (. builder activity data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn step-functions-invoke-activity-props-builder
-  "The step-functions-invoke-activity-props-builder function buildes out new instances of 
-StepFunctionsInvokeActivityProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-step-functions-invoke-activity-props-builder
+  "The build-step-functions-invoke-activity-props-builder function updates a StepFunctionsInvokeActivityProps$Builder instance using the provided configuration.
+  The function takes the StepFunctionsInvokeActivityProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -7881,43 +8346,46 @@ StepFunctionsInvokeActivityProps$Builder using the provided configuration.  Each
 | `resultSelector` | java.util.Map | [[cdk.support/lookup-entry]] | `:result-selector` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (StepFunctionsInvokeActivityProps$Builder.)]
-    (when-let [data (lookup-entry config id :activity)]
-      (. builder activity data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^StepFunctionsInvokeActivityProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :activity)]
+    (. builder activity data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn step-functions-start-execution-builder
-  "The step-functions-start-execution-builder function buildes out new instances of 
-StepFunctionsStartExecution$Builder using the provided configuration.  Each field is set as follows:
+(defn build-step-functions-start-execution-builder
+  "The build-step-functions-start-execution-builder function updates a StepFunctionsStartExecution$Builder instance using the provided configuration.
+  The function takes the StepFunctionsStartExecution$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -7936,47 +8404,50 @@ StepFunctionsStartExecution$Builder using the provided configuration.  Each fiel
 | `stateMachine` | software.amazon.awscdk.services.stepfunctions.IStateMachine | [[cdk.support/lookup-entry]] | `:state-machine` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (StepFunctionsStartExecution$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :associate-with-parent)]
-      (. builder associateWithParent data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input)]
-      (. builder input data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-machine)]
-      (. builder stateMachine data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^StepFunctionsStartExecution$Builder builder id config]
+  (when-let [data (lookup-entry config id :associate-with-parent)]
+    (. builder associateWithParent data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input)]
+    (. builder input data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-machine)]
+    (. builder stateMachine data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn step-functions-start-execution-props-builder
-  "The step-functions-start-execution-props-builder function buildes out new instances of 
-StepFunctionsStartExecutionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-step-functions-start-execution-props-builder
+  "The build-step-functions-start-execution-props-builder function updates a StepFunctionsStartExecutionProps$Builder instance using the provided configuration.
+  The function takes the StepFunctionsStartExecutionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -7995,201 +8466,228 @@ StepFunctionsStartExecutionProps$Builder using the provided configuration.  Each
 | `stateMachine` | software.amazon.awscdk.services.stepfunctions.IStateMachine | [[cdk.support/lookup-entry]] | `:state-machine` |
 | `stateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:state-name` |
 | `taskTimeout` | software.amazon.awscdk.services.stepfunctions.Timeout | [[cdk.support/lookup-entry]] | `:task-timeout` |
-| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (StepFunctionsStartExecutionProps$Builder.)]
-    (when-let [data (lookup-entry config id :associate-with-parent)]
-      (. builder associateWithParent data))
-    (when-let [data (lookup-entry config id :comment)]
-      (. builder comment data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :heartbeat)]
-      (. builder heartbeat data))
-    (when-let [data (lookup-entry config id :heartbeat-timeout)]
-      (. builder heartbeatTimeout data))
-    (when-let [data (lookup-entry config id :input)]
-      (. builder input data))
-    (when-let [data (lookup-entry config id :input-path)]
-      (. builder inputPath data))
-    (when-let [data (integration-pattern config id :integration-pattern)]
-      (. builder integrationPattern data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :output-path)]
-      (. builder outputPath data))
-    (when-let [data (lookup-entry config id :result-path)]
-      (. builder resultPath data))
-    (when-let [data (lookup-entry config id :result-selector)]
-      (. builder resultSelector data))
-    (when-let [data (lookup-entry config id :state-machine)]
-      (. builder stateMachine data))
-    (when-let [data (lookup-entry config id :state-name)]
-      (. builder stateName data))
-    (when-let [data (lookup-entry config id :task-timeout)]
-      (. builder taskTimeout data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^StepFunctionsStartExecutionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :associate-with-parent)]
+    (. builder associateWithParent data))
+  (when-let [data (lookup-entry config id :comment)]
+    (. builder comment data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :heartbeat)]
+    (. builder heartbeat data))
+  (when-let [data (lookup-entry config id :heartbeat-timeout)]
+    (. builder heartbeatTimeout data))
+  (when-let [data (lookup-entry config id :input)]
+    (. builder input data))
+  (when-let [data (lookup-entry config id :input-path)]
+    (. builder inputPath data))
+  (when-let [data (integration-pattern config id :integration-pattern)]
+    (. builder integrationPattern data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :output-path)]
+    (. builder outputPath data))
+  (when-let [data (lookup-entry config id :result-path)]
+    (. builder resultPath data))
+  (when-let [data (lookup-entry config id :result-selector)]
+    (. builder resultSelector data))
+  (when-let [data (lookup-entry config id :state-machine)]
+    (. builder stateMachine data))
+  (when-let [data (lookup-entry config id :state-name)]
+    (. builder stateName data))
+  (when-let [data (lookup-entry config id :task-timeout)]
+    (. builder taskTimeout data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn stopping-condition-builder
-  "The stopping-condition-builder function buildes out new instances of 
-StoppingCondition$Builder using the provided configuration.  Each field is set as follows:
+(defn build-stopping-condition-builder
+  "The build-stopping-condition-builder function updates a StoppingCondition$Builder instance using the provided configuration.
+  The function takes the StoppingCondition$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `maxRuntime` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:max-runtime` |"
-  [stack id config]
-  (let [builder (StoppingCondition$Builder.)]
-    (when-let [data (lookup-entry config id :max-runtime)]
-      (. builder maxRuntime data))
-    (.build builder)))
+| `maxRuntime` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:max-runtime` |
+"
+  [^StoppingCondition$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-runtime)]
+    (. builder maxRuntime data))
+  (.build builder))
 
 
-(defn task-environment-variable-builder
-  "The task-environment-variable-builder function buildes out new instances of 
-TaskEnvironmentVariable$Builder using the provided configuration.  Each field is set as follows:
+(defn build-task-environment-variable-builder
+  "The build-task-environment-variable-builder function updates a TaskEnvironmentVariable$Builder instance using the provided configuration.
+  The function takes the TaskEnvironmentVariable$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (TaskEnvironmentVariable$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^TaskEnvironmentVariable$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn transform-data-source-builder
-  "The transform-data-source-builder function buildes out new instances of 
-TransformDataSource$Builder using the provided configuration.  Each field is set as follows:
+(defn build-transform-data-source-builder
+  "The build-transform-data-source-builder function updates a TransformDataSource$Builder instance using the provided configuration.
+  The function takes the TransformDataSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3DataSource` | software.amazon.awscdk.services.stepfunctions.tasks.TransformS3DataSource | [[cdk.support/lookup-entry]] | `:s3-data-source` |"
-  [stack id config]
-  (let [builder (TransformDataSource$Builder.)]
-    (when-let [data (lookup-entry config id :s3-data-source)]
-      (. builder s3DataSource data))
-    (.build builder)))
+| `s3DataSource` | software.amazon.awscdk.services.stepfunctions.tasks.TransformS3DataSource | [[cdk.support/lookup-entry]] | `:s3-data-source` |
+"
+  [^TransformDataSource$Builder builder id config]
+  (when-let [data (lookup-entry config id :s3-data-source)]
+    (. builder s3DataSource data))
+  (.build builder))
 
 
-(defn transform-input-builder
-  "The transform-input-builder function buildes out new instances of 
-TransformInput$Builder using the provided configuration.  Each field is set as follows:
+(defn build-transform-input-builder
+  "The build-transform-input-builder function updates a TransformInput$Builder instance using the provided configuration.
+  The function takes the TransformInput$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `compressionType` | software.amazon.awscdk.services.stepfunctions.tasks.CompressionType | [[cdk.api.services.stepfunctions.tasks/compression-type]] | `:compression-type` |
 | `contentType` | java.lang.String | [[cdk.support/lookup-entry]] | `:content-type` |
 | `splitType` | software.amazon.awscdk.services.stepfunctions.tasks.SplitType | [[cdk.api.services.stepfunctions.tasks/split-type]] | `:split-type` |
-| `transformDataSource` | software.amazon.awscdk.services.stepfunctions.tasks.TransformDataSource | [[cdk.support/lookup-entry]] | `:transform-data-source` |"
-  [stack id config]
-  (let [builder (TransformInput$Builder.)]
-    (when-let [data (compression-type config id :compression-type)]
-      (. builder compressionType data))
-    (when-let [data (lookup-entry config id :content-type)]
-      (. builder contentType data))
-    (when-let [data (split-type config id :split-type)]
-      (. builder splitType data))
-    (when-let [data (lookup-entry config id :transform-data-source)]
-      (. builder transformDataSource data))
-    (.build builder)))
+| `transformDataSource` | software.amazon.awscdk.services.stepfunctions.tasks.TransformDataSource | [[cdk.support/lookup-entry]] | `:transform-data-source` |
+"
+  [^TransformInput$Builder builder id config]
+  (when-let [data (compression-type config id :compression-type)]
+    (. builder compressionType data))
+  (when-let [data (lookup-entry config id :content-type)]
+    (. builder contentType data))
+  (when-let [data (split-type config id :split-type)]
+    (. builder splitType data))
+  (when-let [data (lookup-entry config id :transform-data-source)]
+    (. builder transformDataSource data))
+  (.build builder))
 
 
-(defn transform-output-builder
-  "The transform-output-builder function buildes out new instances of 
-TransformOutput$Builder using the provided configuration.  Each field is set as follows:
+(defn build-transform-output-builder
+  "The build-transform-output-builder function updates a TransformOutput$Builder instance using the provided configuration.
+  The function takes the TransformOutput$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accept` | java.lang.String | [[cdk.support/lookup-entry]] | `:accept` |
 | `assembleWith` | software.amazon.awscdk.services.stepfunctions.tasks.AssembleWith | [[cdk.api.services.stepfunctions.tasks/assemble-with]] | `:assemble-with` |
 | `encryptionKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:encryption-key` |
-| `s3OutputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-output-path` |"
-  [stack id config]
-  (let [builder (TransformOutput$Builder.)]
-    (when-let [data (lookup-entry config id :accept)]
-      (. builder accept data))
-    (when-let [data (assemble-with config id :assemble-with)]
-      (. builder assembleWith data))
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (lookup-entry config id :s3-output-path)]
-      (. builder s3OutputPath data))
-    (.build builder)))
+| `s3OutputPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-output-path` |
+"
+  [^TransformOutput$Builder builder id config]
+  (when-let [data (lookup-entry config id :accept)]
+    (. builder accept data))
+  (when-let [data (assemble-with config id :assemble-with)]
+    (. builder assembleWith data))
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (lookup-entry config id :s3-output-path)]
+    (. builder s3OutputPath data))
+  (.build builder))
 
 
-(defn transform-resources-builder
-  "The transform-resources-builder function buildes out new instances of 
-TransformResources$Builder using the provided configuration.  Each field is set as follows:
+(defn build-transform-resources-builder
+  "The build-transform-resources-builder function updates a TransformResources$Builder instance using the provided configuration.
+  The function takes the TransformResources$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `instanceCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:instance-count` |
 | `instanceType` | software.amazon.awscdk.services.ec2.InstanceType | [[cdk.support/lookup-entry]] | `:instance-type` |
-| `volumeEncryptionKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:volume-encryption-key` |"
-  [stack id config]
-  (let [builder (TransformResources$Builder.)]
-    (when-let [data (lookup-entry config id :instance-count)]
-      (. builder instanceCount data))
-    (when-let [data (lookup-entry config id :instance-type)]
-      (. builder instanceType data))
-    (when-let [data (lookup-entry config id :volume-encryption-key)]
-      (. builder volumeEncryptionKey data))
-    (.build builder)))
+| `volumeEncryptionKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:volume-encryption-key` |
+"
+  [^TransformResources$Builder builder id config]
+  (when-let [data (lookup-entry config id :instance-count)]
+    (. builder instanceCount data))
+  (when-let [data (lookup-entry config id :instance-type)]
+    (. builder instanceType data))
+  (when-let [data (lookup-entry config id :volume-encryption-key)]
+    (. builder volumeEncryptionKey data))
+  (.build builder))
 
 
-(defn transform-s3-data-source-builder
-  "The transform-s3-data-source-builder function buildes out new instances of 
-TransformS3DataSource$Builder using the provided configuration.  Each field is set as follows:
+(defn build-transform-s3-data-source-builder
+  "The build-transform-s3-data-source-builder function updates a TransformS3DataSource$Builder instance using the provided configuration.
+  The function takes the TransformS3DataSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `s3DataType` | software.amazon.awscdk.services.stepfunctions.tasks.S3DataType | [[cdk.api.services.stepfunctions.tasks/s3-data-type]] | `:s3-data-type` |
-| `s3Uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-uri` |"
-  [stack id config]
-  (let [builder (TransformS3DataSource$Builder.)]
-    (when-let [data (s3-data-type config id :s3-data-type)]
-      (. builder s3DataType data))
-    (when-let [data (lookup-entry config id :s3-uri)]
-      (. builder s3Uri data))
-    (.build builder)))
+| `s3Uri` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-uri` |
+"
+  [^TransformS3DataSource$Builder builder id config]
+  (when-let [data (s3-data-type config id :s3-data-type)]
+    (. builder s3DataType data))
+  (when-let [data (lookup-entry config id :s3-uri)]
+    (. builder s3Uri data))
+  (.build builder))
 
 
-(defn vpc-config-builder
-  "The vpc-config-builder function buildes out new instances of 
-VpcConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-vpc-config-builder
+  "The build-vpc-config-builder function updates a VpcConfig$Builder instance using the provided configuration.
+  The function takes the VpcConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `subnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:subnets` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (VpcConfig$Builder.)]
-    (when-let [data (lookup-entry config id :subnets)]
-      (. builder subnets data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^VpcConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :subnets)]
+    (. builder subnets data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn worker-configuration-property-builder
-  "The worker-configuration-property-builder function buildes out new instances of 
-WorkerConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-worker-configuration-property-builder
+  "The build-worker-configuration-property-builder function updates a WorkerConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the WorkerConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `numberOfWorkers` | java.lang.Number | [[cdk.support/lookup-entry]] | `:number-of-workers` |
-| `workerType` | software.amazon.awscdk.services.stepfunctions.tasks.WorkerType | [[cdk.api.services.stepfunctions.tasks/worker-type]] | `:worker-type` |"
-  [stack id config]
-  (let [builder (WorkerConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :number-of-workers)]
-      (. builder numberOfWorkers data))
-    (when-let [data (worker-type config id :worker-type)]
-      (. builder workerType data))
-    (.build builder)))
+| `workerType` | software.amazon.awscdk.services.stepfunctions.tasks.WorkerType | [[cdk.api.services.stepfunctions.tasks/worker-type]] | `:worker-type` |
+"
+  [^WorkerConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :number-of-workers)]
+    (. builder numberOfWorkers data))
+  (when-let [data (worker-type config id :worker-type)]
+    (. builder workerType data))
+  (.build builder))

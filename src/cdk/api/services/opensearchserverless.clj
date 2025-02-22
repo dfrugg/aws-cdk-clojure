@@ -16,55 +16,64 @@
                                                                  CfnVpcEndpointProps$Builder]))
 
 
-(defn cfn-access-policy-builder
-  "The cfn-access-policy-builder function buildes out new instances of 
-CfnAccessPolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-access-policy-builder
+  "The build-cfn-access-policy-builder function updates a CfnAccessPolicy$Builder instance using the provided configuration.
+  The function takes the CfnAccessPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `policy` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnAccessPolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :policy)]
-      (. builder policy data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnAccessPolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :policy)]
+    (. builder policy data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-access-policy-props-builder
-  "The cfn-access-policy-props-builder function buildes out new instances of 
-CfnAccessPolicyProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-access-policy-props-builder
+  "The build-cfn-access-policy-props-builder function updates a CfnAccessPolicyProps$Builder instance using the provided configuration.
+  The function takes the CfnAccessPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `policy` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnAccessPolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :policy)]
-      (. builder policy data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnAccessPolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :policy)]
+    (. builder policy data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-collection-builder
-  "The cfn-collection-builder function buildes out new instances of 
-CfnCollection$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-collection-builder
+  "The build-cfn-collection-builder function updates a CfnCollection$Builder instance using the provided configuration.
+  The function takes the CfnCollection$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -72,25 +81,28 @@ CfnCollection$Builder using the provided configuration.  Each field is set as fo
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `standbyReplicas` | java.lang.String | [[cdk.support/lookup-entry]] | `:standby-replicas` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnCollection$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :standby-replicas)]
-      (. builder standbyReplicas data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnCollection$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :standby-replicas)]
+    (. builder standbyReplicas data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-collection-props-builder
-  "The cfn-collection-props-builder function buildes out new instances of 
-CfnCollectionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-collection-props-builder
+  "The build-cfn-collection-props-builder function updates a CfnCollectionProps$Builder instance using the provided configuration.
+  The function takes the CfnCollectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -98,224 +110,251 @@ CfnCollectionProps$Builder using the provided configuration.  Each field is set 
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `standbyReplicas` | java.lang.String | [[cdk.support/lookup-entry]] | `:standby-replicas` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnCollectionProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :standby-replicas)]
-      (. builder standbyReplicas data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnCollectionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :standby-replicas)]
+    (. builder standbyReplicas data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-lifecycle-policy-builder
-  "The cfn-lifecycle-policy-builder function buildes out new instances of 
-CfnLifecyclePolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-builder
+  "The build-cfn-lifecycle-policy-builder function updates a CfnLifecyclePolicy$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `policy` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :policy)]
-      (. builder policy data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
-
-
-(defn cfn-lifecycle-policy-props-builder
-  "The cfn-lifecycle-policy-props-builder function buildes out new instances of 
-CfnLifecyclePolicyProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `policy` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :policy)]
-      (. builder policy data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnLifecyclePolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :policy)]
+    (. builder policy data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-security-config-builder
-  "The cfn-security-config-builder function buildes out new instances of 
-CfnSecurityConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-props-builder
+  "The build-cfn-lifecycle-policy-props-builder function updates a CfnLifecyclePolicyProps$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `policy` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy` |
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnLifecyclePolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :policy)]
+    (. builder policy data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
+
+
+(defn build-cfn-security-config-builder
+  "The build-cfn-security-config-builder function updates a CfnSecurityConfig$Builder instance using the provided configuration.
+  The function takes the CfnSecurityConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `samlOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:saml-options` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnSecurityConfig$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :saml-options)]
-      (. builder samlOptions data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnSecurityConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :saml-options)]
+    (. builder samlOptions data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-security-config-props-builder
-  "The cfn-security-config-props-builder function buildes out new instances of 
-CfnSecurityConfigProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-security-config-props-builder
+  "The build-cfn-security-config-props-builder function updates a CfnSecurityConfigProps$Builder instance using the provided configuration.
+  The function takes the CfnSecurityConfigProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `samlOptions` | software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig$SamlConfigOptionsProperty | [[cdk.support/lookup-entry]] | `:saml-options` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnSecurityConfigProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :saml-options)]
-      (. builder samlOptions data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnSecurityConfigProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :saml-options)]
+    (. builder samlOptions data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-security-config-saml-config-options-property-builder
-  "The cfn-security-config-saml-config-options-property-builder function buildes out new instances of 
-CfnSecurityConfig$SamlConfigOptionsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-security-config-saml-config-options-property-builder
+  "The build-cfn-security-config-saml-config-options-property-builder function updates a CfnSecurityConfig$SamlConfigOptionsProperty$Builder instance using the provided configuration.
+  The function takes the CfnSecurityConfig$SamlConfigOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `groupAttribute` | java.lang.String | [[cdk.support/lookup-entry]] | `:group-attribute` |
 | `metadata` | java.lang.String | [[cdk.support/lookup-entry]] | `:metadata` |
 | `sessionTimeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:session-timeout` |
-| `userAttribute` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-attribute` |"
-  [stack id config]
-  (let [builder (CfnSecurityConfig$SamlConfigOptionsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :group-attribute)]
-      (. builder groupAttribute data))
-    (when-let [data (lookup-entry config id :metadata)]
-      (. builder metadata data))
-    (when-let [data (lookup-entry config id :session-timeout)]
-      (. builder sessionTimeout data))
-    (when-let [data (lookup-entry config id :user-attribute)]
-      (. builder userAttribute data))
-    (.build builder)))
+| `userAttribute` | java.lang.String | [[cdk.support/lookup-entry]] | `:user-attribute` |
+"
+  [^CfnSecurityConfig$SamlConfigOptionsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :group-attribute)]
+    (. builder groupAttribute data))
+  (when-let [data (lookup-entry config id :metadata)]
+    (. builder metadata data))
+  (when-let [data (lookup-entry config id :session-timeout)]
+    (. builder sessionTimeout data))
+  (when-let [data (lookup-entry config id :user-attribute)]
+    (. builder userAttribute data))
+  (.build builder))
 
 
-(defn cfn-security-policy-builder
-  "The cfn-security-policy-builder function buildes out new instances of 
-CfnSecurityPolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-security-policy-builder
+  "The build-cfn-security-policy-builder function updates a CfnSecurityPolicy$Builder instance using the provided configuration.
+  The function takes the CfnSecurityPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `policy` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnSecurityPolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :policy)]
-      (. builder policy data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
-
-
-(defn cfn-security-policy-props-builder
-  "The cfn-security-policy-props-builder function buildes out new instances of 
-CfnSecurityPolicyProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `policy` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnSecurityPolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :policy)]
-      (. builder policy data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnSecurityPolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :policy)]
+    (. builder policy data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-vpc-endpoint-builder
-  "The cfn-vpc-endpoint-builder function buildes out new instances of 
-CfnVpcEndpoint$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-security-policy-props-builder
+  "The build-cfn-security-policy-props-builder function updates a CfnSecurityPolicyProps$Builder instance using the provided configuration.
+  The function takes the CfnSecurityPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `policy` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy` |
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnSecurityPolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :policy)]
+    (. builder policy data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
+
+
+(defn build-cfn-vpc-endpoint-builder
+  "The build-cfn-vpc-endpoint-builder function updates a CfnVpcEndpoint$Builder instance using the provided configuration.
+  The function takes the CfnVpcEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
-| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |"
-  [stack id config]
-  (let [builder (CfnVpcEndpoint$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :security-group-ids)]
-      (. builder securityGroupIds data))
-    (when-let [data (lookup-entry config id :subnet-ids)]
-      (. builder subnetIds data))
-    (when-let [data (lookup-entry config id :vpc-id)]
-      (. builder vpcId data))
-    (.build builder)))
+| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
+"
+  [^CfnVpcEndpoint$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :security-group-ids)]
+    (. builder securityGroupIds data))
+  (when-let [data (lookup-entry config id :subnet-ids)]
+    (. builder subnetIds data))
+  (when-let [data (lookup-entry config id :vpc-id)]
+    (. builder vpcId data))
+  (.build builder))
 
 
-(defn cfn-vpc-endpoint-props-builder
-  "The cfn-vpc-endpoint-props-builder function buildes out new instances of 
-CfnVpcEndpointProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-vpc-endpoint-props-builder
+  "The build-cfn-vpc-endpoint-props-builder function updates a CfnVpcEndpointProps$Builder instance using the provided configuration.
+  The function takes the CfnVpcEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `securityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:security-group-ids` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
-| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |"
-  [stack id config]
-  (let [builder (CfnVpcEndpointProps$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :security-group-ids)]
-      (. builder securityGroupIds data))
-    (when-let [data (lookup-entry config id :subnet-ids)]
-      (. builder subnetIds data))
-    (when-let [data (lookup-entry config id :vpc-id)]
-      (. builder vpcId data))
-    (.build builder)))
+| `vpcId` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-id` |
+"
+  [^CfnVpcEndpointProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :security-group-ids)]
+    (. builder securityGroupIds data))
+  (when-let [data (lookup-entry config id :subnet-ids)]
+    (. builder subnetIds data))
+  (when-let [data (lookup-entry config id :vpc-id)]
+    (. builder vpcId data))
+  (.build builder))

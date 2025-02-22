@@ -6,9 +6,12 @@
                                                               CfnApplicationProps$Builder]))
 
 
-(defn cfn-application-builder
-  "The cfn-application-builder function buildes out new instances of 
-CfnApplication$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-application-builder
+  "The build-cfn-application-builder function updates a CfnApplication$Builder instance using the provided configuration.
+  The function takes the CfnApplication$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -18,49 +21,55 @@ CfnApplication$Builder using the provided configuration.  Each field is set as f
 | `instances` | java.util.List | [[cdk.support/lookup-entry]] | `:instances` |
 | `sapInstanceNumber` | java.lang.String | [[cdk.support/lookup-entry]] | `:sap-instance-number` |
 | `sid` | java.lang.String | [[cdk.support/lookup-entry]] | `:sid` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnApplication$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :application-type)]
-      (. builder applicationType data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :instances)]
-      (. builder instances data))
-    (when-let [data (lookup-entry config id :sap-instance-number)]
-      (. builder sapInstanceNumber data))
-    (when-let [data (lookup-entry config id :sid)]
-      (. builder sid data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnApplication$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :application-type)]
+    (. builder applicationType data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :instances)]
+    (. builder instances data))
+  (when-let [data (lookup-entry config id :sap-instance-number)]
+    (. builder sapInstanceNumber data))
+  (when-let [data (lookup-entry config id :sid)]
+    (. builder sid data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-application-credential-property-builder
-  "The cfn-application-credential-property-builder function buildes out new instances of 
-CfnApplication$CredentialProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-application-credential-property-builder
+  "The build-cfn-application-credential-property-builder function updates a CfnApplication$CredentialProperty$Builder instance using the provided configuration.
+  The function takes the CfnApplication$CredentialProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `credentialType` | java.lang.String | [[cdk.support/lookup-entry]] | `:credential-type` |
 | `databaseName` | java.lang.String | [[cdk.support/lookup-entry]] | `:database-name` |
-| `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |"
-  [stack id config]
-  (let [builder (CfnApplication$CredentialProperty$Builder.)]
-    (when-let [data (lookup-entry config id :credential-type)]
-      (. builder credentialType data))
-    (when-let [data (lookup-entry config id :database-name)]
-      (. builder databaseName data))
-    (when-let [data (lookup-entry config id :secret-id)]
-      (. builder secretId data))
-    (.build builder)))
+| `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |
+"
+  [^CfnApplication$CredentialProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :credential-type)]
+    (. builder credentialType data))
+  (when-let [data (lookup-entry config id :database-name)]
+    (. builder databaseName data))
+  (when-let [data (lookup-entry config id :secret-id)]
+    (. builder secretId data))
+  (.build builder))
 
 
-(defn cfn-application-props-builder
-  "The cfn-application-props-builder function buildes out new instances of 
-CfnApplicationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-application-props-builder
+  "The build-cfn-application-props-builder function updates a CfnApplicationProps$Builder instance using the provided configuration.
+  The function takes the CfnApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -70,21 +79,21 @@ CfnApplicationProps$Builder using the provided configuration.  Each field is set
 | `instances` | java.util.List | [[cdk.support/lookup-entry]] | `:instances` |
 | `sapInstanceNumber` | java.lang.String | [[cdk.support/lookup-entry]] | `:sap-instance-number` |
 | `sid` | java.lang.String | [[cdk.support/lookup-entry]] | `:sid` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnApplicationProps$Builder.)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :application-type)]
-      (. builder applicationType data))
-    (when-let [data (lookup-entry config id :credentials)]
-      (. builder credentials data))
-    (when-let [data (lookup-entry config id :instances)]
-      (. builder instances data))
-    (when-let [data (lookup-entry config id :sap-instance-number)]
-      (. builder sapInstanceNumber data))
-    (when-let [data (lookup-entry config id :sid)]
-      (. builder sid data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnApplicationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :application-type)]
+    (. builder applicationType data))
+  (when-let [data (lookup-entry config id :credentials)]
+    (. builder credentials data))
+  (when-let [data (lookup-entry config id :instances)]
+    (. builder instances data))
+  (when-let [data (lookup-entry config id :sap-instance-number)]
+    (. builder sapInstanceNumber data))
+  (when-let [data (lookup-entry config id :sid)]
+    (. builder sid data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))

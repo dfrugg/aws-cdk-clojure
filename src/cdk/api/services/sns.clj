@@ -126,70 +126,32 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :pass-through data) TracingConfig/PASS_THROUGH)))
 
 
-(defn between-condition-builder
-  "The between-condition-builder function buildes out new instances of 
-BetweenCondition$Builder using the provided configuration.  Each field is set as follows:
+(defn build-between-condition-builder
+  "The build-between-condition-builder function updates a BetweenCondition$Builder instance using the provided configuration.
+  The function takes the BetweenCondition$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `start` | java.lang.Number | [[cdk.support/lookup-entry]] | `:start` |
-| `stop` | java.lang.Number | [[cdk.support/lookup-entry]] | `:stop` |"
-  [stack id config]
-  (let [builder (BetweenCondition$Builder.)]
-    (when-let [data (lookup-entry config id :start)]
-      (. builder start data))
-    (when-let [data (lookup-entry config id :stop)]
-      (. builder stop data))
-    (.build builder)))
+| `stop` | java.lang.Number | [[cdk.support/lookup-entry]] | `:stop` |
+"
+  [^BetweenCondition$Builder builder id config]
+  (when-let [data (lookup-entry config id :start)]
+    (. builder start data))
+  (when-let [data (lookup-entry config id :stop)]
+    (. builder stop data))
+  (.build builder))
 
 
-(defn cfn-subscription-builder
-  "The cfn-subscription-builder function buildes out new instances of 
-CfnSubscription$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-subscription-builder
+  "The build-cfn-subscription-builder function updates a CfnSubscription$Builder instance using the provided configuration.
+  The function takes the CfnSubscription$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `deliveryPolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:delivery-policy` |
-| `endpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint` |
-| `filterPolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:filter-policy` |
-| `filterPolicyScope` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-policy-scope` |
-| `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
-| `rawMessageDelivery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:raw-message-delivery` |
-| `redrivePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:redrive-policy` |
-| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
-| `replayPolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:replay-policy` |
-| `subscriptionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscription-role-arn` |
-| `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |"
-  [stack id config]
-  (let [builder (CfnSubscription$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :delivery-policy)]
-      (. builder deliveryPolicy data))
-    (when-let [data (lookup-entry config id :endpoint)]
-      (. builder endpoint data))
-    (when-let [data (lookup-entry config id :filter-policy)]
-      (. builder filterPolicy data))
-    (when-let [data (lookup-entry config id :filter-policy-scope)]
-      (. builder filterPolicyScope data))
-    (when-let [data (lookup-entry config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :raw-message-delivery)]
-      (. builder rawMessageDelivery data))
-    (when-let [data (lookup-entry config id :redrive-policy)]
-      (. builder redrivePolicy data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :replay-policy)]
-      (. builder replayPolicy data))
-    (when-let [data (lookup-entry config id :subscription-role-arn)]
-      (. builder subscriptionRoleArn data))
-    (when-let [data (lookup-entry config id :topic-arn)]
-      (. builder topicArn data))
-    (.build builder)))
-
-
-(defn cfn-subscription-props-builder
-  "The cfn-subscription-props-builder function buildes out new instances of 
-CfnSubscriptionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -203,37 +165,87 @@ CfnSubscriptionProps$Builder using the provided configuration.  Each field is se
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 | `replayPolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:replay-policy` |
 | `subscriptionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscription-role-arn` |
-| `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |"
-  [stack id config]
-  (let [builder (CfnSubscriptionProps$Builder.)]
-    (when-let [data (lookup-entry config id :delivery-policy)]
-      (. builder deliveryPolicy data))
-    (when-let [data (lookup-entry config id :endpoint)]
-      (. builder endpoint data))
-    (when-let [data (lookup-entry config id :filter-policy)]
-      (. builder filterPolicy data))
-    (when-let [data (lookup-entry config id :filter-policy-scope)]
-      (. builder filterPolicyScope data))
-    (when-let [data (lookup-entry config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :raw-message-delivery)]
-      (. builder rawMessageDelivery data))
-    (when-let [data (lookup-entry config id :redrive-policy)]
-      (. builder redrivePolicy data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :replay-policy)]
-      (. builder replayPolicy data))
-    (when-let [data (lookup-entry config id :subscription-role-arn)]
-      (. builder subscriptionRoleArn data))
-    (when-let [data (lookup-entry config id :topic-arn)]
-      (. builder topicArn data))
-    (.build builder)))
+| `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
+"
+  [^CfnSubscription$Builder builder id config]
+  (when-let [data (lookup-entry config id :delivery-policy)]
+    (. builder deliveryPolicy data))
+  (when-let [data (lookup-entry config id :endpoint)]
+    (. builder endpoint data))
+  (when-let [data (lookup-entry config id :filter-policy)]
+    (. builder filterPolicy data))
+  (when-let [data (lookup-entry config id :filter-policy-scope)]
+    (. builder filterPolicyScope data))
+  (when-let [data (lookup-entry config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :raw-message-delivery)]
+    (. builder rawMessageDelivery data))
+  (when-let [data (lookup-entry config id :redrive-policy)]
+    (. builder redrivePolicy data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :replay-policy)]
+    (. builder replayPolicy data))
+  (when-let [data (lookup-entry config id :subscription-role-arn)]
+    (. builder subscriptionRoleArn data))
+  (when-let [data (lookup-entry config id :topic-arn)]
+    (. builder topicArn data))
+  (.build builder))
 
 
-(defn cfn-topic-builder
-  "The cfn-topic-builder function buildes out new instances of 
-CfnTopic$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-subscription-props-builder
+  "The build-cfn-subscription-props-builder function updates a CfnSubscriptionProps$Builder instance using the provided configuration.
+  The function takes the CfnSubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `deliveryPolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:delivery-policy` |
+| `endpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint` |
+| `filterPolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:filter-policy` |
+| `filterPolicyScope` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-policy-scope` |
+| `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
+| `rawMessageDelivery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:raw-message-delivery` |
+| `redrivePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:redrive-policy` |
+| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
+| `replayPolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:replay-policy` |
+| `subscriptionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscription-role-arn` |
+| `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
+"
+  [^CfnSubscriptionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :delivery-policy)]
+    (. builder deliveryPolicy data))
+  (when-let [data (lookup-entry config id :endpoint)]
+    (. builder endpoint data))
+  (when-let [data (lookup-entry config id :filter-policy)]
+    (. builder filterPolicy data))
+  (when-let [data (lookup-entry config id :filter-policy-scope)]
+    (. builder filterPolicyScope data))
+  (when-let [data (lookup-entry config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :raw-message-delivery)]
+    (. builder rawMessageDelivery data))
+  (when-let [data (lookup-entry config id :redrive-policy)]
+    (. builder redrivePolicy data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :replay-policy)]
+    (. builder replayPolicy data))
+  (when-let [data (lookup-entry config id :subscription-role-arn)]
+    (. builder subscriptionRoleArn data))
+  (when-let [data (lookup-entry config id :topic-arn)]
+    (. builder topicArn data))
+  (.build builder))
+
+
+(defn build-cfn-topic-builder
+  "The build-cfn-topic-builder function updates a CfnTopic$Builder instance using the provided configuration.
+  The function takes the CfnTopic$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -248,130 +260,148 @@ CfnTopic$Builder using the provided configuration.  Each field is set as follows
 | `subscription` | java.util.List | [[cdk.support/lookup-entry]] | `:subscription` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `topicName` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-name` |
-| `tracingConfig` | java.lang.String | [[cdk.support/lookup-entry]] | `:tracing-config` |"
-  [stack id config]
-  (let [builder (CfnTopic$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :archive-policy)]
-      (. builder archivePolicy data))
-    (when-let [data (lookup-entry config id :content-based-deduplication)]
-      (. builder contentBasedDeduplication data))
-    (when-let [data (lookup-entry config id :data-protection-policy)]
-      (. builder dataProtectionPolicy data))
-    (when-let [data (lookup-entry config id :delivery-status-logging)]
-      (. builder deliveryStatusLogging data))
-    (when-let [data (lookup-entry config id :display-name)]
-      (. builder displayName data))
-    (when-let [data (lookup-entry config id :fifo-topic)]
-      (. builder fifoTopic data))
-    (when-let [data (lookup-entry config id :kms-master-key-id)]
-      (. builder kmsMasterKeyId data))
-    (when-let [data (lookup-entry config id :signature-version)]
-      (. builder signatureVersion data))
-    (when-let [data (lookup-entry config id :subscription)]
-      (. builder subscription data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :topic-name)]
-      (. builder topicName data))
-    (when-let [data (lookup-entry config id :tracing-config)]
-      (. builder tracingConfig data))
-    (.build builder)))
+| `tracingConfig` | java.lang.String | [[cdk.support/lookup-entry]] | `:tracing-config` |
+"
+  [^CfnTopic$Builder builder id config]
+  (when-let [data (lookup-entry config id :archive-policy)]
+    (. builder archivePolicy data))
+  (when-let [data (lookup-entry config id :content-based-deduplication)]
+    (. builder contentBasedDeduplication data))
+  (when-let [data (lookup-entry config id :data-protection-policy)]
+    (. builder dataProtectionPolicy data))
+  (when-let [data (lookup-entry config id :delivery-status-logging)]
+    (. builder deliveryStatusLogging data))
+  (when-let [data (lookup-entry config id :display-name)]
+    (. builder displayName data))
+  (when-let [data (lookup-entry config id :fifo-topic)]
+    (. builder fifoTopic data))
+  (when-let [data (lookup-entry config id :kms-master-key-id)]
+    (. builder kmsMasterKeyId data))
+  (when-let [data (lookup-entry config id :signature-version)]
+    (. builder signatureVersion data))
+  (when-let [data (lookup-entry config id :subscription)]
+    (. builder subscription data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :topic-name)]
+    (. builder topicName data))
+  (when-let [data (lookup-entry config id :tracing-config)]
+    (. builder tracingConfig data))
+  (.build builder))
 
 
-(defn cfn-topic-inline-policy-builder
-  "The cfn-topic-inline-policy-builder function buildes out new instances of 
-CfnTopicInlinePolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-topic-inline-policy-builder
+  "The build-cfn-topic-inline-policy-builder function updates a CfnTopicInlinePolicy$Builder instance using the provided configuration.
+  The function takes the CfnTopicInlinePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
-| `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |"
-  [stack id config]
-  (let [builder (CfnTopicInlinePolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :policy-document)]
-      (. builder policyDocument data))
-    (when-let [data (lookup-entry config id :topic-arn)]
-      (. builder topicArn data))
-    (.build builder)))
-
-
-(defn cfn-topic-inline-policy-props-builder
-  "The cfn-topic-inline-policy-props-builder function buildes out new instances of 
-CfnTopicInlinePolicyProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
-| `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |"
-  [stack id config]
-  (let [builder (CfnTopicInlinePolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :policy-document)]
-      (. builder policyDocument data))
-    (when-let [data (lookup-entry config id :topic-arn)]
-      (. builder topicArn data))
-    (.build builder)))
+| `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
+"
+  [^CfnTopicInlinePolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :policy-document)]
+    (. builder policyDocument data))
+  (when-let [data (lookup-entry config id :topic-arn)]
+    (. builder topicArn data))
+  (.build builder))
 
 
-(defn cfn-topic-logging-config-property-builder
-  "The cfn-topic-logging-config-property-builder function buildes out new instances of 
-CfnTopic$LoggingConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-topic-inline-policy-props-builder
+  "The build-cfn-topic-inline-policy-props-builder function updates a CfnTopicInlinePolicyProps$Builder instance using the provided configuration.
+  The function takes the CfnTopicInlinePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
+| `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
+"
+  [^CfnTopicInlinePolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :policy-document)]
+    (. builder policyDocument data))
+  (when-let [data (lookup-entry config id :topic-arn)]
+    (. builder topicArn data))
+  (.build builder))
+
+
+(defn build-cfn-topic-logging-config-property-builder
+  "The build-cfn-topic-logging-config-property-builder function updates a CfnTopic$LoggingConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnTopic$LoggingConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `failureFeedbackRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:failure-feedback-role-arn` |
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 | `successFeedbackRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:success-feedback-role-arn` |
-| `successFeedbackSampleRate` | java.lang.String | [[cdk.support/lookup-entry]] | `:success-feedback-sample-rate` |"
-  [stack id config]
-  (let [builder (CfnTopic$LoggingConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :failure-feedback-role-arn)]
-      (. builder failureFeedbackRoleArn data))
-    (when-let [data (lookup-entry config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :success-feedback-role-arn)]
-      (. builder successFeedbackRoleArn data))
-    (when-let [data (lookup-entry config id :success-feedback-sample-rate)]
-      (. builder successFeedbackSampleRate data))
-    (.build builder)))
+| `successFeedbackSampleRate` | java.lang.String | [[cdk.support/lookup-entry]] | `:success-feedback-sample-rate` |
+"
+  [^CfnTopic$LoggingConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :failure-feedback-role-arn)]
+    (. builder failureFeedbackRoleArn data))
+  (when-let [data (lookup-entry config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :success-feedback-role-arn)]
+    (. builder successFeedbackRoleArn data))
+  (when-let [data (lookup-entry config id :success-feedback-sample-rate)]
+    (. builder successFeedbackSampleRate data))
+  (.build builder))
 
 
-(defn cfn-topic-policy-builder
-  "The cfn-topic-policy-builder function buildes out new instances of 
-CfnTopicPolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-topic-policy-builder
+  "The build-cfn-topic-policy-builder function updates a CfnTopicPolicy$Builder instance using the provided configuration.
+  The function takes the CfnTopicPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
-| `topics` | java.util.List | [[cdk.support/lookup-entry]] | `:topics` |"
-  [stack id config]
-  (let [builder (CfnTopicPolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :policy-document)]
-      (. builder policyDocument data))
-    (when-let [data (lookup-entry config id :topics)]
-      (. builder topics data))
-    (.build builder)))
-
-
-(defn cfn-topic-policy-props-builder
-  "The cfn-topic-policy-props-builder function buildes out new instances of 
-CfnTopicPolicyProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
-| `topics` | java.util.List | [[cdk.support/lookup-entry]] | `:topics` |"
-  [stack id config]
-  (let [builder (CfnTopicPolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :policy-document)]
-      (. builder policyDocument data))
-    (when-let [data (lookup-entry config id :topics)]
-      (. builder topics data))
-    (.build builder)))
+| `topics` | java.util.List | [[cdk.support/lookup-entry]] | `:topics` |
+"
+  [^CfnTopicPolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :policy-document)]
+    (. builder policyDocument data))
+  (when-let [data (lookup-entry config id :topics)]
+    (. builder topics data))
+  (.build builder))
 
 
-(defn cfn-topic-props-builder
-  "The cfn-topic-props-builder function buildes out new instances of 
-CfnTopicProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-topic-policy-props-builder
+  "The build-cfn-topic-policy-props-builder function updates a CfnTopicPolicyProps$Builder instance using the provided configuration.
+  The function takes the CfnTopicPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
+| `topics` | java.util.List | [[cdk.support/lookup-entry]] | `:topics` |
+"
+  [^CfnTopicPolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :policy-document)]
+    (. builder policyDocument data))
+  (when-let [data (lookup-entry config id :topics)]
+    (. builder topics data))
+  (.build builder))
+
+
+(defn build-cfn-topic-props-builder
+  "The build-cfn-topic-props-builder function updates a CfnTopicProps$Builder instance using the provided configuration.
+  The function takes the CfnTopicProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -386,79 +416,88 @@ CfnTopicProps$Builder using the provided configuration.  Each field is set as fo
 | `subscription` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subscription` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `topicName` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-name` |
-| `tracingConfig` | java.lang.String | [[cdk.support/lookup-entry]] | `:tracing-config` |"
-  [stack id config]
-  (let [builder (CfnTopicProps$Builder.)]
-    (when-let [data (lookup-entry config id :archive-policy)]
-      (. builder archivePolicy data))
-    (when-let [data (lookup-entry config id :content-based-deduplication)]
-      (. builder contentBasedDeduplication data))
-    (when-let [data (lookup-entry config id :data-protection-policy)]
-      (. builder dataProtectionPolicy data))
-    (when-let [data (lookup-entry config id :delivery-status-logging)]
-      (. builder deliveryStatusLogging data))
-    (when-let [data (lookup-entry config id :display-name)]
-      (. builder displayName data))
-    (when-let [data (lookup-entry config id :fifo-topic)]
-      (. builder fifoTopic data))
-    (when-let [data (lookup-entry config id :kms-master-key-id)]
-      (. builder kmsMasterKeyId data))
-    (when-let [data (lookup-entry config id :signature-version)]
-      (. builder signatureVersion data))
-    (when-let [data (lookup-entry config id :subscription)]
-      (. builder subscription data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :topic-name)]
-      (. builder topicName data))
-    (when-let [data (lookup-entry config id :tracing-config)]
-      (. builder tracingConfig data))
-    (.build builder)))
+| `tracingConfig` | java.lang.String | [[cdk.support/lookup-entry]] | `:tracing-config` |
+"
+  [^CfnTopicProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :archive-policy)]
+    (. builder archivePolicy data))
+  (when-let [data (lookup-entry config id :content-based-deduplication)]
+    (. builder contentBasedDeduplication data))
+  (when-let [data (lookup-entry config id :data-protection-policy)]
+    (. builder dataProtectionPolicy data))
+  (when-let [data (lookup-entry config id :delivery-status-logging)]
+    (. builder deliveryStatusLogging data))
+  (when-let [data (lookup-entry config id :display-name)]
+    (. builder displayName data))
+  (when-let [data (lookup-entry config id :fifo-topic)]
+    (. builder fifoTopic data))
+  (when-let [data (lookup-entry config id :kms-master-key-id)]
+    (. builder kmsMasterKeyId data))
+  (when-let [data (lookup-entry config id :signature-version)]
+    (. builder signatureVersion data))
+  (when-let [data (lookup-entry config id :subscription)]
+    (. builder subscription data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :topic-name)]
+    (. builder topicName data))
+  (when-let [data (lookup-entry config id :tracing-config)]
+    (. builder tracingConfig data))
+  (.build builder))
 
 
-(defn cfn-topic-subscription-property-builder
-  "The cfn-topic-subscription-property-builder function buildes out new instances of 
-CfnTopic$SubscriptionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-topic-subscription-property-builder
+  "The build-cfn-topic-subscription-property-builder function updates a CfnTopic$SubscriptionProperty$Builder instance using the provided configuration.
+  The function takes the CfnTopic$SubscriptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `endpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint` |
-| `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |"
-  [stack id config]
-  (let [builder (CfnTopic$SubscriptionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :endpoint)]
-      (. builder endpoint data))
-    (when-let [data (lookup-entry config id :protocol)]
-      (. builder protocol data))
-    (.build builder)))
+| `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
+"
+  [^CfnTopic$SubscriptionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :endpoint)]
+    (. builder endpoint data))
+  (when-let [data (lookup-entry config id :protocol)]
+    (. builder protocol data))
+  (.build builder))
 
 
-(defn logging-config-builder
-  "The logging-config-builder function buildes out new instances of 
-LoggingConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-logging-config-builder
+  "The build-logging-config-builder function updates a LoggingConfig$Builder instance using the provided configuration.
+  The function takes the LoggingConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `failureFeedbackRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:failure-feedback-role` |
 | `protocol` | software.amazon.awscdk.services.sns.LoggingProtocol | [[cdk.api.services.sns/logging-protocol]] | `:protocol` |
 | `successFeedbackRole` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:success-feedback-role` |
-| `successFeedbackSampleRate` | java.lang.Number | [[cdk.support/lookup-entry]] | `:success-feedback-sample-rate` |"
-  [stack id config]
-  (let [builder (LoggingConfig$Builder.)]
-    (when-let [data (lookup-entry config id :failure-feedback-role)]
-      (. builder failureFeedbackRole data))
-    (when-let [data (logging-protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :success-feedback-role)]
-      (. builder successFeedbackRole data))
-    (when-let [data (lookup-entry config id :success-feedback-sample-rate)]
-      (. builder successFeedbackSampleRate data))
-    (.build builder)))
+| `successFeedbackSampleRate` | java.lang.Number | [[cdk.support/lookup-entry]] | `:success-feedback-sample-rate` |
+"
+  [^LoggingConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :failure-feedback-role)]
+    (. builder failureFeedbackRole data))
+  (when-let [data (logging-protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :success-feedback-role)]
+    (. builder successFeedbackRole data))
+  (when-let [data (lookup-entry config id :success-feedback-sample-rate)]
+    (. builder successFeedbackSampleRate data))
+  (.build builder))
 
 
-(defn numeric-conditions-builder
-  "The numeric-conditions-builder function buildes out new instances of 
-NumericConditions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-numeric-conditions-builder
+  "The build-numeric-conditions-builder function updates a NumericConditions$Builder instance using the provided configuration.
+  The function takes the NumericConditions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -468,125 +507,58 @@ NumericConditions$Builder using the provided configuration.  Each field is set a
 | `greaterThan` | java.lang.Number | [[cdk.support/lookup-entry]] | `:greater-than` |
 | `greaterThanOrEqualTo` | java.lang.Number | [[cdk.support/lookup-entry]] | `:greater-than-or-equal-to` |
 | `lessThan` | java.lang.Number | [[cdk.support/lookup-entry]] | `:less-than` |
-| `lessThanOrEqualTo` | java.lang.Number | [[cdk.support/lookup-entry]] | `:less-than-or-equal-to` |"
-  [stack id config]
-  (let [builder (NumericConditions$Builder.)]
-    (when-let [data (lookup-entry config id :allowlist)]
-      (. builder allowlist data))
-    (when-let [data (lookup-entry config id :between)]
-      (. builder between data))
-    (when-let [data (lookup-entry config id :between-strict)]
-      (. builder betweenStrict data))
-    (when-let [data (lookup-entry config id :greater-than)]
-      (. builder greaterThan data))
-    (when-let [data (lookup-entry config id :greater-than-or-equal-to)]
-      (. builder greaterThanOrEqualTo data))
-    (when-let [data (lookup-entry config id :less-than)]
-      (. builder lessThan data))
-    (when-let [data (lookup-entry config id :less-than-or-equal-to)]
-      (. builder lessThanOrEqualTo data))
-    (.build builder)))
+| `lessThanOrEqualTo` | java.lang.Number | [[cdk.support/lookup-entry]] | `:less-than-or-equal-to` |
+"
+  [^NumericConditions$Builder builder id config]
+  (when-let [data (lookup-entry config id :allowlist)]
+    (. builder allowlist data))
+  (when-let [data (lookup-entry config id :between)]
+    (. builder between data))
+  (when-let [data (lookup-entry config id :between-strict)]
+    (. builder betweenStrict data))
+  (when-let [data (lookup-entry config id :greater-than)]
+    (. builder greaterThan data))
+  (when-let [data (lookup-entry config id :greater-than-or-equal-to)]
+    (. builder greaterThanOrEqualTo data))
+  (when-let [data (lookup-entry config id :less-than)]
+    (. builder lessThan data))
+  (when-let [data (lookup-entry config id :less-than-or-equal-to)]
+    (. builder lessThanOrEqualTo data))
+  (.build builder))
 
 
-(defn string-conditions-builder
-  "The string-conditions-builder function buildes out new instances of 
-StringConditions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-string-conditions-builder
+  "The build-string-conditions-builder function updates a StringConditions$Builder instance using the provided configuration.
+  The function takes the StringConditions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `allowlist` | java.util.List | [[cdk.support/lookup-entry]] | `:allowlist` |
 | `denylist` | java.util.List | [[cdk.support/lookup-entry]] | `:denylist` |
 | `matchPrefixes` | java.util.List | [[cdk.support/lookup-entry]] | `:match-prefixes` |
-| `matchSuffixes` | java.util.List | [[cdk.support/lookup-entry]] | `:match-suffixes` |"
-  [stack id config]
-  (let [builder (StringConditions$Builder.)]
-    (when-let [data (lookup-entry config id :allowlist)]
-      (. builder allowlist data))
-    (when-let [data (lookup-entry config id :denylist)]
-      (. builder denylist data))
-    (when-let [data (lookup-entry config id :match-prefixes)]
-      (. builder matchPrefixes data))
-    (when-let [data (lookup-entry config id :match-suffixes)]
-      (. builder matchSuffixes data))
-    (.build builder)))
+| `matchSuffixes` | java.util.List | [[cdk.support/lookup-entry]] | `:match-suffixes` |
+"
+  [^StringConditions$Builder builder id config]
+  (when-let [data (lookup-entry config id :allowlist)]
+    (. builder allowlist data))
+  (when-let [data (lookup-entry config id :denylist)]
+    (. builder denylist data))
+  (when-let [data (lookup-entry config id :match-prefixes)]
+    (. builder matchPrefixes data))
+  (when-let [data (lookup-entry config id :match-suffixes)]
+    (. builder matchSuffixes data))
+  (.build builder))
 
 
-(defn subscription-builder
-  "The subscription-builder function buildes out new instances of 
-Subscription$Builder using the provided configuration.  Each field is set as follows:
+(defn build-subscription-builder
+  "The build-subscription-builder function updates a Subscription$Builder instance using the provided configuration.
+  The function takes the Subscription$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `deadLetterQueue` | software.amazon.awscdk.services.sqs.IQueue | [[cdk.support/lookup-entry]] | `:dead-letter-queue` |
-| `endpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint` |
-| `filterPolicy` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy` |
-| `filterPolicyWithMessageBody` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy-with-message-body` |
-| `protocol` | software.amazon.awscdk.services.sns.SubscriptionProtocol | [[cdk.api.services.sns/subscription-protocol]] | `:protocol` |
-| `rawMessageDelivery` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:raw-message-delivery` |
-| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
-| `subscriptionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscription-role-arn` |
-| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |"
-  [stack id config]
-  (let [builder (Subscription$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :dead-letter-queue)]
-      (. builder deadLetterQueue data))
-    (when-let [data (lookup-entry config id :endpoint)]
-      (. builder endpoint data))
-    (when-let [data (lookup-entry config id :filter-policy)]
-      (. builder filterPolicy data))
-    (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
-      (. builder filterPolicyWithMessageBody data))
-    (when-let [data (subscription-protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :raw-message-delivery)]
-      (. builder rawMessageDelivery data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :subscription-role-arn)]
-      (. builder subscriptionRoleArn data))
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (.build builder)))
-
-
-(defn subscription-options-builder
-  "The subscription-options-builder function buildes out new instances of 
-SubscriptionOptions$Builder using the provided configuration.  Each field is set as follows:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `deadLetterQueue` | software.amazon.awscdk.services.sqs.IQueue | [[cdk.support/lookup-entry]] | `:dead-letter-queue` |
-| `endpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint` |
-| `filterPolicy` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy` |
-| `filterPolicyWithMessageBody` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy-with-message-body` |
-| `protocol` | software.amazon.awscdk.services.sns.SubscriptionProtocol | [[cdk.api.services.sns/subscription-protocol]] | `:protocol` |
-| `rawMessageDelivery` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:raw-message-delivery` |
-| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
-| `subscriptionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscription-role-arn` |"
-  [stack id config]
-  (let [builder (SubscriptionOptions$Builder.)]
-    (when-let [data (lookup-entry config id :dead-letter-queue)]
-      (. builder deadLetterQueue data))
-    (when-let [data (lookup-entry config id :endpoint)]
-      (. builder endpoint data))
-    (when-let [data (lookup-entry config id :filter-policy)]
-      (. builder filterPolicy data))
-    (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
-      (. builder filterPolicyWithMessageBody data))
-    (when-let [data (subscription-protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :raw-message-delivery)]
-      (. builder rawMessageDelivery data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :subscription-role-arn)]
-      (. builder subscriptionRoleArn data))
-    (.build builder)))
-
-
-(defn subscription-props-builder
-  "The subscription-props-builder function buildes out new instances of 
-SubscriptionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -598,50 +570,135 @@ SubscriptionProps$Builder using the provided configuration.  Each field is set a
 | `rawMessageDelivery` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:raw-message-delivery` |
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 | `subscriptionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscription-role-arn` |
-| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |"
-  [stack id config]
-  (let [builder (SubscriptionProps$Builder.)]
-    (when-let [data (lookup-entry config id :dead-letter-queue)]
-      (. builder deadLetterQueue data))
-    (when-let [data (lookup-entry config id :endpoint)]
-      (. builder endpoint data))
-    (when-let [data (lookup-entry config id :filter-policy)]
-      (. builder filterPolicy data))
-    (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
-      (. builder filterPolicyWithMessageBody data))
-    (when-let [data (subscription-protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :raw-message-delivery)]
-      (. builder rawMessageDelivery data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :subscription-role-arn)]
-      (. builder subscriptionRoleArn data))
-    (when-let [data (lookup-entry config id :topic)]
-      (. builder topic data))
-    (.build builder)))
+| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
+"
+  [^Subscription$Builder builder id config]
+  (when-let [data (lookup-entry config id :dead-letter-queue)]
+    (. builder deadLetterQueue data))
+  (when-let [data (lookup-entry config id :endpoint)]
+    (. builder endpoint data))
+  (when-let [data (lookup-entry config id :filter-policy)]
+    (. builder filterPolicy data))
+  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+    (. builder filterPolicyWithMessageBody data))
+  (when-let [data (subscription-protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :raw-message-delivery)]
+    (. builder rawMessageDelivery data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :subscription-role-arn)]
+    (. builder subscriptionRoleArn data))
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (.build builder))
 
 
-(defn topic-attributes-builder
-  "The topic-attributes-builder function buildes out new instances of 
-TopicAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-subscription-options-builder
+  "The build-subscription-options-builder function updates a SubscriptionOptions$Builder instance using the provided configuration.
+  The function takes the SubscriptionOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `deadLetterQueue` | software.amazon.awscdk.services.sqs.IQueue | [[cdk.support/lookup-entry]] | `:dead-letter-queue` |
+| `endpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint` |
+| `filterPolicy` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy` |
+| `filterPolicyWithMessageBody` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy-with-message-body` |
+| `protocol` | software.amazon.awscdk.services.sns.SubscriptionProtocol | [[cdk.api.services.sns/subscription-protocol]] | `:protocol` |
+| `rawMessageDelivery` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:raw-message-delivery` |
+| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
+| `subscriptionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscription-role-arn` |
+"
+  [^SubscriptionOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :dead-letter-queue)]
+    (. builder deadLetterQueue data))
+  (when-let [data (lookup-entry config id :endpoint)]
+    (. builder endpoint data))
+  (when-let [data (lookup-entry config id :filter-policy)]
+    (. builder filterPolicy data))
+  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+    (. builder filterPolicyWithMessageBody data))
+  (when-let [data (subscription-protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :raw-message-delivery)]
+    (. builder rawMessageDelivery data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :subscription-role-arn)]
+    (. builder subscriptionRoleArn data))
+  (.build builder))
+
+
+(defn build-subscription-props-builder
+  "The build-subscription-props-builder function updates a SubscriptionProps$Builder instance using the provided configuration.
+  The function takes the SubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `deadLetterQueue` | software.amazon.awscdk.services.sqs.IQueue | [[cdk.support/lookup-entry]] | `:dead-letter-queue` |
+| `endpoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:endpoint` |
+| `filterPolicy` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy` |
+| `filterPolicyWithMessageBody` | java.util.Map | [[cdk.support/lookup-entry]] | `:filter-policy-with-message-body` |
+| `protocol` | software.amazon.awscdk.services.sns.SubscriptionProtocol | [[cdk.api.services.sns/subscription-protocol]] | `:protocol` |
+| `rawMessageDelivery` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:raw-message-delivery` |
+| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
+| `subscriptionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscription-role-arn` |
+| `topic` | software.amazon.awscdk.services.sns.ITopic | [[cdk.support/lookup-entry]] | `:topic` |
+"
+  [^SubscriptionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :dead-letter-queue)]
+    (. builder deadLetterQueue data))
+  (when-let [data (lookup-entry config id :endpoint)]
+    (. builder endpoint data))
+  (when-let [data (lookup-entry config id :filter-policy)]
+    (. builder filterPolicy data))
+  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+    (. builder filterPolicyWithMessageBody data))
+  (when-let [data (subscription-protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :raw-message-delivery)]
+    (. builder rawMessageDelivery data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :subscription-role-arn)]
+    (. builder subscriptionRoleArn data))
+  (when-let [data (lookup-entry config id :topic)]
+    (. builder topic data))
+  (.build builder))
+
+
+(defn build-topic-attributes-builder
+  "The build-topic-attributes-builder function updates a TopicAttributes$Builder instance using the provided configuration.
+  The function takes the TopicAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `contentBasedDeduplication` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:content-based-deduplication` |
-| `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |"
-  [stack id config]
-  (let [builder (TopicAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :content-based-deduplication)]
-      (. builder contentBasedDeduplication data))
-    (when-let [data (lookup-entry config id :topic-arn)]
-      (. builder topicArn data))
-    (.build builder)))
+| `topicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-arn` |
+"
+  [^TopicAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :content-based-deduplication)]
+    (. builder contentBasedDeduplication data))
+  (when-let [data (lookup-entry config id :topic-arn)]
+    (. builder topicArn data))
+  (.build builder))
 
 
-(defn topic-builder
-  "The topic-builder function buildes out new instances of 
-Topic$Builder using the provided configuration.  Each field is set as follows:
+(defn build-topic-builder
+  "The build-topic-builder function updates a Topic$Builder instance using the provided configuration.
+  The function takes the Topic$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -654,75 +711,84 @@ Topic$Builder using the provided configuration.  Each field is set as follows:
 | `messageRetentionPeriodInDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:message-retention-period-in-days` |
 | `signatureVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:signature-version` |
 | `topicName` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-name` |
-| `tracingConfig` | software.amazon.awscdk.services.sns.TracingConfig | [[cdk.api.services.sns/tracing-config]] | `:tracing-config` |"
-  [stack id config]
-  (let [builder (Topic$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :content-based-deduplication)]
-      (. builder contentBasedDeduplication data))
-    (when-let [data (lookup-entry config id :display-name)]
-      (. builder displayName data))
-    (when-let [data (lookup-entry config id :enforce-ssl)]
-      (. builder enforceSsl data))
-    (when-let [data (lookup-entry config id :fifo)]
-      (. builder fifo data))
-    (when-let [data (lookup-entry config id :logging-configs)]
-      (. builder loggingConfigs data))
-    (when-let [data (lookup-entry config id :master-key)]
-      (. builder masterKey data))
-    (when-let [data (lookup-entry config id :message-retention-period-in-days)]
-      (. builder messageRetentionPeriodInDays data))
-    (when-let [data (lookup-entry config id :signature-version)]
-      (. builder signatureVersion data))
-    (when-let [data (lookup-entry config id :topic-name)]
-      (. builder topicName data))
-    (when-let [data (tracing-config config id :tracing-config)]
-      (. builder tracingConfig data))
-    (.build builder)))
+| `tracingConfig` | software.amazon.awscdk.services.sns.TracingConfig | [[cdk.api.services.sns/tracing-config]] | `:tracing-config` |
+"
+  [^Topic$Builder builder id config]
+  (when-let [data (lookup-entry config id :content-based-deduplication)]
+    (. builder contentBasedDeduplication data))
+  (when-let [data (lookup-entry config id :display-name)]
+    (. builder displayName data))
+  (when-let [data (lookup-entry config id :enforce-ssl)]
+    (. builder enforceSsl data))
+  (when-let [data (lookup-entry config id :fifo)]
+    (. builder fifo data))
+  (when-let [data (lookup-entry config id :logging-configs)]
+    (. builder loggingConfigs data))
+  (when-let [data (lookup-entry config id :master-key)]
+    (. builder masterKey data))
+  (when-let [data (lookup-entry config id :message-retention-period-in-days)]
+    (. builder messageRetentionPeriodInDays data))
+  (when-let [data (lookup-entry config id :signature-version)]
+    (. builder signatureVersion data))
+  (when-let [data (lookup-entry config id :topic-name)]
+    (. builder topicName data))
+  (when-let [data (tracing-config config id :tracing-config)]
+    (. builder tracingConfig data))
+  (.build builder))
 
 
-(defn topic-policy-builder
-  "The topic-policy-builder function buildes out new instances of 
-TopicPolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-topic-policy-builder
+  "The build-topic-policy-builder function updates a TopicPolicy$Builder instance using the provided configuration.
+  The function takes the TopicPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `enforceSsl` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enforce-ssl` |
-| `policyDocument` | software.amazon.awscdk.services.iam.PolicyDocument | [[cdk.support/lookup-entry]] | `:policy-document` |
-| `topics` | java.util.List | [[cdk.support/lookup-entry]] | `:topics` |"
-  [stack id config]
-  (let [builder (TopicPolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :enforce-ssl)]
-      (. builder enforceSsl data))
-    (when-let [data (lookup-entry config id :policy-document)]
-      (. builder policyDocument data))
-    (when-let [data (lookup-entry config id :topics)]
-      (. builder topics data))
-    (.build builder)))
-
-
-(defn topic-policy-props-builder
-  "The topic-policy-props-builder function buildes out new instances of 
-TopicPolicyProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `enforceSsl` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enforce-ssl` |
 | `policyDocument` | software.amazon.awscdk.services.iam.PolicyDocument | [[cdk.support/lookup-entry]] | `:policy-document` |
-| `topics` | java.util.List | [[cdk.support/lookup-entry]] | `:topics` |"
-  [stack id config]
-  (let [builder (TopicPolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :enforce-ssl)]
-      (. builder enforceSsl data))
-    (when-let [data (lookup-entry config id :policy-document)]
-      (. builder policyDocument data))
-    (when-let [data (lookup-entry config id :topics)]
-      (. builder topics data))
-    (.build builder)))
+| `topics` | java.util.List | [[cdk.support/lookup-entry]] | `:topics` |
+"
+  [^TopicPolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :enforce-ssl)]
+    (. builder enforceSsl data))
+  (when-let [data (lookup-entry config id :policy-document)]
+    (. builder policyDocument data))
+  (when-let [data (lookup-entry config id :topics)]
+    (. builder topics data))
+  (.build builder))
 
 
-(defn topic-props-builder
-  "The topic-props-builder function buildes out new instances of 
-TopicProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-topic-policy-props-builder
+  "The build-topic-policy-props-builder function updates a TopicPolicyProps$Builder instance using the provided configuration.
+  The function takes the TopicPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `enforceSsl` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enforce-ssl` |
+| `policyDocument` | software.amazon.awscdk.services.iam.PolicyDocument | [[cdk.support/lookup-entry]] | `:policy-document` |
+| `topics` | java.util.List | [[cdk.support/lookup-entry]] | `:topics` |
+"
+  [^TopicPolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :enforce-ssl)]
+    (. builder enforceSsl data))
+  (when-let [data (lookup-entry config id :policy-document)]
+    (. builder policyDocument data))
+  (when-let [data (lookup-entry config id :topics)]
+    (. builder topics data))
+  (.build builder))
+
+
+(defn build-topic-props-builder
+  "The build-topic-props-builder function updates a TopicProps$Builder instance using the provided configuration.
+  The function takes the TopicProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -735,35 +801,38 @@ TopicProps$Builder using the provided configuration.  Each field is set as follo
 | `messageRetentionPeriodInDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:message-retention-period-in-days` |
 | `signatureVersion` | java.lang.String | [[cdk.support/lookup-entry]] | `:signature-version` |
 | `topicName` | java.lang.String | [[cdk.support/lookup-entry]] | `:topic-name` |
-| `tracingConfig` | software.amazon.awscdk.services.sns.TracingConfig | [[cdk.api.services.sns/tracing-config]] | `:tracing-config` |"
-  [stack id config]
-  (let [builder (TopicProps$Builder.)]
-    (when-let [data (lookup-entry config id :content-based-deduplication)]
-      (. builder contentBasedDeduplication data))
-    (when-let [data (lookup-entry config id :display-name)]
-      (. builder displayName data))
-    (when-let [data (lookup-entry config id :enforce-ssl)]
-      (. builder enforceSsl data))
-    (when-let [data (lookup-entry config id :fifo)]
-      (. builder fifo data))
-    (when-let [data (lookup-entry config id :logging-configs)]
-      (. builder loggingConfigs data))
-    (when-let [data (lookup-entry config id :master-key)]
-      (. builder masterKey data))
-    (when-let [data (lookup-entry config id :message-retention-period-in-days)]
-      (. builder messageRetentionPeriodInDays data))
-    (when-let [data (lookup-entry config id :signature-version)]
-      (. builder signatureVersion data))
-    (when-let [data (lookup-entry config id :topic-name)]
-      (. builder topicName data))
-    (when-let [data (tracing-config config id :tracing-config)]
-      (. builder tracingConfig data))
-    (.build builder)))
+| `tracingConfig` | software.amazon.awscdk.services.sns.TracingConfig | [[cdk.api.services.sns/tracing-config]] | `:tracing-config` |
+"
+  [^TopicProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :content-based-deduplication)]
+    (. builder contentBasedDeduplication data))
+  (when-let [data (lookup-entry config id :display-name)]
+    (. builder displayName data))
+  (when-let [data (lookup-entry config id :enforce-ssl)]
+    (. builder enforceSsl data))
+  (when-let [data (lookup-entry config id :fifo)]
+    (. builder fifo data))
+  (when-let [data (lookup-entry config id :logging-configs)]
+    (. builder loggingConfigs data))
+  (when-let [data (lookup-entry config id :master-key)]
+    (. builder masterKey data))
+  (when-let [data (lookup-entry config id :message-retention-period-in-days)]
+    (. builder messageRetentionPeriodInDays data))
+  (when-let [data (lookup-entry config id :signature-version)]
+    (. builder signatureVersion data))
+  (when-let [data (lookup-entry config id :topic-name)]
+    (. builder topicName data))
+  (when-let [data (tracing-config config id :tracing-config)]
+    (. builder tracingConfig data))
+  (.build builder))
 
 
-(defn topic-subscription-config-builder
-  "The topic-subscription-config-builder function buildes out new instances of 
-TopicSubscriptionConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-topic-subscription-config-builder
+  "The build-topic-subscription-config-builder function updates a TopicSubscriptionConfig$Builder instance using the provided configuration.
+  The function takes the TopicSubscriptionConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -777,29 +846,29 @@ TopicSubscriptionConfig$Builder using the provided configuration.  Each field is
 | `subscriberId` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscriber-id` |
 | `subscriberScope` | software.constructs.Construct | [[cdk.support/lookup-entry]] | `:subscriber-scope` |
 | `subscriptionDependency` | software.constructs.IDependable | [[cdk.support/lookup-entry]] | `:subscription-dependency` |
-| `subscriptionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscription-role-arn` |"
-  [stack id config]
-  (let [builder (TopicSubscriptionConfig$Builder.)]
-    (when-let [data (lookup-entry config id :dead-letter-queue)]
-      (. builder deadLetterQueue data))
-    (when-let [data (lookup-entry config id :endpoint)]
-      (. builder endpoint data))
-    (when-let [data (lookup-entry config id :filter-policy)]
-      (. builder filterPolicy data))
-    (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
-      (. builder filterPolicyWithMessageBody data))
-    (when-let [data (subscription-protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :raw-message-delivery)]
-      (. builder rawMessageDelivery data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :subscriber-id)]
-      (. builder subscriberId data))
-    (when-let [data (lookup-entry config id :subscriber-scope)]
-      (. builder subscriberScope data))
-    (when-let [data (lookup-entry config id :subscription-dependency)]
-      (. builder subscriptionDependency data))
-    (when-let [data (lookup-entry config id :subscription-role-arn)]
-      (. builder subscriptionRoleArn data))
-    (.build builder)))
+| `subscriptionRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:subscription-role-arn` |
+"
+  [^TopicSubscriptionConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :dead-letter-queue)]
+    (. builder deadLetterQueue data))
+  (when-let [data (lookup-entry config id :endpoint)]
+    (. builder endpoint data))
+  (when-let [data (lookup-entry config id :filter-policy)]
+    (. builder filterPolicy data))
+  (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
+    (. builder filterPolicyWithMessageBody data))
+  (when-let [data (subscription-protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :raw-message-delivery)]
+    (. builder rawMessageDelivery data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :subscriber-id)]
+    (. builder subscriberId data))
+  (when-let [data (lookup-entry config id :subscriber-scope)]
+    (. builder subscriberScope data))
+  (when-let [data (lookup-entry config id :subscription-dependency)]
+    (. builder subscriptionDependency data))
+  (when-let [data (lookup-entry config id :subscription-role-arn)]
+    (. builder subscriptionRoleArn data))
+  (.build builder))

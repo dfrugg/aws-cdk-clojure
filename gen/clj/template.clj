@@ -160,6 +160,12 @@
 ; Builder Source Templating
 ;
 
+(def template-build-builder-start
+  "(defn build-%s
+  \"%s\"
+  [^%s builder id config]")
+
+
 (def template-builder-start
   "(defn %s
   \"%s\"
@@ -168,7 +174,7 @@
 
 (def template-builder-end
   "
-    (.build builder)))")
+  (.build builder))")
 
 (def template-builder-docstring-method-enum
   "\n| `%s` | %s | [[%s/%s]] | `:%s` |")
@@ -187,11 +193,14 @@
 
 (defn template-builder-docstring
   [methods fn-name class-name]
-  (str "The " fn-name " function buildes out new instances of \n" class-name
-       " using the provided configuration.  Each field is set as follows:\n\n"
+  (str "The build-" fn-name " function updates a " class-name
+       " instance using the provided configuration.\n  The function takes the " class-name
+       " instance, an optional namespace to use when looking up a value in the configuration,\n  and the configuration itself."
+       "\n\n  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:\n\n"
        "| Field | DataType | Lookup Function | Data Key |\n|---|---|---|---|"
        (->> (mapv template-builder-docstring-method methods)
-            str/join)))
+            str/join)
+       "\n"))
 
 ; Builder Creates
 (def template-builder-create-no-args
@@ -264,14 +273,14 @@
 ; Builder Methods
 (def template-builder-method-lookup
   "
-    (when-let [data (lookup-entry config id :%s)]
-      (. builder %s data))")
+  (when-let [data (lookup-entry config id :%s)]
+    (. builder %s data))")
 
 
 (def template-builder-method-enum
   "
-    (when-let [data (%s config id :%s)]
-      (. builder %s data))")
+  (when-let [data (%s config id :%s)]
+    (. builder %s data))")
 
 
 (defn template-builder-method
@@ -279,6 +288,16 @@
   (if method-enum
     (format template-builder-method-enum (second method-enum) method-key method)
     (format template-builder-method-lookup method-key method)))
+
+
+(defn build-builder-source-function
+  "Generates code when builders have single constructor options"
+  [{:keys [methods fn-name class-name] :as builder-data}]
+  (let [docstring (template-builder-docstring methods fn-name class-name)
+        builder-header (format template-build-builder-start fn-name docstring class-name)
+        builder-sets (->> (mapv template-builder-method methods)
+                          str/join)]
+    (str builder-header builder-sets template-builder-end)))
 
 
 (defn builder-source-function-single-inits
@@ -302,15 +321,20 @@
 (defn builder-source-function
   "Builds out the source code for for the builders on a package"
   [{:keys [inits] :as builder-data}]
-  (cond
+  (comment
+    (cond
     ; Only 1
-    (= 1 (count inits))
-    (builder-source-function-single-inits builder-data)
+      (= 1 (count inits))
+      (builder-source-function-single-inits builder-data)
     ; Only use stack ID
-    (superset? #{:no-arg :stack-id} (->> inits (mapv :init-type) set))
-    (->> (filterv #(= :stack-id (:init-type %)) inits)
-         (assoc builder-data :inits)
-         builder-source-function-single-inits)
+      (superset? #{:no-arg :stack-id} (->> inits (mapv :init-type) set))
+      (->> (filterv #(= :stack-id (:init-type %)) inits)
+           (assoc builder-data :inits)
+           builder-source-function-single-inits)
     ;Use Multi Inits
-    :else
-    (builder-source-function-multi-inits builder-data)))
+      :else
+      (builder-source-function-multi-inits builder-data))
+    )
+  (build-builder-source-function builder-data)
+
+  )

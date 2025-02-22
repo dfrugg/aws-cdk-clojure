@@ -19,9 +19,12 @@
                                                     CfnDomainProps$Builder]))
 
 
-(defn cfn-app-auto-branch-creation-config-property-builder
-  "The cfn-app-auto-branch-creation-config-property-builder function buildes out new instances of 
-CfnApp$AutoBranchCreationConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-app-auto-branch-creation-config-property-builder
+  "The build-cfn-app-auto-branch-creation-config-property-builder function updates a CfnApp$AutoBranchCreationConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnApp$AutoBranchCreationConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -35,57 +38,63 @@ CfnApp$AutoBranchCreationConfigProperty$Builder using the provided configuration
 | `environmentVariables` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:environment-variables` |
 | `framework` | java.lang.String | [[cdk.support/lookup-entry]] | `:framework` |
 | `pullRequestEnvironmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:pull-request-environment-name` |
-| `stage` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage` |"
-  [stack id config]
-  (let [builder (CfnApp$AutoBranchCreationConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :auto-branch-creation-patterns)]
-      (. builder autoBranchCreationPatterns data))
-    (when-let [data (lookup-entry config id :basic-auth-config)]
-      (. builder basicAuthConfig data))
-    (when-let [data (lookup-entry config id :build-spec)]
-      (. builder buildSpec data))
-    (when-let [data (lookup-entry config id :enable-auto-branch-creation)]
-      (. builder enableAutoBranchCreation data))
-    (when-let [data (lookup-entry config id :enable-auto-build)]
-      (. builder enableAutoBuild data))
-    (when-let [data (lookup-entry config id :enable-performance-mode)]
-      (. builder enablePerformanceMode data))
-    (when-let [data (lookup-entry config id :enable-pull-request-preview)]
-      (. builder enablePullRequestPreview data))
-    (when-let [data (lookup-entry config id :environment-variables)]
-      (. builder environmentVariables data))
-    (when-let [data (lookup-entry config id :framework)]
-      (. builder framework data))
-    (when-let [data (lookup-entry config id :pull-request-environment-name)]
-      (. builder pullRequestEnvironmentName data))
-    (when-let [data (lookup-entry config id :stage)]
-      (. builder stage data))
-    (.build builder)))
+| `stage` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage` |
+"
+  [^CfnApp$AutoBranchCreationConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :auto-branch-creation-patterns)]
+    (. builder autoBranchCreationPatterns data))
+  (when-let [data (lookup-entry config id :basic-auth-config)]
+    (. builder basicAuthConfig data))
+  (when-let [data (lookup-entry config id :build-spec)]
+    (. builder buildSpec data))
+  (when-let [data (lookup-entry config id :enable-auto-branch-creation)]
+    (. builder enableAutoBranchCreation data))
+  (when-let [data (lookup-entry config id :enable-auto-build)]
+    (. builder enableAutoBuild data))
+  (when-let [data (lookup-entry config id :enable-performance-mode)]
+    (. builder enablePerformanceMode data))
+  (when-let [data (lookup-entry config id :enable-pull-request-preview)]
+    (. builder enablePullRequestPreview data))
+  (when-let [data (lookup-entry config id :environment-variables)]
+    (. builder environmentVariables data))
+  (when-let [data (lookup-entry config id :framework)]
+    (. builder framework data))
+  (when-let [data (lookup-entry config id :pull-request-environment-name)]
+    (. builder pullRequestEnvironmentName data))
+  (when-let [data (lookup-entry config id :stage)]
+    (. builder stage data))
+  (.build builder))
 
 
-(defn cfn-app-basic-auth-config-property-builder
-  "The cfn-app-basic-auth-config-property-builder function buildes out new instances of 
-CfnApp$BasicAuthConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-app-basic-auth-config-property-builder
+  "The build-cfn-app-basic-auth-config-property-builder function updates a CfnApp$BasicAuthConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnApp$BasicAuthConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `enableBasicAuth` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-basic-auth` |
 | `password` | java.lang.String | [[cdk.support/lookup-entry]] | `:password` |
-| `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |"
-  [stack id config]
-  (let [builder (CfnApp$BasicAuthConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :enable-basic-auth)]
-      (. builder enableBasicAuth data))
-    (when-let [data (lookup-entry config id :password)]
-      (. builder password data))
-    (when-let [data (lookup-entry config id :username)]
-      (. builder username data))
-    (.build builder)))
+| `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
+"
+  [^CfnApp$BasicAuthConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :enable-basic-auth)]
+    (. builder enableBasicAuth data))
+  (when-let [data (lookup-entry config id :password)]
+    (. builder password data))
+  (when-let [data (lookup-entry config id :username)]
+    (. builder username data))
+  (.build builder))
 
 
-(defn cfn-app-builder
-  "The cfn-app-builder function buildes out new instances of 
-CfnApp$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-app-builder
+  "The build-cfn-app-builder function updates a CfnApp$Builder instance using the provided configuration.
+  The function takes the CfnApp$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -103,85 +112,94 @@ CfnApp$Builder using the provided configuration.  Each field is set as follows:
 | `oauthToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:oauth-token` |
 | `platform` | java.lang.String | [[cdk.support/lookup-entry]] | `:platform` |
 | `repository` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnApp$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :access-token)]
-      (. builder accessToken data))
-    (when-let [data (lookup-entry config id :auto-branch-creation-config)]
-      (. builder autoBranchCreationConfig data))
-    (when-let [data (lookup-entry config id :basic-auth-config)]
-      (. builder basicAuthConfig data))
-    (when-let [data (lookup-entry config id :build-spec)]
-      (. builder buildSpec data))
-    (when-let [data (lookup-entry config id :custom-headers)]
-      (. builder customHeaders data))
-    (when-let [data (lookup-entry config id :custom-rules)]
-      (. builder customRules data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :enable-branch-auto-deletion)]
-      (. builder enableBranchAutoDeletion data))
-    (when-let [data (lookup-entry config id :environment-variables)]
-      (. builder environmentVariables data))
-    (when-let [data (lookup-entry config id :iam-service-role)]
-      (. builder iamServiceRole data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :oauth-token)]
-      (. builder oauthToken data))
-    (when-let [data (lookup-entry config id :platform)]
-      (. builder platform data))
-    (when-let [data (lookup-entry config id :repository)]
-      (. builder repository data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnApp$Builder builder id config]
+  (when-let [data (lookup-entry config id :access-token)]
+    (. builder accessToken data))
+  (when-let [data (lookup-entry config id :auto-branch-creation-config)]
+    (. builder autoBranchCreationConfig data))
+  (when-let [data (lookup-entry config id :basic-auth-config)]
+    (. builder basicAuthConfig data))
+  (when-let [data (lookup-entry config id :build-spec)]
+    (. builder buildSpec data))
+  (when-let [data (lookup-entry config id :custom-headers)]
+    (. builder customHeaders data))
+  (when-let [data (lookup-entry config id :custom-rules)]
+    (. builder customRules data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :enable-branch-auto-deletion)]
+    (. builder enableBranchAutoDeletion data))
+  (when-let [data (lookup-entry config id :environment-variables)]
+    (. builder environmentVariables data))
+  (when-let [data (lookup-entry config id :iam-service-role)]
+    (. builder iamServiceRole data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :oauth-token)]
+    (. builder oauthToken data))
+  (when-let [data (lookup-entry config id :platform)]
+    (. builder platform data))
+  (when-let [data (lookup-entry config id :repository)]
+    (. builder repository data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-app-custom-rule-property-builder
-  "The cfn-app-custom-rule-property-builder function buildes out new instances of 
-CfnApp$CustomRuleProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-app-custom-rule-property-builder
+  "The build-cfn-app-custom-rule-property-builder function updates a CfnApp$CustomRuleProperty$Builder instance using the provided configuration.
+  The function takes the CfnApp$CustomRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `condition` | java.lang.String | [[cdk.support/lookup-entry]] | `:condition` |
 | `source` | java.lang.String | [[cdk.support/lookup-entry]] | `:source` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
-| `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |"
-  [stack id config]
-  (let [builder (CfnApp$CustomRuleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :condition)]
-      (. builder condition data))
-    (when-let [data (lookup-entry config id :source)]
-      (. builder source data))
-    (when-let [data (lookup-entry config id :status)]
-      (. builder status data))
-    (when-let [data (lookup-entry config id :target)]
-      (. builder target data))
-    (.build builder)))
+| `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |
+"
+  [^CfnApp$CustomRuleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :condition)]
+    (. builder condition data))
+  (when-let [data (lookup-entry config id :source)]
+    (. builder source data))
+  (when-let [data (lookup-entry config id :status)]
+    (. builder status data))
+  (when-let [data (lookup-entry config id :target)]
+    (. builder target data))
+  (.build builder))
 
 
-(defn cfn-app-environment-variable-property-builder
-  "The cfn-app-environment-variable-property-builder function buildes out new instances of 
-CfnApp$EnvironmentVariableProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-app-environment-variable-property-builder
+  "The build-cfn-app-environment-variable-property-builder function updates a CfnApp$EnvironmentVariableProperty$Builder instance using the provided configuration.
+  The function takes the CfnApp$EnvironmentVariableProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnApp$EnvironmentVariableProperty$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnApp$EnvironmentVariableProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-app-props-builder
-  "The cfn-app-props-builder function buildes out new instances of 
-CfnAppProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-app-props-builder
+  "The build-cfn-app-props-builder function updates a CfnAppProps$Builder instance using the provided configuration.
+  The function takes the CfnAppProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -199,79 +217,88 @@ CfnAppProps$Builder using the provided configuration.  Each field is set as foll
 | `oauthToken` | java.lang.String | [[cdk.support/lookup-entry]] | `:oauth-token` |
 | `platform` | java.lang.String | [[cdk.support/lookup-entry]] | `:platform` |
 | `repository` | java.lang.String | [[cdk.support/lookup-entry]] | `:repository` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnAppProps$Builder.)]
-    (when-let [data (lookup-entry config id :access-token)]
-      (. builder accessToken data))
-    (when-let [data (lookup-entry config id :auto-branch-creation-config)]
-      (. builder autoBranchCreationConfig data))
-    (when-let [data (lookup-entry config id :basic-auth-config)]
-      (. builder basicAuthConfig data))
-    (when-let [data (lookup-entry config id :build-spec)]
-      (. builder buildSpec data))
-    (when-let [data (lookup-entry config id :custom-headers)]
-      (. builder customHeaders data))
-    (when-let [data (lookup-entry config id :custom-rules)]
-      (. builder customRules data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :enable-branch-auto-deletion)]
-      (. builder enableBranchAutoDeletion data))
-    (when-let [data (lookup-entry config id :environment-variables)]
-      (. builder environmentVariables data))
-    (when-let [data (lookup-entry config id :iam-service-role)]
-      (. builder iamServiceRole data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :oauth-token)]
-      (. builder oauthToken data))
-    (when-let [data (lookup-entry config id :platform)]
-      (. builder platform data))
-    (when-let [data (lookup-entry config id :repository)]
-      (. builder repository data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnAppProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :access-token)]
+    (. builder accessToken data))
+  (when-let [data (lookup-entry config id :auto-branch-creation-config)]
+    (. builder autoBranchCreationConfig data))
+  (when-let [data (lookup-entry config id :basic-auth-config)]
+    (. builder basicAuthConfig data))
+  (when-let [data (lookup-entry config id :build-spec)]
+    (. builder buildSpec data))
+  (when-let [data (lookup-entry config id :custom-headers)]
+    (. builder customHeaders data))
+  (when-let [data (lookup-entry config id :custom-rules)]
+    (. builder customRules data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :enable-branch-auto-deletion)]
+    (. builder enableBranchAutoDeletion data))
+  (when-let [data (lookup-entry config id :environment-variables)]
+    (. builder environmentVariables data))
+  (when-let [data (lookup-entry config id :iam-service-role)]
+    (. builder iamServiceRole data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :oauth-token)]
+    (. builder oauthToken data))
+  (when-let [data (lookup-entry config id :platform)]
+    (. builder platform data))
+  (when-let [data (lookup-entry config id :repository)]
+    (. builder repository data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-branch-backend-property-builder
-  "The cfn-branch-backend-property-builder function buildes out new instances of 
-CfnBranch$BackendProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-branch-backend-property-builder
+  "The build-cfn-branch-backend-property-builder function updates a CfnBranch$BackendProperty$Builder instance using the provided configuration.
+  The function takes the CfnBranch$BackendProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `stackArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-arn` |"
-  [stack id config]
-  (let [builder (CfnBranch$BackendProperty$Builder.)]
-    (when-let [data (lookup-entry config id :stack-arn)]
-      (. builder stackArn data))
-    (.build builder)))
+| `stackArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stack-arn` |
+"
+  [^CfnBranch$BackendProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :stack-arn)]
+    (. builder stackArn data))
+  (.build builder))
 
 
-(defn cfn-branch-basic-auth-config-property-builder
-  "The cfn-branch-basic-auth-config-property-builder function buildes out new instances of 
-CfnBranch$BasicAuthConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-branch-basic-auth-config-property-builder
+  "The build-cfn-branch-basic-auth-config-property-builder function updates a CfnBranch$BasicAuthConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnBranch$BasicAuthConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `enableBasicAuth` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enable-basic-auth` |
 | `password` | java.lang.String | [[cdk.support/lookup-entry]] | `:password` |
-| `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |"
-  [stack id config]
-  (let [builder (CfnBranch$BasicAuthConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :enable-basic-auth)]
-      (. builder enableBasicAuth data))
-    (when-let [data (lookup-entry config id :password)]
-      (. builder password data))
-    (when-let [data (lookup-entry config id :username)]
-      (. builder username data))
-    (.build builder)))
+| `username` | java.lang.String | [[cdk.support/lookup-entry]] | `:username` |
+"
+  [^CfnBranch$BasicAuthConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :enable-basic-auth)]
+    (. builder enableBasicAuth data))
+  (when-let [data (lookup-entry config id :password)]
+    (. builder password data))
+  (when-let [data (lookup-entry config id :username)]
+    (. builder username data))
+  (.build builder))
 
 
-(defn cfn-branch-builder
-  "The cfn-branch-builder function buildes out new instances of 
-CfnBranch$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-branch-builder
+  "The build-cfn-branch-builder function updates a CfnBranch$Builder instance using the provided configuration.
+  The function takes the CfnBranch$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -288,60 +315,66 @@ CfnBranch$Builder using the provided configuration.  Each field is set as follow
 | `framework` | java.lang.String | [[cdk.support/lookup-entry]] | `:framework` |
 | `pullRequestEnvironmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:pull-request-environment-name` |
 | `stage` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnBranch$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :app-id)]
-      (. builder appId data))
-    (when-let [data (lookup-entry config id :backend)]
-      (. builder backend data))
-    (when-let [data (lookup-entry config id :basic-auth-config)]
-      (. builder basicAuthConfig data))
-    (when-let [data (lookup-entry config id :branch-name)]
-      (. builder branchName data))
-    (when-let [data (lookup-entry config id :build-spec)]
-      (. builder buildSpec data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :enable-auto-build)]
-      (. builder enableAutoBuild data))
-    (when-let [data (lookup-entry config id :enable-performance-mode)]
-      (. builder enablePerformanceMode data))
-    (when-let [data (lookup-entry config id :enable-pull-request-preview)]
-      (. builder enablePullRequestPreview data))
-    (when-let [data (lookup-entry config id :environment-variables)]
-      (. builder environmentVariables data))
-    (when-let [data (lookup-entry config id :framework)]
-      (. builder framework data))
-    (when-let [data (lookup-entry config id :pull-request-environment-name)]
-      (. builder pullRequestEnvironmentName data))
-    (when-let [data (lookup-entry config id :stage)]
-      (. builder stage data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnBranch$Builder builder id config]
+  (when-let [data (lookup-entry config id :app-id)]
+    (. builder appId data))
+  (when-let [data (lookup-entry config id :backend)]
+    (. builder backend data))
+  (when-let [data (lookup-entry config id :basic-auth-config)]
+    (. builder basicAuthConfig data))
+  (when-let [data (lookup-entry config id :branch-name)]
+    (. builder branchName data))
+  (when-let [data (lookup-entry config id :build-spec)]
+    (. builder buildSpec data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :enable-auto-build)]
+    (. builder enableAutoBuild data))
+  (when-let [data (lookup-entry config id :enable-performance-mode)]
+    (. builder enablePerformanceMode data))
+  (when-let [data (lookup-entry config id :enable-pull-request-preview)]
+    (. builder enablePullRequestPreview data))
+  (when-let [data (lookup-entry config id :environment-variables)]
+    (. builder environmentVariables data))
+  (when-let [data (lookup-entry config id :framework)]
+    (. builder framework data))
+  (when-let [data (lookup-entry config id :pull-request-environment-name)]
+    (. builder pullRequestEnvironmentName data))
+  (when-let [data (lookup-entry config id :stage)]
+    (. builder stage data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-branch-environment-variable-property-builder
-  "The cfn-branch-environment-variable-property-builder function buildes out new instances of 
-CfnBranch$EnvironmentVariableProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-branch-environment-variable-property-builder
+  "The build-cfn-branch-environment-variable-property-builder function updates a CfnBranch$EnvironmentVariableProperty$Builder instance using the provided configuration.
+  The function takes the CfnBranch$EnvironmentVariableProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnBranch$EnvironmentVariableProperty$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnBranch$EnvironmentVariableProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-branch-props-builder
-  "The cfn-branch-props-builder function buildes out new instances of 
-CfnBranchProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-branch-props-builder
+  "The build-cfn-branch-props-builder function updates a CfnBranchProps$Builder instance using the provided configuration.
+  The function takes the CfnBranchProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -358,43 +391,46 @@ CfnBranchProps$Builder using the provided configuration.  Each field is set as f
 | `framework` | java.lang.String | [[cdk.support/lookup-entry]] | `:framework` |
 | `pullRequestEnvironmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:pull-request-environment-name` |
 | `stage` | java.lang.String | [[cdk.support/lookup-entry]] | `:stage` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnBranchProps$Builder.)]
-    (when-let [data (lookup-entry config id :app-id)]
-      (. builder appId data))
-    (when-let [data (lookup-entry config id :backend)]
-      (. builder backend data))
-    (when-let [data (lookup-entry config id :basic-auth-config)]
-      (. builder basicAuthConfig data))
-    (when-let [data (lookup-entry config id :branch-name)]
-      (. builder branchName data))
-    (when-let [data (lookup-entry config id :build-spec)]
-      (. builder buildSpec data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :enable-auto-build)]
-      (. builder enableAutoBuild data))
-    (when-let [data (lookup-entry config id :enable-performance-mode)]
-      (. builder enablePerformanceMode data))
-    (when-let [data (lookup-entry config id :enable-pull-request-preview)]
-      (. builder enablePullRequestPreview data))
-    (when-let [data (lookup-entry config id :environment-variables)]
-      (. builder environmentVariables data))
-    (when-let [data (lookup-entry config id :framework)]
-      (. builder framework data))
-    (when-let [data (lookup-entry config id :pull-request-environment-name)]
-      (. builder pullRequestEnvironmentName data))
-    (when-let [data (lookup-entry config id :stage)]
-      (. builder stage data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnBranchProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :app-id)]
+    (. builder appId data))
+  (when-let [data (lookup-entry config id :backend)]
+    (. builder backend data))
+  (when-let [data (lookup-entry config id :basic-auth-config)]
+    (. builder basicAuthConfig data))
+  (when-let [data (lookup-entry config id :branch-name)]
+    (. builder branchName data))
+  (when-let [data (lookup-entry config id :build-spec)]
+    (. builder buildSpec data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :enable-auto-build)]
+    (. builder enableAutoBuild data))
+  (when-let [data (lookup-entry config id :enable-performance-mode)]
+    (. builder enablePerformanceMode data))
+  (when-let [data (lookup-entry config id :enable-pull-request-preview)]
+    (. builder enablePullRequestPreview data))
+  (when-let [data (lookup-entry config id :environment-variables)]
+    (. builder environmentVariables data))
+  (when-let [data (lookup-entry config id :framework)]
+    (. builder framework data))
+  (when-let [data (lookup-entry config id :pull-request-environment-name)]
+    (. builder pullRequestEnvironmentName data))
+  (when-let [data (lookup-entry config id :stage)]
+    (. builder stage data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-domain-builder
-  "The cfn-domain-builder function buildes out new instances of 
-CfnDomain$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-domain-builder
+  "The build-cfn-domain-builder function updates a CfnDomain$Builder instance using the provided configuration.
+  The function takes the CfnDomain$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -404,66 +440,75 @@ CfnDomain$Builder using the provided configuration.  Each field is set as follow
 | `certificateSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificate-settings` |
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
 | `enableAutoSubDomain` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-auto-sub-domain` |
-| `subDomainSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sub-domain-settings` |"
-  [stack id config]
-  (let [builder (CfnDomain$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :app-id)]
-      (. builder appId data))
-    (when-let [data (lookup-entry config id :auto-sub-domain-creation-patterns)]
-      (. builder autoSubDomainCreationPatterns data))
-    (when-let [data (lookup-entry config id :auto-sub-domain-iam-role)]
-      (. builder autoSubDomainIamRole data))
-    (when-let [data (lookup-entry config id :certificate-settings)]
-      (. builder certificateSettings data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :enable-auto-sub-domain)]
-      (. builder enableAutoSubDomain data))
-    (when-let [data (lookup-entry config id :sub-domain-settings)]
-      (. builder subDomainSettings data))
-    (.build builder)))
+| `subDomainSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sub-domain-settings` |
+"
+  [^CfnDomain$Builder builder id config]
+  (when-let [data (lookup-entry config id :app-id)]
+    (. builder appId data))
+  (when-let [data (lookup-entry config id :auto-sub-domain-creation-patterns)]
+    (. builder autoSubDomainCreationPatterns data))
+  (when-let [data (lookup-entry config id :auto-sub-domain-iam-role)]
+    (. builder autoSubDomainIamRole data))
+  (when-let [data (lookup-entry config id :certificate-settings)]
+    (. builder certificateSettings data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :enable-auto-sub-domain)]
+    (. builder enableAutoSubDomain data))
+  (when-let [data (lookup-entry config id :sub-domain-settings)]
+    (. builder subDomainSettings data))
+  (.build builder))
 
 
-(defn cfn-domain-certificate-property-builder
-  "The cfn-domain-certificate-property-builder function buildes out new instances of 
-CfnDomain$CertificateProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-domain-certificate-property-builder
+  "The build-cfn-domain-certificate-property-builder function updates a CfnDomain$CertificateProperty$Builder instance using the provided configuration.
+  The function takes the CfnDomain$CertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `certificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-arn` |
 | `certificateType` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-type` |
-| `certificateVerificationDnsRecord` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-verification-dns-record` |"
-  [stack id config]
-  (let [builder (CfnDomain$CertificateProperty$Builder.)]
-    (when-let [data (lookup-entry config id :certificate-arn)]
-      (. builder certificateArn data))
-    (when-let [data (lookup-entry config id :certificate-type)]
-      (. builder certificateType data))
-    (when-let [data (lookup-entry config id :certificate-verification-dns-record)]
-      (. builder certificateVerificationDnsRecord data))
-    (.build builder)))
+| `certificateVerificationDnsRecord` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-verification-dns-record` |
+"
+  [^CfnDomain$CertificateProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate-arn)]
+    (. builder certificateArn data))
+  (when-let [data (lookup-entry config id :certificate-type)]
+    (. builder certificateType data))
+  (when-let [data (lookup-entry config id :certificate-verification-dns-record)]
+    (. builder certificateVerificationDnsRecord data))
+  (.build builder))
 
 
-(defn cfn-domain-certificate-settings-property-builder
-  "The cfn-domain-certificate-settings-property-builder function buildes out new instances of 
-CfnDomain$CertificateSettingsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-domain-certificate-settings-property-builder
+  "The build-cfn-domain-certificate-settings-property-builder function updates a CfnDomain$CertificateSettingsProperty$Builder instance using the provided configuration.
+  The function takes the CfnDomain$CertificateSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `certificateType` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-type` |
-| `customCertificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-certificate-arn` |"
-  [stack id config]
-  (let [builder (CfnDomain$CertificateSettingsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :certificate-type)]
-      (. builder certificateType data))
-    (when-let [data (lookup-entry config id :custom-certificate-arn)]
-      (. builder customCertificateArn data))
-    (.build builder)))
+| `customCertificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:custom-certificate-arn` |
+"
+  [^CfnDomain$CertificateSettingsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate-type)]
+    (. builder certificateType data))
+  (when-let [data (lookup-entry config id :custom-certificate-arn)]
+    (. builder customCertificateArn data))
+  (.build builder))
 
 
-(defn cfn-domain-props-builder
-  "The cfn-domain-props-builder function buildes out new instances of 
-CfnDomainProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-domain-props-builder
+  "The build-cfn-domain-props-builder function updates a CfnDomainProps$Builder instance using the provided configuration.
+  The function takes the CfnDomainProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -473,38 +518,41 @@ CfnDomainProps$Builder using the provided configuration.  Each field is set as f
 | `certificateSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificate-settings` |
 | `domainName` | java.lang.String | [[cdk.support/lookup-entry]] | `:domain-name` |
 | `enableAutoSubDomain` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-auto-sub-domain` |
-| `subDomainSettings` | java.util.List | [[cdk.support/lookup-entry]] | `:sub-domain-settings` |"
-  [stack id config]
-  (let [builder (CfnDomainProps$Builder.)]
-    (when-let [data (lookup-entry config id :app-id)]
-      (. builder appId data))
-    (when-let [data (lookup-entry config id :auto-sub-domain-creation-patterns)]
-      (. builder autoSubDomainCreationPatterns data))
-    (when-let [data (lookup-entry config id :auto-sub-domain-iam-role)]
-      (. builder autoSubDomainIamRole data))
-    (when-let [data (lookup-entry config id :certificate-settings)]
-      (. builder certificateSettings data))
-    (when-let [data (lookup-entry config id :domain-name)]
-      (. builder domainName data))
-    (when-let [data (lookup-entry config id :enable-auto-sub-domain)]
-      (. builder enableAutoSubDomain data))
-    (when-let [data (lookup-entry config id :sub-domain-settings)]
-      (. builder subDomainSettings data))
-    (.build builder)))
+| `subDomainSettings` | java.util.List | [[cdk.support/lookup-entry]] | `:sub-domain-settings` |
+"
+  [^CfnDomainProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :app-id)]
+    (. builder appId data))
+  (when-let [data (lookup-entry config id :auto-sub-domain-creation-patterns)]
+    (. builder autoSubDomainCreationPatterns data))
+  (when-let [data (lookup-entry config id :auto-sub-domain-iam-role)]
+    (. builder autoSubDomainIamRole data))
+  (when-let [data (lookup-entry config id :certificate-settings)]
+    (. builder certificateSettings data))
+  (when-let [data (lookup-entry config id :domain-name)]
+    (. builder domainName data))
+  (when-let [data (lookup-entry config id :enable-auto-sub-domain)]
+    (. builder enableAutoSubDomain data))
+  (when-let [data (lookup-entry config id :sub-domain-settings)]
+    (. builder subDomainSettings data))
+  (.build builder))
 
 
-(defn cfn-domain-sub-domain-setting-property-builder
-  "The cfn-domain-sub-domain-setting-property-builder function buildes out new instances of 
-CfnDomain$SubDomainSettingProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-domain-sub-domain-setting-property-builder
+  "The build-cfn-domain-sub-domain-setting-property-builder function updates a CfnDomain$SubDomainSettingProperty$Builder instance using the provided configuration.
+  The function takes the CfnDomain$SubDomainSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `branchName` | java.lang.String | [[cdk.support/lookup-entry]] | `:branch-name` |
-| `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |"
-  [stack id config]
-  (let [builder (CfnDomain$SubDomainSettingProperty$Builder.)]
-    (when-let [data (lookup-entry config id :branch-name)]
-      (. builder branchName data))
-    (when-let [data (lookup-entry config id :prefix)]
-      (. builder prefix data))
-    (.build builder)))
+| `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
+"
+  [^CfnDomain$SubDomainSettingProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :branch-name)]
+    (. builder branchName data))
+  (when-let [data (lookup-entry config id :prefix)]
+    (. builder prefix data))
+  (.build builder))

@@ -7,57 +7,69 @@
                                                               LambdaDestinationOptions$Builder]))
 
 
-(defn kinesis-destination-builder
-  "The kinesis-destination-builder function buildes out new instances of 
-KinesisDestination$Builder using the provided configuration.  Each field is set as follows:
+(defn build-kinesis-destination-builder
+  "The build-kinesis-destination-builder function updates a KinesisDestination$Builder instance using the provided configuration.
+  The function takes the KinesisDestination$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |"
-  [stack id config ^software.amazon.awscdk.services.kinesis.IStream stream]
-  (let [builder (KinesisDestination$Builder/create ^software.amazon.awscdk.services.kinesis.IStream stream)]
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (.build builder)))
+| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
+"
+  [^KinesisDestination$Builder builder id config]
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (.build builder))
 
 
-(defn kinesis-destination-props-builder
-  "The kinesis-destination-props-builder function buildes out new instances of 
-KinesisDestinationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-kinesis-destination-props-builder
+  "The build-kinesis-destination-props-builder function updates a KinesisDestinationProps$Builder instance using the provided configuration.
+  The function takes the KinesisDestinationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |"
-  [stack id config]
-  (let [builder (KinesisDestinationProps$Builder.)]
-    (when-let [data (lookup-entry config id :role)]
-      (. builder role data))
-    (.build builder)))
-
-
-(defn lambda-destination-builder
-  "The lambda-destination-builder function buildes out new instances of 
-LambdaDestination$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `addPermissions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:add-permissions` |"
-  [stack id config ^software.amazon.awscdk.services.lambda.IFunction handler-function]
-  (let [builder (LambdaDestination$Builder/create ^software.amazon.awscdk.services.lambda.IFunction handler-function)]
-    (when-let [data (lookup-entry config id :add-permissions)]
-      (. builder addPermissions data))
-    (.build builder)))
+| `role` | software.amazon.awscdk.services.iam.IRole | [[cdk.support/lookup-entry]] | `:role` |
+"
+  [^KinesisDestinationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :role)]
+    (. builder role data))
+  (.build builder))
 
 
-(defn lambda-destination-options-builder
-  "The lambda-destination-options-builder function buildes out new instances of 
-LambdaDestinationOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-lambda-destination-builder
+  "The build-lambda-destination-builder function updates a LambdaDestination$Builder instance using the provided configuration.
+  The function takes the LambdaDestination$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `addPermissions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:add-permissions` |"
-  [stack id config]
-  (let [builder (LambdaDestinationOptions$Builder.)]
-    (when-let [data (lookup-entry config id :add-permissions)]
-      (. builder addPermissions data))
-    (.build builder)))
+| `addPermissions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:add-permissions` |
+"
+  [^LambdaDestination$Builder builder id config]
+  (when-let [data (lookup-entry config id :add-permissions)]
+    (. builder addPermissions data))
+  (.build builder))
+
+
+(defn build-lambda-destination-options-builder
+  "The build-lambda-destination-options-builder function updates a LambdaDestinationOptions$Builder instance using the provided configuration.
+  The function takes the LambdaDestinationOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `addPermissions` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:add-permissions` |
+"
+  [^LambdaDestinationOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :add-permissions)]
+    (. builder addPermissions data))
+  (.build builder))

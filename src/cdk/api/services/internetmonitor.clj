@@ -9,9 +9,12 @@
                                                             CfnMonitorProps$Builder]))
 
 
-(defn cfn-monitor-builder
-  "The cfn-monitor-builder function buildes out new instances of 
-CfnMonitor$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-monitor-builder
+  "The build-cfn-monitor-builder function updates a CfnMonitor$Builder instance using the provided configuration.
+  The function takes the CfnMonitor$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -26,96 +29,108 @@ CfnMonitor$Builder using the provided configuration.  Each field is set as follo
 | `resourcesToRemove` | java.util.List | [[cdk.support/lookup-entry]] | `:resources-to-remove` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `trafficPercentageToMonitor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:traffic-percentage-to-monitor` |"
-  [stack id config]
-  (let [builder (CfnMonitor$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :health-events-config)]
-      (. builder healthEventsConfig data))
-    (when-let [data (lookup-entry config id :include-linked-accounts)]
-      (. builder includeLinkedAccounts data))
-    (when-let [data (lookup-entry config id :internet-measurements-log-delivery)]
-      (. builder internetMeasurementsLogDelivery data))
-    (when-let [data (lookup-entry config id :linked-account-id)]
-      (. builder linkedAccountId data))
-    (when-let [data (lookup-entry config id :max-city-networks-to-monitor)]
-      (. builder maxCityNetworksToMonitor data))
-    (when-let [data (lookup-entry config id :monitor-name)]
-      (. builder monitorName data))
-    (when-let [data (lookup-entry config id :resources)]
-      (. builder resources data))
-    (when-let [data (lookup-entry config id :resources-to-add)]
-      (. builder resourcesToAdd data))
-    (when-let [data (lookup-entry config id :resources-to-remove)]
-      (. builder resourcesToRemove data))
-    (when-let [data (lookup-entry config id :status)]
-      (. builder status data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :traffic-percentage-to-monitor)]
-      (. builder trafficPercentageToMonitor data))
-    (.build builder)))
+| `trafficPercentageToMonitor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:traffic-percentage-to-monitor` |
+"
+  [^CfnMonitor$Builder builder id config]
+  (when-let [data (lookup-entry config id :health-events-config)]
+    (. builder healthEventsConfig data))
+  (when-let [data (lookup-entry config id :include-linked-accounts)]
+    (. builder includeLinkedAccounts data))
+  (when-let [data (lookup-entry config id :internet-measurements-log-delivery)]
+    (. builder internetMeasurementsLogDelivery data))
+  (when-let [data (lookup-entry config id :linked-account-id)]
+    (. builder linkedAccountId data))
+  (when-let [data (lookup-entry config id :max-city-networks-to-monitor)]
+    (. builder maxCityNetworksToMonitor data))
+  (when-let [data (lookup-entry config id :monitor-name)]
+    (. builder monitorName data))
+  (when-let [data (lookup-entry config id :resources)]
+    (. builder resources data))
+  (when-let [data (lookup-entry config id :resources-to-add)]
+    (. builder resourcesToAdd data))
+  (when-let [data (lookup-entry config id :resources-to-remove)]
+    (. builder resourcesToRemove data))
+  (when-let [data (lookup-entry config id :status)]
+    (. builder status data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :traffic-percentage-to-monitor)]
+    (. builder trafficPercentageToMonitor data))
+  (.build builder))
 
 
-(defn cfn-monitor-health-events-config-property-builder
-  "The cfn-monitor-health-events-config-property-builder function buildes out new instances of 
-CfnMonitor$HealthEventsConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-monitor-health-events-config-property-builder
+  "The build-cfn-monitor-health-events-config-property-builder function updates a CfnMonitor$HealthEventsConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnMonitor$HealthEventsConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `availabilityLocalHealthEventsConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:availability-local-health-events-config` |
 | `availabilityScoreThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:availability-score-threshold` |
 | `performanceLocalHealthEventsConfig` | software.amazon.awscdk.services.internetmonitor.CfnMonitor$LocalHealthEventsConfigProperty | [[cdk.support/lookup-entry]] | `:performance-local-health-events-config` |
-| `performanceScoreThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:performance-score-threshold` |"
-  [stack id config]
-  (let [builder (CfnMonitor$HealthEventsConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :availability-local-health-events-config)]
-      (. builder availabilityLocalHealthEventsConfig data))
-    (when-let [data (lookup-entry config id :availability-score-threshold)]
-      (. builder availabilityScoreThreshold data))
-    (when-let [data (lookup-entry config id :performance-local-health-events-config)]
-      (. builder performanceLocalHealthEventsConfig data))
-    (when-let [data (lookup-entry config id :performance-score-threshold)]
-      (. builder performanceScoreThreshold data))
-    (.build builder)))
+| `performanceScoreThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:performance-score-threshold` |
+"
+  [^CfnMonitor$HealthEventsConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :availability-local-health-events-config)]
+    (. builder availabilityLocalHealthEventsConfig data))
+  (when-let [data (lookup-entry config id :availability-score-threshold)]
+    (. builder availabilityScoreThreshold data))
+  (when-let [data (lookup-entry config id :performance-local-health-events-config)]
+    (. builder performanceLocalHealthEventsConfig data))
+  (when-let [data (lookup-entry config id :performance-score-threshold)]
+    (. builder performanceScoreThreshold data))
+  (.build builder))
 
 
-(defn cfn-monitor-internet-measurements-log-delivery-property-builder
-  "The cfn-monitor-internet-measurements-log-delivery-property-builder function buildes out new instances of 
-CfnMonitor$InternetMeasurementsLogDeliveryProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-monitor-internet-measurements-log-delivery-property-builder
+  "The build-cfn-monitor-internet-measurements-log-delivery-property-builder function updates a CfnMonitor$InternetMeasurementsLogDeliveryProperty$Builder instance using the provided configuration.
+  The function takes the CfnMonitor$InternetMeasurementsLogDeliveryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `s3Config` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-config` |"
-  [stack id config]
-  (let [builder (CfnMonitor$InternetMeasurementsLogDeliveryProperty$Builder.)]
-    (when-let [data (lookup-entry config id :s3-config)]
-      (. builder s3Config data))
-    (.build builder)))
+| `s3Config` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-config` |
+"
+  [^CfnMonitor$InternetMeasurementsLogDeliveryProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :s3-config)]
+    (. builder s3Config data))
+  (.build builder))
 
 
-(defn cfn-monitor-local-health-events-config-property-builder
-  "The cfn-monitor-local-health-events-config-property-builder function buildes out new instances of 
-CfnMonitor$LocalHealthEventsConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-monitor-local-health-events-config-property-builder
+  "The build-cfn-monitor-local-health-events-config-property-builder function updates a CfnMonitor$LocalHealthEventsConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnMonitor$LocalHealthEventsConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `healthScoreThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:health-score-threshold` |
 | `minTrafficImpact` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-traffic-impact` |
-| `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |"
-  [stack id config]
-  (let [builder (CfnMonitor$LocalHealthEventsConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :health-score-threshold)]
-      (. builder healthScoreThreshold data))
-    (when-let [data (lookup-entry config id :min-traffic-impact)]
-      (. builder minTrafficImpact data))
-    (when-let [data (lookup-entry config id :status)]
-      (. builder status data))
-    (.build builder)))
+| `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
+"
+  [^CfnMonitor$LocalHealthEventsConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :health-score-threshold)]
+    (. builder healthScoreThreshold data))
+  (when-let [data (lookup-entry config id :min-traffic-impact)]
+    (. builder minTrafficImpact data))
+  (when-let [data (lookup-entry config id :status)]
+    (. builder status data))
+  (.build builder))
 
 
-(defn cfn-monitor-props-builder
-  "The cfn-monitor-props-builder function buildes out new instances of 
-CfnMonitorProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-monitor-props-builder
+  "The build-cfn-monitor-props-builder function updates a CfnMonitorProps$Builder instance using the provided configuration.
+  The function takes the CfnMonitorProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -130,51 +145,54 @@ CfnMonitorProps$Builder using the provided configuration.  Each field is set as 
 | `resourcesToRemove` | java.util.List | [[cdk.support/lookup-entry]] | `:resources-to-remove` |
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `trafficPercentageToMonitor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:traffic-percentage-to-monitor` |"
-  [stack id config]
-  (let [builder (CfnMonitorProps$Builder.)]
-    (when-let [data (lookup-entry config id :health-events-config)]
-      (. builder healthEventsConfig data))
-    (when-let [data (lookup-entry config id :include-linked-accounts)]
-      (. builder includeLinkedAccounts data))
-    (when-let [data (lookup-entry config id :internet-measurements-log-delivery)]
-      (. builder internetMeasurementsLogDelivery data))
-    (when-let [data (lookup-entry config id :linked-account-id)]
-      (. builder linkedAccountId data))
-    (when-let [data (lookup-entry config id :max-city-networks-to-monitor)]
-      (. builder maxCityNetworksToMonitor data))
-    (when-let [data (lookup-entry config id :monitor-name)]
-      (. builder monitorName data))
-    (when-let [data (lookup-entry config id :resources)]
-      (. builder resources data))
-    (when-let [data (lookup-entry config id :resources-to-add)]
-      (. builder resourcesToAdd data))
-    (when-let [data (lookup-entry config id :resources-to-remove)]
-      (. builder resourcesToRemove data))
-    (when-let [data (lookup-entry config id :status)]
-      (. builder status data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :traffic-percentage-to-monitor)]
-      (. builder trafficPercentageToMonitor data))
-    (.build builder)))
+| `trafficPercentageToMonitor` | java.lang.Number | [[cdk.support/lookup-entry]] | `:traffic-percentage-to-monitor` |
+"
+  [^CfnMonitorProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :health-events-config)]
+    (. builder healthEventsConfig data))
+  (when-let [data (lookup-entry config id :include-linked-accounts)]
+    (. builder includeLinkedAccounts data))
+  (when-let [data (lookup-entry config id :internet-measurements-log-delivery)]
+    (. builder internetMeasurementsLogDelivery data))
+  (when-let [data (lookup-entry config id :linked-account-id)]
+    (. builder linkedAccountId data))
+  (when-let [data (lookup-entry config id :max-city-networks-to-monitor)]
+    (. builder maxCityNetworksToMonitor data))
+  (when-let [data (lookup-entry config id :monitor-name)]
+    (. builder monitorName data))
+  (when-let [data (lookup-entry config id :resources)]
+    (. builder resources data))
+  (when-let [data (lookup-entry config id :resources-to-add)]
+    (. builder resourcesToAdd data))
+  (when-let [data (lookup-entry config id :resources-to-remove)]
+    (. builder resourcesToRemove data))
+  (when-let [data (lookup-entry config id :status)]
+    (. builder status data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :traffic-percentage-to-monitor)]
+    (. builder trafficPercentageToMonitor data))
+  (.build builder))
 
 
-(defn cfn-monitor-s3-config-property-builder
-  "The cfn-monitor-s3-config-property-builder function buildes out new instances of 
-CfnMonitor$S3ConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-monitor-s3-config-property-builder
+  "The build-cfn-monitor-s3-config-property-builder function updates a CfnMonitor$S3ConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnMonitor$S3ConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `bucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-name` |
 | `bucketPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-prefix` |
-| `logDeliveryStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-delivery-status` |"
-  [stack id config]
-  (let [builder (CfnMonitor$S3ConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :bucket-name)]
-      (. builder bucketName data))
-    (when-let [data (lookup-entry config id :bucket-prefix)]
-      (. builder bucketPrefix data))
-    (when-let [data (lookup-entry config id :log-delivery-status)]
-      (. builder logDeliveryStatus data))
-    (.build builder)))
+| `logDeliveryStatus` | java.lang.String | [[cdk.support/lookup-entry]] | `:log-delivery-status` |
+"
+  [^CfnMonitor$S3ConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :bucket-name)]
+    (. builder bucketName data))
+  (when-let [data (lookup-entry config id :bucket-prefix)]
+    (. builder bucketPrefix data))
+  (when-let [data (lookup-entry config id :log-delivery-status)]
+    (. builder logDeliveryStatus data))
+  (.build builder))

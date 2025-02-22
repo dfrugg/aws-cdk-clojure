@@ -289,66 +289,78 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :default data) TableEncryption/DEFAULT)))
 
 
-(defn attribute-builder
-  "The attribute-builder function buildes out new instances of 
-Attribute$Builder using the provided configuration.  Each field is set as follows:
+(defn build-attribute-builder
+  "The build-attribute-builder function updates a Attribute$Builder instance using the provided configuration.
+  The function takes the Attribute$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `type` | software.amazon.awscdk.services.dynamodb.AttributeType | [[cdk.api.services.dynamodb/attribute-type]] | `:type` |"
-  [stack id config]
-  (let [builder (Attribute$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (attribute-type config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | software.amazon.awscdk.services.dynamodb.AttributeType | [[cdk.api.services.dynamodb/attribute-type]] | `:type` |
+"
+  [^Attribute$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (attribute-type config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn autoscaled-capacity-options-builder
-  "The autoscaled-capacity-options-builder function buildes out new instances of 
-AutoscaledCapacityOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-autoscaled-capacity-options-builder
+  "The build-autoscaled-capacity-options-builder function updates a AutoscaledCapacityOptions$Builder instance using the provided configuration.
+  The function takes the AutoscaledCapacityOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `maxCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-capacity` |
 | `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |
 | `seedCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:seed-capacity` |
-| `targetUtilizationPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-utilization-percent` |"
-  [stack id config]
-  (let [builder (AutoscaledCapacityOptions$Builder.)]
-    (when-let [data (lookup-entry config id :max-capacity)]
-      (. builder maxCapacity data))
-    (when-let [data (lookup-entry config id :min-capacity)]
-      (. builder minCapacity data))
-    (when-let [data (lookup-entry config id :seed-capacity)]
-      (. builder seedCapacity data))
-    (when-let [data (lookup-entry config id :target-utilization-percent)]
-      (. builder targetUtilizationPercent data))
-    (.build builder)))
+| `targetUtilizationPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-utilization-percent` |
+"
+  [^AutoscaledCapacityOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-capacity)]
+    (. builder maxCapacity data))
+  (when-let [data (lookup-entry config id :min-capacity)]
+    (. builder minCapacity data))
+  (when-let [data (lookup-entry config id :seed-capacity)]
+    (. builder seedCapacity data))
+  (when-let [data (lookup-entry config id :target-utilization-percent)]
+    (. builder targetUtilizationPercent data))
+  (.build builder))
 
 
-(defn cfn-global-table-attribute-definition-property-builder
-  "The cfn-global-table-attribute-definition-property-builder function buildes out new instances of 
-CfnGlobalTable$AttributeDefinitionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-attribute-definition-property-builder
+  "The build-cfn-global-table-attribute-definition-property-builder function updates a CfnGlobalTable$AttributeDefinitionProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$AttributeDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attributeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-name` |
-| `attributeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-type` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$AttributeDefinitionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :attribute-name)]
-      (. builder attributeName data))
-    (when-let [data (lookup-entry config id :attribute-type)]
-      (. builder attributeType data))
-    (.build builder)))
+| `attributeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-type` |
+"
+  [^CfnGlobalTable$AttributeDefinitionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :attribute-name)]
+    (. builder attributeName data))
+  (when-let [data (lookup-entry config id :attribute-type)]
+    (. builder attributeType data))
+  (.build builder))
 
 
-(defn cfn-global-table-builder
-  "The cfn-global-table-builder function buildes out new instances of 
-CfnGlobalTable$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-builder
+  "The build-cfn-global-table-builder function updates a CfnGlobalTable$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -363,76 +375,85 @@ CfnGlobalTable$Builder using the provided configuration.  Each field is set as f
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 | `timeToLiveSpecification` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$TimeToLiveSpecificationProperty | [[cdk.support/lookup-entry]] | `:time-to-live-specification` |
 | `writeOnDemandThroughputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:write-on-demand-throughput-settings` |
-| `writeProvisionedThroughputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:write-provisioned-throughput-settings` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :attribute-definitions)]
-      (. builder attributeDefinitions data))
-    (when-let [data (lookup-entry config id :billing-mode)]
-      (. builder billingMode data))
-    (when-let [data (lookup-entry config id :global-secondary-indexes)]
-      (. builder globalSecondaryIndexes data))
-    (when-let [data (lookup-entry config id :key-schema)]
-      (. builder keySchema data))
-    (when-let [data (lookup-entry config id :local-secondary-indexes)]
-      (. builder localSecondaryIndexes data))
-    (when-let [data (lookup-entry config id :replicas)]
-      (. builder replicas data))
-    (when-let [data (lookup-entry config id :sse-specification)]
-      (. builder sseSpecification data))
-    (when-let [data (lookup-entry config id :stream-specification)]
-      (. builder streamSpecification data))
-    (when-let [data (lookup-entry config id :table-name)]
-      (. builder tableName data))
-    (when-let [data (lookup-entry config id :time-to-live-specification)]
-      (. builder timeToLiveSpecification data))
-    (when-let [data (lookup-entry config id :write-on-demand-throughput-settings)]
-      (. builder writeOnDemandThroughputSettings data))
-    (when-let [data (lookup-entry config id :write-provisioned-throughput-settings)]
-      (. builder writeProvisionedThroughputSettings data))
-    (.build builder)))
+| `writeProvisionedThroughputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:write-provisioned-throughput-settings` |
+"
+  [^CfnGlobalTable$Builder builder id config]
+  (when-let [data (lookup-entry config id :attribute-definitions)]
+    (. builder attributeDefinitions data))
+  (when-let [data (lookup-entry config id :billing-mode)]
+    (. builder billingMode data))
+  (when-let [data (lookup-entry config id :global-secondary-indexes)]
+    (. builder globalSecondaryIndexes data))
+  (when-let [data (lookup-entry config id :key-schema)]
+    (. builder keySchema data))
+  (when-let [data (lookup-entry config id :local-secondary-indexes)]
+    (. builder localSecondaryIndexes data))
+  (when-let [data (lookup-entry config id :replicas)]
+    (. builder replicas data))
+  (when-let [data (lookup-entry config id :sse-specification)]
+    (. builder sseSpecification data))
+  (when-let [data (lookup-entry config id :stream-specification)]
+    (. builder streamSpecification data))
+  (when-let [data (lookup-entry config id :table-name)]
+    (. builder tableName data))
+  (when-let [data (lookup-entry config id :time-to-live-specification)]
+    (. builder timeToLiveSpecification data))
+  (when-let [data (lookup-entry config id :write-on-demand-throughput-settings)]
+    (. builder writeOnDemandThroughputSettings data))
+  (when-let [data (lookup-entry config id :write-provisioned-throughput-settings)]
+    (. builder writeProvisionedThroughputSettings data))
+  (.build builder))
 
 
-(defn cfn-global-table-capacity-auto-scaling-settings-property-builder
-  "The cfn-global-table-capacity-auto-scaling-settings-property-builder function buildes out new instances of 
-CfnGlobalTable$CapacityAutoScalingSettingsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-capacity-auto-scaling-settings-property-builder
+  "The build-cfn-global-table-capacity-auto-scaling-settings-property-builder function updates a CfnGlobalTable$CapacityAutoScalingSettingsProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$CapacityAutoScalingSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `maxCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-capacity` |
 | `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |
 | `seedCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:seed-capacity` |
-| `targetTrackingScalingPolicyConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-tracking-scaling-policy-configuration` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$CapacityAutoScalingSettingsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :max-capacity)]
-      (. builder maxCapacity data))
-    (when-let [data (lookup-entry config id :min-capacity)]
-      (. builder minCapacity data))
-    (when-let [data (lookup-entry config id :seed-capacity)]
-      (. builder seedCapacity data))
-    (when-let [data (lookup-entry config id :target-tracking-scaling-policy-configuration)]
-      (. builder targetTrackingScalingPolicyConfiguration data))
-    (.build builder)))
+| `targetTrackingScalingPolicyConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-tracking-scaling-policy-configuration` |
+"
+  [^CfnGlobalTable$CapacityAutoScalingSettingsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-capacity)]
+    (. builder maxCapacity data))
+  (when-let [data (lookup-entry config id :min-capacity)]
+    (. builder minCapacity data))
+  (when-let [data (lookup-entry config id :seed-capacity)]
+    (. builder seedCapacity data))
+  (when-let [data (lookup-entry config id :target-tracking-scaling-policy-configuration)]
+    (. builder targetTrackingScalingPolicyConfiguration data))
+  (.build builder))
 
 
-(defn cfn-global-table-contributor-insights-specification-property-builder
-  "The cfn-global-table-contributor-insights-specification-property-builder function buildes out new instances of 
-CfnGlobalTable$ContributorInsightsSpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-contributor-insights-specification-property-builder
+  "The build-cfn-global-table-contributor-insights-specification-property-builder function updates a CfnGlobalTable$ContributorInsightsSpecificationProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$ContributorInsightsSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$ContributorInsightsSpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (.build builder)))
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+"
+  [^CfnGlobalTable$ContributorInsightsSpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (.build builder))
 
 
-(defn cfn-global-table-global-secondary-index-property-builder
-  "The cfn-global-table-global-secondary-index-property-builder function buildes out new instances of 
-CfnGlobalTable$GlobalSecondaryIndexProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-global-secondary-index-property-builder
+  "The build-cfn-global-table-global-secondary-index-property-builder function updates a CfnGlobalTable$GlobalSecondaryIndexProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$GlobalSecondaryIndexProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -440,110 +461,128 @@ CfnGlobalTable$GlobalSecondaryIndexProperty$Builder using the provided configura
 | `keySchema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-schema` |
 | `projection` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$ProjectionProperty | [[cdk.support/lookup-entry]] | `:projection` |
 | `writeOnDemandThroughputSettings` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$WriteOnDemandThroughputSettingsProperty | [[cdk.support/lookup-entry]] | `:write-on-demand-throughput-settings` |
-| `writeProvisionedThroughputSettings` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$WriteProvisionedThroughputSettingsProperty | [[cdk.support/lookup-entry]] | `:write-provisioned-throughput-settings` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$GlobalSecondaryIndexProperty$Builder.)]
-    (when-let [data (lookup-entry config id :index-name)]
-      (. builder indexName data))
-    (when-let [data (lookup-entry config id :key-schema)]
-      (. builder keySchema data))
-    (when-let [data (lookup-entry config id :projection)]
-      (. builder projection data))
-    (when-let [data (lookup-entry config id :write-on-demand-throughput-settings)]
-      (. builder writeOnDemandThroughputSettings data))
-    (when-let [data (lookup-entry config id :write-provisioned-throughput-settings)]
-      (. builder writeProvisionedThroughputSettings data))
-    (.build builder)))
+| `writeProvisionedThroughputSettings` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$WriteProvisionedThroughputSettingsProperty | [[cdk.support/lookup-entry]] | `:write-provisioned-throughput-settings` |
+"
+  [^CfnGlobalTable$GlobalSecondaryIndexProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :index-name)]
+    (. builder indexName data))
+  (when-let [data (lookup-entry config id :key-schema)]
+    (. builder keySchema data))
+  (when-let [data (lookup-entry config id :projection)]
+    (. builder projection data))
+  (when-let [data (lookup-entry config id :write-on-demand-throughput-settings)]
+    (. builder writeOnDemandThroughputSettings data))
+  (when-let [data (lookup-entry config id :write-provisioned-throughput-settings)]
+    (. builder writeProvisionedThroughputSettings data))
+  (.build builder))
 
 
-(defn cfn-global-table-key-schema-property-builder
-  "The cfn-global-table-key-schema-property-builder function buildes out new instances of 
-CfnGlobalTable$KeySchemaProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-key-schema-property-builder
+  "The build-cfn-global-table-key-schema-property-builder function updates a CfnGlobalTable$KeySchemaProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$KeySchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attributeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-name` |
-| `keyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-type` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$KeySchemaProperty$Builder.)]
-    (when-let [data (lookup-entry config id :attribute-name)]
-      (. builder attributeName data))
-    (when-let [data (lookup-entry config id :key-type)]
-      (. builder keyType data))
-    (.build builder)))
+| `keyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-type` |
+"
+  [^CfnGlobalTable$KeySchemaProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :attribute-name)]
+    (. builder attributeName data))
+  (when-let [data (lookup-entry config id :key-type)]
+    (. builder keyType data))
+  (.build builder))
 
 
-(defn cfn-global-table-kinesis-stream-specification-property-builder
-  "The cfn-global-table-kinesis-stream-specification-property-builder function buildes out new instances of 
-CfnGlobalTable$KinesisStreamSpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-kinesis-stream-specification-property-builder
+  "The build-cfn-global-table-kinesis-stream-specification-property-builder function updates a CfnGlobalTable$KinesisStreamSpecificationProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$KinesisStreamSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `approximateCreationDateTimePrecision` | java.lang.String | [[cdk.support/lookup-entry]] | `:approximate-creation-date-time-precision` |
-| `streamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-arn` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$KinesisStreamSpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :approximate-creation-date-time-precision)]
-      (. builder approximateCreationDateTimePrecision data))
-    (when-let [data (lookup-entry config id :stream-arn)]
-      (. builder streamArn data))
-    (.build builder)))
+| `streamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-arn` |
+"
+  [^CfnGlobalTable$KinesisStreamSpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :approximate-creation-date-time-precision)]
+    (. builder approximateCreationDateTimePrecision data))
+  (when-let [data (lookup-entry config id :stream-arn)]
+    (. builder streamArn data))
+  (.build builder))
 
 
-(defn cfn-global-table-local-secondary-index-property-builder
-  "The cfn-global-table-local-secondary-index-property-builder function buildes out new instances of 
-CfnGlobalTable$LocalSecondaryIndexProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-local-secondary-index-property-builder
+  "The build-cfn-global-table-local-secondary-index-property-builder function updates a CfnGlobalTable$LocalSecondaryIndexProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$LocalSecondaryIndexProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `indexName` | java.lang.String | [[cdk.support/lookup-entry]] | `:index-name` |
 | `keySchema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-schema` |
-| `projection` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$ProjectionProperty | [[cdk.support/lookup-entry]] | `:projection` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$LocalSecondaryIndexProperty$Builder.)]
-    (when-let [data (lookup-entry config id :index-name)]
-      (. builder indexName data))
-    (when-let [data (lookup-entry config id :key-schema)]
-      (. builder keySchema data))
-    (when-let [data (lookup-entry config id :projection)]
-      (. builder projection data))
-    (.build builder)))
+| `projection` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$ProjectionProperty | [[cdk.support/lookup-entry]] | `:projection` |
+"
+  [^CfnGlobalTable$LocalSecondaryIndexProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :index-name)]
+    (. builder indexName data))
+  (when-let [data (lookup-entry config id :key-schema)]
+    (. builder keySchema data))
+  (when-let [data (lookup-entry config id :projection)]
+    (. builder projection data))
+  (.build builder))
 
 
-(defn cfn-global-table-point-in-time-recovery-specification-property-builder
-  "The cfn-global-table-point-in-time-recovery-specification-property-builder function buildes out new instances of 
-CfnGlobalTable$PointInTimeRecoverySpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-point-in-time-recovery-specification-property-builder
+  "The build-cfn-global-table-point-in-time-recovery-specification-property-builder function updates a CfnGlobalTable$PointInTimeRecoverySpecificationProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$PointInTimeRecoverySpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `pointInTimeRecoveryEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:point-in-time-recovery-enabled` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$PointInTimeRecoverySpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :point-in-time-recovery-enabled)]
-      (. builder pointInTimeRecoveryEnabled data))
-    (.build builder)))
+| `pointInTimeRecoveryEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:point-in-time-recovery-enabled` |
+"
+  [^CfnGlobalTable$PointInTimeRecoverySpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :point-in-time-recovery-enabled)]
+    (. builder pointInTimeRecoveryEnabled data))
+  (.build builder))
 
 
-(defn cfn-global-table-projection-property-builder
-  "The cfn-global-table-projection-property-builder function buildes out new instances of 
-CfnGlobalTable$ProjectionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-projection-property-builder
+  "The build-cfn-global-table-projection-property-builder function updates a CfnGlobalTable$ProjectionProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$ProjectionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `nonKeyAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:non-key-attributes` |
-| `projectionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:projection-type` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$ProjectionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :non-key-attributes)]
-      (. builder nonKeyAttributes data))
-    (when-let [data (lookup-entry config id :projection-type)]
-      (. builder projectionType data))
-    (.build builder)))
+| `projectionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:projection-type` |
+"
+  [^CfnGlobalTable$ProjectionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :non-key-attributes)]
+    (. builder nonKeyAttributes data))
+  (when-let [data (lookup-entry config id :projection-type)]
+    (. builder projectionType data))
+  (.build builder))
 
 
-(defn cfn-global-table-props-builder
-  "The cfn-global-table-props-builder function buildes out new instances of 
-CfnGlobalTableProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-props-builder
+  "The build-cfn-global-table-props-builder function updates a CfnGlobalTableProps$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTableProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -558,93 +597,105 @@ CfnGlobalTableProps$Builder using the provided configuration.  Each field is set
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 | `timeToLiveSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time-to-live-specification` |
 | `writeOnDemandThroughputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:write-on-demand-throughput-settings` |
-| `writeProvisionedThroughputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:write-provisioned-throughput-settings` |"
-  [stack id config]
-  (let [builder (CfnGlobalTableProps$Builder.)]
-    (when-let [data (lookup-entry config id :attribute-definitions)]
-      (. builder attributeDefinitions data))
-    (when-let [data (lookup-entry config id :billing-mode)]
-      (. builder billingMode data))
-    (when-let [data (lookup-entry config id :global-secondary-indexes)]
-      (. builder globalSecondaryIndexes data))
-    (when-let [data (lookup-entry config id :key-schema)]
-      (. builder keySchema data))
-    (when-let [data (lookup-entry config id :local-secondary-indexes)]
-      (. builder localSecondaryIndexes data))
-    (when-let [data (lookup-entry config id :replicas)]
-      (. builder replicas data))
-    (when-let [data (lookup-entry config id :sse-specification)]
-      (. builder sseSpecification data))
-    (when-let [data (lookup-entry config id :stream-specification)]
-      (. builder streamSpecification data))
-    (when-let [data (lookup-entry config id :table-name)]
-      (. builder tableName data))
-    (when-let [data (lookup-entry config id :time-to-live-specification)]
-      (. builder timeToLiveSpecification data))
-    (when-let [data (lookup-entry config id :write-on-demand-throughput-settings)]
-      (. builder writeOnDemandThroughputSettings data))
-    (when-let [data (lookup-entry config id :write-provisioned-throughput-settings)]
-      (. builder writeProvisionedThroughputSettings data))
-    (.build builder)))
+| `writeProvisionedThroughputSettings` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:write-provisioned-throughput-settings` |
+"
+  [^CfnGlobalTableProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :attribute-definitions)]
+    (. builder attributeDefinitions data))
+  (when-let [data (lookup-entry config id :billing-mode)]
+    (. builder billingMode data))
+  (when-let [data (lookup-entry config id :global-secondary-indexes)]
+    (. builder globalSecondaryIndexes data))
+  (when-let [data (lookup-entry config id :key-schema)]
+    (. builder keySchema data))
+  (when-let [data (lookup-entry config id :local-secondary-indexes)]
+    (. builder localSecondaryIndexes data))
+  (when-let [data (lookup-entry config id :replicas)]
+    (. builder replicas data))
+  (when-let [data (lookup-entry config id :sse-specification)]
+    (. builder sseSpecification data))
+  (when-let [data (lookup-entry config id :stream-specification)]
+    (. builder streamSpecification data))
+  (when-let [data (lookup-entry config id :table-name)]
+    (. builder tableName data))
+  (when-let [data (lookup-entry config id :time-to-live-specification)]
+    (. builder timeToLiveSpecification data))
+  (when-let [data (lookup-entry config id :write-on-demand-throughput-settings)]
+    (. builder writeOnDemandThroughputSettings data))
+  (when-let [data (lookup-entry config id :write-provisioned-throughput-settings)]
+    (. builder writeProvisionedThroughputSettings data))
+  (.build builder))
 
 
-(defn cfn-global-table-read-on-demand-throughput-settings-property-builder
-  "The cfn-global-table-read-on-demand-throughput-settings-property-builder function buildes out new instances of 
-CfnGlobalTable$ReadOnDemandThroughputSettingsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-read-on-demand-throughput-settings-property-builder
+  "The build-cfn-global-table-read-on-demand-throughput-settings-property-builder function updates a CfnGlobalTable$ReadOnDemandThroughputSettingsProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$ReadOnDemandThroughputSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `maxReadRequestUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-read-request-units` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$ReadOnDemandThroughputSettingsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :max-read-request-units)]
-      (. builder maxReadRequestUnits data))
-    (.build builder)))
+| `maxReadRequestUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-read-request-units` |
+"
+  [^CfnGlobalTable$ReadOnDemandThroughputSettingsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-read-request-units)]
+    (. builder maxReadRequestUnits data))
+  (.build builder))
 
 
-(defn cfn-global-table-read-provisioned-throughput-settings-property-builder
-  "The cfn-global-table-read-provisioned-throughput-settings-property-builder function buildes out new instances of 
-CfnGlobalTable$ReadProvisionedThroughputSettingsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-read-provisioned-throughput-settings-property-builder
+  "The build-cfn-global-table-read-provisioned-throughput-settings-property-builder function updates a CfnGlobalTable$ReadProvisionedThroughputSettingsProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$ReadProvisionedThroughputSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `readCapacityAutoScalingSettings` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$CapacityAutoScalingSettingsProperty | [[cdk.support/lookup-entry]] | `:read-capacity-auto-scaling-settings` |
-| `readCapacityUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:read-capacity-units` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$ReadProvisionedThroughputSettingsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :read-capacity-auto-scaling-settings)]
-      (. builder readCapacityAutoScalingSettings data))
-    (when-let [data (lookup-entry config id :read-capacity-units)]
-      (. builder readCapacityUnits data))
-    (.build builder)))
+| `readCapacityUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:read-capacity-units` |
+"
+  [^CfnGlobalTable$ReadProvisionedThroughputSettingsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :read-capacity-auto-scaling-settings)]
+    (. builder readCapacityAutoScalingSettings data))
+  (when-let [data (lookup-entry config id :read-capacity-units)]
+    (. builder readCapacityUnits data))
+  (.build builder))
 
 
-(defn cfn-global-table-replica-global-secondary-index-specification-property-builder
-  "The cfn-global-table-replica-global-secondary-index-specification-property-builder function buildes out new instances of 
-CfnGlobalTable$ReplicaGlobalSecondaryIndexSpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-replica-global-secondary-index-specification-property-builder
+  "The build-cfn-global-table-replica-global-secondary-index-specification-property-builder function updates a CfnGlobalTable$ReplicaGlobalSecondaryIndexSpecificationProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$ReplicaGlobalSecondaryIndexSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `contributorInsightsSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:contributor-insights-specification` |
 | `indexName` | java.lang.String | [[cdk.support/lookup-entry]] | `:index-name` |
 | `readOnDemandThroughputSettings` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$ReadOnDemandThroughputSettingsProperty | [[cdk.support/lookup-entry]] | `:read-on-demand-throughput-settings` |
-| `readProvisionedThroughputSettings` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$ReadProvisionedThroughputSettingsProperty | [[cdk.support/lookup-entry]] | `:read-provisioned-throughput-settings` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$ReplicaGlobalSecondaryIndexSpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :contributor-insights-specification)]
-      (. builder contributorInsightsSpecification data))
-    (when-let [data (lookup-entry config id :index-name)]
-      (. builder indexName data))
-    (when-let [data (lookup-entry config id :read-on-demand-throughput-settings)]
-      (. builder readOnDemandThroughputSettings data))
-    (when-let [data (lookup-entry config id :read-provisioned-throughput-settings)]
-      (. builder readProvisionedThroughputSettings data))
-    (.build builder)))
+| `readProvisionedThroughputSettings` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$ReadProvisionedThroughputSettingsProperty | [[cdk.support/lookup-entry]] | `:read-provisioned-throughput-settings` |
+"
+  [^CfnGlobalTable$ReplicaGlobalSecondaryIndexSpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :contributor-insights-specification)]
+    (. builder contributorInsightsSpecification data))
+  (when-let [data (lookup-entry config id :index-name)]
+    (. builder indexName data))
+  (when-let [data (lookup-entry config id :read-on-demand-throughput-settings)]
+    (. builder readOnDemandThroughputSettings data))
+  (when-let [data (lookup-entry config id :read-provisioned-throughput-settings)]
+    (. builder readProvisionedThroughputSettings data))
+  (.build builder))
 
 
-(defn cfn-global-table-replica-specification-property-builder
-  "The cfn-global-table-replica-specification-property-builder function buildes out new instances of 
-CfnGlobalTable$ReplicaSpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-replica-specification-property-builder
+  "The build-cfn-global-table-replica-specification-property-builder function updates a CfnGlobalTable$ReplicaSpecificationProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$ReplicaSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -660,199 +711,232 @@ CfnGlobalTable$ReplicaSpecificationProperty$Builder using the provided configura
 | `resourcePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-policy` |
 | `sseSpecification` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$ReplicaSSESpecificationProperty | [[cdk.support/lookup-entry]] | `:sse-specification` |
 | `tableClass` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-class` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$ReplicaSpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :contributor-insights-specification)]
-      (. builder contributorInsightsSpecification data))
-    (when-let [data (lookup-entry config id :deletion-protection-enabled)]
-      (. builder deletionProtectionEnabled data))
-    (when-let [data (lookup-entry config id :global-secondary-indexes)]
-      (. builder globalSecondaryIndexes data))
-    (when-let [data (lookup-entry config id :kinesis-stream-specification)]
-      (. builder kinesisStreamSpecification data))
-    (when-let [data (lookup-entry config id :point-in-time-recovery-specification)]
-      (. builder pointInTimeRecoverySpecification data))
-    (when-let [data (lookup-entry config id :read-on-demand-throughput-settings)]
-      (. builder readOnDemandThroughputSettings data))
-    (when-let [data (lookup-entry config id :read-provisioned-throughput-settings)]
-      (. builder readProvisionedThroughputSettings data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :replica-stream-specification)]
-      (. builder replicaStreamSpecification data))
-    (when-let [data (lookup-entry config id :resource-policy)]
-      (. builder resourcePolicy data))
-    (when-let [data (lookup-entry config id :sse-specification)]
-      (. builder sseSpecification data))
-    (when-let [data (lookup-entry config id :table-class)]
-      (. builder tableClass data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnGlobalTable$ReplicaSpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :contributor-insights-specification)]
+    (. builder contributorInsightsSpecification data))
+  (when-let [data (lookup-entry config id :deletion-protection-enabled)]
+    (. builder deletionProtectionEnabled data))
+  (when-let [data (lookup-entry config id :global-secondary-indexes)]
+    (. builder globalSecondaryIndexes data))
+  (when-let [data (lookup-entry config id :kinesis-stream-specification)]
+    (. builder kinesisStreamSpecification data))
+  (when-let [data (lookup-entry config id :point-in-time-recovery-specification)]
+    (. builder pointInTimeRecoverySpecification data))
+  (when-let [data (lookup-entry config id :read-on-demand-throughput-settings)]
+    (. builder readOnDemandThroughputSettings data))
+  (when-let [data (lookup-entry config id :read-provisioned-throughput-settings)]
+    (. builder readProvisionedThroughputSettings data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :replica-stream-specification)]
+    (. builder replicaStreamSpecification data))
+  (when-let [data (lookup-entry config id :resource-policy)]
+    (. builder resourcePolicy data))
+  (when-let [data (lookup-entry config id :sse-specification)]
+    (. builder sseSpecification data))
+  (when-let [data (lookup-entry config id :table-class)]
+    (. builder tableClass data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-global-table-replica-sse-specification-property-builder
-  "The cfn-global-table-replica-sse-specification-property-builder function buildes out new instances of 
-CfnGlobalTable$ReplicaSSESpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-replica-sse-specification-property-builder
+  "The build-cfn-global-table-replica-sse-specification-property-builder function updates a CfnGlobalTable$ReplicaSSESpecificationProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$ReplicaSSESpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `kmsMasterKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-master-key-id` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$ReplicaSSESpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :kms-master-key-id)]
-      (. builder kmsMasterKeyId data))
-    (.build builder)))
-
-
-(defn cfn-global-table-replica-stream-specification-property-builder
-  "The cfn-global-table-replica-stream-specification-property-builder function buildes out new instances of 
-CfnGlobalTable$ReplicaStreamSpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `resourcePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-policy` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$ReplicaStreamSpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :resource-policy)]
-      (. builder resourcePolicy data))
-    (.build builder)))
+| `kmsMasterKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-master-key-id` |
+"
+  [^CfnGlobalTable$ReplicaSSESpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :kms-master-key-id)]
+    (. builder kmsMasterKeyId data))
+  (.build builder))
 
 
-(defn cfn-global-table-resource-policy-property-builder
-  "The cfn-global-table-resource-policy-property-builder function buildes out new instances of 
-CfnGlobalTable$ResourcePolicyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-replica-stream-specification-property-builder
+  "The build-cfn-global-table-replica-stream-specification-property-builder function updates a CfnGlobalTable$ReplicaStreamSpecificationProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$ReplicaStreamSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$ResourcePolicyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :policy-document)]
-      (. builder policyDocument data))
-    (.build builder)))
+| `resourcePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-policy` |
+"
+  [^CfnGlobalTable$ReplicaStreamSpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :resource-policy)]
+    (. builder resourcePolicy data))
+  (.build builder))
 
 
-(defn cfn-global-table-sse-specification-property-builder
-  "The cfn-global-table-sse-specification-property-builder function buildes out new instances of 
-CfnGlobalTable$SSESpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-resource-policy-property-builder
+  "The build-cfn-global-table-resource-policy-property-builder function updates a CfnGlobalTable$ResourcePolicyProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$ResourcePolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
+"
+  [^CfnGlobalTable$ResourcePolicyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :policy-document)]
+    (. builder policyDocument data))
+  (.build builder))
+
+
+(defn build-cfn-global-table-sse-specification-property-builder
+  "The build-cfn-global-table-sse-specification-property-builder function updates a CfnGlobalTable$SSESpecificationProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$SSESpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `sseEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:sse-enabled` |
-| `sseType` | java.lang.String | [[cdk.support/lookup-entry]] | `:sse-type` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$SSESpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :sse-enabled)]
-      (. builder sseEnabled data))
-    (when-let [data (lookup-entry config id :sse-type)]
-      (. builder sseType data))
-    (.build builder)))
+| `sseType` | java.lang.String | [[cdk.support/lookup-entry]] | `:sse-type` |
+"
+  [^CfnGlobalTable$SSESpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :sse-enabled)]
+    (. builder sseEnabled data))
+  (when-let [data (lookup-entry config id :sse-type)]
+    (. builder sseType data))
+  (.build builder))
 
 
-(defn cfn-global-table-stream-specification-property-builder
-  "The cfn-global-table-stream-specification-property-builder function buildes out new instances of 
-CfnGlobalTable$StreamSpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-stream-specification-property-builder
+  "The build-cfn-global-table-stream-specification-property-builder function updates a CfnGlobalTable$StreamSpecificationProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$StreamSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `streamViewType` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-view-type` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$StreamSpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :stream-view-type)]
-      (. builder streamViewType data))
-    (.build builder)))
+| `streamViewType` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-view-type` |
+"
+  [^CfnGlobalTable$StreamSpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :stream-view-type)]
+    (. builder streamViewType data))
+  (.build builder))
 
 
-(defn cfn-global-table-target-tracking-scaling-policy-configuration-property-builder
-  "The cfn-global-table-target-tracking-scaling-policy-configuration-property-builder function buildes out new instances of 
-CfnGlobalTable$TargetTrackingScalingPolicyConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-target-tracking-scaling-policy-configuration-property-builder
+  "The build-cfn-global-table-target-tracking-scaling-policy-configuration-property-builder function updates a CfnGlobalTable$TargetTrackingScalingPolicyConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$TargetTrackingScalingPolicyConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `disableScaleIn` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:disable-scale-in` |
 | `scaleInCooldown` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scale-in-cooldown` |
 | `scaleOutCooldown` | java.lang.Number | [[cdk.support/lookup-entry]] | `:scale-out-cooldown` |
-| `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$TargetTrackingScalingPolicyConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :disable-scale-in)]
-      (. builder disableScaleIn data))
-    (when-let [data (lookup-entry config id :scale-in-cooldown)]
-      (. builder scaleInCooldown data))
-    (when-let [data (lookup-entry config id :scale-out-cooldown)]
-      (. builder scaleOutCooldown data))
-    (when-let [data (lookup-entry config id :target-value)]
-      (. builder targetValue data))
-    (.build builder)))
+| `targetValue` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-value` |
+"
+  [^CfnGlobalTable$TargetTrackingScalingPolicyConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :disable-scale-in)]
+    (. builder disableScaleIn data))
+  (when-let [data (lookup-entry config id :scale-in-cooldown)]
+    (. builder scaleInCooldown data))
+  (when-let [data (lookup-entry config id :scale-out-cooldown)]
+    (. builder scaleOutCooldown data))
+  (when-let [data (lookup-entry config id :target-value)]
+    (. builder targetValue data))
+  (.build builder))
 
 
-(defn cfn-global-table-time-to-live-specification-property-builder
-  "The cfn-global-table-time-to-live-specification-property-builder function buildes out new instances of 
-CfnGlobalTable$TimeToLiveSpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-time-to-live-specification-property-builder
+  "The build-cfn-global-table-time-to-live-specification-property-builder function updates a CfnGlobalTable$TimeToLiveSpecificationProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$TimeToLiveSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `attributeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-name` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$TimeToLiveSpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :attribute-name)]
-      (. builder attributeName data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (.build builder)))
-
-
-(defn cfn-global-table-write-on-demand-throughput-settings-property-builder
-  "The cfn-global-table-write-on-demand-throughput-settings-property-builder function buildes out new instances of 
-CfnGlobalTable$WriteOnDemandThroughputSettingsProperty$Builder using the provided configuration.  Each field is set as follows:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `maxWriteRequestUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-write-request-units` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$WriteOnDemandThroughputSettingsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :max-write-request-units)]
-      (. builder maxWriteRequestUnits data))
-    (.build builder)))
-
-
-(defn cfn-global-table-write-provisioned-throughput-settings-property-builder
-  "The cfn-global-table-write-provisioned-throughput-settings-property-builder function buildes out new instances of 
-CfnGlobalTable$WriteProvisionedThroughputSettingsProperty$Builder using the provided configuration.  Each field is set as follows:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `writeCapacityAutoScalingSettings` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$CapacityAutoScalingSettingsProperty | [[cdk.support/lookup-entry]] | `:write-capacity-auto-scaling-settings` |"
-  [stack id config]
-  (let [builder (CfnGlobalTable$WriteProvisionedThroughputSettingsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :write-capacity-auto-scaling-settings)]
-      (. builder writeCapacityAutoScalingSettings data))
-    (.build builder)))
-
-
-(defn cfn-table-attribute-definition-property-builder
-  "The cfn-table-attribute-definition-property-builder function buildes out new instances of 
-CfnTable$AttributeDefinitionProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attributeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-name` |
-| `attributeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-type` |"
-  [stack id config]
-  (let [builder (CfnTable$AttributeDefinitionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :attribute-name)]
-      (. builder attributeName data))
-    (when-let [data (lookup-entry config id :attribute-type)]
-      (. builder attributeType data))
-    (.build builder)))
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+"
+  [^CfnGlobalTable$TimeToLiveSpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :attribute-name)]
+    (. builder attributeName data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (.build builder))
 
 
-(defn cfn-table-builder
-  "The cfn-table-builder function buildes out new instances of 
-CfnTable$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-global-table-write-on-demand-throughput-settings-property-builder
+  "The build-cfn-global-table-write-on-demand-throughput-settings-property-builder function updates a CfnGlobalTable$WriteOnDemandThroughputSettingsProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$WriteOnDemandThroughputSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `maxWriteRequestUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-write-request-units` |
+"
+  [^CfnGlobalTable$WriteOnDemandThroughputSettingsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-write-request-units)]
+    (. builder maxWriteRequestUnits data))
+  (.build builder))
+
+
+(defn build-cfn-global-table-write-provisioned-throughput-settings-property-builder
+  "The build-cfn-global-table-write-provisioned-throughput-settings-property-builder function updates a CfnGlobalTable$WriteProvisionedThroughputSettingsProperty$Builder instance using the provided configuration.
+  The function takes the CfnGlobalTable$WriteProvisionedThroughputSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `writeCapacityAutoScalingSettings` | software.amazon.awscdk.services.dynamodb.CfnGlobalTable$CapacityAutoScalingSettingsProperty | [[cdk.support/lookup-entry]] | `:write-capacity-auto-scaling-settings` |
+"
+  [^CfnGlobalTable$WriteProvisionedThroughputSettingsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :write-capacity-auto-scaling-settings)]
+    (. builder writeCapacityAutoScalingSettings data))
+  (.build builder))
+
+
+(defn build-cfn-table-attribute-definition-property-builder
+  "The build-cfn-table-attribute-definition-property-builder function updates a CfnTable$AttributeDefinitionProperty$Builder instance using the provided configuration.
+  The function takes the CfnTable$AttributeDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `attributeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-name` |
+| `attributeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-type` |
+"
+  [^CfnTable$AttributeDefinitionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :attribute-name)]
+    (. builder attributeName data))
+  (when-let [data (lookup-entry config id :attribute-type)]
+    (. builder attributeType data))
+  (.build builder))
+
+
+(defn build-cfn-table-builder
+  "The build-cfn-table-builder function updates a CfnTable$Builder instance using the provided configuration.
+  The function takes the CfnTable$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -874,84 +958,93 @@ CfnTable$Builder using the provided configuration.  Each field is set as follows
 | `tableClass` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-class` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `timeToLiveSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time-to-live-specification` |"
-  [stack id config]
-  (let [builder (CfnTable$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :attribute-definitions)]
-      (. builder attributeDefinitions data))
-    (when-let [data (lookup-entry config id :billing-mode)]
-      (. builder billingMode data))
-    (when-let [data (lookup-entry config id :contributor-insights-specification)]
-      (. builder contributorInsightsSpecification data))
-    (when-let [data (lookup-entry config id :deletion-protection-enabled)]
-      (. builder deletionProtectionEnabled data))
-    (when-let [data (lookup-entry config id :global-secondary-indexes)]
-      (. builder globalSecondaryIndexes data))
-    (when-let [data (lookup-entry config id :import-source-specification)]
-      (. builder importSourceSpecification data))
-    (when-let [data (lookup-entry config id :key-schema)]
-      (. builder keySchema data))
-    (when-let [data (lookup-entry config id :kinesis-stream-specification)]
-      (. builder kinesisStreamSpecification data))
-    (when-let [data (lookup-entry config id :local-secondary-indexes)]
-      (. builder localSecondaryIndexes data))
-    (when-let [data (lookup-entry config id :on-demand-throughput)]
-      (. builder onDemandThroughput data))
-    (when-let [data (lookup-entry config id :point-in-time-recovery-specification)]
-      (. builder pointInTimeRecoverySpecification data))
-    (when-let [data (lookup-entry config id :provisioned-throughput)]
-      (. builder provisionedThroughput data))
-    (when-let [data (lookup-entry config id :resource-policy)]
-      (. builder resourcePolicy data))
-    (when-let [data (lookup-entry config id :sse-specification)]
-      (. builder sseSpecification data))
-    (when-let [data (lookup-entry config id :stream-specification)]
-      (. builder streamSpecification data))
-    (when-let [data (lookup-entry config id :table-class)]
-      (. builder tableClass data))
-    (when-let [data (lookup-entry config id :table-name)]
-      (. builder tableName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :time-to-live-specification)]
-      (. builder timeToLiveSpecification data))
-    (.build builder)))
+| `timeToLiveSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time-to-live-specification` |
+"
+  [^CfnTable$Builder builder id config]
+  (when-let [data (lookup-entry config id :attribute-definitions)]
+    (. builder attributeDefinitions data))
+  (when-let [data (lookup-entry config id :billing-mode)]
+    (. builder billingMode data))
+  (when-let [data (lookup-entry config id :contributor-insights-specification)]
+    (. builder contributorInsightsSpecification data))
+  (when-let [data (lookup-entry config id :deletion-protection-enabled)]
+    (. builder deletionProtectionEnabled data))
+  (when-let [data (lookup-entry config id :global-secondary-indexes)]
+    (. builder globalSecondaryIndexes data))
+  (when-let [data (lookup-entry config id :import-source-specification)]
+    (. builder importSourceSpecification data))
+  (when-let [data (lookup-entry config id :key-schema)]
+    (. builder keySchema data))
+  (when-let [data (lookup-entry config id :kinesis-stream-specification)]
+    (. builder kinesisStreamSpecification data))
+  (when-let [data (lookup-entry config id :local-secondary-indexes)]
+    (. builder localSecondaryIndexes data))
+  (when-let [data (lookup-entry config id :on-demand-throughput)]
+    (. builder onDemandThroughput data))
+  (when-let [data (lookup-entry config id :point-in-time-recovery-specification)]
+    (. builder pointInTimeRecoverySpecification data))
+  (when-let [data (lookup-entry config id :provisioned-throughput)]
+    (. builder provisionedThroughput data))
+  (when-let [data (lookup-entry config id :resource-policy)]
+    (. builder resourcePolicy data))
+  (when-let [data (lookup-entry config id :sse-specification)]
+    (. builder sseSpecification data))
+  (when-let [data (lookup-entry config id :stream-specification)]
+    (. builder streamSpecification data))
+  (when-let [data (lookup-entry config id :table-class)]
+    (. builder tableClass data))
+  (when-let [data (lookup-entry config id :table-name)]
+    (. builder tableName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :time-to-live-specification)]
+    (. builder timeToLiveSpecification data))
+  (.build builder))
 
 
-(defn cfn-table-contributor-insights-specification-property-builder
-  "The cfn-table-contributor-insights-specification-property-builder function buildes out new instances of 
-CfnTable$ContributorInsightsSpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-table-contributor-insights-specification-property-builder
+  "The build-cfn-table-contributor-insights-specification-property-builder function updates a CfnTable$ContributorInsightsSpecificationProperty$Builder instance using the provided configuration.
+  The function takes the CfnTable$ContributorInsightsSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |"
-  [stack id config]
-  (let [builder (CfnTable$ContributorInsightsSpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (.build builder)))
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+"
+  [^CfnTable$ContributorInsightsSpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (.build builder))
 
 
-(defn cfn-table-csv-property-builder
-  "The cfn-table-csv-property-builder function buildes out new instances of 
-CfnTable$CsvProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-table-csv-property-builder
+  "The build-cfn-table-csv-property-builder function updates a CfnTable$CsvProperty$Builder instance using the provided configuration.
+  The function takes the CfnTable$CsvProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `delimiter` | java.lang.String | [[cdk.support/lookup-entry]] | `:delimiter` |
-| `headerList` | java.util.List | [[cdk.support/lookup-entry]] | `:header-list` |"
-  [stack id config]
-  (let [builder (CfnTable$CsvProperty$Builder.)]
-    (when-let [data (lookup-entry config id :delimiter)]
-      (. builder delimiter data))
-    (when-let [data (lookup-entry config id :header-list)]
-      (. builder headerList data))
-    (.build builder)))
+| `headerList` | java.util.List | [[cdk.support/lookup-entry]] | `:header-list` |
+"
+  [^CfnTable$CsvProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :delimiter)]
+    (. builder delimiter data))
+  (when-let [data (lookup-entry config id :header-list)]
+    (. builder headerList data))
+  (.build builder))
 
 
-(defn cfn-table-global-secondary-index-property-builder
-  "The cfn-table-global-secondary-index-property-builder function buildes out new instances of 
-CfnTable$GlobalSecondaryIndexProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-table-global-secondary-index-property-builder
+  "The build-cfn-table-global-secondary-index-property-builder function updates a CfnTable$GlobalSecondaryIndexProperty$Builder instance using the provided configuration.
+  The function takes the CfnTable$GlobalSecondaryIndexProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -960,166 +1053,193 @@ CfnTable$GlobalSecondaryIndexProperty$Builder using the provided configuration. 
 | `keySchema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-schema` |
 | `onDemandThroughput` | software.amazon.awscdk.services.dynamodb.CfnTable$OnDemandThroughputProperty | [[cdk.support/lookup-entry]] | `:on-demand-throughput` |
 | `projection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:projection` |
-| `provisionedThroughput` | software.amazon.awscdk.services.dynamodb.CfnTable$ProvisionedThroughputProperty | [[cdk.support/lookup-entry]] | `:provisioned-throughput` |"
-  [stack id config]
-  (let [builder (CfnTable$GlobalSecondaryIndexProperty$Builder.)]
-    (when-let [data (lookup-entry config id :contributor-insights-specification)]
-      (. builder contributorInsightsSpecification data))
-    (when-let [data (lookup-entry config id :index-name)]
-      (. builder indexName data))
-    (when-let [data (lookup-entry config id :key-schema)]
-      (. builder keySchema data))
-    (when-let [data (lookup-entry config id :on-demand-throughput)]
-      (. builder onDemandThroughput data))
-    (when-let [data (lookup-entry config id :projection)]
-      (. builder projection data))
-    (when-let [data (lookup-entry config id :provisioned-throughput)]
-      (. builder provisionedThroughput data))
-    (.build builder)))
+| `provisionedThroughput` | software.amazon.awscdk.services.dynamodb.CfnTable$ProvisionedThroughputProperty | [[cdk.support/lookup-entry]] | `:provisioned-throughput` |
+"
+  [^CfnTable$GlobalSecondaryIndexProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :contributor-insights-specification)]
+    (. builder contributorInsightsSpecification data))
+  (when-let [data (lookup-entry config id :index-name)]
+    (. builder indexName data))
+  (when-let [data (lookup-entry config id :key-schema)]
+    (. builder keySchema data))
+  (when-let [data (lookup-entry config id :on-demand-throughput)]
+    (. builder onDemandThroughput data))
+  (when-let [data (lookup-entry config id :projection)]
+    (. builder projection data))
+  (when-let [data (lookup-entry config id :provisioned-throughput)]
+    (. builder provisionedThroughput data))
+  (.build builder))
 
 
-(defn cfn-table-import-source-specification-property-builder
-  "The cfn-table-import-source-specification-property-builder function buildes out new instances of 
-CfnTable$ImportSourceSpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-table-import-source-specification-property-builder
+  "The build-cfn-table-import-source-specification-property-builder function updates a CfnTable$ImportSourceSpecificationProperty$Builder instance using the provided configuration.
+  The function takes the CfnTable$ImportSourceSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `inputCompressionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-compression-type` |
 | `inputFormat` | java.lang.String | [[cdk.support/lookup-entry]] | `:input-format` |
 | `inputFormatOptions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:input-format-options` |
-| `s3BucketSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-bucket-source` |"
-  [stack id config]
-  (let [builder (CfnTable$ImportSourceSpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :input-compression-type)]
-      (. builder inputCompressionType data))
-    (when-let [data (lookup-entry config id :input-format)]
-      (. builder inputFormat data))
-    (when-let [data (lookup-entry config id :input-format-options)]
-      (. builder inputFormatOptions data))
-    (when-let [data (lookup-entry config id :s3-bucket-source)]
-      (. builder s3BucketSource data))
-    (.build builder)))
+| `s3BucketSource` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:s3-bucket-source` |
+"
+  [^CfnTable$ImportSourceSpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :input-compression-type)]
+    (. builder inputCompressionType data))
+  (when-let [data (lookup-entry config id :input-format)]
+    (. builder inputFormat data))
+  (when-let [data (lookup-entry config id :input-format-options)]
+    (. builder inputFormatOptions data))
+  (when-let [data (lookup-entry config id :s3-bucket-source)]
+    (. builder s3BucketSource data))
+  (.build builder))
 
 
-(defn cfn-table-input-format-options-property-builder
-  "The cfn-table-input-format-options-property-builder function buildes out new instances of 
-CfnTable$InputFormatOptionsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-table-input-format-options-property-builder
+  "The build-cfn-table-input-format-options-property-builder function updates a CfnTable$InputFormatOptionsProperty$Builder instance using the provided configuration.
+  The function takes the CfnTable$InputFormatOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `csv` | software.amazon.awscdk.services.dynamodb.CfnTable$CsvProperty | [[cdk.support/lookup-entry]] | `:csv` |"
-  [stack id config]
-  (let [builder (CfnTable$InputFormatOptionsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :csv)]
-      (. builder csv data))
-    (.build builder)))
+| `csv` | software.amazon.awscdk.services.dynamodb.CfnTable$CsvProperty | [[cdk.support/lookup-entry]] | `:csv` |
+"
+  [^CfnTable$InputFormatOptionsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :csv)]
+    (. builder csv data))
+  (.build builder))
 
 
-(defn cfn-table-key-schema-property-builder
-  "The cfn-table-key-schema-property-builder function buildes out new instances of 
-CfnTable$KeySchemaProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-table-key-schema-property-builder
+  "The build-cfn-table-key-schema-property-builder function updates a CfnTable$KeySchemaProperty$Builder instance using the provided configuration.
+  The function takes the CfnTable$KeySchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attributeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-name` |
-| `keyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-type` |"
-  [stack id config]
-  (let [builder (CfnTable$KeySchemaProperty$Builder.)]
-    (when-let [data (lookup-entry config id :attribute-name)]
-      (. builder attributeName data))
-    (when-let [data (lookup-entry config id :key-type)]
-      (. builder keyType data))
-    (.build builder)))
+| `keyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-type` |
+"
+  [^CfnTable$KeySchemaProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :attribute-name)]
+    (. builder attributeName data))
+  (when-let [data (lookup-entry config id :key-type)]
+    (. builder keyType data))
+  (.build builder))
 
 
-(defn cfn-table-kinesis-stream-specification-property-builder
-  "The cfn-table-kinesis-stream-specification-property-builder function buildes out new instances of 
-CfnTable$KinesisStreamSpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-table-kinesis-stream-specification-property-builder
+  "The build-cfn-table-kinesis-stream-specification-property-builder function updates a CfnTable$KinesisStreamSpecificationProperty$Builder instance using the provided configuration.
+  The function takes the CfnTable$KinesisStreamSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `approximateCreationDateTimePrecision` | java.lang.String | [[cdk.support/lookup-entry]] | `:approximate-creation-date-time-precision` |
-| `streamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-arn` |"
-  [stack id config]
-  (let [builder (CfnTable$KinesisStreamSpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :approximate-creation-date-time-precision)]
-      (. builder approximateCreationDateTimePrecision data))
-    (when-let [data (lookup-entry config id :stream-arn)]
-      (. builder streamArn data))
-    (.build builder)))
+| `streamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-arn` |
+"
+  [^CfnTable$KinesisStreamSpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :approximate-creation-date-time-precision)]
+    (. builder approximateCreationDateTimePrecision data))
+  (when-let [data (lookup-entry config id :stream-arn)]
+    (. builder streamArn data))
+  (.build builder))
 
 
-(defn cfn-table-local-secondary-index-property-builder
-  "The cfn-table-local-secondary-index-property-builder function buildes out new instances of 
-CfnTable$LocalSecondaryIndexProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-table-local-secondary-index-property-builder
+  "The build-cfn-table-local-secondary-index-property-builder function updates a CfnTable$LocalSecondaryIndexProperty$Builder instance using the provided configuration.
+  The function takes the CfnTable$LocalSecondaryIndexProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `indexName` | java.lang.String | [[cdk.support/lookup-entry]] | `:index-name` |
 | `keySchema` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:key-schema` |
-| `projection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:projection` |"
-  [stack id config]
-  (let [builder (CfnTable$LocalSecondaryIndexProperty$Builder.)]
-    (when-let [data (lookup-entry config id :index-name)]
-      (. builder indexName data))
-    (when-let [data (lookup-entry config id :key-schema)]
-      (. builder keySchema data))
-    (when-let [data (lookup-entry config id :projection)]
-      (. builder projection data))
-    (.build builder)))
+| `projection` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:projection` |
+"
+  [^CfnTable$LocalSecondaryIndexProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :index-name)]
+    (. builder indexName data))
+  (when-let [data (lookup-entry config id :key-schema)]
+    (. builder keySchema data))
+  (when-let [data (lookup-entry config id :projection)]
+    (. builder projection data))
+  (.build builder))
 
 
-(defn cfn-table-on-demand-throughput-property-builder
-  "The cfn-table-on-demand-throughput-property-builder function buildes out new instances of 
-CfnTable$OnDemandThroughputProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-table-on-demand-throughput-property-builder
+  "The build-cfn-table-on-demand-throughput-property-builder function updates a CfnTable$OnDemandThroughputProperty$Builder instance using the provided configuration.
+  The function takes the CfnTable$OnDemandThroughputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `maxReadRequestUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-read-request-units` |
-| `maxWriteRequestUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-write-request-units` |"
-  [stack id config]
-  (let [builder (CfnTable$OnDemandThroughputProperty$Builder.)]
-    (when-let [data (lookup-entry config id :max-read-request-units)]
-      (. builder maxReadRequestUnits data))
-    (when-let [data (lookup-entry config id :max-write-request-units)]
-      (. builder maxWriteRequestUnits data))
-    (.build builder)))
+| `maxWriteRequestUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-write-request-units` |
+"
+  [^CfnTable$OnDemandThroughputProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-read-request-units)]
+    (. builder maxReadRequestUnits data))
+  (when-let [data (lookup-entry config id :max-write-request-units)]
+    (. builder maxWriteRequestUnits data))
+  (.build builder))
 
 
-(defn cfn-table-point-in-time-recovery-specification-property-builder
-  "The cfn-table-point-in-time-recovery-specification-property-builder function buildes out new instances of 
-CfnTable$PointInTimeRecoverySpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-table-point-in-time-recovery-specification-property-builder
+  "The build-cfn-table-point-in-time-recovery-specification-property-builder function updates a CfnTable$PointInTimeRecoverySpecificationProperty$Builder instance using the provided configuration.
+  The function takes the CfnTable$PointInTimeRecoverySpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `pointInTimeRecoveryEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:point-in-time-recovery-enabled` |"
-  [stack id config]
-  (let [builder (CfnTable$PointInTimeRecoverySpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :point-in-time-recovery-enabled)]
-      (. builder pointInTimeRecoveryEnabled data))
-    (.build builder)))
+| `pointInTimeRecoveryEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:point-in-time-recovery-enabled` |
+"
+  [^CfnTable$PointInTimeRecoverySpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :point-in-time-recovery-enabled)]
+    (. builder pointInTimeRecoveryEnabled data))
+  (.build builder))
 
 
-(defn cfn-table-projection-property-builder
-  "The cfn-table-projection-property-builder function buildes out new instances of 
-CfnTable$ProjectionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-table-projection-property-builder
+  "The build-cfn-table-projection-property-builder function updates a CfnTable$ProjectionProperty$Builder instance using the provided configuration.
+  The function takes the CfnTable$ProjectionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `nonKeyAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:non-key-attributes` |
-| `projectionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:projection-type` |"
-  [stack id config]
-  (let [builder (CfnTable$ProjectionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :non-key-attributes)]
-      (. builder nonKeyAttributes data))
-    (when-let [data (lookup-entry config id :projection-type)]
-      (. builder projectionType data))
-    (.build builder)))
+| `projectionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:projection-type` |
+"
+  [^CfnTable$ProjectionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :non-key-attributes)]
+    (. builder nonKeyAttributes data))
+  (when-let [data (lookup-entry config id :projection-type)]
+    (. builder projectionType data))
+  (.build builder))
 
 
-(defn cfn-table-props-builder
-  "The cfn-table-props-builder function buildes out new instances of 
-CfnTableProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-table-props-builder
+  "The build-cfn-table-props-builder function updates a CfnTableProps$Builder instance using the provided configuration.
+  The function takes the CfnTableProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1141,192 +1261,219 @@ CfnTableProps$Builder using the provided configuration.  Each field is set as fo
 | `tableClass` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-class` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `timeToLiveSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time-to-live-specification` |"
-  [stack id config]
-  (let [builder (CfnTableProps$Builder.)]
-    (when-let [data (lookup-entry config id :attribute-definitions)]
-      (. builder attributeDefinitions data))
-    (when-let [data (lookup-entry config id :billing-mode)]
-      (. builder billingMode data))
-    (when-let [data (lookup-entry config id :contributor-insights-specification)]
-      (. builder contributorInsightsSpecification data))
-    (when-let [data (lookup-entry config id :deletion-protection-enabled)]
-      (. builder deletionProtectionEnabled data))
-    (when-let [data (lookup-entry config id :global-secondary-indexes)]
-      (. builder globalSecondaryIndexes data))
-    (when-let [data (lookup-entry config id :import-source-specification)]
-      (. builder importSourceSpecification data))
-    (when-let [data (lookup-entry config id :key-schema)]
-      (. builder keySchema data))
-    (when-let [data (lookup-entry config id :kinesis-stream-specification)]
-      (. builder kinesisStreamSpecification data))
-    (when-let [data (lookup-entry config id :local-secondary-indexes)]
-      (. builder localSecondaryIndexes data))
-    (when-let [data (lookup-entry config id :on-demand-throughput)]
-      (. builder onDemandThroughput data))
-    (when-let [data (lookup-entry config id :point-in-time-recovery-specification)]
-      (. builder pointInTimeRecoverySpecification data))
-    (when-let [data (lookup-entry config id :provisioned-throughput)]
-      (. builder provisionedThroughput data))
-    (when-let [data (lookup-entry config id :resource-policy)]
-      (. builder resourcePolicy data))
-    (when-let [data (lookup-entry config id :sse-specification)]
-      (. builder sseSpecification data))
-    (when-let [data (lookup-entry config id :stream-specification)]
-      (. builder streamSpecification data))
-    (when-let [data (lookup-entry config id :table-class)]
-      (. builder tableClass data))
-    (when-let [data (lookup-entry config id :table-name)]
-      (. builder tableName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :time-to-live-specification)]
-      (. builder timeToLiveSpecification data))
-    (.build builder)))
+| `timeToLiveSpecification` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:time-to-live-specification` |
+"
+  [^CfnTableProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :attribute-definitions)]
+    (. builder attributeDefinitions data))
+  (when-let [data (lookup-entry config id :billing-mode)]
+    (. builder billingMode data))
+  (when-let [data (lookup-entry config id :contributor-insights-specification)]
+    (. builder contributorInsightsSpecification data))
+  (when-let [data (lookup-entry config id :deletion-protection-enabled)]
+    (. builder deletionProtectionEnabled data))
+  (when-let [data (lookup-entry config id :global-secondary-indexes)]
+    (. builder globalSecondaryIndexes data))
+  (when-let [data (lookup-entry config id :import-source-specification)]
+    (. builder importSourceSpecification data))
+  (when-let [data (lookup-entry config id :key-schema)]
+    (. builder keySchema data))
+  (when-let [data (lookup-entry config id :kinesis-stream-specification)]
+    (. builder kinesisStreamSpecification data))
+  (when-let [data (lookup-entry config id :local-secondary-indexes)]
+    (. builder localSecondaryIndexes data))
+  (when-let [data (lookup-entry config id :on-demand-throughput)]
+    (. builder onDemandThroughput data))
+  (when-let [data (lookup-entry config id :point-in-time-recovery-specification)]
+    (. builder pointInTimeRecoverySpecification data))
+  (when-let [data (lookup-entry config id :provisioned-throughput)]
+    (. builder provisionedThroughput data))
+  (when-let [data (lookup-entry config id :resource-policy)]
+    (. builder resourcePolicy data))
+  (when-let [data (lookup-entry config id :sse-specification)]
+    (. builder sseSpecification data))
+  (when-let [data (lookup-entry config id :stream-specification)]
+    (. builder streamSpecification data))
+  (when-let [data (lookup-entry config id :table-class)]
+    (. builder tableClass data))
+  (when-let [data (lookup-entry config id :table-name)]
+    (. builder tableName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :time-to-live-specification)]
+    (. builder timeToLiveSpecification data))
+  (.build builder))
 
 
-(defn cfn-table-provisioned-throughput-property-builder
-  "The cfn-table-provisioned-throughput-property-builder function buildes out new instances of 
-CfnTable$ProvisionedThroughputProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-table-provisioned-throughput-property-builder
+  "The build-cfn-table-provisioned-throughput-property-builder function updates a CfnTable$ProvisionedThroughputProperty$Builder instance using the provided configuration.
+  The function takes the CfnTable$ProvisionedThroughputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `readCapacityUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:read-capacity-units` |
-| `writeCapacityUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:write-capacity-units` |"
-  [stack id config]
-  (let [builder (CfnTable$ProvisionedThroughputProperty$Builder.)]
-    (when-let [data (lookup-entry config id :read-capacity-units)]
-      (. builder readCapacityUnits data))
-    (when-let [data (lookup-entry config id :write-capacity-units)]
-      (. builder writeCapacityUnits data))
-    (.build builder)))
+| `writeCapacityUnits` | java.lang.Number | [[cdk.support/lookup-entry]] | `:write-capacity-units` |
+"
+  [^CfnTable$ProvisionedThroughputProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :read-capacity-units)]
+    (. builder readCapacityUnits data))
+  (when-let [data (lookup-entry config id :write-capacity-units)]
+    (. builder writeCapacityUnits data))
+  (.build builder))
 
 
-(defn cfn-table-resource-policy-property-builder
-  "The cfn-table-resource-policy-property-builder function buildes out new instances of 
-CfnTable$ResourcePolicyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-table-resource-policy-property-builder
+  "The build-cfn-table-resource-policy-property-builder function updates a CfnTable$ResourcePolicyProperty$Builder instance using the provided configuration.
+  The function takes the CfnTable$ResourcePolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |"
-  [stack id config]
-  (let [builder (CfnTable$ResourcePolicyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :policy-document)]
-      (. builder policyDocument data))
-    (.build builder)))
+| `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
+"
+  [^CfnTable$ResourcePolicyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :policy-document)]
+    (. builder policyDocument data))
+  (.build builder))
 
 
-(defn cfn-table-s3-bucket-source-property-builder
-  "The cfn-table-s3-bucket-source-property-builder function buildes out new instances of 
-CfnTable$S3BucketSourceProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-table-s3-bucket-source-property-builder
+  "The build-cfn-table-s3-bucket-source-property-builder function updates a CfnTable$S3BucketSourceProperty$Builder instance using the provided configuration.
+  The function takes the CfnTable$S3BucketSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `s3Bucket` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-bucket` |
 | `s3BucketOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-bucket-owner` |
-| `s3KeyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-key-prefix` |"
-  [stack id config]
-  (let [builder (CfnTable$S3BucketSourceProperty$Builder.)]
-    (when-let [data (lookup-entry config id :s3-bucket)]
-      (. builder s3Bucket data))
-    (when-let [data (lookup-entry config id :s3-bucket-owner)]
-      (. builder s3BucketOwner data))
-    (when-let [data (lookup-entry config id :s3-key-prefix)]
-      (. builder s3KeyPrefix data))
-    (.build builder)))
+| `s3KeyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-key-prefix` |
+"
+  [^CfnTable$S3BucketSourceProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :s3-bucket)]
+    (. builder s3Bucket data))
+  (when-let [data (lookup-entry config id :s3-bucket-owner)]
+    (. builder s3BucketOwner data))
+  (when-let [data (lookup-entry config id :s3-key-prefix)]
+    (. builder s3KeyPrefix data))
+  (.build builder))
 
 
-(defn cfn-table-sse-specification-property-builder
-  "The cfn-table-sse-specification-property-builder function buildes out new instances of 
-CfnTable$SSESpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-table-sse-specification-property-builder
+  "The build-cfn-table-sse-specification-property-builder function updates a CfnTable$SSESpecificationProperty$Builder instance using the provided configuration.
+  The function takes the CfnTable$SSESpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `kmsMasterKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-master-key-id` |
 | `sseEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:sse-enabled` |
-| `sseType` | java.lang.String | [[cdk.support/lookup-entry]] | `:sse-type` |"
-  [stack id config]
-  (let [builder (CfnTable$SSESpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :kms-master-key-id)]
-      (. builder kmsMasterKeyId data))
-    (when-let [data (lookup-entry config id :sse-enabled)]
-      (. builder sseEnabled data))
-    (when-let [data (lookup-entry config id :sse-type)]
-      (. builder sseType data))
-    (.build builder)))
+| `sseType` | java.lang.String | [[cdk.support/lookup-entry]] | `:sse-type` |
+"
+  [^CfnTable$SSESpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :kms-master-key-id)]
+    (. builder kmsMasterKeyId data))
+  (when-let [data (lookup-entry config id :sse-enabled)]
+    (. builder sseEnabled data))
+  (when-let [data (lookup-entry config id :sse-type)]
+    (. builder sseType data))
+  (.build builder))
 
 
-(defn cfn-table-stream-specification-property-builder
-  "The cfn-table-stream-specification-property-builder function buildes out new instances of 
-CfnTable$StreamSpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-table-stream-specification-property-builder
+  "The build-cfn-table-stream-specification-property-builder function updates a CfnTable$StreamSpecificationProperty$Builder instance using the provided configuration.
+  The function takes the CfnTable$StreamSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `resourcePolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:resource-policy` |
-| `streamViewType` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-view-type` |"
-  [stack id config]
-  (let [builder (CfnTable$StreamSpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :resource-policy)]
-      (. builder resourcePolicy data))
-    (when-let [data (lookup-entry config id :stream-view-type)]
-      (. builder streamViewType data))
-    (.build builder)))
+| `streamViewType` | java.lang.String | [[cdk.support/lookup-entry]] | `:stream-view-type` |
+"
+  [^CfnTable$StreamSpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :resource-policy)]
+    (. builder resourcePolicy data))
+  (when-let [data (lookup-entry config id :stream-view-type)]
+    (. builder streamViewType data))
+  (.build builder))
 
 
-(defn cfn-table-time-to-live-specification-property-builder
-  "The cfn-table-time-to-live-specification-property-builder function buildes out new instances of 
-CfnTable$TimeToLiveSpecificationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-table-time-to-live-specification-property-builder
+  "The build-cfn-table-time-to-live-specification-property-builder function updates a CfnTable$TimeToLiveSpecificationProperty$Builder instance using the provided configuration.
+  The function takes the CfnTable$TimeToLiveSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attributeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-name` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |"
-  [stack id config]
-  (let [builder (CfnTable$TimeToLiveSpecificationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :attribute-name)]
-      (. builder attributeName data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (.build builder)))
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+"
+  [^CfnTable$TimeToLiveSpecificationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :attribute-name)]
+    (. builder attributeName data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (.build builder))
 
 
-(defn csv-options-builder
-  "The csv-options-builder function buildes out new instances of 
-CsvOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-csv-options-builder
+  "The build-csv-options-builder function updates a CsvOptions$Builder instance using the provided configuration.
+  The function takes the CsvOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `delimiter` | java.lang.String | [[cdk.support/lookup-entry]] | `:delimiter` |
-| `headerList` | java.util.List | [[cdk.support/lookup-entry]] | `:header-list` |"
-  [stack id config]
-  (let [builder (CsvOptions$Builder.)]
-    (when-let [data (lookup-entry config id :delimiter)]
-      (. builder delimiter data))
-    (when-let [data (lookup-entry config id :header-list)]
-      (. builder headerList data))
-    (.build builder)))
+| `headerList` | java.util.List | [[cdk.support/lookup-entry]] | `:header-list` |
+"
+  [^CsvOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :delimiter)]
+    (. builder delimiter data))
+  (when-let [data (lookup-entry config id :header-list)]
+    (. builder headerList data))
+  (.build builder))
 
 
-(defn enable-scaling-props-builder
-  "The enable-scaling-props-builder function buildes out new instances of 
-EnableScalingProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-enable-scaling-props-builder
+  "The build-enable-scaling-props-builder function updates a EnableScalingProps$Builder instance using the provided configuration.
+  The function takes the EnableScalingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `maxCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-capacity` |
-| `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |"
-  [stack id config]
-  (let [builder (EnableScalingProps$Builder.)]
-    (when-let [data (lookup-entry config id :max-capacity)]
-      (. builder maxCapacity data))
-    (when-let [data (lookup-entry config id :min-capacity)]
-      (. builder minCapacity data))
-    (.build builder)))
+| `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |
+"
+  [^EnableScalingProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-capacity)]
+    (. builder maxCapacity data))
+  (when-let [data (lookup-entry config id :min-capacity)]
+    (. builder minCapacity data))
+  (.build builder))
 
 
-(defn global-secondary-index-props-builder
-  "The global-secondary-index-props-builder function buildes out new instances of 
-GlobalSecondaryIndexProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-global-secondary-index-props-builder
+  "The build-global-secondary-index-props-builder function updates a GlobalSecondaryIndexProps$Builder instance using the provided configuration.
+  The function takes the GlobalSecondaryIndexProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1336,29 +1483,32 @@ GlobalSecondaryIndexProps$Builder using the provided configuration.  Each field 
 | `projectionType` | software.amazon.awscdk.services.dynamodb.ProjectionType | [[cdk.api.services.dynamodb/projection-type]] | `:projection-type` |
 | `readCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:read-capacity` |
 | `sortKey` | software.amazon.awscdk.services.dynamodb.Attribute | [[cdk.support/lookup-entry]] | `:sort-key` |
-| `writeCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:write-capacity` |"
-  [stack id config]
-  (let [builder (GlobalSecondaryIndexProps$Builder.)]
-    (when-let [data (lookup-entry config id :index-name)]
-      (. builder indexName data))
-    (when-let [data (lookup-entry config id :non-key-attributes)]
-      (. builder nonKeyAttributes data))
-    (when-let [data (lookup-entry config id :partition-key)]
-      (. builder partitionKey data))
-    (when-let [data (projection-type config id :projection-type)]
-      (. builder projectionType data))
-    (when-let [data (lookup-entry config id :read-capacity)]
-      (. builder readCapacity data))
-    (when-let [data (lookup-entry config id :sort-key)]
-      (. builder sortKey data))
-    (when-let [data (lookup-entry config id :write-capacity)]
-      (. builder writeCapacity data))
-    (.build builder)))
+| `writeCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:write-capacity` |
+"
+  [^GlobalSecondaryIndexProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :index-name)]
+    (. builder indexName data))
+  (when-let [data (lookup-entry config id :non-key-attributes)]
+    (. builder nonKeyAttributes data))
+  (when-let [data (lookup-entry config id :partition-key)]
+    (. builder partitionKey data))
+  (when-let [data (projection-type config id :projection-type)]
+    (. builder projectionType data))
+  (when-let [data (lookup-entry config id :read-capacity)]
+    (. builder readCapacity data))
+  (when-let [data (lookup-entry config id :sort-key)]
+    (. builder sortKey data))
+  (when-let [data (lookup-entry config id :write-capacity)]
+    (. builder writeCapacity data))
+  (.build builder))
 
 
-(defn global-secondary-index-props-v2-builder
-  "The global-secondary-index-props-v2-builder function buildes out new instances of 
-GlobalSecondaryIndexPropsV2$Builder using the provided configuration.  Each field is set as follows:
+(defn build-global-secondary-index-props-v2-builder
+  "The build-global-secondary-index-props-v2-builder function updates a GlobalSecondaryIndexPropsV2$Builder instance using the provided configuration.
+  The function takes the GlobalSecondaryIndexPropsV2$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1368,29 +1518,32 @@ GlobalSecondaryIndexPropsV2$Builder using the provided configuration.  Each fiel
 | `projectionType` | software.amazon.awscdk.services.dynamodb.ProjectionType | [[cdk.api.services.dynamodb/projection-type]] | `:projection-type` |
 | `readCapacity` | software.amazon.awscdk.services.dynamodb.Capacity | [[cdk.support/lookup-entry]] | `:read-capacity` |
 | `sortKey` | software.amazon.awscdk.services.dynamodb.Attribute | [[cdk.support/lookup-entry]] | `:sort-key` |
-| `writeCapacity` | software.amazon.awscdk.services.dynamodb.Capacity | [[cdk.support/lookup-entry]] | `:write-capacity` |"
-  [stack id config]
-  (let [builder (GlobalSecondaryIndexPropsV2$Builder.)]
-    (when-let [data (lookup-entry config id :index-name)]
-      (. builder indexName data))
-    (when-let [data (lookup-entry config id :non-key-attributes)]
-      (. builder nonKeyAttributes data))
-    (when-let [data (lookup-entry config id :partition-key)]
-      (. builder partitionKey data))
-    (when-let [data (projection-type config id :projection-type)]
-      (. builder projectionType data))
-    (when-let [data (lookup-entry config id :read-capacity)]
-      (. builder readCapacity data))
-    (when-let [data (lookup-entry config id :sort-key)]
-      (. builder sortKey data))
-    (when-let [data (lookup-entry config id :write-capacity)]
-      (. builder writeCapacity data))
-    (.build builder)))
+| `writeCapacity` | software.amazon.awscdk.services.dynamodb.Capacity | [[cdk.support/lookup-entry]] | `:write-capacity` |
+"
+  [^GlobalSecondaryIndexPropsV2$Builder builder id config]
+  (when-let [data (lookup-entry config id :index-name)]
+    (. builder indexName data))
+  (when-let [data (lookup-entry config id :non-key-attributes)]
+    (. builder nonKeyAttributes data))
+  (when-let [data (lookup-entry config id :partition-key)]
+    (. builder partitionKey data))
+  (when-let [data (projection-type config id :projection-type)]
+    (. builder projectionType data))
+  (when-let [data (lookup-entry config id :read-capacity)]
+    (. builder readCapacity data))
+  (when-let [data (lookup-entry config id :sort-key)]
+    (. builder sortKey data))
+  (when-let [data (lookup-entry config id :write-capacity)]
+    (. builder writeCapacity data))
+  (.build builder))
 
 
-(defn import-source-specification-builder
-  "The import-source-specification-builder function buildes out new instances of 
-ImportSourceSpecification$Builder using the provided configuration.  Each field is set as follows:
+(defn build-import-source-specification-builder
+  "The build-import-source-specification-builder function updates a ImportSourceSpecification$Builder instance using the provided configuration.
+  The function takes the ImportSourceSpecification$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1398,48 +1551,54 @@ ImportSourceSpecification$Builder using the provided configuration.  Each field 
 | `bucketOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:bucket-owner` |
 | `compressionType` | software.amazon.awscdk.services.dynamodb.InputCompressionType | [[cdk.api.services.dynamodb/input-compression-type]] | `:compression-type` |
 | `inputFormat` | software.amazon.awscdk.services.dynamodb.InputFormat | [[cdk.support/lookup-entry]] | `:input-format` |
-| `keyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-prefix` |"
-  [stack id config]
-  (let [builder (ImportSourceSpecification$Builder.)]
-    (when-let [data (lookup-entry config id :bucket)]
-      (. builder bucket data))
-    (when-let [data (lookup-entry config id :bucket-owner)]
-      (. builder bucketOwner data))
-    (when-let [data (input-compression-type config id :compression-type)]
-      (. builder compressionType data))
-    (when-let [data (lookup-entry config id :input-format)]
-      (. builder inputFormat data))
-    (when-let [data (lookup-entry config id :key-prefix)]
-      (. builder keyPrefix data))
-    (.build builder)))
+| `keyPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:key-prefix` |
+"
+  [^ImportSourceSpecification$Builder builder id config]
+  (when-let [data (lookup-entry config id :bucket)]
+    (. builder bucket data))
+  (when-let [data (lookup-entry config id :bucket-owner)]
+    (. builder bucketOwner data))
+  (when-let [data (input-compression-type config id :compression-type)]
+    (. builder compressionType data))
+  (when-let [data (lookup-entry config id :input-format)]
+    (. builder inputFormat data))
+  (when-let [data (lookup-entry config id :key-prefix)]
+    (. builder keyPrefix data))
+  (.build builder))
 
 
-(defn local-secondary-index-props-builder
-  "The local-secondary-index-props-builder function buildes out new instances of 
-LocalSecondaryIndexProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-local-secondary-index-props-builder
+  "The build-local-secondary-index-props-builder function updates a LocalSecondaryIndexProps$Builder instance using the provided configuration.
+  The function takes the LocalSecondaryIndexProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `indexName` | java.lang.String | [[cdk.support/lookup-entry]] | `:index-name` |
 | `nonKeyAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:non-key-attributes` |
 | `projectionType` | software.amazon.awscdk.services.dynamodb.ProjectionType | [[cdk.api.services.dynamodb/projection-type]] | `:projection-type` |
-| `sortKey` | software.amazon.awscdk.services.dynamodb.Attribute | [[cdk.support/lookup-entry]] | `:sort-key` |"
-  [stack id config]
-  (let [builder (LocalSecondaryIndexProps$Builder.)]
-    (when-let [data (lookup-entry config id :index-name)]
-      (. builder indexName data))
-    (when-let [data (lookup-entry config id :non-key-attributes)]
-      (. builder nonKeyAttributes data))
-    (when-let [data (projection-type config id :projection-type)]
-      (. builder projectionType data))
-    (when-let [data (lookup-entry config id :sort-key)]
-      (. builder sortKey data))
-    (.build builder)))
+| `sortKey` | software.amazon.awscdk.services.dynamodb.Attribute | [[cdk.support/lookup-entry]] | `:sort-key` |
+"
+  [^LocalSecondaryIndexProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :index-name)]
+    (. builder indexName data))
+  (when-let [data (lookup-entry config id :non-key-attributes)]
+    (. builder nonKeyAttributes data))
+  (when-let [data (projection-type config id :projection-type)]
+    (. builder projectionType data))
+  (when-let [data (lookup-entry config id :sort-key)]
+    (. builder sortKey data))
+  (.build builder))
 
 
-(defn operations-metric-options-builder
-  "The operations-metric-options-builder function buildes out new instances of 
-OperationsMetricOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-operations-metric-options-builder
+  "The build-operations-metric-options-builder function updates a OperationsMetricOptions$Builder instance using the provided configuration.
+  The function takes the OperationsMetricOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1451,50 +1610,56 @@ OperationsMetricOptions$Builder using the provided configuration.  Each field is
 | `period` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:period` |
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 | `statistic` | java.lang.String | [[cdk.support/lookup-entry]] | `:statistic` |
-| `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |"
-  [stack id config]
-  (let [builder (OperationsMetricOptions$Builder.)]
-    (when-let [data (lookup-entry config id :account)]
-      (. builder account data))
-    (when-let [data (lookup-entry config id :color)]
-      (. builder color data))
-    (when-let [data (lookup-entry config id :dimensions-map)]
-      (. builder dimensionsMap data))
-    (when-let [data (lookup-entry config id :label)]
-      (. builder label data))
-    (when-let [data (lookup-entry config id :operations)]
-      (. builder operations data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :statistic)]
-      (. builder statistic data))
-    (when-let [data (unit config id :unit)]
-      (. builder unit data))
-    (.build builder)))
+| `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |
+"
+  [^OperationsMetricOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :account)]
+    (. builder account data))
+  (when-let [data (lookup-entry config id :color)]
+    (. builder color data))
+  (when-let [data (lookup-entry config id :dimensions-map)]
+    (. builder dimensionsMap data))
+  (when-let [data (lookup-entry config id :label)]
+    (. builder label data))
+  (when-let [data (lookup-entry config id :operations)]
+    (. builder operations data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :statistic)]
+    (. builder statistic data))
+  (when-let [data (unit config id :unit)]
+    (. builder unit data))
+  (.build builder))
 
 
-(defn replica-global-secondary-index-options-builder
-  "The replica-global-secondary-index-options-builder function buildes out new instances of 
-ReplicaGlobalSecondaryIndexOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-replica-global-secondary-index-options-builder
+  "The build-replica-global-secondary-index-options-builder function updates a ReplicaGlobalSecondaryIndexOptions$Builder instance using the provided configuration.
+  The function takes the ReplicaGlobalSecondaryIndexOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `contributorInsights` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:contributor-insights` |
-| `readCapacity` | software.amazon.awscdk.services.dynamodb.Capacity | [[cdk.support/lookup-entry]] | `:read-capacity` |"
-  [stack id config]
-  (let [builder (ReplicaGlobalSecondaryIndexOptions$Builder.)]
-    (when-let [data (lookup-entry config id :contributor-insights)]
-      (. builder contributorInsights data))
-    (when-let [data (lookup-entry config id :read-capacity)]
-      (. builder readCapacity data))
-    (.build builder)))
+| `readCapacity` | software.amazon.awscdk.services.dynamodb.Capacity | [[cdk.support/lookup-entry]] | `:read-capacity` |
+"
+  [^ReplicaGlobalSecondaryIndexOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :contributor-insights)]
+    (. builder contributorInsights data))
+  (when-let [data (lookup-entry config id :read-capacity)]
+    (. builder readCapacity data))
+  (.build builder))
 
 
-(defn replica-table-props-builder
-  "The replica-table-props-builder function buildes out new instances of 
-ReplicaTableProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-replica-table-props-builder
+  "The build-replica-table-props-builder function updates a ReplicaTableProps$Builder instance using the provided configuration.
+  The function takes the ReplicaTableProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1507,72 +1672,81 @@ ReplicaTableProps$Builder using the provided configuration.  Each field is set a
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 | `resourcePolicy` | software.amazon.awscdk.services.iam.PolicyDocument | [[cdk.support/lookup-entry]] | `:resource-policy` |
 | `tableClass` | software.amazon.awscdk.services.dynamodb.TableClass | [[cdk.api.services.dynamodb/table-class]] | `:table-class` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (ReplicaTableProps$Builder.)]
-    (when-let [data (lookup-entry config id :contributor-insights)]
-      (. builder contributorInsights data))
-    (when-let [data (lookup-entry config id :deletion-protection)]
-      (. builder deletionProtection data))
-    (when-let [data (lookup-entry config id :global-secondary-index-options)]
-      (. builder globalSecondaryIndexOptions data))
-    (when-let [data (lookup-entry config id :kinesis-stream)]
-      (. builder kinesisStream data))
-    (when-let [data (lookup-entry config id :point-in-time-recovery)]
-      (. builder pointInTimeRecovery data))
-    (when-let [data (lookup-entry config id :read-capacity)]
-      (. builder readCapacity data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :resource-policy)]
-      (. builder resourcePolicy data))
-    (when-let [data (table-class config id :table-class)]
-      (. builder tableClass data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^ReplicaTableProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :contributor-insights)]
+    (. builder contributorInsights data))
+  (when-let [data (lookup-entry config id :deletion-protection)]
+    (. builder deletionProtection data))
+  (when-let [data (lookup-entry config id :global-secondary-index-options)]
+    (. builder globalSecondaryIndexOptions data))
+  (when-let [data (lookup-entry config id :kinesis-stream)]
+    (. builder kinesisStream data))
+  (when-let [data (lookup-entry config id :point-in-time-recovery)]
+    (. builder pointInTimeRecovery data))
+  (when-let [data (lookup-entry config id :read-capacity)]
+    (. builder readCapacity data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :resource-policy)]
+    (. builder resourcePolicy data))
+  (when-let [data (table-class config id :table-class)]
+    (. builder tableClass data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn schema-options-builder
-  "The schema-options-builder function buildes out new instances of 
-SchemaOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-schema-options-builder
+  "The build-schema-options-builder function updates a SchemaOptions$Builder instance using the provided configuration.
+  The function takes the SchemaOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `partitionKey` | software.amazon.awscdk.services.dynamodb.Attribute | [[cdk.support/lookup-entry]] | `:partition-key` |
-| `sortKey` | software.amazon.awscdk.services.dynamodb.Attribute | [[cdk.support/lookup-entry]] | `:sort-key` |"
-  [stack id config]
-  (let [builder (SchemaOptions$Builder.)]
-    (when-let [data (lookup-entry config id :partition-key)]
-      (. builder partitionKey data))
-    (when-let [data (lookup-entry config id :sort-key)]
-      (. builder sortKey data))
-    (.build builder)))
+| `sortKey` | software.amazon.awscdk.services.dynamodb.Attribute | [[cdk.support/lookup-entry]] | `:sort-key` |
+"
+  [^SchemaOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :partition-key)]
+    (. builder partitionKey data))
+  (when-let [data (lookup-entry config id :sort-key)]
+    (. builder sortKey data))
+  (.build builder))
 
 
-(defn secondary-index-props-builder
-  "The secondary-index-props-builder function buildes out new instances of 
-SecondaryIndexProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-secondary-index-props-builder
+  "The build-secondary-index-props-builder function updates a SecondaryIndexProps$Builder instance using the provided configuration.
+  The function takes the SecondaryIndexProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `indexName` | java.lang.String | [[cdk.support/lookup-entry]] | `:index-name` |
 | `nonKeyAttributes` | java.util.List | [[cdk.support/lookup-entry]] | `:non-key-attributes` |
-| `projectionType` | software.amazon.awscdk.services.dynamodb.ProjectionType | [[cdk.api.services.dynamodb/projection-type]] | `:projection-type` |"
-  [stack id config]
-  (let [builder (SecondaryIndexProps$Builder.)]
-    (when-let [data (lookup-entry config id :index-name)]
-      (. builder indexName data))
-    (when-let [data (lookup-entry config id :non-key-attributes)]
-      (. builder nonKeyAttributes data))
-    (when-let [data (projection-type config id :projection-type)]
-      (. builder projectionType data))
-    (.build builder)))
+| `projectionType` | software.amazon.awscdk.services.dynamodb.ProjectionType | [[cdk.api.services.dynamodb/projection-type]] | `:projection-type` |
+"
+  [^SecondaryIndexProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :index-name)]
+    (. builder indexName data))
+  (when-let [data (lookup-entry config id :non-key-attributes)]
+    (. builder nonKeyAttributes data))
+  (when-let [data (projection-type config id :projection-type)]
+    (. builder projectionType data))
+  (.build builder))
 
 
-(defn system-errors-for-operations-metric-options-builder
-  "The system-errors-for-operations-metric-options-builder function buildes out new instances of 
-SystemErrorsForOperationsMetricOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-system-errors-for-operations-metric-options-builder
+  "The build-system-errors-for-operations-metric-options-builder function updates a SystemErrorsForOperationsMetricOptions$Builder instance using the provided configuration.
+  The function takes the SystemErrorsForOperationsMetricOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1584,33 +1758,36 @@ SystemErrorsForOperationsMetricOptions$Builder using the provided configuration.
 | `period` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:period` |
 | `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
 | `statistic` | java.lang.String | [[cdk.support/lookup-entry]] | `:statistic` |
-| `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |"
-  [stack id config]
-  (let [builder (SystemErrorsForOperationsMetricOptions$Builder.)]
-    (when-let [data (lookup-entry config id :account)]
-      (. builder account data))
-    (when-let [data (lookup-entry config id :color)]
-      (. builder color data))
-    (when-let [data (lookup-entry config id :dimensions-map)]
-      (. builder dimensionsMap data))
-    (when-let [data (lookup-entry config id :label)]
-      (. builder label data))
-    (when-let [data (lookup-entry config id :operations)]
-      (. builder operations data))
-    (when-let [data (lookup-entry config id :period)]
-      (. builder period data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (when-let [data (lookup-entry config id :statistic)]
-      (. builder statistic data))
-    (when-let [data (unit config id :unit)]
-      (. builder unit data))
-    (.build builder)))
+| `unit` | software.amazon.awscdk.services.cloudwatch.Unit | [[cdk.api.services.cloudwatch/unit]] | `:unit` |
+"
+  [^SystemErrorsForOperationsMetricOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :account)]
+    (. builder account data))
+  (when-let [data (lookup-entry config id :color)]
+    (. builder color data))
+  (when-let [data (lookup-entry config id :dimensions-map)]
+    (. builder dimensionsMap data))
+  (when-let [data (lookup-entry config id :label)]
+    (. builder label data))
+  (when-let [data (lookup-entry config id :operations)]
+    (. builder operations data))
+  (when-let [data (lookup-entry config id :period)]
+    (. builder period data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (when-let [data (lookup-entry config id :statistic)]
+    (. builder statistic data))
+  (when-let [data (unit config id :unit)]
+    (. builder unit data))
+  (.build builder))
 
 
-(defn table-attributes-builder
-  "The table-attributes-builder function buildes out new instances of 
-TableAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-table-attributes-builder
+  "The build-table-attributes-builder function updates a TableAttributes$Builder instance using the provided configuration.
+  The function takes the TableAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1620,29 +1797,32 @@ TableAttributes$Builder using the provided configuration.  Each field is set as 
 | `localIndexes` | java.util.List | [[cdk.support/lookup-entry]] | `:local-indexes` |
 | `tableArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-arn` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
-| `tableStreamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-stream-arn` |"
-  [stack id config]
-  (let [builder (TableAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (lookup-entry config id :global-indexes)]
-      (. builder globalIndexes data))
-    (when-let [data (lookup-entry config id :grant-index-permissions)]
-      (. builder grantIndexPermissions data))
-    (when-let [data (lookup-entry config id :local-indexes)]
-      (. builder localIndexes data))
-    (when-let [data (lookup-entry config id :table-arn)]
-      (. builder tableArn data))
-    (when-let [data (lookup-entry config id :table-name)]
-      (. builder tableName data))
-    (when-let [data (lookup-entry config id :table-stream-arn)]
-      (. builder tableStreamArn data))
-    (.build builder)))
+| `tableStreamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-stream-arn` |
+"
+  [^TableAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (lookup-entry config id :global-indexes)]
+    (. builder globalIndexes data))
+  (when-let [data (lookup-entry config id :grant-index-permissions)]
+    (. builder grantIndexPermissions data))
+  (when-let [data (lookup-entry config id :local-indexes)]
+    (. builder localIndexes data))
+  (when-let [data (lookup-entry config id :table-arn)]
+    (. builder tableArn data))
+  (when-let [data (lookup-entry config id :table-name)]
+    (. builder tableName data))
+  (when-let [data (lookup-entry config id :table-stream-arn)]
+    (. builder tableStreamArn data))
+  (.build builder))
 
 
-(defn table-attributes-v2-builder
-  "The table-attributes-v2-builder function buildes out new instances of 
-TableAttributesV2$Builder using the provided configuration.  Each field is set as follows:
+(defn build-table-attributes-v2-builder
+  "The build-table-attributes-v2-builder function updates a TableAttributesV2$Builder instance using the provided configuration.
+  The function takes the TableAttributesV2$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1653,31 +1833,34 @@ TableAttributesV2$Builder using the provided configuration.  Each field is set a
 | `tableArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-arn` |
 | `tableId` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-id` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
-| `tableStreamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-stream-arn` |"
-  [stack id config]
-  (let [builder (TableAttributesV2$Builder.)]
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (lookup-entry config id :global-indexes)]
-      (. builder globalIndexes data))
-    (when-let [data (lookup-entry config id :grant-index-permissions)]
-      (. builder grantIndexPermissions data))
-    (when-let [data (lookup-entry config id :local-indexes)]
-      (. builder localIndexes data))
-    (when-let [data (lookup-entry config id :table-arn)]
-      (. builder tableArn data))
-    (when-let [data (lookup-entry config id :table-id)]
-      (. builder tableId data))
-    (when-let [data (lookup-entry config id :table-name)]
-      (. builder tableName data))
-    (when-let [data (lookup-entry config id :table-stream-arn)]
-      (. builder tableStreamArn data))
-    (.build builder)))
+| `tableStreamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-stream-arn` |
+"
+  [^TableAttributesV2$Builder builder id config]
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (lookup-entry config id :global-indexes)]
+    (. builder globalIndexes data))
+  (when-let [data (lookup-entry config id :grant-index-permissions)]
+    (. builder grantIndexPermissions data))
+  (when-let [data (lookup-entry config id :local-indexes)]
+    (. builder localIndexes data))
+  (when-let [data (lookup-entry config id :table-arn)]
+    (. builder tableArn data))
+  (when-let [data (lookup-entry config id :table-id)]
+    (. builder tableId data))
+  (when-let [data (lookup-entry config id :table-name)]
+    (. builder tableName data))
+  (when-let [data (lookup-entry config id :table-stream-arn)]
+    (. builder tableStreamArn data))
+  (.build builder))
 
 
-(defn table-builder
-  "The table-builder function buildes out new instances of 
-Table$Builder using the provided configuration.  Each field is set as follows:
+(defn build-table-builder
+  "The build-table-builder function updates a Table$Builder instance using the provided configuration.
+  The function takes the Table$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1701,57 +1884,60 @@ Table$Builder using the provided configuration.  Each field is set as follows:
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 | `timeToLiveAttribute` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-to-live-attribute` |
 | `waitForReplicationToFinish` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:wait-for-replication-to-finish` |
-| `writeCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:write-capacity` |"
-  [stack id config]
-  (let [builder (Table$Builder/create stack id)]
-    (when-let [data (billing-mode config id :billing-mode)]
-      (. builder billingMode data))
-    (when-let [data (lookup-entry config id :contributor-insights-enabled)]
-      (. builder contributorInsightsEnabled data))
-    (when-let [data (lookup-entry config id :deletion-protection)]
-      (. builder deletionProtection data))
-    (when-let [data (table-encryption config id :encryption)]
-      (. builder encryption data))
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (lookup-entry config id :import-source)]
-      (. builder importSource data))
-    (when-let [data (lookup-entry config id :kinesis-stream)]
-      (. builder kinesisStream data))
-    (when-let [data (lookup-entry config id :partition-key)]
-      (. builder partitionKey data))
-    (when-let [data (lookup-entry config id :point-in-time-recovery)]
-      (. builder pointInTimeRecovery data))
-    (when-let [data (lookup-entry config id :read-capacity)]
-      (. builder readCapacity data))
-    (when-let [data (removal-policy config id :removal-policy)]
-      (. builder removalPolicy data))
-    (when-let [data (lookup-entry config id :replication-regions)]
-      (. builder replicationRegions data))
-    (when-let [data (lookup-entry config id :replication-timeout)]
-      (. builder replicationTimeout data))
-    (when-let [data (lookup-entry config id :resource-policy)]
-      (. builder resourcePolicy data))
-    (when-let [data (lookup-entry config id :sort-key)]
-      (. builder sortKey data))
-    (when-let [data (stream-view-type config id :stream)]
-      (. builder stream data))
-    (when-let [data (table-class config id :table-class)]
-      (. builder tableClass data))
-    (when-let [data (lookup-entry config id :table-name)]
-      (. builder tableName data))
-    (when-let [data (lookup-entry config id :time-to-live-attribute)]
-      (. builder timeToLiveAttribute data))
-    (when-let [data (lookup-entry config id :wait-for-replication-to-finish)]
-      (. builder waitForReplicationToFinish data))
-    (when-let [data (lookup-entry config id :write-capacity)]
-      (. builder writeCapacity data))
-    (.build builder)))
+| `writeCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:write-capacity` |
+"
+  [^Table$Builder builder id config]
+  (when-let [data (billing-mode config id :billing-mode)]
+    (. builder billingMode data))
+  (when-let [data (lookup-entry config id :contributor-insights-enabled)]
+    (. builder contributorInsightsEnabled data))
+  (when-let [data (lookup-entry config id :deletion-protection)]
+    (. builder deletionProtection data))
+  (when-let [data (table-encryption config id :encryption)]
+    (. builder encryption data))
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (lookup-entry config id :import-source)]
+    (. builder importSource data))
+  (when-let [data (lookup-entry config id :kinesis-stream)]
+    (. builder kinesisStream data))
+  (when-let [data (lookup-entry config id :partition-key)]
+    (. builder partitionKey data))
+  (when-let [data (lookup-entry config id :point-in-time-recovery)]
+    (. builder pointInTimeRecovery data))
+  (when-let [data (lookup-entry config id :read-capacity)]
+    (. builder readCapacity data))
+  (when-let [data (removal-policy config id :removal-policy)]
+    (. builder removalPolicy data))
+  (when-let [data (lookup-entry config id :replication-regions)]
+    (. builder replicationRegions data))
+  (when-let [data (lookup-entry config id :replication-timeout)]
+    (. builder replicationTimeout data))
+  (when-let [data (lookup-entry config id :resource-policy)]
+    (. builder resourcePolicy data))
+  (when-let [data (lookup-entry config id :sort-key)]
+    (. builder sortKey data))
+  (when-let [data (stream-view-type config id :stream)]
+    (. builder stream data))
+  (when-let [data (table-class config id :table-class)]
+    (. builder tableClass data))
+  (when-let [data (lookup-entry config id :table-name)]
+    (. builder tableName data))
+  (when-let [data (lookup-entry config id :time-to-live-attribute)]
+    (. builder timeToLiveAttribute data))
+  (when-let [data (lookup-entry config id :wait-for-replication-to-finish)]
+    (. builder waitForReplicationToFinish data))
+  (when-let [data (lookup-entry config id :write-capacity)]
+    (. builder writeCapacity data))
+  (.build builder))
 
 
-(defn table-options-builder
-  "The table-options-builder function buildes out new instances of 
-TableOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-table-options-builder
+  "The build-table-options-builder function updates a TableOptions$Builder instance using the provided configuration.
+  The function takes the TableOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1773,53 +1959,56 @@ TableOptions$Builder using the provided configuration.  Each field is set as fol
 | `tableClass` | software.amazon.awscdk.services.dynamodb.TableClass | [[cdk.api.services.dynamodb/table-class]] | `:table-class` |
 | `timeToLiveAttribute` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-to-live-attribute` |
 | `waitForReplicationToFinish` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:wait-for-replication-to-finish` |
-| `writeCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:write-capacity` |"
-  [stack id config]
-  (let [builder (TableOptions$Builder.)]
-    (when-let [data (billing-mode config id :billing-mode)]
-      (. builder billingMode data))
-    (when-let [data (lookup-entry config id :contributor-insights-enabled)]
-      (. builder contributorInsightsEnabled data))
-    (when-let [data (lookup-entry config id :deletion-protection)]
-      (. builder deletionProtection data))
-    (when-let [data (table-encryption config id :encryption)]
-      (. builder encryption data))
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (lookup-entry config id :import-source)]
-      (. builder importSource data))
-    (when-let [data (lookup-entry config id :partition-key)]
-      (. builder partitionKey data))
-    (when-let [data (lookup-entry config id :point-in-time-recovery)]
-      (. builder pointInTimeRecovery data))
-    (when-let [data (lookup-entry config id :read-capacity)]
-      (. builder readCapacity data))
-    (when-let [data (removal-policy config id :removal-policy)]
-      (. builder removalPolicy data))
-    (when-let [data (lookup-entry config id :replication-regions)]
-      (. builder replicationRegions data))
-    (when-let [data (lookup-entry config id :replication-timeout)]
-      (. builder replicationTimeout data))
-    (when-let [data (lookup-entry config id :resource-policy)]
-      (. builder resourcePolicy data))
-    (when-let [data (lookup-entry config id :sort-key)]
-      (. builder sortKey data))
-    (when-let [data (stream-view-type config id :stream)]
-      (. builder stream data))
-    (when-let [data (table-class config id :table-class)]
-      (. builder tableClass data))
-    (when-let [data (lookup-entry config id :time-to-live-attribute)]
-      (. builder timeToLiveAttribute data))
-    (when-let [data (lookup-entry config id :wait-for-replication-to-finish)]
-      (. builder waitForReplicationToFinish data))
-    (when-let [data (lookup-entry config id :write-capacity)]
-      (. builder writeCapacity data))
-    (.build builder)))
+| `writeCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:write-capacity` |
+"
+  [^TableOptions$Builder builder id config]
+  (when-let [data (billing-mode config id :billing-mode)]
+    (. builder billingMode data))
+  (when-let [data (lookup-entry config id :contributor-insights-enabled)]
+    (. builder contributorInsightsEnabled data))
+  (when-let [data (lookup-entry config id :deletion-protection)]
+    (. builder deletionProtection data))
+  (when-let [data (table-encryption config id :encryption)]
+    (. builder encryption data))
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (lookup-entry config id :import-source)]
+    (. builder importSource data))
+  (when-let [data (lookup-entry config id :partition-key)]
+    (. builder partitionKey data))
+  (when-let [data (lookup-entry config id :point-in-time-recovery)]
+    (. builder pointInTimeRecovery data))
+  (when-let [data (lookup-entry config id :read-capacity)]
+    (. builder readCapacity data))
+  (when-let [data (removal-policy config id :removal-policy)]
+    (. builder removalPolicy data))
+  (when-let [data (lookup-entry config id :replication-regions)]
+    (. builder replicationRegions data))
+  (when-let [data (lookup-entry config id :replication-timeout)]
+    (. builder replicationTimeout data))
+  (when-let [data (lookup-entry config id :resource-policy)]
+    (. builder resourcePolicy data))
+  (when-let [data (lookup-entry config id :sort-key)]
+    (. builder sortKey data))
+  (when-let [data (stream-view-type config id :stream)]
+    (. builder stream data))
+  (when-let [data (table-class config id :table-class)]
+    (. builder tableClass data))
+  (when-let [data (lookup-entry config id :time-to-live-attribute)]
+    (. builder timeToLiveAttribute data))
+  (when-let [data (lookup-entry config id :wait-for-replication-to-finish)]
+    (. builder waitForReplicationToFinish data))
+  (when-let [data (lookup-entry config id :write-capacity)]
+    (. builder writeCapacity data))
+  (.build builder))
 
 
-(defn table-options-v2-builder
-  "The table-options-v2-builder function buildes out new instances of 
-TableOptionsV2$Builder using the provided configuration.  Each field is set as follows:
+(defn build-table-options-v2-builder
+  "The build-table-options-v2-builder function updates a TableOptionsV2$Builder instance using the provided configuration.
+  The function takes the TableOptionsV2$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1829,29 +2018,32 @@ TableOptionsV2$Builder using the provided configuration.  Each field is set as f
 | `pointInTimeRecovery` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:point-in-time-recovery` |
 | `resourcePolicy` | software.amazon.awscdk.services.iam.PolicyDocument | [[cdk.support/lookup-entry]] | `:resource-policy` |
 | `tableClass` | software.amazon.awscdk.services.dynamodb.TableClass | [[cdk.api.services.dynamodb/table-class]] | `:table-class` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (TableOptionsV2$Builder.)]
-    (when-let [data (lookup-entry config id :contributor-insights)]
-      (. builder contributorInsights data))
-    (when-let [data (lookup-entry config id :deletion-protection)]
-      (. builder deletionProtection data))
-    (when-let [data (lookup-entry config id :kinesis-stream)]
-      (. builder kinesisStream data))
-    (when-let [data (lookup-entry config id :point-in-time-recovery)]
-      (. builder pointInTimeRecovery data))
-    (when-let [data (lookup-entry config id :resource-policy)]
-      (. builder resourcePolicy data))
-    (when-let [data (table-class config id :table-class)]
-      (. builder tableClass data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^TableOptionsV2$Builder builder id config]
+  (when-let [data (lookup-entry config id :contributor-insights)]
+    (. builder contributorInsights data))
+  (when-let [data (lookup-entry config id :deletion-protection)]
+    (. builder deletionProtection data))
+  (when-let [data (lookup-entry config id :kinesis-stream)]
+    (. builder kinesisStream data))
+  (when-let [data (lookup-entry config id :point-in-time-recovery)]
+    (. builder pointInTimeRecovery data))
+  (when-let [data (lookup-entry config id :resource-policy)]
+    (. builder resourcePolicy data))
+  (when-let [data (table-class config id :table-class)]
+    (. builder tableClass data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn table-props-builder
-  "The table-props-builder function buildes out new instances of 
-TableProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-table-props-builder
+  "The build-table-props-builder function updates a TableProps$Builder instance using the provided configuration.
+  The function takes the TableProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1875,57 +2067,60 @@ TableProps$Builder using the provided configuration.  Each field is set as follo
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 | `timeToLiveAttribute` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-to-live-attribute` |
 | `waitForReplicationToFinish` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:wait-for-replication-to-finish` |
-| `writeCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:write-capacity` |"
-  [stack id config]
-  (let [builder (TableProps$Builder.)]
-    (when-let [data (billing-mode config id :billing-mode)]
-      (. builder billingMode data))
-    (when-let [data (lookup-entry config id :contributor-insights-enabled)]
-      (. builder contributorInsightsEnabled data))
-    (when-let [data (lookup-entry config id :deletion-protection)]
-      (. builder deletionProtection data))
-    (when-let [data (table-encryption config id :encryption)]
-      (. builder encryption data))
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (lookup-entry config id :import-source)]
-      (. builder importSource data))
-    (when-let [data (lookup-entry config id :kinesis-stream)]
-      (. builder kinesisStream data))
-    (when-let [data (lookup-entry config id :partition-key)]
-      (. builder partitionKey data))
-    (when-let [data (lookup-entry config id :point-in-time-recovery)]
-      (. builder pointInTimeRecovery data))
-    (when-let [data (lookup-entry config id :read-capacity)]
-      (. builder readCapacity data))
-    (when-let [data (removal-policy config id :removal-policy)]
-      (. builder removalPolicy data))
-    (when-let [data (lookup-entry config id :replication-regions)]
-      (. builder replicationRegions data))
-    (when-let [data (lookup-entry config id :replication-timeout)]
-      (. builder replicationTimeout data))
-    (when-let [data (lookup-entry config id :resource-policy)]
-      (. builder resourcePolicy data))
-    (when-let [data (lookup-entry config id :sort-key)]
-      (. builder sortKey data))
-    (when-let [data (stream-view-type config id :stream)]
-      (. builder stream data))
-    (when-let [data (table-class config id :table-class)]
-      (. builder tableClass data))
-    (when-let [data (lookup-entry config id :table-name)]
-      (. builder tableName data))
-    (when-let [data (lookup-entry config id :time-to-live-attribute)]
-      (. builder timeToLiveAttribute data))
-    (when-let [data (lookup-entry config id :wait-for-replication-to-finish)]
-      (. builder waitForReplicationToFinish data))
-    (when-let [data (lookup-entry config id :write-capacity)]
-      (. builder writeCapacity data))
-    (.build builder)))
+| `writeCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:write-capacity` |
+"
+  [^TableProps$Builder builder id config]
+  (when-let [data (billing-mode config id :billing-mode)]
+    (. builder billingMode data))
+  (when-let [data (lookup-entry config id :contributor-insights-enabled)]
+    (. builder contributorInsightsEnabled data))
+  (when-let [data (lookup-entry config id :deletion-protection)]
+    (. builder deletionProtection data))
+  (when-let [data (table-encryption config id :encryption)]
+    (. builder encryption data))
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (lookup-entry config id :import-source)]
+    (. builder importSource data))
+  (when-let [data (lookup-entry config id :kinesis-stream)]
+    (. builder kinesisStream data))
+  (when-let [data (lookup-entry config id :partition-key)]
+    (. builder partitionKey data))
+  (when-let [data (lookup-entry config id :point-in-time-recovery)]
+    (. builder pointInTimeRecovery data))
+  (when-let [data (lookup-entry config id :read-capacity)]
+    (. builder readCapacity data))
+  (when-let [data (removal-policy config id :removal-policy)]
+    (. builder removalPolicy data))
+  (when-let [data (lookup-entry config id :replication-regions)]
+    (. builder replicationRegions data))
+  (when-let [data (lookup-entry config id :replication-timeout)]
+    (. builder replicationTimeout data))
+  (when-let [data (lookup-entry config id :resource-policy)]
+    (. builder resourcePolicy data))
+  (when-let [data (lookup-entry config id :sort-key)]
+    (. builder sortKey data))
+  (when-let [data (stream-view-type config id :stream)]
+    (. builder stream data))
+  (when-let [data (table-class config id :table-class)]
+    (. builder tableClass data))
+  (when-let [data (lookup-entry config id :table-name)]
+    (. builder tableName data))
+  (when-let [data (lookup-entry config id :time-to-live-attribute)]
+    (. builder timeToLiveAttribute data))
+  (when-let [data (lookup-entry config id :wait-for-replication-to-finish)]
+    (. builder waitForReplicationToFinish data))
+  (when-let [data (lookup-entry config id :write-capacity)]
+    (. builder writeCapacity data))
+  (.build builder))
 
 
-(defn table-props-v2-builder
-  "The table-props-v2-builder function buildes out new instances of 
-TablePropsV2$Builder using the provided configuration.  Each field is set as follows:
+(defn build-table-props-v2-builder
+  "The build-table-props-v2-builder function updates a TablePropsV2$Builder instance using the provided configuration.
+  The function takes the TablePropsV2$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1946,51 +2141,54 @@ TablePropsV2$Builder using the provided configuration.  Each field is set as fol
 | `tableClass` | software.amazon.awscdk.services.dynamodb.TableClass | [[cdk.api.services.dynamodb/table-class]] | `:table-class` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `timeToLiveAttribute` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-to-live-attribute` |"
-  [stack id config]
-  (let [builder (TablePropsV2$Builder.)]
-    (when-let [data (lookup-entry config id :billing)]
-      (. builder billing data))
-    (when-let [data (lookup-entry config id :contributor-insights)]
-      (. builder contributorInsights data))
-    (when-let [data (lookup-entry config id :deletion-protection)]
-      (. builder deletionProtection data))
-    (when-let [data (stream-view-type config id :dynamo-stream)]
-      (. builder dynamoStream data))
-    (when-let [data (lookup-entry config id :encryption)]
-      (. builder encryption data))
-    (when-let [data (lookup-entry config id :global-secondary-indexes)]
-      (. builder globalSecondaryIndexes data))
-    (when-let [data (lookup-entry config id :kinesis-stream)]
-      (. builder kinesisStream data))
-    (when-let [data (lookup-entry config id :local-secondary-indexes)]
-      (. builder localSecondaryIndexes data))
-    (when-let [data (lookup-entry config id :partition-key)]
-      (. builder partitionKey data))
-    (when-let [data (lookup-entry config id :point-in-time-recovery)]
-      (. builder pointInTimeRecovery data))
-    (when-let [data (removal-policy config id :removal-policy)]
-      (. builder removalPolicy data))
-    (when-let [data (lookup-entry config id :replicas)]
-      (. builder replicas data))
-    (when-let [data (lookup-entry config id :resource-policy)]
-      (. builder resourcePolicy data))
-    (when-let [data (lookup-entry config id :sort-key)]
-      (. builder sortKey data))
-    (when-let [data (table-class config id :table-class)]
-      (. builder tableClass data))
-    (when-let [data (lookup-entry config id :table-name)]
-      (. builder tableName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :time-to-live-attribute)]
-      (. builder timeToLiveAttribute data))
-    (.build builder)))
+| `timeToLiveAttribute` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-to-live-attribute` |
+"
+  [^TablePropsV2$Builder builder id config]
+  (when-let [data (lookup-entry config id :billing)]
+    (. builder billing data))
+  (when-let [data (lookup-entry config id :contributor-insights)]
+    (. builder contributorInsights data))
+  (when-let [data (lookup-entry config id :deletion-protection)]
+    (. builder deletionProtection data))
+  (when-let [data (stream-view-type config id :dynamo-stream)]
+    (. builder dynamoStream data))
+  (when-let [data (lookup-entry config id :encryption)]
+    (. builder encryption data))
+  (when-let [data (lookup-entry config id :global-secondary-indexes)]
+    (. builder globalSecondaryIndexes data))
+  (when-let [data (lookup-entry config id :kinesis-stream)]
+    (. builder kinesisStream data))
+  (when-let [data (lookup-entry config id :local-secondary-indexes)]
+    (. builder localSecondaryIndexes data))
+  (when-let [data (lookup-entry config id :partition-key)]
+    (. builder partitionKey data))
+  (when-let [data (lookup-entry config id :point-in-time-recovery)]
+    (. builder pointInTimeRecovery data))
+  (when-let [data (removal-policy config id :removal-policy)]
+    (. builder removalPolicy data))
+  (when-let [data (lookup-entry config id :replicas)]
+    (. builder replicas data))
+  (when-let [data (lookup-entry config id :resource-policy)]
+    (. builder resourcePolicy data))
+  (when-let [data (lookup-entry config id :sort-key)]
+    (. builder sortKey data))
+  (when-let [data (table-class config id :table-class)]
+    (. builder tableClass data))
+  (when-let [data (lookup-entry config id :table-name)]
+    (. builder tableName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :time-to-live-attribute)]
+    (. builder timeToLiveAttribute data))
+  (.build builder))
 
 
-(defn table-v2-builder
-  "The table-v2-builder function buildes out new instances of 
-TableV2$Builder using the provided configuration.  Each field is set as follows:
+(defn build-table-v2-builder
+  "The build-table-v2-builder function updates a TableV2$Builder instance using the provided configuration.
+  The function takes the TableV2$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2011,68 +2209,74 @@ TableV2$Builder using the provided configuration.  Each field is set as follows:
 | `tableClass` | software.amazon.awscdk.services.dynamodb.TableClass | [[cdk.api.services.dynamodb/table-class]] | `:table-class` |
 | `tableName` | java.lang.String | [[cdk.support/lookup-entry]] | `:table-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `timeToLiveAttribute` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-to-live-attribute` |"
-  [stack id config]
-  (let [builder (TableV2$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :billing)]
-      (. builder billing data))
-    (when-let [data (lookup-entry config id :contributor-insights)]
-      (. builder contributorInsights data))
-    (when-let [data (lookup-entry config id :deletion-protection)]
-      (. builder deletionProtection data))
-    (when-let [data (stream-view-type config id :dynamo-stream)]
-      (. builder dynamoStream data))
-    (when-let [data (lookup-entry config id :encryption)]
-      (. builder encryption data))
-    (when-let [data (lookup-entry config id :global-secondary-indexes)]
-      (. builder globalSecondaryIndexes data))
-    (when-let [data (lookup-entry config id :kinesis-stream)]
-      (. builder kinesisStream data))
-    (when-let [data (lookup-entry config id :local-secondary-indexes)]
-      (. builder localSecondaryIndexes data))
-    (when-let [data (lookup-entry config id :partition-key)]
-      (. builder partitionKey data))
-    (when-let [data (lookup-entry config id :point-in-time-recovery)]
-      (. builder pointInTimeRecovery data))
-    (when-let [data (removal-policy config id :removal-policy)]
-      (. builder removalPolicy data))
-    (when-let [data (lookup-entry config id :replicas)]
-      (. builder replicas data))
-    (when-let [data (lookup-entry config id :resource-policy)]
-      (. builder resourcePolicy data))
-    (when-let [data (lookup-entry config id :sort-key)]
-      (. builder sortKey data))
-    (when-let [data (table-class config id :table-class)]
-      (. builder tableClass data))
-    (when-let [data (lookup-entry config id :table-name)]
-      (. builder tableName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :time-to-live-attribute)]
-      (. builder timeToLiveAttribute data))
-    (.build builder)))
+| `timeToLiveAttribute` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-to-live-attribute` |
+"
+  [^TableV2$Builder builder id config]
+  (when-let [data (lookup-entry config id :billing)]
+    (. builder billing data))
+  (when-let [data (lookup-entry config id :contributor-insights)]
+    (. builder contributorInsights data))
+  (when-let [data (lookup-entry config id :deletion-protection)]
+    (. builder deletionProtection data))
+  (when-let [data (stream-view-type config id :dynamo-stream)]
+    (. builder dynamoStream data))
+  (when-let [data (lookup-entry config id :encryption)]
+    (. builder encryption data))
+  (when-let [data (lookup-entry config id :global-secondary-indexes)]
+    (. builder globalSecondaryIndexes data))
+  (when-let [data (lookup-entry config id :kinesis-stream)]
+    (. builder kinesisStream data))
+  (when-let [data (lookup-entry config id :local-secondary-indexes)]
+    (. builder localSecondaryIndexes data))
+  (when-let [data (lookup-entry config id :partition-key)]
+    (. builder partitionKey data))
+  (when-let [data (lookup-entry config id :point-in-time-recovery)]
+    (. builder pointInTimeRecovery data))
+  (when-let [data (removal-policy config id :removal-policy)]
+    (. builder removalPolicy data))
+  (when-let [data (lookup-entry config id :replicas)]
+    (. builder replicas data))
+  (when-let [data (lookup-entry config id :resource-policy)]
+    (. builder resourcePolicy data))
+  (when-let [data (lookup-entry config id :sort-key)]
+    (. builder sortKey data))
+  (when-let [data (table-class config id :table-class)]
+    (. builder tableClass data))
+  (when-let [data (lookup-entry config id :table-name)]
+    (. builder tableName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :time-to-live-attribute)]
+    (. builder timeToLiveAttribute data))
+  (.build builder))
 
 
-(defn throughput-props-builder
-  "The throughput-props-builder function buildes out new instances of 
-ThroughputProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-throughput-props-builder
+  "The build-throughput-props-builder function updates a ThroughputProps$Builder instance using the provided configuration.
+  The function takes the ThroughputProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `readCapacity` | software.amazon.awscdk.services.dynamodb.Capacity | [[cdk.support/lookup-entry]] | `:read-capacity` |
-| `writeCapacity` | software.amazon.awscdk.services.dynamodb.Capacity | [[cdk.support/lookup-entry]] | `:write-capacity` |"
-  [stack id config]
-  (let [builder (ThroughputProps$Builder.)]
-    (when-let [data (lookup-entry config id :read-capacity)]
-      (. builder readCapacity data))
-    (when-let [data (lookup-entry config id :write-capacity)]
-      (. builder writeCapacity data))
-    (.build builder)))
+| `writeCapacity` | software.amazon.awscdk.services.dynamodb.Capacity | [[cdk.support/lookup-entry]] | `:write-capacity` |
+"
+  [^ThroughputProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :read-capacity)]
+    (. builder readCapacity data))
+  (when-let [data (lookup-entry config id :write-capacity)]
+    (. builder writeCapacity data))
+  (.build builder))
 
 
-(defn utilization-scaling-props-builder
-  "The utilization-scaling-props-builder function buildes out new instances of 
-UtilizationScalingProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-utilization-scaling-props-builder
+  "The build-utilization-scaling-props-builder function updates a UtilizationScalingProps$Builder instance using the provided configuration.
+  The function takes the UtilizationScalingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2080,17 +2284,17 @@ UtilizationScalingProps$Builder using the provided configuration.  Each field is
 | `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
 | `scaleInCooldown` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:scale-in-cooldown` |
 | `scaleOutCooldown` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:scale-out-cooldown` |
-| `targetUtilizationPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-utilization-percent` |"
-  [stack id config]
-  (let [builder (UtilizationScalingProps$Builder.)]
-    (when-let [data (lookup-entry config id :disable-scale-in)]
-      (. builder disableScaleIn data))
-    (when-let [data (lookup-entry config id :policy-name)]
-      (. builder policyName data))
-    (when-let [data (lookup-entry config id :scale-in-cooldown)]
-      (. builder scaleInCooldown data))
-    (when-let [data (lookup-entry config id :scale-out-cooldown)]
-      (. builder scaleOutCooldown data))
-    (when-let [data (lookup-entry config id :target-utilization-percent)]
-      (. builder targetUtilizationPercent data))
-    (.build builder)))
+| `targetUtilizationPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:target-utilization-percent` |
+"
+  [^UtilizationScalingProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :disable-scale-in)]
+    (. builder disableScaleIn data))
+  (when-let [data (lookup-entry config id :policy-name)]
+    (. builder policyName data))
+  (when-let [data (lookup-entry config id :scale-in-cooldown)]
+    (. builder scaleInCooldown data))
+  (when-let [data (lookup-entry config id :scale-out-cooldown)]
+    (. builder scaleOutCooldown data))
+  (when-let [data (lookup-entry config id :target-utilization-percent)]
+    (. builder targetUtilizationPercent data))
+  (.build builder))

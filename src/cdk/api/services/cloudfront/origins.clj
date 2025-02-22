@@ -16,9 +16,12 @@
                                                                S3OriginProps$Builder]))
 
 
-(defn function-url-origin-builder
-  "The function-url-origin-builder function buildes out new instances of 
-FunctionUrlOrigin$Builder using the provided configuration.  Each field is set as follows:
+(defn build-function-url-origin-builder
+  "The build-function-url-origin-builder function updates a FunctionUrlOrigin$Builder instance using the provided configuration.
+  The function takes the FunctionUrlOrigin$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -30,33 +33,36 @@ FunctionUrlOrigin$Builder using the provided configuration.  Each field is set a
 | `originPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-path` |
 | `originShieldEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:origin-shield-enabled` |
 | `originShieldRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-shield-region` |
-| `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |"
-  [stack id config ^software.amazon.awscdk.services.lambda.IFunctionUrl function-url]
-  (let [builder (FunctionUrlOrigin$Builder/create ^software.amazon.awscdk.services.lambda.IFunctionUrl function-url)]
-    (when-let [data (lookup-entry config id :connection-attempts)]
-      (. builder connectionAttempts data))
-    (when-let [data (lookup-entry config id :connection-timeout)]
-      (. builder connectionTimeout data))
-    (when-let [data (lookup-entry config id :custom-headers)]
-      (. builder customHeaders data))
-    (when-let [data (lookup-entry config id :keepalive-timeout)]
-      (. builder keepaliveTimeout data))
-    (when-let [data (lookup-entry config id :origin-id)]
-      (. builder originId data))
-    (when-let [data (lookup-entry config id :origin-path)]
-      (. builder originPath data))
-    (when-let [data (lookup-entry config id :origin-shield-enabled)]
-      (. builder originShieldEnabled data))
-    (when-let [data (lookup-entry config id :origin-shield-region)]
-      (. builder originShieldRegion data))
-    (when-let [data (lookup-entry config id :read-timeout)]
-      (. builder readTimeout data))
-    (.build builder)))
+| `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |
+"
+  [^FunctionUrlOrigin$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-attempts)]
+    (. builder connectionAttempts data))
+  (when-let [data (lookup-entry config id :connection-timeout)]
+    (. builder connectionTimeout data))
+  (when-let [data (lookup-entry config id :custom-headers)]
+    (. builder customHeaders data))
+  (when-let [data (lookup-entry config id :keepalive-timeout)]
+    (. builder keepaliveTimeout data))
+  (when-let [data (lookup-entry config id :origin-id)]
+    (. builder originId data))
+  (when-let [data (lookup-entry config id :origin-path)]
+    (. builder originPath data))
+  (when-let [data (lookup-entry config id :origin-shield-enabled)]
+    (. builder originShieldEnabled data))
+  (when-let [data (lookup-entry config id :origin-shield-region)]
+    (. builder originShieldRegion data))
+  (when-let [data (lookup-entry config id :read-timeout)]
+    (. builder readTimeout data))
+  (.build builder))
 
 
-(defn function-url-origin-props-builder
-  "The function-url-origin-props-builder function buildes out new instances of 
-FunctionUrlOriginProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-function-url-origin-props-builder
+  "The build-function-url-origin-props-builder function updates a FunctionUrlOriginProps$Builder instance using the provided configuration.
+  The function takes the FunctionUrlOriginProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -68,83 +74,36 @@ FunctionUrlOriginProps$Builder using the provided configuration.  Each field is 
 | `originPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-path` |
 | `originShieldEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:origin-shield-enabled` |
 | `originShieldRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-shield-region` |
-| `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |"
-  [stack id config]
-  (let [builder (FunctionUrlOriginProps$Builder.)]
-    (when-let [data (lookup-entry config id :connection-attempts)]
-      (. builder connectionAttempts data))
-    (when-let [data (lookup-entry config id :connection-timeout)]
-      (. builder connectionTimeout data))
-    (when-let [data (lookup-entry config id :custom-headers)]
-      (. builder customHeaders data))
-    (when-let [data (lookup-entry config id :keepalive-timeout)]
-      (. builder keepaliveTimeout data))
-    (when-let [data (lookup-entry config id :origin-id)]
-      (. builder originId data))
-    (when-let [data (lookup-entry config id :origin-path)]
-      (. builder originPath data))
-    (when-let [data (lookup-entry config id :origin-shield-enabled)]
-      (. builder originShieldEnabled data))
-    (when-let [data (lookup-entry config id :origin-shield-region)]
-      (. builder originShieldRegion data))
-    (when-let [data (lookup-entry config id :read-timeout)]
-      (. builder readTimeout data))
-    (.build builder)))
+| `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |
+"
+  [^FunctionUrlOriginProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-attempts)]
+    (. builder connectionAttempts data))
+  (when-let [data (lookup-entry config id :connection-timeout)]
+    (. builder connectionTimeout data))
+  (when-let [data (lookup-entry config id :custom-headers)]
+    (. builder customHeaders data))
+  (when-let [data (lookup-entry config id :keepalive-timeout)]
+    (. builder keepaliveTimeout data))
+  (when-let [data (lookup-entry config id :origin-id)]
+    (. builder originId data))
+  (when-let [data (lookup-entry config id :origin-path)]
+    (. builder originPath data))
+  (when-let [data (lookup-entry config id :origin-shield-enabled)]
+    (. builder originShieldEnabled data))
+  (when-let [data (lookup-entry config id :origin-shield-region)]
+    (. builder originShieldRegion data))
+  (when-let [data (lookup-entry config id :read-timeout)]
+    (. builder readTimeout data))
+  (.build builder))
 
 
-(defn http-origin-builder
-  "The http-origin-builder function buildes out new instances of 
-HttpOrigin$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-origin-builder
+  "The build-http-origin-builder function updates a HttpOrigin$Builder instance using the provided configuration.
+  The function takes the HttpOrigin$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `connectionAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:connection-attempts` |
-| `connectionTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:connection-timeout` |
-| `customHeaders` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-headers` |
-| `httpPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:http-port` |
-| `httpsPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:https-port` |
-| `keepaliveTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:keepalive-timeout` |
-| `originId` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-id` |
-| `originPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-path` |
-| `originShieldEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:origin-shield-enabled` |
-| `originShieldRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-shield-region` |
-| `originSslProtocols` | java.util.List | [[cdk.support/lookup-entry]] | `:origin-ssl-protocols` |
-| `protocolPolicy` | software.amazon.awscdk.services.cloudfront.OriginProtocolPolicy | [[cdk.api.services.cloudfront/origin-protocol-policy]] | `:protocol-policy` |
-| `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |"
-  [stack id config ^java.lang.String domain-name]
-  (let [builder (HttpOrigin$Builder/create ^java.lang.String domain-name)]
-    (when-let [data (lookup-entry config id :connection-attempts)]
-      (. builder connectionAttempts data))
-    (when-let [data (lookup-entry config id :connection-timeout)]
-      (. builder connectionTimeout data))
-    (when-let [data (lookup-entry config id :custom-headers)]
-      (. builder customHeaders data))
-    (when-let [data (lookup-entry config id :http-port)]
-      (. builder httpPort data))
-    (when-let [data (lookup-entry config id :https-port)]
-      (. builder httpsPort data))
-    (when-let [data (lookup-entry config id :keepalive-timeout)]
-      (. builder keepaliveTimeout data))
-    (when-let [data (lookup-entry config id :origin-id)]
-      (. builder originId data))
-    (when-let [data (lookup-entry config id :origin-path)]
-      (. builder originPath data))
-    (when-let [data (lookup-entry config id :origin-shield-enabled)]
-      (. builder originShieldEnabled data))
-    (when-let [data (lookup-entry config id :origin-shield-region)]
-      (. builder originShieldRegion data))
-    (when-let [data (lookup-entry config id :origin-ssl-protocols)]
-      (. builder originSslProtocols data))
-    (when-let [data (origin-protocol-policy config id :protocol-policy)]
-      (. builder protocolPolicy data))
-    (when-let [data (lookup-entry config id :read-timeout)]
-      (. builder readTimeout data))
-    (.build builder)))
-
-
-(defn http-origin-props-builder
-  "The http-origin-props-builder function buildes out new instances of 
-HttpOriginProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -160,91 +119,44 @@ HttpOriginProps$Builder using the provided configuration.  Each field is set as 
 | `originShieldRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-shield-region` |
 | `originSslProtocols` | java.util.List | [[cdk.support/lookup-entry]] | `:origin-ssl-protocols` |
 | `protocolPolicy` | software.amazon.awscdk.services.cloudfront.OriginProtocolPolicy | [[cdk.api.services.cloudfront/origin-protocol-policy]] | `:protocol-policy` |
-| `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |"
-  [stack id config]
-  (let [builder (HttpOriginProps$Builder.)]
-    (when-let [data (lookup-entry config id :connection-attempts)]
-      (. builder connectionAttempts data))
-    (when-let [data (lookup-entry config id :connection-timeout)]
-      (. builder connectionTimeout data))
-    (when-let [data (lookup-entry config id :custom-headers)]
-      (. builder customHeaders data))
-    (when-let [data (lookup-entry config id :http-port)]
-      (. builder httpPort data))
-    (when-let [data (lookup-entry config id :https-port)]
-      (. builder httpsPort data))
-    (when-let [data (lookup-entry config id :keepalive-timeout)]
-      (. builder keepaliveTimeout data))
-    (when-let [data (lookup-entry config id :origin-id)]
-      (. builder originId data))
-    (when-let [data (lookup-entry config id :origin-path)]
-      (. builder originPath data))
-    (when-let [data (lookup-entry config id :origin-shield-enabled)]
-      (. builder originShieldEnabled data))
-    (when-let [data (lookup-entry config id :origin-shield-region)]
-      (. builder originShieldRegion data))
-    (when-let [data (lookup-entry config id :origin-ssl-protocols)]
-      (. builder originSslProtocols data))
-    (when-let [data (origin-protocol-policy config id :protocol-policy)]
-      (. builder protocolPolicy data))
-    (when-let [data (lookup-entry config id :read-timeout)]
-      (. builder readTimeout data))
-    (.build builder)))
+| `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |
+"
+  [^HttpOrigin$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-attempts)]
+    (. builder connectionAttempts data))
+  (when-let [data (lookup-entry config id :connection-timeout)]
+    (. builder connectionTimeout data))
+  (when-let [data (lookup-entry config id :custom-headers)]
+    (. builder customHeaders data))
+  (when-let [data (lookup-entry config id :http-port)]
+    (. builder httpPort data))
+  (when-let [data (lookup-entry config id :https-port)]
+    (. builder httpsPort data))
+  (when-let [data (lookup-entry config id :keepalive-timeout)]
+    (. builder keepaliveTimeout data))
+  (when-let [data (lookup-entry config id :origin-id)]
+    (. builder originId data))
+  (when-let [data (lookup-entry config id :origin-path)]
+    (. builder originPath data))
+  (when-let [data (lookup-entry config id :origin-shield-enabled)]
+    (. builder originShieldEnabled data))
+  (when-let [data (lookup-entry config id :origin-shield-region)]
+    (. builder originShieldRegion data))
+  (when-let [data (lookup-entry config id :origin-ssl-protocols)]
+    (. builder originSslProtocols data))
+  (when-let [data (origin-protocol-policy config id :protocol-policy)]
+    (. builder protocolPolicy data))
+  (when-let [data (lookup-entry config id :read-timeout)]
+    (. builder readTimeout data))
+  (.build builder))
 
 
-(defn load-balancer-v2-origin-builder
-  "The load-balancer-v2-origin-builder function buildes out new instances of 
-LoadBalancerV2Origin$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-origin-props-builder
+  "The build-http-origin-props-builder function updates a HttpOriginProps$Builder instance using the provided configuration.
+  The function takes the HttpOriginProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `connectionAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:connection-attempts` |
-| `connectionTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:connection-timeout` |
-| `customHeaders` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-headers` |
-| `httpPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:http-port` |
-| `httpsPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:https-port` |
-| `keepaliveTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:keepalive-timeout` |
-| `originId` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-id` |
-| `originPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-path` |
-| `originShieldEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:origin-shield-enabled` |
-| `originShieldRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-shield-region` |
-| `originSslProtocols` | java.util.List | [[cdk.support/lookup-entry]] | `:origin-ssl-protocols` |
-| `protocolPolicy` | software.amazon.awscdk.services.cloudfront.OriginProtocolPolicy | [[cdk.api.services.cloudfront/origin-protocol-policy]] | `:protocol-policy` |
-| `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |"
-  [stack id config ^software.amazon.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2 load-balancer]
-  (let [builder (LoadBalancerV2Origin$Builder/create ^software.amazon.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2 load-balancer)]
-    (when-let [data (lookup-entry config id :connection-attempts)]
-      (. builder connectionAttempts data))
-    (when-let [data (lookup-entry config id :connection-timeout)]
-      (. builder connectionTimeout data))
-    (when-let [data (lookup-entry config id :custom-headers)]
-      (. builder customHeaders data))
-    (when-let [data (lookup-entry config id :http-port)]
-      (. builder httpPort data))
-    (when-let [data (lookup-entry config id :https-port)]
-      (. builder httpsPort data))
-    (when-let [data (lookup-entry config id :keepalive-timeout)]
-      (. builder keepaliveTimeout data))
-    (when-let [data (lookup-entry config id :origin-id)]
-      (. builder originId data))
-    (when-let [data (lookup-entry config id :origin-path)]
-      (. builder originPath data))
-    (when-let [data (lookup-entry config id :origin-shield-enabled)]
-      (. builder originShieldEnabled data))
-    (when-let [data (lookup-entry config id :origin-shield-region)]
-      (. builder originShieldRegion data))
-    (when-let [data (lookup-entry config id :origin-ssl-protocols)]
-      (. builder originSslProtocols data))
-    (when-let [data (origin-protocol-policy config id :protocol-policy)]
-      (. builder protocolPolicy data))
-    (when-let [data (lookup-entry config id :read-timeout)]
-      (. builder readTimeout data))
-    (.build builder)))
-
-
-(defn load-balancer-v2-origin-props-builder
-  "The load-balancer-v2-origin-props-builder function buildes out new instances of 
-LoadBalancerV2OriginProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -260,119 +172,196 @@ LoadBalancerV2OriginProps$Builder using the provided configuration.  Each field 
 | `originShieldRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-shield-region` |
 | `originSslProtocols` | java.util.List | [[cdk.support/lookup-entry]] | `:origin-ssl-protocols` |
 | `protocolPolicy` | software.amazon.awscdk.services.cloudfront.OriginProtocolPolicy | [[cdk.api.services.cloudfront/origin-protocol-policy]] | `:protocol-policy` |
-| `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |"
-  [stack id config]
-  (let [builder (LoadBalancerV2OriginProps$Builder.)]
-    (when-let [data (lookup-entry config id :connection-attempts)]
-      (. builder connectionAttempts data))
-    (when-let [data (lookup-entry config id :connection-timeout)]
-      (. builder connectionTimeout data))
-    (when-let [data (lookup-entry config id :custom-headers)]
-      (. builder customHeaders data))
-    (when-let [data (lookup-entry config id :http-port)]
-      (. builder httpPort data))
-    (when-let [data (lookup-entry config id :https-port)]
-      (. builder httpsPort data))
-    (when-let [data (lookup-entry config id :keepalive-timeout)]
-      (. builder keepaliveTimeout data))
-    (when-let [data (lookup-entry config id :origin-id)]
-      (. builder originId data))
-    (when-let [data (lookup-entry config id :origin-path)]
-      (. builder originPath data))
-    (when-let [data (lookup-entry config id :origin-shield-enabled)]
-      (. builder originShieldEnabled data))
-    (when-let [data (lookup-entry config id :origin-shield-region)]
-      (. builder originShieldRegion data))
-    (when-let [data (lookup-entry config id :origin-ssl-protocols)]
-      (. builder originSslProtocols data))
-    (when-let [data (origin-protocol-policy config id :protocol-policy)]
-      (. builder protocolPolicy data))
-    (when-let [data (lookup-entry config id :read-timeout)]
-      (. builder readTimeout data))
-    (.build builder)))
+| `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |
+"
+  [^HttpOriginProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-attempts)]
+    (. builder connectionAttempts data))
+  (when-let [data (lookup-entry config id :connection-timeout)]
+    (. builder connectionTimeout data))
+  (when-let [data (lookup-entry config id :custom-headers)]
+    (. builder customHeaders data))
+  (when-let [data (lookup-entry config id :http-port)]
+    (. builder httpPort data))
+  (when-let [data (lookup-entry config id :https-port)]
+    (. builder httpsPort data))
+  (when-let [data (lookup-entry config id :keepalive-timeout)]
+    (. builder keepaliveTimeout data))
+  (when-let [data (lookup-entry config id :origin-id)]
+    (. builder originId data))
+  (when-let [data (lookup-entry config id :origin-path)]
+    (. builder originPath data))
+  (when-let [data (lookup-entry config id :origin-shield-enabled)]
+    (. builder originShieldEnabled data))
+  (when-let [data (lookup-entry config id :origin-shield-region)]
+    (. builder originShieldRegion data))
+  (when-let [data (lookup-entry config id :origin-ssl-protocols)]
+    (. builder originSslProtocols data))
+  (when-let [data (origin-protocol-policy config id :protocol-policy)]
+    (. builder protocolPolicy data))
+  (when-let [data (lookup-entry config id :read-timeout)]
+    (. builder readTimeout data))
+  (.build builder))
 
 
-(defn origin-group-builder
-  "The origin-group-builder function buildes out new instances of 
-OriginGroup$Builder using the provided configuration.  Each field is set as follows:
+(defn build-load-balancer-v2-origin-builder
+  "The build-load-balancer-v2-origin-builder function updates a LoadBalancerV2Origin$Builder instance using the provided configuration.
+  The function takes the LoadBalancerV2Origin$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `connectionAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:connection-attempts` |
+| `connectionTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:connection-timeout` |
+| `customHeaders` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-headers` |
+| `httpPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:http-port` |
+| `httpsPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:https-port` |
+| `keepaliveTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:keepalive-timeout` |
+| `originId` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-id` |
+| `originPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-path` |
+| `originShieldEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:origin-shield-enabled` |
+| `originShieldRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-shield-region` |
+| `originSslProtocols` | java.util.List | [[cdk.support/lookup-entry]] | `:origin-ssl-protocols` |
+| `protocolPolicy` | software.amazon.awscdk.services.cloudfront.OriginProtocolPolicy | [[cdk.api.services.cloudfront/origin-protocol-policy]] | `:protocol-policy` |
+| `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |
+"
+  [^LoadBalancerV2Origin$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-attempts)]
+    (. builder connectionAttempts data))
+  (when-let [data (lookup-entry config id :connection-timeout)]
+    (. builder connectionTimeout data))
+  (when-let [data (lookup-entry config id :custom-headers)]
+    (. builder customHeaders data))
+  (when-let [data (lookup-entry config id :http-port)]
+    (. builder httpPort data))
+  (when-let [data (lookup-entry config id :https-port)]
+    (. builder httpsPort data))
+  (when-let [data (lookup-entry config id :keepalive-timeout)]
+    (. builder keepaliveTimeout data))
+  (when-let [data (lookup-entry config id :origin-id)]
+    (. builder originId data))
+  (when-let [data (lookup-entry config id :origin-path)]
+    (. builder originPath data))
+  (when-let [data (lookup-entry config id :origin-shield-enabled)]
+    (. builder originShieldEnabled data))
+  (when-let [data (lookup-entry config id :origin-shield-region)]
+    (. builder originShieldRegion data))
+  (when-let [data (lookup-entry config id :origin-ssl-protocols)]
+    (. builder originSslProtocols data))
+  (when-let [data (origin-protocol-policy config id :protocol-policy)]
+    (. builder protocolPolicy data))
+  (when-let [data (lookup-entry config id :read-timeout)]
+    (. builder readTimeout data))
+  (.build builder))
+
+
+(defn build-load-balancer-v2-origin-props-builder
+  "The build-load-balancer-v2-origin-props-builder function updates a LoadBalancerV2OriginProps$Builder instance using the provided configuration.
+  The function takes the LoadBalancerV2OriginProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `connectionAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:connection-attempts` |
+| `connectionTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:connection-timeout` |
+| `customHeaders` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-headers` |
+| `httpPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:http-port` |
+| `httpsPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:https-port` |
+| `keepaliveTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:keepalive-timeout` |
+| `originId` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-id` |
+| `originPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-path` |
+| `originShieldEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:origin-shield-enabled` |
+| `originShieldRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-shield-region` |
+| `originSslProtocols` | java.util.List | [[cdk.support/lookup-entry]] | `:origin-ssl-protocols` |
+| `protocolPolicy` | software.amazon.awscdk.services.cloudfront.OriginProtocolPolicy | [[cdk.api.services.cloudfront/origin-protocol-policy]] | `:protocol-policy` |
+| `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |
+"
+  [^LoadBalancerV2OriginProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-attempts)]
+    (. builder connectionAttempts data))
+  (when-let [data (lookup-entry config id :connection-timeout)]
+    (. builder connectionTimeout data))
+  (when-let [data (lookup-entry config id :custom-headers)]
+    (. builder customHeaders data))
+  (when-let [data (lookup-entry config id :http-port)]
+    (. builder httpPort data))
+  (when-let [data (lookup-entry config id :https-port)]
+    (. builder httpsPort data))
+  (when-let [data (lookup-entry config id :keepalive-timeout)]
+    (. builder keepaliveTimeout data))
+  (when-let [data (lookup-entry config id :origin-id)]
+    (. builder originId data))
+  (when-let [data (lookup-entry config id :origin-path)]
+    (. builder originPath data))
+  (when-let [data (lookup-entry config id :origin-shield-enabled)]
+    (. builder originShieldEnabled data))
+  (when-let [data (lookup-entry config id :origin-shield-region)]
+    (. builder originShieldRegion data))
+  (when-let [data (lookup-entry config id :origin-ssl-protocols)]
+    (. builder originSslProtocols data))
+  (when-let [data (origin-protocol-policy config id :protocol-policy)]
+    (. builder protocolPolicy data))
+  (when-let [data (lookup-entry config id :read-timeout)]
+    (. builder readTimeout data))
+  (.build builder))
+
+
+(defn build-origin-group-builder
+  "The build-origin-group-builder function updates a OriginGroup$Builder instance using the provided configuration.
+  The function takes the OriginGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `fallbackOrigin` | software.amazon.awscdk.services.cloudfront.IOrigin | [[cdk.support/lookup-entry]] | `:fallback-origin` |
 | `fallbackStatusCodes` | java.util.List | [[cdk.support/lookup-entry]] | `:fallback-status-codes` |
-| `primaryOrigin` | software.amazon.awscdk.services.cloudfront.IOrigin | [[cdk.support/lookup-entry]] | `:primary-origin` |"
-  [stack id config]
-  (let [builder (OriginGroup$Builder/create)]
-    (when-let [data (lookup-entry config id :fallback-origin)]
-      (. builder fallbackOrigin data))
-    (when-let [data (lookup-entry config id :fallback-status-codes)]
-      (. builder fallbackStatusCodes data))
-    (when-let [data (lookup-entry config id :primary-origin)]
-      (. builder primaryOrigin data))
-    (.build builder)))
+| `primaryOrigin` | software.amazon.awscdk.services.cloudfront.IOrigin | [[cdk.support/lookup-entry]] | `:primary-origin` |
+"
+  [^OriginGroup$Builder builder id config]
+  (when-let [data (lookup-entry config id :fallback-origin)]
+    (. builder fallbackOrigin data))
+  (when-let [data (lookup-entry config id :fallback-status-codes)]
+    (. builder fallbackStatusCodes data))
+  (when-let [data (lookup-entry config id :primary-origin)]
+    (. builder primaryOrigin data))
+  (.build builder))
 
 
-(defn origin-group-props-builder
-  "The origin-group-props-builder function buildes out new instances of 
-OriginGroupProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-origin-group-props-builder
+  "The build-origin-group-props-builder function updates a OriginGroupProps$Builder instance using the provided configuration.
+  The function takes the OriginGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `fallbackOrigin` | software.amazon.awscdk.services.cloudfront.IOrigin | [[cdk.support/lookup-entry]] | `:fallback-origin` |
 | `fallbackStatusCodes` | java.util.List | [[cdk.support/lookup-entry]] | `:fallback-status-codes` |
-| `primaryOrigin` | software.amazon.awscdk.services.cloudfront.IOrigin | [[cdk.support/lookup-entry]] | `:primary-origin` |"
-  [stack id config]
-  (let [builder (OriginGroupProps$Builder.)]
-    (when-let [data (lookup-entry config id :fallback-origin)]
-      (. builder fallbackOrigin data))
-    (when-let [data (lookup-entry config id :fallback-status-codes)]
-      (. builder fallbackStatusCodes data))
-    (when-let [data (lookup-entry config id :primary-origin)]
-      (. builder primaryOrigin data))
-    (.build builder)))
+| `primaryOrigin` | software.amazon.awscdk.services.cloudfront.IOrigin | [[cdk.support/lookup-entry]] | `:primary-origin` |
+"
+  [^OriginGroupProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :fallback-origin)]
+    (. builder fallbackOrigin data))
+  (when-let [data (lookup-entry config id :fallback-status-codes)]
+    (. builder fallbackStatusCodes data))
+  (when-let [data (lookup-entry config id :primary-origin)]
+    (. builder primaryOrigin data))
+  (.build builder))
 
 
-(defn rest-api-origin-builder
-  "The rest-api-origin-builder function buildes out new instances of 
-RestApiOrigin$Builder using the provided configuration.  Each field is set as follows:
+(defn build-rest-api-origin-builder
+  "The build-rest-api-origin-builder function updates a RestApiOrigin$Builder instance using the provided configuration.
+  The function takes the RestApiOrigin$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `connectionAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:connection-attempts` |
-| `connectionTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:connection-timeout` |
-| `customHeaders` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-headers` |
-| `keepaliveTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:keepalive-timeout` |
-| `originId` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-id` |
-| `originPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-path` |
-| `originShieldEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:origin-shield-enabled` |
-| `originShieldRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-shield-region` |
-| `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |"
-  [stack id config ^software.amazon.awscdk.services.apigateway.RestApiBase rest-api]
-  (let [builder (RestApiOrigin$Builder/create ^software.amazon.awscdk.services.apigateway.RestApiBase rest-api)]
-    (when-let [data (lookup-entry config id :connection-attempts)]
-      (. builder connectionAttempts data))
-    (when-let [data (lookup-entry config id :connection-timeout)]
-      (. builder connectionTimeout data))
-    (when-let [data (lookup-entry config id :custom-headers)]
-      (. builder customHeaders data))
-    (when-let [data (lookup-entry config id :keepalive-timeout)]
-      (. builder keepaliveTimeout data))
-    (when-let [data (lookup-entry config id :origin-id)]
-      (. builder originId data))
-    (when-let [data (lookup-entry config id :origin-path)]
-      (. builder originPath data))
-    (when-let [data (lookup-entry config id :origin-shield-enabled)]
-      (. builder originShieldEnabled data))
-    (when-let [data (lookup-entry config id :origin-shield-region)]
-      (. builder originShieldRegion data))
-    (when-let [data (lookup-entry config id :read-timeout)]
-      (. builder readTimeout data))
-    (.build builder)))
-
-
-(defn rest-api-origin-props-builder
-  "The rest-api-origin-props-builder function buildes out new instances of 
-RestApiOriginProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -384,33 +373,77 @@ RestApiOriginProps$Builder using the provided configuration.  Each field is set 
 | `originPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-path` |
 | `originShieldEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:origin-shield-enabled` |
 | `originShieldRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-shield-region` |
-| `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |"
-  [stack id config]
-  (let [builder (RestApiOriginProps$Builder.)]
-    (when-let [data (lookup-entry config id :connection-attempts)]
-      (. builder connectionAttempts data))
-    (when-let [data (lookup-entry config id :connection-timeout)]
-      (. builder connectionTimeout data))
-    (when-let [data (lookup-entry config id :custom-headers)]
-      (. builder customHeaders data))
-    (when-let [data (lookup-entry config id :keepalive-timeout)]
-      (. builder keepaliveTimeout data))
-    (when-let [data (lookup-entry config id :origin-id)]
-      (. builder originId data))
-    (when-let [data (lookup-entry config id :origin-path)]
-      (. builder originPath data))
-    (when-let [data (lookup-entry config id :origin-shield-enabled)]
-      (. builder originShieldEnabled data))
-    (when-let [data (lookup-entry config id :origin-shield-region)]
-      (. builder originShieldRegion data))
-    (when-let [data (lookup-entry config id :read-timeout)]
-      (. builder readTimeout data))
-    (.build builder)))
+| `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |
+"
+  [^RestApiOrigin$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-attempts)]
+    (. builder connectionAttempts data))
+  (when-let [data (lookup-entry config id :connection-timeout)]
+    (. builder connectionTimeout data))
+  (when-let [data (lookup-entry config id :custom-headers)]
+    (. builder customHeaders data))
+  (when-let [data (lookup-entry config id :keepalive-timeout)]
+    (. builder keepaliveTimeout data))
+  (when-let [data (lookup-entry config id :origin-id)]
+    (. builder originId data))
+  (when-let [data (lookup-entry config id :origin-path)]
+    (. builder originPath data))
+  (when-let [data (lookup-entry config id :origin-shield-enabled)]
+    (. builder originShieldEnabled data))
+  (when-let [data (lookup-entry config id :origin-shield-region)]
+    (. builder originShieldRegion data))
+  (when-let [data (lookup-entry config id :read-timeout)]
+    (. builder readTimeout data))
+  (.build builder))
 
 
-(defn s3-origin-builder
-  "The s3-origin-builder function buildes out new instances of 
-S3Origin$Builder using the provided configuration.  Each field is set as follows:
+(defn build-rest-api-origin-props-builder
+  "The build-rest-api-origin-props-builder function updates a RestApiOriginProps$Builder instance using the provided configuration.
+  The function takes the RestApiOriginProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `connectionAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:connection-attempts` |
+| `connectionTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:connection-timeout` |
+| `customHeaders` | java.util.Map | [[cdk.support/lookup-entry]] | `:custom-headers` |
+| `keepaliveTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:keepalive-timeout` |
+| `originId` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-id` |
+| `originPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-path` |
+| `originShieldEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:origin-shield-enabled` |
+| `originShieldRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-shield-region` |
+| `readTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:read-timeout` |
+"
+  [^RestApiOriginProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-attempts)]
+    (. builder connectionAttempts data))
+  (when-let [data (lookup-entry config id :connection-timeout)]
+    (. builder connectionTimeout data))
+  (when-let [data (lookup-entry config id :custom-headers)]
+    (. builder customHeaders data))
+  (when-let [data (lookup-entry config id :keepalive-timeout)]
+    (. builder keepaliveTimeout data))
+  (when-let [data (lookup-entry config id :origin-id)]
+    (. builder originId data))
+  (when-let [data (lookup-entry config id :origin-path)]
+    (. builder originPath data))
+  (when-let [data (lookup-entry config id :origin-shield-enabled)]
+    (. builder originShieldEnabled data))
+  (when-let [data (lookup-entry config id :origin-shield-region)]
+    (. builder originShieldRegion data))
+  (when-let [data (lookup-entry config id :read-timeout)]
+    (. builder readTimeout data))
+  (.build builder))
+
+
+(defn build-s3-origin-builder
+  "The build-s3-origin-builder function updates a S3Origin$Builder instance using the provided configuration.
+  The function takes the S3Origin$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -421,31 +454,34 @@ S3Origin$Builder using the provided configuration.  Each field is set as follows
 | `originId` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-id` |
 | `originPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-path` |
 | `originShieldEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:origin-shield-enabled` |
-| `originShieldRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-shield-region` |"
-  [stack id config ^software.amazon.awscdk.services.s3.IBucket bucket]
-  (let [builder (S3Origin$Builder/create ^software.amazon.awscdk.services.s3.IBucket bucket)]
-    (when-let [data (lookup-entry config id :connection-attempts)]
-      (. builder connectionAttempts data))
-    (when-let [data (lookup-entry config id :connection-timeout)]
-      (. builder connectionTimeout data))
-    (when-let [data (lookup-entry config id :custom-headers)]
-      (. builder customHeaders data))
-    (when-let [data (lookup-entry config id :origin-access-identity)]
-      (. builder originAccessIdentity data))
-    (when-let [data (lookup-entry config id :origin-id)]
-      (. builder originId data))
-    (when-let [data (lookup-entry config id :origin-path)]
-      (. builder originPath data))
-    (when-let [data (lookup-entry config id :origin-shield-enabled)]
-      (. builder originShieldEnabled data))
-    (when-let [data (lookup-entry config id :origin-shield-region)]
-      (. builder originShieldRegion data))
-    (.build builder)))
+| `originShieldRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-shield-region` |
+"
+  [^S3Origin$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-attempts)]
+    (. builder connectionAttempts data))
+  (when-let [data (lookup-entry config id :connection-timeout)]
+    (. builder connectionTimeout data))
+  (when-let [data (lookup-entry config id :custom-headers)]
+    (. builder customHeaders data))
+  (when-let [data (lookup-entry config id :origin-access-identity)]
+    (. builder originAccessIdentity data))
+  (when-let [data (lookup-entry config id :origin-id)]
+    (. builder originId data))
+  (when-let [data (lookup-entry config id :origin-path)]
+    (. builder originPath data))
+  (when-let [data (lookup-entry config id :origin-shield-enabled)]
+    (. builder originShieldEnabled data))
+  (when-let [data (lookup-entry config id :origin-shield-region)]
+    (. builder originShieldRegion data))
+  (.build builder))
 
 
-(defn s3-origin-props-builder
-  "The s3-origin-props-builder function buildes out new instances of 
-S3OriginProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-s3-origin-props-builder
+  "The build-s3-origin-props-builder function updates a S3OriginProps$Builder instance using the provided configuration.
+  The function takes the S3OriginProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -456,23 +492,23 @@ S3OriginProps$Builder using the provided configuration.  Each field is set as fo
 | `originId` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-id` |
 | `originPath` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-path` |
 | `originShieldEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:origin-shield-enabled` |
-| `originShieldRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-shield-region` |"
-  [stack id config]
-  (let [builder (S3OriginProps$Builder.)]
-    (when-let [data (lookup-entry config id :connection-attempts)]
-      (. builder connectionAttempts data))
-    (when-let [data (lookup-entry config id :connection-timeout)]
-      (. builder connectionTimeout data))
-    (when-let [data (lookup-entry config id :custom-headers)]
-      (. builder customHeaders data))
-    (when-let [data (lookup-entry config id :origin-access-identity)]
-      (. builder originAccessIdentity data))
-    (when-let [data (lookup-entry config id :origin-id)]
-      (. builder originId data))
-    (when-let [data (lookup-entry config id :origin-path)]
-      (. builder originPath data))
-    (when-let [data (lookup-entry config id :origin-shield-enabled)]
-      (. builder originShieldEnabled data))
-    (when-let [data (lookup-entry config id :origin-shield-region)]
-      (. builder originShieldRegion data))
-    (.build builder)))
+| `originShieldRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin-shield-region` |
+"
+  [^S3OriginProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-attempts)]
+    (. builder connectionAttempts data))
+  (when-let [data (lookup-entry config id :connection-timeout)]
+    (. builder connectionTimeout data))
+  (when-let [data (lookup-entry config id :custom-headers)]
+    (. builder customHeaders data))
+  (when-let [data (lookup-entry config id :origin-access-identity)]
+    (. builder originAccessIdentity data))
+  (when-let [data (lookup-entry config id :origin-id)]
+    (. builder originId data))
+  (when-let [data (lookup-entry config id :origin-path)]
+    (. builder originPath data))
+  (when-let [data (lookup-entry config id :origin-shield-enabled)]
+    (. builder originShieldEnabled data))
+  (when-let [data (lookup-entry config id :origin-shield-region)]
+    (. builder originShieldRegion data))
+  (.build builder))

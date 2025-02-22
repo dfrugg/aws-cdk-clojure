@@ -41,49 +41,58 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :ssl data) LoadBalancingProtocol/SSL)))
 
 
-(defn cfn-load-balancer-access-logging-policy-property-builder
-  "The cfn-load-balancer-access-logging-policy-property-builder function buildes out new instances of 
-CfnLoadBalancer$AccessLoggingPolicyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-load-balancer-access-logging-policy-property-builder
+  "The build-cfn-load-balancer-access-logging-policy-property-builder function updates a CfnLoadBalancer$AccessLoggingPolicyProperty$Builder instance using the provided configuration.
+  The function takes the CfnLoadBalancer$AccessLoggingPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `emitInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:emit-interval` |
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `s3BucketName` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-bucket-name` |
-| `s3BucketPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-bucket-prefix` |"
-  [stack id config]
-  (let [builder (CfnLoadBalancer$AccessLoggingPolicyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :emit-interval)]
-      (. builder emitInterval data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :s3-bucket-name)]
-      (. builder s3BucketName data))
-    (when-let [data (lookup-entry config id :s3-bucket-prefix)]
-      (. builder s3BucketPrefix data))
-    (.build builder)))
+| `s3BucketPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-bucket-prefix` |
+"
+  [^CfnLoadBalancer$AccessLoggingPolicyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :emit-interval)]
+    (. builder emitInterval data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :s3-bucket-name)]
+    (. builder s3BucketName data))
+  (when-let [data (lookup-entry config id :s3-bucket-prefix)]
+    (. builder s3BucketPrefix data))
+  (.build builder))
 
 
-(defn cfn-load-balancer-app-cookie-stickiness-policy-property-builder
-  "The cfn-load-balancer-app-cookie-stickiness-policy-property-builder function buildes out new instances of 
-CfnLoadBalancer$AppCookieStickinessPolicyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-load-balancer-app-cookie-stickiness-policy-property-builder
+  "The build-cfn-load-balancer-app-cookie-stickiness-policy-property-builder function updates a CfnLoadBalancer$AppCookieStickinessPolicyProperty$Builder instance using the provided configuration.
+  The function takes the CfnLoadBalancer$AppCookieStickinessPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `cookieName` | java.lang.String | [[cdk.support/lookup-entry]] | `:cookie-name` |
-| `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |"
-  [stack id config]
-  (let [builder (CfnLoadBalancer$AppCookieStickinessPolicyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :cookie-name)]
-      (. builder cookieName data))
-    (when-let [data (lookup-entry config id :policy-name)]
-      (. builder policyName data))
-    (.build builder)))
+| `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
+"
+  [^CfnLoadBalancer$AppCookieStickinessPolicyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :cookie-name)]
+    (. builder cookieName data))
+  (when-let [data (lookup-entry config id :policy-name)]
+    (. builder policyName data))
+  (.build builder))
 
 
-(defn cfn-load-balancer-builder
-  "The cfn-load-balancer-builder function buildes out new instances of 
-CfnLoadBalancer$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-load-balancer-builder
+  "The build-cfn-load-balancer-builder function updates a CfnLoadBalancer$Builder instance using the provided configuration.
+  The function takes the CfnLoadBalancer$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -102,78 +111,87 @@ CfnLoadBalancer$Builder using the provided configuration.  Each field is set as 
 | `scheme` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheme` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
 | `subnets` | java.util.List | [[cdk.support/lookup-entry]] | `:subnets` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnLoadBalancer$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :access-logging-policy)]
-      (. builder accessLoggingPolicy data))
-    (when-let [data (lookup-entry config id :app-cookie-stickiness-policy)]
-      (. builder appCookieStickinessPolicy data))
-    (when-let [data (lookup-entry config id :availability-zones)]
-      (. builder availabilityZones data))
-    (when-let [data (lookup-entry config id :connection-draining-policy)]
-      (. builder connectionDrainingPolicy data))
-    (when-let [data (lookup-entry config id :connection-settings)]
-      (. builder connectionSettings data))
-    (when-let [data (lookup-entry config id :cross-zone)]
-      (. builder crossZone data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :instances)]
-      (. builder instances data))
-    (when-let [data (lookup-entry config id :lb-cookie-stickiness-policy)]
-      (. builder lbCookieStickinessPolicy data))
-    (when-let [data (lookup-entry config id :listeners)]
-      (. builder listeners data))
-    (when-let [data (lookup-entry config id :load-balancer-name)]
-      (. builder loadBalancerName data))
-    (when-let [data (lookup-entry config id :policies)]
-      (. builder policies data))
-    (when-let [data (lookup-entry config id :scheme)]
-      (. builder scheme data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :subnets)]
-      (. builder subnets data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnLoadBalancer$Builder builder id config]
+  (when-let [data (lookup-entry config id :access-logging-policy)]
+    (. builder accessLoggingPolicy data))
+  (when-let [data (lookup-entry config id :app-cookie-stickiness-policy)]
+    (. builder appCookieStickinessPolicy data))
+  (when-let [data (lookup-entry config id :availability-zones)]
+    (. builder availabilityZones data))
+  (when-let [data (lookup-entry config id :connection-draining-policy)]
+    (. builder connectionDrainingPolicy data))
+  (when-let [data (lookup-entry config id :connection-settings)]
+    (. builder connectionSettings data))
+  (when-let [data (lookup-entry config id :cross-zone)]
+    (. builder crossZone data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :instances)]
+    (. builder instances data))
+  (when-let [data (lookup-entry config id :lb-cookie-stickiness-policy)]
+    (. builder lbCookieStickinessPolicy data))
+  (when-let [data (lookup-entry config id :listeners)]
+    (. builder listeners data))
+  (when-let [data (lookup-entry config id :load-balancer-name)]
+    (. builder loadBalancerName data))
+  (when-let [data (lookup-entry config id :policies)]
+    (. builder policies data))
+  (when-let [data (lookup-entry config id :scheme)]
+    (. builder scheme data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :subnets)]
+    (. builder subnets data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-load-balancer-connection-draining-policy-property-builder
-  "The cfn-load-balancer-connection-draining-policy-property-builder function buildes out new instances of 
-CfnLoadBalancer$ConnectionDrainingPolicyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-load-balancer-connection-draining-policy-property-builder
+  "The build-cfn-load-balancer-connection-draining-policy-property-builder function updates a CfnLoadBalancer$ConnectionDrainingPolicyProperty$Builder instance using the provided configuration.
+  The function takes the CfnLoadBalancer$ConnectionDrainingPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
-| `timeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (CfnLoadBalancer$ConnectionDrainingPolicyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^CfnLoadBalancer$ConnectionDrainingPolicyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn cfn-load-balancer-connection-settings-property-builder
-  "The cfn-load-balancer-connection-settings-property-builder function buildes out new instances of 
-CfnLoadBalancer$ConnectionSettingsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-load-balancer-connection-settings-property-builder
+  "The build-cfn-load-balancer-connection-settings-property-builder function updates a CfnLoadBalancer$ConnectionSettingsProperty$Builder instance using the provided configuration.
+  The function takes the CfnLoadBalancer$ConnectionSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `idleTimeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:idle-timeout` |"
-  [stack id config]
-  (let [builder (CfnLoadBalancer$ConnectionSettingsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :idle-timeout)]
-      (. builder idleTimeout data))
-    (.build builder)))
+| `idleTimeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:idle-timeout` |
+"
+  [^CfnLoadBalancer$ConnectionSettingsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :idle-timeout)]
+    (. builder idleTimeout data))
+  (.build builder))
 
 
-(defn cfn-load-balancer-health-check-property-builder
-  "The cfn-load-balancer-health-check-property-builder function buildes out new instances of 
-CfnLoadBalancer$HealthCheckProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-load-balancer-health-check-property-builder
+  "The build-cfn-load-balancer-health-check-property-builder function updates a CfnLoadBalancer$HealthCheckProperty$Builder instance using the provided configuration.
+  The function takes the CfnLoadBalancer$HealthCheckProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -181,42 +199,48 @@ CfnLoadBalancer$HealthCheckProperty$Builder using the provided configuration.  E
 | `interval` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval` |
 | `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |
 | `timeout` | java.lang.String | [[cdk.support/lookup-entry]] | `:timeout` |
-| `unhealthyThreshold` | java.lang.String | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |"
-  [stack id config]
-  (let [builder (CfnLoadBalancer$HealthCheckProperty$Builder.)]
-    (when-let [data (lookup-entry config id :healthy-threshold)]
-      (. builder healthyThreshold data))
-    (when-let [data (lookup-entry config id :interval)]
-      (. builder interval data))
-    (when-let [data (lookup-entry config id :target)]
-      (. builder target data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :unhealthy-threshold)]
-      (. builder unhealthyThreshold data))
-    (.build builder)))
+| `unhealthyThreshold` | java.lang.String | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |
+"
+  [^CfnLoadBalancer$HealthCheckProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :healthy-threshold)]
+    (. builder healthyThreshold data))
+  (when-let [data (lookup-entry config id :interval)]
+    (. builder interval data))
+  (when-let [data (lookup-entry config id :target)]
+    (. builder target data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :unhealthy-threshold)]
+    (. builder unhealthyThreshold data))
+  (.build builder))
 
 
-(defn cfn-load-balancer-lb-cookie-stickiness-policy-property-builder
-  "The cfn-load-balancer-lb-cookie-stickiness-policy-property-builder function buildes out new instances of 
-CfnLoadBalancer$LBCookieStickinessPolicyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-load-balancer-lb-cookie-stickiness-policy-property-builder
+  "The build-cfn-load-balancer-lb-cookie-stickiness-policy-property-builder function updates a CfnLoadBalancer$LBCookieStickinessPolicyProperty$Builder instance using the provided configuration.
+  The function takes the CfnLoadBalancer$LBCookieStickinessPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `cookieExpirationPeriod` | java.lang.String | [[cdk.support/lookup-entry]] | `:cookie-expiration-period` |
-| `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |"
-  [stack id config]
-  (let [builder (CfnLoadBalancer$LBCookieStickinessPolicyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :cookie-expiration-period)]
-      (. builder cookieExpirationPeriod data))
-    (when-let [data (lookup-entry config id :policy-name)]
-      (. builder policyName data))
-    (.build builder)))
+| `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
+"
+  [^CfnLoadBalancer$LBCookieStickinessPolicyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :cookie-expiration-period)]
+    (. builder cookieExpirationPeriod data))
+  (when-let [data (lookup-entry config id :policy-name)]
+    (. builder policyName data))
+  (.build builder))
 
 
-(defn cfn-load-balancer-listeners-property-builder
-  "The cfn-load-balancer-listeners-property-builder function buildes out new instances of 
-CfnLoadBalancer$ListenersProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-load-balancer-listeners-property-builder
+  "The build-cfn-load-balancer-listeners-property-builder function updates a CfnLoadBalancer$ListenersProperty$Builder instance using the provided configuration.
+  The function takes the CfnLoadBalancer$ListenersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -225,27 +249,30 @@ CfnLoadBalancer$ListenersProperty$Builder using the provided configuration.  Eac
 | `loadBalancerPort` | java.lang.String | [[cdk.support/lookup-entry]] | `:load-balancer-port` |
 | `policyNames` | java.util.List | [[cdk.support/lookup-entry]] | `:policy-names` |
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
-| `sslCertificateId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ssl-certificate-id` |"
-  [stack id config]
-  (let [builder (CfnLoadBalancer$ListenersProperty$Builder.)]
-    (when-let [data (lookup-entry config id :instance-port)]
-      (. builder instancePort data))
-    (when-let [data (lookup-entry config id :instance-protocol)]
-      (. builder instanceProtocol data))
-    (when-let [data (lookup-entry config id :load-balancer-port)]
-      (. builder loadBalancerPort data))
-    (when-let [data (lookup-entry config id :policy-names)]
-      (. builder policyNames data))
-    (when-let [data (lookup-entry config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :ssl-certificate-id)]
-      (. builder sslCertificateId data))
-    (.build builder)))
+| `sslCertificateId` | java.lang.String | [[cdk.support/lookup-entry]] | `:ssl-certificate-id` |
+"
+  [^CfnLoadBalancer$ListenersProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :instance-port)]
+    (. builder instancePort data))
+  (when-let [data (lookup-entry config id :instance-protocol)]
+    (. builder instanceProtocol data))
+  (when-let [data (lookup-entry config id :load-balancer-port)]
+    (. builder loadBalancerPort data))
+  (when-let [data (lookup-entry config id :policy-names)]
+    (. builder policyNames data))
+  (when-let [data (lookup-entry config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :ssl-certificate-id)]
+    (. builder sslCertificateId data))
+  (.build builder))
 
 
-(defn cfn-load-balancer-policies-property-builder
-  "The cfn-load-balancer-policies-property-builder function buildes out new instances of 
-CfnLoadBalancer$PoliciesProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-load-balancer-policies-property-builder
+  "The build-cfn-load-balancer-policies-property-builder function updates a CfnLoadBalancer$PoliciesProperty$Builder instance using the provided configuration.
+  The function takes the CfnLoadBalancer$PoliciesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -253,25 +280,28 @@ CfnLoadBalancer$PoliciesProperty$Builder using the provided configuration.  Each
 | `instancePorts` | java.util.List | [[cdk.support/lookup-entry]] | `:instance-ports` |
 | `loadBalancerPorts` | java.util.List | [[cdk.support/lookup-entry]] | `:load-balancer-ports` |
 | `policyName` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-name` |
-| `policyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-type` |"
-  [stack id config]
-  (let [builder (CfnLoadBalancer$PoliciesProperty$Builder.)]
-    (when-let [data (lookup-entry config id :attributes)]
-      (. builder attributes data))
-    (when-let [data (lookup-entry config id :instance-ports)]
-      (. builder instancePorts data))
-    (when-let [data (lookup-entry config id :load-balancer-ports)]
-      (. builder loadBalancerPorts data))
-    (when-let [data (lookup-entry config id :policy-name)]
-      (. builder policyName data))
-    (when-let [data (lookup-entry config id :policy-type)]
-      (. builder policyType data))
-    (.build builder)))
+| `policyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:policy-type` |
+"
+  [^CfnLoadBalancer$PoliciesProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :attributes)]
+    (. builder attributes data))
+  (when-let [data (lookup-entry config id :instance-ports)]
+    (. builder instancePorts data))
+  (when-let [data (lookup-entry config id :load-balancer-ports)]
+    (. builder loadBalancerPorts data))
+  (when-let [data (lookup-entry config id :policy-name)]
+    (. builder policyName data))
+  (when-let [data (lookup-entry config id :policy-type)]
+    (. builder policyType data))
+  (.build builder))
 
 
-(defn cfn-load-balancer-props-builder
-  "The cfn-load-balancer-props-builder function buildes out new instances of 
-CfnLoadBalancerProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-load-balancer-props-builder
+  "The build-cfn-load-balancer-props-builder function updates a CfnLoadBalancerProps$Builder instance using the provided configuration.
+  The function takes the CfnLoadBalancerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -290,47 +320,50 @@ CfnLoadBalancerProps$Builder using the provided configuration.  Each field is se
 | `scheme` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheme` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
 | `subnets` | java.util.List | [[cdk.support/lookup-entry]] | `:subnets` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnLoadBalancerProps$Builder.)]
-    (when-let [data (lookup-entry config id :access-logging-policy)]
-      (. builder accessLoggingPolicy data))
-    (when-let [data (lookup-entry config id :app-cookie-stickiness-policy)]
-      (. builder appCookieStickinessPolicy data))
-    (when-let [data (lookup-entry config id :availability-zones)]
-      (. builder availabilityZones data))
-    (when-let [data (lookup-entry config id :connection-draining-policy)]
-      (. builder connectionDrainingPolicy data))
-    (when-let [data (lookup-entry config id :connection-settings)]
-      (. builder connectionSettings data))
-    (when-let [data (lookup-entry config id :cross-zone)]
-      (. builder crossZone data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :instances)]
-      (. builder instances data))
-    (when-let [data (lookup-entry config id :lb-cookie-stickiness-policy)]
-      (. builder lbCookieStickinessPolicy data))
-    (when-let [data (lookup-entry config id :listeners)]
-      (. builder listeners data))
-    (when-let [data (lookup-entry config id :load-balancer-name)]
-      (. builder loadBalancerName data))
-    (when-let [data (lookup-entry config id :policies)]
-      (. builder policies data))
-    (when-let [data (lookup-entry config id :scheme)]
-      (. builder scheme data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :subnets)]
-      (. builder subnets data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnLoadBalancerProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :access-logging-policy)]
+    (. builder accessLoggingPolicy data))
+  (when-let [data (lookup-entry config id :app-cookie-stickiness-policy)]
+    (. builder appCookieStickinessPolicy data))
+  (when-let [data (lookup-entry config id :availability-zones)]
+    (. builder availabilityZones data))
+  (when-let [data (lookup-entry config id :connection-draining-policy)]
+    (. builder connectionDrainingPolicy data))
+  (when-let [data (lookup-entry config id :connection-settings)]
+    (. builder connectionSettings data))
+  (when-let [data (lookup-entry config id :cross-zone)]
+    (. builder crossZone data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :instances)]
+    (. builder instances data))
+  (when-let [data (lookup-entry config id :lb-cookie-stickiness-policy)]
+    (. builder lbCookieStickinessPolicy data))
+  (when-let [data (lookup-entry config id :listeners)]
+    (. builder listeners data))
+  (when-let [data (lookup-entry config id :load-balancer-name)]
+    (. builder loadBalancerName data))
+  (when-let [data (lookup-entry config id :policies)]
+    (. builder policies data))
+  (when-let [data (lookup-entry config id :scheme)]
+    (. builder scheme data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :subnets)]
+    (. builder subnets data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn health-check-builder
-  "The health-check-builder function buildes out new instances of 
-HealthCheck$Builder using the provided configuration.  Each field is set as follows:
+(defn build-health-check-builder
+  "The build-health-check-builder function updates a HealthCheck$Builder instance using the provided configuration.
+  The function takes the HealthCheck$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -340,29 +373,32 @@ HealthCheck$Builder using the provided configuration.  Each field is set as foll
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | software.amazon.awscdk.services.elasticloadbalancing.LoadBalancingProtocol | [[cdk.api.services.elasticloadbalancing/load-balancing-protocol]] | `:protocol` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `unhealthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |"
-  [stack id config]
-  (let [builder (HealthCheck$Builder.)]
-    (when-let [data (lookup-entry config id :healthy-threshold)]
-      (. builder healthyThreshold data))
-    (when-let [data (lookup-entry config id :interval)]
-      (. builder interval data))
-    (when-let [data (lookup-entry config id :path)]
-      (. builder path data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (load-balancing-protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :unhealthy-threshold)]
-      (. builder unhealthyThreshold data))
-    (.build builder)))
+| `unhealthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |
+"
+  [^HealthCheck$Builder builder id config]
+  (when-let [data (lookup-entry config id :healthy-threshold)]
+    (. builder healthyThreshold data))
+  (when-let [data (lookup-entry config id :interval)]
+    (. builder interval data))
+  (when-let [data (lookup-entry config id :path)]
+    (. builder path data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (load-balancing-protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :unhealthy-threshold)]
+    (. builder unhealthyThreshold data))
+  (.build builder))
 
 
-(defn load-balancer-builder
-  "The load-balancer-builder function buildes out new instances of 
-LoadBalancer$Builder using the provided configuration.  Each field is set as follows:
+(defn build-load-balancer-builder
+  "The build-load-balancer-builder function updates a LoadBalancer$Builder instance using the provided configuration.
+  The function takes the LoadBalancer$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -373,31 +409,34 @@ LoadBalancer$Builder using the provided configuration.  Each field is set as fol
 | `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
 | `subnetSelection` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:subnet-selection` |
 | `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (LoadBalancer$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :access-logging-policy)]
-      (. builder accessLoggingPolicy data))
-    (when-let [data (lookup-entry config id :cross-zone)]
-      (. builder crossZone data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :internet-facing)]
-      (. builder internetFacing data))
-    (when-let [data (lookup-entry config id :listeners)]
-      (. builder listeners data))
-    (when-let [data (lookup-entry config id :subnet-selection)]
-      (. builder subnetSelection data))
-    (when-let [data (lookup-entry config id :targets)]
-      (. builder targets data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^LoadBalancer$Builder builder id config]
+  (when-let [data (lookup-entry config id :access-logging-policy)]
+    (. builder accessLoggingPolicy data))
+  (when-let [data (lookup-entry config id :cross-zone)]
+    (. builder crossZone data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :internet-facing)]
+    (. builder internetFacing data))
+  (when-let [data (lookup-entry config id :listeners)]
+    (. builder listeners data))
+  (when-let [data (lookup-entry config id :subnet-selection)]
+    (. builder subnetSelection data))
+  (when-let [data (lookup-entry config id :targets)]
+    (. builder targets data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))
 
 
-(defn load-balancer-listener-builder
-  "The load-balancer-listener-builder function buildes out new instances of 
-LoadBalancerListener$Builder using the provided configuration.  Each field is set as follows:
+(defn build-load-balancer-listener-builder
+  "The build-load-balancer-listener-builder function updates a LoadBalancerListener$Builder instance using the provided configuration.
+  The function takes the LoadBalancerListener$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -407,29 +446,32 @@ LoadBalancerListener$Builder using the provided configuration.  Each field is se
 | `internalPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:internal-port` |
 | `internalProtocol` | software.amazon.awscdk.services.elasticloadbalancing.LoadBalancingProtocol | [[cdk.api.services.elasticloadbalancing/load-balancing-protocol]] | `:internal-protocol` |
 | `policyNames` | java.util.List | [[cdk.support/lookup-entry]] | `:policy-names` |
-| `sslCertificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:ssl-certificate-arn` |"
-  [stack id config]
-  (let [builder (LoadBalancerListener$Builder.)]
-    (when-let [data (lookup-entry config id :allow-connections-from)]
-      (. builder allowConnectionsFrom data))
-    (when-let [data (lookup-entry config id :external-port)]
-      (. builder externalPort data))
-    (when-let [data (load-balancing-protocol config id :external-protocol)]
-      (. builder externalProtocol data))
-    (when-let [data (lookup-entry config id :internal-port)]
-      (. builder internalPort data))
-    (when-let [data (load-balancing-protocol config id :internal-protocol)]
-      (. builder internalProtocol data))
-    (when-let [data (lookup-entry config id :policy-names)]
-      (. builder policyNames data))
-    (when-let [data (lookup-entry config id :ssl-certificate-arn)]
-      (. builder sslCertificateArn data))
-    (.build builder)))
+| `sslCertificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:ssl-certificate-arn` |
+"
+  [^LoadBalancerListener$Builder builder id config]
+  (when-let [data (lookup-entry config id :allow-connections-from)]
+    (. builder allowConnectionsFrom data))
+  (when-let [data (lookup-entry config id :external-port)]
+    (. builder externalPort data))
+  (when-let [data (load-balancing-protocol config id :external-protocol)]
+    (. builder externalProtocol data))
+  (when-let [data (lookup-entry config id :internal-port)]
+    (. builder internalPort data))
+  (when-let [data (load-balancing-protocol config id :internal-protocol)]
+    (. builder internalProtocol data))
+  (when-let [data (lookup-entry config id :policy-names)]
+    (. builder policyNames data))
+  (when-let [data (lookup-entry config id :ssl-certificate-arn)]
+    (. builder sslCertificateArn data))
+  (.build builder))
 
 
-(defn load-balancer-props-builder
-  "The load-balancer-props-builder function buildes out new instances of 
-LoadBalancerProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-load-balancer-props-builder
+  "The build-load-balancer-props-builder function updates a LoadBalancerProps$Builder instance using the provided configuration.
+  The function takes the LoadBalancerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -440,23 +482,23 @@ LoadBalancerProps$Builder using the provided configuration.  Each field is set a
 | `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
 | `subnetSelection` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:subnet-selection` |
 | `targets` | java.util.List | [[cdk.support/lookup-entry]] | `:targets` |
-| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |"
-  [stack id config]
-  (let [builder (LoadBalancerProps$Builder.)]
-    (when-let [data (lookup-entry config id :access-logging-policy)]
-      (. builder accessLoggingPolicy data))
-    (when-let [data (lookup-entry config id :cross-zone)]
-      (. builder crossZone data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :internet-facing)]
-      (. builder internetFacing data))
-    (when-let [data (lookup-entry config id :listeners)]
-      (. builder listeners data))
-    (when-let [data (lookup-entry config id :subnet-selection)]
-      (. builder subnetSelection data))
-    (when-let [data (lookup-entry config id :targets)]
-      (. builder targets data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (.build builder)))
+| `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
+"
+  [^LoadBalancerProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :access-logging-policy)]
+    (. builder accessLoggingPolicy data))
+  (when-let [data (lookup-entry config id :cross-zone)]
+    (. builder crossZone data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :internet-facing)]
+    (. builder internetFacing data))
+  (when-let [data (lookup-entry config id :listeners)]
+    (. builder listeners data))
+  (when-let [data (lookup-entry config id :subnet-selection)]
+    (. builder subnetSelection data))
+  (when-let [data (lookup-entry config id :targets)]
+    (. builder targets data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (.build builder))

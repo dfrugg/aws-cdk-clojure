@@ -21,43 +21,52 @@
                                                       CfnSimulationApplicationVersionProps$Builder]))
 
 
-(defn cfn-fleet-builder
-  "The cfn-fleet-builder function buildes out new instances of 
-CfnFleet$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-fleet-builder
+  "The build-cfn-fleet-builder function updates a CfnFleet$Builder instance using the provided configuration.
+  The function takes the CfnFleet$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnFleet$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnFleet$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-fleet-props-builder
-  "The cfn-fleet-props-builder function buildes out new instances of 
-CfnFleetProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-fleet-props-builder
+  "The build-cfn-fleet-props-builder function updates a CfnFleetProps$Builder instance using the provided configuration.
+  The function takes the CfnFleetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnFleetProps$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnFleetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-robot-application-builder
-  "The cfn-robot-application-builder function buildes out new instances of 
-CfnRobotApplication$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-robot-application-builder
+  "The build-cfn-robot-application-builder function updates a CfnRobotApplication$Builder instance using the provided configuration.
+  The function takes the CfnRobotApplication$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -66,27 +75,30 @@ CfnRobotApplication$Builder using the provided configuration.  Each field is set
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `robotSoftwareSuite` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:robot-software-suite` |
 | `sources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sources` |
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnRobotApplication$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :current-revision-id)]
-      (. builder currentRevisionId data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :robot-software-suite)]
-      (. builder robotSoftwareSuite data))
-    (when-let [data (lookup-entry config id :sources)]
-      (. builder sources data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnRobotApplication$Builder builder id config]
+  (when-let [data (lookup-entry config id :current-revision-id)]
+    (. builder currentRevisionId data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :robot-software-suite)]
+    (. builder robotSoftwareSuite data))
+  (when-let [data (lookup-entry config id :sources)]
+    (. builder sources data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-robot-application-props-builder
-  "The cfn-robot-application-props-builder function buildes out new instances of 
-CfnRobotApplicationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-robot-application-props-builder
+  "The build-cfn-robot-application-props-builder function updates a CfnRobotApplicationProps$Builder instance using the provided configuration.
+  The function takes the CfnRobotApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -95,98 +107,113 @@ CfnRobotApplicationProps$Builder using the provided configuration.  Each field i
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `robotSoftwareSuite` | software.amazon.awscdk.services.robomaker.CfnRobotApplication$RobotSoftwareSuiteProperty | [[cdk.support/lookup-entry]] | `:robot-software-suite` |
 | `sources` | java.util.List | [[cdk.support/lookup-entry]] | `:sources` |
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnRobotApplicationProps$Builder.)]
-    (when-let [data (lookup-entry config id :current-revision-id)]
-      (. builder currentRevisionId data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :robot-software-suite)]
-      (. builder robotSoftwareSuite data))
-    (when-let [data (lookup-entry config id :sources)]
-      (. builder sources data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnRobotApplicationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :current-revision-id)]
+    (. builder currentRevisionId data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :robot-software-suite)]
+    (. builder robotSoftwareSuite data))
+  (when-let [data (lookup-entry config id :sources)]
+    (. builder sources data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-robot-application-robot-software-suite-property-builder
-  "The cfn-robot-application-robot-software-suite-property-builder function buildes out new instances of 
-CfnRobotApplication$RobotSoftwareSuiteProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-robot-application-robot-software-suite-property-builder
+  "The build-cfn-robot-application-robot-software-suite-property-builder function updates a CfnRobotApplication$RobotSoftwareSuiteProperty$Builder instance using the provided configuration.
+  The function takes the CfnRobotApplication$RobotSoftwareSuiteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |"
-  [stack id config]
-  (let [builder (CfnRobotApplication$RobotSoftwareSuiteProperty$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :version)]
-      (. builder version data))
-    (.build builder)))
+| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
+"
+  [^CfnRobotApplication$RobotSoftwareSuiteProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :version)]
+    (. builder version data))
+  (.build builder))
 
 
-(defn cfn-robot-application-source-config-property-builder
-  "The cfn-robot-application-source-config-property-builder function buildes out new instances of 
-CfnRobotApplication$SourceConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-robot-application-source-config-property-builder
+  "The build-cfn-robot-application-source-config-property-builder function updates a CfnRobotApplication$SourceConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnRobotApplication$SourceConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `architecture` | java.lang.String | [[cdk.support/lookup-entry]] | `:architecture` |
 | `s3Bucket` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-bucket` |
-| `s3Key` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-key` |"
-  [stack id config]
-  (let [builder (CfnRobotApplication$SourceConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :architecture)]
-      (. builder architecture data))
-    (when-let [data (lookup-entry config id :s3-bucket)]
-      (. builder s3Bucket data))
-    (when-let [data (lookup-entry config id :s3-key)]
-      (. builder s3Key data))
-    (.build builder)))
+| `s3Key` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-key` |
+"
+  [^CfnRobotApplication$SourceConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :architecture)]
+    (. builder architecture data))
+  (when-let [data (lookup-entry config id :s3-bucket)]
+    (. builder s3Bucket data))
+  (when-let [data (lookup-entry config id :s3-key)]
+    (. builder s3Key data))
+  (.build builder))
 
 
-(defn cfn-robot-application-version-builder
-  "The cfn-robot-application-version-builder function buildes out new instances of 
-CfnRobotApplicationVersion$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-robot-application-version-builder
+  "The build-cfn-robot-application-version-builder function updates a CfnRobotApplicationVersion$Builder instance using the provided configuration.
+  The function takes the CfnRobotApplicationVersion$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `application` | java.lang.String | [[cdk.support/lookup-entry]] | `:application` |
-| `currentRevisionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:current-revision-id` |"
-  [stack id config]
-  (let [builder (CfnRobotApplicationVersion$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application)]
-      (. builder application data))
-    (when-let [data (lookup-entry config id :current-revision-id)]
-      (. builder currentRevisionId data))
-    (.build builder)))
-
-
-(defn cfn-robot-application-version-props-builder
-  "The cfn-robot-application-version-props-builder function buildes out new instances of 
-CfnRobotApplicationVersionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `application` | java.lang.String | [[cdk.support/lookup-entry]] | `:application` |
-| `currentRevisionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:current-revision-id` |"
-  [stack id config]
-  (let [builder (CfnRobotApplicationVersionProps$Builder.)]
-    (when-let [data (lookup-entry config id :application)]
-      (. builder application data))
-    (when-let [data (lookup-entry config id :current-revision-id)]
-      (. builder currentRevisionId data))
-    (.build builder)))
+| `currentRevisionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:current-revision-id` |
+"
+  [^CfnRobotApplicationVersion$Builder builder id config]
+  (when-let [data (lookup-entry config id :application)]
+    (. builder application data))
+  (when-let [data (lookup-entry config id :current-revision-id)]
+    (. builder currentRevisionId data))
+  (.build builder))
 
 
-(defn cfn-robot-builder
-  "The cfn-robot-builder function buildes out new instances of 
-CfnRobot$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-robot-application-version-props-builder
+  "The build-cfn-robot-application-version-props-builder function updates a CfnRobotApplicationVersionProps$Builder instance using the provided configuration.
+  The function takes the CfnRobotApplicationVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `application` | java.lang.String | [[cdk.support/lookup-entry]] | `:application` |
+| `currentRevisionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:current-revision-id` |
+"
+  [^CfnRobotApplicationVersionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application)]
+    (. builder application data))
+  (when-let [data (lookup-entry config id :current-revision-id)]
+    (. builder currentRevisionId data))
+  (.build builder))
+
+
+(defn build-cfn-robot-builder
+  "The build-cfn-robot-builder function updates a CfnRobot$Builder instance using the provided configuration.
+  The function takes the CfnRobot$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -194,25 +221,28 @@ CfnRobot$Builder using the provided configuration.  Each field is set as follows
 | `fleet` | java.lang.String | [[cdk.support/lookup-entry]] | `:fleet` |
 | `greengrassGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:greengrass-group-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnRobot$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :architecture)]
-      (. builder architecture data))
-    (when-let [data (lookup-entry config id :fleet)]
-      (. builder fleet data))
-    (when-let [data (lookup-entry config id :greengrass-group-id)]
-      (. builder greengrassGroupId data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnRobot$Builder builder id config]
+  (when-let [data (lookup-entry config id :architecture)]
+    (. builder architecture data))
+  (when-let [data (lookup-entry config id :fleet)]
+    (. builder fleet data))
+  (when-let [data (lookup-entry config id :greengrass-group-id)]
+    (. builder greengrassGroupId data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-robot-props-builder
-  "The cfn-robot-props-builder function buildes out new instances of 
-CfnRobotProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-robot-props-builder
+  "The build-cfn-robot-props-builder function updates a CfnRobotProps$Builder instance using the provided configuration.
+  The function takes the CfnRobotProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -220,25 +250,28 @@ CfnRobotProps$Builder using the provided configuration.  Each field is set as fo
 | `fleet` | java.lang.String | [[cdk.support/lookup-entry]] | `:fleet` |
 | `greengrassGroupId` | java.lang.String | [[cdk.support/lookup-entry]] | `:greengrass-group-id` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnRobotProps$Builder.)]
-    (when-let [data (lookup-entry config id :architecture)]
-      (. builder architecture data))
-    (when-let [data (lookup-entry config id :fleet)]
-      (. builder fleet data))
-    (when-let [data (lookup-entry config id :greengrass-group-id)]
-      (. builder greengrassGroupId data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnRobotProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :architecture)]
+    (. builder architecture data))
+  (when-let [data (lookup-entry config id :fleet)]
+    (. builder fleet data))
+  (when-let [data (lookup-entry config id :greengrass-group-id)]
+    (. builder greengrassGroupId data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-simulation-application-builder
-  "The cfn-simulation-application-builder function buildes out new instances of 
-CfnSimulationApplication$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-simulation-application-builder
+  "The build-cfn-simulation-application-builder function updates a CfnSimulationApplication$Builder instance using the provided configuration.
+  The function takes the CfnSimulationApplication$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -249,31 +282,34 @@ CfnSimulationApplication$Builder using the provided configuration.  Each field i
 | `robotSoftwareSuite` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:robot-software-suite` |
 | `simulationSoftwareSuite` | software.amazon.awscdk.services.robomaker.CfnSimulationApplication$SimulationSoftwareSuiteProperty | [[cdk.support/lookup-entry]] | `:simulation-software-suite` |
 | `sources` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sources` |
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnSimulationApplication$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :current-revision-id)]
-      (. builder currentRevisionId data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :rendering-engine)]
-      (. builder renderingEngine data))
-    (when-let [data (lookup-entry config id :robot-software-suite)]
-      (. builder robotSoftwareSuite data))
-    (when-let [data (lookup-entry config id :simulation-software-suite)]
-      (. builder simulationSoftwareSuite data))
-    (when-let [data (lookup-entry config id :sources)]
-      (. builder sources data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnSimulationApplication$Builder builder id config]
+  (when-let [data (lookup-entry config id :current-revision-id)]
+    (. builder currentRevisionId data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :rendering-engine)]
+    (. builder renderingEngine data))
+  (when-let [data (lookup-entry config id :robot-software-suite)]
+    (. builder robotSoftwareSuite data))
+  (when-let [data (lookup-entry config id :simulation-software-suite)]
+    (. builder simulationSoftwareSuite data))
+  (when-let [data (lookup-entry config id :sources)]
+    (. builder sources data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-simulation-application-props-builder
-  "The cfn-simulation-application-props-builder function buildes out new instances of 
-CfnSimulationApplicationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-simulation-application-props-builder
+  "The build-cfn-simulation-application-props-builder function updates a CfnSimulationApplicationProps$Builder instance using the provided configuration.
+  The function takes the CfnSimulationApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -284,128 +320,146 @@ CfnSimulationApplicationProps$Builder using the provided configuration.  Each fi
 | `robotSoftwareSuite` | software.amazon.awscdk.services.robomaker.CfnSimulationApplication$RobotSoftwareSuiteProperty | [[cdk.support/lookup-entry]] | `:robot-software-suite` |
 | `simulationSoftwareSuite` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:simulation-software-suite` |
 | `sources` | java.util.List | [[cdk.support/lookup-entry]] | `:sources` |
-| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnSimulationApplicationProps$Builder.)]
-    (when-let [data (lookup-entry config id :current-revision-id)]
-      (. builder currentRevisionId data))
-    (when-let [data (lookup-entry config id :environment)]
-      (. builder environment data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :rendering-engine)]
-      (. builder renderingEngine data))
-    (when-let [data (lookup-entry config id :robot-software-suite)]
-      (. builder robotSoftwareSuite data))
-    (when-let [data (lookup-entry config id :simulation-software-suite)]
-      (. builder simulationSoftwareSuite data))
-    (when-let [data (lookup-entry config id :sources)]
-      (. builder sources data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.Map | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnSimulationApplicationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :current-revision-id)]
+    (. builder currentRevisionId data))
+  (when-let [data (lookup-entry config id :environment)]
+    (. builder environment data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :rendering-engine)]
+    (. builder renderingEngine data))
+  (when-let [data (lookup-entry config id :robot-software-suite)]
+    (. builder robotSoftwareSuite data))
+  (when-let [data (lookup-entry config id :simulation-software-suite)]
+    (. builder simulationSoftwareSuite data))
+  (when-let [data (lookup-entry config id :sources)]
+    (. builder sources data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-simulation-application-rendering-engine-property-builder
-  "The cfn-simulation-application-rendering-engine-property-builder function buildes out new instances of 
-CfnSimulationApplication$RenderingEngineProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-simulation-application-rendering-engine-property-builder
+  "The build-cfn-simulation-application-rendering-engine-property-builder function updates a CfnSimulationApplication$RenderingEngineProperty$Builder instance using the provided configuration.
+  The function takes the CfnSimulationApplication$RenderingEngineProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |"
-  [stack id config]
-  (let [builder (CfnSimulationApplication$RenderingEngineProperty$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :version)]
-      (. builder version data))
-    (.build builder)))
-
-
-(defn cfn-simulation-application-robot-software-suite-property-builder
-  "The cfn-simulation-application-robot-software-suite-property-builder function buildes out new instances of 
-CfnSimulationApplication$RobotSoftwareSuiteProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |"
-  [stack id config]
-  (let [builder (CfnSimulationApplication$RobotSoftwareSuiteProperty$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :version)]
-      (. builder version data))
-    (.build builder)))
+| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
+"
+  [^CfnSimulationApplication$RenderingEngineProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :version)]
+    (. builder version data))
+  (.build builder))
 
 
-(defn cfn-simulation-application-simulation-software-suite-property-builder
-  "The cfn-simulation-application-simulation-software-suite-property-builder function buildes out new instances of 
-CfnSimulationApplication$SimulationSoftwareSuiteProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-simulation-application-robot-software-suite-property-builder
+  "The build-cfn-simulation-application-robot-software-suite-property-builder function updates a CfnSimulationApplication$RobotSoftwareSuiteProperty$Builder instance using the provided configuration.
+  The function takes the CfnSimulationApplication$RobotSoftwareSuiteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |"
-  [stack id config]
-  (let [builder (CfnSimulationApplication$SimulationSoftwareSuiteProperty$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :version)]
-      (. builder version data))
-    (.build builder)))
+| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
+"
+  [^CfnSimulationApplication$RobotSoftwareSuiteProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :version)]
+    (. builder version data))
+  (.build builder))
 
 
-(defn cfn-simulation-application-source-config-property-builder
-  "The cfn-simulation-application-source-config-property-builder function buildes out new instances of 
-CfnSimulationApplication$SourceConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-simulation-application-simulation-software-suite-property-builder
+  "The build-cfn-simulation-application-simulation-software-suite-property-builder function updates a CfnSimulationApplication$SimulationSoftwareSuiteProperty$Builder instance using the provided configuration.
+  The function takes the CfnSimulationApplication$SimulationSoftwareSuiteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
+"
+  [^CfnSimulationApplication$SimulationSoftwareSuiteProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :version)]
+    (. builder version data))
+  (.build builder))
+
+
+(defn build-cfn-simulation-application-source-config-property-builder
+  "The build-cfn-simulation-application-source-config-property-builder function updates a CfnSimulationApplication$SourceConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnSimulationApplication$SourceConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `architecture` | java.lang.String | [[cdk.support/lookup-entry]] | `:architecture` |
 | `s3Bucket` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-bucket` |
-| `s3Key` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-key` |"
-  [stack id config]
-  (let [builder (CfnSimulationApplication$SourceConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :architecture)]
-      (. builder architecture data))
-    (when-let [data (lookup-entry config id :s3-bucket)]
-      (. builder s3Bucket data))
-    (when-let [data (lookup-entry config id :s3-key)]
-      (. builder s3Key data))
-    (.build builder)))
+| `s3Key` | java.lang.String | [[cdk.support/lookup-entry]] | `:s3-key` |
+"
+  [^CfnSimulationApplication$SourceConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :architecture)]
+    (. builder architecture data))
+  (when-let [data (lookup-entry config id :s3-bucket)]
+    (. builder s3Bucket data))
+  (when-let [data (lookup-entry config id :s3-key)]
+    (. builder s3Key data))
+  (.build builder))
 
 
-(defn cfn-simulation-application-version-builder
-  "The cfn-simulation-application-version-builder function buildes out new instances of 
-CfnSimulationApplicationVersion$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-simulation-application-version-builder
+  "The build-cfn-simulation-application-version-builder function updates a CfnSimulationApplicationVersion$Builder instance using the provided configuration.
+  The function takes the CfnSimulationApplicationVersion$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `application` | java.lang.String | [[cdk.support/lookup-entry]] | `:application` |
-| `currentRevisionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:current-revision-id` |"
-  [stack id config]
-  (let [builder (CfnSimulationApplicationVersion$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application)]
-      (. builder application data))
-    (when-let [data (lookup-entry config id :current-revision-id)]
-      (. builder currentRevisionId data))
-    (.build builder)))
-
-
-(defn cfn-simulation-application-version-props-builder
-  "The cfn-simulation-application-version-props-builder function buildes out new instances of 
-CfnSimulationApplicationVersionProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `application` | java.lang.String | [[cdk.support/lookup-entry]] | `:application` |
-| `currentRevisionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:current-revision-id` |"
-  [stack id config]
-  (let [builder (CfnSimulationApplicationVersionProps$Builder.)]
-    (when-let [data (lookup-entry config id :application)]
-      (. builder application data))
-    (when-let [data (lookup-entry config id :current-revision-id)]
-      (. builder currentRevisionId data))
-    (.build builder)))
+| `currentRevisionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:current-revision-id` |
+"
+  [^CfnSimulationApplicationVersion$Builder builder id config]
+  (when-let [data (lookup-entry config id :application)]
+    (. builder application data))
+  (when-let [data (lookup-entry config id :current-revision-id)]
+    (. builder currentRevisionId data))
+  (.build builder))
+
+
+(defn build-cfn-simulation-application-version-props-builder
+  "The build-cfn-simulation-application-version-props-builder function updates a CfnSimulationApplicationVersionProps$Builder instance using the provided configuration.
+  The function takes the CfnSimulationApplicationVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `application` | java.lang.String | [[cdk.support/lookup-entry]] | `:application` |
+| `currentRevisionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:current-revision-id` |
+"
+  [^CfnSimulationApplicationVersionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application)]
+    (. builder application data))
+  (when-let [data (lookup-entry config id :current-revision-id)]
+    (. builder currentRevisionId data))
+  (.build builder))

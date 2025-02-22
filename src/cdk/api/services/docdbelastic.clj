@@ -5,9 +5,12 @@
                                                          CfnClusterProps$Builder]))
 
 
-(defn cfn-cluster-builder
-  "The cfn-cluster-builder function buildes out new instances of 
-CfnCluster$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-cluster-builder
+  "The build-cfn-cluster-builder function updates a CfnCluster$Builder instance using the provided configuration.
+  The function takes the CfnCluster$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -24,43 +27,46 @@ CfnCluster$Builder using the provided configuration.  Each field is set as follo
 | `shardInstanceCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:shard-instance-count` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcSecurityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-security-group-ids` |"
-  [stack id config]
-  (let [builder (CfnCluster$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :admin-user-name)]
-      (. builder adminUserName data))
-    (when-let [data (lookup-entry config id :admin-user-password)]
-      (. builder adminUserPassword data))
-    (when-let [data (lookup-entry config id :auth-type)]
-      (. builder authType data))
-    (when-let [data (lookup-entry config id :backup-retention-period)]
-      (. builder backupRetentionPeriod data))
-    (when-let [data (lookup-entry config id :cluster-name)]
-      (. builder clusterName data))
-    (when-let [data (lookup-entry config id :kms-key-id)]
-      (. builder kmsKeyId data))
-    (when-let [data (lookup-entry config id :preferred-backup-window)]
-      (. builder preferredBackupWindow data))
-    (when-let [data (lookup-entry config id :preferred-maintenance-window)]
-      (. builder preferredMaintenanceWindow data))
-    (when-let [data (lookup-entry config id :shard-capacity)]
-      (. builder shardCapacity data))
-    (when-let [data (lookup-entry config id :shard-count)]
-      (. builder shardCount data))
-    (when-let [data (lookup-entry config id :shard-instance-count)]
-      (. builder shardInstanceCount data))
-    (when-let [data (lookup-entry config id :subnet-ids)]
-      (. builder subnetIds data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :vpc-security-group-ids)]
-      (. builder vpcSecurityGroupIds data))
-    (.build builder)))
+| `vpcSecurityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-security-group-ids` |
+"
+  [^CfnCluster$Builder builder id config]
+  (when-let [data (lookup-entry config id :admin-user-name)]
+    (. builder adminUserName data))
+  (when-let [data (lookup-entry config id :admin-user-password)]
+    (. builder adminUserPassword data))
+  (when-let [data (lookup-entry config id :auth-type)]
+    (. builder authType data))
+  (when-let [data (lookup-entry config id :backup-retention-period)]
+    (. builder backupRetentionPeriod data))
+  (when-let [data (lookup-entry config id :cluster-name)]
+    (. builder clusterName data))
+  (when-let [data (lookup-entry config id :kms-key-id)]
+    (. builder kmsKeyId data))
+  (when-let [data (lookup-entry config id :preferred-backup-window)]
+    (. builder preferredBackupWindow data))
+  (when-let [data (lookup-entry config id :preferred-maintenance-window)]
+    (. builder preferredMaintenanceWindow data))
+  (when-let [data (lookup-entry config id :shard-capacity)]
+    (. builder shardCapacity data))
+  (when-let [data (lookup-entry config id :shard-count)]
+    (. builder shardCount data))
+  (when-let [data (lookup-entry config id :shard-instance-count)]
+    (. builder shardInstanceCount data))
+  (when-let [data (lookup-entry config id :subnet-ids)]
+    (. builder subnetIds data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :vpc-security-group-ids)]
+    (. builder vpcSecurityGroupIds data))
+  (.build builder))
 
 
-(defn cfn-cluster-props-builder
-  "The cfn-cluster-props-builder function buildes out new instances of 
-CfnClusterProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-cluster-props-builder
+  "The build-cfn-cluster-props-builder function updates a CfnClusterProps$Builder instance using the provided configuration.
+  The function takes the CfnClusterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -77,35 +83,35 @@ CfnClusterProps$Builder using the provided configuration.  Each field is set as 
 | `shardInstanceCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:shard-instance-count` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `vpcSecurityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-security-group-ids` |"
-  [stack id config]
-  (let [builder (CfnClusterProps$Builder.)]
-    (when-let [data (lookup-entry config id :admin-user-name)]
-      (. builder adminUserName data))
-    (when-let [data (lookup-entry config id :admin-user-password)]
-      (. builder adminUserPassword data))
-    (when-let [data (lookup-entry config id :auth-type)]
-      (. builder authType data))
-    (when-let [data (lookup-entry config id :backup-retention-period)]
-      (. builder backupRetentionPeriod data))
-    (when-let [data (lookup-entry config id :cluster-name)]
-      (. builder clusterName data))
-    (when-let [data (lookup-entry config id :kms-key-id)]
-      (. builder kmsKeyId data))
-    (when-let [data (lookup-entry config id :preferred-backup-window)]
-      (. builder preferredBackupWindow data))
-    (when-let [data (lookup-entry config id :preferred-maintenance-window)]
-      (. builder preferredMaintenanceWindow data))
-    (when-let [data (lookup-entry config id :shard-capacity)]
-      (. builder shardCapacity data))
-    (when-let [data (lookup-entry config id :shard-count)]
-      (. builder shardCount data))
-    (when-let [data (lookup-entry config id :shard-instance-count)]
-      (. builder shardInstanceCount data))
-    (when-let [data (lookup-entry config id :subnet-ids)]
-      (. builder subnetIds data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :vpc-security-group-ids)]
-      (. builder vpcSecurityGroupIds data))
-    (.build builder)))
+| `vpcSecurityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-security-group-ids` |
+"
+  [^CfnClusterProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :admin-user-name)]
+    (. builder adminUserName data))
+  (when-let [data (lookup-entry config id :admin-user-password)]
+    (. builder adminUserPassword data))
+  (when-let [data (lookup-entry config id :auth-type)]
+    (. builder authType data))
+  (when-let [data (lookup-entry config id :backup-retention-period)]
+    (. builder backupRetentionPeriod data))
+  (when-let [data (lookup-entry config id :cluster-name)]
+    (. builder clusterName data))
+  (when-let [data (lookup-entry config id :kms-key-id)]
+    (. builder kmsKeyId data))
+  (when-let [data (lookup-entry config id :preferred-backup-window)]
+    (. builder preferredBackupWindow data))
+  (when-let [data (lookup-entry config id :preferred-maintenance-window)]
+    (. builder preferredMaintenanceWindow data))
+  (when-let [data (lookup-entry config id :shard-capacity)]
+    (. builder shardCapacity data))
+  (when-let [data (lookup-entry config id :shard-count)]
+    (. builder shardCount data))
+  (when-let [data (lookup-entry config id :shard-instance-count)]
+    (. builder shardInstanceCount data))
+  (when-let [data (lookup-entry config id :subnet-ids)]
+    (. builder subnetIds data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :vpc-security-group-ids)]
+    (. builder vpcSecurityGroupIds data))
+  (.build builder))

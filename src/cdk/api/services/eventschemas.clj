@@ -14,169 +14,196 @@
                                                          CfnSchemaProps$Builder]))
 
 
-(defn cfn-discoverer-builder
-  "The cfn-discoverer-builder function buildes out new instances of 
-CfnDiscoverer$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-discoverer-builder
+  "The build-cfn-discoverer-builder function updates a CfnDiscoverer$Builder instance using the provided configuration.
+  The function takes the CfnDiscoverer$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `crossAccount` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cross-account` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `sourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-arn` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDiscoverer$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :cross-account)]
-      (. builder crossAccount data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :source-arn)]
-      (. builder sourceArn data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDiscoverer$Builder builder id config]
+  (when-let [data (lookup-entry config id :cross-account)]
+    (. builder crossAccount data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :source-arn)]
+    (. builder sourceArn data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-discoverer-props-builder
-  "The cfn-discoverer-props-builder function buildes out new instances of 
-CfnDiscovererProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-discoverer-props-builder
+  "The build-cfn-discoverer-props-builder function updates a CfnDiscovererProps$Builder instance using the provided configuration.
+  The function takes the CfnDiscovererProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `crossAccount` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cross-account` |
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `sourceArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-arn` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDiscovererProps$Builder.)]
-    (when-let [data (lookup-entry config id :cross-account)]
-      (. builder crossAccount data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :source-arn)]
-      (. builder sourceArn data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDiscovererProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :cross-account)]
+    (. builder crossAccount data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :source-arn)]
+    (. builder sourceArn data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-discoverer-tags-entry-property-builder
-  "The cfn-discoverer-tags-entry-property-builder function buildes out new instances of 
-CfnDiscoverer$TagsEntryProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-discoverer-tags-entry-property-builder
+  "The build-cfn-discoverer-tags-entry-property-builder function updates a CfnDiscoverer$TagsEntryProperty$Builder instance using the provided configuration.
+  The function takes the CfnDiscoverer$TagsEntryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnDiscoverer$TagsEntryProperty$Builder.)]
-    (when-let [data (lookup-entry config id :key)]
-      (. builder key data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnDiscoverer$TagsEntryProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :key)]
+    (. builder key data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-registry-builder
-  "The cfn-registry-builder function buildes out new instances of 
-CfnRegistry$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-registry-builder
+  "The build-cfn-registry-builder function updates a CfnRegistry$Builder instance using the provided configuration.
+  The function takes the CfnRegistry$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `registryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:registry-name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnRegistry$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :registry-name)]
-      (. builder registryName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnRegistry$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :registry-name)]
+    (. builder registryName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-registry-policy-builder
-  "The cfn-registry-policy-builder function buildes out new instances of 
-CfnRegistryPolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-registry-policy-builder
+  "The build-cfn-registry-policy-builder function updates a CfnRegistryPolicy$Builder instance using the provided configuration.
+  The function takes the CfnRegistryPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `policy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy` |
-| `registryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:registry-name` |
-| `revisionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:revision-id` |"
-  [stack id config]
-  (let [builder (CfnRegistryPolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :policy)]
-      (. builder policy data))
-    (when-let [data (lookup-entry config id :registry-name)]
-      (. builder registryName data))
-    (when-let [data (lookup-entry config id :revision-id)]
-      (. builder revisionId data))
-    (.build builder)))
-
-
-(defn cfn-registry-policy-props-builder
-  "The cfn-registry-policy-props-builder function buildes out new instances of 
-CfnRegistryPolicyProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `policy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy` |
 | `registryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:registry-name` |
-| `revisionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:revision-id` |"
-  [stack id config]
-  (let [builder (CfnRegistryPolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :policy)]
-      (. builder policy data))
-    (when-let [data (lookup-entry config id :registry-name)]
-      (. builder registryName data))
-    (when-let [data (lookup-entry config id :revision-id)]
-      (. builder revisionId data))
-    (.build builder)))
+| `revisionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:revision-id` |
+"
+  [^CfnRegistryPolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :policy)]
+    (. builder policy data))
+  (when-let [data (lookup-entry config id :registry-name)]
+    (. builder registryName data))
+  (when-let [data (lookup-entry config id :revision-id)]
+    (. builder revisionId data))
+  (.build builder))
 
 
-(defn cfn-registry-props-builder
-  "The cfn-registry-props-builder function buildes out new instances of 
-CfnRegistryProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-registry-policy-props-builder
+  "The build-cfn-registry-policy-props-builder function updates a CfnRegistryPolicyProps$Builder instance using the provided configuration.
+  The function takes the CfnRegistryPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `policy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy` |
+| `registryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:registry-name` |
+| `revisionId` | java.lang.String | [[cdk.support/lookup-entry]] | `:revision-id` |
+"
+  [^CfnRegistryPolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :policy)]
+    (. builder policy data))
+  (when-let [data (lookup-entry config id :registry-name)]
+    (. builder registryName data))
+  (when-let [data (lookup-entry config id :revision-id)]
+    (. builder revisionId data))
+  (.build builder))
+
+
+(defn build-cfn-registry-props-builder
+  "The build-cfn-registry-props-builder function updates a CfnRegistryProps$Builder instance using the provided configuration.
+  The function takes the CfnRegistryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
 | `registryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:registry-name` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnRegistryProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :registry-name)]
-      (. builder registryName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnRegistryProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :registry-name)]
+    (. builder registryName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-registry-tags-entry-property-builder
-  "The cfn-registry-tags-entry-property-builder function buildes out new instances of 
-CfnRegistry$TagsEntryProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-registry-tags-entry-property-builder
+  "The build-cfn-registry-tags-entry-property-builder function updates a CfnRegistry$TagsEntryProperty$Builder instance using the provided configuration.
+  The function takes the CfnRegistry$TagsEntryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnRegistry$TagsEntryProperty$Builder.)]
-    (when-let [data (lookup-entry config id :key)]
-      (. builder key data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnRegistry$TagsEntryProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :key)]
+    (. builder key data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-schema-builder
-  "The cfn-schema-builder function buildes out new instances of 
-CfnSchema$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-schema-builder
+  "The build-cfn-schema-builder function updates a CfnSchema$Builder instance using the provided configuration.
+  The function takes the CfnSchema$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -185,27 +212,30 @@ CfnSchema$Builder using the provided configuration.  Each field is set as follow
 | `registryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:registry-name` |
 | `schemaName` | java.lang.String | [[cdk.support/lookup-entry]] | `:schema-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnSchema$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :content)]
-      (. builder content data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :registry-name)]
-      (. builder registryName data))
-    (when-let [data (lookup-entry config id :schema-name)]
-      (. builder schemaName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnSchema$Builder builder id config]
+  (when-let [data (lookup-entry config id :content)]
+    (. builder content data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :registry-name)]
+    (. builder registryName data))
+  (when-let [data (lookup-entry config id :schema-name)]
+    (. builder schemaName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-schema-props-builder
-  "The cfn-schema-props-builder function buildes out new instances of 
-CfnSchemaProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-schema-props-builder
+  "The build-cfn-schema-props-builder function updates a CfnSchemaProps$Builder instance using the provided configuration.
+  The function takes the CfnSchemaProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -214,36 +244,39 @@ CfnSchemaProps$Builder using the provided configuration.  Each field is set as f
 | `registryName` | java.lang.String | [[cdk.support/lookup-entry]] | `:registry-name` |
 | `schemaName` | java.lang.String | [[cdk.support/lookup-entry]] | `:schema-name` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnSchemaProps$Builder.)]
-    (when-let [data (lookup-entry config id :content)]
-      (. builder content data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :registry-name)]
-      (. builder registryName data))
-    (when-let [data (lookup-entry config id :schema-name)]
-      (. builder schemaName data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnSchemaProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :content)]
+    (. builder content data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :registry-name)]
+    (. builder registryName data))
+  (when-let [data (lookup-entry config id :schema-name)]
+    (. builder schemaName data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-schema-tags-entry-property-builder
-  "The cfn-schema-tags-entry-property-builder function buildes out new instances of 
-CfnSchema$TagsEntryProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-schema-tags-entry-property-builder
+  "The build-cfn-schema-tags-entry-property-builder function updates a CfnSchema$TagsEntryProperty$Builder instance using the provided configuration.
+  The function takes the CfnSchema$TagsEntryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnSchema$TagsEntryProperty$Builder.)]
-    (when-let [data (lookup-entry config id :key)]
-      (. builder key data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnSchema$TagsEntryProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :key)]
+    (. builder key data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))

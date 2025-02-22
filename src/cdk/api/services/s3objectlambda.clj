@@ -14,194 +14,227 @@
                                                            CfnAccessPointProps$Builder]))
 
 
-(defn cfn-access-point-alias-property-builder
-  "The cfn-access-point-alias-property-builder function buildes out new instances of 
-CfnAccessPoint$AliasProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-access-point-alias-property-builder
+  "The build-cfn-access-point-alias-property-builder function updates a CfnAccessPoint$AliasProperty$Builder instance using the provided configuration.
+  The function takes the CfnAccessPoint$AliasProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `status` | java.lang.String | [[cdk.support/lookup-entry]] | `:status` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnAccessPoint$AliasProperty$Builder.)]
-    (when-let [data (lookup-entry config id :status)]
-      (. builder status data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnAccessPoint$AliasProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :status)]
+    (. builder status data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-access-point-aws-lambda-property-builder
-  "The cfn-access-point-aws-lambda-property-builder function buildes out new instances of 
-CfnAccessPoint$AwsLambdaProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-access-point-aws-lambda-property-builder
+  "The build-cfn-access-point-aws-lambda-property-builder function updates a CfnAccessPoint$AwsLambdaProperty$Builder instance using the provided configuration.
+  The function takes the CfnAccessPoint$AwsLambdaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `functionArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-arn` |
-| `functionPayload` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-payload` |"
-  [stack id config]
-  (let [builder (CfnAccessPoint$AwsLambdaProperty$Builder.)]
-    (when-let [data (lookup-entry config id :function-arn)]
-      (. builder functionArn data))
-    (when-let [data (lookup-entry config id :function-payload)]
-      (. builder functionPayload data))
-    (.build builder)))
+| `functionPayload` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-payload` |
+"
+  [^CfnAccessPoint$AwsLambdaProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :function-arn)]
+    (. builder functionArn data))
+  (when-let [data (lookup-entry config id :function-payload)]
+    (. builder functionPayload data))
+  (.build builder))
 
 
-(defn cfn-access-point-builder
-  "The cfn-access-point-builder function buildes out new instances of 
-CfnAccessPoint$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-access-point-builder
+  "The build-cfn-access-point-builder function updates a CfnAccessPoint$Builder instance using the provided configuration.
+  The function takes the CfnAccessPoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `objectLambdaConfiguration` | software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint$ObjectLambdaConfigurationProperty | [[cdk.support/lookup-entry]] | `:object-lambda-configuration` |"
-  [stack id config]
-  (let [builder (CfnAccessPoint$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :object-lambda-configuration)]
-      (. builder objectLambdaConfiguration data))
-    (.build builder)))
+| `objectLambdaConfiguration` | software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint$ObjectLambdaConfigurationProperty | [[cdk.support/lookup-entry]] | `:object-lambda-configuration` |
+"
+  [^CfnAccessPoint$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :object-lambda-configuration)]
+    (. builder objectLambdaConfiguration data))
+  (.build builder))
 
 
-(defn cfn-access-point-content-transformation-property-builder
-  "The cfn-access-point-content-transformation-property-builder function buildes out new instances of 
-CfnAccessPoint$ContentTransformationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-access-point-content-transformation-property-builder
+  "The build-cfn-access-point-content-transformation-property-builder function updates a CfnAccessPoint$ContentTransformationProperty$Builder instance using the provided configuration.
+  The function takes the CfnAccessPoint$ContentTransformationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `awsLambda` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aws-lambda` |"
-  [stack id config]
-  (let [builder (CfnAccessPoint$ContentTransformationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :aws-lambda)]
-      (. builder awsLambda data))
-    (.build builder)))
+| `awsLambda` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:aws-lambda` |
+"
+  [^CfnAccessPoint$ContentTransformationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :aws-lambda)]
+    (. builder awsLambda data))
+  (.build builder))
 
 
-(defn cfn-access-point-object-lambda-configuration-property-builder
-  "The cfn-access-point-object-lambda-configuration-property-builder function buildes out new instances of 
-CfnAccessPoint$ObjectLambdaConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-access-point-object-lambda-configuration-property-builder
+  "The build-cfn-access-point-object-lambda-configuration-property-builder function updates a CfnAccessPoint$ObjectLambdaConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnAccessPoint$ObjectLambdaConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `allowedFeatures` | java.util.List | [[cdk.support/lookup-entry]] | `:allowed-features` |
 | `cloudWatchMetricsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cloud-watch-metrics-enabled` |
 | `supportingAccessPoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:supporting-access-point` |
-| `transformationConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:transformation-configurations` |"
-  [stack id config]
-  (let [builder (CfnAccessPoint$ObjectLambdaConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :allowed-features)]
-      (. builder allowedFeatures data))
-    (when-let [data (lookup-entry config id :cloud-watch-metrics-enabled)]
-      (. builder cloudWatchMetricsEnabled data))
-    (when-let [data (lookup-entry config id :supporting-access-point)]
-      (. builder supportingAccessPoint data))
-    (when-let [data (lookup-entry config id :transformation-configurations)]
-      (. builder transformationConfigurations data))
-    (.build builder)))
+| `transformationConfigurations` | java.util.List | [[cdk.support/lookup-entry]] | `:transformation-configurations` |
+"
+  [^CfnAccessPoint$ObjectLambdaConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :allowed-features)]
+    (. builder allowedFeatures data))
+  (when-let [data (lookup-entry config id :cloud-watch-metrics-enabled)]
+    (. builder cloudWatchMetricsEnabled data))
+  (when-let [data (lookup-entry config id :supporting-access-point)]
+    (. builder supportingAccessPoint data))
+  (when-let [data (lookup-entry config id :transformation-configurations)]
+    (. builder transformationConfigurations data))
+  (.build builder))
 
 
-(defn cfn-access-point-policy-builder
-  "The cfn-access-point-policy-builder function buildes out new instances of 
-CfnAccessPointPolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-access-point-policy-builder
+  "The build-cfn-access-point-policy-builder function updates a CfnAccessPointPolicy$Builder instance using the provided configuration.
+  The function takes the CfnAccessPointPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `objectLambdaAccessPoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-lambda-access-point` |
-| `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |"
-  [stack id config]
-  (let [builder (CfnAccessPointPolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :object-lambda-access-point)]
-      (. builder objectLambdaAccessPoint data))
-    (when-let [data (lookup-entry config id :policy-document)]
-      (. builder policyDocument data))
-    (.build builder)))
-
-
-(defn cfn-access-point-policy-props-builder
-  "The cfn-access-point-policy-props-builder function buildes out new instances of 
-CfnAccessPointPolicyProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `objectLambdaAccessPoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-lambda-access-point` |
-| `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |"
-  [stack id config]
-  (let [builder (CfnAccessPointPolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :object-lambda-access-point)]
-      (. builder objectLambdaAccessPoint data))
-    (when-let [data (lookup-entry config id :policy-document)]
-      (. builder policyDocument data))
-    (.build builder)))
+| `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
+"
+  [^CfnAccessPointPolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :object-lambda-access-point)]
+    (. builder objectLambdaAccessPoint data))
+  (when-let [data (lookup-entry config id :policy-document)]
+    (. builder policyDocument data))
+  (.build builder))
 
 
-(defn cfn-access-point-policy-status-property-builder
-  "The cfn-access-point-policy-status-property-builder function buildes out new instances of 
-CfnAccessPoint$PolicyStatusProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-access-point-policy-props-builder
+  "The build-cfn-access-point-policy-props-builder function updates a CfnAccessPointPolicyProps$Builder instance using the provided configuration.
+  The function takes the CfnAccessPointPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `isPublic` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-public` |"
-  [stack id config]
-  (let [builder (CfnAccessPoint$PolicyStatusProperty$Builder.)]
-    (when-let [data (lookup-entry config id :is-public)]
-      (. builder isPublic data))
-    (.build builder)))
+| `objectLambdaAccessPoint` | java.lang.String | [[cdk.support/lookup-entry]] | `:object-lambda-access-point` |
+| `policyDocument` | java.lang.Object | [[cdk.support/lookup-entry]] | `:policy-document` |
+"
+  [^CfnAccessPointPolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :object-lambda-access-point)]
+    (. builder objectLambdaAccessPoint data))
+  (when-let [data (lookup-entry config id :policy-document)]
+    (. builder policyDocument data))
+  (.build builder))
 
 
-(defn cfn-access-point-props-builder
-  "The cfn-access-point-props-builder function buildes out new instances of 
-CfnAccessPointProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-access-point-policy-status-property-builder
+  "The build-cfn-access-point-policy-status-property-builder function updates a CfnAccessPoint$PolicyStatusProperty$Builder instance using the provided configuration.
+  The function takes the CfnAccessPoint$PolicyStatusProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `isPublic` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:is-public` |
+"
+  [^CfnAccessPoint$PolicyStatusProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :is-public)]
+    (. builder isPublic data))
+  (.build builder))
+
+
+(defn build-cfn-access-point-props-builder
+  "The build-cfn-access-point-props-builder function updates a CfnAccessPointProps$Builder instance using the provided configuration.
+  The function takes the CfnAccessPointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `objectLambdaConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:object-lambda-configuration` |"
-  [stack id config]
-  (let [builder (CfnAccessPointProps$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :object-lambda-configuration)]
-      (. builder objectLambdaConfiguration data))
-    (.build builder)))
+| `objectLambdaConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:object-lambda-configuration` |
+"
+  [^CfnAccessPointProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :object-lambda-configuration)]
+    (. builder objectLambdaConfiguration data))
+  (.build builder))
 
 
-(defn cfn-access-point-public-access-block-configuration-property-builder
-  "The cfn-access-point-public-access-block-configuration-property-builder function buildes out new instances of 
-CfnAccessPoint$PublicAccessBlockConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-access-point-public-access-block-configuration-property-builder
+  "The build-cfn-access-point-public-access-block-configuration-property-builder function updates a CfnAccessPoint$PublicAccessBlockConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnAccessPoint$PublicAccessBlockConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `blockPublicAcls` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:block-public-acls` |
 | `blockPublicPolicy` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:block-public-policy` |
 | `ignorePublicAcls` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:ignore-public-acls` |
-| `restrictPublicBuckets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:restrict-public-buckets` |"
-  [stack id config]
-  (let [builder (CfnAccessPoint$PublicAccessBlockConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :block-public-acls)]
-      (. builder blockPublicAcls data))
-    (when-let [data (lookup-entry config id :block-public-policy)]
-      (. builder blockPublicPolicy data))
-    (when-let [data (lookup-entry config id :ignore-public-acls)]
-      (. builder ignorePublicAcls data))
-    (when-let [data (lookup-entry config id :restrict-public-buckets)]
-      (. builder restrictPublicBuckets data))
-    (.build builder)))
+| `restrictPublicBuckets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:restrict-public-buckets` |
+"
+  [^CfnAccessPoint$PublicAccessBlockConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :block-public-acls)]
+    (. builder blockPublicAcls data))
+  (when-let [data (lookup-entry config id :block-public-policy)]
+    (. builder blockPublicPolicy data))
+  (when-let [data (lookup-entry config id :ignore-public-acls)]
+    (. builder ignorePublicAcls data))
+  (when-let [data (lookup-entry config id :restrict-public-buckets)]
+    (. builder restrictPublicBuckets data))
+  (.build builder))
 
 
-(defn cfn-access-point-transformation-configuration-property-builder
-  "The cfn-access-point-transformation-configuration-property-builder function buildes out new instances of 
-CfnAccessPoint$TransformationConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-access-point-transformation-configuration-property-builder
+  "The build-cfn-access-point-transformation-configuration-property-builder function updates a CfnAccessPoint$TransformationConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnAccessPoint$TransformationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `actions` | java.util.List | [[cdk.support/lookup-entry]] | `:actions` |
-| `contentTransformation` | java.lang.Object | [[cdk.support/lookup-entry]] | `:content-transformation` |"
-  [stack id config]
-  (let [builder (CfnAccessPoint$TransformationConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :actions)]
-      (. builder actions data))
-    (when-let [data (lookup-entry config id :content-transformation)]
-      (. builder contentTransformation data))
-    (.build builder)))
+| `contentTransformation` | java.lang.Object | [[cdk.support/lookup-entry]] | `:content-transformation` |
+"
+  [^CfnAccessPoint$TransformationConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :actions)]
+    (. builder actions data))
+  (when-let [data (lookup-entry config id :content-transformation)]
+    (. builder contentTransformation data))
+  (.build builder))

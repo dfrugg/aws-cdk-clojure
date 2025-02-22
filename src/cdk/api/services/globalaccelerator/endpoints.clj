@@ -11,125 +11,149 @@
                                                                         NetworkLoadBalancerEndpointProps$Builder]))
 
 
-(defn application-load-balancer-endpoint-builder
-  "The application-load-balancer-endpoint-builder function buildes out new instances of 
-ApplicationLoadBalancerEndpoint$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-load-balancer-endpoint-builder
+  "The build-application-load-balancer-endpoint-builder function updates a ApplicationLoadBalancerEndpoint$Builder instance using the provided configuration.
+  The function takes the ApplicationLoadBalancerEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `preserveClientIp` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:preserve-client-ip` |
-| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |"
-  [stack id config ^software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancer load-balancer]
-  (let [builder (ApplicationLoadBalancerEndpoint$Builder/create ^software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancer load-balancer)]
-    (when-let [data (lookup-entry config id :preserve-client-ip)]
-      (. builder preserveClientIp data))
-    (when-let [data (lookup-entry config id :weight)]
-      (. builder weight data))
-    (.build builder)))
+| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
+"
+  [^ApplicationLoadBalancerEndpoint$Builder builder id config]
+  (when-let [data (lookup-entry config id :preserve-client-ip)]
+    (. builder preserveClientIp data))
+  (when-let [data (lookup-entry config id :weight)]
+    (. builder weight data))
+  (.build builder))
 
 
-(defn application-load-balancer-endpoint-options-builder
-  "The application-load-balancer-endpoint-options-builder function buildes out new instances of 
-ApplicationLoadBalancerEndpointOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-application-load-balancer-endpoint-options-builder
+  "The build-application-load-balancer-endpoint-options-builder function updates a ApplicationLoadBalancerEndpointOptions$Builder instance using the provided configuration.
+  The function takes the ApplicationLoadBalancerEndpointOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `preserveClientIp` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:preserve-client-ip` |
-| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |"
-  [stack id config]
-  (let [builder (ApplicationLoadBalancerEndpointOptions$Builder.)]
-    (when-let [data (lookup-entry config id :preserve-client-ip)]
-      (. builder preserveClientIp data))
-    (when-let [data (lookup-entry config id :weight)]
-      (. builder weight data))
-    (.build builder)))
-
-
-(defn cfn-eip-endpoint-builder
-  "The cfn-eip-endpoint-builder function buildes out new instances of 
-CfnEipEndpoint$Builder using the provided configuration.  Each field is set as follows:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |"
-  [stack id config ^software.amazon.awscdk.services.ec2.CfnEIP eip]
-  (let [builder (CfnEipEndpoint$Builder/create ^software.amazon.awscdk.services.ec2.CfnEIP eip)]
-    (when-let [data (lookup-entry config id :weight)]
-      (. builder weight data))
-    (.build builder)))
-
-
-(defn cfn-eip-endpoint-props-builder
-  "The cfn-eip-endpoint-props-builder function buildes out new instances of 
-CfnEipEndpointProps$Builder using the provided configuration.  Each field is set as follows:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |"
-  [stack id config]
-  (let [builder (CfnEipEndpointProps$Builder.)]
-    (when-let [data (lookup-entry config id :weight)]
-      (. builder weight data))
-    (.build builder)))
-
-
-(defn instance-endpoint-builder
-  "The instance-endpoint-builder function buildes out new instances of 
-InstanceEndpoint$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `preserveClientIp` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:preserve-client-ip` |
-| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |"
-  [stack id config ^software.amazon.awscdk.services.ec2.IInstance endpoint-instance]
-  (let [builder (InstanceEndpoint$Builder/create ^software.amazon.awscdk.services.ec2.IInstance endpoint-instance)]
-    (when-let [data (lookup-entry config id :preserve-client-ip)]
-      (. builder preserveClientIp data))
-    (when-let [data (lookup-entry config id :weight)]
-      (. builder weight data))
-    (.build builder)))
+| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
+"
+  [^ApplicationLoadBalancerEndpointOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :preserve-client-ip)]
+    (. builder preserveClientIp data))
+  (when-let [data (lookup-entry config id :weight)]
+    (. builder weight data))
+  (.build builder))
 
 
-(defn instance-endpoint-props-builder
-  "The instance-endpoint-props-builder function buildes out new instances of 
-InstanceEndpointProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-eip-endpoint-builder
+  "The build-cfn-eip-endpoint-builder function updates a CfnEipEndpoint$Builder instance using the provided configuration.
+  The function takes the CfnEipEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
+"
+  [^CfnEipEndpoint$Builder builder id config]
+  (when-let [data (lookup-entry config id :weight)]
+    (. builder weight data))
+  (.build builder))
+
+
+(defn build-cfn-eip-endpoint-props-builder
+  "The build-cfn-eip-endpoint-props-builder function updates a CfnEipEndpointProps$Builder instance using the provided configuration.
+  The function takes the CfnEipEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
+"
+  [^CfnEipEndpointProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :weight)]
+    (. builder weight data))
+  (.build builder))
+
+
+(defn build-instance-endpoint-builder
+  "The build-instance-endpoint-builder function updates a InstanceEndpoint$Builder instance using the provided configuration.
+  The function takes the InstanceEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `preserveClientIp` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:preserve-client-ip` |
-| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |"
-  [stack id config]
-  (let [builder (InstanceEndpointProps$Builder.)]
-    (when-let [data (lookup-entry config id :preserve-client-ip)]
-      (. builder preserveClientIp data))
-    (when-let [data (lookup-entry config id :weight)]
-      (. builder weight data))
-    (.build builder)))
+| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
+"
+  [^InstanceEndpoint$Builder builder id config]
+  (when-let [data (lookup-entry config id :preserve-client-ip)]
+    (. builder preserveClientIp data))
+  (when-let [data (lookup-entry config id :weight)]
+    (. builder weight data))
+  (.build builder))
 
 
-(defn network-load-balancer-endpoint-builder
-  "The network-load-balancer-endpoint-builder function buildes out new instances of 
-NetworkLoadBalancerEndpoint$Builder using the provided configuration.  Each field is set as follows:
+(defn build-instance-endpoint-props-builder
+  "The build-instance-endpoint-props-builder function updates a InstanceEndpointProps$Builder instance using the provided configuration.
+  The function takes the InstanceEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |"
-  [stack id config ^software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer load-balancer]
-  (let [builder (NetworkLoadBalancerEndpoint$Builder/create ^software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer load-balancer)]
-    (when-let [data (lookup-entry config id :weight)]
-      (. builder weight data))
-    (.build builder)))
-
-
-(defn network-load-balancer-endpoint-props-builder
-  "The network-load-balancer-endpoint-props-builder function buildes out new instances of 
-NetworkLoadBalancerEndpointProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |"
-  [stack id config]
-  (let [builder (NetworkLoadBalancerEndpointProps$Builder.)]
-    (when-let [data (lookup-entry config id :weight)]
-      (. builder weight data))
-    (.build builder)))
+| `preserveClientIp` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:preserve-client-ip` |
+| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
+"
+  [^InstanceEndpointProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :preserve-client-ip)]
+    (. builder preserveClientIp data))
+  (when-let [data (lookup-entry config id :weight)]
+    (. builder weight data))
+  (.build builder))
+
+
+(defn build-network-load-balancer-endpoint-builder
+  "The build-network-load-balancer-endpoint-builder function updates a NetworkLoadBalancerEndpoint$Builder instance using the provided configuration.
+  The function takes the NetworkLoadBalancerEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
+"
+  [^NetworkLoadBalancerEndpoint$Builder builder id config]
+  (when-let [data (lookup-entry config id :weight)]
+    (. builder weight data))
+  (.build builder))
+
+
+(defn build-network-load-balancer-endpoint-props-builder
+  "The build-network-load-balancer-endpoint-props-builder function updates a NetworkLoadBalancerEndpointProps$Builder instance using the provided configuration.
+  The function takes the NetworkLoadBalancerEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
+"
+  [^NetworkLoadBalancerEndpointProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :weight)]
+    (. builder weight data))
+  (.build builder))

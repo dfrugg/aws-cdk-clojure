@@ -17,9 +17,12 @@
                                                     CfnEventSubscriptionProps$Builder]))
 
 
-(defn cfn-db-cluster-builder
-  "The cfn-db-cluster-builder function buildes out new instances of 
-CfnDBCluster$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-db-cluster-builder
+  "The build-cfn-db-cluster-builder function updates a CfnDBCluster$Builder instance using the provided configuration.
+  The function takes the CfnDBCluster$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -47,108 +50,88 @@ CfnDBCluster$Builder using the provided configuration.  Each field is set as fol
 | `storageEncrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:storage-encrypted` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `useLatestRestorableTime` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:use-latest-restorable-time` |
-| `vpcSecurityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-security-group-ids` |"
-  [stack id config]
-  (let [builder (CfnDBCluster$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :associated-roles)]
-      (. builder associatedRoles data))
-    (when-let [data (lookup-entry config id :availability-zones)]
-      (. builder availabilityZones data))
-    (when-let [data (lookup-entry config id :backup-retention-period)]
-      (. builder backupRetentionPeriod data))
-    (when-let [data (lookup-entry config id :copy-tags-to-snapshot)]
-      (. builder copyTagsToSnapshot data))
-    (when-let [data (lookup-entry config id :db-cluster-identifier)]
-      (. builder dbClusterIdentifier data))
-    (when-let [data (lookup-entry config id :db-cluster-parameter-group-name)]
-      (. builder dbClusterParameterGroupName data))
-    (when-let [data (lookup-entry config id :db-instance-parameter-group-name)]
-      (. builder dbInstanceParameterGroupName data))
-    (when-let [data (lookup-entry config id :db-port)]
-      (. builder dbPort data))
-    (when-let [data (lookup-entry config id :db-subnet-group-name)]
-      (. builder dbSubnetGroupName data))
-    (when-let [data (lookup-entry config id :deletion-protection)]
-      (. builder deletionProtection data))
-    (when-let [data (lookup-entry config id :enable-cloudwatch-logs-exports)]
-      (. builder enableCloudwatchLogsExports data))
-    (when-let [data (lookup-entry config id :engine-version)]
-      (. builder engineVersion data))
-    (when-let [data (lookup-entry config id :iam-auth-enabled)]
-      (. builder iamAuthEnabled data))
-    (when-let [data (lookup-entry config id :kms-key-id)]
-      (. builder kmsKeyId data))
-    (when-let [data (lookup-entry config id :preferred-backup-window)]
-      (. builder preferredBackupWindow data))
-    (when-let [data (lookup-entry config id :preferred-maintenance-window)]
-      (. builder preferredMaintenanceWindow data))
-    (when-let [data (lookup-entry config id :restore-to-time)]
-      (. builder restoreToTime data))
-    (when-let [data (lookup-entry config id :restore-type)]
-      (. builder restoreType data))
-    (when-let [data (lookup-entry config id :serverless-scaling-configuration)]
-      (. builder serverlessScalingConfiguration data))
-    (when-let [data (lookup-entry config id :snapshot-identifier)]
-      (. builder snapshotIdentifier data))
-    (when-let [data (lookup-entry config id :source-db-cluster-identifier)]
-      (. builder sourceDbClusterIdentifier data))
-    (when-let [data (lookup-entry config id :storage-encrypted)]
-      (. builder storageEncrypted data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :use-latest-restorable-time)]
-      (. builder useLatestRestorableTime data))
-    (when-let [data (lookup-entry config id :vpc-security-group-ids)]
-      (. builder vpcSecurityGroupIds data))
-    (.build builder)))
+| `vpcSecurityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-security-group-ids` |
+"
+  [^CfnDBCluster$Builder builder id config]
+  (when-let [data (lookup-entry config id :associated-roles)]
+    (. builder associatedRoles data))
+  (when-let [data (lookup-entry config id :availability-zones)]
+    (. builder availabilityZones data))
+  (when-let [data (lookup-entry config id :backup-retention-period)]
+    (. builder backupRetentionPeriod data))
+  (when-let [data (lookup-entry config id :copy-tags-to-snapshot)]
+    (. builder copyTagsToSnapshot data))
+  (when-let [data (lookup-entry config id :db-cluster-identifier)]
+    (. builder dbClusterIdentifier data))
+  (when-let [data (lookup-entry config id :db-cluster-parameter-group-name)]
+    (. builder dbClusterParameterGroupName data))
+  (when-let [data (lookup-entry config id :db-instance-parameter-group-name)]
+    (. builder dbInstanceParameterGroupName data))
+  (when-let [data (lookup-entry config id :db-port)]
+    (. builder dbPort data))
+  (when-let [data (lookup-entry config id :db-subnet-group-name)]
+    (. builder dbSubnetGroupName data))
+  (when-let [data (lookup-entry config id :deletion-protection)]
+    (. builder deletionProtection data))
+  (when-let [data (lookup-entry config id :enable-cloudwatch-logs-exports)]
+    (. builder enableCloudwatchLogsExports data))
+  (when-let [data (lookup-entry config id :engine-version)]
+    (. builder engineVersion data))
+  (when-let [data (lookup-entry config id :iam-auth-enabled)]
+    (. builder iamAuthEnabled data))
+  (when-let [data (lookup-entry config id :kms-key-id)]
+    (. builder kmsKeyId data))
+  (when-let [data (lookup-entry config id :preferred-backup-window)]
+    (. builder preferredBackupWindow data))
+  (when-let [data (lookup-entry config id :preferred-maintenance-window)]
+    (. builder preferredMaintenanceWindow data))
+  (when-let [data (lookup-entry config id :restore-to-time)]
+    (. builder restoreToTime data))
+  (when-let [data (lookup-entry config id :restore-type)]
+    (. builder restoreType data))
+  (when-let [data (lookup-entry config id :serverless-scaling-configuration)]
+    (. builder serverlessScalingConfiguration data))
+  (when-let [data (lookup-entry config id :snapshot-identifier)]
+    (. builder snapshotIdentifier data))
+  (when-let [data (lookup-entry config id :source-db-cluster-identifier)]
+    (. builder sourceDbClusterIdentifier data))
+  (when-let [data (lookup-entry config id :storage-encrypted)]
+    (. builder storageEncrypted data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :use-latest-restorable-time)]
+    (. builder useLatestRestorableTime data))
+  (when-let [data (lookup-entry config id :vpc-security-group-ids)]
+    (. builder vpcSecurityGroupIds data))
+  (.build builder))
 
 
-(defn cfn-db-cluster-db-cluster-role-property-builder
-  "The cfn-db-cluster-db-cluster-role-property-builder function buildes out new instances of 
-CfnDBCluster$DBClusterRoleProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-db-cluster-db-cluster-role-property-builder
+  "The build-cfn-db-cluster-db-cluster-role-property-builder function updates a CfnDBCluster$DBClusterRoleProperty$Builder instance using the provided configuration.
+  The function takes the CfnDBCluster$DBClusterRoleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `featureName` | java.lang.String | [[cdk.support/lookup-entry]] | `:feature-name` |
-| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |"
-  [stack id config]
-  (let [builder (CfnDBCluster$DBClusterRoleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :feature-name)]
-      (. builder featureName data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (.build builder)))
+| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
+"
+  [^CfnDBCluster$DBClusterRoleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :feature-name)]
+    (. builder featureName data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (.build builder))
 
 
-(defn cfn-db-cluster-parameter-group-builder
-  "The cfn-db-cluster-parameter-group-builder function buildes out new instances of 
-CfnDBClusterParameterGroup$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-db-cluster-parameter-group-builder
+  "The build-cfn-db-cluster-parameter-group-builder function updates a CfnDBClusterParameterGroup$Builder instance using the provided configuration.
+  The function takes the CfnDBClusterParameterGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `family` | java.lang.String | [[cdk.support/lookup-entry]] | `:family` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `parameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameters` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDBClusterParameterGroup$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :family)]
-      (. builder family data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
-
-
-(defn cfn-db-cluster-parameter-group-props-builder
-  "The cfn-db-cluster-parameter-group-props-builder function buildes out new instances of 
-CfnDBClusterParameterGroupProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -156,25 +139,57 @@ CfnDBClusterParameterGroupProps$Builder using the provided configuration.  Each 
 | `family` | java.lang.String | [[cdk.support/lookup-entry]] | `:family` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `parameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameters` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDBClusterParameterGroupProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :family)]
-      (. builder family data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDBClusterParameterGroup$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :family)]
+    (. builder family data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-db-cluster-props-builder
-  "The cfn-db-cluster-props-builder function buildes out new instances of 
-CfnDBClusterProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-db-cluster-parameter-group-props-builder
+  "The build-cfn-db-cluster-parameter-group-props-builder function updates a CfnDBClusterParameterGroupProps$Builder instance using the provided configuration.
+  The function takes the CfnDBClusterParameterGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `family` | java.lang.String | [[cdk.support/lookup-entry]] | `:family` |
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `parameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameters` |
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDBClusterParameterGroupProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :family)]
+    (. builder family data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
+
+
+(defn build-cfn-db-cluster-props-builder
+  "The build-cfn-db-cluster-props-builder function updates a CfnDBClusterProps$Builder instance using the provided configuration.
+  The function takes the CfnDBClusterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -202,82 +217,88 @@ CfnDBClusterProps$Builder using the provided configuration.  Each field is set a
 | `storageEncrypted` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:storage-encrypted` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
 | `useLatestRestorableTime` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:use-latest-restorable-time` |
-| `vpcSecurityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-security-group-ids` |"
-  [stack id config]
-  (let [builder (CfnDBClusterProps$Builder.)]
-    (when-let [data (lookup-entry config id :associated-roles)]
-      (. builder associatedRoles data))
-    (when-let [data (lookup-entry config id :availability-zones)]
-      (. builder availabilityZones data))
-    (when-let [data (lookup-entry config id :backup-retention-period)]
-      (. builder backupRetentionPeriod data))
-    (when-let [data (lookup-entry config id :copy-tags-to-snapshot)]
-      (. builder copyTagsToSnapshot data))
-    (when-let [data (lookup-entry config id :db-cluster-identifier)]
-      (. builder dbClusterIdentifier data))
-    (when-let [data (lookup-entry config id :db-cluster-parameter-group-name)]
-      (. builder dbClusterParameterGroupName data))
-    (when-let [data (lookup-entry config id :db-instance-parameter-group-name)]
-      (. builder dbInstanceParameterGroupName data))
-    (when-let [data (lookup-entry config id :db-port)]
-      (. builder dbPort data))
-    (when-let [data (lookup-entry config id :db-subnet-group-name)]
-      (. builder dbSubnetGroupName data))
-    (when-let [data (lookup-entry config id :deletion-protection)]
-      (. builder deletionProtection data))
-    (when-let [data (lookup-entry config id :enable-cloudwatch-logs-exports)]
-      (. builder enableCloudwatchLogsExports data))
-    (when-let [data (lookup-entry config id :engine-version)]
-      (. builder engineVersion data))
-    (when-let [data (lookup-entry config id :iam-auth-enabled)]
-      (. builder iamAuthEnabled data))
-    (when-let [data (lookup-entry config id :kms-key-id)]
-      (. builder kmsKeyId data))
-    (when-let [data (lookup-entry config id :preferred-backup-window)]
-      (. builder preferredBackupWindow data))
-    (when-let [data (lookup-entry config id :preferred-maintenance-window)]
-      (. builder preferredMaintenanceWindow data))
-    (when-let [data (lookup-entry config id :restore-to-time)]
-      (. builder restoreToTime data))
-    (when-let [data (lookup-entry config id :restore-type)]
-      (. builder restoreType data))
-    (when-let [data (lookup-entry config id :serverless-scaling-configuration)]
-      (. builder serverlessScalingConfiguration data))
-    (when-let [data (lookup-entry config id :snapshot-identifier)]
-      (. builder snapshotIdentifier data))
-    (when-let [data (lookup-entry config id :source-db-cluster-identifier)]
-      (. builder sourceDbClusterIdentifier data))
-    (when-let [data (lookup-entry config id :storage-encrypted)]
-      (. builder storageEncrypted data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :use-latest-restorable-time)]
-      (. builder useLatestRestorableTime data))
-    (when-let [data (lookup-entry config id :vpc-security-group-ids)]
-      (. builder vpcSecurityGroupIds data))
-    (.build builder)))
+| `vpcSecurityGroupIds` | java.util.List | [[cdk.support/lookup-entry]] | `:vpc-security-group-ids` |
+"
+  [^CfnDBClusterProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :associated-roles)]
+    (. builder associatedRoles data))
+  (when-let [data (lookup-entry config id :availability-zones)]
+    (. builder availabilityZones data))
+  (when-let [data (lookup-entry config id :backup-retention-period)]
+    (. builder backupRetentionPeriod data))
+  (when-let [data (lookup-entry config id :copy-tags-to-snapshot)]
+    (. builder copyTagsToSnapshot data))
+  (when-let [data (lookup-entry config id :db-cluster-identifier)]
+    (. builder dbClusterIdentifier data))
+  (when-let [data (lookup-entry config id :db-cluster-parameter-group-name)]
+    (. builder dbClusterParameterGroupName data))
+  (when-let [data (lookup-entry config id :db-instance-parameter-group-name)]
+    (. builder dbInstanceParameterGroupName data))
+  (when-let [data (lookup-entry config id :db-port)]
+    (. builder dbPort data))
+  (when-let [data (lookup-entry config id :db-subnet-group-name)]
+    (. builder dbSubnetGroupName data))
+  (when-let [data (lookup-entry config id :deletion-protection)]
+    (. builder deletionProtection data))
+  (when-let [data (lookup-entry config id :enable-cloudwatch-logs-exports)]
+    (. builder enableCloudwatchLogsExports data))
+  (when-let [data (lookup-entry config id :engine-version)]
+    (. builder engineVersion data))
+  (when-let [data (lookup-entry config id :iam-auth-enabled)]
+    (. builder iamAuthEnabled data))
+  (when-let [data (lookup-entry config id :kms-key-id)]
+    (. builder kmsKeyId data))
+  (when-let [data (lookup-entry config id :preferred-backup-window)]
+    (. builder preferredBackupWindow data))
+  (when-let [data (lookup-entry config id :preferred-maintenance-window)]
+    (. builder preferredMaintenanceWindow data))
+  (when-let [data (lookup-entry config id :restore-to-time)]
+    (. builder restoreToTime data))
+  (when-let [data (lookup-entry config id :restore-type)]
+    (. builder restoreType data))
+  (when-let [data (lookup-entry config id :serverless-scaling-configuration)]
+    (. builder serverlessScalingConfiguration data))
+  (when-let [data (lookup-entry config id :snapshot-identifier)]
+    (. builder snapshotIdentifier data))
+  (when-let [data (lookup-entry config id :source-db-cluster-identifier)]
+    (. builder sourceDbClusterIdentifier data))
+  (when-let [data (lookup-entry config id :storage-encrypted)]
+    (. builder storageEncrypted data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :use-latest-restorable-time)]
+    (. builder useLatestRestorableTime data))
+  (when-let [data (lookup-entry config id :vpc-security-group-ids)]
+    (. builder vpcSecurityGroupIds data))
+  (.build builder))
 
 
-(defn cfn-db-cluster-serverless-scaling-configuration-property-builder
-  "The cfn-db-cluster-serverless-scaling-configuration-property-builder function buildes out new instances of 
-CfnDBCluster$ServerlessScalingConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-db-cluster-serverless-scaling-configuration-property-builder
+  "The build-cfn-db-cluster-serverless-scaling-configuration-property-builder function updates a CfnDBCluster$ServerlessScalingConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnDBCluster$ServerlessScalingConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `maxCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-capacity` |
-| `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |"
-  [stack id config]
-  (let [builder (CfnDBCluster$ServerlessScalingConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :max-capacity)]
-      (. builder maxCapacity data))
-    (when-let [data (lookup-entry config id :min-capacity)]
-      (. builder minCapacity data))
-    (.build builder)))
+| `minCapacity` | java.lang.Number | [[cdk.support/lookup-entry]] | `:min-capacity` |
+"
+  [^CfnDBCluster$ServerlessScalingConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-capacity)]
+    (. builder maxCapacity data))
+  (when-let [data (lookup-entry config id :min-capacity)]
+    (. builder minCapacity data))
+  (.build builder))
 
 
-(defn cfn-db-instance-builder
-  "The cfn-db-instance-builder function buildes out new instances of 
-CfnDBInstance$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-db-instance-builder
+  "The build-cfn-db-instance-builder function updates a CfnDBInstance$Builder instance using the provided configuration.
+  The function takes the CfnDBInstance$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -291,37 +312,40 @@ CfnDBInstance$Builder using the provided configuration.  Each field is set as fo
 | `dbSnapshotIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-snapshot-identifier` |
 | `dbSubnetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-subnet-group-name` |
 | `preferredMaintenanceWindow` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-maintenance-window` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDBInstance$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :allow-major-version-upgrade)]
-      (. builder allowMajorVersionUpgrade data))
-    (when-let [data (lookup-entry config id :auto-minor-version-upgrade)]
-      (. builder autoMinorVersionUpgrade data))
-    (when-let [data (lookup-entry config id :availability-zone)]
-      (. builder availabilityZone data))
-    (when-let [data (lookup-entry config id :db-cluster-identifier)]
-      (. builder dbClusterIdentifier data))
-    (when-let [data (lookup-entry config id :db-instance-class)]
-      (. builder dbInstanceClass data))
-    (when-let [data (lookup-entry config id :db-instance-identifier)]
-      (. builder dbInstanceIdentifier data))
-    (when-let [data (lookup-entry config id :db-parameter-group-name)]
-      (. builder dbParameterGroupName data))
-    (when-let [data (lookup-entry config id :db-snapshot-identifier)]
-      (. builder dbSnapshotIdentifier data))
-    (when-let [data (lookup-entry config id :db-subnet-group-name)]
-      (. builder dbSubnetGroupName data))
-    (when-let [data (lookup-entry config id :preferred-maintenance-window)]
-      (. builder preferredMaintenanceWindow data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDBInstance$Builder builder id config]
+  (when-let [data (lookup-entry config id :allow-major-version-upgrade)]
+    (. builder allowMajorVersionUpgrade data))
+  (when-let [data (lookup-entry config id :auto-minor-version-upgrade)]
+    (. builder autoMinorVersionUpgrade data))
+  (when-let [data (lookup-entry config id :availability-zone)]
+    (. builder availabilityZone data))
+  (when-let [data (lookup-entry config id :db-cluster-identifier)]
+    (. builder dbClusterIdentifier data))
+  (when-let [data (lookup-entry config id :db-instance-class)]
+    (. builder dbInstanceClass data))
+  (when-let [data (lookup-entry config id :db-instance-identifier)]
+    (. builder dbInstanceIdentifier data))
+  (when-let [data (lookup-entry config id :db-parameter-group-name)]
+    (. builder dbParameterGroupName data))
+  (when-let [data (lookup-entry config id :db-snapshot-identifier)]
+    (. builder dbSnapshotIdentifier data))
+  (when-let [data (lookup-entry config id :db-subnet-group-name)]
+    (. builder dbSubnetGroupName data))
+  (when-let [data (lookup-entry config id :preferred-maintenance-window)]
+    (. builder preferredMaintenanceWindow data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-db-instance-props-builder
-  "The cfn-db-instance-props-builder function buildes out new instances of 
-CfnDBInstanceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-db-instance-props-builder
+  "The build-cfn-db-instance-props-builder function updates a CfnDBInstanceProps$Builder instance using the provided configuration.
+  The function takes the CfnDBInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -335,63 +359,40 @@ CfnDBInstanceProps$Builder using the provided configuration.  Each field is set 
 | `dbSnapshotIdentifier` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-snapshot-identifier` |
 | `dbSubnetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-subnet-group-name` |
 | `preferredMaintenanceWindow` | java.lang.String | [[cdk.support/lookup-entry]] | `:preferred-maintenance-window` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDBInstanceProps$Builder.)]
-    (when-let [data (lookup-entry config id :allow-major-version-upgrade)]
-      (. builder allowMajorVersionUpgrade data))
-    (when-let [data (lookup-entry config id :auto-minor-version-upgrade)]
-      (. builder autoMinorVersionUpgrade data))
-    (when-let [data (lookup-entry config id :availability-zone)]
-      (. builder availabilityZone data))
-    (when-let [data (lookup-entry config id :db-cluster-identifier)]
-      (. builder dbClusterIdentifier data))
-    (when-let [data (lookup-entry config id :db-instance-class)]
-      (. builder dbInstanceClass data))
-    (when-let [data (lookup-entry config id :db-instance-identifier)]
-      (. builder dbInstanceIdentifier data))
-    (when-let [data (lookup-entry config id :db-parameter-group-name)]
-      (. builder dbParameterGroupName data))
-    (when-let [data (lookup-entry config id :db-snapshot-identifier)]
-      (. builder dbSnapshotIdentifier data))
-    (when-let [data (lookup-entry config id :db-subnet-group-name)]
-      (. builder dbSubnetGroupName data))
-    (when-let [data (lookup-entry config id :preferred-maintenance-window)]
-      (. builder preferredMaintenanceWindow data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDBInstanceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :allow-major-version-upgrade)]
+    (. builder allowMajorVersionUpgrade data))
+  (when-let [data (lookup-entry config id :auto-minor-version-upgrade)]
+    (. builder autoMinorVersionUpgrade data))
+  (when-let [data (lookup-entry config id :availability-zone)]
+    (. builder availabilityZone data))
+  (when-let [data (lookup-entry config id :db-cluster-identifier)]
+    (. builder dbClusterIdentifier data))
+  (when-let [data (lookup-entry config id :db-instance-class)]
+    (. builder dbInstanceClass data))
+  (when-let [data (lookup-entry config id :db-instance-identifier)]
+    (. builder dbInstanceIdentifier data))
+  (when-let [data (lookup-entry config id :db-parameter-group-name)]
+    (. builder dbParameterGroupName data))
+  (when-let [data (lookup-entry config id :db-snapshot-identifier)]
+    (. builder dbSnapshotIdentifier data))
+  (when-let [data (lookup-entry config id :db-subnet-group-name)]
+    (. builder dbSubnetGroupName data))
+  (when-let [data (lookup-entry config id :preferred-maintenance-window)]
+    (. builder preferredMaintenanceWindow data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-db-parameter-group-builder
-  "The cfn-db-parameter-group-builder function buildes out new instances of 
-CfnDBParameterGroup$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-db-parameter-group-builder
+  "The build-cfn-db-parameter-group-builder function updates a CfnDBParameterGroup$Builder instance using the provided configuration.
+  The function takes the CfnDBParameterGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `family` | java.lang.String | [[cdk.support/lookup-entry]] | `:family` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `parameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameters` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDBParameterGroup$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :family)]
-      (. builder family data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
-
-
-(defn cfn-db-parameter-group-props-builder
-  "The cfn-db-parameter-group-props-builder function buildes out new instances of 
-CfnDBParameterGroupProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -399,71 +400,109 @@ CfnDBParameterGroupProps$Builder using the provided configuration.  Each field i
 | `family` | java.lang.String | [[cdk.support/lookup-entry]] | `:family` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `parameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameters` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDBParameterGroupProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :family)]
-      (. builder family data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDBParameterGroup$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :family)]
+    (. builder family data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-db-subnet-group-builder
-  "The cfn-db-subnet-group-builder function buildes out new instances of 
-CfnDBSubnetGroup$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-db-parameter-group-props-builder
+  "The build-cfn-db-parameter-group-props-builder function updates a CfnDBParameterGroupProps$Builder instance using the provided configuration.
+  The function takes the CfnDBParameterGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `family` | java.lang.String | [[cdk.support/lookup-entry]] | `:family` |
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+| `parameters` | java.lang.Object | [[cdk.support/lookup-entry]] | `:parameters` |
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDBParameterGroupProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :family)]
+    (. builder family data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
+
+
+(defn build-cfn-db-subnet-group-builder
+  "The build-cfn-db-subnet-group-builder function updates a CfnDBSubnetGroup$Builder instance using the provided configuration.
+  The function takes the CfnDBSubnetGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dbSubnetGroupDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-subnet-group-description` |
 | `dbSubnetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-subnet-group-name` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDBSubnetGroup$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :db-subnet-group-description)]
-      (. builder dbSubnetGroupDescription data))
-    (when-let [data (lookup-entry config id :db-subnet-group-name)]
-      (. builder dbSubnetGroupName data))
-    (when-let [data (lookup-entry config id :subnet-ids)]
-      (. builder subnetIds data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDBSubnetGroup$Builder builder id config]
+  (when-let [data (lookup-entry config id :db-subnet-group-description)]
+    (. builder dbSubnetGroupDescription data))
+  (when-let [data (lookup-entry config id :db-subnet-group-name)]
+    (. builder dbSubnetGroupName data))
+  (when-let [data (lookup-entry config id :subnet-ids)]
+    (. builder subnetIds data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-db-subnet-group-props-builder
-  "The cfn-db-subnet-group-props-builder function buildes out new instances of 
-CfnDBSubnetGroupProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-db-subnet-group-props-builder
+  "The build-cfn-db-subnet-group-props-builder function updates a CfnDBSubnetGroupProps$Builder instance using the provided configuration.
+  The function takes the CfnDBSubnetGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dbSubnetGroupDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-subnet-group-description` |
 | `dbSubnetGroupName` | java.lang.String | [[cdk.support/lookup-entry]] | `:db-subnet-group-name` |
 | `subnetIds` | java.util.List | [[cdk.support/lookup-entry]] | `:subnet-ids` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnDBSubnetGroupProps$Builder.)]
-    (when-let [data (lookup-entry config id :db-subnet-group-description)]
-      (. builder dbSubnetGroupDescription data))
-    (when-let [data (lookup-entry config id :db-subnet-group-name)]
-      (. builder dbSubnetGroupName data))
-    (when-let [data (lookup-entry config id :subnet-ids)]
-      (. builder subnetIds data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnDBSubnetGroupProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :db-subnet-group-description)]
+    (. builder dbSubnetGroupDescription data))
+  (when-let [data (lookup-entry config id :db-subnet-group-name)]
+    (. builder dbSubnetGroupName data))
+  (when-let [data (lookup-entry config id :subnet-ids)]
+    (. builder subnetIds data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-event-subscription-builder
-  "The cfn-event-subscription-builder function buildes out new instances of 
-CfnEventSubscription$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-event-subscription-builder
+  "The build-cfn-event-subscription-builder function updates a CfnEventSubscription$Builder instance using the provided configuration.
+  The function takes the CfnEventSubscription$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -471,25 +510,28 @@ CfnEventSubscription$Builder using the provided configuration.  Each field is se
 | `eventCategories` | java.util.List | [[cdk.support/lookup-entry]] | `:event-categories` |
 | `snsTopicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:sns-topic-arn` |
 | `sourceIds` | java.util.List | [[cdk.support/lookup-entry]] | `:source-ids` |
-| `sourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-type` |"
-  [stack id config]
-  (let [builder (CfnEventSubscription$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :event-categories)]
-      (. builder eventCategories data))
-    (when-let [data (lookup-entry config id :sns-topic-arn)]
-      (. builder snsTopicArn data))
-    (when-let [data (lookup-entry config id :source-ids)]
-      (. builder sourceIds data))
-    (when-let [data (lookup-entry config id :source-type)]
-      (. builder sourceType data))
-    (.build builder)))
+| `sourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-type` |
+"
+  [^CfnEventSubscription$Builder builder id config]
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :event-categories)]
+    (. builder eventCategories data))
+  (when-let [data (lookup-entry config id :sns-topic-arn)]
+    (. builder snsTopicArn data))
+  (when-let [data (lookup-entry config id :source-ids)]
+    (. builder sourceIds data))
+  (when-let [data (lookup-entry config id :source-type)]
+    (. builder sourceType data))
+  (.build builder))
 
 
-(defn cfn-event-subscription-props-builder
-  "The cfn-event-subscription-props-builder function buildes out new instances of 
-CfnEventSubscriptionProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-event-subscription-props-builder
+  "The build-cfn-event-subscription-props-builder function updates a CfnEventSubscriptionProps$Builder instance using the provided configuration.
+  The function takes the CfnEventSubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -497,17 +539,17 @@ CfnEventSubscriptionProps$Builder using the provided configuration.  Each field 
 | `eventCategories` | java.util.List | [[cdk.support/lookup-entry]] | `:event-categories` |
 | `snsTopicArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:sns-topic-arn` |
 | `sourceIds` | java.util.List | [[cdk.support/lookup-entry]] | `:source-ids` |
-| `sourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-type` |"
-  [stack id config]
-  (let [builder (CfnEventSubscriptionProps$Builder.)]
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :event-categories)]
-      (. builder eventCategories data))
-    (when-let [data (lookup-entry config id :sns-topic-arn)]
-      (. builder snsTopicArn data))
-    (when-let [data (lookup-entry config id :source-ids)]
-      (. builder sourceIds data))
-    (when-let [data (lookup-entry config id :source-type)]
-      (. builder sourceType data))
-    (.build builder)))
+| `sourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-type` |
+"
+  [^CfnEventSubscriptionProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :event-categories)]
+    (. builder eventCategories data))
+  (when-let [data (lookup-entry config id :sns-topic-arn)]
+    (. builder snsTopicArn data))
+  (when-let [data (lookup-entry config id :source-ids)]
+    (. builder sourceIds data))
+  (when-let [data (lookup-entry config id :source-type)]
+    (. builder sourceType data))
+  (.build builder))

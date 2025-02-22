@@ -90,55 +90,64 @@
                                                      CfnVoiceChannelProps$Builder]))
 
 
-(defn cfn-adm-channel-builder
-  "The cfn-adm-channel-builder function buildes out new instances of 
-CfnADMChannel$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-adm-channel-builder
+  "The build-cfn-adm-channel-builder function updates a CfnADMChannel$Builder instance using the provided configuration.
+  The function takes the CfnADMChannel$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
 | `clientId` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-id` |
 | `clientSecret` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-secret` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |"
-  [stack id config]
-  (let [builder (CfnADMChannel$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :client-id)]
-      (. builder clientId data))
-    (when-let [data (lookup-entry config id :client-secret)]
-      (. builder clientSecret data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (.build builder)))
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+"
+  [^CfnADMChannel$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :client-id)]
+    (. builder clientId data))
+  (when-let [data (lookup-entry config id :client-secret)]
+    (. builder clientSecret data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (.build builder))
 
 
-(defn cfn-adm-channel-props-builder
-  "The cfn-adm-channel-props-builder function buildes out new instances of 
-CfnADMChannelProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-adm-channel-props-builder
+  "The build-cfn-adm-channel-props-builder function updates a CfnADMChannelProps$Builder instance using the provided configuration.
+  The function takes the CfnADMChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
 | `clientId` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-id` |
 | `clientSecret` | java.lang.String | [[cdk.support/lookup-entry]] | `:client-secret` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |"
-  [stack id config]
-  (let [builder (CfnADMChannelProps$Builder.)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :client-id)]
-      (. builder clientId data))
-    (when-let [data (lookup-entry config id :client-secret)]
-      (. builder clientSecret data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (.build builder)))
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+"
+  [^CfnADMChannelProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :client-id)]
+    (. builder clientId data))
+  (when-let [data (lookup-entry config id :client-secret)]
+    (. builder clientSecret data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (.build builder))
 
 
-(defn cfn-apns-channel-builder
-  "The cfn-apns-channel-builder function buildes out new instances of 
-CfnAPNSChannel$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-apns-channel-builder
+  "The build-cfn-apns-channel-builder function updates a CfnAPNSChannel$Builder instance using the provided configuration.
+  The function takes the CfnAPNSChannel$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -150,71 +159,36 @@ CfnAPNSChannel$Builder using the provided configuration.  Each field is set as f
 | `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |
 | `teamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:team-id` |
 | `tokenKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key` |
-| `tokenKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key-id` |"
-  [stack id config]
-  (let [builder (CfnAPNSChannel$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :bundle-id)]
-      (. builder bundleId data))
-    (when-let [data (lookup-entry config id :certificate)]
-      (. builder certificate data))
-    (when-let [data (lookup-entry config id :default-authentication-method)]
-      (. builder defaultAuthenticationMethod data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :private-key)]
-      (. builder privateKey data))
-    (when-let [data (lookup-entry config id :team-id)]
-      (. builder teamId data))
-    (when-let [data (lookup-entry config id :token-key)]
-      (. builder tokenKey data))
-    (when-let [data (lookup-entry config id :token-key-id)]
-      (. builder tokenKeyId data))
-    (.build builder)))
+| `tokenKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key-id` |
+"
+  [^CfnAPNSChannel$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :bundle-id)]
+    (. builder bundleId data))
+  (when-let [data (lookup-entry config id :certificate)]
+    (. builder certificate data))
+  (when-let [data (lookup-entry config id :default-authentication-method)]
+    (. builder defaultAuthenticationMethod data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :private-key)]
+    (. builder privateKey data))
+  (when-let [data (lookup-entry config id :team-id)]
+    (. builder teamId data))
+  (when-let [data (lookup-entry config id :token-key)]
+    (. builder tokenKey data))
+  (when-let [data (lookup-entry config id :token-key-id)]
+    (. builder tokenKeyId data))
+  (.build builder))
 
 
-(defn cfn-apns-channel-props-builder
-  "The cfn-apns-channel-props-builder function buildes out new instances of 
-CfnAPNSChannelProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-apns-channel-props-builder
+  "The build-cfn-apns-channel-props-builder function updates a CfnAPNSChannelProps$Builder instance using the provided configuration.
+  The function takes the CfnAPNSChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
-| `bundleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:bundle-id` |
-| `certificate` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate` |
-| `defaultAuthenticationMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-authentication-method` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
-| `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |
-| `teamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:team-id` |
-| `tokenKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key` |
-| `tokenKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key-id` |"
-  [stack id config]
-  (let [builder (CfnAPNSChannelProps$Builder.)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :bundle-id)]
-      (. builder bundleId data))
-    (when-let [data (lookup-entry config id :certificate)]
-      (. builder certificate data))
-    (when-let [data (lookup-entry config id :default-authentication-method)]
-      (. builder defaultAuthenticationMethod data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :private-key)]
-      (. builder privateKey data))
-    (when-let [data (lookup-entry config id :team-id)]
-      (. builder teamId data))
-    (when-let [data (lookup-entry config id :token-key)]
-      (. builder tokenKey data))
-    (when-let [data (lookup-entry config id :token-key-id)]
-      (. builder tokenKeyId data))
-    (.build builder)))
-
-
-(defn cfn-apns-sandbox-channel-builder
-  "The cfn-apns-sandbox-channel-builder function buildes out new instances of 
-CfnAPNSSandboxChannel$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -226,33 +200,77 @@ CfnAPNSSandboxChannel$Builder using the provided configuration.  Each field is s
 | `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |
 | `teamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:team-id` |
 | `tokenKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key` |
-| `tokenKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key-id` |"
-  [stack id config]
-  (let [builder (CfnAPNSSandboxChannel$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :bundle-id)]
-      (. builder bundleId data))
-    (when-let [data (lookup-entry config id :certificate)]
-      (. builder certificate data))
-    (when-let [data (lookup-entry config id :default-authentication-method)]
-      (. builder defaultAuthenticationMethod data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :private-key)]
-      (. builder privateKey data))
-    (when-let [data (lookup-entry config id :team-id)]
-      (. builder teamId data))
-    (when-let [data (lookup-entry config id :token-key)]
-      (. builder tokenKey data))
-    (when-let [data (lookup-entry config id :token-key-id)]
-      (. builder tokenKeyId data))
-    (.build builder)))
+| `tokenKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key-id` |
+"
+  [^CfnAPNSChannelProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :bundle-id)]
+    (. builder bundleId data))
+  (when-let [data (lookup-entry config id :certificate)]
+    (. builder certificate data))
+  (when-let [data (lookup-entry config id :default-authentication-method)]
+    (. builder defaultAuthenticationMethod data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :private-key)]
+    (. builder privateKey data))
+  (when-let [data (lookup-entry config id :team-id)]
+    (. builder teamId data))
+  (when-let [data (lookup-entry config id :token-key)]
+    (. builder tokenKey data))
+  (when-let [data (lookup-entry config id :token-key-id)]
+    (. builder tokenKeyId data))
+  (.build builder))
 
 
-(defn cfn-apns-sandbox-channel-props-builder
-  "The cfn-apns-sandbox-channel-props-builder function buildes out new instances of 
-CfnAPNSSandboxChannelProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-apns-sandbox-channel-builder
+  "The build-cfn-apns-sandbox-channel-builder function updates a CfnAPNSSandboxChannel$Builder instance using the provided configuration.
+  The function takes the CfnAPNSSandboxChannel$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
+| `bundleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:bundle-id` |
+| `certificate` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate` |
+| `defaultAuthenticationMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-authentication-method` |
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+| `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |
+| `teamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:team-id` |
+| `tokenKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key` |
+| `tokenKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key-id` |
+"
+  [^CfnAPNSSandboxChannel$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :bundle-id)]
+    (. builder bundleId data))
+  (when-let [data (lookup-entry config id :certificate)]
+    (. builder certificate data))
+  (when-let [data (lookup-entry config id :default-authentication-method)]
+    (. builder defaultAuthenticationMethod data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :private-key)]
+    (. builder privateKey data))
+  (when-let [data (lookup-entry config id :team-id)]
+    (. builder teamId data))
+  (when-let [data (lookup-entry config id :token-key)]
+    (. builder tokenKey data))
+  (when-let [data (lookup-entry config id :token-key-id)]
+    (. builder tokenKeyId data))
+  (.build builder))
+
+
+(defn build-cfn-apns-sandbox-channel-props-builder
+  "The build-cfn-apns-sandbox-channel-props-builder function updates a CfnAPNSSandboxChannelProps$Builder instance using the provided configuration.
+  The function takes the CfnAPNSSandboxChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -264,71 +282,36 @@ CfnAPNSSandboxChannelProps$Builder using the provided configuration.  Each field
 | `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |
 | `teamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:team-id` |
 | `tokenKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key` |
-| `tokenKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key-id` |"
-  [stack id config]
-  (let [builder (CfnAPNSSandboxChannelProps$Builder.)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :bundle-id)]
-      (. builder bundleId data))
-    (when-let [data (lookup-entry config id :certificate)]
-      (. builder certificate data))
-    (when-let [data (lookup-entry config id :default-authentication-method)]
-      (. builder defaultAuthenticationMethod data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :private-key)]
-      (. builder privateKey data))
-    (when-let [data (lookup-entry config id :team-id)]
-      (. builder teamId data))
-    (when-let [data (lookup-entry config id :token-key)]
-      (. builder tokenKey data))
-    (when-let [data (lookup-entry config id :token-key-id)]
-      (. builder tokenKeyId data))
-    (.build builder)))
+| `tokenKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key-id` |
+"
+  [^CfnAPNSSandboxChannelProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :bundle-id)]
+    (. builder bundleId data))
+  (when-let [data (lookup-entry config id :certificate)]
+    (. builder certificate data))
+  (when-let [data (lookup-entry config id :default-authentication-method)]
+    (. builder defaultAuthenticationMethod data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :private-key)]
+    (. builder privateKey data))
+  (when-let [data (lookup-entry config id :team-id)]
+    (. builder teamId data))
+  (when-let [data (lookup-entry config id :token-key)]
+    (. builder tokenKey data))
+  (when-let [data (lookup-entry config id :token-key-id)]
+    (. builder tokenKeyId data))
+  (.build builder))
 
 
-(defn cfn-apns-voip-channel-builder
-  "The cfn-apns-voip-channel-builder function buildes out new instances of 
-CfnAPNSVoipChannel$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-apns-voip-channel-builder
+  "The build-cfn-apns-voip-channel-builder function updates a CfnAPNSVoipChannel$Builder instance using the provided configuration.
+  The function takes the CfnAPNSVoipChannel$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
-| `bundleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:bundle-id` |
-| `certificate` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate` |
-| `defaultAuthenticationMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-authentication-method` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
-| `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |
-| `teamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:team-id` |
-| `tokenKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key` |
-| `tokenKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key-id` |"
-  [stack id config]
-  (let [builder (CfnAPNSVoipChannel$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :bundle-id)]
-      (. builder bundleId data))
-    (when-let [data (lookup-entry config id :certificate)]
-      (. builder certificate data))
-    (when-let [data (lookup-entry config id :default-authentication-method)]
-      (. builder defaultAuthenticationMethod data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :private-key)]
-      (. builder privateKey data))
-    (when-let [data (lookup-entry config id :team-id)]
-      (. builder teamId data))
-    (when-let [data (lookup-entry config id :token-key)]
-      (. builder tokenKey data))
-    (when-let [data (lookup-entry config id :token-key-id)]
-      (. builder tokenKeyId data))
-    (.build builder)))
-
-
-(defn cfn-apns-voip-channel-props-builder
-  "The cfn-apns-voip-channel-props-builder function buildes out new instances of 
-CfnAPNSVoipChannelProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -340,33 +323,77 @@ CfnAPNSVoipChannelProps$Builder using the provided configuration.  Each field is
 | `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |
 | `teamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:team-id` |
 | `tokenKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key` |
-| `tokenKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key-id` |"
-  [stack id config]
-  (let [builder (CfnAPNSVoipChannelProps$Builder.)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :bundle-id)]
-      (. builder bundleId data))
-    (when-let [data (lookup-entry config id :certificate)]
-      (. builder certificate data))
-    (when-let [data (lookup-entry config id :default-authentication-method)]
-      (. builder defaultAuthenticationMethod data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :private-key)]
-      (. builder privateKey data))
-    (when-let [data (lookup-entry config id :team-id)]
-      (. builder teamId data))
-    (when-let [data (lookup-entry config id :token-key)]
-      (. builder tokenKey data))
-    (when-let [data (lookup-entry config id :token-key-id)]
-      (. builder tokenKeyId data))
-    (.build builder)))
+| `tokenKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key-id` |
+"
+  [^CfnAPNSVoipChannel$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :bundle-id)]
+    (. builder bundleId data))
+  (when-let [data (lookup-entry config id :certificate)]
+    (. builder certificate data))
+  (when-let [data (lookup-entry config id :default-authentication-method)]
+    (. builder defaultAuthenticationMethod data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :private-key)]
+    (. builder privateKey data))
+  (when-let [data (lookup-entry config id :team-id)]
+    (. builder teamId data))
+  (when-let [data (lookup-entry config id :token-key)]
+    (. builder tokenKey data))
+  (when-let [data (lookup-entry config id :token-key-id)]
+    (. builder tokenKeyId data))
+  (.build builder))
 
 
-(defn cfn-apns-voip-sandbox-channel-builder
-  "The cfn-apns-voip-sandbox-channel-builder function buildes out new instances of 
-CfnAPNSVoipSandboxChannel$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-apns-voip-channel-props-builder
+  "The build-cfn-apns-voip-channel-props-builder function updates a CfnAPNSVoipChannelProps$Builder instance using the provided configuration.
+  The function takes the CfnAPNSVoipChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
+| `bundleId` | java.lang.String | [[cdk.support/lookup-entry]] | `:bundle-id` |
+| `certificate` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate` |
+| `defaultAuthenticationMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-authentication-method` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |
+| `teamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:team-id` |
+| `tokenKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key` |
+| `tokenKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key-id` |
+"
+  [^CfnAPNSVoipChannelProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :bundle-id)]
+    (. builder bundleId data))
+  (when-let [data (lookup-entry config id :certificate)]
+    (. builder certificate data))
+  (when-let [data (lookup-entry config id :default-authentication-method)]
+    (. builder defaultAuthenticationMethod data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :private-key)]
+    (. builder privateKey data))
+  (when-let [data (lookup-entry config id :team-id)]
+    (. builder teamId data))
+  (when-let [data (lookup-entry config id :token-key)]
+    (. builder tokenKey data))
+  (when-let [data (lookup-entry config id :token-key-id)]
+    (. builder tokenKeyId data))
+  (.build builder))
+
+
+(defn build-cfn-apns-voip-sandbox-channel-builder
+  "The build-cfn-apns-voip-sandbox-channel-builder function updates a CfnAPNSVoipSandboxChannel$Builder instance using the provided configuration.
+  The function takes the CfnAPNSVoipSandboxChannel$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -378,33 +405,36 @@ CfnAPNSVoipSandboxChannel$Builder using the provided configuration.  Each field 
 | `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |
 | `teamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:team-id` |
 | `tokenKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key` |
-| `tokenKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key-id` |"
-  [stack id config]
-  (let [builder (CfnAPNSVoipSandboxChannel$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :bundle-id)]
-      (. builder bundleId data))
-    (when-let [data (lookup-entry config id :certificate)]
-      (. builder certificate data))
-    (when-let [data (lookup-entry config id :default-authentication-method)]
-      (. builder defaultAuthenticationMethod data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :private-key)]
-      (. builder privateKey data))
-    (when-let [data (lookup-entry config id :team-id)]
-      (. builder teamId data))
-    (when-let [data (lookup-entry config id :token-key)]
-      (. builder tokenKey data))
-    (when-let [data (lookup-entry config id :token-key-id)]
-      (. builder tokenKeyId data))
-    (.build builder)))
+| `tokenKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key-id` |
+"
+  [^CfnAPNSVoipSandboxChannel$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :bundle-id)]
+    (. builder bundleId data))
+  (when-let [data (lookup-entry config id :certificate)]
+    (. builder certificate data))
+  (when-let [data (lookup-entry config id :default-authentication-method)]
+    (. builder defaultAuthenticationMethod data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :private-key)]
+    (. builder privateKey data))
+  (when-let [data (lookup-entry config id :team-id)]
+    (. builder teamId data))
+  (when-let [data (lookup-entry config id :token-key)]
+    (. builder tokenKey data))
+  (when-let [data (lookup-entry config id :token-key-id)]
+    (. builder tokenKeyId data))
+  (.build builder))
 
 
-(defn cfn-apns-voip-sandbox-channel-props-builder
-  "The cfn-apns-voip-sandbox-channel-props-builder function buildes out new instances of 
-CfnAPNSVoipSandboxChannelProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-apns-voip-sandbox-channel-props-builder
+  "The build-cfn-apns-voip-sandbox-channel-props-builder function updates a CfnAPNSVoipSandboxChannelProps$Builder instance using the provided configuration.
+  The function takes the CfnAPNSVoipSandboxChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -416,67 +446,76 @@ CfnAPNSVoipSandboxChannelProps$Builder using the provided configuration.  Each f
 | `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |
 | `teamId` | java.lang.String | [[cdk.support/lookup-entry]] | `:team-id` |
 | `tokenKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key` |
-| `tokenKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key-id` |"
-  [stack id config]
-  (let [builder (CfnAPNSVoipSandboxChannelProps$Builder.)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :bundle-id)]
-      (. builder bundleId data))
-    (when-let [data (lookup-entry config id :certificate)]
-      (. builder certificate data))
-    (when-let [data (lookup-entry config id :default-authentication-method)]
-      (. builder defaultAuthenticationMethod data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :private-key)]
-      (. builder privateKey data))
-    (when-let [data (lookup-entry config id :team-id)]
-      (. builder teamId data))
-    (when-let [data (lookup-entry config id :token-key)]
-      (. builder tokenKey data))
-    (when-let [data (lookup-entry config id :token-key-id)]
-      (. builder tokenKeyId data))
-    (.build builder)))
+| `tokenKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:token-key-id` |
+"
+  [^CfnAPNSVoipSandboxChannelProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :bundle-id)]
+    (. builder bundleId data))
+  (when-let [data (lookup-entry config id :certificate)]
+    (. builder certificate data))
+  (when-let [data (lookup-entry config id :default-authentication-method)]
+    (. builder defaultAuthenticationMethod data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :private-key)]
+    (. builder privateKey data))
+  (when-let [data (lookup-entry config id :team-id)]
+    (. builder teamId data))
+  (when-let [data (lookup-entry config id :token-key)]
+    (. builder tokenKey data))
+  (when-let [data (lookup-entry config id :token-key-id)]
+    (. builder tokenKeyId data))
+  (.build builder))
 
 
-(defn cfn-app-builder
-  "The cfn-app-builder function buildes out new instances of 
-CfnApp$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-app-builder
+  "The build-cfn-app-builder function updates a CfnApp$Builder instance using the provided configuration.
+  The function takes the CfnApp$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnApp$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnApp$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-app-props-builder
-  "The cfn-app-props-builder function buildes out new instances of 
-CfnAppProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-app-props-builder
+  "The build-cfn-app-props-builder function updates a CfnAppProps$Builder instance using the provided configuration.
+  The function takes the CfnAppProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnAppProps$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnAppProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-application-settings-builder
-  "The cfn-application-settings-builder function buildes out new instances of 
-CfnApplicationSettings$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-application-settings-builder
+  "The build-cfn-application-settings-builder function updates a CfnApplicationSettings$Builder instance using the provided configuration.
+  The function takes the CfnApplicationSettings$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -484,68 +523,77 @@ CfnApplicationSettings$Builder using the provided configuration.  Each field is 
 | `campaignHook` | software.amazon.awscdk.services.pinpoint.CfnApplicationSettings$CampaignHookProperty | [[cdk.support/lookup-entry]] | `:campaign-hook` |
 | `cloudWatchMetricsEnabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cloud-watch-metrics-enabled` |
 | `limits` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:limits` |
-| `quietTime` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:quiet-time` |"
-  [stack id config]
-  (let [builder (CfnApplicationSettings$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :campaign-hook)]
-      (. builder campaignHook data))
-    (when-let [data (lookup-entry config id :cloud-watch-metrics-enabled)]
-      (. builder cloudWatchMetricsEnabled data))
-    (when-let [data (lookup-entry config id :limits)]
-      (. builder limits data))
-    (when-let [data (lookup-entry config id :quiet-time)]
-      (. builder quietTime data))
-    (.build builder)))
+| `quietTime` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:quiet-time` |
+"
+  [^CfnApplicationSettings$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :campaign-hook)]
+    (. builder campaignHook data))
+  (when-let [data (lookup-entry config id :cloud-watch-metrics-enabled)]
+    (. builder cloudWatchMetricsEnabled data))
+  (when-let [data (lookup-entry config id :limits)]
+    (. builder limits data))
+  (when-let [data (lookup-entry config id :quiet-time)]
+    (. builder quietTime data))
+  (.build builder))
 
 
-(defn cfn-application-settings-campaign-hook-property-builder
-  "The cfn-application-settings-campaign-hook-property-builder function buildes out new instances of 
-CfnApplicationSettings$CampaignHookProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-application-settings-campaign-hook-property-builder
+  "The build-cfn-application-settings-campaign-hook-property-builder function updates a CfnApplicationSettings$CampaignHookProperty$Builder instance using the provided configuration.
+  The function takes the CfnApplicationSettings$CampaignHookProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `lambdaFunctionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:lambda-function-name` |
 | `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
-| `webUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:web-url` |"
-  [stack id config]
-  (let [builder (CfnApplicationSettings$CampaignHookProperty$Builder.)]
-    (when-let [data (lookup-entry config id :lambda-function-name)]
-      (. builder lambdaFunctionName data))
-    (when-let [data (lookup-entry config id :mode)]
-      (. builder mode data))
-    (when-let [data (lookup-entry config id :web-url)]
-      (. builder webUrl data))
-    (.build builder)))
+| `webUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:web-url` |
+"
+  [^CfnApplicationSettings$CampaignHookProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :lambda-function-name)]
+    (. builder lambdaFunctionName data))
+  (when-let [data (lookup-entry config id :mode)]
+    (. builder mode data))
+  (when-let [data (lookup-entry config id :web-url)]
+    (. builder webUrl data))
+  (.build builder))
 
 
-(defn cfn-application-settings-limits-property-builder
-  "The cfn-application-settings-limits-property-builder function buildes out new instances of 
-CfnApplicationSettings$LimitsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-application-settings-limits-property-builder
+  "The build-cfn-application-settings-limits-property-builder function updates a CfnApplicationSettings$LimitsProperty$Builder instance using the provided configuration.
+  The function takes the CfnApplicationSettings$LimitsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `daily` | java.lang.Number | [[cdk.support/lookup-entry]] | `:daily` |
 | `maximumDuration` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-duration` |
 | `messagesPerSecond` | java.lang.Number | [[cdk.support/lookup-entry]] | `:messages-per-second` |
-| `total` | java.lang.Number | [[cdk.support/lookup-entry]] | `:total` |"
-  [stack id config]
-  (let [builder (CfnApplicationSettings$LimitsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :daily)]
-      (. builder daily data))
-    (when-let [data (lookup-entry config id :maximum-duration)]
-      (. builder maximumDuration data))
-    (when-let [data (lookup-entry config id :messages-per-second)]
-      (. builder messagesPerSecond data))
-    (when-let [data (lookup-entry config id :total)]
-      (. builder total data))
-    (.build builder)))
+| `total` | java.lang.Number | [[cdk.support/lookup-entry]] | `:total` |
+"
+  [^CfnApplicationSettings$LimitsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :daily)]
+    (. builder daily data))
+  (when-let [data (lookup-entry config id :maximum-duration)]
+    (. builder maximumDuration data))
+  (when-let [data (lookup-entry config id :messages-per-second)]
+    (. builder messagesPerSecond data))
+  (when-let [data (lookup-entry config id :total)]
+    (. builder total data))
+  (.build builder))
 
 
-(defn cfn-application-settings-props-builder
-  "The cfn-application-settings-props-builder function buildes out new instances of 
-CfnApplicationSettingsProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-application-settings-props-builder
+  "The build-cfn-application-settings-props-builder function updates a CfnApplicationSettingsProps$Builder instance using the provided configuration.
+  The function takes the CfnApplicationSettingsProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -553,105 +601,120 @@ CfnApplicationSettingsProps$Builder using the provided configuration.  Each fiel
 | `campaignHook` | software.amazon.awscdk.services.pinpoint.CfnApplicationSettings$CampaignHookProperty | [[cdk.support/lookup-entry]] | `:campaign-hook` |
 | `cloudWatchMetricsEnabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:cloud-watch-metrics-enabled` |
 | `limits` | software.amazon.awscdk.services.pinpoint.CfnApplicationSettings$LimitsProperty | [[cdk.support/lookup-entry]] | `:limits` |
-| `quietTime` | software.amazon.awscdk.services.pinpoint.CfnApplicationSettings$QuietTimeProperty | [[cdk.support/lookup-entry]] | `:quiet-time` |"
-  [stack id config]
-  (let [builder (CfnApplicationSettingsProps$Builder.)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :campaign-hook)]
-      (. builder campaignHook data))
-    (when-let [data (lookup-entry config id :cloud-watch-metrics-enabled)]
-      (. builder cloudWatchMetricsEnabled data))
-    (when-let [data (lookup-entry config id :limits)]
-      (. builder limits data))
-    (when-let [data (lookup-entry config id :quiet-time)]
-      (. builder quietTime data))
-    (.build builder)))
+| `quietTime` | software.amazon.awscdk.services.pinpoint.CfnApplicationSettings$QuietTimeProperty | [[cdk.support/lookup-entry]] | `:quiet-time` |
+"
+  [^CfnApplicationSettingsProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :campaign-hook)]
+    (. builder campaignHook data))
+  (when-let [data (lookup-entry config id :cloud-watch-metrics-enabled)]
+    (. builder cloudWatchMetricsEnabled data))
+  (when-let [data (lookup-entry config id :limits)]
+    (. builder limits data))
+  (when-let [data (lookup-entry config id :quiet-time)]
+    (. builder quietTime data))
+  (.build builder))
 
 
-(defn cfn-application-settings-quiet-time-property-builder
-  "The cfn-application-settings-quiet-time-property-builder function buildes out new instances of 
-CfnApplicationSettings$QuietTimeProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-application-settings-quiet-time-property-builder
+  "The build-cfn-application-settings-quiet-time-property-builder function updates a CfnApplicationSettings$QuietTimeProperty$Builder instance using the provided configuration.
+  The function takes the CfnApplicationSettings$QuietTimeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `end` | java.lang.String | [[cdk.support/lookup-entry]] | `:end` |
-| `start` | java.lang.String | [[cdk.support/lookup-entry]] | `:start` |"
-  [stack id config]
-  (let [builder (CfnApplicationSettings$QuietTimeProperty$Builder.)]
-    (when-let [data (lookup-entry config id :end)]
-      (. builder end data))
-    (when-let [data (lookup-entry config id :start)]
-      (. builder start data))
-    (.build builder)))
+| `start` | java.lang.String | [[cdk.support/lookup-entry]] | `:start` |
+"
+  [^CfnApplicationSettings$QuietTimeProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :end)]
+    (. builder end data))
+  (when-let [data (lookup-entry config id :start)]
+    (. builder start data))
+  (.build builder))
 
 
-(defn cfn-baidu-channel-builder
-  "The cfn-baidu-channel-builder function buildes out new instances of 
-CfnBaiduChannel$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-baidu-channel-builder
+  "The build-cfn-baidu-channel-builder function updates a CfnBaiduChannel$Builder instance using the provided configuration.
+  The function takes the CfnBaiduChannel$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `apiKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-key` |
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
-| `secretKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-key` |"
-  [stack id config]
-  (let [builder (CfnBaiduChannel$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :api-key)]
-      (. builder apiKey data))
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :secret-key)]
-      (. builder secretKey data))
-    (.build builder)))
+| `secretKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-key` |
+"
+  [^CfnBaiduChannel$Builder builder id config]
+  (when-let [data (lookup-entry config id :api-key)]
+    (. builder apiKey data))
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :secret-key)]
+    (. builder secretKey data))
+  (.build builder))
 
 
-(defn cfn-baidu-channel-props-builder
-  "The cfn-baidu-channel-props-builder function buildes out new instances of 
-CfnBaiduChannelProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-baidu-channel-props-builder
+  "The build-cfn-baidu-channel-props-builder function updates a CfnBaiduChannelProps$Builder instance using the provided configuration.
+  The function takes the CfnBaiduChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `apiKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:api-key` |
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
-| `secretKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-key` |"
-  [stack id config]
-  (let [builder (CfnBaiduChannelProps$Builder.)]
-    (when-let [data (lookup-entry config id :api-key)]
-      (. builder apiKey data))
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :secret-key)]
-      (. builder secretKey data))
-    (.build builder)))
+| `secretKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-key` |
+"
+  [^CfnBaiduChannelProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :api-key)]
+    (. builder apiKey data))
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :secret-key)]
+    (. builder secretKey data))
+  (.build builder))
 
 
-(defn cfn-campaign-attribute-dimension-property-builder
-  "The cfn-campaign-attribute-dimension-property-builder function buildes out new instances of 
-CfnCampaign$AttributeDimensionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-attribute-dimension-property-builder
+  "The build-cfn-campaign-attribute-dimension-property-builder function updates a CfnCampaign$AttributeDimensionProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$AttributeDimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attributeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-type` |
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |"
-  [stack id config]
-  (let [builder (CfnCampaign$AttributeDimensionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :attribute-type)]
-      (. builder attributeType data))
-    (when-let [data (lookup-entry config id :values)]
-      (. builder values data))
-    (.build builder)))
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+"
+  [^CfnCampaign$AttributeDimensionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :attribute-type)]
+    (. builder attributeType data))
+  (when-let [data (lookup-entry config id :values)]
+    (. builder values data))
+  (.build builder))
 
 
-(defn cfn-campaign-builder
-  "The cfn-campaign-builder function buildes out new instances of 
-CfnCampaign$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-builder
+  "The build-cfn-campaign-builder function updates a CfnCampaign$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -672,145 +735,163 @@ CfnCampaign$Builder using the provided configuration.  Each field is set as foll
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:template-configuration` |
 | `treatmentDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:treatment-description` |
-| `treatmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:treatment-name` |"
-  [stack id config]
-  (let [builder (CfnCampaign$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :additional-treatments)]
-      (. builder additionalTreatments data))
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :campaign-hook)]
-      (. builder campaignHook data))
-    (when-let [data (lookup-entry config id :custom-delivery-configuration)]
-      (. builder customDeliveryConfiguration data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :holdout-percent)]
-      (. builder holdoutPercent data))
-    (when-let [data (lookup-entry config id :is-paused)]
-      (. builder isPaused data))
-    (when-let [data (lookup-entry config id :limits)]
-      (. builder limits data))
-    (when-let [data (lookup-entry config id :message-configuration)]
-      (. builder messageConfiguration data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :schedule)]
-      (. builder schedule data))
-    (when-let [data (lookup-entry config id :segment-id)]
-      (. builder segmentId data))
-    (when-let [data (lookup-entry config id :segment-version)]
-      (. builder segmentVersion data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :template-configuration)]
-      (. builder templateConfiguration data))
-    (when-let [data (lookup-entry config id :treatment-description)]
-      (. builder treatmentDescription data))
-    (when-let [data (lookup-entry config id :treatment-name)]
-      (. builder treatmentName data))
-    (.build builder)))
+| `treatmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:treatment-name` |
+"
+  [^CfnCampaign$Builder builder id config]
+  (when-let [data (lookup-entry config id :additional-treatments)]
+    (. builder additionalTreatments data))
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :campaign-hook)]
+    (. builder campaignHook data))
+  (when-let [data (lookup-entry config id :custom-delivery-configuration)]
+    (. builder customDeliveryConfiguration data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :holdout-percent)]
+    (. builder holdoutPercent data))
+  (when-let [data (lookup-entry config id :is-paused)]
+    (. builder isPaused data))
+  (when-let [data (lookup-entry config id :limits)]
+    (. builder limits data))
+  (when-let [data (lookup-entry config id :message-configuration)]
+    (. builder messageConfiguration data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :schedule)]
+    (. builder schedule data))
+  (when-let [data (lookup-entry config id :segment-id)]
+    (. builder segmentId data))
+  (when-let [data (lookup-entry config id :segment-version)]
+    (. builder segmentVersion data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :template-configuration)]
+    (. builder templateConfiguration data))
+  (when-let [data (lookup-entry config id :treatment-description)]
+    (. builder treatmentDescription data))
+  (when-let [data (lookup-entry config id :treatment-name)]
+    (. builder treatmentName data))
+  (.build builder))
 
 
-(defn cfn-campaign-campaign-custom-message-property-builder
-  "The cfn-campaign-campaign-custom-message-property-builder function buildes out new instances of 
-CfnCampaign$CampaignCustomMessageProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-campaign-custom-message-property-builder
+  "The build-cfn-campaign-campaign-custom-message-property-builder function updates a CfnCampaign$CampaignCustomMessageProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$CampaignCustomMessageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `data` | java.lang.String | [[cdk.support/lookup-entry]] | `:data` |"
-  [stack id config]
-  (let [builder (CfnCampaign$CampaignCustomMessageProperty$Builder.)]
-    (when-let [data (lookup-entry config id :data)]
-      (. builder data data))
-    (.build builder)))
+| `data` | java.lang.String | [[cdk.support/lookup-entry]] | `:data` |
+"
+  [^CfnCampaign$CampaignCustomMessageProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :data)]
+    (. builder data data))
+  (.build builder))
 
 
-(defn cfn-campaign-campaign-email-message-property-builder
-  "The cfn-campaign-campaign-email-message-property-builder function buildes out new instances of 
-CfnCampaign$CampaignEmailMessageProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-campaign-email-message-property-builder
+  "The build-cfn-campaign-campaign-email-message-property-builder function updates a CfnCampaign$CampaignEmailMessageProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$CampaignEmailMessageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `body` | java.lang.String | [[cdk.support/lookup-entry]] | `:body` |
 | `fromAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:from-address` |
 | `htmlBody` | java.lang.String | [[cdk.support/lookup-entry]] | `:html-body` |
-| `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |"
-  [stack id config]
-  (let [builder (CfnCampaign$CampaignEmailMessageProperty$Builder.)]
-    (when-let [data (lookup-entry config id :body)]
-      (. builder body data))
-    (when-let [data (lookup-entry config id :from-address)]
-      (. builder fromAddress data))
-    (when-let [data (lookup-entry config id :html-body)]
-      (. builder htmlBody data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (.build builder)))
+| `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
+"
+  [^CfnCampaign$CampaignEmailMessageProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :body)]
+    (. builder body data))
+  (when-let [data (lookup-entry config id :from-address)]
+    (. builder fromAddress data))
+  (when-let [data (lookup-entry config id :html-body)]
+    (. builder htmlBody data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (.build builder))
 
 
-(defn cfn-campaign-campaign-event-filter-property-builder
-  "The cfn-campaign-campaign-event-filter-property-builder function buildes out new instances of 
-CfnCampaign$CampaignEventFilterProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-campaign-event-filter-property-builder
+  "The build-cfn-campaign-campaign-event-filter-property-builder function updates a CfnCampaign$CampaignEventFilterProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$CampaignEventFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dimensions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dimensions` |
-| `filterType` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-type` |"
-  [stack id config]
-  (let [builder (CfnCampaign$CampaignEventFilterProperty$Builder.)]
-    (when-let [data (lookup-entry config id :dimensions)]
-      (. builder dimensions data))
-    (when-let [data (lookup-entry config id :filter-type)]
-      (. builder filterType data))
-    (.build builder)))
+| `filterType` | java.lang.String | [[cdk.support/lookup-entry]] | `:filter-type` |
+"
+  [^CfnCampaign$CampaignEventFilterProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :dimensions)]
+    (. builder dimensions data))
+  (when-let [data (lookup-entry config id :filter-type)]
+    (. builder filterType data))
+  (.build builder))
 
 
-(defn cfn-campaign-campaign-hook-property-builder
-  "The cfn-campaign-campaign-hook-property-builder function buildes out new instances of 
-CfnCampaign$CampaignHookProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-campaign-hook-property-builder
+  "The build-cfn-campaign-campaign-hook-property-builder function updates a CfnCampaign$CampaignHookProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$CampaignHookProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `lambdaFunctionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:lambda-function-name` |
 | `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
-| `webUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:web-url` |"
-  [stack id config]
-  (let [builder (CfnCampaign$CampaignHookProperty$Builder.)]
-    (when-let [data (lookup-entry config id :lambda-function-name)]
-      (. builder lambdaFunctionName data))
-    (when-let [data (lookup-entry config id :mode)]
-      (. builder mode data))
-    (when-let [data (lookup-entry config id :web-url)]
-      (. builder webUrl data))
-    (.build builder)))
+| `webUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:web-url` |
+"
+  [^CfnCampaign$CampaignHookProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :lambda-function-name)]
+    (. builder lambdaFunctionName data))
+  (when-let [data (lookup-entry config id :mode)]
+    (. builder mode data))
+  (when-let [data (lookup-entry config id :web-url)]
+    (. builder webUrl data))
+  (.build builder))
 
 
-(defn cfn-campaign-campaign-in-app-message-property-builder
-  "The cfn-campaign-campaign-in-app-message-property-builder function buildes out new instances of 
-CfnCampaign$CampaignInAppMessageProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-campaign-in-app-message-property-builder
+  "The build-cfn-campaign-campaign-in-app-message-property-builder function updates a CfnCampaign$CampaignInAppMessageProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$CampaignInAppMessageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `content` | java.util.List | [[cdk.support/lookup-entry]] | `:content` |
 | `customConfig` | java.lang.Object | [[cdk.support/lookup-entry]] | `:custom-config` |
-| `layout` | java.lang.String | [[cdk.support/lookup-entry]] | `:layout` |"
-  [stack id config]
-  (let [builder (CfnCampaign$CampaignInAppMessageProperty$Builder.)]
-    (when-let [data (lookup-entry config id :content)]
-      (. builder content data))
-    (when-let [data (lookup-entry config id :custom-config)]
-      (. builder customConfig data))
-    (when-let [data (lookup-entry config id :layout)]
-      (. builder layout data))
-    (.build builder)))
+| `layout` | java.lang.String | [[cdk.support/lookup-entry]] | `:layout` |
+"
+  [^CfnCampaign$CampaignInAppMessageProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :content)]
+    (. builder content data))
+  (when-let [data (lookup-entry config id :custom-config)]
+    (. builder customConfig data))
+  (when-let [data (lookup-entry config id :layout)]
+    (. builder layout data))
+  (.build builder))
 
 
-(defn cfn-campaign-campaign-sms-message-property-builder
-  "The cfn-campaign-campaign-sms-message-property-builder function buildes out new instances of 
-CfnCampaign$CampaignSmsMessageProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-campaign-sms-message-property-builder
+  "The build-cfn-campaign-campaign-sms-message-property-builder function updates a CfnCampaign$CampaignSmsMessageProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$CampaignSmsMessageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -819,44 +900,50 @@ CfnCampaign$CampaignSmsMessageProperty$Builder using the provided configuration.
 | `messageType` | java.lang.String | [[cdk.support/lookup-entry]] | `:message-type` |
 | `originationNumber` | java.lang.String | [[cdk.support/lookup-entry]] | `:origination-number` |
 | `senderId` | java.lang.String | [[cdk.support/lookup-entry]] | `:sender-id` |
-| `templateId` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-id` |"
-  [stack id config]
-  (let [builder (CfnCampaign$CampaignSmsMessageProperty$Builder.)]
-    (when-let [data (lookup-entry config id :body)]
-      (. builder body data))
-    (when-let [data (lookup-entry config id :entity-id)]
-      (. builder entityId data))
-    (when-let [data (lookup-entry config id :message-type)]
-      (. builder messageType data))
-    (when-let [data (lookup-entry config id :origination-number)]
-      (. builder originationNumber data))
-    (when-let [data (lookup-entry config id :sender-id)]
-      (. builder senderId data))
-    (when-let [data (lookup-entry config id :template-id)]
-      (. builder templateId data))
-    (.build builder)))
+| `templateId` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-id` |
+"
+  [^CfnCampaign$CampaignSmsMessageProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :body)]
+    (. builder body data))
+  (when-let [data (lookup-entry config id :entity-id)]
+    (. builder entityId data))
+  (when-let [data (lookup-entry config id :message-type)]
+    (. builder messageType data))
+  (when-let [data (lookup-entry config id :origination-number)]
+    (. builder originationNumber data))
+  (when-let [data (lookup-entry config id :sender-id)]
+    (. builder senderId data))
+  (when-let [data (lookup-entry config id :template-id)]
+    (. builder templateId data))
+  (.build builder))
 
 
-(defn cfn-campaign-custom-delivery-configuration-property-builder
-  "The cfn-campaign-custom-delivery-configuration-property-builder function buildes out new instances of 
-CfnCampaign$CustomDeliveryConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-custom-delivery-configuration-property-builder
+  "The build-cfn-campaign-custom-delivery-configuration-property-builder function updates a CfnCampaign$CustomDeliveryConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$CustomDeliveryConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `deliveryUri` | java.lang.String | [[cdk.support/lookup-entry]] | `:delivery-uri` |
-| `endpointTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:endpoint-types` |"
-  [stack id config]
-  (let [builder (CfnCampaign$CustomDeliveryConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :delivery-uri)]
-      (. builder deliveryUri data))
-    (when-let [data (lookup-entry config id :endpoint-types)]
-      (. builder endpointTypes data))
-    (.build builder)))
+| `endpointTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:endpoint-types` |
+"
+  [^CfnCampaign$CustomDeliveryConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :delivery-uri)]
+    (. builder deliveryUri data))
+  (when-let [data (lookup-entry config id :endpoint-types)]
+    (. builder endpointTypes data))
+  (.build builder))
 
 
-(defn cfn-campaign-default-button-configuration-property-builder
-  "The cfn-campaign-default-button-configuration-property-builder function buildes out new instances of 
-CfnCampaign$DefaultButtonConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-default-button-configuration-property-builder
+  "The build-cfn-campaign-default-button-configuration-property-builder function updates a CfnCampaign$DefaultButtonConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$DefaultButtonConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -865,90 +952,102 @@ CfnCampaign$DefaultButtonConfigurationProperty$Builder using the provided config
 | `buttonAction` | java.lang.String | [[cdk.support/lookup-entry]] | `:button-action` |
 | `link` | java.lang.String | [[cdk.support/lookup-entry]] | `:link` |
 | `text` | java.lang.String | [[cdk.support/lookup-entry]] | `:text` |
-| `textColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-color` |"
-  [stack id config]
-  (let [builder (CfnCampaign$DefaultButtonConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :background-color)]
-      (. builder backgroundColor data))
-    (when-let [data (lookup-entry config id :border-radius)]
-      (. builder borderRadius data))
-    (when-let [data (lookup-entry config id :button-action)]
-      (. builder buttonAction data))
-    (when-let [data (lookup-entry config id :link)]
-      (. builder link data))
-    (when-let [data (lookup-entry config id :text)]
-      (. builder text data))
-    (when-let [data (lookup-entry config id :text-color)]
-      (. builder textColor data))
-    (.build builder)))
+| `textColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-color` |
+"
+  [^CfnCampaign$DefaultButtonConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :background-color)]
+    (. builder backgroundColor data))
+  (when-let [data (lookup-entry config id :border-radius)]
+    (. builder borderRadius data))
+  (when-let [data (lookup-entry config id :button-action)]
+    (. builder buttonAction data))
+  (when-let [data (lookup-entry config id :link)]
+    (. builder link data))
+  (when-let [data (lookup-entry config id :text)]
+    (. builder text data))
+  (when-let [data (lookup-entry config id :text-color)]
+    (. builder textColor data))
+  (.build builder))
 
 
-(defn cfn-campaign-event-dimensions-property-builder
-  "The cfn-campaign-event-dimensions-property-builder function buildes out new instances of 
-CfnCampaign$EventDimensionsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-event-dimensions-property-builder
+  "The build-cfn-campaign-event-dimensions-property-builder function updates a CfnCampaign$EventDimensionsProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$EventDimensionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attributes` | java.lang.Object | [[cdk.support/lookup-entry]] | `:attributes` |
 | `eventType` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:event-type` |
-| `metrics` | java.lang.Object | [[cdk.support/lookup-entry]] | `:metrics` |"
-  [stack id config]
-  (let [builder (CfnCampaign$EventDimensionsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :attributes)]
-      (. builder attributes data))
-    (when-let [data (lookup-entry config id :event-type)]
-      (. builder eventType data))
-    (when-let [data (lookup-entry config id :metrics)]
-      (. builder metrics data))
-    (.build builder)))
+| `metrics` | java.lang.Object | [[cdk.support/lookup-entry]] | `:metrics` |
+"
+  [^CfnCampaign$EventDimensionsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :attributes)]
+    (. builder attributes data))
+  (when-let [data (lookup-entry config id :event-type)]
+    (. builder eventType data))
+  (when-let [data (lookup-entry config id :metrics)]
+    (. builder metrics data))
+  (.build builder))
 
 
-(defn cfn-campaign-in-app-message-body-config-property-builder
-  "The cfn-campaign-in-app-message-body-config-property-builder function buildes out new instances of 
-CfnCampaign$InAppMessageBodyConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-in-app-message-body-config-property-builder
+  "The build-cfn-campaign-in-app-message-body-config-property-builder function updates a CfnCampaign$InAppMessageBodyConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$InAppMessageBodyConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `alignment` | java.lang.String | [[cdk.support/lookup-entry]] | `:alignment` |
 | `body` | java.lang.String | [[cdk.support/lookup-entry]] | `:body` |
-| `textColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-color` |"
-  [stack id config]
-  (let [builder (CfnCampaign$InAppMessageBodyConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :alignment)]
-      (. builder alignment data))
-    (when-let [data (lookup-entry config id :body)]
-      (. builder body data))
-    (when-let [data (lookup-entry config id :text-color)]
-      (. builder textColor data))
-    (.build builder)))
+| `textColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-color` |
+"
+  [^CfnCampaign$InAppMessageBodyConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :alignment)]
+    (. builder alignment data))
+  (when-let [data (lookup-entry config id :body)]
+    (. builder body data))
+  (when-let [data (lookup-entry config id :text-color)]
+    (. builder textColor data))
+  (.build builder))
 
 
-(defn cfn-campaign-in-app-message-button-property-builder
-  "The cfn-campaign-in-app-message-button-property-builder function buildes out new instances of 
-CfnCampaign$InAppMessageButtonProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-in-app-message-button-property-builder
+  "The build-cfn-campaign-in-app-message-button-property-builder function updates a CfnCampaign$InAppMessageButtonProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$InAppMessageButtonProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `android` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:android` |
 | `defaultConfig` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:default-config` |
 | `ios` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ios` |
-| `web` | software.amazon.awscdk.services.pinpoint.CfnCampaign$OverrideButtonConfigurationProperty | [[cdk.support/lookup-entry]] | `:web` |"
-  [stack id config]
-  (let [builder (CfnCampaign$InAppMessageButtonProperty$Builder.)]
-    (when-let [data (lookup-entry config id :android)]
-      (. builder android data))
-    (when-let [data (lookup-entry config id :default-config)]
-      (. builder defaultConfig data))
-    (when-let [data (lookup-entry config id :ios)]
-      (. builder ios data))
-    (when-let [data (lookup-entry config id :web)]
-      (. builder web data))
-    (.build builder)))
+| `web` | software.amazon.awscdk.services.pinpoint.CfnCampaign$OverrideButtonConfigurationProperty | [[cdk.support/lookup-entry]] | `:web` |
+"
+  [^CfnCampaign$InAppMessageButtonProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :android)]
+    (. builder android data))
+  (when-let [data (lookup-entry config id :default-config)]
+    (. builder defaultConfig data))
+  (when-let [data (lookup-entry config id :ios)]
+    (. builder ios data))
+  (when-let [data (lookup-entry config id :web)]
+    (. builder web data))
+  (.build builder))
 
 
-(defn cfn-campaign-in-app-message-content-property-builder
-  "The cfn-campaign-in-app-message-content-property-builder function buildes out new instances of 
-CfnCampaign$InAppMessageContentProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-in-app-message-content-property-builder
+  "The build-cfn-campaign-in-app-message-content-property-builder function updates a CfnCampaign$InAppMessageContentProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$InAppMessageContentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -957,47 +1056,53 @@ CfnCampaign$InAppMessageContentProperty$Builder using the provided configuration
 | `headerConfig` | software.amazon.awscdk.services.pinpoint.CfnCampaign$InAppMessageHeaderConfigProperty | [[cdk.support/lookup-entry]] | `:header-config` |
 | `imageUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-url` |
 | `primaryBtn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:primary-btn` |
-| `secondaryBtn` | software.amazon.awscdk.services.pinpoint.CfnCampaign$InAppMessageButtonProperty | [[cdk.support/lookup-entry]] | `:secondary-btn` |"
-  [stack id config]
-  (let [builder (CfnCampaign$InAppMessageContentProperty$Builder.)]
-    (when-let [data (lookup-entry config id :background-color)]
-      (. builder backgroundColor data))
-    (when-let [data (lookup-entry config id :body-config)]
-      (. builder bodyConfig data))
-    (when-let [data (lookup-entry config id :header-config)]
-      (. builder headerConfig data))
-    (when-let [data (lookup-entry config id :image-url)]
-      (. builder imageUrl data))
-    (when-let [data (lookup-entry config id :primary-btn)]
-      (. builder primaryBtn data))
-    (when-let [data (lookup-entry config id :secondary-btn)]
-      (. builder secondaryBtn data))
-    (.build builder)))
+| `secondaryBtn` | software.amazon.awscdk.services.pinpoint.CfnCampaign$InAppMessageButtonProperty | [[cdk.support/lookup-entry]] | `:secondary-btn` |
+"
+  [^CfnCampaign$InAppMessageContentProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :background-color)]
+    (. builder backgroundColor data))
+  (when-let [data (lookup-entry config id :body-config)]
+    (. builder bodyConfig data))
+  (when-let [data (lookup-entry config id :header-config)]
+    (. builder headerConfig data))
+  (when-let [data (lookup-entry config id :image-url)]
+    (. builder imageUrl data))
+  (when-let [data (lookup-entry config id :primary-btn)]
+    (. builder primaryBtn data))
+  (when-let [data (lookup-entry config id :secondary-btn)]
+    (. builder secondaryBtn data))
+  (.build builder))
 
 
-(defn cfn-campaign-in-app-message-header-config-property-builder
-  "The cfn-campaign-in-app-message-header-config-property-builder function buildes out new instances of 
-CfnCampaign$InAppMessageHeaderConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-in-app-message-header-config-property-builder
+  "The build-cfn-campaign-in-app-message-header-config-property-builder function updates a CfnCampaign$InAppMessageHeaderConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$InAppMessageHeaderConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `alignment` | java.lang.String | [[cdk.support/lookup-entry]] | `:alignment` |
 | `header` | java.lang.String | [[cdk.support/lookup-entry]] | `:header` |
-| `textColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-color` |"
-  [stack id config]
-  (let [builder (CfnCampaign$InAppMessageHeaderConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :alignment)]
-      (. builder alignment data))
-    (when-let [data (lookup-entry config id :header)]
-      (. builder header data))
-    (when-let [data (lookup-entry config id :text-color)]
-      (. builder textColor data))
-    (.build builder)))
+| `textColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-color` |
+"
+  [^CfnCampaign$InAppMessageHeaderConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :alignment)]
+    (. builder alignment data))
+  (when-let [data (lookup-entry config id :header)]
+    (. builder header data))
+  (when-let [data (lookup-entry config id :text-color)]
+    (. builder textColor data))
+  (.build builder))
 
 
-(defn cfn-campaign-limits-property-builder
-  "The cfn-campaign-limits-property-builder function buildes out new instances of 
-CfnCampaign$LimitsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-limits-property-builder
+  "The build-cfn-campaign-limits-property-builder function updates a CfnCampaign$LimitsProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$LimitsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1005,25 +1110,28 @@ CfnCampaign$LimitsProperty$Builder using the provided configuration.  Each field
 | `maximumDuration` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-duration` |
 | `messagesPerSecond` | java.lang.Number | [[cdk.support/lookup-entry]] | `:messages-per-second` |
 | `session` | java.lang.Number | [[cdk.support/lookup-entry]] | `:session` |
-| `total` | java.lang.Number | [[cdk.support/lookup-entry]] | `:total` |"
-  [stack id config]
-  (let [builder (CfnCampaign$LimitsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :daily)]
-      (. builder daily data))
-    (when-let [data (lookup-entry config id :maximum-duration)]
-      (. builder maximumDuration data))
-    (when-let [data (lookup-entry config id :messages-per-second)]
-      (. builder messagesPerSecond data))
-    (when-let [data (lookup-entry config id :session)]
-      (. builder session data))
-    (when-let [data (lookup-entry config id :total)]
-      (. builder total data))
-    (.build builder)))
+| `total` | java.lang.Number | [[cdk.support/lookup-entry]] | `:total` |
+"
+  [^CfnCampaign$LimitsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :daily)]
+    (. builder daily data))
+  (when-let [data (lookup-entry config id :maximum-duration)]
+    (. builder maximumDuration data))
+  (when-let [data (lookup-entry config id :messages-per-second)]
+    (. builder messagesPerSecond data))
+  (when-let [data (lookup-entry config id :session)]
+    (. builder session data))
+  (when-let [data (lookup-entry config id :total)]
+    (. builder total data))
+  (.build builder))
 
 
-(defn cfn-campaign-message-configuration-property-builder
-  "The cfn-campaign-message-configuration-property-builder function buildes out new instances of 
-CfnCampaign$MessageConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-message-configuration-property-builder
+  "The build-cfn-campaign-message-configuration-property-builder function updates a CfnCampaign$MessageConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$MessageConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1035,33 +1143,36 @@ CfnCampaign$MessageConfigurationProperty$Builder using the provided configuratio
 | `emailMessage` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:email-message` |
 | `gcmMessage` | software.amazon.awscdk.services.pinpoint.CfnCampaign$MessageProperty | [[cdk.support/lookup-entry]] | `:gcm-message` |
 | `inAppMessage` | software.amazon.awscdk.services.pinpoint.CfnCampaign$CampaignInAppMessageProperty | [[cdk.support/lookup-entry]] | `:in-app-message` |
-| `smsMessage` | software.amazon.awscdk.services.pinpoint.CfnCampaign$CampaignSmsMessageProperty | [[cdk.support/lookup-entry]] | `:sms-message` |"
-  [stack id config]
-  (let [builder (CfnCampaign$MessageConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :adm-message)]
-      (. builder admMessage data))
-    (when-let [data (lookup-entry config id :apns-message)]
-      (. builder apnsMessage data))
-    (when-let [data (lookup-entry config id :baidu-message)]
-      (. builder baiduMessage data))
-    (when-let [data (lookup-entry config id :custom-message)]
-      (. builder customMessage data))
-    (when-let [data (lookup-entry config id :default-message)]
-      (. builder defaultMessage data))
-    (when-let [data (lookup-entry config id :email-message)]
-      (. builder emailMessage data))
-    (when-let [data (lookup-entry config id :gcm-message)]
-      (. builder gcmMessage data))
-    (when-let [data (lookup-entry config id :in-app-message)]
-      (. builder inAppMessage data))
-    (when-let [data (lookup-entry config id :sms-message)]
-      (. builder smsMessage data))
-    (.build builder)))
+| `smsMessage` | software.amazon.awscdk.services.pinpoint.CfnCampaign$CampaignSmsMessageProperty | [[cdk.support/lookup-entry]] | `:sms-message` |
+"
+  [^CfnCampaign$MessageConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :adm-message)]
+    (. builder admMessage data))
+  (when-let [data (lookup-entry config id :apns-message)]
+    (. builder apnsMessage data))
+  (when-let [data (lookup-entry config id :baidu-message)]
+    (. builder baiduMessage data))
+  (when-let [data (lookup-entry config id :custom-message)]
+    (. builder customMessage data))
+  (when-let [data (lookup-entry config id :default-message)]
+    (. builder defaultMessage data))
+  (when-let [data (lookup-entry config id :email-message)]
+    (. builder emailMessage data))
+  (when-let [data (lookup-entry config id :gcm-message)]
+    (. builder gcmMessage data))
+  (when-let [data (lookup-entry config id :in-app-message)]
+    (. builder inAppMessage data))
+  (when-let [data (lookup-entry config id :sms-message)]
+    (. builder smsMessage data))
+  (.build builder))
 
 
-(defn cfn-campaign-message-property-builder
-  "The cfn-campaign-message-property-builder function buildes out new instances of 
-CfnCampaign$MessageProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-message-property-builder
+  "The build-cfn-campaign-message-property-builder function updates a CfnCampaign$MessageProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$MessageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1076,73 +1187,82 @@ CfnCampaign$MessageProperty$Builder using the provided configuration.  Each fiel
 | `silentPush` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:silent-push` |
 | `timeToLive` | java.lang.Number | [[cdk.support/lookup-entry]] | `:time-to-live` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
-| `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |"
-  [stack id config]
-  (let [builder (CfnCampaign$MessageProperty$Builder.)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :body)]
-      (. builder body data))
-    (when-let [data (lookup-entry config id :image-icon-url)]
-      (. builder imageIconUrl data))
-    (when-let [data (lookup-entry config id :image-small-icon-url)]
-      (. builder imageSmallIconUrl data))
-    (when-let [data (lookup-entry config id :image-url)]
-      (. builder imageUrl data))
-    (when-let [data (lookup-entry config id :json-body)]
-      (. builder jsonBody data))
-    (when-let [data (lookup-entry config id :media-url)]
-      (. builder mediaUrl data))
-    (when-let [data (lookup-entry config id :raw-content)]
-      (. builder rawContent data))
-    (when-let [data (lookup-entry config id :silent-push)]
-      (. builder silentPush data))
-    (when-let [data (lookup-entry config id :time-to-live)]
-      (. builder timeToLive data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (lookup-entry config id :url)]
-      (. builder url data))
-    (.build builder)))
+| `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
+"
+  [^CfnCampaign$MessageProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :body)]
+    (. builder body data))
+  (when-let [data (lookup-entry config id :image-icon-url)]
+    (. builder imageIconUrl data))
+  (when-let [data (lookup-entry config id :image-small-icon-url)]
+    (. builder imageSmallIconUrl data))
+  (when-let [data (lookup-entry config id :image-url)]
+    (. builder imageUrl data))
+  (when-let [data (lookup-entry config id :json-body)]
+    (. builder jsonBody data))
+  (when-let [data (lookup-entry config id :media-url)]
+    (. builder mediaUrl data))
+  (when-let [data (lookup-entry config id :raw-content)]
+    (. builder rawContent data))
+  (when-let [data (lookup-entry config id :silent-push)]
+    (. builder silentPush data))
+  (when-let [data (lookup-entry config id :time-to-live)]
+    (. builder timeToLive data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (lookup-entry config id :url)]
+    (. builder url data))
+  (.build builder))
 
 
-(defn cfn-campaign-metric-dimension-property-builder
-  "The cfn-campaign-metric-dimension-property-builder function buildes out new instances of 
-CfnCampaign$MetricDimensionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-metric-dimension-property-builder
+  "The build-cfn-campaign-metric-dimension-property-builder function updates a CfnCampaign$MetricDimensionProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$MetricDimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `comparisonOperator` | java.lang.String | [[cdk.support/lookup-entry]] | `:comparison-operator` |
-| `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnCampaign$MetricDimensionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :comparison-operator)]
-      (. builder comparisonOperator data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnCampaign$MetricDimensionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :comparison-operator)]
+    (. builder comparisonOperator data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-campaign-override-button-configuration-property-builder
-  "The cfn-campaign-override-button-configuration-property-builder function buildes out new instances of 
-CfnCampaign$OverrideButtonConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-override-button-configuration-property-builder
+  "The build-cfn-campaign-override-button-configuration-property-builder function updates a CfnCampaign$OverrideButtonConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$OverrideButtonConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `buttonAction` | java.lang.String | [[cdk.support/lookup-entry]] | `:button-action` |
-| `link` | java.lang.String | [[cdk.support/lookup-entry]] | `:link` |"
-  [stack id config]
-  (let [builder (CfnCampaign$OverrideButtonConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :button-action)]
-      (. builder buttonAction data))
-    (when-let [data (lookup-entry config id :link)]
-      (. builder link data))
-    (.build builder)))
+| `link` | java.lang.String | [[cdk.support/lookup-entry]] | `:link` |
+"
+  [^CfnCampaign$OverrideButtonConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :button-action)]
+    (. builder buttonAction data))
+  (when-let [data (lookup-entry config id :link)]
+    (. builder link data))
+  (.build builder))
 
 
-(defn cfn-campaign-props-builder
-  "The cfn-campaign-props-builder function buildes out new instances of 
-CfnCampaignProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-props-builder
+  "The build-cfn-campaign-props-builder function updates a CfnCampaignProps$Builder instance using the provided configuration.
+  The function takes the CfnCampaignProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1163,68 +1283,74 @@ CfnCampaignProps$Builder using the provided configuration.  Each field is set as
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateConfiguration` | software.amazon.awscdk.services.pinpoint.CfnCampaign$TemplateConfigurationProperty | [[cdk.support/lookup-entry]] | `:template-configuration` |
 | `treatmentDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:treatment-description` |
-| `treatmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:treatment-name` |"
-  [stack id config]
-  (let [builder (CfnCampaignProps$Builder.)]
-    (when-let [data (lookup-entry config id :additional-treatments)]
-      (. builder additionalTreatments data))
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :campaign-hook)]
-      (. builder campaignHook data))
-    (when-let [data (lookup-entry config id :custom-delivery-configuration)]
-      (. builder customDeliveryConfiguration data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :holdout-percent)]
-      (. builder holdoutPercent data))
-    (when-let [data (lookup-entry config id :is-paused)]
-      (. builder isPaused data))
-    (when-let [data (lookup-entry config id :limits)]
-      (. builder limits data))
-    (when-let [data (lookup-entry config id :message-configuration)]
-      (. builder messageConfiguration data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :schedule)]
-      (. builder schedule data))
-    (when-let [data (lookup-entry config id :segment-id)]
-      (. builder segmentId data))
-    (when-let [data (lookup-entry config id :segment-version)]
-      (. builder segmentVersion data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :template-configuration)]
-      (. builder templateConfiguration data))
-    (when-let [data (lookup-entry config id :treatment-description)]
-      (. builder treatmentDescription data))
-    (when-let [data (lookup-entry config id :treatment-name)]
-      (. builder treatmentName data))
-    (.build builder)))
+| `treatmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:treatment-name` |
+"
+  [^CfnCampaignProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :additional-treatments)]
+    (. builder additionalTreatments data))
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :campaign-hook)]
+    (. builder campaignHook data))
+  (when-let [data (lookup-entry config id :custom-delivery-configuration)]
+    (. builder customDeliveryConfiguration data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :holdout-percent)]
+    (. builder holdoutPercent data))
+  (when-let [data (lookup-entry config id :is-paused)]
+    (. builder isPaused data))
+  (when-let [data (lookup-entry config id :limits)]
+    (. builder limits data))
+  (when-let [data (lookup-entry config id :message-configuration)]
+    (. builder messageConfiguration data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :schedule)]
+    (. builder schedule data))
+  (when-let [data (lookup-entry config id :segment-id)]
+    (. builder segmentId data))
+  (when-let [data (lookup-entry config id :segment-version)]
+    (. builder segmentVersion data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :template-configuration)]
+    (. builder templateConfiguration data))
+  (when-let [data (lookup-entry config id :treatment-description)]
+    (. builder treatmentDescription data))
+  (when-let [data (lookup-entry config id :treatment-name)]
+    (. builder treatmentName data))
+  (.build builder))
 
 
-(defn cfn-campaign-quiet-time-property-builder
-  "The cfn-campaign-quiet-time-property-builder function buildes out new instances of 
-CfnCampaign$QuietTimeProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-quiet-time-property-builder
+  "The build-cfn-campaign-quiet-time-property-builder function updates a CfnCampaign$QuietTimeProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$QuietTimeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `end` | java.lang.String | [[cdk.support/lookup-entry]] | `:end` |
-| `start` | java.lang.String | [[cdk.support/lookup-entry]] | `:start` |"
-  [stack id config]
-  (let [builder (CfnCampaign$QuietTimeProperty$Builder.)]
-    (when-let [data (lookup-entry config id :end)]
-      (. builder end data))
-    (when-let [data (lookup-entry config id :start)]
-      (. builder start data))
-    (.build builder)))
+| `start` | java.lang.String | [[cdk.support/lookup-entry]] | `:start` |
+"
+  [^CfnCampaign$QuietTimeProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :end)]
+    (. builder end data))
+  (when-let [data (lookup-entry config id :start)]
+    (. builder start data))
+  (.build builder))
 
 
-(defn cfn-campaign-schedule-property-builder
-  "The cfn-campaign-schedule-property-builder function buildes out new instances of 
-CfnCampaign$ScheduleProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-schedule-property-builder
+  "The build-cfn-campaign-schedule-property-builder function updates a CfnCampaign$ScheduleProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$ScheduleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1234,86 +1360,98 @@ CfnCampaign$ScheduleProperty$Builder using the provided configuration.  Each fie
 | `isLocalTime` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-local-time` |
 | `quietTime` | software.amazon.awscdk.services.pinpoint.CfnCampaign$QuietTimeProperty | [[cdk.support/lookup-entry]] | `:quiet-time` |
 | `startTime` | java.lang.String | [[cdk.support/lookup-entry]] | `:start-time` |
-| `timeZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-zone` |"
-  [stack id config]
-  (let [builder (CfnCampaign$ScheduleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :end-time)]
-      (. builder endTime data))
-    (when-let [data (lookup-entry config id :event-filter)]
-      (. builder eventFilter data))
-    (when-let [data (lookup-entry config id :frequency)]
-      (. builder frequency data))
-    (when-let [data (lookup-entry config id :is-local-time)]
-      (. builder isLocalTime data))
-    (when-let [data (lookup-entry config id :quiet-time)]
-      (. builder quietTime data))
-    (when-let [data (lookup-entry config id :start-time)]
-      (. builder startTime data))
-    (when-let [data (lookup-entry config id :time-zone)]
-      (. builder timeZone data))
-    (.build builder)))
+| `timeZone` | java.lang.String | [[cdk.support/lookup-entry]] | `:time-zone` |
+"
+  [^CfnCampaign$ScheduleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :end-time)]
+    (. builder endTime data))
+  (when-let [data (lookup-entry config id :event-filter)]
+    (. builder eventFilter data))
+  (when-let [data (lookup-entry config id :frequency)]
+    (. builder frequency data))
+  (when-let [data (lookup-entry config id :is-local-time)]
+    (. builder isLocalTime data))
+  (when-let [data (lookup-entry config id :quiet-time)]
+    (. builder quietTime data))
+  (when-let [data (lookup-entry config id :start-time)]
+    (. builder startTime data))
+  (when-let [data (lookup-entry config id :time-zone)]
+    (. builder timeZone data))
+  (.build builder))
 
 
-(defn cfn-campaign-set-dimension-property-builder
-  "The cfn-campaign-set-dimension-property-builder function buildes out new instances of 
-CfnCampaign$SetDimensionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-set-dimension-property-builder
+  "The build-cfn-campaign-set-dimension-property-builder function updates a CfnCampaign$SetDimensionProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$SetDimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dimensionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:dimension-type` |
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |"
-  [stack id config]
-  (let [builder (CfnCampaign$SetDimensionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :dimension-type)]
-      (. builder dimensionType data))
-    (when-let [data (lookup-entry config id :values)]
-      (. builder values data))
-    (.build builder)))
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+"
+  [^CfnCampaign$SetDimensionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :dimension-type)]
+    (. builder dimensionType data))
+  (when-let [data (lookup-entry config id :values)]
+    (. builder values data))
+  (.build builder))
 
 
-(defn cfn-campaign-template-configuration-property-builder
-  "The cfn-campaign-template-configuration-property-builder function buildes out new instances of 
-CfnCampaign$TemplateConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-template-configuration-property-builder
+  "The build-cfn-campaign-template-configuration-property-builder function updates a CfnCampaign$TemplateConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$TemplateConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `emailTemplate` | software.amazon.awscdk.services.pinpoint.CfnCampaign$TemplateProperty | [[cdk.support/lookup-entry]] | `:email-template` |
 | `pushTemplate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:push-template` |
 | `smsTemplate` | software.amazon.awscdk.services.pinpoint.CfnCampaign$TemplateProperty | [[cdk.support/lookup-entry]] | `:sms-template` |
-| `voiceTemplate` | software.amazon.awscdk.services.pinpoint.CfnCampaign$TemplateProperty | [[cdk.support/lookup-entry]] | `:voice-template` |"
-  [stack id config]
-  (let [builder (CfnCampaign$TemplateConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :email-template)]
-      (. builder emailTemplate data))
-    (when-let [data (lookup-entry config id :push-template)]
-      (. builder pushTemplate data))
-    (when-let [data (lookup-entry config id :sms-template)]
-      (. builder smsTemplate data))
-    (when-let [data (lookup-entry config id :voice-template)]
-      (. builder voiceTemplate data))
-    (.build builder)))
+| `voiceTemplate` | software.amazon.awscdk.services.pinpoint.CfnCampaign$TemplateProperty | [[cdk.support/lookup-entry]] | `:voice-template` |
+"
+  [^CfnCampaign$TemplateConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :email-template)]
+    (. builder emailTemplate data))
+  (when-let [data (lookup-entry config id :push-template)]
+    (. builder pushTemplate data))
+  (when-let [data (lookup-entry config id :sms-template)]
+    (. builder smsTemplate data))
+  (when-let [data (lookup-entry config id :voice-template)]
+    (. builder voiceTemplate data))
+  (.build builder))
 
 
-(defn cfn-campaign-template-property-builder
-  "The cfn-campaign-template-property-builder function buildes out new instances of 
-CfnCampaign$TemplateProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-template-property-builder
+  "The build-cfn-campaign-template-property-builder function updates a CfnCampaign$TemplateProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$TemplateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
-| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |"
-  [stack id config]
-  (let [builder (CfnCampaign$TemplateProperty$Builder.)]
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :version)]
-      (. builder version data))
-    (.build builder)))
+| `version` | java.lang.String | [[cdk.support/lookup-entry]] | `:version` |
+"
+  [^CfnCampaign$TemplateProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :version)]
+    (. builder version data))
+  (.build builder))
 
 
-(defn cfn-campaign-write-treatment-resource-property-builder
-  "The cfn-campaign-write-treatment-resource-property-builder function buildes out new instances of 
-CfnCampaign$WriteTreatmentResourceProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-campaign-write-treatment-resource-property-builder
+  "The build-cfn-campaign-write-treatment-resource-property-builder function updates a CfnCampaign$WriteTreatmentResourceProperty$Builder instance using the provided configuration.
+  The function takes the CfnCampaign$WriteTreatmentResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1323,61 +1461,32 @@ CfnCampaign$WriteTreatmentResourceProperty$Builder using the provided configurat
 | `sizePercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:size-percent` |
 | `templateConfiguration` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:template-configuration` |
 | `treatmentDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:treatment-description` |
-| `treatmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:treatment-name` |"
-  [stack id config]
-  (let [builder (CfnCampaign$WriteTreatmentResourceProperty$Builder.)]
-    (when-let [data (lookup-entry config id :custom-delivery-configuration)]
-      (. builder customDeliveryConfiguration data))
-    (when-let [data (lookup-entry config id :message-configuration)]
-      (. builder messageConfiguration data))
-    (when-let [data (lookup-entry config id :schedule)]
-      (. builder schedule data))
-    (when-let [data (lookup-entry config id :size-percent)]
-      (. builder sizePercent data))
-    (when-let [data (lookup-entry config id :template-configuration)]
-      (. builder templateConfiguration data))
-    (when-let [data (lookup-entry config id :treatment-description)]
-      (. builder treatmentDescription data))
-    (when-let [data (lookup-entry config id :treatment-name)]
-      (. builder treatmentName data))
-    (.build builder)))
+| `treatmentName` | java.lang.String | [[cdk.support/lookup-entry]] | `:treatment-name` |
+"
+  [^CfnCampaign$WriteTreatmentResourceProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :custom-delivery-configuration)]
+    (. builder customDeliveryConfiguration data))
+  (when-let [data (lookup-entry config id :message-configuration)]
+    (. builder messageConfiguration data))
+  (when-let [data (lookup-entry config id :schedule)]
+    (. builder schedule data))
+  (when-let [data (lookup-entry config id :size-percent)]
+    (. builder sizePercent data))
+  (when-let [data (lookup-entry config id :template-configuration)]
+    (. builder templateConfiguration data))
+  (when-let [data (lookup-entry config id :treatment-description)]
+    (. builder treatmentDescription data))
+  (when-let [data (lookup-entry config id :treatment-name)]
+    (. builder treatmentName data))
+  (.build builder))
 
 
-(defn cfn-email-channel-builder
-  "The cfn-email-channel-builder function buildes out new instances of 
-CfnEmailChannel$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-email-channel-builder
+  "The build-cfn-email-channel-builder function updates a CfnEmailChannel$Builder instance using the provided configuration.
+  The function takes the CfnEmailChannel$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
-| `configurationSet` | java.lang.String | [[cdk.support/lookup-entry]] | `:configuration-set` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
-| `fromAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:from-address` |
-| `identity` | java.lang.String | [[cdk.support/lookup-entry]] | `:identity` |
-| `orchestrationSendingRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:orchestration-sending-role-arn` |
-| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |"
-  [stack id config]
-  (let [builder (CfnEmailChannel$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :configuration-set)]
-      (. builder configurationSet data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :from-address)]
-      (. builder fromAddress data))
-    (when-let [data (lookup-entry config id :identity)]
-      (. builder identity data))
-    (when-let [data (lookup-entry config id :orchestration-sending-role-arn)]
-      (. builder orchestrationSendingRoleArn data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (.build builder)))
-
-
-(defn cfn-email-channel-props-builder
-  "The cfn-email-channel-props-builder function buildes out new instances of 
-CfnEmailChannelProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1387,29 +1496,67 @@ CfnEmailChannelProps$Builder using the provided configuration.  Each field is se
 | `fromAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:from-address` |
 | `identity` | java.lang.String | [[cdk.support/lookup-entry]] | `:identity` |
 | `orchestrationSendingRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:orchestration-sending-role-arn` |
-| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |"
-  [stack id config]
-  (let [builder (CfnEmailChannelProps$Builder.)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :configuration-set)]
-      (. builder configurationSet data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :from-address)]
-      (. builder fromAddress data))
-    (when-let [data (lookup-entry config id :identity)]
-      (. builder identity data))
-    (when-let [data (lookup-entry config id :orchestration-sending-role-arn)]
-      (. builder orchestrationSendingRoleArn data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (.build builder)))
+| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
+"
+  [^CfnEmailChannel$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :configuration-set)]
+    (. builder configurationSet data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :from-address)]
+    (. builder fromAddress data))
+  (when-let [data (lookup-entry config id :identity)]
+    (. builder identity data))
+  (when-let [data (lookup-entry config id :orchestration-sending-role-arn)]
+    (. builder orchestrationSendingRoleArn data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (.build builder))
 
 
-(defn cfn-email-template-builder
-  "The cfn-email-template-builder function buildes out new instances of 
-CfnEmailTemplate$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-email-channel-props-builder
+  "The build-cfn-email-channel-props-builder function updates a CfnEmailChannelProps$Builder instance using the provided configuration.
+  The function takes the CfnEmailChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
+| `configurationSet` | java.lang.String | [[cdk.support/lookup-entry]] | `:configuration-set` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `fromAddress` | java.lang.String | [[cdk.support/lookup-entry]] | `:from-address` |
+| `identity` | java.lang.String | [[cdk.support/lookup-entry]] | `:identity` |
+| `orchestrationSendingRoleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:orchestration-sending-role-arn` |
+| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
+"
+  [^CfnEmailChannelProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :configuration-set)]
+    (. builder configurationSet data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :from-address)]
+    (. builder fromAddress data))
+  (when-let [data (lookup-entry config id :identity)]
+    (. builder identity data))
+  (when-let [data (lookup-entry config id :orchestration-sending-role-arn)]
+    (. builder orchestrationSendingRoleArn data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (.build builder))
+
+
+(defn build-cfn-email-template-builder
+  "The build-cfn-email-template-builder function updates a CfnEmailTemplate$Builder instance using the provided configuration.
+  The function takes the CfnEmailTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1419,29 +1566,32 @@ CfnEmailTemplate$Builder using the provided configuration.  Each field is set as
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-description` |
 | `templateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-name` |
-| `textPart` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-part` |"
-  [stack id config]
-  (let [builder (CfnEmailTemplate$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :default-substitutions)]
-      (. builder defaultSubstitutions data))
-    (when-let [data (lookup-entry config id :html-part)]
-      (. builder htmlPart data))
-    (when-let [data (lookup-entry config id :subject)]
-      (. builder subject data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :template-description)]
-      (. builder templateDescription data))
-    (when-let [data (lookup-entry config id :template-name)]
-      (. builder templateName data))
-    (when-let [data (lookup-entry config id :text-part)]
-      (. builder textPart data))
-    (.build builder)))
+| `textPart` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-part` |
+"
+  [^CfnEmailTemplate$Builder builder id config]
+  (when-let [data (lookup-entry config id :default-substitutions)]
+    (. builder defaultSubstitutions data))
+  (when-let [data (lookup-entry config id :html-part)]
+    (. builder htmlPart data))
+  (when-let [data (lookup-entry config id :subject)]
+    (. builder subject data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :template-description)]
+    (. builder templateDescription data))
+  (when-let [data (lookup-entry config id :template-name)]
+    (. builder templateName data))
+  (when-let [data (lookup-entry config id :text-part)]
+    (. builder textPart data))
+  (.build builder))
 
 
-(defn cfn-email-template-props-builder
-  "The cfn-email-template-props-builder function buildes out new instances of 
-CfnEmailTemplateProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-email-template-props-builder
+  "The build-cfn-email-template-props-builder function updates a CfnEmailTemplateProps$Builder instance using the provided configuration.
+  The function takes the CfnEmailTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1451,69 +1601,78 @@ CfnEmailTemplateProps$Builder using the provided configuration.  Each field is s
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-description` |
 | `templateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-name` |
-| `textPart` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-part` |"
-  [stack id config]
-  (let [builder (CfnEmailTemplateProps$Builder.)]
-    (when-let [data (lookup-entry config id :default-substitutions)]
-      (. builder defaultSubstitutions data))
-    (when-let [data (lookup-entry config id :html-part)]
-      (. builder htmlPart data))
-    (when-let [data (lookup-entry config id :subject)]
-      (. builder subject data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :template-description)]
-      (. builder templateDescription data))
-    (when-let [data (lookup-entry config id :template-name)]
-      (. builder templateName data))
-    (when-let [data (lookup-entry config id :text-part)]
-      (. builder textPart data))
-    (.build builder)))
+| `textPart` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-part` |
+"
+  [^CfnEmailTemplateProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :default-substitutions)]
+    (. builder defaultSubstitutions data))
+  (when-let [data (lookup-entry config id :html-part)]
+    (. builder htmlPart data))
+  (when-let [data (lookup-entry config id :subject)]
+    (. builder subject data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :template-description)]
+    (. builder templateDescription data))
+  (when-let [data (lookup-entry config id :template-name)]
+    (. builder templateName data))
+  (when-let [data (lookup-entry config id :text-part)]
+    (. builder textPart data))
+  (.build builder))
 
 
-(defn cfn-event-stream-builder
-  "The cfn-event-stream-builder function buildes out new instances of 
-CfnEventStream$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-event-stream-builder
+  "The build-cfn-event-stream-builder function updates a CfnEventStream$Builder instance using the provided configuration.
+  The function takes the CfnEventStream$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
-| `destinationStreamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-stream-arn` |
-| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |"
-  [stack id config]
-  (let [builder (CfnEventStream$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :destination-stream-arn)]
-      (. builder destinationStreamArn data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (.build builder)))
-
-
-(defn cfn-event-stream-props-builder
-  "The cfn-event-stream-props-builder function buildes out new instances of 
-CfnEventStreamProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
 | `destinationStreamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-stream-arn` |
-| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |"
-  [stack id config]
-  (let [builder (CfnEventStreamProps$Builder.)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :destination-stream-arn)]
-      (. builder destinationStreamArn data))
-    (when-let [data (lookup-entry config id :role-arn)]
-      (. builder roleArn data))
-    (.build builder)))
+| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
+"
+  [^CfnEventStream$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :destination-stream-arn)]
+    (. builder destinationStreamArn data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (.build builder))
 
 
-(defn cfn-gcm-channel-builder
-  "The cfn-gcm-channel-builder function buildes out new instances of 
-CfnGCMChannel$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-event-stream-props-builder
+  "The build-cfn-event-stream-props-builder function updates a CfnEventStreamProps$Builder instance using the provided configuration.
+  The function takes the CfnEventStreamProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
+| `destinationStreamArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:destination-stream-arn` |
+| `roleArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:role-arn` |
+"
+  [^CfnEventStreamProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :destination-stream-arn)]
+    (. builder destinationStreamArn data))
+  (when-let [data (lookup-entry config id :role-arn)]
+    (. builder roleArn data))
+  (.build builder))
+
+
+(defn build-cfn-gcm-channel-builder
+  "The build-cfn-gcm-channel-builder function updates a CfnGCMChannel$Builder instance using the provided configuration.
+  The function takes the CfnGCMChannel$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1521,25 +1680,28 @@ CfnGCMChannel$Builder using the provided configuration.  Each field is set as fo
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
 | `defaultAuthenticationMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-authentication-method` |
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
-| `serviceJson` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-json` |"
-  [stack id config]
-  (let [builder (CfnGCMChannel$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :api-key)]
-      (. builder apiKey data))
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :default-authentication-method)]
-      (. builder defaultAuthenticationMethod data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :service-json)]
-      (. builder serviceJson data))
-    (.build builder)))
+| `serviceJson` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-json` |
+"
+  [^CfnGCMChannel$Builder builder id config]
+  (when-let [data (lookup-entry config id :api-key)]
+    (. builder apiKey data))
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :default-authentication-method)]
+    (. builder defaultAuthenticationMethod data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :service-json)]
+    (. builder serviceJson data))
+  (.build builder))
 
 
-(defn cfn-gcm-channel-props-builder
-  "The cfn-gcm-channel-props-builder function buildes out new instances of 
-CfnGCMChannelProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gcm-channel-props-builder
+  "The build-cfn-gcm-channel-props-builder function updates a CfnGCMChannelProps$Builder instance using the provided configuration.
+  The function takes the CfnGCMChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1547,45 +1709,51 @@ CfnGCMChannelProps$Builder using the provided configuration.  Each field is set 
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
 | `defaultAuthenticationMethod` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-authentication-method` |
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
-| `serviceJson` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-json` |"
-  [stack id config]
-  (let [builder (CfnGCMChannelProps$Builder.)]
-    (when-let [data (lookup-entry config id :api-key)]
-      (. builder apiKey data))
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :default-authentication-method)]
-      (. builder defaultAuthenticationMethod data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :service-json)]
-      (. builder serviceJson data))
-    (.build builder)))
+| `serviceJson` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-json` |
+"
+  [^CfnGCMChannelProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :api-key)]
+    (. builder apiKey data))
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :default-authentication-method)]
+    (. builder defaultAuthenticationMethod data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :service-json)]
+    (. builder serviceJson data))
+  (.build builder))
 
 
-(defn cfn-in-app-template-body-config-property-builder
-  "The cfn-in-app-template-body-config-property-builder function buildes out new instances of 
-CfnInAppTemplate$BodyConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-in-app-template-body-config-property-builder
+  "The build-cfn-in-app-template-body-config-property-builder function updates a CfnInAppTemplate$BodyConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnInAppTemplate$BodyConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `alignment` | java.lang.String | [[cdk.support/lookup-entry]] | `:alignment` |
 | `body` | java.lang.String | [[cdk.support/lookup-entry]] | `:body` |
-| `textColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-color` |"
-  [stack id config]
-  (let [builder (CfnInAppTemplate$BodyConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :alignment)]
-      (. builder alignment data))
-    (when-let [data (lookup-entry config id :body)]
-      (. builder body data))
-    (when-let [data (lookup-entry config id :text-color)]
-      (. builder textColor data))
-    (.build builder)))
+| `textColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-color` |
+"
+  [^CfnInAppTemplate$BodyConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :alignment)]
+    (. builder alignment data))
+  (when-let [data (lookup-entry config id :body)]
+    (. builder body data))
+  (when-let [data (lookup-entry config id :text-color)]
+    (. builder textColor data))
+  (.build builder))
 
 
-(defn cfn-in-app-template-builder
-  "The cfn-in-app-template-builder function buildes out new instances of 
-CfnInAppTemplate$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-in-app-template-builder
+  "The build-cfn-in-app-template-builder function updates a CfnInAppTemplate$Builder instance using the provided configuration.
+  The function takes the CfnInAppTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1594,50 +1762,56 @@ CfnInAppTemplate$Builder using the provided configuration.  Each field is set as
 | `layout` | java.lang.String | [[cdk.support/lookup-entry]] | `:layout` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-description` |
-| `templateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-name` |"
-  [stack id config]
-  (let [builder (CfnInAppTemplate$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :content)]
-      (. builder content data))
-    (when-let [data (lookup-entry config id :custom-config)]
-      (. builder customConfig data))
-    (when-let [data (lookup-entry config id :layout)]
-      (. builder layout data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :template-description)]
-      (. builder templateDescription data))
-    (when-let [data (lookup-entry config id :template-name)]
-      (. builder templateName data))
-    (.build builder)))
+| `templateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-name` |
+"
+  [^CfnInAppTemplate$Builder builder id config]
+  (when-let [data (lookup-entry config id :content)]
+    (. builder content data))
+  (when-let [data (lookup-entry config id :custom-config)]
+    (. builder customConfig data))
+  (when-let [data (lookup-entry config id :layout)]
+    (. builder layout data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :template-description)]
+    (. builder templateDescription data))
+  (when-let [data (lookup-entry config id :template-name)]
+    (. builder templateName data))
+  (.build builder))
 
 
-(defn cfn-in-app-template-button-config-property-builder
-  "The cfn-in-app-template-button-config-property-builder function buildes out new instances of 
-CfnInAppTemplate$ButtonConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-in-app-template-button-config-property-builder
+  "The build-cfn-in-app-template-button-config-property-builder function updates a CfnInAppTemplate$ButtonConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnInAppTemplate$ButtonConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `android` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:android` |
 | `defaultConfig` | software.amazon.awscdk.services.pinpoint.CfnInAppTemplate$DefaultButtonConfigurationProperty | [[cdk.support/lookup-entry]] | `:default-config` |
 | `ios` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:ios` |
-| `web` | software.amazon.awscdk.services.pinpoint.CfnInAppTemplate$OverrideButtonConfigurationProperty | [[cdk.support/lookup-entry]] | `:web` |"
-  [stack id config]
-  (let [builder (CfnInAppTemplate$ButtonConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :android)]
-      (. builder android data))
-    (when-let [data (lookup-entry config id :default-config)]
-      (. builder defaultConfig data))
-    (when-let [data (lookup-entry config id :ios)]
-      (. builder ios data))
-    (when-let [data (lookup-entry config id :web)]
-      (. builder web data))
-    (.build builder)))
+| `web` | software.amazon.awscdk.services.pinpoint.CfnInAppTemplate$OverrideButtonConfigurationProperty | [[cdk.support/lookup-entry]] | `:web` |
+"
+  [^CfnInAppTemplate$ButtonConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :android)]
+    (. builder android data))
+  (when-let [data (lookup-entry config id :default-config)]
+    (. builder defaultConfig data))
+  (when-let [data (lookup-entry config id :ios)]
+    (. builder ios data))
+  (when-let [data (lookup-entry config id :web)]
+    (. builder web data))
+  (.build builder))
 
 
-(defn cfn-in-app-template-default-button-configuration-property-builder
-  "The cfn-in-app-template-default-button-configuration-property-builder function buildes out new instances of 
-CfnInAppTemplate$DefaultButtonConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-in-app-template-default-button-configuration-property-builder
+  "The build-cfn-in-app-template-default-button-configuration-property-builder function updates a CfnInAppTemplate$DefaultButtonConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnInAppTemplate$DefaultButtonConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1646,47 +1820,53 @@ CfnInAppTemplate$DefaultButtonConfigurationProperty$Builder using the provided c
 | `buttonAction` | java.lang.String | [[cdk.support/lookup-entry]] | `:button-action` |
 | `link` | java.lang.String | [[cdk.support/lookup-entry]] | `:link` |
 | `text` | java.lang.String | [[cdk.support/lookup-entry]] | `:text` |
-| `textColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-color` |"
-  [stack id config]
-  (let [builder (CfnInAppTemplate$DefaultButtonConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :background-color)]
-      (. builder backgroundColor data))
-    (when-let [data (lookup-entry config id :border-radius)]
-      (. builder borderRadius data))
-    (when-let [data (lookup-entry config id :button-action)]
-      (. builder buttonAction data))
-    (when-let [data (lookup-entry config id :link)]
-      (. builder link data))
-    (when-let [data (lookup-entry config id :text)]
-      (. builder text data))
-    (when-let [data (lookup-entry config id :text-color)]
-      (. builder textColor data))
-    (.build builder)))
+| `textColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-color` |
+"
+  [^CfnInAppTemplate$DefaultButtonConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :background-color)]
+    (. builder backgroundColor data))
+  (when-let [data (lookup-entry config id :border-radius)]
+    (. builder borderRadius data))
+  (when-let [data (lookup-entry config id :button-action)]
+    (. builder buttonAction data))
+  (when-let [data (lookup-entry config id :link)]
+    (. builder link data))
+  (when-let [data (lookup-entry config id :text)]
+    (. builder text data))
+  (when-let [data (lookup-entry config id :text-color)]
+    (. builder textColor data))
+  (.build builder))
 
 
-(defn cfn-in-app-template-header-config-property-builder
-  "The cfn-in-app-template-header-config-property-builder function buildes out new instances of 
-CfnInAppTemplate$HeaderConfigProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-in-app-template-header-config-property-builder
+  "The build-cfn-in-app-template-header-config-property-builder function updates a CfnInAppTemplate$HeaderConfigProperty$Builder instance using the provided configuration.
+  The function takes the CfnInAppTemplate$HeaderConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `alignment` | java.lang.String | [[cdk.support/lookup-entry]] | `:alignment` |
 | `header` | java.lang.String | [[cdk.support/lookup-entry]] | `:header` |
-| `textColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-color` |"
-  [stack id config]
-  (let [builder (CfnInAppTemplate$HeaderConfigProperty$Builder.)]
-    (when-let [data (lookup-entry config id :alignment)]
-      (. builder alignment data))
-    (when-let [data (lookup-entry config id :header)]
-      (. builder header data))
-    (when-let [data (lookup-entry config id :text-color)]
-      (. builder textColor data))
-    (.build builder)))
+| `textColor` | java.lang.String | [[cdk.support/lookup-entry]] | `:text-color` |
+"
+  [^CfnInAppTemplate$HeaderConfigProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :alignment)]
+    (. builder alignment data))
+  (when-let [data (lookup-entry config id :header)]
+    (. builder header data))
+  (when-let [data (lookup-entry config id :text-color)]
+    (. builder textColor data))
+  (.build builder))
 
 
-(defn cfn-in-app-template-in-app-message-content-property-builder
-  "The cfn-in-app-template-in-app-message-content-property-builder function buildes out new instances of 
-CfnInAppTemplate$InAppMessageContentProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-in-app-template-in-app-message-content-property-builder
+  "The build-cfn-in-app-template-in-app-message-content-property-builder function updates a CfnInAppTemplate$InAppMessageContentProperty$Builder instance using the provided configuration.
+  The function takes the CfnInAppTemplate$InAppMessageContentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1695,44 +1875,50 @@ CfnInAppTemplate$InAppMessageContentProperty$Builder using the provided configur
 | `headerConfig` | software.amazon.awscdk.services.pinpoint.CfnInAppTemplate$HeaderConfigProperty | [[cdk.support/lookup-entry]] | `:header-config` |
 | `imageUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:image-url` |
 | `primaryBtn` | software.amazon.awscdk.services.pinpoint.CfnInAppTemplate$ButtonConfigProperty | [[cdk.support/lookup-entry]] | `:primary-btn` |
-| `secondaryBtn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secondary-btn` |"
-  [stack id config]
-  (let [builder (CfnInAppTemplate$InAppMessageContentProperty$Builder.)]
-    (when-let [data (lookup-entry config id :background-color)]
-      (. builder backgroundColor data))
-    (when-let [data (lookup-entry config id :body-config)]
-      (. builder bodyConfig data))
-    (when-let [data (lookup-entry config id :header-config)]
-      (. builder headerConfig data))
-    (when-let [data (lookup-entry config id :image-url)]
-      (. builder imageUrl data))
-    (when-let [data (lookup-entry config id :primary-btn)]
-      (. builder primaryBtn data))
-    (when-let [data (lookup-entry config id :secondary-btn)]
-      (. builder secondaryBtn data))
-    (.build builder)))
+| `secondaryBtn` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:secondary-btn` |
+"
+  [^CfnInAppTemplate$InAppMessageContentProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :background-color)]
+    (. builder backgroundColor data))
+  (when-let [data (lookup-entry config id :body-config)]
+    (. builder bodyConfig data))
+  (when-let [data (lookup-entry config id :header-config)]
+    (. builder headerConfig data))
+  (when-let [data (lookup-entry config id :image-url)]
+    (. builder imageUrl data))
+  (when-let [data (lookup-entry config id :primary-btn)]
+    (. builder primaryBtn data))
+  (when-let [data (lookup-entry config id :secondary-btn)]
+    (. builder secondaryBtn data))
+  (.build builder))
 
 
-(defn cfn-in-app-template-override-button-configuration-property-builder
-  "The cfn-in-app-template-override-button-configuration-property-builder function buildes out new instances of 
-CfnInAppTemplate$OverrideButtonConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-in-app-template-override-button-configuration-property-builder
+  "The build-cfn-in-app-template-override-button-configuration-property-builder function updates a CfnInAppTemplate$OverrideButtonConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnInAppTemplate$OverrideButtonConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `buttonAction` | java.lang.String | [[cdk.support/lookup-entry]] | `:button-action` |
-| `link` | java.lang.String | [[cdk.support/lookup-entry]] | `:link` |"
-  [stack id config]
-  (let [builder (CfnInAppTemplate$OverrideButtonConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :button-action)]
-      (. builder buttonAction data))
-    (when-let [data (lookup-entry config id :link)]
-      (. builder link data))
-    (.build builder)))
+| `link` | java.lang.String | [[cdk.support/lookup-entry]] | `:link` |
+"
+  [^CfnInAppTemplate$OverrideButtonConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :button-action)]
+    (. builder buttonAction data))
+  (when-let [data (lookup-entry config id :link)]
+    (. builder link data))
+  (.build builder))
 
 
-(defn cfn-in-app-template-props-builder
-  "The cfn-in-app-template-props-builder function buildes out new instances of 
-CfnInAppTemplateProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-in-app-template-props-builder
+  "The build-cfn-in-app-template-props-builder function updates a CfnInAppTemplateProps$Builder instance using the provided configuration.
+  The function takes the CfnInAppTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1741,27 +1927,30 @@ CfnInAppTemplateProps$Builder using the provided configuration.  Each field is s
 | `layout` | java.lang.String | [[cdk.support/lookup-entry]] | `:layout` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-description` |
-| `templateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-name` |"
-  [stack id config]
-  (let [builder (CfnInAppTemplateProps$Builder.)]
-    (when-let [data (lookup-entry config id :content)]
-      (. builder content data))
-    (when-let [data (lookup-entry config id :custom-config)]
-      (. builder customConfig data))
-    (when-let [data (lookup-entry config id :layout)]
-      (. builder layout data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :template-description)]
-      (. builder templateDescription data))
-    (when-let [data (lookup-entry config id :template-name)]
-      (. builder templateName data))
-    (.build builder)))
+| `templateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-name` |
+"
+  [^CfnInAppTemplateProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :content)]
+    (. builder content data))
+  (when-let [data (lookup-entry config id :custom-config)]
+    (. builder customConfig data))
+  (when-let [data (lookup-entry config id :layout)]
+    (. builder layout data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :template-description)]
+    (. builder templateDescription data))
+  (when-let [data (lookup-entry config id :template-name)]
+    (. builder templateName data))
+  (.build builder))
 
 
-(defn cfn-push-template-android-push-notification-template-property-builder
-  "The cfn-push-template-android-push-notification-template-property-builder function buildes out new instances of 
-CfnPushTemplate$AndroidPushNotificationTemplateProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-push-template-android-push-notification-template-property-builder
+  "The build-cfn-push-template-android-push-notification-template-property-builder function updates a CfnPushTemplate$AndroidPushNotificationTemplateProperty$Builder instance using the provided configuration.
+  The function takes the CfnPushTemplate$AndroidPushNotificationTemplateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1772,31 +1961,34 @@ CfnPushTemplate$AndroidPushNotificationTemplateProperty$Builder using the provid
 | `smallImageIconUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:small-image-icon-url` |
 | `sound` | java.lang.String | [[cdk.support/lookup-entry]] | `:sound` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
-| `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |"
-  [stack id config]
-  (let [builder (CfnPushTemplate$AndroidPushNotificationTemplateProperty$Builder.)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :body)]
-      (. builder body data))
-    (when-let [data (lookup-entry config id :image-icon-url)]
-      (. builder imageIconUrl data))
-    (when-let [data (lookup-entry config id :image-url)]
-      (. builder imageUrl data))
-    (when-let [data (lookup-entry config id :small-image-icon-url)]
-      (. builder smallImageIconUrl data))
-    (when-let [data (lookup-entry config id :sound)]
-      (. builder sound data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (lookup-entry config id :url)]
-      (. builder url data))
-    (.build builder)))
+| `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
+"
+  [^CfnPushTemplate$AndroidPushNotificationTemplateProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :body)]
+    (. builder body data))
+  (when-let [data (lookup-entry config id :image-icon-url)]
+    (. builder imageIconUrl data))
+  (when-let [data (lookup-entry config id :image-url)]
+    (. builder imageUrl data))
+  (when-let [data (lookup-entry config id :small-image-icon-url)]
+    (. builder smallImageIconUrl data))
+  (when-let [data (lookup-entry config id :sound)]
+    (. builder sound data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (lookup-entry config id :url)]
+    (. builder url data))
+  (.build builder))
 
 
-(defn cfn-push-template-apns-push-notification-template-property-builder
-  "The cfn-push-template-apns-push-notification-template-property-builder function buildes out new instances of 
-CfnPushTemplate$APNSPushNotificationTemplateProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-push-template-apns-push-notification-template-property-builder
+  "The build-cfn-push-template-apns-push-notification-template-property-builder function updates a CfnPushTemplate$APNSPushNotificationTemplateProperty$Builder instance using the provided configuration.
+  The function takes the CfnPushTemplate$APNSPushNotificationTemplateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1805,27 +1997,30 @@ CfnPushTemplate$APNSPushNotificationTemplateProperty$Builder using the provided 
 | `mediaUrl` | java.lang.String | [[cdk.support/lookup-entry]] | `:media-url` |
 | `sound` | java.lang.String | [[cdk.support/lookup-entry]] | `:sound` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
-| `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |"
-  [stack id config]
-  (let [builder (CfnPushTemplate$APNSPushNotificationTemplateProperty$Builder.)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :body)]
-      (. builder body data))
-    (when-let [data (lookup-entry config id :media-url)]
-      (. builder mediaUrl data))
-    (when-let [data (lookup-entry config id :sound)]
-      (. builder sound data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (lookup-entry config id :url)]
-      (. builder url data))
-    (.build builder)))
+| `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
+"
+  [^CfnPushTemplate$APNSPushNotificationTemplateProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :body)]
+    (. builder body data))
+  (when-let [data (lookup-entry config id :media-url)]
+    (. builder mediaUrl data))
+  (when-let [data (lookup-entry config id :sound)]
+    (. builder sound data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (lookup-entry config id :url)]
+    (. builder url data))
+  (.build builder))
 
 
-(defn cfn-push-template-builder
-  "The cfn-push-template-builder function buildes out new instances of 
-CfnPushTemplate$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-push-template-builder
+  "The build-cfn-push-template-builder function updates a CfnPushTemplate$Builder instance using the provided configuration.
+  The function takes the CfnPushTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1837,33 +2032,36 @@ CfnPushTemplate$Builder using the provided configuration.  Each field is set as 
 | `gcm` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:gcm` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-description` |
-| `templateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-name` |"
-  [stack id config]
-  (let [builder (CfnPushTemplate$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :adm)]
-      (. builder adm data))
-    (when-let [data (lookup-entry config id :apns)]
-      (. builder apns data))
-    (when-let [data (lookup-entry config id :baidu)]
-      (. builder baidu data))
-    (when-let [data (lookup-entry config id :default-substitutions)]
-      (. builder defaultSubstitutions data))
-    (when-let [data (lookup-entry config id :default-value)]
-      (. builder defaultValue data))
-    (when-let [data (lookup-entry config id :gcm)]
-      (. builder gcm data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :template-description)]
-      (. builder templateDescription data))
-    (when-let [data (lookup-entry config id :template-name)]
-      (. builder templateName data))
-    (.build builder)))
+| `templateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-name` |
+"
+  [^CfnPushTemplate$Builder builder id config]
+  (when-let [data (lookup-entry config id :adm)]
+    (. builder adm data))
+  (when-let [data (lookup-entry config id :apns)]
+    (. builder apns data))
+  (when-let [data (lookup-entry config id :baidu)]
+    (. builder baidu data))
+  (when-let [data (lookup-entry config id :default-substitutions)]
+    (. builder defaultSubstitutions data))
+  (when-let [data (lookup-entry config id :default-value)]
+    (. builder defaultValue data))
+  (when-let [data (lookup-entry config id :gcm)]
+    (. builder gcm data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :template-description)]
+    (. builder templateDescription data))
+  (when-let [data (lookup-entry config id :template-name)]
+    (. builder templateName data))
+  (.build builder))
 
 
-(defn cfn-push-template-default-push-notification-template-property-builder
-  "The cfn-push-template-default-push-notification-template-property-builder function buildes out new instances of 
-CfnPushTemplate$DefaultPushNotificationTemplateProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-push-template-default-push-notification-template-property-builder
+  "The build-cfn-push-template-default-push-notification-template-property-builder function updates a CfnPushTemplate$DefaultPushNotificationTemplateProperty$Builder instance using the provided configuration.
+  The function takes the CfnPushTemplate$DefaultPushNotificationTemplateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1871,25 +2069,28 @@ CfnPushTemplate$DefaultPushNotificationTemplateProperty$Builder using the provid
 | `body` | java.lang.String | [[cdk.support/lookup-entry]] | `:body` |
 | `sound` | java.lang.String | [[cdk.support/lookup-entry]] | `:sound` |
 | `title` | java.lang.String | [[cdk.support/lookup-entry]] | `:title` |
-| `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |"
-  [stack id config]
-  (let [builder (CfnPushTemplate$DefaultPushNotificationTemplateProperty$Builder.)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :body)]
-      (. builder body data))
-    (when-let [data (lookup-entry config id :sound)]
-      (. builder sound data))
-    (when-let [data (lookup-entry config id :title)]
-      (. builder title data))
-    (when-let [data (lookup-entry config id :url)]
-      (. builder url data))
-    (.build builder)))
+| `url` | java.lang.String | [[cdk.support/lookup-entry]] | `:url` |
+"
+  [^CfnPushTemplate$DefaultPushNotificationTemplateProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :body)]
+    (. builder body data))
+  (when-let [data (lookup-entry config id :sound)]
+    (. builder sound data))
+  (when-let [data (lookup-entry config id :title)]
+    (. builder title data))
+  (when-let [data (lookup-entry config id :url)]
+    (. builder url data))
+  (.build builder))
 
 
-(defn cfn-push-template-props-builder
-  "The cfn-push-template-props-builder function buildes out new instances of 
-CfnPushTemplateProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-push-template-props-builder
+  "The build-cfn-push-template-props-builder function updates a CfnPushTemplateProps$Builder instance using the provided configuration.
+  The function takes the CfnPushTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1901,64 +2102,73 @@ CfnPushTemplateProps$Builder using the provided configuration.  Each field is se
 | `gcm` | software.amazon.awscdk.services.pinpoint.CfnPushTemplate$AndroidPushNotificationTemplateProperty | [[cdk.support/lookup-entry]] | `:gcm` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-description` |
-| `templateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-name` |"
-  [stack id config]
-  (let [builder (CfnPushTemplateProps$Builder.)]
-    (when-let [data (lookup-entry config id :adm)]
-      (. builder adm data))
-    (when-let [data (lookup-entry config id :apns)]
-      (. builder apns data))
-    (when-let [data (lookup-entry config id :baidu)]
-      (. builder baidu data))
-    (when-let [data (lookup-entry config id :default-substitutions)]
-      (. builder defaultSubstitutions data))
-    (when-let [data (lookup-entry config id :default-value)]
-      (. builder defaultValue data))
-    (when-let [data (lookup-entry config id :gcm)]
-      (. builder gcm data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :template-description)]
-      (. builder templateDescription data))
-    (when-let [data (lookup-entry config id :template-name)]
-      (. builder templateName data))
-    (.build builder)))
+| `templateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-name` |
+"
+  [^CfnPushTemplateProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :adm)]
+    (. builder adm data))
+  (when-let [data (lookup-entry config id :apns)]
+    (. builder apns data))
+  (when-let [data (lookup-entry config id :baidu)]
+    (. builder baidu data))
+  (when-let [data (lookup-entry config id :default-substitutions)]
+    (. builder defaultSubstitutions data))
+  (when-let [data (lookup-entry config id :default-value)]
+    (. builder defaultValue data))
+  (when-let [data (lookup-entry config id :gcm)]
+    (. builder gcm data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :template-description)]
+    (. builder templateDescription data))
+  (when-let [data (lookup-entry config id :template-name)]
+    (. builder templateName data))
+  (.build builder))
 
 
-(defn cfn-segment-attribute-dimension-property-builder
-  "The cfn-segment-attribute-dimension-property-builder function buildes out new instances of 
-CfnSegment$AttributeDimensionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-segment-attribute-dimension-property-builder
+  "The build-cfn-segment-attribute-dimension-property-builder function updates a CfnSegment$AttributeDimensionProperty$Builder instance using the provided configuration.
+  The function takes the CfnSegment$AttributeDimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attributeType` | java.lang.String | [[cdk.support/lookup-entry]] | `:attribute-type` |
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |"
-  [stack id config]
-  (let [builder (CfnSegment$AttributeDimensionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :attribute-type)]
-      (. builder attributeType data))
-    (when-let [data (lookup-entry config id :values)]
-      (. builder values data))
-    (.build builder)))
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+"
+  [^CfnSegment$AttributeDimensionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :attribute-type)]
+    (. builder attributeType data))
+  (when-let [data (lookup-entry config id :values)]
+    (. builder values data))
+  (.build builder))
 
 
-(defn cfn-segment-behavior-property-builder
-  "The cfn-segment-behavior-property-builder function buildes out new instances of 
-CfnSegment$BehaviorProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-segment-behavior-property-builder
+  "The build-cfn-segment-behavior-property-builder function updates a CfnSegment$BehaviorProperty$Builder instance using the provided configuration.
+  The function takes the CfnSegment$BehaviorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `recency` | software.amazon.awscdk.services.pinpoint.CfnSegment$RecencyProperty | [[cdk.support/lookup-entry]] | `:recency` |"
-  [stack id config]
-  (let [builder (CfnSegment$BehaviorProperty$Builder.)]
-    (when-let [data (lookup-entry config id :recency)]
-      (. builder recency data))
-    (.build builder)))
+| `recency` | software.amazon.awscdk.services.pinpoint.CfnSegment$RecencyProperty | [[cdk.support/lookup-entry]] | `:recency` |
+"
+  [^CfnSegment$BehaviorProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :recency)]
+    (. builder recency data))
+  (.build builder))
 
 
-(defn cfn-segment-builder
-  "The cfn-segment-builder function buildes out new instances of 
-CfnSegment$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-segment-builder
+  "The build-cfn-segment-builder function updates a CfnSegment$Builder instance using the provided configuration.
+  The function takes the CfnSegment$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1966,42 +2176,48 @@ CfnSegment$Builder using the provided configuration.  Each field is set as follo
 | `dimensions` | software.amazon.awscdk.services.pinpoint.CfnSegment$SegmentDimensionsProperty | [[cdk.support/lookup-entry]] | `:dimensions` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `segmentGroups` | software.amazon.awscdk.services.pinpoint.CfnSegment$SegmentGroupsProperty | [[cdk.support/lookup-entry]] | `:segment-groups` |
-| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnSegment$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :dimensions)]
-      (. builder dimensions data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :segment-groups)]
-      (. builder segmentGroups data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnSegment$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :dimensions)]
+    (. builder dimensions data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :segment-groups)]
+    (. builder segmentGroups data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-segment-coordinates-property-builder
-  "The cfn-segment-coordinates-property-builder function buildes out new instances of 
-CfnSegment$CoordinatesProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-segment-coordinates-property-builder
+  "The build-cfn-segment-coordinates-property-builder function updates a CfnSegment$CoordinatesProperty$Builder instance using the provided configuration.
+  The function takes the CfnSegment$CoordinatesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `latitude` | java.lang.Number | [[cdk.support/lookup-entry]] | `:latitude` |
-| `longitude` | java.lang.Number | [[cdk.support/lookup-entry]] | `:longitude` |"
-  [stack id config]
-  (let [builder (CfnSegment$CoordinatesProperty$Builder.)]
-    (when-let [data (lookup-entry config id :latitude)]
-      (. builder latitude data))
-    (when-let [data (lookup-entry config id :longitude)]
-      (. builder longitude data))
-    (.build builder)))
+| `longitude` | java.lang.Number | [[cdk.support/lookup-entry]] | `:longitude` |
+"
+  [^CfnSegment$CoordinatesProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :latitude)]
+    (. builder latitude data))
+  (when-let [data (lookup-entry config id :longitude)]
+    (. builder longitude data))
+  (.build builder))
 
 
-(defn cfn-segment-demographic-property-builder
-  "The cfn-segment-demographic-property-builder function buildes out new instances of 
-CfnSegment$DemographicProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-segment-demographic-property-builder
+  "The build-cfn-segment-demographic-property-builder function updates a CfnSegment$DemographicProperty$Builder instance using the provided configuration.
+  The function takes the CfnSegment$DemographicProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2010,84 +2226,96 @@ CfnSegment$DemographicProperty$Builder using the provided configuration.  Each f
 | `deviceType` | software.amazon.awscdk.services.pinpoint.CfnSegment$SetDimensionProperty | [[cdk.support/lookup-entry]] | `:device-type` |
 | `make` | software.amazon.awscdk.services.pinpoint.CfnSegment$SetDimensionProperty | [[cdk.support/lookup-entry]] | `:make` |
 | `model` | software.amazon.awscdk.services.pinpoint.CfnSegment$SetDimensionProperty | [[cdk.support/lookup-entry]] | `:model` |
-| `platform` | software.amazon.awscdk.services.pinpoint.CfnSegment$SetDimensionProperty | [[cdk.support/lookup-entry]] | `:platform` |"
-  [stack id config]
-  (let [builder (CfnSegment$DemographicProperty$Builder.)]
-    (when-let [data (lookup-entry config id :app-version)]
-      (. builder appVersion data))
-    (when-let [data (lookup-entry config id :channel)]
-      (. builder channel data))
-    (when-let [data (lookup-entry config id :device-type)]
-      (. builder deviceType data))
-    (when-let [data (lookup-entry config id :make)]
-      (. builder make data))
-    (when-let [data (lookup-entry config id :model)]
-      (. builder model data))
-    (when-let [data (lookup-entry config id :platform)]
-      (. builder platform data))
-    (.build builder)))
+| `platform` | software.amazon.awscdk.services.pinpoint.CfnSegment$SetDimensionProperty | [[cdk.support/lookup-entry]] | `:platform` |
+"
+  [^CfnSegment$DemographicProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :app-version)]
+    (. builder appVersion data))
+  (when-let [data (lookup-entry config id :channel)]
+    (. builder channel data))
+  (when-let [data (lookup-entry config id :device-type)]
+    (. builder deviceType data))
+  (when-let [data (lookup-entry config id :make)]
+    (. builder make data))
+  (when-let [data (lookup-entry config id :model)]
+    (. builder model data))
+  (when-let [data (lookup-entry config id :platform)]
+    (. builder platform data))
+  (.build builder))
 
 
-(defn cfn-segment-gps-point-property-builder
-  "The cfn-segment-gps-point-property-builder function buildes out new instances of 
-CfnSegment$GPSPointProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-segment-gps-point-property-builder
+  "The build-cfn-segment-gps-point-property-builder function updates a CfnSegment$GPSPointProperty$Builder instance using the provided configuration.
+  The function takes the CfnSegment$GPSPointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `coordinates` | software.amazon.awscdk.services.pinpoint.CfnSegment$CoordinatesProperty | [[cdk.support/lookup-entry]] | `:coordinates` |
-| `rangeInKilometers` | java.lang.Number | [[cdk.support/lookup-entry]] | `:range-in-kilometers` |"
-  [stack id config]
-  (let [builder (CfnSegment$GPSPointProperty$Builder.)]
-    (when-let [data (lookup-entry config id :coordinates)]
-      (. builder coordinates data))
-    (when-let [data (lookup-entry config id :range-in-kilometers)]
-      (. builder rangeInKilometers data))
-    (.build builder)))
+| `rangeInKilometers` | java.lang.Number | [[cdk.support/lookup-entry]] | `:range-in-kilometers` |
+"
+  [^CfnSegment$GPSPointProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :coordinates)]
+    (. builder coordinates data))
+  (when-let [data (lookup-entry config id :range-in-kilometers)]
+    (. builder rangeInKilometers data))
+  (.build builder))
 
 
-(defn cfn-segment-groups-property-builder
-  "The cfn-segment-groups-property-builder function buildes out new instances of 
-CfnSegment$GroupsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-segment-groups-property-builder
+  "The build-cfn-segment-groups-property-builder function updates a CfnSegment$GroupsProperty$Builder instance using the provided configuration.
+  The function takes the CfnSegment$GroupsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dimensions` | java.util.List | [[cdk.support/lookup-entry]] | `:dimensions` |
 | `sourceSegments` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:source-segments` |
 | `sourceType` | java.lang.String | [[cdk.support/lookup-entry]] | `:source-type` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnSegment$GroupsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :dimensions)]
-      (. builder dimensions data))
-    (when-let [data (lookup-entry config id :source-segments)]
-      (. builder sourceSegments data))
-    (when-let [data (lookup-entry config id :source-type)]
-      (. builder sourceType data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnSegment$GroupsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :dimensions)]
+    (. builder dimensions data))
+  (when-let [data (lookup-entry config id :source-segments)]
+    (. builder sourceSegments data))
+  (when-let [data (lookup-entry config id :source-type)]
+    (. builder sourceType data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-segment-location-property-builder
-  "The cfn-segment-location-property-builder function buildes out new instances of 
-CfnSegment$LocationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-segment-location-property-builder
+  "The build-cfn-segment-location-property-builder function updates a CfnSegment$LocationProperty$Builder instance using the provided configuration.
+  The function takes the CfnSegment$LocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `country` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:country` |
-| `gpsPoint` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:gps-point` |"
-  [stack id config]
-  (let [builder (CfnSegment$LocationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :country)]
-      (. builder country data))
-    (when-let [data (lookup-entry config id :gps-point)]
-      (. builder gpsPoint data))
-    (.build builder)))
+| `gpsPoint` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:gps-point` |
+"
+  [^CfnSegment$LocationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :country)]
+    (. builder country data))
+  (when-let [data (lookup-entry config id :gps-point)]
+    (. builder gpsPoint data))
+  (.build builder))
 
 
-(defn cfn-segment-props-builder
-  "The cfn-segment-props-builder function buildes out new instances of 
-CfnSegmentProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-segment-props-builder
+  "The build-cfn-segment-props-builder function updates a CfnSegmentProps$Builder instance using the provided configuration.
+  The function takes the CfnSegmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2095,42 +2323,48 @@ CfnSegmentProps$Builder using the provided configuration.  Each field is set as 
 | `dimensions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dimensions` |
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `segmentGroups` | software.amazon.awscdk.services.pinpoint.CfnSegment$SegmentGroupsProperty | [[cdk.support/lookup-entry]] | `:segment-groups` |
-| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnSegmentProps$Builder.)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :dimensions)]
-      (. builder dimensions data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :segment-groups)]
-      (. builder segmentGroups data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnSegmentProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :dimensions)]
+    (. builder dimensions data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :segment-groups)]
+    (. builder segmentGroups data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-segment-recency-property-builder
-  "The cfn-segment-recency-property-builder function buildes out new instances of 
-CfnSegment$RecencyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-segment-recency-property-builder
+  "The build-cfn-segment-recency-property-builder function updates a CfnSegment$RecencyProperty$Builder instance using the provided configuration.
+  The function takes the CfnSegment$RecencyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `duration` | java.lang.String | [[cdk.support/lookup-entry]] | `:duration` |
-| `recencyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:recency-type` |"
-  [stack id config]
-  (let [builder (CfnSegment$RecencyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :duration)]
-      (. builder duration data))
-    (when-let [data (lookup-entry config id :recency-type)]
-      (. builder recencyType data))
-    (.build builder)))
+| `recencyType` | java.lang.String | [[cdk.support/lookup-entry]] | `:recency-type` |
+"
+  [^CfnSegment$RecencyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :duration)]
+    (. builder duration data))
+  (when-let [data (lookup-entry config id :recency-type)]
+    (. builder recencyType data))
+  (.build builder))
 
 
-(defn cfn-segment-segment-dimensions-property-builder
-  "The cfn-segment-segment-dimensions-property-builder function buildes out new instances of 
-CfnSegment$SegmentDimensionsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-segment-segment-dimensions-property-builder
+  "The build-cfn-segment-segment-dimensions-property-builder function updates a CfnSegment$SegmentDimensionsProperty$Builder instance using the provided configuration.
+  The function takes the CfnSegment$SegmentDimensionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2139,150 +2373,142 @@ CfnSegment$SegmentDimensionsProperty$Builder using the provided configuration.  
 | `demographic` | software.amazon.awscdk.services.pinpoint.CfnSegment$DemographicProperty | [[cdk.support/lookup-entry]] | `:demographic` |
 | `location` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:location` |
 | `metrics` | java.lang.Object | [[cdk.support/lookup-entry]] | `:metrics` |
-| `userAttributes` | java.lang.Object | [[cdk.support/lookup-entry]] | `:user-attributes` |"
-  [stack id config]
-  (let [builder (CfnSegment$SegmentDimensionsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :attributes)]
-      (. builder attributes data))
-    (when-let [data (lookup-entry config id :behavior)]
-      (. builder behavior data))
-    (when-let [data (lookup-entry config id :demographic)]
-      (. builder demographic data))
-    (when-let [data (lookup-entry config id :location)]
-      (. builder location data))
-    (when-let [data (lookup-entry config id :metrics)]
-      (. builder metrics data))
-    (when-let [data (lookup-entry config id :user-attributes)]
-      (. builder userAttributes data))
-    (.build builder)))
+| `userAttributes` | java.lang.Object | [[cdk.support/lookup-entry]] | `:user-attributes` |
+"
+  [^CfnSegment$SegmentDimensionsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :attributes)]
+    (. builder attributes data))
+  (when-let [data (lookup-entry config id :behavior)]
+    (. builder behavior data))
+  (when-let [data (lookup-entry config id :demographic)]
+    (. builder demographic data))
+  (when-let [data (lookup-entry config id :location)]
+    (. builder location data))
+  (when-let [data (lookup-entry config id :metrics)]
+    (. builder metrics data))
+  (when-let [data (lookup-entry config id :user-attributes)]
+    (. builder userAttributes data))
+  (.build builder))
 
 
-(defn cfn-segment-segment-groups-property-builder
-  "The cfn-segment-segment-groups-property-builder function buildes out new instances of 
-CfnSegment$SegmentGroupsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-segment-segment-groups-property-builder
+  "The build-cfn-segment-segment-groups-property-builder function updates a CfnSegment$SegmentGroupsProperty$Builder instance using the provided configuration.
+  The function takes the CfnSegment$SegmentGroupsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `groups` | java.util.List | [[cdk.support/lookup-entry]] | `:groups` |
-| `include` | java.lang.String | [[cdk.support/lookup-entry]] | `:include` |"
-  [stack id config]
-  (let [builder (CfnSegment$SegmentGroupsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :groups)]
-      (. builder groups data))
-    (when-let [data (lookup-entry config id :include)]
-      (. builder include data))
-    (.build builder)))
+| `include` | java.lang.String | [[cdk.support/lookup-entry]] | `:include` |
+"
+  [^CfnSegment$SegmentGroupsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :groups)]
+    (. builder groups data))
+  (when-let [data (lookup-entry config id :include)]
+    (. builder include data))
+  (.build builder))
 
 
-(defn cfn-segment-set-dimension-property-builder
-  "The cfn-segment-set-dimension-property-builder function buildes out new instances of 
-CfnSegment$SetDimensionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-segment-set-dimension-property-builder
+  "The build-cfn-segment-set-dimension-property-builder function updates a CfnSegment$SetDimensionProperty$Builder instance using the provided configuration.
+  The function takes the CfnSegment$SetDimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `dimensionType` | java.lang.String | [[cdk.support/lookup-entry]] | `:dimension-type` |
-| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |"
-  [stack id config]
-  (let [builder (CfnSegment$SetDimensionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :dimension-type)]
-      (. builder dimensionType data))
-    (when-let [data (lookup-entry config id :values)]
-      (. builder values data))
-    (.build builder)))
+| `values` | java.util.List | [[cdk.support/lookup-entry]] | `:values` |
+"
+  [^CfnSegment$SetDimensionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :dimension-type)]
+    (. builder dimensionType data))
+  (when-let [data (lookup-entry config id :values)]
+    (. builder values data))
+  (.build builder))
 
 
-(defn cfn-segment-source-segments-property-builder
-  "The cfn-segment-source-segments-property-builder function buildes out new instances of 
-CfnSegment$SourceSegmentsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-segment-source-segments-property-builder
+  "The build-cfn-segment-source-segments-property-builder function updates a CfnSegment$SourceSegmentsProperty$Builder instance using the provided configuration.
+  The function takes the CfnSegment$SourceSegmentsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `id` | java.lang.String | [[cdk.support/lookup-entry]] | `:id` |
-| `version` | java.lang.Number | [[cdk.support/lookup-entry]] | `:version` |"
-  [stack id config]
-  (let [builder (CfnSegment$SourceSegmentsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :id)]
-      (. builder id data))
-    (when-let [data (lookup-entry config id :version)]
-      (. builder version data))
-    (.build builder)))
+| `version` | java.lang.Number | [[cdk.support/lookup-entry]] | `:version` |
+"
+  [^CfnSegment$SourceSegmentsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :id)]
+    (. builder id data))
+  (when-let [data (lookup-entry config id :version)]
+    (. builder version data))
+  (.build builder))
 
 
-(defn cfn-sms-channel-builder
-  "The cfn-sms-channel-builder function buildes out new instances of 
-CfnSMSChannel$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-sms-channel-builder
+  "The build-cfn-sms-channel-builder function updates a CfnSMSChannel$Builder instance using the provided configuration.
+  The function takes the CfnSMSChannel$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
 | `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
 | `senderId` | java.lang.String | [[cdk.support/lookup-entry]] | `:sender-id` |
-| `shortCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:short-code` |"
-  [stack id config]
-  (let [builder (CfnSMSChannel$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :sender-id)]
-      (. builder senderId data))
-    (when-let [data (lookup-entry config id :short-code)]
-      (. builder shortCode data))
-    (.build builder)))
+| `shortCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:short-code` |
+"
+  [^CfnSMSChannel$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :sender-id)]
+    (. builder senderId data))
+  (when-let [data (lookup-entry config id :short-code)]
+    (. builder shortCode data))
+  (.build builder))
 
 
-(defn cfn-sms-channel-props-builder
-  "The cfn-sms-channel-props-builder function buildes out new instances of 
-CfnSMSChannelProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-sms-channel-props-builder
+  "The build-cfn-sms-channel-props-builder function updates a CfnSMSChannelProps$Builder instance using the provided configuration.
+  The function takes the CfnSMSChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
 | `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
 | `senderId` | java.lang.String | [[cdk.support/lookup-entry]] | `:sender-id` |
-| `shortCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:short-code` |"
-  [stack id config]
-  (let [builder (CfnSMSChannelProps$Builder.)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :sender-id)]
-      (. builder senderId data))
-    (when-let [data (lookup-entry config id :short-code)]
-      (. builder shortCode data))
-    (.build builder)))
+| `shortCode` | java.lang.String | [[cdk.support/lookup-entry]] | `:short-code` |
+"
+  [^CfnSMSChannelProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :sender-id)]
+    (. builder senderId data))
+  (when-let [data (lookup-entry config id :short-code)]
+    (. builder shortCode data))
+  (.build builder))
 
 
-(defn cfn-sms-template-builder
-  "The cfn-sms-template-builder function buildes out new instances of 
-CfnSmsTemplate$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-sms-template-builder
+  "The build-cfn-sms-template-builder function updates a CfnSmsTemplate$Builder instance using the provided configuration.
+  The function takes the CfnSmsTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `body` | java.lang.String | [[cdk.support/lookup-entry]] | `:body` |
-| `defaultSubstitutions` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-substitutions` |
-| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
-| `templateDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-description` |
-| `templateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-name` |"
-  [stack id config]
-  (let [builder (CfnSmsTemplate$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :body)]
-      (. builder body data))
-    (when-let [data (lookup-entry config id :default-substitutions)]
-      (. builder defaultSubstitutions data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :template-description)]
-      (. builder templateDescription data))
-    (when-let [data (lookup-entry config id :template-name)]
-      (. builder templateName data))
-    (.build builder)))
-
-
-(defn cfn-sms-template-props-builder
-  "The cfn-sms-template-props-builder function buildes out new instances of 
-CfnSmsTemplateProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2290,51 +2516,86 @@ CfnSmsTemplateProps$Builder using the provided configuration.  Each field is set
 | `defaultSubstitutions` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-substitutions` |
 | `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
 | `templateDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-description` |
-| `templateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-name` |"
-  [stack id config]
-  (let [builder (CfnSmsTemplateProps$Builder.)]
-    (when-let [data (lookup-entry config id :body)]
-      (. builder body data))
-    (when-let [data (lookup-entry config id :default-substitutions)]
-      (. builder defaultSubstitutions data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :template-description)]
-      (. builder templateDescription data))
-    (when-let [data (lookup-entry config id :template-name)]
-      (. builder templateName data))
-    (.build builder)))
+| `templateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-name` |
+"
+  [^CfnSmsTemplate$Builder builder id config]
+  (when-let [data (lookup-entry config id :body)]
+    (. builder body data))
+  (when-let [data (lookup-entry config id :default-substitutions)]
+    (. builder defaultSubstitutions data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :template-description)]
+    (. builder templateDescription data))
+  (when-let [data (lookup-entry config id :template-name)]
+    (. builder templateName data))
+  (.build builder))
 
 
-(defn cfn-voice-channel-builder
-  "The cfn-voice-channel-builder function buildes out new instances of 
-CfnVoiceChannel$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-sms-template-props-builder
+  "The build-cfn-sms-template-props-builder function updates a CfnSmsTemplateProps$Builder instance using the provided configuration.
+  The function takes the CfnSmsTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `body` | java.lang.String | [[cdk.support/lookup-entry]] | `:body` |
+| `defaultSubstitutions` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-substitutions` |
+| `tags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:tags` |
+| `templateDescription` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-description` |
+| `templateName` | java.lang.String | [[cdk.support/lookup-entry]] | `:template-name` |
+"
+  [^CfnSmsTemplateProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :body)]
+    (. builder body data))
+  (when-let [data (lookup-entry config id :default-substitutions)]
+    (. builder defaultSubstitutions data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :template-description)]
+    (. builder templateDescription data))
+  (when-let [data (lookup-entry config id :template-name)]
+    (. builder templateName data))
+  (.build builder))
+
+
+(defn build-cfn-voice-channel-builder
+  "The build-cfn-voice-channel-builder function updates a CfnVoiceChannel$Builder instance using the provided configuration.
+  The function takes the CfnVoiceChannel$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
-| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |"
-  [stack id config]
-  (let [builder (CfnVoiceChannel$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (.build builder)))
+| `enabled` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enabled` |
+"
+  [^CfnVoiceChannel$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (.build builder))
 
 
-(defn cfn-voice-channel-props-builder
-  "The cfn-voice-channel-props-builder function buildes out new instances of 
-CfnVoiceChannelProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-voice-channel-props-builder
+  "The build-cfn-voice-channel-props-builder function updates a CfnVoiceChannelProps$Builder instance using the provided configuration.
+  The function takes the CfnVoiceChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `applicationId` | java.lang.String | [[cdk.support/lookup-entry]] | `:application-id` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |"
-  [stack id config]
-  (let [builder (CfnVoiceChannelProps$Builder.)]
-    (when-let [data (lookup-entry config id :application-id)]
-      (. builder applicationId data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (.build builder)))
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+"
+  [^CfnVoiceChannelProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application-id)]
+    (. builder applicationId data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (.build builder))

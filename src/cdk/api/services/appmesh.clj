@@ -442,54 +442,66 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :disabled data) TlsMode/DISABLED)))
 
 
-(defn access-log-config-builder
-  "The access-log-config-builder function buildes out new instances of 
-AccessLogConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-access-log-config-builder
+  "The build-access-log-config-builder function updates a AccessLogConfig$Builder instance using the provided configuration.
+  The function takes the AccessLogConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `virtualGatewayAccessLog` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayAccessLogProperty | [[cdk.support/lookup-entry]] | `:virtual-gateway-access-log` |
-| `virtualNodeAccessLog` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$AccessLogProperty | [[cdk.support/lookup-entry]] | `:virtual-node-access-log` |"
-  [stack id config]
-  (let [builder (AccessLogConfig$Builder.)]
-    (when-let [data (lookup-entry config id :virtual-gateway-access-log)]
-      (. builder virtualGatewayAccessLog data))
-    (when-let [data (lookup-entry config id :virtual-node-access-log)]
-      (. builder virtualNodeAccessLog data))
-    (.build builder)))
+| `virtualNodeAccessLog` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$AccessLogProperty | [[cdk.support/lookup-entry]] | `:virtual-node-access-log` |
+"
+  [^AccessLogConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :virtual-gateway-access-log)]
+    (. builder virtualGatewayAccessLog data))
+  (when-let [data (lookup-entry config id :virtual-node-access-log)]
+    (. builder virtualNodeAccessLog data))
+  (.build builder))
 
 
-(defn backend-config-builder
-  "The backend-config-builder function buildes out new instances of 
-BackendConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-backend-config-builder
+  "The build-backend-config-builder function updates a BackendConfig$Builder instance using the provided configuration.
+  The function takes the BackendConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `virtualServiceBackend` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$BackendProperty | [[cdk.support/lookup-entry]] | `:virtual-service-backend` |"
-  [stack id config]
-  (let [builder (BackendConfig$Builder.)]
-    (when-let [data (lookup-entry config id :virtual-service-backend)]
-      (. builder virtualServiceBackend data))
-    (.build builder)))
-
-
-(defn backend-defaults-builder
-  "The backend-defaults-builder function buildes out new instances of 
-BackendDefaults$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `tlsClientPolicy` | software.amazon.awscdk.services.appmesh.TlsClientPolicy | [[cdk.support/lookup-entry]] | `:tls-client-policy` |"
-  [stack id config]
-  (let [builder (BackendDefaults$Builder.)]
-    (when-let [data (lookup-entry config id :tls-client-policy)]
-      (. builder tlsClientPolicy data))
-    (.build builder)))
+| `virtualServiceBackend` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$BackendProperty | [[cdk.support/lookup-entry]] | `:virtual-service-backend` |
+"
+  [^BackendConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :virtual-service-backend)]
+    (. builder virtualServiceBackend data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-builder
-  "The cfn-gateway-route-builder function buildes out new instances of 
-CfnGatewayRoute$Builder using the provided configuration.  Each field is set as follows:
+(defn build-backend-defaults-builder
+  "The build-backend-defaults-builder function updates a BackendDefaults$Builder instance using the provided configuration.
+  The function takes the BackendDefaults$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `tlsClientPolicy` | software.amazon.awscdk.services.appmesh.TlsClientPolicy | [[cdk.support/lookup-entry]] | `:tls-client-policy` |
+"
+  [^BackendDefaults$Builder builder id config]
+  (when-let [data (lookup-entry config id :tls-client-policy)]
+    (. builder tlsClientPolicy data))
+  (.build builder))
+
+
+(defn build-cfn-gateway-route-builder
+  "The build-cfn-gateway-route-builder function updates a CfnGatewayRoute$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -498,58 +510,67 @@ CfnGatewayRoute$Builder using the provided configuration.  Each field is set as 
 | `meshOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-owner` |
 | `spec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spec` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :gateway-route-name)]
-      (. builder gatewayRouteName data))
-    (when-let [data (lookup-entry config id :mesh-name)]
-      (. builder meshName data))
-    (when-let [data (lookup-entry config id :mesh-owner)]
-      (. builder meshOwner data))
-    (when-let [data (lookup-entry config id :spec)]
-      (. builder spec data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :virtual-gateway-name)]
-      (. builder virtualGatewayName data))
-    (.build builder)))
+| `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |
+"
+  [^CfnGatewayRoute$Builder builder id config]
+  (when-let [data (lookup-entry config id :gateway-route-name)]
+    (. builder gatewayRouteName data))
+  (when-let [data (lookup-entry config id :mesh-name)]
+    (. builder meshName data))
+  (when-let [data (lookup-entry config id :mesh-owner)]
+    (. builder meshOwner data))
+  (when-let [data (lookup-entry config id :spec)]
+    (. builder spec data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :virtual-gateway-name)]
+    (. builder virtualGatewayName data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-gateway-route-hostname-match-property-builder
-  "The cfn-gateway-route-gateway-route-hostname-match-property-builder function buildes out new instances of 
-CfnGatewayRoute$GatewayRouteHostnameMatchProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-gateway-route-hostname-match-property-builder
+  "The build-cfn-gateway-route-gateway-route-hostname-match-property-builder function updates a CfnGatewayRoute$GatewayRouteHostnameMatchProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$GatewayRouteHostnameMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `exact` | java.lang.String | [[cdk.support/lookup-entry]] | `:exact` |
-| `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$GatewayRouteHostnameMatchProperty$Builder.)]
-    (when-let [data (lookup-entry config id :exact)]
-      (. builder exact data))
-    (when-let [data (lookup-entry config id :suffix)]
-      (. builder suffix data))
-    (.build builder)))
+| `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |
+"
+  [^CfnGatewayRoute$GatewayRouteHostnameMatchProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :exact)]
+    (. builder exact data))
+  (when-let [data (lookup-entry config id :suffix)]
+    (. builder suffix data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-gateway-route-hostname-rewrite-property-builder
-  "The cfn-gateway-route-gateway-route-hostname-rewrite-property-builder function buildes out new instances of 
-CfnGatewayRoute$GatewayRouteHostnameRewriteProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-gateway-route-hostname-rewrite-property-builder
+  "The build-cfn-gateway-route-gateway-route-hostname-rewrite-property-builder function updates a CfnGatewayRoute$GatewayRouteHostnameRewriteProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$GatewayRouteHostnameRewriteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultTargetHostname` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-target-hostname` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$GatewayRouteHostnameRewriteProperty$Builder.)]
-    (when-let [data (lookup-entry config id :default-target-hostname)]
-      (. builder defaultTargetHostname data))
-    (.build builder)))
+| `defaultTargetHostname` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-target-hostname` |
+"
+  [^CfnGatewayRoute$GatewayRouteHostnameRewriteProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :default-target-hostname)]
+    (. builder defaultTargetHostname data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-gateway-route-metadata-match-property-builder
-  "The cfn-gateway-route-gateway-route-metadata-match-property-builder function buildes out new instances of 
-CfnGatewayRoute$GatewayRouteMetadataMatchProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-gateway-route-metadata-match-property-builder
+  "The build-cfn-gateway-route-gateway-route-metadata-match-property-builder function updates a CfnGatewayRoute$GatewayRouteMetadataMatchProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$GatewayRouteMetadataMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -557,204 +578,237 @@ CfnGatewayRoute$GatewayRouteMetadataMatchProperty$Builder using the provided con
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 | `range` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteRangeMatchProperty | [[cdk.support/lookup-entry]] | `:range` |
 | `regex` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex` |
-| `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$GatewayRouteMetadataMatchProperty$Builder.)]
-    (when-let [data (lookup-entry config id :exact)]
-      (. builder exact data))
-    (when-let [data (lookup-entry config id :prefix)]
-      (. builder prefix data))
-    (when-let [data (lookup-entry config id :range)]
-      (. builder range data))
-    (when-let [data (lookup-entry config id :regex)]
-      (. builder regex data))
-    (when-let [data (lookup-entry config id :suffix)]
-      (. builder suffix data))
-    (.build builder)))
+| `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |
+"
+  [^CfnGatewayRoute$GatewayRouteMetadataMatchProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :exact)]
+    (. builder exact data))
+  (when-let [data (lookup-entry config id :prefix)]
+    (. builder prefix data))
+  (when-let [data (lookup-entry config id :range)]
+    (. builder range data))
+  (when-let [data (lookup-entry config id :regex)]
+    (. builder regex data))
+  (when-let [data (lookup-entry config id :suffix)]
+    (. builder suffix data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-gateway-route-range-match-property-builder
-  "The cfn-gateway-route-gateway-route-range-match-property-builder function buildes out new instances of 
-CfnGatewayRoute$GatewayRouteRangeMatchProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-gateway-route-range-match-property-builder
+  "The build-cfn-gateway-route-gateway-route-range-match-property-builder function updates a CfnGatewayRoute$GatewayRouteRangeMatchProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$GatewayRouteRangeMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `end` | java.lang.Number | [[cdk.support/lookup-entry]] | `:end` |
-| `start` | java.lang.Number | [[cdk.support/lookup-entry]] | `:start` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$GatewayRouteRangeMatchProperty$Builder.)]
-    (when-let [data (lookup-entry config id :end)]
-      (. builder end data))
-    (when-let [data (lookup-entry config id :start)]
-      (. builder start data))
-    (.build builder)))
+| `start` | java.lang.Number | [[cdk.support/lookup-entry]] | `:start` |
+"
+  [^CfnGatewayRoute$GatewayRouteRangeMatchProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :end)]
+    (. builder end data))
+  (when-let [data (lookup-entry config id :start)]
+    (. builder start data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-gateway-route-spec-property-builder
-  "The cfn-gateway-route-gateway-route-spec-property-builder function buildes out new instances of 
-CfnGatewayRoute$GatewayRouteSpecProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-gateway-route-spec-property-builder
+  "The build-cfn-gateway-route-gateway-route-spec-property-builder function updates a CfnGatewayRoute$GatewayRouteSpecProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$GatewayRouteSpecProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `grpcRoute` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GrpcGatewayRouteProperty | [[cdk.support/lookup-entry]] | `:grpc-route` |
 | `http2Route` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http2-route` |
 | `httpRoute` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http-route` |
-| `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$GatewayRouteSpecProperty$Builder.)]
-    (when-let [data (lookup-entry config id :grpc-route)]
-      (. builder grpcRoute data))
-    (when-let [data (lookup-entry config id :http2-route)]
-      (. builder http2Route data))
-    (when-let [data (lookup-entry config id :http-route)]
-      (. builder httpRoute data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (.build builder)))
+| `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
+"
+  [^CfnGatewayRoute$GatewayRouteSpecProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :grpc-route)]
+    (. builder grpcRoute data))
+  (when-let [data (lookup-entry config id :http2-route)]
+    (. builder http2Route data))
+  (when-let [data (lookup-entry config id :http-route)]
+    (. builder httpRoute data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-gateway-route-target-property-builder
-  "The cfn-gateway-route-gateway-route-target-property-builder function buildes out new instances of 
-CfnGatewayRoute$GatewayRouteTargetProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-gateway-route-target-property-builder
+  "The build-cfn-gateway-route-gateway-route-target-property-builder function updates a CfnGatewayRoute$GatewayRouteTargetProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$GatewayRouteTargetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
-| `virtualService` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteVirtualServiceProperty | [[cdk.support/lookup-entry]] | `:virtual-service` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$GatewayRouteTargetProperty$Builder.)]
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :virtual-service)]
-      (. builder virtualService data))
-    (.build builder)))
+| `virtualService` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteVirtualServiceProperty | [[cdk.support/lookup-entry]] | `:virtual-service` |
+"
+  [^CfnGatewayRoute$GatewayRouteTargetProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :virtual-service)]
+    (. builder virtualService data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-gateway-route-virtual-service-property-builder
-  "The cfn-gateway-route-gateway-route-virtual-service-property-builder function buildes out new instances of 
-CfnGatewayRoute$GatewayRouteVirtualServiceProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-gateway-route-virtual-service-property-builder
+  "The build-cfn-gateway-route-gateway-route-virtual-service-property-builder function updates a CfnGatewayRoute$GatewayRouteVirtualServiceProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$GatewayRouteVirtualServiceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `virtualServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-service-name` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$GatewayRouteVirtualServiceProperty$Builder.)]
-    (when-let [data (lookup-entry config id :virtual-service-name)]
-      (. builder virtualServiceName data))
-    (.build builder)))
+| `virtualServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-service-name` |
+"
+  [^CfnGatewayRoute$GatewayRouteVirtualServiceProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :virtual-service-name)]
+    (. builder virtualServiceName data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-grpc-gateway-route-action-property-builder
-  "The cfn-gateway-route-grpc-gateway-route-action-property-builder function buildes out new instances of 
-CfnGatewayRoute$GrpcGatewayRouteActionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-grpc-gateway-route-action-property-builder
+  "The build-cfn-gateway-route-grpc-gateway-route-action-property-builder function updates a CfnGatewayRoute$GrpcGatewayRouteActionProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$GrpcGatewayRouteActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `rewrite` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GrpcGatewayRouteRewriteProperty | [[cdk.support/lookup-entry]] | `:rewrite` |
-| `target` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteTargetProperty | [[cdk.support/lookup-entry]] | `:target` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$GrpcGatewayRouteActionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :rewrite)]
-      (. builder rewrite data))
-    (when-let [data (lookup-entry config id :target)]
-      (. builder target data))
-    (.build builder)))
+| `target` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteTargetProperty | [[cdk.support/lookup-entry]] | `:target` |
+"
+  [^CfnGatewayRoute$GrpcGatewayRouteActionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :rewrite)]
+    (. builder rewrite data))
+  (when-let [data (lookup-entry config id :target)]
+    (. builder target data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-grpc-gateway-route-match-property-builder
-  "The cfn-gateway-route-grpc-gateway-route-match-property-builder function buildes out new instances of 
-CfnGatewayRoute$GrpcGatewayRouteMatchProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-grpc-gateway-route-match-property-builder
+  "The build-cfn-gateway-route-grpc-gateway-route-match-property-builder function updates a CfnGatewayRoute$GrpcGatewayRouteMatchProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$GrpcGatewayRouteMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `hostname` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hostname` |
 | `metadata` | java.util.List | [[cdk.support/lookup-entry]] | `:metadata` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
-| `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$GrpcGatewayRouteMatchProperty$Builder.)]
-    (when-let [data (lookup-entry config id :hostname)]
-      (. builder hostname data))
-    (when-let [data (lookup-entry config id :metadata)]
-      (. builder metadata data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (.build builder)))
+| `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
+"
+  [^CfnGatewayRoute$GrpcGatewayRouteMatchProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :hostname)]
+    (. builder hostname data))
+  (when-let [data (lookup-entry config id :metadata)]
+    (. builder metadata data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-grpc-gateway-route-metadata-property-builder
-  "The cfn-gateway-route-grpc-gateway-route-metadata-property-builder function buildes out new instances of 
-CfnGatewayRoute$GrpcGatewayRouteMetadataProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-grpc-gateway-route-metadata-property-builder
+  "The build-cfn-gateway-route-grpc-gateway-route-metadata-property-builder function updates a CfnGatewayRoute$GrpcGatewayRouteMetadataProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$GrpcGatewayRouteMetadataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `invert` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:invert` |
 | `match` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$GrpcGatewayRouteMetadataProperty$Builder.)]
-    (when-let [data (lookup-entry config id :invert)]
-      (. builder invert data))
-    (when-let [data (lookup-entry config id :match)]
-      (. builder match data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^CfnGatewayRoute$GrpcGatewayRouteMetadataProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :invert)]
+    (. builder invert data))
+  (when-let [data (lookup-entry config id :match)]
+    (. builder match data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-grpc-gateway-route-property-builder
-  "The cfn-gateway-route-grpc-gateway-route-property-builder function buildes out new instances of 
-CfnGatewayRoute$GrpcGatewayRouteProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-grpc-gateway-route-property-builder
+  "The build-cfn-gateway-route-grpc-gateway-route-property-builder function updates a CfnGatewayRoute$GrpcGatewayRouteProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$GrpcGatewayRouteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `action` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GrpcGatewayRouteActionProperty | [[cdk.support/lookup-entry]] | `:action` |
-| `match` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$GrpcGatewayRouteProperty$Builder.)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :match)]
-      (. builder match data))
-    (.build builder)))
+| `match` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match` |
+"
+  [^CfnGatewayRoute$GrpcGatewayRouteProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :match)]
+    (. builder match data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-grpc-gateway-route-rewrite-property-builder
-  "The cfn-gateway-route-grpc-gateway-route-rewrite-property-builder function buildes out new instances of 
-CfnGatewayRoute$GrpcGatewayRouteRewriteProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-grpc-gateway-route-rewrite-property-builder
+  "The build-cfn-gateway-route-grpc-gateway-route-rewrite-property-builder function updates a CfnGatewayRoute$GrpcGatewayRouteRewriteProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$GrpcGatewayRouteRewriteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `hostname` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hostname` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$GrpcGatewayRouteRewriteProperty$Builder.)]
-    (when-let [data (lookup-entry config id :hostname)]
-      (. builder hostname data))
-    (.build builder)))
+| `hostname` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hostname` |
+"
+  [^CfnGatewayRoute$GrpcGatewayRouteRewriteProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :hostname)]
+    (. builder hostname data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-http-gateway-route-action-property-builder
-  "The cfn-gateway-route-http-gateway-route-action-property-builder function buildes out new instances of 
-CfnGatewayRoute$HttpGatewayRouteActionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-http-gateway-route-action-property-builder
+  "The build-cfn-gateway-route-http-gateway-route-action-property-builder function updates a CfnGatewayRoute$HttpGatewayRouteActionProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$HttpGatewayRouteActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `rewrite` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$HttpGatewayRouteRewriteProperty | [[cdk.support/lookup-entry]] | `:rewrite` |
-| `target` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteTargetProperty | [[cdk.support/lookup-entry]] | `:target` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$HttpGatewayRouteActionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :rewrite)]
-      (. builder rewrite data))
-    (when-let [data (lookup-entry config id :target)]
-      (. builder target data))
-    (.build builder)))
+| `target` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteTargetProperty | [[cdk.support/lookup-entry]] | `:target` |
+"
+  [^CfnGatewayRoute$HttpGatewayRouteActionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :rewrite)]
+    (. builder rewrite data))
+  (when-let [data (lookup-entry config id :target)]
+    (. builder target data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-http-gateway-route-header-match-property-builder
-  "The cfn-gateway-route-http-gateway-route-header-match-property-builder function buildes out new instances of 
-CfnGatewayRoute$HttpGatewayRouteHeaderMatchProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-http-gateway-route-header-match-property-builder
+  "The build-cfn-gateway-route-http-gateway-route-header-match-property-builder function updates a CfnGatewayRoute$HttpGatewayRouteHeaderMatchProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$HttpGatewayRouteHeaderMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -762,45 +816,51 @@ CfnGatewayRoute$HttpGatewayRouteHeaderMatchProperty$Builder using the provided c
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 | `range` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range` |
 | `regex` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex` |
-| `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$HttpGatewayRouteHeaderMatchProperty$Builder.)]
-    (when-let [data (lookup-entry config id :exact)]
-      (. builder exact data))
-    (when-let [data (lookup-entry config id :prefix)]
-      (. builder prefix data))
-    (when-let [data (lookup-entry config id :range)]
-      (. builder range data))
-    (when-let [data (lookup-entry config id :regex)]
-      (. builder regex data))
-    (when-let [data (lookup-entry config id :suffix)]
-      (. builder suffix data))
-    (.build builder)))
+| `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |
+"
+  [^CfnGatewayRoute$HttpGatewayRouteHeaderMatchProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :exact)]
+    (. builder exact data))
+  (when-let [data (lookup-entry config id :prefix)]
+    (. builder prefix data))
+  (when-let [data (lookup-entry config id :range)]
+    (. builder range data))
+  (when-let [data (lookup-entry config id :regex)]
+    (. builder regex data))
+  (when-let [data (lookup-entry config id :suffix)]
+    (. builder suffix data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-http-gateway-route-header-property-builder
-  "The cfn-gateway-route-http-gateway-route-header-property-builder function buildes out new instances of 
-CfnGatewayRoute$HttpGatewayRouteHeaderProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-http-gateway-route-header-property-builder
+  "The build-cfn-gateway-route-http-gateway-route-header-property-builder function updates a CfnGatewayRoute$HttpGatewayRouteHeaderProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$HttpGatewayRouteHeaderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `invert` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:invert` |
 | `match` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$HttpGatewayRouteHeaderProperty$Builder.)]
-    (when-let [data (lookup-entry config id :invert)]
-      (. builder invert data))
-    (when-let [data (lookup-entry config id :match)]
-      (. builder match data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^CfnGatewayRoute$HttpGatewayRouteHeaderProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :invert)]
+    (. builder invert data))
+  (when-let [data (lookup-entry config id :match)]
+    (. builder match data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-http-gateway-route-match-property-builder
-  "The cfn-gateway-route-http-gateway-route-match-property-builder function buildes out new instances of 
-CfnGatewayRoute$HttpGatewayRouteMatchProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-http-gateway-route-match-property-builder
+  "The build-cfn-gateway-route-http-gateway-route-match-property-builder function updates a CfnGatewayRoute$HttpGatewayRouteMatchProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$HttpGatewayRouteMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -810,128 +870,149 @@ CfnGatewayRoute$HttpGatewayRouteMatchProperty$Builder using the provided configu
 | `path` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:path` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
-| `queryParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:query-parameters` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$HttpGatewayRouteMatchProperty$Builder.)]
-    (when-let [data (lookup-entry config id :headers)]
-      (. builder headers data))
-    (when-let [data (lookup-entry config id :hostname)]
-      (. builder hostname data))
-    (when-let [data (lookup-entry config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :path)]
-      (. builder path data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :prefix)]
-      (. builder prefix data))
-    (when-let [data (lookup-entry config id :query-parameters)]
-      (. builder queryParameters data))
-    (.build builder)))
+| `queryParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:query-parameters` |
+"
+  [^CfnGatewayRoute$HttpGatewayRouteMatchProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :headers)]
+    (. builder headers data))
+  (when-let [data (lookup-entry config id :hostname)]
+    (. builder hostname data))
+  (when-let [data (lookup-entry config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :path)]
+    (. builder path data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :prefix)]
+    (. builder prefix data))
+  (when-let [data (lookup-entry config id :query-parameters)]
+    (. builder queryParameters data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-http-gateway-route-path-rewrite-property-builder
-  "The cfn-gateway-route-http-gateway-route-path-rewrite-property-builder function buildes out new instances of 
-CfnGatewayRoute$HttpGatewayRoutePathRewriteProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-http-gateway-route-path-rewrite-property-builder
+  "The build-cfn-gateway-route-http-gateway-route-path-rewrite-property-builder function updates a CfnGatewayRoute$HttpGatewayRoutePathRewriteProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$HttpGatewayRoutePathRewriteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `exact` | java.lang.String | [[cdk.support/lookup-entry]] | `:exact` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$HttpGatewayRoutePathRewriteProperty$Builder.)]
-    (when-let [data (lookup-entry config id :exact)]
-      (. builder exact data))
-    (.build builder)))
+| `exact` | java.lang.String | [[cdk.support/lookup-entry]] | `:exact` |
+"
+  [^CfnGatewayRoute$HttpGatewayRoutePathRewriteProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :exact)]
+    (. builder exact data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-http-gateway-route-prefix-rewrite-property-builder
-  "The cfn-gateway-route-http-gateway-route-prefix-rewrite-property-builder function buildes out new instances of 
-CfnGatewayRoute$HttpGatewayRoutePrefixRewriteProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-http-gateway-route-prefix-rewrite-property-builder
+  "The build-cfn-gateway-route-http-gateway-route-prefix-rewrite-property-builder function updates a CfnGatewayRoute$HttpGatewayRoutePrefixRewriteProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$HttpGatewayRoutePrefixRewriteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `defaultPrefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:default-prefix` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$HttpGatewayRoutePrefixRewriteProperty$Builder.)]
-    (when-let [data (lookup-entry config id :default-prefix)]
-      (. builder defaultPrefix data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnGatewayRoute$HttpGatewayRoutePrefixRewriteProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :default-prefix)]
+    (. builder defaultPrefix data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-http-gateway-route-property-builder
-  "The cfn-gateway-route-http-gateway-route-property-builder function buildes out new instances of 
-CfnGatewayRoute$HttpGatewayRouteProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-http-gateway-route-property-builder
+  "The build-cfn-gateway-route-http-gateway-route-property-builder function updates a CfnGatewayRoute$HttpGatewayRouteProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$HttpGatewayRouteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `action` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:action` |
-| `match` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$HttpGatewayRouteMatchProperty | [[cdk.support/lookup-entry]] | `:match` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$HttpGatewayRouteProperty$Builder.)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :match)]
-      (. builder match data))
-    (.build builder)))
+| `match` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$HttpGatewayRouteMatchProperty | [[cdk.support/lookup-entry]] | `:match` |
+"
+  [^CfnGatewayRoute$HttpGatewayRouteProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :match)]
+    (. builder match data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-http-gateway-route-rewrite-property-builder
-  "The cfn-gateway-route-http-gateway-route-rewrite-property-builder function buildes out new instances of 
-CfnGatewayRoute$HttpGatewayRouteRewriteProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-http-gateway-route-rewrite-property-builder
+  "The build-cfn-gateway-route-http-gateway-route-rewrite-property-builder function updates a CfnGatewayRoute$HttpGatewayRouteRewriteProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$HttpGatewayRouteRewriteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `hostname` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:hostname` |
 | `path` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$HttpGatewayRoutePathRewriteProperty | [[cdk.support/lookup-entry]] | `:path` |
-| `prefix` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:prefix` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$HttpGatewayRouteRewriteProperty$Builder.)]
-    (when-let [data (lookup-entry config id :hostname)]
-      (. builder hostname data))
-    (when-let [data (lookup-entry config id :path)]
-      (. builder path data))
-    (when-let [data (lookup-entry config id :prefix)]
-      (. builder prefix data))
-    (.build builder)))
+| `prefix` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:prefix` |
+"
+  [^CfnGatewayRoute$HttpGatewayRouteRewriteProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :hostname)]
+    (. builder hostname data))
+  (when-let [data (lookup-entry config id :path)]
+    (. builder path data))
+  (when-let [data (lookup-entry config id :prefix)]
+    (. builder prefix data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-http-path-match-property-builder
-  "The cfn-gateway-route-http-path-match-property-builder function buildes out new instances of 
-CfnGatewayRoute$HttpPathMatchProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-http-path-match-property-builder
+  "The build-cfn-gateway-route-http-path-match-property-builder function updates a CfnGatewayRoute$HttpPathMatchProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$HttpPathMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `exact` | java.lang.String | [[cdk.support/lookup-entry]] | `:exact` |
-| `regex` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$HttpPathMatchProperty$Builder.)]
-    (when-let [data (lookup-entry config id :exact)]
-      (. builder exact data))
-    (when-let [data (lookup-entry config id :regex)]
-      (. builder regex data))
-    (.build builder)))
+| `regex` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex` |
+"
+  [^CfnGatewayRoute$HttpPathMatchProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :exact)]
+    (. builder exact data))
+  (when-let [data (lookup-entry config id :regex)]
+    (. builder regex data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-http-query-parameter-match-property-builder
-  "The cfn-gateway-route-http-query-parameter-match-property-builder function buildes out new instances of 
-CfnGatewayRoute$HttpQueryParameterMatchProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-http-query-parameter-match-property-builder
+  "The build-cfn-gateway-route-http-query-parameter-match-property-builder function updates a CfnGatewayRoute$HttpQueryParameterMatchProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$HttpQueryParameterMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `exact` | java.lang.String | [[cdk.support/lookup-entry]] | `:exact` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$HttpQueryParameterMatchProperty$Builder.)]
-    (when-let [data (lookup-entry config id :exact)]
-      (. builder exact data))
-    (.build builder)))
+| `exact` | java.lang.String | [[cdk.support/lookup-entry]] | `:exact` |
+"
+  [^CfnGatewayRoute$HttpQueryParameterMatchProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :exact)]
+    (. builder exact data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-props-builder
-  "The cfn-gateway-route-props-builder function buildes out new instances of 
-CfnGatewayRouteProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-props-builder
+  "The build-cfn-gateway-route-props-builder function updates a CfnGatewayRouteProps$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRouteProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -940,129 +1021,150 @@ CfnGatewayRouteProps$Builder using the provided configuration.  Each field is se
 | `meshOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-owner` |
 | `spec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spec` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |"
-  [stack id config]
-  (let [builder (CfnGatewayRouteProps$Builder.)]
-    (when-let [data (lookup-entry config id :gateway-route-name)]
-      (. builder gatewayRouteName data))
-    (when-let [data (lookup-entry config id :mesh-name)]
-      (. builder meshName data))
-    (when-let [data (lookup-entry config id :mesh-owner)]
-      (. builder meshOwner data))
-    (when-let [data (lookup-entry config id :spec)]
-      (. builder spec data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :virtual-gateway-name)]
-      (. builder virtualGatewayName data))
-    (.build builder)))
+| `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |
+"
+  [^CfnGatewayRouteProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :gateway-route-name)]
+    (. builder gatewayRouteName data))
+  (when-let [data (lookup-entry config id :mesh-name)]
+    (. builder meshName data))
+  (when-let [data (lookup-entry config id :mesh-owner)]
+    (. builder meshOwner data))
+  (when-let [data (lookup-entry config id :spec)]
+    (. builder spec data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :virtual-gateway-name)]
+    (. builder virtualGatewayName data))
+  (.build builder))
 
 
-(defn cfn-gateway-route-query-parameter-property-builder
-  "The cfn-gateway-route-query-parameter-property-builder function buildes out new instances of 
-CfnGatewayRoute$QueryParameterProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-gateway-route-query-parameter-property-builder
+  "The build-cfn-gateway-route-query-parameter-property-builder function updates a CfnGatewayRoute$QueryParameterProperty$Builder instance using the provided configuration.
+  The function takes the CfnGatewayRoute$QueryParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `match` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (CfnGatewayRoute$QueryParameterProperty$Builder.)]
-    (when-let [data (lookup-entry config id :match)]
-      (. builder match data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^CfnGatewayRoute$QueryParameterProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :match)]
+    (. builder match data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn cfn-mesh-builder
-  "The cfn-mesh-builder function buildes out new instances of 
-CfnMesh$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-mesh-builder
+  "The build-cfn-mesh-builder function updates a CfnMesh$Builder instance using the provided configuration.
+  The function takes the CfnMesh$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `meshName` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-name` |
 | `spec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spec` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnMesh$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :mesh-name)]
-      (. builder meshName data))
-    (when-let [data (lookup-entry config id :spec)]
-      (. builder spec data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnMesh$Builder builder id config]
+  (when-let [data (lookup-entry config id :mesh-name)]
+    (. builder meshName data))
+  (when-let [data (lookup-entry config id :spec)]
+    (. builder spec data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-mesh-egress-filter-property-builder
-  "The cfn-mesh-egress-filter-property-builder function buildes out new instances of 
-CfnMesh$EgressFilterProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-mesh-egress-filter-property-builder
+  "The build-cfn-mesh-egress-filter-property-builder function updates a CfnMesh$EgressFilterProperty$Builder instance using the provided configuration.
+  The function takes the CfnMesh$EgressFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnMesh$EgressFilterProperty$Builder.)]
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
-
-
-(defn cfn-mesh-mesh-service-discovery-property-builder
-  "The cfn-mesh-mesh-service-discovery-property-builder function buildes out new instances of 
-CfnMesh$MeshServiceDiscoveryProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ipPreference` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-preference` |"
-  [stack id config]
-  (let [builder (CfnMesh$MeshServiceDiscoveryProperty$Builder.)]
-    (when-let [data (lookup-entry config id :ip-preference)]
-      (. builder ipPreference data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnMesh$EgressFilterProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-mesh-mesh-spec-property-builder
-  "The cfn-mesh-mesh-spec-property-builder function buildes out new instances of 
-CfnMesh$MeshSpecProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-mesh-mesh-service-discovery-property-builder
+  "The build-cfn-mesh-mesh-service-discovery-property-builder function updates a CfnMesh$MeshServiceDiscoveryProperty$Builder instance using the provided configuration.
+  The function takes the CfnMesh$MeshServiceDiscoveryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `ipPreference` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-preference` |
+"
+  [^CfnMesh$MeshServiceDiscoveryProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :ip-preference)]
+    (. builder ipPreference data))
+  (.build builder))
+
+
+(defn build-cfn-mesh-mesh-spec-property-builder
+  "The build-cfn-mesh-mesh-spec-property-builder function updates a CfnMesh$MeshSpecProperty$Builder instance using the provided configuration.
+  The function takes the CfnMesh$MeshSpecProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `egressFilter` | software.amazon.awscdk.services.appmesh.CfnMesh$EgressFilterProperty | [[cdk.support/lookup-entry]] | `:egress-filter` |
-| `serviceDiscovery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:service-discovery` |"
-  [stack id config]
-  (let [builder (CfnMesh$MeshSpecProperty$Builder.)]
-    (when-let [data (lookup-entry config id :egress-filter)]
-      (. builder egressFilter data))
-    (when-let [data (lookup-entry config id :service-discovery)]
-      (. builder serviceDiscovery data))
-    (.build builder)))
+| `serviceDiscovery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:service-discovery` |
+"
+  [^CfnMesh$MeshSpecProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :egress-filter)]
+    (. builder egressFilter data))
+  (when-let [data (lookup-entry config id :service-discovery)]
+    (. builder serviceDiscovery data))
+  (.build builder))
 
 
-(defn cfn-mesh-props-builder
-  "The cfn-mesh-props-builder function buildes out new instances of 
-CfnMeshProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-mesh-props-builder
+  "The build-cfn-mesh-props-builder function updates a CfnMeshProps$Builder instance using the provided configuration.
+  The function takes the CfnMeshProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `meshName` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-name` |
 | `spec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spec` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnMeshProps$Builder.)]
-    (when-let [data (lookup-entry config id :mesh-name)]
-      (. builder meshName data))
-    (when-let [data (lookup-entry config id :spec)]
-      (. builder spec data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnMeshProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :mesh-name)]
+    (. builder meshName data))
+  (when-let [data (lookup-entry config id :spec)]
+    (. builder spec data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-route-builder
-  "The cfn-route-builder function buildes out new instances of 
-CfnRoute$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-builder
+  "The build-cfn-route-builder function updates a CfnRoute$Builder instance using the provided configuration.
+  The function takes the CfnRoute$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1071,44 +1173,50 @@ CfnRoute$Builder using the provided configuration.  Each field is set as follows
 | `routeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:route-name` |
 | `spec` | software.amazon.awscdk.services.appmesh.CfnRoute$RouteSpecProperty | [[cdk.support/lookup-entry]] | `:spec` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |"
-  [stack id config]
-  (let [builder (CfnRoute$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :mesh-name)]
-      (. builder meshName data))
-    (when-let [data (lookup-entry config id :mesh-owner)]
-      (. builder meshOwner data))
-    (when-let [data (lookup-entry config id :route-name)]
-      (. builder routeName data))
-    (when-let [data (lookup-entry config id :spec)]
-      (. builder spec data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :virtual-router-name)]
-      (. builder virtualRouterName data))
-    (.build builder)))
+| `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |
+"
+  [^CfnRoute$Builder builder id config]
+  (when-let [data (lookup-entry config id :mesh-name)]
+    (. builder meshName data))
+  (when-let [data (lookup-entry config id :mesh-owner)]
+    (. builder meshOwner data))
+  (when-let [data (lookup-entry config id :route-name)]
+    (. builder routeName data))
+  (when-let [data (lookup-entry config id :spec)]
+    (. builder spec data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :virtual-router-name)]
+    (. builder virtualRouterName data))
+  (.build builder))
 
 
-(defn cfn-route-duration-property-builder
-  "The cfn-route-duration-property-builder function buildes out new instances of 
-CfnRoute$DurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-duration-property-builder
+  "The build-cfn-route-duration-property-builder function updates a CfnRoute$DurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$DurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
-| `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnRoute$DurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :unit)]
-      (. builder unit data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnRoute$DurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :unit)]
+    (. builder unit data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-route-grpc-retry-policy-property-builder
-  "The cfn-route-grpc-retry-policy-property-builder function buildes out new instances of 
-CfnRoute$GrpcRetryPolicyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-grpc-retry-policy-property-builder
+  "The build-cfn-route-grpc-retry-policy-property-builder function updates a CfnRoute$GrpcRetryPolicyProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$GrpcRetryPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1116,62 +1224,71 @@ CfnRoute$GrpcRetryPolicyProperty$Builder using the provided configuration.  Each
 | `httpRetryEvents` | java.util.List | [[cdk.support/lookup-entry]] | `:http-retry-events` |
 | `maxRetries` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-retries` |
 | `perRetryTimeout` | software.amazon.awscdk.services.appmesh.CfnRoute$DurationProperty | [[cdk.support/lookup-entry]] | `:per-retry-timeout` |
-| `tcpRetryEvents` | java.util.List | [[cdk.support/lookup-entry]] | `:tcp-retry-events` |"
-  [stack id config]
-  (let [builder (CfnRoute$GrpcRetryPolicyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :grpc-retry-events)]
-      (. builder grpcRetryEvents data))
-    (when-let [data (lookup-entry config id :http-retry-events)]
-      (. builder httpRetryEvents data))
-    (when-let [data (lookup-entry config id :max-retries)]
-      (. builder maxRetries data))
-    (when-let [data (lookup-entry config id :per-retry-timeout)]
-      (. builder perRetryTimeout data))
-    (when-let [data (lookup-entry config id :tcp-retry-events)]
-      (. builder tcpRetryEvents data))
-    (.build builder)))
+| `tcpRetryEvents` | java.util.List | [[cdk.support/lookup-entry]] | `:tcp-retry-events` |
+"
+  [^CfnRoute$GrpcRetryPolicyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :grpc-retry-events)]
+    (. builder grpcRetryEvents data))
+  (when-let [data (lookup-entry config id :http-retry-events)]
+    (. builder httpRetryEvents data))
+  (when-let [data (lookup-entry config id :max-retries)]
+    (. builder maxRetries data))
+  (when-let [data (lookup-entry config id :per-retry-timeout)]
+    (. builder perRetryTimeout data))
+  (when-let [data (lookup-entry config id :tcp-retry-events)]
+    (. builder tcpRetryEvents data))
+  (.build builder))
 
 
-(defn cfn-route-grpc-route-action-property-builder
-  "The cfn-route-grpc-route-action-property-builder function buildes out new instances of 
-CfnRoute$GrpcRouteActionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-grpc-route-action-property-builder
+  "The build-cfn-route-grpc-route-action-property-builder function updates a CfnRoute$GrpcRouteActionProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$GrpcRouteActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `weightedTargets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:weighted-targets` |"
-  [stack id config]
-  (let [builder (CfnRoute$GrpcRouteActionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :weighted-targets)]
-      (. builder weightedTargets data))
-    (.build builder)))
+| `weightedTargets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:weighted-targets` |
+"
+  [^CfnRoute$GrpcRouteActionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :weighted-targets)]
+    (. builder weightedTargets data))
+  (.build builder))
 
 
-(defn cfn-route-grpc-route-match-property-builder
-  "The cfn-route-grpc-route-match-property-builder function buildes out new instances of 
-CfnRoute$GrpcRouteMatchProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-grpc-route-match-property-builder
+  "The build-cfn-route-grpc-route-match-property-builder function updates a CfnRoute$GrpcRouteMatchProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$GrpcRouteMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `metadata` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:metadata` |
 | `methodName` | java.lang.String | [[cdk.support/lookup-entry]] | `:method-name` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
-| `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |"
-  [stack id config]
-  (let [builder (CfnRoute$GrpcRouteMatchProperty$Builder.)]
-    (when-let [data (lookup-entry config id :metadata)]
-      (. builder metadata data))
-    (when-let [data (lookup-entry config id :method-name)]
-      (. builder methodName data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (.build builder)))
+| `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
+"
+  [^CfnRoute$GrpcRouteMatchProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :metadata)]
+    (. builder metadata data))
+  (when-let [data (lookup-entry config id :method-name)]
+    (. builder methodName data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (.build builder))
 
 
-(defn cfn-route-grpc-route-metadata-match-method-property-builder
-  "The cfn-route-grpc-route-metadata-match-method-property-builder function buildes out new instances of 
-CfnRoute$GrpcRouteMetadataMatchMethodProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-grpc-route-metadata-match-method-property-builder
+  "The build-cfn-route-grpc-route-metadata-match-method-property-builder function updates a CfnRoute$GrpcRouteMetadataMatchMethodProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$GrpcRouteMetadataMatchMethodProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1179,85 +1296,97 @@ CfnRoute$GrpcRouteMetadataMatchMethodProperty$Builder using the provided configu
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 | `range` | software.amazon.awscdk.services.appmesh.CfnRoute$MatchRangeProperty | [[cdk.support/lookup-entry]] | `:range` |
 | `regex` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex` |
-| `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |"
-  [stack id config]
-  (let [builder (CfnRoute$GrpcRouteMetadataMatchMethodProperty$Builder.)]
-    (when-let [data (lookup-entry config id :exact)]
-      (. builder exact data))
-    (when-let [data (lookup-entry config id :prefix)]
-      (. builder prefix data))
-    (when-let [data (lookup-entry config id :range)]
-      (. builder range data))
-    (when-let [data (lookup-entry config id :regex)]
-      (. builder regex data))
-    (when-let [data (lookup-entry config id :suffix)]
-      (. builder suffix data))
-    (.build builder)))
+| `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |
+"
+  [^CfnRoute$GrpcRouteMetadataMatchMethodProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :exact)]
+    (. builder exact data))
+  (when-let [data (lookup-entry config id :prefix)]
+    (. builder prefix data))
+  (when-let [data (lookup-entry config id :range)]
+    (. builder range data))
+  (when-let [data (lookup-entry config id :regex)]
+    (. builder regex data))
+  (when-let [data (lookup-entry config id :suffix)]
+    (. builder suffix data))
+  (.build builder))
 
 
-(defn cfn-route-grpc-route-metadata-property-builder
-  "The cfn-route-grpc-route-metadata-property-builder function buildes out new instances of 
-CfnRoute$GrpcRouteMetadataProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-grpc-route-metadata-property-builder
+  "The build-cfn-route-grpc-route-metadata-property-builder function updates a CfnRoute$GrpcRouteMetadataProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$GrpcRouteMetadataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `invert` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:invert` |
 | `match` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (CfnRoute$GrpcRouteMetadataProperty$Builder.)]
-    (when-let [data (lookup-entry config id :invert)]
-      (. builder invert data))
-    (when-let [data (lookup-entry config id :match)]
-      (. builder match data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^CfnRoute$GrpcRouteMetadataProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :invert)]
+    (. builder invert data))
+  (when-let [data (lookup-entry config id :match)]
+    (. builder match data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn cfn-route-grpc-route-property-builder
-  "The cfn-route-grpc-route-property-builder function buildes out new instances of 
-CfnRoute$GrpcRouteProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-grpc-route-property-builder
+  "The build-cfn-route-grpc-route-property-builder function updates a CfnRoute$GrpcRouteProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$GrpcRouteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `action` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:action` |
 | `match` | software.amazon.awscdk.services.appmesh.CfnRoute$GrpcRouteMatchProperty | [[cdk.support/lookup-entry]] | `:match` |
 | `retryPolicy` | software.amazon.awscdk.services.appmesh.CfnRoute$GrpcRetryPolicyProperty | [[cdk.support/lookup-entry]] | `:retry-policy` |
-| `timeout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (CfnRoute$GrpcRouteProperty$Builder.)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :match)]
-      (. builder match data))
-    (when-let [data (lookup-entry config id :retry-policy)]
-      (. builder retryPolicy data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^CfnRoute$GrpcRouteProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :match)]
+    (. builder match data))
+  (when-let [data (lookup-entry config id :retry-policy)]
+    (. builder retryPolicy data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn cfn-route-grpc-timeout-property-builder
-  "The cfn-route-grpc-timeout-property-builder function buildes out new instances of 
-CfnRoute$GrpcTimeoutProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-grpc-timeout-property-builder
+  "The build-cfn-route-grpc-timeout-property-builder function updates a CfnRoute$GrpcTimeoutProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$GrpcTimeoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `idle` | software.amazon.awscdk.services.appmesh.CfnRoute$DurationProperty | [[cdk.support/lookup-entry]] | `:idle` |
-| `perRequest` | software.amazon.awscdk.services.appmesh.CfnRoute$DurationProperty | [[cdk.support/lookup-entry]] | `:per-request` |"
-  [stack id config]
-  (let [builder (CfnRoute$GrpcTimeoutProperty$Builder.)]
-    (when-let [data (lookup-entry config id :idle)]
-      (. builder idle data))
-    (when-let [data (lookup-entry config id :per-request)]
-      (. builder perRequest data))
-    (.build builder)))
+| `perRequest` | software.amazon.awscdk.services.appmesh.CfnRoute$DurationProperty | [[cdk.support/lookup-entry]] | `:per-request` |
+"
+  [^CfnRoute$GrpcTimeoutProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :idle)]
+    (. builder idle data))
+  (when-let [data (lookup-entry config id :per-request)]
+    (. builder perRequest data))
+  (.build builder))
 
 
-(defn cfn-route-header-match-method-property-builder
-  "The cfn-route-header-match-method-property-builder function buildes out new instances of 
-CfnRoute$HeaderMatchMethodProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-header-match-method-property-builder
+  "The build-cfn-route-header-match-method-property-builder function updates a CfnRoute$HeaderMatchMethodProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$HeaderMatchMethodProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1265,113 +1394,131 @@ CfnRoute$HeaderMatchMethodProperty$Builder using the provided configuration.  Ea
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 | `range` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:range` |
 | `regex` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex` |
-| `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |"
-  [stack id config]
-  (let [builder (CfnRoute$HeaderMatchMethodProperty$Builder.)]
-    (when-let [data (lookup-entry config id :exact)]
-      (. builder exact data))
-    (when-let [data (lookup-entry config id :prefix)]
-      (. builder prefix data))
-    (when-let [data (lookup-entry config id :range)]
-      (. builder range data))
-    (when-let [data (lookup-entry config id :regex)]
-      (. builder regex data))
-    (when-let [data (lookup-entry config id :suffix)]
-      (. builder suffix data))
-    (.build builder)))
+| `suffix` | java.lang.String | [[cdk.support/lookup-entry]] | `:suffix` |
+"
+  [^CfnRoute$HeaderMatchMethodProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :exact)]
+    (. builder exact data))
+  (when-let [data (lookup-entry config id :prefix)]
+    (. builder prefix data))
+  (when-let [data (lookup-entry config id :range)]
+    (. builder range data))
+  (when-let [data (lookup-entry config id :regex)]
+    (. builder regex data))
+  (when-let [data (lookup-entry config id :suffix)]
+    (. builder suffix data))
+  (.build builder))
 
 
-(defn cfn-route-http-path-match-property-builder
-  "The cfn-route-http-path-match-property-builder function buildes out new instances of 
-CfnRoute$HttpPathMatchProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-http-path-match-property-builder
+  "The build-cfn-route-http-path-match-property-builder function updates a CfnRoute$HttpPathMatchProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$HttpPathMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `exact` | java.lang.String | [[cdk.support/lookup-entry]] | `:exact` |
-| `regex` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex` |"
-  [stack id config]
-  (let [builder (CfnRoute$HttpPathMatchProperty$Builder.)]
-    (when-let [data (lookup-entry config id :exact)]
-      (. builder exact data))
-    (when-let [data (lookup-entry config id :regex)]
-      (. builder regex data))
-    (.build builder)))
+| `regex` | java.lang.String | [[cdk.support/lookup-entry]] | `:regex` |
+"
+  [^CfnRoute$HttpPathMatchProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :exact)]
+    (. builder exact data))
+  (when-let [data (lookup-entry config id :regex)]
+    (. builder regex data))
+  (.build builder))
 
 
-(defn cfn-route-http-query-parameter-match-property-builder
-  "The cfn-route-http-query-parameter-match-property-builder function buildes out new instances of 
-CfnRoute$HttpQueryParameterMatchProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-http-query-parameter-match-property-builder
+  "The build-cfn-route-http-query-parameter-match-property-builder function updates a CfnRoute$HttpQueryParameterMatchProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$HttpQueryParameterMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `exact` | java.lang.String | [[cdk.support/lookup-entry]] | `:exact` |"
-  [stack id config]
-  (let [builder (CfnRoute$HttpQueryParameterMatchProperty$Builder.)]
-    (when-let [data (lookup-entry config id :exact)]
-      (. builder exact data))
-    (.build builder)))
+| `exact` | java.lang.String | [[cdk.support/lookup-entry]] | `:exact` |
+"
+  [^CfnRoute$HttpQueryParameterMatchProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :exact)]
+    (. builder exact data))
+  (.build builder))
 
 
-(defn cfn-route-http-retry-policy-property-builder
-  "The cfn-route-http-retry-policy-property-builder function buildes out new instances of 
-CfnRoute$HttpRetryPolicyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-http-retry-policy-property-builder
+  "The build-cfn-route-http-retry-policy-property-builder function updates a CfnRoute$HttpRetryPolicyProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$HttpRetryPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `httpRetryEvents` | java.util.List | [[cdk.support/lookup-entry]] | `:http-retry-events` |
 | `maxRetries` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-retries` |
 | `perRetryTimeout` | software.amazon.awscdk.services.appmesh.CfnRoute$DurationProperty | [[cdk.support/lookup-entry]] | `:per-retry-timeout` |
-| `tcpRetryEvents` | java.util.List | [[cdk.support/lookup-entry]] | `:tcp-retry-events` |"
-  [stack id config]
-  (let [builder (CfnRoute$HttpRetryPolicyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :http-retry-events)]
-      (. builder httpRetryEvents data))
-    (when-let [data (lookup-entry config id :max-retries)]
-      (. builder maxRetries data))
-    (when-let [data (lookup-entry config id :per-retry-timeout)]
-      (. builder perRetryTimeout data))
-    (when-let [data (lookup-entry config id :tcp-retry-events)]
-      (. builder tcpRetryEvents data))
-    (.build builder)))
+| `tcpRetryEvents` | java.util.List | [[cdk.support/lookup-entry]] | `:tcp-retry-events` |
+"
+  [^CfnRoute$HttpRetryPolicyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :http-retry-events)]
+    (. builder httpRetryEvents data))
+  (when-let [data (lookup-entry config id :max-retries)]
+    (. builder maxRetries data))
+  (when-let [data (lookup-entry config id :per-retry-timeout)]
+    (. builder perRetryTimeout data))
+  (when-let [data (lookup-entry config id :tcp-retry-events)]
+    (. builder tcpRetryEvents data))
+  (.build builder))
 
 
-(defn cfn-route-http-route-action-property-builder
-  "The cfn-route-http-route-action-property-builder function buildes out new instances of 
-CfnRoute$HttpRouteActionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-http-route-action-property-builder
+  "The build-cfn-route-http-route-action-property-builder function updates a CfnRoute$HttpRouteActionProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$HttpRouteActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `weightedTargets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:weighted-targets` |"
-  [stack id config]
-  (let [builder (CfnRoute$HttpRouteActionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :weighted-targets)]
-      (. builder weightedTargets data))
-    (.build builder)))
+| `weightedTargets` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:weighted-targets` |
+"
+  [^CfnRoute$HttpRouteActionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :weighted-targets)]
+    (. builder weightedTargets data))
+  (.build builder))
 
 
-(defn cfn-route-http-route-header-property-builder
-  "The cfn-route-http-route-header-property-builder function buildes out new instances of 
-CfnRoute$HttpRouteHeaderProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-http-route-header-property-builder
+  "The build-cfn-route-http-route-header-property-builder function updates a CfnRoute$HttpRouteHeaderProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$HttpRouteHeaderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `invert` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:invert` |
 | `match` | software.amazon.awscdk.services.appmesh.CfnRoute$HeaderMatchMethodProperty | [[cdk.support/lookup-entry]] | `:match` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (CfnRoute$HttpRouteHeaderProperty$Builder.)]
-    (when-let [data (lookup-entry config id :invert)]
-      (. builder invert data))
-    (when-let [data (lookup-entry config id :match)]
-      (. builder match data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^CfnRoute$HttpRouteHeaderProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :invert)]
+    (. builder invert data))
+  (when-let [data (lookup-entry config id :match)]
+    (. builder match data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn cfn-route-http-route-match-property-builder
-  "The cfn-route-http-route-match-property-builder function buildes out new instances of 
-CfnRoute$HttpRouteMatchProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-http-route-match-property-builder
+  "The build-cfn-route-http-route-match-property-builder function updates a CfnRoute$HttpRouteMatchProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$HttpRouteMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1381,86 +1528,98 @@ CfnRoute$HttpRouteMatchProperty$Builder using the provided configuration.  Each 
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `prefix` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix` |
 | `queryParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:query-parameters` |
-| `scheme` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheme` |"
-  [stack id config]
-  (let [builder (CfnRoute$HttpRouteMatchProperty$Builder.)]
-    (when-let [data (lookup-entry config id :headers)]
-      (. builder headers data))
-    (when-let [data (lookup-entry config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :path)]
-      (. builder path data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :prefix)]
-      (. builder prefix data))
-    (when-let [data (lookup-entry config id :query-parameters)]
-      (. builder queryParameters data))
-    (when-let [data (lookup-entry config id :scheme)]
-      (. builder scheme data))
-    (.build builder)))
+| `scheme` | java.lang.String | [[cdk.support/lookup-entry]] | `:scheme` |
+"
+  [^CfnRoute$HttpRouteMatchProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :headers)]
+    (. builder headers data))
+  (when-let [data (lookup-entry config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :path)]
+    (. builder path data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :prefix)]
+    (. builder prefix data))
+  (when-let [data (lookup-entry config id :query-parameters)]
+    (. builder queryParameters data))
+  (when-let [data (lookup-entry config id :scheme)]
+    (. builder scheme data))
+  (.build builder))
 
 
-(defn cfn-route-http-route-property-builder
-  "The cfn-route-http-route-property-builder function buildes out new instances of 
-CfnRoute$HttpRouteProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-http-route-property-builder
+  "The build-cfn-route-http-route-property-builder function updates a CfnRoute$HttpRouteProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$HttpRouteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `action` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:action` |
 | `match` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpRouteMatchProperty | [[cdk.support/lookup-entry]] | `:match` |
 | `retryPolicy` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpRetryPolicyProperty | [[cdk.support/lookup-entry]] | `:retry-policy` |
-| `timeout` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpTimeoutProperty | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (CfnRoute$HttpRouteProperty$Builder.)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :match)]
-      (. builder match data))
-    (when-let [data (lookup-entry config id :retry-policy)]
-      (. builder retryPolicy data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpTimeoutProperty | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^CfnRoute$HttpRouteProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :match)]
+    (. builder match data))
+  (when-let [data (lookup-entry config id :retry-policy)]
+    (. builder retryPolicy data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn cfn-route-http-timeout-property-builder
-  "The cfn-route-http-timeout-property-builder function buildes out new instances of 
-CfnRoute$HttpTimeoutProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-http-timeout-property-builder
+  "The build-cfn-route-http-timeout-property-builder function updates a CfnRoute$HttpTimeoutProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$HttpTimeoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `idle` | software.amazon.awscdk.services.appmesh.CfnRoute$DurationProperty | [[cdk.support/lookup-entry]] | `:idle` |
-| `perRequest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:per-request` |"
-  [stack id config]
-  (let [builder (CfnRoute$HttpTimeoutProperty$Builder.)]
-    (when-let [data (lookup-entry config id :idle)]
-      (. builder idle data))
-    (when-let [data (lookup-entry config id :per-request)]
-      (. builder perRequest data))
-    (.build builder)))
+| `perRequest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:per-request` |
+"
+  [^CfnRoute$HttpTimeoutProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :idle)]
+    (. builder idle data))
+  (when-let [data (lookup-entry config id :per-request)]
+    (. builder perRequest data))
+  (.build builder))
 
 
-(defn cfn-route-match-range-property-builder
-  "The cfn-route-match-range-property-builder function buildes out new instances of 
-CfnRoute$MatchRangeProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-match-range-property-builder
+  "The build-cfn-route-match-range-property-builder function updates a CfnRoute$MatchRangeProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$MatchRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `end` | java.lang.Number | [[cdk.support/lookup-entry]] | `:end` |
-| `start` | java.lang.Number | [[cdk.support/lookup-entry]] | `:start` |"
-  [stack id config]
-  (let [builder (CfnRoute$MatchRangeProperty$Builder.)]
-    (when-let [data (lookup-entry config id :end)]
-      (. builder end data))
-    (when-let [data (lookup-entry config id :start)]
-      (. builder start data))
-    (.build builder)))
+| `start` | java.lang.Number | [[cdk.support/lookup-entry]] | `:start` |
+"
+  [^CfnRoute$MatchRangeProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :end)]
+    (. builder end data))
+  (when-let [data (lookup-entry config id :start)]
+    (. builder start data))
+  (.build builder))
 
 
-(defn cfn-route-props-builder
-  "The cfn-route-props-builder function buildes out new instances of 
-CfnRouteProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-props-builder
+  "The build-cfn-route-props-builder function updates a CfnRouteProps$Builder instance using the provided configuration.
+  The function takes the CfnRouteProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1469,44 +1628,50 @@ CfnRouteProps$Builder using the provided configuration.  Each field is set as fo
 | `routeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:route-name` |
 | `spec` | software.amazon.awscdk.services.appmesh.CfnRoute$RouteSpecProperty | [[cdk.support/lookup-entry]] | `:spec` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |"
-  [stack id config]
-  (let [builder (CfnRouteProps$Builder.)]
-    (when-let [data (lookup-entry config id :mesh-name)]
-      (. builder meshName data))
-    (when-let [data (lookup-entry config id :mesh-owner)]
-      (. builder meshOwner data))
-    (when-let [data (lookup-entry config id :route-name)]
-      (. builder routeName data))
-    (when-let [data (lookup-entry config id :spec)]
-      (. builder spec data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :virtual-router-name)]
-      (. builder virtualRouterName data))
-    (.build builder)))
+| `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |
+"
+  [^CfnRouteProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :mesh-name)]
+    (. builder meshName data))
+  (when-let [data (lookup-entry config id :mesh-owner)]
+    (. builder meshOwner data))
+  (when-let [data (lookup-entry config id :route-name)]
+    (. builder routeName data))
+  (when-let [data (lookup-entry config id :spec)]
+    (. builder spec data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :virtual-router-name)]
+    (. builder virtualRouterName data))
+  (.build builder))
 
 
-(defn cfn-route-query-parameter-property-builder
-  "The cfn-route-query-parameter-property-builder function buildes out new instances of 
-CfnRoute$QueryParameterProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-query-parameter-property-builder
+  "The build-cfn-route-query-parameter-property-builder function updates a CfnRoute$QueryParameterProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$QueryParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `match` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpQueryParameterMatchProperty | [[cdk.support/lookup-entry]] | `:match` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (CfnRoute$QueryParameterProperty$Builder.)]
-    (when-let [data (lookup-entry config id :match)]
-      (. builder match data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^CfnRoute$QueryParameterProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :match)]
+    (. builder match data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn cfn-route-route-spec-property-builder
-  "The cfn-route-route-spec-property-builder function buildes out new instances of 
-CfnRoute$RouteSpecProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-route-spec-property-builder
+  "The build-cfn-route-route-spec-property-builder function updates a CfnRoute$RouteSpecProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$RouteSpecProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1514,107 +1679,125 @@ CfnRoute$RouteSpecProperty$Builder using the provided configuration.  Each field
 | `http2Route` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http2-route` |
 | `httpRoute` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http-route` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
-| `tcpRoute` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tcp-route` |"
-  [stack id config]
-  (let [builder (CfnRoute$RouteSpecProperty$Builder.)]
-    (when-let [data (lookup-entry config id :grpc-route)]
-      (. builder grpcRoute data))
-    (when-let [data (lookup-entry config id :http2-route)]
-      (. builder http2Route data))
-    (when-let [data (lookup-entry config id :http-route)]
-      (. builder httpRoute data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :tcp-route)]
-      (. builder tcpRoute data))
-    (.build builder)))
+| `tcpRoute` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tcp-route` |
+"
+  [^CfnRoute$RouteSpecProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :grpc-route)]
+    (. builder grpcRoute data))
+  (when-let [data (lookup-entry config id :http2-route)]
+    (. builder http2Route data))
+  (when-let [data (lookup-entry config id :http-route)]
+    (. builder httpRoute data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :tcp-route)]
+    (. builder tcpRoute data))
+  (.build builder))
 
 
-(defn cfn-route-tcp-route-action-property-builder
-  "The cfn-route-tcp-route-action-property-builder function buildes out new instances of 
-CfnRoute$TcpRouteActionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-tcp-route-action-property-builder
+  "The build-cfn-route-tcp-route-action-property-builder function updates a CfnRoute$TcpRouteActionProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$TcpRouteActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `weightedTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:weighted-targets` |"
-  [stack id config]
-  (let [builder (CfnRoute$TcpRouteActionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :weighted-targets)]
-      (. builder weightedTargets data))
-    (.build builder)))
-
-
-(defn cfn-route-tcp-route-match-property-builder
-  "The cfn-route-tcp-route-match-property-builder function buildes out new instances of 
-CfnRoute$TcpRouteMatchProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |"
-  [stack id config]
-  (let [builder (CfnRoute$TcpRouteMatchProperty$Builder.)]
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (.build builder)))
+| `weightedTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:weighted-targets` |
+"
+  [^CfnRoute$TcpRouteActionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :weighted-targets)]
+    (. builder weightedTargets data))
+  (.build builder))
 
 
-(defn cfn-route-tcp-route-property-builder
-  "The cfn-route-tcp-route-property-builder function buildes out new instances of 
-CfnRoute$TcpRouteProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-tcp-route-match-property-builder
+  "The build-cfn-route-tcp-route-match-property-builder function updates a CfnRoute$TcpRouteMatchProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$TcpRouteMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
+"
+  [^CfnRoute$TcpRouteMatchProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (.build builder))
+
+
+(defn build-cfn-route-tcp-route-property-builder
+  "The build-cfn-route-tcp-route-property-builder function updates a CfnRoute$TcpRouteProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$TcpRouteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `action` | software.amazon.awscdk.services.appmesh.CfnRoute$TcpRouteActionProperty | [[cdk.support/lookup-entry]] | `:action` |
 | `match` | software.amazon.awscdk.services.appmesh.CfnRoute$TcpRouteMatchProperty | [[cdk.support/lookup-entry]] | `:match` |
-| `timeout` | software.amazon.awscdk.services.appmesh.CfnRoute$TcpTimeoutProperty | [[cdk.support/lookup-entry]] | `:timeout` |"
-  [stack id config]
-  (let [builder (CfnRoute$TcpRouteProperty$Builder.)]
-    (when-let [data (lookup-entry config id :action)]
-      (. builder action data))
-    (when-let [data (lookup-entry config id :match)]
-      (. builder match data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (.build builder)))
+| `timeout` | software.amazon.awscdk.services.appmesh.CfnRoute$TcpTimeoutProperty | [[cdk.support/lookup-entry]] | `:timeout` |
+"
+  [^CfnRoute$TcpRouteProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :action)]
+    (. builder action data))
+  (when-let [data (lookup-entry config id :match)]
+    (. builder match data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (.build builder))
 
 
-(defn cfn-route-tcp-timeout-property-builder
-  "The cfn-route-tcp-timeout-property-builder function buildes out new instances of 
-CfnRoute$TcpTimeoutProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-tcp-timeout-property-builder
+  "The build-cfn-route-tcp-timeout-property-builder function updates a CfnRoute$TcpTimeoutProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$TcpTimeoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `idle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:idle` |"
-  [stack id config]
-  (let [builder (CfnRoute$TcpTimeoutProperty$Builder.)]
-    (when-let [data (lookup-entry config id :idle)]
-      (. builder idle data))
-    (.build builder)))
+| `idle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:idle` |
+"
+  [^CfnRoute$TcpTimeoutProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :idle)]
+    (. builder idle data))
+  (.build builder))
 
 
-(defn cfn-route-weighted-target-property-builder
-  "The cfn-route-weighted-target-property-builder function buildes out new instances of 
-CfnRoute$WeightedTargetProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-route-weighted-target-property-builder
+  "The build-cfn-route-weighted-target-property-builder function updates a CfnRoute$WeightedTargetProperty$Builder instance using the provided configuration.
+  The function takes the CfnRoute$WeightedTargetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `virtualNode` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node` |
-| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |"
-  [stack id config]
-  (let [builder (CfnRoute$WeightedTargetProperty$Builder.)]
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :virtual-node)]
-      (. builder virtualNode data))
-    (when-let [data (lookup-entry config id :weight)]
-      (. builder weight data))
-    (.build builder)))
+| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
+"
+  [^CfnRoute$WeightedTargetProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :virtual-node)]
+    (. builder virtualNode data))
+  (when-let [data (lookup-entry config id :weight)]
+    (. builder weight data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-builder
-  "The cfn-virtual-gateway-builder function buildes out new instances of 
-CfnVirtualGateway$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-builder
+  "The build-cfn-virtual-gateway-builder function updates a CfnVirtualGateway$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1622,59 +1805,68 @@ CfnVirtualGateway$Builder using the provided configuration.  Each field is set a
 | `meshOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-owner` |
 | `spec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spec` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :mesh-name)]
-      (. builder meshName data))
-    (when-let [data (lookup-entry config id :mesh-owner)]
-      (. builder meshOwner data))
-    (when-let [data (lookup-entry config id :spec)]
-      (. builder spec data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :virtual-gateway-name)]
-      (. builder virtualGatewayName data))
-    (.build builder)))
+| `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |
+"
+  [^CfnVirtualGateway$Builder builder id config]
+  (when-let [data (lookup-entry config id :mesh-name)]
+    (. builder meshName data))
+  (when-let [data (lookup-entry config id :mesh-owner)]
+    (. builder meshOwner data))
+  (when-let [data (lookup-entry config id :spec)]
+    (. builder spec data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :virtual-gateway-name)]
+    (. builder virtualGatewayName data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-json-format-ref-property-builder
-  "The cfn-virtual-gateway-json-format-ref-property-builder function buildes out new instances of 
-CfnVirtualGateway$JsonFormatRefProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-json-format-ref-property-builder
+  "The build-cfn-virtual-gateway-json-format-ref-property-builder function updates a CfnVirtualGateway$JsonFormatRefProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$JsonFormatRefProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$JsonFormatRefProperty$Builder.)]
-    (when-let [data (lookup-entry config id :key)]
-      (. builder key data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnVirtualGateway$JsonFormatRefProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :key)]
+    (. builder key data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-logging-format-property-builder
-  "The cfn-virtual-gateway-logging-format-property-builder function buildes out new instances of 
-CfnVirtualGateway$LoggingFormatProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-logging-format-property-builder
+  "The build-cfn-virtual-gateway-logging-format-property-builder function updates a CfnVirtualGateway$LoggingFormatProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$LoggingFormatProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `json` | java.util.List | [[cdk.support/lookup-entry]] | `:json` |
-| `text` | java.lang.String | [[cdk.support/lookup-entry]] | `:text` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$LoggingFormatProperty$Builder.)]
-    (when-let [data (lookup-entry config id :json)]
-      (. builder json data))
-    (when-let [data (lookup-entry config id :text)]
-      (. builder text data))
-    (.build builder)))
+| `text` | java.lang.String | [[cdk.support/lookup-entry]] | `:text` |
+"
+  [^CfnVirtualGateway$LoggingFormatProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :json)]
+    (. builder json data))
+  (when-let [data (lookup-entry config id :text)]
+    (. builder text data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-props-builder
-  "The cfn-virtual-gateway-props-builder function buildes out new instances of 
-CfnVirtualGatewayProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-props-builder
+  "The build-cfn-virtual-gateway-props-builder function updates a CfnVirtualGatewayProps$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGatewayProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1682,186 +1874,219 @@ CfnVirtualGatewayProps$Builder using the provided configuration.  Each field is 
 | `meshOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-owner` |
 | `spec` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewaySpecProperty | [[cdk.support/lookup-entry]] | `:spec` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |"
-  [stack id config]
-  (let [builder (CfnVirtualGatewayProps$Builder.)]
-    (when-let [data (lookup-entry config id :mesh-name)]
-      (. builder meshName data))
-    (when-let [data (lookup-entry config id :mesh-owner)]
-      (. builder meshOwner data))
-    (when-let [data (lookup-entry config id :spec)]
-      (. builder spec data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :virtual-gateway-name)]
-      (. builder virtualGatewayName data))
-    (.build builder)))
+| `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |
+"
+  [^CfnVirtualGatewayProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :mesh-name)]
+    (. builder meshName data))
+  (when-let [data (lookup-entry config id :mesh-owner)]
+    (. builder meshOwner data))
+  (when-let [data (lookup-entry config id :spec)]
+    (. builder spec data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :virtual-gateway-name)]
+    (. builder virtualGatewayName data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-subject-alternative-name-matchers-property-builder
-  "The cfn-virtual-gateway-subject-alternative-name-matchers-property-builder function buildes out new instances of 
-CfnVirtualGateway$SubjectAlternativeNameMatchersProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-subject-alternative-name-matchers-property-builder
+  "The build-cfn-virtual-gateway-subject-alternative-name-matchers-property-builder function updates a CfnVirtualGateway$SubjectAlternativeNameMatchersProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$SubjectAlternativeNameMatchersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `exact` | java.util.List | [[cdk.support/lookup-entry]] | `:exact` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$SubjectAlternativeNameMatchersProperty$Builder.)]
-    (when-let [data (lookup-entry config id :exact)]
-      (. builder exact data))
-    (.build builder)))
-
-
-(defn cfn-virtual-gateway-subject-alternative-names-property-builder
-  "The cfn-virtual-gateway-subject-alternative-names-property-builder function buildes out new instances of 
-CfnVirtualGateway$SubjectAlternativeNamesProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `match` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$SubjectAlternativeNamesProperty$Builder.)]
-    (when-let [data (lookup-entry config id :match)]
-      (. builder match data))
-    (.build builder)))
+| `exact` | java.util.List | [[cdk.support/lookup-entry]] | `:exact` |
+"
+  [^CfnVirtualGateway$SubjectAlternativeNameMatchersProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :exact)]
+    (. builder exact data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-access-log-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-access-log-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayAccessLogProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-subject-alternative-names-property-builder
+  "The build-cfn-virtual-gateway-subject-alternative-names-property-builder function updates a CfnVirtualGateway$SubjectAlternativeNamesProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$SubjectAlternativeNamesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `file` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayFileAccessLogProperty | [[cdk.support/lookup-entry]] | `:file` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayAccessLogProperty$Builder.)]
-    (when-let [data (lookup-entry config id :file)]
-      (. builder file data))
-    (.build builder)))
-
-
-(defn cfn-virtual-gateway-virtual-gateway-backend-defaults-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-backend-defaults-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayBackendDefaultsProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `clientPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-policy` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayBackendDefaultsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :client-policy)]
-      (. builder clientPolicy data))
-    (.build builder)))
+| `match` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match` |
+"
+  [^CfnVirtualGateway$SubjectAlternativeNamesProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :match)]
+    (. builder match data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-client-policy-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-client-policy-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayClientPolicyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-access-log-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-access-log-property-builder function updates a CfnVirtualGateway$VirtualGatewayAccessLogProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayAccessLogProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `tls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tls` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayClientPolicyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :tls)]
-      (. builder tls data))
-    (.build builder)))
+| `file` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayFileAccessLogProperty | [[cdk.support/lookup-entry]] | `:file` |
+"
+  [^CfnVirtualGateway$VirtualGatewayAccessLogProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :file)]
+    (. builder file data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-client-policy-tls-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-client-policy-tls-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayClientPolicyTlsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-backend-defaults-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-backend-defaults-property-builder function updates a CfnVirtualGateway$VirtualGatewayBackendDefaultsProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayBackendDefaultsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `clientPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-policy` |
+"
+  [^CfnVirtualGateway$VirtualGatewayBackendDefaultsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :client-policy)]
+    (. builder clientPolicy data))
+  (.build builder))
+
+
+(defn build-cfn-virtual-gateway-virtual-gateway-client-policy-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-client-policy-property-builder function updates a CfnVirtualGateway$VirtualGatewayClientPolicyProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayClientPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `tls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tls` |
+"
+  [^CfnVirtualGateway$VirtualGatewayClientPolicyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :tls)]
+    (. builder tls data))
+  (.build builder))
+
+
+(defn build-cfn-virtual-gateway-virtual-gateway-client-policy-tls-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-client-policy-tls-property-builder function updates a CfnVirtualGateway$VirtualGatewayClientPolicyTlsProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayClientPolicyTlsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `certificate` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayClientTlsCertificateProperty | [[cdk.support/lookup-entry]] | `:certificate` |
 | `enforce` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enforce` |
 | `ports` | java.util.List | [[cdk.support/lookup-entry]] | `:ports` |
-| `validation` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayTlsValidationContextProperty | [[cdk.support/lookup-entry]] | `:validation` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayClientPolicyTlsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :certificate)]
-      (. builder certificate data))
-    (when-let [data (lookup-entry config id :enforce)]
-      (. builder enforce data))
-    (when-let [data (lookup-entry config id :ports)]
-      (. builder ports data))
-    (when-let [data (lookup-entry config id :validation)]
-      (. builder validation data))
-    (.build builder)))
+| `validation` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayTlsValidationContextProperty | [[cdk.support/lookup-entry]] | `:validation` |
+"
+  [^CfnVirtualGateway$VirtualGatewayClientPolicyTlsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate)]
+    (. builder certificate data))
+  (when-let [data (lookup-entry config id :enforce)]
+    (. builder enforce data))
+  (when-let [data (lookup-entry config id :ports)]
+    (. builder ports data))
+  (when-let [data (lookup-entry config id :validation)]
+    (. builder validation data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-client-tls-certificate-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-client-tls-certificate-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayClientTlsCertificateProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-client-tls-certificate-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-client-tls-certificate-property-builder function updates a CfnVirtualGateway$VirtualGatewayClientTlsCertificateProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayClientTlsCertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `file` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:file` |
-| `sds` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sds` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayClientTlsCertificateProperty$Builder.)]
-    (when-let [data (lookup-entry config id :file)]
-      (. builder file data))
-    (when-let [data (lookup-entry config id :sds)]
-      (. builder sds data))
-    (.build builder)))
+| `sds` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sds` |
+"
+  [^CfnVirtualGateway$VirtualGatewayClientTlsCertificateProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :file)]
+    (. builder file data))
+  (when-let [data (lookup-entry config id :sds)]
+    (. builder sds data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-connection-pool-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-connection-pool-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayConnectionPoolProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-connection-pool-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-connection-pool-property-builder function updates a CfnVirtualGateway$VirtualGatewayConnectionPoolProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayConnectionPoolProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `grpc` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:grpc` |
 | `http` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http` |
-| `http2` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayHttp2ConnectionPoolProperty | [[cdk.support/lookup-entry]] | `:http2` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayConnectionPoolProperty$Builder.)]
-    (when-let [data (lookup-entry config id :grpc)]
-      (. builder grpc data))
-    (when-let [data (lookup-entry config id :http)]
-      (. builder http data))
-    (when-let [data (lookup-entry config id :http2)]
-      (. builder http2 data))
-    (.build builder)))
+| `http2` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayHttp2ConnectionPoolProperty | [[cdk.support/lookup-entry]] | `:http2` |
+"
+  [^CfnVirtualGateway$VirtualGatewayConnectionPoolProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :grpc)]
+    (. builder grpc data))
+  (when-let [data (lookup-entry config id :http)]
+    (. builder http data))
+  (when-let [data (lookup-entry config id :http2)]
+    (. builder http2 data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-file-access-log-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-file-access-log-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayFileAccessLogProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-file-access-log-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-file-access-log-property-builder function updates a CfnVirtualGateway$VirtualGatewayFileAccessLogProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayFileAccessLogProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `format` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$LoggingFormatProperty | [[cdk.support/lookup-entry]] | `:format` |
-| `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayFileAccessLogProperty$Builder.)]
-    (when-let [data (lookup-entry config id :format)]
-      (. builder format data))
-    (when-let [data (lookup-entry config id :path)]
-      (. builder path data))
-    (.build builder)))
+| `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
+"
+  [^CfnVirtualGateway$VirtualGatewayFileAccessLogProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :format)]
+    (. builder format data))
+  (when-let [data (lookup-entry config id :path)]
+    (. builder path data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-grpc-connection-pool-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-grpc-connection-pool-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayGrpcConnectionPoolProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-grpc-connection-pool-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-grpc-connection-pool-property-builder function updates a CfnVirtualGateway$VirtualGatewayGrpcConnectionPoolProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayGrpcConnectionPoolProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `maxRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-requests` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayGrpcConnectionPoolProperty$Builder.)]
-    (when-let [data (lookup-entry config id :max-requests)]
-      (. builder maxRequests data))
-    (.build builder)))
+| `maxRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-requests` |
+"
+  [^CfnVirtualGateway$VirtualGatewayGrpcConnectionPoolProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-requests)]
+    (. builder maxRequests data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-health-check-policy-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-health-check-policy-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayHealthCheckPolicyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-health-check-policy-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-health-check-policy-property-builder function updates a CfnVirtualGateway$VirtualGatewayHealthCheckPolicyProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayHealthCheckPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -1871,414 +2096,486 @@ CfnVirtualGateway$VirtualGatewayHealthCheckPolicyProperty$Builder using the prov
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 | `timeoutMillis` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-millis` |
-| `unhealthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayHealthCheckPolicyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :healthy-threshold)]
-      (. builder healthyThreshold data))
-    (when-let [data (lookup-entry config id :interval-millis)]
-      (. builder intervalMillis data))
-    (when-let [data (lookup-entry config id :path)]
-      (. builder path data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :timeout-millis)]
-      (. builder timeoutMillis data))
-    (when-let [data (lookup-entry config id :unhealthy-threshold)]
-      (. builder unhealthyThreshold data))
-    (.build builder)))
+| `unhealthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |
+"
+  [^CfnVirtualGateway$VirtualGatewayHealthCheckPolicyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :healthy-threshold)]
+    (. builder healthyThreshold data))
+  (when-let [data (lookup-entry config id :interval-millis)]
+    (. builder intervalMillis data))
+  (when-let [data (lookup-entry config id :path)]
+    (. builder path data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :timeout-millis)]
+    (. builder timeoutMillis data))
+  (when-let [data (lookup-entry config id :unhealthy-threshold)]
+    (. builder unhealthyThreshold data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-http-connection-pool-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-http-connection-pool-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayHttpConnectionPoolProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-http-connection-pool-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-http-connection-pool-property-builder function updates a CfnVirtualGateway$VirtualGatewayHttpConnectionPoolProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayHttpConnectionPoolProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `maxConnections` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-connections` |
-| `maxPendingRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-pending-requests` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayHttpConnectionPoolProperty$Builder.)]
-    (when-let [data (lookup-entry config id :max-connections)]
-      (. builder maxConnections data))
-    (when-let [data (lookup-entry config id :max-pending-requests)]
-      (. builder maxPendingRequests data))
-    (.build builder)))
+| `maxPendingRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-pending-requests` |
+"
+  [^CfnVirtualGateway$VirtualGatewayHttpConnectionPoolProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-connections)]
+    (. builder maxConnections data))
+  (when-let [data (lookup-entry config id :max-pending-requests)]
+    (. builder maxPendingRequests data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-http2-connection-pool-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-http2-connection-pool-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayHttp2ConnectionPoolProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-http2-connection-pool-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-http2-connection-pool-property-builder function updates a CfnVirtualGateway$VirtualGatewayHttp2ConnectionPoolProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayHttp2ConnectionPoolProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `maxRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-requests` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayHttp2ConnectionPoolProperty$Builder.)]
-    (when-let [data (lookup-entry config id :max-requests)]
-      (. builder maxRequests data))
-    (.build builder)))
+| `maxRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-requests` |
+"
+  [^CfnVirtualGateway$VirtualGatewayHttp2ConnectionPoolProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-requests)]
+    (. builder maxRequests data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-listener-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-listener-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayListenerProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-listener-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-listener-property-builder function updates a CfnVirtualGateway$VirtualGatewayListenerProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayListenerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `connectionPool` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:connection-pool` |
 | `healthCheck` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayHealthCheckPolicyProperty | [[cdk.support/lookup-entry]] | `:health-check` |
 | `portMapping` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:port-mapping` |
-| `tls` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayListenerTlsProperty | [[cdk.support/lookup-entry]] | `:tls` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayListenerProperty$Builder.)]
-    (when-let [data (lookup-entry config id :connection-pool)]
-      (. builder connectionPool data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :port-mapping)]
-      (. builder portMapping data))
-    (when-let [data (lookup-entry config id :tls)]
-      (. builder tls data))
-    (.build builder)))
+| `tls` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayListenerTlsProperty | [[cdk.support/lookup-entry]] | `:tls` |
+"
+  [^CfnVirtualGateway$VirtualGatewayListenerProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-pool)]
+    (. builder connectionPool data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :port-mapping)]
+    (. builder portMapping data))
+  (when-let [data (lookup-entry config id :tls)]
+    (. builder tls data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-listener-tls-acm-certificate-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-listener-tls-acm-certificate-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayListenerTlsAcmCertificateProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-listener-tls-acm-certificate-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-listener-tls-acm-certificate-property-builder function updates a CfnVirtualGateway$VirtualGatewayListenerTlsAcmCertificateProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayListenerTlsAcmCertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `certificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-arn` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayListenerTlsAcmCertificateProperty$Builder.)]
-    (when-let [data (lookup-entry config id :certificate-arn)]
-      (. builder certificateArn data))
-    (.build builder)))
+| `certificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-arn` |
+"
+  [^CfnVirtualGateway$VirtualGatewayListenerTlsAcmCertificateProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate-arn)]
+    (. builder certificateArn data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-listener-tls-certificate-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-listener-tls-certificate-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayListenerTlsCertificateProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-listener-tls-certificate-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-listener-tls-certificate-property-builder function updates a CfnVirtualGateway$VirtualGatewayListenerTlsCertificateProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayListenerTlsCertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `acm` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayListenerTlsAcmCertificateProperty | [[cdk.support/lookup-entry]] | `:acm` |
 | `file` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:file` |
-| `sds` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayListenerTlsSdsCertificateProperty | [[cdk.support/lookup-entry]] | `:sds` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayListenerTlsCertificateProperty$Builder.)]
-    (when-let [data (lookup-entry config id :acm)]
-      (. builder acm data))
-    (when-let [data (lookup-entry config id :file)]
-      (. builder file data))
-    (when-let [data (lookup-entry config id :sds)]
-      (. builder sds data))
-    (.build builder)))
+| `sds` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayListenerTlsSdsCertificateProperty | [[cdk.support/lookup-entry]] | `:sds` |
+"
+  [^CfnVirtualGateway$VirtualGatewayListenerTlsCertificateProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :acm)]
+    (. builder acm data))
+  (when-let [data (lookup-entry config id :file)]
+    (. builder file data))
+  (when-let [data (lookup-entry config id :sds)]
+    (. builder sds data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-listener-tls-file-certificate-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-listener-tls-file-certificate-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayListenerTlsFileCertificateProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-listener-tls-file-certificate-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-listener-tls-file-certificate-property-builder function updates a CfnVirtualGateway$VirtualGatewayListenerTlsFileCertificateProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayListenerTlsFileCertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `certificateChain` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-chain` |
-| `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayListenerTlsFileCertificateProperty$Builder.)]
-    (when-let [data (lookup-entry config id :certificate-chain)]
-      (. builder certificateChain data))
-    (when-let [data (lookup-entry config id :private-key)]
-      (. builder privateKey data))
-    (.build builder)))
+| `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |
+"
+  [^CfnVirtualGateway$VirtualGatewayListenerTlsFileCertificateProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate-chain)]
+    (. builder certificateChain data))
+  (when-let [data (lookup-entry config id :private-key)]
+    (. builder privateKey data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-listener-tls-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-listener-tls-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayListenerTlsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-listener-tls-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-listener-tls-property-builder function updates a CfnVirtualGateway$VirtualGatewayListenerTlsProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayListenerTlsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `certificate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificate` |
 | `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
-| `validation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validation` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayListenerTlsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :certificate)]
-      (. builder certificate data))
-    (when-let [data (lookup-entry config id :mode)]
-      (. builder mode data))
-    (when-let [data (lookup-entry config id :validation)]
-      (. builder validation data))
-    (.build builder)))
+| `validation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validation` |
+"
+  [^CfnVirtualGateway$VirtualGatewayListenerTlsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate)]
+    (. builder certificate data))
+  (when-let [data (lookup-entry config id :mode)]
+    (. builder mode data))
+  (when-let [data (lookup-entry config id :validation)]
+    (. builder validation data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-listener-tls-sds-certificate-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-listener-tls-sds-certificate-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayListenerTlsSdsCertificateProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-listener-tls-sds-certificate-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-listener-tls-sds-certificate-property-builder function updates a CfnVirtualGateway$VirtualGatewayListenerTlsSdsCertificateProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayListenerTlsSdsCertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayListenerTlsSdsCertificateProperty$Builder.)]
-    (when-let [data (lookup-entry config id :secret-name)]
-      (. builder secretName data))
-    (.build builder)))
+| `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |
+"
+  [^CfnVirtualGateway$VirtualGatewayListenerTlsSdsCertificateProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :secret-name)]
+    (. builder secretName data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-listener-tls-validation-context-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-listener-tls-validation-context-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-listener-tls-validation-context-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-listener-tls-validation-context-property-builder function updates a CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `subjectAlternativeNames` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
-| `trust` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextTrustProperty | [[cdk.support/lookup-entry]] | `:trust` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextProperty$Builder.)]
-    (when-let [data (lookup-entry config id :subject-alternative-names)]
-      (. builder subjectAlternativeNames data))
-    (when-let [data (lookup-entry config id :trust)]
-      (. builder trust data))
-    (.build builder)))
+| `trust` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextTrustProperty | [[cdk.support/lookup-entry]] | `:trust` |
+"
+  [^CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :subject-alternative-names)]
+    (. builder subjectAlternativeNames data))
+  (when-let [data (lookup-entry config id :trust)]
+    (. builder trust data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-listener-tls-validation-context-trust-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-listener-tls-validation-context-trust-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextTrustProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-listener-tls-validation-context-trust-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-listener-tls-validation-context-trust-property-builder function updates a CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextTrustProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextTrustProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `file` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:file` |
-| `sds` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayTlsValidationContextSdsTrustProperty | [[cdk.support/lookup-entry]] | `:sds` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextTrustProperty$Builder.)]
-    (when-let [data (lookup-entry config id :file)]
-      (. builder file data))
-    (when-let [data (lookup-entry config id :sds)]
-      (. builder sds data))
-    (.build builder)))
+| `sds` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayTlsValidationContextSdsTrustProperty | [[cdk.support/lookup-entry]] | `:sds` |
+"
+  [^CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextTrustProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :file)]
+    (. builder file data))
+  (when-let [data (lookup-entry config id :sds)]
+    (. builder sds data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-logging-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-logging-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayLoggingProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-logging-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-logging-property-builder function updates a CfnVirtualGateway$VirtualGatewayLoggingProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayLoggingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessLog` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-log` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayLoggingProperty$Builder.)]
-    (when-let [data (lookup-entry config id :access-log)]
-      (. builder accessLog data))
-    (.build builder)))
+| `accessLog` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:access-log` |
+"
+  [^CfnVirtualGateway$VirtualGatewayLoggingProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :access-log)]
+    (. builder accessLog data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-port-mapping-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-port-mapping-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayPortMappingProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-port-mapping-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-port-mapping-property-builder function updates a CfnVirtualGateway$VirtualGatewayPortMappingProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayPortMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
-| `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayPortMappingProperty$Builder.)]
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :protocol)]
-      (. builder protocol data))
-    (.build builder)))
+| `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
+"
+  [^CfnVirtualGateway$VirtualGatewayPortMappingProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :protocol)]
+    (. builder protocol data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-spec-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-spec-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewaySpecProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-spec-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-spec-property-builder function updates a CfnVirtualGateway$VirtualGatewaySpecProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewaySpecProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `backendDefaults` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:backend-defaults` |
 | `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
-| `logging` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewaySpecProperty$Builder.)]
-    (when-let [data (lookup-entry config id :backend-defaults)]
-      (. builder backendDefaults data))
-    (when-let [data (lookup-entry config id :listeners)]
-      (. builder listeners data))
-    (when-let [data (lookup-entry config id :logging)]
-      (. builder logging data))
-    (.build builder)))
+| `logging` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging` |
+"
+  [^CfnVirtualGateway$VirtualGatewaySpecProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :backend-defaults)]
+    (. builder backendDefaults data))
+  (when-let [data (lookup-entry config id :listeners)]
+    (. builder listeners data))
+  (when-let [data (lookup-entry config id :logging)]
+    (. builder logging data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-tls-validation-context-acm-trust-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-tls-validation-context-acm-trust-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayTlsValidationContextAcmTrustProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-acm-trust-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-acm-trust-property-builder function updates a CfnVirtualGateway$VirtualGatewayTlsValidationContextAcmTrustProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayTlsValidationContextAcmTrustProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `certificateAuthorityArns` | java.util.List | [[cdk.support/lookup-entry]] | `:certificate-authority-arns` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayTlsValidationContextAcmTrustProperty$Builder.)]
-    (when-let [data (lookup-entry config id :certificate-authority-arns)]
-      (. builder certificateAuthorityArns data))
-    (.build builder)))
-
-
-(defn cfn-virtual-gateway-virtual-gateway-tls-validation-context-file-trust-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-tls-validation-context-file-trust-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayTlsValidationContextFileTrustProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `certificateChain` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-chain` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayTlsValidationContextFileTrustProperty$Builder.)]
-    (when-let [data (lookup-entry config id :certificate-chain)]
-      (. builder certificateChain data))
-    (.build builder)))
+| `certificateAuthorityArns` | java.util.List | [[cdk.support/lookup-entry]] | `:certificate-authority-arns` |
+"
+  [^CfnVirtualGateway$VirtualGatewayTlsValidationContextAcmTrustProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate-authority-arns)]
+    (. builder certificateAuthorityArns data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-tls-validation-context-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-tls-validation-context-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayTlsValidationContextProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-file-trust-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-file-trust-property-builder function updates a CfnVirtualGateway$VirtualGatewayTlsValidationContextFileTrustProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayTlsValidationContextFileTrustProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `certificateChain` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-chain` |
+"
+  [^CfnVirtualGateway$VirtualGatewayTlsValidationContextFileTrustProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate-chain)]
+    (. builder certificateChain data))
+  (.build builder))
+
+
+(defn build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-property-builder function updates a CfnVirtualGateway$VirtualGatewayTlsValidationContextProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayTlsValidationContextProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `subjectAlternativeNames` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
-| `trust` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayTlsValidationContextTrustProperty | [[cdk.support/lookup-entry]] | `:trust` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayTlsValidationContextProperty$Builder.)]
-    (when-let [data (lookup-entry config id :subject-alternative-names)]
-      (. builder subjectAlternativeNames data))
-    (when-let [data (lookup-entry config id :trust)]
-      (. builder trust data))
-    (.build builder)))
+| `trust` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayTlsValidationContextTrustProperty | [[cdk.support/lookup-entry]] | `:trust` |
+"
+  [^CfnVirtualGateway$VirtualGatewayTlsValidationContextProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :subject-alternative-names)]
+    (. builder subjectAlternativeNames data))
+  (when-let [data (lookup-entry config id :trust)]
+    (. builder trust data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-tls-validation-context-sds-trust-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-tls-validation-context-sds-trust-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayTlsValidationContextSdsTrustProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-sds-trust-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-sds-trust-property-builder function updates a CfnVirtualGateway$VirtualGatewayTlsValidationContextSdsTrustProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayTlsValidationContextSdsTrustProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayTlsValidationContextSdsTrustProperty$Builder.)]
-    (when-let [data (lookup-entry config id :secret-name)]
-      (. builder secretName data))
-    (.build builder)))
+| `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |
+"
+  [^CfnVirtualGateway$VirtualGatewayTlsValidationContextSdsTrustProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :secret-name)]
+    (. builder secretName data))
+  (.build builder))
 
 
-(defn cfn-virtual-gateway-virtual-gateway-tls-validation-context-trust-property-builder
-  "The cfn-virtual-gateway-virtual-gateway-tls-validation-context-trust-property-builder function buildes out new instances of 
-CfnVirtualGateway$VirtualGatewayTlsValidationContextTrustProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-trust-property-builder
+  "The build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-trust-property-builder function updates a CfnVirtualGateway$VirtualGatewayTlsValidationContextTrustProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualGateway$VirtualGatewayTlsValidationContextTrustProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `acm` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayTlsValidationContextAcmTrustProperty | [[cdk.support/lookup-entry]] | `:acm` |
 | `file` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:file` |
-| `sds` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayTlsValidationContextSdsTrustProperty | [[cdk.support/lookup-entry]] | `:sds` |"
-  [stack id config]
-  (let [builder (CfnVirtualGateway$VirtualGatewayTlsValidationContextTrustProperty$Builder.)]
-    (when-let [data (lookup-entry config id :acm)]
-      (. builder acm data))
-    (when-let [data (lookup-entry config id :file)]
-      (. builder file data))
-    (when-let [data (lookup-entry config id :sds)]
-      (. builder sds data))
-    (.build builder)))
+| `sds` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayTlsValidationContextSdsTrustProperty | [[cdk.support/lookup-entry]] | `:sds` |
+"
+  [^CfnVirtualGateway$VirtualGatewayTlsValidationContextTrustProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :acm)]
+    (. builder acm data))
+  (when-let [data (lookup-entry config id :file)]
+    (. builder file data))
+  (when-let [data (lookup-entry config id :sds)]
+    (. builder sds data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-access-log-property-builder
-  "The cfn-virtual-node-access-log-property-builder function buildes out new instances of 
-CfnVirtualNode$AccessLogProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-access-log-property-builder
+  "The build-cfn-virtual-node-access-log-property-builder function updates a CfnVirtualNode$AccessLogProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$AccessLogProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `file` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$FileAccessLogProperty | [[cdk.support/lookup-entry]] | `:file` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$AccessLogProperty$Builder.)]
-    (when-let [data (lookup-entry config id :file)]
-      (. builder file data))
-    (.build builder)))
+| `file` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$FileAccessLogProperty | [[cdk.support/lookup-entry]] | `:file` |
+"
+  [^CfnVirtualNode$AccessLogProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :file)]
+    (. builder file data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-aws-cloud-map-instance-attribute-property-builder
-  "The cfn-virtual-node-aws-cloud-map-instance-attribute-property-builder function buildes out new instances of 
-CfnVirtualNode$AwsCloudMapInstanceAttributeProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-aws-cloud-map-instance-attribute-property-builder
+  "The build-cfn-virtual-node-aws-cloud-map-instance-attribute-property-builder function updates a CfnVirtualNode$AwsCloudMapInstanceAttributeProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$AwsCloudMapInstanceAttributeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$AwsCloudMapInstanceAttributeProperty$Builder.)]
-    (when-let [data (lookup-entry config id :key)]
-      (. builder key data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnVirtualNode$AwsCloudMapInstanceAttributeProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :key)]
+    (. builder key data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-aws-cloud-map-service-discovery-property-builder
-  "The cfn-virtual-node-aws-cloud-map-service-discovery-property-builder function buildes out new instances of 
-CfnVirtualNode$AwsCloudMapServiceDiscoveryProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-aws-cloud-map-service-discovery-property-builder
+  "The build-cfn-virtual-node-aws-cloud-map-service-discovery-property-builder function updates a CfnVirtualNode$AwsCloudMapServiceDiscoveryProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$AwsCloudMapServiceDiscoveryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `attributes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:attributes` |
 | `ipPreference` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-preference` |
 | `namespaceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:namespace-name` |
-| `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$AwsCloudMapServiceDiscoveryProperty$Builder.)]
-    (when-let [data (lookup-entry config id :attributes)]
-      (. builder attributes data))
-    (when-let [data (lookup-entry config id :ip-preference)]
-      (. builder ipPreference data))
-    (when-let [data (lookup-entry config id :namespace-name)]
-      (. builder namespaceName data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (.build builder)))
+| `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
+"
+  [^CfnVirtualNode$AwsCloudMapServiceDiscoveryProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :attributes)]
+    (. builder attributes data))
+  (when-let [data (lookup-entry config id :ip-preference)]
+    (. builder ipPreference data))
+  (when-let [data (lookup-entry config id :namespace-name)]
+    (. builder namespaceName data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-backend-defaults-property-builder
-  "The cfn-virtual-node-backend-defaults-property-builder function buildes out new instances of 
-CfnVirtualNode$BackendDefaultsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-backend-defaults-property-builder
+  "The build-cfn-virtual-node-backend-defaults-property-builder function updates a CfnVirtualNode$BackendDefaultsProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$BackendDefaultsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `clientPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-policy` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$BackendDefaultsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :client-policy)]
-      (. builder clientPolicy data))
-    (.build builder)))
-
-
-(defn cfn-virtual-node-backend-property-builder
-  "The cfn-virtual-node-backend-property-builder function buildes out new instances of 
-CfnVirtualNode$BackendProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `virtualService` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:virtual-service` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$BackendProperty$Builder.)]
-    (when-let [data (lookup-entry config id :virtual-service)]
-      (. builder virtualService data))
-    (.build builder)))
+| `clientPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-policy` |
+"
+  [^CfnVirtualNode$BackendDefaultsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :client-policy)]
+    (. builder clientPolicy data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-builder
-  "The cfn-virtual-node-builder function buildes out new instances of 
-CfnVirtualNode$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-backend-property-builder
+  "The build-cfn-virtual-node-backend-property-builder function updates a CfnVirtualNode$BackendProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$BackendProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `virtualService` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:virtual-service` |
+"
+  [^CfnVirtualNode$BackendProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :virtual-service)]
+    (. builder virtualService data))
+  (.build builder))
+
+
+(defn build-cfn-virtual-node-builder
+  "The build-cfn-virtual-node-builder function updates a CfnVirtualNode$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2286,150 +2583,174 @@ CfnVirtualNode$Builder using the provided configuration.  Each field is set as f
 | `meshOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-owner` |
 | `spec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spec` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :mesh-name)]
-      (. builder meshName data))
-    (when-let [data (lookup-entry config id :mesh-owner)]
-      (. builder meshOwner data))
-    (when-let [data (lookup-entry config id :spec)]
-      (. builder spec data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :virtual-node-name)]
-      (. builder virtualNodeName data))
-    (.build builder)))
+| `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |
+"
+  [^CfnVirtualNode$Builder builder id config]
+  (when-let [data (lookup-entry config id :mesh-name)]
+    (. builder meshName data))
+  (when-let [data (lookup-entry config id :mesh-owner)]
+    (. builder meshOwner data))
+  (when-let [data (lookup-entry config id :spec)]
+    (. builder spec data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :virtual-node-name)]
+    (. builder virtualNodeName data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-client-policy-property-builder
-  "The cfn-virtual-node-client-policy-property-builder function buildes out new instances of 
-CfnVirtualNode$ClientPolicyProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-client-policy-property-builder
+  "The build-cfn-virtual-node-client-policy-property-builder function updates a CfnVirtualNode$ClientPolicyProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$ClientPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `tls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tls` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$ClientPolicyProperty$Builder.)]
-    (when-let [data (lookup-entry config id :tls)]
-      (. builder tls data))
-    (.build builder)))
+| `tls` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tls` |
+"
+  [^CfnVirtualNode$ClientPolicyProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :tls)]
+    (. builder tls data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-client-policy-tls-property-builder
-  "The cfn-virtual-node-client-policy-tls-property-builder function buildes out new instances of 
-CfnVirtualNode$ClientPolicyTlsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-client-policy-tls-property-builder
+  "The build-cfn-virtual-node-client-policy-tls-property-builder function updates a CfnVirtualNode$ClientPolicyTlsProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$ClientPolicyTlsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `certificate` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:certificate` |
 | `enforce` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:enforce` |
 | `ports` | java.util.List | [[cdk.support/lookup-entry]] | `:ports` |
-| `validation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validation` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$ClientPolicyTlsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :certificate)]
-      (. builder certificate data))
-    (when-let [data (lookup-entry config id :enforce)]
-      (. builder enforce data))
-    (when-let [data (lookup-entry config id :ports)]
-      (. builder ports data))
-    (when-let [data (lookup-entry config id :validation)]
-      (. builder validation data))
-    (.build builder)))
+| `validation` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:validation` |
+"
+  [^CfnVirtualNode$ClientPolicyTlsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate)]
+    (. builder certificate data))
+  (when-let [data (lookup-entry config id :enforce)]
+    (. builder enforce data))
+  (when-let [data (lookup-entry config id :ports)]
+    (. builder ports data))
+  (when-let [data (lookup-entry config id :validation)]
+    (. builder validation data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-client-tls-certificate-property-builder
-  "The cfn-virtual-node-client-tls-certificate-property-builder function buildes out new instances of 
-CfnVirtualNode$ClientTlsCertificateProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-client-tls-certificate-property-builder
+  "The build-cfn-virtual-node-client-tls-certificate-property-builder function updates a CfnVirtualNode$ClientTlsCertificateProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$ClientTlsCertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `file` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:file` |
-| `sds` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sds` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$ClientTlsCertificateProperty$Builder.)]
-    (when-let [data (lookup-entry config id :file)]
-      (. builder file data))
-    (when-let [data (lookup-entry config id :sds)]
-      (. builder sds data))
-    (.build builder)))
+| `sds` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sds` |
+"
+  [^CfnVirtualNode$ClientTlsCertificateProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :file)]
+    (. builder file data))
+  (when-let [data (lookup-entry config id :sds)]
+    (. builder sds data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-dns-service-discovery-property-builder
-  "The cfn-virtual-node-dns-service-discovery-property-builder function buildes out new instances of 
-CfnVirtualNode$DnsServiceDiscoveryProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-dns-service-discovery-property-builder
+  "The build-cfn-virtual-node-dns-service-discovery-property-builder function updates a CfnVirtualNode$DnsServiceDiscoveryProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$DnsServiceDiscoveryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `hostname` | java.lang.String | [[cdk.support/lookup-entry]] | `:hostname` |
 | `ipPreference` | java.lang.String | [[cdk.support/lookup-entry]] | `:ip-preference` |
-| `responseType` | java.lang.String | [[cdk.support/lookup-entry]] | `:response-type` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$DnsServiceDiscoveryProperty$Builder.)]
-    (when-let [data (lookup-entry config id :hostname)]
-      (. builder hostname data))
-    (when-let [data (lookup-entry config id :ip-preference)]
-      (. builder ipPreference data))
-    (when-let [data (lookup-entry config id :response-type)]
-      (. builder responseType data))
-    (.build builder)))
+| `responseType` | java.lang.String | [[cdk.support/lookup-entry]] | `:response-type` |
+"
+  [^CfnVirtualNode$DnsServiceDiscoveryProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :hostname)]
+    (. builder hostname data))
+  (when-let [data (lookup-entry config id :ip-preference)]
+    (. builder ipPreference data))
+  (when-let [data (lookup-entry config id :response-type)]
+    (. builder responseType data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-duration-property-builder
-  "The cfn-virtual-node-duration-property-builder function buildes out new instances of 
-CfnVirtualNode$DurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-duration-property-builder
+  "The build-cfn-virtual-node-duration-property-builder function updates a CfnVirtualNode$DurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$DurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `unit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unit` |
-| `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$DurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :unit)]
-      (. builder unit data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.Number | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnVirtualNode$DurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :unit)]
+    (. builder unit data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-file-access-log-property-builder
-  "The cfn-virtual-node-file-access-log-property-builder function buildes out new instances of 
-CfnVirtualNode$FileAccessLogProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-file-access-log-property-builder
+  "The build-cfn-virtual-node-file-access-log-property-builder function updates a CfnVirtualNode$FileAccessLogProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$FileAccessLogProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `format` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$LoggingFormatProperty | [[cdk.support/lookup-entry]] | `:format` |
-| `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$FileAccessLogProperty$Builder.)]
-    (when-let [data (lookup-entry config id :format)]
-      (. builder format data))
-    (when-let [data (lookup-entry config id :path)]
-      (. builder path data))
-    (.build builder)))
+| `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
+"
+  [^CfnVirtualNode$FileAccessLogProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :format)]
+    (. builder format data))
+  (when-let [data (lookup-entry config id :path)]
+    (. builder path data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-grpc-timeout-property-builder
-  "The cfn-virtual-node-grpc-timeout-property-builder function buildes out new instances of 
-CfnVirtualNode$GrpcTimeoutProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-grpc-timeout-property-builder
+  "The build-cfn-virtual-node-grpc-timeout-property-builder function updates a CfnVirtualNode$GrpcTimeoutProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$GrpcTimeoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `idle` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:idle` |
-| `perRequest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:per-request` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$GrpcTimeoutProperty$Builder.)]
-    (when-let [data (lookup-entry config id :idle)]
-      (. builder idle data))
-    (when-let [data (lookup-entry config id :per-request)]
-      (. builder perRequest data))
-    (.build builder)))
+| `perRequest` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:per-request` |
+"
+  [^CfnVirtualNode$GrpcTimeoutProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :idle)]
+    (. builder idle data))
+  (when-let [data (lookup-entry config id :per-request)]
+    (. builder perRequest data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-health-check-property-builder
-  "The cfn-virtual-node-health-check-property-builder function buildes out new instances of 
-CfnVirtualNode$HealthCheckProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-health-check-property-builder
+  "The build-cfn-virtual-node-health-check-property-builder function updates a CfnVirtualNode$HealthCheckProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$HealthCheckProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2439,63 +2760,72 @@ CfnVirtualNode$HealthCheckProperty$Builder using the provided configuration.  Ea
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
 | `timeoutMillis` | java.lang.Number | [[cdk.support/lookup-entry]] | `:timeout-millis` |
-| `unhealthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$HealthCheckProperty$Builder.)]
-    (when-let [data (lookup-entry config id :healthy-threshold)]
-      (. builder healthyThreshold data))
-    (when-let [data (lookup-entry config id :interval-millis)]
-      (. builder intervalMillis data))
-    (when-let [data (lookup-entry config id :path)]
-      (. builder path data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :timeout-millis)]
-      (. builder timeoutMillis data))
-    (when-let [data (lookup-entry config id :unhealthy-threshold)]
-      (. builder unhealthyThreshold data))
-    (.build builder)))
+| `unhealthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |
+"
+  [^CfnVirtualNode$HealthCheckProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :healthy-threshold)]
+    (. builder healthyThreshold data))
+  (when-let [data (lookup-entry config id :interval-millis)]
+    (. builder intervalMillis data))
+  (when-let [data (lookup-entry config id :path)]
+    (. builder path data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :timeout-millis)]
+    (. builder timeoutMillis data))
+  (when-let [data (lookup-entry config id :unhealthy-threshold)]
+    (. builder unhealthyThreshold data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-http-timeout-property-builder
-  "The cfn-virtual-node-http-timeout-property-builder function buildes out new instances of 
-CfnVirtualNode$HttpTimeoutProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-http-timeout-property-builder
+  "The build-cfn-virtual-node-http-timeout-property-builder function updates a CfnVirtualNode$HttpTimeoutProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$HttpTimeoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `idle` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$DurationProperty | [[cdk.support/lookup-entry]] | `:idle` |
-| `perRequest` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$DurationProperty | [[cdk.support/lookup-entry]] | `:per-request` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$HttpTimeoutProperty$Builder.)]
-    (when-let [data (lookup-entry config id :idle)]
-      (. builder idle data))
-    (when-let [data (lookup-entry config id :per-request)]
-      (. builder perRequest data))
-    (.build builder)))
+| `perRequest` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$DurationProperty | [[cdk.support/lookup-entry]] | `:per-request` |
+"
+  [^CfnVirtualNode$HttpTimeoutProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :idle)]
+    (. builder idle data))
+  (when-let [data (lookup-entry config id :per-request)]
+    (. builder perRequest data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-json-format-ref-property-builder
-  "The cfn-virtual-node-json-format-ref-property-builder function buildes out new instances of 
-CfnVirtualNode$JsonFormatRefProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-json-format-ref-property-builder
+  "The build-cfn-virtual-node-json-format-ref-property-builder function updates a CfnVirtualNode$JsonFormatRefProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$JsonFormatRefProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `key` | java.lang.String | [[cdk.support/lookup-entry]] | `:key` |
-| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$JsonFormatRefProperty$Builder.)]
-    (when-let [data (lookup-entry config id :key)]
-      (. builder key data))
-    (when-let [data (lookup-entry config id :value)]
-      (. builder value data))
-    (.build builder)))
+| `value` | java.lang.String | [[cdk.support/lookup-entry]] | `:value` |
+"
+  [^CfnVirtualNode$JsonFormatRefProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :key)]
+    (. builder key data))
+  (when-let [data (lookup-entry config id :value)]
+    (. builder value data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-listener-property-builder
-  "The cfn-virtual-node-listener-property-builder function buildes out new instances of 
-CfnVirtualNode$ListenerProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-listener-property-builder
+  "The build-cfn-virtual-node-listener-property-builder function updates a CfnVirtualNode$ListenerProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$ListenerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2504,240 +2834,279 @@ CfnVirtualNode$ListenerProperty$Builder using the provided configuration.  Each 
 | `outlierDetection` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$OutlierDetectionProperty | [[cdk.support/lookup-entry]] | `:outlier-detection` |
 | `portMapping` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:port-mapping` |
 | `timeout` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:timeout` |
-| `tls` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerTlsProperty | [[cdk.support/lookup-entry]] | `:tls` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$ListenerProperty$Builder.)]
-    (when-let [data (lookup-entry config id :connection-pool)]
-      (. builder connectionPool data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :outlier-detection)]
-      (. builder outlierDetection data))
-    (when-let [data (lookup-entry config id :port-mapping)]
-      (. builder portMapping data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :tls)]
-      (. builder tls data))
-    (.build builder)))
+| `tls` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerTlsProperty | [[cdk.support/lookup-entry]] | `:tls` |
+"
+  [^CfnVirtualNode$ListenerProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-pool)]
+    (. builder connectionPool data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :outlier-detection)]
+    (. builder outlierDetection data))
+  (when-let [data (lookup-entry config id :port-mapping)]
+    (. builder portMapping data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :tls)]
+    (. builder tls data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-listener-timeout-property-builder
-  "The cfn-virtual-node-listener-timeout-property-builder function buildes out new instances of 
-CfnVirtualNode$ListenerTimeoutProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-listener-timeout-property-builder
+  "The build-cfn-virtual-node-listener-timeout-property-builder function updates a CfnVirtualNode$ListenerTimeoutProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$ListenerTimeoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `grpc` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:grpc` |
 | `http` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http` |
 | `http2` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$HttpTimeoutProperty | [[cdk.support/lookup-entry]] | `:http2` |
-| `tcp` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TcpTimeoutProperty | [[cdk.support/lookup-entry]] | `:tcp` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$ListenerTimeoutProperty$Builder.)]
-    (when-let [data (lookup-entry config id :grpc)]
-      (. builder grpc data))
-    (when-let [data (lookup-entry config id :http)]
-      (. builder http data))
-    (when-let [data (lookup-entry config id :http2)]
-      (. builder http2 data))
-    (when-let [data (lookup-entry config id :tcp)]
-      (. builder tcp data))
-    (.build builder)))
+| `tcp` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TcpTimeoutProperty | [[cdk.support/lookup-entry]] | `:tcp` |
+"
+  [^CfnVirtualNode$ListenerTimeoutProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :grpc)]
+    (. builder grpc data))
+  (when-let [data (lookup-entry config id :http)]
+    (. builder http data))
+  (when-let [data (lookup-entry config id :http2)]
+    (. builder http2 data))
+  (when-let [data (lookup-entry config id :tcp)]
+    (. builder tcp data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-listener-tls-acm-certificate-property-builder
-  "The cfn-virtual-node-listener-tls-acm-certificate-property-builder function buildes out new instances of 
-CfnVirtualNode$ListenerTlsAcmCertificateProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-listener-tls-acm-certificate-property-builder
+  "The build-cfn-virtual-node-listener-tls-acm-certificate-property-builder function updates a CfnVirtualNode$ListenerTlsAcmCertificateProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$ListenerTlsAcmCertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `certificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-arn` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$ListenerTlsAcmCertificateProperty$Builder.)]
-    (when-let [data (lookup-entry config id :certificate-arn)]
-      (. builder certificateArn data))
-    (.build builder)))
+| `certificateArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-arn` |
+"
+  [^CfnVirtualNode$ListenerTlsAcmCertificateProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate-arn)]
+    (. builder certificateArn data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-listener-tls-certificate-property-builder
-  "The cfn-virtual-node-listener-tls-certificate-property-builder function buildes out new instances of 
-CfnVirtualNode$ListenerTlsCertificateProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-listener-tls-certificate-property-builder
+  "The build-cfn-virtual-node-listener-tls-certificate-property-builder function updates a CfnVirtualNode$ListenerTlsCertificateProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$ListenerTlsCertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `acm` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerTlsAcmCertificateProperty | [[cdk.support/lookup-entry]] | `:acm` |
 | `file` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:file` |
-| `sds` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sds` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$ListenerTlsCertificateProperty$Builder.)]
-    (when-let [data (lookup-entry config id :acm)]
-      (. builder acm data))
-    (when-let [data (lookup-entry config id :file)]
-      (. builder file data))
-    (when-let [data (lookup-entry config id :sds)]
-      (. builder sds data))
-    (.build builder)))
+| `sds` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sds` |
+"
+  [^CfnVirtualNode$ListenerTlsCertificateProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :acm)]
+    (. builder acm data))
+  (when-let [data (lookup-entry config id :file)]
+    (. builder file data))
+  (when-let [data (lookup-entry config id :sds)]
+    (. builder sds data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-listener-tls-file-certificate-property-builder
-  "The cfn-virtual-node-listener-tls-file-certificate-property-builder function buildes out new instances of 
-CfnVirtualNode$ListenerTlsFileCertificateProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-listener-tls-file-certificate-property-builder
+  "The build-cfn-virtual-node-listener-tls-file-certificate-property-builder function updates a CfnVirtualNode$ListenerTlsFileCertificateProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$ListenerTlsFileCertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `certificateChain` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-chain` |
-| `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$ListenerTlsFileCertificateProperty$Builder.)]
-    (when-let [data (lookup-entry config id :certificate-chain)]
-      (. builder certificateChain data))
-    (when-let [data (lookup-entry config id :private-key)]
-      (. builder privateKey data))
-    (.build builder)))
+| `privateKey` | java.lang.String | [[cdk.support/lookup-entry]] | `:private-key` |
+"
+  [^CfnVirtualNode$ListenerTlsFileCertificateProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate-chain)]
+    (. builder certificateChain data))
+  (when-let [data (lookup-entry config id :private-key)]
+    (. builder privateKey data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-listener-tls-property-builder
-  "The cfn-virtual-node-listener-tls-property-builder function buildes out new instances of 
-CfnVirtualNode$ListenerTlsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-listener-tls-property-builder
+  "The build-cfn-virtual-node-listener-tls-property-builder function updates a CfnVirtualNode$ListenerTlsProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$ListenerTlsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `certificate` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerTlsCertificateProperty | [[cdk.support/lookup-entry]] | `:certificate` |
 | `mode` | java.lang.String | [[cdk.support/lookup-entry]] | `:mode` |
-| `validation` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerTlsValidationContextProperty | [[cdk.support/lookup-entry]] | `:validation` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$ListenerTlsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :certificate)]
-      (. builder certificate data))
-    (when-let [data (lookup-entry config id :mode)]
-      (. builder mode data))
-    (when-let [data (lookup-entry config id :validation)]
-      (. builder validation data))
-    (.build builder)))
+| `validation` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerTlsValidationContextProperty | [[cdk.support/lookup-entry]] | `:validation` |
+"
+  [^CfnVirtualNode$ListenerTlsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate)]
+    (. builder certificate data))
+  (when-let [data (lookup-entry config id :mode)]
+    (. builder mode data))
+  (when-let [data (lookup-entry config id :validation)]
+    (. builder validation data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-listener-tls-sds-certificate-property-builder
-  "The cfn-virtual-node-listener-tls-sds-certificate-property-builder function buildes out new instances of 
-CfnVirtualNode$ListenerTlsSdsCertificateProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-listener-tls-sds-certificate-property-builder
+  "The build-cfn-virtual-node-listener-tls-sds-certificate-property-builder function updates a CfnVirtualNode$ListenerTlsSdsCertificateProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$ListenerTlsSdsCertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$ListenerTlsSdsCertificateProperty$Builder.)]
-    (when-let [data (lookup-entry config id :secret-name)]
-      (. builder secretName data))
-    (.build builder)))
+| `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |
+"
+  [^CfnVirtualNode$ListenerTlsSdsCertificateProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :secret-name)]
+    (. builder secretName data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-listener-tls-validation-context-property-builder
-  "The cfn-virtual-node-listener-tls-validation-context-property-builder function buildes out new instances of 
-CfnVirtualNode$ListenerTlsValidationContextProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-listener-tls-validation-context-property-builder
+  "The build-cfn-virtual-node-listener-tls-validation-context-property-builder function updates a CfnVirtualNode$ListenerTlsValidationContextProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$ListenerTlsValidationContextProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `subjectAlternativeNames` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$SubjectAlternativeNamesProperty | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
-| `trust` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:trust` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$ListenerTlsValidationContextProperty$Builder.)]
-    (when-let [data (lookup-entry config id :subject-alternative-names)]
-      (. builder subjectAlternativeNames data))
-    (when-let [data (lookup-entry config id :trust)]
-      (. builder trust data))
-    (.build builder)))
+| `trust` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:trust` |
+"
+  [^CfnVirtualNode$ListenerTlsValidationContextProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :subject-alternative-names)]
+    (. builder subjectAlternativeNames data))
+  (when-let [data (lookup-entry config id :trust)]
+    (. builder trust data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-listener-tls-validation-context-trust-property-builder
-  "The cfn-virtual-node-listener-tls-validation-context-trust-property-builder function buildes out new instances of 
-CfnVirtualNode$ListenerTlsValidationContextTrustProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-listener-tls-validation-context-trust-property-builder
+  "The build-cfn-virtual-node-listener-tls-validation-context-trust-property-builder function updates a CfnVirtualNode$ListenerTlsValidationContextTrustProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$ListenerTlsValidationContextTrustProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `file` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TlsValidationContextFileTrustProperty | [[cdk.support/lookup-entry]] | `:file` |
-| `sds` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TlsValidationContextSdsTrustProperty | [[cdk.support/lookup-entry]] | `:sds` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$ListenerTlsValidationContextTrustProperty$Builder.)]
-    (when-let [data (lookup-entry config id :file)]
-      (. builder file data))
-    (when-let [data (lookup-entry config id :sds)]
-      (. builder sds data))
-    (.build builder)))
+| `sds` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TlsValidationContextSdsTrustProperty | [[cdk.support/lookup-entry]] | `:sds` |
+"
+  [^CfnVirtualNode$ListenerTlsValidationContextTrustProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :file)]
+    (. builder file data))
+  (when-let [data (lookup-entry config id :sds)]
+    (. builder sds data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-logging-format-property-builder
-  "The cfn-virtual-node-logging-format-property-builder function buildes out new instances of 
-CfnVirtualNode$LoggingFormatProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-logging-format-property-builder
+  "The build-cfn-virtual-node-logging-format-property-builder function updates a CfnVirtualNode$LoggingFormatProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$LoggingFormatProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `json` | java.util.List | [[cdk.support/lookup-entry]] | `:json` |
-| `text` | java.lang.String | [[cdk.support/lookup-entry]] | `:text` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$LoggingFormatProperty$Builder.)]
-    (when-let [data (lookup-entry config id :json)]
-      (. builder json data))
-    (when-let [data (lookup-entry config id :text)]
-      (. builder text data))
-    (.build builder)))
+| `text` | java.lang.String | [[cdk.support/lookup-entry]] | `:text` |
+"
+  [^CfnVirtualNode$LoggingFormatProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :json)]
+    (. builder json data))
+  (when-let [data (lookup-entry config id :text)]
+    (. builder text data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-logging-property-builder
-  "The cfn-virtual-node-logging-property-builder function buildes out new instances of 
-CfnVirtualNode$LoggingProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-logging-property-builder
+  "The build-cfn-virtual-node-logging-property-builder function updates a CfnVirtualNode$LoggingProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$LoggingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `accessLog` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$AccessLogProperty | [[cdk.support/lookup-entry]] | `:access-log` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$LoggingProperty$Builder.)]
-    (when-let [data (lookup-entry config id :access-log)]
-      (. builder accessLog data))
-    (.build builder)))
+| `accessLog` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$AccessLogProperty | [[cdk.support/lookup-entry]] | `:access-log` |
+"
+  [^CfnVirtualNode$LoggingProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :access-log)]
+    (. builder accessLog data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-outlier-detection-property-builder
-  "The cfn-virtual-node-outlier-detection-property-builder function buildes out new instances of 
-CfnVirtualNode$OutlierDetectionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-outlier-detection-property-builder
+  "The build-cfn-virtual-node-outlier-detection-property-builder function updates a CfnVirtualNode$OutlierDetectionProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$OutlierDetectionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `baseEjectionDuration` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$DurationProperty | [[cdk.support/lookup-entry]] | `:base-ejection-duration` |
 | `interval` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$DurationProperty | [[cdk.support/lookup-entry]] | `:interval` |
 | `maxEjectionPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-ejection-percent` |
-| `maxServerErrors` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-server-errors` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$OutlierDetectionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :base-ejection-duration)]
-      (. builder baseEjectionDuration data))
-    (when-let [data (lookup-entry config id :interval)]
-      (. builder interval data))
-    (when-let [data (lookup-entry config id :max-ejection-percent)]
-      (. builder maxEjectionPercent data))
-    (when-let [data (lookup-entry config id :max-server-errors)]
-      (. builder maxServerErrors data))
-    (.build builder)))
+| `maxServerErrors` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-server-errors` |
+"
+  [^CfnVirtualNode$OutlierDetectionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :base-ejection-duration)]
+    (. builder baseEjectionDuration data))
+  (when-let [data (lookup-entry config id :interval)]
+    (. builder interval data))
+  (when-let [data (lookup-entry config id :max-ejection-percent)]
+    (. builder maxEjectionPercent data))
+  (when-let [data (lookup-entry config id :max-server-errors)]
+    (. builder maxServerErrors data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-port-mapping-property-builder
-  "The cfn-virtual-node-port-mapping-property-builder function buildes out new instances of 
-CfnVirtualNode$PortMappingProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-port-mapping-property-builder
+  "The build-cfn-virtual-node-port-mapping-property-builder function updates a CfnVirtualNode$PortMappingProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$PortMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
-| `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$PortMappingProperty$Builder.)]
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :protocol)]
-      (. builder protocol data))
-    (.build builder)))
+| `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
+"
+  [^CfnVirtualNode$PortMappingProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :protocol)]
+    (. builder protocol data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-props-builder
-  "The cfn-virtual-node-props-builder function buildes out new instances of 
-CfnVirtualNodeProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-props-builder
+  "The build-cfn-virtual-node-props-builder function updates a CfnVirtualNodeProps$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNodeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2745,231 +3114,273 @@ CfnVirtualNodeProps$Builder using the provided configuration.  Each field is set
 | `meshOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-owner` |
 | `spec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spec` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |"
-  [stack id config]
-  (let [builder (CfnVirtualNodeProps$Builder.)]
-    (when-let [data (lookup-entry config id :mesh-name)]
-      (. builder meshName data))
-    (when-let [data (lookup-entry config id :mesh-owner)]
-      (. builder meshOwner data))
-    (when-let [data (lookup-entry config id :spec)]
-      (. builder spec data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :virtual-node-name)]
-      (. builder virtualNodeName data))
-    (.build builder)))
+| `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |
+"
+  [^CfnVirtualNodeProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :mesh-name)]
+    (. builder meshName data))
+  (when-let [data (lookup-entry config id :mesh-owner)]
+    (. builder meshOwner data))
+  (when-let [data (lookup-entry config id :spec)]
+    (. builder spec data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :virtual-node-name)]
+    (. builder virtualNodeName data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-service-discovery-property-builder
-  "The cfn-virtual-node-service-discovery-property-builder function buildes out new instances of 
-CfnVirtualNode$ServiceDiscoveryProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-service-discovery-property-builder
+  "The build-cfn-virtual-node-service-discovery-property-builder function updates a CfnVirtualNode$ServiceDiscoveryProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$ServiceDiscoveryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `awsCloudMap` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$AwsCloudMapServiceDiscoveryProperty | [[cdk.support/lookup-entry]] | `:aws-cloud-map` |
-| `dns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dns` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$ServiceDiscoveryProperty$Builder.)]
-    (when-let [data (lookup-entry config id :aws-cloud-map)]
-      (. builder awsCloudMap data))
-    (when-let [data (lookup-entry config id :dns)]
-      (. builder dns data))
-    (.build builder)))
+| `dns` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:dns` |
+"
+  [^CfnVirtualNode$ServiceDiscoveryProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :aws-cloud-map)]
+    (. builder awsCloudMap data))
+  (when-let [data (lookup-entry config id :dns)]
+    (. builder dns data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-subject-alternative-name-matchers-property-builder
-  "The cfn-virtual-node-subject-alternative-name-matchers-property-builder function buildes out new instances of 
-CfnVirtualNode$SubjectAlternativeNameMatchersProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-subject-alternative-name-matchers-property-builder
+  "The build-cfn-virtual-node-subject-alternative-name-matchers-property-builder function updates a CfnVirtualNode$SubjectAlternativeNameMatchersProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$SubjectAlternativeNameMatchersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `exact` | java.util.List | [[cdk.support/lookup-entry]] | `:exact` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$SubjectAlternativeNameMatchersProperty$Builder.)]
-    (when-let [data (lookup-entry config id :exact)]
-      (. builder exact data))
-    (.build builder)))
-
-
-(defn cfn-virtual-node-subject-alternative-names-property-builder
-  "The cfn-virtual-node-subject-alternative-names-property-builder function buildes out new instances of 
-CfnVirtualNode$SubjectAlternativeNamesProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `match` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$SubjectAlternativeNamesProperty$Builder.)]
-    (when-let [data (lookup-entry config id :match)]
-      (. builder match data))
-    (.build builder)))
+| `exact` | java.util.List | [[cdk.support/lookup-entry]] | `:exact` |
+"
+  [^CfnVirtualNode$SubjectAlternativeNameMatchersProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :exact)]
+    (. builder exact data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-tcp-timeout-property-builder
-  "The cfn-virtual-node-tcp-timeout-property-builder function buildes out new instances of 
-CfnVirtualNode$TcpTimeoutProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-subject-alternative-names-property-builder
+  "The build-cfn-virtual-node-subject-alternative-names-property-builder function updates a CfnVirtualNode$SubjectAlternativeNamesProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$SubjectAlternativeNamesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `idle` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$DurationProperty | [[cdk.support/lookup-entry]] | `:idle` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$TcpTimeoutProperty$Builder.)]
-    (when-let [data (lookup-entry config id :idle)]
-      (. builder idle data))
-    (.build builder)))
-
-
-(defn cfn-virtual-node-tls-validation-context-acm-trust-property-builder
-  "The cfn-virtual-node-tls-validation-context-acm-trust-property-builder function buildes out new instances of 
-CfnVirtualNode$TlsValidationContextAcmTrustProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `certificateAuthorityArns` | java.util.List | [[cdk.support/lookup-entry]] | `:certificate-authority-arns` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$TlsValidationContextAcmTrustProperty$Builder.)]
-    (when-let [data (lookup-entry config id :certificate-authority-arns)]
-      (. builder certificateAuthorityArns data))
-    (.build builder)))
+| `match` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:match` |
+"
+  [^CfnVirtualNode$SubjectAlternativeNamesProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :match)]
+    (. builder match data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-tls-validation-context-file-trust-property-builder
-  "The cfn-virtual-node-tls-validation-context-file-trust-property-builder function buildes out new instances of 
-CfnVirtualNode$TlsValidationContextFileTrustProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-tcp-timeout-property-builder
+  "The build-cfn-virtual-node-tcp-timeout-property-builder function updates a CfnVirtualNode$TcpTimeoutProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$TcpTimeoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `certificateChain` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-chain` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$TlsValidationContextFileTrustProperty$Builder.)]
-    (when-let [data (lookup-entry config id :certificate-chain)]
-      (. builder certificateChain data))
-    (.build builder)))
+| `idle` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$DurationProperty | [[cdk.support/lookup-entry]] | `:idle` |
+"
+  [^CfnVirtualNode$TcpTimeoutProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :idle)]
+    (. builder idle data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-tls-validation-context-property-builder
-  "The cfn-virtual-node-tls-validation-context-property-builder function buildes out new instances of 
-CfnVirtualNode$TlsValidationContextProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-tls-validation-context-acm-trust-property-builder
+  "The build-cfn-virtual-node-tls-validation-context-acm-trust-property-builder function updates a CfnVirtualNode$TlsValidationContextAcmTrustProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$TlsValidationContextAcmTrustProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `certificateAuthorityArns` | java.util.List | [[cdk.support/lookup-entry]] | `:certificate-authority-arns` |
+"
+  [^CfnVirtualNode$TlsValidationContextAcmTrustProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate-authority-arns)]
+    (. builder certificateAuthorityArns data))
+  (.build builder))
+
+
+(defn build-cfn-virtual-node-tls-validation-context-file-trust-property-builder
+  "The build-cfn-virtual-node-tls-validation-context-file-trust-property-builder function updates a CfnVirtualNode$TlsValidationContextFileTrustProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$TlsValidationContextFileTrustProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `certificateChain` | java.lang.String | [[cdk.support/lookup-entry]] | `:certificate-chain` |
+"
+  [^CfnVirtualNode$TlsValidationContextFileTrustProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate-chain)]
+    (. builder certificateChain data))
+  (.build builder))
+
+
+(defn build-cfn-virtual-node-tls-validation-context-property-builder
+  "The build-cfn-virtual-node-tls-validation-context-property-builder function updates a CfnVirtualNode$TlsValidationContextProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$TlsValidationContextProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `subjectAlternativeNames` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$SubjectAlternativeNamesProperty | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
-| `trust` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TlsValidationContextTrustProperty | [[cdk.support/lookup-entry]] | `:trust` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$TlsValidationContextProperty$Builder.)]
-    (when-let [data (lookup-entry config id :subject-alternative-names)]
-      (. builder subjectAlternativeNames data))
-    (when-let [data (lookup-entry config id :trust)]
-      (. builder trust data))
-    (.build builder)))
+| `trust` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TlsValidationContextTrustProperty | [[cdk.support/lookup-entry]] | `:trust` |
+"
+  [^CfnVirtualNode$TlsValidationContextProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :subject-alternative-names)]
+    (. builder subjectAlternativeNames data))
+  (when-let [data (lookup-entry config id :trust)]
+    (. builder trust data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-tls-validation-context-sds-trust-property-builder
-  "The cfn-virtual-node-tls-validation-context-sds-trust-property-builder function buildes out new instances of 
-CfnVirtualNode$TlsValidationContextSdsTrustProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-tls-validation-context-sds-trust-property-builder
+  "The build-cfn-virtual-node-tls-validation-context-sds-trust-property-builder function updates a CfnVirtualNode$TlsValidationContextSdsTrustProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$TlsValidationContextSdsTrustProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$TlsValidationContextSdsTrustProperty$Builder.)]
-    (when-let [data (lookup-entry config id :secret-name)]
-      (. builder secretName data))
-    (.build builder)))
+| `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |
+"
+  [^CfnVirtualNode$TlsValidationContextSdsTrustProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :secret-name)]
+    (. builder secretName data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-tls-validation-context-trust-property-builder
-  "The cfn-virtual-node-tls-validation-context-trust-property-builder function buildes out new instances of 
-CfnVirtualNode$TlsValidationContextTrustProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-tls-validation-context-trust-property-builder
+  "The build-cfn-virtual-node-tls-validation-context-trust-property-builder function updates a CfnVirtualNode$TlsValidationContextTrustProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$TlsValidationContextTrustProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `acm` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TlsValidationContextAcmTrustProperty | [[cdk.support/lookup-entry]] | `:acm` |
 | `file` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TlsValidationContextFileTrustProperty | [[cdk.support/lookup-entry]] | `:file` |
-| `sds` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sds` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$TlsValidationContextTrustProperty$Builder.)]
-    (when-let [data (lookup-entry config id :acm)]
-      (. builder acm data))
-    (when-let [data (lookup-entry config id :file)]
-      (. builder file data))
-    (when-let [data (lookup-entry config id :sds)]
-      (. builder sds data))
-    (.build builder)))
+| `sds` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:sds` |
+"
+  [^CfnVirtualNode$TlsValidationContextTrustProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :acm)]
+    (. builder acm data))
+  (when-let [data (lookup-entry config id :file)]
+    (. builder file data))
+  (when-let [data (lookup-entry config id :sds)]
+    (. builder sds data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-virtual-node-connection-pool-property-builder
-  "The cfn-virtual-node-virtual-node-connection-pool-property-builder function buildes out new instances of 
-CfnVirtualNode$VirtualNodeConnectionPoolProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-virtual-node-connection-pool-property-builder
+  "The build-cfn-virtual-node-virtual-node-connection-pool-property-builder function updates a CfnVirtualNode$VirtualNodeConnectionPoolProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$VirtualNodeConnectionPoolProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `grpc` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:grpc` |
 | `http` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$VirtualNodeHttpConnectionPoolProperty | [[cdk.support/lookup-entry]] | `:http` |
 | `http2` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:http2` |
-| `tcp` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tcp` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$VirtualNodeConnectionPoolProperty$Builder.)]
-    (when-let [data (lookup-entry config id :grpc)]
-      (. builder grpc data))
-    (when-let [data (lookup-entry config id :http)]
-      (. builder http data))
-    (when-let [data (lookup-entry config id :http2)]
-      (. builder http2 data))
-    (when-let [data (lookup-entry config id :tcp)]
-      (. builder tcp data))
-    (.build builder)))
+| `tcp` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tcp` |
+"
+  [^CfnVirtualNode$VirtualNodeConnectionPoolProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :grpc)]
+    (. builder grpc data))
+  (when-let [data (lookup-entry config id :http)]
+    (. builder http data))
+  (when-let [data (lookup-entry config id :http2)]
+    (. builder http2 data))
+  (when-let [data (lookup-entry config id :tcp)]
+    (. builder tcp data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-virtual-node-grpc-connection-pool-property-builder
-  "The cfn-virtual-node-virtual-node-grpc-connection-pool-property-builder function buildes out new instances of 
-CfnVirtualNode$VirtualNodeGrpcConnectionPoolProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-virtual-node-grpc-connection-pool-property-builder
+  "The build-cfn-virtual-node-virtual-node-grpc-connection-pool-property-builder function updates a CfnVirtualNode$VirtualNodeGrpcConnectionPoolProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$VirtualNodeGrpcConnectionPoolProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `maxRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-requests` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$VirtualNodeGrpcConnectionPoolProperty$Builder.)]
-    (when-let [data (lookup-entry config id :max-requests)]
-      (. builder maxRequests data))
-    (.build builder)))
+| `maxRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-requests` |
+"
+  [^CfnVirtualNode$VirtualNodeGrpcConnectionPoolProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-requests)]
+    (. builder maxRequests data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-virtual-node-http-connection-pool-property-builder
-  "The cfn-virtual-node-virtual-node-http-connection-pool-property-builder function buildes out new instances of 
-CfnVirtualNode$VirtualNodeHttpConnectionPoolProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-virtual-node-http-connection-pool-property-builder
+  "The build-cfn-virtual-node-virtual-node-http-connection-pool-property-builder function updates a CfnVirtualNode$VirtualNodeHttpConnectionPoolProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$VirtualNodeHttpConnectionPoolProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `maxConnections` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-connections` |
-| `maxPendingRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-pending-requests` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$VirtualNodeHttpConnectionPoolProperty$Builder.)]
-    (when-let [data (lookup-entry config id :max-connections)]
-      (. builder maxConnections data))
-    (when-let [data (lookup-entry config id :max-pending-requests)]
-      (. builder maxPendingRequests data))
-    (.build builder)))
+| `maxPendingRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-pending-requests` |
+"
+  [^CfnVirtualNode$VirtualNodeHttpConnectionPoolProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-connections)]
+    (. builder maxConnections data))
+  (when-let [data (lookup-entry config id :max-pending-requests)]
+    (. builder maxPendingRequests data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-virtual-node-http2-connection-pool-property-builder
-  "The cfn-virtual-node-virtual-node-http2-connection-pool-property-builder function buildes out new instances of 
-CfnVirtualNode$VirtualNodeHttp2ConnectionPoolProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-virtual-node-http2-connection-pool-property-builder
+  "The build-cfn-virtual-node-virtual-node-http2-connection-pool-property-builder function updates a CfnVirtualNode$VirtualNodeHttp2ConnectionPoolProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$VirtualNodeHttp2ConnectionPoolProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `maxRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-requests` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$VirtualNodeHttp2ConnectionPoolProperty$Builder.)]
-    (when-let [data (lookup-entry config id :max-requests)]
-      (. builder maxRequests data))
-    (.build builder)))
+| `maxRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-requests` |
+"
+  [^CfnVirtualNode$VirtualNodeHttp2ConnectionPoolProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-requests)]
+    (. builder maxRequests data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-virtual-node-spec-property-builder
-  "The cfn-virtual-node-virtual-node-spec-property-builder function buildes out new instances of 
-CfnVirtualNode$VirtualNodeSpecProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-virtual-node-spec-property-builder
+  "The build-cfn-virtual-node-virtual-node-spec-property-builder function updates a CfnVirtualNode$VirtualNodeSpecProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$VirtualNodeSpecProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -2977,56 +3388,65 @@ CfnVirtualNode$VirtualNodeSpecProperty$Builder using the provided configuration.
 | `backends` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:backends` |
 | `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
 | `logging` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:logging` |
-| `serviceDiscovery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:service-discovery` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$VirtualNodeSpecProperty$Builder.)]
-    (when-let [data (lookup-entry config id :backend-defaults)]
-      (. builder backendDefaults data))
-    (when-let [data (lookup-entry config id :backends)]
-      (. builder backends data))
-    (when-let [data (lookup-entry config id :listeners)]
-      (. builder listeners data))
-    (when-let [data (lookup-entry config id :logging)]
-      (. builder logging data))
-    (when-let [data (lookup-entry config id :service-discovery)]
-      (. builder serviceDiscovery data))
-    (.build builder)))
+| `serviceDiscovery` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:service-discovery` |
+"
+  [^CfnVirtualNode$VirtualNodeSpecProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :backend-defaults)]
+    (. builder backendDefaults data))
+  (when-let [data (lookup-entry config id :backends)]
+    (. builder backends data))
+  (when-let [data (lookup-entry config id :listeners)]
+    (. builder listeners data))
+  (when-let [data (lookup-entry config id :logging)]
+    (. builder logging data))
+  (when-let [data (lookup-entry config id :service-discovery)]
+    (. builder serviceDiscovery data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-virtual-node-tcp-connection-pool-property-builder
-  "The cfn-virtual-node-virtual-node-tcp-connection-pool-property-builder function buildes out new instances of 
-CfnVirtualNode$VirtualNodeTcpConnectionPoolProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-virtual-node-tcp-connection-pool-property-builder
+  "The build-cfn-virtual-node-virtual-node-tcp-connection-pool-property-builder function updates a CfnVirtualNode$VirtualNodeTcpConnectionPoolProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$VirtualNodeTcpConnectionPoolProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `maxConnections` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-connections` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$VirtualNodeTcpConnectionPoolProperty$Builder.)]
-    (when-let [data (lookup-entry config id :max-connections)]
-      (. builder maxConnections data))
-    (.build builder)))
+| `maxConnections` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-connections` |
+"
+  [^CfnVirtualNode$VirtualNodeTcpConnectionPoolProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-connections)]
+    (. builder maxConnections data))
+  (.build builder))
 
 
-(defn cfn-virtual-node-virtual-service-backend-property-builder
-  "The cfn-virtual-node-virtual-service-backend-property-builder function buildes out new instances of 
-CfnVirtualNode$VirtualServiceBackendProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-node-virtual-service-backend-property-builder
+  "The build-cfn-virtual-node-virtual-service-backend-property-builder function updates a CfnVirtualNode$VirtualServiceBackendProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualNode$VirtualServiceBackendProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `clientPolicy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:client-policy` |
-| `virtualServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-service-name` |"
-  [stack id config]
-  (let [builder (CfnVirtualNode$VirtualServiceBackendProperty$Builder.)]
-    (when-let [data (lookup-entry config id :client-policy)]
-      (. builder clientPolicy data))
-    (when-let [data (lookup-entry config id :virtual-service-name)]
-      (. builder virtualServiceName data))
-    (.build builder)))
+| `virtualServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-service-name` |
+"
+  [^CfnVirtualNode$VirtualServiceBackendProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :client-policy)]
+    (. builder clientPolicy data))
+  (when-let [data (lookup-entry config id :virtual-service-name)]
+    (. builder virtualServiceName data))
+  (.build builder))
 
 
-(defn cfn-virtual-router-builder
-  "The cfn-virtual-router-builder function buildes out new instances of 
-CfnVirtualRouter$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-router-builder
+  "The build-cfn-virtual-router-builder function updates a CfnVirtualRouter$Builder instance using the provided configuration.
+  The function takes the CfnVirtualRouter$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3034,42 +3454,48 @@ CfnVirtualRouter$Builder using the provided configuration.  Each field is set as
 | `meshOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-owner` |
 | `spec` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:spec` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |"
-  [stack id config]
-  (let [builder (CfnVirtualRouter$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :mesh-name)]
-      (. builder meshName data))
-    (when-let [data (lookup-entry config id :mesh-owner)]
-      (. builder meshOwner data))
-    (when-let [data (lookup-entry config id :spec)]
-      (. builder spec data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :virtual-router-name)]
-      (. builder virtualRouterName data))
-    (.build builder)))
+| `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |
+"
+  [^CfnVirtualRouter$Builder builder id config]
+  (when-let [data (lookup-entry config id :mesh-name)]
+    (. builder meshName data))
+  (when-let [data (lookup-entry config id :mesh-owner)]
+    (. builder meshOwner data))
+  (when-let [data (lookup-entry config id :spec)]
+    (. builder spec data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :virtual-router-name)]
+    (. builder virtualRouterName data))
+  (.build builder))
 
 
-(defn cfn-virtual-router-port-mapping-property-builder
-  "The cfn-virtual-router-port-mapping-property-builder function buildes out new instances of 
-CfnVirtualRouter$PortMappingProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-router-port-mapping-property-builder
+  "The build-cfn-virtual-router-port-mapping-property-builder function updates a CfnVirtualRouter$PortMappingProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualRouter$PortMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
-| `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |"
-  [stack id config]
-  (let [builder (CfnVirtualRouter$PortMappingProperty$Builder.)]
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :protocol)]
-      (. builder protocol data))
-    (.build builder)))
+| `protocol` | java.lang.String | [[cdk.support/lookup-entry]] | `:protocol` |
+"
+  [^CfnVirtualRouter$PortMappingProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :protocol)]
+    (. builder protocol data))
+  (.build builder))
 
 
-(defn cfn-virtual-router-props-builder
-  "The cfn-virtual-router-props-builder function buildes out new instances of 
-CfnVirtualRouterProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-router-props-builder
+  "The build-cfn-virtual-router-props-builder function updates a CfnVirtualRouterProps$Builder instance using the provided configuration.
+  The function takes the CfnVirtualRouterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3077,79 +3503,62 @@ CfnVirtualRouterProps$Builder using the provided configuration.  Each field is s
 | `meshOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-owner` |
 | `spec` | software.amazon.awscdk.services.appmesh.CfnVirtualRouter$VirtualRouterSpecProperty | [[cdk.support/lookup-entry]] | `:spec` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |"
-  [stack id config]
-  (let [builder (CfnVirtualRouterProps$Builder.)]
-    (when-let [data (lookup-entry config id :mesh-name)]
-      (. builder meshName data))
-    (when-let [data (lookup-entry config id :mesh-owner)]
-      (. builder meshOwner data))
-    (when-let [data (lookup-entry config id :spec)]
-      (. builder spec data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :virtual-router-name)]
-      (. builder virtualRouterName data))
-    (.build builder)))
+| `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |
+"
+  [^CfnVirtualRouterProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :mesh-name)]
+    (. builder meshName data))
+  (when-let [data (lookup-entry config id :mesh-owner)]
+    (. builder meshOwner data))
+  (when-let [data (lookup-entry config id :spec)]
+    (. builder spec data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :virtual-router-name)]
+    (. builder virtualRouterName data))
+  (.build builder))
 
 
-(defn cfn-virtual-router-virtual-router-listener-property-builder
-  "The cfn-virtual-router-virtual-router-listener-property-builder function buildes out new instances of 
-CfnVirtualRouter$VirtualRouterListenerProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-router-virtual-router-listener-property-builder
+  "The build-cfn-virtual-router-virtual-router-listener-property-builder function updates a CfnVirtualRouter$VirtualRouterListenerProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualRouter$VirtualRouterListenerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `portMapping` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:port-mapping` |"
-  [stack id config]
-  (let [builder (CfnVirtualRouter$VirtualRouterListenerProperty$Builder.)]
-    (when-let [data (lookup-entry config id :port-mapping)]
-      (. builder portMapping data))
-    (.build builder)))
-
-
-(defn cfn-virtual-router-virtual-router-spec-property-builder
-  "The cfn-virtual-router-virtual-router-spec-property-builder function buildes out new instances of 
-CfnVirtualRouter$VirtualRouterSpecProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `listeners` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:listeners` |"
-  [stack id config]
-  (let [builder (CfnVirtualRouter$VirtualRouterSpecProperty$Builder.)]
-    (when-let [data (lookup-entry config id :listeners)]
-      (. builder listeners data))
-    (.build builder)))
+| `portMapping` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:port-mapping` |
+"
+  [^CfnVirtualRouter$VirtualRouterListenerProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :port-mapping)]
+    (. builder portMapping data))
+  (.build builder))
 
 
-(defn cfn-virtual-service-builder
-  "The cfn-virtual-service-builder function buildes out new instances of 
-CfnVirtualService$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-router-virtual-router-spec-property-builder
+  "The build-cfn-virtual-router-virtual-router-spec-property-builder function updates a CfnVirtualRouter$VirtualRouterSpecProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualRouter$VirtualRouterSpecProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `meshName` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-name` |
-| `meshOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-owner` |
-| `spec` | software.amazon.awscdk.services.appmesh.CfnVirtualService$VirtualServiceSpecProperty | [[cdk.support/lookup-entry]] | `:spec` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `virtualServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-service-name` |"
-  [stack id config]
-  (let [builder (CfnVirtualService$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :mesh-name)]
-      (. builder meshName data))
-    (when-let [data (lookup-entry config id :mesh-owner)]
-      (. builder meshOwner data))
-    (when-let [data (lookup-entry config id :spec)]
-      (. builder spec data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :virtual-service-name)]
-      (. builder virtualServiceName data))
-    (.build builder)))
+| `listeners` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:listeners` |
+"
+  [^CfnVirtualRouter$VirtualRouterSpecProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :listeners)]
+    (. builder listeners data))
+  (.build builder))
 
 
-(defn cfn-virtual-service-props-builder
-  "The cfn-virtual-service-props-builder function buildes out new instances of 
-CfnVirtualServiceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-service-builder
+  "The build-cfn-virtual-service-builder function updates a CfnVirtualService$Builder instance using the provided configuration.
+  The function takes the CfnVirtualService$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3157,246 +3566,317 @@ CfnVirtualServiceProps$Builder using the provided configuration.  Each field is 
 | `meshOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-owner` |
 | `spec` | software.amazon.awscdk.services.appmesh.CfnVirtualService$VirtualServiceSpecProperty | [[cdk.support/lookup-entry]] | `:spec` |
 | `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
-| `virtualServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-service-name` |"
-  [stack id config]
-  (let [builder (CfnVirtualServiceProps$Builder.)]
-    (when-let [data (lookup-entry config id :mesh-name)]
-      (. builder meshName data))
-    (when-let [data (lookup-entry config id :mesh-owner)]
-      (. builder meshOwner data))
-    (when-let [data (lookup-entry config id :spec)]
-      (. builder spec data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (when-let [data (lookup-entry config id :virtual-service-name)]
-      (. builder virtualServiceName data))
-    (.build builder)))
+| `virtualServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-service-name` |
+"
+  [^CfnVirtualService$Builder builder id config]
+  (when-let [data (lookup-entry config id :mesh-name)]
+    (. builder meshName data))
+  (when-let [data (lookup-entry config id :mesh-owner)]
+    (. builder meshOwner data))
+  (when-let [data (lookup-entry config id :spec)]
+    (. builder spec data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :virtual-service-name)]
+    (. builder virtualServiceName data))
+  (.build builder))
 
 
-(defn cfn-virtual-service-virtual-node-service-provider-property-builder
-  "The cfn-virtual-service-virtual-node-service-provider-property-builder function buildes out new instances of 
-CfnVirtualService$VirtualNodeServiceProviderProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-service-props-builder
+  "The build-cfn-virtual-service-props-builder function updates a CfnVirtualServiceProps$Builder instance using the provided configuration.
+  The function takes the CfnVirtualServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |"
-  [stack id config]
-  (let [builder (CfnVirtualService$VirtualNodeServiceProviderProperty$Builder.)]
-    (when-let [data (lookup-entry config id :virtual-node-name)]
-      (. builder virtualNodeName data))
-    (.build builder)))
-
-
-(defn cfn-virtual-service-virtual-router-service-provider-property-builder
-  "The cfn-virtual-service-virtual-router-service-provider-property-builder function buildes out new instances of 
-CfnVirtualService$VirtualRouterServiceProviderProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |"
-  [stack id config]
-  (let [builder (CfnVirtualService$VirtualRouterServiceProviderProperty$Builder.)]
-    (when-let [data (lookup-entry config id :virtual-router-name)]
-      (. builder virtualRouterName data))
-    (.build builder)))
+| `meshName` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-name` |
+| `meshOwner` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-owner` |
+| `spec` | software.amazon.awscdk.services.appmesh.CfnVirtualService$VirtualServiceSpecProperty | [[cdk.support/lookup-entry]] | `:spec` |
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+| `virtualServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-service-name` |
+"
+  [^CfnVirtualServiceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :mesh-name)]
+    (. builder meshName data))
+  (when-let [data (lookup-entry config id :mesh-owner)]
+    (. builder meshOwner data))
+  (when-let [data (lookup-entry config id :spec)]
+    (. builder spec data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (when-let [data (lookup-entry config id :virtual-service-name)]
+    (. builder virtualServiceName data))
+  (.build builder))
 
 
-(defn cfn-virtual-service-virtual-service-provider-property-builder
-  "The cfn-virtual-service-virtual-service-provider-property-builder function buildes out new instances of 
-CfnVirtualService$VirtualServiceProviderProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-service-virtual-node-service-provider-property-builder
+  "The build-cfn-virtual-service-virtual-node-service-provider-property-builder function updates a CfnVirtualService$VirtualNodeServiceProviderProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualService$VirtualNodeServiceProviderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |
+"
+  [^CfnVirtualService$VirtualNodeServiceProviderProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :virtual-node-name)]
+    (. builder virtualNodeName data))
+  (.build builder))
+
+
+(defn build-cfn-virtual-service-virtual-router-service-provider-property-builder
+  "The build-cfn-virtual-service-virtual-router-service-provider-property-builder function updates a CfnVirtualService$VirtualRouterServiceProviderProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualService$VirtualRouterServiceProviderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |
+"
+  [^CfnVirtualService$VirtualRouterServiceProviderProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :virtual-router-name)]
+    (. builder virtualRouterName data))
+  (.build builder))
+
+
+(defn build-cfn-virtual-service-virtual-service-provider-property-builder
+  "The build-cfn-virtual-service-virtual-service-provider-property-builder function updates a CfnVirtualService$VirtualServiceProviderProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualService$VirtualServiceProviderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `virtualNode` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:virtual-node` |
-| `virtualRouter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:virtual-router` |"
-  [stack id config]
-  (let [builder (CfnVirtualService$VirtualServiceProviderProperty$Builder.)]
-    (when-let [data (lookup-entry config id :virtual-node)]
-      (. builder virtualNode data))
-    (when-let [data (lookup-entry config id :virtual-router)]
-      (. builder virtualRouter data))
-    (.build builder)))
+| `virtualRouter` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:virtual-router` |
+"
+  [^CfnVirtualService$VirtualServiceProviderProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :virtual-node)]
+    (. builder virtualNode data))
+  (when-let [data (lookup-entry config id :virtual-router)]
+    (. builder virtualRouter data))
+  (.build builder))
 
 
-(defn cfn-virtual-service-virtual-service-spec-property-builder
-  "The cfn-virtual-service-virtual-service-spec-property-builder function buildes out new instances of 
-CfnVirtualService$VirtualServiceSpecProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-virtual-service-virtual-service-spec-property-builder
+  "The build-cfn-virtual-service-virtual-service-spec-property-builder function updates a CfnVirtualService$VirtualServiceSpecProperty$Builder instance using the provided configuration.
+  The function takes the CfnVirtualService$VirtualServiceSpecProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `provider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provider` |"
-  [stack id config]
-  (let [builder (CfnVirtualService$VirtualServiceSpecProperty$Builder.)]
-    (when-let [data (lookup-entry config id :provider)]
-      (. builder provider data))
-    (.build builder)))
-
-
-(defn common-gateway-route-spec-options-builder
-  "The common-gateway-route-spec-options-builder function buildes out new instances of 
-CommonGatewayRouteSpecOptions$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |"
-  [stack id config]
-  (let [builder (CommonGatewayRouteSpecOptions$Builder.)]
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (.build builder)))
+| `provider` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:provider` |
+"
+  [^CfnVirtualService$VirtualServiceSpecProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :provider)]
+    (. builder provider data))
+  (.build builder))
 
 
-(defn gateway-route-attributes-builder
-  "The gateway-route-attributes-builder function buildes out new instances of 
-GatewayRouteAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-common-gateway-route-spec-options-builder
+  "The build-common-gateway-route-spec-options-builder function updates a CommonGatewayRouteSpecOptions$Builder instance using the provided configuration.
+  The function takes the CommonGatewayRouteSpecOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `gatewayRouteName` | java.lang.String | [[cdk.support/lookup-entry]] | `:gateway-route-name` |
-| `virtualGateway` | software.amazon.awscdk.services.appmesh.IVirtualGateway | [[cdk.support/lookup-entry]] | `:virtual-gateway` |"
-  [stack id config]
-  (let [builder (GatewayRouteAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :gateway-route-name)]
-      (. builder gatewayRouteName data))
-    (when-let [data (lookup-entry config id :virtual-gateway)]
-      (. builder virtualGateway data))
-    (.build builder)))
+| `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
+"
+  [^CommonGatewayRouteSpecOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (.build builder))
 
 
-(defn gateway-route-base-props-builder
-  "The gateway-route-base-props-builder function buildes out new instances of 
-GatewayRouteBaseProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-gateway-route-attributes-builder
+  "The build-gateway-route-attributes-builder function updates a GatewayRouteAttributes$Builder instance using the provided configuration.
+  The function takes the GatewayRouteAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `gatewayRouteName` | java.lang.String | [[cdk.support/lookup-entry]] | `:gateway-route-name` |
-| `routeSpec` | software.amazon.awscdk.services.appmesh.GatewayRouteSpec | [[cdk.support/lookup-entry]] | `:route-spec` |"
-  [stack id config]
-  (let [builder (GatewayRouteBaseProps$Builder.)]
-    (when-let [data (lookup-entry config id :gateway-route-name)]
-      (. builder gatewayRouteName data))
-    (when-let [data (lookup-entry config id :route-spec)]
-      (. builder routeSpec data))
-    (.build builder)))
+| `virtualGateway` | software.amazon.awscdk.services.appmesh.IVirtualGateway | [[cdk.support/lookup-entry]] | `:virtual-gateway` |
+"
+  [^GatewayRouteAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :gateway-route-name)]
+    (. builder gatewayRouteName data))
+  (when-let [data (lookup-entry config id :virtual-gateway)]
+    (. builder virtualGateway data))
+  (.build builder))
 
 
-(defn gateway-route-builder
-  "The gateway-route-builder function buildes out new instances of 
-GatewayRoute$Builder using the provided configuration.  Each field is set as follows:
+(defn build-gateway-route-base-props-builder
+  "The build-gateway-route-base-props-builder function updates a GatewayRouteBaseProps$Builder instance using the provided configuration.
+  The function takes the GatewayRouteBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `gatewayRouteName` | java.lang.String | [[cdk.support/lookup-entry]] | `:gateway-route-name` |
 | `routeSpec` | software.amazon.awscdk.services.appmesh.GatewayRouteSpec | [[cdk.support/lookup-entry]] | `:route-spec` |
-| `virtualGateway` | software.amazon.awscdk.services.appmesh.IVirtualGateway | [[cdk.support/lookup-entry]] | `:virtual-gateway` |"
-  [stack id config]
-  (let [builder (GatewayRoute$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :gateway-route-name)]
-      (. builder gatewayRouteName data))
-    (when-let [data (lookup-entry config id :route-spec)]
-      (. builder routeSpec data))
-    (when-let [data (lookup-entry config id :virtual-gateway)]
-      (. builder virtualGateway data))
-    (.build builder)))
+"
+  [^GatewayRouteBaseProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :gateway-route-name)]
+    (. builder gatewayRouteName data))
+  (when-let [data (lookup-entry config id :route-spec)]
+    (. builder routeSpec data))
+  (.build builder))
 
 
-(defn gateway-route-hostname-match-config-builder
-  "The gateway-route-hostname-match-config-builder function buildes out new instances of 
-GatewayRouteHostnameMatchConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-gateway-route-builder
+  "The build-gateway-route-builder function updates a GatewayRoute$Builder instance using the provided configuration.
+  The function takes the GatewayRoute$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `hostnameMatch` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteHostnameMatchProperty | [[cdk.support/lookup-entry]] | `:hostname-match` |"
-  [stack id config]
-  (let [builder (GatewayRouteHostnameMatchConfig$Builder.)]
-    (when-let [data (lookup-entry config id :hostname-match)]
-      (. builder hostnameMatch data))
-    (.build builder)))
-
-
-(defn gateway-route-props-builder
-  "The gateway-route-props-builder function buildes out new instances of 
-GatewayRouteProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `gatewayRouteName` | java.lang.String | [[cdk.support/lookup-entry]] | `:gateway-route-name` |
 | `routeSpec` | software.amazon.awscdk.services.appmesh.GatewayRouteSpec | [[cdk.support/lookup-entry]] | `:route-spec` |
-| `virtualGateway` | software.amazon.awscdk.services.appmesh.IVirtualGateway | [[cdk.support/lookup-entry]] | `:virtual-gateway` |"
-  [stack id config]
-  (let [builder (GatewayRouteProps$Builder.)]
-    (when-let [data (lookup-entry config id :gateway-route-name)]
-      (. builder gatewayRouteName data))
-    (when-let [data (lookup-entry config id :route-spec)]
-      (. builder routeSpec data))
-    (when-let [data (lookup-entry config id :virtual-gateway)]
-      (. builder virtualGateway data))
-    (.build builder)))
+| `virtualGateway` | software.amazon.awscdk.services.appmesh.IVirtualGateway | [[cdk.support/lookup-entry]] | `:virtual-gateway` |
+"
+  [^GatewayRoute$Builder builder id config]
+  (when-let [data (lookup-entry config id :gateway-route-name)]
+    (. builder gatewayRouteName data))
+  (when-let [data (lookup-entry config id :route-spec)]
+    (. builder routeSpec data))
+  (when-let [data (lookup-entry config id :virtual-gateway)]
+    (. builder virtualGateway data))
+  (.build builder))
 
 
-(defn gateway-route-spec-config-builder
-  "The gateway-route-spec-config-builder function buildes out new instances of 
-GatewayRouteSpecConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-gateway-route-hostname-match-config-builder
+  "The build-gateway-route-hostname-match-config-builder function updates a GatewayRouteHostnameMatchConfig$Builder instance using the provided configuration.
+  The function takes the GatewayRouteHostnameMatchConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `hostnameMatch` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GatewayRouteHostnameMatchProperty | [[cdk.support/lookup-entry]] | `:hostname-match` |
+"
+  [^GatewayRouteHostnameMatchConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :hostname-match)]
+    (. builder hostnameMatch data))
+  (.build builder))
+
+
+(defn build-gateway-route-props-builder
+  "The build-gateway-route-props-builder function updates a GatewayRouteProps$Builder instance using the provided configuration.
+  The function takes the GatewayRouteProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `gatewayRouteName` | java.lang.String | [[cdk.support/lookup-entry]] | `:gateway-route-name` |
+| `routeSpec` | software.amazon.awscdk.services.appmesh.GatewayRouteSpec | [[cdk.support/lookup-entry]] | `:route-spec` |
+| `virtualGateway` | software.amazon.awscdk.services.appmesh.IVirtualGateway | [[cdk.support/lookup-entry]] | `:virtual-gateway` |
+"
+  [^GatewayRouteProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :gateway-route-name)]
+    (. builder gatewayRouteName data))
+  (when-let [data (lookup-entry config id :route-spec)]
+    (. builder routeSpec data))
+  (when-let [data (lookup-entry config id :virtual-gateway)]
+    (. builder virtualGateway data))
+  (.build builder))
+
+
+(defn build-gateway-route-spec-config-builder
+  "The build-gateway-route-spec-config-builder function updates a GatewayRouteSpecConfig$Builder instance using the provided configuration.
+  The function takes the GatewayRouteSpecConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `grpcSpecConfig` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$GrpcGatewayRouteProperty | [[cdk.support/lookup-entry]] | `:grpc-spec-config` |
 | `http2SpecConfig` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$HttpGatewayRouteProperty | [[cdk.support/lookup-entry]] | `:http2-spec-config` |
 | `httpSpecConfig` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$HttpGatewayRouteProperty | [[cdk.support/lookup-entry]] | `:http-spec-config` |
-| `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |"
-  [stack id config]
-  (let [builder (GatewayRouteSpecConfig$Builder.)]
-    (when-let [data (lookup-entry config id :grpc-spec-config)]
-      (. builder grpcSpecConfig data))
-    (when-let [data (lookup-entry config id :http2-spec-config)]
-      (. builder http2SpecConfig data))
-    (when-let [data (lookup-entry config id :http-spec-config)]
-      (. builder httpSpecConfig data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (.build builder)))
+| `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
+"
+  [^GatewayRouteSpecConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :grpc-spec-config)]
+    (. builder grpcSpecConfig data))
+  (when-let [data (lookup-entry config id :http2-spec-config)]
+    (. builder http2SpecConfig data))
+  (when-let [data (lookup-entry config id :http-spec-config)]
+    (. builder httpSpecConfig data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (.build builder))
 
 
-(defn grpc-connection-pool-builder
-  "The grpc-connection-pool-builder function buildes out new instances of 
-GrpcConnectionPool$Builder using the provided configuration.  Each field is set as follows:
+(defn build-grpc-connection-pool-builder
+  "The build-grpc-connection-pool-builder function updates a GrpcConnectionPool$Builder instance using the provided configuration.
+  The function takes the GrpcConnectionPool$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `maxRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-requests` |"
-  [stack id config]
-  (let [builder (GrpcConnectionPool$Builder.)]
-    (when-let [data (lookup-entry config id :max-requests)]
-      (. builder maxRequests data))
-    (.build builder)))
+| `maxRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-requests` |
+"
+  [^GrpcConnectionPool$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-requests)]
+    (. builder maxRequests data))
+  (.build builder))
 
 
-(defn grpc-gateway-listener-options-builder
-  "The grpc-gateway-listener-options-builder function buildes out new instances of 
-GrpcGatewayListenerOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-grpc-gateway-listener-options-builder
+  "The build-grpc-gateway-listener-options-builder function updates a GrpcGatewayListenerOptions$Builder instance using the provided configuration.
+  The function takes the GrpcGatewayListenerOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `connectionPool` | software.amazon.awscdk.services.appmesh.GrpcConnectionPool | [[cdk.support/lookup-entry]] | `:connection-pool` |
 | `healthCheck` | software.amazon.awscdk.services.appmesh.HealthCheck | [[cdk.support/lookup-entry]] | `:health-check` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
-| `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |"
-  [stack id config]
-  (let [builder (GrpcGatewayListenerOptions$Builder.)]
-    (when-let [data (lookup-entry config id :connection-pool)]
-      (. builder connectionPool data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :tls)]
-      (. builder tls data))
-    (.build builder)))
+| `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |
+"
+  [^GrpcGatewayListenerOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-pool)]
+    (. builder connectionPool data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :tls)]
+    (. builder tls data))
+  (.build builder))
 
 
-(defn grpc-gateway-route-match-builder
-  "The grpc-gateway-route-match-builder function buildes out new instances of 
-GrpcGatewayRouteMatch$Builder using the provided configuration.  Each field is set as follows:
+(defn build-grpc-gateway-route-match-builder
+  "The build-grpc-gateway-route-match-builder function updates a GrpcGatewayRouteMatch$Builder instance using the provided configuration.
+  The function takes the GrpcGatewayRouteMatch$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3404,68 +3884,77 @@ GrpcGatewayRouteMatch$Builder using the provided configuration.  Each field is s
 | `metadata` | java.util.List | [[cdk.support/lookup-entry]] | `:metadata` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `rewriteRequestHostname` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:rewrite-request-hostname` |
-| `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |"
-  [stack id config]
-  (let [builder (GrpcGatewayRouteMatch$Builder.)]
-    (when-let [data (lookup-entry config id :hostname)]
-      (. builder hostname data))
-    (when-let [data (lookup-entry config id :metadata)]
-      (. builder metadata data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :rewrite-request-hostname)]
-      (. builder rewriteRequestHostname data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (.build builder)))
+| `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
+"
+  [^GrpcGatewayRouteMatch$Builder builder id config]
+  (when-let [data (lookup-entry config id :hostname)]
+    (. builder hostname data))
+  (when-let [data (lookup-entry config id :metadata)]
+    (. builder metadata data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :rewrite-request-hostname)]
+    (. builder rewriteRequestHostname data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (.build builder))
 
 
-(defn grpc-gateway-route-spec-options-builder
-  "The grpc-gateway-route-spec-options-builder function buildes out new instances of 
-GrpcGatewayRouteSpecOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-grpc-gateway-route-spec-options-builder
+  "The build-grpc-gateway-route-spec-options-builder function updates a GrpcGatewayRouteSpecOptions$Builder instance using the provided configuration.
+  The function takes the GrpcGatewayRouteSpecOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `match` | software.amazon.awscdk.services.appmesh.GrpcGatewayRouteMatch | [[cdk.support/lookup-entry]] | `:match` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
-| `routeTarget` | software.amazon.awscdk.services.appmesh.IVirtualService | [[cdk.support/lookup-entry]] | `:route-target` |"
-  [stack id config]
-  (let [builder (GrpcGatewayRouteSpecOptions$Builder.)]
-    (when-let [data (lookup-entry config id :match)]
-      (. builder match data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :route-target)]
-      (. builder routeTarget data))
-    (.build builder)))
+| `routeTarget` | software.amazon.awscdk.services.appmesh.IVirtualService | [[cdk.support/lookup-entry]] | `:route-target` |
+"
+  [^GrpcGatewayRouteSpecOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :match)]
+    (. builder match data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :route-target)]
+    (. builder routeTarget data))
+  (.build builder))
 
 
-(defn grpc-health-check-options-builder
-  "The grpc-health-check-options-builder function buildes out new instances of 
-GrpcHealthCheckOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-grpc-health-check-options-builder
+  "The build-grpc-health-check-options-builder function updates a GrpcHealthCheckOptions$Builder instance using the provided configuration.
+  The function takes the GrpcHealthCheckOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `healthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:healthy-threshold` |
 | `interval` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:interval` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `unhealthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |"
-  [stack id config]
-  (let [builder (GrpcHealthCheckOptions$Builder.)]
-    (when-let [data (lookup-entry config id :healthy-threshold)]
-      (. builder healthyThreshold data))
-    (when-let [data (lookup-entry config id :interval)]
-      (. builder interval data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :unhealthy-threshold)]
-      (. builder unhealthyThreshold data))
-    (.build builder)))
+| `unhealthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |
+"
+  [^GrpcHealthCheckOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :healthy-threshold)]
+    (. builder healthyThreshold data))
+  (when-let [data (lookup-entry config id :interval)]
+    (. builder interval data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :unhealthy-threshold)]
+    (. builder unhealthyThreshold data))
+  (.build builder))
 
 
-(defn grpc-retry-policy-builder
-  "The grpc-retry-policy-builder function buildes out new instances of 
-GrpcRetryPolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-grpc-retry-policy-builder
+  "The build-grpc-retry-policy-builder function updates a GrpcRetryPolicy$Builder instance using the provided configuration.
+  The function takes the GrpcRetryPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3473,48 +3962,54 @@ GrpcRetryPolicy$Builder using the provided configuration.  Each field is set as 
 | `httpRetryEvents` | java.util.List | [[cdk.support/lookup-entry]] | `:http-retry-events` |
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 | `retryTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:retry-timeout` |
-| `tcpRetryEvents` | java.util.List | [[cdk.support/lookup-entry]] | `:tcp-retry-events` |"
-  [stack id config]
-  (let [builder (GrpcRetryPolicy$Builder.)]
-    (when-let [data (lookup-entry config id :grpc-retry-events)]
-      (. builder grpcRetryEvents data))
-    (when-let [data (lookup-entry config id :http-retry-events)]
-      (. builder httpRetryEvents data))
-    (when-let [data (lookup-entry config id :retry-attempts)]
-      (. builder retryAttempts data))
-    (when-let [data (lookup-entry config id :retry-timeout)]
-      (. builder retryTimeout data))
-    (when-let [data (lookup-entry config id :tcp-retry-events)]
-      (. builder tcpRetryEvents data))
-    (.build builder)))
+| `tcpRetryEvents` | java.util.List | [[cdk.support/lookup-entry]] | `:tcp-retry-events` |
+"
+  [^GrpcRetryPolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :grpc-retry-events)]
+    (. builder grpcRetryEvents data))
+  (when-let [data (lookup-entry config id :http-retry-events)]
+    (. builder httpRetryEvents data))
+  (when-let [data (lookup-entry config id :retry-attempts)]
+    (. builder retryAttempts data))
+  (when-let [data (lookup-entry config id :retry-timeout)]
+    (. builder retryTimeout data))
+  (when-let [data (lookup-entry config id :tcp-retry-events)]
+    (. builder tcpRetryEvents data))
+  (.build builder))
 
 
-(defn grpc-route-match-builder
-  "The grpc-route-match-builder function buildes out new instances of 
-GrpcRouteMatch$Builder using the provided configuration.  Each field is set as follows:
+(defn build-grpc-route-match-builder
+  "The build-grpc-route-match-builder function updates a GrpcRouteMatch$Builder instance using the provided configuration.
+  The function takes the GrpcRouteMatch$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `metadata` | java.util.List | [[cdk.support/lookup-entry]] | `:metadata` |
 | `methodName` | java.lang.String | [[cdk.support/lookup-entry]] | `:method-name` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
-| `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |"
-  [stack id config]
-  (let [builder (GrpcRouteMatch$Builder.)]
-    (when-let [data (lookup-entry config id :metadata)]
-      (. builder metadata data))
-    (when-let [data (lookup-entry config id :method-name)]
-      (. builder methodName data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :service-name)]
-      (. builder serviceName data))
-    (.build builder)))
+| `serviceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:service-name` |
+"
+  [^GrpcRouteMatch$Builder builder id config]
+  (when-let [data (lookup-entry config id :metadata)]
+    (. builder metadata data))
+  (when-let [data (lookup-entry config id :method-name)]
+    (. builder methodName data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :service-name)]
+    (. builder serviceName data))
+  (.build builder))
 
 
-(defn grpc-route-spec-options-builder
-  "The grpc-route-spec-options-builder function buildes out new instances of 
-GrpcRouteSpecOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-grpc-route-spec-options-builder
+  "The build-grpc-route-spec-options-builder function updates a GrpcRouteSpecOptions$Builder instance using the provided configuration.
+  The function takes the GrpcRouteSpecOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3522,42 +4017,48 @@ GrpcRouteSpecOptions$Builder using the provided configuration.  Each field is se
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 | `retryPolicy` | software.amazon.awscdk.services.appmesh.GrpcRetryPolicy | [[cdk.support/lookup-entry]] | `:retry-policy` |
 | `timeout` | software.amazon.awscdk.services.appmesh.GrpcTimeout | [[cdk.support/lookup-entry]] | `:timeout` |
-| `weightedTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:weighted-targets` |"
-  [stack id config]
-  (let [builder (GrpcRouteSpecOptions$Builder.)]
-    (when-let [data (lookup-entry config id :match)]
-      (. builder match data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :retry-policy)]
-      (. builder retryPolicy data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :weighted-targets)]
-      (. builder weightedTargets data))
-    (.build builder)))
+| `weightedTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:weighted-targets` |
+"
+  [^GrpcRouteSpecOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :match)]
+    (. builder match data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :retry-policy)]
+    (. builder retryPolicy data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :weighted-targets)]
+    (. builder weightedTargets data))
+  (.build builder))
 
 
-(defn grpc-timeout-builder
-  "The grpc-timeout-builder function buildes out new instances of 
-GrpcTimeout$Builder using the provided configuration.  Each field is set as follows:
+(defn build-grpc-timeout-builder
+  "The build-grpc-timeout-builder function updates a GrpcTimeout$Builder instance using the provided configuration.
+  The function takes the GrpcTimeout$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `idle` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:idle` |
-| `perRequest` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:per-request` |"
-  [stack id config]
-  (let [builder (GrpcTimeout$Builder.)]
-    (when-let [data (lookup-entry config id :idle)]
-      (. builder idle data))
-    (when-let [data (lookup-entry config id :per-request)]
-      (. builder perRequest data))
-    (.build builder)))
+| `perRequest` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:per-request` |
+"
+  [^GrpcTimeout$Builder builder id config]
+  (when-let [data (lookup-entry config id :idle)]
+    (. builder idle data))
+  (when-let [data (lookup-entry config id :per-request)]
+    (. builder perRequest data))
+  (.build builder))
 
 
-(defn grpc-virtual-node-listener-options-builder
-  "The grpc-virtual-node-listener-options-builder function buildes out new instances of 
-GrpcVirtualNodeListenerOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-grpc-virtual-node-listener-options-builder
+  "The build-grpc-virtual-node-listener-options-builder function updates a GrpcVirtualNodeListenerOptions$Builder instance using the provided configuration.
+  The function takes the GrpcVirtualNodeListenerOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3566,112 +4067,130 @@ GrpcVirtualNodeListenerOptions$Builder using the provided configuration.  Each f
 | `outlierDetection` | software.amazon.awscdk.services.appmesh.OutlierDetection | [[cdk.support/lookup-entry]] | `:outlier-detection` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `timeout` | software.amazon.awscdk.services.appmesh.GrpcTimeout | [[cdk.support/lookup-entry]] | `:timeout` |
-| `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |"
-  [stack id config]
-  (let [builder (GrpcVirtualNodeListenerOptions$Builder.)]
-    (when-let [data (lookup-entry config id :connection-pool)]
-      (. builder connectionPool data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :outlier-detection)]
-      (. builder outlierDetection data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :tls)]
-      (. builder tls data))
-    (.build builder)))
+| `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |
+"
+  [^GrpcVirtualNodeListenerOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-pool)]
+    (. builder connectionPool data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :outlier-detection)]
+    (. builder outlierDetection data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :tls)]
+    (. builder tls data))
+  (.build builder))
 
 
-(defn header-match-config-builder
-  "The header-match-config-builder function buildes out new instances of 
-HeaderMatchConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-header-match-config-builder
+  "The build-header-match-config-builder function updates a HeaderMatchConfig$Builder instance using the provided configuration.
+  The function takes the HeaderMatchConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `headerMatch` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpRouteHeaderProperty | [[cdk.support/lookup-entry]] | `:header-match` |"
-  [stack id config]
-  (let [builder (HeaderMatchConfig$Builder.)]
-    (when-let [data (lookup-entry config id :header-match)]
-      (. builder headerMatch data))
-    (.build builder)))
-
-
-(defn health-check-bind-options-builder
-  "The health-check-bind-options-builder function buildes out new instances of 
-HealthCheckBindOptions$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `defaultPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:default-port` |"
-  [stack id config]
-  (let [builder (HealthCheckBindOptions$Builder.)]
-    (when-let [data (lookup-entry config id :default-port)]
-      (. builder defaultPort data))
-    (.build builder)))
+| `headerMatch` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpRouteHeaderProperty | [[cdk.support/lookup-entry]] | `:header-match` |
+"
+  [^HeaderMatchConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :header-match)]
+    (. builder headerMatch data))
+  (.build builder))
 
 
-(defn health-check-config-builder
-  "The health-check-config-builder function buildes out new instances of 
-HealthCheckConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-health-check-bind-options-builder
+  "The build-health-check-bind-options-builder function updates a HealthCheckBindOptions$Builder instance using the provided configuration.
+  The function takes the HealthCheckBindOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `defaultPort` | java.lang.Number | [[cdk.support/lookup-entry]] | `:default-port` |
+"
+  [^HealthCheckBindOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :default-port)]
+    (. builder defaultPort data))
+  (.build builder))
+
+
+(defn build-health-check-config-builder
+  "The build-health-check-config-builder function updates a HealthCheckConfig$Builder instance using the provided configuration.
+  The function takes the HealthCheckConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `virtualGatewayHealthCheck` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayHealthCheckPolicyProperty | [[cdk.support/lookup-entry]] | `:virtual-gateway-health-check` |
-| `virtualNodeHealthCheck` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$HealthCheckProperty | [[cdk.support/lookup-entry]] | `:virtual-node-health-check` |"
-  [stack id config]
-  (let [builder (HealthCheckConfig$Builder.)]
-    (when-let [data (lookup-entry config id :virtual-gateway-health-check)]
-      (. builder virtualGatewayHealthCheck data))
-    (when-let [data (lookup-entry config id :virtual-node-health-check)]
-      (. builder virtualNodeHealthCheck data))
-    (.build builder)))
+| `virtualNodeHealthCheck` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$HealthCheckProperty | [[cdk.support/lookup-entry]] | `:virtual-node-health-check` |
+"
+  [^HealthCheckConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :virtual-gateway-health-check)]
+    (. builder virtualGatewayHealthCheck data))
+  (when-let [data (lookup-entry config id :virtual-node-health-check)]
+    (. builder virtualNodeHealthCheck data))
+  (.build builder))
 
 
-(defn http-connection-pool-builder
-  "The http-connection-pool-builder function buildes out new instances of 
-HttpConnectionPool$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-connection-pool-builder
+  "The build-http-connection-pool-builder function updates a HttpConnectionPool$Builder instance using the provided configuration.
+  The function takes the HttpConnectionPool$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `maxConnections` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-connections` |
-| `maxPendingRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-pending-requests` |"
-  [stack id config]
-  (let [builder (HttpConnectionPool$Builder.)]
-    (when-let [data (lookup-entry config id :max-connections)]
-      (. builder maxConnections data))
-    (when-let [data (lookup-entry config id :max-pending-requests)]
-      (. builder maxPendingRequests data))
-    (.build builder)))
+| `maxPendingRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-pending-requests` |
+"
+  [^HttpConnectionPool$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-connections)]
+    (. builder maxConnections data))
+  (when-let [data (lookup-entry config id :max-pending-requests)]
+    (. builder maxPendingRequests data))
+  (.build builder))
 
 
-(defn http-gateway-listener-options-builder
-  "The http-gateway-listener-options-builder function buildes out new instances of 
-HttpGatewayListenerOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-gateway-listener-options-builder
+  "The build-http-gateway-listener-options-builder function updates a HttpGatewayListenerOptions$Builder instance using the provided configuration.
+  The function takes the HttpGatewayListenerOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `connectionPool` | software.amazon.awscdk.services.appmesh.HttpConnectionPool | [[cdk.support/lookup-entry]] | `:connection-pool` |
 | `healthCheck` | software.amazon.awscdk.services.appmesh.HealthCheck | [[cdk.support/lookup-entry]] | `:health-check` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
-| `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |"
-  [stack id config]
-  (let [builder (HttpGatewayListenerOptions$Builder.)]
-    (when-let [data (lookup-entry config id :connection-pool)]
-      (. builder connectionPool data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :tls)]
-      (. builder tls data))
-    (.build builder)))
+| `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |
+"
+  [^HttpGatewayListenerOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-pool)]
+    (. builder connectionPool data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :tls)]
+    (. builder tls data))
+  (.build builder))
 
 
-(defn http-gateway-route-match-builder
-  "The http-gateway-route-match-builder function buildes out new instances of 
-HttpGatewayRouteMatch$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-gateway-route-match-builder
+  "The build-http-gateway-route-match-builder function updates a HttpGatewayRouteMatch$Builder instance using the provided configuration.
+  The function takes the HttpGatewayRouteMatch$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3681,72 +4200,81 @@ HttpGatewayRouteMatch$Builder using the provided configuration.  Each field is s
 | `path` | software.amazon.awscdk.services.appmesh.HttpGatewayRoutePathMatch | [[cdk.support/lookup-entry]] | `:path` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `queryParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:query-parameters` |
-| `rewriteRequestHostname` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:rewrite-request-hostname` |"
-  [stack id config]
-  (let [builder (HttpGatewayRouteMatch$Builder.)]
-    (when-let [data (lookup-entry config id :headers)]
-      (. builder headers data))
-    (when-let [data (lookup-entry config id :hostname)]
-      (. builder hostname data))
-    (when-let [data (http-route-method config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :path)]
-      (. builder path data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :query-parameters)]
-      (. builder queryParameters data))
-    (when-let [data (lookup-entry config id :rewrite-request-hostname)]
-      (. builder rewriteRequestHostname data))
-    (.build builder)))
+| `rewriteRequestHostname` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:rewrite-request-hostname` |
+"
+  [^HttpGatewayRouteMatch$Builder builder id config]
+  (when-let [data (lookup-entry config id :headers)]
+    (. builder headers data))
+  (when-let [data (lookup-entry config id :hostname)]
+    (. builder hostname data))
+  (when-let [data (http-route-method config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :path)]
+    (. builder path data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :query-parameters)]
+    (. builder queryParameters data))
+  (when-let [data (lookup-entry config id :rewrite-request-hostname)]
+    (. builder rewriteRequestHostname data))
+  (.build builder))
 
 
-(defn http-gateway-route-path-match-config-builder
-  "The http-gateway-route-path-match-config-builder function buildes out new instances of 
-HttpGatewayRoutePathMatchConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-gateway-route-path-match-config-builder
+  "The build-http-gateway-route-path-match-config-builder function updates a HttpGatewayRoutePathMatchConfig$Builder instance using the provided configuration.
+  The function takes the HttpGatewayRoutePathMatchConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `prefixPathMatch` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix-path-match` |
 | `prefixPathRewrite` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$HttpGatewayRoutePrefixRewriteProperty | [[cdk.support/lookup-entry]] | `:prefix-path-rewrite` |
 | `wholePathMatch` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$HttpPathMatchProperty | [[cdk.support/lookup-entry]] | `:whole-path-match` |
-| `wholePathRewrite` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$HttpGatewayRoutePathRewriteProperty | [[cdk.support/lookup-entry]] | `:whole-path-rewrite` |"
-  [stack id config]
-  (let [builder (HttpGatewayRoutePathMatchConfig$Builder.)]
-    (when-let [data (lookup-entry config id :prefix-path-match)]
-      (. builder prefixPathMatch data))
-    (when-let [data (lookup-entry config id :prefix-path-rewrite)]
-      (. builder prefixPathRewrite data))
-    (when-let [data (lookup-entry config id :whole-path-match)]
-      (. builder wholePathMatch data))
-    (when-let [data (lookup-entry config id :whole-path-rewrite)]
-      (. builder wholePathRewrite data))
-    (.build builder)))
+| `wholePathRewrite` | software.amazon.awscdk.services.appmesh.CfnGatewayRoute$HttpGatewayRoutePathRewriteProperty | [[cdk.support/lookup-entry]] | `:whole-path-rewrite` |
+"
+  [^HttpGatewayRoutePathMatchConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :prefix-path-match)]
+    (. builder prefixPathMatch data))
+  (when-let [data (lookup-entry config id :prefix-path-rewrite)]
+    (. builder prefixPathRewrite data))
+  (when-let [data (lookup-entry config id :whole-path-match)]
+    (. builder wholePathMatch data))
+  (when-let [data (lookup-entry config id :whole-path-rewrite)]
+    (. builder wholePathRewrite data))
+  (.build builder))
 
 
-(defn http-gateway-route-spec-options-builder
-  "The http-gateway-route-spec-options-builder function buildes out new instances of 
-HttpGatewayRouteSpecOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-gateway-route-spec-options-builder
+  "The build-http-gateway-route-spec-options-builder function updates a HttpGatewayRouteSpecOptions$Builder instance using the provided configuration.
+  The function takes the HttpGatewayRouteSpecOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `match` | software.amazon.awscdk.services.appmesh.HttpGatewayRouteMatch | [[cdk.support/lookup-entry]] | `:match` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
-| `routeTarget` | software.amazon.awscdk.services.appmesh.IVirtualService | [[cdk.support/lookup-entry]] | `:route-target` |"
-  [stack id config]
-  (let [builder (HttpGatewayRouteSpecOptions$Builder.)]
-    (when-let [data (lookup-entry config id :match)]
-      (. builder match data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :route-target)]
-      (. builder routeTarget data))
-    (.build builder)))
+| `routeTarget` | software.amazon.awscdk.services.appmesh.IVirtualService | [[cdk.support/lookup-entry]] | `:route-target` |
+"
+  [^HttpGatewayRouteSpecOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :match)]
+    (. builder match data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :route-target)]
+    (. builder routeTarget data))
+  (.build builder))
 
 
-(defn http-health-check-options-builder
-  "The http-health-check-options-builder function buildes out new instances of 
-HttpHealthCheckOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-health-check-options-builder
+  "The build-http-health-check-options-builder function updates a HttpHealthCheckOptions$Builder instance using the provided configuration.
+  The function takes the HttpHealthCheckOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3754,48 +4282,54 @@ HttpHealthCheckOptions$Builder using the provided configuration.  Each field is 
 | `interval` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:interval` |
 | `path` | java.lang.String | [[cdk.support/lookup-entry]] | `:path` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `unhealthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |"
-  [stack id config]
-  (let [builder (HttpHealthCheckOptions$Builder.)]
-    (when-let [data (lookup-entry config id :healthy-threshold)]
-      (. builder healthyThreshold data))
-    (when-let [data (lookup-entry config id :interval)]
-      (. builder interval data))
-    (when-let [data (lookup-entry config id :path)]
-      (. builder path data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :unhealthy-threshold)]
-      (. builder unhealthyThreshold data))
-    (.build builder)))
+| `unhealthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |
+"
+  [^HttpHealthCheckOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :healthy-threshold)]
+    (. builder healthyThreshold data))
+  (when-let [data (lookup-entry config id :interval)]
+    (. builder interval data))
+  (when-let [data (lookup-entry config id :path)]
+    (. builder path data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :unhealthy-threshold)]
+    (. builder unhealthyThreshold data))
+  (.build builder))
 
 
-(defn http-retry-policy-builder
-  "The http-retry-policy-builder function buildes out new instances of 
-HttpRetryPolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-retry-policy-builder
+  "The build-http-retry-policy-builder function updates a HttpRetryPolicy$Builder instance using the provided configuration.
+  The function takes the HttpRetryPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `httpRetryEvents` | java.util.List | [[cdk.support/lookup-entry]] | `:http-retry-events` |
 | `retryAttempts` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retry-attempts` |
 | `retryTimeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:retry-timeout` |
-| `tcpRetryEvents` | java.util.List | [[cdk.support/lookup-entry]] | `:tcp-retry-events` |"
-  [stack id config]
-  (let [builder (HttpRetryPolicy$Builder.)]
-    (when-let [data (lookup-entry config id :http-retry-events)]
-      (. builder httpRetryEvents data))
-    (when-let [data (lookup-entry config id :retry-attempts)]
-      (. builder retryAttempts data))
-    (when-let [data (lookup-entry config id :retry-timeout)]
-      (. builder retryTimeout data))
-    (when-let [data (lookup-entry config id :tcp-retry-events)]
-      (. builder tcpRetryEvents data))
-    (.build builder)))
+| `tcpRetryEvents` | java.util.List | [[cdk.support/lookup-entry]] | `:tcp-retry-events` |
+"
+  [^HttpRetryPolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :http-retry-events)]
+    (. builder httpRetryEvents data))
+  (when-let [data (lookup-entry config id :retry-attempts)]
+    (. builder retryAttempts data))
+  (when-let [data (lookup-entry config id :retry-timeout)]
+    (. builder retryTimeout data))
+  (when-let [data (lookup-entry config id :tcp-retry-events)]
+    (. builder tcpRetryEvents data))
+  (.build builder))
 
 
-(defn http-route-match-builder
-  "The http-route-match-builder function buildes out new instances of 
-HttpRouteMatch$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-route-match-builder
+  "The build-http-route-match-builder function updates a HttpRouteMatch$Builder instance using the provided configuration.
+  The function takes the HttpRouteMatch$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3804,44 +4338,50 @@ HttpRouteMatch$Builder using the provided configuration.  Each field is set as f
 | `path` | software.amazon.awscdk.services.appmesh.HttpRoutePathMatch | [[cdk.support/lookup-entry]] | `:path` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `protocol` | software.amazon.awscdk.services.appmesh.HttpRouteProtocol | [[cdk.api.services.appmesh/http-route-protocol]] | `:protocol` |
-| `queryParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:query-parameters` |"
-  [stack id config]
-  (let [builder (HttpRouteMatch$Builder.)]
-    (when-let [data (lookup-entry config id :headers)]
-      (. builder headers data))
-    (when-let [data (http-route-method config id :method)]
-      (. builder method data))
-    (when-let [data (lookup-entry config id :path)]
-      (. builder path data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (http-route-protocol config id :protocol)]
-      (. builder protocol data))
-    (when-let [data (lookup-entry config id :query-parameters)]
-      (. builder queryParameters data))
-    (.build builder)))
+| `queryParameters` | java.util.List | [[cdk.support/lookup-entry]] | `:query-parameters` |
+"
+  [^HttpRouteMatch$Builder builder id config]
+  (when-let [data (lookup-entry config id :headers)]
+    (. builder headers data))
+  (when-let [data (http-route-method config id :method)]
+    (. builder method data))
+  (when-let [data (lookup-entry config id :path)]
+    (. builder path data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (http-route-protocol config id :protocol)]
+    (. builder protocol data))
+  (when-let [data (lookup-entry config id :query-parameters)]
+    (. builder queryParameters data))
+  (.build builder))
 
 
-(defn http-route-path-match-config-builder
-  "The http-route-path-match-config-builder function buildes out new instances of 
-HttpRoutePathMatchConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-route-path-match-config-builder
+  "The build-http-route-path-match-config-builder function updates a HttpRoutePathMatchConfig$Builder instance using the provided configuration.
+  The function takes the HttpRoutePathMatchConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `prefixPathMatch` | java.lang.String | [[cdk.support/lookup-entry]] | `:prefix-path-match` |
-| `wholePathMatch` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpPathMatchProperty | [[cdk.support/lookup-entry]] | `:whole-path-match` |"
-  [stack id config]
-  (let [builder (HttpRoutePathMatchConfig$Builder.)]
-    (when-let [data (lookup-entry config id :prefix-path-match)]
-      (. builder prefixPathMatch data))
-    (when-let [data (lookup-entry config id :whole-path-match)]
-      (. builder wholePathMatch data))
-    (.build builder)))
+| `wholePathMatch` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpPathMatchProperty | [[cdk.support/lookup-entry]] | `:whole-path-match` |
+"
+  [^HttpRoutePathMatchConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :prefix-path-match)]
+    (. builder prefixPathMatch data))
+  (when-let [data (lookup-entry config id :whole-path-match)]
+    (. builder wholePathMatch data))
+  (.build builder))
 
 
-(defn http-route-spec-options-builder
-  "The http-route-spec-options-builder function buildes out new instances of 
-HttpRouteSpecOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-route-spec-options-builder
+  "The build-http-route-spec-options-builder function updates a HttpRouteSpecOptions$Builder instance using the provided configuration.
+  The function takes the HttpRouteSpecOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3849,42 +4389,48 @@ HttpRouteSpecOptions$Builder using the provided configuration.  Each field is se
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 | `retryPolicy` | software.amazon.awscdk.services.appmesh.HttpRetryPolicy | [[cdk.support/lookup-entry]] | `:retry-policy` |
 | `timeout` | software.amazon.awscdk.services.appmesh.HttpTimeout | [[cdk.support/lookup-entry]] | `:timeout` |
-| `weightedTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:weighted-targets` |"
-  [stack id config]
-  (let [builder (HttpRouteSpecOptions$Builder.)]
-    (when-let [data (lookup-entry config id :match)]
-      (. builder match data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :retry-policy)]
-      (. builder retryPolicy data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :weighted-targets)]
-      (. builder weightedTargets data))
-    (.build builder)))
+| `weightedTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:weighted-targets` |
+"
+  [^HttpRouteSpecOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :match)]
+    (. builder match data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :retry-policy)]
+    (. builder retryPolicy data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :weighted-targets)]
+    (. builder weightedTargets data))
+  (.build builder))
 
 
-(defn http-timeout-builder
-  "The http-timeout-builder function buildes out new instances of 
-HttpTimeout$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-timeout-builder
+  "The build-http-timeout-builder function updates a HttpTimeout$Builder instance using the provided configuration.
+  The function takes the HttpTimeout$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `idle` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:idle` |
-| `perRequest` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:per-request` |"
-  [stack id config]
-  (let [builder (HttpTimeout$Builder.)]
-    (when-let [data (lookup-entry config id :idle)]
-      (. builder idle data))
-    (when-let [data (lookup-entry config id :per-request)]
-      (. builder perRequest data))
-    (.build builder)))
+| `perRequest` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:per-request` |
+"
+  [^HttpTimeout$Builder builder id config]
+  (when-let [data (lookup-entry config id :idle)]
+    (. builder idle data))
+  (when-let [data (lookup-entry config id :per-request)]
+    (. builder perRequest data))
+  (.build builder))
 
 
-(defn http-virtual-node-listener-options-builder
-  "The http-virtual-node-listener-options-builder function buildes out new instances of 
-HttpVirtualNodeListenerOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http-virtual-node-listener-options-builder
+  "The build-http-virtual-node-listener-options-builder function updates a HttpVirtualNodeListenerOptions$Builder instance using the provided configuration.
+  The function takes the HttpVirtualNodeListenerOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3893,64 +4439,73 @@ HttpVirtualNodeListenerOptions$Builder using the provided configuration.  Each f
 | `outlierDetection` | software.amazon.awscdk.services.appmesh.OutlierDetection | [[cdk.support/lookup-entry]] | `:outlier-detection` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `timeout` | software.amazon.awscdk.services.appmesh.HttpTimeout | [[cdk.support/lookup-entry]] | `:timeout` |
-| `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |"
-  [stack id config]
-  (let [builder (HttpVirtualNodeListenerOptions$Builder.)]
-    (when-let [data (lookup-entry config id :connection-pool)]
-      (. builder connectionPool data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :outlier-detection)]
-      (. builder outlierDetection data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :tls)]
-      (. builder tls data))
-    (.build builder)))
+| `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |
+"
+  [^HttpVirtualNodeListenerOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-pool)]
+    (. builder connectionPool data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :outlier-detection)]
+    (. builder outlierDetection data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :tls)]
+    (. builder tls data))
+  (.build builder))
 
 
-(defn http2-connection-pool-builder
-  "The http2-connection-pool-builder function buildes out new instances of 
-Http2ConnectionPool$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http2-connection-pool-builder
+  "The build-http2-connection-pool-builder function updates a Http2ConnectionPool$Builder instance using the provided configuration.
+  The function takes the Http2ConnectionPool$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `maxRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-requests` |"
-  [stack id config]
-  (let [builder (Http2ConnectionPool$Builder.)]
-    (when-let [data (lookup-entry config id :max-requests)]
-      (. builder maxRequests data))
-    (.build builder)))
+| `maxRequests` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-requests` |
+"
+  [^Http2ConnectionPool$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-requests)]
+    (. builder maxRequests data))
+  (.build builder))
 
 
-(defn http2-gateway-listener-options-builder
-  "The http2-gateway-listener-options-builder function buildes out new instances of 
-Http2GatewayListenerOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http2-gateway-listener-options-builder
+  "The build-http2-gateway-listener-options-builder function updates a Http2GatewayListenerOptions$Builder instance using the provided configuration.
+  The function takes the Http2GatewayListenerOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `connectionPool` | software.amazon.awscdk.services.appmesh.Http2ConnectionPool | [[cdk.support/lookup-entry]] | `:connection-pool` |
 | `healthCheck` | software.amazon.awscdk.services.appmesh.HealthCheck | [[cdk.support/lookup-entry]] | `:health-check` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
-| `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |"
-  [stack id config]
-  (let [builder (Http2GatewayListenerOptions$Builder.)]
-    (when-let [data (lookup-entry config id :connection-pool)]
-      (. builder connectionPool data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :tls)]
-      (. builder tls data))
-    (.build builder)))
+| `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |
+"
+  [^Http2GatewayListenerOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-pool)]
+    (. builder connectionPool data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :tls)]
+    (. builder tls data))
+  (.build builder))
 
 
-(defn http2-virtual-node-listener-options-builder
-  "The http2-virtual-node-listener-options-builder function buildes out new instances of 
-Http2VirtualNodeListenerOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-http2-virtual-node-listener-options-builder
+  "The build-http2-virtual-node-listener-options-builder function updates a Http2VirtualNodeListenerOptions$Builder instance using the provided configuration.
+  The function takes the Http2VirtualNodeListenerOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -3959,249 +4514,288 @@ Http2VirtualNodeListenerOptions$Builder using the provided configuration.  Each 
 | `outlierDetection` | software.amazon.awscdk.services.appmesh.OutlierDetection | [[cdk.support/lookup-entry]] | `:outlier-detection` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `timeout` | software.amazon.awscdk.services.appmesh.HttpTimeout | [[cdk.support/lookup-entry]] | `:timeout` |
-| `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |"
-  [stack id config]
-  (let [builder (Http2VirtualNodeListenerOptions$Builder.)]
-    (when-let [data (lookup-entry config id :connection-pool)]
-      (. builder connectionPool data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :outlier-detection)]
-      (. builder outlierDetection data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :tls)]
-      (. builder tls data))
-    (.build builder)))
+| `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |
+"
+  [^Http2VirtualNodeListenerOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-pool)]
+    (. builder connectionPool data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :outlier-detection)]
+    (. builder outlierDetection data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :tls)]
+    (. builder tls data))
+  (.build builder))
 
 
-(defn listener-tls-options-builder
-  "The listener-tls-options-builder function buildes out new instances of 
-ListenerTlsOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-listener-tls-options-builder
+  "The build-listener-tls-options-builder function updates a ListenerTlsOptions$Builder instance using the provided configuration.
+  The function takes the ListenerTlsOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `certificate` | software.amazon.awscdk.services.appmesh.TlsCertificate | [[cdk.support/lookup-entry]] | `:certificate` |
 | `mode` | software.amazon.awscdk.services.appmesh.TlsMode | [[cdk.api.services.appmesh/tls-mode]] | `:mode` |
-| `mutualTlsValidation` | software.amazon.awscdk.services.appmesh.MutualTlsValidation | [[cdk.support/lookup-entry]] | `:mutual-tls-validation` |"
-  [stack id config]
-  (let [builder (ListenerTlsOptions$Builder.)]
-    (when-let [data (lookup-entry config id :certificate)]
-      (. builder certificate data))
-    (when-let [data (tls-mode config id :mode)]
-      (. builder mode data))
-    (when-let [data (lookup-entry config id :mutual-tls-validation)]
-      (. builder mutualTlsValidation data))
-    (.build builder)))
+| `mutualTlsValidation` | software.amazon.awscdk.services.appmesh.MutualTlsValidation | [[cdk.support/lookup-entry]] | `:mutual-tls-validation` |
+"
+  [^ListenerTlsOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :certificate)]
+    (. builder certificate data))
+  (when-let [data (tls-mode config id :mode)]
+    (. builder mode data))
+  (when-let [data (lookup-entry config id :mutual-tls-validation)]
+    (. builder mutualTlsValidation data))
+  (.build builder))
 
 
-(defn logging-format-config-builder
-  "The logging-format-config-builder function buildes out new instances of 
-LoggingFormatConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-logging-format-config-builder
+  "The build-logging-format-config-builder function updates a LoggingFormatConfig$Builder instance using the provided configuration.
+  The function takes the LoggingFormatConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `formatConfig` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$LoggingFormatProperty | [[cdk.support/lookup-entry]] | `:format-config` |"
-  [stack id config]
-  (let [builder (LoggingFormatConfig$Builder.)]
-    (when-let [data (lookup-entry config id :format-config)]
-      (. builder formatConfig data))
-    (.build builder)))
-
-
-(defn mesh-builder
-  "The mesh-builder function buildes out new instances of 
-Mesh$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `egressFilter` | software.amazon.awscdk.services.appmesh.MeshFilterType | [[cdk.api.services.appmesh/mesh-filter-type]] | `:egress-filter` |
-| `meshName` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-name` |
-| `serviceDiscovery` | software.amazon.awscdk.services.appmesh.MeshServiceDiscovery | [[cdk.support/lookup-entry]] | `:service-discovery` |"
-  [stack id config]
-  (let [builder (Mesh$Builder/create stack id)]
-    (when-let [data (mesh-filter-type config id :egress-filter)]
-      (. builder egressFilter data))
-    (when-let [data (lookup-entry config id :mesh-name)]
-      (. builder meshName data))
-    (when-let [data (lookup-entry config id :service-discovery)]
-      (. builder serviceDiscovery data))
-    (.build builder)))
+| `formatConfig` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$LoggingFormatProperty | [[cdk.support/lookup-entry]] | `:format-config` |
+"
+  [^LoggingFormatConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :format-config)]
+    (. builder formatConfig data))
+  (.build builder))
 
 
-(defn mesh-props-builder
-  "The mesh-props-builder function buildes out new instances of 
-MeshProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-mesh-builder
+  "The build-mesh-builder function updates a Mesh$Builder instance using the provided configuration.
+  The function takes the Mesh$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `egressFilter` | software.amazon.awscdk.services.appmesh.MeshFilterType | [[cdk.api.services.appmesh/mesh-filter-type]] | `:egress-filter` |
 | `meshName` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-name` |
-| `serviceDiscovery` | software.amazon.awscdk.services.appmesh.MeshServiceDiscovery | [[cdk.support/lookup-entry]] | `:service-discovery` |"
-  [stack id config]
-  (let [builder (MeshProps$Builder.)]
-    (when-let [data (mesh-filter-type config id :egress-filter)]
-      (. builder egressFilter data))
-    (when-let [data (lookup-entry config id :mesh-name)]
-      (. builder meshName data))
-    (when-let [data (lookup-entry config id :service-discovery)]
-      (. builder serviceDiscovery data))
-    (.build builder)))
+| `serviceDiscovery` | software.amazon.awscdk.services.appmesh.MeshServiceDiscovery | [[cdk.support/lookup-entry]] | `:service-discovery` |
+"
+  [^Mesh$Builder builder id config]
+  (when-let [data (mesh-filter-type config id :egress-filter)]
+    (. builder egressFilter data))
+  (when-let [data (lookup-entry config id :mesh-name)]
+    (. builder meshName data))
+  (when-let [data (lookup-entry config id :service-discovery)]
+    (. builder serviceDiscovery data))
+  (.build builder))
 
 
-(defn mesh-service-discovery-builder
-  "The mesh-service-discovery-builder function buildes out new instances of 
-MeshServiceDiscovery$Builder using the provided configuration.  Each field is set as follows:
+(defn build-mesh-props-builder
+  "The build-mesh-props-builder function updates a MeshProps$Builder instance using the provided configuration.
+  The function takes the MeshProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `ipPreference` | software.amazon.awscdk.services.appmesh.IpPreference | [[cdk.api.services.appmesh/ip-preference]] | `:ip-preference` |"
-  [stack id config]
-  (let [builder (MeshServiceDiscovery$Builder.)]
-    (when-let [data (ip-preference config id :ip-preference)]
-      (. builder ipPreference data))
-    (.build builder)))
+| `egressFilter` | software.amazon.awscdk.services.appmesh.MeshFilterType | [[cdk.api.services.appmesh/mesh-filter-type]] | `:egress-filter` |
+| `meshName` | java.lang.String | [[cdk.support/lookup-entry]] | `:mesh-name` |
+| `serviceDiscovery` | software.amazon.awscdk.services.appmesh.MeshServiceDiscovery | [[cdk.support/lookup-entry]] | `:service-discovery` |
+"
+  [^MeshProps$Builder builder id config]
+  (when-let [data (mesh-filter-type config id :egress-filter)]
+    (. builder egressFilter data))
+  (when-let [data (lookup-entry config id :mesh-name)]
+    (. builder meshName data))
+  (when-let [data (lookup-entry config id :service-discovery)]
+    (. builder serviceDiscovery data))
+  (.build builder))
 
 
-(defn mutual-tls-validation-builder
-  "The mutual-tls-validation-builder function buildes out new instances of 
-MutualTlsValidation$Builder using the provided configuration.  Each field is set as follows:
+(defn build-mesh-service-discovery-builder
+  "The build-mesh-service-discovery-builder function updates a MeshServiceDiscovery$Builder instance using the provided configuration.
+  The function takes the MeshServiceDiscovery$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `ipPreference` | software.amazon.awscdk.services.appmesh.IpPreference | [[cdk.api.services.appmesh/ip-preference]] | `:ip-preference` |
+"
+  [^MeshServiceDiscovery$Builder builder id config]
+  (when-let [data (ip-preference config id :ip-preference)]
+    (. builder ipPreference data))
+  (.build builder))
+
+
+(defn build-mutual-tls-validation-builder
+  "The build-mutual-tls-validation-builder function updates a MutualTlsValidation$Builder instance using the provided configuration.
+  The function takes the MutualTlsValidation$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `subjectAlternativeNames` | software.amazon.awscdk.services.appmesh.SubjectAlternativeNames | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
-| `trust` | software.amazon.awscdk.services.appmesh.MutualTlsValidationTrust | [[cdk.support/lookup-entry]] | `:trust` |"
-  [stack id config]
-  (let [builder (MutualTlsValidation$Builder.)]
-    (when-let [data (lookup-entry config id :subject-alternative-names)]
-      (. builder subjectAlternativeNames data))
-    (when-let [data (lookup-entry config id :trust)]
-      (. builder trust data))
-    (.build builder)))
+| `trust` | software.amazon.awscdk.services.appmesh.MutualTlsValidationTrust | [[cdk.support/lookup-entry]] | `:trust` |
+"
+  [^MutualTlsValidation$Builder builder id config]
+  (when-let [data (lookup-entry config id :subject-alternative-names)]
+    (. builder subjectAlternativeNames data))
+  (when-let [data (lookup-entry config id :trust)]
+    (. builder trust data))
+  (.build builder))
 
 
-(defn outlier-detection-builder
-  "The outlier-detection-builder function buildes out new instances of 
-OutlierDetection$Builder using the provided configuration.  Each field is set as follows:
+(defn build-outlier-detection-builder
+  "The build-outlier-detection-builder function updates a OutlierDetection$Builder instance using the provided configuration.
+  The function takes the OutlierDetection$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `baseEjectionDuration` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:base-ejection-duration` |
 | `interval` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:interval` |
 | `maxEjectionPercent` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-ejection-percent` |
-| `maxServerErrors` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-server-errors` |"
-  [stack id config]
-  (let [builder (OutlierDetection$Builder.)]
-    (when-let [data (lookup-entry config id :base-ejection-duration)]
-      (. builder baseEjectionDuration data))
-    (when-let [data (lookup-entry config id :interval)]
-      (. builder interval data))
-    (when-let [data (lookup-entry config id :max-ejection-percent)]
-      (. builder maxEjectionPercent data))
-    (when-let [data (lookup-entry config id :max-server-errors)]
-      (. builder maxServerErrors data))
-    (.build builder)))
+| `maxServerErrors` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-server-errors` |
+"
+  [^OutlierDetection$Builder builder id config]
+  (when-let [data (lookup-entry config id :base-ejection-duration)]
+    (. builder baseEjectionDuration data))
+  (when-let [data (lookup-entry config id :interval)]
+    (. builder interval data))
+  (when-let [data (lookup-entry config id :max-ejection-percent)]
+    (. builder maxEjectionPercent data))
+  (when-let [data (lookup-entry config id :max-server-errors)]
+    (. builder maxServerErrors data))
+  (.build builder))
 
 
-(defn query-parameter-match-config-builder
-  "The query-parameter-match-config-builder function buildes out new instances of 
-QueryParameterMatchConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-query-parameter-match-config-builder
+  "The build-query-parameter-match-config-builder function updates a QueryParameterMatchConfig$Builder instance using the provided configuration.
+  The function takes the QueryParameterMatchConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `queryParameterMatch` | software.amazon.awscdk.services.appmesh.CfnRoute$QueryParameterProperty | [[cdk.support/lookup-entry]] | `:query-parameter-match` |"
-  [stack id config]
-  (let [builder (QueryParameterMatchConfig$Builder.)]
-    (when-let [data (lookup-entry config id :query-parameter-match)]
-      (. builder queryParameterMatch data))
-    (.build builder)))
-
-
-(defn route-attributes-builder
-  "The route-attributes-builder function buildes out new instances of 
-RouteAttributes$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `routeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:route-name` |
-| `virtualRouter` | software.amazon.awscdk.services.appmesh.IVirtualRouter | [[cdk.support/lookup-entry]] | `:virtual-router` |"
-  [stack id config]
-  (let [builder (RouteAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :route-name)]
-      (. builder routeName data))
-    (when-let [data (lookup-entry config id :virtual-router)]
-      (. builder virtualRouter data))
-    (.build builder)))
+| `queryParameterMatch` | software.amazon.awscdk.services.appmesh.CfnRoute$QueryParameterProperty | [[cdk.support/lookup-entry]] | `:query-parameter-match` |
+"
+  [^QueryParameterMatchConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :query-parameter-match)]
+    (. builder queryParameterMatch data))
+  (.build builder))
 
 
-(defn route-base-props-builder
-  "The route-base-props-builder function buildes out new instances of 
-RouteBaseProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-route-attributes-builder
+  "The build-route-attributes-builder function updates a RouteAttributes$Builder instance using the provided configuration.
+  The function takes the RouteAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `routeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:route-name` |
-| `routeSpec` | software.amazon.awscdk.services.appmesh.RouteSpec | [[cdk.support/lookup-entry]] | `:route-spec` |"
-  [stack id config]
-  (let [builder (RouteBaseProps$Builder.)]
-    (when-let [data (lookup-entry config id :route-name)]
-      (. builder routeName data))
-    (when-let [data (lookup-entry config id :route-spec)]
-      (. builder routeSpec data))
-    (.build builder)))
+| `virtualRouter` | software.amazon.awscdk.services.appmesh.IVirtualRouter | [[cdk.support/lookup-entry]] | `:virtual-router` |
+"
+  [^RouteAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :route-name)]
+    (. builder routeName data))
+  (when-let [data (lookup-entry config id :virtual-router)]
+    (. builder virtualRouter data))
+  (.build builder))
 
 
-(defn route-builder
-  "The route-builder function buildes out new instances of 
-Route$Builder using the provided configuration.  Each field is set as follows:
+(defn build-route-base-props-builder
+  "The build-route-base-props-builder function updates a RouteBaseProps$Builder instance using the provided configuration.
+  The function takes the RouteBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `routeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:route-name` |
+| `routeSpec` | software.amazon.awscdk.services.appmesh.RouteSpec | [[cdk.support/lookup-entry]] | `:route-spec` |
+"
+  [^RouteBaseProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :route-name)]
+    (. builder routeName data))
+  (when-let [data (lookup-entry config id :route-spec)]
+    (. builder routeSpec data))
+  (.build builder))
+
+
+(defn build-route-builder
+  "The build-route-builder function updates a Route$Builder instance using the provided configuration.
+  The function takes the Route$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `mesh` | software.amazon.awscdk.services.appmesh.IMesh | [[cdk.support/lookup-entry]] | `:mesh` |
 | `routeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:route-name` |
 | `routeSpec` | software.amazon.awscdk.services.appmesh.RouteSpec | [[cdk.support/lookup-entry]] | `:route-spec` |
-| `virtualRouter` | software.amazon.awscdk.services.appmesh.IVirtualRouter | [[cdk.support/lookup-entry]] | `:virtual-router` |"
-  [stack id config]
-  (let [builder (Route$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :mesh)]
-      (. builder mesh data))
-    (when-let [data (lookup-entry config id :route-name)]
-      (. builder routeName data))
-    (when-let [data (lookup-entry config id :route-spec)]
-      (. builder routeSpec data))
-    (when-let [data (lookup-entry config id :virtual-router)]
-      (. builder virtualRouter data))
-    (.build builder)))
+| `virtualRouter` | software.amazon.awscdk.services.appmesh.IVirtualRouter | [[cdk.support/lookup-entry]] | `:virtual-router` |
+"
+  [^Route$Builder builder id config]
+  (when-let [data (lookup-entry config id :mesh)]
+    (. builder mesh data))
+  (when-let [data (lookup-entry config id :route-name)]
+    (. builder routeName data))
+  (when-let [data (lookup-entry config id :route-spec)]
+    (. builder routeSpec data))
+  (when-let [data (lookup-entry config id :virtual-router)]
+    (. builder virtualRouter data))
+  (.build builder))
 
 
-(defn route-props-builder
-  "The route-props-builder function buildes out new instances of 
-RouteProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-route-props-builder
+  "The build-route-props-builder function updates a RouteProps$Builder instance using the provided configuration.
+  The function takes the RouteProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `mesh` | software.amazon.awscdk.services.appmesh.IMesh | [[cdk.support/lookup-entry]] | `:mesh` |
 | `routeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:route-name` |
 | `routeSpec` | software.amazon.awscdk.services.appmesh.RouteSpec | [[cdk.support/lookup-entry]] | `:route-spec` |
-| `virtualRouter` | software.amazon.awscdk.services.appmesh.IVirtualRouter | [[cdk.support/lookup-entry]] | `:virtual-router` |"
-  [stack id config]
-  (let [builder (RouteProps$Builder.)]
-    (when-let [data (lookup-entry config id :mesh)]
-      (. builder mesh data))
-    (when-let [data (lookup-entry config id :route-name)]
-      (. builder routeName data))
-    (when-let [data (lookup-entry config id :route-spec)]
-      (. builder routeSpec data))
-    (when-let [data (lookup-entry config id :virtual-router)]
-      (. builder virtualRouter data))
-    (.build builder)))
+| `virtualRouter` | software.amazon.awscdk.services.appmesh.IVirtualRouter | [[cdk.support/lookup-entry]] | `:virtual-router` |
+"
+  [^RouteProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :mesh)]
+    (. builder mesh data))
+  (when-let [data (lookup-entry config id :route-name)]
+    (. builder routeName data))
+  (when-let [data (lookup-entry config id :route-spec)]
+    (. builder routeSpec data))
+  (when-let [data (lookup-entry config id :virtual-router)]
+    (. builder virtualRouter data))
+  (.build builder))
 
 
-(defn route-spec-config-builder
-  "The route-spec-config-builder function buildes out new instances of 
-RouteSpecConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-route-spec-config-builder
+  "The build-route-spec-config-builder function updates a RouteSpecConfig$Builder instance using the provided configuration.
+  The function takes the RouteSpecConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -4209,141 +4803,165 @@ RouteSpecConfig$Builder using the provided configuration.  Each field is set as 
 | `http2RouteSpec` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpRouteProperty | [[cdk.support/lookup-entry]] | `:http2-route-spec` |
 | `httpRouteSpec` | software.amazon.awscdk.services.appmesh.CfnRoute$HttpRouteProperty | [[cdk.support/lookup-entry]] | `:http-route-spec` |
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
-| `tcpRouteSpec` | software.amazon.awscdk.services.appmesh.CfnRoute$TcpRouteProperty | [[cdk.support/lookup-entry]] | `:tcp-route-spec` |"
-  [stack id config]
-  (let [builder (RouteSpecConfig$Builder.)]
-    (when-let [data (lookup-entry config id :grpc-route-spec)]
-      (. builder grpcRouteSpec data))
-    (when-let [data (lookup-entry config id :http2-route-spec)]
-      (. builder http2RouteSpec data))
-    (when-let [data (lookup-entry config id :http-route-spec)]
-      (. builder httpRouteSpec data))
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :tcp-route-spec)]
-      (. builder tcpRouteSpec data))
-    (.build builder)))
+| `tcpRouteSpec` | software.amazon.awscdk.services.appmesh.CfnRoute$TcpRouteProperty | [[cdk.support/lookup-entry]] | `:tcp-route-spec` |
+"
+  [^RouteSpecConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :grpc-route-spec)]
+    (. builder grpcRouteSpec data))
+  (when-let [data (lookup-entry config id :http2-route-spec)]
+    (. builder http2RouteSpec data))
+  (when-let [data (lookup-entry config id :http-route-spec)]
+    (. builder httpRouteSpec data))
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :tcp-route-spec)]
+    (. builder tcpRouteSpec data))
+  (.build builder))
 
 
-(defn route-spec-options-base-builder
-  "The route-spec-options-base-builder function buildes out new instances of 
-RouteSpecOptionsBase$Builder using the provided configuration.  Each field is set as follows:
+(defn build-route-spec-options-base-builder
+  "The build-route-spec-options-base-builder function updates a RouteSpecOptionsBase$Builder instance using the provided configuration.
+  The function takes the RouteSpecOptionsBase$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |"
-  [stack id config]
-  (let [builder (RouteSpecOptionsBase$Builder.)]
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (.build builder)))
+| `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
+"
+  [^RouteSpecOptionsBase$Builder builder id config]
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (.build builder))
 
 
-(defn service-discovery-config-builder
-  "The service-discovery-config-builder function buildes out new instances of 
-ServiceDiscoveryConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-service-discovery-config-builder
+  "The build-service-discovery-config-builder function updates a ServiceDiscoveryConfig$Builder instance using the provided configuration.
+  The function takes the ServiceDiscoveryConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `cloudmap` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$AwsCloudMapServiceDiscoveryProperty | [[cdk.support/lookup-entry]] | `:cloudmap` |
-| `dns` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$DnsServiceDiscoveryProperty | [[cdk.support/lookup-entry]] | `:dns` |"
-  [stack id config]
-  (let [builder (ServiceDiscoveryConfig$Builder.)]
-    (when-let [data (lookup-entry config id :cloudmap)]
-      (. builder cloudmap data))
-    (when-let [data (lookup-entry config id :dns)]
-      (. builder dns data))
-    (.build builder)))
+| `dns` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$DnsServiceDiscoveryProperty | [[cdk.support/lookup-entry]] | `:dns` |
+"
+  [^ServiceDiscoveryConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :cloudmap)]
+    (. builder cloudmap data))
+  (when-let [data (lookup-entry config id :dns)]
+    (. builder dns data))
+  (.build builder))
 
 
-(defn subject-alternative-names-matcher-config-builder
-  "The subject-alternative-names-matcher-config-builder function buildes out new instances of 
-SubjectAlternativeNamesMatcherConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-subject-alternative-names-matcher-config-builder
+  "The build-subject-alternative-names-matcher-config-builder function updates a SubjectAlternativeNamesMatcherConfig$Builder instance using the provided configuration.
+  The function takes the SubjectAlternativeNamesMatcherConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `subjectAlternativeNamesMatch` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$SubjectAlternativeNameMatchersProperty | [[cdk.support/lookup-entry]] | `:subject-alternative-names-match` |"
-  [stack id config]
-  (let [builder (SubjectAlternativeNamesMatcherConfig$Builder.)]
-    (when-let [data (lookup-entry config id :subject-alternative-names-match)]
-      (. builder subjectAlternativeNamesMatch data))
-    (.build builder)))
-
-
-(defn tcp-connection-pool-builder
-  "The tcp-connection-pool-builder function buildes out new instances of 
-TcpConnectionPool$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `maxConnections` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-connections` |"
-  [stack id config]
-  (let [builder (TcpConnectionPool$Builder.)]
-    (when-let [data (lookup-entry config id :max-connections)]
-      (. builder maxConnections data))
-    (.build builder)))
+| `subjectAlternativeNamesMatch` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$SubjectAlternativeNameMatchersProperty | [[cdk.support/lookup-entry]] | `:subject-alternative-names-match` |
+"
+  [^SubjectAlternativeNamesMatcherConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :subject-alternative-names-match)]
+    (. builder subjectAlternativeNamesMatch data))
+  (.build builder))
 
 
-(defn tcp-health-check-options-builder
-  "The tcp-health-check-options-builder function buildes out new instances of 
-TcpHealthCheckOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-tcp-connection-pool-builder
+  "The build-tcp-connection-pool-builder function updates a TcpConnectionPool$Builder instance using the provided configuration.
+  The function takes the TcpConnectionPool$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `maxConnections` | java.lang.Number | [[cdk.support/lookup-entry]] | `:max-connections` |
+"
+  [^TcpConnectionPool$Builder builder id config]
+  (when-let [data (lookup-entry config id :max-connections)]
+    (. builder maxConnections data))
+  (.build builder))
+
+
+(defn build-tcp-health-check-options-builder
+  "The build-tcp-health-check-options-builder function updates a TcpHealthCheckOptions$Builder instance using the provided configuration.
+  The function takes the TcpHealthCheckOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `healthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:healthy-threshold` |
 | `interval` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:interval` |
 | `timeout` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:timeout` |
-| `unhealthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |"
-  [stack id config]
-  (let [builder (TcpHealthCheckOptions$Builder.)]
-    (when-let [data (lookup-entry config id :healthy-threshold)]
-      (. builder healthyThreshold data))
-    (when-let [data (lookup-entry config id :interval)]
-      (. builder interval data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :unhealthy-threshold)]
-      (. builder unhealthyThreshold data))
-    (.build builder)))
+| `unhealthyThreshold` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unhealthy-threshold` |
+"
+  [^TcpHealthCheckOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :healthy-threshold)]
+    (. builder healthyThreshold data))
+  (when-let [data (lookup-entry config id :interval)]
+    (. builder interval data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :unhealthy-threshold)]
+    (. builder unhealthyThreshold data))
+  (.build builder))
 
 
-(defn tcp-route-spec-options-builder
-  "The tcp-route-spec-options-builder function buildes out new instances of 
-TcpRouteSpecOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-tcp-route-spec-options-builder
+  "The build-tcp-route-spec-options-builder function updates a TcpRouteSpecOptions$Builder instance using the provided configuration.
+  The function takes the TcpRouteSpecOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `priority` | java.lang.Number | [[cdk.support/lookup-entry]] | `:priority` |
 | `timeout` | software.amazon.awscdk.services.appmesh.TcpTimeout | [[cdk.support/lookup-entry]] | `:timeout` |
-| `weightedTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:weighted-targets` |"
-  [stack id config]
-  (let [builder (TcpRouteSpecOptions$Builder.)]
-    (when-let [data (lookup-entry config id :priority)]
-      (. builder priority data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :weighted-targets)]
-      (. builder weightedTargets data))
-    (.build builder)))
+| `weightedTargets` | java.util.List | [[cdk.support/lookup-entry]] | `:weighted-targets` |
+"
+  [^TcpRouteSpecOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :priority)]
+    (. builder priority data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :weighted-targets)]
+    (. builder weightedTargets data))
+  (.build builder))
 
 
-(defn tcp-timeout-builder
-  "The tcp-timeout-builder function buildes out new instances of 
-TcpTimeout$Builder using the provided configuration.  Each field is set as follows:
+(defn build-tcp-timeout-builder
+  "The build-tcp-timeout-builder function updates a TcpTimeout$Builder instance using the provided configuration.
+  The function takes the TcpTimeout$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `idle` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:idle` |"
-  [stack id config]
-  (let [builder (TcpTimeout$Builder.)]
-    (when-let [data (lookup-entry config id :idle)]
-      (. builder idle data))
-    (.build builder)))
+| `idle` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:idle` |
+"
+  [^TcpTimeout$Builder builder id config]
+  (when-let [data (lookup-entry config id :idle)]
+    (. builder idle data))
+  (.build builder))
 
 
-(defn tcp-virtual-node-listener-options-builder
-  "The tcp-virtual-node-listener-options-builder function buildes out new instances of 
-TcpVirtualNodeListenerOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-tcp-virtual-node-listener-options-builder
+  "The build-tcp-virtual-node-listener-options-builder function updates a TcpVirtualNodeListenerOptions$Builder instance using the provided configuration.
+  The function takes the TcpVirtualNodeListenerOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -4352,175 +4970,156 @@ TcpVirtualNodeListenerOptions$Builder using the provided configuration.  Each fi
 | `outlierDetection` | software.amazon.awscdk.services.appmesh.OutlierDetection | [[cdk.support/lookup-entry]] | `:outlier-detection` |
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `timeout` | software.amazon.awscdk.services.appmesh.TcpTimeout | [[cdk.support/lookup-entry]] | `:timeout` |
-| `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |"
-  [stack id config]
-  (let [builder (TcpVirtualNodeListenerOptions$Builder.)]
-    (when-let [data (lookup-entry config id :connection-pool)]
-      (. builder connectionPool data))
-    (when-let [data (lookup-entry config id :health-check)]
-      (. builder healthCheck data))
-    (when-let [data (lookup-entry config id :outlier-detection)]
-      (. builder outlierDetection data))
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :timeout)]
-      (. builder timeout data))
-    (when-let [data (lookup-entry config id :tls)]
-      (. builder tls data))
-    (.build builder)))
+| `tls` | software.amazon.awscdk.services.appmesh.ListenerTlsOptions | [[cdk.support/lookup-entry]] | `:tls` |
+"
+  [^TcpVirtualNodeListenerOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :connection-pool)]
+    (. builder connectionPool data))
+  (when-let [data (lookup-entry config id :health-check)]
+    (. builder healthCheck data))
+  (when-let [data (lookup-entry config id :outlier-detection)]
+    (. builder outlierDetection data))
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :timeout)]
+    (. builder timeout data))
+  (when-let [data (lookup-entry config id :tls)]
+    (. builder tls data))
+  (.build builder))
 
 
-(defn tls-certificate-config-builder
-  "The tls-certificate-config-builder function buildes out new instances of 
-TlsCertificateConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-tls-certificate-config-builder
+  "The build-tls-certificate-config-builder function updates a TlsCertificateConfig$Builder instance using the provided configuration.
+  The function takes the TlsCertificateConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `tlsCertificate` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerTlsCertificateProperty | [[cdk.support/lookup-entry]] | `:tls-certificate` |"
-  [stack id config]
-  (let [builder (TlsCertificateConfig$Builder.)]
-    (when-let [data (lookup-entry config id :tls-certificate)]
-      (. builder tlsCertificate data))
-    (.build builder)))
+| `tlsCertificate` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerTlsCertificateProperty | [[cdk.support/lookup-entry]] | `:tls-certificate` |
+"
+  [^TlsCertificateConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :tls-certificate)]
+    (. builder tlsCertificate data))
+  (.build builder))
 
 
-(defn tls-client-policy-builder
-  "The tls-client-policy-builder function buildes out new instances of 
-TlsClientPolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-tls-client-policy-builder
+  "The build-tls-client-policy-builder function updates a TlsClientPolicy$Builder instance using the provided configuration.
+  The function takes the TlsClientPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `enforce` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enforce` |
 | `mutualTlsCertificate` | software.amazon.awscdk.services.appmesh.MutualTlsCertificate | [[cdk.support/lookup-entry]] | `:mutual-tls-certificate` |
 | `ports` | java.util.List | [[cdk.support/lookup-entry]] | `:ports` |
-| `validation` | software.amazon.awscdk.services.appmesh.TlsValidation | [[cdk.support/lookup-entry]] | `:validation` |"
-  [stack id config]
-  (let [builder (TlsClientPolicy$Builder.)]
-    (when-let [data (lookup-entry config id :enforce)]
-      (. builder enforce data))
-    (when-let [data (lookup-entry config id :mutual-tls-certificate)]
-      (. builder mutualTlsCertificate data))
-    (when-let [data (lookup-entry config id :ports)]
-      (. builder ports data))
-    (when-let [data (lookup-entry config id :validation)]
-      (. builder validation data))
-    (.build builder)))
+| `validation` | software.amazon.awscdk.services.appmesh.TlsValidation | [[cdk.support/lookup-entry]] | `:validation` |
+"
+  [^TlsClientPolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :enforce)]
+    (. builder enforce data))
+  (when-let [data (lookup-entry config id :mutual-tls-certificate)]
+    (. builder mutualTlsCertificate data))
+  (when-let [data (lookup-entry config id :ports)]
+    (. builder ports data))
+  (when-let [data (lookup-entry config id :validation)]
+    (. builder validation data))
+  (.build builder))
 
 
-(defn tls-validation-builder
-  "The tls-validation-builder function buildes out new instances of 
-TlsValidation$Builder using the provided configuration.  Each field is set as follows:
+(defn build-tls-validation-builder
+  "The build-tls-validation-builder function updates a TlsValidation$Builder instance using the provided configuration.
+  The function takes the TlsValidation$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `subjectAlternativeNames` | software.amazon.awscdk.services.appmesh.SubjectAlternativeNames | [[cdk.support/lookup-entry]] | `:subject-alternative-names` |
-| `trust` | software.amazon.awscdk.services.appmesh.TlsValidationTrust | [[cdk.support/lookup-entry]] | `:trust` |"
-  [stack id config]
-  (let [builder (TlsValidation$Builder.)]
-    (when-let [data (lookup-entry config id :subject-alternative-names)]
-      (. builder subjectAlternativeNames data))
-    (when-let [data (lookup-entry config id :trust)]
-      (. builder trust data))
-    (.build builder)))
+| `trust` | software.amazon.awscdk.services.appmesh.TlsValidationTrust | [[cdk.support/lookup-entry]] | `:trust` |
+"
+  [^TlsValidation$Builder builder id config]
+  (when-let [data (lookup-entry config id :subject-alternative-names)]
+    (. builder subjectAlternativeNames data))
+  (when-let [data (lookup-entry config id :trust)]
+    (. builder trust data))
+  (.build builder))
 
 
-(defn tls-validation-trust-config-builder
-  "The tls-validation-trust-config-builder function buildes out new instances of 
-TlsValidationTrustConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-tls-validation-trust-config-builder
+  "The build-tls-validation-trust-config-builder function updates a TlsValidationTrustConfig$Builder instance using the provided configuration.
+  The function takes the TlsValidationTrustConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `tlsValidationTrust` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TlsValidationContextTrustProperty | [[cdk.support/lookup-entry]] | `:tls-validation-trust` |"
-  [stack id config]
-  (let [builder (TlsValidationTrustConfig$Builder.)]
-    (when-let [data (lookup-entry config id :tls-validation-trust)]
-      (. builder tlsValidationTrust data))
-    (.build builder)))
+| `tlsValidationTrust` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$TlsValidationContextTrustProperty | [[cdk.support/lookup-entry]] | `:tls-validation-trust` |
+"
+  [^TlsValidationTrustConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :tls-validation-trust)]
+    (. builder tlsValidationTrust data))
+  (.build builder))
 
 
-(defn virtual-gateway-attributes-builder
-  "The virtual-gateway-attributes-builder function buildes out new instances of 
-VirtualGatewayAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-virtual-gateway-attributes-builder
+  "The build-virtual-gateway-attributes-builder function updates a VirtualGatewayAttributes$Builder instance using the provided configuration.
+  The function takes the VirtualGatewayAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `mesh` | software.amazon.awscdk.services.appmesh.IMesh | [[cdk.support/lookup-entry]] | `:mesh` |
-| `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |"
-  [stack id config]
-  (let [builder (VirtualGatewayAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :mesh)]
-      (. builder mesh data))
-    (when-let [data (lookup-entry config id :virtual-gateway-name)]
-      (. builder virtualGatewayName data))
-    (.build builder)))
+| `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |
+"
+  [^VirtualGatewayAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :mesh)]
+    (. builder mesh data))
+  (when-let [data (lookup-entry config id :virtual-gateway-name)]
+    (. builder virtualGatewayName data))
+  (.build builder))
 
 
-(defn virtual-gateway-base-props-builder
-  "The virtual-gateway-base-props-builder function buildes out new instances of 
-VirtualGatewayBaseProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-virtual-gateway-base-props-builder
+  "The build-virtual-gateway-base-props-builder function updates a VirtualGatewayBaseProps$Builder instance using the provided configuration.
+  The function takes the VirtualGatewayBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `accessLog` | software.amazon.awscdk.services.appmesh.AccessLog | [[cdk.support/lookup-entry]] | `:access-log` |
 | `backendDefaults` | software.amazon.awscdk.services.appmesh.BackendDefaults | [[cdk.support/lookup-entry]] | `:backend-defaults` |
 | `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
-| `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |"
-  [stack id config]
-  (let [builder (VirtualGatewayBaseProps$Builder.)]
-    (when-let [data (lookup-entry config id :access-log)]
-      (. builder accessLog data))
-    (when-let [data (lookup-entry config id :backend-defaults)]
-      (. builder backendDefaults data))
-    (when-let [data (lookup-entry config id :listeners)]
-      (. builder listeners data))
-    (when-let [data (lookup-entry config id :virtual-gateway-name)]
-      (. builder virtualGatewayName data))
-    (.build builder)))
+| `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |
+"
+  [^VirtualGatewayBaseProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :access-log)]
+    (. builder accessLog data))
+  (when-let [data (lookup-entry config id :backend-defaults)]
+    (. builder backendDefaults data))
+  (when-let [data (lookup-entry config id :listeners)]
+    (. builder listeners data))
+  (when-let [data (lookup-entry config id :virtual-gateway-name)]
+    (. builder virtualGatewayName data))
+  (.build builder))
 
 
-(defn virtual-gateway-builder
-  "The virtual-gateway-builder function buildes out new instances of 
-VirtualGateway$Builder using the provided configuration.  Each field is set as follows:
+(defn build-virtual-gateway-builder
+  "The build-virtual-gateway-builder function updates a VirtualGateway$Builder instance using the provided configuration.
+  The function takes the VirtualGateway$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `accessLog` | software.amazon.awscdk.services.appmesh.AccessLog | [[cdk.support/lookup-entry]] | `:access-log` |
-| `backendDefaults` | software.amazon.awscdk.services.appmesh.BackendDefaults | [[cdk.support/lookup-entry]] | `:backend-defaults` |
-| `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
-| `mesh` | software.amazon.awscdk.services.appmesh.IMesh | [[cdk.support/lookup-entry]] | `:mesh` |
-| `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |"
-  [stack id config]
-  (let [builder (VirtualGateway$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :access-log)]
-      (. builder accessLog data))
-    (when-let [data (lookup-entry config id :backend-defaults)]
-      (. builder backendDefaults data))
-    (when-let [data (lookup-entry config id :listeners)]
-      (. builder listeners data))
-    (when-let [data (lookup-entry config id :mesh)]
-      (. builder mesh data))
-    (when-let [data (lookup-entry config id :virtual-gateway-name)]
-      (. builder virtualGatewayName data))
-    (.build builder)))
-
-
-(defn virtual-gateway-listener-config-builder
-  "The virtual-gateway-listener-config-builder function buildes out new instances of 
-VirtualGatewayListenerConfig$Builder using the provided configuration.  Each field is set as follows:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `listener` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayListenerProperty | [[cdk.support/lookup-entry]] | `:listener` |"
-  [stack id config]
-  (let [builder (VirtualGatewayListenerConfig$Builder.)]
-    (when-let [data (lookup-entry config id :listener)]
-      (. builder listener data))
-    (.build builder)))
-
-
-(defn virtual-gateway-props-builder
-  "The virtual-gateway-props-builder function buildes out new instances of 
-VirtualGatewayProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -4528,42 +5127,94 @@ VirtualGatewayProps$Builder using the provided configuration.  Each field is set
 | `backendDefaults` | software.amazon.awscdk.services.appmesh.BackendDefaults | [[cdk.support/lookup-entry]] | `:backend-defaults` |
 | `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
 | `mesh` | software.amazon.awscdk.services.appmesh.IMesh | [[cdk.support/lookup-entry]] | `:mesh` |
-| `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |"
-  [stack id config]
-  (let [builder (VirtualGatewayProps$Builder.)]
-    (when-let [data (lookup-entry config id :access-log)]
-      (. builder accessLog data))
-    (when-let [data (lookup-entry config id :backend-defaults)]
-      (. builder backendDefaults data))
-    (when-let [data (lookup-entry config id :listeners)]
-      (. builder listeners data))
-    (when-let [data (lookup-entry config id :mesh)]
-      (. builder mesh data))
-    (when-let [data (lookup-entry config id :virtual-gateway-name)]
-      (. builder virtualGatewayName data))
-    (.build builder)))
+| `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |
+"
+  [^VirtualGateway$Builder builder id config]
+  (when-let [data (lookup-entry config id :access-log)]
+    (. builder accessLog data))
+  (when-let [data (lookup-entry config id :backend-defaults)]
+    (. builder backendDefaults data))
+  (when-let [data (lookup-entry config id :listeners)]
+    (. builder listeners data))
+  (when-let [data (lookup-entry config id :mesh)]
+    (. builder mesh data))
+  (when-let [data (lookup-entry config id :virtual-gateway-name)]
+    (. builder virtualGatewayName data))
+  (.build builder))
 
 
-(defn virtual-node-attributes-builder
-  "The virtual-node-attributes-builder function buildes out new instances of 
-VirtualNodeAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-virtual-gateway-listener-config-builder
+  "The build-virtual-gateway-listener-config-builder function updates a VirtualGatewayListenerConfig$Builder instance using the provided configuration.
+  The function takes the VirtualGatewayListenerConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `listener` | software.amazon.awscdk.services.appmesh.CfnVirtualGateway$VirtualGatewayListenerProperty | [[cdk.support/lookup-entry]] | `:listener` |
+"
+  [^VirtualGatewayListenerConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :listener)]
+    (. builder listener data))
+  (.build builder))
+
+
+(defn build-virtual-gateway-props-builder
+  "The build-virtual-gateway-props-builder function updates a VirtualGatewayProps$Builder instance using the provided configuration.
+  The function takes the VirtualGatewayProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `accessLog` | software.amazon.awscdk.services.appmesh.AccessLog | [[cdk.support/lookup-entry]] | `:access-log` |
+| `backendDefaults` | software.amazon.awscdk.services.appmesh.BackendDefaults | [[cdk.support/lookup-entry]] | `:backend-defaults` |
+| `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
+| `mesh` | software.amazon.awscdk.services.appmesh.IMesh | [[cdk.support/lookup-entry]] | `:mesh` |
+| `virtualGatewayName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-gateway-name` |
+"
+  [^VirtualGatewayProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :access-log)]
+    (. builder accessLog data))
+  (when-let [data (lookup-entry config id :backend-defaults)]
+    (. builder backendDefaults data))
+  (when-let [data (lookup-entry config id :listeners)]
+    (. builder listeners data))
+  (when-let [data (lookup-entry config id :mesh)]
+    (. builder mesh data))
+  (when-let [data (lookup-entry config id :virtual-gateway-name)]
+    (. builder virtualGatewayName data))
+  (.build builder))
+
+
+(defn build-virtual-node-attributes-builder
+  "The build-virtual-node-attributes-builder function updates a VirtualNodeAttributes$Builder instance using the provided configuration.
+  The function takes the VirtualNodeAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `mesh` | software.amazon.awscdk.services.appmesh.IMesh | [[cdk.support/lookup-entry]] | `:mesh` |
-| `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |"
-  [stack id config]
-  (let [builder (VirtualNodeAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :mesh)]
-      (. builder mesh data))
-    (when-let [data (lookup-entry config id :virtual-node-name)]
-      (. builder virtualNodeName data))
-    (.build builder)))
+| `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |
+"
+  [^VirtualNodeAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :mesh)]
+    (. builder mesh data))
+  (when-let [data (lookup-entry config id :virtual-node-name)]
+    (. builder virtualNodeName data))
+  (.build builder))
 
 
-(defn virtual-node-base-props-builder
-  "The virtual-node-base-props-builder function buildes out new instances of 
-VirtualNodeBaseProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-virtual-node-base-props-builder
+  "The build-virtual-node-base-props-builder function updates a VirtualNodeBaseProps$Builder instance using the provided configuration.
+  The function takes the VirtualNodeBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -4572,73 +5223,30 @@ VirtualNodeBaseProps$Builder using the provided configuration.  Each field is se
 | `backends` | java.util.List | [[cdk.support/lookup-entry]] | `:backends` |
 | `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
 | `serviceDiscovery` | software.amazon.awscdk.services.appmesh.ServiceDiscovery | [[cdk.support/lookup-entry]] | `:service-discovery` |
-| `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |"
-  [stack id config]
-  (let [builder (VirtualNodeBaseProps$Builder.)]
-    (when-let [data (lookup-entry config id :access-log)]
-      (. builder accessLog data))
-    (when-let [data (lookup-entry config id :backend-defaults)]
-      (. builder backendDefaults data))
-    (when-let [data (lookup-entry config id :backends)]
-      (. builder backends data))
-    (when-let [data (lookup-entry config id :listeners)]
-      (. builder listeners data))
-    (when-let [data (lookup-entry config id :service-discovery)]
-      (. builder serviceDiscovery data))
-    (when-let [data (lookup-entry config id :virtual-node-name)]
-      (. builder virtualNodeName data))
-    (.build builder)))
+| `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |
+"
+  [^VirtualNodeBaseProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :access-log)]
+    (. builder accessLog data))
+  (when-let [data (lookup-entry config id :backend-defaults)]
+    (. builder backendDefaults data))
+  (when-let [data (lookup-entry config id :backends)]
+    (. builder backends data))
+  (when-let [data (lookup-entry config id :listeners)]
+    (. builder listeners data))
+  (when-let [data (lookup-entry config id :service-discovery)]
+    (. builder serviceDiscovery data))
+  (when-let [data (lookup-entry config id :virtual-node-name)]
+    (. builder virtualNodeName data))
+  (.build builder))
 
 
-(defn virtual-node-builder
-  "The virtual-node-builder function buildes out new instances of 
-VirtualNode$Builder using the provided configuration.  Each field is set as follows:
+(defn build-virtual-node-builder
+  "The build-virtual-node-builder function updates a VirtualNode$Builder instance using the provided configuration.
+  The function takes the VirtualNode$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `accessLog` | software.amazon.awscdk.services.appmesh.AccessLog | [[cdk.support/lookup-entry]] | `:access-log` |
-| `backendDefaults` | software.amazon.awscdk.services.appmesh.BackendDefaults | [[cdk.support/lookup-entry]] | `:backend-defaults` |
-| `backends` | java.util.List | [[cdk.support/lookup-entry]] | `:backends` |
-| `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
-| `mesh` | software.amazon.awscdk.services.appmesh.IMesh | [[cdk.support/lookup-entry]] | `:mesh` |
-| `serviceDiscovery` | software.amazon.awscdk.services.appmesh.ServiceDiscovery | [[cdk.support/lookup-entry]] | `:service-discovery` |
-| `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |"
-  [stack id config]
-  (let [builder (VirtualNode$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :access-log)]
-      (. builder accessLog data))
-    (when-let [data (lookup-entry config id :backend-defaults)]
-      (. builder backendDefaults data))
-    (when-let [data (lookup-entry config id :backends)]
-      (. builder backends data))
-    (when-let [data (lookup-entry config id :listeners)]
-      (. builder listeners data))
-    (when-let [data (lookup-entry config id :mesh)]
-      (. builder mesh data))
-    (when-let [data (lookup-entry config id :service-discovery)]
-      (. builder serviceDiscovery data))
-    (when-let [data (lookup-entry config id :virtual-node-name)]
-      (. builder virtualNodeName data))
-    (.build builder)))
-
-
-(defn virtual-node-listener-config-builder
-  "The virtual-node-listener-config-builder function buildes out new instances of 
-VirtualNodeListenerConfig$Builder using the provided configuration.  Each field is set as follows:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `listener` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerProperty | [[cdk.support/lookup-entry]] | `:listener` |"
-  [stack id config]
-  (let [builder (VirtualNodeListenerConfig$Builder.)]
-    (when-let [data (lookup-entry config id :listener)]
-      (. builder listener data))
-    (.build builder)))
-
-
-(defn virtual-node-props-builder
-  "The virtual-node-props-builder function buildes out new instances of 
-VirtualNodeProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -4648,214 +5256,299 @@ VirtualNodeProps$Builder using the provided configuration.  Each field is set as
 | `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
 | `mesh` | software.amazon.awscdk.services.appmesh.IMesh | [[cdk.support/lookup-entry]] | `:mesh` |
 | `serviceDiscovery` | software.amazon.awscdk.services.appmesh.ServiceDiscovery | [[cdk.support/lookup-entry]] | `:service-discovery` |
-| `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |"
-  [stack id config]
-  (let [builder (VirtualNodeProps$Builder.)]
-    (when-let [data (lookup-entry config id :access-log)]
-      (. builder accessLog data))
-    (when-let [data (lookup-entry config id :backend-defaults)]
-      (. builder backendDefaults data))
-    (when-let [data (lookup-entry config id :backends)]
-      (. builder backends data))
-    (when-let [data (lookup-entry config id :listeners)]
-      (. builder listeners data))
-    (when-let [data (lookup-entry config id :mesh)]
-      (. builder mesh data))
-    (when-let [data (lookup-entry config id :service-discovery)]
-      (. builder serviceDiscovery data))
-    (when-let [data (lookup-entry config id :virtual-node-name)]
-      (. builder virtualNodeName data))
-    (.build builder)))
+| `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |
+"
+  [^VirtualNode$Builder builder id config]
+  (when-let [data (lookup-entry config id :access-log)]
+    (. builder accessLog data))
+  (when-let [data (lookup-entry config id :backend-defaults)]
+    (. builder backendDefaults data))
+  (when-let [data (lookup-entry config id :backends)]
+    (. builder backends data))
+  (when-let [data (lookup-entry config id :listeners)]
+    (. builder listeners data))
+  (when-let [data (lookup-entry config id :mesh)]
+    (. builder mesh data))
+  (when-let [data (lookup-entry config id :service-discovery)]
+    (. builder serviceDiscovery data))
+  (when-let [data (lookup-entry config id :virtual-node-name)]
+    (. builder virtualNodeName data))
+  (.build builder))
 
 
-(defn virtual-router-attributes-builder
-  "The virtual-router-attributes-builder function buildes out new instances of 
-VirtualRouterAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-virtual-node-listener-config-builder
+  "The build-virtual-node-listener-config-builder function updates a VirtualNodeListenerConfig$Builder instance using the provided configuration.
+  The function takes the VirtualNodeListenerConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `listener` | software.amazon.awscdk.services.appmesh.CfnVirtualNode$ListenerProperty | [[cdk.support/lookup-entry]] | `:listener` |
+"
+  [^VirtualNodeListenerConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :listener)]
+    (. builder listener data))
+  (.build builder))
+
+
+(defn build-virtual-node-props-builder
+  "The build-virtual-node-props-builder function updates a VirtualNodeProps$Builder instance using the provided configuration.
+  The function takes the VirtualNodeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `accessLog` | software.amazon.awscdk.services.appmesh.AccessLog | [[cdk.support/lookup-entry]] | `:access-log` |
+| `backendDefaults` | software.amazon.awscdk.services.appmesh.BackendDefaults | [[cdk.support/lookup-entry]] | `:backend-defaults` |
+| `backends` | java.util.List | [[cdk.support/lookup-entry]] | `:backends` |
+| `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
+| `mesh` | software.amazon.awscdk.services.appmesh.IMesh | [[cdk.support/lookup-entry]] | `:mesh` |
+| `serviceDiscovery` | software.amazon.awscdk.services.appmesh.ServiceDiscovery | [[cdk.support/lookup-entry]] | `:service-discovery` |
+| `virtualNodeName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-node-name` |
+"
+  [^VirtualNodeProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :access-log)]
+    (. builder accessLog data))
+  (when-let [data (lookup-entry config id :backend-defaults)]
+    (. builder backendDefaults data))
+  (when-let [data (lookup-entry config id :backends)]
+    (. builder backends data))
+  (when-let [data (lookup-entry config id :listeners)]
+    (. builder listeners data))
+  (when-let [data (lookup-entry config id :mesh)]
+    (. builder mesh data))
+  (when-let [data (lookup-entry config id :service-discovery)]
+    (. builder serviceDiscovery data))
+  (when-let [data (lookup-entry config id :virtual-node-name)]
+    (. builder virtualNodeName data))
+  (.build builder))
+
+
+(defn build-virtual-router-attributes-builder
+  "The build-virtual-router-attributes-builder function updates a VirtualRouterAttributes$Builder instance using the provided configuration.
+  The function takes the VirtualRouterAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `mesh` | software.amazon.awscdk.services.appmesh.IMesh | [[cdk.support/lookup-entry]] | `:mesh` |
-| `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |"
-  [stack id config]
-  (let [builder (VirtualRouterAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :mesh)]
-      (. builder mesh data))
-    (when-let [data (lookup-entry config id :virtual-router-name)]
-      (. builder virtualRouterName data))
-    (.build builder)))
+| `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |
+"
+  [^VirtualRouterAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :mesh)]
+    (. builder mesh data))
+  (when-let [data (lookup-entry config id :virtual-router-name)]
+    (. builder virtualRouterName data))
+  (.build builder))
 
 
-(defn virtual-router-base-props-builder
-  "The virtual-router-base-props-builder function buildes out new instances of 
-VirtualRouterBaseProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-virtual-router-base-props-builder
+  "The build-virtual-router-base-props-builder function updates a VirtualRouterBaseProps$Builder instance using the provided configuration.
+  The function takes the VirtualRouterBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
-| `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |"
-  [stack id config]
-  (let [builder (VirtualRouterBaseProps$Builder.)]
-    (when-let [data (lookup-entry config id :listeners)]
-      (. builder listeners data))
-    (when-let [data (lookup-entry config id :virtual-router-name)]
-      (. builder virtualRouterName data))
-    (.build builder)))
+| `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |
+"
+  [^VirtualRouterBaseProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :listeners)]
+    (. builder listeners data))
+  (when-let [data (lookup-entry config id :virtual-router-name)]
+    (. builder virtualRouterName data))
+  (.build builder))
 
 
-(defn virtual-router-builder
-  "The virtual-router-builder function buildes out new instances of 
-VirtualRouter$Builder using the provided configuration.  Each field is set as follows:
+(defn build-virtual-router-builder
+  "The build-virtual-router-builder function updates a VirtualRouter$Builder instance using the provided configuration.
+  The function takes the VirtualRouter$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
-| `mesh` | software.amazon.awscdk.services.appmesh.IMesh | [[cdk.support/lookup-entry]] | `:mesh` |
-| `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |"
-  [stack id config]
-  (let [builder (VirtualRouter$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :listeners)]
-      (. builder listeners data))
-    (when-let [data (lookup-entry config id :mesh)]
-      (. builder mesh data))
-    (when-let [data (lookup-entry config id :virtual-router-name)]
-      (. builder virtualRouterName data))
-    (.build builder)))
-
-
-(defn virtual-router-listener-config-builder
-  "The virtual-router-listener-config-builder function buildes out new instances of 
-VirtualRouterListenerConfig$Builder using the provided configuration.  Each field is set as follows:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `listener` | software.amazon.awscdk.services.appmesh.CfnVirtualRouter$VirtualRouterListenerProperty | [[cdk.support/lookup-entry]] | `:listener` |"
-  [stack id config]
-  (let [builder (VirtualRouterListenerConfig$Builder.)]
-    (when-let [data (lookup-entry config id :listener)]
-      (. builder listener data))
-    (.build builder)))
-
-
-(defn virtual-router-props-builder
-  "The virtual-router-props-builder function buildes out new instances of 
-VirtualRouterProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
 | `mesh` | software.amazon.awscdk.services.appmesh.IMesh | [[cdk.support/lookup-entry]] | `:mesh` |
-| `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |"
-  [stack id config]
-  (let [builder (VirtualRouterProps$Builder.)]
-    (when-let [data (lookup-entry config id :listeners)]
-      (. builder listeners data))
-    (when-let [data (lookup-entry config id :mesh)]
-      (. builder mesh data))
-    (when-let [data (lookup-entry config id :virtual-router-name)]
-      (. builder virtualRouterName data))
-    (.build builder)))
+| `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |
+"
+  [^VirtualRouter$Builder builder id config]
+  (when-let [data (lookup-entry config id :listeners)]
+    (. builder listeners data))
+  (when-let [data (lookup-entry config id :mesh)]
+    (. builder mesh data))
+  (when-let [data (lookup-entry config id :virtual-router-name)]
+    (. builder virtualRouterName data))
+  (.build builder))
 
 
-(defn virtual-service-attributes-builder
-  "The virtual-service-attributes-builder function buildes out new instances of 
-VirtualServiceAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-virtual-router-listener-config-builder
+  "The build-virtual-router-listener-config-builder function updates a VirtualRouterListenerConfig$Builder instance using the provided configuration.
+  The function takes the VirtualRouterListenerConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `listener` | software.amazon.awscdk.services.appmesh.CfnVirtualRouter$VirtualRouterListenerProperty | [[cdk.support/lookup-entry]] | `:listener` |
+"
+  [^VirtualRouterListenerConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :listener)]
+    (. builder listener data))
+  (.build builder))
+
+
+(defn build-virtual-router-props-builder
+  "The build-virtual-router-props-builder function updates a VirtualRouterProps$Builder instance using the provided configuration.
+  The function takes the VirtualRouterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `listeners` | java.util.List | [[cdk.support/lookup-entry]] | `:listeners` |
+| `mesh` | software.amazon.awscdk.services.appmesh.IMesh | [[cdk.support/lookup-entry]] | `:mesh` |
+| `virtualRouterName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-router-name` |
+"
+  [^VirtualRouterProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :listeners)]
+    (. builder listeners data))
+  (when-let [data (lookup-entry config id :mesh)]
+    (. builder mesh data))
+  (when-let [data (lookup-entry config id :virtual-router-name)]
+    (. builder virtualRouterName data))
+  (.build builder))
+
+
+(defn build-virtual-service-attributes-builder
+  "The build-virtual-service-attributes-builder function updates a VirtualServiceAttributes$Builder instance using the provided configuration.
+  The function takes the VirtualServiceAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `mesh` | software.amazon.awscdk.services.appmesh.IMesh | [[cdk.support/lookup-entry]] | `:mesh` |
-| `virtualServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-service-name` |"
-  [stack id config]
-  (let [builder (VirtualServiceAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :mesh)]
-      (. builder mesh data))
-    (when-let [data (lookup-entry config id :virtual-service-name)]
-      (. builder virtualServiceName data))
-    (.build builder)))
+| `virtualServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-service-name` |
+"
+  [^VirtualServiceAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :mesh)]
+    (. builder mesh data))
+  (when-let [data (lookup-entry config id :virtual-service-name)]
+    (. builder virtualServiceName data))
+  (.build builder))
 
 
-(defn virtual-service-backend-options-builder
-  "The virtual-service-backend-options-builder function buildes out new instances of 
-VirtualServiceBackendOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-virtual-service-backend-options-builder
+  "The build-virtual-service-backend-options-builder function updates a VirtualServiceBackendOptions$Builder instance using the provided configuration.
+  The function takes the VirtualServiceBackendOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `tlsClientPolicy` | software.amazon.awscdk.services.appmesh.TlsClientPolicy | [[cdk.support/lookup-entry]] | `:tls-client-policy` |"
-  [stack id config]
-  (let [builder (VirtualServiceBackendOptions$Builder.)]
-    (when-let [data (lookup-entry config id :tls-client-policy)]
-      (. builder tlsClientPolicy data))
-    (.build builder)))
+| `tlsClientPolicy` | software.amazon.awscdk.services.appmesh.TlsClientPolicy | [[cdk.support/lookup-entry]] | `:tls-client-policy` |
+"
+  [^VirtualServiceBackendOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :tls-client-policy)]
+    (. builder tlsClientPolicy data))
+  (.build builder))
 
 
-(defn virtual-service-builder
-  "The virtual-service-builder function buildes out new instances of 
-VirtualService$Builder using the provided configuration.  Each field is set as follows:
+(defn build-virtual-service-builder
+  "The build-virtual-service-builder function updates a VirtualService$Builder instance using the provided configuration.
+  The function takes the VirtualService$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `virtualServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-service-name` |
-| `virtualServiceProvider` | software.amazon.awscdk.services.appmesh.VirtualServiceProvider | [[cdk.support/lookup-entry]] | `:virtual-service-provider` |"
-  [stack id config]
-  (let [builder (VirtualService$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :virtual-service-name)]
-      (. builder virtualServiceName data))
-    (when-let [data (lookup-entry config id :virtual-service-provider)]
-      (. builder virtualServiceProvider data))
-    (.build builder)))
+| `virtualServiceProvider` | software.amazon.awscdk.services.appmesh.VirtualServiceProvider | [[cdk.support/lookup-entry]] | `:virtual-service-provider` |
+"
+  [^VirtualService$Builder builder id config]
+  (when-let [data (lookup-entry config id :virtual-service-name)]
+    (. builder virtualServiceName data))
+  (when-let [data (lookup-entry config id :virtual-service-provider)]
+    (. builder virtualServiceProvider data))
+  (.build builder))
 
 
-(defn virtual-service-props-builder
-  "The virtual-service-props-builder function buildes out new instances of 
-VirtualServiceProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-virtual-service-props-builder
+  "The build-virtual-service-props-builder function updates a VirtualServiceProps$Builder instance using the provided configuration.
+  The function takes the VirtualServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `virtualServiceName` | java.lang.String | [[cdk.support/lookup-entry]] | `:virtual-service-name` |
-| `virtualServiceProvider` | software.amazon.awscdk.services.appmesh.VirtualServiceProvider | [[cdk.support/lookup-entry]] | `:virtual-service-provider` |"
-  [stack id config]
-  (let [builder (VirtualServiceProps$Builder.)]
-    (when-let [data (lookup-entry config id :virtual-service-name)]
-      (. builder virtualServiceName data))
-    (when-let [data (lookup-entry config id :virtual-service-provider)]
-      (. builder virtualServiceProvider data))
-    (.build builder)))
+| `virtualServiceProvider` | software.amazon.awscdk.services.appmesh.VirtualServiceProvider | [[cdk.support/lookup-entry]] | `:virtual-service-provider` |
+"
+  [^VirtualServiceProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :virtual-service-name)]
+    (. builder virtualServiceName data))
+  (when-let [data (lookup-entry config id :virtual-service-provider)]
+    (. builder virtualServiceProvider data))
+  (.build builder))
 
 
-(defn virtual-service-provider-config-builder
-  "The virtual-service-provider-config-builder function buildes out new instances of 
-VirtualServiceProviderConfig$Builder using the provided configuration.  Each field is set as follows:
+(defn build-virtual-service-provider-config-builder
+  "The build-virtual-service-provider-config-builder function updates a VirtualServiceProviderConfig$Builder instance using the provided configuration.
+  The function takes the VirtualServiceProviderConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `mesh` | software.amazon.awscdk.services.appmesh.IMesh | [[cdk.support/lookup-entry]] | `:mesh` |
 | `virtualNodeProvider` | software.amazon.awscdk.services.appmesh.CfnVirtualService$VirtualNodeServiceProviderProperty | [[cdk.support/lookup-entry]] | `:virtual-node-provider` |
-| `virtualRouterProvider` | software.amazon.awscdk.services.appmesh.CfnVirtualService$VirtualRouterServiceProviderProperty | [[cdk.support/lookup-entry]] | `:virtual-router-provider` |"
-  [stack id config]
-  (let [builder (VirtualServiceProviderConfig$Builder.)]
-    (when-let [data (lookup-entry config id :mesh)]
-      (. builder mesh data))
-    (when-let [data (lookup-entry config id :virtual-node-provider)]
-      (. builder virtualNodeProvider data))
-    (when-let [data (lookup-entry config id :virtual-router-provider)]
-      (. builder virtualRouterProvider data))
-    (.build builder)))
+| `virtualRouterProvider` | software.amazon.awscdk.services.appmesh.CfnVirtualService$VirtualRouterServiceProviderProperty | [[cdk.support/lookup-entry]] | `:virtual-router-provider` |
+"
+  [^VirtualServiceProviderConfig$Builder builder id config]
+  (when-let [data (lookup-entry config id :mesh)]
+    (. builder mesh data))
+  (when-let [data (lookup-entry config id :virtual-node-provider)]
+    (. builder virtualNodeProvider data))
+  (when-let [data (lookup-entry config id :virtual-router-provider)]
+    (. builder virtualRouterProvider data))
+  (.build builder))
 
 
-(defn weighted-target-builder
-  "The weighted-target-builder function buildes out new instances of 
-WeightedTarget$Builder using the provided configuration.  Each field is set as follows:
+(defn build-weighted-target-builder
+  "The build-weighted-target-builder function updates a WeightedTarget$Builder instance using the provided configuration.
+  The function takes the WeightedTarget$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `port` | java.lang.Number | [[cdk.support/lookup-entry]] | `:port` |
 | `virtualNode` | software.amazon.awscdk.services.appmesh.IVirtualNode | [[cdk.support/lookup-entry]] | `:virtual-node` |
-| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |"
-  [stack id config]
-  (let [builder (WeightedTarget$Builder.)]
-    (when-let [data (lookup-entry config id :port)]
-      (. builder port data))
-    (when-let [data (lookup-entry config id :virtual-node)]
-      (. builder virtualNode data))
-    (when-let [data (lookup-entry config id :weight)]
-      (. builder weight data))
-    (.build builder)))
+| `weight` | java.lang.Number | [[cdk.support/lookup-entry]] | `:weight` |
+"
+  [^WeightedTarget$Builder builder id config]
+  (when-let [data (lookup-entry config id :port)]
+    (. builder port data))
+  (when-let [data (lookup-entry config id :virtual-node)]
+    (. builder virtualNode data))
+  (when-let [data (lookup-entry config id :weight)]
+    (. builder weight data))
+  (.build builder))

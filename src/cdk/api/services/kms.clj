@@ -80,100 +80,118 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :sign-verify data) KeyUsage/SIGN_VERIFY)))
 
 
-(defn alias-attributes-builder
-  "The alias-attributes-builder function buildes out new instances of 
-AliasAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-alias-attributes-builder
+  "The build-alias-attributes-builder function updates a AliasAttributes$Builder instance using the provided configuration.
+  The function takes the AliasAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aliasName` | java.lang.String | [[cdk.support/lookup-entry]] | `:alias-name` |
-| `aliasTargetKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:alias-target-key` |"
-  [stack id config]
-  (let [builder (AliasAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :alias-name)]
-      (. builder aliasName data))
-    (when-let [data (lookup-entry config id :alias-target-key)]
-      (. builder aliasTargetKey data))
-    (.build builder)))
+| `aliasTargetKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:alias-target-key` |
+"
+  [^AliasAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :alias-name)]
+    (. builder aliasName data))
+  (when-let [data (lookup-entry config id :alias-target-key)]
+    (. builder aliasTargetKey data))
+  (.build builder))
 
 
-(defn alias-builder
-  "The alias-builder function buildes out new instances of 
-Alias$Builder using the provided configuration.  Each field is set as follows:
+(defn build-alias-builder
+  "The build-alias-builder function updates a Alias$Builder instance using the provided configuration.
+  The function takes the Alias$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `aliasName` | java.lang.String | [[cdk.support/lookup-entry]] | `:alias-name` |
-| `removalPolicy` | software.amazon.awscdk.RemovalPolicy | [[cdk.api/removal-policy]] | `:removal-policy` |
-| `targetKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:target-key` |"
-  [stack id config]
-  (let [builder (Alias$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :alias-name)]
-      (. builder aliasName data))
-    (when-let [data (removal-policy config id :removal-policy)]
-      (. builder removalPolicy data))
-    (when-let [data (lookup-entry config id :target-key)]
-      (. builder targetKey data))
-    (.build builder)))
-
-
-(defn alias-props-builder
-  "The alias-props-builder function buildes out new instances of 
-AliasProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aliasName` | java.lang.String | [[cdk.support/lookup-entry]] | `:alias-name` |
 | `removalPolicy` | software.amazon.awscdk.RemovalPolicy | [[cdk.api/removal-policy]] | `:removal-policy` |
-| `targetKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:target-key` |"
-  [stack id config]
-  (let [builder (AliasProps$Builder.)]
-    (when-let [data (lookup-entry config id :alias-name)]
-      (. builder aliasName data))
-    (when-let [data (removal-policy config id :removal-policy)]
-      (. builder removalPolicy data))
-    (when-let [data (lookup-entry config id :target-key)]
-      (. builder targetKey data))
-    (.build builder)))
+| `targetKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:target-key` |
+"
+  [^Alias$Builder builder id config]
+  (when-let [data (lookup-entry config id :alias-name)]
+    (. builder aliasName data))
+  (when-let [data (removal-policy config id :removal-policy)]
+    (. builder removalPolicy data))
+  (when-let [data (lookup-entry config id :target-key)]
+    (. builder targetKey data))
+  (.build builder))
 
 
-(defn cfn-alias-builder
-  "The cfn-alias-builder function buildes out new instances of 
-CfnAlias$Builder using the provided configuration.  Each field is set as follows:
+(defn build-alias-props-builder
+  "The build-alias-props-builder function updates a AliasProps$Builder instance using the provided configuration.
+  The function takes the AliasProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `aliasName` | java.lang.String | [[cdk.support/lookup-entry]] | `:alias-name` |
-| `targetKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-key-id` |"
-  [stack id config]
-  (let [builder (CfnAlias$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :alias-name)]
-      (. builder aliasName data))
-    (when-let [data (lookup-entry config id :target-key-id)]
-      (. builder targetKeyId data))
-    (.build builder)))
-
-
-(defn cfn-alias-props-builder
-  "The cfn-alias-props-builder function buildes out new instances of 
-CfnAliasProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `aliasName` | java.lang.String | [[cdk.support/lookup-entry]] | `:alias-name` |
-| `targetKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-key-id` |"
-  [stack id config]
-  (let [builder (CfnAliasProps$Builder.)]
-    (when-let [data (lookup-entry config id :alias-name)]
-      (. builder aliasName data))
-    (when-let [data (lookup-entry config id :target-key-id)]
-      (. builder targetKeyId data))
-    (.build builder)))
+| `removalPolicy` | software.amazon.awscdk.RemovalPolicy | [[cdk.api/removal-policy]] | `:removal-policy` |
+| `targetKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:target-key` |
+"
+  [^AliasProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :alias-name)]
+    (. builder aliasName data))
+  (when-let [data (removal-policy config id :removal-policy)]
+    (. builder removalPolicy data))
+  (when-let [data (lookup-entry config id :target-key)]
+    (. builder targetKey data))
+  (.build builder))
 
 
-(defn cfn-key-builder
-  "The cfn-key-builder function buildes out new instances of 
-CfnKey$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-alias-builder
+  "The build-cfn-alias-builder function updates a CfnAlias$Builder instance using the provided configuration.
+  The function takes the CfnAlias$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `aliasName` | java.lang.String | [[cdk.support/lookup-entry]] | `:alias-name` |
+| `targetKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-key-id` |
+"
+  [^CfnAlias$Builder builder id config]
+  (when-let [data (lookup-entry config id :alias-name)]
+    (. builder aliasName data))
+  (when-let [data (lookup-entry config id :target-key-id)]
+    (. builder targetKeyId data))
+  (.build builder))
+
+
+(defn build-cfn-alias-props-builder
+  "The build-cfn-alias-props-builder function updates a CfnAliasProps$Builder instance using the provided configuration.
+  The function takes the CfnAliasProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `aliasName` | java.lang.String | [[cdk.support/lookup-entry]] | `:alias-name` |
+| `targetKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-key-id` |
+"
+  [^CfnAliasProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :alias-name)]
+    (. builder aliasName data))
+  (when-let [data (lookup-entry config id :target-key-id)]
+    (. builder targetKeyId data))
+  (.build builder))
+
+
+(defn build-cfn-key-builder
+  "The build-cfn-key-builder function updates a CfnKey$Builder instance using the provided configuration.
+  The function takes the CfnKey$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -188,39 +206,42 @@ CfnKey$Builder using the provided configuration.  Each field is set as follows:
 | `origin` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin` |
 | `pendingWindowInDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:pending-window-in-days` |
 | `rotationPeriodInDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rotation-period-in-days` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnKey$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :bypass-policy-lockout-safety-check)]
-      (. builder bypassPolicyLockoutSafetyCheck data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :enable-key-rotation)]
-      (. builder enableKeyRotation data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :key-policy)]
-      (. builder keyPolicy data))
-    (when-let [data (lookup-entry config id :key-spec)]
-      (. builder keySpec data))
-    (when-let [data (lookup-entry config id :key-usage)]
-      (. builder keyUsage data))
-    (when-let [data (lookup-entry config id :multi-region)]
-      (. builder multiRegion data))
-    (when-let [data (lookup-entry config id :origin)]
-      (. builder origin data))
-    (when-let [data (lookup-entry config id :pending-window-in-days)]
-      (. builder pendingWindowInDays data))
-    (when-let [data (lookup-entry config id :rotation-period-in-days)]
-      (. builder rotationPeriodInDays data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnKey$Builder builder id config]
+  (when-let [data (lookup-entry config id :bypass-policy-lockout-safety-check)]
+    (. builder bypassPolicyLockoutSafetyCheck data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :enable-key-rotation)]
+    (. builder enableKeyRotation data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :key-policy)]
+    (. builder keyPolicy data))
+  (when-let [data (lookup-entry config id :key-spec)]
+    (. builder keySpec data))
+  (when-let [data (lookup-entry config id :key-usage)]
+    (. builder keyUsage data))
+  (when-let [data (lookup-entry config id :multi-region)]
+    (. builder multiRegion data))
+  (when-let [data (lookup-entry config id :origin)]
+    (. builder origin data))
+  (when-let [data (lookup-entry config id :pending-window-in-days)]
+    (. builder pendingWindowInDays data))
+  (when-let [data (lookup-entry config id :rotation-period-in-days)]
+    (. builder rotationPeriodInDays data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-key-props-builder
-  "The cfn-key-props-builder function buildes out new instances of 
-CfnKeyProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-key-props-builder
+  "The build-cfn-key-props-builder function updates a CfnKeyProps$Builder instance using the provided configuration.
+  The function takes the CfnKeyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -235,39 +256,42 @@ CfnKeyProps$Builder using the provided configuration.  Each field is set as foll
 | `origin` | java.lang.String | [[cdk.support/lookup-entry]] | `:origin` |
 | `pendingWindowInDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:pending-window-in-days` |
 | `rotationPeriodInDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:rotation-period-in-days` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnKeyProps$Builder.)]
-    (when-let [data (lookup-entry config id :bypass-policy-lockout-safety-check)]
-      (. builder bypassPolicyLockoutSafetyCheck data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :enable-key-rotation)]
-      (. builder enableKeyRotation data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :key-policy)]
-      (. builder keyPolicy data))
-    (when-let [data (lookup-entry config id :key-spec)]
-      (. builder keySpec data))
-    (when-let [data (lookup-entry config id :key-usage)]
-      (. builder keyUsage data))
-    (when-let [data (lookup-entry config id :multi-region)]
-      (. builder multiRegion data))
-    (when-let [data (lookup-entry config id :origin)]
-      (. builder origin data))
-    (when-let [data (lookup-entry config id :pending-window-in-days)]
-      (. builder pendingWindowInDays data))
-    (when-let [data (lookup-entry config id :rotation-period-in-days)]
-      (. builder rotationPeriodInDays data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnKeyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :bypass-policy-lockout-safety-check)]
+    (. builder bypassPolicyLockoutSafetyCheck data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :enable-key-rotation)]
+    (. builder enableKeyRotation data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :key-policy)]
+    (. builder keyPolicy data))
+  (when-let [data (lookup-entry config id :key-spec)]
+    (. builder keySpec data))
+  (when-let [data (lookup-entry config id :key-usage)]
+    (. builder keyUsage data))
+  (when-let [data (lookup-entry config id :multi-region)]
+    (. builder multiRegion data))
+  (when-let [data (lookup-entry config id :origin)]
+    (. builder origin data))
+  (when-let [data (lookup-entry config id :pending-window-in-days)]
+    (. builder pendingWindowInDays data))
+  (when-let [data (lookup-entry config id :rotation-period-in-days)]
+    (. builder rotationPeriodInDays data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-replica-key-builder
-  "The cfn-replica-key-builder function buildes out new instances of 
-CfnReplicaKey$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-replica-key-builder
+  "The build-cfn-replica-key-builder function updates a CfnReplicaKey$Builder instance using the provided configuration.
+  The function takes the CfnReplicaKey$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -276,27 +300,30 @@ CfnReplicaKey$Builder using the provided configuration.  Each field is set as fo
 | `keyPolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:key-policy` |
 | `pendingWindowInDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:pending-window-in-days` |
 | `primaryKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:primary-key-arn` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnReplicaKey$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :key-policy)]
-      (. builder keyPolicy data))
-    (when-let [data (lookup-entry config id :pending-window-in-days)]
-      (. builder pendingWindowInDays data))
-    (when-let [data (lookup-entry config id :primary-key-arn)]
-      (. builder primaryKeyArn data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnReplicaKey$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :key-policy)]
+    (. builder keyPolicy data))
+  (when-let [data (lookup-entry config id :pending-window-in-days)]
+    (. builder pendingWindowInDays data))
+  (when-let [data (lookup-entry config id :primary-key-arn)]
+    (. builder primaryKeyArn data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-replica-key-props-builder
-  "The cfn-replica-key-props-builder function buildes out new instances of 
-CfnReplicaKeyProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-replica-key-props-builder
+  "The build-cfn-replica-key-props-builder function updates a CfnReplicaKeyProps$Builder instance using the provided configuration.
+  The function takes the CfnReplicaKeyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -305,85 +332,30 @@ CfnReplicaKeyProps$Builder using the provided configuration.  Each field is set 
 | `keyPolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:key-policy` |
 | `pendingWindowInDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:pending-window-in-days` |
 | `primaryKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:primary-key-arn` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnReplicaKeyProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (lookup-entry config id :key-policy)]
-      (. builder keyPolicy data))
-    (when-let [data (lookup-entry config id :pending-window-in-days)]
-      (. builder pendingWindowInDays data))
-    (when-let [data (lookup-entry config id :primary-key-arn)]
-      (. builder primaryKeyArn data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnReplicaKeyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (lookup-entry config id :key-policy)]
+    (. builder keyPolicy data))
+  (when-let [data (lookup-entry config id :pending-window-in-days)]
+    (. builder pendingWindowInDays data))
+  (when-let [data (lookup-entry config id :primary-key-arn)]
+    (. builder primaryKeyArn data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn key-builder
-  "The key-builder function buildes out new instances of 
-Key$Builder using the provided configuration.  Each field is set as follows:
+(defn build-key-builder
+  "The build-key-builder function updates a Key$Builder instance using the provided configuration.
+  The function takes the Key$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `admins` | java.util.List | [[cdk.support/lookup-entry]] | `:admins` |
-| `alias` | java.lang.String | [[cdk.support/lookup-entry]] | `:alias` |
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `enableKeyRotation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-key-rotation` |
-| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
-| `keySpec` | software.amazon.awscdk.services.kms.KeySpec | [[cdk.api.services.kms/key-spec]] | `:key-spec` |
-| `keyUsage` | software.amazon.awscdk.services.kms.KeyUsage | [[cdk.api.services.kms/key-usage]] | `:key-usage` |
-| `pendingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:pending-window` |
-| `policy` | software.amazon.awscdk.services.iam.PolicyDocument | [[cdk.support/lookup-entry]] | `:policy` |
-| `removalPolicy` | software.amazon.awscdk.RemovalPolicy | [[cdk.api/removal-policy]] | `:removal-policy` |
-| `rotationPeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:rotation-period` |"
-  [stack id config]
-  (let [builder (Key$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :admins)]
-      (. builder admins data))
-    (when-let [data (lookup-entry config id :alias)]
-      (. builder alias data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :enable-key-rotation)]
-      (. builder enableKeyRotation data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (key-spec config id :key-spec)]
-      (. builder keySpec data))
-    (when-let [data (key-usage config id :key-usage)]
-      (. builder keyUsage data))
-    (when-let [data (lookup-entry config id :pending-window)]
-      (. builder pendingWindow data))
-    (when-let [data (lookup-entry config id :policy)]
-      (. builder policy data))
-    (when-let [data (removal-policy config id :removal-policy)]
-      (. builder removalPolicy data))
-    (when-let [data (lookup-entry config id :rotation-period)]
-      (. builder rotationPeriod data))
-    (.build builder)))
-
-
-(defn key-lookup-options-builder
-  "The key-lookup-options-builder function buildes out new instances of 
-KeyLookupOptions$Builder using the provided configuration.  Each field is set as follows:
-
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `aliasName` | java.lang.String | [[cdk.support/lookup-entry]] | `:alias-name` |"
-  [stack id config]
-  (let [builder (KeyLookupOptions$Builder.)]
-    (when-let [data (lookup-entry config id :alias-name)]
-      (. builder aliasName data))
-    (.build builder)))
-
-
-(defn key-props-builder
-  "The key-props-builder function buildes out new instances of 
-KeyProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -397,29 +369,93 @@ KeyProps$Builder using the provided configuration.  Each field is set as follows
 | `pendingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:pending-window` |
 | `policy` | software.amazon.awscdk.services.iam.PolicyDocument | [[cdk.support/lookup-entry]] | `:policy` |
 | `removalPolicy` | software.amazon.awscdk.RemovalPolicy | [[cdk.api/removal-policy]] | `:removal-policy` |
-| `rotationPeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:rotation-period` |"
-  [stack id config]
-  (let [builder (KeyProps$Builder.)]
-    (when-let [data (lookup-entry config id :admins)]
-      (. builder admins data))
-    (when-let [data (lookup-entry config id :alias)]
-      (. builder alias data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :enable-key-rotation)]
-      (. builder enableKeyRotation data))
-    (when-let [data (lookup-entry config id :enabled)]
-      (. builder enabled data))
-    (when-let [data (key-spec config id :key-spec)]
-      (. builder keySpec data))
-    (when-let [data (key-usage config id :key-usage)]
-      (. builder keyUsage data))
-    (when-let [data (lookup-entry config id :pending-window)]
-      (. builder pendingWindow data))
-    (when-let [data (lookup-entry config id :policy)]
-      (. builder policy data))
-    (when-let [data (removal-policy config id :removal-policy)]
-      (. builder removalPolicy data))
-    (when-let [data (lookup-entry config id :rotation-period)]
-      (. builder rotationPeriod data))
-    (.build builder)))
+| `rotationPeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:rotation-period` |
+"
+  [^Key$Builder builder id config]
+  (when-let [data (lookup-entry config id :admins)]
+    (. builder admins data))
+  (when-let [data (lookup-entry config id :alias)]
+    (. builder alias data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :enable-key-rotation)]
+    (. builder enableKeyRotation data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (key-spec config id :key-spec)]
+    (. builder keySpec data))
+  (when-let [data (key-usage config id :key-usage)]
+    (. builder keyUsage data))
+  (when-let [data (lookup-entry config id :pending-window)]
+    (. builder pendingWindow data))
+  (when-let [data (lookup-entry config id :policy)]
+    (. builder policy data))
+  (when-let [data (removal-policy config id :removal-policy)]
+    (. builder removalPolicy data))
+  (when-let [data (lookup-entry config id :rotation-period)]
+    (. builder rotationPeriod data))
+  (.build builder))
+
+
+(defn build-key-lookup-options-builder
+  "The build-key-lookup-options-builder function updates a KeyLookupOptions$Builder instance using the provided configuration.
+  The function takes the KeyLookupOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `aliasName` | java.lang.String | [[cdk.support/lookup-entry]] | `:alias-name` |
+"
+  [^KeyLookupOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :alias-name)]
+    (. builder aliasName data))
+  (.build builder))
+
+
+(defn build-key-props-builder
+  "The build-key-props-builder function updates a KeyProps$Builder instance using the provided configuration.
+  The function takes the KeyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `admins` | java.util.List | [[cdk.support/lookup-entry]] | `:admins` |
+| `alias` | java.lang.String | [[cdk.support/lookup-entry]] | `:alias` |
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `enableKeyRotation` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enable-key-rotation` |
+| `enabled` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:enabled` |
+| `keySpec` | software.amazon.awscdk.services.kms.KeySpec | [[cdk.api.services.kms/key-spec]] | `:key-spec` |
+| `keyUsage` | software.amazon.awscdk.services.kms.KeyUsage | [[cdk.api.services.kms/key-usage]] | `:key-usage` |
+| `pendingWindow` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:pending-window` |
+| `policy` | software.amazon.awscdk.services.iam.PolicyDocument | [[cdk.support/lookup-entry]] | `:policy` |
+| `removalPolicy` | software.amazon.awscdk.RemovalPolicy | [[cdk.api/removal-policy]] | `:removal-policy` |
+| `rotationPeriod` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:rotation-period` |
+"
+  [^KeyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :admins)]
+    (. builder admins data))
+  (when-let [data (lookup-entry config id :alias)]
+    (. builder alias data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :enable-key-rotation)]
+    (. builder enableKeyRotation data))
+  (when-let [data (lookup-entry config id :enabled)]
+    (. builder enabled data))
+  (when-let [data (key-spec config id :key-spec)]
+    (. builder keySpec data))
+  (when-let [data (key-usage config id :key-usage)]
+    (. builder keyUsage data))
+  (when-let [data (lookup-entry config id :pending-window)]
+    (. builder pendingWindow data))
+  (when-let [data (lookup-entry config id :policy)]
+    (. builder policy data))
+  (when-let [data (removal-policy config id :removal-policy)]
+    (. builder removalPolicy data))
+  (when-let [data (lookup-entry config id :rotation-period)]
+    (. builder rotationPeriod data))
+  (.build builder))

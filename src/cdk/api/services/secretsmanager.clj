@@ -64,63 +64,75 @@ function on the data with the provided namespace id and item-key.  The found val
       (= :redshift-cluster data) AttachmentTargetType/REDSHIFT_CLUSTER)))
 
 
-(defn attached-secret-options-builder
-  "The attached-secret-options-builder function buildes out new instances of 
-AttachedSecretOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-attached-secret-options-builder
+  "The build-attached-secret-options-builder function updates a AttachedSecretOptions$Builder instance using the provided configuration.
+  The function takes the AttachedSecretOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `target` | software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget | [[cdk.support/lookup-entry]] | `:target` |"
-  [stack id config]
-  (let [builder (AttachedSecretOptions$Builder.)]
-    (when-let [data (lookup-entry config id :target)]
-      (. builder target data))
-    (.build builder)))
+| `target` | software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget | [[cdk.support/lookup-entry]] | `:target` |
+"
+  [^AttachedSecretOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :target)]
+    (. builder target data))
+  (.build builder))
 
 
-(defn cfn-resource-policy-builder
-  "The cfn-resource-policy-builder function buildes out new instances of 
-CfnResourcePolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resource-policy-builder
+  "The build-cfn-resource-policy-builder function updates a CfnResourcePolicy$Builder instance using the provided configuration.
+  The function takes the CfnResourcePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `blockPublicPolicy` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:block-public-policy` |
-| `resourcePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:resource-policy` |
-| `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |"
-  [stack id config]
-  (let [builder (CfnResourcePolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :block-public-policy)]
-      (. builder blockPublicPolicy data))
-    (when-let [data (lookup-entry config id :resource-policy)]
-      (. builder resourcePolicy data))
-    (when-let [data (lookup-entry config id :secret-id)]
-      (. builder secretId data))
-    (.build builder)))
-
-
-(defn cfn-resource-policy-props-builder
-  "The cfn-resource-policy-props-builder function buildes out new instances of 
-CfnResourcePolicyProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `blockPublicPolicy` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:block-public-policy` |
 | `resourcePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:resource-policy` |
-| `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |"
-  [stack id config]
-  (let [builder (CfnResourcePolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :block-public-policy)]
-      (. builder blockPublicPolicy data))
-    (when-let [data (lookup-entry config id :resource-policy)]
-      (. builder resourcePolicy data))
-    (when-let [data (lookup-entry config id :secret-id)]
-      (. builder secretId data))
-    (.build builder)))
+| `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |
+"
+  [^CfnResourcePolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :block-public-policy)]
+    (. builder blockPublicPolicy data))
+  (when-let [data (lookup-entry config id :resource-policy)]
+    (. builder resourcePolicy data))
+  (when-let [data (lookup-entry config id :secret-id)]
+    (. builder secretId data))
+  (.build builder))
 
 
-(defn cfn-rotation-schedule-builder
-  "The cfn-rotation-schedule-builder function buildes out new instances of 
-CfnRotationSchedule$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-resource-policy-props-builder
+  "The build-cfn-resource-policy-props-builder function updates a CfnResourcePolicyProps$Builder instance using the provided configuration.
+  The function takes the CfnResourcePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `blockPublicPolicy` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:block-public-policy` |
+| `resourcePolicy` | java.lang.Object | [[cdk.support/lookup-entry]] | `:resource-policy` |
+| `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |
+"
+  [^CfnResourcePolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :block-public-policy)]
+    (. builder blockPublicPolicy data))
+  (when-let [data (lookup-entry config id :resource-policy)]
+    (. builder resourcePolicy data))
+  (when-let [data (lookup-entry config id :secret-id)]
+    (. builder secretId data))
+  (.build builder))
+
+
+(defn build-cfn-rotation-schedule-builder
+  "The build-cfn-rotation-schedule-builder function updates a CfnRotationSchedule$Builder instance using the provided configuration.
+  The function takes the CfnRotationSchedule$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -128,25 +140,28 @@ CfnRotationSchedule$Builder using the provided configuration.  Each field is set
 | `rotateImmediatelyOnUpdate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:rotate-immediately-on-update` |
 | `rotationLambdaArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:rotation-lambda-arn` |
 | `rotationRules` | software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule$RotationRulesProperty | [[cdk.support/lookup-entry]] | `:rotation-rules` |
-| `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |"
-  [stack id config]
-  (let [builder (CfnRotationSchedule$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :hosted-rotation-lambda)]
-      (. builder hostedRotationLambda data))
-    (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
-      (. builder rotateImmediatelyOnUpdate data))
-    (when-let [data (lookup-entry config id :rotation-lambda-arn)]
-      (. builder rotationLambdaArn data))
-    (when-let [data (lookup-entry config id :rotation-rules)]
-      (. builder rotationRules data))
-    (when-let [data (lookup-entry config id :secret-id)]
-      (. builder secretId data))
-    (.build builder)))
+| `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |
+"
+  [^CfnRotationSchedule$Builder builder id config]
+  (when-let [data (lookup-entry config id :hosted-rotation-lambda)]
+    (. builder hostedRotationLambda data))
+  (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
+    (. builder rotateImmediatelyOnUpdate data))
+  (when-let [data (lookup-entry config id :rotation-lambda-arn)]
+    (. builder rotationLambdaArn data))
+  (when-let [data (lookup-entry config id :rotation-rules)]
+    (. builder rotationRules data))
+  (when-let [data (lookup-entry config id :secret-id)]
+    (. builder secretId data))
+  (.build builder))
 
 
-(defn cfn-rotation-schedule-hosted-rotation-lambda-property-builder
-  "The cfn-rotation-schedule-hosted-rotation-lambda-property-builder function buildes out new instances of 
-CfnRotationSchedule$HostedRotationLambdaProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-rotation-schedule-hosted-rotation-lambda-property-builder
+  "The build-cfn-rotation-schedule-hosted-rotation-lambda-property-builder function updates a CfnRotationSchedule$HostedRotationLambdaProperty$Builder instance using the provided configuration.
+  The function takes the CfnRotationSchedule$HostedRotationLambdaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -160,37 +175,40 @@ CfnRotationSchedule$HostedRotationLambdaProperty$Builder using the provided conf
 | `superuserSecretArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:superuser-secret-arn` |
 | `superuserSecretKmsKeyArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:superuser-secret-kms-key-arn` |
 | `vpcSecurityGroupIds` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-security-group-ids` |
-| `vpcSubnetIds` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-subnet-ids` |"
-  [stack id config]
-  (let [builder (CfnRotationSchedule$HostedRotationLambdaProperty$Builder.)]
-    (when-let [data (lookup-entry config id :exclude-characters)]
-      (. builder excludeCharacters data))
-    (when-let [data (lookup-entry config id :kms-key-arn)]
-      (. builder kmsKeyArn data))
-    (when-let [data (lookup-entry config id :master-secret-arn)]
-      (. builder masterSecretArn data))
-    (when-let [data (lookup-entry config id :master-secret-kms-key-arn)]
-      (. builder masterSecretKmsKeyArn data))
-    (when-let [data (lookup-entry config id :rotation-lambda-name)]
-      (. builder rotationLambdaName data))
-    (when-let [data (lookup-entry config id :rotation-type)]
-      (. builder rotationType data))
-    (when-let [data (lookup-entry config id :runtime)]
-      (. builder runtime data))
-    (when-let [data (lookup-entry config id :superuser-secret-arn)]
-      (. builder superuserSecretArn data))
-    (when-let [data (lookup-entry config id :superuser-secret-kms-key-arn)]
-      (. builder superuserSecretKmsKeyArn data))
-    (when-let [data (lookup-entry config id :vpc-security-group-ids)]
-      (. builder vpcSecurityGroupIds data))
-    (when-let [data (lookup-entry config id :vpc-subnet-ids)]
-      (. builder vpcSubnetIds data))
-    (.build builder)))
+| `vpcSubnetIds` | java.lang.String | [[cdk.support/lookup-entry]] | `:vpc-subnet-ids` |
+"
+  [^CfnRotationSchedule$HostedRotationLambdaProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :exclude-characters)]
+    (. builder excludeCharacters data))
+  (when-let [data (lookup-entry config id :kms-key-arn)]
+    (. builder kmsKeyArn data))
+  (when-let [data (lookup-entry config id :master-secret-arn)]
+    (. builder masterSecretArn data))
+  (when-let [data (lookup-entry config id :master-secret-kms-key-arn)]
+    (. builder masterSecretKmsKeyArn data))
+  (when-let [data (lookup-entry config id :rotation-lambda-name)]
+    (. builder rotationLambdaName data))
+  (when-let [data (lookup-entry config id :rotation-type)]
+    (. builder rotationType data))
+  (when-let [data (lookup-entry config id :runtime)]
+    (. builder runtime data))
+  (when-let [data (lookup-entry config id :superuser-secret-arn)]
+    (. builder superuserSecretArn data))
+  (when-let [data (lookup-entry config id :superuser-secret-kms-key-arn)]
+    (. builder superuserSecretKmsKeyArn data))
+  (when-let [data (lookup-entry config id :vpc-security-group-ids)]
+    (. builder vpcSecurityGroupIds data))
+  (when-let [data (lookup-entry config id :vpc-subnet-ids)]
+    (. builder vpcSubnetIds data))
+  (.build builder))
 
 
-(defn cfn-rotation-schedule-props-builder
-  "The cfn-rotation-schedule-props-builder function buildes out new instances of 
-CfnRotationScheduleProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-rotation-schedule-props-builder
+  "The build-cfn-rotation-schedule-props-builder function updates a CfnRotationScheduleProps$Builder instance using the provided configuration.
+  The function takes the CfnRotationScheduleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -198,45 +216,51 @@ CfnRotationScheduleProps$Builder using the provided configuration.  Each field i
 | `rotateImmediatelyOnUpdate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:rotate-immediately-on-update` |
 | `rotationLambdaArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:rotation-lambda-arn` |
 | `rotationRules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:rotation-rules` |
-| `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |"
-  [stack id config]
-  (let [builder (CfnRotationScheduleProps$Builder.)]
-    (when-let [data (lookup-entry config id :hosted-rotation-lambda)]
-      (. builder hostedRotationLambda data))
-    (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
-      (. builder rotateImmediatelyOnUpdate data))
-    (when-let [data (lookup-entry config id :rotation-lambda-arn)]
-      (. builder rotationLambdaArn data))
-    (when-let [data (lookup-entry config id :rotation-rules)]
-      (. builder rotationRules data))
-    (when-let [data (lookup-entry config id :secret-id)]
-      (. builder secretId data))
-    (.build builder)))
+| `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |
+"
+  [^CfnRotationScheduleProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :hosted-rotation-lambda)]
+    (. builder hostedRotationLambda data))
+  (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
+    (. builder rotateImmediatelyOnUpdate data))
+  (when-let [data (lookup-entry config id :rotation-lambda-arn)]
+    (. builder rotationLambdaArn data))
+  (when-let [data (lookup-entry config id :rotation-rules)]
+    (. builder rotationRules data))
+  (when-let [data (lookup-entry config id :secret-id)]
+    (. builder secretId data))
+  (.build builder))
 
 
-(defn cfn-rotation-schedule-rotation-rules-property-builder
-  "The cfn-rotation-schedule-rotation-rules-property-builder function buildes out new instances of 
-CfnRotationSchedule$RotationRulesProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-rotation-schedule-rotation-rules-property-builder
+  "The build-cfn-rotation-schedule-rotation-rules-property-builder function updates a CfnRotationSchedule$RotationRulesProperty$Builder instance using the provided configuration.
+  The function takes the CfnRotationSchedule$RotationRulesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `automaticallyAfterDays` | java.lang.Number | [[cdk.support/lookup-entry]] | `:automatically-after-days` |
 | `duration` | java.lang.String | [[cdk.support/lookup-entry]] | `:duration` |
-| `scheduleExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:schedule-expression` |"
-  [stack id config]
-  (let [builder (CfnRotationSchedule$RotationRulesProperty$Builder.)]
-    (when-let [data (lookup-entry config id :automatically-after-days)]
-      (. builder automaticallyAfterDays data))
-    (when-let [data (lookup-entry config id :duration)]
-      (. builder duration data))
-    (when-let [data (lookup-entry config id :schedule-expression)]
-      (. builder scheduleExpression data))
-    (.build builder)))
+| `scheduleExpression` | java.lang.String | [[cdk.support/lookup-entry]] | `:schedule-expression` |
+"
+  [^CfnRotationSchedule$RotationRulesProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :automatically-after-days)]
+    (. builder automaticallyAfterDays data))
+  (when-let [data (lookup-entry config id :duration)]
+    (. builder duration data))
+  (when-let [data (lookup-entry config id :schedule-expression)]
+    (. builder scheduleExpression data))
+  (.build builder))
 
 
-(defn cfn-secret-builder
-  "The cfn-secret-builder function buildes out new instances of 
-CfnSecret$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-secret-builder
+  "The build-cfn-secret-builder function updates a CfnSecret$Builder instance using the provided configuration.
+  The function takes the CfnSecret$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -246,29 +270,32 @@ CfnSecret$Builder using the provided configuration.  Each field is set as follow
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `replicaRegions` | java.util.List | [[cdk.support/lookup-entry]] | `:replica-regions` |
 | `secretString` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-string` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnSecret$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :generate-secret-string)]
-      (. builder generateSecretString data))
-    (when-let [data (lookup-entry config id :kms-key-id)]
-      (. builder kmsKeyId data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :replica-regions)]
-      (. builder replicaRegions data))
-    (when-let [data (lookup-entry config id :secret-string)]
-      (. builder secretString data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnSecret$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :generate-secret-string)]
+    (. builder generateSecretString data))
+  (when-let [data (lookup-entry config id :kms-key-id)]
+    (. builder kmsKeyId data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :replica-regions)]
+    (. builder replicaRegions data))
+  (when-let [data (lookup-entry config id :secret-string)]
+    (. builder secretString data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-secret-generate-secret-string-property-builder
-  "The cfn-secret-generate-secret-string-property-builder function buildes out new instances of 
-CfnSecret$GenerateSecretStringProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-secret-generate-secret-string-property-builder
+  "The build-cfn-secret-generate-secret-string-property-builder function updates a CfnSecret$GenerateSecretStringProperty$Builder instance using the provided configuration.
+  The function takes the CfnSecret$GenerateSecretStringProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -281,35 +308,38 @@ CfnSecret$GenerateSecretStringProperty$Builder using the provided configuration.
 | `includeSpace` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-space` |
 | `passwordLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:password-length` |
 | `requireEachIncludedType` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-each-included-type` |
-| `secretStringTemplate` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-string-template` |"
-  [stack id config]
-  (let [builder (CfnSecret$GenerateSecretStringProperty$Builder.)]
-    (when-let [data (lookup-entry config id :exclude-characters)]
-      (. builder excludeCharacters data))
-    (when-let [data (lookup-entry config id :exclude-lowercase)]
-      (. builder excludeLowercase data))
-    (when-let [data (lookup-entry config id :exclude-numbers)]
-      (. builder excludeNumbers data))
-    (when-let [data (lookup-entry config id :exclude-punctuation)]
-      (. builder excludePunctuation data))
-    (when-let [data (lookup-entry config id :exclude-uppercase)]
-      (. builder excludeUppercase data))
-    (when-let [data (lookup-entry config id :generate-string-key)]
-      (. builder generateStringKey data))
-    (when-let [data (lookup-entry config id :include-space)]
-      (. builder includeSpace data))
-    (when-let [data (lookup-entry config id :password-length)]
-      (. builder passwordLength data))
-    (when-let [data (lookup-entry config id :require-each-included-type)]
-      (. builder requireEachIncludedType data))
-    (when-let [data (lookup-entry config id :secret-string-template)]
-      (. builder secretStringTemplate data))
-    (.build builder)))
+| `secretStringTemplate` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-string-template` |
+"
+  [^CfnSecret$GenerateSecretStringProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :exclude-characters)]
+    (. builder excludeCharacters data))
+  (when-let [data (lookup-entry config id :exclude-lowercase)]
+    (. builder excludeLowercase data))
+  (when-let [data (lookup-entry config id :exclude-numbers)]
+    (. builder excludeNumbers data))
+  (when-let [data (lookup-entry config id :exclude-punctuation)]
+    (. builder excludePunctuation data))
+  (when-let [data (lookup-entry config id :exclude-uppercase)]
+    (. builder excludeUppercase data))
+  (when-let [data (lookup-entry config id :generate-string-key)]
+    (. builder generateStringKey data))
+  (when-let [data (lookup-entry config id :include-space)]
+    (. builder includeSpace data))
+  (when-let [data (lookup-entry config id :password-length)]
+    (. builder passwordLength data))
+  (when-let [data (lookup-entry config id :require-each-included-type)]
+    (. builder requireEachIncludedType data))
+  (when-let [data (lookup-entry config id :secret-string-template)]
+    (. builder secretStringTemplate data))
+  (.build builder))
 
 
-(defn cfn-secret-props-builder
-  "The cfn-secret-props-builder function buildes out new instances of 
-CfnSecretProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-secret-props-builder
+  "The build-cfn-secret-props-builder function updates a CfnSecretProps$Builder instance using the provided configuration.
+  The function takes the CfnSecretProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -319,86 +349,98 @@ CfnSecretProps$Builder using the provided configuration.  Each field is set as f
 | `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
 | `replicaRegions` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:replica-regions` |
 | `secretString` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-string` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnSecretProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :generate-secret-string)]
-      (. builder generateSecretString data))
-    (when-let [data (lookup-entry config id :kms-key-id)]
-      (. builder kmsKeyId data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :replica-regions)]
-      (. builder replicaRegions data))
-    (when-let [data (lookup-entry config id :secret-string)]
-      (. builder secretString data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnSecretProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :generate-secret-string)]
+    (. builder generateSecretString data))
+  (when-let [data (lookup-entry config id :kms-key-id)]
+    (. builder kmsKeyId data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :replica-regions)]
+    (. builder replicaRegions data))
+  (when-let [data (lookup-entry config id :secret-string)]
+    (. builder secretString data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-secret-replica-region-property-builder
-  "The cfn-secret-replica-region-property-builder function buildes out new instances of 
-CfnSecret$ReplicaRegionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-secret-replica-region-property-builder
+  "The build-cfn-secret-replica-region-property-builder function updates a CfnSecret$ReplicaRegionProperty$Builder instance using the provided configuration.
+  The function takes the CfnSecret$ReplicaRegionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `kmsKeyId` | java.lang.String | [[cdk.support/lookup-entry]] | `:kms-key-id` |
-| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |"
-  [stack id config]
-  (let [builder (CfnSecret$ReplicaRegionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :kms-key-id)]
-      (. builder kmsKeyId data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (.build builder)))
+| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
+"
+  [^CfnSecret$ReplicaRegionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :kms-key-id)]
+    (. builder kmsKeyId data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (.build builder))
 
 
-(defn cfn-secret-target-attachment-builder
-  "The cfn-secret-target-attachment-builder function buildes out new instances of 
-CfnSecretTargetAttachment$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-secret-target-attachment-builder
+  "The build-cfn-secret-target-attachment-builder function updates a CfnSecretTargetAttachment$Builder instance using the provided configuration.
+  The function takes the CfnSecretTargetAttachment$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |
-| `targetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-id` |
-| `targetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-type` |"
-  [stack id config]
-  (let [builder (CfnSecretTargetAttachment$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :secret-id)]
-      (. builder secretId data))
-    (when-let [data (lookup-entry config id :target-id)]
-      (. builder targetId data))
-    (when-let [data (lookup-entry config id :target-type)]
-      (. builder targetType data))
-    (.build builder)))
-
-
-(defn cfn-secret-target-attachment-props-builder
-  "The cfn-secret-target-attachment-props-builder function buildes out new instances of 
-CfnSecretTargetAttachmentProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |
 | `targetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-id` |
-| `targetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-type` |"
-  [stack id config]
-  (let [builder (CfnSecretTargetAttachmentProps$Builder.)]
-    (when-let [data (lookup-entry config id :secret-id)]
-      (. builder secretId data))
-    (when-let [data (lookup-entry config id :target-id)]
-      (. builder targetId data))
-    (when-let [data (lookup-entry config id :target-type)]
-      (. builder targetType data))
-    (.build builder)))
+| `targetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-type` |
+"
+  [^CfnSecretTargetAttachment$Builder builder id config]
+  (when-let [data (lookup-entry config id :secret-id)]
+    (. builder secretId data))
+  (when-let [data (lookup-entry config id :target-id)]
+    (. builder targetId data))
+  (when-let [data (lookup-entry config id :target-type)]
+    (. builder targetType data))
+  (.build builder))
 
 
-(defn multi-user-hosted-rotation-options-builder
-  "The multi-user-hosted-rotation-options-builder function buildes out new instances of 
-MultiUserHostedRotationOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-secret-target-attachment-props-builder
+  "The build-cfn-secret-target-attachment-props-builder function updates a CfnSecretTargetAttachmentProps$Builder instance using the provided configuration.
+  The function takes the CfnSecretTargetAttachmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `secretId` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-id` |
+| `targetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-id` |
+| `targetType` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-type` |
+"
+  [^CfnSecretTargetAttachmentProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :secret-id)]
+    (. builder secretId data))
+  (when-let [data (lookup-entry config id :target-id)]
+    (. builder targetId data))
+  (when-let [data (lookup-entry config id :target-type)]
+    (. builder targetType data))
+  (.build builder))
+
+
+(defn build-multi-user-hosted-rotation-options-builder
+  "The build-multi-user-hosted-rotation-options-builder function updates a MultiUserHostedRotationOptions$Builder instance using the provided configuration.
+  The function takes the MultiUserHostedRotationOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -407,121 +449,84 @@ MultiUserHostedRotationOptions$Builder using the provided configuration.  Each f
 | `masterSecret` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:master-secret` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |"
-  [stack id config]
-  (let [builder (MultiUserHostedRotationOptions$Builder.)]
-    (when-let [data (lookup-entry config id :exclude-characters)]
-      (. builder excludeCharacters data))
-    (when-let [data (lookup-entry config id :function-name)]
-      (. builder functionName data))
-    (when-let [data (lookup-entry config id :master-secret)]
-      (. builder masterSecret data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnets)]
-      (. builder vpcSubnets data))
-    (.build builder)))
+| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
+"
+  [^MultiUserHostedRotationOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :exclude-characters)]
+    (. builder excludeCharacters data))
+  (when-let [data (lookup-entry config id :function-name)]
+    (. builder functionName data))
+  (when-let [data (lookup-entry config id :master-secret)]
+    (. builder masterSecret data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnets)]
+    (. builder vpcSubnets data))
+  (.build builder))
 
 
-(defn replica-region-builder
-  "The replica-region-builder function buildes out new instances of 
-ReplicaRegion$Builder using the provided configuration.  Each field is set as follows:
+(defn build-replica-region-builder
+  "The build-replica-region-builder function updates a ReplicaRegion$Builder instance using the provided configuration.
+  The function takes the ReplicaRegion$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `encryptionKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:encryption-key` |
-| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |"
-  [stack id config]
-  (let [builder (ReplicaRegion$Builder.)]
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (lookup-entry config id :region)]
-      (. builder region data))
-    (.build builder)))
+| `region` | java.lang.String | [[cdk.support/lookup-entry]] | `:region` |
+"
+  [^ReplicaRegion$Builder builder id config]
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (lookup-entry config id :region)]
+    (. builder region data))
+  (.build builder))
 
 
-(defn resource-policy-builder
-  "The resource-policy-builder function buildes out new instances of 
-ResourcePolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-resource-policy-builder
+  "The build-resource-policy-builder function updates a ResourcePolicy$Builder instance using the provided configuration.
+  The function takes the ResourcePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `secret` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:secret` |"
-  [stack id config]
-  (let [builder (ResourcePolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :secret)]
-      (. builder secret data))
-    (.build builder)))
-
-
-(defn resource-policy-props-builder
-  "The resource-policy-props-builder function buildes out new instances of 
-ResourcePolicyProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `secret` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:secret` |"
-  [stack id config]
-  (let [builder (ResourcePolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :secret)]
-      (. builder secret data))
-    (.build builder)))
+| `secret` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:secret` |
+"
+  [^ResourcePolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :secret)]
+    (. builder secret data))
+  (.build builder))
 
 
-(defn rotation-schedule-builder
-  "The rotation-schedule-builder function buildes out new instances of 
-RotationSchedule$Builder using the provided configuration.  Each field is set as follows:
+(defn build-resource-policy-props-builder
+  "The build-resource-policy-props-builder function updates a ResourcePolicyProps$Builder instance using the provided configuration.
+  The function takes the ResourcePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `automaticallyAfter` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:automatically-after` |
-| `hostedRotation` | software.amazon.awscdk.services.secretsmanager.HostedRotation | [[cdk.support/lookup-entry]] | `:hosted-rotation` |
-| `rotateImmediatelyOnUpdate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:rotate-immediately-on-update` |
-| `rotationLambda` | software.amazon.awscdk.services.lambda.IFunction | [[cdk.support/lookup-entry]] | `:rotation-lambda` |
-| `secret` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:secret` |"
-  [stack id config]
-  (let [builder (RotationSchedule$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :automatically-after)]
-      (. builder automaticallyAfter data))
-    (when-let [data (lookup-entry config id :hosted-rotation)]
-      (. builder hostedRotation data))
-    (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
-      (. builder rotateImmediatelyOnUpdate data))
-    (when-let [data (lookup-entry config id :rotation-lambda)]
-      (. builder rotationLambda data))
-    (when-let [data (lookup-entry config id :secret)]
-      (. builder secret data))
-    (.build builder)))
-
-
-(defn rotation-schedule-options-builder
-  "The rotation-schedule-options-builder function buildes out new instances of 
-RotationScheduleOptions$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `automaticallyAfter` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:automatically-after` |
-| `hostedRotation` | software.amazon.awscdk.services.secretsmanager.HostedRotation | [[cdk.support/lookup-entry]] | `:hosted-rotation` |
-| `rotateImmediatelyOnUpdate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:rotate-immediately-on-update` |
-| `rotationLambda` | software.amazon.awscdk.services.lambda.IFunction | [[cdk.support/lookup-entry]] | `:rotation-lambda` |"
-  [stack id config]
-  (let [builder (RotationScheduleOptions$Builder.)]
-    (when-let [data (lookup-entry config id :automatically-after)]
-      (. builder automaticallyAfter data))
-    (when-let [data (lookup-entry config id :hosted-rotation)]
-      (. builder hostedRotation data))
-    (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
-      (. builder rotateImmediatelyOnUpdate data))
-    (when-let [data (lookup-entry config id :rotation-lambda)]
-      (. builder rotationLambda data))
-    (.build builder)))
+| `secret` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:secret` |
+"
+  [^ResourcePolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :secret)]
+    (. builder secret data))
+  (.build builder))
 
 
-(defn rotation-schedule-props-builder
-  "The rotation-schedule-props-builder function buildes out new instances of 
-RotationScheduleProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-rotation-schedule-builder
+  "The build-rotation-schedule-builder function updates a RotationSchedule$Builder instance using the provided configuration.
+  The function takes the RotationSchedule$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -529,100 +534,126 @@ RotationScheduleProps$Builder using the provided configuration.  Each field is s
 | `hostedRotation` | software.amazon.awscdk.services.secretsmanager.HostedRotation | [[cdk.support/lookup-entry]] | `:hosted-rotation` |
 | `rotateImmediatelyOnUpdate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:rotate-immediately-on-update` |
 | `rotationLambda` | software.amazon.awscdk.services.lambda.IFunction | [[cdk.support/lookup-entry]] | `:rotation-lambda` |
-| `secret` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:secret` |"
-  [stack id config]
-  (let [builder (RotationScheduleProps$Builder.)]
-    (when-let [data (lookup-entry config id :automatically-after)]
-      (. builder automaticallyAfter data))
-    (when-let [data (lookup-entry config id :hosted-rotation)]
-      (. builder hostedRotation data))
-    (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
-      (. builder rotateImmediatelyOnUpdate data))
-    (when-let [data (lookup-entry config id :rotation-lambda)]
-      (. builder rotationLambda data))
-    (when-let [data (lookup-entry config id :secret)]
-      (. builder secret data))
-    (.build builder)))
+| `secret` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:secret` |
+"
+  [^RotationSchedule$Builder builder id config]
+  (when-let [data (lookup-entry config id :automatically-after)]
+    (. builder automaticallyAfter data))
+  (when-let [data (lookup-entry config id :hosted-rotation)]
+    (. builder hostedRotation data))
+  (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
+    (. builder rotateImmediatelyOnUpdate data))
+  (when-let [data (lookup-entry config id :rotation-lambda)]
+    (. builder rotationLambda data))
+  (when-let [data (lookup-entry config id :secret)]
+    (. builder secret data))
+  (.build builder))
 
 
-(defn secret-attachment-target-props-builder
-  "The secret-attachment-target-props-builder function buildes out new instances of 
-SecretAttachmentTargetProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-rotation-schedule-options-builder
+  "The build-rotation-schedule-options-builder function updates a RotationScheduleOptions$Builder instance using the provided configuration.
+  The function takes the RotationScheduleOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `automaticallyAfter` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:automatically-after` |
+| `hostedRotation` | software.amazon.awscdk.services.secretsmanager.HostedRotation | [[cdk.support/lookup-entry]] | `:hosted-rotation` |
+| `rotateImmediatelyOnUpdate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:rotate-immediately-on-update` |
+| `rotationLambda` | software.amazon.awscdk.services.lambda.IFunction | [[cdk.support/lookup-entry]] | `:rotation-lambda` |
+"
+  [^RotationScheduleOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :automatically-after)]
+    (. builder automaticallyAfter data))
+  (when-let [data (lookup-entry config id :hosted-rotation)]
+    (. builder hostedRotation data))
+  (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
+    (. builder rotateImmediatelyOnUpdate data))
+  (when-let [data (lookup-entry config id :rotation-lambda)]
+    (. builder rotationLambda data))
+  (.build builder))
+
+
+(defn build-rotation-schedule-props-builder
+  "The build-rotation-schedule-props-builder function updates a RotationScheduleProps$Builder instance using the provided configuration.
+  The function takes the RotationScheduleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `automaticallyAfter` | software.amazon.awscdk.Duration | [[cdk.support/lookup-entry]] | `:automatically-after` |
+| `hostedRotation` | software.amazon.awscdk.services.secretsmanager.HostedRotation | [[cdk.support/lookup-entry]] | `:hosted-rotation` |
+| `rotateImmediatelyOnUpdate` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:rotate-immediately-on-update` |
+| `rotationLambda` | software.amazon.awscdk.services.lambda.IFunction | [[cdk.support/lookup-entry]] | `:rotation-lambda` |
+| `secret` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:secret` |
+"
+  [^RotationScheduleProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :automatically-after)]
+    (. builder automaticallyAfter data))
+  (when-let [data (lookup-entry config id :hosted-rotation)]
+    (. builder hostedRotation data))
+  (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
+    (. builder rotateImmediatelyOnUpdate data))
+  (when-let [data (lookup-entry config id :rotation-lambda)]
+    (. builder rotationLambda data))
+  (when-let [data (lookup-entry config id :secret)]
+    (. builder secret data))
+  (.build builder))
+
+
+(defn build-secret-attachment-target-props-builder
+  "The build-secret-attachment-target-props-builder function updates a SecretAttachmentTargetProps$Builder instance using the provided configuration.
+  The function takes the SecretAttachmentTargetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `targetId` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-id` |
-| `targetType` | software.amazon.awscdk.services.secretsmanager.AttachmentTargetType | [[cdk.api.services.secretsmanager/attachment-target-type]] | `:target-type` |"
-  [stack id config]
-  (let [builder (SecretAttachmentTargetProps$Builder.)]
-    (when-let [data (lookup-entry config id :target-id)]
-      (. builder targetId data))
-    (when-let [data (attachment-target-type config id :target-type)]
-      (. builder targetType data))
-    (.build builder)))
+| `targetType` | software.amazon.awscdk.services.secretsmanager.AttachmentTargetType | [[cdk.api.services.secretsmanager/attachment-target-type]] | `:target-type` |
+"
+  [^SecretAttachmentTargetProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :target-id)]
+    (. builder targetId data))
+  (when-let [data (attachment-target-type config id :target-type)]
+    (. builder targetType data))
+  (.build builder))
 
 
-(defn secret-attributes-builder
-  "The secret-attributes-builder function buildes out new instances of 
-SecretAttributes$Builder using the provided configuration.  Each field is set as follows:
+(defn build-secret-attributes-builder
+  "The build-secret-attributes-builder function updates a SecretAttributes$Builder instance using the provided configuration.
+  The function takes the SecretAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `encryptionKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:encryption-key` |
 | `secretCompleteArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-complete-arn` |
-| `secretPartialArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-partial-arn` |"
-  [stack id config]
-  (let [builder (SecretAttributes$Builder.)]
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (lookup-entry config id :secret-complete-arn)]
-      (. builder secretCompleteArn data))
-    (when-let [data (lookup-entry config id :secret-partial-arn)]
-      (. builder secretPartialArn data))
-    (.build builder)))
+| `secretPartialArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-partial-arn` |
+"
+  [^SecretAttributes$Builder builder id config]
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (lookup-entry config id :secret-complete-arn)]
+    (. builder secretCompleteArn data))
+  (when-let [data (lookup-entry config id :secret-partial-arn)]
+    (. builder secretPartialArn data))
+  (.build builder))
 
 
-(defn secret-builder
-  "The secret-builder function buildes out new instances of 
-Secret$Builder using the provided configuration.  Each field is set as follows:
+(defn build-secret-builder
+  "The build-secret-builder function updates a Secret$Builder instance using the provided configuration.
+  The function takes the Secret$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
-| `encryptionKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:encryption-key` |
-| `generateSecretString` | software.amazon.awscdk.services.secretsmanager.SecretStringGenerator | [[cdk.support/lookup-entry]] | `:generate-secret-string` |
-| `removalPolicy` | software.amazon.awscdk.RemovalPolicy | [[cdk.api/removal-policy]] | `:removal-policy` |
-| `replicaRegions` | java.util.List | [[cdk.support/lookup-entry]] | `:replica-regions` |
-| `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |
-| `secretObjectValue` | java.util.Map | [[cdk.support/lookup-entry]] | `:secret-object-value` |
-| `secretStringBeta1` | software.amazon.awscdk.services.secretsmanager.SecretStringValueBeta1 | [[cdk.support/lookup-entry]] | `:secret-string-beta1` |
-| `secretStringValue` | software.amazon.awscdk.SecretValue | [[cdk.support/lookup-entry]] | `:secret-string-value` |"
-  [stack id config]
-  (let [builder (Secret$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (lookup-entry config id :generate-secret-string)]
-      (. builder generateSecretString data))
-    (when-let [data (removal-policy config id :removal-policy)]
-      (. builder removalPolicy data))
-    (when-let [data (lookup-entry config id :replica-regions)]
-      (. builder replicaRegions data))
-    (when-let [data (lookup-entry config id :secret-name)]
-      (. builder secretName data))
-    (when-let [data (lookup-entry config id :secret-object-value)]
-      (. builder secretObjectValue data))
-    (when-let [data (lookup-entry config id :secret-string-beta1)]
-      (. builder secretStringBeta1 data))
-    (when-let [data (lookup-entry config id :secret-string-value)]
-      (. builder secretStringValue data))
-    (.build builder)))
-
-
-(defn secret-props-builder
-  "The secret-props-builder function buildes out new instances of 
-SecretProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -634,61 +665,111 @@ SecretProps$Builder using the provided configuration.  Each field is set as foll
 | `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |
 | `secretObjectValue` | java.util.Map | [[cdk.support/lookup-entry]] | `:secret-object-value` |
 | `secretStringBeta1` | software.amazon.awscdk.services.secretsmanager.SecretStringValueBeta1 | [[cdk.support/lookup-entry]] | `:secret-string-beta1` |
-| `secretStringValue` | software.amazon.awscdk.SecretValue | [[cdk.support/lookup-entry]] | `:secret-string-value` |"
-  [stack id config]
-  (let [builder (SecretProps$Builder.)]
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :encryption-key)]
-      (. builder encryptionKey data))
-    (when-let [data (lookup-entry config id :generate-secret-string)]
-      (. builder generateSecretString data))
-    (when-let [data (removal-policy config id :removal-policy)]
-      (. builder removalPolicy data))
-    (when-let [data (lookup-entry config id :replica-regions)]
-      (. builder replicaRegions data))
-    (when-let [data (lookup-entry config id :secret-name)]
-      (. builder secretName data))
-    (when-let [data (lookup-entry config id :secret-object-value)]
-      (. builder secretObjectValue data))
-    (when-let [data (lookup-entry config id :secret-string-beta1)]
-      (. builder secretStringBeta1 data))
-    (when-let [data (lookup-entry config id :secret-string-value)]
-      (. builder secretStringValue data))
-    (.build builder)))
+| `secretStringValue` | software.amazon.awscdk.SecretValue | [[cdk.support/lookup-entry]] | `:secret-string-value` |
+"
+  [^Secret$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (lookup-entry config id :generate-secret-string)]
+    (. builder generateSecretString data))
+  (when-let [data (removal-policy config id :removal-policy)]
+    (. builder removalPolicy data))
+  (when-let [data (lookup-entry config id :replica-regions)]
+    (. builder replicaRegions data))
+  (when-let [data (lookup-entry config id :secret-name)]
+    (. builder secretName data))
+  (when-let [data (lookup-entry config id :secret-object-value)]
+    (. builder secretObjectValue data))
+  (when-let [data (lookup-entry config id :secret-string-beta1)]
+    (. builder secretStringBeta1 data))
+  (when-let [data (lookup-entry config id :secret-string-value)]
+    (. builder secretStringValue data))
+  (.build builder))
 
 
-(defn secret-rotation-application-builder
-  "The secret-rotation-application-builder function buildes out new instances of 
-SecretRotationApplication$Builder using the provided configuration.  Each field is set as follows:
+(defn build-secret-props-builder
+  "The build-secret-props-builder function updates a SecretProps$Builder instance using the provided configuration.
+  The function takes the SecretProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `isMultiUser` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-multi-user` |"
-  [stack id config ^java.lang.String application-id ^java.lang.String semantic-version]
-  (let [builder (SecretRotationApplication$Builder/create ^java.lang.String application-id ^java.lang.String semantic-version)]
-    (when-let [data (lookup-entry config id :is-multi-user)]
-      (. builder isMultiUser data))
-    (.build builder)))
-
-
-(defn secret-rotation-application-options-builder
-  "The secret-rotation-application-options-builder function buildes out new instances of 
-SecretRotationApplicationOptions$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `isMultiUser` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-multi-user` |"
-  [stack id config]
-  (let [builder (SecretRotationApplicationOptions$Builder.)]
-    (when-let [data (lookup-entry config id :is-multi-user)]
-      (. builder isMultiUser data))
-    (.build builder)))
+| `description` | java.lang.String | [[cdk.support/lookup-entry]] | `:description` |
+| `encryptionKey` | software.amazon.awscdk.services.kms.IKey | [[cdk.support/lookup-entry]] | `:encryption-key` |
+| `generateSecretString` | software.amazon.awscdk.services.secretsmanager.SecretStringGenerator | [[cdk.support/lookup-entry]] | `:generate-secret-string` |
+| `removalPolicy` | software.amazon.awscdk.RemovalPolicy | [[cdk.api/removal-policy]] | `:removal-policy` |
+| `replicaRegions` | java.util.List | [[cdk.support/lookup-entry]] | `:replica-regions` |
+| `secretName` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-name` |
+| `secretObjectValue` | java.util.Map | [[cdk.support/lookup-entry]] | `:secret-object-value` |
+| `secretStringBeta1` | software.amazon.awscdk.services.secretsmanager.SecretStringValueBeta1 | [[cdk.support/lookup-entry]] | `:secret-string-beta1` |
+| `secretStringValue` | software.amazon.awscdk.SecretValue | [[cdk.support/lookup-entry]] | `:secret-string-value` |
+"
+  [^SecretProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :encryption-key)]
+    (. builder encryptionKey data))
+  (when-let [data (lookup-entry config id :generate-secret-string)]
+    (. builder generateSecretString data))
+  (when-let [data (removal-policy config id :removal-policy)]
+    (. builder removalPolicy data))
+  (when-let [data (lookup-entry config id :replica-regions)]
+    (. builder replicaRegions data))
+  (when-let [data (lookup-entry config id :secret-name)]
+    (. builder secretName data))
+  (when-let [data (lookup-entry config id :secret-object-value)]
+    (. builder secretObjectValue data))
+  (when-let [data (lookup-entry config id :secret-string-beta1)]
+    (. builder secretStringBeta1 data))
+  (when-let [data (lookup-entry config id :secret-string-value)]
+    (. builder secretStringValue data))
+  (.build builder))
 
 
-(defn secret-rotation-builder
-  "The secret-rotation-builder function buildes out new instances of 
-SecretRotation$Builder using the provided configuration.  Each field is set as follows:
+(defn build-secret-rotation-application-builder
+  "The build-secret-rotation-application-builder function updates a SecretRotationApplication$Builder instance using the provided configuration.
+  The function takes the SecretRotationApplication$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `isMultiUser` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-multi-user` |
+"
+  [^SecretRotationApplication$Builder builder id config]
+  (when-let [data (lookup-entry config id :is-multi-user)]
+    (. builder isMultiUser data))
+  (.build builder))
+
+
+(defn build-secret-rotation-application-options-builder
+  "The build-secret-rotation-application-options-builder function updates a SecretRotationApplicationOptions$Builder instance using the provided configuration.
+  The function takes the SecretRotationApplicationOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `isMultiUser` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:is-multi-user` |
+"
+  [^SecretRotationApplicationOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :is-multi-user)]
+    (. builder isMultiUser data))
+  (.build builder))
+
+
+(defn build-secret-rotation-builder
+  "The build-secret-rotation-builder function updates a SecretRotation$Builder instance using the provided configuration.
+  The function takes the SecretRotation$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -702,37 +783,40 @@ SecretRotation$Builder using the provided configuration.  Each field is set as f
 | `securityGroup` | software.amazon.awscdk.services.ec2.ISecurityGroup | [[cdk.support/lookup-entry]] | `:security-group` |
 | `target` | software.amazon.awscdk.services.ec2.IConnectable | [[cdk.support/lookup-entry]] | `:target` |
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |"
-  [stack id config]
-  (let [builder (SecretRotation$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :application)]
-      (. builder application data))
-    (when-let [data (lookup-entry config id :automatically-after)]
-      (. builder automaticallyAfter data))
-    (when-let [data (lookup-entry config id :endpoint)]
-      (. builder endpoint data))
-    (when-let [data (lookup-entry config id :exclude-characters)]
-      (. builder excludeCharacters data))
-    (when-let [data (lookup-entry config id :master-secret)]
-      (. builder masterSecret data))
-    (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
-      (. builder rotateImmediatelyOnUpdate data))
-    (when-let [data (lookup-entry config id :secret)]
-      (. builder secret data))
-    (when-let [data (lookup-entry config id :security-group)]
-      (. builder securityGroup data))
-    (when-let [data (lookup-entry config id :target)]
-      (. builder target data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnets)]
-      (. builder vpcSubnets data))
-    (.build builder)))
+| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
+"
+  [^SecretRotation$Builder builder id config]
+  (when-let [data (lookup-entry config id :application)]
+    (. builder application data))
+  (when-let [data (lookup-entry config id :automatically-after)]
+    (. builder automaticallyAfter data))
+  (when-let [data (lookup-entry config id :endpoint)]
+    (. builder endpoint data))
+  (when-let [data (lookup-entry config id :exclude-characters)]
+    (. builder excludeCharacters data))
+  (when-let [data (lookup-entry config id :master-secret)]
+    (. builder masterSecret data))
+  (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
+    (. builder rotateImmediatelyOnUpdate data))
+  (when-let [data (lookup-entry config id :secret)]
+    (. builder secret data))
+  (when-let [data (lookup-entry config id :security-group)]
+    (. builder securityGroup data))
+  (when-let [data (lookup-entry config id :target)]
+    (. builder target data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnets)]
+    (. builder vpcSubnets data))
+  (.build builder))
 
 
-(defn secret-rotation-props-builder
-  "The secret-rotation-props-builder function buildes out new instances of 
-SecretRotationProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-secret-rotation-props-builder
+  "The build-secret-rotation-props-builder function updates a SecretRotationProps$Builder instance using the provided configuration.
+  The function takes the SecretRotationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -746,37 +830,40 @@ SecretRotationProps$Builder using the provided configuration.  Each field is set
 | `securityGroup` | software.amazon.awscdk.services.ec2.ISecurityGroup | [[cdk.support/lookup-entry]] | `:security-group` |
 | `target` | software.amazon.awscdk.services.ec2.IConnectable | [[cdk.support/lookup-entry]] | `:target` |
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |"
-  [stack id config]
-  (let [builder (SecretRotationProps$Builder.)]
-    (when-let [data (lookup-entry config id :application)]
-      (. builder application data))
-    (when-let [data (lookup-entry config id :automatically-after)]
-      (. builder automaticallyAfter data))
-    (when-let [data (lookup-entry config id :endpoint)]
-      (. builder endpoint data))
-    (when-let [data (lookup-entry config id :exclude-characters)]
-      (. builder excludeCharacters data))
-    (when-let [data (lookup-entry config id :master-secret)]
-      (. builder masterSecret data))
-    (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
-      (. builder rotateImmediatelyOnUpdate data))
-    (when-let [data (lookup-entry config id :secret)]
-      (. builder secret data))
-    (when-let [data (lookup-entry config id :security-group)]
-      (. builder securityGroup data))
-    (when-let [data (lookup-entry config id :target)]
-      (. builder target data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnets)]
-      (. builder vpcSubnets data))
-    (.build builder)))
+| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
+"
+  [^SecretRotationProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :application)]
+    (. builder application data))
+  (when-let [data (lookup-entry config id :automatically-after)]
+    (. builder automaticallyAfter data))
+  (when-let [data (lookup-entry config id :endpoint)]
+    (. builder endpoint data))
+  (when-let [data (lookup-entry config id :exclude-characters)]
+    (. builder excludeCharacters data))
+  (when-let [data (lookup-entry config id :master-secret)]
+    (. builder masterSecret data))
+  (when-let [data (lookup-entry config id :rotate-immediately-on-update)]
+    (. builder rotateImmediatelyOnUpdate data))
+  (when-let [data (lookup-entry config id :secret)]
+    (. builder secret data))
+  (when-let [data (lookup-entry config id :security-group)]
+    (. builder securityGroup data))
+  (when-let [data (lookup-entry config id :target)]
+    (. builder target data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnets)]
+    (. builder vpcSubnets data))
+  (.build builder))
 
 
-(defn secret-string-generator-builder
-  "The secret-string-generator-builder function buildes out new instances of 
-SecretStringGenerator$Builder using the provided configuration.  Each field is set as follows:
+(defn build-secret-string-generator-builder
+  "The build-secret-string-generator-builder function updates a SecretStringGenerator$Builder instance using the provided configuration.
+  The function takes the SecretStringGenerator$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -789,69 +876,78 @@ SecretStringGenerator$Builder using the provided configuration.  Each field is s
 | `includeSpace` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:include-space` |
 | `passwordLength` | java.lang.Number | [[cdk.support/lookup-entry]] | `:password-length` |
 | `requireEachIncludedType` | java.lang.Boolean | [[cdk.support/lookup-entry]] | `:require-each-included-type` |
-| `secretStringTemplate` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-string-template` |"
-  [stack id config]
-  (let [builder (SecretStringGenerator$Builder.)]
-    (when-let [data (lookup-entry config id :exclude-characters)]
-      (. builder excludeCharacters data))
-    (when-let [data (lookup-entry config id :exclude-lowercase)]
-      (. builder excludeLowercase data))
-    (when-let [data (lookup-entry config id :exclude-numbers)]
-      (. builder excludeNumbers data))
-    (when-let [data (lookup-entry config id :exclude-punctuation)]
-      (. builder excludePunctuation data))
-    (when-let [data (lookup-entry config id :exclude-uppercase)]
-      (. builder excludeUppercase data))
-    (when-let [data (lookup-entry config id :generate-string-key)]
-      (. builder generateStringKey data))
-    (when-let [data (lookup-entry config id :include-space)]
-      (. builder includeSpace data))
-    (when-let [data (lookup-entry config id :password-length)]
-      (. builder passwordLength data))
-    (when-let [data (lookup-entry config id :require-each-included-type)]
-      (. builder requireEachIncludedType data))
-    (when-let [data (lookup-entry config id :secret-string-template)]
-      (. builder secretStringTemplate data))
-    (.build builder)))
+| `secretStringTemplate` | java.lang.String | [[cdk.support/lookup-entry]] | `:secret-string-template` |
+"
+  [^SecretStringGenerator$Builder builder id config]
+  (when-let [data (lookup-entry config id :exclude-characters)]
+    (. builder excludeCharacters data))
+  (when-let [data (lookup-entry config id :exclude-lowercase)]
+    (. builder excludeLowercase data))
+  (when-let [data (lookup-entry config id :exclude-numbers)]
+    (. builder excludeNumbers data))
+  (when-let [data (lookup-entry config id :exclude-punctuation)]
+    (. builder excludePunctuation data))
+  (when-let [data (lookup-entry config id :exclude-uppercase)]
+    (. builder excludeUppercase data))
+  (when-let [data (lookup-entry config id :generate-string-key)]
+    (. builder generateStringKey data))
+  (when-let [data (lookup-entry config id :include-space)]
+    (. builder includeSpace data))
+  (when-let [data (lookup-entry config id :password-length)]
+    (. builder passwordLength data))
+  (when-let [data (lookup-entry config id :require-each-included-type)]
+    (. builder requireEachIncludedType data))
+  (when-let [data (lookup-entry config id :secret-string-template)]
+    (. builder secretStringTemplate data))
+  (.build builder))
 
 
-(defn secret-target-attachment-builder
-  "The secret-target-attachment-builder function buildes out new instances of 
-SecretTargetAttachment$Builder using the provided configuration.  Each field is set as follows:
+(defn build-secret-target-attachment-builder
+  "The build-secret-target-attachment-builder function updates a SecretTargetAttachment$Builder instance using the provided configuration.
+  The function takes the SecretTargetAttachment$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `secret` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:secret` |
-| `target` | software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget | [[cdk.support/lookup-entry]] | `:target` |"
-  [stack id config]
-  (let [builder (SecretTargetAttachment$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :secret)]
-      (. builder secret data))
-    (when-let [data (lookup-entry config id :target)]
-      (. builder target data))
-    (.build builder)))
-
-
-(defn secret-target-attachment-props-builder
-  "The secret-target-attachment-props-builder function buildes out new instances of 
-SecretTargetAttachmentProps$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `secret` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:secret` |
-| `target` | software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget | [[cdk.support/lookup-entry]] | `:target` |"
-  [stack id config]
-  (let [builder (SecretTargetAttachmentProps$Builder.)]
-    (when-let [data (lookup-entry config id :secret)]
-      (. builder secret data))
-    (when-let [data (lookup-entry config id :target)]
-      (. builder target data))
-    (.build builder)))
+| `target` | software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget | [[cdk.support/lookup-entry]] | `:target` |
+"
+  [^SecretTargetAttachment$Builder builder id config]
+  (when-let [data (lookup-entry config id :secret)]
+    (. builder secret data))
+  (when-let [data (lookup-entry config id :target)]
+    (. builder target data))
+  (.build builder))
 
 
-(defn single-user-hosted-rotation-options-builder
-  "The single-user-hosted-rotation-options-builder function buildes out new instances of 
-SingleUserHostedRotationOptions$Builder using the provided configuration.  Each field is set as follows:
+(defn build-secret-target-attachment-props-builder
+  "The build-secret-target-attachment-props-builder function updates a SecretTargetAttachmentProps$Builder instance using the provided configuration.
+  The function takes the SecretTargetAttachmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `secret` | software.amazon.awscdk.services.secretsmanager.ISecret | [[cdk.support/lookup-entry]] | `:secret` |
+| `target` | software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget | [[cdk.support/lookup-entry]] | `:target` |
+"
+  [^SecretTargetAttachmentProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :secret)]
+    (. builder secret data))
+  (when-let [data (lookup-entry config id :target)]
+    (. builder target data))
+  (.build builder))
+
+
+(defn build-single-user-hosted-rotation-options-builder
+  "The build-single-user-hosted-rotation-options-builder function updates a SingleUserHostedRotationOptions$Builder instance using the provided configuration.
+  The function takes the SingleUserHostedRotationOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -859,17 +955,17 @@ SingleUserHostedRotationOptions$Builder using the provided configuration.  Each 
 | `functionName` | java.lang.String | [[cdk.support/lookup-entry]] | `:function-name` |
 | `securityGroups` | java.util.List | [[cdk.support/lookup-entry]] | `:security-groups` |
 | `vpc` | software.amazon.awscdk.services.ec2.IVpc | [[cdk.support/lookup-entry]] | `:vpc` |
-| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |"
-  [stack id config]
-  (let [builder (SingleUserHostedRotationOptions$Builder.)]
-    (when-let [data (lookup-entry config id :exclude-characters)]
-      (. builder excludeCharacters data))
-    (when-let [data (lookup-entry config id :function-name)]
-      (. builder functionName data))
-    (when-let [data (lookup-entry config id :security-groups)]
-      (. builder securityGroups data))
-    (when-let [data (lookup-entry config id :vpc)]
-      (. builder vpc data))
-    (when-let [data (lookup-entry config id :vpc-subnets)]
-      (. builder vpcSubnets data))
-    (.build builder)))
+| `vpcSubnets` | software.amazon.awscdk.services.ec2.SubnetSelection | [[cdk.support/lookup-entry]] | `:vpc-subnets` |
+"
+  [^SingleUserHostedRotationOptions$Builder builder id config]
+  (when-let [data (lookup-entry config id :exclude-characters)]
+    (. builder excludeCharacters data))
+  (when-let [data (lookup-entry config id :function-name)]
+    (. builder functionName data))
+  (when-let [data (lookup-entry config id :security-groups)]
+    (. builder securityGroups data))
+  (when-let [data (lookup-entry config id :vpc)]
+    (. builder vpc data))
+  (when-let [data (lookup-entry config id :vpc-subnets)]
+    (. builder vpcSubnets data))
+  (.build builder))

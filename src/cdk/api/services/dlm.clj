@@ -26,54 +26,66 @@
                                                 CfnLifecyclePolicyProps$Builder]))
 
 
-(defn cfn-lifecycle-policy-action-property-builder
-  "The cfn-lifecycle-policy-action-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$ActionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-action-property-builder
+  "The build-cfn-lifecycle-policy-action-property-builder function updates a CfnLifecyclePolicy$ActionProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$ActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `crossRegionCopy` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:cross-region-copy` |
-| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$ActionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :cross-region-copy)]
-      (. builder crossRegionCopy data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (.build builder)))
+| `name` | java.lang.String | [[cdk.support/lookup-entry]] | `:name` |
+"
+  [^CfnLifecyclePolicy$ActionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :cross-region-copy)]
+    (. builder crossRegionCopy data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (.build builder))
 
 
-(defn cfn-lifecycle-policy-archive-retain-rule-property-builder
-  "The cfn-lifecycle-policy-archive-retain-rule-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$ArchiveRetainRuleProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-archive-retain-rule-property-builder
+  "The build-cfn-lifecycle-policy-archive-retain-rule-property-builder function updates a CfnLifecyclePolicy$ArchiveRetainRuleProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$ArchiveRetainRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `retentionArchiveTier` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retention-archive-tier` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$ArchiveRetainRuleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :retention-archive-tier)]
-      (. builder retentionArchiveTier data))
-    (.build builder)))
-
-
-(defn cfn-lifecycle-policy-archive-rule-property-builder
-  "The cfn-lifecycle-policy-archive-rule-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$ArchiveRuleProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
-| `retainRule` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$ArchiveRetainRuleProperty | [[cdk.support/lookup-entry]] | `:retain-rule` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$ArchiveRuleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :retain-rule)]
-      (. builder retainRule data))
-    (.build builder)))
+| `retentionArchiveTier` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retention-archive-tier` |
+"
+  [^CfnLifecyclePolicy$ArchiveRetainRuleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :retention-archive-tier)]
+    (. builder retentionArchiveTier data))
+  (.build builder))
 
 
-(defn cfn-lifecycle-policy-builder
-  "The cfn-lifecycle-policy-builder function buildes out new instances of 
-CfnLifecyclePolicy$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-archive-rule-property-builder
+  "The build-cfn-lifecycle-policy-archive-rule-property-builder function updates a CfnLifecyclePolicy$ArchiveRuleProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$ArchiveRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `retainRule` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$ArchiveRetainRuleProperty | [[cdk.support/lookup-entry]] | `:retain-rule` |
+"
+  [^CfnLifecyclePolicy$ArchiveRuleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :retain-rule)]
+    (. builder retainRule data))
+  (.build builder))
+
+
+(defn build-cfn-lifecycle-policy-builder
+  "The build-cfn-lifecycle-policy-builder function updates a CfnLifecyclePolicy$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -88,39 +100,42 @@ CfnLifecyclePolicy$Builder using the provided configuration.  Each field is set 
 | `policyDetails` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$PolicyDetailsProperty | [[cdk.support/lookup-entry]] | `:policy-details` |
 | `retainInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retain-interval` |
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$Builder/create stack id)]
-    (when-let [data (lookup-entry config id :copy-tags)]
-      (. builder copyTags data))
-    (when-let [data (lookup-entry config id :create-interval)]
-      (. builder createInterval data))
-    (when-let [data (lookup-entry config id :cross-region-copy-targets)]
-      (. builder crossRegionCopyTargets data))
-    (when-let [data (lookup-entry config id :default-policy)]
-      (. builder defaultPolicy data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :exclusions)]
-      (. builder exclusions data))
-    (when-let [data (lookup-entry config id :execution-role-arn)]
-      (. builder executionRoleArn data))
-    (when-let [data (lookup-entry config id :extend-deletion)]
-      (. builder extendDeletion data))
-    (when-let [data (lookup-entry config id :policy-details)]
-      (. builder policyDetails data))
-    (when-let [data (lookup-entry config id :retain-interval)]
-      (. builder retainInterval data))
-    (when-let [data (lookup-entry config id :state)]
-      (. builder state data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnLifecyclePolicy$Builder builder id config]
+  (when-let [data (lookup-entry config id :copy-tags)]
+    (. builder copyTags data))
+  (when-let [data (lookup-entry config id :create-interval)]
+    (. builder createInterval data))
+  (when-let [data (lookup-entry config id :cross-region-copy-targets)]
+    (. builder crossRegionCopyTargets data))
+  (when-let [data (lookup-entry config id :default-policy)]
+    (. builder defaultPolicy data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :exclusions)]
+    (. builder exclusions data))
+  (when-let [data (lookup-entry config id :execution-role-arn)]
+    (. builder executionRoleArn data))
+  (when-let [data (lookup-entry config id :extend-deletion)]
+    (. builder extendDeletion data))
+  (when-let [data (lookup-entry config id :policy-details)]
+    (. builder policyDetails data))
+  (when-let [data (lookup-entry config id :retain-interval)]
+    (. builder retainInterval data))
+  (when-let [data (lookup-entry config id :state)]
+    (. builder state data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-lifecycle-policy-create-rule-property-builder
-  "The cfn-lifecycle-policy-create-rule-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$CreateRuleProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-create-rule-property-builder
+  "The build-cfn-lifecycle-policy-create-rule-property-builder function updates a CfnLifecyclePolicy$CreateRuleProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$CreateRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -129,81 +144,93 @@ CfnLifecyclePolicy$CreateRuleProperty$Builder using the provided configuration. 
 | `intervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval-unit` |
 | `location` | java.lang.String | [[cdk.support/lookup-entry]] | `:location` |
 | `scripts` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:scripts` |
-| `times` | java.util.List | [[cdk.support/lookup-entry]] | `:times` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$CreateRuleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :cron-expression)]
-      (. builder cronExpression data))
-    (when-let [data (lookup-entry config id :interval)]
-      (. builder interval data))
-    (when-let [data (lookup-entry config id :interval-unit)]
-      (. builder intervalUnit data))
-    (when-let [data (lookup-entry config id :location)]
-      (. builder location data))
-    (when-let [data (lookup-entry config id :scripts)]
-      (. builder scripts data))
-    (when-let [data (lookup-entry config id :times)]
-      (. builder times data))
-    (.build builder)))
+| `times` | java.util.List | [[cdk.support/lookup-entry]] | `:times` |
+"
+  [^CfnLifecyclePolicy$CreateRuleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :cron-expression)]
+    (. builder cronExpression data))
+  (when-let [data (lookup-entry config id :interval)]
+    (. builder interval data))
+  (when-let [data (lookup-entry config id :interval-unit)]
+    (. builder intervalUnit data))
+  (when-let [data (lookup-entry config id :location)]
+    (. builder location data))
+  (when-let [data (lookup-entry config id :scripts)]
+    (. builder scripts data))
+  (when-let [data (lookup-entry config id :times)]
+    (. builder times data))
+  (.build builder))
 
 
-(defn cfn-lifecycle-policy-cross-region-copy-action-property-builder
-  "The cfn-lifecycle-policy-cross-region-copy-action-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$CrossRegionCopyActionProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-cross-region-copy-action-property-builder
+  "The build-cfn-lifecycle-policy-cross-region-copy-action-property-builder function updates a CfnLifecyclePolicy$CrossRegionCopyActionProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$CrossRegionCopyActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `encryptionConfiguration` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$EncryptionConfigurationProperty | [[cdk.support/lookup-entry]] | `:encryption-configuration` |
 | `retainRule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retain-rule` |
-| `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$CrossRegionCopyActionProperty$Builder.)]
-    (when-let [data (lookup-entry config id :encryption-configuration)]
-      (. builder encryptionConfiguration data))
-    (when-let [data (lookup-entry config id :retain-rule)]
-      (. builder retainRule data))
-    (when-let [data (lookup-entry config id :target)]
-      (. builder target data))
-    (.build builder)))
+| `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |
+"
+  [^CfnLifecyclePolicy$CrossRegionCopyActionProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :encryption-configuration)]
+    (. builder encryptionConfiguration data))
+  (when-let [data (lookup-entry config id :retain-rule)]
+    (. builder retainRule data))
+  (when-let [data (lookup-entry config id :target)]
+    (. builder target data))
+  (.build builder))
 
 
-(defn cfn-lifecycle-policy-cross-region-copy-deprecate-rule-property-builder
-  "The cfn-lifecycle-policy-cross-region-copy-deprecate-rule-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$CrossRegionCopyDeprecateRuleProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-cross-region-copy-deprecate-rule-property-builder
+  "The build-cfn-lifecycle-policy-cross-region-copy-deprecate-rule-property-builder function updates a CfnLifecyclePolicy$CrossRegionCopyDeprecateRuleProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$CrossRegionCopyDeprecateRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `interval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:interval` |
-| `intervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval-unit` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$CrossRegionCopyDeprecateRuleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :interval)]
-      (. builder interval data))
-    (when-let [data (lookup-entry config id :interval-unit)]
-      (. builder intervalUnit data))
-    (.build builder)))
-
-
-(defn cfn-lifecycle-policy-cross-region-copy-retain-rule-property-builder
-  "The cfn-lifecycle-policy-cross-region-copy-retain-rule-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$CrossRegionCopyRetainRuleProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `interval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:interval` |
-| `intervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval-unit` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$CrossRegionCopyRetainRuleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :interval)]
-      (. builder interval data))
-    (when-let [data (lookup-entry config id :interval-unit)]
-      (. builder intervalUnit data))
-    (.build builder)))
+| `intervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval-unit` |
+"
+  [^CfnLifecyclePolicy$CrossRegionCopyDeprecateRuleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :interval)]
+    (. builder interval data))
+  (when-let [data (lookup-entry config id :interval-unit)]
+    (. builder intervalUnit data))
+  (.build builder))
 
 
-(defn cfn-lifecycle-policy-cross-region-copy-rule-property-builder
-  "The cfn-lifecycle-policy-cross-region-copy-rule-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$CrossRegionCopyRuleProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-cross-region-copy-retain-rule-property-builder
+  "The build-cfn-lifecycle-policy-cross-region-copy-retain-rule-property-builder function updates a CfnLifecyclePolicy$CrossRegionCopyRetainRuleProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$CrossRegionCopyRetainRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `interval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:interval` |
+| `intervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval-unit` |
+"
+  [^CfnLifecyclePolicy$CrossRegionCopyRetainRuleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :interval)]
+    (. builder interval data))
+  (when-let [data (lookup-entry config id :interval-unit)]
+    (. builder intervalUnit data))
+  (.build builder))
+
+
+(defn build-cfn-lifecycle-policy-cross-region-copy-rule-property-builder
+  "The build-cfn-lifecycle-policy-cross-region-copy-rule-property-builder function updates a CfnLifecyclePolicy$CrossRegionCopyRuleProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$CrossRegionCopyRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -213,166 +240,190 @@ CfnLifecyclePolicy$CrossRegionCopyRuleProperty$Builder using the provided config
 | `encrypted` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encrypted` |
 | `retainRule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retain-rule` |
 | `target` | java.lang.String | [[cdk.support/lookup-entry]] | `:target` |
-| `targetRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-region` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$CrossRegionCopyRuleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :cmk-arn)]
-      (. builder cmkArn data))
-    (when-let [data (lookup-entry config id :copy-tags)]
-      (. builder copyTags data))
-    (when-let [data (lookup-entry config id :deprecate-rule)]
-      (. builder deprecateRule data))
-    (when-let [data (lookup-entry config id :encrypted)]
-      (. builder encrypted data))
-    (when-let [data (lookup-entry config id :retain-rule)]
-      (. builder retainRule data))
-    (when-let [data (lookup-entry config id :target)]
-      (. builder target data))
-    (when-let [data (lookup-entry config id :target-region)]
-      (. builder targetRegion data))
-    (.build builder)))
+| `targetRegion` | java.lang.String | [[cdk.support/lookup-entry]] | `:target-region` |
+"
+  [^CfnLifecyclePolicy$CrossRegionCopyRuleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :cmk-arn)]
+    (. builder cmkArn data))
+  (when-let [data (lookup-entry config id :copy-tags)]
+    (. builder copyTags data))
+  (when-let [data (lookup-entry config id :deprecate-rule)]
+    (. builder deprecateRule data))
+  (when-let [data (lookup-entry config id :encrypted)]
+    (. builder encrypted data))
+  (when-let [data (lookup-entry config id :retain-rule)]
+    (. builder retainRule data))
+  (when-let [data (lookup-entry config id :target)]
+    (. builder target data))
+  (when-let [data (lookup-entry config id :target-region)]
+    (. builder targetRegion data))
+  (.build builder))
 
 
-(defn cfn-lifecycle-policy-deprecate-rule-property-builder
-  "The cfn-lifecycle-policy-deprecate-rule-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$DeprecateRuleProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-deprecate-rule-property-builder
+  "The build-cfn-lifecycle-policy-deprecate-rule-property-builder function updates a CfnLifecyclePolicy$DeprecateRuleProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$DeprecateRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `count` | java.lang.Number | [[cdk.support/lookup-entry]] | `:count` |
 | `interval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:interval` |
-| `intervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval-unit` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$DeprecateRuleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :count)]
-      (. builder count data))
-    (when-let [data (lookup-entry config id :interval)]
-      (. builder interval data))
-    (when-let [data (lookup-entry config id :interval-unit)]
-      (. builder intervalUnit data))
-    (.build builder)))
+| `intervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval-unit` |
+"
+  [^CfnLifecyclePolicy$DeprecateRuleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :count)]
+    (. builder count data))
+  (when-let [data (lookup-entry config id :interval)]
+    (. builder interval data))
+  (when-let [data (lookup-entry config id :interval-unit)]
+    (. builder intervalUnit data))
+  (.build builder))
 
 
-(defn cfn-lifecycle-policy-encryption-configuration-property-builder
-  "The cfn-lifecycle-policy-encryption-configuration-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$EncryptionConfigurationProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-encryption-configuration-property-builder
+  "The build-cfn-lifecycle-policy-encryption-configuration-property-builder function updates a CfnLifecyclePolicy$EncryptionConfigurationProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$EncryptionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `cmkArn` | java.lang.String | [[cdk.support/lookup-entry]] | `:cmk-arn` |
-| `encrypted` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encrypted` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$EncryptionConfigurationProperty$Builder.)]
-    (when-let [data (lookup-entry config id :cmk-arn)]
-      (. builder cmkArn data))
-    (when-let [data (lookup-entry config id :encrypted)]
-      (. builder encrypted data))
-    (.build builder)))
+| `encrypted` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:encrypted` |
+"
+  [^CfnLifecyclePolicy$EncryptionConfigurationProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :cmk-arn)]
+    (. builder cmkArn data))
+  (when-let [data (lookup-entry config id :encrypted)]
+    (. builder encrypted data))
+  (.build builder))
 
 
-(defn cfn-lifecycle-policy-event-parameters-property-builder
-  "The cfn-lifecycle-policy-event-parameters-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$EventParametersProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-event-parameters-property-builder
+  "The build-cfn-lifecycle-policy-event-parameters-property-builder function updates a CfnLifecyclePolicy$EventParametersProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$EventParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `descriptionRegex` | java.lang.String | [[cdk.support/lookup-entry]] | `:description-regex` |
 | `eventType` | java.lang.String | [[cdk.support/lookup-entry]] | `:event-type` |
-| `snapshotOwner` | java.util.List | [[cdk.support/lookup-entry]] | `:snapshot-owner` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$EventParametersProperty$Builder.)]
-    (when-let [data (lookup-entry config id :description-regex)]
-      (. builder descriptionRegex data))
-    (when-let [data (lookup-entry config id :event-type)]
-      (. builder eventType data))
-    (when-let [data (lookup-entry config id :snapshot-owner)]
-      (. builder snapshotOwner data))
-    (.build builder)))
+| `snapshotOwner` | java.util.List | [[cdk.support/lookup-entry]] | `:snapshot-owner` |
+"
+  [^CfnLifecyclePolicy$EventParametersProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :description-regex)]
+    (. builder descriptionRegex data))
+  (when-let [data (lookup-entry config id :event-type)]
+    (. builder eventType data))
+  (when-let [data (lookup-entry config id :snapshot-owner)]
+    (. builder snapshotOwner data))
+  (.build builder))
 
 
-(defn cfn-lifecycle-policy-event-source-property-builder
-  "The cfn-lifecycle-policy-event-source-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$EventSourceProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-event-source-property-builder
+  "The build-cfn-lifecycle-policy-event-source-property-builder function updates a CfnLifecyclePolicy$EventSourceProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$EventSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `parameters` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$EventParametersProperty | [[cdk.support/lookup-entry]] | `:parameters` |
-| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$EventSourceProperty$Builder.)]
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :type)]
-      (. builder type data))
-    (.build builder)))
+| `type` | java.lang.String | [[cdk.support/lookup-entry]] | `:type` |
+"
+  [^CfnLifecyclePolicy$EventSourceProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :type)]
+    (. builder type data))
+  (.build builder))
 
 
-(defn cfn-lifecycle-policy-exclusions-property-builder
-  "The cfn-lifecycle-policy-exclusions-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$ExclusionsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-exclusions-property-builder
+  "The build-cfn-lifecycle-policy-exclusions-property-builder function updates a CfnLifecyclePolicy$ExclusionsProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$ExclusionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `excludeBootVolumes` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-boot-volumes` |
 | `excludeTags` | java.lang.Object | [[cdk.support/lookup-entry]] | `:exclude-tags` |
-| `excludeVolumeTypes` | java.lang.Object | [[cdk.support/lookup-entry]] | `:exclude-volume-types` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$ExclusionsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :exclude-boot-volumes)]
-      (. builder excludeBootVolumes data))
-    (when-let [data (lookup-entry config id :exclude-tags)]
-      (. builder excludeTags data))
-    (when-let [data (lookup-entry config id :exclude-volume-types)]
-      (. builder excludeVolumeTypes data))
-    (.build builder)))
+| `excludeVolumeTypes` | java.lang.Object | [[cdk.support/lookup-entry]] | `:exclude-volume-types` |
+"
+  [^CfnLifecyclePolicy$ExclusionsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :exclude-boot-volumes)]
+    (. builder excludeBootVolumes data))
+  (when-let [data (lookup-entry config id :exclude-tags)]
+    (. builder excludeTags data))
+  (when-let [data (lookup-entry config id :exclude-volume-types)]
+    (. builder excludeVolumeTypes data))
+  (.build builder))
 
 
-(defn cfn-lifecycle-policy-fast-restore-rule-property-builder
-  "The cfn-lifecycle-policy-fast-restore-rule-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$FastRestoreRuleProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-fast-restore-rule-property-builder
+  "The build-cfn-lifecycle-policy-fast-restore-rule-property-builder function updates a CfnLifecyclePolicy$FastRestoreRuleProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$FastRestoreRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `availabilityZones` | java.util.List | [[cdk.support/lookup-entry]] | `:availability-zones` |
 | `count` | java.lang.Number | [[cdk.support/lookup-entry]] | `:count` |
 | `interval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:interval` |
-| `intervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval-unit` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$FastRestoreRuleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :availability-zones)]
-      (. builder availabilityZones data))
-    (when-let [data (lookup-entry config id :count)]
-      (. builder count data))
-    (when-let [data (lookup-entry config id :interval)]
-      (. builder interval data))
-    (when-let [data (lookup-entry config id :interval-unit)]
-      (. builder intervalUnit data))
-    (.build builder)))
+| `intervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval-unit` |
+"
+  [^CfnLifecyclePolicy$FastRestoreRuleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :availability-zones)]
+    (. builder availabilityZones data))
+  (when-let [data (lookup-entry config id :count)]
+    (. builder count data))
+  (when-let [data (lookup-entry config id :interval)]
+    (. builder interval data))
+  (when-let [data (lookup-entry config id :interval-unit)]
+    (. builder intervalUnit data))
+  (.build builder))
 
 
-(defn cfn-lifecycle-policy-parameters-property-builder
-  "The cfn-lifecycle-policy-parameters-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$ParametersProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-parameters-property-builder
+  "The build-cfn-lifecycle-policy-parameters-property-builder function updates a CfnLifecyclePolicy$ParametersProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$ParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `excludeBootVolume` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-boot-volume` |
 | `excludeDataVolumeTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:exclude-data-volume-tags` |
-| `noReboot` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:no-reboot` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$ParametersProperty$Builder.)]
-    (when-let [data (lookup-entry config id :exclude-boot-volume)]
-      (. builder excludeBootVolume data))
-    (when-let [data (lookup-entry config id :exclude-data-volume-tags)]
-      (. builder excludeDataVolumeTags data))
-    (when-let [data (lookup-entry config id :no-reboot)]
-      (. builder noReboot data))
-    (.build builder)))
+| `noReboot` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:no-reboot` |
+"
+  [^CfnLifecyclePolicy$ParametersProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :exclude-boot-volume)]
+    (. builder excludeBootVolume data))
+  (when-let [data (lookup-entry config id :exclude-data-volume-tags)]
+    (. builder excludeDataVolumeTags data))
+  (when-let [data (lookup-entry config id :no-reboot)]
+    (. builder noReboot data))
+  (.build builder))
 
 
-(defn cfn-lifecycle-policy-policy-details-property-builder
-  "The cfn-lifecycle-policy-policy-details-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$PolicyDetailsProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-policy-details-property-builder
+  "The build-cfn-lifecycle-policy-policy-details-property-builder function updates a CfnLifecyclePolicy$PolicyDetailsProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$PolicyDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -391,47 +442,50 @@ CfnLifecyclePolicy$PolicyDetailsProperty$Builder using the provided configuratio
 | `resourceTypes` | java.util.List | [[cdk.support/lookup-entry]] | `:resource-types` |
 | `retainInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retain-interval` |
 | `schedules` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:schedules` |
-| `targetTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-tags` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$PolicyDetailsProperty$Builder.)]
-    (when-let [data (lookup-entry config id :actions)]
-      (. builder actions data))
-    (when-let [data (lookup-entry config id :copy-tags)]
-      (. builder copyTags data))
-    (when-let [data (lookup-entry config id :create-interval)]
-      (. builder createInterval data))
-    (when-let [data (lookup-entry config id :cross-region-copy-targets)]
-      (. builder crossRegionCopyTargets data))
-    (when-let [data (lookup-entry config id :event-source)]
-      (. builder eventSource data))
-    (when-let [data (lookup-entry config id :exclusions)]
-      (. builder exclusions data))
-    (when-let [data (lookup-entry config id :extend-deletion)]
-      (. builder extendDeletion data))
-    (when-let [data (lookup-entry config id :parameters)]
-      (. builder parameters data))
-    (when-let [data (lookup-entry config id :policy-language)]
-      (. builder policyLanguage data))
-    (when-let [data (lookup-entry config id :policy-type)]
-      (. builder policyType data))
-    (when-let [data (lookup-entry config id :resource-locations)]
-      (. builder resourceLocations data))
-    (when-let [data (lookup-entry config id :resource-type)]
-      (. builder resourceType data))
-    (when-let [data (lookup-entry config id :resource-types)]
-      (. builder resourceTypes data))
-    (when-let [data (lookup-entry config id :retain-interval)]
-      (. builder retainInterval data))
-    (when-let [data (lookup-entry config id :schedules)]
-      (. builder schedules data))
-    (when-let [data (lookup-entry config id :target-tags)]
-      (. builder targetTags data))
-    (.build builder)))
+| `targetTags` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:target-tags` |
+"
+  [^CfnLifecyclePolicy$PolicyDetailsProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :actions)]
+    (. builder actions data))
+  (when-let [data (lookup-entry config id :copy-tags)]
+    (. builder copyTags data))
+  (when-let [data (lookup-entry config id :create-interval)]
+    (. builder createInterval data))
+  (when-let [data (lookup-entry config id :cross-region-copy-targets)]
+    (. builder crossRegionCopyTargets data))
+  (when-let [data (lookup-entry config id :event-source)]
+    (. builder eventSource data))
+  (when-let [data (lookup-entry config id :exclusions)]
+    (. builder exclusions data))
+  (when-let [data (lookup-entry config id :extend-deletion)]
+    (. builder extendDeletion data))
+  (when-let [data (lookup-entry config id :parameters)]
+    (. builder parameters data))
+  (when-let [data (lookup-entry config id :policy-language)]
+    (. builder policyLanguage data))
+  (when-let [data (lookup-entry config id :policy-type)]
+    (. builder policyType data))
+  (when-let [data (lookup-entry config id :resource-locations)]
+    (. builder resourceLocations data))
+  (when-let [data (lookup-entry config id :resource-type)]
+    (. builder resourceType data))
+  (when-let [data (lookup-entry config id :resource-types)]
+    (. builder resourceTypes data))
+  (when-let [data (lookup-entry config id :retain-interval)]
+    (. builder retainInterval data))
+  (when-let [data (lookup-entry config id :schedules)]
+    (. builder schedules data))
+  (when-let [data (lookup-entry config id :target-tags)]
+    (. builder targetTags data))
+  (.build builder))
 
 
-(defn cfn-lifecycle-policy-props-builder
-  "The cfn-lifecycle-policy-props-builder function buildes out new instances of 
-CfnLifecyclePolicyProps$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-props-builder
+  "The build-cfn-lifecycle-policy-props-builder function updates a CfnLifecyclePolicyProps$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -446,79 +500,88 @@ CfnLifecyclePolicyProps$Builder using the provided configuration.  Each field is
 | `policyDetails` | software.amazon.awscdk.services.dlm.CfnLifecyclePolicy$PolicyDetailsProperty | [[cdk.support/lookup-entry]] | `:policy-details` |
 | `retainInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:retain-interval` |
 | `state` | java.lang.String | [[cdk.support/lookup-entry]] | `:state` |
-| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicyProps$Builder.)]
-    (when-let [data (lookup-entry config id :copy-tags)]
-      (. builder copyTags data))
-    (when-let [data (lookup-entry config id :create-interval)]
-      (. builder createInterval data))
-    (when-let [data (lookup-entry config id :cross-region-copy-targets)]
-      (. builder crossRegionCopyTargets data))
-    (when-let [data (lookup-entry config id :default-policy)]
-      (. builder defaultPolicy data))
-    (when-let [data (lookup-entry config id :description)]
-      (. builder description data))
-    (when-let [data (lookup-entry config id :exclusions)]
-      (. builder exclusions data))
-    (when-let [data (lookup-entry config id :execution-role-arn)]
-      (. builder executionRoleArn data))
-    (when-let [data (lookup-entry config id :extend-deletion)]
-      (. builder extendDeletion data))
-    (when-let [data (lookup-entry config id :policy-details)]
-      (. builder policyDetails data))
-    (when-let [data (lookup-entry config id :retain-interval)]
-      (. builder retainInterval data))
-    (when-let [data (lookup-entry config id :state)]
-      (. builder state data))
-    (when-let [data (lookup-entry config id :tags)]
-      (. builder tags data))
-    (.build builder)))
+| `tags` | java.util.List | [[cdk.support/lookup-entry]] | `:tags` |
+"
+  [^CfnLifecyclePolicyProps$Builder builder id config]
+  (when-let [data (lookup-entry config id :copy-tags)]
+    (. builder copyTags data))
+  (when-let [data (lookup-entry config id :create-interval)]
+    (. builder createInterval data))
+  (when-let [data (lookup-entry config id :cross-region-copy-targets)]
+    (. builder crossRegionCopyTargets data))
+  (when-let [data (lookup-entry config id :default-policy)]
+    (. builder defaultPolicy data))
+  (when-let [data (lookup-entry config id :description)]
+    (. builder description data))
+  (when-let [data (lookup-entry config id :exclusions)]
+    (. builder exclusions data))
+  (when-let [data (lookup-entry config id :execution-role-arn)]
+    (. builder executionRoleArn data))
+  (when-let [data (lookup-entry config id :extend-deletion)]
+    (. builder extendDeletion data))
+  (when-let [data (lookup-entry config id :policy-details)]
+    (. builder policyDetails data))
+  (when-let [data (lookup-entry config id :retain-interval)]
+    (. builder retainInterval data))
+  (when-let [data (lookup-entry config id :state)]
+    (. builder state data))
+  (when-let [data (lookup-entry config id :tags)]
+    (. builder tags data))
+  (.build builder))
 
 
-(defn cfn-lifecycle-policy-retain-rule-property-builder
-  "The cfn-lifecycle-policy-retain-rule-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$RetainRuleProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-retain-rule-property-builder
+  "The build-cfn-lifecycle-policy-retain-rule-property-builder function updates a CfnLifecyclePolicy$RetainRuleProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$RetainRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
 
-| Field | DataType | Lookup Function | Data Key |
-|---|---|---|---|
-| `count` | java.lang.Number | [[cdk.support/lookup-entry]] | `:count` |
-| `interval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:interval` |
-| `intervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval-unit` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$RetainRuleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :count)]
-      (. builder count data))
-    (when-let [data (lookup-entry config id :interval)]
-      (. builder interval data))
-    (when-let [data (lookup-entry config id :interval-unit)]
-      (. builder intervalUnit data))
-    (.build builder)))
-
-
-(defn cfn-lifecycle-policy-retention-archive-tier-property-builder
-  "The cfn-lifecycle-policy-retention-archive-tier-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$RetentionArchiveTierProperty$Builder using the provided configuration.  Each field is set as follows:
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `count` | java.lang.Number | [[cdk.support/lookup-entry]] | `:count` |
 | `interval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:interval` |
-| `intervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval-unit` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$RetentionArchiveTierProperty$Builder.)]
-    (when-let [data (lookup-entry config id :count)]
-      (. builder count data))
-    (when-let [data (lookup-entry config id :interval)]
-      (. builder interval data))
-    (when-let [data (lookup-entry config id :interval-unit)]
-      (. builder intervalUnit data))
-    (.build builder)))
+| `intervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval-unit` |
+"
+  [^CfnLifecyclePolicy$RetainRuleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :count)]
+    (. builder count data))
+  (when-let [data (lookup-entry config id :interval)]
+    (. builder interval data))
+  (when-let [data (lookup-entry config id :interval-unit)]
+    (. builder intervalUnit data))
+  (.build builder))
 
 
-(defn cfn-lifecycle-policy-schedule-property-builder
-  "The cfn-lifecycle-policy-schedule-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$ScheduleProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-retention-archive-tier-property-builder
+  "The build-cfn-lifecycle-policy-retention-archive-tier-property-builder function updates a CfnLifecyclePolicy$RetentionArchiveTierProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$RetentionArchiveTierProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
+
+| Field | DataType | Lookup Function | Data Key |
+|---|---|---|---|
+| `count` | java.lang.Number | [[cdk.support/lookup-entry]] | `:count` |
+| `interval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:interval` |
+| `intervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:interval-unit` |
+"
+  [^CfnLifecyclePolicy$RetentionArchiveTierProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :count)]
+    (. builder count data))
+  (when-let [data (lookup-entry config id :interval)]
+    (. builder interval data))
+  (when-let [data (lookup-entry config id :interval-unit)]
+    (. builder intervalUnit data))
+  (.build builder))
+
+
+(defn build-cfn-lifecycle-policy-schedule-property-builder
+  "The build-cfn-lifecycle-policy-schedule-property-builder function updates a CfnLifecyclePolicy$ScheduleProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$ScheduleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -532,37 +595,40 @@ CfnLifecyclePolicy$ScheduleProperty$Builder using the provided configuration.  E
 | `retainRule` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:retain-rule` |
 | `shareRules` | java.util.List | [[cdk.support/lookup-entry]] | `:share-rules` |
 | `tagsToAdd` | software.amazon.awscdk.IResolvable | [[cdk.support/lookup-entry]] | `:tags-to-add` |
-| `variableTags` | java.util.List | [[cdk.support/lookup-entry]] | `:variable-tags` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$ScheduleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :archive-rule)]
-      (. builder archiveRule data))
-    (when-let [data (lookup-entry config id :copy-tags)]
-      (. builder copyTags data))
-    (when-let [data (lookup-entry config id :create-rule)]
-      (. builder createRule data))
-    (when-let [data (lookup-entry config id :cross-region-copy-rules)]
-      (. builder crossRegionCopyRules data))
-    (when-let [data (lookup-entry config id :deprecate-rule)]
-      (. builder deprecateRule data))
-    (when-let [data (lookup-entry config id :fast-restore-rule)]
-      (. builder fastRestoreRule data))
-    (when-let [data (lookup-entry config id :name)]
-      (. builder name data))
-    (when-let [data (lookup-entry config id :retain-rule)]
-      (. builder retainRule data))
-    (when-let [data (lookup-entry config id :share-rules)]
-      (. builder shareRules data))
-    (when-let [data (lookup-entry config id :tags-to-add)]
-      (. builder tagsToAdd data))
-    (when-let [data (lookup-entry config id :variable-tags)]
-      (. builder variableTags data))
-    (.build builder)))
+| `variableTags` | java.util.List | [[cdk.support/lookup-entry]] | `:variable-tags` |
+"
+  [^CfnLifecyclePolicy$ScheduleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :archive-rule)]
+    (. builder archiveRule data))
+  (when-let [data (lookup-entry config id :copy-tags)]
+    (. builder copyTags data))
+  (when-let [data (lookup-entry config id :create-rule)]
+    (. builder createRule data))
+  (when-let [data (lookup-entry config id :cross-region-copy-rules)]
+    (. builder crossRegionCopyRules data))
+  (when-let [data (lookup-entry config id :deprecate-rule)]
+    (. builder deprecateRule data))
+  (when-let [data (lookup-entry config id :fast-restore-rule)]
+    (. builder fastRestoreRule data))
+  (when-let [data (lookup-entry config id :name)]
+    (. builder name data))
+  (when-let [data (lookup-entry config id :retain-rule)]
+    (. builder retainRule data))
+  (when-let [data (lookup-entry config id :share-rules)]
+    (. builder shareRules data))
+  (when-let [data (lookup-entry config id :tags-to-add)]
+    (. builder tagsToAdd data))
+  (when-let [data (lookup-entry config id :variable-tags)]
+    (. builder variableTags data))
+  (.build builder))
 
 
-(defn cfn-lifecycle-policy-script-property-builder
-  "The cfn-lifecycle-policy-script-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$ScriptProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-script-property-builder
+  "The build-cfn-lifecycle-policy-script-property-builder function updates a CfnLifecyclePolicy$ScriptProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$ScriptProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
@@ -571,39 +637,42 @@ CfnLifecyclePolicy$ScriptProperty$Builder using the provided configuration.  Eac
 | `executionHandlerService` | java.lang.String | [[cdk.support/lookup-entry]] | `:execution-handler-service` |
 | `executionTimeout` | java.lang.Number | [[cdk.support/lookup-entry]] | `:execution-timeout` |
 | `maximumRetryCount` | java.lang.Number | [[cdk.support/lookup-entry]] | `:maximum-retry-count` |
-| `stages` | java.util.List | [[cdk.support/lookup-entry]] | `:stages` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$ScriptProperty$Builder.)]
-    (when-let [data (lookup-entry config id :execute-operation-on-script-failure)]
-      (. builder executeOperationOnScriptFailure data))
-    (when-let [data (lookup-entry config id :execution-handler)]
-      (. builder executionHandler data))
-    (when-let [data (lookup-entry config id :execution-handler-service)]
-      (. builder executionHandlerService data))
-    (when-let [data (lookup-entry config id :execution-timeout)]
-      (. builder executionTimeout data))
-    (when-let [data (lookup-entry config id :maximum-retry-count)]
-      (. builder maximumRetryCount data))
-    (when-let [data (lookup-entry config id :stages)]
-      (. builder stages data))
-    (.build builder)))
+| `stages` | java.util.List | [[cdk.support/lookup-entry]] | `:stages` |
+"
+  [^CfnLifecyclePolicy$ScriptProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :execute-operation-on-script-failure)]
+    (. builder executeOperationOnScriptFailure data))
+  (when-let [data (lookup-entry config id :execution-handler)]
+    (. builder executionHandler data))
+  (when-let [data (lookup-entry config id :execution-handler-service)]
+    (. builder executionHandlerService data))
+  (when-let [data (lookup-entry config id :execution-timeout)]
+    (. builder executionTimeout data))
+  (when-let [data (lookup-entry config id :maximum-retry-count)]
+    (. builder maximumRetryCount data))
+  (when-let [data (lookup-entry config id :stages)]
+    (. builder stages data))
+  (.build builder))
 
 
-(defn cfn-lifecycle-policy-share-rule-property-builder
-  "The cfn-lifecycle-policy-share-rule-property-builder function buildes out new instances of 
-CfnLifecyclePolicy$ShareRuleProperty$Builder using the provided configuration.  Each field is set as follows:
+(defn build-cfn-lifecycle-policy-share-rule-property-builder
+  "The build-cfn-lifecycle-policy-share-rule-property-builder function updates a CfnLifecyclePolicy$ShareRuleProperty$Builder instance using the provided configuration.
+  The function takes the CfnLifecyclePolicy$ShareRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
+  and the configuration itself.
+
+  Fields on the builder are populated by looking up their respective data key, where the namespaced value takes precendence over the non-namespaced value:
 
 | Field | DataType | Lookup Function | Data Key |
 |---|---|---|---|
 | `targetAccounts` | java.util.List | [[cdk.support/lookup-entry]] | `:target-accounts` |
 | `unshareInterval` | java.lang.Number | [[cdk.support/lookup-entry]] | `:unshare-interval` |
-| `unshareIntervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unshare-interval-unit` |"
-  [stack id config]
-  (let [builder (CfnLifecyclePolicy$ShareRuleProperty$Builder.)]
-    (when-let [data (lookup-entry config id :target-accounts)]
-      (. builder targetAccounts data))
-    (when-let [data (lookup-entry config id :unshare-interval)]
-      (. builder unshareInterval data))
-    (when-let [data (lookup-entry config id :unshare-interval-unit)]
-      (. builder unshareIntervalUnit data))
-    (.build builder)))
+| `unshareIntervalUnit` | java.lang.String | [[cdk.support/lookup-entry]] | `:unshare-interval-unit` |
+"
+  [^CfnLifecyclePolicy$ShareRuleProperty$Builder builder id config]
+  (when-let [data (lookup-entry config id :target-accounts)]
+    (. builder targetAccounts data))
+  (when-let [data (lookup-entry config id :unshare-interval)]
+    (. builder unshareInterval data))
+  (when-let [data (lookup-entry config id :unshare-interval-unit)]
+    (. builder unshareIntervalUnit data))
+  (.build builder))
