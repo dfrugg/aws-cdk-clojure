@@ -1,11 +1,11 @@
 (ns cdk.api.triggers
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.triggers package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api.services.lambda :refer [application-log-level
+  (:require [cdk.api.services.lambda :refer [application-log-level
                                              logging-format
                                              system-log-level
                                              tracing]]
-            [cdk.api.services.logs :refer [retention-days]])
+            [cdk.api.services.logs :refer [retention-days]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.triggers InvocationType
                                             Trigger$Builder
                                             TriggerFunction$Builder

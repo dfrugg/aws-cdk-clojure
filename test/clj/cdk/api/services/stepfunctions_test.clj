@@ -1,9 +1,6 @@
 (ns cdk.api.services.stepfunctions-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.stepfunctions package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.stepfunctions :refer [csv-header-location
+  (:require [cdk.api.services.stepfunctions :refer [csv-header-location
                                                     input-type
                                                     integration-pattern
                                                     jitter-type
@@ -11,7 +8,10 @@
                                                     processor-mode
                                                     processor-type
                                                     service-integration-pattern
-                                                    state-machine-type]])
+                                                    state-machine-type]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.stepfunctions CsvHeaderLocation
                                                           InputType
                                                           IntegrationPattern

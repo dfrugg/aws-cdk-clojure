@@ -1,7 +1,7 @@
 (ns cdk.api.services.codecommit
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.codecommit package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api.services.codestarnotifications :refer [detail-type]])
+  (:require [cdk.api.services.codestarnotifications :refer [detail-type]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.codecommit CfnRepository$Builder
                                                        CfnRepository$CodeProperty$Builder
                                                        CfnRepository$RepositoryTriggerProperty$Builder

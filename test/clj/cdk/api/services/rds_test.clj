@@ -1,9 +1,6 @@
 (ns cdk.api.services.rds-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.rds package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.rds :refer [aurora-capacity-unit
+  (:require [cdk.api.services.rds :refer [aurora-capacity-unit
                                           client-password-auth-type
                                           db-cluster-storage-type
                                           instance-type
@@ -12,7 +9,10 @@
                                           network-type
                                           performance-insight-retention
                                           storage-type
-                                          timeout-action]])
+                                          timeout-action]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.rds AuroraCapacityUnit
                                                 ClientPasswordAuthType
                                                 DBClusterStorageType

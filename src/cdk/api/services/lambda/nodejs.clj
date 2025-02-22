@@ -1,12 +1,12 @@
 (ns cdk.api.services.lambda.nodejs
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.lambda.nodejs package. "
-  (:require [cdk.support :refer [lookup-entry]]
+  (:require [cdk.api :refer [bundling-file-access]]
             [cdk.api.services.lambda :refer [application-log-level
                                              logging-format
                                              system-log-level
                                              tracing]]
             [cdk.api.services.logs :refer [retention-days]]
-            [cdk.api :refer [bundling-file-access]])
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.lambda.nodejs BundlingOptions$Builder
                                                           Charset
                                                           LogLevel

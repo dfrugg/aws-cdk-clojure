@@ -1,10 +1,10 @@
 (ns cdk.api.services.ecs.patterns-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.ecs.patterns package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.services.ecs.patterns :refer [application-load-balanced-service-record-type
+                                                   network-load-balanced-service-record-type]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.services.ecs.patterns :refer [application-load-balanced-service-record-type
-                                                   network-load-balanced-service-record-type]])
+                                  testing]])
   (:import [software.amazon.awscdk.services.ecs.patterns ApplicationLoadBalancedServiceRecordType
                                                          NetworkLoadBalancedServiceRecordType]))
 

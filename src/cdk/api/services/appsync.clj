@@ -1,10 +1,10 @@
 (ns cdk.api.services.appsync
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.appsync package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api :refer [asset-hash-type
+  (:require [cdk.api :refer [asset-hash-type
                              ignore-mode
                              symlink-follow-mode]]
-            [cdk.api.services.logs :refer [retention-days]])
+            [cdk.api.services.logs :refer [retention-days]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.appsync ApiKeyConfig$Builder
                                                     AppsyncFunction$Builder
                                                     AppsyncFunctionAttributes$Builder

@@ -1,16 +1,16 @@
 (ns cdk.api.services.codebuild-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.codebuild package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.codebuild :refer [build-environment-variable-type
+  (:require [cdk.api.services.codebuild :refer [build-environment-variable-type
                                                 compute-type
                                                 event-action
                                                 image-pull-principal-type
                                                 local-cache-mode
                                                 project-notification-events
                                                 report-group-type
-                                                windows-image-type]])
+                                                windows-image-type]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.codebuild BuildEnvironmentVariableType
                                                       ComputeType
                                                       EventAction

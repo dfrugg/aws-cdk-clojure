@@ -1,11 +1,11 @@
 (ns cdk.api.services.cloudwatch.actions-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.cloudwatch.actions package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.cloudwatch.actions :refer [ec2-instance-action
+  (:require [cdk.api.services.cloudwatch.actions :refer [ec2-instance-action
                                                          ops-item-category
-                                                         ops-item-severity]])
+                                                         ops-item-severity]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.cloudwatch.actions Ec2InstanceAction
                                                                OpsItemCategory
                                                                OpsItemSeverity]))

@@ -1,9 +1,6 @@
 (ns cdk.api.services.eks-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.eks package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.eks :refer [alb-scheme
+  (:require [cdk.api.services.eks :refer [alb-scheme
                                           capacity-type
                                           cluster-logging-types
                                           core-dns-compute-type
@@ -14,7 +11,10 @@
                                           node-type
                                           nodegroup-ami-type
                                           patch-type
-                                          taint-effect]])
+                                          taint-effect]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.eks AlbScheme
                                                 CapacityType
                                                 ClusterLoggingTypes

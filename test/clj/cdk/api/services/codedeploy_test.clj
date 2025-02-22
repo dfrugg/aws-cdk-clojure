@@ -1,10 +1,10 @@
 (ns cdk.api.services.codedeploy-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.codedeploy package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.services.codedeploy :refer [compute-platform
+                                                 load-balancer-generation]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.services.codedeploy :refer [compute-platform
-                                                 load-balancer-generation]])
+                                  testing]])
   (:import [software.amazon.awscdk.services.codedeploy ComputePlatform
                                                        LoadBalancerGeneration]))
 

@@ -1,7 +1,7 @@
 (ns cdk.api.services.eks
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.eks package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api.services.autoscaling :refer [monitoring]])
+  (:require [cdk.api.services.autoscaling :refer [monitoring]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.eks AlbController$Builder
                                                 AlbControllerOptions$Builder
                                                 AlbControllerProps$Builder

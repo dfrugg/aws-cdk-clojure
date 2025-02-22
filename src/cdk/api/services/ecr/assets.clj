@@ -1,8 +1,8 @@
 (ns cdk.api.services.ecr.assets
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.ecr.assets package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api :refer [ignore-mode
-                             symlink-follow-mode]])
+  (:require [cdk.api :refer [ignore-mode
+                             symlink-follow-mode]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.ecr.assets DockerCacheOption$Builder
                                                        DockerImageAsset$Builder
                                                        DockerImageAssetInvalidationOptions$Builder

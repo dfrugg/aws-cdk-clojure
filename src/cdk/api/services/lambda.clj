@@ -1,11 +1,11 @@
 (ns cdk.api.services.lambda
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.lambda package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api.services.logs :refer [retention-days]]
-            [cdk.api :refer [asset-hash-type
+  (:require [cdk.api :refer [asset-hash-type
                              ignore-mode
                              removal-policy
-                             symlink-follow-mode]])
+                             symlink-follow-mode]]
+            [cdk.api.services.logs :refer [retention-days]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.lambda AdotInstrumentationConfig$Builder
                                                    AdotLambdaExecWrapper
                                                    Alias$Builder

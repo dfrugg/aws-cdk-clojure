@@ -1,9 +1,6 @@
 (ns cdk.api.services.apigatewayv2-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.apigatewayv2 package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.apigatewayv2 :refer [authorizer-payload-version
+  (:require [cdk.api.services.apigatewayv2 :refer [authorizer-payload-version
                                                    content-handling
                                                    cors-http-method
                                                    endpoint-type
@@ -15,7 +12,10 @@
                                                    passthrough-behavior
                                                    security-policy
                                                    web-socket-authorizer-type
-                                                   web-socket-integration-type]])
+                                                   web-socket-integration-type]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.apigatewayv2 AuthorizerPayloadVersion
                                                          ContentHandling
                                                          CorsHttpMethod

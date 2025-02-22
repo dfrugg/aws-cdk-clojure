@@ -1,9 +1,9 @@
 (ns cdk.api.services.chatbot-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.chatbot package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.services.chatbot :refer [logging-level]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.services.chatbot :refer [logging-level]])
+                                  testing]])
   (:import [software.amazon.awscdk.services.chatbot LoggingLevel]))
 
 

@@ -1,7 +1,7 @@
 (ns cdk.api.services.cloudfront.origins
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.cloudfront.origins package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api.services.cloudfront :refer [origin-protocol-policy]])
+  (:require [cdk.api.services.cloudfront :refer [origin-protocol-policy]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.cloudfront.origins FunctionUrlOrigin$Builder
                                                                FunctionUrlOriginProps$Builder
                                                                HttpOrigin$Builder

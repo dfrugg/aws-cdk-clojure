@@ -1,7 +1,7 @@
 (ns cdk.api.services.elasticloadbalancingv2.actions
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.elasticloadbalancingv2.actions package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api.services.elasticloadbalancingv2 :refer [unauthenticated-action]])
+  (:require [cdk.api.services.elasticloadbalancingv2 :refer [unauthenticated-action]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.elasticloadbalancingv2.actions AuthenticateCognitoAction$Builder
                                                                            AuthenticateCognitoActionProps$Builder]))
 

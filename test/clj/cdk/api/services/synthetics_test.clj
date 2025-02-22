@@ -1,10 +1,10 @@
 (ns cdk.api.services.synthetics-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.synthetics package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.services.synthetics :refer [cleanup
+                                                 runtime-family]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.services.synthetics :refer [cleanup
-                                                 runtime-family]])
+                                  testing]])
   (:import [software.amazon.awscdk.services.synthetics Cleanup
                                                        RuntimeFamily]))
 

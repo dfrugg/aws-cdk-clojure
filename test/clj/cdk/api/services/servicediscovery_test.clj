@@ -1,13 +1,13 @@
 (ns cdk.api.services.servicediscovery-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.servicediscovery package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.servicediscovery :refer [discovery-type
+  (:require [cdk.api.services.servicediscovery :refer [discovery-type
                                                        dns-record-type
                                                        health-check-type
                                                        namespace-type
-                                                       routing-policy]])
+                                                       routing-policy]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.servicediscovery DiscoveryType
                                                              DnsRecordType
                                                              HealthCheckType

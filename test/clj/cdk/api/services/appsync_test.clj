@@ -1,15 +1,15 @@
 (ns cdk.api.services.appsync-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.appsync package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.appsync :refer [authorization-type
+  (:require [cdk.api.services.appsync :refer [authorization-type
                                               field-log-level
                                               function-runtime-family
                                               introspection-config
                                               merge-type
                                               user-pool-default-action
-                                              visibility]])
+                                              visibility]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.appsync AuthorizationType
                                                     FieldLogLevel
                                                     FunctionRuntimeFamily

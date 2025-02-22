@@ -1,9 +1,6 @@
 (ns cdk.api.services.appmesh-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.appmesh package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.appmesh :refer [dns-response-type
+  (:require [cdk.api.services.appmesh :refer [dns-response-type
                                               grpc-retry-event
                                               http-retry-event
                                               http-route-method
@@ -11,7 +8,10 @@
                                               ip-preference
                                               mesh-filter-type
                                               tcp-retry-event
-                                              tls-mode]])
+                                              tls-mode]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.appmesh DnsResponseType
                                                     GrpcRetryEvent
                                                     HttpRetryEvent

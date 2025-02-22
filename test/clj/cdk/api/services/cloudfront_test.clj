@@ -1,9 +1,6 @@
 (ns cdk.api.services.cloudfront-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.cloudfront package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.cloudfront :refer [cloud-front-allowed-cached-methods
+  (:require [cdk.api.services.cloudfront :refer [cloud-front-allowed-cached-methods
                                                  cloud-front-allowed-methods
                                                  failover-status-code
                                                  function-event-type
@@ -16,7 +13,10 @@
                                                  price-class
                                                  security-policy-protocol
                                                  ssl-method
-                                                 viewer-protocol-policy]])
+                                                 viewer-protocol-policy]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.cloudfront CloudFrontAllowedCachedMethods
                                                        CloudFrontAllowedMethods
                                                        FailoverStatusCode

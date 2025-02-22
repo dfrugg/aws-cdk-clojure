@@ -1,9 +1,9 @@
 (ns cdk.api.services.elasticloadbalancing-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.elasticloadbalancing package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.services.elasticloadbalancing :refer [load-balancing-protocol]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.services.elasticloadbalancing :refer [load-balancing-protocol]])
+                                  testing]])
   (:import [software.amazon.awscdk.services.elasticloadbalancing LoadBalancingProtocol]))
 
 

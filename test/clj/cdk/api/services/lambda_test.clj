@@ -1,9 +1,6 @@
 (ns cdk.api.services.lambda-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.lambda package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.lambda :refer [adot-lambda-exec-wrapper
+  (:require [cdk.api.services.lambda :refer [adot-lambda-exec-wrapper
                                              application-log-level
                                              destination-type
                                              function-url-auth-type
@@ -17,7 +14,10 @@
                                              starting-position
                                              system-log-level
                                              tracing
-                                             untrusted-artifact-on-deployment]])
+                                             untrusted-artifact-on-deployment]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.lambda AdotLambdaExecWrapper
                                                    ApplicationLogLevel
                                                    DestinationType

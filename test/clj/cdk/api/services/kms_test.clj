@@ -1,10 +1,10 @@
 (ns cdk.api.services.kms-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.kms package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.services.kms :refer [key-spec
+                                          key-usage]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.services.kms :refer [key-spec
-                                          key-usage]])
+                                  testing]])
   (:import [software.amazon.awscdk.services.kms KeySpec
                                                 KeyUsage]))
 

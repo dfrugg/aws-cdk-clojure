@@ -1,16 +1,16 @@
 (ns cdk.api.services.cognito-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.cognito package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.cognito :refer [account-recovery
+  (:require [cdk.api.services.cognito :refer [account-recovery
                                               advanced-security-mode
                                               lambda-version
                                               mfa
                                               oidc-attribute-request-method
                                               signing-algorithm
                                               user-pool-identity-provider-saml-metadata-type
-                                              verification-email-style]])
+                                              verification-email-style]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.cognito AccountRecovery
                                                     AdvancedSecurityMode
                                                     LambdaVersion

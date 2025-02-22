@@ -1,8 +1,8 @@
 (ns cdk.api.services.opensearchservice
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.opensearchservice package. "
-  (:require [cdk.support :refer [lookup-entry]]
+  (:require [cdk.api :refer [removal-policy]]
             [cdk.api.services.ec2 :refer [ebs-device-volume-type]]
-            [cdk.api :refer [removal-policy]])
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.opensearchservice AdvancedSecurityOptions$Builder
                                                               CapacityConfig$Builder
                                                               CfnDomain$AdvancedSecurityOptionsInputProperty$Builder

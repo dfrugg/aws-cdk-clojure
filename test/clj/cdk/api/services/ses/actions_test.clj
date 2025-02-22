@@ -1,10 +1,10 @@
 (ns cdk.api.services.ses.actions-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.ses.actions package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.services.ses.actions :refer [email-encoding
+                                                  lambda-invocation-type]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.services.ses.actions :refer [email-encoding
-                                                  lambda-invocation-type]])
+                                  testing]])
   (:import [software.amazon.awscdk.services.ses.actions EmailEncoding
                                                         LambdaInvocationType]))
 

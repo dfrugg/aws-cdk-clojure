@@ -1,8 +1,8 @@
 (ns cdk.api.services.logs
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.logs package. "
-  (:require [cdk.support :refer [lookup-entry]]
+  (:require [cdk.api :refer [removal-policy]]
             [cdk.api.services.cloudwatch :refer [unit]]
-            [cdk.api :refer [removal-policy]])
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.logs CfnAccountPolicy$Builder
                                                  CfnAccountPolicyProps$Builder
                                                  CfnDelivery$Builder

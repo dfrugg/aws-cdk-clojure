@@ -1,9 +1,9 @@
 (ns cdk.api.services.certificatemanager-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.certificatemanager package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.services.certificatemanager :refer [validation-method]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.services.certificatemanager :refer [validation-method]])
+                                  testing]])
   (:import [software.amazon.awscdk.services.certificatemanager ValidationMethod]))
 
 

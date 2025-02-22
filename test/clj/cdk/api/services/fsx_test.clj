@@ -1,12 +1,12 @@
 (ns cdk.api.services.fsx-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.fsx package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.fsx :refer [lustre-auto-import-policy
+  (:require [cdk.api.services.fsx :refer [lustre-auto-import-policy
                                           lustre-data-compression-type
                                           lustre-deployment-type
-                                          weekday]])
+                                          weekday]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.fsx LustreAutoImportPolicy
                                                 LustreDataCompressionType
                                                 LustreDeploymentType

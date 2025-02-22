@@ -1,12 +1,12 @@
 (ns cdk.api.services.globalaccelerator-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.globalaccelerator package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.globalaccelerator :refer [client-affinity
+  (:require [cdk.api.services.globalaccelerator :refer [client-affinity
                                                         connection-protocol
                                                         health-check-protocol
-                                                        ip-address-type]])
+                                                        ip-address-type]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.globalaccelerator ClientAffinity
                                                               ConnectionProtocol
                                                               HealthCheckProtocol

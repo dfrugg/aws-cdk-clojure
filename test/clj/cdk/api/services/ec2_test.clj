@@ -1,9 +1,6 @@
 (ns cdk.api.services.ec2-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.ec2 package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.ec2 :refer [action
+  (:require [cdk.api.services.ec2 :refer [action
                                           address-family
                                           amazon-linux-cpu-type
                                           amazon-linux-edition
@@ -42,7 +39,10 @@
                                           vpc-endpoint-type
                                           vpn-connection-type
                                           vpn-port
-                                          windows-version]])
+                                          windows-version]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.ec2 Action
                                                 AddressFamily
                                                 AmazonLinuxCpuType

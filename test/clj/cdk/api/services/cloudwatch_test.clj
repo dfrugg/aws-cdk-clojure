@@ -1,9 +1,6 @@
 (ns cdk.api.services.cloudwatch-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.cloudwatch package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.cloudwatch :refer [alarm-state
+  (:require [cdk.api.services.cloudwatch :refer [alarm-state
                                                  alarm-status-widget-sort-by
                                                  comparison-operator
                                                  graph-widget-view
@@ -18,7 +15,10 @@
                                                  unit
                                                  variable-input-type
                                                  variable-type
-                                                 vertical-shading]])
+                                                 vertical-shading]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.cloudwatch AlarmState
                                                        AlarmStatusWidgetSortBy
                                                        ComparisonOperator

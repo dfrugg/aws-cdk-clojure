@@ -1,10 +1,10 @@
 (ns cdk.api.aws-apigatewayv2-integrations
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.aws_apigatewayv2_integrations package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api.services.apigatewayv2 :refer [content-handling
+  (:require [cdk.api.services.apigatewayv2 :refer [content-handling
                                                    http-integration-subtype
                                                    http-method
-                                                   passthrough-behavior]])
+                                                   passthrough-behavior]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.aws_apigatewayv2_integrations HttpAlbIntegration$Builder
                                                                  HttpAlbIntegrationProps$Builder
                                                                  HttpLambdaIntegration$Builder

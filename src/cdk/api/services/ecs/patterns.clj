@@ -1,13 +1,13 @@
 (ns cdk.api.services.ecs.patterns
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.ecs.patterns package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api.services.ecs :refer [fargate-platform-version
+  (:require [cdk.api.services.ecs :refer [fargate-platform-version
                                           propagated-tag-source
                                           protocol]]
             [cdk.api.services.elasticloadbalancingv2 :refer [application-protocol
                                                              application-protocol-version
                                                              ip-address-type
-                                                             ssl-policy]])
+                                                             ssl-policy]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.ecs.patterns ApplicationListenerProps$Builder
                                                          ApplicationLoadBalancedEc2Service$Builder
                                                          ApplicationLoadBalancedEc2ServiceProps$Builder

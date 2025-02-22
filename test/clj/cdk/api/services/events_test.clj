@@ -1,9 +1,9 @@
 (ns cdk.api.services.events-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.events package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.services.events :refer [http-method]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.services.events :refer [http-method]])
+                                  testing]])
   (:import [software.amazon.awscdk.services.events HttpMethod]))
 
 

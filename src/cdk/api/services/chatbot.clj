@@ -1,7 +1,7 @@
 (ns cdk.api.services.chatbot
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.chatbot package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api.services.logs :refer [retention-days]])
+  (:require [cdk.api.services.logs :refer [retention-days]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.chatbot CfnMicrosoftTeamsChannelConfiguration$Builder
                                                     CfnMicrosoftTeamsChannelConfigurationProps$Builder
                                                     CfnSlackChannelConfiguration$Builder

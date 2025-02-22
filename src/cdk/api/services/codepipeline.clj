@@ -1,7 +1,7 @@
 (ns cdk.api.services.codepipeline
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.codepipeline package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api.services.codestarnotifications :refer [detail-type]])
+  (:require [cdk.api.services.codestarnotifications :refer [detail-type]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.codepipeline ActionArtifactBounds$Builder
                                                          ActionBindOptions$Builder
                                                          ActionCategory

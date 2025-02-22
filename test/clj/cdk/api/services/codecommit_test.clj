@@ -1,10 +1,10 @@
 (ns cdk.api.services.codecommit-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.codecommit package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.services.codecommit :refer [repository-event-trigger
+                                                 repository-notification-events]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.services.codecommit :refer [repository-event-trigger
-                                                 repository-notification-events]])
+                                  testing]])
   (:import [software.amazon.awscdk.services.codecommit RepositoryEventTrigger
                                                        RepositoryNotificationEvents]))
 

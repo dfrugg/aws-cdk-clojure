@@ -1,12 +1,12 @@
 (ns cdk.api.services.route53-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.route53 package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.route53 :refer [caa-tag
+  (:require [cdk.api.services.route53 :refer [caa-tag
                                               continent
                                               key-signing-key-status
-                                              record-type]])
+                                              record-type]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.route53 CaaTag
                                                     Continent
                                                     KeySigningKeyStatus

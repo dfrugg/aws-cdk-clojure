@@ -1,9 +1,9 @@
 (ns cdk.api.pipelines
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.pipelines package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api.services.codepipeline.actions :refer [code-commit-trigger
+  (:require [cdk.api.services.codepipeline.actions :refer [code-commit-trigger
                                                            git-hub-trigger
-                                                           s3-trigger]])
+                                                           s3-trigger]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.pipelines AddStageOpts$Builder
                                              AssetType
                                              CodeBuildOptions$Builder

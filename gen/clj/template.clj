@@ -36,7 +36,7 @@
   [clojure-fns]
   (when-not (empty? clojure-fns)
     (let [open-token "\n  (:require "
-          item-token (-> (map-indexed namespace-require-item clojure-fns)
+          item-token (-> (map-indexed namespace-require-item (sort clojure-fns))
                          str/join)
           close-token ")"]
       (str open-token item-token close-token))))

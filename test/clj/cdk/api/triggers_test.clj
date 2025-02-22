@@ -1,10 +1,10 @@
 (ns cdk.api.triggers-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.triggers package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.triggers :refer [invocation-type
+                                      trigger-invalidation]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.triggers :refer [invocation-type
-                                      trigger-invalidation]])
+                                  testing]])
   (:import [software.amazon.awscdk.triggers InvocationType
                                             TriggerInvalidation]))
 

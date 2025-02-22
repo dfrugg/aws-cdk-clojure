@@ -1,10 +1,10 @@
 (ns cdk.api.services.kinesis-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.kinesis package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.services.kinesis :refer [stream-encryption
+                                              stream-mode]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.services.kinesis :refer [stream-encryption
-                                              stream-mode]])
+                                  testing]])
   (:import [software.amazon.awscdk.services.kinesis StreamEncryption
                                                     StreamMode]))
 

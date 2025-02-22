@@ -1,9 +1,6 @@
 (ns cdk.api.services.dynamodb-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.dynamodb package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.dynamodb :refer [attribute-type
+  (:require [cdk.api.services.dynamodb :refer [attribute-type
                                                billing-mode
                                                capacity-mode
                                                input-compression-type
@@ -11,7 +8,10 @@
                                                projection-type
                                                stream-view-type
                                                table-class
-                                               table-encryption]])
+                                               table-encryption]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.dynamodb AttributeType
                                                      BillingMode
                                                      CapacityMode

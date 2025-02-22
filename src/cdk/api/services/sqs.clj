@@ -1,7 +1,7 @@
 (ns cdk.api.services.sqs
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.sqs package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api :refer [removal-policy]])
+  (:require [cdk.api :refer [removal-policy]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.sqs CfnQueue$Builder
                                                 CfnQueueInlinePolicy$Builder
                                                 CfnQueueInlinePolicyProps$Builder

@@ -1,7 +1,7 @@
 (ns cdk.api.services.sns.subscriptions
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.sns.subscriptions package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api.services.sns :refer [subscription-protocol]])
+  (:require [cdk.api.services.sns :refer [subscription-protocol]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.sns.subscriptions EmailSubscription$Builder
                                                               EmailSubscriptionProps$Builder
                                                               LambdaSubscription$Builder

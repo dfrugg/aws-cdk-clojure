@@ -1,15 +1,15 @@
 (ns cdk.api.cloudassembly.schema-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.cloudassembly.schema package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.cloudassembly.schema :refer [artifact-metadata-entry-type
+  (:require [cdk.api.cloudassembly.schema :refer [artifact-metadata-entry-type
                                                   artifact-type
                                                   context-provider
                                                   file-asset-packaging
                                                   load-balancer-listener-protocol
                                                   load-balancer-type
-                                                  require-approval]])
+                                                  require-approval]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.cloudassembly.schema ArtifactMetadataEntryType
                                                         ArtifactType
                                                         ContextProvider

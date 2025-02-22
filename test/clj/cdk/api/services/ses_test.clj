@@ -1,9 +1,6 @@
 (ns cdk.api.services.ses-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.ses package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.ses :refer [cloud-watch-dimension-source
+  (:require [cdk.api.services.ses :refer [cloud-watch-dimension-source
                                           configuration-set-tls-policy
                                           easy-dkim-signing-key-length
                                           email-sending-event
@@ -11,7 +8,10 @@
                                           receipt-filter-policy
                                           scaling-mode
                                           suppression-reasons
-                                          tls-policy]])
+                                          tls-policy]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.ses CloudWatchDimensionSource
                                                 ConfigurationSetTlsPolicy
                                                 EasyDkimSigningKeyLength

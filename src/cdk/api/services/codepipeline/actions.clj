@@ -1,7 +1,7 @@
 (ns cdk.api.services.codepipeline.actions
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.codepipeline.actions package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api.services.s3 :refer [bucket-access-control]])
+  (:require [cdk.api.services.s3 :refer [bucket-access-control]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.codepipeline.actions AlexaSkillDeployAction$Builder
                                                                  AlexaSkillDeployActionProps$Builder
                                                                  CloudFormationCreateReplaceChangeSetAction$Builder

@@ -1,11 +1,11 @@
 (ns cdk.api.cxapi-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.cxapi package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.cxapi :refer [load-balancer-ip-address-type
+  (:require [cdk.api.cxapi :refer [load-balancer-ip-address-type
                                    synthesis-message-level
-                                   vpc-subnet-group-type]])
+                                   vpc-subnet-group-type]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.cxapi LoadBalancerIpAddressType
                                          SynthesisMessageLevel
                                          VpcSubnetGroupType]))

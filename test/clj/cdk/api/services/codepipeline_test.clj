@@ -1,14 +1,14 @@
 (ns cdk.api.services.codepipeline-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.codepipeline package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.codepipeline :refer [action-category
+  (:require [cdk.api.services.codepipeline :refer [action-category
                                                    execution-mode
                                                    git-pull-request-event
                                                    pipeline-notification-events
                                                    pipeline-type
-                                                   provider-type]])
+                                                   provider-type]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.codepipeline ActionCategory
                                                          ExecutionMode
                                                          GitPullRequestEvent

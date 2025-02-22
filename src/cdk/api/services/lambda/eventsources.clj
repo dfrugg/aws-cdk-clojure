@@ -1,8 +1,8 @@
 (ns cdk.api.services.lambda.eventsources
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.lambda.eventsources package. "
-  (:require [cdk.support :refer [lookup-entry]]
+  (:require [cdk.api.services.apigateway :refer [authorization-type]]
             [cdk.api.services.lambda :refer [starting-position]]
-            [cdk.api.services.apigateway :refer [authorization-type]])
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.lambda.eventsources ApiEventSource$Builder
                                                                 AuthenticationMethod
                                                                 BaseStreamEventSourceProps$Builder

@@ -1,9 +1,9 @@
 (ns cdk.api.services.codeguruprofiler-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.codeguruprofiler package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.services.codeguruprofiler :refer [compute-platform]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.services.codeguruprofiler :refer [compute-platform]])
+                                  testing]])
   (:import [software.amazon.awscdk.services.codeguruprofiler ComputePlatform]))
 
 

@@ -1,9 +1,9 @@
 (ns cdk.api.services.secretsmanager-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.secretsmanager package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.services.secretsmanager :refer [attachment-target-type]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.services.secretsmanager :refer [attachment-target-type]])
+                                  testing]])
   (:import [software.amazon.awscdk.services.secretsmanager AttachmentTargetType]))
 
 

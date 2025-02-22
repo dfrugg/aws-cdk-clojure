@@ -1,10 +1,10 @@
 (ns cdk.api.services.stepfunctions.tasks
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.stepfunctions.tasks package. "
-  (:require [cdk.support :refer [lookup-entry]]
+  (:require [cdk.api.services.ecs :refer [fargate-platform-version
+                                          propagated-tag-source]]
             [cdk.api.services.stepfunctions :refer [integration-pattern
                                                     service-integration-pattern]]
-            [cdk.api.services.ecs :refer [fargate-platform-version
-                                          propagated-tag-source]])
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.stepfunctions.tasks ActionOnFailure
                                                                 AlgorithmSpecification$Builder
                                                                 ApplicationConfiguration$Builder

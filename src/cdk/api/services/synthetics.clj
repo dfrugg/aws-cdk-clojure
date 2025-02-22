@@ -1,9 +1,9 @@
 (ns cdk.api.services.synthetics
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.synthetics package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api :refer [asset-hash-type
+  (:require [cdk.api :refer [asset-hash-type
                              ignore-mode
-                             symlink-follow-mode]])
+                             symlink-follow-mode]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.synthetics ArtifactsBucketLocation$Builder
                                                        AssetCode$Builder
                                                        Canary$Builder

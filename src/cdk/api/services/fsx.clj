@@ -1,7 +1,7 @@
 (ns cdk.api.services.fsx
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.fsx package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api :refer [removal-policy]])
+  (:require [cdk.api :refer [removal-policy]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.fsx CfnDataRepositoryAssociation$AutoExportPolicyProperty$Builder
                                                 CfnDataRepositoryAssociation$AutoImportPolicyProperty$Builder
                                                 CfnDataRepositoryAssociation$Builder

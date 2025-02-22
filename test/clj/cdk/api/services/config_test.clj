@@ -1,9 +1,9 @@
 (ns cdk.api.services.config-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.config package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.services.config :refer [maximum-execution-frequency]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.services.config :refer [maximum-execution-frequency]])
+                                  testing]])
   (:import [software.amazon.awscdk.services.config MaximumExecutionFrequency]))
 
 

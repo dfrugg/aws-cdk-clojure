@@ -1,7 +1,7 @@
 (ns cdk.api.cxapi
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.cxapi package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api.cloudassembly.schema :refer [artifact-type]])
+  (:require [cdk.api.cloudassembly.schema :refer [artifact-type]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.cxapi AssemblyBuildOptions$Builder
                                          AssetManifestArtifact$Builder
                                          AwsCloudFormationStackProperties$Builder

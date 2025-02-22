@@ -1,10 +1,10 @@
 (ns cdk.api.services.ec2
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.ec2 package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api :refer [asset-hash-type
+  (:require [cdk.api :refer [asset-hash-type
                              ignore-mode
                              removal-policy
-                             symlink-follow-mode]])
+                             symlink-follow-mode]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.ec2 AclCidrConfig$Builder
                                                 AclIcmp$Builder
                                                 AclPortRange$Builder

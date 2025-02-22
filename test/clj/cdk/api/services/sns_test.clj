@@ -1,12 +1,12 @@
 (ns cdk.api.services.sns-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.sns package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.sns :refer [filter-or-policy-type
+  (:require [cdk.api.services.sns :refer [filter-or-policy-type
                                           logging-protocol
                                           subscription-protocol
-                                          tracing-config]])
+                                          tracing-config]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.sns FilterOrPolicyType
                                                 LoggingProtocol
                                                 SubscriptionProtocol

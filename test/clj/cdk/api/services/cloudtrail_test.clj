@@ -1,11 +1,11 @@
 (ns cdk.api.services.cloudtrail-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.cloudtrail package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.cloudtrail :refer [data-resource-type
+  (:require [cdk.api.services.cloudtrail :refer [data-resource-type
                                                  management-event-sources
-                                                 read-write-type]])
+                                                 read-write-type]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.cloudtrail DataResourceType
                                                        ManagementEventSources
                                                        ReadWriteType]))

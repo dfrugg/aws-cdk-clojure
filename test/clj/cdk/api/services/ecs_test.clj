@@ -1,9 +1,6 @@
 (ns cdk.api.services.ecs-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.ecs package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.ecs :refer [alarm-behavior
+  (:require [cdk.api.services.ecs :refer [alarm-behavior
                                           ami-hardware-type
                                           aws-log-driver-mode
                                           bin-pack-resource
@@ -32,7 +29,10 @@
                                           splunk-log-format
                                           tmpfs-mount-option
                                           ulimit-name
-                                          windows-optimized-version]])
+                                          windows-optimized-version]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.ecs AlarmBehavior
                                                 AmiHardwareType
                                                 AwsLogDriverMode

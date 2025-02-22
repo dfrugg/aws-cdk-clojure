@@ -1,7 +1,7 @@
 (ns cdk.api.services.servicecatalog
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.servicecatalog package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api.services.s3.deployment :refer [server-side-encryption]])
+  (:require [cdk.api.services.s3.deployment :refer [server-side-encryption]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.servicecatalog CfnAcceptedPortfolioShare$Builder
                                                            CfnAcceptedPortfolioShareProps$Builder
                                                            CfnCloudFormationProduct$Builder

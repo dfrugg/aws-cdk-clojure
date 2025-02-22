@@ -1,9 +1,9 @@
 (ns cdk.api.services.codestarnotifications-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.codestarnotifications package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.services.codestarnotifications :refer [detail-type]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.services.codestarnotifications :refer [detail-type]])
+                                  testing]])
   (:import [software.amazon.awscdk.services.codestarnotifications DetailType]))
 
 

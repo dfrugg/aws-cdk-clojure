@@ -1,10 +1,10 @@
 (ns cdk.api.services.opensearchservice-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.opensearchservice package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.services.opensearchservice :refer [ip-address-type
+                                                        tls-security-policy]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.services.opensearchservice :refer [ip-address-type
-                                                        tls-security-policy]])
+                                  testing]])
   (:import [software.amazon.awscdk.services.opensearchservice IpAddressType
                                                               TLSSecurityPolicy]))
 

@@ -1,14 +1,14 @@
 (ns cdk.api.services.codepipeline.actions-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.codepipeline.actions package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.codepipeline.actions :refer [code-build-action-type
+  (:require [cdk.api.services.codepipeline.actions :refer [code-build-action-type
                                                            code-commit-trigger
                                                            git-hub-trigger
                                                            jenkins-action-type
                                                            s3-trigger
-                                                           stack-set-organizations-auto-deployment]])
+                                                           stack-set-organizations-auto-deployment]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.codepipeline.actions CodeBuildActionType
                                                                  CodeCommitTrigger
                                                                  GitHubTrigger

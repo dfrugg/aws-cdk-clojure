@@ -1,9 +1,6 @@
 (ns cdk.api.services.s3-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.s3 package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.s3 :refer [bucket-access-control
+  (:require [cdk.api.services.s3 :refer [bucket-access-control
                                          bucket-encryption
                                          bucket-notification-destination-type
                                          event-type
@@ -14,7 +11,10 @@
                                          object-lock-mode
                                          object-ownership
                                          partition-date-source
-                                         redirect-protocol]])
+                                         redirect-protocol]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.s3 BucketAccessControl
                                                BucketEncryption
                                                BucketNotificationDestinationType

@@ -1,16 +1,16 @@
 (ns cdk.api.services.ecs
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.ecs package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api.services.logs :refer [retention-days]]
-            [cdk.api.services.ec2 :refer [ebs-device-volume-type
-                                          instance-architecture]]
-            [cdk.api.services.servicediscovery :refer [dns-record-type
-                                                       namespace-type]]
+  (:require [cdk.api :refer [asset-hash-type
+                             ignore-mode
+                             symlink-follow-mode]]
             [cdk.api.services.applicationautoscaling :refer [service-namespace]]
             [cdk.api.services.autoscaling :refer [monitoring]]
-            [cdk.api :refer [asset-hash-type
-                             ignore-mode
-                             symlink-follow-mode]])
+            [cdk.api.services.ec2 :refer [ebs-device-volume-type
+                                          instance-architecture]]
+            [cdk.api.services.logs :refer [retention-days]]
+            [cdk.api.services.servicediscovery :refer [dns-record-type
+                                                       namespace-type]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.ecs AddAutoScalingGroupCapacityOptions$Builder
                                                 AddCapacityOptions$Builder
                                                 AlarmBehavior

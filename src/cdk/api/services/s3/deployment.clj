@@ -1,8 +1,8 @@
 (ns cdk.api.services.s3.deployment
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.s3.deployment package. "
-  (:require [cdk.support :refer [lookup-entry]]
+  (:require [cdk.api.services.logs :refer [retention-days]]
             [cdk.api.services.s3 :refer [bucket-access-control]]
-            [cdk.api.services.logs :refer [retention-days]])
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.s3.deployment BucketDeployment$Builder
                                                           BucketDeploymentProps$Builder
                                                           DeployTimeSubstitutedFile$Builder

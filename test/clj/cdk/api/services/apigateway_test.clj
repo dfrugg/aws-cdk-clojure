@@ -1,9 +1,6 @@
 (ns cdk.api.services.apigateway-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.apigateway package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.apigateway :refer [api-key-source-type
+  (:require [cdk.api.services.apigateway :refer [api-key-source-type
                                                  authorization-type
                                                  connection-type
                                                  content-handling
@@ -14,7 +11,10 @@
                                                  method-logging-level
                                                  passthrough-behavior
                                                  period
-                                                 security-policy]])
+                                                 security-policy]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.apigateway ApiKeySourceType
                                                        AuthorizationType
                                                        ConnectionType

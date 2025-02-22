@@ -1,12 +1,12 @@
 (ns cdk.api.services.sqs-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.sqs package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.sqs :refer [deduplication-scope
+  (:require [cdk.api.services.sqs :refer [deduplication-scope
                                           fifo-throughput-limit
                                           queue-encryption
-                                          redrive-permission]])
+                                          redrive-permission]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.sqs DeduplicationScope
                                                 FifoThroughputLimit
                                                 QueueEncryption

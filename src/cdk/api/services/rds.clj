@@ -1,8 +1,8 @@
 (ns cdk.api.services.rds
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.rds package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api :refer [removal-policy]]
-            [cdk.api.services.logs :refer [retention-days]])
+  (:require [cdk.api :refer [removal-policy]]
+            [cdk.api.services.logs :refer [retention-days]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.rds AuroraCapacityUnit
                                                 AuroraClusterEngineProps$Builder
                                                 AuroraMysqlClusterEngineProps$Builder

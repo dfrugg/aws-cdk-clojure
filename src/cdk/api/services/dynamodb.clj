@@ -1,8 +1,8 @@
 (ns cdk.api.services.dynamodb
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.dynamodb package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api :refer [removal-policy]]
-            [cdk.api.services.cloudwatch :refer [unit]])
+  (:require [cdk.api :refer [removal-policy]]
+            [cdk.api.services.cloudwatch :refer [unit]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.dynamodb Attribute$Builder
                                                      AttributeType
                                                      AutoscaledCapacityOptions$Builder

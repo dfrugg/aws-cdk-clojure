@@ -1,10 +1,10 @@
 (ns cdk.api.services.logs-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.logs package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.services.logs :refer [log-group-class
+                                           retention-days]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.services.logs :refer [log-group-class
-                                           retention-days]])
+                                  testing]])
   (:import [software.amazon.awscdk.services.logs LogGroupClass
                                                  RetentionDays]))
 

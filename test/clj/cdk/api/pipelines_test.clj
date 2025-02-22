@@ -1,10 +1,10 @@
 (ns cdk.api.pipelines-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.pipelines package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.pipelines :refer [asset-type
+                                       docker-credential-usage]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.pipelines :refer [asset-type
-                                       docker-credential-usage]])
+                                  testing]])
   (:import [software.amazon.awscdk.pipelines AssetType
                                              DockerCredentialUsage]))
 

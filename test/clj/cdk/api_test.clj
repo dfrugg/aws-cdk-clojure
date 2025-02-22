@@ -1,9 +1,6 @@
 (ns cdk.api-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api :refer [arn-format
+  (:require [cdk.api :refer [arn-format
                              asset-hash-type
                              bundling-file-access
                              bundling-output
@@ -20,7 +17,10 @@
                              resolution-type-hint
                              size-rounding-behavior
                              symlink-follow-mode
-                             tag-type]])
+                             tag-type]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk ArnFormat
                                    AssetHashType
                                    BundlingFileAccess

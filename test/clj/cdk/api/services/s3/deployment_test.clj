@@ -1,10 +1,10 @@
 (ns cdk.api.services.s3.deployment-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.s3.deployment package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.services.s3.deployment :refer [server-side-encryption
+                                                    storage-class]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.services.s3.deployment :refer [server-side-encryption
-                                                    storage-class]])
+                                  testing]])
   (:import [software.amazon.awscdk.services.s3.deployment ServerSideEncryption
                                                           StorageClass]))
 

@@ -1,9 +1,9 @@
 (ns cdk.api.services.events.targets
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.events.targets package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api.services.ecs :refer [fargate-platform-version
+  (:require [cdk.api.services.ecs :refer [fargate-platform-version
                                           launch-type
-                                          propagated-tag-source]])
+                                          propagated-tag-source]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.events.targets ApiDestination$Builder
                                                            ApiDestinationProps$Builder
                                                            ApiGateway$Builder

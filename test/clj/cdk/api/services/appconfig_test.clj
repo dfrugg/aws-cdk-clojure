@@ -1,16 +1,16 @@
 (ns cdk.api.services.appconfig-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.appconfig package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.appconfig :refer [action-point
+  (:require [cdk.api.services.appconfig :refer [action-point
                                                 configuration-source-type
                                                 configuration-type
                                                 growth-type
                                                 monitor-type
                                                 platform
                                                 source-type
-                                                validator-type]])
+                                                validator-type]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.appconfig ActionPoint
                                                       ConfigurationSourceType
                                                       ConfigurationType

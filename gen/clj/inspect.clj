@@ -101,6 +101,8 @@
         (register-enum data)))))
 
 
+; Begin Enum Specific Processing
+
 (defn enum-values
   "Extracts a map of Enum values and there key value."
   [^Enum enum]
@@ -120,6 +122,7 @@
       (assoc :values (enum-values enum-class))
       (register :enums config)))
 
+; Begin Builder Specific Processing
 
 (def create-method
   "The form that matches the value of the create method when reflected."

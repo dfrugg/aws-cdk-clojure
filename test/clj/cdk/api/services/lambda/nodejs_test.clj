@@ -1,12 +1,12 @@
 (ns cdk.api.services.lambda.nodejs-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.lambda.nodejs package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.lambda.nodejs :refer [charset
+  (:require [cdk.api.services.lambda.nodejs :refer [charset
                                                     log-level
                                                     output-format
-                                                    source-map-mode]])
+                                                    source-map-mode]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.lambda.nodejs Charset
                                                           LogLevel
                                                           OutputFormat

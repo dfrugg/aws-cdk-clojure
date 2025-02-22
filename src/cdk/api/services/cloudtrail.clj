@@ -1,7 +1,7 @@
 (ns cdk.api.services.cloudtrail
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.cloudtrail package. "
-  (:require [cdk.support :refer [lookup-entry]]
-            [cdk.api.services.logs :refer [retention-days]])
+  (:require [cdk.api.services.logs :refer [retention-days]]
+            [cdk.support :refer [lookup-entry]])
   (:import [software.amazon.awscdk.services.cloudtrail AddEventSelectorOptions$Builder
                                                        CfnChannel$Builder
                                                        CfnChannel$DestinationProperty$Builder

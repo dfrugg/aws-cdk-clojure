@@ -1,12 +1,12 @@
 (ns cdk.api.services.applicationautoscaling-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.applicationautoscaling package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.applicationautoscaling :refer [adjustment-type
+  (:require [cdk.api.services.applicationautoscaling :refer [adjustment-type
                                                              metric-aggregation-type
                                                              predefined-metric
-                                                             service-namespace]])
+                                                             service-namespace]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.applicationautoscaling AdjustmentType
                                                                    MetricAggregationType
                                                                    PredefinedMetric

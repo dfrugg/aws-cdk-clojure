@@ -1,9 +1,9 @@
 (ns cdk.api.aws-apigatewayv2-authorizers-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.aws_apigatewayv2_authorizers package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.aws-apigatewayv2-authorizers :refer [http-lambda-response-type]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.aws-apigatewayv2-authorizers :refer [http-lambda-response-type]])
+                                  testing]])
   (:import [software.amazon.awscdk.aws_apigatewayv2_authorizers HttpLambdaResponseType]))
 
 

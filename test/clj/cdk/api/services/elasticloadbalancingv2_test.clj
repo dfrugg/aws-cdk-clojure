@@ -1,9 +1,6 @@
 (ns cdk.api.services.elasticloadbalancingv2-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.elasticloadbalancingv2 package. "
-  (:require [clojure.test :refer [deftest
-                                  is
-                                  testing]]
-            [cdk.api.services.elasticloadbalancingv2 :refer [alpn-policy
+  (:require [cdk.api.services.elasticloadbalancingv2 :refer [alpn-policy
                                                              application-protocol
                                                              application-protocol-version
                                                              client-routing-policy
@@ -16,7 +13,10 @@
                                                              target-group-load-balancing-algorithm-type
                                                              target-type
                                                              unauthenticated-action
-                                                             xff-header-processing-mode]])
+                                                             xff-header-processing-mode]]
+            [clojure.test :refer [deftest
+                                  is
+                                  testing]])
   (:import [software.amazon.awscdk.services.elasticloadbalancingv2 AlpnPolicy
                                                                    ApplicationProtocol
                                                                    ApplicationProtocolVersion

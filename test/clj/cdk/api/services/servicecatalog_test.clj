@@ -1,9 +1,9 @@
 (ns cdk.api.services.servicecatalog-test
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.servicecatalog package. "
-  (:require [clojure.test :refer [deftest
+  (:require [cdk.api.services.servicecatalog :refer [message-language]]
+            [clojure.test :refer [deftest
                                   is
-                                  testing]]
-            [cdk.api.services.servicecatalog :refer [message-language]])
+                                  testing]])
   (:import [software.amazon.awscdk.services.servicecatalog MessageLanguage]))
 
 
