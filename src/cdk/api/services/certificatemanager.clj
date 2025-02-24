@@ -67,6 +67,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn certificate-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-certificate-builder (Certificate$Builder/create scope (name id)) id config))
+
+
 (defn build-certificate-props-builder
   "The build-certificate-props-builder function updates a CertificateProps$Builder instance using the provided configuration.
   The function takes the CertificateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -99,6 +105,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn certificate-props-builder
+  ""
+  [id config]
+  (build-certificate-props-builder (new CertificateProps$Builder) id config))
+
+
 (defn build-certification-validation-props-builder
   "The build-certification-validation-props-builder function updates a CertificationValidationProps$Builder instance using the provided configuration.
   The function takes the CertificationValidationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -125,6 +137,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn certification-validation-props-builder
+  ""
+  [id config]
+  (build-certification-validation-props-builder (new CertificationValidationProps$Builder) id config))
+
+
 (defn build-cfn-account-builder
   "The build-cfn-account-builder function updates a CfnAccount$Builder instance using the provided configuration.
   The function takes the CfnAccount$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -140,6 +158,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :expiry-events-configuration)]
     (. builder expiryEventsConfiguration data))
   (.build builder))
+
+
+(defn cfn-account-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-account-builder (CfnAccount$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-account-expiry-events-configuration-property-builder
@@ -159,6 +183,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-account-expiry-events-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-account-expiry-events-configuration-property-builder (new CfnAccount$ExpiryEventsConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-account-props-builder
   "The build-cfn-account-props-builder function updates a CfnAccountProps$Builder instance using the provided configuration.
   The function takes the CfnAccountProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -174,6 +204,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :expiry-events-configuration)]
     (. builder expiryEventsConfiguration data))
   (.build builder))
+
+
+(defn cfn-account-props-builder
+  ""
+  [id config]
+  (build-cfn-account-props-builder (new CfnAccountProps$Builder) id config))
 
 
 (defn build-cfn-certificate-builder
@@ -214,6 +250,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-certificate-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-certificate-builder (CfnCertificate$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-certificate-domain-validation-option-property-builder
   "The build-cfn-certificate-domain-validation-option-property-builder function updates a CfnCertificate$DomainValidationOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnCertificate$DomainValidationOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -235,6 +277,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :validation-domain)]
     (. builder validationDomain data))
   (.build builder))
+
+
+(defn cfn-certificate-domain-validation-option-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-domain-validation-option-property-builder (new CfnCertificate$DomainValidationOptionProperty$Builder) id config))
 
 
 (defn build-cfn-certificate-props-builder
@@ -273,6 +321,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :validation-method)]
     (. builder validationMethod data))
   (.build builder))
+
+
+(defn cfn-certificate-props-builder
+  ""
+  [id config]
+  (build-cfn-certificate-props-builder (new CfnCertificateProps$Builder) id config))
 
 
 (defn build-dns-validated-certificate-props-builder
@@ -322,6 +376,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn dns-validated-certificate-props-builder
+  ""
+  [id config]
+  (build-dns-validated-certificate-props-builder (new DnsValidatedCertificateProps$Builder) id config))
+
+
 (defn build-private-certificate-builder
   "The build-private-certificate-builder function updates a PrivateCertificate$Builder instance using the provided configuration.
   The function takes the PrivateCertificate$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -348,6 +408,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn private-certificate-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-private-certificate-builder (PrivateCertificate$Builder/create scope (name id)) id config))
+
+
 (defn build-private-certificate-props-builder
   "The build-private-certificate-props-builder function updates a PrivateCertificateProps$Builder instance using the provided configuration.
   The function takes the PrivateCertificateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -372,3 +438,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :subject-alternative-names)]
     (. builder subjectAlternativeNames data))
   (.build builder))
+
+
+(defn private-certificate-props-builder
+  ""
+  [id config]
+  (build-private-certificate-props-builder (new PrivateCertificateProps$Builder) id config))

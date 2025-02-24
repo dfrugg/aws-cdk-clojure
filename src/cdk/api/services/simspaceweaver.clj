@@ -35,6 +35,12 @@
   (.build builder))
 
 
+(defn cfn-simulation-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-simulation-builder (CfnSimulation$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-simulation-props-builder
   "The build-cfn-simulation-props-builder function updates a CfnSimulationProps$Builder instance using the provided configuration.
   The function takes the CfnSimulationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -64,6 +70,12 @@
   (.build builder))
 
 
+(defn cfn-simulation-props-builder
+  ""
+  [id config]
+  (build-cfn-simulation-props-builder (new CfnSimulationProps$Builder) id config))
+
+
 (defn build-cfn-simulation-s3-location-property-builder
   "The build-cfn-simulation-s3-location-property-builder function updates a CfnSimulation$S3LocationProperty$Builder instance using the provided configuration.
   The function takes the CfnSimulation$S3LocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -82,3 +94,9 @@
   (when-let [data (lookup-entry config id :object-key)]
     (. builder objectKey data))
   (.build builder))
+
+
+(defn cfn-simulation-s3-location-property-builder
+  ""
+  [id config]
+  (build-cfn-simulation-s3-location-property-builder (new CfnSimulation$S3LocationProperty$Builder) id config))

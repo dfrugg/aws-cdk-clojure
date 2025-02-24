@@ -1,4 +1,8 @@
-{software.amazon.awscdk
+{:defaults {[] ["" []]
+            [software.constructs.Construct] ["-scope" [scope]]
+            [software.constructs.Construct java.lang.String] ["-scope-id" [scope id]]}
+
+ software.amazon.awscdk
  {RemoveTag$Builder [tag-key]
   SecretValue$Builder [protected-value]
   Tag$Builder [tag-key tag-value]

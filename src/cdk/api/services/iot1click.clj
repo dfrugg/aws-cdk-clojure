@@ -31,6 +31,12 @@
   (.build builder))
 
 
+(defn cfn-device-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-device-builder (CfnDevice$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-device-props-builder
   "The build-cfn-device-props-builder function updates a CfnDeviceProps$Builder instance using the provided configuration.
   The function takes the CfnDeviceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -49,6 +55,12 @@
   (when-let [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
+
+
+(defn cfn-device-props-builder
+  ""
+  [id config]
+  (build-cfn-device-props-builder (new CfnDeviceProps$Builder) id config))
 
 
 (defn build-cfn-placement-builder
@@ -77,6 +89,12 @@
   (.build builder))
 
 
+(defn cfn-placement-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-placement-builder (CfnPlacement$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-placement-props-builder
   "The build-cfn-placement-props-builder function updates a CfnPlacementProps$Builder instance using the provided configuration.
   The function takes the CfnPlacementProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -103,6 +121,12 @@
   (.build builder))
 
 
+(defn cfn-placement-props-builder
+  ""
+  [id config]
+  (build-cfn-placement-props-builder (new CfnPlacementProps$Builder) id config))
+
+
 (defn build-cfn-project-builder
   "The build-cfn-project-builder function updates a CfnProject$Builder instance using the provided configuration.
   The function takes the CfnProject$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -126,6 +150,12 @@
   (.build builder))
 
 
+(defn cfn-project-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-project-builder (CfnProject$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-project-device-template-property-builder
   "The build-cfn-project-device-template-property-builder function updates a CfnProject$DeviceTemplateProperty$Builder instance using the provided configuration.
   The function takes the CfnProject$DeviceTemplateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -146,6 +176,12 @@
   (.build builder))
 
 
+(defn cfn-project-device-template-property-builder
+  ""
+  [id config]
+  (build-cfn-project-device-template-property-builder (new CfnProject$DeviceTemplateProperty$Builder) id config))
+
+
 (defn build-cfn-project-placement-template-property-builder
   "The build-cfn-project-placement-template-property-builder function updates a CfnProject$PlacementTemplateProperty$Builder instance using the provided configuration.
   The function takes the CfnProject$PlacementTemplateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -164,6 +200,12 @@
   (when-let [data (lookup-entry config id :device-templates)]
     (. builder deviceTemplates data))
   (.build builder))
+
+
+(defn cfn-project-placement-template-property-builder
+  ""
+  [id config]
+  (build-cfn-project-placement-template-property-builder (new CfnProject$PlacementTemplateProperty$Builder) id config))
 
 
 (defn build-cfn-project-props-builder
@@ -187,3 +229,9 @@
   (when-let [data (lookup-entry config id :project-name)]
     (. builder projectName data))
   (.build builder))
+
+
+(defn cfn-project-props-builder
+  ""
+  [id config]
+  (build-cfn-project-props-builder (new CfnProjectProps$Builder) id config))

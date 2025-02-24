@@ -55,6 +55,12 @@
   (.build builder))
 
 
+(defn cfn-detector-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-detector-builder (CfnDetector$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-detector-cfn-data-source-configurations-property-builder
   "The build-cfn-detector-cfn-data-source-configurations-property-builder function updates a CfnDetector$CFNDataSourceConfigurationsProperty$Builder instance using the provided configuration.
   The function takes the CfnDetector$CFNDataSourceConfigurationsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -78,6 +84,12 @@
   (.build builder))
 
 
+(defn cfn-detector-cfn-data-source-configurations-property-builder
+  ""
+  [id config]
+  (build-cfn-detector-cfn-data-source-configurations-property-builder (new CfnDetector$CFNDataSourceConfigurationsProperty$Builder) id config))
+
+
 (defn build-cfn-detector-cfn-feature-additional-configuration-property-builder
   "The build-cfn-detector-cfn-feature-additional-configuration-property-builder function updates a CfnDetector$CFNFeatureAdditionalConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDetector$CFNFeatureAdditionalConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -96,6 +108,12 @@
   (when-let [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
+
+
+(defn cfn-detector-cfn-feature-additional-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-detector-cfn-feature-additional-configuration-property-builder (new CfnDetector$CFNFeatureAdditionalConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-detector-cfn-feature-configuration-property-builder
@@ -121,6 +139,12 @@
   (.build builder))
 
 
+(defn cfn-detector-cfn-feature-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-detector-cfn-feature-configuration-property-builder (new CfnDetector$CFNFeatureConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-detector-cfn-kubernetes-audit-logs-configuration-property-builder
   "The build-cfn-detector-cfn-kubernetes-audit-logs-configuration-property-builder function updates a CfnDetector$CFNKubernetesAuditLogsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDetector$CFNKubernetesAuditLogsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -136,6 +160,12 @@
   (when-let [data (lookup-entry config id :enable)]
     (. builder enable data))
   (.build builder))
+
+
+(defn cfn-detector-cfn-kubernetes-audit-logs-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-detector-cfn-kubernetes-audit-logs-configuration-property-builder (new CfnDetector$CFNKubernetesAuditLogsConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-detector-cfn-kubernetes-configuration-property-builder
@@ -155,6 +185,12 @@
   (.build builder))
 
 
+(defn cfn-detector-cfn-kubernetes-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-detector-cfn-kubernetes-configuration-property-builder (new CfnDetector$CFNKubernetesConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-detector-cfn-malware-protection-configuration-property-builder
   "The build-cfn-detector-cfn-malware-protection-configuration-property-builder function updates a CfnDetector$CFNMalwareProtectionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDetector$CFNMalwareProtectionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -170,6 +206,12 @@
   (when-let [data (lookup-entry config id :scan-ec2-instance-with-findings)]
     (. builder scanEc2InstanceWithFindings data))
   (.build builder))
+
+
+(defn cfn-detector-cfn-malware-protection-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-detector-cfn-malware-protection-configuration-property-builder (new CfnDetector$CFNMalwareProtectionConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-detector-cfn-scan-ec2-instance-with-findings-configuration-property-builder
@@ -189,6 +231,12 @@
   (.build builder))
 
 
+(defn cfn-detector-cfn-scan-ec2-instance-with-findings-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-detector-cfn-scan-ec2-instance-with-findings-configuration-property-builder (new CfnDetector$CFNScanEc2InstanceWithFindingsConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-detector-cfns3-logs-configuration-property-builder
   "The build-cfn-detector-cfns3-logs-configuration-property-builder function updates a CfnDetector$CFNS3LogsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDetector$CFNS3LogsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -204,6 +252,12 @@
   (when-let [data (lookup-entry config id :enable)]
     (. builder enable data))
   (.build builder))
+
+
+(defn cfn-detector-cfns3-logs-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-detector-cfns3-logs-configuration-property-builder (new CfnDetector$CFNS3LogsConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-detector-props-builder
@@ -235,6 +289,12 @@
   (.build builder))
 
 
+(defn cfn-detector-props-builder
+  ""
+  [id config]
+  (build-cfn-detector-props-builder (new CfnDetectorProps$Builder) id config))
+
+
 (defn build-cfn-detector-tag-item-property-builder
   "The build-cfn-detector-tag-item-property-builder function updates a CfnDetector$TagItemProperty$Builder instance using the provided configuration.
   The function takes the CfnDetector$TagItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -253,6 +313,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-detector-tag-item-property-builder
+  ""
+  [id config]
+  (build-cfn-detector-tag-item-property-builder (new CfnDetector$TagItemProperty$Builder) id config))
 
 
 (defn build-cfn-filter-builder
@@ -288,6 +354,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-filter-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-filter-builder (CfnFilter$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-filter-condition-property-builder
@@ -340,6 +412,12 @@
   (.build builder))
 
 
+(defn cfn-filter-condition-property-builder
+  ""
+  [id config]
+  (build-cfn-filter-condition-property-builder (new CfnFilter$ConditionProperty$Builder) id config))
+
+
 (defn build-cfn-filter-finding-criteria-property-builder
   "The build-cfn-filter-finding-criteria-property-builder function updates a CfnFilter$FindingCriteriaProperty$Builder instance using the provided configuration.
   The function takes the CfnFilter$FindingCriteriaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -358,6 +436,12 @@
   (when-let [data (lookup-entry config id :item-type)]
     (. builder itemType data))
   (.build builder))
+
+
+(defn cfn-filter-finding-criteria-property-builder
+  ""
+  [id config]
+  (build-cfn-filter-finding-criteria-property-builder (new CfnFilter$FindingCriteriaProperty$Builder) id config))
 
 
 (defn build-cfn-filter-props-builder
@@ -395,6 +479,12 @@
   (.build builder))
 
 
+(defn cfn-filter-props-builder
+  ""
+  [id config]
+  (build-cfn-filter-props-builder (new CfnFilterProps$Builder) id config))
+
+
 (defn build-cfn-ip-set-builder
   "The build-cfn-ip-set-builder function updates a CfnIPSet$Builder instance using the provided configuration.
   The function takes the CfnIPSet$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -425,6 +515,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-ip-set-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-ip-set-builder (CfnIPSet$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-ip-set-props-builder
@@ -459,6 +555,12 @@
   (.build builder))
 
 
+(defn cfn-ip-set-props-builder
+  ""
+  [id config]
+  (build-cfn-ip-set-props-builder (new CfnIPSetProps$Builder) id config))
+
+
 (defn build-cfn-master-builder
   "The build-cfn-master-builder function updates a CfnMaster$Builder instance using the provided configuration.
   The function takes the CfnMaster$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -482,6 +584,12 @@
   (.build builder))
 
 
+(defn cfn-master-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-master-builder (CfnMaster$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-master-props-builder
   "The build-cfn-master-props-builder function updates a CfnMasterProps$Builder instance using the provided configuration.
   The function takes the CfnMasterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -503,6 +611,12 @@
   (when-let [data (lookup-entry config id :master-id)]
     (. builder masterId data))
   (.build builder))
+
+
+(defn cfn-master-props-builder
+  ""
+  [id config]
+  (build-cfn-master-props-builder (new CfnMasterProps$Builder) id config))
 
 
 (defn build-cfn-member-builder
@@ -537,6 +651,12 @@
   (.build builder))
 
 
+(defn cfn-member-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-member-builder (CfnMember$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-member-props-builder
   "The build-cfn-member-props-builder function updates a CfnMemberProps$Builder instance using the provided configuration.
   The function takes the CfnMemberProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -567,6 +687,12 @@
   (when-let [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
+
+
+(defn cfn-member-props-builder
+  ""
+  [id config]
+  (build-cfn-member-props-builder (new CfnMemberProps$Builder) id config))
 
 
 (defn build-cfn-threat-intel-set-builder
@@ -601,6 +727,12 @@
   (.build builder))
 
 
+(defn cfn-threat-intel-set-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-threat-intel-set-builder (CfnThreatIntelSet$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-threat-intel-set-props-builder
   "The build-cfn-threat-intel-set-props-builder function updates a CfnThreatIntelSetProps$Builder instance using the provided configuration.
   The function takes the CfnThreatIntelSetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -631,3 +763,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-threat-intel-set-props-builder
+  ""
+  [id config]
+  (build-cfn-threat-intel-set-props-builder (new CfnThreatIntelSetProps$Builder) id config))

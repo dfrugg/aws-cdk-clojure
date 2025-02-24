@@ -32,6 +32,12 @@
   (.build builder))
 
 
+(defn cfn-execution-plan-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-execution-plan-builder (CfnExecutionPlan$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-execution-plan-capacity-units-configuration-property-builder
   "The build-cfn-execution-plan-capacity-units-configuration-property-builder function updates a CfnExecutionPlan$CapacityUnitsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnExecutionPlan$CapacityUnitsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -47,6 +53,12 @@
   (when-let [data (lookup-entry config id :rescore-capacity-units)]
     (. builder rescoreCapacityUnits data))
   (.build builder))
+
+
+(defn cfn-execution-plan-capacity-units-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-execution-plan-capacity-units-configuration-property-builder (new CfnExecutionPlan$CapacityUnitsConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-execution-plan-props-builder
@@ -73,3 +85,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-execution-plan-props-builder
+  ""
+  [id config]
+  (build-cfn-execution-plan-props-builder (new CfnExecutionPlanProps$Builder) id config))

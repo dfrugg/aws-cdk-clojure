@@ -34,6 +34,12 @@
   (.build builder))
 
 
+(defn cfn-application-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-builder (CfnApplication$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-application-props-builder
   "The build-cfn-application-props-builder function updates a CfnApplicationProps$Builder instance using the provided configuration.
   The function takes the CfnApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -57,6 +63,12 @@
   (.build builder))
 
 
+(defn cfn-application-props-builder
+  ""
+  [id config]
+  (build-cfn-application-props-builder (new CfnApplicationProps$Builder) id config))
+
+
 (defn build-cfn-attribute-group-association-builder
   "The build-cfn-attribute-group-association-builder function updates a CfnAttributeGroupAssociation$Builder instance using the provided configuration.
   The function takes the CfnAttributeGroupAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -77,6 +89,12 @@
   (.build builder))
 
 
+(defn cfn-attribute-group-association-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-attribute-group-association-builder (CfnAttributeGroupAssociation$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-attribute-group-association-props-builder
   "The build-cfn-attribute-group-association-props-builder function updates a CfnAttributeGroupAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnAttributeGroupAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -95,6 +113,12 @@
   (when-let [data (lookup-entry config id :attribute-group)]
     (. builder attributeGroup data))
   (.build builder))
+
+
+(defn cfn-attribute-group-association-props-builder
+  ""
+  [id config]
+  (build-cfn-attribute-group-association-props-builder (new CfnAttributeGroupAssociationProps$Builder) id config))
 
 
 (defn build-cfn-attribute-group-builder
@@ -123,6 +147,12 @@
   (.build builder))
 
 
+(defn cfn-attribute-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-attribute-group-builder (CfnAttributeGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-attribute-group-props-builder
   "The build-cfn-attribute-group-props-builder function updates a CfnAttributeGroupProps$Builder instance using the provided configuration.
   The function takes the CfnAttributeGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -149,6 +179,12 @@
   (.build builder))
 
 
+(defn cfn-attribute-group-props-builder
+  ""
+  [id config]
+  (build-cfn-attribute-group-props-builder (new CfnAttributeGroupProps$Builder) id config))
+
+
 (defn build-cfn-resource-association-builder
   "The build-cfn-resource-association-builder function updates a CfnResourceAssociation$Builder instance using the provided configuration.
   The function takes the CfnResourceAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -172,6 +208,12 @@
   (.build builder))
 
 
+(defn cfn-resource-association-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-resource-association-builder (CfnResourceAssociation$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-resource-association-props-builder
   "The build-cfn-resource-association-props-builder function updates a CfnResourceAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnResourceAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -193,3 +235,9 @@
   (when-let [data (lookup-entry config id :resource-type)]
     (. builder resourceType data))
   (.build builder))
+
+
+(defn cfn-resource-association-props-builder
+  ""
+  [id config]
+  (build-cfn-resource-association-props-builder (new CfnResourceAssociationProps$Builder) id config))

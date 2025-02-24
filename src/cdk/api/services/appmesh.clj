@@ -462,6 +462,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn access-log-config-builder
+  ""
+  [id config]
+  (build-access-log-config-builder (new AccessLogConfig$Builder) id config))
+
+
 (defn build-backend-config-builder
   "The build-backend-config-builder function updates a BackendConfig$Builder instance using the provided configuration.
   The function takes the BackendConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -479,6 +485,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn backend-config-builder
+  ""
+  [id config]
+  (build-backend-config-builder (new BackendConfig$Builder) id config))
+
+
 (defn build-backend-defaults-builder
   "The build-backend-defaults-builder function updates a BackendDefaults$Builder instance using the provided configuration.
   The function takes the BackendDefaults$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -494,6 +506,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tls-client-policy)]
     (. builder tlsClientPolicy data))
   (.build builder))
+
+
+(defn backend-defaults-builder
+  ""
+  [id config]
+  (build-backend-defaults-builder (new BackendDefaults$Builder) id config))
 
 
 (defn build-cfn-gateway-route-builder
@@ -528,6 +546,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-gateway-route-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-gateway-route-builder (CfnGatewayRoute$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-gateway-route-gateway-route-hostname-match-property-builder
   "The build-cfn-gateway-route-gateway-route-hostname-match-property-builder function updates a CfnGatewayRoute$GatewayRouteHostnameMatchProperty$Builder instance using the provided configuration.
   The function takes the CfnGatewayRoute$GatewayRouteHostnameMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -548,6 +572,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-gateway-route-gateway-route-hostname-match-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-gateway-route-hostname-match-property-builder (new CfnGatewayRoute$GatewayRouteHostnameMatchProperty$Builder) id config))
+
+
 (defn build-cfn-gateway-route-gateway-route-hostname-rewrite-property-builder
   "The build-cfn-gateway-route-gateway-route-hostname-rewrite-property-builder function updates a CfnGatewayRoute$GatewayRouteHostnameRewriteProperty$Builder instance using the provided configuration.
   The function takes the CfnGatewayRoute$GatewayRouteHostnameRewriteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -563,6 +593,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :default-target-hostname)]
     (. builder defaultTargetHostname data))
   (.build builder))
+
+
+(defn cfn-gateway-route-gateway-route-hostname-rewrite-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-gateway-route-hostname-rewrite-property-builder (new CfnGatewayRoute$GatewayRouteHostnameRewriteProperty$Builder) id config))
 
 
 (defn build-cfn-gateway-route-gateway-route-metadata-match-property-builder
@@ -594,6 +630,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-gateway-route-gateway-route-metadata-match-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-gateway-route-metadata-match-property-builder (new CfnGatewayRoute$GatewayRouteMetadataMatchProperty$Builder) id config))
+
+
 (defn build-cfn-gateway-route-gateway-route-range-match-property-builder
   "The build-cfn-gateway-route-gateway-route-range-match-property-builder function updates a CfnGatewayRoute$GatewayRouteRangeMatchProperty$Builder instance using the provided configuration.
   The function takes the CfnGatewayRoute$GatewayRouteRangeMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -612,6 +654,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :start)]
     (. builder start data))
   (.build builder))
+
+
+(defn cfn-gateway-route-gateway-route-range-match-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-gateway-route-range-match-property-builder (new CfnGatewayRoute$GatewayRouteRangeMatchProperty$Builder) id config))
 
 
 (defn build-cfn-gateway-route-gateway-route-spec-property-builder
@@ -640,6 +688,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-gateway-route-gateway-route-spec-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-gateway-route-spec-property-builder (new CfnGatewayRoute$GatewayRouteSpecProperty$Builder) id config))
+
+
 (defn build-cfn-gateway-route-gateway-route-target-property-builder
   "The build-cfn-gateway-route-gateway-route-target-property-builder function updates a CfnGatewayRoute$GatewayRouteTargetProperty$Builder instance using the provided configuration.
   The function takes the CfnGatewayRoute$GatewayRouteTargetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -660,6 +714,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-gateway-route-gateway-route-target-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-gateway-route-target-property-builder (new CfnGatewayRoute$GatewayRouteTargetProperty$Builder) id config))
+
+
 (defn build-cfn-gateway-route-gateway-route-virtual-service-property-builder
   "The build-cfn-gateway-route-gateway-route-virtual-service-property-builder function updates a CfnGatewayRoute$GatewayRouteVirtualServiceProperty$Builder instance using the provided configuration.
   The function takes the CfnGatewayRoute$GatewayRouteVirtualServiceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -675,6 +735,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :virtual-service-name)]
     (. builder virtualServiceName data))
   (.build builder))
+
+
+(defn cfn-gateway-route-gateway-route-virtual-service-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-gateway-route-virtual-service-property-builder (new CfnGatewayRoute$GatewayRouteVirtualServiceProperty$Builder) id config))
 
 
 (defn build-cfn-gateway-route-grpc-gateway-route-action-property-builder
@@ -695,6 +761,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
+
+
+(defn cfn-gateway-route-grpc-gateway-route-action-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-grpc-gateway-route-action-property-builder (new CfnGatewayRoute$GrpcGatewayRouteActionProperty$Builder) id config))
 
 
 (defn build-cfn-gateway-route-grpc-gateway-route-match-property-builder
@@ -723,6 +795,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-gateway-route-grpc-gateway-route-match-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-grpc-gateway-route-match-property-builder (new CfnGatewayRoute$GrpcGatewayRouteMatchProperty$Builder) id config))
+
+
 (defn build-cfn-gateway-route-grpc-gateway-route-metadata-property-builder
   "The build-cfn-gateway-route-grpc-gateway-route-metadata-property-builder function updates a CfnGatewayRoute$GrpcGatewayRouteMetadataProperty$Builder instance using the provided configuration.
   The function takes the CfnGatewayRoute$GrpcGatewayRouteMetadataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -746,6 +824,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-gateway-route-grpc-gateway-route-metadata-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-grpc-gateway-route-metadata-property-builder (new CfnGatewayRoute$GrpcGatewayRouteMetadataProperty$Builder) id config))
+
+
 (defn build-cfn-gateway-route-grpc-gateway-route-property-builder
   "The build-cfn-gateway-route-grpc-gateway-route-property-builder function updates a CfnGatewayRoute$GrpcGatewayRouteProperty$Builder instance using the provided configuration.
   The function takes the CfnGatewayRoute$GrpcGatewayRouteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -766,6 +850,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-gateway-route-grpc-gateway-route-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-grpc-gateway-route-property-builder (new CfnGatewayRoute$GrpcGatewayRouteProperty$Builder) id config))
+
+
 (defn build-cfn-gateway-route-grpc-gateway-route-rewrite-property-builder
   "The build-cfn-gateway-route-grpc-gateway-route-rewrite-property-builder function updates a CfnGatewayRoute$GrpcGatewayRouteRewriteProperty$Builder instance using the provided configuration.
   The function takes the CfnGatewayRoute$GrpcGatewayRouteRewriteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -781,6 +871,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :hostname)]
     (. builder hostname data))
   (.build builder))
+
+
+(defn cfn-gateway-route-grpc-gateway-route-rewrite-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-grpc-gateway-route-rewrite-property-builder (new CfnGatewayRoute$GrpcGatewayRouteRewriteProperty$Builder) id config))
 
 
 (defn build-cfn-gateway-route-http-gateway-route-action-property-builder
@@ -801,6 +897,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
+
+
+(defn cfn-gateway-route-http-gateway-route-action-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-http-gateway-route-action-property-builder (new CfnGatewayRoute$HttpGatewayRouteActionProperty$Builder) id config))
 
 
 (defn build-cfn-gateway-route-http-gateway-route-header-match-property-builder
@@ -832,6 +934,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-gateway-route-http-gateway-route-header-match-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-http-gateway-route-header-match-property-builder (new CfnGatewayRoute$HttpGatewayRouteHeaderMatchProperty$Builder) id config))
+
+
 (defn build-cfn-gateway-route-http-gateway-route-header-property-builder
   "The build-cfn-gateway-route-http-gateway-route-header-property-builder function updates a CfnGatewayRoute$HttpGatewayRouteHeaderProperty$Builder instance using the provided configuration.
   The function takes the CfnGatewayRoute$HttpGatewayRouteHeaderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -853,6 +961,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-gateway-route-http-gateway-route-header-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-http-gateway-route-header-property-builder (new CfnGatewayRoute$HttpGatewayRouteHeaderProperty$Builder) id config))
 
 
 (defn build-cfn-gateway-route-http-gateway-route-match-property-builder
@@ -890,6 +1004,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-gateway-route-http-gateway-route-match-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-http-gateway-route-match-property-builder (new CfnGatewayRoute$HttpGatewayRouteMatchProperty$Builder) id config))
+
+
 (defn build-cfn-gateway-route-http-gateway-route-path-rewrite-property-builder
   "The build-cfn-gateway-route-http-gateway-route-path-rewrite-property-builder function updates a CfnGatewayRoute$HttpGatewayRoutePathRewriteProperty$Builder instance using the provided configuration.
   The function takes the CfnGatewayRoute$HttpGatewayRoutePathRewriteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -905,6 +1025,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :exact)]
     (. builder exact data))
   (.build builder))
+
+
+(defn cfn-gateway-route-http-gateway-route-path-rewrite-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-http-gateway-route-path-rewrite-property-builder (new CfnGatewayRoute$HttpGatewayRoutePathRewriteProperty$Builder) id config))
 
 
 (defn build-cfn-gateway-route-http-gateway-route-prefix-rewrite-property-builder
@@ -927,6 +1053,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-gateway-route-http-gateway-route-prefix-rewrite-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-http-gateway-route-prefix-rewrite-property-builder (new CfnGatewayRoute$HttpGatewayRoutePrefixRewriteProperty$Builder) id config))
+
+
 (defn build-cfn-gateway-route-http-gateway-route-property-builder
   "The build-cfn-gateway-route-http-gateway-route-property-builder function updates a CfnGatewayRoute$HttpGatewayRouteProperty$Builder instance using the provided configuration.
   The function takes the CfnGatewayRoute$HttpGatewayRouteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -945,6 +1077,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :match)]
     (. builder match data))
   (.build builder))
+
+
+(defn cfn-gateway-route-http-gateway-route-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-http-gateway-route-property-builder (new CfnGatewayRoute$HttpGatewayRouteProperty$Builder) id config))
 
 
 (defn build-cfn-gateway-route-http-gateway-route-rewrite-property-builder
@@ -970,6 +1108,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-gateway-route-http-gateway-route-rewrite-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-http-gateway-route-rewrite-property-builder (new CfnGatewayRoute$HttpGatewayRouteRewriteProperty$Builder) id config))
+
+
 (defn build-cfn-gateway-route-http-path-match-property-builder
   "The build-cfn-gateway-route-http-path-match-property-builder function updates a CfnGatewayRoute$HttpPathMatchProperty$Builder instance using the provided configuration.
   The function takes the CfnGatewayRoute$HttpPathMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -990,6 +1134,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-gateway-route-http-path-match-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-http-path-match-property-builder (new CfnGatewayRoute$HttpPathMatchProperty$Builder) id config))
+
+
 (defn build-cfn-gateway-route-http-query-parameter-match-property-builder
   "The build-cfn-gateway-route-http-query-parameter-match-property-builder function updates a CfnGatewayRoute$HttpQueryParameterMatchProperty$Builder instance using the provided configuration.
   The function takes the CfnGatewayRoute$HttpQueryParameterMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1005,6 +1155,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :exact)]
     (. builder exact data))
   (.build builder))
+
+
+(defn cfn-gateway-route-http-query-parameter-match-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-http-query-parameter-match-property-builder (new CfnGatewayRoute$HttpQueryParameterMatchProperty$Builder) id config))
 
 
 (defn build-cfn-gateway-route-props-builder
@@ -1039,6 +1195,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-gateway-route-props-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-props-builder (new CfnGatewayRouteProps$Builder) id config))
+
+
 (defn build-cfn-gateway-route-query-parameter-property-builder
   "The build-cfn-gateway-route-query-parameter-property-builder function updates a CfnGatewayRoute$QueryParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnGatewayRoute$QueryParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1057,6 +1219,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-gateway-route-query-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-route-query-parameter-property-builder (new CfnGatewayRoute$QueryParameterProperty$Builder) id config))
 
 
 (defn build-cfn-mesh-builder
@@ -1082,6 +1250,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-mesh-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-mesh-builder (CfnMesh$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-mesh-egress-filter-property-builder
   "The build-cfn-mesh-egress-filter-property-builder function updates a CfnMesh$EgressFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnMesh$EgressFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1099,6 +1273,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-mesh-egress-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-mesh-egress-filter-property-builder (new CfnMesh$EgressFilterProperty$Builder) id config))
+
+
 (defn build-cfn-mesh-mesh-service-discovery-property-builder
   "The build-cfn-mesh-mesh-service-discovery-property-builder function updates a CfnMesh$MeshServiceDiscoveryProperty$Builder instance using the provided configuration.
   The function takes the CfnMesh$MeshServiceDiscoveryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1114,6 +1294,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :ip-preference)]
     (. builder ipPreference data))
   (.build builder))
+
+
+(defn cfn-mesh-mesh-service-discovery-property-builder
+  ""
+  [id config]
+  (build-cfn-mesh-mesh-service-discovery-property-builder (new CfnMesh$MeshServiceDiscoveryProperty$Builder) id config))
 
 
 (defn build-cfn-mesh-mesh-spec-property-builder
@@ -1134,6 +1320,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :service-discovery)]
     (. builder serviceDiscovery data))
   (.build builder))
+
+
+(defn cfn-mesh-mesh-spec-property-builder
+  ""
+  [id config]
+  (build-cfn-mesh-mesh-spec-property-builder (new CfnMesh$MeshSpecProperty$Builder) id config))
 
 
 (defn build-cfn-mesh-props-builder
@@ -1157,6 +1349,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-mesh-props-builder
+  ""
+  [id config]
+  (build-cfn-mesh-props-builder (new CfnMeshProps$Builder) id config))
 
 
 (defn build-cfn-route-builder
@@ -1191,6 +1389,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-route-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-route-builder (CfnRoute$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-route-duration-property-builder
   "The build-cfn-route-duration-property-builder function updates a CfnRoute$DurationProperty$Builder instance using the provided configuration.
   The function takes the CfnRoute$DurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1209,6 +1413,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-route-duration-property-builder
+  ""
+  [id config]
+  (build-cfn-route-duration-property-builder (new CfnRoute$DurationProperty$Builder) id config))
 
 
 (defn build-cfn-route-grpc-retry-policy-property-builder
@@ -1240,6 +1450,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-route-grpc-retry-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-route-grpc-retry-policy-property-builder (new CfnRoute$GrpcRetryPolicyProperty$Builder) id config))
+
+
 (defn build-cfn-route-grpc-route-action-property-builder
   "The build-cfn-route-grpc-route-action-property-builder function updates a CfnRoute$GrpcRouteActionProperty$Builder instance using the provided configuration.
   The function takes the CfnRoute$GrpcRouteActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1255,6 +1471,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :weighted-targets)]
     (. builder weightedTargets data))
   (.build builder))
+
+
+(defn cfn-route-grpc-route-action-property-builder
+  ""
+  [id config]
+  (build-cfn-route-grpc-route-action-property-builder (new CfnRoute$GrpcRouteActionProperty$Builder) id config))
 
 
 (defn build-cfn-route-grpc-route-match-property-builder
@@ -1281,6 +1503,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :service-name)]
     (. builder serviceName data))
   (.build builder))
+
+
+(defn cfn-route-grpc-route-match-property-builder
+  ""
+  [id config]
+  (build-cfn-route-grpc-route-match-property-builder (new CfnRoute$GrpcRouteMatchProperty$Builder) id config))
 
 
 (defn build-cfn-route-grpc-route-metadata-match-method-property-builder
@@ -1312,6 +1540,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-route-grpc-route-metadata-match-method-property-builder
+  ""
+  [id config]
+  (build-cfn-route-grpc-route-metadata-match-method-property-builder (new CfnRoute$GrpcRouteMetadataMatchMethodProperty$Builder) id config))
+
+
 (defn build-cfn-route-grpc-route-metadata-property-builder
   "The build-cfn-route-grpc-route-metadata-property-builder function updates a CfnRoute$GrpcRouteMetadataProperty$Builder instance using the provided configuration.
   The function takes the CfnRoute$GrpcRouteMetadataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1333,6 +1567,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-route-grpc-route-metadata-property-builder
+  ""
+  [id config]
+  (build-cfn-route-grpc-route-metadata-property-builder (new CfnRoute$GrpcRouteMetadataProperty$Builder) id config))
 
 
 (defn build-cfn-route-grpc-route-property-builder
@@ -1361,6 +1601,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-route-grpc-route-property-builder
+  ""
+  [id config]
+  (build-cfn-route-grpc-route-property-builder (new CfnRoute$GrpcRouteProperty$Builder) id config))
+
+
 (defn build-cfn-route-grpc-timeout-property-builder
   "The build-cfn-route-grpc-timeout-property-builder function updates a CfnRoute$GrpcTimeoutProperty$Builder instance using the provided configuration.
   The function takes the CfnRoute$GrpcTimeoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1379,6 +1625,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :per-request)]
     (. builder perRequest data))
   (.build builder))
+
+
+(defn cfn-route-grpc-timeout-property-builder
+  ""
+  [id config]
+  (build-cfn-route-grpc-timeout-property-builder (new CfnRoute$GrpcTimeoutProperty$Builder) id config))
 
 
 (defn build-cfn-route-header-match-method-property-builder
@@ -1410,6 +1662,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-route-header-match-method-property-builder
+  ""
+  [id config]
+  (build-cfn-route-header-match-method-property-builder (new CfnRoute$HeaderMatchMethodProperty$Builder) id config))
+
+
 (defn build-cfn-route-http-path-match-property-builder
   "The build-cfn-route-http-path-match-property-builder function updates a CfnRoute$HttpPathMatchProperty$Builder instance using the provided configuration.
   The function takes the CfnRoute$HttpPathMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1430,6 +1688,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-route-http-path-match-property-builder
+  ""
+  [id config]
+  (build-cfn-route-http-path-match-property-builder (new CfnRoute$HttpPathMatchProperty$Builder) id config))
+
+
 (defn build-cfn-route-http-query-parameter-match-property-builder
   "The build-cfn-route-http-query-parameter-match-property-builder function updates a CfnRoute$HttpQueryParameterMatchProperty$Builder instance using the provided configuration.
   The function takes the CfnRoute$HttpQueryParameterMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1445,6 +1709,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :exact)]
     (. builder exact data))
   (.build builder))
+
+
+(defn cfn-route-http-query-parameter-match-property-builder
+  ""
+  [id config]
+  (build-cfn-route-http-query-parameter-match-property-builder (new CfnRoute$HttpQueryParameterMatchProperty$Builder) id config))
 
 
 (defn build-cfn-route-http-retry-policy-property-builder
@@ -1473,6 +1743,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-route-http-retry-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-route-http-retry-policy-property-builder (new CfnRoute$HttpRetryPolicyProperty$Builder) id config))
+
+
 (defn build-cfn-route-http-route-action-property-builder
   "The build-cfn-route-http-route-action-property-builder function updates a CfnRoute$HttpRouteActionProperty$Builder instance using the provided configuration.
   The function takes the CfnRoute$HttpRouteActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1488,6 +1764,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :weighted-targets)]
     (. builder weightedTargets data))
   (.build builder))
+
+
+(defn cfn-route-http-route-action-property-builder
+  ""
+  [id config]
+  (build-cfn-route-http-route-action-property-builder (new CfnRoute$HttpRouteActionProperty$Builder) id config))
 
 
 (defn build-cfn-route-http-route-header-property-builder
@@ -1511,6 +1793,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-route-http-route-header-property-builder
+  ""
+  [id config]
+  (build-cfn-route-http-route-header-property-builder (new CfnRoute$HttpRouteHeaderProperty$Builder) id config))
 
 
 (defn build-cfn-route-http-route-match-property-builder
@@ -1548,6 +1836,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-route-http-route-match-property-builder
+  ""
+  [id config]
+  (build-cfn-route-http-route-match-property-builder (new CfnRoute$HttpRouteMatchProperty$Builder) id config))
+
+
 (defn build-cfn-route-http-route-property-builder
   "The build-cfn-route-http-route-property-builder function updates a CfnRoute$HttpRouteProperty$Builder instance using the provided configuration.
   The function takes the CfnRoute$HttpRouteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1574,6 +1868,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-route-http-route-property-builder
+  ""
+  [id config]
+  (build-cfn-route-http-route-property-builder (new CfnRoute$HttpRouteProperty$Builder) id config))
+
+
 (defn build-cfn-route-http-timeout-property-builder
   "The build-cfn-route-http-timeout-property-builder function updates a CfnRoute$HttpTimeoutProperty$Builder instance using the provided configuration.
   The function takes the CfnRoute$HttpTimeoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1594,6 +1894,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-route-http-timeout-property-builder
+  ""
+  [id config]
+  (build-cfn-route-http-timeout-property-builder (new CfnRoute$HttpTimeoutProperty$Builder) id config))
+
+
 (defn build-cfn-route-match-range-property-builder
   "The build-cfn-route-match-range-property-builder function updates a CfnRoute$MatchRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnRoute$MatchRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1612,6 +1918,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :start)]
     (. builder start data))
   (.build builder))
+
+
+(defn cfn-route-match-range-property-builder
+  ""
+  [id config]
+  (build-cfn-route-match-range-property-builder (new CfnRoute$MatchRangeProperty$Builder) id config))
 
 
 (defn build-cfn-route-props-builder
@@ -1646,6 +1958,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-route-props-builder
+  ""
+  [id config]
+  (build-cfn-route-props-builder (new CfnRouteProps$Builder) id config))
+
+
 (defn build-cfn-route-query-parameter-property-builder
   "The build-cfn-route-query-parameter-property-builder function updates a CfnRoute$QueryParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnRoute$QueryParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1664,6 +1982,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-route-query-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-route-query-parameter-property-builder (new CfnRoute$QueryParameterProperty$Builder) id config))
 
 
 (defn build-cfn-route-route-spec-property-builder
@@ -1695,6 +2019,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-route-route-spec-property-builder
+  ""
+  [id config]
+  (build-cfn-route-route-spec-property-builder (new CfnRoute$RouteSpecProperty$Builder) id config))
+
+
 (defn build-cfn-route-tcp-route-action-property-builder
   "The build-cfn-route-tcp-route-action-property-builder function updates a CfnRoute$TcpRouteActionProperty$Builder instance using the provided configuration.
   The function takes the CfnRoute$TcpRouteActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1712,6 +2042,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-route-tcp-route-action-property-builder
+  ""
+  [id config]
+  (build-cfn-route-tcp-route-action-property-builder (new CfnRoute$TcpRouteActionProperty$Builder) id config))
+
+
 (defn build-cfn-route-tcp-route-match-property-builder
   "The build-cfn-route-tcp-route-match-property-builder function updates a CfnRoute$TcpRouteMatchProperty$Builder instance using the provided configuration.
   The function takes the CfnRoute$TcpRouteMatchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1727,6 +2063,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :port)]
     (. builder port data))
   (.build builder))
+
+
+(defn cfn-route-tcp-route-match-property-builder
+  ""
+  [id config]
+  (build-cfn-route-tcp-route-match-property-builder (new CfnRoute$TcpRouteMatchProperty$Builder) id config))
 
 
 (defn build-cfn-route-tcp-route-property-builder
@@ -1752,6 +2094,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-route-tcp-route-property-builder
+  ""
+  [id config]
+  (build-cfn-route-tcp-route-property-builder (new CfnRoute$TcpRouteProperty$Builder) id config))
+
+
 (defn build-cfn-route-tcp-timeout-property-builder
   "The build-cfn-route-tcp-timeout-property-builder function updates a CfnRoute$TcpTimeoutProperty$Builder instance using the provided configuration.
   The function takes the CfnRoute$TcpTimeoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1767,6 +2115,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :idle)]
     (. builder idle data))
   (.build builder))
+
+
+(defn cfn-route-tcp-timeout-property-builder
+  ""
+  [id config]
+  (build-cfn-route-tcp-timeout-property-builder (new CfnRoute$TcpTimeoutProperty$Builder) id config))
 
 
 (defn build-cfn-route-weighted-target-property-builder
@@ -1790,6 +2144,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
+
+
+(defn cfn-route-weighted-target-property-builder
+  ""
+  [id config]
+  (build-cfn-route-weighted-target-property-builder (new CfnRoute$WeightedTargetProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-gateway-builder
@@ -1821,6 +2181,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-gateway-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-virtual-gateway-builder (CfnVirtualGateway$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-virtual-gateway-json-format-ref-property-builder
   "The build-cfn-virtual-gateway-json-format-ref-property-builder function updates a CfnVirtualGateway$JsonFormatRefProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualGateway$JsonFormatRefProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1841,6 +2207,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-gateway-json-format-ref-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-json-format-ref-property-builder (new CfnVirtualGateway$JsonFormatRefProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-gateway-logging-format-property-builder
   "The build-cfn-virtual-gateway-logging-format-property-builder function updates a CfnVirtualGateway$LoggingFormatProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualGateway$LoggingFormatProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1859,6 +2231,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :text)]
     (. builder text data))
   (.build builder))
+
+
+(defn cfn-virtual-gateway-logging-format-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-logging-format-property-builder (new CfnVirtualGateway$LoggingFormatProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-gateway-props-builder
@@ -1890,6 +2268,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-gateway-props-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-props-builder (new CfnVirtualGatewayProps$Builder) id config))
+
+
 (defn build-cfn-virtual-gateway-subject-alternative-name-matchers-property-builder
   "The build-cfn-virtual-gateway-subject-alternative-name-matchers-property-builder function updates a CfnVirtualGateway$SubjectAlternativeNameMatchersProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualGateway$SubjectAlternativeNameMatchersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1905,6 +2289,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :exact)]
     (. builder exact data))
   (.build builder))
+
+
+(defn cfn-virtual-gateway-subject-alternative-name-matchers-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-subject-alternative-name-matchers-property-builder (new CfnVirtualGateway$SubjectAlternativeNameMatchersProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-gateway-subject-alternative-names-property-builder
@@ -1924,6 +2314,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-gateway-subject-alternative-names-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-subject-alternative-names-property-builder (new CfnVirtualGateway$SubjectAlternativeNamesProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-gateway-virtual-gateway-access-log-property-builder
   "The build-cfn-virtual-gateway-virtual-gateway-access-log-property-builder function updates a CfnVirtualGateway$VirtualGatewayAccessLogProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualGateway$VirtualGatewayAccessLogProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1939,6 +2335,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :file)]
     (. builder file data))
   (.build builder))
+
+
+(defn cfn-virtual-gateway-virtual-gateway-access-log-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-access-log-property-builder (new CfnVirtualGateway$VirtualGatewayAccessLogProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-gateway-virtual-gateway-backend-defaults-property-builder
@@ -1958,6 +2360,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-gateway-virtual-gateway-backend-defaults-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-backend-defaults-property-builder (new CfnVirtualGateway$VirtualGatewayBackendDefaultsProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-gateway-virtual-gateway-client-policy-property-builder
   "The build-cfn-virtual-gateway-virtual-gateway-client-policy-property-builder function updates a CfnVirtualGateway$VirtualGatewayClientPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualGateway$VirtualGatewayClientPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1973,6 +2381,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tls)]
     (. builder tls data))
   (.build builder))
+
+
+(defn cfn-virtual-gateway-virtual-gateway-client-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-client-policy-property-builder (new CfnVirtualGateway$VirtualGatewayClientPolicyProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-gateway-virtual-gateway-client-policy-tls-property-builder
@@ -2001,6 +2415,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-gateway-virtual-gateway-client-policy-tls-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-client-policy-tls-property-builder (new CfnVirtualGateway$VirtualGatewayClientPolicyTlsProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-gateway-virtual-gateway-client-tls-certificate-property-builder
   "The build-cfn-virtual-gateway-virtual-gateway-client-tls-certificate-property-builder function updates a CfnVirtualGateway$VirtualGatewayClientTlsCertificateProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualGateway$VirtualGatewayClientTlsCertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2019,6 +2439,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :sds)]
     (. builder sds data))
   (.build builder))
+
+
+(defn cfn-virtual-gateway-virtual-gateway-client-tls-certificate-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-client-tls-certificate-property-builder (new CfnVirtualGateway$VirtualGatewayClientTlsCertificateProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-gateway-virtual-gateway-connection-pool-property-builder
@@ -2044,6 +2470,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-gateway-virtual-gateway-connection-pool-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-connection-pool-property-builder (new CfnVirtualGateway$VirtualGatewayConnectionPoolProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-gateway-virtual-gateway-file-access-log-property-builder
   "The build-cfn-virtual-gateway-virtual-gateway-file-access-log-property-builder function updates a CfnVirtualGateway$VirtualGatewayFileAccessLogProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualGateway$VirtualGatewayFileAccessLogProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2064,6 +2496,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-gateway-virtual-gateway-file-access-log-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-file-access-log-property-builder (new CfnVirtualGateway$VirtualGatewayFileAccessLogProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-gateway-virtual-gateway-grpc-connection-pool-property-builder
   "The build-cfn-virtual-gateway-virtual-gateway-grpc-connection-pool-property-builder function updates a CfnVirtualGateway$VirtualGatewayGrpcConnectionPoolProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualGateway$VirtualGatewayGrpcConnectionPoolProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2079,6 +2517,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :max-requests)]
     (. builder maxRequests data))
   (.build builder))
+
+
+(defn cfn-virtual-gateway-virtual-gateway-grpc-connection-pool-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-grpc-connection-pool-property-builder (new CfnVirtualGateway$VirtualGatewayGrpcConnectionPoolProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-gateway-virtual-gateway-health-check-policy-property-builder
@@ -2116,6 +2560,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-gateway-virtual-gateway-health-check-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-health-check-policy-property-builder (new CfnVirtualGateway$VirtualGatewayHealthCheckPolicyProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-gateway-virtual-gateway-http-connection-pool-property-builder
   "The build-cfn-virtual-gateway-virtual-gateway-http-connection-pool-property-builder function updates a CfnVirtualGateway$VirtualGatewayHttpConnectionPoolProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualGateway$VirtualGatewayHttpConnectionPoolProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2136,6 +2586,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-gateway-virtual-gateway-http-connection-pool-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-http-connection-pool-property-builder (new CfnVirtualGateway$VirtualGatewayHttpConnectionPoolProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-gateway-virtual-gateway-http2-connection-pool-property-builder
   "The build-cfn-virtual-gateway-virtual-gateway-http2-connection-pool-property-builder function updates a CfnVirtualGateway$VirtualGatewayHttp2ConnectionPoolProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualGateway$VirtualGatewayHttp2ConnectionPoolProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2151,6 +2607,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :max-requests)]
     (. builder maxRequests data))
   (.build builder))
+
+
+(defn cfn-virtual-gateway-virtual-gateway-http2-connection-pool-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-http2-connection-pool-property-builder (new CfnVirtualGateway$VirtualGatewayHttp2ConnectionPoolProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-gateway-virtual-gateway-listener-property-builder
@@ -2179,6 +2641,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-gateway-virtual-gateway-listener-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-listener-property-builder (new CfnVirtualGateway$VirtualGatewayListenerProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-gateway-virtual-gateway-listener-tls-acm-certificate-property-builder
   "The build-cfn-virtual-gateway-virtual-gateway-listener-tls-acm-certificate-property-builder function updates a CfnVirtualGateway$VirtualGatewayListenerTlsAcmCertificateProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualGateway$VirtualGatewayListenerTlsAcmCertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2194,6 +2662,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :certificate-arn)]
     (. builder certificateArn data))
   (.build builder))
+
+
+(defn cfn-virtual-gateway-virtual-gateway-listener-tls-acm-certificate-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-listener-tls-acm-certificate-property-builder (new CfnVirtualGateway$VirtualGatewayListenerTlsAcmCertificateProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-gateway-virtual-gateway-listener-tls-certificate-property-builder
@@ -2219,6 +2693,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-gateway-virtual-gateway-listener-tls-certificate-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-listener-tls-certificate-property-builder (new CfnVirtualGateway$VirtualGatewayListenerTlsCertificateProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-gateway-virtual-gateway-listener-tls-file-certificate-property-builder
   "The build-cfn-virtual-gateway-virtual-gateway-listener-tls-file-certificate-property-builder function updates a CfnVirtualGateway$VirtualGatewayListenerTlsFileCertificateProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualGateway$VirtualGatewayListenerTlsFileCertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2237,6 +2717,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :private-key)]
     (. builder privateKey data))
   (.build builder))
+
+
+(defn cfn-virtual-gateway-virtual-gateway-listener-tls-file-certificate-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-listener-tls-file-certificate-property-builder (new CfnVirtualGateway$VirtualGatewayListenerTlsFileCertificateProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-gateway-virtual-gateway-listener-tls-property-builder
@@ -2262,6 +2748,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-gateway-virtual-gateway-listener-tls-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-listener-tls-property-builder (new CfnVirtualGateway$VirtualGatewayListenerTlsProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-gateway-virtual-gateway-listener-tls-sds-certificate-property-builder
   "The build-cfn-virtual-gateway-virtual-gateway-listener-tls-sds-certificate-property-builder function updates a CfnVirtualGateway$VirtualGatewayListenerTlsSdsCertificateProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualGateway$VirtualGatewayListenerTlsSdsCertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2277,6 +2769,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :secret-name)]
     (. builder secretName data))
   (.build builder))
+
+
+(defn cfn-virtual-gateway-virtual-gateway-listener-tls-sds-certificate-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-listener-tls-sds-certificate-property-builder (new CfnVirtualGateway$VirtualGatewayListenerTlsSdsCertificateProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-gateway-virtual-gateway-listener-tls-validation-context-property-builder
@@ -2299,6 +2797,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-gateway-virtual-gateway-listener-tls-validation-context-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-listener-tls-validation-context-property-builder (new CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-gateway-virtual-gateway-listener-tls-validation-context-trust-property-builder
   "The build-cfn-virtual-gateway-virtual-gateway-listener-tls-validation-context-trust-property-builder function updates a CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextTrustProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextTrustProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2319,6 +2823,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-gateway-virtual-gateway-listener-tls-validation-context-trust-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-listener-tls-validation-context-trust-property-builder (new CfnVirtualGateway$VirtualGatewayListenerTlsValidationContextTrustProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-gateway-virtual-gateway-logging-property-builder
   "The build-cfn-virtual-gateway-virtual-gateway-logging-property-builder function updates a CfnVirtualGateway$VirtualGatewayLoggingProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualGateway$VirtualGatewayLoggingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2334,6 +2844,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :access-log)]
     (. builder accessLog data))
   (.build builder))
+
+
+(defn cfn-virtual-gateway-virtual-gateway-logging-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-logging-property-builder (new CfnVirtualGateway$VirtualGatewayLoggingProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-gateway-virtual-gateway-port-mapping-property-builder
@@ -2354,6 +2870,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :protocol)]
     (. builder protocol data))
   (.build builder))
+
+
+(defn cfn-virtual-gateway-virtual-gateway-port-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-port-mapping-property-builder (new CfnVirtualGateway$VirtualGatewayPortMappingProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-gateway-virtual-gateway-spec-property-builder
@@ -2379,6 +2901,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-gateway-virtual-gateway-spec-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-spec-property-builder (new CfnVirtualGateway$VirtualGatewaySpecProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-acm-trust-property-builder
   "The build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-acm-trust-property-builder function updates a CfnVirtualGateway$VirtualGatewayTlsValidationContextAcmTrustProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualGateway$VirtualGatewayTlsValidationContextAcmTrustProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2396,6 +2924,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-gateway-virtual-gateway-tls-validation-context-acm-trust-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-acm-trust-property-builder (new CfnVirtualGateway$VirtualGatewayTlsValidationContextAcmTrustProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-file-trust-property-builder
   "The build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-file-trust-property-builder function updates a CfnVirtualGateway$VirtualGatewayTlsValidationContextFileTrustProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualGateway$VirtualGatewayTlsValidationContextFileTrustProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2411,6 +2945,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :certificate-chain)]
     (. builder certificateChain data))
   (.build builder))
+
+
+(defn cfn-virtual-gateway-virtual-gateway-tls-validation-context-file-trust-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-file-trust-property-builder (new CfnVirtualGateway$VirtualGatewayTlsValidationContextFileTrustProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-property-builder
@@ -2433,6 +2973,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-gateway-virtual-gateway-tls-validation-context-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-property-builder (new CfnVirtualGateway$VirtualGatewayTlsValidationContextProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-sds-trust-property-builder
   "The build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-sds-trust-property-builder function updates a CfnVirtualGateway$VirtualGatewayTlsValidationContextSdsTrustProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualGateway$VirtualGatewayTlsValidationContextSdsTrustProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2448,6 +2994,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :secret-name)]
     (. builder secretName data))
   (.build builder))
+
+
+(defn cfn-virtual-gateway-virtual-gateway-tls-validation-context-sds-trust-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-sds-trust-property-builder (new CfnVirtualGateway$VirtualGatewayTlsValidationContextSdsTrustProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-trust-property-builder
@@ -2473,6 +3025,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-gateway-virtual-gateway-tls-validation-context-trust-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-gateway-virtual-gateway-tls-validation-context-trust-property-builder (new CfnVirtualGateway$VirtualGatewayTlsValidationContextTrustProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-access-log-property-builder
   "The build-cfn-virtual-node-access-log-property-builder function updates a CfnVirtualNode$AccessLogProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$AccessLogProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2488,6 +3046,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :file)]
     (. builder file data))
   (.build builder))
+
+
+(defn cfn-virtual-node-access-log-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-access-log-property-builder (new CfnVirtualNode$AccessLogProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-aws-cloud-map-instance-attribute-property-builder
@@ -2508,6 +3072,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-virtual-node-aws-cloud-map-instance-attribute-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-aws-cloud-map-instance-attribute-property-builder (new CfnVirtualNode$AwsCloudMapInstanceAttributeProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-aws-cloud-map-service-discovery-property-builder
@@ -2536,6 +3106,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-aws-cloud-map-service-discovery-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-aws-cloud-map-service-discovery-property-builder (new CfnVirtualNode$AwsCloudMapServiceDiscoveryProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-backend-defaults-property-builder
   "The build-cfn-virtual-node-backend-defaults-property-builder function updates a CfnVirtualNode$BackendDefaultsProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$BackendDefaultsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2553,6 +3129,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-backend-defaults-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-backend-defaults-property-builder (new CfnVirtualNode$BackendDefaultsProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-backend-property-builder
   "The build-cfn-virtual-node-backend-property-builder function updates a CfnVirtualNode$BackendProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$BackendProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2568,6 +3150,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :virtual-service)]
     (. builder virtualService data))
   (.build builder))
+
+
+(defn cfn-virtual-node-backend-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-backend-property-builder (new CfnVirtualNode$BackendProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-builder
@@ -2599,6 +3187,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-virtual-node-builder (CfnVirtualNode$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-virtual-node-client-policy-property-builder
   "The build-cfn-virtual-node-client-policy-property-builder function updates a CfnVirtualNode$ClientPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$ClientPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2614,6 +3208,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tls)]
     (. builder tls data))
   (.build builder))
+
+
+(defn cfn-virtual-node-client-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-client-policy-property-builder (new CfnVirtualNode$ClientPolicyProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-client-policy-tls-property-builder
@@ -2642,6 +3242,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-client-policy-tls-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-client-policy-tls-property-builder (new CfnVirtualNode$ClientPolicyTlsProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-client-tls-certificate-property-builder
   "The build-cfn-virtual-node-client-tls-certificate-property-builder function updates a CfnVirtualNode$ClientTlsCertificateProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$ClientTlsCertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2660,6 +3266,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :sds)]
     (. builder sds data))
   (.build builder))
+
+
+(defn cfn-virtual-node-client-tls-certificate-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-client-tls-certificate-property-builder (new CfnVirtualNode$ClientTlsCertificateProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-dns-service-discovery-property-builder
@@ -2685,6 +3297,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-dns-service-discovery-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-dns-service-discovery-property-builder (new CfnVirtualNode$DnsServiceDiscoveryProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-duration-property-builder
   "The build-cfn-virtual-node-duration-property-builder function updates a CfnVirtualNode$DurationProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$DurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2703,6 +3321,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-virtual-node-duration-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-duration-property-builder (new CfnVirtualNode$DurationProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-file-access-log-property-builder
@@ -2725,6 +3349,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-file-access-log-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-file-access-log-property-builder (new CfnVirtualNode$FileAccessLogProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-grpc-timeout-property-builder
   "The build-cfn-virtual-node-grpc-timeout-property-builder function updates a CfnVirtualNode$GrpcTimeoutProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$GrpcTimeoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2743,6 +3373,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :per-request)]
     (. builder perRequest data))
   (.build builder))
+
+
+(defn cfn-virtual-node-grpc-timeout-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-grpc-timeout-property-builder (new CfnVirtualNode$GrpcTimeoutProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-health-check-property-builder
@@ -2780,6 +3416,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-health-check-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-health-check-property-builder (new CfnVirtualNode$HealthCheckProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-http-timeout-property-builder
   "The build-cfn-virtual-node-http-timeout-property-builder function updates a CfnVirtualNode$HttpTimeoutProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$HttpTimeoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2800,6 +3442,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-http-timeout-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-http-timeout-property-builder (new CfnVirtualNode$HttpTimeoutProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-json-format-ref-property-builder
   "The build-cfn-virtual-node-json-format-ref-property-builder function updates a CfnVirtualNode$JsonFormatRefProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$JsonFormatRefProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2818,6 +3466,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-virtual-node-json-format-ref-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-json-format-ref-property-builder (new CfnVirtualNode$JsonFormatRefProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-listener-property-builder
@@ -2852,6 +3506,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-listener-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-listener-property-builder (new CfnVirtualNode$ListenerProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-listener-timeout-property-builder
   "The build-cfn-virtual-node-listener-timeout-property-builder function updates a CfnVirtualNode$ListenerTimeoutProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$ListenerTimeoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2878,6 +3538,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-listener-timeout-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-listener-timeout-property-builder (new CfnVirtualNode$ListenerTimeoutProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-listener-tls-acm-certificate-property-builder
   "The build-cfn-virtual-node-listener-tls-acm-certificate-property-builder function updates a CfnVirtualNode$ListenerTlsAcmCertificateProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$ListenerTlsAcmCertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2893,6 +3559,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :certificate-arn)]
     (. builder certificateArn data))
   (.build builder))
+
+
+(defn cfn-virtual-node-listener-tls-acm-certificate-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-listener-tls-acm-certificate-property-builder (new CfnVirtualNode$ListenerTlsAcmCertificateProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-listener-tls-certificate-property-builder
@@ -2918,6 +3590,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-listener-tls-certificate-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-listener-tls-certificate-property-builder (new CfnVirtualNode$ListenerTlsCertificateProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-listener-tls-file-certificate-property-builder
   "The build-cfn-virtual-node-listener-tls-file-certificate-property-builder function updates a CfnVirtualNode$ListenerTlsFileCertificateProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$ListenerTlsFileCertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2936,6 +3614,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :private-key)]
     (. builder privateKey data))
   (.build builder))
+
+
+(defn cfn-virtual-node-listener-tls-file-certificate-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-listener-tls-file-certificate-property-builder (new CfnVirtualNode$ListenerTlsFileCertificateProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-listener-tls-property-builder
@@ -2961,6 +3645,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-listener-tls-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-listener-tls-property-builder (new CfnVirtualNode$ListenerTlsProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-listener-tls-sds-certificate-property-builder
   "The build-cfn-virtual-node-listener-tls-sds-certificate-property-builder function updates a CfnVirtualNode$ListenerTlsSdsCertificateProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$ListenerTlsSdsCertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2976,6 +3666,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :secret-name)]
     (. builder secretName data))
   (.build builder))
+
+
+(defn cfn-virtual-node-listener-tls-sds-certificate-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-listener-tls-sds-certificate-property-builder (new CfnVirtualNode$ListenerTlsSdsCertificateProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-listener-tls-validation-context-property-builder
@@ -2998,6 +3694,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-listener-tls-validation-context-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-listener-tls-validation-context-property-builder (new CfnVirtualNode$ListenerTlsValidationContextProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-listener-tls-validation-context-trust-property-builder
   "The build-cfn-virtual-node-listener-tls-validation-context-trust-property-builder function updates a CfnVirtualNode$ListenerTlsValidationContextTrustProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$ListenerTlsValidationContextTrustProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3016,6 +3718,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :sds)]
     (. builder sds data))
   (.build builder))
+
+
+(defn cfn-virtual-node-listener-tls-validation-context-trust-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-listener-tls-validation-context-trust-property-builder (new CfnVirtualNode$ListenerTlsValidationContextTrustProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-logging-format-property-builder
@@ -3038,6 +3746,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-logging-format-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-logging-format-property-builder (new CfnVirtualNode$LoggingFormatProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-logging-property-builder
   "The build-cfn-virtual-node-logging-property-builder function updates a CfnVirtualNode$LoggingProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$LoggingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3053,6 +3767,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :access-log)]
     (. builder accessLog data))
   (.build builder))
+
+
+(defn cfn-virtual-node-logging-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-logging-property-builder (new CfnVirtualNode$LoggingProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-outlier-detection-property-builder
@@ -3081,6 +3801,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-outlier-detection-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-outlier-detection-property-builder (new CfnVirtualNode$OutlierDetectionProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-port-mapping-property-builder
   "The build-cfn-virtual-node-port-mapping-property-builder function updates a CfnVirtualNode$PortMappingProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$PortMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3099,6 +3825,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :protocol)]
     (. builder protocol data))
   (.build builder))
+
+
+(defn cfn-virtual-node-port-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-port-mapping-property-builder (new CfnVirtualNode$PortMappingProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-props-builder
@@ -3130,6 +3862,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-props-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-props-builder (new CfnVirtualNodeProps$Builder) id config))
+
+
 (defn build-cfn-virtual-node-service-discovery-property-builder
   "The build-cfn-virtual-node-service-discovery-property-builder function updates a CfnVirtualNode$ServiceDiscoveryProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$ServiceDiscoveryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3150,6 +3888,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-service-discovery-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-service-discovery-property-builder (new CfnVirtualNode$ServiceDiscoveryProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-subject-alternative-name-matchers-property-builder
   "The build-cfn-virtual-node-subject-alternative-name-matchers-property-builder function updates a CfnVirtualNode$SubjectAlternativeNameMatchersProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$SubjectAlternativeNameMatchersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3165,6 +3909,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :exact)]
     (. builder exact data))
   (.build builder))
+
+
+(defn cfn-virtual-node-subject-alternative-name-matchers-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-subject-alternative-name-matchers-property-builder (new CfnVirtualNode$SubjectAlternativeNameMatchersProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-subject-alternative-names-property-builder
@@ -3184,6 +3934,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-subject-alternative-names-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-subject-alternative-names-property-builder (new CfnVirtualNode$SubjectAlternativeNamesProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-tcp-timeout-property-builder
   "The build-cfn-virtual-node-tcp-timeout-property-builder function updates a CfnVirtualNode$TcpTimeoutProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$TcpTimeoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3199,6 +3955,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :idle)]
     (. builder idle data))
   (.build builder))
+
+
+(defn cfn-virtual-node-tcp-timeout-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-tcp-timeout-property-builder (new CfnVirtualNode$TcpTimeoutProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-tls-validation-context-acm-trust-property-builder
@@ -3218,6 +3980,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-tls-validation-context-acm-trust-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-tls-validation-context-acm-trust-property-builder (new CfnVirtualNode$TlsValidationContextAcmTrustProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-tls-validation-context-file-trust-property-builder
   "The build-cfn-virtual-node-tls-validation-context-file-trust-property-builder function updates a CfnVirtualNode$TlsValidationContextFileTrustProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$TlsValidationContextFileTrustProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3233,6 +4001,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :certificate-chain)]
     (. builder certificateChain data))
   (.build builder))
+
+
+(defn cfn-virtual-node-tls-validation-context-file-trust-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-tls-validation-context-file-trust-property-builder (new CfnVirtualNode$TlsValidationContextFileTrustProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-tls-validation-context-property-builder
@@ -3255,6 +4029,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-tls-validation-context-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-tls-validation-context-property-builder (new CfnVirtualNode$TlsValidationContextProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-tls-validation-context-sds-trust-property-builder
   "The build-cfn-virtual-node-tls-validation-context-sds-trust-property-builder function updates a CfnVirtualNode$TlsValidationContextSdsTrustProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$TlsValidationContextSdsTrustProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3270,6 +4050,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :secret-name)]
     (. builder secretName data))
   (.build builder))
+
+
+(defn cfn-virtual-node-tls-validation-context-sds-trust-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-tls-validation-context-sds-trust-property-builder (new CfnVirtualNode$TlsValidationContextSdsTrustProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-tls-validation-context-trust-property-builder
@@ -3293,6 +4079,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :sds)]
     (. builder sds data))
   (.build builder))
+
+
+(defn cfn-virtual-node-tls-validation-context-trust-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-tls-validation-context-trust-property-builder (new CfnVirtualNode$TlsValidationContextTrustProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-virtual-node-connection-pool-property-builder
@@ -3321,6 +4113,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-virtual-node-connection-pool-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-virtual-node-connection-pool-property-builder (new CfnVirtualNode$VirtualNodeConnectionPoolProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-virtual-node-grpc-connection-pool-property-builder
   "The build-cfn-virtual-node-virtual-node-grpc-connection-pool-property-builder function updates a CfnVirtualNode$VirtualNodeGrpcConnectionPoolProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$VirtualNodeGrpcConnectionPoolProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3336,6 +4134,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :max-requests)]
     (. builder maxRequests data))
   (.build builder))
+
+
+(defn cfn-virtual-node-virtual-node-grpc-connection-pool-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-virtual-node-grpc-connection-pool-property-builder (new CfnVirtualNode$VirtualNodeGrpcConnectionPoolProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-virtual-node-http-connection-pool-property-builder
@@ -3358,6 +4162,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-virtual-node-http-connection-pool-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-virtual-node-http-connection-pool-property-builder (new CfnVirtualNode$VirtualNodeHttpConnectionPoolProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-virtual-node-http2-connection-pool-property-builder
   "The build-cfn-virtual-node-virtual-node-http2-connection-pool-property-builder function updates a CfnVirtualNode$VirtualNodeHttp2ConnectionPoolProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$VirtualNodeHttp2ConnectionPoolProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3373,6 +4183,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :max-requests)]
     (. builder maxRequests data))
   (.build builder))
+
+
+(defn cfn-virtual-node-virtual-node-http2-connection-pool-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-virtual-node-http2-connection-pool-property-builder (new CfnVirtualNode$VirtualNodeHttp2ConnectionPoolProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-virtual-node-spec-property-builder
@@ -3404,6 +4220,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-node-virtual-node-spec-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-virtual-node-spec-property-builder (new CfnVirtualNode$VirtualNodeSpecProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-node-virtual-node-tcp-connection-pool-property-builder
   "The build-cfn-virtual-node-virtual-node-tcp-connection-pool-property-builder function updates a CfnVirtualNode$VirtualNodeTcpConnectionPoolProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualNode$VirtualNodeTcpConnectionPoolProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3419,6 +4241,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :max-connections)]
     (. builder maxConnections data))
   (.build builder))
+
+
+(defn cfn-virtual-node-virtual-node-tcp-connection-pool-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-virtual-node-tcp-connection-pool-property-builder (new CfnVirtualNode$VirtualNodeTcpConnectionPoolProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-node-virtual-service-backend-property-builder
@@ -3439,6 +4267,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :virtual-service-name)]
     (. builder virtualServiceName data))
   (.build builder))
+
+
+(defn cfn-virtual-node-virtual-service-backend-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-node-virtual-service-backend-property-builder (new CfnVirtualNode$VirtualServiceBackendProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-router-builder
@@ -3470,6 +4304,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-router-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-virtual-router-builder (CfnVirtualRouter$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-virtual-router-port-mapping-property-builder
   "The build-cfn-virtual-router-port-mapping-property-builder function updates a CfnVirtualRouter$PortMappingProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualRouter$PortMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3488,6 +4328,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :protocol)]
     (. builder protocol data))
   (.build builder))
+
+
+(defn cfn-virtual-router-port-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-router-port-mapping-property-builder (new CfnVirtualRouter$PortMappingProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-router-props-builder
@@ -3519,6 +4365,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-router-props-builder
+  ""
+  [id config]
+  (build-cfn-virtual-router-props-builder (new CfnVirtualRouterProps$Builder) id config))
+
+
 (defn build-cfn-virtual-router-virtual-router-listener-property-builder
   "The build-cfn-virtual-router-virtual-router-listener-property-builder function updates a CfnVirtualRouter$VirtualRouterListenerProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualRouter$VirtualRouterListenerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3536,6 +4388,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-router-virtual-router-listener-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-router-virtual-router-listener-property-builder (new CfnVirtualRouter$VirtualRouterListenerProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-router-virtual-router-spec-property-builder
   "The build-cfn-virtual-router-virtual-router-spec-property-builder function updates a CfnVirtualRouter$VirtualRouterSpecProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualRouter$VirtualRouterSpecProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3551,6 +4409,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :listeners)]
     (. builder listeners data))
   (.build builder))
+
+
+(defn cfn-virtual-router-virtual-router-spec-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-router-virtual-router-spec-property-builder (new CfnVirtualRouter$VirtualRouterSpecProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-service-builder
@@ -3582,6 +4446,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-service-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-virtual-service-builder (CfnVirtualService$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-virtual-service-props-builder
   "The build-cfn-virtual-service-props-builder function updates a CfnVirtualServiceProps$Builder instance using the provided configuration.
   The function takes the CfnVirtualServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3611,6 +4481,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-service-props-builder
+  ""
+  [id config]
+  (build-cfn-virtual-service-props-builder (new CfnVirtualServiceProps$Builder) id config))
+
+
 (defn build-cfn-virtual-service-virtual-node-service-provider-property-builder
   "The build-cfn-virtual-service-virtual-node-service-provider-property-builder function updates a CfnVirtualService$VirtualNodeServiceProviderProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualService$VirtualNodeServiceProviderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3628,6 +4504,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-service-virtual-node-service-provider-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-service-virtual-node-service-provider-property-builder (new CfnVirtualService$VirtualNodeServiceProviderProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-service-virtual-router-service-provider-property-builder
   "The build-cfn-virtual-service-virtual-router-service-provider-property-builder function updates a CfnVirtualService$VirtualRouterServiceProviderProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualService$VirtualRouterServiceProviderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3643,6 +4525,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :virtual-router-name)]
     (. builder virtualRouterName data))
   (.build builder))
+
+
+(defn cfn-virtual-service-virtual-router-service-provider-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-service-virtual-router-service-provider-property-builder (new CfnVirtualService$VirtualRouterServiceProviderProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-service-virtual-service-provider-property-builder
@@ -3665,6 +4553,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-service-virtual-service-provider-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-service-virtual-service-provider-property-builder (new CfnVirtualService$VirtualServiceProviderProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-service-virtual-service-spec-property-builder
   "The build-cfn-virtual-service-virtual-service-spec-property-builder function updates a CfnVirtualService$VirtualServiceSpecProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualService$VirtualServiceSpecProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3682,6 +4576,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-virtual-service-virtual-service-spec-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-service-virtual-service-spec-property-builder (new CfnVirtualService$VirtualServiceSpecProperty$Builder) id config))
+
+
 (defn build-common-gateway-route-spec-options-builder
   "The build-common-gateway-route-spec-options-builder function updates a CommonGatewayRouteSpecOptions$Builder instance using the provided configuration.
   The function takes the CommonGatewayRouteSpecOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3697,6 +4597,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :priority)]
     (. builder priority data))
   (.build builder))
+
+
+(defn common-gateway-route-spec-options-builder
+  ""
+  [id config]
+  (build-common-gateway-route-spec-options-builder (new CommonGatewayRouteSpecOptions$Builder) id config))
 
 
 (defn build-gateway-route-attributes-builder
@@ -3719,6 +4625,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn gateway-route-attributes-builder
+  ""
+  [id config]
+  (build-gateway-route-attributes-builder (new GatewayRouteAttributes$Builder) id config))
+
+
 (defn build-gateway-route-base-props-builder
   "The build-gateway-route-base-props-builder function updates a GatewayRouteBaseProps$Builder instance using the provided configuration.
   The function takes the GatewayRouteBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3737,6 +4649,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :route-spec)]
     (. builder routeSpec data))
   (.build builder))
+
+
+(defn gateway-route-base-props-builder
+  ""
+  [id config]
+  (build-gateway-route-base-props-builder (new GatewayRouteBaseProps$Builder) id config))
 
 
 (defn build-gateway-route-builder
@@ -3762,6 +4680,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn gateway-route-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-gateway-route-builder (GatewayRoute$Builder/create scope (name id)) id config))
+
+
 (defn build-gateway-route-hostname-match-config-builder
   "The build-gateway-route-hostname-match-config-builder function updates a GatewayRouteHostnameMatchConfig$Builder instance using the provided configuration.
   The function takes the GatewayRouteHostnameMatchConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3777,6 +4701,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :hostname-match)]
     (. builder hostnameMatch data))
   (.build builder))
+
+
+(defn gateway-route-hostname-match-config-builder
+  ""
+  [id config]
+  (build-gateway-route-hostname-match-config-builder (new GatewayRouteHostnameMatchConfig$Builder) id config))
 
 
 (defn build-gateway-route-props-builder
@@ -3800,6 +4730,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :virtual-gateway)]
     (. builder virtualGateway data))
   (.build builder))
+
+
+(defn gateway-route-props-builder
+  ""
+  [id config]
+  (build-gateway-route-props-builder (new GatewayRouteProps$Builder) id config))
 
 
 (defn build-gateway-route-spec-config-builder
@@ -3828,6 +4764,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn gateway-route-spec-config-builder
+  ""
+  [id config]
+  (build-gateway-route-spec-config-builder (new GatewayRouteSpecConfig$Builder) id config))
+
+
 (defn build-grpc-connection-pool-builder
   "The build-grpc-connection-pool-builder function updates a GrpcConnectionPool$Builder instance using the provided configuration.
   The function takes the GrpcConnectionPool$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3843,6 +4785,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :max-requests)]
     (. builder maxRequests data))
   (.build builder))
+
+
+(defn grpc-connection-pool-builder
+  ""
+  [id config]
+  (build-grpc-connection-pool-builder (new GrpcConnectionPool$Builder) id config))
 
 
 (defn build-grpc-gateway-listener-options-builder
@@ -3869,6 +4817,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tls)]
     (. builder tls data))
   (.build builder))
+
+
+(defn grpc-gateway-listener-options-builder
+  ""
+  [id config]
+  (build-grpc-gateway-listener-options-builder (new GrpcGatewayListenerOptions$Builder) id config))
 
 
 (defn build-grpc-gateway-route-match-builder
@@ -3900,6 +4854,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn grpc-gateway-route-match-builder
+  ""
+  [id config]
+  (build-grpc-gateway-route-match-builder (new GrpcGatewayRouteMatch$Builder) id config))
+
+
 (defn build-grpc-gateway-route-spec-options-builder
   "The build-grpc-gateway-route-spec-options-builder function updates a GrpcGatewayRouteSpecOptions$Builder instance using the provided configuration.
   The function takes the GrpcGatewayRouteSpecOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3921,6 +4881,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :route-target)]
     (. builder routeTarget data))
   (.build builder))
+
+
+(defn grpc-gateway-route-spec-options-builder
+  ""
+  [id config]
+  (build-grpc-gateway-route-spec-options-builder (new GrpcGatewayRouteSpecOptions$Builder) id config))
 
 
 (defn build-grpc-health-check-options-builder
@@ -3947,6 +4913,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :unhealthy-threshold)]
     (. builder unhealthyThreshold data))
   (.build builder))
+
+
+(defn grpc-health-check-options-builder
+  ""
+  [id config]
+  (build-grpc-health-check-options-builder (new GrpcHealthCheckOptions$Builder) id config))
 
 
 (defn build-grpc-retry-policy-builder
@@ -3978,6 +4950,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn grpc-retry-policy-builder
+  ""
+  [id config]
+  (build-grpc-retry-policy-builder (new GrpcRetryPolicy$Builder) id config))
+
+
 (defn build-grpc-route-match-builder
   "The build-grpc-route-match-builder function updates a GrpcRouteMatch$Builder instance using the provided configuration.
   The function takes the GrpcRouteMatch$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4002,6 +4980,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :service-name)]
     (. builder serviceName data))
   (.build builder))
+
+
+(defn grpc-route-match-builder
+  ""
+  [id config]
+  (build-grpc-route-match-builder (new GrpcRouteMatch$Builder) id config))
 
 
 (defn build-grpc-route-spec-options-builder
@@ -4033,6 +5017,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn grpc-route-spec-options-builder
+  ""
+  [id config]
+  (build-grpc-route-spec-options-builder (new GrpcRouteSpecOptions$Builder) id config))
+
+
 (defn build-grpc-timeout-builder
   "The build-grpc-timeout-builder function updates a GrpcTimeout$Builder instance using the provided configuration.
   The function takes the GrpcTimeout$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4051,6 +5041,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :per-request)]
     (. builder perRequest data))
   (.build builder))
+
+
+(defn grpc-timeout-builder
+  ""
+  [id config]
+  (build-grpc-timeout-builder (new GrpcTimeout$Builder) id config))
 
 
 (defn build-grpc-virtual-node-listener-options-builder
@@ -4085,6 +5081,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn grpc-virtual-node-listener-options-builder
+  ""
+  [id config]
+  (build-grpc-virtual-node-listener-options-builder (new GrpcVirtualNodeListenerOptions$Builder) id config))
+
+
 (defn build-header-match-config-builder
   "The build-header-match-config-builder function updates a HeaderMatchConfig$Builder instance using the provided configuration.
   The function takes the HeaderMatchConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4102,6 +5104,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn header-match-config-builder
+  ""
+  [id config]
+  (build-header-match-config-builder (new HeaderMatchConfig$Builder) id config))
+
+
 (defn build-health-check-bind-options-builder
   "The build-health-check-bind-options-builder function updates a HealthCheckBindOptions$Builder instance using the provided configuration.
   The function takes the HealthCheckBindOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4117,6 +5125,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :default-port)]
     (. builder defaultPort data))
   (.build builder))
+
+
+(defn health-check-bind-options-builder
+  ""
+  [id config]
+  (build-health-check-bind-options-builder (new HealthCheckBindOptions$Builder) id config))
 
 
 (defn build-health-check-config-builder
@@ -4139,6 +5153,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn health-check-config-builder
+  ""
+  [id config]
+  (build-health-check-config-builder (new HealthCheckConfig$Builder) id config))
+
+
 (defn build-http-connection-pool-builder
   "The build-http-connection-pool-builder function updates a HttpConnectionPool$Builder instance using the provided configuration.
   The function takes the HttpConnectionPool$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4157,6 +5177,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :max-pending-requests)]
     (. builder maxPendingRequests data))
   (.build builder))
+
+
+(defn http-connection-pool-builder
+  ""
+  [id config]
+  (build-http-connection-pool-builder (new HttpConnectionPool$Builder) id config))
 
 
 (defn build-http-gateway-listener-options-builder
@@ -4183,6 +5209,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tls)]
     (. builder tls data))
   (.build builder))
+
+
+(defn http-gateway-listener-options-builder
+  ""
+  [id config]
+  (build-http-gateway-listener-options-builder (new HttpGatewayListenerOptions$Builder) id config))
 
 
 (defn build-http-gateway-route-match-builder
@@ -4220,6 +5252,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn http-gateway-route-match-builder
+  ""
+  [id config]
+  (build-http-gateway-route-match-builder (new HttpGatewayRouteMatch$Builder) id config))
+
+
 (defn build-http-gateway-route-path-match-config-builder
   "The build-http-gateway-route-path-match-config-builder function updates a HttpGatewayRoutePathMatchConfig$Builder instance using the provided configuration.
   The function takes the HttpGatewayRoutePathMatchConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4246,6 +5284,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn http-gateway-route-path-match-config-builder
+  ""
+  [id config]
+  (build-http-gateway-route-path-match-config-builder (new HttpGatewayRoutePathMatchConfig$Builder) id config))
+
+
 (defn build-http-gateway-route-spec-options-builder
   "The build-http-gateway-route-spec-options-builder function updates a HttpGatewayRouteSpecOptions$Builder instance using the provided configuration.
   The function takes the HttpGatewayRouteSpecOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4267,6 +5311,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :route-target)]
     (. builder routeTarget data))
   (.build builder))
+
+
+(defn http-gateway-route-spec-options-builder
+  ""
+  [id config]
+  (build-http-gateway-route-spec-options-builder (new HttpGatewayRouteSpecOptions$Builder) id config))
 
 
 (defn build-http-health-check-options-builder
@@ -4298,6 +5348,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn http-health-check-options-builder
+  ""
+  [id config]
+  (build-http-health-check-options-builder (new HttpHealthCheckOptions$Builder) id config))
+
+
 (defn build-http-retry-policy-builder
   "The build-http-retry-policy-builder function updates a HttpRetryPolicy$Builder instance using the provided configuration.
   The function takes the HttpRetryPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4322,6 +5378,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tcp-retry-events)]
     (. builder tcpRetryEvents data))
   (.build builder))
+
+
+(defn http-retry-policy-builder
+  ""
+  [id config]
+  (build-http-retry-policy-builder (new HttpRetryPolicy$Builder) id config))
 
 
 (defn build-http-route-match-builder
@@ -4356,6 +5418,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn http-route-match-builder
+  ""
+  [id config]
+  (build-http-route-match-builder (new HttpRouteMatch$Builder) id config))
+
+
 (defn build-http-route-path-match-config-builder
   "The build-http-route-path-match-config-builder function updates a HttpRoutePathMatchConfig$Builder instance using the provided configuration.
   The function takes the HttpRoutePathMatchConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4374,6 +5442,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :whole-path-match)]
     (. builder wholePathMatch data))
   (.build builder))
+
+
+(defn http-route-path-match-config-builder
+  ""
+  [id config]
+  (build-http-route-path-match-config-builder (new HttpRoutePathMatchConfig$Builder) id config))
 
 
 (defn build-http-route-spec-options-builder
@@ -4405,6 +5479,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn http-route-spec-options-builder
+  ""
+  [id config]
+  (build-http-route-spec-options-builder (new HttpRouteSpecOptions$Builder) id config))
+
+
 (defn build-http-timeout-builder
   "The build-http-timeout-builder function updates a HttpTimeout$Builder instance using the provided configuration.
   The function takes the HttpTimeout$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4423,6 +5503,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :per-request)]
     (. builder perRequest data))
   (.build builder))
+
+
+(defn http-timeout-builder
+  ""
+  [id config]
+  (build-http-timeout-builder (new HttpTimeout$Builder) id config))
 
 
 (defn build-http-virtual-node-listener-options-builder
@@ -4457,6 +5543,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn http-virtual-node-listener-options-builder
+  ""
+  [id config]
+  (build-http-virtual-node-listener-options-builder (new HttpVirtualNodeListenerOptions$Builder) id config))
+
+
 (defn build-http2-connection-pool-builder
   "The build-http2-connection-pool-builder function updates a Http2ConnectionPool$Builder instance using the provided configuration.
   The function takes the Http2ConnectionPool$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4472,6 +5564,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :max-requests)]
     (. builder maxRequests data))
   (.build builder))
+
+
+(defn http2-connection-pool-builder
+  ""
+  [id config]
+  (build-http2-connection-pool-builder (new Http2ConnectionPool$Builder) id config))
 
 
 (defn build-http2-gateway-listener-options-builder
@@ -4498,6 +5596,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tls)]
     (. builder tls data))
   (.build builder))
+
+
+(defn http2-gateway-listener-options-builder
+  ""
+  [id config]
+  (build-http2-gateway-listener-options-builder (new Http2GatewayListenerOptions$Builder) id config))
 
 
 (defn build-http2-virtual-node-listener-options-builder
@@ -4532,6 +5636,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn http2-virtual-node-listener-options-builder
+  ""
+  [id config]
+  (build-http2-virtual-node-listener-options-builder (new Http2VirtualNodeListenerOptions$Builder) id config))
+
+
 (defn build-listener-tls-options-builder
   "The build-listener-tls-options-builder function updates a ListenerTlsOptions$Builder instance using the provided configuration.
   The function takes the ListenerTlsOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4555,6 +5665,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn listener-tls-options-builder
+  ""
+  [id config]
+  (build-listener-tls-options-builder (new ListenerTlsOptions$Builder) id config))
+
+
 (defn build-logging-format-config-builder
   "The build-logging-format-config-builder function updates a LoggingFormatConfig$Builder instance using the provided configuration.
   The function takes the LoggingFormatConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4570,6 +5686,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :format-config)]
     (. builder formatConfig data))
   (.build builder))
+
+
+(defn logging-format-config-builder
+  ""
+  [id config]
+  (build-logging-format-config-builder (new LoggingFormatConfig$Builder) id config))
 
 
 (defn build-mesh-builder
@@ -4595,6 +5717,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn mesh-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-mesh-builder (Mesh$Builder/create scope (name id)) id config))
+
+
 (defn build-mesh-props-builder
   "The build-mesh-props-builder function updates a MeshProps$Builder instance using the provided configuration.
   The function takes the MeshProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4618,6 +5746,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn mesh-props-builder
+  ""
+  [id config]
+  (build-mesh-props-builder (new MeshProps$Builder) id config))
+
+
 (defn build-mesh-service-discovery-builder
   "The build-mesh-service-discovery-builder function updates a MeshServiceDiscovery$Builder instance using the provided configuration.
   The function takes the MeshServiceDiscovery$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4633,6 +5767,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (ip-preference config id :ip-preference)]
     (. builder ipPreference data))
   (.build builder))
+
+
+(defn mesh-service-discovery-builder
+  ""
+  [id config]
+  (build-mesh-service-discovery-builder (new MeshServiceDiscovery$Builder) id config))
 
 
 (defn build-mutual-tls-validation-builder
@@ -4653,6 +5793,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :trust)]
     (. builder trust data))
   (.build builder))
+
+
+(defn mutual-tls-validation-builder
+  ""
+  [id config]
+  (build-mutual-tls-validation-builder (new MutualTlsValidation$Builder) id config))
 
 
 (defn build-outlier-detection-builder
@@ -4681,6 +5827,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn outlier-detection-builder
+  ""
+  [id config]
+  (build-outlier-detection-builder (new OutlierDetection$Builder) id config))
+
+
 (defn build-query-parameter-match-config-builder
   "The build-query-parameter-match-config-builder function updates a QueryParameterMatchConfig$Builder instance using the provided configuration.
   The function takes the QueryParameterMatchConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4696,6 +5848,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :query-parameter-match)]
     (. builder queryParameterMatch data))
   (.build builder))
+
+
+(defn query-parameter-match-config-builder
+  ""
+  [id config]
+  (build-query-parameter-match-config-builder (new QueryParameterMatchConfig$Builder) id config))
 
 
 (defn build-route-attributes-builder
@@ -4718,6 +5876,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn route-attributes-builder
+  ""
+  [id config]
+  (build-route-attributes-builder (new RouteAttributes$Builder) id config))
+
+
 (defn build-route-base-props-builder
   "The build-route-base-props-builder function updates a RouteBaseProps$Builder instance using the provided configuration.
   The function takes the RouteBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4736,6 +5900,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :route-spec)]
     (. builder routeSpec data))
   (.build builder))
+
+
+(defn route-base-props-builder
+  ""
+  [id config]
+  (build-route-base-props-builder (new RouteBaseProps$Builder) id config))
 
 
 (defn build-route-builder
@@ -4764,6 +5934,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn route-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-route-builder (Route$Builder/create scope (name id)) id config))
+
+
 (defn build-route-props-builder
   "The build-route-props-builder function updates a RouteProps$Builder instance using the provided configuration.
   The function takes the RouteProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4788,6 +5964,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :virtual-router)]
     (. builder virtualRouter data))
   (.build builder))
+
+
+(defn route-props-builder
+  ""
+  [id config]
+  (build-route-props-builder (new RouteProps$Builder) id config))
 
 
 (defn build-route-spec-config-builder
@@ -4819,6 +6001,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn route-spec-config-builder
+  ""
+  [id config]
+  (build-route-spec-config-builder (new RouteSpecConfig$Builder) id config))
+
+
 (defn build-route-spec-options-base-builder
   "The build-route-spec-options-base-builder function updates a RouteSpecOptionsBase$Builder instance using the provided configuration.
   The function takes the RouteSpecOptionsBase$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4834,6 +6022,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :priority)]
     (. builder priority data))
   (.build builder))
+
+
+(defn route-spec-options-base-builder
+  ""
+  [id config]
+  (build-route-spec-options-base-builder (new RouteSpecOptionsBase$Builder) id config))
 
 
 (defn build-service-discovery-config-builder
@@ -4856,6 +6050,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn service-discovery-config-builder
+  ""
+  [id config]
+  (build-service-discovery-config-builder (new ServiceDiscoveryConfig$Builder) id config))
+
+
 (defn build-subject-alternative-names-matcher-config-builder
   "The build-subject-alternative-names-matcher-config-builder function updates a SubjectAlternativeNamesMatcherConfig$Builder instance using the provided configuration.
   The function takes the SubjectAlternativeNamesMatcherConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4873,6 +6073,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn subject-alternative-names-matcher-config-builder
+  ""
+  [id config]
+  (build-subject-alternative-names-matcher-config-builder (new SubjectAlternativeNamesMatcherConfig$Builder) id config))
+
+
 (defn build-tcp-connection-pool-builder
   "The build-tcp-connection-pool-builder function updates a TcpConnectionPool$Builder instance using the provided configuration.
   The function takes the TcpConnectionPool$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4888,6 +6094,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :max-connections)]
     (. builder maxConnections data))
   (.build builder))
+
+
+(defn tcp-connection-pool-builder
+  ""
+  [id config]
+  (build-tcp-connection-pool-builder (new TcpConnectionPool$Builder) id config))
 
 
 (defn build-tcp-health-check-options-builder
@@ -4916,6 +6128,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn tcp-health-check-options-builder
+  ""
+  [id config]
+  (build-tcp-health-check-options-builder (new TcpHealthCheckOptions$Builder) id config))
+
+
 (defn build-tcp-route-spec-options-builder
   "The build-tcp-route-spec-options-builder function updates a TcpRouteSpecOptions$Builder instance using the provided configuration.
   The function takes the TcpRouteSpecOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4939,6 +6157,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn tcp-route-spec-options-builder
+  ""
+  [id config]
+  (build-tcp-route-spec-options-builder (new TcpRouteSpecOptions$Builder) id config))
+
+
 (defn build-tcp-timeout-builder
   "The build-tcp-timeout-builder function updates a TcpTimeout$Builder instance using the provided configuration.
   The function takes the TcpTimeout$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4954,6 +6178,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :idle)]
     (. builder idle data))
   (.build builder))
+
+
+(defn tcp-timeout-builder
+  ""
+  [id config]
+  (build-tcp-timeout-builder (new TcpTimeout$Builder) id config))
 
 
 (defn build-tcp-virtual-node-listener-options-builder
@@ -4988,6 +6218,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn tcp-virtual-node-listener-options-builder
+  ""
+  [id config]
+  (build-tcp-virtual-node-listener-options-builder (new TcpVirtualNodeListenerOptions$Builder) id config))
+
+
 (defn build-tls-certificate-config-builder
   "The build-tls-certificate-config-builder function updates a TlsCertificateConfig$Builder instance using the provided configuration.
   The function takes the TlsCertificateConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5003,6 +6239,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tls-certificate)]
     (. builder tlsCertificate data))
   (.build builder))
+
+
+(defn tls-certificate-config-builder
+  ""
+  [id config]
+  (build-tls-certificate-config-builder (new TlsCertificateConfig$Builder) id config))
 
 
 (defn build-tls-client-policy-builder
@@ -5031,6 +6273,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn tls-client-policy-builder
+  ""
+  [id config]
+  (build-tls-client-policy-builder (new TlsClientPolicy$Builder) id config))
+
+
 (defn build-tls-validation-builder
   "The build-tls-validation-builder function updates a TlsValidation$Builder instance using the provided configuration.
   The function takes the TlsValidation$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5051,6 +6299,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn tls-validation-builder
+  ""
+  [id config]
+  (build-tls-validation-builder (new TlsValidation$Builder) id config))
+
+
 (defn build-tls-validation-trust-config-builder
   "The build-tls-validation-trust-config-builder function updates a TlsValidationTrustConfig$Builder instance using the provided configuration.
   The function takes the TlsValidationTrustConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5066,6 +6320,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tls-validation-trust)]
     (. builder tlsValidationTrust data))
   (.build builder))
+
+
+(defn tls-validation-trust-config-builder
+  ""
+  [id config]
+  (build-tls-validation-trust-config-builder (new TlsValidationTrustConfig$Builder) id config))
 
 
 (defn build-virtual-gateway-attributes-builder
@@ -5086,6 +6346,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :virtual-gateway-name)]
     (. builder virtualGatewayName data))
   (.build builder))
+
+
+(defn virtual-gateway-attributes-builder
+  ""
+  [id config]
+  (build-virtual-gateway-attributes-builder (new VirtualGatewayAttributes$Builder) id config))
 
 
 (defn build-virtual-gateway-base-props-builder
@@ -5112,6 +6378,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :virtual-gateway-name)]
     (. builder virtualGatewayName data))
   (.build builder))
+
+
+(defn virtual-gateway-base-props-builder
+  ""
+  [id config]
+  (build-virtual-gateway-base-props-builder (new VirtualGatewayBaseProps$Builder) id config))
 
 
 (defn build-virtual-gateway-builder
@@ -5143,6 +6415,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn virtual-gateway-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-virtual-gateway-builder (VirtualGateway$Builder/create scope (name id)) id config))
+
+
 (defn build-virtual-gateway-listener-config-builder
   "The build-virtual-gateway-listener-config-builder function updates a VirtualGatewayListenerConfig$Builder instance using the provided configuration.
   The function takes the VirtualGatewayListenerConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5158,6 +6436,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :listener)]
     (. builder listener data))
   (.build builder))
+
+
+(defn virtual-gateway-listener-config-builder
+  ""
+  [id config]
+  (build-virtual-gateway-listener-config-builder (new VirtualGatewayListenerConfig$Builder) id config))
 
 
 (defn build-virtual-gateway-props-builder
@@ -5189,6 +6473,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn virtual-gateway-props-builder
+  ""
+  [id config]
+  (build-virtual-gateway-props-builder (new VirtualGatewayProps$Builder) id config))
+
+
 (defn build-virtual-node-attributes-builder
   "The build-virtual-node-attributes-builder function updates a VirtualNodeAttributes$Builder instance using the provided configuration.
   The function takes the VirtualNodeAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5207,6 +6497,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :virtual-node-name)]
     (. builder virtualNodeName data))
   (.build builder))
+
+
+(defn virtual-node-attributes-builder
+  ""
+  [id config]
+  (build-virtual-node-attributes-builder (new VirtualNodeAttributes$Builder) id config))
 
 
 (defn build-virtual-node-base-props-builder
@@ -5239,6 +6535,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :virtual-node-name)]
     (. builder virtualNodeName data))
   (.build builder))
+
+
+(defn virtual-node-base-props-builder
+  ""
+  [id config]
+  (build-virtual-node-base-props-builder (new VirtualNodeBaseProps$Builder) id config))
 
 
 (defn build-virtual-node-builder
@@ -5276,6 +6578,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn virtual-node-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-virtual-node-builder (VirtualNode$Builder/create scope (name id)) id config))
+
+
 (defn build-virtual-node-listener-config-builder
   "The build-virtual-node-listener-config-builder function updates a VirtualNodeListenerConfig$Builder instance using the provided configuration.
   The function takes the VirtualNodeListenerConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5291,6 +6599,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :listener)]
     (. builder listener data))
   (.build builder))
+
+
+(defn virtual-node-listener-config-builder
+  ""
+  [id config]
+  (build-virtual-node-listener-config-builder (new VirtualNodeListenerConfig$Builder) id config))
 
 
 (defn build-virtual-node-props-builder
@@ -5328,6 +6642,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn virtual-node-props-builder
+  ""
+  [id config]
+  (build-virtual-node-props-builder (new VirtualNodeProps$Builder) id config))
+
+
 (defn build-virtual-router-attributes-builder
   "The build-virtual-router-attributes-builder function updates a VirtualRouterAttributes$Builder instance using the provided configuration.
   The function takes the VirtualRouterAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5348,6 +6668,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn virtual-router-attributes-builder
+  ""
+  [id config]
+  (build-virtual-router-attributes-builder (new VirtualRouterAttributes$Builder) id config))
+
+
 (defn build-virtual-router-base-props-builder
   "The build-virtual-router-base-props-builder function updates a VirtualRouterBaseProps$Builder instance using the provided configuration.
   The function takes the VirtualRouterBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5366,6 +6692,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :virtual-router-name)]
     (. builder virtualRouterName data))
   (.build builder))
+
+
+(defn virtual-router-base-props-builder
+  ""
+  [id config]
+  (build-virtual-router-base-props-builder (new VirtualRouterBaseProps$Builder) id config))
 
 
 (defn build-virtual-router-builder
@@ -5391,6 +6723,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn virtual-router-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-virtual-router-builder (VirtualRouter$Builder/create scope (name id)) id config))
+
+
 (defn build-virtual-router-listener-config-builder
   "The build-virtual-router-listener-config-builder function updates a VirtualRouterListenerConfig$Builder instance using the provided configuration.
   The function takes the VirtualRouterListenerConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5406,6 +6744,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :listener)]
     (. builder listener data))
   (.build builder))
+
+
+(defn virtual-router-listener-config-builder
+  ""
+  [id config]
+  (build-virtual-router-listener-config-builder (new VirtualRouterListenerConfig$Builder) id config))
 
 
 (defn build-virtual-router-props-builder
@@ -5431,6 +6775,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn virtual-router-props-builder
+  ""
+  [id config]
+  (build-virtual-router-props-builder (new VirtualRouterProps$Builder) id config))
+
+
 (defn build-virtual-service-attributes-builder
   "The build-virtual-service-attributes-builder function updates a VirtualServiceAttributes$Builder instance using the provided configuration.
   The function takes the VirtualServiceAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5451,6 +6801,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn virtual-service-attributes-builder
+  ""
+  [id config]
+  (build-virtual-service-attributes-builder (new VirtualServiceAttributes$Builder) id config))
+
+
 (defn build-virtual-service-backend-options-builder
   "The build-virtual-service-backend-options-builder function updates a VirtualServiceBackendOptions$Builder instance using the provided configuration.
   The function takes the VirtualServiceBackendOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5466,6 +6822,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tls-client-policy)]
     (. builder tlsClientPolicy data))
   (.build builder))
+
+
+(defn virtual-service-backend-options-builder
+  ""
+  [id config]
+  (build-virtual-service-backend-options-builder (new VirtualServiceBackendOptions$Builder) id config))
 
 
 (defn build-virtual-service-builder
@@ -5488,6 +6850,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn virtual-service-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-virtual-service-builder (VirtualService$Builder/create scope (name id)) id config))
+
+
 (defn build-virtual-service-props-builder
   "The build-virtual-service-props-builder function updates a VirtualServiceProps$Builder instance using the provided configuration.
   The function takes the VirtualServiceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5506,6 +6874,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :virtual-service-provider)]
     (. builder virtualServiceProvider data))
   (.build builder))
+
+
+(defn virtual-service-props-builder
+  ""
+  [id config]
+  (build-virtual-service-props-builder (new VirtualServiceProps$Builder) id config))
 
 
 (defn build-virtual-service-provider-config-builder
@@ -5531,6 +6905,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn virtual-service-provider-config-builder
+  ""
+  [id config]
+  (build-virtual-service-provider-config-builder (new VirtualServiceProviderConfig$Builder) id config))
+
+
 (defn build-weighted-target-builder
   "The build-weighted-target-builder function updates a WeightedTarget$Builder instance using the provided configuration.
   The function takes the WeightedTarget$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5552,3 +6932,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
+
+
+(defn weighted-target-builder
+  ""
+  [id config]
+  (build-weighted-target-builder (new WeightedTarget$Builder) id config))

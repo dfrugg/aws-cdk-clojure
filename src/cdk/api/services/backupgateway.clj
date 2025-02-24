@@ -40,6 +40,12 @@
   (.build builder))
 
 
+(defn cfn-hypervisor-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-hypervisor-builder (CfnHypervisor$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-hypervisor-props-builder
   "The build-cfn-hypervisor-props-builder function updates a CfnHypervisorProps$Builder instance using the provided configuration.
   The function takes the CfnHypervisorProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -73,3 +79,9 @@
   (when-let [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
+
+
+(defn cfn-hypervisor-props-builder
+  ""
+  [id config]
+  (build-cfn-hypervisor-props-builder (new CfnHypervisorProps$Builder) id config))

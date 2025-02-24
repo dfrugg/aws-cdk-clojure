@@ -50,6 +50,12 @@
   (.build builder))
 
 
+(defn asset-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-asset-builder (Asset$Builder/create scope (name id)) id config))
+
+
 (defn build-asset-options-builder
   "The build-asset-options-builder function updates a AssetOptions$Builder instance using the provided configuration.
   The function takes the AssetOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -86,6 +92,12 @@
   (when-let [data (lookup-entry config id :readers)]
     (. builder readers data))
   (.build builder))
+
+
+(defn asset-options-builder
+  ""
+  [id config]
+  (build-asset-options-builder (new AssetOptions$Builder) id config))
 
 
 (defn build-asset-props-builder
@@ -127,3 +139,9 @@
   (when-let [data (lookup-entry config id :readers)]
     (. builder readers data))
   (.build builder))
+
+
+(defn asset-props-builder
+  ""
+  [id config]
+  (build-asset-props-builder (new AssetProps$Builder) id config))

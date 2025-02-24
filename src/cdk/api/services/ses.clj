@@ -310,6 +310,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn add-header-action-config-builder
+  ""
+  [id config]
+  (build-add-header-action-config-builder (new AddHeaderActionConfig$Builder) id config))
+
+
 (defn build-allow-list-receipt-filter-builder
   "The build-allow-list-receipt-filter-builder function updates a AllowListReceiptFilter$Builder instance using the provided configuration.
   The function takes the AllowListReceiptFilter$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -327,6 +333,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn allow-list-receipt-filter-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-allow-list-receipt-filter-builder (AllowListReceiptFilter$Builder/create scope (name id)) id config))
+
+
 (defn build-allow-list-receipt-filter-props-builder
   "The build-allow-list-receipt-filter-props-builder function updates a AllowListReceiptFilterProps$Builder instance using the provided configuration.
   The function takes the AllowListReceiptFilterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -342,6 +354,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :ips)]
     (. builder ips data))
   (.build builder))
+
+
+(defn allow-list-receipt-filter-props-builder
+  ""
+  [id config]
+  (build-allow-list-receipt-filter-props-builder (new AllowListReceiptFilterProps$Builder) id config))
 
 
 (defn build-bounce-action-config-builder
@@ -373,6 +391,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn bounce-action-config-builder
+  ""
+  [id config]
+  (build-bounce-action-config-builder (new BounceActionConfig$Builder) id config))
+
+
 (defn build-byo-dkim-options-builder
   "The build-byo-dkim-options-builder function updates a ByoDkimOptions$Builder instance using the provided configuration.
   The function takes the ByoDkimOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -394,6 +418,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :selector)]
     (. builder selector data))
   (.build builder))
+
+
+(defn byo-dkim-options-builder
+  ""
+  [id config]
+  (build-byo-dkim-options-builder (new ByoDkimOptions$Builder) id config))
 
 
 (defn build-cfn-configuration-set-builder
@@ -431,6 +461,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-configuration-set-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-configuration-set-builder (CfnConfigurationSet$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-configuration-set-dashboard-options-property-builder
   "The build-cfn-configuration-set-dashboard-options-property-builder function updates a CfnConfigurationSet$DashboardOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnConfigurationSet$DashboardOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -446,6 +482,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :engagement-metrics)]
     (. builder engagementMetrics data))
   (.build builder))
+
+
+(defn cfn-configuration-set-dashboard-options-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-dashboard-options-property-builder (new CfnConfigurationSet$DashboardOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-configuration-set-delivery-options-property-builder
@@ -468,6 +510,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-configuration-set-delivery-options-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-delivery-options-property-builder (new CfnConfigurationSet$DeliveryOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-configuration-set-event-destination-builder
   "The build-cfn-configuration-set-event-destination-builder function updates a CfnConfigurationSetEventDestination$Builder instance using the provided configuration.
   The function takes the CfnConfigurationSetEventDestination$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -488,6 +536,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-configuration-set-event-destination-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-configuration-set-event-destination-builder (CfnConfigurationSetEventDestination$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-configuration-set-event-destination-cloud-watch-destination-property-builder
   "The build-cfn-configuration-set-event-destination-cloud-watch-destination-property-builder function updates a CfnConfigurationSetEventDestination$CloudWatchDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnConfigurationSetEventDestination$CloudWatchDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -503,6 +557,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :dimension-configurations)]
     (. builder dimensionConfigurations data))
   (.build builder))
+
+
+(defn cfn-configuration-set-event-destination-cloud-watch-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-event-destination-cloud-watch-destination-property-builder (new CfnConfigurationSetEventDestination$CloudWatchDestinationProperty$Builder) id config))
 
 
 (defn build-cfn-configuration-set-event-destination-dimension-configuration-property-builder
@@ -526,6 +586,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :dimension-value-source)]
     (. builder dimensionValueSource data))
   (.build builder))
+
+
+(defn cfn-configuration-set-event-destination-dimension-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-event-destination-dimension-configuration-property-builder (new CfnConfigurationSetEventDestination$DimensionConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-configuration-set-event-destination-event-destination-property-builder
@@ -560,6 +626,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-configuration-set-event-destination-event-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-event-destination-event-destination-property-builder (new CfnConfigurationSetEventDestination$EventDestinationProperty$Builder) id config))
+
+
 (defn build-cfn-configuration-set-event-destination-kinesis-firehose-destination-property-builder
   "The build-cfn-configuration-set-event-destination-kinesis-firehose-destination-property-builder function updates a CfnConfigurationSetEventDestination$KinesisFirehoseDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnConfigurationSetEventDestination$KinesisFirehoseDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -578,6 +650,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :iam-role-arn)]
     (. builder iamRoleArn data))
   (.build builder))
+
+
+(defn cfn-configuration-set-event-destination-kinesis-firehose-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-event-destination-kinesis-firehose-destination-property-builder (new CfnConfigurationSetEventDestination$KinesisFirehoseDestinationProperty$Builder) id config))
 
 
 (defn build-cfn-configuration-set-event-destination-props-builder
@@ -600,6 +678,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-configuration-set-event-destination-props-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-event-destination-props-builder (new CfnConfigurationSetEventDestinationProps$Builder) id config))
+
+
 (defn build-cfn-configuration-set-event-destination-sns-destination-property-builder
   "The build-cfn-configuration-set-event-destination-sns-destination-property-builder function updates a CfnConfigurationSetEventDestination$SnsDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnConfigurationSetEventDestination$SnsDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -617,6 +701,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-configuration-set-event-destination-sns-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-event-destination-sns-destination-property-builder (new CfnConfigurationSetEventDestination$SnsDestinationProperty$Builder) id config))
+
+
 (defn build-cfn-configuration-set-guardian-options-property-builder
   "The build-cfn-configuration-set-guardian-options-property-builder function updates a CfnConfigurationSet$GuardianOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnConfigurationSet$GuardianOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -632,6 +722,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :optimized-shared-delivery)]
     (. builder optimizedSharedDelivery data))
   (.build builder))
+
+
+(defn cfn-configuration-set-guardian-options-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-guardian-options-property-builder (new CfnConfigurationSet$GuardianOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-configuration-set-props-builder
@@ -669,6 +765,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-configuration-set-props-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-props-builder (new CfnConfigurationSetProps$Builder) id config))
+
+
 (defn build-cfn-configuration-set-reputation-options-property-builder
   "The build-cfn-configuration-set-reputation-options-property-builder function updates a CfnConfigurationSet$ReputationOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnConfigurationSet$ReputationOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -684,6 +786,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :reputation-metrics-enabled)]
     (. builder reputationMetricsEnabled data))
   (.build builder))
+
+
+(defn cfn-configuration-set-reputation-options-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-reputation-options-property-builder (new CfnConfigurationSet$ReputationOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-configuration-set-sending-options-property-builder
@@ -703,6 +811,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-configuration-set-sending-options-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-sending-options-property-builder (new CfnConfigurationSet$SendingOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-configuration-set-suppression-options-property-builder
   "The build-cfn-configuration-set-suppression-options-property-builder function updates a CfnConfigurationSet$SuppressionOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnConfigurationSet$SuppressionOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -720,6 +834,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-configuration-set-suppression-options-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-suppression-options-property-builder (new CfnConfigurationSet$SuppressionOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-configuration-set-tracking-options-property-builder
   "The build-cfn-configuration-set-tracking-options-property-builder function updates a CfnConfigurationSet$TrackingOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnConfigurationSet$TrackingOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -735,6 +855,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :custom-redirect-domain)]
     (. builder customRedirectDomain data))
   (.build builder))
+
+
+(defn cfn-configuration-set-tracking-options-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-tracking-options-property-builder (new CfnConfigurationSet$TrackingOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-configuration-set-vdm-options-property-builder
@@ -755,6 +881,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :guardian-options)]
     (. builder guardianOptions data))
   (.build builder))
+
+
+(defn cfn-configuration-set-vdm-options-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-vdm-options-property-builder (new CfnConfigurationSet$VdmOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-contact-list-builder
@@ -783,6 +915,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-contact-list-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-contact-list-builder (CfnContactList$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-contact-list-props-builder
   "The build-cfn-contact-list-props-builder function updates a CfnContactListProps$Builder instance using the provided configuration.
   The function takes the CfnContactListProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -807,6 +945,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :topics)]
     (. builder topics data))
   (.build builder))
+
+
+(defn cfn-contact-list-props-builder
+  ""
+  [id config]
+  (build-cfn-contact-list-props-builder (new CfnContactListProps$Builder) id config))
 
 
 (defn build-cfn-contact-list-topic-property-builder
@@ -835,6 +979,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-contact-list-topic-property-builder
+  ""
+  [id config]
+  (build-cfn-contact-list-topic-property-builder (new CfnContactList$TopicProperty$Builder) id config))
+
+
 (defn build-cfn-dedicated-ip-pool-builder
   "The build-cfn-dedicated-ip-pool-builder function updates a CfnDedicatedIpPool$Builder instance using the provided configuration.
   The function takes the CfnDedicatedIpPool$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -855,6 +1005,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-dedicated-ip-pool-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-dedicated-ip-pool-builder (CfnDedicatedIpPool$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-dedicated-ip-pool-props-builder
   "The build-cfn-dedicated-ip-pool-props-builder function updates a CfnDedicatedIpPoolProps$Builder instance using the provided configuration.
   The function takes the CfnDedicatedIpPoolProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -873,6 +1029,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :scaling-mode)]
     (. builder scalingMode data))
   (.build builder))
+
+
+(defn cfn-dedicated-ip-pool-props-builder
+  ""
+  [id config]
+  (build-cfn-dedicated-ip-pool-props-builder (new CfnDedicatedIpPoolProps$Builder) id config))
 
 
 (defn build-cfn-email-identity-builder
@@ -907,6 +1069,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-email-identity-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-email-identity-builder (CfnEmailIdentity$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-email-identity-configuration-set-attributes-property-builder
   "The build-cfn-email-identity-configuration-set-attributes-property-builder function updates a CfnEmailIdentity$ConfigurationSetAttributesProperty$Builder instance using the provided configuration.
   The function takes the CfnEmailIdentity$ConfigurationSetAttributesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -924,6 +1092,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-email-identity-configuration-set-attributes-property-builder
+  ""
+  [id config]
+  (build-cfn-email-identity-configuration-set-attributes-property-builder (new CfnEmailIdentity$ConfigurationSetAttributesProperty$Builder) id config))
+
+
 (defn build-cfn-email-identity-dkim-attributes-property-builder
   "The build-cfn-email-identity-dkim-attributes-property-builder function updates a CfnEmailIdentity$DkimAttributesProperty$Builder instance using the provided configuration.
   The function takes the CfnEmailIdentity$DkimAttributesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -939,6 +1113,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :signing-enabled)]
     (. builder signingEnabled data))
   (.build builder))
+
+
+(defn cfn-email-identity-dkim-attributes-property-builder
+  ""
+  [id config]
+  (build-cfn-email-identity-dkim-attributes-property-builder (new CfnEmailIdentity$DkimAttributesProperty$Builder) id config))
 
 
 (defn build-cfn-email-identity-dkim-signing-attributes-property-builder
@@ -964,6 +1144,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-email-identity-dkim-signing-attributes-property-builder
+  ""
+  [id config]
+  (build-cfn-email-identity-dkim-signing-attributes-property-builder (new CfnEmailIdentity$DkimSigningAttributesProperty$Builder) id config))
+
+
 (defn build-cfn-email-identity-feedback-attributes-property-builder
   "The build-cfn-email-identity-feedback-attributes-property-builder function updates a CfnEmailIdentity$FeedbackAttributesProperty$Builder instance using the provided configuration.
   The function takes the CfnEmailIdentity$FeedbackAttributesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -979,6 +1165,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :email-forwarding-enabled)]
     (. builder emailForwardingEnabled data))
   (.build builder))
+
+
+(defn cfn-email-identity-feedback-attributes-property-builder
+  ""
+  [id config]
+  (build-cfn-email-identity-feedback-attributes-property-builder (new CfnEmailIdentity$FeedbackAttributesProperty$Builder) id config))
 
 
 (defn build-cfn-email-identity-mail-from-attributes-property-builder
@@ -999,6 +1191,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :mail-from-domain)]
     (. builder mailFromDomain data))
   (.build builder))
+
+
+(defn cfn-email-identity-mail-from-attributes-property-builder
+  ""
+  [id config]
+  (build-cfn-email-identity-mail-from-attributes-property-builder (new CfnEmailIdentity$MailFromAttributesProperty$Builder) id config))
 
 
 (defn build-cfn-email-identity-props-builder
@@ -1033,6 +1231,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-email-identity-props-builder
+  ""
+  [id config]
+  (build-cfn-email-identity-props-builder (new CfnEmailIdentityProps$Builder) id config))
+
+
 (defn build-cfn-receipt-filter-builder
   "The build-cfn-receipt-filter-builder function updates a CfnReceiptFilter$Builder instance using the provided configuration.
   The function takes the CfnReceiptFilter$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1048,6 +1252,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :filter)]
     (. builder filter data))
   (.build builder))
+
+
+(defn cfn-receipt-filter-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-receipt-filter-builder (CfnReceiptFilter$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-receipt-filter-filter-property-builder
@@ -1070,6 +1280,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-receipt-filter-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-receipt-filter-filter-property-builder (new CfnReceiptFilter$FilterProperty$Builder) id config))
+
+
 (defn build-cfn-receipt-filter-ip-filter-property-builder
   "The build-cfn-receipt-filter-ip-filter-property-builder function updates a CfnReceiptFilter$IpFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnReceiptFilter$IpFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1090,6 +1306,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-receipt-filter-ip-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-receipt-filter-ip-filter-property-builder (new CfnReceiptFilter$IpFilterProperty$Builder) id config))
+
+
 (defn build-cfn-receipt-filter-props-builder
   "The build-cfn-receipt-filter-props-builder function updates a CfnReceiptFilterProps$Builder instance using the provided configuration.
   The function takes the CfnReceiptFilterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1105,6 +1327,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :filter)]
     (. builder filter data))
   (.build builder))
+
+
+(defn cfn-receipt-filter-props-builder
+  ""
+  [id config]
+  (build-cfn-receipt-filter-props-builder (new CfnReceiptFilterProps$Builder) id config))
 
 
 (defn build-cfn-receipt-rule-action-property-builder
@@ -1142,6 +1370,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-receipt-rule-action-property-builder
+  ""
+  [id config]
+  (build-cfn-receipt-rule-action-property-builder (new CfnReceiptRule$ActionProperty$Builder) id config))
+
+
 (defn build-cfn-receipt-rule-add-header-action-property-builder
   "The build-cfn-receipt-rule-add-header-action-property-builder function updates a CfnReceiptRule$AddHeaderActionProperty$Builder instance using the provided configuration.
   The function takes the CfnReceiptRule$AddHeaderActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1160,6 +1394,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :header-value)]
     (. builder headerValue data))
   (.build builder))
+
+
+(defn cfn-receipt-rule-add-header-action-property-builder
+  ""
+  [id config]
+  (build-cfn-receipt-rule-add-header-action-property-builder (new CfnReceiptRule$AddHeaderActionProperty$Builder) id config))
 
 
 (defn build-cfn-receipt-rule-bounce-action-property-builder
@@ -1191,6 +1431,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-receipt-rule-bounce-action-property-builder
+  ""
+  [id config]
+  (build-cfn-receipt-rule-bounce-action-property-builder (new CfnReceiptRule$BounceActionProperty$Builder) id config))
+
+
 (defn build-cfn-receipt-rule-builder
   "The build-cfn-receipt-rule-builder function updates a CfnReceiptRule$Builder instance using the provided configuration.
   The function takes the CfnReceiptRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1212,6 +1458,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :rule-set-name)]
     (. builder ruleSetName data))
   (.build builder))
+
+
+(defn cfn-receipt-rule-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-receipt-rule-builder (CfnReceiptRule$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-receipt-rule-lambda-action-property-builder
@@ -1237,6 +1489,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-receipt-rule-lambda-action-property-builder
+  ""
+  [id config]
+  (build-cfn-receipt-rule-lambda-action-property-builder (new CfnReceiptRule$LambdaActionProperty$Builder) id config))
+
+
 (defn build-cfn-receipt-rule-props-builder
   "The build-cfn-receipt-rule-props-builder function updates a CfnReceiptRuleProps$Builder instance using the provided configuration.
   The function takes the CfnReceiptRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1258,6 +1516,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :rule-set-name)]
     (. builder ruleSetName data))
   (.build builder))
+
+
+(defn cfn-receipt-rule-props-builder
+  ""
+  [id config]
+  (build-cfn-receipt-rule-props-builder (new CfnReceiptRuleProps$Builder) id config))
 
 
 (defn build-cfn-receipt-rule-rule-property-builder
@@ -1292,6 +1556,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-receipt-rule-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-receipt-rule-rule-property-builder (new CfnReceiptRule$RuleProperty$Builder) id config))
+
+
 (defn build-cfn-receipt-rule-s3-action-property-builder
   "The build-cfn-receipt-rule-s3-action-property-builder function updates a CfnReceiptRule$S3ActionProperty$Builder instance using the provided configuration.
   The function takes the CfnReceiptRule$S3ActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1318,6 +1588,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-receipt-rule-s3-action-property-builder
+  ""
+  [id config]
+  (build-cfn-receipt-rule-s3-action-property-builder (new CfnReceiptRule$S3ActionProperty$Builder) id config))
+
+
 (defn build-cfn-receipt-rule-set-builder
   "The build-cfn-receipt-rule-set-builder function updates a CfnReceiptRuleSet$Builder instance using the provided configuration.
   The function takes the CfnReceiptRuleSet$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1335,6 +1611,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-receipt-rule-set-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-receipt-rule-set-builder (CfnReceiptRuleSet$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-receipt-rule-set-props-builder
   "The build-cfn-receipt-rule-set-props-builder function updates a CfnReceiptRuleSetProps$Builder instance using the provided configuration.
   The function takes the CfnReceiptRuleSetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1350,6 +1632,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :rule-set-name)]
     (. builder ruleSetName data))
   (.build builder))
+
+
+(defn cfn-receipt-rule-set-props-builder
+  ""
+  [id config]
+  (build-cfn-receipt-rule-set-props-builder (new CfnReceiptRuleSetProps$Builder) id config))
 
 
 (defn build-cfn-receipt-rule-sns-action-property-builder
@@ -1372,6 +1660,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-receipt-rule-sns-action-property-builder
+  ""
+  [id config]
+  (build-cfn-receipt-rule-sns-action-property-builder (new CfnReceiptRule$SNSActionProperty$Builder) id config))
+
+
 (defn build-cfn-receipt-rule-stop-action-property-builder
   "The build-cfn-receipt-rule-stop-action-property-builder function updates a CfnReceiptRule$StopActionProperty$Builder instance using the provided configuration.
   The function takes the CfnReceiptRule$StopActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1390,6 +1684,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
+
+
+(defn cfn-receipt-rule-stop-action-property-builder
+  ""
+  [id config]
+  (build-cfn-receipt-rule-stop-action-property-builder (new CfnReceiptRule$StopActionProperty$Builder) id config))
 
 
 (defn build-cfn-receipt-rule-workmail-action-property-builder
@@ -1412,6 +1712,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-receipt-rule-workmail-action-property-builder
+  ""
+  [id config]
+  (build-cfn-receipt-rule-workmail-action-property-builder (new CfnReceiptRule$WorkmailActionProperty$Builder) id config))
+
+
 (defn build-cfn-template-builder
   "The build-cfn-template-builder function updates a CfnTemplate$Builder instance using the provided configuration.
   The function takes the CfnTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1429,6 +1735,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-template-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-template-builder (CfnTemplate$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-template-props-builder
   "The build-cfn-template-props-builder function updates a CfnTemplateProps$Builder instance using the provided configuration.
   The function takes the CfnTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1444,6 +1756,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :template)]
     (. builder template data))
   (.build builder))
+
+
+(defn cfn-template-props-builder
+  ""
+  [id config]
+  (build-cfn-template-props-builder (new CfnTemplateProps$Builder) id config))
 
 
 (defn build-cfn-template-template-property-builder
@@ -1472,6 +1790,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-template-template-property-builder
+  ""
+  [id config]
+  (build-cfn-template-template-property-builder (new CfnTemplate$TemplateProperty$Builder) id config))
+
+
 (defn build-cfn-vdm-attributes-builder
   "The build-cfn-vdm-attributes-builder function updates a CfnVdmAttributes$Builder instance using the provided configuration.
   The function takes the CfnVdmAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1492,6 +1816,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-vdm-attributes-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-vdm-attributes-builder (CfnVdmAttributes$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-vdm-attributes-dashboard-attributes-property-builder
   "The build-cfn-vdm-attributes-dashboard-attributes-property-builder function updates a CfnVdmAttributes$DashboardAttributesProperty$Builder instance using the provided configuration.
   The function takes the CfnVdmAttributes$DashboardAttributesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1509,6 +1839,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-vdm-attributes-dashboard-attributes-property-builder
+  ""
+  [id config]
+  (build-cfn-vdm-attributes-dashboard-attributes-property-builder (new CfnVdmAttributes$DashboardAttributesProperty$Builder) id config))
+
+
 (defn build-cfn-vdm-attributes-guardian-attributes-property-builder
   "The build-cfn-vdm-attributes-guardian-attributes-property-builder function updates a CfnVdmAttributes$GuardianAttributesProperty$Builder instance using the provided configuration.
   The function takes the CfnVdmAttributes$GuardianAttributesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1524,6 +1860,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :optimized-shared-delivery)]
     (. builder optimizedSharedDelivery data))
   (.build builder))
+
+
+(defn cfn-vdm-attributes-guardian-attributes-property-builder
+  ""
+  [id config]
+  (build-cfn-vdm-attributes-guardian-attributes-property-builder (new CfnVdmAttributes$GuardianAttributesProperty$Builder) id config))
 
 
 (defn build-cfn-vdm-attributes-props-builder
@@ -1544,6 +1886,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :guardian-attributes)]
     (. builder guardianAttributes data))
   (.build builder))
+
+
+(defn cfn-vdm-attributes-props-builder
+  ""
+  [id config]
+  (build-cfn-vdm-attributes-props-builder (new CfnVdmAttributesProps$Builder) id config))
 
 
 (defn build-cloud-watch-dimension-builder
@@ -1567,6 +1915,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (cloud-watch-dimension-source config id :source)]
     (. builder source data))
   (.build builder))
+
+
+(defn cloud-watch-dimension-builder
+  ""
+  [id config]
+  (build-cloud-watch-dimension-builder (new CloudWatchDimension$Builder) id config))
 
 
 (defn build-configuration-set-builder
@@ -1604,6 +1958,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn configuration-set-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-configuration-set-builder (ConfigurationSet$Builder/create scope (name id)) id config))
+
+
 (defn build-configuration-set-event-destination-builder
   "The build-configuration-set-event-destination-builder function updates a ConfigurationSetEventDestination$Builder instance using the provided configuration.
   The function takes the ConfigurationSetEventDestination$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1633,6 +1993,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn configuration-set-event-destination-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-configuration-set-event-destination-builder (ConfigurationSetEventDestination$Builder/create scope (name id)) id config))
+
+
 (defn build-configuration-set-event-destination-options-builder
   "The build-configuration-set-event-destination-options-builder function updates a ConfigurationSetEventDestinationOptions$Builder instance using the provided configuration.
   The function takes the ConfigurationSetEventDestinationOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1657,6 +2023,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :events)]
     (. builder events data))
   (.build builder))
+
+
+(defn configuration-set-event-destination-options-builder
+  ""
+  [id config]
+  (build-configuration-set-event-destination-options-builder (new ConfigurationSetEventDestinationOptions$Builder) id config))
 
 
 (defn build-configuration-set-event-destination-props-builder
@@ -1686,6 +2058,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :events)]
     (. builder events data))
   (.build builder))
+
+
+(defn configuration-set-event-destination-props-builder
+  ""
+  [id config]
+  (build-configuration-set-event-destination-props-builder (new ConfigurationSetEventDestinationProps$Builder) id config))
 
 
 (defn build-configuration-set-props-builder
@@ -1723,6 +2101,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn configuration-set-props-builder
+  ""
+  [id config]
+  (build-configuration-set-props-builder (new ConfigurationSetProps$Builder) id config))
+
+
 (defn build-dedicated-ip-pool-builder
   "The build-dedicated-ip-pool-builder function updates a DedicatedIpPool$Builder instance using the provided configuration.
   The function takes the DedicatedIpPool$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1743,6 +2127,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn dedicated-ip-pool-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-dedicated-ip-pool-builder (DedicatedIpPool$Builder/create scope (name id)) id config))
+
+
 (defn build-dedicated-ip-pool-props-builder
   "The build-dedicated-ip-pool-props-builder function updates a DedicatedIpPoolProps$Builder instance using the provided configuration.
   The function takes the DedicatedIpPoolProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1761,6 +2151,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (scaling-mode config id :scaling-mode)]
     (. builder scalingMode data))
   (.build builder))
+
+
+(defn dedicated-ip-pool-props-builder
+  ""
+  [id config]
+  (build-dedicated-ip-pool-props-builder (new DedicatedIpPoolProps$Builder) id config))
 
 
 (defn build-dkim-identity-config-builder
@@ -1786,6 +2182,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn dkim-identity-config-builder
+  ""
+  [id config]
+  (build-dkim-identity-config-builder (new DkimIdentityConfig$Builder) id config))
+
+
 (defn build-dkim-record-builder
   "The build-dkim-record-builder function updates a DkimRecord$Builder instance using the provided configuration.
   The function takes the DkimRecord$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1804,6 +2206,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn dkim-record-builder
+  ""
+  [id config]
+  (build-dkim-record-builder (new DkimRecord$Builder) id config))
 
 
 (defn build-drop-spam-receipt-rule-builder
@@ -1844,6 +2252,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn drop-spam-receipt-rule-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-drop-spam-receipt-rule-builder (DropSpamReceiptRule$Builder/create scope (name id)) id config))
+
+
 (defn build-drop-spam-receipt-rule-props-builder
   "The build-drop-spam-receipt-rule-props-builder function updates a DropSpamReceiptRuleProps$Builder instance using the provided configuration.
   The function takes the DropSpamReceiptRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1882,6 +2296,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn drop-spam-receipt-rule-props-builder
+  ""
+  [id config]
+  (build-drop-spam-receipt-rule-props-builder (new DropSpamReceiptRuleProps$Builder) id config))
+
+
 (defn build-email-identity-builder
   "The build-email-identity-builder function updates a EmailIdentity$Builder instance using the provided configuration.
   The function takes the EmailIdentity$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1915,6 +2335,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :mail-from-domain)]
     (. builder mailFromDomain data))
   (.build builder))
+
+
+(defn email-identity-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-email-identity-builder (EmailIdentity$Builder/create scope (name id)) id config))
 
 
 (defn build-email-identity-props-builder
@@ -1952,6 +2378,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn email-identity-props-builder
+  ""
+  [id config]
+  (build-email-identity-props-builder (new EmailIdentityProps$Builder) id config))
+
+
 (defn build-lambda-action-config-builder
   "The build-lambda-action-config-builder function updates a LambdaActionConfig$Builder instance using the provided configuration.
   The function takes the LambdaActionConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1973,6 +2405,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
+
+
+(defn lambda-action-config-builder
+  ""
+  [id config]
+  (build-lambda-action-config-builder (new LambdaActionConfig$Builder) id config))
 
 
 (defn build-receipt-filter-builder
@@ -1998,6 +2436,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn receipt-filter-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-receipt-filter-builder (ReceiptFilter$Builder/create scope (name id)) id config))
+
+
 (defn build-receipt-filter-props-builder
   "The build-receipt-filter-props-builder function updates a ReceiptFilterProps$Builder instance using the provided configuration.
   The function takes the ReceiptFilterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2019,6 +2463,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :receipt-filter-name)]
     (. builder receiptFilterName data))
   (.build builder))
+
+
+(defn receipt-filter-props-builder
+  ""
+  [id config]
+  (build-receipt-filter-props-builder (new ReceiptFilterProps$Builder) id config))
 
 
 (defn build-receipt-rule-action-config-builder
@@ -2054,6 +2504,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :workmail-action)]
     (. builder workmailAction data))
   (.build builder))
+
+
+(defn receipt-rule-action-config-builder
+  ""
+  [id config]
+  (build-receipt-rule-action-config-builder (new ReceiptRuleActionConfig$Builder) id config))
 
 
 (defn build-receipt-rule-builder
@@ -2094,6 +2550,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn receipt-rule-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-receipt-rule-builder (ReceiptRule$Builder/create scope (name id)) id config))
+
+
 (defn build-receipt-rule-options-builder
   "The build-receipt-rule-options-builder function updates a ReceiptRuleOptions$Builder instance using the provided configuration.
   The function takes the ReceiptRuleOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2127,6 +2589,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (tls-policy config id :tls-policy)]
     (. builder tlsPolicy data))
   (.build builder))
+
+
+(defn receipt-rule-options-builder
+  ""
+  [id config]
+  (build-receipt-rule-options-builder (new ReceiptRuleOptions$Builder) id config))
 
 
 (defn build-receipt-rule-props-builder
@@ -2167,6 +2635,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn receipt-rule-props-builder
+  ""
+  [id config]
+  (build-receipt-rule-props-builder (new ReceiptRuleProps$Builder) id config))
+
+
 (defn build-receipt-rule-set-builder
   "The build-receipt-rule-set-builder function updates a ReceiptRuleSet$Builder instance using the provided configuration.
   The function takes the ReceiptRuleSet$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2190,6 +2664,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn receipt-rule-set-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-receipt-rule-set-builder (ReceiptRuleSet$Builder/create scope (name id)) id config))
+
+
 (defn build-receipt-rule-set-props-builder
   "The build-receipt-rule-set-props-builder function updates a ReceiptRuleSetProps$Builder instance using the provided configuration.
   The function takes the ReceiptRuleSetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2211,6 +2691,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :rules)]
     (. builder rules data))
   (.build builder))
+
+
+(defn receipt-rule-set-props-builder
+  ""
+  [id config]
+  (build-receipt-rule-set-props-builder (new ReceiptRuleSetProps$Builder) id config))
 
 
 (defn build-s3-action-config-builder
@@ -2239,6 +2725,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn s3-action-config-builder
+  ""
+  [id config]
+  (build-s3-action-config-builder (new S3ActionConfig$Builder) id config))
+
+
 (defn build-sns-action-config-builder
   "The build-sns-action-config-builder function updates a SNSActionConfig$Builder instance using the provided configuration.
   The function takes the SNSActionConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2257,6 +2749,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
+
+
+(defn sns-action-config-builder
+  ""
+  [id config]
+  (build-sns-action-config-builder (new SNSActionConfig$Builder) id config))
 
 
 (defn build-stop-action-config-builder
@@ -2279,6 +2777,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn stop-action-config-builder
+  ""
+  [id config]
+  (build-stop-action-config-builder (new StopActionConfig$Builder) id config))
+
+
 (defn build-vdm-attributes-builder
   "The build-vdm-attributes-builder function updates a VdmAttributes$Builder instance using the provided configuration.
   The function takes the VdmAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2297,6 +2801,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :optimized-shared-delivery)]
     (. builder optimizedSharedDelivery data))
   (.build builder))
+
+
+(defn vdm-attributes-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-vdm-attributes-builder (VdmAttributes$Builder/create scope (name id)) id config))
 
 
 (defn build-vdm-attributes-props-builder
@@ -2319,6 +2829,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn vdm-attributes-props-builder
+  ""
+  [id config]
+  (build-vdm-attributes-props-builder (new VdmAttributesProps$Builder) id config))
+
+
 (defn build-workmail-action-config-builder
   "The build-workmail-action-config-builder function updates a WorkmailActionConfig$Builder instance using the provided configuration.
   The function takes the WorkmailActionConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2337,3 +2853,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
+
+
+(defn workmail-action-config-builder
+  ""
+  [id config]
+  (build-workmail-action-config-builder (new WorkmailActionConfig$Builder) id config))

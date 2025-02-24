@@ -1632,6 +1632,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-aggregation-function-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-aggregation-function-property-builder (new CfnAnalysis$AggregationFunctionProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-aggregation-sort-configuration-property-builder
   "The build-cfn-analysis-aggregation-sort-configuration-property-builder function updates a CfnAnalysis$AggregationSortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$AggregationSortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1655,6 +1661,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-aggregation-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-aggregation-sort-configuration-property-builder (new CfnAnalysis$AggregationSortConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-analysis-defaults-property-builder
   "The build-cfn-analysis-analysis-defaults-property-builder function updates a CfnAnalysis$AnalysisDefaultsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$AnalysisDefaultsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1670,6 +1682,12 @@
   (when-let [data (lookup-entry config id :default-new-sheet-configuration)]
     (. builder defaultNewSheetConfiguration data))
   (.build builder))
+
+
+(defn cfn-analysis-analysis-defaults-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-analysis-defaults-property-builder (new CfnAnalysis$AnalysisDefaultsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-analysis-definition-property-builder
@@ -1710,6 +1728,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-analysis-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-analysis-definition-property-builder (new CfnAnalysis$AnalysisDefinitionProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-analysis-error-property-builder
   "The build-cfn-analysis-analysis-error-property-builder function updates a CfnAnalysis$AnalysisErrorProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$AnalysisErrorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1733,6 +1757,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-analysis-error-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-analysis-error-property-builder (new CfnAnalysis$AnalysisErrorProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-analysis-source-entity-property-builder
   "The build-cfn-analysis-analysis-source-entity-property-builder function updates a CfnAnalysis$AnalysisSourceEntityProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$AnalysisSourceEntityProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1748,6 +1778,12 @@
   (when-let [data (lookup-entry config id :source-template)]
     (. builder sourceTemplate data))
   (.build builder))
+
+
+(defn cfn-analysis-analysis-source-entity-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-analysis-source-entity-property-builder (new CfnAnalysis$AnalysisSourceEntityProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-analysis-source-template-property-builder
@@ -1770,6 +1806,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-analysis-source-template-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-analysis-source-template-property-builder (new CfnAnalysis$AnalysisSourceTemplateProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-anchor-date-configuration-property-builder
   "The build-cfn-analysis-anchor-date-configuration-property-builder function updates a CfnAnalysis$AnchorDateConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$AnchorDateConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1788,6 +1830,12 @@
   (when-let [data (lookup-entry config id :parameter-name)]
     (. builder parameterName data))
   (.build builder))
+
+
+(defn cfn-analysis-anchor-date-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-anchor-date-configuration-property-builder (new CfnAnalysis$AnchorDateConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-arc-axis-configuration-property-builder
@@ -1810,6 +1858,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-arc-axis-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-arc-axis-configuration-property-builder (new CfnAnalysis$ArcAxisConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-arc-axis-display-range-property-builder
   "The build-cfn-analysis-arc-axis-display-range-property-builder function updates a CfnAnalysis$ArcAxisDisplayRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ArcAxisDisplayRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1828,6 +1882,12 @@
   (when-let [data (lookup-entry config id :min)]
     (. builder min data))
   (.build builder))
+
+
+(defn cfn-analysis-arc-axis-display-range-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-arc-axis-display-range-property-builder (new CfnAnalysis$ArcAxisDisplayRangeProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-arc-configuration-property-builder
@@ -1850,6 +1910,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-arc-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-arc-configuration-property-builder (new CfnAnalysis$ArcConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-arc-options-property-builder
   "The build-cfn-analysis-arc-options-property-builder function updates a CfnAnalysis$ArcOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ArcOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1865,6 +1931,12 @@
   (when-let [data (lookup-entry config id :arc-thickness)]
     (. builder arcThickness data))
   (.build builder))
+
+
+(defn cfn-analysis-arc-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-arc-options-property-builder (new CfnAnalysis$ArcOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-asset-options-property-builder
@@ -1887,6 +1959,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-asset-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-asset-options-property-builder (new CfnAnalysis$AssetOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-attribute-aggregation-function-property-builder
   "The build-cfn-analysis-attribute-aggregation-function-property-builder function updates a CfnAnalysis$AttributeAggregationFunctionProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$AttributeAggregationFunctionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1905,6 +1983,12 @@
   (when-let [data (lookup-entry config id :value-for-multiple-values)]
     (. builder valueForMultipleValues data))
   (.build builder))
+
+
+(defn cfn-analysis-attribute-aggregation-function-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-attribute-aggregation-function-property-builder (new CfnAnalysis$AttributeAggregationFunctionProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-axis-data-options-property-builder
@@ -1927,6 +2011,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-axis-data-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-axis-data-options-property-builder (new CfnAnalysis$AxisDataOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-axis-display-min-max-range-property-builder
   "The build-cfn-analysis-axis-display-min-max-range-property-builder function updates a CfnAnalysis$AxisDisplayMinMaxRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$AxisDisplayMinMaxRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1945,6 +2035,12 @@
   (when-let [data (lookup-entry config id :minimum)]
     (. builder minimum data))
   (.build builder))
+
+
+(defn cfn-analysis-axis-display-min-max-range-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-axis-display-min-max-range-property-builder (new CfnAnalysis$AxisDisplayMinMaxRangeProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-axis-display-options-property-builder
@@ -1979,6 +2075,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-axis-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-axis-display-options-property-builder (new CfnAnalysis$AxisDisplayOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-axis-display-range-property-builder
   "The build-cfn-analysis-axis-display-range-property-builder function updates a CfnAnalysis$AxisDisplayRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$AxisDisplayRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1997,6 +2099,12 @@
   (when-let [data (lookup-entry config id :min-max)]
     (. builder minMax data))
   (.build builder))
+
+
+(defn cfn-analysis-axis-display-range-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-axis-display-range-property-builder (new CfnAnalysis$AxisDisplayRangeProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-axis-label-options-property-builder
@@ -2022,6 +2130,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-axis-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-axis-label-options-property-builder (new CfnAnalysis$AxisLabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-axis-label-reference-options-property-builder
   "The build-cfn-analysis-axis-label-reference-options-property-builder function updates a CfnAnalysis$AxisLabelReferenceOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$AxisLabelReferenceOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2040,6 +2154,12 @@
   (when-let [data (lookup-entry config id :field-id)]
     (. builder fieldId data))
   (.build builder))
+
+
+(defn cfn-analysis-axis-label-reference-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-axis-label-reference-options-property-builder (new CfnAnalysis$AxisLabelReferenceOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-axis-linear-scale-property-builder
@@ -2062,6 +2182,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-axis-linear-scale-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-axis-linear-scale-property-builder (new CfnAnalysis$AxisLinearScaleProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-axis-logarithmic-scale-property-builder
   "The build-cfn-analysis-axis-logarithmic-scale-property-builder function updates a CfnAnalysis$AxisLogarithmicScaleProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$AxisLogarithmicScaleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2077,6 +2203,12 @@
   (when-let [data (lookup-entry config id :base)]
     (. builder base data))
   (.build builder))
+
+
+(defn cfn-analysis-axis-logarithmic-scale-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-axis-logarithmic-scale-property-builder (new CfnAnalysis$AxisLogarithmicScaleProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-axis-scale-property-builder
@@ -2099,6 +2231,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-axis-scale-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-axis-scale-property-builder (new CfnAnalysis$AxisScaleProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-axis-tick-label-options-property-builder
   "The build-cfn-analysis-axis-tick-label-options-property-builder function updates a CfnAnalysis$AxisTickLabelOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$AxisTickLabelOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2117,6 +2255,12 @@
   (when-let [data (lookup-entry config id :rotation-angle)]
     (. builder rotationAngle data))
   (.build builder))
+
+
+(defn cfn-analysis-axis-tick-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-axis-tick-label-options-property-builder (new CfnAnalysis$AxisTickLabelOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-bar-chart-aggregated-field-wells-property-builder
@@ -2143,6 +2287,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-analysis-bar-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-bar-chart-aggregated-field-wells-property-builder (new CfnAnalysis$BarChartAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-bar-chart-configuration-property-builder
@@ -2207,6 +2357,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-bar-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-bar-chart-configuration-property-builder (new CfnAnalysis$BarChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-bar-chart-field-wells-property-builder
   "The build-cfn-analysis-bar-chart-field-wells-property-builder function updates a CfnAnalysis$BarChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$BarChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2222,6 +2378,12 @@
   (when-let [data (lookup-entry config id :bar-chart-aggregated-field-wells)]
     (. builder barChartAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-analysis-bar-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-bar-chart-field-wells-property-builder (new CfnAnalysis$BarChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-bar-chart-sort-configuration-property-builder
@@ -2256,6 +2418,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-bar-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-bar-chart-sort-configuration-property-builder (new CfnAnalysis$BarChartSortConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-bar-chart-visual-property-builder
   "The build-cfn-analysis-bar-chart-visual-property-builder function updates a CfnAnalysis$BarChartVisualProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$BarChartVisualProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2288,6 +2456,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-bar-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-bar-chart-visual-property-builder (new CfnAnalysis$BarChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-bin-count-options-property-builder
   "The build-cfn-analysis-bin-count-options-property-builder function updates a CfnAnalysis$BinCountOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$BinCountOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2303,6 +2477,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-analysis-bin-count-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-bin-count-options-property-builder (new CfnAnalysis$BinCountOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-bin-width-options-property-builder
@@ -2323,6 +2503,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-analysis-bin-width-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-bin-width-options-property-builder (new CfnAnalysis$BinWidthOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-body-section-configuration-property-builder
@@ -2351,6 +2537,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-body-section-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-body-section-configuration-property-builder (new CfnAnalysis$BodySectionConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-body-section-content-property-builder
   "The build-cfn-analysis-body-section-content-property-builder function updates a CfnAnalysis$BodySectionContentProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$BodySectionContentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2366,6 +2558,12 @@
   (when-let [data (lookup-entry config id :layout)]
     (. builder layout data))
   (.build builder))
+
+
+(defn cfn-analysis-body-section-content-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-body-section-content-property-builder (new CfnAnalysis$BodySectionContentProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-box-plot-aggregated-field-wells-property-builder
@@ -2386,6 +2584,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-analysis-box-plot-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-box-plot-aggregated-field-wells-property-builder (new CfnAnalysis$BoxPlotAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-box-plot-chart-configuration-property-builder
@@ -2435,6 +2639,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-box-plot-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-box-plot-chart-configuration-property-builder (new CfnAnalysis$BoxPlotChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-box-plot-field-wells-property-builder
   "The build-cfn-analysis-box-plot-field-wells-property-builder function updates a CfnAnalysis$BoxPlotFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$BoxPlotFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2450,6 +2660,12 @@
   (when-let [data (lookup-entry config id :box-plot-aggregated-field-wells)]
     (. builder boxPlotAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-analysis-box-plot-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-box-plot-field-wells-property-builder (new CfnAnalysis$BoxPlotFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-box-plot-options-property-builder
@@ -2475,6 +2691,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-box-plot-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-box-plot-options-property-builder (new CfnAnalysis$BoxPlotOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-box-plot-sort-configuration-property-builder
   "The build-cfn-analysis-box-plot-sort-configuration-property-builder function updates a CfnAnalysis$BoxPlotSortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$BoxPlotSortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2495,6 +2717,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-box-plot-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-box-plot-sort-configuration-property-builder (new CfnAnalysis$BoxPlotSortConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-box-plot-style-options-property-builder
   "The build-cfn-analysis-box-plot-style-options-property-builder function updates a CfnAnalysis$BoxPlotStyleOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$BoxPlotStyleOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2510,6 +2738,12 @@
   (when-let [data (lookup-entry config id :fill-style)]
     (. builder fillStyle data))
   (.build builder))
+
+
+(defn cfn-analysis-box-plot-style-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-box-plot-style-options-property-builder (new CfnAnalysis$BoxPlotStyleOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-box-plot-visual-property-builder
@@ -2542,6 +2776,12 @@
   (when-let [data (lookup-entry config id :visual-id)]
     (. builder visualId data))
   (.build builder))
+
+
+(defn cfn-analysis-box-plot-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-box-plot-visual-property-builder (new CfnAnalysis$BoxPlotVisualProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-builder
@@ -2597,6 +2837,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-analysis-builder (CfnAnalysis$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-analysis-calculated-field-property-builder
   "The build-cfn-analysis-calculated-field-property-builder function updates a CfnAnalysis$CalculatedFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$CalculatedFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2620,6 +2866,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-calculated-field-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-calculated-field-property-builder (new CfnAnalysis$CalculatedFieldProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-calculated-measure-field-property-builder
   "The build-cfn-analysis-calculated-measure-field-property-builder function updates a CfnAnalysis$CalculatedMeasureFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$CalculatedMeasureFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2640,6 +2892,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-calculated-measure-field-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-calculated-measure-field-property-builder (new CfnAnalysis$CalculatedMeasureFieldProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-cascading-control-configuration-property-builder
   "The build-cfn-analysis-cascading-control-configuration-property-builder function updates a CfnAnalysis$CascadingControlConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$CascadingControlConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2655,6 +2913,12 @@
   (when-let [data (lookup-entry config id :source-controls)]
     (. builder sourceControls data))
   (.build builder))
+
+
+(defn cfn-analysis-cascading-control-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-cascading-control-configuration-property-builder (new CfnAnalysis$CascadingControlConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-cascading-control-source-property-builder
@@ -2675,6 +2939,12 @@
   (when-let [data (lookup-entry config id :source-sheet-control-id)]
     (. builder sourceSheetControlId data))
   (.build builder))
+
+
+(defn cfn-analysis-cascading-control-source-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-cascading-control-source-property-builder (new CfnAnalysis$CascadingControlSourceProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-categorical-dimension-field-property-builder
@@ -2703,6 +2973,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-categorical-dimension-field-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-categorical-dimension-field-property-builder (new CfnAnalysis$CategoricalDimensionFieldProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-categorical-measure-field-property-builder
   "The build-cfn-analysis-categorical-measure-field-property-builder function updates a CfnAnalysis$CategoricalMeasureFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$CategoricalMeasureFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2729,6 +3005,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-categorical-measure-field-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-categorical-measure-field-property-builder (new CfnAnalysis$CategoricalMeasureFieldProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-category-drill-down-filter-property-builder
   "The build-cfn-analysis-category-drill-down-filter-property-builder function updates a CfnAnalysis$CategoryDrillDownFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$CategoryDrillDownFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2747,6 +3029,12 @@
   (when-let [data (lookup-entry config id :column)]
     (. builder column data))
   (.build builder))
+
+
+(defn cfn-analysis-category-drill-down-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-category-drill-down-filter-property-builder (new CfnAnalysis$CategoryDrillDownFilterProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-category-filter-configuration-property-builder
@@ -2770,6 +3058,12 @@
   (when-let [data (lookup-entry config id :filter-list-configuration)]
     (. builder filterListConfiguration data))
   (.build builder))
+
+
+(defn cfn-analysis-category-filter-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-category-filter-configuration-property-builder (new CfnAnalysis$CategoryFilterConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-category-filter-property-builder
@@ -2798,6 +3092,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-category-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-category-filter-property-builder (new CfnAnalysis$CategoryFilterProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-chart-axis-label-options-property-builder
   "The build-cfn-analysis-chart-axis-label-options-property-builder function updates a CfnAnalysis$ChartAxisLabelOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ChartAxisLabelOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2821,6 +3121,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-chart-axis-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-chart-axis-label-options-property-builder (new CfnAnalysis$ChartAxisLabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-cluster-marker-configuration-property-builder
   "The build-cfn-analysis-cluster-marker-configuration-property-builder function updates a CfnAnalysis$ClusterMarkerConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ClusterMarkerConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2838,6 +3144,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-cluster-marker-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-cluster-marker-configuration-property-builder (new CfnAnalysis$ClusterMarkerConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-cluster-marker-property-builder
   "The build-cfn-analysis-cluster-marker-property-builder function updates a CfnAnalysis$ClusterMarkerProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ClusterMarkerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2853,6 +3165,12 @@
   (when-let [data (lookup-entry config id :simple-cluster-marker)]
     (. builder simpleClusterMarker data))
   (.build builder))
+
+
+(defn cfn-analysis-cluster-marker-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-cluster-marker-property-builder (new CfnAnalysis$ClusterMarkerProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-color-scale-property-builder
@@ -2878,6 +3196,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-color-scale-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-color-scale-property-builder (new CfnAnalysis$ColorScaleProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-colors-configuration-property-builder
   "The build-cfn-analysis-colors-configuration-property-builder function updates a CfnAnalysis$ColorsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ColorsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2893,6 +3217,12 @@
   (when-let [data (lookup-entry config id :custom-colors)]
     (. builder customColors data))
   (.build builder))
+
+
+(defn cfn-analysis-colors-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-colors-configuration-property-builder (new CfnAnalysis$ColorsConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-column-configuration-property-builder
@@ -2921,6 +3251,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-column-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-column-configuration-property-builder (new CfnAnalysis$ColumnConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-column-hierarchy-property-builder
   "The build-cfn-analysis-column-hierarchy-property-builder function updates a CfnAnalysis$ColumnHierarchyProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ColumnHierarchyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2944,6 +3280,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-column-hierarchy-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-column-hierarchy-property-builder (new CfnAnalysis$ColumnHierarchyProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-column-identifier-property-builder
   "The build-cfn-analysis-column-identifier-property-builder function updates a CfnAnalysis$ColumnIdentifierProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ColumnIdentifierProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2962,6 +3304,12 @@
   (when-let [data (lookup-entry config id :data-set-identifier)]
     (. builder dataSetIdentifier data))
   (.build builder))
+
+
+(defn cfn-analysis-column-identifier-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-column-identifier-property-builder (new CfnAnalysis$ColumnIdentifierProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-column-sort-property-builder
@@ -2985,6 +3333,12 @@
   (when-let [data (lookup-entry config id :sort-by)]
     (. builder sortBy data))
   (.build builder))
+
+
+(defn cfn-analysis-column-sort-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-column-sort-property-builder (new CfnAnalysis$ColumnSortProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-column-tooltip-item-property-builder
@@ -3013,6 +3367,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-column-tooltip-item-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-column-tooltip-item-property-builder (new CfnAnalysis$ColumnTooltipItemProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-combo-chart-aggregated-field-wells-property-builder
   "The build-cfn-analysis-combo-chart-aggregated-field-wells-property-builder function updates a CfnAnalysis$ComboChartAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ComboChartAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3037,6 +3397,12 @@
   (when-let [data (lookup-entry config id :line-values)]
     (. builder lineValues data))
   (.build builder))
+
+
+(defn cfn-analysis-combo-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-combo-chart-aggregated-field-wells-property-builder (new CfnAnalysis$ComboChartAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-combo-chart-configuration-property-builder
@@ -3101,6 +3467,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-combo-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-combo-chart-configuration-property-builder (new CfnAnalysis$ComboChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-combo-chart-field-wells-property-builder
   "The build-cfn-analysis-combo-chart-field-wells-property-builder function updates a CfnAnalysis$ComboChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ComboChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3116,6 +3488,12 @@
   (when-let [data (lookup-entry config id :combo-chart-aggregated-field-wells)]
     (. builder comboChartAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-analysis-combo-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-combo-chart-field-wells-property-builder (new CfnAnalysis$ComboChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-combo-chart-sort-configuration-property-builder
@@ -3142,6 +3520,12 @@
   (when-let [data (lookup-entry config id :color-sort)]
     (. builder colorSort data))
   (.build builder))
+
+
+(defn cfn-analysis-combo-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-combo-chart-sort-configuration-property-builder (new CfnAnalysis$ComboChartSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-combo-chart-visual-property-builder
@@ -3176,6 +3560,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-combo-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-combo-chart-visual-property-builder (new CfnAnalysis$ComboChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-comparison-configuration-property-builder
   "The build-cfn-analysis-comparison-configuration-property-builder function updates a CfnAnalysis$ComparisonConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ComparisonConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3196,6 +3586,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-comparison-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-comparison-configuration-property-builder (new CfnAnalysis$ComparisonConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-comparison-format-configuration-property-builder
   "The build-cfn-analysis-comparison-format-configuration-property-builder function updates a CfnAnalysis$ComparisonFormatConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ComparisonFormatConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3214,6 +3610,12 @@
   (when-let [data (lookup-entry config id :percentage-display-format-configuration)]
     (. builder percentageDisplayFormatConfiguration data))
   (.build builder))
+
+
+(defn cfn-analysis-comparison-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-comparison-format-configuration-property-builder (new CfnAnalysis$ComparisonFormatConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-computation-property-builder
@@ -3260,6 +3662,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-computation-property-builder (new CfnAnalysis$ComputationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-conditional-formatting-color-property-builder
   "The build-cfn-analysis-conditional-formatting-color-property-builder function updates a CfnAnalysis$ConditionalFormattingColorProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ConditionalFormattingColorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3278,6 +3686,12 @@
   (when-let [data (lookup-entry config id :solid)]
     (. builder solid data))
   (.build builder))
+
+
+(defn cfn-analysis-conditional-formatting-color-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-conditional-formatting-color-property-builder (new CfnAnalysis$ConditionalFormattingColorProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-conditional-formatting-custom-icon-condition-property-builder
@@ -3306,6 +3720,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-conditional-formatting-custom-icon-condition-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-conditional-formatting-custom-icon-condition-property-builder (new CfnAnalysis$ConditionalFormattingCustomIconConditionProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-conditional-formatting-custom-icon-options-property-builder
   "The build-cfn-analysis-conditional-formatting-custom-icon-options-property-builder function updates a CfnAnalysis$ConditionalFormattingCustomIconOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ConditionalFormattingCustomIconOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3324,6 +3744,12 @@
   (when-let [data (lookup-entry config id :unicode-icon)]
     (. builder unicodeIcon data))
   (.build builder))
+
+
+(defn cfn-analysis-conditional-formatting-custom-icon-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-conditional-formatting-custom-icon-options-property-builder (new CfnAnalysis$ConditionalFormattingCustomIconOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-conditional-formatting-gradient-color-property-builder
@@ -3346,6 +3772,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-conditional-formatting-gradient-color-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-conditional-formatting-gradient-color-property-builder (new CfnAnalysis$ConditionalFormattingGradientColorProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-conditional-formatting-icon-display-configuration-property-builder
   "The build-cfn-analysis-conditional-formatting-icon-display-configuration-property-builder function updates a CfnAnalysis$ConditionalFormattingIconDisplayConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ConditionalFormattingIconDisplayConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3361,6 +3793,12 @@
   (when-let [data (lookup-entry config id :icon-display-option)]
     (. builder iconDisplayOption data))
   (.build builder))
+
+
+(defn cfn-analysis-conditional-formatting-icon-display-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-conditional-formatting-icon-display-configuration-property-builder (new CfnAnalysis$ConditionalFormattingIconDisplayConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-conditional-formatting-icon-property-builder
@@ -3383,6 +3821,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-conditional-formatting-icon-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-conditional-formatting-icon-property-builder (new CfnAnalysis$ConditionalFormattingIconProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-conditional-formatting-icon-set-property-builder
   "The build-cfn-analysis-conditional-formatting-icon-set-property-builder function updates a CfnAnalysis$ConditionalFormattingIconSetProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ConditionalFormattingIconSetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3401,6 +3845,12 @@
   (when-let [data (lookup-entry config id :icon-set-type)]
     (. builder iconSetType data))
   (.build builder))
+
+
+(defn cfn-analysis-conditional-formatting-icon-set-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-conditional-formatting-icon-set-property-builder (new CfnAnalysis$ConditionalFormattingIconSetProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-conditional-formatting-solid-color-property-builder
@@ -3423,6 +3873,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-conditional-formatting-solid-color-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-conditional-formatting-solid-color-property-builder (new CfnAnalysis$ConditionalFormattingSolidColorProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-contribution-analysis-default-property-builder
   "The build-cfn-analysis-contribution-analysis-default-property-builder function updates a CfnAnalysis$ContributionAnalysisDefaultProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ContributionAnalysisDefaultProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3441,6 +3897,12 @@
   (when-let [data (lookup-entry config id :measure-field-id)]
     (. builder measureFieldId data))
   (.build builder))
+
+
+(defn cfn-analysis-contribution-analysis-default-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-contribution-analysis-default-property-builder (new CfnAnalysis$ContributionAnalysisDefaultProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-currency-display-format-configuration-property-builder
@@ -3481,6 +3943,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-currency-display-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-currency-display-format-configuration-property-builder (new CfnAnalysis$CurrencyDisplayFormatConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-custom-action-filter-operation-property-builder
   "The build-cfn-analysis-custom-action-filter-operation-property-builder function updates a CfnAnalysis$CustomActionFilterOperationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$CustomActionFilterOperationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3501,6 +3969,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-custom-action-filter-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-custom-action-filter-operation-property-builder (new CfnAnalysis$CustomActionFilterOperationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-custom-action-navigation-operation-property-builder
   "The build-cfn-analysis-custom-action-navigation-operation-property-builder function updates a CfnAnalysis$CustomActionNavigationOperationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$CustomActionNavigationOperationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3518,6 +3992,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-custom-action-navigation-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-custom-action-navigation-operation-property-builder (new CfnAnalysis$CustomActionNavigationOperationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-custom-action-set-parameters-operation-property-builder
   "The build-cfn-analysis-custom-action-set-parameters-operation-property-builder function updates a CfnAnalysis$CustomActionSetParametersOperationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$CustomActionSetParametersOperationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3533,6 +4013,12 @@
   (when-let [data (lookup-entry config id :parameter-value-configurations)]
     (. builder parameterValueConfigurations data))
   (.build builder))
+
+
+(defn cfn-analysis-custom-action-set-parameters-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-custom-action-set-parameters-operation-property-builder (new CfnAnalysis$CustomActionSetParametersOperationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-custom-action-url-operation-property-builder
@@ -3553,6 +4039,12 @@
   (when-let [data (lookup-entry config id :url-template)]
     (. builder urlTemplate data))
   (.build builder))
+
+
+(defn cfn-analysis-custom-action-url-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-custom-action-url-operation-property-builder (new CfnAnalysis$CustomActionURLOperationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-custom-color-property-builder
@@ -3578,6 +4070,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-custom-color-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-custom-color-property-builder (new CfnAnalysis$CustomColorProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-custom-content-configuration-property-builder
   "The build-cfn-analysis-custom-content-configuration-property-builder function updates a CfnAnalysis$CustomContentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$CustomContentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3599,6 +4097,12 @@
   (when-let [data (lookup-entry config id :image-scaling)]
     (. builder imageScaling data))
   (.build builder))
+
+
+(defn cfn-analysis-custom-content-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-custom-content-configuration-property-builder (new CfnAnalysis$CustomContentConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-custom-content-visual-property-builder
@@ -3633,6 +4137,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-custom-content-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-custom-content-visual-property-builder (new CfnAnalysis$CustomContentVisualProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-custom-filter-configuration-property-builder
   "The build-cfn-analysis-custom-filter-configuration-property-builder function updates a CfnAnalysis$CustomFilterConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$CustomFilterConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3662,6 +4172,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-custom-filter-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-custom-filter-configuration-property-builder (new CfnAnalysis$CustomFilterConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-custom-filter-list-configuration-property-builder
   "The build-cfn-analysis-custom-filter-list-configuration-property-builder function updates a CfnAnalysis$CustomFilterListConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$CustomFilterListConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3688,6 +4204,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-custom-filter-list-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-custom-filter-list-configuration-property-builder (new CfnAnalysis$CustomFilterListConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-custom-narrative-options-property-builder
   "The build-cfn-analysis-custom-narrative-options-property-builder function updates a CfnAnalysis$CustomNarrativeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$CustomNarrativeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3703,6 +4225,12 @@
   (when-let [data (lookup-entry config id :narrative)]
     (. builder narrative data))
   (.build builder))
+
+
+(defn cfn-analysis-custom-narrative-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-custom-narrative-options-property-builder (new CfnAnalysis$CustomNarrativeOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-custom-parameter-values-property-builder
@@ -3731,6 +4259,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-custom-parameter-values-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-custom-parameter-values-property-builder (new CfnAnalysis$CustomParameterValuesProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-custom-values-configuration-property-builder
   "The build-cfn-analysis-custom-values-configuration-property-builder function updates a CfnAnalysis$CustomValuesConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$CustomValuesConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3749,6 +4283,12 @@
   (when-let [data (lookup-entry config id :include-null-value)]
     (. builder includeNullValue data))
   (.build builder))
+
+
+(defn cfn-analysis-custom-values-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-custom-values-configuration-property-builder (new CfnAnalysis$CustomValuesConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-data-bars-options-property-builder
@@ -3774,6 +4314,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-data-bars-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-data-bars-options-property-builder (new CfnAnalysis$DataBarsOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-data-color-property-builder
   "The build-cfn-analysis-data-color-property-builder function updates a CfnAnalysis$DataColorProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DataColorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3792,6 +4338,12 @@
   (when-let [data (lookup-entry config id :data-value)]
     (. builder dataValue data))
   (.build builder))
+
+
+(defn cfn-analysis-data-color-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-data-color-property-builder (new CfnAnalysis$DataColorProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-data-field-series-item-property-builder
@@ -3818,6 +4370,12 @@
   (when-let [data (lookup-entry config id :settings)]
     (. builder settings data))
   (.build builder))
+
+
+(defn cfn-analysis-data-field-series-item-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-data-field-series-item-property-builder (new CfnAnalysis$DataFieldSeriesItemProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-data-label-options-property-builder
@@ -3864,6 +4422,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-data-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-data-label-options-property-builder (new CfnAnalysis$DataLabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-data-label-type-property-builder
   "The build-cfn-analysis-data-label-type-property-builder function updates a CfnAnalysis$DataLabelTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DataLabelTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3893,6 +4457,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-data-label-type-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-data-label-type-property-builder (new CfnAnalysis$DataLabelTypeProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-data-path-color-property-builder
   "The build-cfn-analysis-data-path-color-property-builder function updates a CfnAnalysis$DataPathColorProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DataPathColorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3914,6 +4484,12 @@
   (when-let [data (lookup-entry config id :time-granularity)]
     (. builder timeGranularity data))
   (.build builder))
+
+
+(defn cfn-analysis-data-path-color-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-data-path-color-property-builder (new CfnAnalysis$DataPathColorProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-data-path-label-type-property-builder
@@ -3939,6 +4515,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-data-path-label-type-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-data-path-label-type-property-builder (new CfnAnalysis$DataPathLabelTypeProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-data-path-sort-property-builder
   "The build-cfn-analysis-data-path-sort-property-builder function updates a CfnAnalysis$DataPathSortProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DataPathSortProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3959,6 +4541,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-data-path-sort-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-data-path-sort-property-builder (new CfnAnalysis$DataPathSortProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-data-path-type-property-builder
   "The build-cfn-analysis-data-path-type-property-builder function updates a CfnAnalysis$DataPathTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DataPathTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3974,6 +4562,12 @@
   (when-let [data (lookup-entry config id :pivot-table-data-path-type)]
     (. builder pivotTableDataPathType data))
   (.build builder))
+
+
+(defn cfn-analysis-data-path-type-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-data-path-type-property-builder (new CfnAnalysis$DataPathTypeProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-data-path-value-property-builder
@@ -3999,6 +4593,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-data-path-value-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-data-path-value-property-builder (new CfnAnalysis$DataPathValueProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-data-set-identifier-declaration-property-builder
   "The build-cfn-analysis-data-set-identifier-declaration-property-builder function updates a CfnAnalysis$DataSetIdentifierDeclarationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DataSetIdentifierDeclarationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4017,6 +4617,12 @@
   (when-let [data (lookup-entry config id :identifier)]
     (. builder identifier data))
   (.build builder))
+
+
+(defn cfn-analysis-data-set-identifier-declaration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-data-set-identifier-declaration-property-builder (new CfnAnalysis$DataSetIdentifierDeclarationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-data-set-reference-property-builder
@@ -4039,6 +4645,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-data-set-reference-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-data-set-reference-property-builder (new CfnAnalysis$DataSetReferenceProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-date-axis-options-property-builder
   "The build-cfn-analysis-date-axis-options-property-builder function updates a CfnAnalysis$DateAxisOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DateAxisOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4054,6 +4666,12 @@
   (when-let [data (lookup-entry config id :missing-date-visibility)]
     (. builder missingDateVisibility data))
   (.build builder))
+
+
+(defn cfn-analysis-date-axis-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-date-axis-options-property-builder (new CfnAnalysis$DateAxisOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-date-dimension-field-property-builder
@@ -4085,6 +4703,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-date-dimension-field-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-date-dimension-field-property-builder (new CfnAnalysis$DateDimensionFieldProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-date-measure-field-property-builder
   "The build-cfn-analysis-date-measure-field-property-builder function updates a CfnAnalysis$DateMeasureFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DateMeasureFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4111,6 +4735,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-date-measure-field-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-date-measure-field-property-builder (new CfnAnalysis$DateMeasureFieldProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-date-time-default-values-property-builder
   "The build-cfn-analysis-date-time-default-values-property-builder function updates a CfnAnalysis$DateTimeDefaultValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DateTimeDefaultValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4132,6 +4762,12 @@
   (when-let [data (lookup-entry config id :static-values)]
     (. builder staticValues data))
   (.build builder))
+
+
+(defn cfn-analysis-date-time-default-values-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-date-time-default-values-property-builder (new CfnAnalysis$DateTimeDefaultValuesProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-date-time-format-configuration-property-builder
@@ -4157,6 +4793,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-date-time-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-date-time-format-configuration-property-builder (new CfnAnalysis$DateTimeFormatConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-date-time-hierarchy-property-builder
   "The build-cfn-analysis-date-time-hierarchy-property-builder function updates a CfnAnalysis$DateTimeHierarchyProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DateTimeHierarchyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4175,6 +4817,12 @@
   (when-let [data (lookup-entry config id :hierarchy-id)]
     (. builder hierarchyId data))
   (.build builder))
+
+
+(defn cfn-analysis-date-time-hierarchy-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-date-time-hierarchy-property-builder (new CfnAnalysis$DateTimeHierarchyProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-date-time-parameter-declaration-property-builder
@@ -4206,6 +4854,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-date-time-parameter-declaration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-date-time-parameter-declaration-property-builder (new CfnAnalysis$DateTimeParameterDeclarationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-date-time-parameter-property-builder
   "The build-cfn-analysis-date-time-parameter-property-builder function updates a CfnAnalysis$DateTimeParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DateTimeParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4224,6 +4878,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-analysis-date-time-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-date-time-parameter-property-builder (new CfnAnalysis$DateTimeParameterProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-date-time-picker-control-display-options-property-builder
@@ -4249,6 +4909,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-date-time-picker-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-date-time-picker-control-display-options-property-builder (new CfnAnalysis$DateTimePickerControlDisplayOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-date-time-value-when-unset-configuration-property-builder
   "The build-cfn-analysis-date-time-value-when-unset-configuration-property-builder function updates a CfnAnalysis$DateTimeValueWhenUnsetConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DateTimeValueWhenUnsetConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4269,6 +4935,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-date-time-value-when-unset-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-date-time-value-when-unset-configuration-property-builder (new CfnAnalysis$DateTimeValueWhenUnsetConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-decimal-default-values-property-builder
   "The build-cfn-analysis-decimal-default-values-property-builder function updates a CfnAnalysis$DecimalDefaultValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DecimalDefaultValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4287,6 +4959,12 @@
   (when-let [data (lookup-entry config id :static-values)]
     (. builder staticValues data))
   (.build builder))
+
+
+(defn cfn-analysis-decimal-default-values-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-decimal-default-values-property-builder (new CfnAnalysis$DecimalDefaultValuesProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-decimal-parameter-declaration-property-builder
@@ -4318,6 +4996,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-decimal-parameter-declaration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-decimal-parameter-declaration-property-builder (new CfnAnalysis$DecimalParameterDeclarationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-decimal-parameter-property-builder
   "The build-cfn-analysis-decimal-parameter-property-builder function updates a CfnAnalysis$DecimalParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DecimalParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4338,6 +5022,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-decimal-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-decimal-parameter-property-builder (new CfnAnalysis$DecimalParameterProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-decimal-places-configuration-property-builder
   "The build-cfn-analysis-decimal-places-configuration-property-builder function updates a CfnAnalysis$DecimalPlacesConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DecimalPlacesConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4353,6 +5043,12 @@
   (when-let [data (lookup-entry config id :decimal-places)]
     (. builder decimalPlaces data))
   (.build builder))
+
+
+(defn cfn-analysis-decimal-places-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-decimal-places-configuration-property-builder (new CfnAnalysis$DecimalPlacesConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-decimal-value-when-unset-configuration-property-builder
@@ -4375,6 +5071,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-decimal-value-when-unset-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-decimal-value-when-unset-configuration-property-builder (new CfnAnalysis$DecimalValueWhenUnsetConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-default-date-time-picker-control-options-property-builder
   "The build-cfn-analysis-default-date-time-picker-control-options-property-builder function updates a CfnAnalysis$DefaultDateTimePickerControlOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DefaultDateTimePickerControlOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4395,6 +5097,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-default-date-time-picker-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-default-date-time-picker-control-options-property-builder (new CfnAnalysis$DefaultDateTimePickerControlOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-default-filter-control-configuration-property-builder
   "The build-cfn-analysis-default-filter-control-configuration-property-builder function updates a CfnAnalysis$DefaultFilterControlConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DefaultFilterControlConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4413,6 +5121,12 @@
   (when-let [data (lookup-entry config id :title)]
     (. builder title data))
   (.build builder))
+
+
+(defn cfn-analysis-default-filter-control-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-default-filter-control-configuration-property-builder (new CfnAnalysis$DefaultFilterControlConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-default-filter-control-options-property-builder
@@ -4450,6 +5164,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-default-filter-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-default-filter-control-options-property-builder (new CfnAnalysis$DefaultFilterControlOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-default-filter-drop-down-control-options-property-builder
   "The build-cfn-analysis-default-filter-drop-down-control-options-property-builder function updates a CfnAnalysis$DefaultFilterDropDownControlOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DefaultFilterDropDownControlOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4471,6 +5191,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-analysis-default-filter-drop-down-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-default-filter-drop-down-control-options-property-builder (new CfnAnalysis$DefaultFilterDropDownControlOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-default-filter-list-control-options-property-builder
@@ -4496,6 +5222,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-default-filter-list-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-default-filter-list-control-options-property-builder (new CfnAnalysis$DefaultFilterListControlOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-default-free-form-layout-configuration-property-builder
   "The build-cfn-analysis-default-free-form-layout-configuration-property-builder function updates a CfnAnalysis$DefaultFreeFormLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DefaultFreeFormLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4513,6 +5245,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-default-free-form-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-default-free-form-layout-configuration-property-builder (new CfnAnalysis$DefaultFreeFormLayoutConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-default-grid-layout-configuration-property-builder
   "The build-cfn-analysis-default-grid-layout-configuration-property-builder function updates a CfnAnalysis$DefaultGridLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DefaultGridLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4528,6 +5266,12 @@
   (when-let [data (lookup-entry config id :canvas-size-options)]
     (. builder canvasSizeOptions data))
   (.build builder))
+
+
+(defn cfn-analysis-default-grid-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-default-grid-layout-configuration-property-builder (new CfnAnalysis$DefaultGridLayoutConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-default-interactive-layout-configuration-property-builder
@@ -4548,6 +5292,12 @@
   (when-let [data (lookup-entry config id :grid)]
     (. builder grid data))
   (.build builder))
+
+
+(defn cfn-analysis-default-interactive-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-default-interactive-layout-configuration-property-builder (new CfnAnalysis$DefaultInteractiveLayoutConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-default-new-sheet-configuration-property-builder
@@ -4573,6 +5323,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-default-new-sheet-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-default-new-sheet-configuration-property-builder (new CfnAnalysis$DefaultNewSheetConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-default-paginated-layout-configuration-property-builder
   "The build-cfn-analysis-default-paginated-layout-configuration-property-builder function updates a CfnAnalysis$DefaultPaginatedLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DefaultPaginatedLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4588,6 +5344,12 @@
   (when-let [data (lookup-entry config id :section-based)]
     (. builder sectionBased data))
   (.build builder))
+
+
+(defn cfn-analysis-default-paginated-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-default-paginated-layout-configuration-property-builder (new CfnAnalysis$DefaultPaginatedLayoutConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-default-relative-date-time-control-options-property-builder
@@ -4607,6 +5369,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-default-relative-date-time-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-default-relative-date-time-control-options-property-builder (new CfnAnalysis$DefaultRelativeDateTimeControlOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-default-section-based-layout-configuration-property-builder
   "The build-cfn-analysis-default-section-based-layout-configuration-property-builder function updates a CfnAnalysis$DefaultSectionBasedLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DefaultSectionBasedLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4622,6 +5390,12 @@
   (when-let [data (lookup-entry config id :canvas-size-options)]
     (. builder canvasSizeOptions data))
   (.build builder))
+
+
+(defn cfn-analysis-default-section-based-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-default-section-based-layout-configuration-property-builder (new CfnAnalysis$DefaultSectionBasedLayoutConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-default-slider-control-options-property-builder
@@ -4653,6 +5427,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-default-slider-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-default-slider-control-options-property-builder (new CfnAnalysis$DefaultSliderControlOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-default-text-area-control-options-property-builder
   "The build-cfn-analysis-default-text-area-control-options-property-builder function updates a CfnAnalysis$DefaultTextAreaControlOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DefaultTextAreaControlOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4673,6 +5453,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-default-text-area-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-default-text-area-control-options-property-builder (new CfnAnalysis$DefaultTextAreaControlOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-default-text-field-control-options-property-builder
   "The build-cfn-analysis-default-text-field-control-options-property-builder function updates a CfnAnalysis$DefaultTextFieldControlOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DefaultTextFieldControlOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4688,6 +5474,12 @@
   (when-let [data (lookup-entry config id :display-options)]
     (. builder displayOptions data))
   (.build builder))
+
+
+(defn cfn-analysis-default-text-field-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-default-text-field-control-options-property-builder (new CfnAnalysis$DefaultTextFieldControlOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-destination-parameter-value-configuration-property-builder
@@ -4719,6 +5511,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-destination-parameter-value-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-destination-parameter-value-configuration-property-builder (new CfnAnalysis$DestinationParameterValueConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-dimension-field-property-builder
   "The build-cfn-analysis-dimension-field-property-builder function updates a CfnAnalysis$DimensionFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DimensionFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4742,6 +5540,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-dimension-field-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-dimension-field-property-builder (new CfnAnalysis$DimensionFieldProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-donut-center-options-property-builder
   "The build-cfn-analysis-donut-center-options-property-builder function updates a CfnAnalysis$DonutCenterOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DonutCenterOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4757,6 +5561,12 @@
   (when-let [data (lookup-entry config id :label-visibility)]
     (. builder labelVisibility data))
   (.build builder))
+
+
+(defn cfn-analysis-donut-center-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-donut-center-options-property-builder (new CfnAnalysis$DonutCenterOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-donut-options-property-builder
@@ -4777,6 +5587,12 @@
   (when-let [data (lookup-entry config id :donut-center-options)]
     (. builder donutCenterOptions data))
   (.build builder))
+
+
+(defn cfn-analysis-donut-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-donut-options-property-builder (new CfnAnalysis$DonutOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-drill-down-filter-property-builder
@@ -4802,6 +5618,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-drill-down-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-drill-down-filter-property-builder (new CfnAnalysis$DrillDownFilterProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-drop-down-control-display-options-property-builder
   "The build-cfn-analysis-drop-down-control-display-options-property-builder function updates a CfnAnalysis$DropDownControlDisplayOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$DropDownControlDisplayOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4823,6 +5645,12 @@
   (when-let [data (lookup-entry config id :title-options)]
     (. builder titleOptions data))
   (.build builder))
+
+
+(defn cfn-analysis-drop-down-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-drop-down-control-display-options-property-builder (new CfnAnalysis$DropDownControlDisplayOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-dynamic-default-value-property-builder
@@ -4848,6 +5676,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-dynamic-default-value-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-dynamic-default-value-property-builder (new CfnAnalysis$DynamicDefaultValueProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-empty-visual-property-builder
   "The build-cfn-analysis-empty-visual-property-builder function updates a CfnAnalysis$EmptyVisualProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$EmptyVisualProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4871,6 +5705,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-empty-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-empty-visual-property-builder (new CfnAnalysis$EmptyVisualProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-entity-property-builder
   "The build-cfn-analysis-entity-property-builder function updates a CfnAnalysis$EntityProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$EntityProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4886,6 +5726,12 @@
   (when-let [data (lookup-entry config id :path)]
     (. builder path data))
   (.build builder))
+
+
+(defn cfn-analysis-entity-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-entity-property-builder (new CfnAnalysis$EntityProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-exclude-period-configuration-property-builder
@@ -4911,6 +5757,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-exclude-period-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-exclude-period-configuration-property-builder (new CfnAnalysis$ExcludePeriodConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-explicit-hierarchy-property-builder
   "The build-cfn-analysis-explicit-hierarchy-property-builder function updates a CfnAnalysis$ExplicitHierarchyProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ExplicitHierarchyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4932,6 +5784,12 @@
   (when-let [data (lookup-entry config id :hierarchy-id)]
     (. builder hierarchyId data))
   (.build builder))
+
+
+(defn cfn-analysis-explicit-hierarchy-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-explicit-hierarchy-property-builder (new CfnAnalysis$ExplicitHierarchyProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-field-based-tooltip-property-builder
@@ -4957,6 +5815,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-field-based-tooltip-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-field-based-tooltip-property-builder (new CfnAnalysis$FieldBasedTooltipProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-field-label-type-property-builder
   "The build-cfn-analysis-field-label-type-property-builder function updates a CfnAnalysis$FieldLabelTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FieldLabelTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4975,6 +5839,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-analysis-field-label-type-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-field-label-type-property-builder (new CfnAnalysis$FieldLabelTypeProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-field-series-item-property-builder
@@ -5000,6 +5870,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-field-series-item-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-field-series-item-property-builder (new CfnAnalysis$FieldSeriesItemProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-field-sort-options-property-builder
   "The build-cfn-analysis-field-sort-options-property-builder function updates a CfnAnalysis$FieldSortOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FieldSortOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5020,6 +5896,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-field-sort-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-field-sort-options-property-builder (new CfnAnalysis$FieldSortOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-field-sort-property-builder
   "The build-cfn-analysis-field-sort-property-builder function updates a CfnAnalysis$FieldSortProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FieldSortProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5038,6 +5920,12 @@
   (when-let [data (lookup-entry config id :field-id)]
     (. builder fieldId data))
   (.build builder))
+
+
+(defn cfn-analysis-field-sort-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-field-sort-property-builder (new CfnAnalysis$FieldSortProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-field-tooltip-item-property-builder
@@ -5063,6 +5951,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-field-tooltip-item-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-field-tooltip-item-property-builder (new CfnAnalysis$FieldTooltipItemProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-filled-map-aggregated-field-wells-property-builder
   "The build-cfn-analysis-filled-map-aggregated-field-wells-property-builder function updates a CfnAnalysis$FilledMapAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FilledMapAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5083,6 +5977,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-filled-map-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filled-map-aggregated-field-wells-property-builder (new CfnAnalysis$FilledMapAggregatedFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-filled-map-conditional-formatting-option-property-builder
   "The build-cfn-analysis-filled-map-conditional-formatting-option-property-builder function updates a CfnAnalysis$FilledMapConditionalFormattingOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FilledMapConditionalFormattingOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5100,6 +6000,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-filled-map-conditional-formatting-option-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filled-map-conditional-formatting-option-property-builder (new CfnAnalysis$FilledMapConditionalFormattingOptionProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-filled-map-conditional-formatting-property-builder
   "The build-cfn-analysis-filled-map-conditional-formatting-property-builder function updates a CfnAnalysis$FilledMapConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FilledMapConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5115,6 +6021,12 @@
   (when-let [data (lookup-entry config id :conditional-formatting-options)]
     (. builder conditionalFormattingOptions data))
   (.build builder))
+
+
+(defn cfn-analysis-filled-map-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filled-map-conditional-formatting-property-builder (new CfnAnalysis$FilledMapConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-filled-map-configuration-property-builder
@@ -5149,6 +6061,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-filled-map-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filled-map-configuration-property-builder (new CfnAnalysis$FilledMapConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-filled-map-field-wells-property-builder
   "The build-cfn-analysis-filled-map-field-wells-property-builder function updates a CfnAnalysis$FilledMapFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FilledMapFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5164,6 +6082,12 @@
   (when-let [data (lookup-entry config id :filled-map-aggregated-field-wells)]
     (. builder filledMapAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-analysis-filled-map-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filled-map-field-wells-property-builder (new CfnAnalysis$FilledMapFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-filled-map-shape-conditional-formatting-property-builder
@@ -5186,6 +6110,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-filled-map-shape-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filled-map-shape-conditional-formatting-property-builder (new CfnAnalysis$FilledMapShapeConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-filled-map-sort-configuration-property-builder
   "The build-cfn-analysis-filled-map-sort-configuration-property-builder function updates a CfnAnalysis$FilledMapSortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FilledMapSortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5201,6 +6131,12 @@
   (when-let [data (lookup-entry config id :category-sort)]
     (. builder categorySort data))
   (.build builder))
+
+
+(defn cfn-analysis-filled-map-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filled-map-sort-configuration-property-builder (new CfnAnalysis$FilledMapSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-filled-map-visual-property-builder
@@ -5236,6 +6172,12 @@
   (when-let [data (lookup-entry config id :visual-id)]
     (. builder visualId data))
   (.build builder))
+
+
+(defn cfn-analysis-filled-map-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filled-map-visual-property-builder (new CfnAnalysis$FilledMapVisualProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-filter-control-property-builder
@@ -5276,6 +6218,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-filter-control-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filter-control-property-builder (new CfnAnalysis$FilterControlProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-filter-cross-sheet-control-property-builder
   "The build-cfn-analysis-filter-cross-sheet-control-property-builder function updates a CfnAnalysis$FilterCrossSheetControlProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FilterCrossSheetControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5297,6 +6245,12 @@
   (when-let [data (lookup-entry config id :source-filter-id)]
     (. builder sourceFilterId data))
   (.build builder))
+
+
+(defn cfn-analysis-filter-cross-sheet-control-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filter-cross-sheet-control-property-builder (new CfnAnalysis$FilterCrossSheetControlProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-filter-date-time-picker-control-property-builder
@@ -5326,6 +6280,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-analysis-filter-date-time-picker-control-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filter-date-time-picker-control-property-builder (new CfnAnalysis$FilterDateTimePickerControlProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-filter-drop-down-control-property-builder
@@ -5363,6 +6323,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-filter-drop-down-control-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filter-drop-down-control-property-builder (new CfnAnalysis$FilterDropDownControlProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-filter-group-property-builder
   "The build-cfn-analysis-filter-group-property-builder function updates a CfnAnalysis$FilterGroupProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FilterGroupProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5392,6 +6358,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-filter-group-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filter-group-property-builder (new CfnAnalysis$FilterGroupProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-filter-list-configuration-property-builder
   "The build-cfn-analysis-filter-list-configuration-property-builder function updates a CfnAnalysis$FilterListConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FilterListConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5416,6 +6388,12 @@
   (when-let [data (lookup-entry config id :select-all-options)]
     (. builder selectAllOptions data))
   (.build builder))
+
+
+(defn cfn-analysis-filter-list-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filter-list-configuration-property-builder (new CfnAnalysis$FilterListConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-filter-list-control-property-builder
@@ -5453,6 +6431,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-filter-list-control-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filter-list-control-property-builder (new CfnAnalysis$FilterListControlProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-filter-operation-selected-fields-configuration-property-builder
   "The build-cfn-analysis-filter-operation-selected-fields-configuration-property-builder function updates a CfnAnalysis$FilterOperationSelectedFieldsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FilterOperationSelectedFieldsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5476,6 +6460,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-filter-operation-selected-fields-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filter-operation-selected-fields-configuration-property-builder (new CfnAnalysis$FilterOperationSelectedFieldsConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-filter-operation-target-visuals-configuration-property-builder
   "The build-cfn-analysis-filter-operation-target-visuals-configuration-property-builder function updates a CfnAnalysis$FilterOperationTargetVisualsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FilterOperationTargetVisualsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5491,6 +6481,12 @@
   (when-let [data (lookup-entry config id :same-sheet-target-visual-configuration)]
     (. builder sameSheetTargetVisualConfiguration data))
   (.build builder))
+
+
+(defn cfn-analysis-filter-operation-target-visuals-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filter-operation-target-visuals-configuration-property-builder (new CfnAnalysis$FilterOperationTargetVisualsConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-filter-property-builder
@@ -5528,6 +6524,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filter-property-builder (new CfnAnalysis$FilterProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-filter-relative-date-time-control-property-builder
   "The build-cfn-analysis-filter-relative-date-time-control-property-builder function updates a CfnAnalysis$FilterRelativeDateTimeControlProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FilterRelativeDateTimeControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5554,6 +6556,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-filter-relative-date-time-control-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filter-relative-date-time-control-property-builder (new CfnAnalysis$FilterRelativeDateTimeControlProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-filter-scope-configuration-property-builder
   "The build-cfn-analysis-filter-scope-configuration-property-builder function updates a CfnAnalysis$FilterScopeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FilterScopeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5574,6 +6582,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-filter-scope-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filter-scope-configuration-property-builder (new CfnAnalysis$FilterScopeConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-filter-selectable-values-property-builder
   "The build-cfn-analysis-filter-selectable-values-property-builder function updates a CfnAnalysis$FilterSelectableValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FilterSelectableValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5589,6 +6603,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-analysis-filter-selectable-values-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filter-selectable-values-property-builder (new CfnAnalysis$FilterSelectableValuesProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-filter-slider-control-property-builder
@@ -5629,6 +6649,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-filter-slider-control-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filter-slider-control-property-builder (new CfnAnalysis$FilterSliderControlProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-filter-text-area-control-property-builder
   "The build-cfn-analysis-filter-text-area-control-property-builder function updates a CfnAnalysis$FilterTextAreaControlProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FilterTextAreaControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5658,6 +6684,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-filter-text-area-control-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filter-text-area-control-property-builder (new CfnAnalysis$FilterTextAreaControlProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-filter-text-field-control-property-builder
   "The build-cfn-analysis-filter-text-field-control-property-builder function updates a CfnAnalysis$FilterTextFieldControlProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FilterTextFieldControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5682,6 +6714,12 @@
   (when-let [data (lookup-entry config id :title)]
     (. builder title data))
   (.build builder))
+
+
+(defn cfn-analysis-filter-text-field-control-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-filter-text-field-control-property-builder (new CfnAnalysis$FilterTextFieldControlProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-font-configuration-property-builder
@@ -5713,6 +6751,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-font-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-font-configuration-property-builder (new CfnAnalysis$FontConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-font-size-property-builder
   "The build-cfn-analysis-font-size-property-builder function updates a CfnAnalysis$FontSizeProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FontSizeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5730,6 +6774,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-font-size-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-font-size-property-builder (new CfnAnalysis$FontSizeProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-font-weight-property-builder
   "The build-cfn-analysis-font-weight-property-builder function updates a CfnAnalysis$FontWeightProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FontWeightProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5745,6 +6795,12 @@
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-analysis-font-weight-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-font-weight-property-builder (new CfnAnalysis$FontWeightProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-forecast-computation-property-builder
@@ -5794,6 +6850,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-forecast-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-forecast-computation-property-builder (new CfnAnalysis$ForecastComputationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-forecast-configuration-property-builder
   "The build-cfn-analysis-forecast-configuration-property-builder function updates a CfnAnalysis$ForecastConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ForecastConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5814,6 +6876,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-forecast-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-forecast-configuration-property-builder (new CfnAnalysis$ForecastConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-forecast-scenario-property-builder
   "The build-cfn-analysis-forecast-scenario-property-builder function updates a CfnAnalysis$ForecastScenarioProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ForecastScenarioProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5832,6 +6900,12 @@
   (when-let [data (lookup-entry config id :what-if-range-scenario)]
     (. builder whatIfRangeScenario data))
   (.build builder))
+
+
+(defn cfn-analysis-forecast-scenario-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-forecast-scenario-property-builder (new CfnAnalysis$ForecastScenarioProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-format-configuration-property-builder
@@ -5857,6 +6931,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-format-configuration-property-builder (new CfnAnalysis$FormatConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-free-form-layout-canvas-size-options-property-builder
   "The build-cfn-analysis-free-form-layout-canvas-size-options-property-builder function updates a CfnAnalysis$FreeFormLayoutCanvasSizeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FreeFormLayoutCanvasSizeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5872,6 +6952,12 @@
   (when-let [data (lookup-entry config id :screen-canvas-size-options)]
     (. builder screenCanvasSizeOptions data))
   (.build builder))
+
+
+(defn cfn-analysis-free-form-layout-canvas-size-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-free-form-layout-canvas-size-options-property-builder (new CfnAnalysis$FreeFormLayoutCanvasSizeOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-free-form-layout-configuration-property-builder
@@ -5894,6 +6980,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-free-form-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-free-form-layout-configuration-property-builder (new CfnAnalysis$FreeFormLayoutConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-free-form-layout-element-background-style-property-builder
   "The build-cfn-analysis-free-form-layout-element-background-style-property-builder function updates a CfnAnalysis$FreeFormLayoutElementBackgroundStyleProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FreeFormLayoutElementBackgroundStyleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5914,6 +7006,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-free-form-layout-element-background-style-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-free-form-layout-element-background-style-property-builder (new CfnAnalysis$FreeFormLayoutElementBackgroundStyleProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-free-form-layout-element-border-style-property-builder
   "The build-cfn-analysis-free-form-layout-element-border-style-property-builder function updates a CfnAnalysis$FreeFormLayoutElementBorderStyleProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FreeFormLayoutElementBorderStyleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5932,6 +7030,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-analysis-free-form-layout-element-border-style-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-free-form-layout-element-border-style-property-builder (new CfnAnalysis$FreeFormLayoutElementBorderStyleProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-free-form-layout-element-property-builder
@@ -5984,6 +7088,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-free-form-layout-element-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-free-form-layout-element-property-builder (new CfnAnalysis$FreeFormLayoutElementProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-free-form-layout-screen-canvas-size-options-property-builder
   "The build-cfn-analysis-free-form-layout-screen-canvas-size-options-property-builder function updates a CfnAnalysis$FreeFormLayoutScreenCanvasSizeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FreeFormLayoutScreenCanvasSizeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6001,6 +7111,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-free-form-layout-screen-canvas-size-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-free-form-layout-screen-canvas-size-options-property-builder (new CfnAnalysis$FreeFormLayoutScreenCanvasSizeOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-free-form-section-layout-configuration-property-builder
   "The build-cfn-analysis-free-form-section-layout-configuration-property-builder function updates a CfnAnalysis$FreeFormSectionLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FreeFormSectionLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6016,6 +7132,12 @@
   (when-let [data (lookup-entry config id :elements)]
     (. builder elements data))
   (.build builder))
+
+
+(defn cfn-analysis-free-form-section-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-free-form-section-layout-configuration-property-builder (new CfnAnalysis$FreeFormSectionLayoutConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-funnel-chart-aggregated-field-wells-property-builder
@@ -6036,6 +7158,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-analysis-funnel-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-funnel-chart-aggregated-field-wells-property-builder (new CfnAnalysis$FunnelChartAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-funnel-chart-configuration-property-builder
@@ -6073,6 +7201,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-funnel-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-funnel-chart-configuration-property-builder (new CfnAnalysis$FunnelChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-funnel-chart-data-label-options-property-builder
   "The build-cfn-analysis-funnel-chart-data-label-options-property-builder function updates a CfnAnalysis$FunnelChartDataLabelOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FunnelChartDataLabelOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6108,6 +7242,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-funnel-chart-data-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-funnel-chart-data-label-options-property-builder (new CfnAnalysis$FunnelChartDataLabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-funnel-chart-field-wells-property-builder
   "The build-cfn-analysis-funnel-chart-field-wells-property-builder function updates a CfnAnalysis$FunnelChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$FunnelChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6123,6 +7263,12 @@
   (when-let [data (lookup-entry config id :funnel-chart-aggregated-field-wells)]
     (. builder funnelChartAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-analysis-funnel-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-funnel-chart-field-wells-property-builder (new CfnAnalysis$FunnelChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-funnel-chart-sort-configuration-property-builder
@@ -6143,6 +7289,12 @@
   (when-let [data (lookup-entry config id :category-sort)]
     (. builder categorySort data))
   (.build builder))
+
+
+(defn cfn-analysis-funnel-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-funnel-chart-sort-configuration-property-builder (new CfnAnalysis$FunnelChartSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-funnel-chart-visual-property-builder
@@ -6177,6 +7329,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-funnel-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-funnel-chart-visual-property-builder (new CfnAnalysis$FunnelChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-gauge-chart-arc-conditional-formatting-property-builder
   "The build-cfn-analysis-gauge-chart-arc-conditional-formatting-property-builder function updates a CfnAnalysis$GaugeChartArcConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$GaugeChartArcConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6192,6 +7350,12 @@
   (when-let [data (lookup-entry config id :foreground-color)]
     (. builder foregroundColor data))
   (.build builder))
+
+
+(defn cfn-analysis-gauge-chart-arc-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-gauge-chart-arc-conditional-formatting-property-builder (new CfnAnalysis$GaugeChartArcConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-gauge-chart-conditional-formatting-option-property-builder
@@ -6214,6 +7378,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-gauge-chart-conditional-formatting-option-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-gauge-chart-conditional-formatting-option-property-builder (new CfnAnalysis$GaugeChartConditionalFormattingOptionProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-gauge-chart-conditional-formatting-property-builder
   "The build-cfn-analysis-gauge-chart-conditional-formatting-property-builder function updates a CfnAnalysis$GaugeChartConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$GaugeChartConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6229,6 +7399,12 @@
   (when-let [data (lookup-entry config id :conditional-formatting-options)]
     (. builder conditionalFormattingOptions data))
   (.build builder))
+
+
+(defn cfn-analysis-gauge-chart-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-gauge-chart-conditional-formatting-property-builder (new CfnAnalysis$GaugeChartConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-gauge-chart-configuration-property-builder
@@ -6260,6 +7436,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-gauge-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-gauge-chart-configuration-property-builder (new CfnAnalysis$GaugeChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-gauge-chart-field-wells-property-builder
   "The build-cfn-analysis-gauge-chart-field-wells-property-builder function updates a CfnAnalysis$GaugeChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$GaugeChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6278,6 +7460,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-analysis-gauge-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-gauge-chart-field-wells-property-builder (new CfnAnalysis$GaugeChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-gauge-chart-options-property-builder
@@ -6309,6 +7497,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-gauge-chart-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-gauge-chart-options-property-builder (new CfnAnalysis$GaugeChartOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-gauge-chart-primary-value-conditional-formatting-property-builder
   "The build-cfn-analysis-gauge-chart-primary-value-conditional-formatting-property-builder function updates a CfnAnalysis$GaugeChartPrimaryValueConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$GaugeChartPrimaryValueConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6327,6 +7521,12 @@
   (when-let [data (lookup-entry config id :text-color)]
     (. builder textColor data))
   (.build builder))
+
+
+(defn cfn-analysis-gauge-chart-primary-value-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-gauge-chart-primary-value-conditional-formatting-property-builder (new CfnAnalysis$GaugeChartPrimaryValueConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-gauge-chart-visual-property-builder
@@ -6361,6 +7561,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-gauge-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-gauge-chart-visual-property-builder (new CfnAnalysis$GaugeChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-geospatial-coordinate-bounds-property-builder
   "The build-cfn-analysis-geospatial-coordinate-bounds-property-builder function updates a CfnAnalysis$GeospatialCoordinateBoundsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$GeospatialCoordinateBoundsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6387,6 +7593,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-geospatial-coordinate-bounds-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-geospatial-coordinate-bounds-property-builder (new CfnAnalysis$GeospatialCoordinateBoundsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-geospatial-heatmap-color-scale-property-builder
   "The build-cfn-analysis-geospatial-heatmap-color-scale-property-builder function updates a CfnAnalysis$GeospatialHeatmapColorScaleProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$GeospatialHeatmapColorScaleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6402,6 +7614,12 @@
   (when-let [data (lookup-entry config id :colors)]
     (. builder colors data))
   (.build builder))
+
+
+(defn cfn-analysis-geospatial-heatmap-color-scale-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-geospatial-heatmap-color-scale-property-builder (new CfnAnalysis$GeospatialHeatmapColorScaleProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-geospatial-heatmap-configuration-property-builder
@@ -6421,6 +7639,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-geospatial-heatmap-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-geospatial-heatmap-configuration-property-builder (new CfnAnalysis$GeospatialHeatmapConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-geospatial-heatmap-data-color-property-builder
   "The build-cfn-analysis-geospatial-heatmap-data-color-property-builder function updates a CfnAnalysis$GeospatialHeatmapDataColorProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$GeospatialHeatmapDataColorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6436,6 +7660,12 @@
   (when-let [data (lookup-entry config id :color)]
     (. builder color data))
   (.build builder))
+
+
+(defn cfn-analysis-geospatial-heatmap-data-color-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-geospatial-heatmap-data-color-property-builder (new CfnAnalysis$GeospatialHeatmapDataColorProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-geospatial-map-aggregated-field-wells-property-builder
@@ -6459,6 +7689,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-analysis-geospatial-map-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-geospatial-map-aggregated-field-wells-property-builder (new CfnAnalysis$GeospatialMapAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-geospatial-map-configuration-property-builder
@@ -6496,6 +7732,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-geospatial-map-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-geospatial-map-configuration-property-builder (new CfnAnalysis$GeospatialMapConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-geospatial-map-field-wells-property-builder
   "The build-cfn-analysis-geospatial-map-field-wells-property-builder function updates a CfnAnalysis$GeospatialMapFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$GeospatialMapFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6513,6 +7755,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-geospatial-map-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-geospatial-map-field-wells-property-builder (new CfnAnalysis$GeospatialMapFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-geospatial-map-style-options-property-builder
   "The build-cfn-analysis-geospatial-map-style-options-property-builder function updates a CfnAnalysis$GeospatialMapStyleOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$GeospatialMapStyleOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6528,6 +7776,12 @@
   (when-let [data (lookup-entry config id :base-map-style)]
     (. builder baseMapStyle data))
   (.build builder))
+
+
+(defn cfn-analysis-geospatial-map-style-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-geospatial-map-style-options-property-builder (new CfnAnalysis$GeospatialMapStyleOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-geospatial-map-visual-property-builder
@@ -6562,6 +7816,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-geospatial-map-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-geospatial-map-visual-property-builder (new CfnAnalysis$GeospatialMapVisualProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-geospatial-point-style-options-property-builder
   "The build-cfn-analysis-geospatial-point-style-options-property-builder function updates a CfnAnalysis$GeospatialPointStyleOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$GeospatialPointStyleOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6585,6 +7845,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-geospatial-point-style-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-geospatial-point-style-options-property-builder (new CfnAnalysis$GeospatialPointStyleOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-geospatial-window-options-property-builder
   "The build-cfn-analysis-geospatial-window-options-property-builder function updates a CfnAnalysis$GeospatialWindowOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$GeospatialWindowOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6603,6 +7869,12 @@
   (when-let [data (lookup-entry config id :map-zoom-mode)]
     (. builder mapZoomMode data))
   (.build builder))
+
+
+(defn cfn-analysis-geospatial-window-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-geospatial-window-options-property-builder (new CfnAnalysis$GeospatialWindowOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-global-table-border-options-property-builder
@@ -6625,6 +7897,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-global-table-border-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-global-table-border-options-property-builder (new CfnAnalysis$GlobalTableBorderOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-gradient-color-property-builder
   "The build-cfn-analysis-gradient-color-property-builder function updates a CfnAnalysis$GradientColorProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$GradientColorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6640,6 +7918,12 @@
   (when-let [data (lookup-entry config id :stops)]
     (. builder stops data))
   (.build builder))
+
+
+(defn cfn-analysis-gradient-color-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-gradient-color-property-builder (new CfnAnalysis$GradientColorProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-gradient-stop-property-builder
@@ -6665,6 +7949,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-gradient-stop-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-gradient-stop-property-builder (new CfnAnalysis$GradientStopProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-grid-layout-canvas-size-options-property-builder
   "The build-cfn-analysis-grid-layout-canvas-size-options-property-builder function updates a CfnAnalysis$GridLayoutCanvasSizeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$GridLayoutCanvasSizeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6680,6 +7970,12 @@
   (when-let [data (lookup-entry config id :screen-canvas-size-options)]
     (. builder screenCanvasSizeOptions data))
   (.build builder))
+
+
+(defn cfn-analysis-grid-layout-canvas-size-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-grid-layout-canvas-size-options-property-builder (new CfnAnalysis$GridLayoutCanvasSizeOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-grid-layout-configuration-property-builder
@@ -6700,6 +7996,12 @@
   (when-let [data (lookup-entry config id :elements)]
     (. builder elements data))
   (.build builder))
+
+
+(defn cfn-analysis-grid-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-grid-layout-configuration-property-builder (new CfnAnalysis$GridLayoutConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-grid-layout-element-property-builder
@@ -6734,6 +8036,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-grid-layout-element-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-grid-layout-element-property-builder (new CfnAnalysis$GridLayoutElementProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-grid-layout-screen-canvas-size-options-property-builder
   "The build-cfn-analysis-grid-layout-screen-canvas-size-options-property-builder function updates a CfnAnalysis$GridLayoutScreenCanvasSizeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$GridLayoutScreenCanvasSizeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6752,6 +8060,12 @@
   (when-let [data (lookup-entry config id :resize-option)]
     (. builder resizeOption data))
   (.build builder))
+
+
+(defn cfn-analysis-grid-layout-screen-canvas-size-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-grid-layout-screen-canvas-size-options-property-builder (new CfnAnalysis$GridLayoutScreenCanvasSizeOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-growth-rate-computation-property-builder
@@ -6783,6 +8097,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-growth-rate-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-growth-rate-computation-property-builder (new CfnAnalysis$GrowthRateComputationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-header-footer-section-configuration-property-builder
   "The build-cfn-analysis-header-footer-section-configuration-property-builder function updates a CfnAnalysis$HeaderFooterSectionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$HeaderFooterSectionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6806,6 +8126,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-header-footer-section-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-header-footer-section-configuration-property-builder (new CfnAnalysis$HeaderFooterSectionConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-heat-map-aggregated-field-wells-property-builder
   "The build-cfn-analysis-heat-map-aggregated-field-wells-property-builder function updates a CfnAnalysis$HeatMapAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$HeatMapAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6827,6 +8153,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-analysis-heat-map-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-heat-map-aggregated-field-wells-property-builder (new CfnAnalysis$HeatMapAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-heat-map-configuration-property-builder
@@ -6867,6 +8199,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-heat-map-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-heat-map-configuration-property-builder (new CfnAnalysis$HeatMapConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-heat-map-field-wells-property-builder
   "The build-cfn-analysis-heat-map-field-wells-property-builder function updates a CfnAnalysis$HeatMapFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$HeatMapFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6882,6 +8220,12 @@
   (when-let [data (lookup-entry config id :heat-map-aggregated-field-wells)]
     (. builder heatMapAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-analysis-heat-map-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-heat-map-field-wells-property-builder (new CfnAnalysis$HeatMapFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-heat-map-sort-configuration-property-builder
@@ -6908,6 +8252,12 @@
   (when-let [data (lookup-entry config id :heat-map-row-sort)]
     (. builder heatMapRowSort data))
   (.build builder))
+
+
+(defn cfn-analysis-heat-map-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-heat-map-sort-configuration-property-builder (new CfnAnalysis$HeatMapSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-heat-map-visual-property-builder
@@ -6942,6 +8292,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-heat-map-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-heat-map-visual-property-builder (new CfnAnalysis$HeatMapVisualProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-histogram-aggregated-field-wells-property-builder
   "The build-cfn-analysis-histogram-aggregated-field-wells-property-builder function updates a CfnAnalysis$HistogramAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$HistogramAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -6957,6 +8313,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-analysis-histogram-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-histogram-aggregated-field-wells-property-builder (new CfnAnalysis$HistogramAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-histogram-bin-options-property-builder
@@ -6983,6 +8345,12 @@
   (when-let [data (lookup-entry config id :start-value)]
     (. builder startValue data))
   (.build builder))
+
+
+(defn cfn-analysis-histogram-bin-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-histogram-bin-options-property-builder (new CfnAnalysis$HistogramBinOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-histogram-configuration-property-builder
@@ -7023,6 +8391,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-histogram-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-histogram-configuration-property-builder (new CfnAnalysis$HistogramConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-histogram-field-wells-property-builder
   "The build-cfn-analysis-histogram-field-wells-property-builder function updates a CfnAnalysis$HistogramFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$HistogramFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7038,6 +8412,12 @@
   (when-let [data (lookup-entry config id :histogram-aggregated-field-wells)]
     (. builder histogramAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-analysis-histogram-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-histogram-field-wells-property-builder (new CfnAnalysis$HistogramFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-histogram-visual-property-builder
@@ -7069,6 +8449,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-histogram-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-histogram-visual-property-builder (new CfnAnalysis$HistogramVisualProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-insight-configuration-property-builder
   "The build-cfn-analysis-insight-configuration-property-builder function updates a CfnAnalysis$InsightConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$InsightConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7087,6 +8473,12 @@
   (when-let [data (lookup-entry config id :custom-narrative)]
     (. builder customNarrative data))
   (.build builder))
+
+
+(defn cfn-analysis-insight-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-insight-configuration-property-builder (new CfnAnalysis$InsightConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-insight-visual-property-builder
@@ -7121,6 +8513,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-insight-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-insight-visual-property-builder (new CfnAnalysis$InsightVisualProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-integer-default-values-property-builder
   "The build-cfn-analysis-integer-default-values-property-builder function updates a CfnAnalysis$IntegerDefaultValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$IntegerDefaultValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7139,6 +8537,12 @@
   (when-let [data (lookup-entry config id :static-values)]
     (. builder staticValues data))
   (.build builder))
+
+
+(defn cfn-analysis-integer-default-values-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-integer-default-values-property-builder (new CfnAnalysis$IntegerDefaultValuesProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-integer-parameter-declaration-property-builder
@@ -7170,6 +8574,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-integer-parameter-declaration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-integer-parameter-declaration-property-builder (new CfnAnalysis$IntegerParameterDeclarationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-integer-parameter-property-builder
   "The build-cfn-analysis-integer-parameter-property-builder function updates a CfnAnalysis$IntegerParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$IntegerParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7188,6 +8598,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-analysis-integer-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-integer-parameter-property-builder (new CfnAnalysis$IntegerParameterProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-integer-value-when-unset-configuration-property-builder
@@ -7210,6 +8626,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-integer-value-when-unset-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-integer-value-when-unset-configuration-property-builder (new CfnAnalysis$IntegerValueWhenUnsetConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-items-limit-configuration-property-builder
   "The build-cfn-analysis-items-limit-configuration-property-builder function updates a CfnAnalysis$ItemsLimitConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ItemsLimitConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7228,6 +8650,12 @@
   (when-let [data (lookup-entry config id :other-categories)]
     (. builder otherCategories data))
   (.build builder))
+
+
+(defn cfn-analysis-items-limit-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-items-limit-configuration-property-builder (new CfnAnalysis$ItemsLimitConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-kpi-actual-value-conditional-formatting-property-builder
@@ -7250,6 +8678,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-kpi-actual-value-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-kpi-actual-value-conditional-formatting-property-builder (new CfnAnalysis$KPIActualValueConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-kpi-comparison-value-conditional-formatting-property-builder
   "The build-cfn-analysis-kpi-comparison-value-conditional-formatting-property-builder function updates a CfnAnalysis$KPIComparisonValueConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$KPIComparisonValueConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7268,6 +8702,12 @@
   (when-let [data (lookup-entry config id :text-color)]
     (. builder textColor data))
   (.build builder))
+
+
+(defn cfn-analysis-kpi-comparison-value-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-kpi-comparison-value-conditional-formatting-property-builder (new CfnAnalysis$KPIComparisonValueConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-kpi-conditional-formatting-option-property-builder
@@ -7296,6 +8736,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-kpi-conditional-formatting-option-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-kpi-conditional-formatting-option-property-builder (new CfnAnalysis$KPIConditionalFormattingOptionProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-kpi-conditional-formatting-property-builder
   "The build-cfn-analysis-kpi-conditional-formatting-property-builder function updates a CfnAnalysis$KPIConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$KPIConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7311,6 +8757,12 @@
   (when-let [data (lookup-entry config id :conditional-formatting-options)]
     (. builder conditionalFormattingOptions data))
   (.build builder))
+
+
+(defn cfn-analysis-kpi-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-kpi-conditional-formatting-property-builder (new CfnAnalysis$KPIConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-kpi-configuration-property-builder
@@ -7336,6 +8788,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-kpi-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-kpi-configuration-property-builder (new CfnAnalysis$KPIConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-kpi-field-wells-property-builder
   "The build-cfn-analysis-kpi-field-wells-property-builder function updates a CfnAnalysis$KPIFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$KPIFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7357,6 +8815,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-analysis-kpi-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-kpi-field-wells-property-builder (new CfnAnalysis$KPIFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-kpi-options-property-builder
@@ -7400,6 +8864,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-kpi-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-kpi-options-property-builder (new CfnAnalysis$KPIOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-kpi-primary-value-conditional-formatting-property-builder
   "The build-cfn-analysis-kpi-primary-value-conditional-formatting-property-builder function updates a CfnAnalysis$KPIPrimaryValueConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$KPIPrimaryValueConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7420,6 +8890,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-kpi-primary-value-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-kpi-primary-value-conditional-formatting-property-builder (new CfnAnalysis$KPIPrimaryValueConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-kpi-progress-bar-conditional-formatting-property-builder
   "The build-cfn-analysis-kpi-progress-bar-conditional-formatting-property-builder function updates a CfnAnalysis$KPIProgressBarConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$KPIProgressBarConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7437,6 +8913,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-kpi-progress-bar-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-kpi-progress-bar-conditional-formatting-property-builder (new CfnAnalysis$KPIProgressBarConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-kpi-sort-configuration-property-builder
   "The build-cfn-analysis-kpi-sort-configuration-property-builder function updates a CfnAnalysis$KPISortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$KPISortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7452,6 +8934,12 @@
   (when-let [data (lookup-entry config id :trend-group-sort)]
     (. builder trendGroupSort data))
   (.build builder))
+
+
+(defn cfn-analysis-kpi-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-kpi-sort-configuration-property-builder (new CfnAnalysis$KPISortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-kpi-sparkline-options-property-builder
@@ -7480,6 +8968,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-kpi-sparkline-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-kpi-sparkline-options-property-builder (new CfnAnalysis$KPISparklineOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-kpi-visual-layout-options-property-builder
   "The build-cfn-analysis-kpi-visual-layout-options-property-builder function updates a CfnAnalysis$KPIVisualLayoutOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$KPIVisualLayoutOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7495,6 +8989,12 @@
   (when-let [data (lookup-entry config id :standard-layout)]
     (. builder standardLayout data))
   (.build builder))
+
+
+(defn cfn-analysis-kpi-visual-layout-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-kpi-visual-layout-options-property-builder (new CfnAnalysis$KPIVisualLayoutOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-kpi-visual-property-builder
@@ -7532,6 +9032,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-kpi-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-kpi-visual-property-builder (new CfnAnalysis$KPIVisualProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-kpi-visual-standard-layout-property-builder
   "The build-cfn-analysis-kpi-visual-standard-layout-property-builder function updates a CfnAnalysis$KPIVisualStandardLayoutProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$KPIVisualStandardLayoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7547,6 +9053,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-analysis-kpi-visual-standard-layout-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-kpi-visual-standard-layout-property-builder (new CfnAnalysis$KPIVisualStandardLayoutProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-label-options-property-builder
@@ -7572,6 +9084,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-label-options-property-builder (new CfnAnalysis$LabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-layout-configuration-property-builder
   "The build-cfn-analysis-layout-configuration-property-builder function updates a CfnAnalysis$LayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$LayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7595,6 +9113,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-layout-configuration-property-builder (new CfnAnalysis$LayoutConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-layout-property-builder
   "The build-cfn-analysis-layout-property-builder function updates a CfnAnalysis$LayoutProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$LayoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7610,6 +9134,12 @@
   (when-let [data (lookup-entry config id :configuration)]
     (. builder configuration data))
   (.build builder))
+
+
+(defn cfn-analysis-layout-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-layout-property-builder (new CfnAnalysis$LayoutProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-legend-options-property-builder
@@ -7641,6 +9171,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-legend-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-legend-options-property-builder (new CfnAnalysis$LegendOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-line-chart-aggregated-field-wells-property-builder
   "The build-cfn-analysis-line-chart-aggregated-field-wells-property-builder function updates a CfnAnalysis$LineChartAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$LineChartAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7665,6 +9201,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-analysis-line-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-line-chart-aggregated-field-wells-property-builder (new CfnAnalysis$LineChartAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-line-chart-configuration-property-builder
@@ -7738,6 +9280,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-line-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-line-chart-configuration-property-builder (new CfnAnalysis$LineChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-line-chart-default-series-settings-property-builder
   "The build-cfn-analysis-line-chart-default-series-settings-property-builder function updates a CfnAnalysis$LineChartDefaultSeriesSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$LineChartDefaultSeriesSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7761,6 +9309,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-line-chart-default-series-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-line-chart-default-series-settings-property-builder (new CfnAnalysis$LineChartDefaultSeriesSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-line-chart-field-wells-property-builder
   "The build-cfn-analysis-line-chart-field-wells-property-builder function updates a CfnAnalysis$LineChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$LineChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7776,6 +9330,12 @@
   (when-let [data (lookup-entry config id :line-chart-aggregated-field-wells)]
     (. builder lineChartAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-analysis-line-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-line-chart-field-wells-property-builder (new CfnAnalysis$LineChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-line-chart-line-style-settings-property-builder
@@ -7804,6 +9364,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-line-chart-line-style-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-line-chart-line-style-settings-property-builder (new CfnAnalysis$LineChartLineStyleSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-line-chart-marker-style-settings-property-builder
   "The build-cfn-analysis-line-chart-marker-style-settings-property-builder function updates a CfnAnalysis$LineChartMarkerStyleSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$LineChartMarkerStyleSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7830,6 +9396,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-line-chart-marker-style-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-line-chart-marker-style-settings-property-builder (new CfnAnalysis$LineChartMarkerStyleSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-line-chart-series-settings-property-builder
   "The build-cfn-analysis-line-chart-series-settings-property-builder function updates a CfnAnalysis$LineChartSeriesSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$LineChartSeriesSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7848,6 +9420,12 @@
   (when-let [data (lookup-entry config id :marker-style-settings)]
     (. builder markerStyleSettings data))
   (.build builder))
+
+
+(defn cfn-analysis-line-chart-series-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-line-chart-series-settings-property-builder (new CfnAnalysis$LineChartSeriesSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-line-chart-sort-configuration-property-builder
@@ -7877,6 +9455,12 @@
   (when-let [data (lookup-entry config id :small-multiples-sort)]
     (. builder smallMultiplesSort data))
   (.build builder))
+
+
+(defn cfn-analysis-line-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-line-chart-sort-configuration-property-builder (new CfnAnalysis$LineChartSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-line-chart-visual-property-builder
@@ -7911,6 +9495,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-line-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-line-chart-visual-property-builder (new CfnAnalysis$LineChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-line-series-axis-display-options-property-builder
   "The build-cfn-analysis-line-series-axis-display-options-property-builder function updates a CfnAnalysis$LineSeriesAxisDisplayOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$LineSeriesAxisDisplayOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7929,6 +9519,12 @@
   (when-let [data (lookup-entry config id :missing-data-configurations)]
     (. builder missingDataConfigurations data))
   (.build builder))
+
+
+(defn cfn-analysis-line-series-axis-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-line-series-axis-display-options-property-builder (new CfnAnalysis$LineSeriesAxisDisplayOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-list-control-display-options-property-builder
@@ -7957,6 +9553,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-list-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-list-control-display-options-property-builder (new CfnAnalysis$ListControlDisplayOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-list-control-search-options-property-builder
   "The build-cfn-analysis-list-control-search-options-property-builder function updates a CfnAnalysis$ListControlSearchOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ListControlSearchOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -7972,6 +9574,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-analysis-list-control-search-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-list-control-search-options-property-builder (new CfnAnalysis$ListControlSearchOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-list-control-select-all-options-property-builder
@@ -7991,6 +9599,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-list-control-select-all-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-list-control-select-all-options-property-builder (new CfnAnalysis$ListControlSelectAllOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-loading-animation-property-builder
   "The build-cfn-analysis-loading-animation-property-builder function updates a CfnAnalysis$LoadingAnimationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$LoadingAnimationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8008,6 +9622,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-loading-animation-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-loading-animation-property-builder (new CfnAnalysis$LoadingAnimationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-local-navigation-configuration-property-builder
   "The build-cfn-analysis-local-navigation-configuration-property-builder function updates a CfnAnalysis$LocalNavigationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$LocalNavigationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8023,6 +9643,12 @@
   (when-let [data (lookup-entry config id :target-sheet-id)]
     (. builder targetSheetId data))
   (.build builder))
+
+
+(defn cfn-analysis-local-navigation-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-local-navigation-configuration-property-builder (new CfnAnalysis$LocalNavigationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-long-format-text-property-builder
@@ -8045,6 +9671,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-long-format-text-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-long-format-text-property-builder (new CfnAnalysis$LongFormatTextProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-mapped-data-set-parameter-property-builder
   "The build-cfn-analysis-mapped-data-set-parameter-property-builder function updates a CfnAnalysis$MappedDataSetParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$MappedDataSetParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8065,6 +9697,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-mapped-data-set-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-mapped-data-set-parameter-property-builder (new CfnAnalysis$MappedDataSetParameterProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-maximum-label-type-property-builder
   "The build-cfn-analysis-maximum-label-type-property-builder function updates a CfnAnalysis$MaximumLabelTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$MaximumLabelTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8080,6 +9718,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-analysis-maximum-label-type-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-maximum-label-type-property-builder (new CfnAnalysis$MaximumLabelTypeProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-maximum-minimum-computation-property-builder
@@ -8111,6 +9755,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-maximum-minimum-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-maximum-minimum-computation-property-builder (new CfnAnalysis$MaximumMinimumComputationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-measure-field-property-builder
   "The build-cfn-analysis-measure-field-property-builder function updates a CfnAnalysis$MeasureFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$MeasureFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8135,6 +9785,12 @@
   (when-let [data (lookup-entry config id :numerical-measure-field)]
     (. builder numericalMeasureField data))
   (.build builder))
+
+
+(defn cfn-analysis-measure-field-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-measure-field-property-builder (new CfnAnalysis$MeasureFieldProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-metric-comparison-computation-property-builder
@@ -8166,6 +9822,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-metric-comparison-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-metric-comparison-computation-property-builder (new CfnAnalysis$MetricComparisonComputationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-minimum-label-type-property-builder
   "The build-cfn-analysis-minimum-label-type-property-builder function updates a CfnAnalysis$MinimumLabelTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$MinimumLabelTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8181,6 +9843,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-analysis-minimum-label-type-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-minimum-label-type-property-builder (new CfnAnalysis$MinimumLabelTypeProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-missing-data-configuration-property-builder
@@ -8200,6 +9868,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-missing-data-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-missing-data-configuration-property-builder (new CfnAnalysis$MissingDataConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-negative-value-configuration-property-builder
   "The build-cfn-analysis-negative-value-configuration-property-builder function updates a CfnAnalysis$NegativeValueConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$NegativeValueConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8217,6 +9891,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-negative-value-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-negative-value-configuration-property-builder (new CfnAnalysis$NegativeValueConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-null-value-format-configuration-property-builder
   "The build-cfn-analysis-null-value-format-configuration-property-builder function updates a CfnAnalysis$NullValueFormatConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$NullValueFormatConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8232,6 +9912,12 @@
   (when-let [data (lookup-entry config id :null-string)]
     (. builder nullString data))
   (.build builder))
+
+
+(defn cfn-analysis-null-value-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-null-value-format-configuration-property-builder (new CfnAnalysis$NullValueFormatConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-number-display-format-configuration-property-builder
@@ -8269,6 +9955,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-number-display-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-number-display-format-configuration-property-builder (new CfnAnalysis$NumberDisplayFormatConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-number-format-configuration-property-builder
   "The build-cfn-analysis-number-format-configuration-property-builder function updates a CfnAnalysis$NumberFormatConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$NumberFormatConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8284,6 +9976,12 @@
   (when-let [data (lookup-entry config id :format-configuration)]
     (. builder formatConfiguration data))
   (.build builder))
+
+
+(defn cfn-analysis-number-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-number-format-configuration-property-builder (new CfnAnalysis$NumberFormatConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-numeric-axis-options-property-builder
@@ -8306,6 +10004,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-numeric-axis-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-numeric-axis-options-property-builder (new CfnAnalysis$NumericAxisOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-numeric-equality-drill-down-filter-property-builder
   "The build-cfn-analysis-numeric-equality-drill-down-filter-property-builder function updates a CfnAnalysis$NumericEqualityDrillDownFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$NumericEqualityDrillDownFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8324,6 +10028,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-analysis-numeric-equality-drill-down-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-numeric-equality-drill-down-filter-property-builder (new CfnAnalysis$NumericEqualityDrillDownFilterProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-numeric-equality-filter-property-builder
@@ -8367,6 +10077,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-numeric-equality-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-numeric-equality-filter-property-builder (new CfnAnalysis$NumericEqualityFilterProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-numeric-format-configuration-property-builder
   "The build-cfn-analysis-numeric-format-configuration-property-builder function updates a CfnAnalysis$NumericFormatConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$NumericFormatConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8388,6 +10104,12 @@
   (when-let [data (lookup-entry config id :percentage-display-format-configuration)]
     (. builder percentageDisplayFormatConfiguration data))
   (.build builder))
+
+
+(defn cfn-analysis-numeric-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-numeric-format-configuration-property-builder (new CfnAnalysis$NumericFormatConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-numeric-range-filter-property-builder
@@ -8434,6 +10156,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-numeric-range-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-numeric-range-filter-property-builder (new CfnAnalysis$NumericRangeFilterProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-numeric-range-filter-value-property-builder
   "The build-cfn-analysis-numeric-range-filter-value-property-builder function updates a CfnAnalysis$NumericRangeFilterValueProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$NumericRangeFilterValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8452,6 +10180,12 @@
   (when-let [data (lookup-entry config id :static-value)]
     (. builder staticValue data))
   (.build builder))
+
+
+(defn cfn-analysis-numeric-range-filter-value-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-numeric-range-filter-value-property-builder (new CfnAnalysis$NumericRangeFilterValueProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-numeric-separator-configuration-property-builder
@@ -8474,6 +10208,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-numeric-separator-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-numeric-separator-configuration-property-builder (new CfnAnalysis$NumericSeparatorConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-numerical-aggregation-function-property-builder
   "The build-cfn-analysis-numerical-aggregation-function-property-builder function updates a CfnAnalysis$NumericalAggregationFunctionProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$NumericalAggregationFunctionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8492,6 +10232,12 @@
   (when-let [data (lookup-entry config id :simple-numerical-aggregation)]
     (. builder simpleNumericalAggregation data))
   (.build builder))
+
+
+(defn cfn-analysis-numerical-aggregation-function-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-numerical-aggregation-function-property-builder (new CfnAnalysis$NumericalAggregationFunctionProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-numerical-dimension-field-property-builder
@@ -8520,6 +10266,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-numerical-dimension-field-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-numerical-dimension-field-property-builder (new CfnAnalysis$NumericalDimensionFieldProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-numerical-measure-field-property-builder
   "The build-cfn-analysis-numerical-measure-field-property-builder function updates a CfnAnalysis$NumericalMeasureFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$NumericalMeasureFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8546,6 +10298,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-numerical-measure-field-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-numerical-measure-field-property-builder (new CfnAnalysis$NumericalMeasureFieldProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-pagination-configuration-property-builder
   "The build-cfn-analysis-pagination-configuration-property-builder function updates a CfnAnalysis$PaginationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$PaginationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8564,6 +10322,12 @@
   (when-let [data (lookup-entry config id :page-size)]
     (. builder pageSize data))
   (.build builder))
+
+
+(defn cfn-analysis-pagination-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pagination-configuration-property-builder (new CfnAnalysis$PaginationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-panel-configuration-property-builder
@@ -8607,6 +10371,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-panel-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-panel-configuration-property-builder (new CfnAnalysis$PanelConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-panel-title-options-property-builder
   "The build-cfn-analysis-panel-title-options-property-builder function updates a CfnAnalysis$PanelTitleOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$PanelTitleOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8628,6 +10398,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-analysis-panel-title-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-panel-title-options-property-builder (new CfnAnalysis$PanelTitleOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-parameter-control-property-builder
@@ -8662,6 +10438,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-parameter-control-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-parameter-control-property-builder (new CfnAnalysis$ParameterControlProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-parameter-date-time-picker-control-property-builder
   "The build-cfn-analysis-parameter-date-time-picker-control-property-builder function updates a CfnAnalysis$ParameterDateTimePickerControlProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ParameterDateTimePickerControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8688,6 +10470,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-parameter-date-time-picker-control-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-parameter-date-time-picker-control-property-builder (new CfnAnalysis$ParameterDateTimePickerControlProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-parameter-declaration-property-builder
   "The build-cfn-analysis-parameter-declaration-property-builder function updates a CfnAnalysis$ParameterDeclarationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ParameterDeclarationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8712,6 +10500,12 @@
   (when-let [data (lookup-entry config id :string-parameter-declaration)]
     (. builder stringParameterDeclaration data))
   (.build builder))
+
+
+(defn cfn-analysis-parameter-declaration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-parameter-declaration-property-builder (new CfnAnalysis$ParameterDeclarationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-parameter-drop-down-control-property-builder
@@ -8749,6 +10543,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-parameter-drop-down-control-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-parameter-drop-down-control-property-builder (new CfnAnalysis$ParameterDropDownControlProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-parameter-list-control-property-builder
   "The build-cfn-analysis-parameter-list-control-property-builder function updates a CfnAnalysis$ParameterListControlProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ParameterListControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8784,6 +10584,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-parameter-list-control-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-parameter-list-control-property-builder (new CfnAnalysis$ParameterListControlProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-parameter-selectable-values-property-builder
   "The build-cfn-analysis-parameter-selectable-values-property-builder function updates a CfnAnalysis$ParameterSelectableValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ParameterSelectableValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8802,6 +10608,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-analysis-parameter-selectable-values-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-parameter-selectable-values-property-builder (new CfnAnalysis$ParameterSelectableValuesProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-parameter-slider-control-property-builder
@@ -8839,6 +10651,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-parameter-slider-control-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-parameter-slider-control-property-builder (new CfnAnalysis$ParameterSliderControlProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-parameter-text-area-control-property-builder
   "The build-cfn-analysis-parameter-text-area-control-property-builder function updates a CfnAnalysis$ParameterTextAreaControlProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ParameterTextAreaControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8868,6 +10686,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-parameter-text-area-control-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-parameter-text-area-control-property-builder (new CfnAnalysis$ParameterTextAreaControlProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-parameter-text-field-control-property-builder
   "The build-cfn-analysis-parameter-text-field-control-property-builder function updates a CfnAnalysis$ParameterTextFieldControlProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ParameterTextFieldControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8892,6 +10716,12 @@
   (when-let [data (lookup-entry config id :title)]
     (. builder title data))
   (.build builder))
+
+
+(defn cfn-analysis-parameter-text-field-control-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-parameter-text-field-control-property-builder (new CfnAnalysis$ParameterTextFieldControlProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-parameters-property-builder
@@ -8920,6 +10750,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-parameters-property-builder (new CfnAnalysis$ParametersProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-percent-visible-range-property-builder
   "The build-cfn-analysis-percent-visible-range-property-builder function updates a CfnAnalysis$PercentVisibleRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$PercentVisibleRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8938,6 +10774,12 @@
   (when-let [data (lookup-entry config id :to)]
     (. builder to data))
   (.build builder))
+
+
+(defn cfn-analysis-percent-visible-range-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-percent-visible-range-property-builder (new CfnAnalysis$PercentVisibleRangeProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-percentage-display-format-configuration-property-builder
@@ -8972,6 +10814,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-percentage-display-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-percentage-display-format-configuration-property-builder (new CfnAnalysis$PercentageDisplayFormatConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-percentile-aggregation-property-builder
   "The build-cfn-analysis-percentile-aggregation-property-builder function updates a CfnAnalysis$PercentileAggregationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$PercentileAggregationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -8987,6 +10835,12 @@
   (when-let [data (lookup-entry config id :percentile-value)]
     (. builder percentileValue data))
   (.build builder))
+
+
+(defn cfn-analysis-percentile-aggregation-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-percentile-aggregation-property-builder (new CfnAnalysis$PercentileAggregationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-period-over-period-computation-property-builder
@@ -9013,6 +10867,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-analysis-period-over-period-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-period-over-period-computation-property-builder (new CfnAnalysis$PeriodOverPeriodComputationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-period-to-date-computation-property-builder
@@ -9044,6 +10904,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-period-to-date-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-period-to-date-computation-property-builder (new CfnAnalysis$PeriodToDateComputationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-pie-chart-aggregated-field-wells-property-builder
   "The build-cfn-analysis-pie-chart-aggregated-field-wells-property-builder function updates a CfnAnalysis$PieChartAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$PieChartAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -9065,6 +10931,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-analysis-pie-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pie-chart-aggregated-field-wells-property-builder (new CfnAnalysis$PieChartAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-pie-chart-configuration-property-builder
@@ -9114,6 +10986,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-pie-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pie-chart-configuration-property-builder (new CfnAnalysis$PieChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-pie-chart-field-wells-property-builder
   "The build-cfn-analysis-pie-chart-field-wells-property-builder function updates a CfnAnalysis$PieChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$PieChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -9129,6 +11007,12 @@
   (when-let [data (lookup-entry config id :pie-chart-aggregated-field-wells)]
     (. builder pieChartAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-analysis-pie-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pie-chart-field-wells-property-builder (new CfnAnalysis$PieChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-pie-chart-sort-configuration-property-builder
@@ -9155,6 +11039,12 @@
   (when-let [data (lookup-entry config id :small-multiples-sort)]
     (. builder smallMultiplesSort data))
   (.build builder))
+
+
+(defn cfn-analysis-pie-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pie-chart-sort-configuration-property-builder (new CfnAnalysis$PieChartSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-pie-chart-visual-property-builder
@@ -9189,6 +11079,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-pie-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pie-chart-visual-property-builder (new CfnAnalysis$PieChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-pivot-field-sort-options-property-builder
   "The build-cfn-analysis-pivot-field-sort-options-property-builder function updates a CfnAnalysis$PivotFieldSortOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$PivotFieldSortOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -9207,6 +11103,12 @@
   (when-let [data (lookup-entry config id :sort-by)]
     (. builder sortBy data))
   (.build builder))
+
+
+(defn cfn-analysis-pivot-field-sort-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-field-sort-options-property-builder (new CfnAnalysis$PivotFieldSortOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-pivot-table-aggregated-field-wells-property-builder
@@ -9230,6 +11132,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-analysis-pivot-table-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-table-aggregated-field-wells-property-builder (new CfnAnalysis$PivotTableAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-pivot-table-cell-conditional-formatting-property-builder
@@ -9258,6 +11166,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-pivot-table-cell-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-table-cell-conditional-formatting-property-builder (new CfnAnalysis$PivotTableCellConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-pivot-table-conditional-formatting-option-property-builder
   "The build-cfn-analysis-pivot-table-conditional-formatting-option-property-builder function updates a CfnAnalysis$PivotTableConditionalFormattingOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$PivotTableConditionalFormattingOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -9273,6 +11187,12 @@
   (when-let [data (lookup-entry config id :cell)]
     (. builder cell data))
   (.build builder))
+
+
+(defn cfn-analysis-pivot-table-conditional-formatting-option-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-table-conditional-formatting-option-property-builder (new CfnAnalysis$PivotTableConditionalFormattingOptionProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-pivot-table-conditional-formatting-property-builder
@@ -9292,6 +11212,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-pivot-table-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-table-conditional-formatting-property-builder (new CfnAnalysis$PivotTableConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-pivot-table-conditional-formatting-scope-property-builder
   "The build-cfn-analysis-pivot-table-conditional-formatting-scope-property-builder function updates a CfnAnalysis$PivotTableConditionalFormattingScopeProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$PivotTableConditionalFormattingScopeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -9307,6 +11233,12 @@
   (when-let [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
+
+
+(defn cfn-analysis-pivot-table-conditional-formatting-scope-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-table-conditional-formatting-scope-property-builder (new CfnAnalysis$PivotTableConditionalFormattingScopeProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-pivot-table-configuration-property-builder
@@ -9341,6 +11273,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-pivot-table-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-table-configuration-property-builder (new CfnAnalysis$PivotTableConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-pivot-table-data-path-option-property-builder
   "The build-cfn-analysis-pivot-table-data-path-option-property-builder function updates a CfnAnalysis$PivotTableDataPathOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$PivotTableDataPathOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -9359,6 +11297,12 @@
   (when-let [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
+
+
+(defn cfn-analysis-pivot-table-data-path-option-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-table-data-path-option-property-builder (new CfnAnalysis$PivotTableDataPathOptionProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-pivot-table-field-collapse-state-option-property-builder
@@ -9381,6 +11325,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-pivot-table-field-collapse-state-option-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-table-field-collapse-state-option-property-builder (new CfnAnalysis$PivotTableFieldCollapseStateOptionProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-pivot-table-field-collapse-state-target-property-builder
   "The build-cfn-analysis-pivot-table-field-collapse-state-target-property-builder function updates a CfnAnalysis$PivotTableFieldCollapseStateTargetProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$PivotTableFieldCollapseStateTargetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -9399,6 +11349,12 @@
   (when-let [data (lookup-entry config id :field-id)]
     (. builder fieldId data))
   (.build builder))
+
+
+(defn cfn-analysis-pivot-table-field-collapse-state-target-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-table-field-collapse-state-target-property-builder (new CfnAnalysis$PivotTableFieldCollapseStateTargetProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-pivot-table-field-option-property-builder
@@ -9424,6 +11380,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-pivot-table-field-option-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-table-field-option-property-builder (new CfnAnalysis$PivotTableFieldOptionProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-pivot-table-field-options-property-builder
   "The build-cfn-analysis-pivot-table-field-options-property-builder function updates a CfnAnalysis$PivotTableFieldOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$PivotTableFieldOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -9447,6 +11409,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-pivot-table-field-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-table-field-options-property-builder (new CfnAnalysis$PivotTableFieldOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-pivot-table-field-subtotal-options-property-builder
   "The build-cfn-analysis-pivot-table-field-subtotal-options-property-builder function updates a CfnAnalysis$PivotTableFieldSubtotalOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$PivotTableFieldSubtotalOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -9464,6 +11432,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-pivot-table-field-subtotal-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-table-field-subtotal-options-property-builder (new CfnAnalysis$PivotTableFieldSubtotalOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-pivot-table-field-wells-property-builder
   "The build-cfn-analysis-pivot-table-field-wells-property-builder function updates a CfnAnalysis$PivotTableFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$PivotTableFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -9479,6 +11453,12 @@
   (when-let [data (lookup-entry config id :pivot-table-aggregated-field-wells)]
     (. builder pivotTableAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-analysis-pivot-table-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-table-field-wells-property-builder (new CfnAnalysis$PivotTableFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-pivot-table-options-property-builder
@@ -9534,6 +11514,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-pivot-table-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-table-options-property-builder (new CfnAnalysis$PivotTableOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-pivot-table-paginated-report-options-property-builder
   "The build-cfn-analysis-pivot-table-paginated-report-options-property-builder function updates a CfnAnalysis$PivotTablePaginatedReportOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$PivotTablePaginatedReportOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -9554,6 +11540,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-pivot-table-paginated-report-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-table-paginated-report-options-property-builder (new CfnAnalysis$PivotTablePaginatedReportOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-pivot-table-rows-label-options-property-builder
   "The build-cfn-analysis-pivot-table-rows-label-options-property-builder function updates a CfnAnalysis$PivotTableRowsLabelOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$PivotTableRowsLabelOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -9572,6 +11564,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-analysis-pivot-table-rows-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-table-rows-label-options-property-builder (new CfnAnalysis$PivotTableRowsLabelOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-pivot-table-sort-by-property-builder
@@ -9597,6 +11595,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-pivot-table-sort-by-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-table-sort-by-property-builder (new CfnAnalysis$PivotTableSortByProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-pivot-table-sort-configuration-property-builder
   "The build-cfn-analysis-pivot-table-sort-configuration-property-builder function updates a CfnAnalysis$PivotTableSortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$PivotTableSortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -9612,6 +11616,12 @@
   (when-let [data (lookup-entry config id :field-sort-options)]
     (. builder fieldSortOptions data))
   (.build builder))
+
+
+(defn cfn-analysis-pivot-table-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-table-sort-configuration-property-builder (new CfnAnalysis$PivotTableSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-pivot-table-total-options-property-builder
@@ -9638,6 +11648,12 @@
   (when-let [data (lookup-entry config id :row-total-options)]
     (. builder rowTotalOptions data))
   (.build builder))
+
+
+(defn cfn-analysis-pivot-table-total-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-table-total-options-property-builder (new CfnAnalysis$PivotTableTotalOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-pivot-table-visual-property-builder
@@ -9670,6 +11686,12 @@
   (when-let [data (lookup-entry config id :visual-id)]
     (. builder visualId data))
   (.build builder))
+
+
+(defn cfn-analysis-pivot-table-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-table-visual-property-builder (new CfnAnalysis$PivotTableVisualProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-pivot-total-options-property-builder
@@ -9710,6 +11732,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-pivot-total-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-pivot-total-options-property-builder (new CfnAnalysis$PivotTotalOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-predefined-hierarchy-property-builder
   "The build-cfn-analysis-predefined-hierarchy-property-builder function updates a CfnAnalysis$PredefinedHierarchyProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$PredefinedHierarchyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -9733,6 +11761,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-predefined-hierarchy-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-predefined-hierarchy-property-builder (new CfnAnalysis$PredefinedHierarchyProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-progress-bar-options-property-builder
   "The build-cfn-analysis-progress-bar-options-property-builder function updates a CfnAnalysis$ProgressBarOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ProgressBarOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -9748,6 +11782,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-analysis-progress-bar-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-progress-bar-options-property-builder (new CfnAnalysis$ProgressBarOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-props-builder
@@ -9803,6 +11843,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-props-builder
+  ""
+  [id config]
+  (build-cfn-analysis-props-builder (new CfnAnalysisProps$Builder) id config))
+
+
 (defn build-cfn-analysis-radar-chart-aggregated-field-wells-property-builder
   "The build-cfn-analysis-radar-chart-aggregated-field-wells-property-builder function updates a CfnAnalysis$RadarChartAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$RadarChartAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -9826,6 +11872,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-radar-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-radar-chart-aggregated-field-wells-property-builder (new CfnAnalysis$RadarChartAggregatedFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-radar-chart-area-style-settings-property-builder
   "The build-cfn-analysis-radar-chart-area-style-settings-property-builder function updates a CfnAnalysis$RadarChartAreaStyleSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$RadarChartAreaStyleSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -9841,6 +11893,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-analysis-radar-chart-area-style-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-radar-chart-area-style-settings-property-builder (new CfnAnalysis$RadarChartAreaStyleSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-radar-chart-configuration-property-builder
@@ -9902,6 +11960,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-radar-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-radar-chart-configuration-property-builder (new CfnAnalysis$RadarChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-radar-chart-field-wells-property-builder
   "The build-cfn-analysis-radar-chart-field-wells-property-builder function updates a CfnAnalysis$RadarChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$RadarChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -9919,6 +11983,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-radar-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-radar-chart-field-wells-property-builder (new CfnAnalysis$RadarChartFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-radar-chart-series-settings-property-builder
   "The build-cfn-analysis-radar-chart-series-settings-property-builder function updates a CfnAnalysis$RadarChartSeriesSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$RadarChartSeriesSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -9934,6 +12004,12 @@
   (when-let [data (lookup-entry config id :area-style-settings)]
     (. builder areaStyleSettings data))
   (.build builder))
+
+
+(defn cfn-analysis-radar-chart-series-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-radar-chart-series-settings-property-builder (new CfnAnalysis$RadarChartSeriesSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-radar-chart-sort-configuration-property-builder
@@ -9960,6 +12036,12 @@
   (when-let [data (lookup-entry config id :color-sort)]
     (. builder colorSort data))
   (.build builder))
+
+
+(defn cfn-analysis-radar-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-radar-chart-sort-configuration-property-builder (new CfnAnalysis$RadarChartSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-radar-chart-visual-property-builder
@@ -9994,6 +12076,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-radar-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-radar-chart-visual-property-builder (new CfnAnalysis$RadarChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-range-ends-label-type-property-builder
   "The build-cfn-analysis-range-ends-label-type-property-builder function updates a CfnAnalysis$RangeEndsLabelTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$RangeEndsLabelTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10011,6 +12099,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-range-ends-label-type-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-range-ends-label-type-property-builder (new CfnAnalysis$RangeEndsLabelTypeProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-reference-line-custom-label-configuration-property-builder
   "The build-cfn-analysis-reference-line-custom-label-configuration-property-builder function updates a CfnAnalysis$ReferenceLineCustomLabelConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ReferenceLineCustomLabelConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10026,6 +12120,12 @@
   (when-let [data (lookup-entry config id :custom-label)]
     (. builder customLabel data))
   (.build builder))
+
+
+(defn cfn-analysis-reference-line-custom-label-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-reference-line-custom-label-configuration-property-builder (new CfnAnalysis$ReferenceLineCustomLabelConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-reference-line-data-configuration-property-builder
@@ -10054,6 +12154,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-reference-line-data-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-reference-line-data-configuration-property-builder (new CfnAnalysis$ReferenceLineDataConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-reference-line-dynamic-data-configuration-property-builder
   "The build-cfn-analysis-reference-line-dynamic-data-configuration-property-builder function updates a CfnAnalysis$ReferenceLineDynamicDataConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ReferenceLineDynamicDataConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10075,6 +12181,12 @@
   (when-let [data (lookup-entry config id :measure-aggregation-function)]
     (. builder measureAggregationFunction data))
   (.build builder))
+
+
+(defn cfn-analysis-reference-line-dynamic-data-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-reference-line-dynamic-data-configuration-property-builder (new CfnAnalysis$ReferenceLineDynamicDataConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-reference-line-label-configuration-property-builder
@@ -10109,6 +12221,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-reference-line-label-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-reference-line-label-configuration-property-builder (new CfnAnalysis$ReferenceLineLabelConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-reference-line-property-builder
   "The build-cfn-analysis-reference-line-property-builder function updates a CfnAnalysis$ReferenceLineProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ReferenceLineProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10135,6 +12253,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-reference-line-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-reference-line-property-builder (new CfnAnalysis$ReferenceLineProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-reference-line-static-data-configuration-property-builder
   "The build-cfn-analysis-reference-line-static-data-configuration-property-builder function updates a CfnAnalysis$ReferenceLineStaticDataConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ReferenceLineStaticDataConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10150,6 +12274,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-analysis-reference-line-static-data-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-reference-line-static-data-configuration-property-builder (new CfnAnalysis$ReferenceLineStaticDataConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-reference-line-style-configuration-property-builder
@@ -10172,6 +12302,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-reference-line-style-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-reference-line-style-configuration-property-builder (new CfnAnalysis$ReferenceLineStyleConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-reference-line-value-label-configuration-property-builder
   "The build-cfn-analysis-reference-line-value-label-configuration-property-builder function updates a CfnAnalysis$ReferenceLineValueLabelConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ReferenceLineValueLabelConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10190,6 +12326,12 @@
   (when-let [data (lookup-entry config id :relative-position)]
     (. builder relativePosition data))
   (.build builder))
+
+
+(defn cfn-analysis-reference-line-value-label-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-reference-line-value-label-configuration-property-builder (new CfnAnalysis$ReferenceLineValueLabelConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-relative-date-time-control-display-options-property-builder
@@ -10213,6 +12355,12 @@
   (when-let [data (lookup-entry config id :title-options)]
     (. builder titleOptions data))
   (.build builder))
+
+
+(defn cfn-analysis-relative-date-time-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-relative-date-time-control-display-options-property-builder (new CfnAnalysis$RelativeDateTimeControlDisplayOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-relative-dates-filter-property-builder
@@ -10262,6 +12410,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-relative-dates-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-relative-dates-filter-property-builder (new CfnAnalysis$RelativeDatesFilterProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-resource-permission-property-builder
   "The build-cfn-analysis-resource-permission-property-builder function updates a CfnAnalysis$ResourcePermissionProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ResourcePermissionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10285,6 +12439,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-resource-permission-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-resource-permission-property-builder (new CfnAnalysis$ResourcePermissionProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-rolling-date-configuration-property-builder
   "The build-cfn-analysis-rolling-date-configuration-property-builder function updates a CfnAnalysis$RollingDateConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$RollingDateConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10303,6 +12463,12 @@
   (when-let [data (lookup-entry config id :expression)]
     (. builder expression data))
   (.build builder))
+
+
+(defn cfn-analysis-rolling-date-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-rolling-date-configuration-property-builder (new CfnAnalysis$RollingDateConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-row-alternate-color-options-property-builder
@@ -10328,6 +12494,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-row-alternate-color-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-row-alternate-color-options-property-builder (new CfnAnalysis$RowAlternateColorOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-same-sheet-target-visual-configuration-property-builder
   "The build-cfn-analysis-same-sheet-target-visual-configuration-property-builder function updates a CfnAnalysis$SameSheetTargetVisualConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$SameSheetTargetVisualConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10346,6 +12518,12 @@
   (when-let [data (lookup-entry config id :target-visuals)]
     (. builder targetVisuals data))
   (.build builder))
+
+
+(defn cfn-analysis-same-sheet-target-visual-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-same-sheet-target-visual-configuration-property-builder (new CfnAnalysis$SameSheetTargetVisualConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-sankey-diagram-aggregated-field-wells-property-builder
@@ -10371,6 +12549,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-sankey-diagram-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-sankey-diagram-aggregated-field-wells-property-builder (new CfnAnalysis$SankeyDiagramAggregatedFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-sankey-diagram-chart-configuration-property-builder
   "The build-cfn-analysis-sankey-diagram-chart-configuration-property-builder function updates a CfnAnalysis$SankeyDiagramChartConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$SankeyDiagramChartConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10394,6 +12578,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-sankey-diagram-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-sankey-diagram-chart-configuration-property-builder (new CfnAnalysis$SankeyDiagramChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-sankey-diagram-field-wells-property-builder
   "The build-cfn-analysis-sankey-diagram-field-wells-property-builder function updates a CfnAnalysis$SankeyDiagramFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$SankeyDiagramFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10409,6 +12599,12 @@
   (when-let [data (lookup-entry config id :sankey-diagram-aggregated-field-wells)]
     (. builder sankeyDiagramAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-analysis-sankey-diagram-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-sankey-diagram-field-wells-property-builder (new CfnAnalysis$SankeyDiagramFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-sankey-diagram-sort-configuration-property-builder
@@ -10432,6 +12628,12 @@
   (when-let [data (lookup-entry config id :weight-sort)]
     (. builder weightSort data))
   (.build builder))
+
+
+(defn cfn-analysis-sankey-diagram-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-sankey-diagram-sort-configuration-property-builder (new CfnAnalysis$SankeyDiagramSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-sankey-diagram-visual-property-builder
@@ -10463,6 +12665,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-sankey-diagram-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-sankey-diagram-visual-property-builder (new CfnAnalysis$SankeyDiagramVisualProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-scatter-plot-categorically-aggregated-field-wells-property-builder
   "The build-cfn-analysis-scatter-plot-categorically-aggregated-field-wells-property-builder function updates a CfnAnalysis$ScatterPlotCategoricallyAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ScatterPlotCategoricallyAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10490,6 +12698,12 @@
   (when-let [data (lookup-entry config id :y-axis)]
     (. builder yAxis data))
   (.build builder))
+
+
+(defn cfn-analysis-scatter-plot-categorically-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-scatter-plot-categorically-aggregated-field-wells-property-builder (new CfnAnalysis$ScatterPlotCategoricallyAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-scatter-plot-configuration-property-builder
@@ -10533,6 +12747,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-scatter-plot-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-scatter-plot-configuration-property-builder (new CfnAnalysis$ScatterPlotConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-scatter-plot-field-wells-property-builder
   "The build-cfn-analysis-scatter-plot-field-wells-property-builder function updates a CfnAnalysis$ScatterPlotFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ScatterPlotFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10551,6 +12771,12 @@
   (when-let [data (lookup-entry config id :scatter-plot-unaggregated-field-wells)]
     (. builder scatterPlotUnaggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-analysis-scatter-plot-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-scatter-plot-field-wells-property-builder (new CfnAnalysis$ScatterPlotFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-scatter-plot-unaggregated-field-wells-property-builder
@@ -10580,6 +12806,12 @@
   (when-let [data (lookup-entry config id :y-axis)]
     (. builder yAxis data))
   (.build builder))
+
+
+(defn cfn-analysis-scatter-plot-unaggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-scatter-plot-unaggregated-field-wells-property-builder (new CfnAnalysis$ScatterPlotUnaggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-scatter-plot-visual-property-builder
@@ -10614,6 +12846,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-scatter-plot-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-scatter-plot-visual-property-builder (new CfnAnalysis$ScatterPlotVisualProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-scroll-bar-options-property-builder
   "The build-cfn-analysis-scroll-bar-options-property-builder function updates a CfnAnalysis$ScrollBarOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ScrollBarOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10634,6 +12872,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-scroll-bar-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-scroll-bar-options-property-builder (new CfnAnalysis$ScrollBarOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-secondary-value-options-property-builder
   "The build-cfn-analysis-secondary-value-options-property-builder function updates a CfnAnalysis$SecondaryValueOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$SecondaryValueOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10649,6 +12893,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-analysis-secondary-value-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-secondary-value-options-property-builder (new CfnAnalysis$SecondaryValueOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-section-after-page-break-property-builder
@@ -10668,6 +12918,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-section-after-page-break-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-section-after-page-break-property-builder (new CfnAnalysis$SectionAfterPageBreakProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-section-based-layout-canvas-size-options-property-builder
   "The build-cfn-analysis-section-based-layout-canvas-size-options-property-builder function updates a CfnAnalysis$SectionBasedLayoutCanvasSizeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$SectionBasedLayoutCanvasSizeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10683,6 +12939,12 @@
   (when-let [data (lookup-entry config id :paper-canvas-size-options)]
     (. builder paperCanvasSizeOptions data))
   (.build builder))
+
+
+(defn cfn-analysis-section-based-layout-canvas-size-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-section-based-layout-canvas-size-options-property-builder (new CfnAnalysis$SectionBasedLayoutCanvasSizeOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-section-based-layout-configuration-property-builder
@@ -10711,6 +12973,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-section-based-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-section-based-layout-configuration-property-builder (new CfnAnalysis$SectionBasedLayoutConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-section-based-layout-paper-canvas-size-options-property-builder
   "The build-cfn-analysis-section-based-layout-paper-canvas-size-options-property-builder function updates a CfnAnalysis$SectionBasedLayoutPaperCanvasSizeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$SectionBasedLayoutPaperCanvasSizeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10734,6 +13002,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-section-based-layout-paper-canvas-size-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-section-based-layout-paper-canvas-size-options-property-builder (new CfnAnalysis$SectionBasedLayoutPaperCanvasSizeOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-section-layout-configuration-property-builder
   "The build-cfn-analysis-section-layout-configuration-property-builder function updates a CfnAnalysis$SectionLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$SectionLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10751,6 +13025,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-section-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-section-layout-configuration-property-builder (new CfnAnalysis$SectionLayoutConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-section-page-break-configuration-property-builder
   "The build-cfn-analysis-section-page-break-configuration-property-builder function updates a CfnAnalysis$SectionPageBreakConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$SectionPageBreakConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10766,6 +13046,12 @@
   (when-let [data (lookup-entry config id :after)]
     (. builder after data))
   (.build builder))
+
+
+(defn cfn-analysis-section-page-break-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-section-page-break-configuration-property-builder (new CfnAnalysis$SectionPageBreakConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-section-style-property-builder
@@ -10788,6 +13074,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-section-style-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-section-style-property-builder (new CfnAnalysis$SectionStyleProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-selected-sheets-filter-scope-configuration-property-builder
   "The build-cfn-analysis-selected-sheets-filter-scope-configuration-property-builder function updates a CfnAnalysis$SelectedSheetsFilterScopeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$SelectedSheetsFilterScopeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10803,6 +13095,12 @@
   (when-let [data (lookup-entry config id :sheet-visual-scoping-configurations)]
     (. builder sheetVisualScopingConfigurations data))
   (.build builder))
+
+
+(defn cfn-analysis-selected-sheets-filter-scope-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-selected-sheets-filter-scope-configuration-property-builder (new CfnAnalysis$SelectedSheetsFilterScopeConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-series-item-property-builder
@@ -10825,6 +13123,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-series-item-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-series-item-property-builder (new CfnAnalysis$SeriesItemProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-set-parameter-value-configuration-property-builder
   "The build-cfn-analysis-set-parameter-value-configuration-property-builder function updates a CfnAnalysis$SetParameterValueConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$SetParameterValueConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10845,6 +13149,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-set-parameter-value-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-set-parameter-value-configuration-property-builder (new CfnAnalysis$SetParameterValueConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-shape-conditional-format-property-builder
   "The build-cfn-analysis-shape-conditional-format-property-builder function updates a CfnAnalysis$ShapeConditionalFormatProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ShapeConditionalFormatProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10860,6 +13170,12 @@
   (when-let [data (lookup-entry config id :background-color)]
     (. builder backgroundColor data))
   (.build builder))
+
+
+(defn cfn-analysis-shape-conditional-format-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-shape-conditional-format-property-builder (new CfnAnalysis$ShapeConditionalFormatProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-sheet-control-info-icon-label-options-property-builder
@@ -10882,6 +13198,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-sheet-control-info-icon-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-sheet-control-info-icon-label-options-property-builder (new CfnAnalysis$SheetControlInfoIconLabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-sheet-control-layout-configuration-property-builder
   "The build-cfn-analysis-sheet-control-layout-configuration-property-builder function updates a CfnAnalysis$SheetControlLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$SheetControlLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10899,6 +13221,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-sheet-control-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-sheet-control-layout-configuration-property-builder (new CfnAnalysis$SheetControlLayoutConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-sheet-control-layout-property-builder
   "The build-cfn-analysis-sheet-control-layout-property-builder function updates a CfnAnalysis$SheetControlLayoutProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$SheetControlLayoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10914,6 +13242,12 @@
   (when-let [data (lookup-entry config id :configuration)]
     (. builder configuration data))
   (.build builder))
+
+
+(defn cfn-analysis-sheet-control-layout-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-sheet-control-layout-property-builder (new CfnAnalysis$SheetControlLayoutProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-sheet-definition-property-builder
@@ -10963,6 +13297,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-sheet-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-sheet-definition-property-builder (new CfnAnalysis$SheetDefinitionProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-sheet-element-configuration-overrides-property-builder
   "The build-cfn-analysis-sheet-element-configuration-overrides-property-builder function updates a CfnAnalysis$SheetElementConfigurationOverridesProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$SheetElementConfigurationOverridesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -10978,6 +13318,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-analysis-sheet-element-configuration-overrides-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-sheet-element-configuration-overrides-property-builder (new CfnAnalysis$SheetElementConfigurationOverridesProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-sheet-element-rendering-rule-property-builder
@@ -11000,6 +13346,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-sheet-element-rendering-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-sheet-element-rendering-rule-property-builder (new CfnAnalysis$SheetElementRenderingRuleProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-sheet-property-builder
   "The build-cfn-analysis-sheet-property-builder function updates a CfnAnalysis$SheetProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$SheetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11020,6 +13372,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-sheet-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-sheet-property-builder (new CfnAnalysis$SheetProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-sheet-text-box-property-builder
   "The build-cfn-analysis-sheet-text-box-property-builder function updates a CfnAnalysis$SheetTextBoxProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$SheetTextBoxProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11038,6 +13396,12 @@
   (when-let [data (lookup-entry config id :sheet-text-box-id)]
     (. builder sheetTextBoxId data))
   (.build builder))
+
+
+(defn cfn-analysis-sheet-text-box-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-sheet-text-box-property-builder (new CfnAnalysis$SheetTextBoxProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-sheet-visual-scoping-configuration-property-builder
@@ -11063,6 +13427,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-sheet-visual-scoping-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-sheet-visual-scoping-configuration-property-builder (new CfnAnalysis$SheetVisualScopingConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-short-format-text-property-builder
   "The build-cfn-analysis-short-format-text-property-builder function updates a CfnAnalysis$ShortFormatTextProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ShortFormatTextProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11083,6 +13453,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-short-format-text-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-short-format-text-property-builder (new CfnAnalysis$ShortFormatTextProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-simple-cluster-marker-property-builder
   "The build-cfn-analysis-simple-cluster-marker-property-builder function updates a CfnAnalysis$SimpleClusterMarkerProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$SimpleClusterMarkerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11098,6 +13474,12 @@
   (when-let [data (lookup-entry config id :color)]
     (. builder color data))
   (.build builder))
+
+
+(defn cfn-analysis-simple-cluster-marker-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-simple-cluster-marker-property-builder (new CfnAnalysis$SimpleClusterMarkerProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-slider-control-display-options-property-builder
@@ -11120,6 +13502,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-slider-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-slider-control-display-options-property-builder (new CfnAnalysis$SliderControlDisplayOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-small-multiples-axis-properties-property-builder
   "The build-cfn-analysis-small-multiples-axis-properties-property-builder function updates a CfnAnalysis$SmallMultiplesAxisPropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$SmallMultiplesAxisPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11138,6 +13526,12 @@
   (when-let [data (lookup-entry config id :scale)]
     (. builder scale data))
   (.build builder))
+
+
+(defn cfn-analysis-small-multiples-axis-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-small-multiples-axis-properties-property-builder (new CfnAnalysis$SmallMultiplesAxisPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-small-multiples-options-property-builder
@@ -11169,6 +13563,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-small-multiples-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-small-multiples-options-property-builder (new CfnAnalysis$SmallMultiplesOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-spacing-property-builder
   "The build-cfn-analysis-spacing-property-builder function updates a CfnAnalysis$SpacingProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$SpacingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11195,6 +13595,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-spacing-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-spacing-property-builder (new CfnAnalysis$SpacingProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-string-default-values-property-builder
   "The build-cfn-analysis-string-default-values-property-builder function updates a CfnAnalysis$StringDefaultValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$StringDefaultValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11215,6 +13621,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-string-default-values-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-string-default-values-property-builder (new CfnAnalysis$StringDefaultValuesProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-string-format-configuration-property-builder
   "The build-cfn-analysis-string-format-configuration-property-builder function updates a CfnAnalysis$StringFormatConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$StringFormatConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11233,6 +13645,12 @@
   (when-let [data (lookup-entry config id :numeric-format-configuration)]
     (. builder numericFormatConfiguration data))
   (.build builder))
+
+
+(defn cfn-analysis-string-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-string-format-configuration-property-builder (new CfnAnalysis$StringFormatConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-string-parameter-declaration-property-builder
@@ -11264,6 +13682,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-string-parameter-declaration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-string-parameter-declaration-property-builder (new CfnAnalysis$StringParameterDeclarationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-string-parameter-property-builder
   "The build-cfn-analysis-string-parameter-property-builder function updates a CfnAnalysis$StringParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$StringParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11284,6 +13708,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-string-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-string-parameter-property-builder (new CfnAnalysis$StringParameterProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-string-value-when-unset-configuration-property-builder
   "The build-cfn-analysis-string-value-when-unset-configuration-property-builder function updates a CfnAnalysis$StringValueWhenUnsetConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$StringValueWhenUnsetConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11302,6 +13732,12 @@
   (when-let [data (lookup-entry config id :value-when-unset-option)]
     (. builder valueWhenUnsetOption data))
   (.build builder))
+
+
+(defn cfn-analysis-string-value-when-unset-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-string-value-when-unset-configuration-property-builder (new CfnAnalysis$StringValueWhenUnsetConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-subtotal-options-property-builder
@@ -11342,6 +13778,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-subtotal-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-subtotal-options-property-builder (new CfnAnalysis$SubtotalOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-table-aggregated-field-wells-property-builder
   "The build-cfn-analysis-table-aggregated-field-wells-property-builder function updates a CfnAnalysis$TableAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TableAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11360,6 +13802,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-analysis-table-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-aggregated-field-wells-property-builder (new CfnAnalysis$TableAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-table-border-options-property-builder
@@ -11385,6 +13833,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-table-border-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-border-options-property-builder (new CfnAnalysis$TableBorderOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-table-cell-conditional-formatting-property-builder
   "The build-cfn-analysis-table-cell-conditional-formatting-property-builder function updates a CfnAnalysis$TableCellConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TableCellConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11405,6 +13859,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-table-cell-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-cell-conditional-formatting-property-builder (new CfnAnalysis$TableCellConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-table-cell-image-sizing-configuration-property-builder
   "The build-cfn-analysis-table-cell-image-sizing-configuration-property-builder function updates a CfnAnalysis$TableCellImageSizingConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TableCellImageSizingConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11420,6 +13880,12 @@
   (when-let [data (lookup-entry config id :table-cell-image-scaling-configuration)]
     (. builder tableCellImageScalingConfiguration data))
   (.build builder))
+
+
+(defn cfn-analysis-table-cell-image-sizing-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-cell-image-sizing-configuration-property-builder (new CfnAnalysis$TableCellImageSizingConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-table-cell-style-property-builder
@@ -11460,6 +13926,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-table-cell-style-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-cell-style-property-builder (new CfnAnalysis$TableCellStyleProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-table-conditional-formatting-option-property-builder
   "The build-cfn-analysis-table-conditional-formatting-option-property-builder function updates a CfnAnalysis$TableConditionalFormattingOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TableConditionalFormattingOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11480,6 +13952,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-table-conditional-formatting-option-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-conditional-formatting-option-property-builder (new CfnAnalysis$TableConditionalFormattingOptionProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-table-conditional-formatting-property-builder
   "The build-cfn-analysis-table-conditional-formatting-property-builder function updates a CfnAnalysis$TableConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TableConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11495,6 +13973,12 @@
   (when-let [data (lookup-entry config id :conditional-formatting-options)]
     (. builder conditionalFormattingOptions data))
   (.build builder))
+
+
+(defn cfn-analysis-table-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-conditional-formatting-property-builder (new CfnAnalysis$TableConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-table-configuration-property-builder
@@ -11532,6 +14016,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-table-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-configuration-property-builder (new CfnAnalysis$TableConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-table-field-custom-icon-content-property-builder
   "The build-cfn-analysis-table-field-custom-icon-content-property-builder function updates a CfnAnalysis$TableFieldCustomIconContentProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TableFieldCustomIconContentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11547,6 +14037,12 @@
   (when-let [data (lookup-entry config id :icon)]
     (. builder icon data))
   (.build builder))
+
+
+(defn cfn-analysis-table-field-custom-icon-content-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-field-custom-icon-content-property-builder (new CfnAnalysis$TableFieldCustomIconContentProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-table-field-custom-text-content-property-builder
@@ -11569,6 +14065,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-table-field-custom-text-content-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-field-custom-text-content-property-builder (new CfnAnalysis$TableFieldCustomTextContentProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-table-field-image-configuration-property-builder
   "The build-cfn-analysis-table-field-image-configuration-property-builder function updates a CfnAnalysis$TableFieldImageConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TableFieldImageConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11584,6 +14086,12 @@
   (when-let [data (lookup-entry config id :sizing-options)]
     (. builder sizingOptions data))
   (.build builder))
+
+
+(defn cfn-analysis-table-field-image-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-field-image-configuration-property-builder (new CfnAnalysis$TableFieldImageConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-table-field-link-configuration-property-builder
@@ -11606,6 +14114,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-table-field-link-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-field-link-configuration-property-builder (new CfnAnalysis$TableFieldLinkConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-table-field-link-content-configuration-property-builder
   "The build-cfn-analysis-table-field-link-content-configuration-property-builder function updates a CfnAnalysis$TableFieldLinkContentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TableFieldLinkContentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11624,6 +14138,12 @@
   (when-let [data (lookup-entry config id :custom-text-content)]
     (. builder customTextContent data))
   (.build builder))
+
+
+(defn cfn-analysis-table-field-link-content-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-field-link-content-configuration-property-builder (new CfnAnalysis$TableFieldLinkContentConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-table-field-option-property-builder
@@ -11655,6 +14175,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-table-field-option-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-field-option-property-builder (new CfnAnalysis$TableFieldOptionProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-table-field-options-property-builder
   "The build-cfn-analysis-table-field-options-property-builder function updates a CfnAnalysis$TableFieldOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TableFieldOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11678,6 +14204,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-table-field-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-field-options-property-builder (new CfnAnalysis$TableFieldOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-table-field-url-configuration-property-builder
   "The build-cfn-analysis-table-field-url-configuration-property-builder function updates a CfnAnalysis$TableFieldURLConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TableFieldURLConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11696,6 +14228,12 @@
   (when-let [data (lookup-entry config id :link-configuration)]
     (. builder linkConfiguration data))
   (.build builder))
+
+
+(defn cfn-analysis-table-field-url-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-field-url-configuration-property-builder (new CfnAnalysis$TableFieldURLConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-table-field-wells-property-builder
@@ -11718,6 +14256,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-table-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-field-wells-property-builder (new CfnAnalysis$TableFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-table-inline-visualization-property-builder
   "The build-cfn-analysis-table-inline-visualization-property-builder function updates a CfnAnalysis$TableInlineVisualizationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TableInlineVisualizationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11733,6 +14277,12 @@
   (when-let [data (lookup-entry config id :data-bars)]
     (. builder dataBars data))
   (.build builder))
+
+
+(defn cfn-analysis-table-inline-visualization-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-inline-visualization-property-builder (new CfnAnalysis$TableInlineVisualizationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-table-options-property-builder
@@ -11761,6 +14311,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-table-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-options-property-builder (new CfnAnalysis$TableOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-table-paginated-report-options-property-builder
   "The build-cfn-analysis-table-paginated-report-options-property-builder function updates a CfnAnalysis$TablePaginatedReportOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TablePaginatedReportOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11781,6 +14337,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-table-paginated-report-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-paginated-report-options-property-builder (new CfnAnalysis$TablePaginatedReportOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-table-pinned-field-options-property-builder
   "The build-cfn-analysis-table-pinned-field-options-property-builder function updates a CfnAnalysis$TablePinnedFieldOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TablePinnedFieldOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11796,6 +14358,12 @@
   (when-let [data (lookup-entry config id :pinned-left-fields)]
     (. builder pinnedLeftFields data))
   (.build builder))
+
+
+(defn cfn-analysis-table-pinned-field-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-pinned-field-options-property-builder (new CfnAnalysis$TablePinnedFieldOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-table-row-conditional-formatting-property-builder
@@ -11816,6 +14384,12 @@
   (when-let [data (lookup-entry config id :text-color)]
     (. builder textColor data))
   (.build builder))
+
+
+(defn cfn-analysis-table-row-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-row-conditional-formatting-property-builder (new CfnAnalysis$TableRowConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-table-side-border-options-property-builder
@@ -11850,6 +14424,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-table-side-border-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-side-border-options-property-builder (new CfnAnalysis$TableSideBorderOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-table-sort-configuration-property-builder
   "The build-cfn-analysis-table-sort-configuration-property-builder function updates a CfnAnalysis$TableSortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TableSortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11870,6 +14450,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-table-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-sort-configuration-property-builder (new CfnAnalysis$TableSortConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-table-style-target-property-builder
   "The build-cfn-analysis-table-style-target-property-builder function updates a CfnAnalysis$TableStyleTargetProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TableStyleTargetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11887,6 +14473,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-table-style-target-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-style-target-property-builder (new CfnAnalysis$TableStyleTargetProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-table-unaggregated-field-wells-property-builder
   "The build-cfn-analysis-table-unaggregated-field-wells-property-builder function updates a CfnAnalysis$TableUnaggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TableUnaggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11902,6 +14494,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-analysis-table-unaggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-unaggregated-field-wells-property-builder (new CfnAnalysis$TableUnaggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-table-visual-property-builder
@@ -11936,6 +14534,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-table-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-table-visual-property-builder (new CfnAnalysis$TableVisualProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-text-area-control-display-options-property-builder
   "The build-cfn-analysis-text-area-control-display-options-property-builder function updates a CfnAnalysis$TextAreaControlDisplayOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TextAreaControlDisplayOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11957,6 +14561,12 @@
   (when-let [data (lookup-entry config id :title-options)]
     (. builder titleOptions data))
   (.build builder))
+
+
+(defn cfn-analysis-text-area-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-text-area-control-display-options-property-builder (new CfnAnalysis$TextAreaControlDisplayOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-text-conditional-format-property-builder
@@ -11982,6 +14592,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-text-conditional-format-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-text-conditional-format-property-builder (new CfnAnalysis$TextConditionalFormatProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-text-control-placeholder-options-property-builder
   "The build-cfn-analysis-text-control-placeholder-options-property-builder function updates a CfnAnalysis$TextControlPlaceholderOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TextControlPlaceholderOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -11997,6 +14613,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-analysis-text-control-placeholder-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-text-control-placeholder-options-property-builder (new CfnAnalysis$TextControlPlaceholderOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-text-field-control-display-options-property-builder
@@ -12022,6 +14644,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-text-field-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-text-field-control-display-options-property-builder (new CfnAnalysis$TextFieldControlDisplayOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-thousand-separator-options-property-builder
   "The build-cfn-analysis-thousand-separator-options-property-builder function updates a CfnAnalysis$ThousandSeparatorOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ThousandSeparatorOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -12040,6 +14668,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-analysis-thousand-separator-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-thousand-separator-options-property-builder (new CfnAnalysis$ThousandSeparatorOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-time-based-forecast-properties-property-builder
@@ -12072,6 +14706,12 @@
   (when-let [data (lookup-entry config id :upper-boundary)]
     (. builder upperBoundary data))
   (.build builder))
+
+
+(defn cfn-analysis-time-based-forecast-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-time-based-forecast-properties-property-builder (new CfnAnalysis$TimeBasedForecastPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-time-equality-filter-property-builder
@@ -12109,6 +14749,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-time-equality-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-time-equality-filter-property-builder (new CfnAnalysis$TimeEqualityFilterProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-time-range-drill-down-filter-property-builder
   "The build-cfn-analysis-time-range-drill-down-filter-property-builder function updates a CfnAnalysis$TimeRangeDrillDownFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TimeRangeDrillDownFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -12133,6 +14779,12 @@
   (when-let [data (lookup-entry config id :time-granularity)]
     (. builder timeGranularity data))
   (.build builder))
+
+
+(defn cfn-analysis-time-range-drill-down-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-time-range-drill-down-filter-property-builder (new CfnAnalysis$TimeRangeDrillDownFilterProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-time-range-filter-property-builder
@@ -12179,6 +14831,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-time-range-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-time-range-filter-property-builder (new CfnAnalysis$TimeRangeFilterProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-time-range-filter-value-property-builder
   "The build-cfn-analysis-time-range-filter-value-property-builder function updates a CfnAnalysis$TimeRangeFilterValueProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TimeRangeFilterValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -12202,6 +14860,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-time-range-filter-value-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-time-range-filter-value-property-builder (new CfnAnalysis$TimeRangeFilterValueProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-tooltip-item-property-builder
   "The build-cfn-analysis-tooltip-item-property-builder function updates a CfnAnalysis$TooltipItemProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TooltipItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -12220,6 +14884,12 @@
   (when-let [data (lookup-entry config id :field-tooltip-item)]
     (. builder fieldTooltipItem data))
   (.build builder))
+
+
+(defn cfn-analysis-tooltip-item-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-tooltip-item-property-builder (new CfnAnalysis$TooltipItemProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-tooltip-options-property-builder
@@ -12243,6 +14913,12 @@
   (when-let [data (lookup-entry config id :tooltip-visibility)]
     (. builder tooltipVisibility data))
   (.build builder))
+
+
+(defn cfn-analysis-tooltip-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-tooltip-options-property-builder (new CfnAnalysis$TooltipOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-top-bottom-filter-property-builder
@@ -12278,6 +14954,12 @@
   (when-let [data (lookup-entry config id :time-granularity)]
     (. builder timeGranularity data))
   (.build builder))
+
+
+(defn cfn-analysis-top-bottom-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-top-bottom-filter-property-builder (new CfnAnalysis$TopBottomFilterProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-top-bottom-movers-computation-property-builder
@@ -12318,6 +15000,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-top-bottom-movers-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-top-bottom-movers-computation-property-builder (new CfnAnalysis$TopBottomMoversComputationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-top-bottom-ranked-computation-property-builder
   "The build-cfn-analysis-top-bottom-ranked-computation-property-builder function updates a CfnAnalysis$TopBottomRankedComputationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TopBottomRankedComputationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -12350,6 +15038,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-top-bottom-ranked-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-top-bottom-ranked-computation-property-builder (new CfnAnalysis$TopBottomRankedComputationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-total-aggregation-computation-property-builder
   "The build-cfn-analysis-total-aggregation-computation-property-builder function updates a CfnAnalysis$TotalAggregationComputationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TotalAggregationComputationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -12373,6 +15067,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-total-aggregation-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-total-aggregation-computation-property-builder (new CfnAnalysis$TotalAggregationComputationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-total-aggregation-function-property-builder
   "The build-cfn-analysis-total-aggregation-function-property-builder function updates a CfnAnalysis$TotalAggregationFunctionProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TotalAggregationFunctionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -12388,6 +15088,12 @@
   (when-let [data (lookup-entry config id :simple-total-aggregation-function)]
     (. builder simpleTotalAggregationFunction data))
   (.build builder))
+
+
+(defn cfn-analysis-total-aggregation-function-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-total-aggregation-function-property-builder (new CfnAnalysis$TotalAggregationFunctionProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-total-aggregation-option-property-builder
@@ -12408,6 +15114,12 @@
   (when-let [data (lookup-entry config id :total-aggregation-function)]
     (. builder totalAggregationFunction data))
   (.build builder))
+
+
+(defn cfn-analysis-total-aggregation-option-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-total-aggregation-option-property-builder (new CfnAnalysis$TotalAggregationOptionProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-total-options-property-builder
@@ -12442,6 +15154,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-total-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-total-options-property-builder (new CfnAnalysis$TotalOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-tree-map-aggregated-field-wells-property-builder
   "The build-cfn-analysis-tree-map-aggregated-field-wells-property-builder function updates a CfnAnalysis$TreeMapAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TreeMapAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -12463,6 +15181,12 @@
   (when-let [data (lookup-entry config id :sizes)]
     (. builder sizes data))
   (.build builder))
+
+
+(defn cfn-analysis-tree-map-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-tree-map-aggregated-field-wells-property-builder (new CfnAnalysis$TreeMapAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-tree-map-configuration-property-builder
@@ -12506,6 +15230,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-tree-map-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-tree-map-configuration-property-builder (new CfnAnalysis$TreeMapConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-tree-map-field-wells-property-builder
   "The build-cfn-analysis-tree-map-field-wells-property-builder function updates a CfnAnalysis$TreeMapFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TreeMapFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -12521,6 +15251,12 @@
   (when-let [data (lookup-entry config id :tree-map-aggregated-field-wells)]
     (. builder treeMapAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-analysis-tree-map-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-tree-map-field-wells-property-builder (new CfnAnalysis$TreeMapFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-tree-map-sort-configuration-property-builder
@@ -12541,6 +15277,12 @@
   (when-let [data (lookup-entry config id :tree-map-sort)]
     (. builder treeMapSort data))
   (.build builder))
+
+
+(defn cfn-analysis-tree-map-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-tree-map-sort-configuration-property-builder (new CfnAnalysis$TreeMapSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-tree-map-visual-property-builder
@@ -12575,6 +15317,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-tree-map-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-tree-map-visual-property-builder (new CfnAnalysis$TreeMapVisualProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-trend-arrow-options-property-builder
   "The build-cfn-analysis-trend-arrow-options-property-builder function updates a CfnAnalysis$TrendArrowOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$TrendArrowOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -12590,6 +15338,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-analysis-trend-arrow-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-trend-arrow-options-property-builder (new CfnAnalysis$TrendArrowOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-unaggregated-field-property-builder
@@ -12615,6 +15369,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-unaggregated-field-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-unaggregated-field-property-builder (new CfnAnalysis$UnaggregatedFieldProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-unique-values-computation-property-builder
   "The build-cfn-analysis-unique-values-computation-property-builder function updates a CfnAnalysis$UniqueValuesComputationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$UniqueValuesComputationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -12638,6 +15398,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-unique-values-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-unique-values-computation-property-builder (new CfnAnalysis$UniqueValuesComputationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-validation-strategy-property-builder
   "The build-cfn-analysis-validation-strategy-property-builder function updates a CfnAnalysis$ValidationStrategyProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$ValidationStrategyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -12655,6 +15421,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-validation-strategy-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-validation-strategy-property-builder (new CfnAnalysis$ValidationStrategyProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-visible-range-options-property-builder
   "The build-cfn-analysis-visible-range-options-property-builder function updates a CfnAnalysis$VisibleRangeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$VisibleRangeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -12670,6 +15442,12 @@
   (when-let [data (lookup-entry config id :percent-range)]
     (. builder percentRange data))
   (.build builder))
+
+
+(defn cfn-analysis-visible-range-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-visible-range-options-property-builder (new CfnAnalysis$VisibleRangeOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-visual-custom-action-operation-property-builder
@@ -12696,6 +15474,12 @@
   (when-let [data (lookup-entry config id :url-operation)]
     (. builder urlOperation data))
   (.build builder))
+
+
+(defn cfn-analysis-visual-custom-action-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-visual-custom-action-operation-property-builder (new CfnAnalysis$VisualCustomActionOperationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-visual-custom-action-property-builder
@@ -12727,6 +15511,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-visual-custom-action-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-visual-custom-action-property-builder (new CfnAnalysis$VisualCustomActionProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-visual-palette-property-builder
   "The build-cfn-analysis-visual-palette-property-builder function updates a CfnAnalysis$VisualPaletteProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$VisualPaletteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -12745,6 +15535,12 @@
   (when-let [data (lookup-entry config id :color-map)]
     (. builder colorMap data))
   (.build builder))
+
+
+(defn cfn-analysis-visual-palette-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-visual-palette-property-builder (new CfnAnalysis$VisualPaletteProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-visual-property-builder
@@ -12830,6 +15626,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-visual-property-builder (new CfnAnalysis$VisualProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-visual-subtitle-label-options-property-builder
   "The build-cfn-analysis-visual-subtitle-label-options-property-builder function updates a CfnAnalysis$VisualSubtitleLabelOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$VisualSubtitleLabelOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -12850,6 +15652,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-visual-subtitle-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-visual-subtitle-label-options-property-builder (new CfnAnalysis$VisualSubtitleLabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-visual-title-label-options-property-builder
   "The build-cfn-analysis-visual-title-label-options-property-builder function updates a CfnAnalysis$VisualTitleLabelOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$VisualTitleLabelOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -12868,6 +15676,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-analysis-visual-title-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-visual-title-label-options-property-builder (new CfnAnalysis$VisualTitleLabelOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-waterfall-chart-aggregated-field-wells-property-builder
@@ -12893,6 +15707,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-waterfall-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-waterfall-chart-aggregated-field-wells-property-builder (new CfnAnalysis$WaterfallChartAggregatedFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-waterfall-chart-color-configuration-property-builder
   "The build-cfn-analysis-waterfall-chart-color-configuration-property-builder function updates a CfnAnalysis$WaterfallChartColorConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$WaterfallChartColorConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -12908,6 +15728,12 @@
   (when-let [data (lookup-entry config id :group-color-configuration)]
     (. builder groupColorConfiguration data))
   (.build builder))
+
+
+(defn cfn-analysis-waterfall-chart-color-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-waterfall-chart-color-configuration-property-builder (new CfnAnalysis$WaterfallChartColorConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-waterfall-chart-configuration-property-builder
@@ -12957,6 +15783,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-waterfall-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-waterfall-chart-configuration-property-builder (new CfnAnalysis$WaterfallChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-waterfall-chart-field-wells-property-builder
   "The build-cfn-analysis-waterfall-chart-field-wells-property-builder function updates a CfnAnalysis$WaterfallChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$WaterfallChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -12972,6 +15804,12 @@
   (when-let [data (lookup-entry config id :waterfall-chart-aggregated-field-wells)]
     (. builder waterfallChartAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-analysis-waterfall-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-waterfall-chart-field-wells-property-builder (new CfnAnalysis$WaterfallChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-waterfall-chart-group-color-configuration-property-builder
@@ -12997,6 +15835,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-waterfall-chart-group-color-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-waterfall-chart-group-color-configuration-property-builder (new CfnAnalysis$WaterfallChartGroupColorConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-waterfall-chart-options-property-builder
   "The build-cfn-analysis-waterfall-chart-options-property-builder function updates a CfnAnalysis$WaterfallChartOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$WaterfallChartOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13012,6 +15856,12 @@
   (when-let [data (lookup-entry config id :total-bar-label)]
     (. builder totalBarLabel data))
   (.build builder))
+
+
+(defn cfn-analysis-waterfall-chart-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-waterfall-chart-options-property-builder (new CfnAnalysis$WaterfallChartOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-waterfall-chart-sort-configuration-property-builder
@@ -13032,6 +15882,12 @@
   (when-let [data (lookup-entry config id :category-sort)]
     (. builder categorySort data))
   (.build builder))
+
+
+(defn cfn-analysis-waterfall-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-waterfall-chart-sort-configuration-property-builder (new CfnAnalysis$WaterfallChartSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-waterfall-visual-property-builder
@@ -13066,6 +15922,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-waterfall-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-waterfall-visual-property-builder (new CfnAnalysis$WaterfallVisualProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-what-if-point-scenario-property-builder
   "The build-cfn-analysis-what-if-point-scenario-property-builder function updates a CfnAnalysis$WhatIfPointScenarioProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$WhatIfPointScenarioProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13084,6 +15946,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-analysis-what-if-point-scenario-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-what-if-point-scenario-property-builder (new CfnAnalysis$WhatIfPointScenarioProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-what-if-range-scenario-property-builder
@@ -13109,6 +15977,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-what-if-range-scenario-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-what-if-range-scenario-property-builder (new CfnAnalysis$WhatIfRangeScenarioProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-word-cloud-aggregated-field-wells-property-builder
   "The build-cfn-analysis-word-cloud-aggregated-field-wells-property-builder function updates a CfnAnalysis$WordCloudAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$WordCloudAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13127,6 +16001,12 @@
   (when-let [data (lookup-entry config id :size)]
     (. builder size data))
   (.build builder))
+
+
+(defn cfn-analysis-word-cloud-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-word-cloud-aggregated-field-wells-property-builder (new CfnAnalysis$WordCloudAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-word-cloud-chart-configuration-property-builder
@@ -13155,6 +16035,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-word-cloud-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-word-cloud-chart-configuration-property-builder (new CfnAnalysis$WordCloudChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-word-cloud-field-wells-property-builder
   "The build-cfn-analysis-word-cloud-field-wells-property-builder function updates a CfnAnalysis$WordCloudFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$WordCloudFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13170,6 +16056,12 @@
   (when-let [data (lookup-entry config id :word-cloud-aggregated-field-wells)]
     (. builder wordCloudAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-analysis-word-cloud-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-word-cloud-field-wells-property-builder (new CfnAnalysis$WordCloudFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-word-cloud-options-property-builder
@@ -13204,6 +16096,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-word-cloud-options-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-word-cloud-options-property-builder (new CfnAnalysis$WordCloudOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-word-cloud-sort-configuration-property-builder
   "The build-cfn-analysis-word-cloud-sort-configuration-property-builder function updates a CfnAnalysis$WordCloudSortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysis$WordCloudSortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13222,6 +16120,12 @@
   (when-let [data (lookup-entry config id :category-sort)]
     (. builder categorySort data))
   (.build builder))
+
+
+(defn cfn-analysis-word-cloud-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-word-cloud-sort-configuration-property-builder (new CfnAnalysis$WordCloudSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-word-cloud-visual-property-builder
@@ -13256,6 +16160,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-word-cloud-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-word-cloud-visual-property-builder (new CfnAnalysis$WordCloudVisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-ad-hoc-filtering-option-property-builder
   "The build-cfn-dashboard-ad-hoc-filtering-option-property-builder function updates a CfnDashboard$AdHocFilteringOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$AdHocFilteringOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13271,6 +16181,12 @@
   (when-let [data (lookup-entry config id :availability-status)]
     (. builder availabilityStatus data))
   (.build builder))
+
+
+(defn cfn-dashboard-ad-hoc-filtering-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-ad-hoc-filtering-option-property-builder (new CfnDashboard$AdHocFilteringOptionProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-aggregation-function-property-builder
@@ -13299,6 +16215,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-aggregation-function-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-aggregation-function-property-builder (new CfnDashboard$AggregationFunctionProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-aggregation-sort-configuration-property-builder
   "The build-cfn-dashboard-aggregation-sort-configuration-property-builder function updates a CfnDashboard$AggregationSortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$AggregationSortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13322,6 +16244,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-aggregation-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-aggregation-sort-configuration-property-builder (new CfnDashboard$AggregationSortConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-analysis-defaults-property-builder
   "The build-cfn-dashboard-analysis-defaults-property-builder function updates a CfnDashboard$AnalysisDefaultsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$AnalysisDefaultsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13337,6 +16265,12 @@
   (when-let [data (lookup-entry config id :default-new-sheet-configuration)]
     (. builder defaultNewSheetConfiguration data))
   (.build builder))
+
+
+(defn cfn-dashboard-analysis-defaults-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-analysis-defaults-property-builder (new CfnDashboard$AnalysisDefaultsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-anchor-date-configuration-property-builder
@@ -13359,6 +16293,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-anchor-date-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-anchor-date-configuration-property-builder (new CfnDashboard$AnchorDateConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-arc-axis-configuration-property-builder
   "The build-cfn-dashboard-arc-axis-configuration-property-builder function updates a CfnDashboard$ArcAxisConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ArcAxisConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13377,6 +16317,12 @@
   (when-let [data (lookup-entry config id :reserve-range)]
     (. builder reserveRange data))
   (.build builder))
+
+
+(defn cfn-dashboard-arc-axis-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-arc-axis-configuration-property-builder (new CfnDashboard$ArcAxisConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-arc-axis-display-range-property-builder
@@ -13399,6 +16345,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-arc-axis-display-range-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-arc-axis-display-range-property-builder (new CfnDashboard$ArcAxisDisplayRangeProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-arc-configuration-property-builder
   "The build-cfn-dashboard-arc-configuration-property-builder function updates a CfnDashboard$ArcConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ArcConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13419,6 +16371,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-arc-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-arc-configuration-property-builder (new CfnDashboard$ArcConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-arc-options-property-builder
   "The build-cfn-dashboard-arc-options-property-builder function updates a CfnDashboard$ArcOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ArcOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13434,6 +16392,12 @@
   (when-let [data (lookup-entry config id :arc-thickness)]
     (. builder arcThickness data))
   (.build builder))
+
+
+(defn cfn-dashboard-arc-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-arc-options-property-builder (new CfnDashboard$ArcOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-asset-options-property-builder
@@ -13456,6 +16420,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-asset-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-asset-options-property-builder (new CfnDashboard$AssetOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-attribute-aggregation-function-property-builder
   "The build-cfn-dashboard-attribute-aggregation-function-property-builder function updates a CfnDashboard$AttributeAggregationFunctionProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$AttributeAggregationFunctionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13474,6 +16444,12 @@
   (when-let [data (lookup-entry config id :value-for-multiple-values)]
     (. builder valueForMultipleValues data))
   (.build builder))
+
+
+(defn cfn-dashboard-attribute-aggregation-function-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-attribute-aggregation-function-property-builder (new CfnDashboard$AttributeAggregationFunctionProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-axis-data-options-property-builder
@@ -13496,6 +16472,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-axis-data-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-axis-data-options-property-builder (new CfnDashboard$AxisDataOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-axis-display-min-max-range-property-builder
   "The build-cfn-dashboard-axis-display-min-max-range-property-builder function updates a CfnDashboard$AxisDisplayMinMaxRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$AxisDisplayMinMaxRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13514,6 +16496,12 @@
   (when-let [data (lookup-entry config id :minimum)]
     (. builder minimum data))
   (.build builder))
+
+
+(defn cfn-dashboard-axis-display-min-max-range-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-axis-display-min-max-range-property-builder (new CfnDashboard$AxisDisplayMinMaxRangeProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-axis-display-options-property-builder
@@ -13548,6 +16536,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-axis-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-axis-display-options-property-builder (new CfnDashboard$AxisDisplayOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-axis-display-range-property-builder
   "The build-cfn-dashboard-axis-display-range-property-builder function updates a CfnDashboard$AxisDisplayRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$AxisDisplayRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13566,6 +16560,12 @@
   (when-let [data (lookup-entry config id :min-max)]
     (. builder minMax data))
   (.build builder))
+
+
+(defn cfn-dashboard-axis-display-range-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-axis-display-range-property-builder (new CfnDashboard$AxisDisplayRangeProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-axis-label-options-property-builder
@@ -13591,6 +16591,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-axis-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-axis-label-options-property-builder (new CfnDashboard$AxisLabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-axis-label-reference-options-property-builder
   "The build-cfn-dashboard-axis-label-reference-options-property-builder function updates a CfnDashboard$AxisLabelReferenceOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$AxisLabelReferenceOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13609,6 +16615,12 @@
   (when-let [data (lookup-entry config id :field-id)]
     (. builder fieldId data))
   (.build builder))
+
+
+(defn cfn-dashboard-axis-label-reference-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-axis-label-reference-options-property-builder (new CfnDashboard$AxisLabelReferenceOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-axis-linear-scale-property-builder
@@ -13631,6 +16643,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-axis-linear-scale-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-axis-linear-scale-property-builder (new CfnDashboard$AxisLinearScaleProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-axis-logarithmic-scale-property-builder
   "The build-cfn-dashboard-axis-logarithmic-scale-property-builder function updates a CfnDashboard$AxisLogarithmicScaleProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$AxisLogarithmicScaleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13646,6 +16664,12 @@
   (when-let [data (lookup-entry config id :base)]
     (. builder base data))
   (.build builder))
+
+
+(defn cfn-dashboard-axis-logarithmic-scale-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-axis-logarithmic-scale-property-builder (new CfnDashboard$AxisLogarithmicScaleProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-axis-scale-property-builder
@@ -13668,6 +16692,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-axis-scale-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-axis-scale-property-builder (new CfnDashboard$AxisScaleProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-axis-tick-label-options-property-builder
   "The build-cfn-dashboard-axis-tick-label-options-property-builder function updates a CfnDashboard$AxisTickLabelOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$AxisTickLabelOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13686,6 +16716,12 @@
   (when-let [data (lookup-entry config id :rotation-angle)]
     (. builder rotationAngle data))
   (.build builder))
+
+
+(defn cfn-dashboard-axis-tick-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-axis-tick-label-options-property-builder (new CfnDashboard$AxisTickLabelOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-bar-chart-aggregated-field-wells-property-builder
@@ -13712,6 +16748,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-dashboard-bar-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-bar-chart-aggregated-field-wells-property-builder (new CfnDashboard$BarChartAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-bar-chart-configuration-property-builder
@@ -13776,6 +16818,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-bar-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-bar-chart-configuration-property-builder (new CfnDashboard$BarChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-bar-chart-field-wells-property-builder
   "The build-cfn-dashboard-bar-chart-field-wells-property-builder function updates a CfnDashboard$BarChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$BarChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13791,6 +16839,12 @@
   (when-let [data (lookup-entry config id :bar-chart-aggregated-field-wells)]
     (. builder barChartAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-dashboard-bar-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-bar-chart-field-wells-property-builder (new CfnDashboard$BarChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-bar-chart-sort-configuration-property-builder
@@ -13825,6 +16879,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-bar-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-bar-chart-sort-configuration-property-builder (new CfnDashboard$BarChartSortConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-bar-chart-visual-property-builder
   "The build-cfn-dashboard-bar-chart-visual-property-builder function updates a CfnDashboard$BarChartVisualProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$BarChartVisualProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13857,6 +16917,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-bar-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-bar-chart-visual-property-builder (new CfnDashboard$BarChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-bin-count-options-property-builder
   "The build-cfn-dashboard-bin-count-options-property-builder function updates a CfnDashboard$BinCountOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$BinCountOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13872,6 +16938,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-dashboard-bin-count-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-bin-count-options-property-builder (new CfnDashboard$BinCountOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-bin-width-options-property-builder
@@ -13892,6 +16964,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-dashboard-bin-width-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-bin-width-options-property-builder (new CfnDashboard$BinWidthOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-body-section-configuration-property-builder
@@ -13920,6 +16998,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-body-section-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-body-section-configuration-property-builder (new CfnDashboard$BodySectionConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-body-section-content-property-builder
   "The build-cfn-dashboard-body-section-content-property-builder function updates a CfnDashboard$BodySectionContentProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$BodySectionContentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -13935,6 +17019,12 @@
   (when-let [data (lookup-entry config id :layout)]
     (. builder layout data))
   (.build builder))
+
+
+(defn cfn-dashboard-body-section-content-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-body-section-content-property-builder (new CfnDashboard$BodySectionContentProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-box-plot-aggregated-field-wells-property-builder
@@ -13955,6 +17045,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-dashboard-box-plot-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-box-plot-aggregated-field-wells-property-builder (new CfnDashboard$BoxPlotAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-box-plot-chart-configuration-property-builder
@@ -14004,6 +17100,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-box-plot-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-box-plot-chart-configuration-property-builder (new CfnDashboard$BoxPlotChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-box-plot-field-wells-property-builder
   "The build-cfn-dashboard-box-plot-field-wells-property-builder function updates a CfnDashboard$BoxPlotFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$BoxPlotFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14019,6 +17121,12 @@
   (when-let [data (lookup-entry config id :box-plot-aggregated-field-wells)]
     (. builder boxPlotAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-dashboard-box-plot-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-box-plot-field-wells-property-builder (new CfnDashboard$BoxPlotFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-box-plot-options-property-builder
@@ -14044,6 +17152,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-box-plot-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-box-plot-options-property-builder (new CfnDashboard$BoxPlotOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-box-plot-sort-configuration-property-builder
   "The build-cfn-dashboard-box-plot-sort-configuration-property-builder function updates a CfnDashboard$BoxPlotSortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$BoxPlotSortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14064,6 +17178,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-box-plot-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-box-plot-sort-configuration-property-builder (new CfnDashboard$BoxPlotSortConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-box-plot-style-options-property-builder
   "The build-cfn-dashboard-box-plot-style-options-property-builder function updates a CfnDashboard$BoxPlotStyleOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$BoxPlotStyleOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14079,6 +17199,12 @@
   (when-let [data (lookup-entry config id :fill-style)]
     (. builder fillStyle data))
   (.build builder))
+
+
+(defn cfn-dashboard-box-plot-style-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-box-plot-style-options-property-builder (new CfnDashboard$BoxPlotStyleOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-box-plot-visual-property-builder
@@ -14111,6 +17237,12 @@
   (when-let [data (lookup-entry config id :visual-id)]
     (. builder visualId data))
   (.build builder))
+
+
+(defn cfn-dashboard-box-plot-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-box-plot-visual-property-builder (new CfnDashboard$BoxPlotVisualProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-builder
@@ -14169,6 +17301,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-dashboard-builder (CfnDashboard$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-dashboard-calculated-field-property-builder
   "The build-cfn-dashboard-calculated-field-property-builder function updates a CfnDashboard$CalculatedFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$CalculatedFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14192,6 +17330,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-calculated-field-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-calculated-field-property-builder (new CfnDashboard$CalculatedFieldProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-calculated-measure-field-property-builder
   "The build-cfn-dashboard-calculated-measure-field-property-builder function updates a CfnDashboard$CalculatedMeasureFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$CalculatedMeasureFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14212,6 +17356,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-calculated-measure-field-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-calculated-measure-field-property-builder (new CfnDashboard$CalculatedMeasureFieldProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-cascading-control-configuration-property-builder
   "The build-cfn-dashboard-cascading-control-configuration-property-builder function updates a CfnDashboard$CascadingControlConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$CascadingControlConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14227,6 +17377,12 @@
   (when-let [data (lookup-entry config id :source-controls)]
     (. builder sourceControls data))
   (.build builder))
+
+
+(defn cfn-dashboard-cascading-control-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-cascading-control-configuration-property-builder (new CfnDashboard$CascadingControlConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-cascading-control-source-property-builder
@@ -14247,6 +17403,12 @@
   (when-let [data (lookup-entry config id :source-sheet-control-id)]
     (. builder sourceSheetControlId data))
   (.build builder))
+
+
+(defn cfn-dashboard-cascading-control-source-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-cascading-control-source-property-builder (new CfnDashboard$CascadingControlSourceProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-categorical-dimension-field-property-builder
@@ -14275,6 +17437,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-categorical-dimension-field-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-categorical-dimension-field-property-builder (new CfnDashboard$CategoricalDimensionFieldProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-categorical-measure-field-property-builder
   "The build-cfn-dashboard-categorical-measure-field-property-builder function updates a CfnDashboard$CategoricalMeasureFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$CategoricalMeasureFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14301,6 +17469,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-categorical-measure-field-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-categorical-measure-field-property-builder (new CfnDashboard$CategoricalMeasureFieldProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-category-drill-down-filter-property-builder
   "The build-cfn-dashboard-category-drill-down-filter-property-builder function updates a CfnDashboard$CategoryDrillDownFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$CategoryDrillDownFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14319,6 +17493,12 @@
   (when-let [data (lookup-entry config id :column)]
     (. builder column data))
   (.build builder))
+
+
+(defn cfn-dashboard-category-drill-down-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-category-drill-down-filter-property-builder (new CfnDashboard$CategoryDrillDownFilterProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-category-filter-configuration-property-builder
@@ -14342,6 +17522,12 @@
   (when-let [data (lookup-entry config id :filter-list-configuration)]
     (. builder filterListConfiguration data))
   (.build builder))
+
+
+(defn cfn-dashboard-category-filter-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-category-filter-configuration-property-builder (new CfnDashboard$CategoryFilterConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-category-filter-property-builder
@@ -14370,6 +17556,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-category-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-category-filter-property-builder (new CfnDashboard$CategoryFilterProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-chart-axis-label-options-property-builder
   "The build-cfn-dashboard-chart-axis-label-options-property-builder function updates a CfnDashboard$ChartAxisLabelOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ChartAxisLabelOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14393,6 +17585,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-chart-axis-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-chart-axis-label-options-property-builder (new CfnDashboard$ChartAxisLabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-cluster-marker-configuration-property-builder
   "The build-cfn-dashboard-cluster-marker-configuration-property-builder function updates a CfnDashboard$ClusterMarkerConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ClusterMarkerConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14410,6 +17608,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-cluster-marker-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-cluster-marker-configuration-property-builder (new CfnDashboard$ClusterMarkerConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-cluster-marker-property-builder
   "The build-cfn-dashboard-cluster-marker-property-builder function updates a CfnDashboard$ClusterMarkerProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ClusterMarkerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14425,6 +17629,12 @@
   (when-let [data (lookup-entry config id :simple-cluster-marker)]
     (. builder simpleClusterMarker data))
   (.build builder))
+
+
+(defn cfn-dashboard-cluster-marker-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-cluster-marker-property-builder (new CfnDashboard$ClusterMarkerProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-color-scale-property-builder
@@ -14450,6 +17660,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-color-scale-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-color-scale-property-builder (new CfnDashboard$ColorScaleProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-colors-configuration-property-builder
   "The build-cfn-dashboard-colors-configuration-property-builder function updates a CfnDashboard$ColorsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ColorsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14465,6 +17681,12 @@
   (when-let [data (lookup-entry config id :custom-colors)]
     (. builder customColors data))
   (.build builder))
+
+
+(defn cfn-dashboard-colors-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-colors-configuration-property-builder (new CfnDashboard$ColorsConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-column-configuration-property-builder
@@ -14493,6 +17715,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-column-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-column-configuration-property-builder (new CfnDashboard$ColumnConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-column-hierarchy-property-builder
   "The build-cfn-dashboard-column-hierarchy-property-builder function updates a CfnDashboard$ColumnHierarchyProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ColumnHierarchyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14516,6 +17744,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-column-hierarchy-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-column-hierarchy-property-builder (new CfnDashboard$ColumnHierarchyProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-column-identifier-property-builder
   "The build-cfn-dashboard-column-identifier-property-builder function updates a CfnDashboard$ColumnIdentifierProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ColumnIdentifierProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14534,6 +17768,12 @@
   (when-let [data (lookup-entry config id :data-set-identifier)]
     (. builder dataSetIdentifier data))
   (.build builder))
+
+
+(defn cfn-dashboard-column-identifier-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-column-identifier-property-builder (new CfnDashboard$ColumnIdentifierProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-column-sort-property-builder
@@ -14557,6 +17797,12 @@
   (when-let [data (lookup-entry config id :sort-by)]
     (. builder sortBy data))
   (.build builder))
+
+
+(defn cfn-dashboard-column-sort-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-column-sort-property-builder (new CfnDashboard$ColumnSortProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-column-tooltip-item-property-builder
@@ -14585,6 +17831,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-column-tooltip-item-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-column-tooltip-item-property-builder (new CfnDashboard$ColumnTooltipItemProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-combo-chart-aggregated-field-wells-property-builder
   "The build-cfn-dashboard-combo-chart-aggregated-field-wells-property-builder function updates a CfnDashboard$ComboChartAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ComboChartAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14609,6 +17861,12 @@
   (when-let [data (lookup-entry config id :line-values)]
     (. builder lineValues data))
   (.build builder))
+
+
+(defn cfn-dashboard-combo-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-combo-chart-aggregated-field-wells-property-builder (new CfnDashboard$ComboChartAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-combo-chart-configuration-property-builder
@@ -14673,6 +17931,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-combo-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-combo-chart-configuration-property-builder (new CfnDashboard$ComboChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-combo-chart-field-wells-property-builder
   "The build-cfn-dashboard-combo-chart-field-wells-property-builder function updates a CfnDashboard$ComboChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ComboChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14688,6 +17952,12 @@
   (when-let [data (lookup-entry config id :combo-chart-aggregated-field-wells)]
     (. builder comboChartAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-dashboard-combo-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-combo-chart-field-wells-property-builder (new CfnDashboard$ComboChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-combo-chart-sort-configuration-property-builder
@@ -14714,6 +17984,12 @@
   (when-let [data (lookup-entry config id :color-sort)]
     (. builder colorSort data))
   (.build builder))
+
+
+(defn cfn-dashboard-combo-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-combo-chart-sort-configuration-property-builder (new CfnDashboard$ComboChartSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-combo-chart-visual-property-builder
@@ -14748,6 +18024,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-combo-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-combo-chart-visual-property-builder (new CfnDashboard$ComboChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-comparison-configuration-property-builder
   "The build-cfn-dashboard-comparison-configuration-property-builder function updates a CfnDashboard$ComparisonConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ComparisonConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14768,6 +18050,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-comparison-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-comparison-configuration-property-builder (new CfnDashboard$ComparisonConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-comparison-format-configuration-property-builder
   "The build-cfn-dashboard-comparison-format-configuration-property-builder function updates a CfnDashboard$ComparisonFormatConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ComparisonFormatConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14786,6 +18074,12 @@
   (when-let [data (lookup-entry config id :percentage-display-format-configuration)]
     (. builder percentageDisplayFormatConfiguration data))
   (.build builder))
+
+
+(defn cfn-dashboard-comparison-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-comparison-format-configuration-property-builder (new CfnDashboard$ComparisonFormatConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-computation-property-builder
@@ -14832,6 +18126,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-computation-property-builder (new CfnDashboard$ComputationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-conditional-formatting-color-property-builder
   "The build-cfn-dashboard-conditional-formatting-color-property-builder function updates a CfnDashboard$ConditionalFormattingColorProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ConditionalFormattingColorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14850,6 +18150,12 @@
   (when-let [data (lookup-entry config id :solid)]
     (. builder solid data))
   (.build builder))
+
+
+(defn cfn-dashboard-conditional-formatting-color-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-conditional-formatting-color-property-builder (new CfnDashboard$ConditionalFormattingColorProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-conditional-formatting-custom-icon-condition-property-builder
@@ -14878,6 +18184,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-conditional-formatting-custom-icon-condition-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-conditional-formatting-custom-icon-condition-property-builder (new CfnDashboard$ConditionalFormattingCustomIconConditionProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-conditional-formatting-custom-icon-options-property-builder
   "The build-cfn-dashboard-conditional-formatting-custom-icon-options-property-builder function updates a CfnDashboard$ConditionalFormattingCustomIconOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ConditionalFormattingCustomIconOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14896,6 +18208,12 @@
   (when-let [data (lookup-entry config id :unicode-icon)]
     (. builder unicodeIcon data))
   (.build builder))
+
+
+(defn cfn-dashboard-conditional-formatting-custom-icon-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-conditional-formatting-custom-icon-options-property-builder (new CfnDashboard$ConditionalFormattingCustomIconOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-conditional-formatting-gradient-color-property-builder
@@ -14918,6 +18236,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-conditional-formatting-gradient-color-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-conditional-formatting-gradient-color-property-builder (new CfnDashboard$ConditionalFormattingGradientColorProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-conditional-formatting-icon-display-configuration-property-builder
   "The build-cfn-dashboard-conditional-formatting-icon-display-configuration-property-builder function updates a CfnDashboard$ConditionalFormattingIconDisplayConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ConditionalFormattingIconDisplayConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14933,6 +18257,12 @@
   (when-let [data (lookup-entry config id :icon-display-option)]
     (. builder iconDisplayOption data))
   (.build builder))
+
+
+(defn cfn-dashboard-conditional-formatting-icon-display-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-conditional-formatting-icon-display-configuration-property-builder (new CfnDashboard$ConditionalFormattingIconDisplayConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-conditional-formatting-icon-property-builder
@@ -14955,6 +18285,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-conditional-formatting-icon-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-conditional-formatting-icon-property-builder (new CfnDashboard$ConditionalFormattingIconProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-conditional-formatting-icon-set-property-builder
   "The build-cfn-dashboard-conditional-formatting-icon-set-property-builder function updates a CfnDashboard$ConditionalFormattingIconSetProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ConditionalFormattingIconSetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -14973,6 +18309,12 @@
   (when-let [data (lookup-entry config id :icon-set-type)]
     (. builder iconSetType data))
   (.build builder))
+
+
+(defn cfn-dashboard-conditional-formatting-icon-set-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-conditional-formatting-icon-set-property-builder (new CfnDashboard$ConditionalFormattingIconSetProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-conditional-formatting-solid-color-property-builder
@@ -14995,6 +18337,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-conditional-formatting-solid-color-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-conditional-formatting-solid-color-property-builder (new CfnDashboard$ConditionalFormattingSolidColorProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-contribution-analysis-default-property-builder
   "The build-cfn-dashboard-contribution-analysis-default-property-builder function updates a CfnDashboard$ContributionAnalysisDefaultProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ContributionAnalysisDefaultProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15013,6 +18361,12 @@
   (when-let [data (lookup-entry config id :measure-field-id)]
     (. builder measureFieldId data))
   (.build builder))
+
+
+(defn cfn-dashboard-contribution-analysis-default-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-contribution-analysis-default-property-builder (new CfnDashboard$ContributionAnalysisDefaultProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-currency-display-format-configuration-property-builder
@@ -15053,6 +18407,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-currency-display-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-currency-display-format-configuration-property-builder (new CfnDashboard$CurrencyDisplayFormatConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-custom-action-filter-operation-property-builder
   "The build-cfn-dashboard-custom-action-filter-operation-property-builder function updates a CfnDashboard$CustomActionFilterOperationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$CustomActionFilterOperationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15073,6 +18433,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-custom-action-filter-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-custom-action-filter-operation-property-builder (new CfnDashboard$CustomActionFilterOperationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-custom-action-navigation-operation-property-builder
   "The build-cfn-dashboard-custom-action-navigation-operation-property-builder function updates a CfnDashboard$CustomActionNavigationOperationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$CustomActionNavigationOperationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15090,6 +18456,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-custom-action-navigation-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-custom-action-navigation-operation-property-builder (new CfnDashboard$CustomActionNavigationOperationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-custom-action-set-parameters-operation-property-builder
   "The build-cfn-dashboard-custom-action-set-parameters-operation-property-builder function updates a CfnDashboard$CustomActionSetParametersOperationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$CustomActionSetParametersOperationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15105,6 +18477,12 @@
   (when-let [data (lookup-entry config id :parameter-value-configurations)]
     (. builder parameterValueConfigurations data))
   (.build builder))
+
+
+(defn cfn-dashboard-custom-action-set-parameters-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-custom-action-set-parameters-operation-property-builder (new CfnDashboard$CustomActionSetParametersOperationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-custom-action-url-operation-property-builder
@@ -15125,6 +18503,12 @@
   (when-let [data (lookup-entry config id :url-template)]
     (. builder urlTemplate data))
   (.build builder))
+
+
+(defn cfn-dashboard-custom-action-url-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-custom-action-url-operation-property-builder (new CfnDashboard$CustomActionURLOperationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-custom-color-property-builder
@@ -15150,6 +18534,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-custom-color-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-custom-color-property-builder (new CfnDashboard$CustomColorProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-custom-content-configuration-property-builder
   "The build-cfn-dashboard-custom-content-configuration-property-builder function updates a CfnDashboard$CustomContentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$CustomContentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15171,6 +18561,12 @@
   (when-let [data (lookup-entry config id :image-scaling)]
     (. builder imageScaling data))
   (.build builder))
+
+
+(defn cfn-dashboard-custom-content-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-custom-content-configuration-property-builder (new CfnDashboard$CustomContentConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-custom-content-visual-property-builder
@@ -15205,6 +18601,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-custom-content-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-custom-content-visual-property-builder (new CfnDashboard$CustomContentVisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-custom-filter-configuration-property-builder
   "The build-cfn-dashboard-custom-filter-configuration-property-builder function updates a CfnDashboard$CustomFilterConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$CustomFilterConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15234,6 +18636,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-custom-filter-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-custom-filter-configuration-property-builder (new CfnDashboard$CustomFilterConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-custom-filter-list-configuration-property-builder
   "The build-cfn-dashboard-custom-filter-list-configuration-property-builder function updates a CfnDashboard$CustomFilterListConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$CustomFilterListConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15260,6 +18668,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-custom-filter-list-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-custom-filter-list-configuration-property-builder (new CfnDashboard$CustomFilterListConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-custom-narrative-options-property-builder
   "The build-cfn-dashboard-custom-narrative-options-property-builder function updates a CfnDashboard$CustomNarrativeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$CustomNarrativeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15275,6 +18689,12 @@
   (when-let [data (lookup-entry config id :narrative)]
     (. builder narrative data))
   (.build builder))
+
+
+(defn cfn-dashboard-custom-narrative-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-custom-narrative-options-property-builder (new CfnDashboard$CustomNarrativeOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-custom-parameter-values-property-builder
@@ -15303,6 +18723,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-custom-parameter-values-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-custom-parameter-values-property-builder (new CfnDashboard$CustomParameterValuesProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-custom-values-configuration-property-builder
   "The build-cfn-dashboard-custom-values-configuration-property-builder function updates a CfnDashboard$CustomValuesConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$CustomValuesConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15321,6 +18747,12 @@
   (when-let [data (lookup-entry config id :include-null-value)]
     (. builder includeNullValue data))
   (.build builder))
+
+
+(defn cfn-dashboard-custom-values-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-custom-values-configuration-property-builder (new CfnDashboard$CustomValuesConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-dashboard-error-property-builder
@@ -15344,6 +18776,12 @@
   (when-let [data (lookup-entry config id :violated-entities)]
     (. builder violatedEntities data))
   (.build builder))
+
+
+(defn cfn-dashboard-dashboard-error-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-dashboard-error-property-builder (new CfnDashboard$DashboardErrorProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-dashboard-publish-options-property-builder
@@ -15393,6 +18831,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-dashboard-publish-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-dashboard-publish-options-property-builder (new CfnDashboard$DashboardPublishOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-dashboard-source-entity-property-builder
   "The build-cfn-dashboard-dashboard-source-entity-property-builder function updates a CfnDashboard$DashboardSourceEntityProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DashboardSourceEntityProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15408,6 +18852,12 @@
   (when-let [data (lookup-entry config id :source-template)]
     (. builder sourceTemplate data))
   (.build builder))
+
+
+(defn cfn-dashboard-dashboard-source-entity-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-dashboard-source-entity-property-builder (new CfnDashboard$DashboardSourceEntityProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-dashboard-source-template-property-builder
@@ -15428,6 +18878,12 @@
   (when-let [data (lookup-entry config id :data-set-references)]
     (. builder dataSetReferences data))
   (.build builder))
+
+
+(defn cfn-dashboard-dashboard-source-template-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-dashboard-source-template-property-builder (new CfnDashboard$DashboardSourceTemplateProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-dashboard-version-definition-property-builder
@@ -15466,6 +18922,12 @@
   (when-let [data (lookup-entry config id :sheets)]
     (. builder sheets data))
   (.build builder))
+
+
+(defn cfn-dashboard-dashboard-version-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-dashboard-version-definition-property-builder (new CfnDashboard$DashboardVersionDefinitionProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-dashboard-version-property-builder
@@ -15512,6 +18974,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-dashboard-version-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-dashboard-version-property-builder (new CfnDashboard$DashboardVersionProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-dashboard-visual-publish-options-property-builder
   "The build-cfn-dashboard-dashboard-visual-publish-options-property-builder function updates a CfnDashboard$DashboardVisualPublishOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DashboardVisualPublishOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15527,6 +18995,12 @@
   (when-let [data (lookup-entry config id :export-hidden-fields-option)]
     (. builder exportHiddenFieldsOption data))
   (.build builder))
+
+
+(defn cfn-dashboard-dashboard-visual-publish-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-dashboard-visual-publish-options-property-builder (new CfnDashboard$DashboardVisualPublishOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-data-bars-options-property-builder
@@ -15552,6 +19026,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-data-bars-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-data-bars-options-property-builder (new CfnDashboard$DataBarsOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-data-color-property-builder
   "The build-cfn-dashboard-data-color-property-builder function updates a CfnDashboard$DataColorProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DataColorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15570,6 +19050,12 @@
   (when-let [data (lookup-entry config id :data-value)]
     (. builder dataValue data))
   (.build builder))
+
+
+(defn cfn-dashboard-data-color-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-data-color-property-builder (new CfnDashboard$DataColorProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-data-field-series-item-property-builder
@@ -15596,6 +19082,12 @@
   (when-let [data (lookup-entry config id :settings)]
     (. builder settings data))
   (.build builder))
+
+
+(defn cfn-dashboard-data-field-series-item-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-data-field-series-item-property-builder (new CfnDashboard$DataFieldSeriesItemProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-data-label-options-property-builder
@@ -15642,6 +19134,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-data-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-data-label-options-property-builder (new CfnDashboard$DataLabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-data-label-type-property-builder
   "The build-cfn-dashboard-data-label-type-property-builder function updates a CfnDashboard$DataLabelTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DataLabelTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15671,6 +19169,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-data-label-type-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-data-label-type-property-builder (new CfnDashboard$DataLabelTypeProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-data-path-color-property-builder
   "The build-cfn-dashboard-data-path-color-property-builder function updates a CfnDashboard$DataPathColorProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DataPathColorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15692,6 +19196,12 @@
   (when-let [data (lookup-entry config id :time-granularity)]
     (. builder timeGranularity data))
   (.build builder))
+
+
+(defn cfn-dashboard-data-path-color-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-data-path-color-property-builder (new CfnDashboard$DataPathColorProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-data-path-label-type-property-builder
@@ -15717,6 +19227,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-data-path-label-type-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-data-path-label-type-property-builder (new CfnDashboard$DataPathLabelTypeProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-data-path-sort-property-builder
   "The build-cfn-dashboard-data-path-sort-property-builder function updates a CfnDashboard$DataPathSortProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DataPathSortProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15737,6 +19253,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-data-path-sort-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-data-path-sort-property-builder (new CfnDashboard$DataPathSortProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-data-path-type-property-builder
   "The build-cfn-dashboard-data-path-type-property-builder function updates a CfnDashboard$DataPathTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DataPathTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15752,6 +19274,12 @@
   (when-let [data (lookup-entry config id :pivot-table-data-path-type)]
     (. builder pivotTableDataPathType data))
   (.build builder))
+
+
+(defn cfn-dashboard-data-path-type-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-data-path-type-property-builder (new CfnDashboard$DataPathTypeProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-data-path-value-property-builder
@@ -15777,6 +19305,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-data-path-value-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-data-path-value-property-builder (new CfnDashboard$DataPathValueProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-data-point-drill-up-down-option-property-builder
   "The build-cfn-dashboard-data-point-drill-up-down-option-property-builder function updates a CfnDashboard$DataPointDrillUpDownOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DataPointDrillUpDownOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15792,6 +19326,12 @@
   (when-let [data (lookup-entry config id :availability-status)]
     (. builder availabilityStatus data))
   (.build builder))
+
+
+(defn cfn-dashboard-data-point-drill-up-down-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-data-point-drill-up-down-option-property-builder (new CfnDashboard$DataPointDrillUpDownOptionProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-data-point-menu-label-option-property-builder
@@ -15811,6 +19351,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-data-point-menu-label-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-data-point-menu-label-option-property-builder (new CfnDashboard$DataPointMenuLabelOptionProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-data-point-tooltip-option-property-builder
   "The build-cfn-dashboard-data-point-tooltip-option-property-builder function updates a CfnDashboard$DataPointTooltipOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DataPointTooltipOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15826,6 +19372,12 @@
   (when-let [data (lookup-entry config id :availability-status)]
     (. builder availabilityStatus data))
   (.build builder))
+
+
+(defn cfn-dashboard-data-point-tooltip-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-data-point-tooltip-option-property-builder (new CfnDashboard$DataPointTooltipOptionProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-data-set-identifier-declaration-property-builder
@@ -15848,6 +19400,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-data-set-identifier-declaration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-data-set-identifier-declaration-property-builder (new CfnDashboard$DataSetIdentifierDeclarationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-data-set-reference-property-builder
   "The build-cfn-dashboard-data-set-reference-property-builder function updates a CfnDashboard$DataSetReferenceProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DataSetReferenceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15868,6 +19426,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-data-set-reference-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-data-set-reference-property-builder (new CfnDashboard$DataSetReferenceProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-date-axis-options-property-builder
   "The build-cfn-dashboard-date-axis-options-property-builder function updates a CfnDashboard$DateAxisOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DateAxisOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15883,6 +19447,12 @@
   (when-let [data (lookup-entry config id :missing-date-visibility)]
     (. builder missingDateVisibility data))
   (.build builder))
+
+
+(defn cfn-dashboard-date-axis-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-date-axis-options-property-builder (new CfnDashboard$DateAxisOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-date-dimension-field-property-builder
@@ -15914,6 +19484,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-date-dimension-field-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-date-dimension-field-property-builder (new CfnDashboard$DateDimensionFieldProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-date-measure-field-property-builder
   "The build-cfn-dashboard-date-measure-field-property-builder function updates a CfnDashboard$DateMeasureFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DateMeasureFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15940,6 +19516,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-date-measure-field-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-date-measure-field-property-builder (new CfnDashboard$DateMeasureFieldProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-date-time-default-values-property-builder
   "The build-cfn-dashboard-date-time-default-values-property-builder function updates a CfnDashboard$DateTimeDefaultValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DateTimeDefaultValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -15961,6 +19543,12 @@
   (when-let [data (lookup-entry config id :static-values)]
     (. builder staticValues data))
   (.build builder))
+
+
+(defn cfn-dashboard-date-time-default-values-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-date-time-default-values-property-builder (new CfnDashboard$DateTimeDefaultValuesProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-date-time-format-configuration-property-builder
@@ -15986,6 +19574,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-date-time-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-date-time-format-configuration-property-builder (new CfnDashboard$DateTimeFormatConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-date-time-hierarchy-property-builder
   "The build-cfn-dashboard-date-time-hierarchy-property-builder function updates a CfnDashboard$DateTimeHierarchyProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DateTimeHierarchyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16004,6 +19598,12 @@
   (when-let [data (lookup-entry config id :hierarchy-id)]
     (. builder hierarchyId data))
   (.build builder))
+
+
+(defn cfn-dashboard-date-time-hierarchy-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-date-time-hierarchy-property-builder (new CfnDashboard$DateTimeHierarchyProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-date-time-parameter-declaration-property-builder
@@ -16035,6 +19635,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-date-time-parameter-declaration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-date-time-parameter-declaration-property-builder (new CfnDashboard$DateTimeParameterDeclarationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-date-time-parameter-property-builder
   "The build-cfn-dashboard-date-time-parameter-property-builder function updates a CfnDashboard$DateTimeParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DateTimeParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16053,6 +19659,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-dashboard-date-time-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-date-time-parameter-property-builder (new CfnDashboard$DateTimeParameterProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-date-time-picker-control-display-options-property-builder
@@ -16078,6 +19690,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-date-time-picker-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-date-time-picker-control-display-options-property-builder (new CfnDashboard$DateTimePickerControlDisplayOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-date-time-value-when-unset-configuration-property-builder
   "The build-cfn-dashboard-date-time-value-when-unset-configuration-property-builder function updates a CfnDashboard$DateTimeValueWhenUnsetConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DateTimeValueWhenUnsetConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16098,6 +19716,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-date-time-value-when-unset-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-date-time-value-when-unset-configuration-property-builder (new CfnDashboard$DateTimeValueWhenUnsetConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-decimal-default-values-property-builder
   "The build-cfn-dashboard-decimal-default-values-property-builder function updates a CfnDashboard$DecimalDefaultValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DecimalDefaultValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16116,6 +19740,12 @@
   (when-let [data (lookup-entry config id :static-values)]
     (. builder staticValues data))
   (.build builder))
+
+
+(defn cfn-dashboard-decimal-default-values-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-decimal-default-values-property-builder (new CfnDashboard$DecimalDefaultValuesProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-decimal-parameter-declaration-property-builder
@@ -16147,6 +19777,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-decimal-parameter-declaration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-decimal-parameter-declaration-property-builder (new CfnDashboard$DecimalParameterDeclarationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-decimal-parameter-property-builder
   "The build-cfn-dashboard-decimal-parameter-property-builder function updates a CfnDashboard$DecimalParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DecimalParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16167,6 +19803,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-decimal-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-decimal-parameter-property-builder (new CfnDashboard$DecimalParameterProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-decimal-places-configuration-property-builder
   "The build-cfn-dashboard-decimal-places-configuration-property-builder function updates a CfnDashboard$DecimalPlacesConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DecimalPlacesConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16182,6 +19824,12 @@
   (when-let [data (lookup-entry config id :decimal-places)]
     (. builder decimalPlaces data))
   (.build builder))
+
+
+(defn cfn-dashboard-decimal-places-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-decimal-places-configuration-property-builder (new CfnDashboard$DecimalPlacesConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-decimal-value-when-unset-configuration-property-builder
@@ -16204,6 +19852,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-decimal-value-when-unset-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-decimal-value-when-unset-configuration-property-builder (new CfnDashboard$DecimalValueWhenUnsetConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-default-date-time-picker-control-options-property-builder
   "The build-cfn-dashboard-default-date-time-picker-control-options-property-builder function updates a CfnDashboard$DefaultDateTimePickerControlOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DefaultDateTimePickerControlOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16224,6 +19878,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-default-date-time-picker-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-default-date-time-picker-control-options-property-builder (new CfnDashboard$DefaultDateTimePickerControlOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-default-filter-control-configuration-property-builder
   "The build-cfn-dashboard-default-filter-control-configuration-property-builder function updates a CfnDashboard$DefaultFilterControlConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DefaultFilterControlConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16242,6 +19902,12 @@
   (when-let [data (lookup-entry config id :title)]
     (. builder title data))
   (.build builder))
+
+
+(defn cfn-dashboard-default-filter-control-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-default-filter-control-configuration-property-builder (new CfnDashboard$DefaultFilterControlConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-default-filter-control-options-property-builder
@@ -16279,6 +19945,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-default-filter-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-default-filter-control-options-property-builder (new CfnDashboard$DefaultFilterControlOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-default-filter-drop-down-control-options-property-builder
   "The build-cfn-dashboard-default-filter-drop-down-control-options-property-builder function updates a CfnDashboard$DefaultFilterDropDownControlOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DefaultFilterDropDownControlOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16300,6 +19972,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-dashboard-default-filter-drop-down-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-default-filter-drop-down-control-options-property-builder (new CfnDashboard$DefaultFilterDropDownControlOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-default-filter-list-control-options-property-builder
@@ -16325,6 +20003,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-default-filter-list-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-default-filter-list-control-options-property-builder (new CfnDashboard$DefaultFilterListControlOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-default-free-form-layout-configuration-property-builder
   "The build-cfn-dashboard-default-free-form-layout-configuration-property-builder function updates a CfnDashboard$DefaultFreeFormLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DefaultFreeFormLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16342,6 +20026,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-default-free-form-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-default-free-form-layout-configuration-property-builder (new CfnDashboard$DefaultFreeFormLayoutConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-default-grid-layout-configuration-property-builder
   "The build-cfn-dashboard-default-grid-layout-configuration-property-builder function updates a CfnDashboard$DefaultGridLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DefaultGridLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16357,6 +20047,12 @@
   (when-let [data (lookup-entry config id :canvas-size-options)]
     (. builder canvasSizeOptions data))
   (.build builder))
+
+
+(defn cfn-dashboard-default-grid-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-default-grid-layout-configuration-property-builder (new CfnDashboard$DefaultGridLayoutConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-default-interactive-layout-configuration-property-builder
@@ -16377,6 +20073,12 @@
   (when-let [data (lookup-entry config id :grid)]
     (. builder grid data))
   (.build builder))
+
+
+(defn cfn-dashboard-default-interactive-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-default-interactive-layout-configuration-property-builder (new CfnDashboard$DefaultInteractiveLayoutConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-default-new-sheet-configuration-property-builder
@@ -16402,6 +20104,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-default-new-sheet-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-default-new-sheet-configuration-property-builder (new CfnDashboard$DefaultNewSheetConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-default-paginated-layout-configuration-property-builder
   "The build-cfn-dashboard-default-paginated-layout-configuration-property-builder function updates a CfnDashboard$DefaultPaginatedLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DefaultPaginatedLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16417,6 +20125,12 @@
   (when-let [data (lookup-entry config id :section-based)]
     (. builder sectionBased data))
   (.build builder))
+
+
+(defn cfn-dashboard-default-paginated-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-default-paginated-layout-configuration-property-builder (new CfnDashboard$DefaultPaginatedLayoutConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-default-relative-date-time-control-options-property-builder
@@ -16436,6 +20150,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-default-relative-date-time-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-default-relative-date-time-control-options-property-builder (new CfnDashboard$DefaultRelativeDateTimeControlOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-default-section-based-layout-configuration-property-builder
   "The build-cfn-dashboard-default-section-based-layout-configuration-property-builder function updates a CfnDashboard$DefaultSectionBasedLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DefaultSectionBasedLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16451,6 +20171,12 @@
   (when-let [data (lookup-entry config id :canvas-size-options)]
     (. builder canvasSizeOptions data))
   (.build builder))
+
+
+(defn cfn-dashboard-default-section-based-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-default-section-based-layout-configuration-property-builder (new CfnDashboard$DefaultSectionBasedLayoutConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-default-slider-control-options-property-builder
@@ -16482,6 +20208,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-default-slider-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-default-slider-control-options-property-builder (new CfnDashboard$DefaultSliderControlOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-default-text-area-control-options-property-builder
   "The build-cfn-dashboard-default-text-area-control-options-property-builder function updates a CfnDashboard$DefaultTextAreaControlOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DefaultTextAreaControlOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16502,6 +20234,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-default-text-area-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-default-text-area-control-options-property-builder (new CfnDashboard$DefaultTextAreaControlOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-default-text-field-control-options-property-builder
   "The build-cfn-dashboard-default-text-field-control-options-property-builder function updates a CfnDashboard$DefaultTextFieldControlOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DefaultTextFieldControlOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16517,6 +20255,12 @@
   (when-let [data (lookup-entry config id :display-options)]
     (. builder displayOptions data))
   (.build builder))
+
+
+(defn cfn-dashboard-default-text-field-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-default-text-field-control-options-property-builder (new CfnDashboard$DefaultTextFieldControlOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-destination-parameter-value-configuration-property-builder
@@ -16548,6 +20292,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-destination-parameter-value-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-destination-parameter-value-configuration-property-builder (new CfnDashboard$DestinationParameterValueConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-dimension-field-property-builder
   "The build-cfn-dashboard-dimension-field-property-builder function updates a CfnDashboard$DimensionFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DimensionFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16571,6 +20321,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-dimension-field-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-dimension-field-property-builder (new CfnDashboard$DimensionFieldProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-donut-center-options-property-builder
   "The build-cfn-dashboard-donut-center-options-property-builder function updates a CfnDashboard$DonutCenterOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DonutCenterOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16586,6 +20342,12 @@
   (when-let [data (lookup-entry config id :label-visibility)]
     (. builder labelVisibility data))
   (.build builder))
+
+
+(defn cfn-dashboard-donut-center-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-donut-center-options-property-builder (new CfnDashboard$DonutCenterOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-donut-options-property-builder
@@ -16606,6 +20368,12 @@
   (when-let [data (lookup-entry config id :donut-center-options)]
     (. builder donutCenterOptions data))
   (.build builder))
+
+
+(defn cfn-dashboard-donut-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-donut-options-property-builder (new CfnDashboard$DonutOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-drill-down-filter-property-builder
@@ -16631,6 +20399,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-drill-down-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-drill-down-filter-property-builder (new CfnDashboard$DrillDownFilterProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-drop-down-control-display-options-property-builder
   "The build-cfn-dashboard-drop-down-control-display-options-property-builder function updates a CfnDashboard$DropDownControlDisplayOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$DropDownControlDisplayOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16652,6 +20426,12 @@
   (when-let [data (lookup-entry config id :title-options)]
     (. builder titleOptions data))
   (.build builder))
+
+
+(defn cfn-dashboard-drop-down-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-drop-down-control-display-options-property-builder (new CfnDashboard$DropDownControlDisplayOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-dynamic-default-value-property-builder
@@ -16677,6 +20457,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-dynamic-default-value-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-dynamic-default-value-property-builder (new CfnDashboard$DynamicDefaultValueProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-empty-visual-property-builder
   "The build-cfn-dashboard-empty-visual-property-builder function updates a CfnDashboard$EmptyVisualProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$EmptyVisualProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16700,6 +20486,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-empty-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-empty-visual-property-builder (new CfnDashboard$EmptyVisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-entity-property-builder
   "The build-cfn-dashboard-entity-property-builder function updates a CfnDashboard$EntityProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$EntityProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16715,6 +20507,12 @@
   (when-let [data (lookup-entry config id :path)]
     (. builder path data))
   (.build builder))
+
+
+(defn cfn-dashboard-entity-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-entity-property-builder (new CfnDashboard$EntityProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-exclude-period-configuration-property-builder
@@ -16740,6 +20538,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-exclude-period-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-exclude-period-configuration-property-builder (new CfnDashboard$ExcludePeriodConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-explicit-hierarchy-property-builder
   "The build-cfn-dashboard-explicit-hierarchy-property-builder function updates a CfnDashboard$ExplicitHierarchyProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ExplicitHierarchyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16763,6 +20567,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-explicit-hierarchy-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-explicit-hierarchy-property-builder (new CfnDashboard$ExplicitHierarchyProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-export-hidden-fields-option-property-builder
   "The build-cfn-dashboard-export-hidden-fields-option-property-builder function updates a CfnDashboard$ExportHiddenFieldsOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ExportHiddenFieldsOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16778,6 +20588,12 @@
   (when-let [data (lookup-entry config id :availability-status)]
     (. builder availabilityStatus data))
   (.build builder))
+
+
+(defn cfn-dashboard-export-hidden-fields-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-export-hidden-fields-option-property-builder (new CfnDashboard$ExportHiddenFieldsOptionProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-export-to-csv-option-property-builder
@@ -16797,6 +20613,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-export-to-csv-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-export-to-csv-option-property-builder (new CfnDashboard$ExportToCSVOptionProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-export-with-hidden-fields-option-property-builder
   "The build-cfn-dashboard-export-with-hidden-fields-option-property-builder function updates a CfnDashboard$ExportWithHiddenFieldsOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ExportWithHiddenFieldsOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16812,6 +20634,12 @@
   (when-let [data (lookup-entry config id :availability-status)]
     (. builder availabilityStatus data))
   (.build builder))
+
+
+(defn cfn-dashboard-export-with-hidden-fields-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-export-with-hidden-fields-option-property-builder (new CfnDashboard$ExportWithHiddenFieldsOptionProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-field-based-tooltip-property-builder
@@ -16837,6 +20665,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-field-based-tooltip-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-field-based-tooltip-property-builder (new CfnDashboard$FieldBasedTooltipProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-field-label-type-property-builder
   "The build-cfn-dashboard-field-label-type-property-builder function updates a CfnDashboard$FieldLabelTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FieldLabelTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16855,6 +20689,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-dashboard-field-label-type-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-field-label-type-property-builder (new CfnDashboard$FieldLabelTypeProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-field-series-item-property-builder
@@ -16880,6 +20720,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-field-series-item-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-field-series-item-property-builder (new CfnDashboard$FieldSeriesItemProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-field-sort-options-property-builder
   "The build-cfn-dashboard-field-sort-options-property-builder function updates a CfnDashboard$FieldSortOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FieldSortOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16900,6 +20746,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-field-sort-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-field-sort-options-property-builder (new CfnDashboard$FieldSortOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-field-sort-property-builder
   "The build-cfn-dashboard-field-sort-property-builder function updates a CfnDashboard$FieldSortProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FieldSortProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16918,6 +20770,12 @@
   (when-let [data (lookup-entry config id :field-id)]
     (. builder fieldId data))
   (.build builder))
+
+
+(defn cfn-dashboard-field-sort-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-field-sort-property-builder (new CfnDashboard$FieldSortProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-field-tooltip-item-property-builder
@@ -16943,6 +20801,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-field-tooltip-item-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-field-tooltip-item-property-builder (new CfnDashboard$FieldTooltipItemProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-filled-map-aggregated-field-wells-property-builder
   "The build-cfn-dashboard-filled-map-aggregated-field-wells-property-builder function updates a CfnDashboard$FilledMapAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FilledMapAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16963,6 +20827,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-filled-map-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filled-map-aggregated-field-wells-property-builder (new CfnDashboard$FilledMapAggregatedFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-filled-map-conditional-formatting-option-property-builder
   "The build-cfn-dashboard-filled-map-conditional-formatting-option-property-builder function updates a CfnDashboard$FilledMapConditionalFormattingOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FilledMapConditionalFormattingOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16980,6 +20850,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-filled-map-conditional-formatting-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filled-map-conditional-formatting-option-property-builder (new CfnDashboard$FilledMapConditionalFormattingOptionProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-filled-map-conditional-formatting-property-builder
   "The build-cfn-dashboard-filled-map-conditional-formatting-property-builder function updates a CfnDashboard$FilledMapConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FilledMapConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -16995,6 +20871,12 @@
   (when-let [data (lookup-entry config id :conditional-formatting-options)]
     (. builder conditionalFormattingOptions data))
   (.build builder))
+
+
+(defn cfn-dashboard-filled-map-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filled-map-conditional-formatting-property-builder (new CfnDashboard$FilledMapConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-filled-map-configuration-property-builder
@@ -17029,6 +20911,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-filled-map-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filled-map-configuration-property-builder (new CfnDashboard$FilledMapConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-filled-map-field-wells-property-builder
   "The build-cfn-dashboard-filled-map-field-wells-property-builder function updates a CfnDashboard$FilledMapFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FilledMapFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17044,6 +20932,12 @@
   (when-let [data (lookup-entry config id :filled-map-aggregated-field-wells)]
     (. builder filledMapAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-dashboard-filled-map-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filled-map-field-wells-property-builder (new CfnDashboard$FilledMapFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-filled-map-shape-conditional-formatting-property-builder
@@ -17066,6 +20960,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-filled-map-shape-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filled-map-shape-conditional-formatting-property-builder (new CfnDashboard$FilledMapShapeConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-filled-map-sort-configuration-property-builder
   "The build-cfn-dashboard-filled-map-sort-configuration-property-builder function updates a CfnDashboard$FilledMapSortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FilledMapSortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17081,6 +20981,12 @@
   (when-let [data (lookup-entry config id :category-sort)]
     (. builder categorySort data))
   (.build builder))
+
+
+(defn cfn-dashboard-filled-map-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filled-map-sort-configuration-property-builder (new CfnDashboard$FilledMapSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-filled-map-visual-property-builder
@@ -17116,6 +21022,12 @@
   (when-let [data (lookup-entry config id :visual-id)]
     (. builder visualId data))
   (.build builder))
+
+
+(defn cfn-dashboard-filled-map-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filled-map-visual-property-builder (new CfnDashboard$FilledMapVisualProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-filter-control-property-builder
@@ -17156,6 +21068,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-filter-control-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filter-control-property-builder (new CfnDashboard$FilterControlProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-filter-cross-sheet-control-property-builder
   "The build-cfn-dashboard-filter-cross-sheet-control-property-builder function updates a CfnDashboard$FilterCrossSheetControlProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FilterCrossSheetControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17177,6 +21095,12 @@
   (when-let [data (lookup-entry config id :source-filter-id)]
     (. builder sourceFilterId data))
   (.build builder))
+
+
+(defn cfn-dashboard-filter-cross-sheet-control-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filter-cross-sheet-control-property-builder (new CfnDashboard$FilterCrossSheetControlProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-filter-date-time-picker-control-property-builder
@@ -17206,6 +21130,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-dashboard-filter-date-time-picker-control-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filter-date-time-picker-control-property-builder (new CfnDashboard$FilterDateTimePickerControlProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-filter-drop-down-control-property-builder
@@ -17243,6 +21173,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-filter-drop-down-control-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filter-drop-down-control-property-builder (new CfnDashboard$FilterDropDownControlProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-filter-group-property-builder
   "The build-cfn-dashboard-filter-group-property-builder function updates a CfnDashboard$FilterGroupProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FilterGroupProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17272,6 +21208,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-filter-group-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filter-group-property-builder (new CfnDashboard$FilterGroupProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-filter-list-configuration-property-builder
   "The build-cfn-dashboard-filter-list-configuration-property-builder function updates a CfnDashboard$FilterListConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FilterListConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17296,6 +21238,12 @@
   (when-let [data (lookup-entry config id :select-all-options)]
     (. builder selectAllOptions data))
   (.build builder))
+
+
+(defn cfn-dashboard-filter-list-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filter-list-configuration-property-builder (new CfnDashboard$FilterListConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-filter-list-control-property-builder
@@ -17333,6 +21281,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-filter-list-control-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filter-list-control-property-builder (new CfnDashboard$FilterListControlProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-filter-operation-selected-fields-configuration-property-builder
   "The build-cfn-dashboard-filter-operation-selected-fields-configuration-property-builder function updates a CfnDashboard$FilterOperationSelectedFieldsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FilterOperationSelectedFieldsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17356,6 +21310,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-filter-operation-selected-fields-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filter-operation-selected-fields-configuration-property-builder (new CfnDashboard$FilterOperationSelectedFieldsConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-filter-operation-target-visuals-configuration-property-builder
   "The build-cfn-dashboard-filter-operation-target-visuals-configuration-property-builder function updates a CfnDashboard$FilterOperationTargetVisualsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FilterOperationTargetVisualsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17371,6 +21331,12 @@
   (when-let [data (lookup-entry config id :same-sheet-target-visual-configuration)]
     (. builder sameSheetTargetVisualConfiguration data))
   (.build builder))
+
+
+(defn cfn-dashboard-filter-operation-target-visuals-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filter-operation-target-visuals-configuration-property-builder (new CfnDashboard$FilterOperationTargetVisualsConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-filter-property-builder
@@ -17408,6 +21374,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filter-property-builder (new CfnDashboard$FilterProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-filter-relative-date-time-control-property-builder
   "The build-cfn-dashboard-filter-relative-date-time-control-property-builder function updates a CfnDashboard$FilterRelativeDateTimeControlProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FilterRelativeDateTimeControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17434,6 +21406,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-filter-relative-date-time-control-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filter-relative-date-time-control-property-builder (new CfnDashboard$FilterRelativeDateTimeControlProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-filter-scope-configuration-property-builder
   "The build-cfn-dashboard-filter-scope-configuration-property-builder function updates a CfnDashboard$FilterScopeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FilterScopeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17454,6 +21432,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-filter-scope-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filter-scope-configuration-property-builder (new CfnDashboard$FilterScopeConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-filter-selectable-values-property-builder
   "The build-cfn-dashboard-filter-selectable-values-property-builder function updates a CfnDashboard$FilterSelectableValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FilterSelectableValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17469,6 +21453,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-dashboard-filter-selectable-values-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filter-selectable-values-property-builder (new CfnDashboard$FilterSelectableValuesProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-filter-slider-control-property-builder
@@ -17509,6 +21499,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-filter-slider-control-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filter-slider-control-property-builder (new CfnDashboard$FilterSliderControlProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-filter-text-area-control-property-builder
   "The build-cfn-dashboard-filter-text-area-control-property-builder function updates a CfnDashboard$FilterTextAreaControlProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FilterTextAreaControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17538,6 +21534,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-filter-text-area-control-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filter-text-area-control-property-builder (new CfnDashboard$FilterTextAreaControlProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-filter-text-field-control-property-builder
   "The build-cfn-dashboard-filter-text-field-control-property-builder function updates a CfnDashboard$FilterTextFieldControlProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FilterTextFieldControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17562,6 +21564,12 @@
   (when-let [data (lookup-entry config id :title)]
     (. builder title data))
   (.build builder))
+
+
+(defn cfn-dashboard-filter-text-field-control-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-filter-text-field-control-property-builder (new CfnDashboard$FilterTextFieldControlProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-font-configuration-property-builder
@@ -17593,6 +21601,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-font-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-font-configuration-property-builder (new CfnDashboard$FontConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-font-size-property-builder
   "The build-cfn-dashboard-font-size-property-builder function updates a CfnDashboard$FontSizeProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FontSizeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17610,6 +21624,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-font-size-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-font-size-property-builder (new CfnDashboard$FontSizeProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-font-weight-property-builder
   "The build-cfn-dashboard-font-weight-property-builder function updates a CfnDashboard$FontWeightProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FontWeightProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17625,6 +21645,12 @@
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-dashboard-font-weight-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-font-weight-property-builder (new CfnDashboard$FontWeightProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-forecast-computation-property-builder
@@ -17674,6 +21700,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-forecast-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-forecast-computation-property-builder (new CfnDashboard$ForecastComputationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-forecast-configuration-property-builder
   "The build-cfn-dashboard-forecast-configuration-property-builder function updates a CfnDashboard$ForecastConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ForecastConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17694,6 +21726,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-forecast-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-forecast-configuration-property-builder (new CfnDashboard$ForecastConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-forecast-scenario-property-builder
   "The build-cfn-dashboard-forecast-scenario-property-builder function updates a CfnDashboard$ForecastScenarioProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ForecastScenarioProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17712,6 +21750,12 @@
   (when-let [data (lookup-entry config id :what-if-range-scenario)]
     (. builder whatIfRangeScenario data))
   (.build builder))
+
+
+(defn cfn-dashboard-forecast-scenario-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-forecast-scenario-property-builder (new CfnDashboard$ForecastScenarioProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-format-configuration-property-builder
@@ -17737,6 +21781,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-format-configuration-property-builder (new CfnDashboard$FormatConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-free-form-layout-canvas-size-options-property-builder
   "The build-cfn-dashboard-free-form-layout-canvas-size-options-property-builder function updates a CfnDashboard$FreeFormLayoutCanvasSizeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FreeFormLayoutCanvasSizeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17752,6 +21802,12 @@
   (when-let [data (lookup-entry config id :screen-canvas-size-options)]
     (. builder screenCanvasSizeOptions data))
   (.build builder))
+
+
+(defn cfn-dashboard-free-form-layout-canvas-size-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-free-form-layout-canvas-size-options-property-builder (new CfnDashboard$FreeFormLayoutCanvasSizeOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-free-form-layout-configuration-property-builder
@@ -17774,6 +21830,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-free-form-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-free-form-layout-configuration-property-builder (new CfnDashboard$FreeFormLayoutConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-free-form-layout-element-background-style-property-builder
   "The build-cfn-dashboard-free-form-layout-element-background-style-property-builder function updates a CfnDashboard$FreeFormLayoutElementBackgroundStyleProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FreeFormLayoutElementBackgroundStyleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17794,6 +21856,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-free-form-layout-element-background-style-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-free-form-layout-element-background-style-property-builder (new CfnDashboard$FreeFormLayoutElementBackgroundStyleProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-free-form-layout-element-border-style-property-builder
   "The build-cfn-dashboard-free-form-layout-element-border-style-property-builder function updates a CfnDashboard$FreeFormLayoutElementBorderStyleProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FreeFormLayoutElementBorderStyleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17812,6 +21880,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-dashboard-free-form-layout-element-border-style-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-free-form-layout-element-border-style-property-builder (new CfnDashboard$FreeFormLayoutElementBorderStyleProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-free-form-layout-element-property-builder
@@ -17864,6 +21938,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-free-form-layout-element-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-free-form-layout-element-property-builder (new CfnDashboard$FreeFormLayoutElementProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-free-form-layout-screen-canvas-size-options-property-builder
   "The build-cfn-dashboard-free-form-layout-screen-canvas-size-options-property-builder function updates a CfnDashboard$FreeFormLayoutScreenCanvasSizeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FreeFormLayoutScreenCanvasSizeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17881,6 +21961,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-free-form-layout-screen-canvas-size-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-free-form-layout-screen-canvas-size-options-property-builder (new CfnDashboard$FreeFormLayoutScreenCanvasSizeOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-free-form-section-layout-configuration-property-builder
   "The build-cfn-dashboard-free-form-section-layout-configuration-property-builder function updates a CfnDashboard$FreeFormSectionLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FreeFormSectionLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17896,6 +21982,12 @@
   (when-let [data (lookup-entry config id :elements)]
     (. builder elements data))
   (.build builder))
+
+
+(defn cfn-dashboard-free-form-section-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-free-form-section-layout-configuration-property-builder (new CfnDashboard$FreeFormSectionLayoutConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-funnel-chart-aggregated-field-wells-property-builder
@@ -17916,6 +22008,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-dashboard-funnel-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-funnel-chart-aggregated-field-wells-property-builder (new CfnDashboard$FunnelChartAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-funnel-chart-configuration-property-builder
@@ -17953,6 +22051,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-funnel-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-funnel-chart-configuration-property-builder (new CfnDashboard$FunnelChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-funnel-chart-data-label-options-property-builder
   "The build-cfn-dashboard-funnel-chart-data-label-options-property-builder function updates a CfnDashboard$FunnelChartDataLabelOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FunnelChartDataLabelOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -17988,6 +22092,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-funnel-chart-data-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-funnel-chart-data-label-options-property-builder (new CfnDashboard$FunnelChartDataLabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-funnel-chart-field-wells-property-builder
   "The build-cfn-dashboard-funnel-chart-field-wells-property-builder function updates a CfnDashboard$FunnelChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$FunnelChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18003,6 +22113,12 @@
   (when-let [data (lookup-entry config id :funnel-chart-aggregated-field-wells)]
     (. builder funnelChartAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-dashboard-funnel-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-funnel-chart-field-wells-property-builder (new CfnDashboard$FunnelChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-funnel-chart-sort-configuration-property-builder
@@ -18023,6 +22139,12 @@
   (when-let [data (lookup-entry config id :category-sort)]
     (. builder categorySort data))
   (.build builder))
+
+
+(defn cfn-dashboard-funnel-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-funnel-chart-sort-configuration-property-builder (new CfnDashboard$FunnelChartSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-funnel-chart-visual-property-builder
@@ -18057,6 +22179,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-funnel-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-funnel-chart-visual-property-builder (new CfnDashboard$FunnelChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-gauge-chart-arc-conditional-formatting-property-builder
   "The build-cfn-dashboard-gauge-chart-arc-conditional-formatting-property-builder function updates a CfnDashboard$GaugeChartArcConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$GaugeChartArcConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18072,6 +22200,12 @@
   (when-let [data (lookup-entry config id :foreground-color)]
     (. builder foregroundColor data))
   (.build builder))
+
+
+(defn cfn-dashboard-gauge-chart-arc-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-gauge-chart-arc-conditional-formatting-property-builder (new CfnDashboard$GaugeChartArcConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-gauge-chart-conditional-formatting-option-property-builder
@@ -18094,6 +22228,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-gauge-chart-conditional-formatting-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-gauge-chart-conditional-formatting-option-property-builder (new CfnDashboard$GaugeChartConditionalFormattingOptionProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-gauge-chart-conditional-formatting-property-builder
   "The build-cfn-dashboard-gauge-chart-conditional-formatting-property-builder function updates a CfnDashboard$GaugeChartConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$GaugeChartConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18109,6 +22249,12 @@
   (when-let [data (lookup-entry config id :conditional-formatting-options)]
     (. builder conditionalFormattingOptions data))
   (.build builder))
+
+
+(defn cfn-dashboard-gauge-chart-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-gauge-chart-conditional-formatting-property-builder (new CfnDashboard$GaugeChartConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-gauge-chart-configuration-property-builder
@@ -18140,6 +22286,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-gauge-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-gauge-chart-configuration-property-builder (new CfnDashboard$GaugeChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-gauge-chart-field-wells-property-builder
   "The build-cfn-dashboard-gauge-chart-field-wells-property-builder function updates a CfnDashboard$GaugeChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$GaugeChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18158,6 +22310,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-dashboard-gauge-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-gauge-chart-field-wells-property-builder (new CfnDashboard$GaugeChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-gauge-chart-options-property-builder
@@ -18189,6 +22347,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-gauge-chart-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-gauge-chart-options-property-builder (new CfnDashboard$GaugeChartOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-gauge-chart-primary-value-conditional-formatting-property-builder
   "The build-cfn-dashboard-gauge-chart-primary-value-conditional-formatting-property-builder function updates a CfnDashboard$GaugeChartPrimaryValueConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$GaugeChartPrimaryValueConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18207,6 +22371,12 @@
   (when-let [data (lookup-entry config id :text-color)]
     (. builder textColor data))
   (.build builder))
+
+
+(defn cfn-dashboard-gauge-chart-primary-value-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-gauge-chart-primary-value-conditional-formatting-property-builder (new CfnDashboard$GaugeChartPrimaryValueConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-gauge-chart-visual-property-builder
@@ -18241,6 +22411,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-gauge-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-gauge-chart-visual-property-builder (new CfnDashboard$GaugeChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-geospatial-coordinate-bounds-property-builder
   "The build-cfn-dashboard-geospatial-coordinate-bounds-property-builder function updates a CfnDashboard$GeospatialCoordinateBoundsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$GeospatialCoordinateBoundsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18267,6 +22443,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-geospatial-coordinate-bounds-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-geospatial-coordinate-bounds-property-builder (new CfnDashboard$GeospatialCoordinateBoundsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-geospatial-heatmap-color-scale-property-builder
   "The build-cfn-dashboard-geospatial-heatmap-color-scale-property-builder function updates a CfnDashboard$GeospatialHeatmapColorScaleProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$GeospatialHeatmapColorScaleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18282,6 +22464,12 @@
   (when-let [data (lookup-entry config id :colors)]
     (. builder colors data))
   (.build builder))
+
+
+(defn cfn-dashboard-geospatial-heatmap-color-scale-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-geospatial-heatmap-color-scale-property-builder (new CfnDashboard$GeospatialHeatmapColorScaleProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-geospatial-heatmap-configuration-property-builder
@@ -18301,6 +22489,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-geospatial-heatmap-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-geospatial-heatmap-configuration-property-builder (new CfnDashboard$GeospatialHeatmapConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-geospatial-heatmap-data-color-property-builder
   "The build-cfn-dashboard-geospatial-heatmap-data-color-property-builder function updates a CfnDashboard$GeospatialHeatmapDataColorProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$GeospatialHeatmapDataColorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18316,6 +22510,12 @@
   (when-let [data (lookup-entry config id :color)]
     (. builder color data))
   (.build builder))
+
+
+(defn cfn-dashboard-geospatial-heatmap-data-color-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-geospatial-heatmap-data-color-property-builder (new CfnDashboard$GeospatialHeatmapDataColorProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-geospatial-map-aggregated-field-wells-property-builder
@@ -18339,6 +22539,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-dashboard-geospatial-map-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-geospatial-map-aggregated-field-wells-property-builder (new CfnDashboard$GeospatialMapAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-geospatial-map-configuration-property-builder
@@ -18376,6 +22582,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-geospatial-map-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-geospatial-map-configuration-property-builder (new CfnDashboard$GeospatialMapConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-geospatial-map-field-wells-property-builder
   "The build-cfn-dashboard-geospatial-map-field-wells-property-builder function updates a CfnDashboard$GeospatialMapFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$GeospatialMapFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18393,6 +22605,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-geospatial-map-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-geospatial-map-field-wells-property-builder (new CfnDashboard$GeospatialMapFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-geospatial-map-style-options-property-builder
   "The build-cfn-dashboard-geospatial-map-style-options-property-builder function updates a CfnDashboard$GeospatialMapStyleOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$GeospatialMapStyleOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18408,6 +22626,12 @@
   (when-let [data (lookup-entry config id :base-map-style)]
     (. builder baseMapStyle data))
   (.build builder))
+
+
+(defn cfn-dashboard-geospatial-map-style-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-geospatial-map-style-options-property-builder (new CfnDashboard$GeospatialMapStyleOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-geospatial-map-visual-property-builder
@@ -18442,6 +22666,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-geospatial-map-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-geospatial-map-visual-property-builder (new CfnDashboard$GeospatialMapVisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-geospatial-point-style-options-property-builder
   "The build-cfn-dashboard-geospatial-point-style-options-property-builder function updates a CfnDashboard$GeospatialPointStyleOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$GeospatialPointStyleOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18465,6 +22695,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-geospatial-point-style-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-geospatial-point-style-options-property-builder (new CfnDashboard$GeospatialPointStyleOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-geospatial-window-options-property-builder
   "The build-cfn-dashboard-geospatial-window-options-property-builder function updates a CfnDashboard$GeospatialWindowOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$GeospatialWindowOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18483,6 +22719,12 @@
   (when-let [data (lookup-entry config id :map-zoom-mode)]
     (. builder mapZoomMode data))
   (.build builder))
+
+
+(defn cfn-dashboard-geospatial-window-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-geospatial-window-options-property-builder (new CfnDashboard$GeospatialWindowOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-global-table-border-options-property-builder
@@ -18505,6 +22747,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-global-table-border-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-global-table-border-options-property-builder (new CfnDashboard$GlobalTableBorderOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-gradient-color-property-builder
   "The build-cfn-dashboard-gradient-color-property-builder function updates a CfnDashboard$GradientColorProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$GradientColorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18520,6 +22768,12 @@
   (when-let [data (lookup-entry config id :stops)]
     (. builder stops data))
   (.build builder))
+
+
+(defn cfn-dashboard-gradient-color-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-gradient-color-property-builder (new CfnDashboard$GradientColorProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-gradient-stop-property-builder
@@ -18545,6 +22799,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-gradient-stop-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-gradient-stop-property-builder (new CfnDashboard$GradientStopProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-grid-layout-canvas-size-options-property-builder
   "The build-cfn-dashboard-grid-layout-canvas-size-options-property-builder function updates a CfnDashboard$GridLayoutCanvasSizeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$GridLayoutCanvasSizeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18560,6 +22820,12 @@
   (when-let [data (lookup-entry config id :screen-canvas-size-options)]
     (. builder screenCanvasSizeOptions data))
   (.build builder))
+
+
+(defn cfn-dashboard-grid-layout-canvas-size-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-grid-layout-canvas-size-options-property-builder (new CfnDashboard$GridLayoutCanvasSizeOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-grid-layout-configuration-property-builder
@@ -18580,6 +22846,12 @@
   (when-let [data (lookup-entry config id :elements)]
     (. builder elements data))
   (.build builder))
+
+
+(defn cfn-dashboard-grid-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-grid-layout-configuration-property-builder (new CfnDashboard$GridLayoutConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-grid-layout-element-property-builder
@@ -18614,6 +22886,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-grid-layout-element-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-grid-layout-element-property-builder (new CfnDashboard$GridLayoutElementProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-grid-layout-screen-canvas-size-options-property-builder
   "The build-cfn-dashboard-grid-layout-screen-canvas-size-options-property-builder function updates a CfnDashboard$GridLayoutScreenCanvasSizeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$GridLayoutScreenCanvasSizeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18632,6 +22910,12 @@
   (when-let [data (lookup-entry config id :resize-option)]
     (. builder resizeOption data))
   (.build builder))
+
+
+(defn cfn-dashboard-grid-layout-screen-canvas-size-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-grid-layout-screen-canvas-size-options-property-builder (new CfnDashboard$GridLayoutScreenCanvasSizeOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-growth-rate-computation-property-builder
@@ -18663,6 +22947,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-growth-rate-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-growth-rate-computation-property-builder (new CfnDashboard$GrowthRateComputationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-header-footer-section-configuration-property-builder
   "The build-cfn-dashboard-header-footer-section-configuration-property-builder function updates a CfnDashboard$HeaderFooterSectionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$HeaderFooterSectionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18686,6 +22976,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-header-footer-section-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-header-footer-section-configuration-property-builder (new CfnDashboard$HeaderFooterSectionConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-heat-map-aggregated-field-wells-property-builder
   "The build-cfn-dashboard-heat-map-aggregated-field-wells-property-builder function updates a CfnDashboard$HeatMapAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$HeatMapAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18707,6 +23003,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-dashboard-heat-map-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-heat-map-aggregated-field-wells-property-builder (new CfnDashboard$HeatMapAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-heat-map-configuration-property-builder
@@ -18747,6 +23049,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-heat-map-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-heat-map-configuration-property-builder (new CfnDashboard$HeatMapConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-heat-map-field-wells-property-builder
   "The build-cfn-dashboard-heat-map-field-wells-property-builder function updates a CfnDashboard$HeatMapFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$HeatMapFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18762,6 +23070,12 @@
   (when-let [data (lookup-entry config id :heat-map-aggregated-field-wells)]
     (. builder heatMapAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-dashboard-heat-map-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-heat-map-field-wells-property-builder (new CfnDashboard$HeatMapFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-heat-map-sort-configuration-property-builder
@@ -18788,6 +23102,12 @@
   (when-let [data (lookup-entry config id :heat-map-row-sort)]
     (. builder heatMapRowSort data))
   (.build builder))
+
+
+(defn cfn-dashboard-heat-map-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-heat-map-sort-configuration-property-builder (new CfnDashboard$HeatMapSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-heat-map-visual-property-builder
@@ -18822,6 +23142,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-heat-map-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-heat-map-visual-property-builder (new CfnDashboard$HeatMapVisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-histogram-aggregated-field-wells-property-builder
   "The build-cfn-dashboard-histogram-aggregated-field-wells-property-builder function updates a CfnDashboard$HistogramAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$HistogramAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18837,6 +23163,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-dashboard-histogram-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-histogram-aggregated-field-wells-property-builder (new CfnDashboard$HistogramAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-histogram-bin-options-property-builder
@@ -18863,6 +23195,12 @@
   (when-let [data (lookup-entry config id :start-value)]
     (. builder startValue data))
   (.build builder))
+
+
+(defn cfn-dashboard-histogram-bin-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-histogram-bin-options-property-builder (new CfnDashboard$HistogramBinOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-histogram-configuration-property-builder
@@ -18903,6 +23241,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-histogram-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-histogram-configuration-property-builder (new CfnDashboard$HistogramConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-histogram-field-wells-property-builder
   "The build-cfn-dashboard-histogram-field-wells-property-builder function updates a CfnDashboard$HistogramFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$HistogramFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18918,6 +23262,12 @@
   (when-let [data (lookup-entry config id :histogram-aggregated-field-wells)]
     (. builder histogramAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-dashboard-histogram-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-histogram-field-wells-property-builder (new CfnDashboard$HistogramFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-histogram-visual-property-builder
@@ -18949,6 +23299,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-histogram-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-histogram-visual-property-builder (new CfnDashboard$HistogramVisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-insight-configuration-property-builder
   "The build-cfn-dashboard-insight-configuration-property-builder function updates a CfnDashboard$InsightConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$InsightConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -18967,6 +23323,12 @@
   (when-let [data (lookup-entry config id :custom-narrative)]
     (. builder customNarrative data))
   (.build builder))
+
+
+(defn cfn-dashboard-insight-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-insight-configuration-property-builder (new CfnDashboard$InsightConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-insight-visual-property-builder
@@ -19001,6 +23363,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-insight-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-insight-visual-property-builder (new CfnDashboard$InsightVisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-integer-default-values-property-builder
   "The build-cfn-dashboard-integer-default-values-property-builder function updates a CfnDashboard$IntegerDefaultValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$IntegerDefaultValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19019,6 +23387,12 @@
   (when-let [data (lookup-entry config id :static-values)]
     (. builder staticValues data))
   (.build builder))
+
+
+(defn cfn-dashboard-integer-default-values-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-integer-default-values-property-builder (new CfnDashboard$IntegerDefaultValuesProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-integer-parameter-declaration-property-builder
@@ -19050,6 +23424,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-integer-parameter-declaration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-integer-parameter-declaration-property-builder (new CfnDashboard$IntegerParameterDeclarationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-integer-parameter-property-builder
   "The build-cfn-dashboard-integer-parameter-property-builder function updates a CfnDashboard$IntegerParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$IntegerParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19068,6 +23448,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-dashboard-integer-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-integer-parameter-property-builder (new CfnDashboard$IntegerParameterProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-integer-value-when-unset-configuration-property-builder
@@ -19090,6 +23476,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-integer-value-when-unset-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-integer-value-when-unset-configuration-property-builder (new CfnDashboard$IntegerValueWhenUnsetConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-items-limit-configuration-property-builder
   "The build-cfn-dashboard-items-limit-configuration-property-builder function updates a CfnDashboard$ItemsLimitConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ItemsLimitConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19108,6 +23500,12 @@
   (when-let [data (lookup-entry config id :other-categories)]
     (. builder otherCategories data))
   (.build builder))
+
+
+(defn cfn-dashboard-items-limit-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-items-limit-configuration-property-builder (new CfnDashboard$ItemsLimitConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-kpi-actual-value-conditional-formatting-property-builder
@@ -19130,6 +23528,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-kpi-actual-value-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-kpi-actual-value-conditional-formatting-property-builder (new CfnDashboard$KPIActualValueConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-kpi-comparison-value-conditional-formatting-property-builder
   "The build-cfn-dashboard-kpi-comparison-value-conditional-formatting-property-builder function updates a CfnDashboard$KPIComparisonValueConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$KPIComparisonValueConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19148,6 +23552,12 @@
   (when-let [data (lookup-entry config id :text-color)]
     (. builder textColor data))
   (.build builder))
+
+
+(defn cfn-dashboard-kpi-comparison-value-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-kpi-comparison-value-conditional-formatting-property-builder (new CfnDashboard$KPIComparisonValueConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-kpi-conditional-formatting-option-property-builder
@@ -19176,6 +23586,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-kpi-conditional-formatting-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-kpi-conditional-formatting-option-property-builder (new CfnDashboard$KPIConditionalFormattingOptionProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-kpi-conditional-formatting-property-builder
   "The build-cfn-dashboard-kpi-conditional-formatting-property-builder function updates a CfnDashboard$KPIConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$KPIConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19191,6 +23607,12 @@
   (when-let [data (lookup-entry config id :conditional-formatting-options)]
     (. builder conditionalFormattingOptions data))
   (.build builder))
+
+
+(defn cfn-dashboard-kpi-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-kpi-conditional-formatting-property-builder (new CfnDashboard$KPIConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-kpi-configuration-property-builder
@@ -19216,6 +23638,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-kpi-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-kpi-configuration-property-builder (new CfnDashboard$KPIConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-kpi-field-wells-property-builder
   "The build-cfn-dashboard-kpi-field-wells-property-builder function updates a CfnDashboard$KPIFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$KPIFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19237,6 +23665,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-dashboard-kpi-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-kpi-field-wells-property-builder (new CfnDashboard$KPIFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-kpi-options-property-builder
@@ -19280,6 +23714,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-kpi-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-kpi-options-property-builder (new CfnDashboard$KPIOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-kpi-primary-value-conditional-formatting-property-builder
   "The build-cfn-dashboard-kpi-primary-value-conditional-formatting-property-builder function updates a CfnDashboard$KPIPrimaryValueConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$KPIPrimaryValueConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19300,6 +23740,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-kpi-primary-value-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-kpi-primary-value-conditional-formatting-property-builder (new CfnDashboard$KPIPrimaryValueConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-kpi-progress-bar-conditional-formatting-property-builder
   "The build-cfn-dashboard-kpi-progress-bar-conditional-formatting-property-builder function updates a CfnDashboard$KPIProgressBarConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$KPIProgressBarConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19317,6 +23763,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-kpi-progress-bar-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-kpi-progress-bar-conditional-formatting-property-builder (new CfnDashboard$KPIProgressBarConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-kpi-sort-configuration-property-builder
   "The build-cfn-dashboard-kpi-sort-configuration-property-builder function updates a CfnDashboard$KPISortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$KPISortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19332,6 +23784,12 @@
   (when-let [data (lookup-entry config id :trend-group-sort)]
     (. builder trendGroupSort data))
   (.build builder))
+
+
+(defn cfn-dashboard-kpi-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-kpi-sort-configuration-property-builder (new CfnDashboard$KPISortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-kpi-sparkline-options-property-builder
@@ -19360,6 +23818,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-kpi-sparkline-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-kpi-sparkline-options-property-builder (new CfnDashboard$KPISparklineOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-kpi-visual-layout-options-property-builder
   "The build-cfn-dashboard-kpi-visual-layout-options-property-builder function updates a CfnDashboard$KPIVisualLayoutOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$KPIVisualLayoutOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19375,6 +23839,12 @@
   (when-let [data (lookup-entry config id :standard-layout)]
     (. builder standardLayout data))
   (.build builder))
+
+
+(defn cfn-dashboard-kpi-visual-layout-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-kpi-visual-layout-options-property-builder (new CfnDashboard$KPIVisualLayoutOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-kpi-visual-property-builder
@@ -19412,6 +23882,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-kpi-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-kpi-visual-property-builder (new CfnDashboard$KPIVisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-kpi-visual-standard-layout-property-builder
   "The build-cfn-dashboard-kpi-visual-standard-layout-property-builder function updates a CfnDashboard$KPIVisualStandardLayoutProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$KPIVisualStandardLayoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19427,6 +23903,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-dashboard-kpi-visual-standard-layout-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-kpi-visual-standard-layout-property-builder (new CfnDashboard$KPIVisualStandardLayoutProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-label-options-property-builder
@@ -19452,6 +23934,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-label-options-property-builder (new CfnDashboard$LabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-layout-configuration-property-builder
   "The build-cfn-dashboard-layout-configuration-property-builder function updates a CfnDashboard$LayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$LayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19475,6 +23963,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-layout-configuration-property-builder (new CfnDashboard$LayoutConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-layout-property-builder
   "The build-cfn-dashboard-layout-property-builder function updates a CfnDashboard$LayoutProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$LayoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19490,6 +23984,12 @@
   (when-let [data (lookup-entry config id :configuration)]
     (. builder configuration data))
   (.build builder))
+
+
+(defn cfn-dashboard-layout-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-layout-property-builder (new CfnDashboard$LayoutProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-legend-options-property-builder
@@ -19521,6 +24021,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-legend-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-legend-options-property-builder (new CfnDashboard$LegendOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-line-chart-aggregated-field-wells-property-builder
   "The build-cfn-dashboard-line-chart-aggregated-field-wells-property-builder function updates a CfnDashboard$LineChartAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$LineChartAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19545,6 +24051,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-dashboard-line-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-line-chart-aggregated-field-wells-property-builder (new CfnDashboard$LineChartAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-line-chart-configuration-property-builder
@@ -19618,6 +24130,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-line-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-line-chart-configuration-property-builder (new CfnDashboard$LineChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-line-chart-default-series-settings-property-builder
   "The build-cfn-dashboard-line-chart-default-series-settings-property-builder function updates a CfnDashboard$LineChartDefaultSeriesSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$LineChartDefaultSeriesSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19641,6 +24159,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-line-chart-default-series-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-line-chart-default-series-settings-property-builder (new CfnDashboard$LineChartDefaultSeriesSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-line-chart-field-wells-property-builder
   "The build-cfn-dashboard-line-chart-field-wells-property-builder function updates a CfnDashboard$LineChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$LineChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19656,6 +24180,12 @@
   (when-let [data (lookup-entry config id :line-chart-aggregated-field-wells)]
     (. builder lineChartAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-dashboard-line-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-line-chart-field-wells-property-builder (new CfnDashboard$LineChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-line-chart-line-style-settings-property-builder
@@ -19684,6 +24214,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-line-chart-line-style-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-line-chart-line-style-settings-property-builder (new CfnDashboard$LineChartLineStyleSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-line-chart-marker-style-settings-property-builder
   "The build-cfn-dashboard-line-chart-marker-style-settings-property-builder function updates a CfnDashboard$LineChartMarkerStyleSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$LineChartMarkerStyleSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19710,6 +24246,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-line-chart-marker-style-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-line-chart-marker-style-settings-property-builder (new CfnDashboard$LineChartMarkerStyleSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-line-chart-series-settings-property-builder
   "The build-cfn-dashboard-line-chart-series-settings-property-builder function updates a CfnDashboard$LineChartSeriesSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$LineChartSeriesSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19728,6 +24270,12 @@
   (when-let [data (lookup-entry config id :marker-style-settings)]
     (. builder markerStyleSettings data))
   (.build builder))
+
+
+(defn cfn-dashboard-line-chart-series-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-line-chart-series-settings-property-builder (new CfnDashboard$LineChartSeriesSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-line-chart-sort-configuration-property-builder
@@ -19757,6 +24305,12 @@
   (when-let [data (lookup-entry config id :small-multiples-sort)]
     (. builder smallMultiplesSort data))
   (.build builder))
+
+
+(defn cfn-dashboard-line-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-line-chart-sort-configuration-property-builder (new CfnDashboard$LineChartSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-line-chart-visual-property-builder
@@ -19791,6 +24345,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-line-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-line-chart-visual-property-builder (new CfnDashboard$LineChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-line-series-axis-display-options-property-builder
   "The build-cfn-dashboard-line-series-axis-display-options-property-builder function updates a CfnDashboard$LineSeriesAxisDisplayOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$LineSeriesAxisDisplayOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19811,6 +24371,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-line-series-axis-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-line-series-axis-display-options-property-builder (new CfnDashboard$LineSeriesAxisDisplayOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-link-sharing-configuration-property-builder
   "The build-cfn-dashboard-link-sharing-configuration-property-builder function updates a CfnDashboard$LinkSharingConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$LinkSharingConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19826,6 +24392,12 @@
   (when-let [data (lookup-entry config id :permissions)]
     (. builder permissions data))
   (.build builder))
+
+
+(defn cfn-dashboard-link-sharing-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-link-sharing-configuration-property-builder (new CfnDashboard$LinkSharingConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-list-control-display-options-property-builder
@@ -19854,6 +24426,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-list-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-list-control-display-options-property-builder (new CfnDashboard$ListControlDisplayOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-list-control-search-options-property-builder
   "The build-cfn-dashboard-list-control-search-options-property-builder function updates a CfnDashboard$ListControlSearchOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ListControlSearchOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19869,6 +24447,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-dashboard-list-control-search-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-list-control-search-options-property-builder (new CfnDashboard$ListControlSearchOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-list-control-select-all-options-property-builder
@@ -19888,6 +24472,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-list-control-select-all-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-list-control-select-all-options-property-builder (new CfnDashboard$ListControlSelectAllOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-loading-animation-property-builder
   "The build-cfn-dashboard-loading-animation-property-builder function updates a CfnDashboard$LoadingAnimationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$LoadingAnimationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19905,6 +24495,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-loading-animation-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-loading-animation-property-builder (new CfnDashboard$LoadingAnimationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-local-navigation-configuration-property-builder
   "The build-cfn-dashboard-local-navigation-configuration-property-builder function updates a CfnDashboard$LocalNavigationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$LocalNavigationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19920,6 +24516,12 @@
   (when-let [data (lookup-entry config id :target-sheet-id)]
     (. builder targetSheetId data))
   (.build builder))
+
+
+(defn cfn-dashboard-local-navigation-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-local-navigation-configuration-property-builder (new CfnDashboard$LocalNavigationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-long-format-text-property-builder
@@ -19942,6 +24544,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-long-format-text-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-long-format-text-property-builder (new CfnDashboard$LongFormatTextProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-mapped-data-set-parameter-property-builder
   "The build-cfn-dashboard-mapped-data-set-parameter-property-builder function updates a CfnDashboard$MappedDataSetParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$MappedDataSetParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19962,6 +24570,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-mapped-data-set-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-mapped-data-set-parameter-property-builder (new CfnDashboard$MappedDataSetParameterProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-maximum-label-type-property-builder
   "The build-cfn-dashboard-maximum-label-type-property-builder function updates a CfnDashboard$MaximumLabelTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$MaximumLabelTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -19977,6 +24591,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-dashboard-maximum-label-type-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-maximum-label-type-property-builder (new CfnDashboard$MaximumLabelTypeProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-maximum-minimum-computation-property-builder
@@ -20008,6 +24628,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-maximum-minimum-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-maximum-minimum-computation-property-builder (new CfnDashboard$MaximumMinimumComputationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-measure-field-property-builder
   "The build-cfn-dashboard-measure-field-property-builder function updates a CfnDashboard$MeasureFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$MeasureFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20032,6 +24658,12 @@
   (when-let [data (lookup-entry config id :numerical-measure-field)]
     (. builder numericalMeasureField data))
   (.build builder))
+
+
+(defn cfn-dashboard-measure-field-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-measure-field-property-builder (new CfnDashboard$MeasureFieldProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-metric-comparison-computation-property-builder
@@ -20063,6 +24695,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-metric-comparison-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-metric-comparison-computation-property-builder (new CfnDashboard$MetricComparisonComputationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-minimum-label-type-property-builder
   "The build-cfn-dashboard-minimum-label-type-property-builder function updates a CfnDashboard$MinimumLabelTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$MinimumLabelTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20078,6 +24716,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-dashboard-minimum-label-type-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-minimum-label-type-property-builder (new CfnDashboard$MinimumLabelTypeProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-missing-data-configuration-property-builder
@@ -20097,6 +24741,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-missing-data-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-missing-data-configuration-property-builder (new CfnDashboard$MissingDataConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-negative-value-configuration-property-builder
   "The build-cfn-dashboard-negative-value-configuration-property-builder function updates a CfnDashboard$NegativeValueConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$NegativeValueConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20114,6 +24764,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-negative-value-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-negative-value-configuration-property-builder (new CfnDashboard$NegativeValueConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-null-value-format-configuration-property-builder
   "The build-cfn-dashboard-null-value-format-configuration-property-builder function updates a CfnDashboard$NullValueFormatConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$NullValueFormatConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20129,6 +24785,12 @@
   (when-let [data (lookup-entry config id :null-string)]
     (. builder nullString data))
   (.build builder))
+
+
+(defn cfn-dashboard-null-value-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-null-value-format-configuration-property-builder (new CfnDashboard$NullValueFormatConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-number-display-format-configuration-property-builder
@@ -20166,6 +24828,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-number-display-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-number-display-format-configuration-property-builder (new CfnDashboard$NumberDisplayFormatConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-number-format-configuration-property-builder
   "The build-cfn-dashboard-number-format-configuration-property-builder function updates a CfnDashboard$NumberFormatConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$NumberFormatConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20181,6 +24849,12 @@
   (when-let [data (lookup-entry config id :format-configuration)]
     (. builder formatConfiguration data))
   (.build builder))
+
+
+(defn cfn-dashboard-number-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-number-format-configuration-property-builder (new CfnDashboard$NumberFormatConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-numeric-axis-options-property-builder
@@ -20203,6 +24877,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-numeric-axis-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-numeric-axis-options-property-builder (new CfnDashboard$NumericAxisOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-numeric-equality-drill-down-filter-property-builder
   "The build-cfn-dashboard-numeric-equality-drill-down-filter-property-builder function updates a CfnDashboard$NumericEqualityDrillDownFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$NumericEqualityDrillDownFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20221,6 +24901,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-dashboard-numeric-equality-drill-down-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-numeric-equality-drill-down-filter-property-builder (new CfnDashboard$NumericEqualityDrillDownFilterProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-numeric-equality-filter-property-builder
@@ -20264,6 +24950,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-numeric-equality-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-numeric-equality-filter-property-builder (new CfnDashboard$NumericEqualityFilterProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-numeric-format-configuration-property-builder
   "The build-cfn-dashboard-numeric-format-configuration-property-builder function updates a CfnDashboard$NumericFormatConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$NumericFormatConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20285,6 +24977,12 @@
   (when-let [data (lookup-entry config id :percentage-display-format-configuration)]
     (. builder percentageDisplayFormatConfiguration data))
   (.build builder))
+
+
+(defn cfn-dashboard-numeric-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-numeric-format-configuration-property-builder (new CfnDashboard$NumericFormatConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-numeric-range-filter-property-builder
@@ -20331,6 +25029,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-numeric-range-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-numeric-range-filter-property-builder (new CfnDashboard$NumericRangeFilterProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-numeric-range-filter-value-property-builder
   "The build-cfn-dashboard-numeric-range-filter-value-property-builder function updates a CfnDashboard$NumericRangeFilterValueProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$NumericRangeFilterValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20349,6 +25053,12 @@
   (when-let [data (lookup-entry config id :static-value)]
     (. builder staticValue data))
   (.build builder))
+
+
+(defn cfn-dashboard-numeric-range-filter-value-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-numeric-range-filter-value-property-builder (new CfnDashboard$NumericRangeFilterValueProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-numeric-separator-configuration-property-builder
@@ -20371,6 +25081,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-numeric-separator-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-numeric-separator-configuration-property-builder (new CfnDashboard$NumericSeparatorConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-numerical-aggregation-function-property-builder
   "The build-cfn-dashboard-numerical-aggregation-function-property-builder function updates a CfnDashboard$NumericalAggregationFunctionProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$NumericalAggregationFunctionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20389,6 +25105,12 @@
   (when-let [data (lookup-entry config id :simple-numerical-aggregation)]
     (. builder simpleNumericalAggregation data))
   (.build builder))
+
+
+(defn cfn-dashboard-numerical-aggregation-function-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-numerical-aggregation-function-property-builder (new CfnDashboard$NumericalAggregationFunctionProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-numerical-dimension-field-property-builder
@@ -20417,6 +25139,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-numerical-dimension-field-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-numerical-dimension-field-property-builder (new CfnDashboard$NumericalDimensionFieldProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-numerical-measure-field-property-builder
   "The build-cfn-dashboard-numerical-measure-field-property-builder function updates a CfnDashboard$NumericalMeasureFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$NumericalMeasureFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20443,6 +25171,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-numerical-measure-field-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-numerical-measure-field-property-builder (new CfnDashboard$NumericalMeasureFieldProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-pagination-configuration-property-builder
   "The build-cfn-dashboard-pagination-configuration-property-builder function updates a CfnDashboard$PaginationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$PaginationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20461,6 +25195,12 @@
   (when-let [data (lookup-entry config id :page-size)]
     (. builder pageSize data))
   (.build builder))
+
+
+(defn cfn-dashboard-pagination-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pagination-configuration-property-builder (new CfnDashboard$PaginationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-panel-configuration-property-builder
@@ -20504,6 +25244,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-panel-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-panel-configuration-property-builder (new CfnDashboard$PanelConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-panel-title-options-property-builder
   "The build-cfn-dashboard-panel-title-options-property-builder function updates a CfnDashboard$PanelTitleOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$PanelTitleOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20525,6 +25271,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-dashboard-panel-title-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-panel-title-options-property-builder (new CfnDashboard$PanelTitleOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-parameter-control-property-builder
@@ -20559,6 +25311,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-parameter-control-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-parameter-control-property-builder (new CfnDashboard$ParameterControlProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-parameter-date-time-picker-control-property-builder
   "The build-cfn-dashboard-parameter-date-time-picker-control-property-builder function updates a CfnDashboard$ParameterDateTimePickerControlProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ParameterDateTimePickerControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20585,6 +25343,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-parameter-date-time-picker-control-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-parameter-date-time-picker-control-property-builder (new CfnDashboard$ParameterDateTimePickerControlProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-parameter-declaration-property-builder
   "The build-cfn-dashboard-parameter-declaration-property-builder function updates a CfnDashboard$ParameterDeclarationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ParameterDeclarationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20609,6 +25373,12 @@
   (when-let [data (lookup-entry config id :string-parameter-declaration)]
     (. builder stringParameterDeclaration data))
   (.build builder))
+
+
+(defn cfn-dashboard-parameter-declaration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-parameter-declaration-property-builder (new CfnDashboard$ParameterDeclarationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-parameter-drop-down-control-property-builder
@@ -20646,6 +25416,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-parameter-drop-down-control-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-parameter-drop-down-control-property-builder (new CfnDashboard$ParameterDropDownControlProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-parameter-list-control-property-builder
   "The build-cfn-dashboard-parameter-list-control-property-builder function updates a CfnDashboard$ParameterListControlProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ParameterListControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20681,6 +25457,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-parameter-list-control-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-parameter-list-control-property-builder (new CfnDashboard$ParameterListControlProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-parameter-selectable-values-property-builder
   "The build-cfn-dashboard-parameter-selectable-values-property-builder function updates a CfnDashboard$ParameterSelectableValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ParameterSelectableValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20699,6 +25481,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-dashboard-parameter-selectable-values-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-parameter-selectable-values-property-builder (new CfnDashboard$ParameterSelectableValuesProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-parameter-slider-control-property-builder
@@ -20736,6 +25524,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-parameter-slider-control-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-parameter-slider-control-property-builder (new CfnDashboard$ParameterSliderControlProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-parameter-text-area-control-property-builder
   "The build-cfn-dashboard-parameter-text-area-control-property-builder function updates a CfnDashboard$ParameterTextAreaControlProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ParameterTextAreaControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20765,6 +25559,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-parameter-text-area-control-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-parameter-text-area-control-property-builder (new CfnDashboard$ParameterTextAreaControlProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-parameter-text-field-control-property-builder
   "The build-cfn-dashboard-parameter-text-field-control-property-builder function updates a CfnDashboard$ParameterTextFieldControlProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ParameterTextFieldControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20789,6 +25589,12 @@
   (when-let [data (lookup-entry config id :title)]
     (. builder title data))
   (.build builder))
+
+
+(defn cfn-dashboard-parameter-text-field-control-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-parameter-text-field-control-property-builder (new CfnDashboard$ParameterTextFieldControlProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-parameters-property-builder
@@ -20817,6 +25623,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-parameters-property-builder (new CfnDashboard$ParametersProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-percent-visible-range-property-builder
   "The build-cfn-dashboard-percent-visible-range-property-builder function updates a CfnDashboard$PercentVisibleRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$PercentVisibleRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20835,6 +25647,12 @@
   (when-let [data (lookup-entry config id :to)]
     (. builder to data))
   (.build builder))
+
+
+(defn cfn-dashboard-percent-visible-range-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-percent-visible-range-property-builder (new CfnDashboard$PercentVisibleRangeProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-percentage-display-format-configuration-property-builder
@@ -20869,6 +25687,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-percentage-display-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-percentage-display-format-configuration-property-builder (new CfnDashboard$PercentageDisplayFormatConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-percentile-aggregation-property-builder
   "The build-cfn-dashboard-percentile-aggregation-property-builder function updates a CfnDashboard$PercentileAggregationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$PercentileAggregationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20884,6 +25708,12 @@
   (when-let [data (lookup-entry config id :percentile-value)]
     (. builder percentileValue data))
   (.build builder))
+
+
+(defn cfn-dashboard-percentile-aggregation-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-percentile-aggregation-property-builder (new CfnDashboard$PercentileAggregationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-period-over-period-computation-property-builder
@@ -20910,6 +25740,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-dashboard-period-over-period-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-period-over-period-computation-property-builder (new CfnDashboard$PeriodOverPeriodComputationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-period-to-date-computation-property-builder
@@ -20941,6 +25777,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-period-to-date-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-period-to-date-computation-property-builder (new CfnDashboard$PeriodToDateComputationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-pie-chart-aggregated-field-wells-property-builder
   "The build-cfn-dashboard-pie-chart-aggregated-field-wells-property-builder function updates a CfnDashboard$PieChartAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$PieChartAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -20962,6 +25804,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-dashboard-pie-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pie-chart-aggregated-field-wells-property-builder (new CfnDashboard$PieChartAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-pie-chart-configuration-property-builder
@@ -21011,6 +25859,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-pie-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pie-chart-configuration-property-builder (new CfnDashboard$PieChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-pie-chart-field-wells-property-builder
   "The build-cfn-dashboard-pie-chart-field-wells-property-builder function updates a CfnDashboard$PieChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$PieChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21026,6 +25880,12 @@
   (when-let [data (lookup-entry config id :pie-chart-aggregated-field-wells)]
     (. builder pieChartAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-dashboard-pie-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pie-chart-field-wells-property-builder (new CfnDashboard$PieChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-pie-chart-sort-configuration-property-builder
@@ -21052,6 +25912,12 @@
   (when-let [data (lookup-entry config id :small-multiples-sort)]
     (. builder smallMultiplesSort data))
   (.build builder))
+
+
+(defn cfn-dashboard-pie-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pie-chart-sort-configuration-property-builder (new CfnDashboard$PieChartSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-pie-chart-visual-property-builder
@@ -21086,6 +25952,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-pie-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pie-chart-visual-property-builder (new CfnDashboard$PieChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-pivot-field-sort-options-property-builder
   "The build-cfn-dashboard-pivot-field-sort-options-property-builder function updates a CfnDashboard$PivotFieldSortOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$PivotFieldSortOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21104,6 +25976,12 @@
   (when-let [data (lookup-entry config id :sort-by)]
     (. builder sortBy data))
   (.build builder))
+
+
+(defn cfn-dashboard-pivot-field-sort-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-field-sort-options-property-builder (new CfnDashboard$PivotFieldSortOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-pivot-table-aggregated-field-wells-property-builder
@@ -21127,6 +26005,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-dashboard-pivot-table-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-table-aggregated-field-wells-property-builder (new CfnDashboard$PivotTableAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-pivot-table-cell-conditional-formatting-property-builder
@@ -21155,6 +26039,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-pivot-table-cell-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-table-cell-conditional-formatting-property-builder (new CfnDashboard$PivotTableCellConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-pivot-table-conditional-formatting-option-property-builder
   "The build-cfn-dashboard-pivot-table-conditional-formatting-option-property-builder function updates a CfnDashboard$PivotTableConditionalFormattingOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$PivotTableConditionalFormattingOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21170,6 +26060,12 @@
   (when-let [data (lookup-entry config id :cell)]
     (. builder cell data))
   (.build builder))
+
+
+(defn cfn-dashboard-pivot-table-conditional-formatting-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-table-conditional-formatting-option-property-builder (new CfnDashboard$PivotTableConditionalFormattingOptionProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-pivot-table-conditional-formatting-property-builder
@@ -21189,6 +26085,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-pivot-table-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-table-conditional-formatting-property-builder (new CfnDashboard$PivotTableConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-pivot-table-conditional-formatting-scope-property-builder
   "The build-cfn-dashboard-pivot-table-conditional-formatting-scope-property-builder function updates a CfnDashboard$PivotTableConditionalFormattingScopeProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$PivotTableConditionalFormattingScopeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21204,6 +26106,12 @@
   (when-let [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
+
+
+(defn cfn-dashboard-pivot-table-conditional-formatting-scope-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-table-conditional-formatting-scope-property-builder (new CfnDashboard$PivotTableConditionalFormattingScopeProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-pivot-table-configuration-property-builder
@@ -21238,6 +26146,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-pivot-table-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-table-configuration-property-builder (new CfnDashboard$PivotTableConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-pivot-table-data-path-option-property-builder
   "The build-cfn-dashboard-pivot-table-data-path-option-property-builder function updates a CfnDashboard$PivotTableDataPathOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$PivotTableDataPathOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21256,6 +26170,12 @@
   (when-let [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
+
+
+(defn cfn-dashboard-pivot-table-data-path-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-table-data-path-option-property-builder (new CfnDashboard$PivotTableDataPathOptionProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-pivot-table-field-collapse-state-option-property-builder
@@ -21278,6 +26198,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-pivot-table-field-collapse-state-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-table-field-collapse-state-option-property-builder (new CfnDashboard$PivotTableFieldCollapseStateOptionProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-pivot-table-field-collapse-state-target-property-builder
   "The build-cfn-dashboard-pivot-table-field-collapse-state-target-property-builder function updates a CfnDashboard$PivotTableFieldCollapseStateTargetProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$PivotTableFieldCollapseStateTargetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21296,6 +26222,12 @@
   (when-let [data (lookup-entry config id :field-id)]
     (. builder fieldId data))
   (.build builder))
+
+
+(defn cfn-dashboard-pivot-table-field-collapse-state-target-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-table-field-collapse-state-target-property-builder (new CfnDashboard$PivotTableFieldCollapseStateTargetProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-pivot-table-field-option-property-builder
@@ -21321,6 +26253,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-pivot-table-field-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-table-field-option-property-builder (new CfnDashboard$PivotTableFieldOptionProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-pivot-table-field-options-property-builder
   "The build-cfn-dashboard-pivot-table-field-options-property-builder function updates a CfnDashboard$PivotTableFieldOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$PivotTableFieldOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21344,6 +26282,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-pivot-table-field-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-table-field-options-property-builder (new CfnDashboard$PivotTableFieldOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-pivot-table-field-subtotal-options-property-builder
   "The build-cfn-dashboard-pivot-table-field-subtotal-options-property-builder function updates a CfnDashboard$PivotTableFieldSubtotalOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$PivotTableFieldSubtotalOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21361,6 +26305,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-pivot-table-field-subtotal-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-table-field-subtotal-options-property-builder (new CfnDashboard$PivotTableFieldSubtotalOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-pivot-table-field-wells-property-builder
   "The build-cfn-dashboard-pivot-table-field-wells-property-builder function updates a CfnDashboard$PivotTableFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$PivotTableFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21376,6 +26326,12 @@
   (when-let [data (lookup-entry config id :pivot-table-aggregated-field-wells)]
     (. builder pivotTableAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-dashboard-pivot-table-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-table-field-wells-property-builder (new CfnDashboard$PivotTableFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-pivot-table-options-property-builder
@@ -21431,6 +26387,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-pivot-table-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-table-options-property-builder (new CfnDashboard$PivotTableOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-pivot-table-paginated-report-options-property-builder
   "The build-cfn-dashboard-pivot-table-paginated-report-options-property-builder function updates a CfnDashboard$PivotTablePaginatedReportOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$PivotTablePaginatedReportOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21451,6 +26413,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-pivot-table-paginated-report-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-table-paginated-report-options-property-builder (new CfnDashboard$PivotTablePaginatedReportOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-pivot-table-rows-label-options-property-builder
   "The build-cfn-dashboard-pivot-table-rows-label-options-property-builder function updates a CfnDashboard$PivotTableRowsLabelOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$PivotTableRowsLabelOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21469,6 +26437,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-dashboard-pivot-table-rows-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-table-rows-label-options-property-builder (new CfnDashboard$PivotTableRowsLabelOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-pivot-table-sort-by-property-builder
@@ -21494,6 +26468,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-pivot-table-sort-by-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-table-sort-by-property-builder (new CfnDashboard$PivotTableSortByProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-pivot-table-sort-configuration-property-builder
   "The build-cfn-dashboard-pivot-table-sort-configuration-property-builder function updates a CfnDashboard$PivotTableSortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$PivotTableSortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21509,6 +26489,12 @@
   (when-let [data (lookup-entry config id :field-sort-options)]
     (. builder fieldSortOptions data))
   (.build builder))
+
+
+(defn cfn-dashboard-pivot-table-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-table-sort-configuration-property-builder (new CfnDashboard$PivotTableSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-pivot-table-total-options-property-builder
@@ -21535,6 +26521,12 @@
   (when-let [data (lookup-entry config id :row-total-options)]
     (. builder rowTotalOptions data))
   (.build builder))
+
+
+(defn cfn-dashboard-pivot-table-total-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-table-total-options-property-builder (new CfnDashboard$PivotTableTotalOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-pivot-table-visual-property-builder
@@ -21567,6 +26559,12 @@
   (when-let [data (lookup-entry config id :visual-id)]
     (. builder visualId data))
   (.build builder))
+
+
+(defn cfn-dashboard-pivot-table-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-table-visual-property-builder (new CfnDashboard$PivotTableVisualProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-pivot-total-options-property-builder
@@ -21607,6 +26605,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-pivot-total-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-pivot-total-options-property-builder (new CfnDashboard$PivotTotalOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-predefined-hierarchy-property-builder
   "The build-cfn-dashboard-predefined-hierarchy-property-builder function updates a CfnDashboard$PredefinedHierarchyProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$PredefinedHierarchyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21630,6 +26634,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-predefined-hierarchy-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-predefined-hierarchy-property-builder (new CfnDashboard$PredefinedHierarchyProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-progress-bar-options-property-builder
   "The build-cfn-dashboard-progress-bar-options-property-builder function updates a CfnDashboard$ProgressBarOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ProgressBarOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21645,6 +26655,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-dashboard-progress-bar-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-progress-bar-options-property-builder (new CfnDashboard$ProgressBarOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-props-builder
@@ -21703,6 +26719,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-props-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-props-builder (new CfnDashboardProps$Builder) id config))
+
+
 (defn build-cfn-dashboard-radar-chart-aggregated-field-wells-property-builder
   "The build-cfn-dashboard-radar-chart-aggregated-field-wells-property-builder function updates a CfnDashboard$RadarChartAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$RadarChartAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21726,6 +26748,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-radar-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-radar-chart-aggregated-field-wells-property-builder (new CfnDashboard$RadarChartAggregatedFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-radar-chart-area-style-settings-property-builder
   "The build-cfn-dashboard-radar-chart-area-style-settings-property-builder function updates a CfnDashboard$RadarChartAreaStyleSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$RadarChartAreaStyleSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21741,6 +26769,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-dashboard-radar-chart-area-style-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-radar-chart-area-style-settings-property-builder (new CfnDashboard$RadarChartAreaStyleSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-radar-chart-configuration-property-builder
@@ -21802,6 +26836,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-radar-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-radar-chart-configuration-property-builder (new CfnDashboard$RadarChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-radar-chart-field-wells-property-builder
   "The build-cfn-dashboard-radar-chart-field-wells-property-builder function updates a CfnDashboard$RadarChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$RadarChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21819,6 +26859,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-radar-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-radar-chart-field-wells-property-builder (new CfnDashboard$RadarChartFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-radar-chart-series-settings-property-builder
   "The build-cfn-dashboard-radar-chart-series-settings-property-builder function updates a CfnDashboard$RadarChartSeriesSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$RadarChartSeriesSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21834,6 +26880,12 @@
   (when-let [data (lookup-entry config id :area-style-settings)]
     (. builder areaStyleSettings data))
   (.build builder))
+
+
+(defn cfn-dashboard-radar-chart-series-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-radar-chart-series-settings-property-builder (new CfnDashboard$RadarChartSeriesSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-radar-chart-sort-configuration-property-builder
@@ -21860,6 +26912,12 @@
   (when-let [data (lookup-entry config id :color-sort)]
     (. builder colorSort data))
   (.build builder))
+
+
+(defn cfn-dashboard-radar-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-radar-chart-sort-configuration-property-builder (new CfnDashboard$RadarChartSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-radar-chart-visual-property-builder
@@ -21894,6 +26952,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-radar-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-radar-chart-visual-property-builder (new CfnDashboard$RadarChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-range-ends-label-type-property-builder
   "The build-cfn-dashboard-range-ends-label-type-property-builder function updates a CfnDashboard$RangeEndsLabelTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$RangeEndsLabelTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21911,6 +26975,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-range-ends-label-type-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-range-ends-label-type-property-builder (new CfnDashboard$RangeEndsLabelTypeProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-reference-line-custom-label-configuration-property-builder
   "The build-cfn-dashboard-reference-line-custom-label-configuration-property-builder function updates a CfnDashboard$ReferenceLineCustomLabelConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ReferenceLineCustomLabelConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21926,6 +26996,12 @@
   (when-let [data (lookup-entry config id :custom-label)]
     (. builder customLabel data))
   (.build builder))
+
+
+(defn cfn-dashboard-reference-line-custom-label-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-reference-line-custom-label-configuration-property-builder (new CfnDashboard$ReferenceLineCustomLabelConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-reference-line-data-configuration-property-builder
@@ -21954,6 +27030,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-reference-line-data-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-reference-line-data-configuration-property-builder (new CfnDashboard$ReferenceLineDataConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-reference-line-dynamic-data-configuration-property-builder
   "The build-cfn-dashboard-reference-line-dynamic-data-configuration-property-builder function updates a CfnDashboard$ReferenceLineDynamicDataConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ReferenceLineDynamicDataConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -21975,6 +27057,12 @@
   (when-let [data (lookup-entry config id :measure-aggregation-function)]
     (. builder measureAggregationFunction data))
   (.build builder))
+
+
+(defn cfn-dashboard-reference-line-dynamic-data-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-reference-line-dynamic-data-configuration-property-builder (new CfnDashboard$ReferenceLineDynamicDataConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-reference-line-label-configuration-property-builder
@@ -22009,6 +27097,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-reference-line-label-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-reference-line-label-configuration-property-builder (new CfnDashboard$ReferenceLineLabelConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-reference-line-property-builder
   "The build-cfn-dashboard-reference-line-property-builder function updates a CfnDashboard$ReferenceLineProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ReferenceLineProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22035,6 +27129,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-reference-line-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-reference-line-property-builder (new CfnDashboard$ReferenceLineProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-reference-line-static-data-configuration-property-builder
   "The build-cfn-dashboard-reference-line-static-data-configuration-property-builder function updates a CfnDashboard$ReferenceLineStaticDataConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ReferenceLineStaticDataConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22050,6 +27150,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-dashboard-reference-line-static-data-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-reference-line-static-data-configuration-property-builder (new CfnDashboard$ReferenceLineStaticDataConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-reference-line-style-configuration-property-builder
@@ -22072,6 +27178,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-reference-line-style-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-reference-line-style-configuration-property-builder (new CfnDashboard$ReferenceLineStyleConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-reference-line-value-label-configuration-property-builder
   "The build-cfn-dashboard-reference-line-value-label-configuration-property-builder function updates a CfnDashboard$ReferenceLineValueLabelConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ReferenceLineValueLabelConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22090,6 +27202,12 @@
   (when-let [data (lookup-entry config id :relative-position)]
     (. builder relativePosition data))
   (.build builder))
+
+
+(defn cfn-dashboard-reference-line-value-label-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-reference-line-value-label-configuration-property-builder (new CfnDashboard$ReferenceLineValueLabelConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-relative-date-time-control-display-options-property-builder
@@ -22113,6 +27231,12 @@
   (when-let [data (lookup-entry config id :title-options)]
     (. builder titleOptions data))
   (.build builder))
+
+
+(defn cfn-dashboard-relative-date-time-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-relative-date-time-control-display-options-property-builder (new CfnDashboard$RelativeDateTimeControlDisplayOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-relative-dates-filter-property-builder
@@ -22162,6 +27286,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-relative-dates-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-relative-dates-filter-property-builder (new CfnDashboard$RelativeDatesFilterProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-resource-permission-property-builder
   "The build-cfn-dashboard-resource-permission-property-builder function updates a CfnDashboard$ResourcePermissionProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ResourcePermissionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22185,6 +27315,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-resource-permission-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-resource-permission-property-builder (new CfnDashboard$ResourcePermissionProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-rolling-date-configuration-property-builder
   "The build-cfn-dashboard-rolling-date-configuration-property-builder function updates a CfnDashboard$RollingDateConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$RollingDateConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22203,6 +27339,12 @@
   (when-let [data (lookup-entry config id :expression)]
     (. builder expression data))
   (.build builder))
+
+
+(defn cfn-dashboard-rolling-date-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-rolling-date-configuration-property-builder (new CfnDashboard$RollingDateConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-row-alternate-color-options-property-builder
@@ -22228,6 +27370,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-row-alternate-color-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-row-alternate-color-options-property-builder (new CfnDashboard$RowAlternateColorOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-same-sheet-target-visual-configuration-property-builder
   "The build-cfn-dashboard-same-sheet-target-visual-configuration-property-builder function updates a CfnDashboard$SameSheetTargetVisualConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$SameSheetTargetVisualConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22246,6 +27394,12 @@
   (when-let [data (lookup-entry config id :target-visuals)]
     (. builder targetVisuals data))
   (.build builder))
+
+
+(defn cfn-dashboard-same-sheet-target-visual-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-same-sheet-target-visual-configuration-property-builder (new CfnDashboard$SameSheetTargetVisualConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-sankey-diagram-aggregated-field-wells-property-builder
@@ -22271,6 +27425,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-sankey-diagram-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-sankey-diagram-aggregated-field-wells-property-builder (new CfnDashboard$SankeyDiagramAggregatedFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-sankey-diagram-chart-configuration-property-builder
   "The build-cfn-dashboard-sankey-diagram-chart-configuration-property-builder function updates a CfnDashboard$SankeyDiagramChartConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$SankeyDiagramChartConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22294,6 +27454,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-sankey-diagram-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-sankey-diagram-chart-configuration-property-builder (new CfnDashboard$SankeyDiagramChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-sankey-diagram-field-wells-property-builder
   "The build-cfn-dashboard-sankey-diagram-field-wells-property-builder function updates a CfnDashboard$SankeyDiagramFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$SankeyDiagramFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22309,6 +27475,12 @@
   (when-let [data (lookup-entry config id :sankey-diagram-aggregated-field-wells)]
     (. builder sankeyDiagramAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-dashboard-sankey-diagram-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-sankey-diagram-field-wells-property-builder (new CfnDashboard$SankeyDiagramFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-sankey-diagram-sort-configuration-property-builder
@@ -22332,6 +27504,12 @@
   (when-let [data (lookup-entry config id :weight-sort)]
     (. builder weightSort data))
   (.build builder))
+
+
+(defn cfn-dashboard-sankey-diagram-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-sankey-diagram-sort-configuration-property-builder (new CfnDashboard$SankeyDiagramSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-sankey-diagram-visual-property-builder
@@ -22363,6 +27541,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-sankey-diagram-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-sankey-diagram-visual-property-builder (new CfnDashboard$SankeyDiagramVisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-scatter-plot-categorically-aggregated-field-wells-property-builder
   "The build-cfn-dashboard-scatter-plot-categorically-aggregated-field-wells-property-builder function updates a CfnDashboard$ScatterPlotCategoricallyAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ScatterPlotCategoricallyAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22390,6 +27574,12 @@
   (when-let [data (lookup-entry config id :y-axis)]
     (. builder yAxis data))
   (.build builder))
+
+
+(defn cfn-dashboard-scatter-plot-categorically-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-scatter-plot-categorically-aggregated-field-wells-property-builder (new CfnDashboard$ScatterPlotCategoricallyAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-scatter-plot-configuration-property-builder
@@ -22433,6 +27623,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-scatter-plot-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-scatter-plot-configuration-property-builder (new CfnDashboard$ScatterPlotConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-scatter-plot-field-wells-property-builder
   "The build-cfn-dashboard-scatter-plot-field-wells-property-builder function updates a CfnDashboard$ScatterPlotFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ScatterPlotFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22451,6 +27647,12 @@
   (when-let [data (lookup-entry config id :scatter-plot-unaggregated-field-wells)]
     (. builder scatterPlotUnaggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-dashboard-scatter-plot-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-scatter-plot-field-wells-property-builder (new CfnDashboard$ScatterPlotFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-scatter-plot-unaggregated-field-wells-property-builder
@@ -22480,6 +27682,12 @@
   (when-let [data (lookup-entry config id :y-axis)]
     (. builder yAxis data))
   (.build builder))
+
+
+(defn cfn-dashboard-scatter-plot-unaggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-scatter-plot-unaggregated-field-wells-property-builder (new CfnDashboard$ScatterPlotUnaggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-scatter-plot-visual-property-builder
@@ -22514,6 +27722,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-scatter-plot-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-scatter-plot-visual-property-builder (new CfnDashboard$ScatterPlotVisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-scroll-bar-options-property-builder
   "The build-cfn-dashboard-scroll-bar-options-property-builder function updates a CfnDashboard$ScrollBarOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ScrollBarOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22534,6 +27748,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-scroll-bar-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-scroll-bar-options-property-builder (new CfnDashboard$ScrollBarOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-secondary-value-options-property-builder
   "The build-cfn-dashboard-secondary-value-options-property-builder function updates a CfnDashboard$SecondaryValueOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$SecondaryValueOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22549,6 +27769,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-dashboard-secondary-value-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-secondary-value-options-property-builder (new CfnDashboard$SecondaryValueOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-section-after-page-break-property-builder
@@ -22568,6 +27794,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-section-after-page-break-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-section-after-page-break-property-builder (new CfnDashboard$SectionAfterPageBreakProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-section-based-layout-canvas-size-options-property-builder
   "The build-cfn-dashboard-section-based-layout-canvas-size-options-property-builder function updates a CfnDashboard$SectionBasedLayoutCanvasSizeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$SectionBasedLayoutCanvasSizeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22583,6 +27815,12 @@
   (when-let [data (lookup-entry config id :paper-canvas-size-options)]
     (. builder paperCanvasSizeOptions data))
   (.build builder))
+
+
+(defn cfn-dashboard-section-based-layout-canvas-size-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-section-based-layout-canvas-size-options-property-builder (new CfnDashboard$SectionBasedLayoutCanvasSizeOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-section-based-layout-configuration-property-builder
@@ -22611,6 +27849,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-section-based-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-section-based-layout-configuration-property-builder (new CfnDashboard$SectionBasedLayoutConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-section-based-layout-paper-canvas-size-options-property-builder
   "The build-cfn-dashboard-section-based-layout-paper-canvas-size-options-property-builder function updates a CfnDashboard$SectionBasedLayoutPaperCanvasSizeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$SectionBasedLayoutPaperCanvasSizeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22634,6 +27878,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-section-based-layout-paper-canvas-size-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-section-based-layout-paper-canvas-size-options-property-builder (new CfnDashboard$SectionBasedLayoutPaperCanvasSizeOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-section-layout-configuration-property-builder
   "The build-cfn-dashboard-section-layout-configuration-property-builder function updates a CfnDashboard$SectionLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$SectionLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22651,6 +27901,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-section-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-section-layout-configuration-property-builder (new CfnDashboard$SectionLayoutConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-section-page-break-configuration-property-builder
   "The build-cfn-dashboard-section-page-break-configuration-property-builder function updates a CfnDashboard$SectionPageBreakConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$SectionPageBreakConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22666,6 +27922,12 @@
   (when-let [data (lookup-entry config id :after)]
     (. builder after data))
   (.build builder))
+
+
+(defn cfn-dashboard-section-page-break-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-section-page-break-configuration-property-builder (new CfnDashboard$SectionPageBreakConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-section-style-property-builder
@@ -22688,6 +27950,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-section-style-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-section-style-property-builder (new CfnDashboard$SectionStyleProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-selected-sheets-filter-scope-configuration-property-builder
   "The build-cfn-dashboard-selected-sheets-filter-scope-configuration-property-builder function updates a CfnDashboard$SelectedSheetsFilterScopeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$SelectedSheetsFilterScopeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22703,6 +27971,12 @@
   (when-let [data (lookup-entry config id :sheet-visual-scoping-configurations)]
     (. builder sheetVisualScopingConfigurations data))
   (.build builder))
+
+
+(defn cfn-dashboard-selected-sheets-filter-scope-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-selected-sheets-filter-scope-configuration-property-builder (new CfnDashboard$SelectedSheetsFilterScopeConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-series-item-property-builder
@@ -22725,6 +27999,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-series-item-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-series-item-property-builder (new CfnDashboard$SeriesItemProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-set-parameter-value-configuration-property-builder
   "The build-cfn-dashboard-set-parameter-value-configuration-property-builder function updates a CfnDashboard$SetParameterValueConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$SetParameterValueConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22745,6 +28025,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-set-parameter-value-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-set-parameter-value-configuration-property-builder (new CfnDashboard$SetParameterValueConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-shape-conditional-format-property-builder
   "The build-cfn-dashboard-shape-conditional-format-property-builder function updates a CfnDashboard$ShapeConditionalFormatProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ShapeConditionalFormatProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22760,6 +28046,12 @@
   (when-let [data (lookup-entry config id :background-color)]
     (. builder backgroundColor data))
   (.build builder))
+
+
+(defn cfn-dashboard-shape-conditional-format-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-shape-conditional-format-property-builder (new CfnDashboard$ShapeConditionalFormatProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-sheet-control-info-icon-label-options-property-builder
@@ -22782,6 +28074,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-sheet-control-info-icon-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-sheet-control-info-icon-label-options-property-builder (new CfnDashboard$SheetControlInfoIconLabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-sheet-control-layout-configuration-property-builder
   "The build-cfn-dashboard-sheet-control-layout-configuration-property-builder function updates a CfnDashboard$SheetControlLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$SheetControlLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22797,6 +28095,12 @@
   (when-let [data (lookup-entry config id :grid-layout)]
     (. builder gridLayout data))
   (.build builder))
+
+
+(defn cfn-dashboard-sheet-control-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-sheet-control-layout-configuration-property-builder (new CfnDashboard$SheetControlLayoutConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-sheet-control-layout-property-builder
@@ -22816,6 +28120,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-sheet-control-layout-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-sheet-control-layout-property-builder (new CfnDashboard$SheetControlLayoutProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-sheet-controls-option-property-builder
   "The build-cfn-dashboard-sheet-controls-option-property-builder function updates a CfnDashboard$SheetControlsOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$SheetControlsOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22831,6 +28141,12 @@
   (when-let [data (lookup-entry config id :visibility-state)]
     (. builder visibilityState data))
   (.build builder))
+
+
+(defn cfn-dashboard-sheet-controls-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-sheet-controls-option-property-builder (new CfnDashboard$SheetControlsOptionProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-sheet-definition-property-builder
@@ -22880,6 +28196,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-sheet-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-sheet-definition-property-builder (new CfnDashboard$SheetDefinitionProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-sheet-element-configuration-overrides-property-builder
   "The build-cfn-dashboard-sheet-element-configuration-overrides-property-builder function updates a CfnDashboard$SheetElementConfigurationOverridesProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$SheetElementConfigurationOverridesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22895,6 +28217,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-dashboard-sheet-element-configuration-overrides-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-sheet-element-configuration-overrides-property-builder (new CfnDashboard$SheetElementConfigurationOverridesProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-sheet-element-rendering-rule-property-builder
@@ -22917,6 +28245,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-sheet-element-rendering-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-sheet-element-rendering-rule-property-builder (new CfnDashboard$SheetElementRenderingRuleProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-sheet-layout-element-maximization-option-property-builder
   "The build-cfn-dashboard-sheet-layout-element-maximization-option-property-builder function updates a CfnDashboard$SheetLayoutElementMaximizationOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$SheetLayoutElementMaximizationOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22932,6 +28266,12 @@
   (when-let [data (lookup-entry config id :availability-status)]
     (. builder availabilityStatus data))
   (.build builder))
+
+
+(defn cfn-dashboard-sheet-layout-element-maximization-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-sheet-layout-element-maximization-option-property-builder (new CfnDashboard$SheetLayoutElementMaximizationOptionProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-sheet-property-builder
@@ -22954,6 +28294,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-sheet-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-sheet-property-builder (new CfnDashboard$SheetProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-sheet-text-box-property-builder
   "The build-cfn-dashboard-sheet-text-box-property-builder function updates a CfnDashboard$SheetTextBoxProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$SheetTextBoxProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -22972,6 +28318,12 @@
   (when-let [data (lookup-entry config id :sheet-text-box-id)]
     (. builder sheetTextBoxId data))
   (.build builder))
+
+
+(defn cfn-dashboard-sheet-text-box-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-sheet-text-box-property-builder (new CfnDashboard$SheetTextBoxProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-sheet-visual-scoping-configuration-property-builder
@@ -22997,6 +28349,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-sheet-visual-scoping-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-sheet-visual-scoping-configuration-property-builder (new CfnDashboard$SheetVisualScopingConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-short-format-text-property-builder
   "The build-cfn-dashboard-short-format-text-property-builder function updates a CfnDashboard$ShortFormatTextProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ShortFormatTextProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23017,6 +28375,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-short-format-text-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-short-format-text-property-builder (new CfnDashboard$ShortFormatTextProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-simple-cluster-marker-property-builder
   "The build-cfn-dashboard-simple-cluster-marker-property-builder function updates a CfnDashboard$SimpleClusterMarkerProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$SimpleClusterMarkerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23032,6 +28396,12 @@
   (when-let [data (lookup-entry config id :color)]
     (. builder color data))
   (.build builder))
+
+
+(defn cfn-dashboard-simple-cluster-marker-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-simple-cluster-marker-property-builder (new CfnDashboard$SimpleClusterMarkerProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-slider-control-display-options-property-builder
@@ -23054,6 +28424,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-slider-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-slider-control-display-options-property-builder (new CfnDashboard$SliderControlDisplayOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-small-multiples-axis-properties-property-builder
   "The build-cfn-dashboard-small-multiples-axis-properties-property-builder function updates a CfnDashboard$SmallMultiplesAxisPropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$SmallMultiplesAxisPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23072,6 +28448,12 @@
   (when-let [data (lookup-entry config id :scale)]
     (. builder scale data))
   (.build builder))
+
+
+(defn cfn-dashboard-small-multiples-axis-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-small-multiples-axis-properties-property-builder (new CfnDashboard$SmallMultiplesAxisPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-small-multiples-options-property-builder
@@ -23103,6 +28485,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-small-multiples-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-small-multiples-options-property-builder (new CfnDashboard$SmallMultiplesOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-spacing-property-builder
   "The build-cfn-dashboard-spacing-property-builder function updates a CfnDashboard$SpacingProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$SpacingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23129,6 +28517,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-spacing-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-spacing-property-builder (new CfnDashboard$SpacingProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-string-default-values-property-builder
   "The build-cfn-dashboard-string-default-values-property-builder function updates a CfnDashboard$StringDefaultValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$StringDefaultValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23149,6 +28543,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-string-default-values-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-string-default-values-property-builder (new CfnDashboard$StringDefaultValuesProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-string-format-configuration-property-builder
   "The build-cfn-dashboard-string-format-configuration-property-builder function updates a CfnDashboard$StringFormatConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$StringFormatConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23167,6 +28567,12 @@
   (when-let [data (lookup-entry config id :numeric-format-configuration)]
     (. builder numericFormatConfiguration data))
   (.build builder))
+
+
+(defn cfn-dashboard-string-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-string-format-configuration-property-builder (new CfnDashboard$StringFormatConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-string-parameter-declaration-property-builder
@@ -23198,6 +28604,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-string-parameter-declaration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-string-parameter-declaration-property-builder (new CfnDashboard$StringParameterDeclarationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-string-parameter-property-builder
   "The build-cfn-dashboard-string-parameter-property-builder function updates a CfnDashboard$StringParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$StringParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23218,6 +28630,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-string-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-string-parameter-property-builder (new CfnDashboard$StringParameterProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-string-value-when-unset-configuration-property-builder
   "The build-cfn-dashboard-string-value-when-unset-configuration-property-builder function updates a CfnDashboard$StringValueWhenUnsetConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$StringValueWhenUnsetConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23236,6 +28654,12 @@
   (when-let [data (lookup-entry config id :value-when-unset-option)]
     (. builder valueWhenUnsetOption data))
   (.build builder))
+
+
+(defn cfn-dashboard-string-value-when-unset-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-string-value-when-unset-configuration-property-builder (new CfnDashboard$StringValueWhenUnsetConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-subtotal-options-property-builder
@@ -23276,6 +28700,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-subtotal-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-subtotal-options-property-builder (new CfnDashboard$SubtotalOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-table-aggregated-field-wells-property-builder
   "The build-cfn-dashboard-table-aggregated-field-wells-property-builder function updates a CfnDashboard$TableAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TableAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23294,6 +28724,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-dashboard-table-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-aggregated-field-wells-property-builder (new CfnDashboard$TableAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-table-border-options-property-builder
@@ -23319,6 +28755,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-table-border-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-border-options-property-builder (new CfnDashboard$TableBorderOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-table-cell-conditional-formatting-property-builder
   "The build-cfn-dashboard-table-cell-conditional-formatting-property-builder function updates a CfnDashboard$TableCellConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TableCellConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23339,6 +28781,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-table-cell-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-cell-conditional-formatting-property-builder (new CfnDashboard$TableCellConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-table-cell-image-sizing-configuration-property-builder
   "The build-cfn-dashboard-table-cell-image-sizing-configuration-property-builder function updates a CfnDashboard$TableCellImageSizingConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TableCellImageSizingConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23354,6 +28802,12 @@
   (when-let [data (lookup-entry config id :table-cell-image-scaling-configuration)]
     (. builder tableCellImageScalingConfiguration data))
   (.build builder))
+
+
+(defn cfn-dashboard-table-cell-image-sizing-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-cell-image-sizing-configuration-property-builder (new CfnDashboard$TableCellImageSizingConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-table-cell-style-property-builder
@@ -23394,6 +28848,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-table-cell-style-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-cell-style-property-builder (new CfnDashboard$TableCellStyleProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-table-conditional-formatting-option-property-builder
   "The build-cfn-dashboard-table-conditional-formatting-option-property-builder function updates a CfnDashboard$TableConditionalFormattingOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TableConditionalFormattingOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23414,6 +28874,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-table-conditional-formatting-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-conditional-formatting-option-property-builder (new CfnDashboard$TableConditionalFormattingOptionProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-table-conditional-formatting-property-builder
   "The build-cfn-dashboard-table-conditional-formatting-property-builder function updates a CfnDashboard$TableConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TableConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23429,6 +28895,12 @@
   (when-let [data (lookup-entry config id :conditional-formatting-options)]
     (. builder conditionalFormattingOptions data))
   (.build builder))
+
+
+(defn cfn-dashboard-table-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-conditional-formatting-property-builder (new CfnDashboard$TableConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-table-configuration-property-builder
@@ -23466,6 +28938,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-table-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-configuration-property-builder (new CfnDashboard$TableConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-table-field-custom-icon-content-property-builder
   "The build-cfn-dashboard-table-field-custom-icon-content-property-builder function updates a CfnDashboard$TableFieldCustomIconContentProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TableFieldCustomIconContentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23481,6 +28959,12 @@
   (when-let [data (lookup-entry config id :icon)]
     (. builder icon data))
   (.build builder))
+
+
+(defn cfn-dashboard-table-field-custom-icon-content-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-field-custom-icon-content-property-builder (new CfnDashboard$TableFieldCustomIconContentProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-table-field-custom-text-content-property-builder
@@ -23503,6 +28987,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-table-field-custom-text-content-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-field-custom-text-content-property-builder (new CfnDashboard$TableFieldCustomTextContentProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-table-field-image-configuration-property-builder
   "The build-cfn-dashboard-table-field-image-configuration-property-builder function updates a CfnDashboard$TableFieldImageConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TableFieldImageConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23518,6 +29008,12 @@
   (when-let [data (lookup-entry config id :sizing-options)]
     (. builder sizingOptions data))
   (.build builder))
+
+
+(defn cfn-dashboard-table-field-image-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-field-image-configuration-property-builder (new CfnDashboard$TableFieldImageConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-table-field-link-configuration-property-builder
@@ -23540,6 +29036,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-table-field-link-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-field-link-configuration-property-builder (new CfnDashboard$TableFieldLinkConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-table-field-link-content-configuration-property-builder
   "The build-cfn-dashboard-table-field-link-content-configuration-property-builder function updates a CfnDashboard$TableFieldLinkContentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TableFieldLinkContentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23558,6 +29060,12 @@
   (when-let [data (lookup-entry config id :custom-text-content)]
     (. builder customTextContent data))
   (.build builder))
+
+
+(defn cfn-dashboard-table-field-link-content-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-field-link-content-configuration-property-builder (new CfnDashboard$TableFieldLinkContentConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-table-field-option-property-builder
@@ -23589,6 +29097,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-table-field-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-field-option-property-builder (new CfnDashboard$TableFieldOptionProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-table-field-options-property-builder
   "The build-cfn-dashboard-table-field-options-property-builder function updates a CfnDashboard$TableFieldOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TableFieldOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23612,6 +29126,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-table-field-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-field-options-property-builder (new CfnDashboard$TableFieldOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-table-field-url-configuration-property-builder
   "The build-cfn-dashboard-table-field-url-configuration-property-builder function updates a CfnDashboard$TableFieldURLConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TableFieldURLConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23630,6 +29150,12 @@
   (when-let [data (lookup-entry config id :link-configuration)]
     (. builder linkConfiguration data))
   (.build builder))
+
+
+(defn cfn-dashboard-table-field-url-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-field-url-configuration-property-builder (new CfnDashboard$TableFieldURLConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-table-field-wells-property-builder
@@ -23652,6 +29178,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-table-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-field-wells-property-builder (new CfnDashboard$TableFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-table-inline-visualization-property-builder
   "The build-cfn-dashboard-table-inline-visualization-property-builder function updates a CfnDashboard$TableInlineVisualizationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TableInlineVisualizationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23667,6 +29199,12 @@
   (when-let [data (lookup-entry config id :data-bars)]
     (. builder dataBars data))
   (.build builder))
+
+
+(defn cfn-dashboard-table-inline-visualization-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-inline-visualization-property-builder (new CfnDashboard$TableInlineVisualizationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-table-options-property-builder
@@ -23695,6 +29233,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-table-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-options-property-builder (new CfnDashboard$TableOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-table-paginated-report-options-property-builder
   "The build-cfn-dashboard-table-paginated-report-options-property-builder function updates a CfnDashboard$TablePaginatedReportOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TablePaginatedReportOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23715,6 +29259,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-table-paginated-report-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-paginated-report-options-property-builder (new CfnDashboard$TablePaginatedReportOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-table-pinned-field-options-property-builder
   "The build-cfn-dashboard-table-pinned-field-options-property-builder function updates a CfnDashboard$TablePinnedFieldOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TablePinnedFieldOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23730,6 +29280,12 @@
   (when-let [data (lookup-entry config id :pinned-left-fields)]
     (. builder pinnedLeftFields data))
   (.build builder))
+
+
+(defn cfn-dashboard-table-pinned-field-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-pinned-field-options-property-builder (new CfnDashboard$TablePinnedFieldOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-table-row-conditional-formatting-property-builder
@@ -23750,6 +29306,12 @@
   (when-let [data (lookup-entry config id :text-color)]
     (. builder textColor data))
   (.build builder))
+
+
+(defn cfn-dashboard-table-row-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-row-conditional-formatting-property-builder (new CfnDashboard$TableRowConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-table-side-border-options-property-builder
@@ -23784,6 +29346,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-table-side-border-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-side-border-options-property-builder (new CfnDashboard$TableSideBorderOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-table-sort-configuration-property-builder
   "The build-cfn-dashboard-table-sort-configuration-property-builder function updates a CfnDashboard$TableSortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TableSortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23804,6 +29372,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-table-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-sort-configuration-property-builder (new CfnDashboard$TableSortConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-table-style-target-property-builder
   "The build-cfn-dashboard-table-style-target-property-builder function updates a CfnDashboard$TableStyleTargetProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TableStyleTargetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23821,6 +29395,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-table-style-target-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-style-target-property-builder (new CfnDashboard$TableStyleTargetProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-table-unaggregated-field-wells-property-builder
   "The build-cfn-dashboard-table-unaggregated-field-wells-property-builder function updates a CfnDashboard$TableUnaggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TableUnaggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23836,6 +29416,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-dashboard-table-unaggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-unaggregated-field-wells-property-builder (new CfnDashboard$TableUnaggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-table-visual-property-builder
@@ -23870,6 +29456,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-table-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-table-visual-property-builder (new CfnDashboard$TableVisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-text-area-control-display-options-property-builder
   "The build-cfn-dashboard-text-area-control-display-options-property-builder function updates a CfnDashboard$TextAreaControlDisplayOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TextAreaControlDisplayOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23891,6 +29483,12 @@
   (when-let [data (lookup-entry config id :title-options)]
     (. builder titleOptions data))
   (.build builder))
+
+
+(defn cfn-dashboard-text-area-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-text-area-control-display-options-property-builder (new CfnDashboard$TextAreaControlDisplayOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-text-conditional-format-property-builder
@@ -23916,6 +29514,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-text-conditional-format-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-text-conditional-format-property-builder (new CfnDashboard$TextConditionalFormatProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-text-control-placeholder-options-property-builder
   "The build-cfn-dashboard-text-control-placeholder-options-property-builder function updates a CfnDashboard$TextControlPlaceholderOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TextControlPlaceholderOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23931,6 +29535,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-dashboard-text-control-placeholder-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-text-control-placeholder-options-property-builder (new CfnDashboard$TextControlPlaceholderOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-text-field-control-display-options-property-builder
@@ -23956,6 +29566,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-text-field-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-text-field-control-display-options-property-builder (new CfnDashboard$TextFieldControlDisplayOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-thousand-separator-options-property-builder
   "The build-cfn-dashboard-thousand-separator-options-property-builder function updates a CfnDashboard$ThousandSeparatorOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ThousandSeparatorOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -23974,6 +29590,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-dashboard-thousand-separator-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-thousand-separator-options-property-builder (new CfnDashboard$ThousandSeparatorOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-time-based-forecast-properties-property-builder
@@ -24006,6 +29628,12 @@
   (when-let [data (lookup-entry config id :upper-boundary)]
     (. builder upperBoundary data))
   (.build builder))
+
+
+(defn cfn-dashboard-time-based-forecast-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-time-based-forecast-properties-property-builder (new CfnDashboard$TimeBasedForecastPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-time-equality-filter-property-builder
@@ -24043,6 +29671,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-time-equality-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-time-equality-filter-property-builder (new CfnDashboard$TimeEqualityFilterProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-time-range-drill-down-filter-property-builder
   "The build-cfn-dashboard-time-range-drill-down-filter-property-builder function updates a CfnDashboard$TimeRangeDrillDownFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TimeRangeDrillDownFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -24067,6 +29701,12 @@
   (when-let [data (lookup-entry config id :time-granularity)]
     (. builder timeGranularity data))
   (.build builder))
+
+
+(defn cfn-dashboard-time-range-drill-down-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-time-range-drill-down-filter-property-builder (new CfnDashboard$TimeRangeDrillDownFilterProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-time-range-filter-property-builder
@@ -24113,6 +29753,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-time-range-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-time-range-filter-property-builder (new CfnDashboard$TimeRangeFilterProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-time-range-filter-value-property-builder
   "The build-cfn-dashboard-time-range-filter-value-property-builder function updates a CfnDashboard$TimeRangeFilterValueProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TimeRangeFilterValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -24136,6 +29782,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-time-range-filter-value-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-time-range-filter-value-property-builder (new CfnDashboard$TimeRangeFilterValueProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-tooltip-item-property-builder
   "The build-cfn-dashboard-tooltip-item-property-builder function updates a CfnDashboard$TooltipItemProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TooltipItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -24154,6 +29806,12 @@
   (when-let [data (lookup-entry config id :field-tooltip-item)]
     (. builder fieldTooltipItem data))
   (.build builder))
+
+
+(defn cfn-dashboard-tooltip-item-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-tooltip-item-property-builder (new CfnDashboard$TooltipItemProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-tooltip-options-property-builder
@@ -24177,6 +29835,12 @@
   (when-let [data (lookup-entry config id :tooltip-visibility)]
     (. builder tooltipVisibility data))
   (.build builder))
+
+
+(defn cfn-dashboard-tooltip-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-tooltip-options-property-builder (new CfnDashboard$TooltipOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-top-bottom-filter-property-builder
@@ -24212,6 +29876,12 @@
   (when-let [data (lookup-entry config id :time-granularity)]
     (. builder timeGranularity data))
   (.build builder))
+
+
+(defn cfn-dashboard-top-bottom-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-top-bottom-filter-property-builder (new CfnDashboard$TopBottomFilterProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-top-bottom-movers-computation-property-builder
@@ -24252,6 +29922,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-top-bottom-movers-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-top-bottom-movers-computation-property-builder (new CfnDashboard$TopBottomMoversComputationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-top-bottom-ranked-computation-property-builder
   "The build-cfn-dashboard-top-bottom-ranked-computation-property-builder function updates a CfnDashboard$TopBottomRankedComputationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TopBottomRankedComputationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -24284,6 +29960,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-top-bottom-ranked-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-top-bottom-ranked-computation-property-builder (new CfnDashboard$TopBottomRankedComputationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-total-aggregation-computation-property-builder
   "The build-cfn-dashboard-total-aggregation-computation-property-builder function updates a CfnDashboard$TotalAggregationComputationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TotalAggregationComputationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -24307,6 +29989,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-total-aggregation-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-total-aggregation-computation-property-builder (new CfnDashboard$TotalAggregationComputationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-total-aggregation-function-property-builder
   "The build-cfn-dashboard-total-aggregation-function-property-builder function updates a CfnDashboard$TotalAggregationFunctionProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TotalAggregationFunctionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -24322,6 +30010,12 @@
   (when-let [data (lookup-entry config id :simple-total-aggregation-function)]
     (. builder simpleTotalAggregationFunction data))
   (.build builder))
+
+
+(defn cfn-dashboard-total-aggregation-function-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-total-aggregation-function-property-builder (new CfnDashboard$TotalAggregationFunctionProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-total-aggregation-option-property-builder
@@ -24342,6 +30036,12 @@
   (when-let [data (lookup-entry config id :total-aggregation-function)]
     (. builder totalAggregationFunction data))
   (.build builder))
+
+
+(defn cfn-dashboard-total-aggregation-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-total-aggregation-option-property-builder (new CfnDashboard$TotalAggregationOptionProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-total-options-property-builder
@@ -24376,6 +30076,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-total-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-total-options-property-builder (new CfnDashboard$TotalOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-tree-map-aggregated-field-wells-property-builder
   "The build-cfn-dashboard-tree-map-aggregated-field-wells-property-builder function updates a CfnDashboard$TreeMapAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TreeMapAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -24397,6 +30103,12 @@
   (when-let [data (lookup-entry config id :sizes)]
     (. builder sizes data))
   (.build builder))
+
+
+(defn cfn-dashboard-tree-map-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-tree-map-aggregated-field-wells-property-builder (new CfnDashboard$TreeMapAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-tree-map-configuration-property-builder
@@ -24440,6 +30152,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-tree-map-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-tree-map-configuration-property-builder (new CfnDashboard$TreeMapConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-tree-map-field-wells-property-builder
   "The build-cfn-dashboard-tree-map-field-wells-property-builder function updates a CfnDashboard$TreeMapFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TreeMapFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -24455,6 +30173,12 @@
   (when-let [data (lookup-entry config id :tree-map-aggregated-field-wells)]
     (. builder treeMapAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-dashboard-tree-map-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-tree-map-field-wells-property-builder (new CfnDashboard$TreeMapFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-tree-map-sort-configuration-property-builder
@@ -24475,6 +30199,12 @@
   (when-let [data (lookup-entry config id :tree-map-sort)]
     (. builder treeMapSort data))
   (.build builder))
+
+
+(defn cfn-dashboard-tree-map-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-tree-map-sort-configuration-property-builder (new CfnDashboard$TreeMapSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-tree-map-visual-property-builder
@@ -24509,6 +30239,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-tree-map-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-tree-map-visual-property-builder (new CfnDashboard$TreeMapVisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-trend-arrow-options-property-builder
   "The build-cfn-dashboard-trend-arrow-options-property-builder function updates a CfnDashboard$TrendArrowOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$TrendArrowOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -24524,6 +30260,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-dashboard-trend-arrow-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-trend-arrow-options-property-builder (new CfnDashboard$TrendArrowOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-unaggregated-field-property-builder
@@ -24549,6 +30291,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-unaggregated-field-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-unaggregated-field-property-builder (new CfnDashboard$UnaggregatedFieldProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-unique-values-computation-property-builder
   "The build-cfn-dashboard-unique-values-computation-property-builder function updates a CfnDashboard$UniqueValuesComputationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$UniqueValuesComputationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -24572,6 +30320,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-unique-values-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-unique-values-computation-property-builder (new CfnDashboard$UniqueValuesComputationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-validation-strategy-property-builder
   "The build-cfn-dashboard-validation-strategy-property-builder function updates a CfnDashboard$ValidationStrategyProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$ValidationStrategyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -24587,6 +30341,12 @@
   (when-let [data (lookup-entry config id :mode)]
     (. builder mode data))
   (.build builder))
+
+
+(defn cfn-dashboard-validation-strategy-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-validation-strategy-property-builder (new CfnDashboard$ValidationStrategyProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-visible-range-options-property-builder
@@ -24606,6 +30366,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-visible-range-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-visible-range-options-property-builder (new CfnDashboard$VisibleRangeOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-visual-axis-sort-option-property-builder
   "The build-cfn-dashboard-visual-axis-sort-option-property-builder function updates a CfnDashboard$VisualAxisSortOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$VisualAxisSortOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -24621,6 +30387,12 @@
   (when-let [data (lookup-entry config id :availability-status)]
     (. builder availabilityStatus data))
   (.build builder))
+
+
+(defn cfn-dashboard-visual-axis-sort-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-visual-axis-sort-option-property-builder (new CfnDashboard$VisualAxisSortOptionProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-visual-custom-action-operation-property-builder
@@ -24647,6 +30419,12 @@
   (when-let [data (lookup-entry config id :url-operation)]
     (. builder urlOperation data))
   (.build builder))
+
+
+(defn cfn-dashboard-visual-custom-action-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-visual-custom-action-operation-property-builder (new CfnDashboard$VisualCustomActionOperationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-visual-custom-action-property-builder
@@ -24678,6 +30456,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-visual-custom-action-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-visual-custom-action-property-builder (new CfnDashboard$VisualCustomActionProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-visual-menu-option-property-builder
   "The build-cfn-dashboard-visual-menu-option-property-builder function updates a CfnDashboard$VisualMenuOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$VisualMenuOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -24693,6 +30477,12 @@
   (when-let [data (lookup-entry config id :availability-status)]
     (. builder availabilityStatus data))
   (.build builder))
+
+
+(defn cfn-dashboard-visual-menu-option-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-visual-menu-option-property-builder (new CfnDashboard$VisualMenuOptionProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-visual-palette-property-builder
@@ -24713,6 +30503,12 @@
   (when-let [data (lookup-entry config id :color-map)]
     (. builder colorMap data))
   (.build builder))
+
+
+(defn cfn-dashboard-visual-palette-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-visual-palette-property-builder (new CfnDashboard$VisualPaletteProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-visual-property-builder
@@ -24798,6 +30594,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-visual-property-builder (new CfnDashboard$VisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-visual-subtitle-label-options-property-builder
   "The build-cfn-dashboard-visual-subtitle-label-options-property-builder function updates a CfnDashboard$VisualSubtitleLabelOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$VisualSubtitleLabelOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -24818,6 +30620,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-visual-subtitle-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-visual-subtitle-label-options-property-builder (new CfnDashboard$VisualSubtitleLabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-visual-title-label-options-property-builder
   "The build-cfn-dashboard-visual-title-label-options-property-builder function updates a CfnDashboard$VisualTitleLabelOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$VisualTitleLabelOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -24836,6 +30644,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-dashboard-visual-title-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-visual-title-label-options-property-builder (new CfnDashboard$VisualTitleLabelOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-waterfall-chart-aggregated-field-wells-property-builder
@@ -24861,6 +30675,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-waterfall-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-waterfall-chart-aggregated-field-wells-property-builder (new CfnDashboard$WaterfallChartAggregatedFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-waterfall-chart-color-configuration-property-builder
   "The build-cfn-dashboard-waterfall-chart-color-configuration-property-builder function updates a CfnDashboard$WaterfallChartColorConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$WaterfallChartColorConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -24876,6 +30696,12 @@
   (when-let [data (lookup-entry config id :group-color-configuration)]
     (. builder groupColorConfiguration data))
   (.build builder))
+
+
+(defn cfn-dashboard-waterfall-chart-color-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-waterfall-chart-color-configuration-property-builder (new CfnDashboard$WaterfallChartColorConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-waterfall-chart-configuration-property-builder
@@ -24925,6 +30751,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-waterfall-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-waterfall-chart-configuration-property-builder (new CfnDashboard$WaterfallChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-waterfall-chart-field-wells-property-builder
   "The build-cfn-dashboard-waterfall-chart-field-wells-property-builder function updates a CfnDashboard$WaterfallChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$WaterfallChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -24940,6 +30772,12 @@
   (when-let [data (lookup-entry config id :waterfall-chart-aggregated-field-wells)]
     (. builder waterfallChartAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-dashboard-waterfall-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-waterfall-chart-field-wells-property-builder (new CfnDashboard$WaterfallChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-waterfall-chart-group-color-configuration-property-builder
@@ -24965,6 +30803,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-waterfall-chart-group-color-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-waterfall-chart-group-color-configuration-property-builder (new CfnDashboard$WaterfallChartGroupColorConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-waterfall-chart-options-property-builder
   "The build-cfn-dashboard-waterfall-chart-options-property-builder function updates a CfnDashboard$WaterfallChartOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$WaterfallChartOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -24980,6 +30824,12 @@
   (when-let [data (lookup-entry config id :total-bar-label)]
     (. builder totalBarLabel data))
   (.build builder))
+
+
+(defn cfn-dashboard-waterfall-chart-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-waterfall-chart-options-property-builder (new CfnDashboard$WaterfallChartOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-waterfall-chart-sort-configuration-property-builder
@@ -25000,6 +30850,12 @@
   (when-let [data (lookup-entry config id :category-sort)]
     (. builder categorySort data))
   (.build builder))
+
+
+(defn cfn-dashboard-waterfall-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-waterfall-chart-sort-configuration-property-builder (new CfnDashboard$WaterfallChartSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-waterfall-visual-property-builder
@@ -25034,6 +30890,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-waterfall-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-waterfall-visual-property-builder (new CfnDashboard$WaterfallVisualProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-what-if-point-scenario-property-builder
   "The build-cfn-dashboard-what-if-point-scenario-property-builder function updates a CfnDashboard$WhatIfPointScenarioProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$WhatIfPointScenarioProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25052,6 +30914,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-dashboard-what-if-point-scenario-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-what-if-point-scenario-property-builder (new CfnDashboard$WhatIfPointScenarioProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-what-if-range-scenario-property-builder
@@ -25077,6 +30945,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-what-if-range-scenario-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-what-if-range-scenario-property-builder (new CfnDashboard$WhatIfRangeScenarioProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-word-cloud-aggregated-field-wells-property-builder
   "The build-cfn-dashboard-word-cloud-aggregated-field-wells-property-builder function updates a CfnDashboard$WordCloudAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$WordCloudAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25095,6 +30969,12 @@
   (when-let [data (lookup-entry config id :size)]
     (. builder size data))
   (.build builder))
+
+
+(defn cfn-dashboard-word-cloud-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-word-cloud-aggregated-field-wells-property-builder (new CfnDashboard$WordCloudAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-word-cloud-chart-configuration-property-builder
@@ -25123,6 +31003,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-word-cloud-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-word-cloud-chart-configuration-property-builder (new CfnDashboard$WordCloudChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-word-cloud-field-wells-property-builder
   "The build-cfn-dashboard-word-cloud-field-wells-property-builder function updates a CfnDashboard$WordCloudFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$WordCloudFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25138,6 +31024,12 @@
   (when-let [data (lookup-entry config id :word-cloud-aggregated-field-wells)]
     (. builder wordCloudAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-dashboard-word-cloud-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-word-cloud-field-wells-property-builder (new CfnDashboard$WordCloudFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-word-cloud-options-property-builder
@@ -25172,6 +31064,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-word-cloud-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-word-cloud-options-property-builder (new CfnDashboard$WordCloudOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dashboard-word-cloud-sort-configuration-property-builder
   "The build-cfn-dashboard-word-cloud-sort-configuration-property-builder function updates a CfnDashboard$WordCloudSortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDashboard$WordCloudSortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25190,6 +31088,12 @@
   (when-let [data (lookup-entry config id :category-sort)]
     (. builder categorySort data))
   (.build builder))
+
+
+(defn cfn-dashboard-word-cloud-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-word-cloud-sort-configuration-property-builder (new CfnDashboard$WordCloudSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dashboard-word-cloud-visual-property-builder
@@ -25222,6 +31126,12 @@
   (when-let [data (lookup-entry config id :visual-id)]
     (. builder visualId data))
   (.build builder))
+
+
+(defn cfn-dashboard-word-cloud-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-word-cloud-visual-property-builder (new CfnDashboard$WordCloudVisualProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-builder
@@ -25289,6 +31199,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-data-set-builder (CfnDataSet$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-data-set-calculated-column-property-builder
   "The build-cfn-data-set-calculated-column-property-builder function updates a CfnDataSet$CalculatedColumnProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$CalculatedColumnProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25310,6 +31226,12 @@
   (when-let [data (lookup-entry config id :expression)]
     (. builder expression data))
   (.build builder))
+
+
+(defn cfn-data-set-calculated-column-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-calculated-column-property-builder (new CfnDataSet$CalculatedColumnProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-cast-column-type-operation-property-builder
@@ -25338,6 +31260,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-cast-column-type-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-cast-column-type-operation-property-builder (new CfnDataSet$CastColumnTypeOperationProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-column-description-property-builder
   "The build-cfn-data-set-column-description-property-builder function updates a CfnDataSet$ColumnDescriptionProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$ColumnDescriptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25355,6 +31283,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-column-description-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-column-description-property-builder (new CfnDataSet$ColumnDescriptionProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-column-group-property-builder
   "The build-cfn-data-set-column-group-property-builder function updates a CfnDataSet$ColumnGroupProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$ColumnGroupProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25370,6 +31304,12 @@
   (when-let [data (lookup-entry config id :geo-spatial-column-group)]
     (. builder geoSpatialColumnGroup data))
   (.build builder))
+
+
+(defn cfn-data-set-column-group-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-column-group-property-builder (new CfnDataSet$ColumnGroupProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-column-level-permission-rule-property-builder
@@ -25392,6 +31332,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-column-level-permission-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-column-level-permission-rule-property-builder (new CfnDataSet$ColumnLevelPermissionRuleProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-column-tag-property-builder
   "The build-cfn-data-set-column-tag-property-builder function updates a CfnDataSet$ColumnTagProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$ColumnTagProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25412,6 +31358,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-column-tag-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-column-tag-property-builder (new CfnDataSet$ColumnTagProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-create-columns-operation-property-builder
   "The build-cfn-data-set-create-columns-operation-property-builder function updates a CfnDataSet$CreateColumnsOperationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$CreateColumnsOperationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25427,6 +31379,12 @@
   (when-let [data (lookup-entry config id :columns)]
     (. builder columns data))
   (.build builder))
+
+
+(defn cfn-data-set-create-columns-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-create-columns-operation-property-builder (new CfnDataSet$CreateColumnsOperationProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-custom-sql-property-builder
@@ -25455,6 +31413,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-custom-sql-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-custom-sql-property-builder (new CfnDataSet$CustomSqlProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-data-set-refresh-properties-property-builder
   "The build-cfn-data-set-data-set-refresh-properties-property-builder function updates a CfnDataSet$DataSetRefreshPropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$DataSetRefreshPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25470,6 +31434,12 @@
   (when-let [data (lookup-entry config id :refresh-configuration)]
     (. builder refreshConfiguration data))
   (.build builder))
+
+
+(defn cfn-data-set-data-set-refresh-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-data-set-refresh-properties-property-builder (new CfnDataSet$DataSetRefreshPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-data-set-usage-configuration-property-builder
@@ -25490,6 +31460,12 @@
   (when-let [data (lookup-entry config id :disable-use-as-imported-source)]
     (. builder disableUseAsImportedSource data))
   (.build builder))
+
+
+(defn cfn-data-set-data-set-usage-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-data-set-usage-configuration-property-builder (new CfnDataSet$DataSetUsageConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-dataset-parameter-property-builder
@@ -25518,6 +31494,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-dataset-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-dataset-parameter-property-builder (new CfnDataSet$DatasetParameterProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-date-time-dataset-parameter-default-values-property-builder
   "The build-cfn-data-set-date-time-dataset-parameter-default-values-property-builder function updates a CfnDataSet$DateTimeDatasetParameterDefaultValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$DateTimeDatasetParameterDefaultValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25533,6 +31515,12 @@
   (when-let [data (lookup-entry config id :static-values)]
     (. builder staticValues data))
   (.build builder))
+
+
+(defn cfn-data-set-date-time-dataset-parameter-default-values-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-date-time-dataset-parameter-default-values-property-builder (new CfnDataSet$DateTimeDatasetParameterDefaultValuesProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-date-time-dataset-parameter-property-builder
@@ -25564,6 +31552,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-date-time-dataset-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-date-time-dataset-parameter-property-builder (new CfnDataSet$DateTimeDatasetParameterProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-decimal-dataset-parameter-default-values-property-builder
   "The build-cfn-data-set-decimal-dataset-parameter-default-values-property-builder function updates a CfnDataSet$DecimalDatasetParameterDefaultValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$DecimalDatasetParameterDefaultValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25579,6 +31573,12 @@
   (when-let [data (lookup-entry config id :static-values)]
     (. builder staticValues data))
   (.build builder))
+
+
+(defn cfn-data-set-decimal-dataset-parameter-default-values-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-decimal-dataset-parameter-default-values-property-builder (new CfnDataSet$DecimalDatasetParameterDefaultValuesProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-decimal-dataset-parameter-property-builder
@@ -25607,6 +31607,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-decimal-dataset-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-decimal-dataset-parameter-property-builder (new CfnDataSet$DecimalDatasetParameterProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-field-folder-property-builder
   "The build-cfn-data-set-field-folder-property-builder function updates a CfnDataSet$FieldFolderProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$FieldFolderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25627,6 +31633,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-field-folder-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-field-folder-property-builder (new CfnDataSet$FieldFolderProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-filter-operation-property-builder
   "The build-cfn-data-set-filter-operation-property-builder function updates a CfnDataSet$FilterOperationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$FilterOperationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25642,6 +31654,12 @@
   (when-let [data (lookup-entry config id :condition-expression)]
     (. builder conditionExpression data))
   (.build builder))
+
+
+(defn cfn-data-set-filter-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-filter-operation-property-builder (new CfnDataSet$FilterOperationProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-geo-spatial-column-group-property-builder
@@ -25667,6 +31685,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-geo-spatial-column-group-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-geo-spatial-column-group-property-builder (new CfnDataSet$GeoSpatialColumnGroupProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-incremental-refresh-property-builder
   "The build-cfn-data-set-incremental-refresh-property-builder function updates a CfnDataSet$IncrementalRefreshProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$IncrementalRefreshProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25682,6 +31706,12 @@
   (when-let [data (lookup-entry config id :lookback-window)]
     (. builder lookbackWindow data))
   (.build builder))
+
+
+(defn cfn-data-set-incremental-refresh-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-incremental-refresh-property-builder (new CfnDataSet$IncrementalRefreshProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-ingestion-wait-policy-property-builder
@@ -25702,6 +31732,12 @@
   (when-let [data (lookup-entry config id :wait-for-spice-ingestion)]
     (. builder waitForSpiceIngestion data))
   (.build builder))
+
+
+(defn cfn-data-set-ingestion-wait-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-ingestion-wait-policy-property-builder (new CfnDataSet$IngestionWaitPolicyProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-input-column-property-builder
@@ -25727,6 +31763,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-input-column-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-input-column-property-builder (new CfnDataSet$InputColumnProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-integer-dataset-parameter-default-values-property-builder
   "The build-cfn-data-set-integer-dataset-parameter-default-values-property-builder function updates a CfnDataSet$IntegerDatasetParameterDefaultValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$IntegerDatasetParameterDefaultValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25742,6 +31784,12 @@
   (when-let [data (lookup-entry config id :static-values)]
     (. builder staticValues data))
   (.build builder))
+
+
+(defn cfn-data-set-integer-dataset-parameter-default-values-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-integer-dataset-parameter-default-values-property-builder (new CfnDataSet$IntegerDatasetParameterDefaultValuesProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-integer-dataset-parameter-property-builder
@@ -25768,6 +31816,12 @@
   (when-let [data (lookup-entry config id :value-type)]
     (. builder valueType data))
   (.build builder))
+
+
+(defn cfn-data-set-integer-dataset-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-integer-dataset-parameter-property-builder (new CfnDataSet$IntegerDatasetParameterProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-join-instruction-property-builder
@@ -25802,6 +31856,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-join-instruction-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-join-instruction-property-builder (new CfnDataSet$JoinInstructionProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-join-key-properties-property-builder
   "The build-cfn-data-set-join-key-properties-property-builder function updates a CfnDataSet$JoinKeyPropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$JoinKeyPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25817,6 +31877,12 @@
   (when-let [data (lookup-entry config id :unique-key)]
     (. builder uniqueKey data))
   (.build builder))
+
+
+(defn cfn-data-set-join-key-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-join-key-properties-property-builder (new CfnDataSet$JoinKeyPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-logical-table-property-builder
@@ -25842,6 +31908,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-logical-table-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-logical-table-property-builder (new CfnDataSet$LogicalTableProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-logical-table-source-property-builder
   "The build-cfn-data-set-logical-table-source-property-builder function updates a CfnDataSet$LogicalTableSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$LogicalTableSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25865,6 +31937,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-logical-table-source-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-logical-table-source-property-builder (new CfnDataSet$LogicalTableSourceProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-lookback-window-property-builder
   "The build-cfn-data-set-lookback-window-property-builder function updates a CfnDataSet$LookbackWindowProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$LookbackWindowProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25886,6 +31964,12 @@
   (when-let [data (lookup-entry config id :size-unit)]
     (. builder sizeUnit data))
   (.build builder))
+
+
+(defn cfn-data-set-lookback-window-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-lookback-window-property-builder (new CfnDataSet$LookbackWindowProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-new-default-values-property-builder
@@ -25914,6 +31998,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-new-default-values-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-new-default-values-property-builder (new CfnDataSet$NewDefaultValuesProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-output-column-property-builder
   "The build-cfn-data-set-output-column-property-builder function updates a CfnDataSet$OutputColumnProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$OutputColumnProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25940,6 +32030,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-output-column-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-output-column-property-builder (new CfnDataSet$OutputColumnProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-override-dataset-parameter-operation-property-builder
   "The build-cfn-data-set-override-dataset-parameter-operation-property-builder function updates a CfnDataSet$OverrideDatasetParameterOperationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$OverrideDatasetParameterOperationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -25961,6 +32057,12 @@
   (when-let [data (lookup-entry config id :parameter-name)]
     (. builder parameterName data))
   (.build builder))
+
+
+(defn cfn-data-set-override-dataset-parameter-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-override-dataset-parameter-operation-property-builder (new CfnDataSet$OverrideDatasetParameterOperationProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-physical-table-property-builder
@@ -25986,6 +32088,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-physical-table-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-physical-table-property-builder (new CfnDataSet$PhysicalTableProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-project-operation-property-builder
   "The build-cfn-data-set-project-operation-property-builder function updates a CfnDataSet$ProjectOperationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$ProjectOperationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -26001,6 +32109,12 @@
   (when-let [data (lookup-entry config id :projected-columns)]
     (. builder projectedColumns data))
   (.build builder))
+
+
+(defn cfn-data-set-project-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-project-operation-property-builder (new CfnDataSet$ProjectOperationProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-props-builder
@@ -26068,6 +32182,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-props-builder
+  ""
+  [id config]
+  (build-cfn-data-set-props-builder (new CfnDataSetProps$Builder) id config))
+
+
 (defn build-cfn-data-set-refresh-configuration-property-builder
   "The build-cfn-data-set-refresh-configuration-property-builder function updates a CfnDataSet$RefreshConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$RefreshConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -26083,6 +32203,12 @@
   (when-let [data (lookup-entry config id :incremental-refresh)]
     (. builder incrementalRefresh data))
   (.build builder))
+
+
+(defn cfn-data-set-refresh-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-refresh-configuration-property-builder (new CfnDataSet$RefreshConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-relational-table-property-builder
@@ -26114,6 +32240,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-relational-table-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-relational-table-property-builder (new CfnDataSet$RelationalTableProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-rename-column-operation-property-builder
   "The build-cfn-data-set-rename-column-operation-property-builder function updates a CfnDataSet$RenameColumnOperationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$RenameColumnOperationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -26134,6 +32266,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-rename-column-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-rename-column-operation-property-builder (new CfnDataSet$RenameColumnOperationProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-resource-permission-property-builder
   "The build-cfn-data-set-resource-permission-property-builder function updates a CfnDataSet$ResourcePermissionProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$ResourcePermissionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -26152,6 +32290,12 @@
   (when-let [data (lookup-entry config id :principal)]
     (. builder principal data))
   (.build builder))
+
+
+(defn cfn-data-set-resource-permission-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-resource-permission-property-builder (new CfnDataSet$ResourcePermissionProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-row-level-permission-data-set-property-builder
@@ -26183,6 +32327,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-row-level-permission-data-set-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-row-level-permission-data-set-property-builder (new CfnDataSet$RowLevelPermissionDataSetProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-row-level-permission-tag-configuration-property-builder
   "The build-cfn-data-set-row-level-permission-tag-configuration-property-builder function updates a CfnDataSet$RowLevelPermissionTagConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$RowLevelPermissionTagConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -26204,6 +32354,12 @@
   (when-let [data (lookup-entry config id :tag-rules)]
     (. builder tagRules data))
   (.build builder))
+
+
+(defn cfn-data-set-row-level-permission-tag-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-row-level-permission-tag-configuration-property-builder (new CfnDataSet$RowLevelPermissionTagConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-row-level-permission-tag-rule-property-builder
@@ -26232,6 +32388,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-row-level-permission-tag-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-row-level-permission-tag-rule-property-builder (new CfnDataSet$RowLevelPermissionTagRuleProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-s3-source-property-builder
   "The build-cfn-data-set-s3-source-property-builder function updates a CfnDataSet$S3SourceProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$S3SourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -26255,6 +32417,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-s3-source-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-s3-source-property-builder (new CfnDataSet$S3SourceProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-string-dataset-parameter-default-values-property-builder
   "The build-cfn-data-set-string-dataset-parameter-default-values-property-builder function updates a CfnDataSet$StringDatasetParameterDefaultValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$StringDatasetParameterDefaultValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -26270,6 +32438,12 @@
   (when-let [data (lookup-entry config id :static-values)]
     (. builder staticValues data))
   (.build builder))
+
+
+(defn cfn-data-set-string-dataset-parameter-default-values-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-string-dataset-parameter-default-values-property-builder (new CfnDataSet$StringDatasetParameterDefaultValuesProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-string-dataset-parameter-property-builder
@@ -26298,6 +32472,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-string-dataset-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-string-dataset-parameter-property-builder (new CfnDataSet$StringDatasetParameterProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-tag-column-operation-property-builder
   "The build-cfn-data-set-tag-column-operation-property-builder function updates a CfnDataSet$TagColumnOperationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$TagColumnOperationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -26316,6 +32496,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-data-set-tag-column-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-tag-column-operation-property-builder (new CfnDataSet$TagColumnOperationProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-transform-operation-property-builder
@@ -26356,6 +32542,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-transform-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-transform-operation-property-builder (new CfnDataSet$TransformOperationProperty$Builder) id config))
+
+
 (defn build-cfn-data-set-untag-column-operation-property-builder
   "The build-cfn-data-set-untag-column-operation-property-builder function updates a CfnDataSet$UntagColumnOperationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSet$UntagColumnOperationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -26374,6 +32566,12 @@
   (when-let [data (lookup-entry config id :tag-names)]
     (. builder tagNames data))
   (.build builder))
+
+
+(defn cfn-data-set-untag-column-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-untag-column-operation-property-builder (new CfnDataSet$UntagColumnOperationProperty$Builder) id config))
 
 
 (defn build-cfn-data-set-upload-settings-property-builder
@@ -26405,6 +32603,12 @@
   (.build builder))
 
 
+(defn cfn-data-set-upload-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-data-set-upload-settings-property-builder (new CfnDataSet$UploadSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-amazon-elasticsearch-parameters-property-builder
   "The build-cfn-data-source-amazon-elasticsearch-parameters-property-builder function updates a CfnDataSource$AmazonElasticsearchParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$AmazonElasticsearchParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -26422,6 +32626,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-amazon-elasticsearch-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-amazon-elasticsearch-parameters-property-builder (new CfnDataSource$AmazonElasticsearchParametersProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-amazon-open-search-parameters-property-builder
   "The build-cfn-data-source-amazon-open-search-parameters-property-builder function updates a CfnDataSource$AmazonOpenSearchParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$AmazonOpenSearchParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -26437,6 +32647,12 @@
   (when-let [data (lookup-entry config id :domain)]
     (. builder domain data))
   (.build builder))
+
+
+(defn cfn-data-source-amazon-open-search-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-amazon-open-search-parameters-property-builder (new CfnDataSource$AmazonOpenSearchParametersProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-athena-parameters-property-builder
@@ -26457,6 +32673,12 @@
   (when-let [data (lookup-entry config id :work-group)]
     (. builder workGroup data))
   (.build builder))
+
+
+(defn cfn-data-source-athena-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-athena-parameters-property-builder (new CfnDataSource$AthenaParametersProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-aurora-parameters-property-builder
@@ -26482,6 +32704,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-aurora-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-aurora-parameters-property-builder (new CfnDataSource$AuroraParametersProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-aurora-postgre-sql-parameters-property-builder
   "The build-cfn-data-source-aurora-postgre-sql-parameters-property-builder function updates a CfnDataSource$AuroraPostgreSqlParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$AuroraPostgreSqlParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -26503,6 +32731,12 @@
   (when-let [data (lookup-entry config id :port)]
     (. builder port data))
   (.build builder))
+
+
+(defn cfn-data-source-aurora-postgre-sql-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-aurora-postgre-sql-parameters-property-builder (new CfnDataSource$AuroraPostgreSqlParametersProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-builder
@@ -26555,6 +32789,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-data-source-builder (CfnDataSource$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-data-source-credential-pair-property-builder
   "The build-cfn-data-source-credential-pair-property-builder function updates a CfnDataSource$CredentialPairProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$CredentialPairProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -26576,6 +32816,12 @@
   (when-let [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
+
+
+(defn cfn-data-source-credential-pair-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-credential-pair-property-builder (new CfnDataSource$CredentialPairProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-data-source-credentials-property-builder
@@ -26601,6 +32847,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-data-source-credentials-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-data-source-credentials-property-builder (new CfnDataSource$DataSourceCredentialsProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-data-source-error-info-property-builder
   "The build-cfn-data-source-data-source-error-info-property-builder function updates a CfnDataSource$DataSourceErrorInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$DataSourceErrorInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -26619,6 +32871,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-data-source-data-source-error-info-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-data-source-error-info-property-builder (new CfnDataSource$DataSourceErrorInfoProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-data-source-parameters-property-builder
@@ -26695,6 +32953,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-data-source-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-data-source-parameters-property-builder (new CfnDataSource$DataSourceParametersProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-databricks-parameters-property-builder
   "The build-cfn-data-source-databricks-parameters-property-builder function updates a CfnDataSource$DatabricksParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$DatabricksParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -26718,6 +32982,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-databricks-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-databricks-parameters-property-builder (new CfnDataSource$DatabricksParametersProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-identity-center-configuration-property-builder
   "The build-cfn-data-source-identity-center-configuration-property-builder function updates a CfnDataSource$IdentityCenterConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$IdentityCenterConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -26733,6 +33003,12 @@
   (when-let [data (lookup-entry config id :enable-identity-propagation)]
     (. builder enableIdentityPropagation data))
   (.build builder))
+
+
+(defn cfn-data-source-identity-center-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-identity-center-configuration-property-builder (new CfnDataSource$IdentityCenterConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-manifest-file-location-property-builder
@@ -26753,6 +33029,12 @@
   (when-let [data (lookup-entry config id :key)]
     (. builder key data))
   (.build builder))
+
+
+(defn cfn-data-source-manifest-file-location-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-manifest-file-location-property-builder (new CfnDataSource$ManifestFileLocationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-maria-db-parameters-property-builder
@@ -26778,6 +33060,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-maria-db-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-maria-db-parameters-property-builder (new CfnDataSource$MariaDbParametersProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-my-sql-parameters-property-builder
   "The build-cfn-data-source-my-sql-parameters-property-builder function updates a CfnDataSource$MySqlParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$MySqlParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -26799,6 +33087,12 @@
   (when-let [data (lookup-entry config id :port)]
     (. builder port data))
   (.build builder))
+
+
+(defn cfn-data-source-my-sql-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-my-sql-parameters-property-builder (new CfnDataSource$MySqlParametersProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-oracle-parameters-property-builder
@@ -26824,6 +33118,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-oracle-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-oracle-parameters-property-builder (new CfnDataSource$OracleParametersProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-postgre-sql-parameters-property-builder
   "The build-cfn-data-source-postgre-sql-parameters-property-builder function updates a CfnDataSource$PostgreSqlParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$PostgreSqlParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -26847,6 +33147,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-postgre-sql-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-postgre-sql-parameters-property-builder (new CfnDataSource$PostgreSqlParametersProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-presto-parameters-property-builder
   "The build-cfn-data-source-presto-parameters-property-builder function updates a CfnDataSource$PrestoParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$PrestoParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -26868,6 +33174,12 @@
   (when-let [data (lookup-entry config id :port)]
     (. builder port data))
   (.build builder))
+
+
+(defn cfn-data-source-presto-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-presto-parameters-property-builder (new CfnDataSource$PrestoParametersProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-props-builder
@@ -26920,6 +33232,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-props-builder
+  ""
+  [id config]
+  (build-cfn-data-source-props-builder (new CfnDataSourceProps$Builder) id config))
+
+
 (defn build-cfn-data-source-rds-parameters-property-builder
   "The build-cfn-data-source-rds-parameters-property-builder function updates a CfnDataSource$RdsParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$RdsParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -26938,6 +33256,12 @@
   (when-let [data (lookup-entry config id :instance-id)]
     (. builder instanceId data))
   (.build builder))
+
+
+(defn cfn-data-source-rds-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-rds-parameters-property-builder (new CfnDataSource$RdsParametersProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-redshift-iam-parameters-property-builder
@@ -26964,6 +33288,12 @@
   (when-let [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
+
+
+(defn cfn-data-source-redshift-iam-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-redshift-iam-parameters-property-builder (new CfnDataSource$RedshiftIAMParametersProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-redshift-parameters-property-builder
@@ -26998,6 +33328,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-redshift-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-redshift-parameters-property-builder (new CfnDataSource$RedshiftParametersProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-resource-permission-property-builder
   "The build-cfn-data-source-resource-permission-property-builder function updates a CfnDataSource$ResourcePermissionProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$ResourcePermissionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27021,6 +33357,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-resource-permission-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-resource-permission-property-builder (new CfnDataSource$ResourcePermissionProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-s3-parameters-property-builder
   "The build-cfn-data-source-s3-parameters-property-builder function updates a CfnDataSource$S3ParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$S3ParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27039,6 +33381,12 @@
   (when-let [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
+
+
+(defn cfn-data-source-s3-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-s3-parameters-property-builder (new CfnDataSource$S3ParametersProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-snowflake-parameters-property-builder
@@ -27064,6 +33412,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-snowflake-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-snowflake-parameters-property-builder (new CfnDataSource$SnowflakeParametersProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-spark-parameters-property-builder
   "The build-cfn-data-source-spark-parameters-property-builder function updates a CfnDataSource$SparkParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$SparkParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27082,6 +33436,12 @@
   (when-let [data (lookup-entry config id :port)]
     (. builder port data))
   (.build builder))
+
+
+(defn cfn-data-source-spark-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-spark-parameters-property-builder (new CfnDataSource$SparkParametersProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-sql-server-parameters-property-builder
@@ -27107,6 +33467,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-sql-server-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-sql-server-parameters-property-builder (new CfnDataSource$SqlServerParametersProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-ssl-properties-property-builder
   "The build-cfn-data-source-ssl-properties-property-builder function updates a CfnDataSource$SslPropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$SslPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27122,6 +33488,12 @@
   (when-let [data (lookup-entry config id :disable-ssl)]
     (. builder disableSsl data))
   (.build builder))
+
+
+(defn cfn-data-source-ssl-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-ssl-properties-property-builder (new CfnDataSource$SslPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-starburst-parameters-property-builder
@@ -27150,6 +33522,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-starburst-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-starburst-parameters-property-builder (new CfnDataSource$StarburstParametersProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-teradata-parameters-property-builder
   "The build-cfn-data-source-teradata-parameters-property-builder function updates a CfnDataSource$TeradataParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$TeradataParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27171,6 +33549,12 @@
   (when-let [data (lookup-entry config id :port)]
     (. builder port data))
   (.build builder))
+
+
+(defn cfn-data-source-teradata-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-teradata-parameters-property-builder (new CfnDataSource$TeradataParametersProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-trino-parameters-property-builder
@@ -27196,6 +33580,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-trino-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-trino-parameters-property-builder (new CfnDataSource$TrinoParametersProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-vpc-connection-properties-property-builder
   "The build-cfn-data-source-vpc-connection-properties-property-builder function updates a CfnDataSource$VpcConnectionPropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$VpcConnectionPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27211,6 +33601,12 @@
   (when-let [data (lookup-entry config id :vpc-connection-arn)]
     (. builder vpcConnectionArn data))
   (.build builder))
+
+
+(defn cfn-data-source-vpc-connection-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-vpc-connection-properties-property-builder (new CfnDataSource$VpcConnectionPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-refresh-schedule-builder
@@ -27236,6 +33632,12 @@
   (.build builder))
 
 
+(defn cfn-refresh-schedule-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-refresh-schedule-builder (CfnRefreshSchedule$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-refresh-schedule-props-builder
   "The build-cfn-refresh-schedule-props-builder function updates a CfnRefreshScheduleProps$Builder instance using the provided configuration.
   The function takes the CfnRefreshScheduleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27259,6 +33661,12 @@
   (.build builder))
 
 
+(defn cfn-refresh-schedule-props-builder
+  ""
+  [id config]
+  (build-cfn-refresh-schedule-props-builder (new CfnRefreshScheduleProps$Builder) id config))
+
+
 (defn build-cfn-refresh-schedule-refresh-on-day-property-builder
   "The build-cfn-refresh-schedule-refresh-on-day-property-builder function updates a CfnRefreshSchedule$RefreshOnDayProperty$Builder instance using the provided configuration.
   The function takes the CfnRefreshSchedule$RefreshOnDayProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27277,6 +33685,12 @@
   (when-let [data (lookup-entry config id :day-of-week)]
     (. builder dayOfWeek data))
   (.build builder))
+
+
+(defn cfn-refresh-schedule-refresh-on-day-property-builder
+  ""
+  [id config]
+  (build-cfn-refresh-schedule-refresh-on-day-property-builder (new CfnRefreshSchedule$RefreshOnDayProperty$Builder) id config))
 
 
 (defn build-cfn-refresh-schedule-refresh-schedule-map-property-builder
@@ -27305,6 +33719,12 @@
   (.build builder))
 
 
+(defn cfn-refresh-schedule-refresh-schedule-map-property-builder
+  ""
+  [id config]
+  (build-cfn-refresh-schedule-refresh-schedule-map-property-builder (new CfnRefreshSchedule$RefreshScheduleMapProperty$Builder) id config))
+
+
 (defn build-cfn-refresh-schedule-schedule-frequency-property-builder
   "The build-cfn-refresh-schedule-schedule-frequency-property-builder function updates a CfnRefreshSchedule$ScheduleFrequencyProperty$Builder instance using the provided configuration.
   The function takes the CfnRefreshSchedule$ScheduleFrequencyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27329,6 +33749,12 @@
   (when-let [data (lookup-entry config id :time-zone)]
     (. builder timeZone data))
   (.build builder))
+
+
+(defn cfn-refresh-schedule-schedule-frequency-property-builder
+  ""
+  [id config]
+  (build-cfn-refresh-schedule-schedule-frequency-property-builder (new CfnRefreshSchedule$ScheduleFrequencyProperty$Builder) id config))
 
 
 (defn build-cfn-template-aggregation-function-property-builder
@@ -27357,6 +33783,12 @@
   (.build builder))
 
 
+(defn cfn-template-aggregation-function-property-builder
+  ""
+  [id config]
+  (build-cfn-template-aggregation-function-property-builder (new CfnTemplate$AggregationFunctionProperty$Builder) id config))
+
+
 (defn build-cfn-template-aggregation-sort-configuration-property-builder
   "The build-cfn-template-aggregation-sort-configuration-property-builder function updates a CfnTemplate$AggregationSortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$AggregationSortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27380,6 +33812,12 @@
   (.build builder))
 
 
+(defn cfn-template-aggregation-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-aggregation-sort-configuration-property-builder (new CfnTemplate$AggregationSortConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-analysis-defaults-property-builder
   "The build-cfn-template-analysis-defaults-property-builder function updates a CfnTemplate$AnalysisDefaultsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$AnalysisDefaultsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27395,6 +33833,12 @@
   (when-let [data (lookup-entry config id :default-new-sheet-configuration)]
     (. builder defaultNewSheetConfiguration data))
   (.build builder))
+
+
+(defn cfn-template-analysis-defaults-property-builder
+  ""
+  [id config]
+  (build-cfn-template-analysis-defaults-property-builder (new CfnTemplate$AnalysisDefaultsProperty$Builder) id config))
 
 
 (defn build-cfn-template-anchor-date-configuration-property-builder
@@ -27417,6 +33861,12 @@
   (.build builder))
 
 
+(defn cfn-template-anchor-date-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-anchor-date-configuration-property-builder (new CfnTemplate$AnchorDateConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-arc-axis-configuration-property-builder
   "The build-cfn-template-arc-axis-configuration-property-builder function updates a CfnTemplate$ArcAxisConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ArcAxisConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27435,6 +33885,12 @@
   (when-let [data (lookup-entry config id :reserve-range)]
     (. builder reserveRange data))
   (.build builder))
+
+
+(defn cfn-template-arc-axis-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-arc-axis-configuration-property-builder (new CfnTemplate$ArcAxisConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-arc-axis-display-range-property-builder
@@ -27457,6 +33913,12 @@
   (.build builder))
 
 
+(defn cfn-template-arc-axis-display-range-property-builder
+  ""
+  [id config]
+  (build-cfn-template-arc-axis-display-range-property-builder (new CfnTemplate$ArcAxisDisplayRangeProperty$Builder) id config))
+
+
 (defn build-cfn-template-arc-configuration-property-builder
   "The build-cfn-template-arc-configuration-property-builder function updates a CfnTemplate$ArcConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ArcConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27477,6 +33939,12 @@
   (.build builder))
 
 
+(defn cfn-template-arc-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-arc-configuration-property-builder (new CfnTemplate$ArcConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-arc-options-property-builder
   "The build-cfn-template-arc-options-property-builder function updates a CfnTemplate$ArcOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ArcOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27492,6 +33960,12 @@
   (when-let [data (lookup-entry config id :arc-thickness)]
     (. builder arcThickness data))
   (.build builder))
+
+
+(defn cfn-template-arc-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-arc-options-property-builder (new CfnTemplate$ArcOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-asset-options-property-builder
@@ -27514,6 +33988,12 @@
   (.build builder))
 
 
+(defn cfn-template-asset-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-asset-options-property-builder (new CfnTemplate$AssetOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-attribute-aggregation-function-property-builder
   "The build-cfn-template-attribute-aggregation-function-property-builder function updates a CfnTemplate$AttributeAggregationFunctionProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$AttributeAggregationFunctionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27532,6 +34012,12 @@
   (when-let [data (lookup-entry config id :value-for-multiple-values)]
     (. builder valueForMultipleValues data))
   (.build builder))
+
+
+(defn cfn-template-attribute-aggregation-function-property-builder
+  ""
+  [id config]
+  (build-cfn-template-attribute-aggregation-function-property-builder (new CfnTemplate$AttributeAggregationFunctionProperty$Builder) id config))
 
 
 (defn build-cfn-template-axis-data-options-property-builder
@@ -27554,6 +34040,12 @@
   (.build builder))
 
 
+(defn cfn-template-axis-data-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-axis-data-options-property-builder (new CfnTemplate$AxisDataOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-axis-display-min-max-range-property-builder
   "The build-cfn-template-axis-display-min-max-range-property-builder function updates a CfnTemplate$AxisDisplayMinMaxRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$AxisDisplayMinMaxRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27572,6 +34064,12 @@
   (when-let [data (lookup-entry config id :minimum)]
     (. builder minimum data))
   (.build builder))
+
+
+(defn cfn-template-axis-display-min-max-range-property-builder
+  ""
+  [id config]
+  (build-cfn-template-axis-display-min-max-range-property-builder (new CfnTemplate$AxisDisplayMinMaxRangeProperty$Builder) id config))
 
 
 (defn build-cfn-template-axis-display-options-property-builder
@@ -27606,6 +34104,12 @@
   (.build builder))
 
 
+(defn cfn-template-axis-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-axis-display-options-property-builder (new CfnTemplate$AxisDisplayOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-axis-display-range-property-builder
   "The build-cfn-template-axis-display-range-property-builder function updates a CfnTemplate$AxisDisplayRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$AxisDisplayRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27624,6 +34128,12 @@
   (when-let [data (lookup-entry config id :min-max)]
     (. builder minMax data))
   (.build builder))
+
+
+(defn cfn-template-axis-display-range-property-builder
+  ""
+  [id config]
+  (build-cfn-template-axis-display-range-property-builder (new CfnTemplate$AxisDisplayRangeProperty$Builder) id config))
 
 
 (defn build-cfn-template-axis-label-options-property-builder
@@ -27649,6 +34159,12 @@
   (.build builder))
 
 
+(defn cfn-template-axis-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-axis-label-options-property-builder (new CfnTemplate$AxisLabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-axis-label-reference-options-property-builder
   "The build-cfn-template-axis-label-reference-options-property-builder function updates a CfnTemplate$AxisLabelReferenceOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$AxisLabelReferenceOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27667,6 +34183,12 @@
   (when-let [data (lookup-entry config id :field-id)]
     (. builder fieldId data))
   (.build builder))
+
+
+(defn cfn-template-axis-label-reference-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-axis-label-reference-options-property-builder (new CfnTemplate$AxisLabelReferenceOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-axis-linear-scale-property-builder
@@ -27689,6 +34211,12 @@
   (.build builder))
 
 
+(defn cfn-template-axis-linear-scale-property-builder
+  ""
+  [id config]
+  (build-cfn-template-axis-linear-scale-property-builder (new CfnTemplate$AxisLinearScaleProperty$Builder) id config))
+
+
 (defn build-cfn-template-axis-logarithmic-scale-property-builder
   "The build-cfn-template-axis-logarithmic-scale-property-builder function updates a CfnTemplate$AxisLogarithmicScaleProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$AxisLogarithmicScaleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27704,6 +34232,12 @@
   (when-let [data (lookup-entry config id :base)]
     (. builder base data))
   (.build builder))
+
+
+(defn cfn-template-axis-logarithmic-scale-property-builder
+  ""
+  [id config]
+  (build-cfn-template-axis-logarithmic-scale-property-builder (new CfnTemplate$AxisLogarithmicScaleProperty$Builder) id config))
 
 
 (defn build-cfn-template-axis-scale-property-builder
@@ -27726,6 +34260,12 @@
   (.build builder))
 
 
+(defn cfn-template-axis-scale-property-builder
+  ""
+  [id config]
+  (build-cfn-template-axis-scale-property-builder (new CfnTemplate$AxisScaleProperty$Builder) id config))
+
+
 (defn build-cfn-template-axis-tick-label-options-property-builder
   "The build-cfn-template-axis-tick-label-options-property-builder function updates a CfnTemplate$AxisTickLabelOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$AxisTickLabelOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27744,6 +34284,12 @@
   (when-let [data (lookup-entry config id :rotation-angle)]
     (. builder rotationAngle data))
   (.build builder))
+
+
+(defn cfn-template-axis-tick-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-axis-tick-label-options-property-builder (new CfnTemplate$AxisTickLabelOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-bar-chart-aggregated-field-wells-property-builder
@@ -27770,6 +34316,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-template-bar-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-bar-chart-aggregated-field-wells-property-builder (new CfnTemplate$BarChartAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-bar-chart-configuration-property-builder
@@ -27834,6 +34386,12 @@
   (.build builder))
 
 
+(defn cfn-template-bar-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-bar-chart-configuration-property-builder (new CfnTemplate$BarChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-bar-chart-field-wells-property-builder
   "The build-cfn-template-bar-chart-field-wells-property-builder function updates a CfnTemplate$BarChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$BarChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27849,6 +34407,12 @@
   (when-let [data (lookup-entry config id :bar-chart-aggregated-field-wells)]
     (. builder barChartAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-template-bar-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-bar-chart-field-wells-property-builder (new CfnTemplate$BarChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-bar-chart-sort-configuration-property-builder
@@ -27883,6 +34447,12 @@
   (.build builder))
 
 
+(defn cfn-template-bar-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-bar-chart-sort-configuration-property-builder (new CfnTemplate$BarChartSortConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-bar-chart-visual-property-builder
   "The build-cfn-template-bar-chart-visual-property-builder function updates a CfnTemplate$BarChartVisualProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$BarChartVisualProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27915,6 +34485,12 @@
   (.build builder))
 
 
+(defn cfn-template-bar-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-bar-chart-visual-property-builder (new CfnTemplate$BarChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-template-bin-count-options-property-builder
   "The build-cfn-template-bin-count-options-property-builder function updates a CfnTemplate$BinCountOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$BinCountOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27930,6 +34506,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-template-bin-count-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-bin-count-options-property-builder (new CfnTemplate$BinCountOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-bin-width-options-property-builder
@@ -27950,6 +34532,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-template-bin-width-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-bin-width-options-property-builder (new CfnTemplate$BinWidthOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-body-section-configuration-property-builder
@@ -27978,6 +34566,12 @@
   (.build builder))
 
 
+(defn cfn-template-body-section-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-body-section-configuration-property-builder (new CfnTemplate$BodySectionConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-body-section-content-property-builder
   "The build-cfn-template-body-section-content-property-builder function updates a CfnTemplate$BodySectionContentProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$BodySectionContentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -27993,6 +34587,12 @@
   (when-let [data (lookup-entry config id :layout)]
     (. builder layout data))
   (.build builder))
+
+
+(defn cfn-template-body-section-content-property-builder
+  ""
+  [id config]
+  (build-cfn-template-body-section-content-property-builder (new CfnTemplate$BodySectionContentProperty$Builder) id config))
 
 
 (defn build-cfn-template-box-plot-aggregated-field-wells-property-builder
@@ -28013,6 +34613,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-template-box-plot-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-box-plot-aggregated-field-wells-property-builder (new CfnTemplate$BoxPlotAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-box-plot-chart-configuration-property-builder
@@ -28062,6 +34668,12 @@
   (.build builder))
 
 
+(defn cfn-template-box-plot-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-box-plot-chart-configuration-property-builder (new CfnTemplate$BoxPlotChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-box-plot-field-wells-property-builder
   "The build-cfn-template-box-plot-field-wells-property-builder function updates a CfnTemplate$BoxPlotFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$BoxPlotFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28077,6 +34689,12 @@
   (when-let [data (lookup-entry config id :box-plot-aggregated-field-wells)]
     (. builder boxPlotAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-template-box-plot-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-box-plot-field-wells-property-builder (new CfnTemplate$BoxPlotFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-box-plot-options-property-builder
@@ -28102,6 +34720,12 @@
   (.build builder))
 
 
+(defn cfn-template-box-plot-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-box-plot-options-property-builder (new CfnTemplate$BoxPlotOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-box-plot-sort-configuration-property-builder
   "The build-cfn-template-box-plot-sort-configuration-property-builder function updates a CfnTemplate$BoxPlotSortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$BoxPlotSortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28122,6 +34746,12 @@
   (.build builder))
 
 
+(defn cfn-template-box-plot-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-box-plot-sort-configuration-property-builder (new CfnTemplate$BoxPlotSortConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-box-plot-style-options-property-builder
   "The build-cfn-template-box-plot-style-options-property-builder function updates a CfnTemplate$BoxPlotStyleOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$BoxPlotStyleOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28137,6 +34767,12 @@
   (when-let [data (lookup-entry config id :fill-style)]
     (. builder fillStyle data))
   (.build builder))
+
+
+(defn cfn-template-box-plot-style-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-box-plot-style-options-property-builder (new CfnTemplate$BoxPlotStyleOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-box-plot-visual-property-builder
@@ -28169,6 +34805,12 @@
   (when-let [data (lookup-entry config id :visual-id)]
     (. builder visualId data))
   (.build builder))
+
+
+(defn cfn-template-box-plot-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-box-plot-visual-property-builder (new CfnTemplate$BoxPlotVisualProperty$Builder) id config))
 
 
 (defn build-cfn-template-builder
@@ -28212,6 +34854,12 @@
   (.build builder))
 
 
+(defn cfn-template-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-template-builder (CfnTemplate$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-template-calculated-field-property-builder
   "The build-cfn-template-calculated-field-property-builder function updates a CfnTemplate$CalculatedFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$CalculatedFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28235,6 +34883,12 @@
   (.build builder))
 
 
+(defn cfn-template-calculated-field-property-builder
+  ""
+  [id config]
+  (build-cfn-template-calculated-field-property-builder (new CfnTemplate$CalculatedFieldProperty$Builder) id config))
+
+
 (defn build-cfn-template-calculated-measure-field-property-builder
   "The build-cfn-template-calculated-measure-field-property-builder function updates a CfnTemplate$CalculatedMeasureFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$CalculatedMeasureFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28255,6 +34909,12 @@
   (.build builder))
 
 
+(defn cfn-template-calculated-measure-field-property-builder
+  ""
+  [id config]
+  (build-cfn-template-calculated-measure-field-property-builder (new CfnTemplate$CalculatedMeasureFieldProperty$Builder) id config))
+
+
 (defn build-cfn-template-cascading-control-configuration-property-builder
   "The build-cfn-template-cascading-control-configuration-property-builder function updates a CfnTemplate$CascadingControlConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$CascadingControlConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28270,6 +34930,12 @@
   (when-let [data (lookup-entry config id :source-controls)]
     (. builder sourceControls data))
   (.build builder))
+
+
+(defn cfn-template-cascading-control-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-cascading-control-configuration-property-builder (new CfnTemplate$CascadingControlConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-cascading-control-source-property-builder
@@ -28290,6 +34956,12 @@
   (when-let [data (lookup-entry config id :source-sheet-control-id)]
     (. builder sourceSheetControlId data))
   (.build builder))
+
+
+(defn cfn-template-cascading-control-source-property-builder
+  ""
+  [id config]
+  (build-cfn-template-cascading-control-source-property-builder (new CfnTemplate$CascadingControlSourceProperty$Builder) id config))
 
 
 (defn build-cfn-template-categorical-dimension-field-property-builder
@@ -28318,6 +34990,12 @@
   (.build builder))
 
 
+(defn cfn-template-categorical-dimension-field-property-builder
+  ""
+  [id config]
+  (build-cfn-template-categorical-dimension-field-property-builder (new CfnTemplate$CategoricalDimensionFieldProperty$Builder) id config))
+
+
 (defn build-cfn-template-categorical-measure-field-property-builder
   "The build-cfn-template-categorical-measure-field-property-builder function updates a CfnTemplate$CategoricalMeasureFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$CategoricalMeasureFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28344,6 +35022,12 @@
   (.build builder))
 
 
+(defn cfn-template-categorical-measure-field-property-builder
+  ""
+  [id config]
+  (build-cfn-template-categorical-measure-field-property-builder (new CfnTemplate$CategoricalMeasureFieldProperty$Builder) id config))
+
+
 (defn build-cfn-template-category-drill-down-filter-property-builder
   "The build-cfn-template-category-drill-down-filter-property-builder function updates a CfnTemplate$CategoryDrillDownFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$CategoryDrillDownFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28362,6 +35046,12 @@
   (when-let [data (lookup-entry config id :column)]
     (. builder column data))
   (.build builder))
+
+
+(defn cfn-template-category-drill-down-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-template-category-drill-down-filter-property-builder (new CfnTemplate$CategoryDrillDownFilterProperty$Builder) id config))
 
 
 (defn build-cfn-template-category-filter-configuration-property-builder
@@ -28385,6 +35075,12 @@
   (when-let [data (lookup-entry config id :filter-list-configuration)]
     (. builder filterListConfiguration data))
   (.build builder))
+
+
+(defn cfn-template-category-filter-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-category-filter-configuration-property-builder (new CfnTemplate$CategoryFilterConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-category-filter-property-builder
@@ -28413,6 +35109,12 @@
   (.build builder))
 
 
+(defn cfn-template-category-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-template-category-filter-property-builder (new CfnTemplate$CategoryFilterProperty$Builder) id config))
+
+
 (defn build-cfn-template-chart-axis-label-options-property-builder
   "The build-cfn-template-chart-axis-label-options-property-builder function updates a CfnTemplate$ChartAxisLabelOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ChartAxisLabelOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28436,6 +35138,12 @@
   (.build builder))
 
 
+(defn cfn-template-chart-axis-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-chart-axis-label-options-property-builder (new CfnTemplate$ChartAxisLabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-cluster-marker-configuration-property-builder
   "The build-cfn-template-cluster-marker-configuration-property-builder function updates a CfnTemplate$ClusterMarkerConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ClusterMarkerConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28453,6 +35161,12 @@
   (.build builder))
 
 
+(defn cfn-template-cluster-marker-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-cluster-marker-configuration-property-builder (new CfnTemplate$ClusterMarkerConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-cluster-marker-property-builder
   "The build-cfn-template-cluster-marker-property-builder function updates a CfnTemplate$ClusterMarkerProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ClusterMarkerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28468,6 +35182,12 @@
   (when-let [data (lookup-entry config id :simple-cluster-marker)]
     (. builder simpleClusterMarker data))
   (.build builder))
+
+
+(defn cfn-template-cluster-marker-property-builder
+  ""
+  [id config]
+  (build-cfn-template-cluster-marker-property-builder (new CfnTemplate$ClusterMarkerProperty$Builder) id config))
 
 
 (defn build-cfn-template-color-scale-property-builder
@@ -28493,6 +35213,12 @@
   (.build builder))
 
 
+(defn cfn-template-color-scale-property-builder
+  ""
+  [id config]
+  (build-cfn-template-color-scale-property-builder (new CfnTemplate$ColorScaleProperty$Builder) id config))
+
+
 (defn build-cfn-template-colors-configuration-property-builder
   "The build-cfn-template-colors-configuration-property-builder function updates a CfnTemplate$ColorsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ColorsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28508,6 +35234,12 @@
   (when-let [data (lookup-entry config id :custom-colors)]
     (. builder customColors data))
   (.build builder))
+
+
+(defn cfn-template-colors-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-colors-configuration-property-builder (new CfnTemplate$ColorsConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-column-configuration-property-builder
@@ -28536,6 +35268,12 @@
   (.build builder))
 
 
+(defn cfn-template-column-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-column-configuration-property-builder (new CfnTemplate$ColumnConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-column-group-column-schema-property-builder
   "The build-cfn-template-column-group-column-schema-property-builder function updates a CfnTemplate$ColumnGroupColumnSchemaProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ColumnGroupColumnSchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28551,6 +35289,12 @@
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-template-column-group-column-schema-property-builder
+  ""
+  [id config]
+  (build-cfn-template-column-group-column-schema-property-builder (new CfnTemplate$ColumnGroupColumnSchemaProperty$Builder) id config))
 
 
 (defn build-cfn-template-column-group-schema-property-builder
@@ -28571,6 +35315,12 @@
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-template-column-group-schema-property-builder
+  ""
+  [id config]
+  (build-cfn-template-column-group-schema-property-builder (new CfnTemplate$ColumnGroupSchemaProperty$Builder) id config))
 
 
 (defn build-cfn-template-column-hierarchy-property-builder
@@ -28596,6 +35346,12 @@
   (.build builder))
 
 
+(defn cfn-template-column-hierarchy-property-builder
+  ""
+  [id config]
+  (build-cfn-template-column-hierarchy-property-builder (new CfnTemplate$ColumnHierarchyProperty$Builder) id config))
+
+
 (defn build-cfn-template-column-identifier-property-builder
   "The build-cfn-template-column-identifier-property-builder function updates a CfnTemplate$ColumnIdentifierProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ColumnIdentifierProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28614,6 +35370,12 @@
   (when-let [data (lookup-entry config id :data-set-identifier)]
     (. builder dataSetIdentifier data))
   (.build builder))
+
+
+(defn cfn-template-column-identifier-property-builder
+  ""
+  [id config]
+  (build-cfn-template-column-identifier-property-builder (new CfnTemplate$ColumnIdentifierProperty$Builder) id config))
 
 
 (defn build-cfn-template-column-schema-property-builder
@@ -28639,6 +35401,12 @@
   (.build builder))
 
 
+(defn cfn-template-column-schema-property-builder
+  ""
+  [id config]
+  (build-cfn-template-column-schema-property-builder (new CfnTemplate$ColumnSchemaProperty$Builder) id config))
+
+
 (defn build-cfn-template-column-sort-property-builder
   "The build-cfn-template-column-sort-property-builder function updates a CfnTemplate$ColumnSortProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ColumnSortProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28660,6 +35428,12 @@
   (when-let [data (lookup-entry config id :sort-by)]
     (. builder sortBy data))
   (.build builder))
+
+
+(defn cfn-template-column-sort-property-builder
+  ""
+  [id config]
+  (build-cfn-template-column-sort-property-builder (new CfnTemplate$ColumnSortProperty$Builder) id config))
 
 
 (defn build-cfn-template-column-tooltip-item-property-builder
@@ -28688,6 +35462,12 @@
   (.build builder))
 
 
+(defn cfn-template-column-tooltip-item-property-builder
+  ""
+  [id config]
+  (build-cfn-template-column-tooltip-item-property-builder (new CfnTemplate$ColumnTooltipItemProperty$Builder) id config))
+
+
 (defn build-cfn-template-combo-chart-aggregated-field-wells-property-builder
   "The build-cfn-template-combo-chart-aggregated-field-wells-property-builder function updates a CfnTemplate$ComboChartAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ComboChartAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28712,6 +35492,12 @@
   (when-let [data (lookup-entry config id :line-values)]
     (. builder lineValues data))
   (.build builder))
+
+
+(defn cfn-template-combo-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-combo-chart-aggregated-field-wells-property-builder (new CfnTemplate$ComboChartAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-combo-chart-configuration-property-builder
@@ -28776,6 +35562,12 @@
   (.build builder))
 
 
+(defn cfn-template-combo-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-combo-chart-configuration-property-builder (new CfnTemplate$ComboChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-combo-chart-field-wells-property-builder
   "The build-cfn-template-combo-chart-field-wells-property-builder function updates a CfnTemplate$ComboChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ComboChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28791,6 +35583,12 @@
   (when-let [data (lookup-entry config id :combo-chart-aggregated-field-wells)]
     (. builder comboChartAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-template-combo-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-combo-chart-field-wells-property-builder (new CfnTemplate$ComboChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-combo-chart-sort-configuration-property-builder
@@ -28817,6 +35615,12 @@
   (when-let [data (lookup-entry config id :color-sort)]
     (. builder colorSort data))
   (.build builder))
+
+
+(defn cfn-template-combo-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-combo-chart-sort-configuration-property-builder (new CfnTemplate$ComboChartSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-combo-chart-visual-property-builder
@@ -28851,6 +35655,12 @@
   (.build builder))
 
 
+(defn cfn-template-combo-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-combo-chart-visual-property-builder (new CfnTemplate$ComboChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-template-comparison-configuration-property-builder
   "The build-cfn-template-comparison-configuration-property-builder function updates a CfnTemplate$ComparisonConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ComparisonConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28871,6 +35681,12 @@
   (.build builder))
 
 
+(defn cfn-template-comparison-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-comparison-configuration-property-builder (new CfnTemplate$ComparisonConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-comparison-format-configuration-property-builder
   "The build-cfn-template-comparison-format-configuration-property-builder function updates a CfnTemplate$ComparisonFormatConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ComparisonFormatConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28889,6 +35705,12 @@
   (when-let [data (lookup-entry config id :percentage-display-format-configuration)]
     (. builder percentageDisplayFormatConfiguration data))
   (.build builder))
+
+
+(defn cfn-template-comparison-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-comparison-format-configuration-property-builder (new CfnTemplate$ComparisonFormatConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-computation-property-builder
@@ -28935,6 +35757,12 @@
   (.build builder))
 
 
+(defn cfn-template-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-template-computation-property-builder (new CfnTemplate$ComputationProperty$Builder) id config))
+
+
 (defn build-cfn-template-conditional-formatting-color-property-builder
   "The build-cfn-template-conditional-formatting-color-property-builder function updates a CfnTemplate$ConditionalFormattingColorProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ConditionalFormattingColorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28953,6 +35781,12 @@
   (when-let [data (lookup-entry config id :solid)]
     (. builder solid data))
   (.build builder))
+
+
+(defn cfn-template-conditional-formatting-color-property-builder
+  ""
+  [id config]
+  (build-cfn-template-conditional-formatting-color-property-builder (new CfnTemplate$ConditionalFormattingColorProperty$Builder) id config))
 
 
 (defn build-cfn-template-conditional-formatting-custom-icon-condition-property-builder
@@ -28981,6 +35815,12 @@
   (.build builder))
 
 
+(defn cfn-template-conditional-formatting-custom-icon-condition-property-builder
+  ""
+  [id config]
+  (build-cfn-template-conditional-formatting-custom-icon-condition-property-builder (new CfnTemplate$ConditionalFormattingCustomIconConditionProperty$Builder) id config))
+
+
 (defn build-cfn-template-conditional-formatting-custom-icon-options-property-builder
   "The build-cfn-template-conditional-formatting-custom-icon-options-property-builder function updates a CfnTemplate$ConditionalFormattingCustomIconOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ConditionalFormattingCustomIconOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -28999,6 +35839,12 @@
   (when-let [data (lookup-entry config id :unicode-icon)]
     (. builder unicodeIcon data))
   (.build builder))
+
+
+(defn cfn-template-conditional-formatting-custom-icon-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-conditional-formatting-custom-icon-options-property-builder (new CfnTemplate$ConditionalFormattingCustomIconOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-conditional-formatting-gradient-color-property-builder
@@ -29021,6 +35867,12 @@
   (.build builder))
 
 
+(defn cfn-template-conditional-formatting-gradient-color-property-builder
+  ""
+  [id config]
+  (build-cfn-template-conditional-formatting-gradient-color-property-builder (new CfnTemplate$ConditionalFormattingGradientColorProperty$Builder) id config))
+
+
 (defn build-cfn-template-conditional-formatting-icon-display-configuration-property-builder
   "The build-cfn-template-conditional-formatting-icon-display-configuration-property-builder function updates a CfnTemplate$ConditionalFormattingIconDisplayConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ConditionalFormattingIconDisplayConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29036,6 +35888,12 @@
   (when-let [data (lookup-entry config id :icon-display-option)]
     (. builder iconDisplayOption data))
   (.build builder))
+
+
+(defn cfn-template-conditional-formatting-icon-display-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-conditional-formatting-icon-display-configuration-property-builder (new CfnTemplate$ConditionalFormattingIconDisplayConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-conditional-formatting-icon-property-builder
@@ -29058,6 +35916,12 @@
   (.build builder))
 
 
+(defn cfn-template-conditional-formatting-icon-property-builder
+  ""
+  [id config]
+  (build-cfn-template-conditional-formatting-icon-property-builder (new CfnTemplate$ConditionalFormattingIconProperty$Builder) id config))
+
+
 (defn build-cfn-template-conditional-formatting-icon-set-property-builder
   "The build-cfn-template-conditional-formatting-icon-set-property-builder function updates a CfnTemplate$ConditionalFormattingIconSetProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ConditionalFormattingIconSetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29076,6 +35940,12 @@
   (when-let [data (lookup-entry config id :icon-set-type)]
     (. builder iconSetType data))
   (.build builder))
+
+
+(defn cfn-template-conditional-formatting-icon-set-property-builder
+  ""
+  [id config]
+  (build-cfn-template-conditional-formatting-icon-set-property-builder (new CfnTemplate$ConditionalFormattingIconSetProperty$Builder) id config))
 
 
 (defn build-cfn-template-conditional-formatting-solid-color-property-builder
@@ -29098,6 +35968,12 @@
   (.build builder))
 
 
+(defn cfn-template-conditional-formatting-solid-color-property-builder
+  ""
+  [id config]
+  (build-cfn-template-conditional-formatting-solid-color-property-builder (new CfnTemplate$ConditionalFormattingSolidColorProperty$Builder) id config))
+
+
 (defn build-cfn-template-contribution-analysis-default-property-builder
   "The build-cfn-template-contribution-analysis-default-property-builder function updates a CfnTemplate$ContributionAnalysisDefaultProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ContributionAnalysisDefaultProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29116,6 +35992,12 @@
   (when-let [data (lookup-entry config id :measure-field-id)]
     (. builder measureFieldId data))
   (.build builder))
+
+
+(defn cfn-template-contribution-analysis-default-property-builder
+  ""
+  [id config]
+  (build-cfn-template-contribution-analysis-default-property-builder (new CfnTemplate$ContributionAnalysisDefaultProperty$Builder) id config))
 
 
 (defn build-cfn-template-currency-display-format-configuration-property-builder
@@ -29156,6 +36038,12 @@
   (.build builder))
 
 
+(defn cfn-template-currency-display-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-currency-display-format-configuration-property-builder (new CfnTemplate$CurrencyDisplayFormatConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-custom-action-filter-operation-property-builder
   "The build-cfn-template-custom-action-filter-operation-property-builder function updates a CfnTemplate$CustomActionFilterOperationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$CustomActionFilterOperationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29176,6 +36064,12 @@
   (.build builder))
 
 
+(defn cfn-template-custom-action-filter-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-template-custom-action-filter-operation-property-builder (new CfnTemplate$CustomActionFilterOperationProperty$Builder) id config))
+
+
 (defn build-cfn-template-custom-action-navigation-operation-property-builder
   "The build-cfn-template-custom-action-navigation-operation-property-builder function updates a CfnTemplate$CustomActionNavigationOperationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$CustomActionNavigationOperationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29193,6 +36087,12 @@
   (.build builder))
 
 
+(defn cfn-template-custom-action-navigation-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-template-custom-action-navigation-operation-property-builder (new CfnTemplate$CustomActionNavigationOperationProperty$Builder) id config))
+
+
 (defn build-cfn-template-custom-action-set-parameters-operation-property-builder
   "The build-cfn-template-custom-action-set-parameters-operation-property-builder function updates a CfnTemplate$CustomActionSetParametersOperationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$CustomActionSetParametersOperationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29208,6 +36108,12 @@
   (when-let [data (lookup-entry config id :parameter-value-configurations)]
     (. builder parameterValueConfigurations data))
   (.build builder))
+
+
+(defn cfn-template-custom-action-set-parameters-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-template-custom-action-set-parameters-operation-property-builder (new CfnTemplate$CustomActionSetParametersOperationProperty$Builder) id config))
 
 
 (defn build-cfn-template-custom-action-url-operation-property-builder
@@ -29228,6 +36134,12 @@
   (when-let [data (lookup-entry config id :url-template)]
     (. builder urlTemplate data))
   (.build builder))
+
+
+(defn cfn-template-custom-action-url-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-template-custom-action-url-operation-property-builder (new CfnTemplate$CustomActionURLOperationProperty$Builder) id config))
 
 
 (defn build-cfn-template-custom-color-property-builder
@@ -29253,6 +36165,12 @@
   (.build builder))
 
 
+(defn cfn-template-custom-color-property-builder
+  ""
+  [id config]
+  (build-cfn-template-custom-color-property-builder (new CfnTemplate$CustomColorProperty$Builder) id config))
+
+
 (defn build-cfn-template-custom-content-configuration-property-builder
   "The build-cfn-template-custom-content-configuration-property-builder function updates a CfnTemplate$CustomContentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$CustomContentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29274,6 +36192,12 @@
   (when-let [data (lookup-entry config id :image-scaling)]
     (. builder imageScaling data))
   (.build builder))
+
+
+(defn cfn-template-custom-content-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-custom-content-configuration-property-builder (new CfnTemplate$CustomContentConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-custom-content-visual-property-builder
@@ -29308,6 +36232,12 @@
   (.build builder))
 
 
+(defn cfn-template-custom-content-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-custom-content-visual-property-builder (new CfnTemplate$CustomContentVisualProperty$Builder) id config))
+
+
 (defn build-cfn-template-custom-filter-configuration-property-builder
   "The build-cfn-template-custom-filter-configuration-property-builder function updates a CfnTemplate$CustomFilterConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$CustomFilterConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29337,6 +36267,12 @@
   (.build builder))
 
 
+(defn cfn-template-custom-filter-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-custom-filter-configuration-property-builder (new CfnTemplate$CustomFilterConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-custom-filter-list-configuration-property-builder
   "The build-cfn-template-custom-filter-list-configuration-property-builder function updates a CfnTemplate$CustomFilterListConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$CustomFilterListConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29363,6 +36299,12 @@
   (.build builder))
 
 
+(defn cfn-template-custom-filter-list-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-custom-filter-list-configuration-property-builder (new CfnTemplate$CustomFilterListConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-custom-narrative-options-property-builder
   "The build-cfn-template-custom-narrative-options-property-builder function updates a CfnTemplate$CustomNarrativeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$CustomNarrativeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29378,6 +36320,12 @@
   (when-let [data (lookup-entry config id :narrative)]
     (. builder narrative data))
   (.build builder))
+
+
+(defn cfn-template-custom-narrative-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-custom-narrative-options-property-builder (new CfnTemplate$CustomNarrativeOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-custom-parameter-values-property-builder
@@ -29406,6 +36354,12 @@
   (.build builder))
 
 
+(defn cfn-template-custom-parameter-values-property-builder
+  ""
+  [id config]
+  (build-cfn-template-custom-parameter-values-property-builder (new CfnTemplate$CustomParameterValuesProperty$Builder) id config))
+
+
 (defn build-cfn-template-custom-values-configuration-property-builder
   "The build-cfn-template-custom-values-configuration-property-builder function updates a CfnTemplate$CustomValuesConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$CustomValuesConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29424,6 +36378,12 @@
   (when-let [data (lookup-entry config id :include-null-value)]
     (. builder includeNullValue data))
   (.build builder))
+
+
+(defn cfn-template-custom-values-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-custom-values-configuration-property-builder (new CfnTemplate$CustomValuesConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-data-bars-options-property-builder
@@ -29449,6 +36409,12 @@
   (.build builder))
 
 
+(defn cfn-template-data-bars-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-data-bars-options-property-builder (new CfnTemplate$DataBarsOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-data-color-property-builder
   "The build-cfn-template-data-color-property-builder function updates a CfnTemplate$DataColorProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DataColorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29467,6 +36433,12 @@
   (when-let [data (lookup-entry config id :data-value)]
     (. builder dataValue data))
   (.build builder))
+
+
+(defn cfn-template-data-color-property-builder
+  ""
+  [id config]
+  (build-cfn-template-data-color-property-builder (new CfnTemplate$DataColorProperty$Builder) id config))
 
 
 (defn build-cfn-template-data-field-series-item-property-builder
@@ -29493,6 +36465,12 @@
   (when-let [data (lookup-entry config id :settings)]
     (. builder settings data))
   (.build builder))
+
+
+(defn cfn-template-data-field-series-item-property-builder
+  ""
+  [id config]
+  (build-cfn-template-data-field-series-item-property-builder (new CfnTemplate$DataFieldSeriesItemProperty$Builder) id config))
 
 
 (defn build-cfn-template-data-label-options-property-builder
@@ -29539,6 +36517,12 @@
   (.build builder))
 
 
+(defn cfn-template-data-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-data-label-options-property-builder (new CfnTemplate$DataLabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-data-label-type-property-builder
   "The build-cfn-template-data-label-type-property-builder function updates a CfnTemplate$DataLabelTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DataLabelTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29568,6 +36552,12 @@
   (.build builder))
 
 
+(defn cfn-template-data-label-type-property-builder
+  ""
+  [id config]
+  (build-cfn-template-data-label-type-property-builder (new CfnTemplate$DataLabelTypeProperty$Builder) id config))
+
+
 (defn build-cfn-template-data-path-color-property-builder
   "The build-cfn-template-data-path-color-property-builder function updates a CfnTemplate$DataPathColorProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DataPathColorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29589,6 +36579,12 @@
   (when-let [data (lookup-entry config id :time-granularity)]
     (. builder timeGranularity data))
   (.build builder))
+
+
+(defn cfn-template-data-path-color-property-builder
+  ""
+  [id config]
+  (build-cfn-template-data-path-color-property-builder (new CfnTemplate$DataPathColorProperty$Builder) id config))
 
 
 (defn build-cfn-template-data-path-label-type-property-builder
@@ -29614,6 +36610,12 @@
   (.build builder))
 
 
+(defn cfn-template-data-path-label-type-property-builder
+  ""
+  [id config]
+  (build-cfn-template-data-path-label-type-property-builder (new CfnTemplate$DataPathLabelTypeProperty$Builder) id config))
+
+
 (defn build-cfn-template-data-path-sort-property-builder
   "The build-cfn-template-data-path-sort-property-builder function updates a CfnTemplate$DataPathSortProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DataPathSortProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29634,6 +36636,12 @@
   (.build builder))
 
 
+(defn cfn-template-data-path-sort-property-builder
+  ""
+  [id config]
+  (build-cfn-template-data-path-sort-property-builder (new CfnTemplate$DataPathSortProperty$Builder) id config))
+
+
 (defn build-cfn-template-data-path-type-property-builder
   "The build-cfn-template-data-path-type-property-builder function updates a CfnTemplate$DataPathTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DataPathTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29649,6 +36657,12 @@
   (when-let [data (lookup-entry config id :pivot-table-data-path-type)]
     (. builder pivotTableDataPathType data))
   (.build builder))
+
+
+(defn cfn-template-data-path-type-property-builder
+  ""
+  [id config]
+  (build-cfn-template-data-path-type-property-builder (new CfnTemplate$DataPathTypeProperty$Builder) id config))
 
 
 (defn build-cfn-template-data-path-value-property-builder
@@ -29674,6 +36688,12 @@
   (.build builder))
 
 
+(defn cfn-template-data-path-value-property-builder
+  ""
+  [id config]
+  (build-cfn-template-data-path-value-property-builder (new CfnTemplate$DataPathValueProperty$Builder) id config))
+
+
 (defn build-cfn-template-data-set-configuration-property-builder
   "The build-cfn-template-data-set-configuration-property-builder function updates a CfnTemplate$DataSetConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DataSetConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29697,6 +36717,12 @@
   (.build builder))
 
 
+(defn cfn-template-data-set-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-data-set-configuration-property-builder (new CfnTemplate$DataSetConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-data-set-reference-property-builder
   "The build-cfn-template-data-set-reference-property-builder function updates a CfnTemplate$DataSetReferenceProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DataSetReferenceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29717,6 +36743,12 @@
   (.build builder))
 
 
+(defn cfn-template-data-set-reference-property-builder
+  ""
+  [id config]
+  (build-cfn-template-data-set-reference-property-builder (new CfnTemplate$DataSetReferenceProperty$Builder) id config))
+
+
 (defn build-cfn-template-data-set-schema-property-builder
   "The build-cfn-template-data-set-schema-property-builder function updates a CfnTemplate$DataSetSchemaProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DataSetSchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29734,6 +36766,12 @@
   (.build builder))
 
 
+(defn cfn-template-data-set-schema-property-builder
+  ""
+  [id config]
+  (build-cfn-template-data-set-schema-property-builder (new CfnTemplate$DataSetSchemaProperty$Builder) id config))
+
+
 (defn build-cfn-template-date-axis-options-property-builder
   "The build-cfn-template-date-axis-options-property-builder function updates a CfnTemplate$DateAxisOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DateAxisOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29749,6 +36787,12 @@
   (when-let [data (lookup-entry config id :missing-date-visibility)]
     (. builder missingDateVisibility data))
   (.build builder))
+
+
+(defn cfn-template-date-axis-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-date-axis-options-property-builder (new CfnTemplate$DateAxisOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-date-dimension-field-property-builder
@@ -29780,6 +36824,12 @@
   (.build builder))
 
 
+(defn cfn-template-date-dimension-field-property-builder
+  ""
+  [id config]
+  (build-cfn-template-date-dimension-field-property-builder (new CfnTemplate$DateDimensionFieldProperty$Builder) id config))
+
+
 (defn build-cfn-template-date-measure-field-property-builder
   "The build-cfn-template-date-measure-field-property-builder function updates a CfnTemplate$DateMeasureFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DateMeasureFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29806,6 +36856,12 @@
   (.build builder))
 
 
+(defn cfn-template-date-measure-field-property-builder
+  ""
+  [id config]
+  (build-cfn-template-date-measure-field-property-builder (new CfnTemplate$DateMeasureFieldProperty$Builder) id config))
+
+
 (defn build-cfn-template-date-time-default-values-property-builder
   "The build-cfn-template-date-time-default-values-property-builder function updates a CfnTemplate$DateTimeDefaultValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DateTimeDefaultValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29827,6 +36883,12 @@
   (when-let [data (lookup-entry config id :static-values)]
     (. builder staticValues data))
   (.build builder))
+
+
+(defn cfn-template-date-time-default-values-property-builder
+  ""
+  [id config]
+  (build-cfn-template-date-time-default-values-property-builder (new CfnTemplate$DateTimeDefaultValuesProperty$Builder) id config))
 
 
 (defn build-cfn-template-date-time-format-configuration-property-builder
@@ -29852,6 +36914,12 @@
   (.build builder))
 
 
+(defn cfn-template-date-time-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-date-time-format-configuration-property-builder (new CfnTemplate$DateTimeFormatConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-date-time-hierarchy-property-builder
   "The build-cfn-template-date-time-hierarchy-property-builder function updates a CfnTemplate$DateTimeHierarchyProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DateTimeHierarchyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29870,6 +36938,12 @@
   (when-let [data (lookup-entry config id :hierarchy-id)]
     (. builder hierarchyId data))
   (.build builder))
+
+
+(defn cfn-template-date-time-hierarchy-property-builder
+  ""
+  [id config]
+  (build-cfn-template-date-time-hierarchy-property-builder (new CfnTemplate$DateTimeHierarchyProperty$Builder) id config))
 
 
 (defn build-cfn-template-date-time-parameter-declaration-property-builder
@@ -29901,6 +36975,12 @@
   (.build builder))
 
 
+(defn cfn-template-date-time-parameter-declaration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-date-time-parameter-declaration-property-builder (new CfnTemplate$DateTimeParameterDeclarationProperty$Builder) id config))
+
+
 (defn build-cfn-template-date-time-picker-control-display-options-property-builder
   "The build-cfn-template-date-time-picker-control-display-options-property-builder function updates a CfnTemplate$DateTimePickerControlDisplayOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DateTimePickerControlDisplayOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29924,6 +37004,12 @@
   (.build builder))
 
 
+(defn cfn-template-date-time-picker-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-date-time-picker-control-display-options-property-builder (new CfnTemplate$DateTimePickerControlDisplayOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-date-time-value-when-unset-configuration-property-builder
   "The build-cfn-template-date-time-value-when-unset-configuration-property-builder function updates a CfnTemplate$DateTimeValueWhenUnsetConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DateTimeValueWhenUnsetConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29944,6 +37030,12 @@
   (.build builder))
 
 
+(defn cfn-template-date-time-value-when-unset-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-date-time-value-when-unset-configuration-property-builder (new CfnTemplate$DateTimeValueWhenUnsetConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-decimal-default-values-property-builder
   "The build-cfn-template-decimal-default-values-property-builder function updates a CfnTemplate$DecimalDefaultValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DecimalDefaultValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -29962,6 +37054,12 @@
   (when-let [data (lookup-entry config id :static-values)]
     (. builder staticValues data))
   (.build builder))
+
+
+(defn cfn-template-decimal-default-values-property-builder
+  ""
+  [id config]
+  (build-cfn-template-decimal-default-values-property-builder (new CfnTemplate$DecimalDefaultValuesProperty$Builder) id config))
 
 
 (defn build-cfn-template-decimal-parameter-declaration-property-builder
@@ -29993,6 +37091,12 @@
   (.build builder))
 
 
+(defn cfn-template-decimal-parameter-declaration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-decimal-parameter-declaration-property-builder (new CfnTemplate$DecimalParameterDeclarationProperty$Builder) id config))
+
+
 (defn build-cfn-template-decimal-places-configuration-property-builder
   "The build-cfn-template-decimal-places-configuration-property-builder function updates a CfnTemplate$DecimalPlacesConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DecimalPlacesConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30008,6 +37112,12 @@
   (when-let [data (lookup-entry config id :decimal-places)]
     (. builder decimalPlaces data))
   (.build builder))
+
+
+(defn cfn-template-decimal-places-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-decimal-places-configuration-property-builder (new CfnTemplate$DecimalPlacesConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-decimal-value-when-unset-configuration-property-builder
@@ -30030,6 +37140,12 @@
   (.build builder))
 
 
+(defn cfn-template-decimal-value-when-unset-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-decimal-value-when-unset-configuration-property-builder (new CfnTemplate$DecimalValueWhenUnsetConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-default-date-time-picker-control-options-property-builder
   "The build-cfn-template-default-date-time-picker-control-options-property-builder function updates a CfnTemplate$DefaultDateTimePickerControlOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DefaultDateTimePickerControlOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30050,6 +37166,12 @@
   (.build builder))
 
 
+(defn cfn-template-default-date-time-picker-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-default-date-time-picker-control-options-property-builder (new CfnTemplate$DefaultDateTimePickerControlOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-default-filter-control-configuration-property-builder
   "The build-cfn-template-default-filter-control-configuration-property-builder function updates a CfnTemplate$DefaultFilterControlConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DefaultFilterControlConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30068,6 +37190,12 @@
   (when-let [data (lookup-entry config id :title)]
     (. builder title data))
   (.build builder))
+
+
+(defn cfn-template-default-filter-control-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-default-filter-control-configuration-property-builder (new CfnTemplate$DefaultFilterControlConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-default-filter-control-options-property-builder
@@ -30105,6 +37233,12 @@
   (.build builder))
 
 
+(defn cfn-template-default-filter-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-default-filter-control-options-property-builder (new CfnTemplate$DefaultFilterControlOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-default-filter-drop-down-control-options-property-builder
   "The build-cfn-template-default-filter-drop-down-control-options-property-builder function updates a CfnTemplate$DefaultFilterDropDownControlOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DefaultFilterDropDownControlOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30126,6 +37260,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-template-default-filter-drop-down-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-default-filter-drop-down-control-options-property-builder (new CfnTemplate$DefaultFilterDropDownControlOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-default-filter-list-control-options-property-builder
@@ -30151,6 +37291,12 @@
   (.build builder))
 
 
+(defn cfn-template-default-filter-list-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-default-filter-list-control-options-property-builder (new CfnTemplate$DefaultFilterListControlOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-default-free-form-layout-configuration-property-builder
   "The build-cfn-template-default-free-form-layout-configuration-property-builder function updates a CfnTemplate$DefaultFreeFormLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DefaultFreeFormLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30168,6 +37314,12 @@
   (.build builder))
 
 
+(defn cfn-template-default-free-form-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-default-free-form-layout-configuration-property-builder (new CfnTemplate$DefaultFreeFormLayoutConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-default-grid-layout-configuration-property-builder
   "The build-cfn-template-default-grid-layout-configuration-property-builder function updates a CfnTemplate$DefaultGridLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DefaultGridLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30183,6 +37335,12 @@
   (when-let [data (lookup-entry config id :canvas-size-options)]
     (. builder canvasSizeOptions data))
   (.build builder))
+
+
+(defn cfn-template-default-grid-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-default-grid-layout-configuration-property-builder (new CfnTemplate$DefaultGridLayoutConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-default-interactive-layout-configuration-property-builder
@@ -30203,6 +37361,12 @@
   (when-let [data (lookup-entry config id :grid)]
     (. builder grid data))
   (.build builder))
+
+
+(defn cfn-template-default-interactive-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-default-interactive-layout-configuration-property-builder (new CfnTemplate$DefaultInteractiveLayoutConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-default-new-sheet-configuration-property-builder
@@ -30228,6 +37392,12 @@
   (.build builder))
 
 
+(defn cfn-template-default-new-sheet-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-default-new-sheet-configuration-property-builder (new CfnTemplate$DefaultNewSheetConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-default-paginated-layout-configuration-property-builder
   "The build-cfn-template-default-paginated-layout-configuration-property-builder function updates a CfnTemplate$DefaultPaginatedLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DefaultPaginatedLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30243,6 +37413,12 @@
   (when-let [data (lookup-entry config id :section-based)]
     (. builder sectionBased data))
   (.build builder))
+
+
+(defn cfn-template-default-paginated-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-default-paginated-layout-configuration-property-builder (new CfnTemplate$DefaultPaginatedLayoutConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-default-relative-date-time-control-options-property-builder
@@ -30262,6 +37438,12 @@
   (.build builder))
 
 
+(defn cfn-template-default-relative-date-time-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-default-relative-date-time-control-options-property-builder (new CfnTemplate$DefaultRelativeDateTimeControlOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-default-section-based-layout-configuration-property-builder
   "The build-cfn-template-default-section-based-layout-configuration-property-builder function updates a CfnTemplate$DefaultSectionBasedLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DefaultSectionBasedLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30277,6 +37459,12 @@
   (when-let [data (lookup-entry config id :canvas-size-options)]
     (. builder canvasSizeOptions data))
   (.build builder))
+
+
+(defn cfn-template-default-section-based-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-default-section-based-layout-configuration-property-builder (new CfnTemplate$DefaultSectionBasedLayoutConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-default-slider-control-options-property-builder
@@ -30308,6 +37496,12 @@
   (.build builder))
 
 
+(defn cfn-template-default-slider-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-default-slider-control-options-property-builder (new CfnTemplate$DefaultSliderControlOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-default-text-area-control-options-property-builder
   "The build-cfn-template-default-text-area-control-options-property-builder function updates a CfnTemplate$DefaultTextAreaControlOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DefaultTextAreaControlOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30328,6 +37522,12 @@
   (.build builder))
 
 
+(defn cfn-template-default-text-area-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-default-text-area-control-options-property-builder (new CfnTemplate$DefaultTextAreaControlOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-default-text-field-control-options-property-builder
   "The build-cfn-template-default-text-field-control-options-property-builder function updates a CfnTemplate$DefaultTextFieldControlOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DefaultTextFieldControlOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30343,6 +37543,12 @@
   (when-let [data (lookup-entry config id :display-options)]
     (. builder displayOptions data))
   (.build builder))
+
+
+(defn cfn-template-default-text-field-control-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-default-text-field-control-options-property-builder (new CfnTemplate$DefaultTextFieldControlOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-destination-parameter-value-configuration-property-builder
@@ -30374,6 +37580,12 @@
   (.build builder))
 
 
+(defn cfn-template-destination-parameter-value-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-destination-parameter-value-configuration-property-builder (new CfnTemplate$DestinationParameterValueConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-dimension-field-property-builder
   "The build-cfn-template-dimension-field-property-builder function updates a CfnTemplate$DimensionFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DimensionFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30397,6 +37609,12 @@
   (.build builder))
 
 
+(defn cfn-template-dimension-field-property-builder
+  ""
+  [id config]
+  (build-cfn-template-dimension-field-property-builder (new CfnTemplate$DimensionFieldProperty$Builder) id config))
+
+
 (defn build-cfn-template-donut-center-options-property-builder
   "The build-cfn-template-donut-center-options-property-builder function updates a CfnTemplate$DonutCenterOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DonutCenterOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30412,6 +37630,12 @@
   (when-let [data (lookup-entry config id :label-visibility)]
     (. builder labelVisibility data))
   (.build builder))
+
+
+(defn cfn-template-donut-center-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-donut-center-options-property-builder (new CfnTemplate$DonutCenterOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-donut-options-property-builder
@@ -30432,6 +37656,12 @@
   (when-let [data (lookup-entry config id :donut-center-options)]
     (. builder donutCenterOptions data))
   (.build builder))
+
+
+(defn cfn-template-donut-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-donut-options-property-builder (new CfnTemplate$DonutOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-drill-down-filter-property-builder
@@ -30457,6 +37687,12 @@
   (.build builder))
 
 
+(defn cfn-template-drill-down-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-template-drill-down-filter-property-builder (new CfnTemplate$DrillDownFilterProperty$Builder) id config))
+
+
 (defn build-cfn-template-drop-down-control-display-options-property-builder
   "The build-cfn-template-drop-down-control-display-options-property-builder function updates a CfnTemplate$DropDownControlDisplayOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$DropDownControlDisplayOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30478,6 +37714,12 @@
   (when-let [data (lookup-entry config id :title-options)]
     (. builder titleOptions data))
   (.build builder))
+
+
+(defn cfn-template-drop-down-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-drop-down-control-display-options-property-builder (new CfnTemplate$DropDownControlDisplayOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-dynamic-default-value-property-builder
@@ -30503,6 +37745,12 @@
   (.build builder))
 
 
+(defn cfn-template-dynamic-default-value-property-builder
+  ""
+  [id config]
+  (build-cfn-template-dynamic-default-value-property-builder (new CfnTemplate$DynamicDefaultValueProperty$Builder) id config))
+
+
 (defn build-cfn-template-empty-visual-property-builder
   "The build-cfn-template-empty-visual-property-builder function updates a CfnTemplate$EmptyVisualProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$EmptyVisualProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30526,6 +37774,12 @@
   (.build builder))
 
 
+(defn cfn-template-empty-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-empty-visual-property-builder (new CfnTemplate$EmptyVisualProperty$Builder) id config))
+
+
 (defn build-cfn-template-entity-property-builder
   "The build-cfn-template-entity-property-builder function updates a CfnTemplate$EntityProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$EntityProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30541,6 +37795,12 @@
   (when-let [data (lookup-entry config id :path)]
     (. builder path data))
   (.build builder))
+
+
+(defn cfn-template-entity-property-builder
+  ""
+  [id config]
+  (build-cfn-template-entity-property-builder (new CfnTemplate$EntityProperty$Builder) id config))
 
 
 (defn build-cfn-template-exclude-period-configuration-property-builder
@@ -30566,6 +37826,12 @@
   (.build builder))
 
 
+(defn cfn-template-exclude-period-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-exclude-period-configuration-property-builder (new CfnTemplate$ExcludePeriodConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-explicit-hierarchy-property-builder
   "The build-cfn-template-explicit-hierarchy-property-builder function updates a CfnTemplate$ExplicitHierarchyProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ExplicitHierarchyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30587,6 +37853,12 @@
   (when-let [data (lookup-entry config id :hierarchy-id)]
     (. builder hierarchyId data))
   (.build builder))
+
+
+(defn cfn-template-explicit-hierarchy-property-builder
+  ""
+  [id config]
+  (build-cfn-template-explicit-hierarchy-property-builder (new CfnTemplate$ExplicitHierarchyProperty$Builder) id config))
 
 
 (defn build-cfn-template-field-based-tooltip-property-builder
@@ -30612,6 +37884,12 @@
   (.build builder))
 
 
+(defn cfn-template-field-based-tooltip-property-builder
+  ""
+  [id config]
+  (build-cfn-template-field-based-tooltip-property-builder (new CfnTemplate$FieldBasedTooltipProperty$Builder) id config))
+
+
 (defn build-cfn-template-field-label-type-property-builder
   "The build-cfn-template-field-label-type-property-builder function updates a CfnTemplate$FieldLabelTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FieldLabelTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30630,6 +37908,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-template-field-label-type-property-builder
+  ""
+  [id config]
+  (build-cfn-template-field-label-type-property-builder (new CfnTemplate$FieldLabelTypeProperty$Builder) id config))
 
 
 (defn build-cfn-template-field-series-item-property-builder
@@ -30655,6 +37939,12 @@
   (.build builder))
 
 
+(defn cfn-template-field-series-item-property-builder
+  ""
+  [id config]
+  (build-cfn-template-field-series-item-property-builder (new CfnTemplate$FieldSeriesItemProperty$Builder) id config))
+
+
 (defn build-cfn-template-field-sort-options-property-builder
   "The build-cfn-template-field-sort-options-property-builder function updates a CfnTemplate$FieldSortOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FieldSortOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30675,6 +37965,12 @@
   (.build builder))
 
 
+(defn cfn-template-field-sort-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-field-sort-options-property-builder (new CfnTemplate$FieldSortOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-field-sort-property-builder
   "The build-cfn-template-field-sort-property-builder function updates a CfnTemplate$FieldSortProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FieldSortProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30693,6 +37989,12 @@
   (when-let [data (lookup-entry config id :field-id)]
     (. builder fieldId data))
   (.build builder))
+
+
+(defn cfn-template-field-sort-property-builder
+  ""
+  [id config]
+  (build-cfn-template-field-sort-property-builder (new CfnTemplate$FieldSortProperty$Builder) id config))
 
 
 (defn build-cfn-template-field-tooltip-item-property-builder
@@ -30718,6 +38020,12 @@
   (.build builder))
 
 
+(defn cfn-template-field-tooltip-item-property-builder
+  ""
+  [id config]
+  (build-cfn-template-field-tooltip-item-property-builder (new CfnTemplate$FieldTooltipItemProperty$Builder) id config))
+
+
 (defn build-cfn-template-filled-map-aggregated-field-wells-property-builder
   "The build-cfn-template-filled-map-aggregated-field-wells-property-builder function updates a CfnTemplate$FilledMapAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FilledMapAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30738,6 +38046,12 @@
   (.build builder))
 
 
+(defn cfn-template-filled-map-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filled-map-aggregated-field-wells-property-builder (new CfnTemplate$FilledMapAggregatedFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-template-filled-map-conditional-formatting-option-property-builder
   "The build-cfn-template-filled-map-conditional-formatting-option-property-builder function updates a CfnTemplate$FilledMapConditionalFormattingOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FilledMapConditionalFormattingOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30755,6 +38069,12 @@
   (.build builder))
 
 
+(defn cfn-template-filled-map-conditional-formatting-option-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filled-map-conditional-formatting-option-property-builder (new CfnTemplate$FilledMapConditionalFormattingOptionProperty$Builder) id config))
+
+
 (defn build-cfn-template-filled-map-conditional-formatting-property-builder
   "The build-cfn-template-filled-map-conditional-formatting-property-builder function updates a CfnTemplate$FilledMapConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FilledMapConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30770,6 +38090,12 @@
   (when-let [data (lookup-entry config id :conditional-formatting-options)]
     (. builder conditionalFormattingOptions data))
   (.build builder))
+
+
+(defn cfn-template-filled-map-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filled-map-conditional-formatting-property-builder (new CfnTemplate$FilledMapConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-template-filled-map-configuration-property-builder
@@ -30804,6 +38130,12 @@
   (.build builder))
 
 
+(defn cfn-template-filled-map-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filled-map-configuration-property-builder (new CfnTemplate$FilledMapConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-filled-map-field-wells-property-builder
   "The build-cfn-template-filled-map-field-wells-property-builder function updates a CfnTemplate$FilledMapFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FilledMapFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30819,6 +38151,12 @@
   (when-let [data (lookup-entry config id :filled-map-aggregated-field-wells)]
     (. builder filledMapAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-template-filled-map-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filled-map-field-wells-property-builder (new CfnTemplate$FilledMapFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-filled-map-shape-conditional-formatting-property-builder
@@ -30841,6 +38179,12 @@
   (.build builder))
 
 
+(defn cfn-template-filled-map-shape-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filled-map-shape-conditional-formatting-property-builder (new CfnTemplate$FilledMapShapeConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-template-filled-map-sort-configuration-property-builder
   "The build-cfn-template-filled-map-sort-configuration-property-builder function updates a CfnTemplate$FilledMapSortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FilledMapSortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30856,6 +38200,12 @@
   (when-let [data (lookup-entry config id :category-sort)]
     (. builder categorySort data))
   (.build builder))
+
+
+(defn cfn-template-filled-map-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filled-map-sort-configuration-property-builder (new CfnTemplate$FilledMapSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-filled-map-visual-property-builder
@@ -30891,6 +38241,12 @@
   (when-let [data (lookup-entry config id :visual-id)]
     (. builder visualId data))
   (.build builder))
+
+
+(defn cfn-template-filled-map-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filled-map-visual-property-builder (new CfnTemplate$FilledMapVisualProperty$Builder) id config))
 
 
 (defn build-cfn-template-filter-control-property-builder
@@ -30931,6 +38287,12 @@
   (.build builder))
 
 
+(defn cfn-template-filter-control-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filter-control-property-builder (new CfnTemplate$FilterControlProperty$Builder) id config))
+
+
 (defn build-cfn-template-filter-cross-sheet-control-property-builder
   "The build-cfn-template-filter-cross-sheet-control-property-builder function updates a CfnTemplate$FilterCrossSheetControlProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FilterCrossSheetControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -30952,6 +38314,12 @@
   (when-let [data (lookup-entry config id :source-filter-id)]
     (. builder sourceFilterId data))
   (.build builder))
+
+
+(defn cfn-template-filter-cross-sheet-control-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filter-cross-sheet-control-property-builder (new CfnTemplate$FilterCrossSheetControlProperty$Builder) id config))
 
 
 (defn build-cfn-template-filter-date-time-picker-control-property-builder
@@ -30981,6 +38349,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-template-filter-date-time-picker-control-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filter-date-time-picker-control-property-builder (new CfnTemplate$FilterDateTimePickerControlProperty$Builder) id config))
 
 
 (defn build-cfn-template-filter-drop-down-control-property-builder
@@ -31018,6 +38392,12 @@
   (.build builder))
 
 
+(defn cfn-template-filter-drop-down-control-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filter-drop-down-control-property-builder (new CfnTemplate$FilterDropDownControlProperty$Builder) id config))
+
+
 (defn build-cfn-template-filter-group-property-builder
   "The build-cfn-template-filter-group-property-builder function updates a CfnTemplate$FilterGroupProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FilterGroupProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31047,6 +38427,12 @@
   (.build builder))
 
 
+(defn cfn-template-filter-group-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filter-group-property-builder (new CfnTemplate$FilterGroupProperty$Builder) id config))
+
+
 (defn build-cfn-template-filter-list-configuration-property-builder
   "The build-cfn-template-filter-list-configuration-property-builder function updates a CfnTemplate$FilterListConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FilterListConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31071,6 +38457,12 @@
   (when-let [data (lookup-entry config id :select-all-options)]
     (. builder selectAllOptions data))
   (.build builder))
+
+
+(defn cfn-template-filter-list-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filter-list-configuration-property-builder (new CfnTemplate$FilterListConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-filter-list-control-property-builder
@@ -31108,6 +38500,12 @@
   (.build builder))
 
 
+(defn cfn-template-filter-list-control-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filter-list-control-property-builder (new CfnTemplate$FilterListControlProperty$Builder) id config))
+
+
 (defn build-cfn-template-filter-operation-selected-fields-configuration-property-builder
   "The build-cfn-template-filter-operation-selected-fields-configuration-property-builder function updates a CfnTemplate$FilterOperationSelectedFieldsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FilterOperationSelectedFieldsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31131,6 +38529,12 @@
   (.build builder))
 
 
+(defn cfn-template-filter-operation-selected-fields-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filter-operation-selected-fields-configuration-property-builder (new CfnTemplate$FilterOperationSelectedFieldsConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-filter-operation-target-visuals-configuration-property-builder
   "The build-cfn-template-filter-operation-target-visuals-configuration-property-builder function updates a CfnTemplate$FilterOperationTargetVisualsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FilterOperationTargetVisualsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31146,6 +38550,12 @@
   (when-let [data (lookup-entry config id :same-sheet-target-visual-configuration)]
     (. builder sameSheetTargetVisualConfiguration data))
   (.build builder))
+
+
+(defn cfn-template-filter-operation-target-visuals-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filter-operation-target-visuals-configuration-property-builder (new CfnTemplate$FilterOperationTargetVisualsConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-filter-property-builder
@@ -31183,6 +38593,12 @@
   (.build builder))
 
 
+(defn cfn-template-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filter-property-builder (new CfnTemplate$FilterProperty$Builder) id config))
+
+
 (defn build-cfn-template-filter-relative-date-time-control-property-builder
   "The build-cfn-template-filter-relative-date-time-control-property-builder function updates a CfnTemplate$FilterRelativeDateTimeControlProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FilterRelativeDateTimeControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31209,6 +38625,12 @@
   (.build builder))
 
 
+(defn cfn-template-filter-relative-date-time-control-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filter-relative-date-time-control-property-builder (new CfnTemplate$FilterRelativeDateTimeControlProperty$Builder) id config))
+
+
 (defn build-cfn-template-filter-scope-configuration-property-builder
   "The build-cfn-template-filter-scope-configuration-property-builder function updates a CfnTemplate$FilterScopeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FilterScopeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31229,6 +38651,12 @@
   (.build builder))
 
 
+(defn cfn-template-filter-scope-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filter-scope-configuration-property-builder (new CfnTemplate$FilterScopeConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-filter-selectable-values-property-builder
   "The build-cfn-template-filter-selectable-values-property-builder function updates a CfnTemplate$FilterSelectableValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FilterSelectableValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31244,6 +38672,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-template-filter-selectable-values-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filter-selectable-values-property-builder (new CfnTemplate$FilterSelectableValuesProperty$Builder) id config))
 
 
 (defn build-cfn-template-filter-slider-control-property-builder
@@ -31284,6 +38718,12 @@
   (.build builder))
 
 
+(defn cfn-template-filter-slider-control-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filter-slider-control-property-builder (new CfnTemplate$FilterSliderControlProperty$Builder) id config))
+
+
 (defn build-cfn-template-filter-text-area-control-property-builder
   "The build-cfn-template-filter-text-area-control-property-builder function updates a CfnTemplate$FilterTextAreaControlProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FilterTextAreaControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31313,6 +38753,12 @@
   (.build builder))
 
 
+(defn cfn-template-filter-text-area-control-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filter-text-area-control-property-builder (new CfnTemplate$FilterTextAreaControlProperty$Builder) id config))
+
+
 (defn build-cfn-template-filter-text-field-control-property-builder
   "The build-cfn-template-filter-text-field-control-property-builder function updates a CfnTemplate$FilterTextFieldControlProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FilterTextFieldControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31337,6 +38783,12 @@
   (when-let [data (lookup-entry config id :title)]
     (. builder title data))
   (.build builder))
+
+
+(defn cfn-template-filter-text-field-control-property-builder
+  ""
+  [id config]
+  (build-cfn-template-filter-text-field-control-property-builder (new CfnTemplate$FilterTextFieldControlProperty$Builder) id config))
 
 
 (defn build-cfn-template-font-configuration-property-builder
@@ -31368,6 +38820,12 @@
   (.build builder))
 
 
+(defn cfn-template-font-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-font-configuration-property-builder (new CfnTemplate$FontConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-font-size-property-builder
   "The build-cfn-template-font-size-property-builder function updates a CfnTemplate$FontSizeProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FontSizeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31385,6 +38843,12 @@
   (.build builder))
 
 
+(defn cfn-template-font-size-property-builder
+  ""
+  [id config]
+  (build-cfn-template-font-size-property-builder (new CfnTemplate$FontSizeProperty$Builder) id config))
+
+
 (defn build-cfn-template-font-weight-property-builder
   "The build-cfn-template-font-weight-property-builder function updates a CfnTemplate$FontWeightProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FontWeightProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31400,6 +38864,12 @@
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-template-font-weight-property-builder
+  ""
+  [id config]
+  (build-cfn-template-font-weight-property-builder (new CfnTemplate$FontWeightProperty$Builder) id config))
 
 
 (defn build-cfn-template-forecast-computation-property-builder
@@ -31449,6 +38919,12 @@
   (.build builder))
 
 
+(defn cfn-template-forecast-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-template-forecast-computation-property-builder (new CfnTemplate$ForecastComputationProperty$Builder) id config))
+
+
 (defn build-cfn-template-forecast-configuration-property-builder
   "The build-cfn-template-forecast-configuration-property-builder function updates a CfnTemplate$ForecastConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ForecastConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31469,6 +38945,12 @@
   (.build builder))
 
 
+(defn cfn-template-forecast-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-forecast-configuration-property-builder (new CfnTemplate$ForecastConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-forecast-scenario-property-builder
   "The build-cfn-template-forecast-scenario-property-builder function updates a CfnTemplate$ForecastScenarioProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ForecastScenarioProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31487,6 +38969,12 @@
   (when-let [data (lookup-entry config id :what-if-range-scenario)]
     (. builder whatIfRangeScenario data))
   (.build builder))
+
+
+(defn cfn-template-forecast-scenario-property-builder
+  ""
+  [id config]
+  (build-cfn-template-forecast-scenario-property-builder (new CfnTemplate$ForecastScenarioProperty$Builder) id config))
 
 
 (defn build-cfn-template-format-configuration-property-builder
@@ -31512,6 +39000,12 @@
   (.build builder))
 
 
+(defn cfn-template-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-format-configuration-property-builder (new CfnTemplate$FormatConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-free-form-layout-canvas-size-options-property-builder
   "The build-cfn-template-free-form-layout-canvas-size-options-property-builder function updates a CfnTemplate$FreeFormLayoutCanvasSizeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FreeFormLayoutCanvasSizeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31527,6 +39021,12 @@
   (when-let [data (lookup-entry config id :screen-canvas-size-options)]
     (. builder screenCanvasSizeOptions data))
   (.build builder))
+
+
+(defn cfn-template-free-form-layout-canvas-size-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-free-form-layout-canvas-size-options-property-builder (new CfnTemplate$FreeFormLayoutCanvasSizeOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-free-form-layout-configuration-property-builder
@@ -31549,6 +39049,12 @@
   (.build builder))
 
 
+(defn cfn-template-free-form-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-free-form-layout-configuration-property-builder (new CfnTemplate$FreeFormLayoutConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-free-form-layout-element-background-style-property-builder
   "The build-cfn-template-free-form-layout-element-background-style-property-builder function updates a CfnTemplate$FreeFormLayoutElementBackgroundStyleProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FreeFormLayoutElementBackgroundStyleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31569,6 +39075,12 @@
   (.build builder))
 
 
+(defn cfn-template-free-form-layout-element-background-style-property-builder
+  ""
+  [id config]
+  (build-cfn-template-free-form-layout-element-background-style-property-builder (new CfnTemplate$FreeFormLayoutElementBackgroundStyleProperty$Builder) id config))
+
+
 (defn build-cfn-template-free-form-layout-element-border-style-property-builder
   "The build-cfn-template-free-form-layout-element-border-style-property-builder function updates a CfnTemplate$FreeFormLayoutElementBorderStyleProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FreeFormLayoutElementBorderStyleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31587,6 +39099,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-template-free-form-layout-element-border-style-property-builder
+  ""
+  [id config]
+  (build-cfn-template-free-form-layout-element-border-style-property-builder (new CfnTemplate$FreeFormLayoutElementBorderStyleProperty$Builder) id config))
 
 
 (defn build-cfn-template-free-form-layout-element-property-builder
@@ -31639,6 +39157,12 @@
   (.build builder))
 
 
+(defn cfn-template-free-form-layout-element-property-builder
+  ""
+  [id config]
+  (build-cfn-template-free-form-layout-element-property-builder (new CfnTemplate$FreeFormLayoutElementProperty$Builder) id config))
+
+
 (defn build-cfn-template-free-form-layout-screen-canvas-size-options-property-builder
   "The build-cfn-template-free-form-layout-screen-canvas-size-options-property-builder function updates a CfnTemplate$FreeFormLayoutScreenCanvasSizeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FreeFormLayoutScreenCanvasSizeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31656,6 +39180,12 @@
   (.build builder))
 
 
+(defn cfn-template-free-form-layout-screen-canvas-size-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-free-form-layout-screen-canvas-size-options-property-builder (new CfnTemplate$FreeFormLayoutScreenCanvasSizeOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-free-form-section-layout-configuration-property-builder
   "The build-cfn-template-free-form-section-layout-configuration-property-builder function updates a CfnTemplate$FreeFormSectionLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FreeFormSectionLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31671,6 +39201,12 @@
   (when-let [data (lookup-entry config id :elements)]
     (. builder elements data))
   (.build builder))
+
+
+(defn cfn-template-free-form-section-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-free-form-section-layout-configuration-property-builder (new CfnTemplate$FreeFormSectionLayoutConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-funnel-chart-aggregated-field-wells-property-builder
@@ -31691,6 +39227,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-template-funnel-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-funnel-chart-aggregated-field-wells-property-builder (new CfnTemplate$FunnelChartAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-funnel-chart-configuration-property-builder
@@ -31728,6 +39270,12 @@
   (.build builder))
 
 
+(defn cfn-template-funnel-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-funnel-chart-configuration-property-builder (new CfnTemplate$FunnelChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-funnel-chart-data-label-options-property-builder
   "The build-cfn-template-funnel-chart-data-label-options-property-builder function updates a CfnTemplate$FunnelChartDataLabelOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FunnelChartDataLabelOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31763,6 +39311,12 @@
   (.build builder))
 
 
+(defn cfn-template-funnel-chart-data-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-funnel-chart-data-label-options-property-builder (new CfnTemplate$FunnelChartDataLabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-funnel-chart-field-wells-property-builder
   "The build-cfn-template-funnel-chart-field-wells-property-builder function updates a CfnTemplate$FunnelChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$FunnelChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31778,6 +39332,12 @@
   (when-let [data (lookup-entry config id :funnel-chart-aggregated-field-wells)]
     (. builder funnelChartAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-template-funnel-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-funnel-chart-field-wells-property-builder (new CfnTemplate$FunnelChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-funnel-chart-sort-configuration-property-builder
@@ -31798,6 +39358,12 @@
   (when-let [data (lookup-entry config id :category-sort)]
     (. builder categorySort data))
   (.build builder))
+
+
+(defn cfn-template-funnel-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-funnel-chart-sort-configuration-property-builder (new CfnTemplate$FunnelChartSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-funnel-chart-visual-property-builder
@@ -31832,6 +39398,12 @@
   (.build builder))
 
 
+(defn cfn-template-funnel-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-funnel-chart-visual-property-builder (new CfnTemplate$FunnelChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-template-gauge-chart-arc-conditional-formatting-property-builder
   "The build-cfn-template-gauge-chart-arc-conditional-formatting-property-builder function updates a CfnTemplate$GaugeChartArcConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$GaugeChartArcConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31847,6 +39419,12 @@
   (when-let [data (lookup-entry config id :foreground-color)]
     (. builder foregroundColor data))
   (.build builder))
+
+
+(defn cfn-template-gauge-chart-arc-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-template-gauge-chart-arc-conditional-formatting-property-builder (new CfnTemplate$GaugeChartArcConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-template-gauge-chart-conditional-formatting-option-property-builder
@@ -31869,6 +39447,12 @@
   (.build builder))
 
 
+(defn cfn-template-gauge-chart-conditional-formatting-option-property-builder
+  ""
+  [id config]
+  (build-cfn-template-gauge-chart-conditional-formatting-option-property-builder (new CfnTemplate$GaugeChartConditionalFormattingOptionProperty$Builder) id config))
+
+
 (defn build-cfn-template-gauge-chart-conditional-formatting-property-builder
   "The build-cfn-template-gauge-chart-conditional-formatting-property-builder function updates a CfnTemplate$GaugeChartConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$GaugeChartConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31884,6 +39468,12 @@
   (when-let [data (lookup-entry config id :conditional-formatting-options)]
     (. builder conditionalFormattingOptions data))
   (.build builder))
+
+
+(defn cfn-template-gauge-chart-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-template-gauge-chart-conditional-formatting-property-builder (new CfnTemplate$GaugeChartConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-template-gauge-chart-configuration-property-builder
@@ -31915,6 +39505,12 @@
   (.build builder))
 
 
+(defn cfn-template-gauge-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-gauge-chart-configuration-property-builder (new CfnTemplate$GaugeChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-gauge-chart-field-wells-property-builder
   "The build-cfn-template-gauge-chart-field-wells-property-builder function updates a CfnTemplate$GaugeChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$GaugeChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31933,6 +39529,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-template-gauge-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-gauge-chart-field-wells-property-builder (new CfnTemplate$GaugeChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-gauge-chart-options-property-builder
@@ -31964,6 +39566,12 @@
   (.build builder))
 
 
+(defn cfn-template-gauge-chart-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-gauge-chart-options-property-builder (new CfnTemplate$GaugeChartOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-gauge-chart-primary-value-conditional-formatting-property-builder
   "The build-cfn-template-gauge-chart-primary-value-conditional-formatting-property-builder function updates a CfnTemplate$GaugeChartPrimaryValueConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$GaugeChartPrimaryValueConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -31982,6 +39590,12 @@
   (when-let [data (lookup-entry config id :text-color)]
     (. builder textColor data))
   (.build builder))
+
+
+(defn cfn-template-gauge-chart-primary-value-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-template-gauge-chart-primary-value-conditional-formatting-property-builder (new CfnTemplate$GaugeChartPrimaryValueConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-template-gauge-chart-visual-property-builder
@@ -32016,6 +39630,12 @@
   (.build builder))
 
 
+(defn cfn-template-gauge-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-gauge-chart-visual-property-builder (new CfnTemplate$GaugeChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-template-geospatial-coordinate-bounds-property-builder
   "The build-cfn-template-geospatial-coordinate-bounds-property-builder function updates a CfnTemplate$GeospatialCoordinateBoundsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$GeospatialCoordinateBoundsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32042,6 +39662,12 @@
   (.build builder))
 
 
+(defn cfn-template-geospatial-coordinate-bounds-property-builder
+  ""
+  [id config]
+  (build-cfn-template-geospatial-coordinate-bounds-property-builder (new CfnTemplate$GeospatialCoordinateBoundsProperty$Builder) id config))
+
+
 (defn build-cfn-template-geospatial-heatmap-color-scale-property-builder
   "The build-cfn-template-geospatial-heatmap-color-scale-property-builder function updates a CfnTemplate$GeospatialHeatmapColorScaleProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$GeospatialHeatmapColorScaleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32057,6 +39683,12 @@
   (when-let [data (lookup-entry config id :colors)]
     (. builder colors data))
   (.build builder))
+
+
+(defn cfn-template-geospatial-heatmap-color-scale-property-builder
+  ""
+  [id config]
+  (build-cfn-template-geospatial-heatmap-color-scale-property-builder (new CfnTemplate$GeospatialHeatmapColorScaleProperty$Builder) id config))
 
 
 (defn build-cfn-template-geospatial-heatmap-configuration-property-builder
@@ -32076,6 +39708,12 @@
   (.build builder))
 
 
+(defn cfn-template-geospatial-heatmap-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-geospatial-heatmap-configuration-property-builder (new CfnTemplate$GeospatialHeatmapConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-geospatial-heatmap-data-color-property-builder
   "The build-cfn-template-geospatial-heatmap-data-color-property-builder function updates a CfnTemplate$GeospatialHeatmapDataColorProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$GeospatialHeatmapDataColorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32091,6 +39729,12 @@
   (when-let [data (lookup-entry config id :color)]
     (. builder color data))
   (.build builder))
+
+
+(defn cfn-template-geospatial-heatmap-data-color-property-builder
+  ""
+  [id config]
+  (build-cfn-template-geospatial-heatmap-data-color-property-builder (new CfnTemplate$GeospatialHeatmapDataColorProperty$Builder) id config))
 
 
 (defn build-cfn-template-geospatial-map-aggregated-field-wells-property-builder
@@ -32114,6 +39758,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-template-geospatial-map-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-geospatial-map-aggregated-field-wells-property-builder (new CfnTemplate$GeospatialMapAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-geospatial-map-configuration-property-builder
@@ -32151,6 +39801,12 @@
   (.build builder))
 
 
+(defn cfn-template-geospatial-map-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-geospatial-map-configuration-property-builder (new CfnTemplate$GeospatialMapConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-geospatial-map-field-wells-property-builder
   "The build-cfn-template-geospatial-map-field-wells-property-builder function updates a CfnTemplate$GeospatialMapFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$GeospatialMapFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32168,6 +39824,12 @@
   (.build builder))
 
 
+(defn cfn-template-geospatial-map-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-geospatial-map-field-wells-property-builder (new CfnTemplate$GeospatialMapFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-template-geospatial-map-style-options-property-builder
   "The build-cfn-template-geospatial-map-style-options-property-builder function updates a CfnTemplate$GeospatialMapStyleOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$GeospatialMapStyleOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32183,6 +39845,12 @@
   (when-let [data (lookup-entry config id :base-map-style)]
     (. builder baseMapStyle data))
   (.build builder))
+
+
+(defn cfn-template-geospatial-map-style-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-geospatial-map-style-options-property-builder (new CfnTemplate$GeospatialMapStyleOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-geospatial-map-visual-property-builder
@@ -32217,6 +39885,12 @@
   (.build builder))
 
 
+(defn cfn-template-geospatial-map-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-geospatial-map-visual-property-builder (new CfnTemplate$GeospatialMapVisualProperty$Builder) id config))
+
+
 (defn build-cfn-template-geospatial-point-style-options-property-builder
   "The build-cfn-template-geospatial-point-style-options-property-builder function updates a CfnTemplate$GeospatialPointStyleOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$GeospatialPointStyleOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32240,6 +39914,12 @@
   (.build builder))
 
 
+(defn cfn-template-geospatial-point-style-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-geospatial-point-style-options-property-builder (new CfnTemplate$GeospatialPointStyleOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-geospatial-window-options-property-builder
   "The build-cfn-template-geospatial-window-options-property-builder function updates a CfnTemplate$GeospatialWindowOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$GeospatialWindowOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32258,6 +39938,12 @@
   (when-let [data (lookup-entry config id :map-zoom-mode)]
     (. builder mapZoomMode data))
   (.build builder))
+
+
+(defn cfn-template-geospatial-window-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-geospatial-window-options-property-builder (new CfnTemplate$GeospatialWindowOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-global-table-border-options-property-builder
@@ -32280,6 +39966,12 @@
   (.build builder))
 
 
+(defn cfn-template-global-table-border-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-global-table-border-options-property-builder (new CfnTemplate$GlobalTableBorderOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-gradient-color-property-builder
   "The build-cfn-template-gradient-color-property-builder function updates a CfnTemplate$GradientColorProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$GradientColorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32295,6 +39987,12 @@
   (when-let [data (lookup-entry config id :stops)]
     (. builder stops data))
   (.build builder))
+
+
+(defn cfn-template-gradient-color-property-builder
+  ""
+  [id config]
+  (build-cfn-template-gradient-color-property-builder (new CfnTemplate$GradientColorProperty$Builder) id config))
 
 
 (defn build-cfn-template-gradient-stop-property-builder
@@ -32320,6 +40018,12 @@
   (.build builder))
 
 
+(defn cfn-template-gradient-stop-property-builder
+  ""
+  [id config]
+  (build-cfn-template-gradient-stop-property-builder (new CfnTemplate$GradientStopProperty$Builder) id config))
+
+
 (defn build-cfn-template-grid-layout-canvas-size-options-property-builder
   "The build-cfn-template-grid-layout-canvas-size-options-property-builder function updates a CfnTemplate$GridLayoutCanvasSizeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$GridLayoutCanvasSizeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32335,6 +40039,12 @@
   (when-let [data (lookup-entry config id :screen-canvas-size-options)]
     (. builder screenCanvasSizeOptions data))
   (.build builder))
+
+
+(defn cfn-template-grid-layout-canvas-size-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-grid-layout-canvas-size-options-property-builder (new CfnTemplate$GridLayoutCanvasSizeOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-grid-layout-configuration-property-builder
@@ -32355,6 +40065,12 @@
   (when-let [data (lookup-entry config id :elements)]
     (. builder elements data))
   (.build builder))
+
+
+(defn cfn-template-grid-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-grid-layout-configuration-property-builder (new CfnTemplate$GridLayoutConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-grid-layout-element-property-builder
@@ -32389,6 +40105,12 @@
   (.build builder))
 
 
+(defn cfn-template-grid-layout-element-property-builder
+  ""
+  [id config]
+  (build-cfn-template-grid-layout-element-property-builder (new CfnTemplate$GridLayoutElementProperty$Builder) id config))
+
+
 (defn build-cfn-template-grid-layout-screen-canvas-size-options-property-builder
   "The build-cfn-template-grid-layout-screen-canvas-size-options-property-builder function updates a CfnTemplate$GridLayoutScreenCanvasSizeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$GridLayoutScreenCanvasSizeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32407,6 +40129,12 @@
   (when-let [data (lookup-entry config id :resize-option)]
     (. builder resizeOption data))
   (.build builder))
+
+
+(defn cfn-template-grid-layout-screen-canvas-size-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-grid-layout-screen-canvas-size-options-property-builder (new CfnTemplate$GridLayoutScreenCanvasSizeOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-growth-rate-computation-property-builder
@@ -32438,6 +40166,12 @@
   (.build builder))
 
 
+(defn cfn-template-growth-rate-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-template-growth-rate-computation-property-builder (new CfnTemplate$GrowthRateComputationProperty$Builder) id config))
+
+
 (defn build-cfn-template-header-footer-section-configuration-property-builder
   "The build-cfn-template-header-footer-section-configuration-property-builder function updates a CfnTemplate$HeaderFooterSectionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$HeaderFooterSectionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32461,6 +40195,12 @@
   (.build builder))
 
 
+(defn cfn-template-header-footer-section-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-header-footer-section-configuration-property-builder (new CfnTemplate$HeaderFooterSectionConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-heat-map-aggregated-field-wells-property-builder
   "The build-cfn-template-heat-map-aggregated-field-wells-property-builder function updates a CfnTemplate$HeatMapAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$HeatMapAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32482,6 +40222,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-template-heat-map-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-heat-map-aggregated-field-wells-property-builder (new CfnTemplate$HeatMapAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-heat-map-configuration-property-builder
@@ -32522,6 +40268,12 @@
   (.build builder))
 
 
+(defn cfn-template-heat-map-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-heat-map-configuration-property-builder (new CfnTemplate$HeatMapConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-heat-map-field-wells-property-builder
   "The build-cfn-template-heat-map-field-wells-property-builder function updates a CfnTemplate$HeatMapFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$HeatMapFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32537,6 +40289,12 @@
   (when-let [data (lookup-entry config id :heat-map-aggregated-field-wells)]
     (. builder heatMapAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-template-heat-map-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-heat-map-field-wells-property-builder (new CfnTemplate$HeatMapFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-heat-map-sort-configuration-property-builder
@@ -32563,6 +40321,12 @@
   (when-let [data (lookup-entry config id :heat-map-row-sort)]
     (. builder heatMapRowSort data))
   (.build builder))
+
+
+(defn cfn-template-heat-map-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-heat-map-sort-configuration-property-builder (new CfnTemplate$HeatMapSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-heat-map-visual-property-builder
@@ -32597,6 +40361,12 @@
   (.build builder))
 
 
+(defn cfn-template-heat-map-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-heat-map-visual-property-builder (new CfnTemplate$HeatMapVisualProperty$Builder) id config))
+
+
 (defn build-cfn-template-histogram-aggregated-field-wells-property-builder
   "The build-cfn-template-histogram-aggregated-field-wells-property-builder function updates a CfnTemplate$HistogramAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$HistogramAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32612,6 +40382,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-template-histogram-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-histogram-aggregated-field-wells-property-builder (new CfnTemplate$HistogramAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-histogram-bin-options-property-builder
@@ -32638,6 +40414,12 @@
   (when-let [data (lookup-entry config id :start-value)]
     (. builder startValue data))
   (.build builder))
+
+
+(defn cfn-template-histogram-bin-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-histogram-bin-options-property-builder (new CfnTemplate$HistogramBinOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-histogram-configuration-property-builder
@@ -32678,6 +40460,12 @@
   (.build builder))
 
 
+(defn cfn-template-histogram-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-histogram-configuration-property-builder (new CfnTemplate$HistogramConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-histogram-field-wells-property-builder
   "The build-cfn-template-histogram-field-wells-property-builder function updates a CfnTemplate$HistogramFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$HistogramFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32693,6 +40481,12 @@
   (when-let [data (lookup-entry config id :histogram-aggregated-field-wells)]
     (. builder histogramAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-template-histogram-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-histogram-field-wells-property-builder (new CfnTemplate$HistogramFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-histogram-visual-property-builder
@@ -32724,6 +40518,12 @@
   (.build builder))
 
 
+(defn cfn-template-histogram-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-histogram-visual-property-builder (new CfnTemplate$HistogramVisualProperty$Builder) id config))
+
+
 (defn build-cfn-template-insight-configuration-property-builder
   "The build-cfn-template-insight-configuration-property-builder function updates a CfnTemplate$InsightConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$InsightConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32742,6 +40542,12 @@
   (when-let [data (lookup-entry config id :custom-narrative)]
     (. builder customNarrative data))
   (.build builder))
+
+
+(defn cfn-template-insight-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-insight-configuration-property-builder (new CfnTemplate$InsightConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-insight-visual-property-builder
@@ -32776,6 +40582,12 @@
   (.build builder))
 
 
+(defn cfn-template-insight-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-insight-visual-property-builder (new CfnTemplate$InsightVisualProperty$Builder) id config))
+
+
 (defn build-cfn-template-integer-default-values-property-builder
   "The build-cfn-template-integer-default-values-property-builder function updates a CfnTemplate$IntegerDefaultValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$IntegerDefaultValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32794,6 +40606,12 @@
   (when-let [data (lookup-entry config id :static-values)]
     (. builder staticValues data))
   (.build builder))
+
+
+(defn cfn-template-integer-default-values-property-builder
+  ""
+  [id config]
+  (build-cfn-template-integer-default-values-property-builder (new CfnTemplate$IntegerDefaultValuesProperty$Builder) id config))
 
 
 (defn build-cfn-template-integer-parameter-declaration-property-builder
@@ -32825,6 +40643,12 @@
   (.build builder))
 
 
+(defn cfn-template-integer-parameter-declaration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-integer-parameter-declaration-property-builder (new CfnTemplate$IntegerParameterDeclarationProperty$Builder) id config))
+
+
 (defn build-cfn-template-integer-value-when-unset-configuration-property-builder
   "The build-cfn-template-integer-value-when-unset-configuration-property-builder function updates a CfnTemplate$IntegerValueWhenUnsetConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$IntegerValueWhenUnsetConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32843,6 +40667,12 @@
   (when-let [data (lookup-entry config id :value-when-unset-option)]
     (. builder valueWhenUnsetOption data))
   (.build builder))
+
+
+(defn cfn-template-integer-value-when-unset-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-integer-value-when-unset-configuration-property-builder (new CfnTemplate$IntegerValueWhenUnsetConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-items-limit-configuration-property-builder
@@ -32865,6 +40695,12 @@
   (.build builder))
 
 
+(defn cfn-template-items-limit-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-items-limit-configuration-property-builder (new CfnTemplate$ItemsLimitConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-kpi-actual-value-conditional-formatting-property-builder
   "The build-cfn-template-kpi-actual-value-conditional-formatting-property-builder function updates a CfnTemplate$KPIActualValueConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$KPIActualValueConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32885,6 +40721,12 @@
   (.build builder))
 
 
+(defn cfn-template-kpi-actual-value-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-template-kpi-actual-value-conditional-formatting-property-builder (new CfnTemplate$KPIActualValueConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-template-kpi-comparison-value-conditional-formatting-property-builder
   "The build-cfn-template-kpi-comparison-value-conditional-formatting-property-builder function updates a CfnTemplate$KPIComparisonValueConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$KPIComparisonValueConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32903,6 +40745,12 @@
   (when-let [data (lookup-entry config id :text-color)]
     (. builder textColor data))
   (.build builder))
+
+
+(defn cfn-template-kpi-comparison-value-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-template-kpi-comparison-value-conditional-formatting-property-builder (new CfnTemplate$KPIComparisonValueConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-template-kpi-conditional-formatting-option-property-builder
@@ -32931,6 +40779,12 @@
   (.build builder))
 
 
+(defn cfn-template-kpi-conditional-formatting-option-property-builder
+  ""
+  [id config]
+  (build-cfn-template-kpi-conditional-formatting-option-property-builder (new CfnTemplate$KPIConditionalFormattingOptionProperty$Builder) id config))
+
+
 (defn build-cfn-template-kpi-conditional-formatting-property-builder
   "The build-cfn-template-kpi-conditional-formatting-property-builder function updates a CfnTemplate$KPIConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$KPIConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32946,6 +40800,12 @@
   (when-let [data (lookup-entry config id :conditional-formatting-options)]
     (. builder conditionalFormattingOptions data))
   (.build builder))
+
+
+(defn cfn-template-kpi-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-template-kpi-conditional-formatting-property-builder (new CfnTemplate$KPIConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-template-kpi-configuration-property-builder
@@ -32971,6 +40831,12 @@
   (.build builder))
 
 
+(defn cfn-template-kpi-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-kpi-configuration-property-builder (new CfnTemplate$KPIConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-kpi-field-wells-property-builder
   "The build-cfn-template-kpi-field-wells-property-builder function updates a CfnTemplate$KPIFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$KPIFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -32992,6 +40858,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-template-kpi-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-kpi-field-wells-property-builder (new CfnTemplate$KPIFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-kpi-options-property-builder
@@ -33035,6 +40907,12 @@
   (.build builder))
 
 
+(defn cfn-template-kpi-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-kpi-options-property-builder (new CfnTemplate$KPIOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-kpi-primary-value-conditional-formatting-property-builder
   "The build-cfn-template-kpi-primary-value-conditional-formatting-property-builder function updates a CfnTemplate$KPIPrimaryValueConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$KPIPrimaryValueConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33055,6 +40933,12 @@
   (.build builder))
 
 
+(defn cfn-template-kpi-primary-value-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-template-kpi-primary-value-conditional-formatting-property-builder (new CfnTemplate$KPIPrimaryValueConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-template-kpi-progress-bar-conditional-formatting-property-builder
   "The build-cfn-template-kpi-progress-bar-conditional-formatting-property-builder function updates a CfnTemplate$KPIProgressBarConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$KPIProgressBarConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33072,6 +40956,12 @@
   (.build builder))
 
 
+(defn cfn-template-kpi-progress-bar-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-template-kpi-progress-bar-conditional-formatting-property-builder (new CfnTemplate$KPIProgressBarConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-template-kpi-sort-configuration-property-builder
   "The build-cfn-template-kpi-sort-configuration-property-builder function updates a CfnTemplate$KPISortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$KPISortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33087,6 +40977,12 @@
   (when-let [data (lookup-entry config id :trend-group-sort)]
     (. builder trendGroupSort data))
   (.build builder))
+
+
+(defn cfn-template-kpi-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-kpi-sort-configuration-property-builder (new CfnTemplate$KPISortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-kpi-sparkline-options-property-builder
@@ -33115,6 +41011,12 @@
   (.build builder))
 
 
+(defn cfn-template-kpi-sparkline-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-kpi-sparkline-options-property-builder (new CfnTemplate$KPISparklineOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-kpi-visual-layout-options-property-builder
   "The build-cfn-template-kpi-visual-layout-options-property-builder function updates a CfnTemplate$KPIVisualLayoutOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$KPIVisualLayoutOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33130,6 +41032,12 @@
   (when-let [data (lookup-entry config id :standard-layout)]
     (. builder standardLayout data))
   (.build builder))
+
+
+(defn cfn-template-kpi-visual-layout-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-kpi-visual-layout-options-property-builder (new CfnTemplate$KPIVisualLayoutOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-kpi-visual-property-builder
@@ -33167,6 +41075,12 @@
   (.build builder))
 
 
+(defn cfn-template-kpi-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-kpi-visual-property-builder (new CfnTemplate$KPIVisualProperty$Builder) id config))
+
+
 (defn build-cfn-template-kpi-visual-standard-layout-property-builder
   "The build-cfn-template-kpi-visual-standard-layout-property-builder function updates a CfnTemplate$KPIVisualStandardLayoutProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$KPIVisualStandardLayoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33182,6 +41096,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-template-kpi-visual-standard-layout-property-builder
+  ""
+  [id config]
+  (build-cfn-template-kpi-visual-standard-layout-property-builder (new CfnTemplate$KPIVisualStandardLayoutProperty$Builder) id config))
 
 
 (defn build-cfn-template-label-options-property-builder
@@ -33207,6 +41127,12 @@
   (.build builder))
 
 
+(defn cfn-template-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-label-options-property-builder (new CfnTemplate$LabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-layout-configuration-property-builder
   "The build-cfn-template-layout-configuration-property-builder function updates a CfnTemplate$LayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$LayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33230,6 +41156,12 @@
   (.build builder))
 
 
+(defn cfn-template-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-layout-configuration-property-builder (new CfnTemplate$LayoutConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-layout-property-builder
   "The build-cfn-template-layout-property-builder function updates a CfnTemplate$LayoutProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$LayoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33245,6 +41177,12 @@
   (when-let [data (lookup-entry config id :configuration)]
     (. builder configuration data))
   (.build builder))
+
+
+(defn cfn-template-layout-property-builder
+  ""
+  [id config]
+  (build-cfn-template-layout-property-builder (new CfnTemplate$LayoutProperty$Builder) id config))
 
 
 (defn build-cfn-template-legend-options-property-builder
@@ -33276,6 +41214,12 @@
   (.build builder))
 
 
+(defn cfn-template-legend-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-legend-options-property-builder (new CfnTemplate$LegendOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-line-chart-aggregated-field-wells-property-builder
   "The build-cfn-template-line-chart-aggregated-field-wells-property-builder function updates a CfnTemplate$LineChartAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$LineChartAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33300,6 +41244,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-template-line-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-line-chart-aggregated-field-wells-property-builder (new CfnTemplate$LineChartAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-line-chart-configuration-property-builder
@@ -33373,6 +41323,12 @@
   (.build builder))
 
 
+(defn cfn-template-line-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-line-chart-configuration-property-builder (new CfnTemplate$LineChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-line-chart-default-series-settings-property-builder
   "The build-cfn-template-line-chart-default-series-settings-property-builder function updates a CfnTemplate$LineChartDefaultSeriesSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$LineChartDefaultSeriesSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33396,6 +41352,12 @@
   (.build builder))
 
 
+(defn cfn-template-line-chart-default-series-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-template-line-chart-default-series-settings-property-builder (new CfnTemplate$LineChartDefaultSeriesSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-template-line-chart-field-wells-property-builder
   "The build-cfn-template-line-chart-field-wells-property-builder function updates a CfnTemplate$LineChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$LineChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33411,6 +41373,12 @@
   (when-let [data (lookup-entry config id :line-chart-aggregated-field-wells)]
     (. builder lineChartAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-template-line-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-line-chart-field-wells-property-builder (new CfnTemplate$LineChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-line-chart-line-style-settings-property-builder
@@ -33439,6 +41407,12 @@
   (.build builder))
 
 
+(defn cfn-template-line-chart-line-style-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-template-line-chart-line-style-settings-property-builder (new CfnTemplate$LineChartLineStyleSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-template-line-chart-marker-style-settings-property-builder
   "The build-cfn-template-line-chart-marker-style-settings-property-builder function updates a CfnTemplate$LineChartMarkerStyleSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$LineChartMarkerStyleSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33465,6 +41439,12 @@
   (.build builder))
 
 
+(defn cfn-template-line-chart-marker-style-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-template-line-chart-marker-style-settings-property-builder (new CfnTemplate$LineChartMarkerStyleSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-template-line-chart-series-settings-property-builder
   "The build-cfn-template-line-chart-series-settings-property-builder function updates a CfnTemplate$LineChartSeriesSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$LineChartSeriesSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33483,6 +41463,12 @@
   (when-let [data (lookup-entry config id :marker-style-settings)]
     (. builder markerStyleSettings data))
   (.build builder))
+
+
+(defn cfn-template-line-chart-series-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-template-line-chart-series-settings-property-builder (new CfnTemplate$LineChartSeriesSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-template-line-chart-sort-configuration-property-builder
@@ -33512,6 +41498,12 @@
   (when-let [data (lookup-entry config id :small-multiples-sort)]
     (. builder smallMultiplesSort data))
   (.build builder))
+
+
+(defn cfn-template-line-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-line-chart-sort-configuration-property-builder (new CfnTemplate$LineChartSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-line-chart-visual-property-builder
@@ -33546,6 +41538,12 @@
   (.build builder))
 
 
+(defn cfn-template-line-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-line-chart-visual-property-builder (new CfnTemplate$LineChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-template-line-series-axis-display-options-property-builder
   "The build-cfn-template-line-series-axis-display-options-property-builder function updates a CfnTemplate$LineSeriesAxisDisplayOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$LineSeriesAxisDisplayOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33564,6 +41562,12 @@
   (when-let [data (lookup-entry config id :missing-data-configurations)]
     (. builder missingDataConfigurations data))
   (.build builder))
+
+
+(defn cfn-template-line-series-axis-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-line-series-axis-display-options-property-builder (new CfnTemplate$LineSeriesAxisDisplayOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-list-control-display-options-property-builder
@@ -33592,6 +41596,12 @@
   (.build builder))
 
 
+(defn cfn-template-list-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-list-control-display-options-property-builder (new CfnTemplate$ListControlDisplayOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-list-control-search-options-property-builder
   "The build-cfn-template-list-control-search-options-property-builder function updates a CfnTemplate$ListControlSearchOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ListControlSearchOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33607,6 +41617,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-template-list-control-search-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-list-control-search-options-property-builder (new CfnTemplate$ListControlSearchOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-list-control-select-all-options-property-builder
@@ -33626,6 +41642,12 @@
   (.build builder))
 
 
+(defn cfn-template-list-control-select-all-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-list-control-select-all-options-property-builder (new CfnTemplate$ListControlSelectAllOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-loading-animation-property-builder
   "The build-cfn-template-loading-animation-property-builder function updates a CfnTemplate$LoadingAnimationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$LoadingAnimationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33643,6 +41665,12 @@
   (.build builder))
 
 
+(defn cfn-template-loading-animation-property-builder
+  ""
+  [id config]
+  (build-cfn-template-loading-animation-property-builder (new CfnTemplate$LoadingAnimationProperty$Builder) id config))
+
+
 (defn build-cfn-template-local-navigation-configuration-property-builder
   "The build-cfn-template-local-navigation-configuration-property-builder function updates a CfnTemplate$LocalNavigationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$LocalNavigationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33658,6 +41686,12 @@
   (when-let [data (lookup-entry config id :target-sheet-id)]
     (. builder targetSheetId data))
   (.build builder))
+
+
+(defn cfn-template-local-navigation-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-local-navigation-configuration-property-builder (new CfnTemplate$LocalNavigationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-long-format-text-property-builder
@@ -33680,6 +41714,12 @@
   (.build builder))
 
 
+(defn cfn-template-long-format-text-property-builder
+  ""
+  [id config]
+  (build-cfn-template-long-format-text-property-builder (new CfnTemplate$LongFormatTextProperty$Builder) id config))
+
+
 (defn build-cfn-template-mapped-data-set-parameter-property-builder
   "The build-cfn-template-mapped-data-set-parameter-property-builder function updates a CfnTemplate$MappedDataSetParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$MappedDataSetParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33700,6 +41740,12 @@
   (.build builder))
 
 
+(defn cfn-template-mapped-data-set-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-template-mapped-data-set-parameter-property-builder (new CfnTemplate$MappedDataSetParameterProperty$Builder) id config))
+
+
 (defn build-cfn-template-maximum-label-type-property-builder
   "The build-cfn-template-maximum-label-type-property-builder function updates a CfnTemplate$MaximumLabelTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$MaximumLabelTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33715,6 +41761,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-template-maximum-label-type-property-builder
+  ""
+  [id config]
+  (build-cfn-template-maximum-label-type-property-builder (new CfnTemplate$MaximumLabelTypeProperty$Builder) id config))
 
 
 (defn build-cfn-template-maximum-minimum-computation-property-builder
@@ -33746,6 +41798,12 @@
   (.build builder))
 
 
+(defn cfn-template-maximum-minimum-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-template-maximum-minimum-computation-property-builder (new CfnTemplate$MaximumMinimumComputationProperty$Builder) id config))
+
+
 (defn build-cfn-template-measure-field-property-builder
   "The build-cfn-template-measure-field-property-builder function updates a CfnTemplate$MeasureFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$MeasureFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33770,6 +41828,12 @@
   (when-let [data (lookup-entry config id :numerical-measure-field)]
     (. builder numericalMeasureField data))
   (.build builder))
+
+
+(defn cfn-template-measure-field-property-builder
+  ""
+  [id config]
+  (build-cfn-template-measure-field-property-builder (new CfnTemplate$MeasureFieldProperty$Builder) id config))
 
 
 (defn build-cfn-template-metric-comparison-computation-property-builder
@@ -33801,6 +41865,12 @@
   (.build builder))
 
 
+(defn cfn-template-metric-comparison-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-template-metric-comparison-computation-property-builder (new CfnTemplate$MetricComparisonComputationProperty$Builder) id config))
+
+
 (defn build-cfn-template-minimum-label-type-property-builder
   "The build-cfn-template-minimum-label-type-property-builder function updates a CfnTemplate$MinimumLabelTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$MinimumLabelTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33816,6 +41886,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-template-minimum-label-type-property-builder
+  ""
+  [id config]
+  (build-cfn-template-minimum-label-type-property-builder (new CfnTemplate$MinimumLabelTypeProperty$Builder) id config))
 
 
 (defn build-cfn-template-missing-data-configuration-property-builder
@@ -33835,6 +41911,12 @@
   (.build builder))
 
 
+(defn cfn-template-missing-data-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-missing-data-configuration-property-builder (new CfnTemplate$MissingDataConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-negative-value-configuration-property-builder
   "The build-cfn-template-negative-value-configuration-property-builder function updates a CfnTemplate$NegativeValueConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$NegativeValueConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33852,6 +41934,12 @@
   (.build builder))
 
 
+(defn cfn-template-negative-value-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-negative-value-configuration-property-builder (new CfnTemplate$NegativeValueConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-null-value-format-configuration-property-builder
   "The build-cfn-template-null-value-format-configuration-property-builder function updates a CfnTemplate$NullValueFormatConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$NullValueFormatConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33867,6 +41955,12 @@
   (when-let [data (lookup-entry config id :null-string)]
     (. builder nullString data))
   (.build builder))
+
+
+(defn cfn-template-null-value-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-null-value-format-configuration-property-builder (new CfnTemplate$NullValueFormatConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-number-display-format-configuration-property-builder
@@ -33904,6 +41998,12 @@
   (.build builder))
 
 
+(defn cfn-template-number-display-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-number-display-format-configuration-property-builder (new CfnTemplate$NumberDisplayFormatConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-number-format-configuration-property-builder
   "The build-cfn-template-number-format-configuration-property-builder function updates a CfnTemplate$NumberFormatConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$NumberFormatConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33919,6 +42019,12 @@
   (when-let [data (lookup-entry config id :format-configuration)]
     (. builder formatConfiguration data))
   (.build builder))
+
+
+(defn cfn-template-number-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-number-format-configuration-property-builder (new CfnTemplate$NumberFormatConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-numeric-axis-options-property-builder
@@ -33941,6 +42047,12 @@
   (.build builder))
 
 
+(defn cfn-template-numeric-axis-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-numeric-axis-options-property-builder (new CfnTemplate$NumericAxisOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-numeric-equality-drill-down-filter-property-builder
   "The build-cfn-template-numeric-equality-drill-down-filter-property-builder function updates a CfnTemplate$NumericEqualityDrillDownFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$NumericEqualityDrillDownFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -33959,6 +42071,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-template-numeric-equality-drill-down-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-template-numeric-equality-drill-down-filter-property-builder (new CfnTemplate$NumericEqualityDrillDownFilterProperty$Builder) id config))
 
 
 (defn build-cfn-template-numeric-equality-filter-property-builder
@@ -34002,6 +42120,12 @@
   (.build builder))
 
 
+(defn cfn-template-numeric-equality-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-template-numeric-equality-filter-property-builder (new CfnTemplate$NumericEqualityFilterProperty$Builder) id config))
+
+
 (defn build-cfn-template-numeric-format-configuration-property-builder
   "The build-cfn-template-numeric-format-configuration-property-builder function updates a CfnTemplate$NumericFormatConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$NumericFormatConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -34023,6 +42147,12 @@
   (when-let [data (lookup-entry config id :percentage-display-format-configuration)]
     (. builder percentageDisplayFormatConfiguration data))
   (.build builder))
+
+
+(defn cfn-template-numeric-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-numeric-format-configuration-property-builder (new CfnTemplate$NumericFormatConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-numeric-range-filter-property-builder
@@ -34069,6 +42199,12 @@
   (.build builder))
 
 
+(defn cfn-template-numeric-range-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-template-numeric-range-filter-property-builder (new CfnTemplate$NumericRangeFilterProperty$Builder) id config))
+
+
 (defn build-cfn-template-numeric-range-filter-value-property-builder
   "The build-cfn-template-numeric-range-filter-value-property-builder function updates a CfnTemplate$NumericRangeFilterValueProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$NumericRangeFilterValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -34087,6 +42223,12 @@
   (when-let [data (lookup-entry config id :static-value)]
     (. builder staticValue data))
   (.build builder))
+
+
+(defn cfn-template-numeric-range-filter-value-property-builder
+  ""
+  [id config]
+  (build-cfn-template-numeric-range-filter-value-property-builder (new CfnTemplate$NumericRangeFilterValueProperty$Builder) id config))
 
 
 (defn build-cfn-template-numeric-separator-configuration-property-builder
@@ -34109,6 +42251,12 @@
   (.build builder))
 
 
+(defn cfn-template-numeric-separator-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-numeric-separator-configuration-property-builder (new CfnTemplate$NumericSeparatorConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-numerical-aggregation-function-property-builder
   "The build-cfn-template-numerical-aggregation-function-property-builder function updates a CfnTemplate$NumericalAggregationFunctionProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$NumericalAggregationFunctionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -34127,6 +42275,12 @@
   (when-let [data (lookup-entry config id :simple-numerical-aggregation)]
     (. builder simpleNumericalAggregation data))
   (.build builder))
+
+
+(defn cfn-template-numerical-aggregation-function-property-builder
+  ""
+  [id config]
+  (build-cfn-template-numerical-aggregation-function-property-builder (new CfnTemplate$NumericalAggregationFunctionProperty$Builder) id config))
 
 
 (defn build-cfn-template-numerical-dimension-field-property-builder
@@ -34155,6 +42309,12 @@
   (.build builder))
 
 
+(defn cfn-template-numerical-dimension-field-property-builder
+  ""
+  [id config]
+  (build-cfn-template-numerical-dimension-field-property-builder (new CfnTemplate$NumericalDimensionFieldProperty$Builder) id config))
+
+
 (defn build-cfn-template-numerical-measure-field-property-builder
   "The build-cfn-template-numerical-measure-field-property-builder function updates a CfnTemplate$NumericalMeasureFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$NumericalMeasureFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -34181,6 +42341,12 @@
   (.build builder))
 
 
+(defn cfn-template-numerical-measure-field-property-builder
+  ""
+  [id config]
+  (build-cfn-template-numerical-measure-field-property-builder (new CfnTemplate$NumericalMeasureFieldProperty$Builder) id config))
+
+
 (defn build-cfn-template-pagination-configuration-property-builder
   "The build-cfn-template-pagination-configuration-property-builder function updates a CfnTemplate$PaginationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$PaginationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -34199,6 +42365,12 @@
   (when-let [data (lookup-entry config id :page-size)]
     (. builder pageSize data))
   (.build builder))
+
+
+(defn cfn-template-pagination-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pagination-configuration-property-builder (new CfnTemplate$PaginationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-panel-configuration-property-builder
@@ -34242,6 +42414,12 @@
   (.build builder))
 
 
+(defn cfn-template-panel-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-panel-configuration-property-builder (new CfnTemplate$PanelConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-panel-title-options-property-builder
   "The build-cfn-template-panel-title-options-property-builder function updates a CfnTemplate$PanelTitleOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$PanelTitleOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -34263,6 +42441,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-template-panel-title-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-panel-title-options-property-builder (new CfnTemplate$PanelTitleOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-parameter-control-property-builder
@@ -34297,6 +42481,12 @@
   (.build builder))
 
 
+(defn cfn-template-parameter-control-property-builder
+  ""
+  [id config]
+  (build-cfn-template-parameter-control-property-builder (new CfnTemplate$ParameterControlProperty$Builder) id config))
+
+
 (defn build-cfn-template-parameter-date-time-picker-control-property-builder
   "The build-cfn-template-parameter-date-time-picker-control-property-builder function updates a CfnTemplate$ParameterDateTimePickerControlProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ParameterDateTimePickerControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -34323,6 +42513,12 @@
   (.build builder))
 
 
+(defn cfn-template-parameter-date-time-picker-control-property-builder
+  ""
+  [id config]
+  (build-cfn-template-parameter-date-time-picker-control-property-builder (new CfnTemplate$ParameterDateTimePickerControlProperty$Builder) id config))
+
+
 (defn build-cfn-template-parameter-declaration-property-builder
   "The build-cfn-template-parameter-declaration-property-builder function updates a CfnTemplate$ParameterDeclarationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ParameterDeclarationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -34347,6 +42543,12 @@
   (when-let [data (lookup-entry config id :string-parameter-declaration)]
     (. builder stringParameterDeclaration data))
   (.build builder))
+
+
+(defn cfn-template-parameter-declaration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-parameter-declaration-property-builder (new CfnTemplate$ParameterDeclarationProperty$Builder) id config))
 
 
 (defn build-cfn-template-parameter-drop-down-control-property-builder
@@ -34384,6 +42586,12 @@
   (.build builder))
 
 
+(defn cfn-template-parameter-drop-down-control-property-builder
+  ""
+  [id config]
+  (build-cfn-template-parameter-drop-down-control-property-builder (new CfnTemplate$ParameterDropDownControlProperty$Builder) id config))
+
+
 (defn build-cfn-template-parameter-list-control-property-builder
   "The build-cfn-template-parameter-list-control-property-builder function updates a CfnTemplate$ParameterListControlProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ParameterListControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -34419,6 +42627,12 @@
   (.build builder))
 
 
+(defn cfn-template-parameter-list-control-property-builder
+  ""
+  [id config]
+  (build-cfn-template-parameter-list-control-property-builder (new CfnTemplate$ParameterListControlProperty$Builder) id config))
+
+
 (defn build-cfn-template-parameter-selectable-values-property-builder
   "The build-cfn-template-parameter-selectable-values-property-builder function updates a CfnTemplate$ParameterSelectableValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ParameterSelectableValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -34437,6 +42651,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-template-parameter-selectable-values-property-builder
+  ""
+  [id config]
+  (build-cfn-template-parameter-selectable-values-property-builder (new CfnTemplate$ParameterSelectableValuesProperty$Builder) id config))
 
 
 (defn build-cfn-template-parameter-slider-control-property-builder
@@ -34474,6 +42694,12 @@
   (.build builder))
 
 
+(defn cfn-template-parameter-slider-control-property-builder
+  ""
+  [id config]
+  (build-cfn-template-parameter-slider-control-property-builder (new CfnTemplate$ParameterSliderControlProperty$Builder) id config))
+
+
 (defn build-cfn-template-parameter-text-area-control-property-builder
   "The build-cfn-template-parameter-text-area-control-property-builder function updates a CfnTemplate$ParameterTextAreaControlProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ParameterTextAreaControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -34503,6 +42729,12 @@
   (.build builder))
 
 
+(defn cfn-template-parameter-text-area-control-property-builder
+  ""
+  [id config]
+  (build-cfn-template-parameter-text-area-control-property-builder (new CfnTemplate$ParameterTextAreaControlProperty$Builder) id config))
+
+
 (defn build-cfn-template-parameter-text-field-control-property-builder
   "The build-cfn-template-parameter-text-field-control-property-builder function updates a CfnTemplate$ParameterTextFieldControlProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ParameterTextFieldControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -34529,6 +42761,12 @@
   (.build builder))
 
 
+(defn cfn-template-parameter-text-field-control-property-builder
+  ""
+  [id config]
+  (build-cfn-template-parameter-text-field-control-property-builder (new CfnTemplate$ParameterTextFieldControlProperty$Builder) id config))
+
+
 (defn build-cfn-template-percent-visible-range-property-builder
   "The build-cfn-template-percent-visible-range-property-builder function updates a CfnTemplate$PercentVisibleRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$PercentVisibleRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -34547,6 +42785,12 @@
   (when-let [data (lookup-entry config id :to)]
     (. builder to data))
   (.build builder))
+
+
+(defn cfn-template-percent-visible-range-property-builder
+  ""
+  [id config]
+  (build-cfn-template-percent-visible-range-property-builder (new CfnTemplate$PercentVisibleRangeProperty$Builder) id config))
 
 
 (defn build-cfn-template-percentage-display-format-configuration-property-builder
@@ -34581,6 +42825,12 @@
   (.build builder))
 
 
+(defn cfn-template-percentage-display-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-percentage-display-format-configuration-property-builder (new CfnTemplate$PercentageDisplayFormatConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-percentile-aggregation-property-builder
   "The build-cfn-template-percentile-aggregation-property-builder function updates a CfnTemplate$PercentileAggregationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$PercentileAggregationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -34596,6 +42846,12 @@
   (when-let [data (lookup-entry config id :percentile-value)]
     (. builder percentileValue data))
   (.build builder))
+
+
+(defn cfn-template-percentile-aggregation-property-builder
+  ""
+  [id config]
+  (build-cfn-template-percentile-aggregation-property-builder (new CfnTemplate$PercentileAggregationProperty$Builder) id config))
 
 
 (defn build-cfn-template-period-over-period-computation-property-builder
@@ -34622,6 +42878,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-template-period-over-period-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-template-period-over-period-computation-property-builder (new CfnTemplate$PeriodOverPeriodComputationProperty$Builder) id config))
 
 
 (defn build-cfn-template-period-to-date-computation-property-builder
@@ -34653,6 +42915,12 @@
   (.build builder))
 
 
+(defn cfn-template-period-to-date-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-template-period-to-date-computation-property-builder (new CfnTemplate$PeriodToDateComputationProperty$Builder) id config))
+
+
 (defn build-cfn-template-pie-chart-aggregated-field-wells-property-builder
   "The build-cfn-template-pie-chart-aggregated-field-wells-property-builder function updates a CfnTemplate$PieChartAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$PieChartAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -34674,6 +42942,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-template-pie-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pie-chart-aggregated-field-wells-property-builder (new CfnTemplate$PieChartAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-pie-chart-configuration-property-builder
@@ -34723,6 +42997,12 @@
   (.build builder))
 
 
+(defn cfn-template-pie-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pie-chart-configuration-property-builder (new CfnTemplate$PieChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-pie-chart-field-wells-property-builder
   "The build-cfn-template-pie-chart-field-wells-property-builder function updates a CfnTemplate$PieChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$PieChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -34738,6 +43018,12 @@
   (when-let [data (lookup-entry config id :pie-chart-aggregated-field-wells)]
     (. builder pieChartAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-template-pie-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pie-chart-field-wells-property-builder (new CfnTemplate$PieChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-pie-chart-sort-configuration-property-builder
@@ -34764,6 +43050,12 @@
   (when-let [data (lookup-entry config id :small-multiples-sort)]
     (. builder smallMultiplesSort data))
   (.build builder))
+
+
+(defn cfn-template-pie-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pie-chart-sort-configuration-property-builder (new CfnTemplate$PieChartSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-pie-chart-visual-property-builder
@@ -34798,6 +43090,12 @@
   (.build builder))
 
 
+(defn cfn-template-pie-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pie-chart-visual-property-builder (new CfnTemplate$PieChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-template-pivot-field-sort-options-property-builder
   "The build-cfn-template-pivot-field-sort-options-property-builder function updates a CfnTemplate$PivotFieldSortOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$PivotFieldSortOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -34816,6 +43114,12 @@
   (when-let [data (lookup-entry config id :sort-by)]
     (. builder sortBy data))
   (.build builder))
+
+
+(defn cfn-template-pivot-field-sort-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-field-sort-options-property-builder (new CfnTemplate$PivotFieldSortOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-pivot-table-aggregated-field-wells-property-builder
@@ -34839,6 +43143,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-template-pivot-table-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-table-aggregated-field-wells-property-builder (new CfnTemplate$PivotTableAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-pivot-table-cell-conditional-formatting-property-builder
@@ -34867,6 +43177,12 @@
   (.build builder))
 
 
+(defn cfn-template-pivot-table-cell-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-table-cell-conditional-formatting-property-builder (new CfnTemplate$PivotTableCellConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-template-pivot-table-conditional-formatting-option-property-builder
   "The build-cfn-template-pivot-table-conditional-formatting-option-property-builder function updates a CfnTemplate$PivotTableConditionalFormattingOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$PivotTableConditionalFormattingOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -34882,6 +43198,12 @@
   (when-let [data (lookup-entry config id :cell)]
     (. builder cell data))
   (.build builder))
+
+
+(defn cfn-template-pivot-table-conditional-formatting-option-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-table-conditional-formatting-option-property-builder (new CfnTemplate$PivotTableConditionalFormattingOptionProperty$Builder) id config))
 
 
 (defn build-cfn-template-pivot-table-conditional-formatting-property-builder
@@ -34901,6 +43223,12 @@
   (.build builder))
 
 
+(defn cfn-template-pivot-table-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-table-conditional-formatting-property-builder (new CfnTemplate$PivotTableConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-template-pivot-table-conditional-formatting-scope-property-builder
   "The build-cfn-template-pivot-table-conditional-formatting-scope-property-builder function updates a CfnTemplate$PivotTableConditionalFormattingScopeProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$PivotTableConditionalFormattingScopeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -34916,6 +43244,12 @@
   (when-let [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
+
+
+(defn cfn-template-pivot-table-conditional-formatting-scope-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-table-conditional-formatting-scope-property-builder (new CfnTemplate$PivotTableConditionalFormattingScopeProperty$Builder) id config))
 
 
 (defn build-cfn-template-pivot-table-configuration-property-builder
@@ -34950,6 +43284,12 @@
   (.build builder))
 
 
+(defn cfn-template-pivot-table-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-table-configuration-property-builder (new CfnTemplate$PivotTableConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-pivot-table-data-path-option-property-builder
   "The build-cfn-template-pivot-table-data-path-option-property-builder function updates a CfnTemplate$PivotTableDataPathOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$PivotTableDataPathOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -34968,6 +43308,12 @@
   (when-let [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
+
+
+(defn cfn-template-pivot-table-data-path-option-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-table-data-path-option-property-builder (new CfnTemplate$PivotTableDataPathOptionProperty$Builder) id config))
 
 
 (defn build-cfn-template-pivot-table-field-collapse-state-option-property-builder
@@ -34990,6 +43336,12 @@
   (.build builder))
 
 
+(defn cfn-template-pivot-table-field-collapse-state-option-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-table-field-collapse-state-option-property-builder (new CfnTemplate$PivotTableFieldCollapseStateOptionProperty$Builder) id config))
+
+
 (defn build-cfn-template-pivot-table-field-collapse-state-target-property-builder
   "The build-cfn-template-pivot-table-field-collapse-state-target-property-builder function updates a CfnTemplate$PivotTableFieldCollapseStateTargetProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$PivotTableFieldCollapseStateTargetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35008,6 +43360,12 @@
   (when-let [data (lookup-entry config id :field-id)]
     (. builder fieldId data))
   (.build builder))
+
+
+(defn cfn-template-pivot-table-field-collapse-state-target-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-table-field-collapse-state-target-property-builder (new CfnTemplate$PivotTableFieldCollapseStateTargetProperty$Builder) id config))
 
 
 (defn build-cfn-template-pivot-table-field-option-property-builder
@@ -35033,6 +43391,12 @@
   (.build builder))
 
 
+(defn cfn-template-pivot-table-field-option-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-table-field-option-property-builder (new CfnTemplate$PivotTableFieldOptionProperty$Builder) id config))
+
+
 (defn build-cfn-template-pivot-table-field-options-property-builder
   "The build-cfn-template-pivot-table-field-options-property-builder function updates a CfnTemplate$PivotTableFieldOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$PivotTableFieldOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35056,6 +43420,12 @@
   (.build builder))
 
 
+(defn cfn-template-pivot-table-field-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-table-field-options-property-builder (new CfnTemplate$PivotTableFieldOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-pivot-table-field-subtotal-options-property-builder
   "The build-cfn-template-pivot-table-field-subtotal-options-property-builder function updates a CfnTemplate$PivotTableFieldSubtotalOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$PivotTableFieldSubtotalOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35073,6 +43443,12 @@
   (.build builder))
 
 
+(defn cfn-template-pivot-table-field-subtotal-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-table-field-subtotal-options-property-builder (new CfnTemplate$PivotTableFieldSubtotalOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-pivot-table-field-wells-property-builder
   "The build-cfn-template-pivot-table-field-wells-property-builder function updates a CfnTemplate$PivotTableFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$PivotTableFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35088,6 +43464,12 @@
   (when-let [data (lookup-entry config id :pivot-table-aggregated-field-wells)]
     (. builder pivotTableAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-template-pivot-table-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-table-field-wells-property-builder (new CfnTemplate$PivotTableFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-pivot-table-options-property-builder
@@ -35143,6 +43525,12 @@
   (.build builder))
 
 
+(defn cfn-template-pivot-table-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-table-options-property-builder (new CfnTemplate$PivotTableOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-pivot-table-paginated-report-options-property-builder
   "The build-cfn-template-pivot-table-paginated-report-options-property-builder function updates a CfnTemplate$PivotTablePaginatedReportOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$PivotTablePaginatedReportOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35163,6 +43551,12 @@
   (.build builder))
 
 
+(defn cfn-template-pivot-table-paginated-report-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-table-paginated-report-options-property-builder (new CfnTemplate$PivotTablePaginatedReportOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-pivot-table-rows-label-options-property-builder
   "The build-cfn-template-pivot-table-rows-label-options-property-builder function updates a CfnTemplate$PivotTableRowsLabelOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$PivotTableRowsLabelOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35181,6 +43575,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-template-pivot-table-rows-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-table-rows-label-options-property-builder (new CfnTemplate$PivotTableRowsLabelOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-pivot-table-sort-by-property-builder
@@ -35206,6 +43606,12 @@
   (.build builder))
 
 
+(defn cfn-template-pivot-table-sort-by-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-table-sort-by-property-builder (new CfnTemplate$PivotTableSortByProperty$Builder) id config))
+
+
 (defn build-cfn-template-pivot-table-sort-configuration-property-builder
   "The build-cfn-template-pivot-table-sort-configuration-property-builder function updates a CfnTemplate$PivotTableSortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$PivotTableSortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35221,6 +43627,12 @@
   (when-let [data (lookup-entry config id :field-sort-options)]
     (. builder fieldSortOptions data))
   (.build builder))
+
+
+(defn cfn-template-pivot-table-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-table-sort-configuration-property-builder (new CfnTemplate$PivotTableSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-pivot-table-total-options-property-builder
@@ -35247,6 +43659,12 @@
   (when-let [data (lookup-entry config id :row-total-options)]
     (. builder rowTotalOptions data))
   (.build builder))
+
+
+(defn cfn-template-pivot-table-total-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-table-total-options-property-builder (new CfnTemplate$PivotTableTotalOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-pivot-table-visual-property-builder
@@ -35279,6 +43697,12 @@
   (when-let [data (lookup-entry config id :visual-id)]
     (. builder visualId data))
   (.build builder))
+
+
+(defn cfn-template-pivot-table-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-table-visual-property-builder (new CfnTemplate$PivotTableVisualProperty$Builder) id config))
 
 
 (defn build-cfn-template-pivot-total-options-property-builder
@@ -35319,6 +43743,12 @@
   (.build builder))
 
 
+(defn cfn-template-pivot-total-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-pivot-total-options-property-builder (new CfnTemplate$PivotTotalOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-predefined-hierarchy-property-builder
   "The build-cfn-template-predefined-hierarchy-property-builder function updates a CfnTemplate$PredefinedHierarchyProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$PredefinedHierarchyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35342,6 +43772,12 @@
   (.build builder))
 
 
+(defn cfn-template-predefined-hierarchy-property-builder
+  ""
+  [id config]
+  (build-cfn-template-predefined-hierarchy-property-builder (new CfnTemplate$PredefinedHierarchyProperty$Builder) id config))
+
+
 (defn build-cfn-template-progress-bar-options-property-builder
   "The build-cfn-template-progress-bar-options-property-builder function updates a CfnTemplate$ProgressBarOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ProgressBarOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35357,6 +43793,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-template-progress-bar-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-progress-bar-options-property-builder (new CfnTemplate$ProgressBarOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-props-builder
@@ -35400,6 +43842,12 @@
   (.build builder))
 
 
+(defn cfn-template-props-builder
+  ""
+  [id config]
+  (build-cfn-template-props-builder (new CfnTemplateProps$Builder) id config))
+
+
 (defn build-cfn-template-radar-chart-aggregated-field-wells-property-builder
   "The build-cfn-template-radar-chart-aggregated-field-wells-property-builder function updates a CfnTemplate$RadarChartAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$RadarChartAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35423,6 +43871,12 @@
   (.build builder))
 
 
+(defn cfn-template-radar-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-radar-chart-aggregated-field-wells-property-builder (new CfnTemplate$RadarChartAggregatedFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-template-radar-chart-area-style-settings-property-builder
   "The build-cfn-template-radar-chart-area-style-settings-property-builder function updates a CfnTemplate$RadarChartAreaStyleSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$RadarChartAreaStyleSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35438,6 +43892,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-template-radar-chart-area-style-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-template-radar-chart-area-style-settings-property-builder (new CfnTemplate$RadarChartAreaStyleSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-template-radar-chart-configuration-property-builder
@@ -35499,6 +43959,12 @@
   (.build builder))
 
 
+(defn cfn-template-radar-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-radar-chart-configuration-property-builder (new CfnTemplate$RadarChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-radar-chart-field-wells-property-builder
   "The build-cfn-template-radar-chart-field-wells-property-builder function updates a CfnTemplate$RadarChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$RadarChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35516,6 +43982,12 @@
   (.build builder))
 
 
+(defn cfn-template-radar-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-radar-chart-field-wells-property-builder (new CfnTemplate$RadarChartFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-template-radar-chart-series-settings-property-builder
   "The build-cfn-template-radar-chart-series-settings-property-builder function updates a CfnTemplate$RadarChartSeriesSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$RadarChartSeriesSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35531,6 +44003,12 @@
   (when-let [data (lookup-entry config id :area-style-settings)]
     (. builder areaStyleSettings data))
   (.build builder))
+
+
+(defn cfn-template-radar-chart-series-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-template-radar-chart-series-settings-property-builder (new CfnTemplate$RadarChartSeriesSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-template-radar-chart-sort-configuration-property-builder
@@ -35557,6 +44035,12 @@
   (when-let [data (lookup-entry config id :color-sort)]
     (. builder colorSort data))
   (.build builder))
+
+
+(defn cfn-template-radar-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-radar-chart-sort-configuration-property-builder (new CfnTemplate$RadarChartSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-radar-chart-visual-property-builder
@@ -35591,6 +44075,12 @@
   (.build builder))
 
 
+(defn cfn-template-radar-chart-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-radar-chart-visual-property-builder (new CfnTemplate$RadarChartVisualProperty$Builder) id config))
+
+
 (defn build-cfn-template-range-ends-label-type-property-builder
   "The build-cfn-template-range-ends-label-type-property-builder function updates a CfnTemplate$RangeEndsLabelTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$RangeEndsLabelTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35608,6 +44098,12 @@
   (.build builder))
 
 
+(defn cfn-template-range-ends-label-type-property-builder
+  ""
+  [id config]
+  (build-cfn-template-range-ends-label-type-property-builder (new CfnTemplate$RangeEndsLabelTypeProperty$Builder) id config))
+
+
 (defn build-cfn-template-reference-line-custom-label-configuration-property-builder
   "The build-cfn-template-reference-line-custom-label-configuration-property-builder function updates a CfnTemplate$ReferenceLineCustomLabelConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ReferenceLineCustomLabelConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35623,6 +44119,12 @@
   (when-let [data (lookup-entry config id :custom-label)]
     (. builder customLabel data))
   (.build builder))
+
+
+(defn cfn-template-reference-line-custom-label-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-reference-line-custom-label-configuration-property-builder (new CfnTemplate$ReferenceLineCustomLabelConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-reference-line-data-configuration-property-builder
@@ -35651,6 +44153,12 @@
   (.build builder))
 
 
+(defn cfn-template-reference-line-data-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-reference-line-data-configuration-property-builder (new CfnTemplate$ReferenceLineDataConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-reference-line-dynamic-data-configuration-property-builder
   "The build-cfn-template-reference-line-dynamic-data-configuration-property-builder function updates a CfnTemplate$ReferenceLineDynamicDataConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ReferenceLineDynamicDataConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35672,6 +44180,12 @@
   (when-let [data (lookup-entry config id :measure-aggregation-function)]
     (. builder measureAggregationFunction data))
   (.build builder))
+
+
+(defn cfn-template-reference-line-dynamic-data-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-reference-line-dynamic-data-configuration-property-builder (new CfnTemplate$ReferenceLineDynamicDataConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-reference-line-label-configuration-property-builder
@@ -35706,6 +44220,12 @@
   (.build builder))
 
 
+(defn cfn-template-reference-line-label-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-reference-line-label-configuration-property-builder (new CfnTemplate$ReferenceLineLabelConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-reference-line-property-builder
   "The build-cfn-template-reference-line-property-builder function updates a CfnTemplate$ReferenceLineProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ReferenceLineProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35732,6 +44252,12 @@
   (.build builder))
 
 
+(defn cfn-template-reference-line-property-builder
+  ""
+  [id config]
+  (build-cfn-template-reference-line-property-builder (new CfnTemplate$ReferenceLineProperty$Builder) id config))
+
+
 (defn build-cfn-template-reference-line-static-data-configuration-property-builder
   "The build-cfn-template-reference-line-static-data-configuration-property-builder function updates a CfnTemplate$ReferenceLineStaticDataConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ReferenceLineStaticDataConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35747,6 +44273,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-template-reference-line-static-data-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-reference-line-static-data-configuration-property-builder (new CfnTemplate$ReferenceLineStaticDataConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-reference-line-style-configuration-property-builder
@@ -35769,6 +44301,12 @@
   (.build builder))
 
 
+(defn cfn-template-reference-line-style-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-reference-line-style-configuration-property-builder (new CfnTemplate$ReferenceLineStyleConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-reference-line-value-label-configuration-property-builder
   "The build-cfn-template-reference-line-value-label-configuration-property-builder function updates a CfnTemplate$ReferenceLineValueLabelConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ReferenceLineValueLabelConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35787,6 +44325,12 @@
   (when-let [data (lookup-entry config id :relative-position)]
     (. builder relativePosition data))
   (.build builder))
+
+
+(defn cfn-template-reference-line-value-label-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-reference-line-value-label-configuration-property-builder (new CfnTemplate$ReferenceLineValueLabelConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-relative-date-time-control-display-options-property-builder
@@ -35810,6 +44354,12 @@
   (when-let [data (lookup-entry config id :title-options)]
     (. builder titleOptions data))
   (.build builder))
+
+
+(defn cfn-template-relative-date-time-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-relative-date-time-control-display-options-property-builder (new CfnTemplate$RelativeDateTimeControlDisplayOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-relative-dates-filter-property-builder
@@ -35859,6 +44409,12 @@
   (.build builder))
 
 
+(defn cfn-template-relative-dates-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-template-relative-dates-filter-property-builder (new CfnTemplate$RelativeDatesFilterProperty$Builder) id config))
+
+
 (defn build-cfn-template-resource-permission-property-builder
   "The build-cfn-template-resource-permission-property-builder function updates a CfnTemplate$ResourcePermissionProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ResourcePermissionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35882,6 +44438,12 @@
   (.build builder))
 
 
+(defn cfn-template-resource-permission-property-builder
+  ""
+  [id config]
+  (build-cfn-template-resource-permission-property-builder (new CfnTemplate$ResourcePermissionProperty$Builder) id config))
+
+
 (defn build-cfn-template-rolling-date-configuration-property-builder
   "The build-cfn-template-rolling-date-configuration-property-builder function updates a CfnTemplate$RollingDateConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$RollingDateConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35900,6 +44462,12 @@
   (when-let [data (lookup-entry config id :expression)]
     (. builder expression data))
   (.build builder))
+
+
+(defn cfn-template-rolling-date-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-rolling-date-configuration-property-builder (new CfnTemplate$RollingDateConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-row-alternate-color-options-property-builder
@@ -35925,6 +44493,12 @@
   (.build builder))
 
 
+(defn cfn-template-row-alternate-color-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-row-alternate-color-options-property-builder (new CfnTemplate$RowAlternateColorOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-same-sheet-target-visual-configuration-property-builder
   "The build-cfn-template-same-sheet-target-visual-configuration-property-builder function updates a CfnTemplate$SameSheetTargetVisualConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$SameSheetTargetVisualConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35943,6 +44517,12 @@
   (when-let [data (lookup-entry config id :target-visuals)]
     (. builder targetVisuals data))
   (.build builder))
+
+
+(defn cfn-template-same-sheet-target-visual-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-same-sheet-target-visual-configuration-property-builder (new CfnTemplate$SameSheetTargetVisualConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-sankey-diagram-aggregated-field-wells-property-builder
@@ -35968,6 +44548,12 @@
   (.build builder))
 
 
+(defn cfn-template-sankey-diagram-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-sankey-diagram-aggregated-field-wells-property-builder (new CfnTemplate$SankeyDiagramAggregatedFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-template-sankey-diagram-chart-configuration-property-builder
   "The build-cfn-template-sankey-diagram-chart-configuration-property-builder function updates a CfnTemplate$SankeyDiagramChartConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$SankeyDiagramChartConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -35991,6 +44577,12 @@
   (.build builder))
 
 
+(defn cfn-template-sankey-diagram-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-sankey-diagram-chart-configuration-property-builder (new CfnTemplate$SankeyDiagramChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-sankey-diagram-field-wells-property-builder
   "The build-cfn-template-sankey-diagram-field-wells-property-builder function updates a CfnTemplate$SankeyDiagramFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$SankeyDiagramFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36006,6 +44598,12 @@
   (when-let [data (lookup-entry config id :sankey-diagram-aggregated-field-wells)]
     (. builder sankeyDiagramAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-template-sankey-diagram-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-sankey-diagram-field-wells-property-builder (new CfnTemplate$SankeyDiagramFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-sankey-diagram-sort-configuration-property-builder
@@ -36029,6 +44627,12 @@
   (when-let [data (lookup-entry config id :weight-sort)]
     (. builder weightSort data))
   (.build builder))
+
+
+(defn cfn-template-sankey-diagram-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-sankey-diagram-sort-configuration-property-builder (new CfnTemplate$SankeyDiagramSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-sankey-diagram-visual-property-builder
@@ -36060,6 +44664,12 @@
   (.build builder))
 
 
+(defn cfn-template-sankey-diagram-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-sankey-diagram-visual-property-builder (new CfnTemplate$SankeyDiagramVisualProperty$Builder) id config))
+
+
 (defn build-cfn-template-scatter-plot-categorically-aggregated-field-wells-property-builder
   "The build-cfn-template-scatter-plot-categorically-aggregated-field-wells-property-builder function updates a CfnTemplate$ScatterPlotCategoricallyAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ScatterPlotCategoricallyAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36087,6 +44697,12 @@
   (when-let [data (lookup-entry config id :y-axis)]
     (. builder yAxis data))
   (.build builder))
+
+
+(defn cfn-template-scatter-plot-categorically-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-scatter-plot-categorically-aggregated-field-wells-property-builder (new CfnTemplate$ScatterPlotCategoricallyAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-scatter-plot-configuration-property-builder
@@ -36130,6 +44746,12 @@
   (.build builder))
 
 
+(defn cfn-template-scatter-plot-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-scatter-plot-configuration-property-builder (new CfnTemplate$ScatterPlotConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-scatter-plot-field-wells-property-builder
   "The build-cfn-template-scatter-plot-field-wells-property-builder function updates a CfnTemplate$ScatterPlotFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ScatterPlotFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36148,6 +44770,12 @@
   (when-let [data (lookup-entry config id :scatter-plot-unaggregated-field-wells)]
     (. builder scatterPlotUnaggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-template-scatter-plot-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-scatter-plot-field-wells-property-builder (new CfnTemplate$ScatterPlotFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-scatter-plot-unaggregated-field-wells-property-builder
@@ -36177,6 +44805,12 @@
   (when-let [data (lookup-entry config id :y-axis)]
     (. builder yAxis data))
   (.build builder))
+
+
+(defn cfn-template-scatter-plot-unaggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-scatter-plot-unaggregated-field-wells-property-builder (new CfnTemplate$ScatterPlotUnaggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-scatter-plot-visual-property-builder
@@ -36211,6 +44845,12 @@
   (.build builder))
 
 
+(defn cfn-template-scatter-plot-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-scatter-plot-visual-property-builder (new CfnTemplate$ScatterPlotVisualProperty$Builder) id config))
+
+
 (defn build-cfn-template-scroll-bar-options-property-builder
   "The build-cfn-template-scroll-bar-options-property-builder function updates a CfnTemplate$ScrollBarOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ScrollBarOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36231,6 +44871,12 @@
   (.build builder))
 
 
+(defn cfn-template-scroll-bar-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-scroll-bar-options-property-builder (new CfnTemplate$ScrollBarOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-secondary-value-options-property-builder
   "The build-cfn-template-secondary-value-options-property-builder function updates a CfnTemplate$SecondaryValueOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$SecondaryValueOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36246,6 +44892,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-template-secondary-value-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-secondary-value-options-property-builder (new CfnTemplate$SecondaryValueOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-section-after-page-break-property-builder
@@ -36265,6 +44917,12 @@
   (.build builder))
 
 
+(defn cfn-template-section-after-page-break-property-builder
+  ""
+  [id config]
+  (build-cfn-template-section-after-page-break-property-builder (new CfnTemplate$SectionAfterPageBreakProperty$Builder) id config))
+
+
 (defn build-cfn-template-section-based-layout-canvas-size-options-property-builder
   "The build-cfn-template-section-based-layout-canvas-size-options-property-builder function updates a CfnTemplate$SectionBasedLayoutCanvasSizeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$SectionBasedLayoutCanvasSizeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36280,6 +44938,12 @@
   (when-let [data (lookup-entry config id :paper-canvas-size-options)]
     (. builder paperCanvasSizeOptions data))
   (.build builder))
+
+
+(defn cfn-template-section-based-layout-canvas-size-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-section-based-layout-canvas-size-options-property-builder (new CfnTemplate$SectionBasedLayoutCanvasSizeOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-section-based-layout-configuration-property-builder
@@ -36308,6 +44972,12 @@
   (.build builder))
 
 
+(defn cfn-template-section-based-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-section-based-layout-configuration-property-builder (new CfnTemplate$SectionBasedLayoutConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-section-based-layout-paper-canvas-size-options-property-builder
   "The build-cfn-template-section-based-layout-paper-canvas-size-options-property-builder function updates a CfnTemplate$SectionBasedLayoutPaperCanvasSizeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$SectionBasedLayoutPaperCanvasSizeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36331,6 +45001,12 @@
   (.build builder))
 
 
+(defn cfn-template-section-based-layout-paper-canvas-size-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-section-based-layout-paper-canvas-size-options-property-builder (new CfnTemplate$SectionBasedLayoutPaperCanvasSizeOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-section-layout-configuration-property-builder
   "The build-cfn-template-section-layout-configuration-property-builder function updates a CfnTemplate$SectionLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$SectionLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36348,6 +45024,12 @@
   (.build builder))
 
 
+(defn cfn-template-section-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-section-layout-configuration-property-builder (new CfnTemplate$SectionLayoutConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-section-page-break-configuration-property-builder
   "The build-cfn-template-section-page-break-configuration-property-builder function updates a CfnTemplate$SectionPageBreakConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$SectionPageBreakConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36363,6 +45045,12 @@
   (when-let [data (lookup-entry config id :after)]
     (. builder after data))
   (.build builder))
+
+
+(defn cfn-template-section-page-break-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-section-page-break-configuration-property-builder (new CfnTemplate$SectionPageBreakConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-section-style-property-builder
@@ -36385,6 +45073,12 @@
   (.build builder))
 
 
+(defn cfn-template-section-style-property-builder
+  ""
+  [id config]
+  (build-cfn-template-section-style-property-builder (new CfnTemplate$SectionStyleProperty$Builder) id config))
+
+
 (defn build-cfn-template-selected-sheets-filter-scope-configuration-property-builder
   "The build-cfn-template-selected-sheets-filter-scope-configuration-property-builder function updates a CfnTemplate$SelectedSheetsFilterScopeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$SelectedSheetsFilterScopeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36400,6 +45094,12 @@
   (when-let [data (lookup-entry config id :sheet-visual-scoping-configurations)]
     (. builder sheetVisualScopingConfigurations data))
   (.build builder))
+
+
+(defn cfn-template-selected-sheets-filter-scope-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-selected-sheets-filter-scope-configuration-property-builder (new CfnTemplate$SelectedSheetsFilterScopeConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-series-item-property-builder
@@ -36422,6 +45122,12 @@
   (.build builder))
 
 
+(defn cfn-template-series-item-property-builder
+  ""
+  [id config]
+  (build-cfn-template-series-item-property-builder (new CfnTemplate$SeriesItemProperty$Builder) id config))
+
+
 (defn build-cfn-template-set-parameter-value-configuration-property-builder
   "The build-cfn-template-set-parameter-value-configuration-property-builder function updates a CfnTemplate$SetParameterValueConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$SetParameterValueConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36442,6 +45148,12 @@
   (.build builder))
 
 
+(defn cfn-template-set-parameter-value-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-set-parameter-value-configuration-property-builder (new CfnTemplate$SetParameterValueConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-shape-conditional-format-property-builder
   "The build-cfn-template-shape-conditional-format-property-builder function updates a CfnTemplate$ShapeConditionalFormatProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ShapeConditionalFormatProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36457,6 +45169,12 @@
   (when-let [data (lookup-entry config id :background-color)]
     (. builder backgroundColor data))
   (.build builder))
+
+
+(defn cfn-template-shape-conditional-format-property-builder
+  ""
+  [id config]
+  (build-cfn-template-shape-conditional-format-property-builder (new CfnTemplate$ShapeConditionalFormatProperty$Builder) id config))
 
 
 (defn build-cfn-template-sheet-control-info-icon-label-options-property-builder
@@ -36479,6 +45197,12 @@
   (.build builder))
 
 
+(defn cfn-template-sheet-control-info-icon-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-sheet-control-info-icon-label-options-property-builder (new CfnTemplate$SheetControlInfoIconLabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-sheet-control-layout-configuration-property-builder
   "The build-cfn-template-sheet-control-layout-configuration-property-builder function updates a CfnTemplate$SheetControlLayoutConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$SheetControlLayoutConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36496,6 +45220,12 @@
   (.build builder))
 
 
+(defn cfn-template-sheet-control-layout-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-sheet-control-layout-configuration-property-builder (new CfnTemplate$SheetControlLayoutConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-sheet-control-layout-property-builder
   "The build-cfn-template-sheet-control-layout-property-builder function updates a CfnTemplate$SheetControlLayoutProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$SheetControlLayoutProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36511,6 +45241,12 @@
   (when-let [data (lookup-entry config id :configuration)]
     (. builder configuration data))
   (.build builder))
+
+
+(defn cfn-template-sheet-control-layout-property-builder
+  ""
+  [id config]
+  (build-cfn-template-sheet-control-layout-property-builder (new CfnTemplate$SheetControlLayoutProperty$Builder) id config))
 
 
 (defn build-cfn-template-sheet-definition-property-builder
@@ -36560,6 +45296,12 @@
   (.build builder))
 
 
+(defn cfn-template-sheet-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-template-sheet-definition-property-builder (new CfnTemplate$SheetDefinitionProperty$Builder) id config))
+
+
 (defn build-cfn-template-sheet-element-configuration-overrides-property-builder
   "The build-cfn-template-sheet-element-configuration-overrides-property-builder function updates a CfnTemplate$SheetElementConfigurationOverridesProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$SheetElementConfigurationOverridesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36575,6 +45317,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-template-sheet-element-configuration-overrides-property-builder
+  ""
+  [id config]
+  (build-cfn-template-sheet-element-configuration-overrides-property-builder (new CfnTemplate$SheetElementConfigurationOverridesProperty$Builder) id config))
 
 
 (defn build-cfn-template-sheet-element-rendering-rule-property-builder
@@ -36597,6 +45345,12 @@
   (.build builder))
 
 
+(defn cfn-template-sheet-element-rendering-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-template-sheet-element-rendering-rule-property-builder (new CfnTemplate$SheetElementRenderingRuleProperty$Builder) id config))
+
+
 (defn build-cfn-template-sheet-property-builder
   "The build-cfn-template-sheet-property-builder function updates a CfnTemplate$SheetProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$SheetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36617,6 +45371,12 @@
   (.build builder))
 
 
+(defn cfn-template-sheet-property-builder
+  ""
+  [id config]
+  (build-cfn-template-sheet-property-builder (new CfnTemplate$SheetProperty$Builder) id config))
+
+
 (defn build-cfn-template-sheet-text-box-property-builder
   "The build-cfn-template-sheet-text-box-property-builder function updates a CfnTemplate$SheetTextBoxProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$SheetTextBoxProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36635,6 +45395,12 @@
   (when-let [data (lookup-entry config id :sheet-text-box-id)]
     (. builder sheetTextBoxId data))
   (.build builder))
+
+
+(defn cfn-template-sheet-text-box-property-builder
+  ""
+  [id config]
+  (build-cfn-template-sheet-text-box-property-builder (new CfnTemplate$SheetTextBoxProperty$Builder) id config))
 
 
 (defn build-cfn-template-sheet-visual-scoping-configuration-property-builder
@@ -36660,6 +45426,12 @@
   (.build builder))
 
 
+(defn cfn-template-sheet-visual-scoping-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-sheet-visual-scoping-configuration-property-builder (new CfnTemplate$SheetVisualScopingConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-short-format-text-property-builder
   "The build-cfn-template-short-format-text-property-builder function updates a CfnTemplate$ShortFormatTextProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ShortFormatTextProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36680,6 +45452,12 @@
   (.build builder))
 
 
+(defn cfn-template-short-format-text-property-builder
+  ""
+  [id config]
+  (build-cfn-template-short-format-text-property-builder (new CfnTemplate$ShortFormatTextProperty$Builder) id config))
+
+
 (defn build-cfn-template-simple-cluster-marker-property-builder
   "The build-cfn-template-simple-cluster-marker-property-builder function updates a CfnTemplate$SimpleClusterMarkerProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$SimpleClusterMarkerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36695,6 +45473,12 @@
   (when-let [data (lookup-entry config id :color)]
     (. builder color data))
   (.build builder))
+
+
+(defn cfn-template-simple-cluster-marker-property-builder
+  ""
+  [id config]
+  (build-cfn-template-simple-cluster-marker-property-builder (new CfnTemplate$SimpleClusterMarkerProperty$Builder) id config))
 
 
 (defn build-cfn-template-slider-control-display-options-property-builder
@@ -36717,6 +45501,12 @@
   (.build builder))
 
 
+(defn cfn-template-slider-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-slider-control-display-options-property-builder (new CfnTemplate$SliderControlDisplayOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-small-multiples-axis-properties-property-builder
   "The build-cfn-template-small-multiples-axis-properties-property-builder function updates a CfnTemplate$SmallMultiplesAxisPropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$SmallMultiplesAxisPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36735,6 +45525,12 @@
   (when-let [data (lookup-entry config id :scale)]
     (. builder scale data))
   (.build builder))
+
+
+(defn cfn-template-small-multiples-axis-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-template-small-multiples-axis-properties-property-builder (new CfnTemplate$SmallMultiplesAxisPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-template-small-multiples-options-property-builder
@@ -36766,6 +45562,12 @@
   (.build builder))
 
 
+(defn cfn-template-small-multiples-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-small-multiples-options-property-builder (new CfnTemplate$SmallMultiplesOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-spacing-property-builder
   "The build-cfn-template-spacing-property-builder function updates a CfnTemplate$SpacingProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$SpacingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36792,6 +45594,12 @@
   (.build builder))
 
 
+(defn cfn-template-spacing-property-builder
+  ""
+  [id config]
+  (build-cfn-template-spacing-property-builder (new CfnTemplate$SpacingProperty$Builder) id config))
+
+
 (defn build-cfn-template-string-default-values-property-builder
   "The build-cfn-template-string-default-values-property-builder function updates a CfnTemplate$StringDefaultValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$StringDefaultValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36812,6 +45620,12 @@
   (.build builder))
 
 
+(defn cfn-template-string-default-values-property-builder
+  ""
+  [id config]
+  (build-cfn-template-string-default-values-property-builder (new CfnTemplate$StringDefaultValuesProperty$Builder) id config))
+
+
 (defn build-cfn-template-string-format-configuration-property-builder
   "The build-cfn-template-string-format-configuration-property-builder function updates a CfnTemplate$StringFormatConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$StringFormatConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36830,6 +45644,12 @@
   (when-let [data (lookup-entry config id :numeric-format-configuration)]
     (. builder numericFormatConfiguration data))
   (.build builder))
+
+
+(defn cfn-template-string-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-string-format-configuration-property-builder (new CfnTemplate$StringFormatConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-string-parameter-declaration-property-builder
@@ -36861,6 +45681,12 @@
   (.build builder))
 
 
+(defn cfn-template-string-parameter-declaration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-string-parameter-declaration-property-builder (new CfnTemplate$StringParameterDeclarationProperty$Builder) id config))
+
+
 (defn build-cfn-template-string-value-when-unset-configuration-property-builder
   "The build-cfn-template-string-value-when-unset-configuration-property-builder function updates a CfnTemplate$StringValueWhenUnsetConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$StringValueWhenUnsetConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36879,6 +45705,12 @@
   (when-let [data (lookup-entry config id :value-when-unset-option)]
     (. builder valueWhenUnsetOption data))
   (.build builder))
+
+
+(defn cfn-template-string-value-when-unset-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-string-value-when-unset-configuration-property-builder (new CfnTemplate$StringValueWhenUnsetConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-subtotal-options-property-builder
@@ -36919,6 +45751,12 @@
   (.build builder))
 
 
+(defn cfn-template-subtotal-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-subtotal-options-property-builder (new CfnTemplate$SubtotalOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-table-aggregated-field-wells-property-builder
   "The build-cfn-template-table-aggregated-field-wells-property-builder function updates a CfnTemplate$TableAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TableAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36937,6 +45775,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-template-table-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-aggregated-field-wells-property-builder (new CfnTemplate$TableAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-table-border-options-property-builder
@@ -36962,6 +45806,12 @@
   (.build builder))
 
 
+(defn cfn-template-table-border-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-border-options-property-builder (new CfnTemplate$TableBorderOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-table-cell-conditional-formatting-property-builder
   "The build-cfn-template-table-cell-conditional-formatting-property-builder function updates a CfnTemplate$TableCellConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TableCellConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36982,6 +45832,12 @@
   (.build builder))
 
 
+(defn cfn-template-table-cell-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-cell-conditional-formatting-property-builder (new CfnTemplate$TableCellConditionalFormattingProperty$Builder) id config))
+
+
 (defn build-cfn-template-table-cell-image-sizing-configuration-property-builder
   "The build-cfn-template-table-cell-image-sizing-configuration-property-builder function updates a CfnTemplate$TableCellImageSizingConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TableCellImageSizingConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -36997,6 +45853,12 @@
   (when-let [data (lookup-entry config id :table-cell-image-scaling-configuration)]
     (. builder tableCellImageScalingConfiguration data))
   (.build builder))
+
+
+(defn cfn-template-table-cell-image-sizing-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-cell-image-sizing-configuration-property-builder (new CfnTemplate$TableCellImageSizingConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-table-cell-style-property-builder
@@ -37037,6 +45899,12 @@
   (.build builder))
 
 
+(defn cfn-template-table-cell-style-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-cell-style-property-builder (new CfnTemplate$TableCellStyleProperty$Builder) id config))
+
+
 (defn build-cfn-template-table-conditional-formatting-option-property-builder
   "The build-cfn-template-table-conditional-formatting-option-property-builder function updates a CfnTemplate$TableConditionalFormattingOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TableConditionalFormattingOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37057,6 +45925,12 @@
   (.build builder))
 
 
+(defn cfn-template-table-conditional-formatting-option-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-conditional-formatting-option-property-builder (new CfnTemplate$TableConditionalFormattingOptionProperty$Builder) id config))
+
+
 (defn build-cfn-template-table-conditional-formatting-property-builder
   "The build-cfn-template-table-conditional-formatting-property-builder function updates a CfnTemplate$TableConditionalFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TableConditionalFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37072,6 +45946,12 @@
   (when-let [data (lookup-entry config id :conditional-formatting-options)]
     (. builder conditionalFormattingOptions data))
   (.build builder))
+
+
+(defn cfn-template-table-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-conditional-formatting-property-builder (new CfnTemplate$TableConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-template-table-configuration-property-builder
@@ -37109,6 +45989,12 @@
   (.build builder))
 
 
+(defn cfn-template-table-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-configuration-property-builder (new CfnTemplate$TableConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-table-field-custom-icon-content-property-builder
   "The build-cfn-template-table-field-custom-icon-content-property-builder function updates a CfnTemplate$TableFieldCustomIconContentProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TableFieldCustomIconContentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37124,6 +46010,12 @@
   (when-let [data (lookup-entry config id :icon)]
     (. builder icon data))
   (.build builder))
+
+
+(defn cfn-template-table-field-custom-icon-content-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-field-custom-icon-content-property-builder (new CfnTemplate$TableFieldCustomIconContentProperty$Builder) id config))
 
 
 (defn build-cfn-template-table-field-custom-text-content-property-builder
@@ -37146,6 +46038,12 @@
   (.build builder))
 
 
+(defn cfn-template-table-field-custom-text-content-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-field-custom-text-content-property-builder (new CfnTemplate$TableFieldCustomTextContentProperty$Builder) id config))
+
+
 (defn build-cfn-template-table-field-image-configuration-property-builder
   "The build-cfn-template-table-field-image-configuration-property-builder function updates a CfnTemplate$TableFieldImageConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TableFieldImageConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37161,6 +46059,12 @@
   (when-let [data (lookup-entry config id :sizing-options)]
     (. builder sizingOptions data))
   (.build builder))
+
+
+(defn cfn-template-table-field-image-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-field-image-configuration-property-builder (new CfnTemplate$TableFieldImageConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-table-field-link-configuration-property-builder
@@ -37183,6 +46087,12 @@
   (.build builder))
 
 
+(defn cfn-template-table-field-link-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-field-link-configuration-property-builder (new CfnTemplate$TableFieldLinkConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-table-field-link-content-configuration-property-builder
   "The build-cfn-template-table-field-link-content-configuration-property-builder function updates a CfnTemplate$TableFieldLinkContentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TableFieldLinkContentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37201,6 +46111,12 @@
   (when-let [data (lookup-entry config id :custom-text-content)]
     (. builder customTextContent data))
   (.build builder))
+
+
+(defn cfn-template-table-field-link-content-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-field-link-content-configuration-property-builder (new CfnTemplate$TableFieldLinkContentConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-table-field-option-property-builder
@@ -37232,6 +46148,12 @@
   (.build builder))
 
 
+(defn cfn-template-table-field-option-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-field-option-property-builder (new CfnTemplate$TableFieldOptionProperty$Builder) id config))
+
+
 (defn build-cfn-template-table-field-options-property-builder
   "The build-cfn-template-table-field-options-property-builder function updates a CfnTemplate$TableFieldOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TableFieldOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37255,6 +46177,12 @@
   (.build builder))
 
 
+(defn cfn-template-table-field-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-field-options-property-builder (new CfnTemplate$TableFieldOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-table-field-url-configuration-property-builder
   "The build-cfn-template-table-field-url-configuration-property-builder function updates a CfnTemplate$TableFieldURLConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TableFieldURLConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37273,6 +46201,12 @@
   (when-let [data (lookup-entry config id :link-configuration)]
     (. builder linkConfiguration data))
   (.build builder))
+
+
+(defn cfn-template-table-field-url-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-field-url-configuration-property-builder (new CfnTemplate$TableFieldURLConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-table-field-wells-property-builder
@@ -37295,6 +46229,12 @@
   (.build builder))
 
 
+(defn cfn-template-table-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-field-wells-property-builder (new CfnTemplate$TableFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-template-table-inline-visualization-property-builder
   "The build-cfn-template-table-inline-visualization-property-builder function updates a CfnTemplate$TableInlineVisualizationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TableInlineVisualizationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37310,6 +46250,12 @@
   (when-let [data (lookup-entry config id :data-bars)]
     (. builder dataBars data))
   (.build builder))
+
+
+(defn cfn-template-table-inline-visualization-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-inline-visualization-property-builder (new CfnTemplate$TableInlineVisualizationProperty$Builder) id config))
 
 
 (defn build-cfn-template-table-options-property-builder
@@ -37338,6 +46284,12 @@
   (.build builder))
 
 
+(defn cfn-template-table-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-options-property-builder (new CfnTemplate$TableOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-table-paginated-report-options-property-builder
   "The build-cfn-template-table-paginated-report-options-property-builder function updates a CfnTemplate$TablePaginatedReportOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TablePaginatedReportOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37358,6 +46310,12 @@
   (.build builder))
 
 
+(defn cfn-template-table-paginated-report-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-paginated-report-options-property-builder (new CfnTemplate$TablePaginatedReportOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-table-pinned-field-options-property-builder
   "The build-cfn-template-table-pinned-field-options-property-builder function updates a CfnTemplate$TablePinnedFieldOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TablePinnedFieldOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37373,6 +46331,12 @@
   (when-let [data (lookup-entry config id :pinned-left-fields)]
     (. builder pinnedLeftFields data))
   (.build builder))
+
+
+(defn cfn-template-table-pinned-field-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-pinned-field-options-property-builder (new CfnTemplate$TablePinnedFieldOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-table-row-conditional-formatting-property-builder
@@ -37393,6 +46357,12 @@
   (when-let [data (lookup-entry config id :text-color)]
     (. builder textColor data))
   (.build builder))
+
+
+(defn cfn-template-table-row-conditional-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-row-conditional-formatting-property-builder (new CfnTemplate$TableRowConditionalFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-template-table-side-border-options-property-builder
@@ -37427,6 +46397,12 @@
   (.build builder))
 
 
+(defn cfn-template-table-side-border-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-side-border-options-property-builder (new CfnTemplate$TableSideBorderOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-table-sort-configuration-property-builder
   "The build-cfn-template-table-sort-configuration-property-builder function updates a CfnTemplate$TableSortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TableSortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37447,6 +46423,12 @@
   (.build builder))
 
 
+(defn cfn-template-table-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-sort-configuration-property-builder (new CfnTemplate$TableSortConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-table-style-target-property-builder
   "The build-cfn-template-table-style-target-property-builder function updates a CfnTemplate$TableStyleTargetProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TableStyleTargetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37464,6 +46446,12 @@
   (.build builder))
 
 
+(defn cfn-template-table-style-target-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-style-target-property-builder (new CfnTemplate$TableStyleTargetProperty$Builder) id config))
+
+
 (defn build-cfn-template-table-unaggregated-field-wells-property-builder
   "The build-cfn-template-table-unaggregated-field-wells-property-builder function updates a CfnTemplate$TableUnaggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TableUnaggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37479,6 +46467,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-template-table-unaggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-unaggregated-field-wells-property-builder (new CfnTemplate$TableUnaggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-table-visual-property-builder
@@ -37513,6 +46507,12 @@
   (.build builder))
 
 
+(defn cfn-template-table-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-table-visual-property-builder (new CfnTemplate$TableVisualProperty$Builder) id config))
+
+
 (defn build-cfn-template-template-error-property-builder
   "The build-cfn-template-template-error-property-builder function updates a CfnTemplate$TemplateErrorProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TemplateErrorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37536,6 +46536,12 @@
   (.build builder))
 
 
+(defn cfn-template-template-error-property-builder
+  ""
+  [id config]
+  (build-cfn-template-template-error-property-builder (new CfnTemplate$TemplateErrorProperty$Builder) id config))
+
+
 (defn build-cfn-template-template-source-analysis-property-builder
   "The build-cfn-template-template-source-analysis-property-builder function updates a CfnTemplate$TemplateSourceAnalysisProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TemplateSourceAnalysisProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37554,6 +46560,12 @@
   (when-let [data (lookup-entry config id :data-set-references)]
     (. builder dataSetReferences data))
   (.build builder))
+
+
+(defn cfn-template-template-source-analysis-property-builder
+  ""
+  [id config]
+  (build-cfn-template-template-source-analysis-property-builder (new CfnTemplate$TemplateSourceAnalysisProperty$Builder) id config))
 
 
 (defn build-cfn-template-template-source-entity-property-builder
@@ -37576,6 +46588,12 @@
   (.build builder))
 
 
+(defn cfn-template-template-source-entity-property-builder
+  ""
+  [id config]
+  (build-cfn-template-template-source-entity-property-builder (new CfnTemplate$TemplateSourceEntityProperty$Builder) id config))
+
+
 (defn build-cfn-template-template-source-template-property-builder
   "The build-cfn-template-template-source-template-property-builder function updates a CfnTemplate$TemplateSourceTemplateProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TemplateSourceTemplateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37591,6 +46609,12 @@
   (when-let [data (lookup-entry config id :arn)]
     (. builder arn data))
   (.build builder))
+
+
+(defn cfn-template-template-source-template-property-builder
+  ""
+  [id config]
+  (build-cfn-template-template-source-template-property-builder (new CfnTemplate$TemplateSourceTemplateProperty$Builder) id config))
 
 
 (defn build-cfn-template-template-version-definition-property-builder
@@ -37629,6 +46653,12 @@
   (when-let [data (lookup-entry config id :sheets)]
     (. builder sheets data))
   (.build builder))
+
+
+(defn cfn-template-template-version-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-template-template-version-definition-property-builder (new CfnTemplate$TemplateVersionDefinitionProperty$Builder) id config))
 
 
 (defn build-cfn-template-template-version-property-builder
@@ -37672,6 +46702,12 @@
   (.build builder))
 
 
+(defn cfn-template-template-version-property-builder
+  ""
+  [id config]
+  (build-cfn-template-template-version-property-builder (new CfnTemplate$TemplateVersionProperty$Builder) id config))
+
+
 (defn build-cfn-template-text-area-control-display-options-property-builder
   "The build-cfn-template-text-area-control-display-options-property-builder function updates a CfnTemplate$TextAreaControlDisplayOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TextAreaControlDisplayOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37693,6 +46729,12 @@
   (when-let [data (lookup-entry config id :title-options)]
     (. builder titleOptions data))
   (.build builder))
+
+
+(defn cfn-template-text-area-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-text-area-control-display-options-property-builder (new CfnTemplate$TextAreaControlDisplayOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-text-conditional-format-property-builder
@@ -37718,6 +46760,12 @@
   (.build builder))
 
 
+(defn cfn-template-text-conditional-format-property-builder
+  ""
+  [id config]
+  (build-cfn-template-text-conditional-format-property-builder (new CfnTemplate$TextConditionalFormatProperty$Builder) id config))
+
+
 (defn build-cfn-template-text-control-placeholder-options-property-builder
   "The build-cfn-template-text-control-placeholder-options-property-builder function updates a CfnTemplate$TextControlPlaceholderOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TextControlPlaceholderOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37733,6 +46781,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-template-text-control-placeholder-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-text-control-placeholder-options-property-builder (new CfnTemplate$TextControlPlaceholderOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-text-field-control-display-options-property-builder
@@ -37758,6 +46812,12 @@
   (.build builder))
 
 
+(defn cfn-template-text-field-control-display-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-text-field-control-display-options-property-builder (new CfnTemplate$TextFieldControlDisplayOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-thousand-separator-options-property-builder
   "The build-cfn-template-thousand-separator-options-property-builder function updates a CfnTemplate$ThousandSeparatorOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ThousandSeparatorOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37776,6 +46836,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-template-thousand-separator-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-thousand-separator-options-property-builder (new CfnTemplate$ThousandSeparatorOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-time-based-forecast-properties-property-builder
@@ -37808,6 +46874,12 @@
   (when-let [data (lookup-entry config id :upper-boundary)]
     (. builder upperBoundary data))
   (.build builder))
+
+
+(defn cfn-template-time-based-forecast-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-template-time-based-forecast-properties-property-builder (new CfnTemplate$TimeBasedForecastPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-template-time-equality-filter-property-builder
@@ -37845,6 +46917,12 @@
   (.build builder))
 
 
+(defn cfn-template-time-equality-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-template-time-equality-filter-property-builder (new CfnTemplate$TimeEqualityFilterProperty$Builder) id config))
+
+
 (defn build-cfn-template-time-range-drill-down-filter-property-builder
   "The build-cfn-template-time-range-drill-down-filter-property-builder function updates a CfnTemplate$TimeRangeDrillDownFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TimeRangeDrillDownFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37869,6 +46947,12 @@
   (when-let [data (lookup-entry config id :time-granularity)]
     (. builder timeGranularity data))
   (.build builder))
+
+
+(defn cfn-template-time-range-drill-down-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-template-time-range-drill-down-filter-property-builder (new CfnTemplate$TimeRangeDrillDownFilterProperty$Builder) id config))
 
 
 (defn build-cfn-template-time-range-filter-property-builder
@@ -37915,6 +46999,12 @@
   (.build builder))
 
 
+(defn cfn-template-time-range-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-template-time-range-filter-property-builder (new CfnTemplate$TimeRangeFilterProperty$Builder) id config))
+
+
 (defn build-cfn-template-time-range-filter-value-property-builder
   "The build-cfn-template-time-range-filter-value-property-builder function updates a CfnTemplate$TimeRangeFilterValueProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TimeRangeFilterValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37938,6 +47028,12 @@
   (.build builder))
 
 
+(defn cfn-template-time-range-filter-value-property-builder
+  ""
+  [id config]
+  (build-cfn-template-time-range-filter-value-property-builder (new CfnTemplate$TimeRangeFilterValueProperty$Builder) id config))
+
+
 (defn build-cfn-template-tooltip-item-property-builder
   "The build-cfn-template-tooltip-item-property-builder function updates a CfnTemplate$TooltipItemProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TooltipItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37956,6 +47052,12 @@
   (when-let [data (lookup-entry config id :field-tooltip-item)]
     (. builder fieldTooltipItem data))
   (.build builder))
+
+
+(defn cfn-template-tooltip-item-property-builder
+  ""
+  [id config]
+  (build-cfn-template-tooltip-item-property-builder (new CfnTemplate$TooltipItemProperty$Builder) id config))
 
 
 (defn build-cfn-template-tooltip-options-property-builder
@@ -37979,6 +47081,12 @@
   (when-let [data (lookup-entry config id :tooltip-visibility)]
     (. builder tooltipVisibility data))
   (.build builder))
+
+
+(defn cfn-template-tooltip-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-tooltip-options-property-builder (new CfnTemplate$TooltipOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-top-bottom-filter-property-builder
@@ -38014,6 +47122,12 @@
   (when-let [data (lookup-entry config id :time-granularity)]
     (. builder timeGranularity data))
   (.build builder))
+
+
+(defn cfn-template-top-bottom-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-template-top-bottom-filter-property-builder (new CfnTemplate$TopBottomFilterProperty$Builder) id config))
 
 
 (defn build-cfn-template-top-bottom-movers-computation-property-builder
@@ -38054,6 +47168,12 @@
   (.build builder))
 
 
+(defn cfn-template-top-bottom-movers-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-template-top-bottom-movers-computation-property-builder (new CfnTemplate$TopBottomMoversComputationProperty$Builder) id config))
+
+
 (defn build-cfn-template-top-bottom-ranked-computation-property-builder
   "The build-cfn-template-top-bottom-ranked-computation-property-builder function updates a CfnTemplate$TopBottomRankedComputationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TopBottomRankedComputationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -38086,6 +47206,12 @@
   (.build builder))
 
 
+(defn cfn-template-top-bottom-ranked-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-template-top-bottom-ranked-computation-property-builder (new CfnTemplate$TopBottomRankedComputationProperty$Builder) id config))
+
+
 (defn build-cfn-template-total-aggregation-computation-property-builder
   "The build-cfn-template-total-aggregation-computation-property-builder function updates a CfnTemplate$TotalAggregationComputationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TotalAggregationComputationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -38109,6 +47235,12 @@
   (.build builder))
 
 
+(defn cfn-template-total-aggregation-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-template-total-aggregation-computation-property-builder (new CfnTemplate$TotalAggregationComputationProperty$Builder) id config))
+
+
 (defn build-cfn-template-total-aggregation-function-property-builder
   "The build-cfn-template-total-aggregation-function-property-builder function updates a CfnTemplate$TotalAggregationFunctionProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TotalAggregationFunctionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -38124,6 +47256,12 @@
   (when-let [data (lookup-entry config id :simple-total-aggregation-function)]
     (. builder simpleTotalAggregationFunction data))
   (.build builder))
+
+
+(defn cfn-template-total-aggregation-function-property-builder
+  ""
+  [id config]
+  (build-cfn-template-total-aggregation-function-property-builder (new CfnTemplate$TotalAggregationFunctionProperty$Builder) id config))
 
 
 (defn build-cfn-template-total-aggregation-option-property-builder
@@ -38144,6 +47282,12 @@
   (when-let [data (lookup-entry config id :total-aggregation-function)]
     (. builder totalAggregationFunction data))
   (.build builder))
+
+
+(defn cfn-template-total-aggregation-option-property-builder
+  ""
+  [id config]
+  (build-cfn-template-total-aggregation-option-property-builder (new CfnTemplate$TotalAggregationOptionProperty$Builder) id config))
 
 
 (defn build-cfn-template-total-options-property-builder
@@ -38178,6 +47322,12 @@
   (.build builder))
 
 
+(defn cfn-template-total-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-total-options-property-builder (new CfnTemplate$TotalOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-tree-map-aggregated-field-wells-property-builder
   "The build-cfn-template-tree-map-aggregated-field-wells-property-builder function updates a CfnTemplate$TreeMapAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TreeMapAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -38199,6 +47349,12 @@
   (when-let [data (lookup-entry config id :sizes)]
     (. builder sizes data))
   (.build builder))
+
+
+(defn cfn-template-tree-map-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-tree-map-aggregated-field-wells-property-builder (new CfnTemplate$TreeMapAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-tree-map-configuration-property-builder
@@ -38242,6 +47398,12 @@
   (.build builder))
 
 
+(defn cfn-template-tree-map-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-tree-map-configuration-property-builder (new CfnTemplate$TreeMapConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-tree-map-field-wells-property-builder
   "The build-cfn-template-tree-map-field-wells-property-builder function updates a CfnTemplate$TreeMapFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TreeMapFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -38257,6 +47419,12 @@
   (when-let [data (lookup-entry config id :tree-map-aggregated-field-wells)]
     (. builder treeMapAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-template-tree-map-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-tree-map-field-wells-property-builder (new CfnTemplate$TreeMapFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-tree-map-sort-configuration-property-builder
@@ -38277,6 +47445,12 @@
   (when-let [data (lookup-entry config id :tree-map-sort)]
     (. builder treeMapSort data))
   (.build builder))
+
+
+(defn cfn-template-tree-map-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-tree-map-sort-configuration-property-builder (new CfnTemplate$TreeMapSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-tree-map-visual-property-builder
@@ -38311,6 +47485,12 @@
   (.build builder))
 
 
+(defn cfn-template-tree-map-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-tree-map-visual-property-builder (new CfnTemplate$TreeMapVisualProperty$Builder) id config))
+
+
 (defn build-cfn-template-trend-arrow-options-property-builder
   "The build-cfn-template-trend-arrow-options-property-builder function updates a CfnTemplate$TrendArrowOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TrendArrowOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -38326,6 +47506,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-template-trend-arrow-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-trend-arrow-options-property-builder (new CfnTemplate$TrendArrowOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-unaggregated-field-property-builder
@@ -38351,6 +47537,12 @@
   (.build builder))
 
 
+(defn cfn-template-unaggregated-field-property-builder
+  ""
+  [id config]
+  (build-cfn-template-unaggregated-field-property-builder (new CfnTemplate$UnaggregatedFieldProperty$Builder) id config))
+
+
 (defn build-cfn-template-unique-values-computation-property-builder
   "The build-cfn-template-unique-values-computation-property-builder function updates a CfnTemplate$UniqueValuesComputationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$UniqueValuesComputationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -38374,6 +47566,12 @@
   (.build builder))
 
 
+(defn cfn-template-unique-values-computation-property-builder
+  ""
+  [id config]
+  (build-cfn-template-unique-values-computation-property-builder (new CfnTemplate$UniqueValuesComputationProperty$Builder) id config))
+
+
 (defn build-cfn-template-validation-strategy-property-builder
   "The build-cfn-template-validation-strategy-property-builder function updates a CfnTemplate$ValidationStrategyProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ValidationStrategyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -38391,6 +47589,12 @@
   (.build builder))
 
 
+(defn cfn-template-validation-strategy-property-builder
+  ""
+  [id config]
+  (build-cfn-template-validation-strategy-property-builder (new CfnTemplate$ValidationStrategyProperty$Builder) id config))
+
+
 (defn build-cfn-template-visible-range-options-property-builder
   "The build-cfn-template-visible-range-options-property-builder function updates a CfnTemplate$VisibleRangeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$VisibleRangeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -38406,6 +47610,12 @@
   (when-let [data (lookup-entry config id :percent-range)]
     (. builder percentRange data))
   (.build builder))
+
+
+(defn cfn-template-visible-range-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-visible-range-options-property-builder (new CfnTemplate$VisibleRangeOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-visual-custom-action-operation-property-builder
@@ -38432,6 +47642,12 @@
   (when-let [data (lookup-entry config id :url-operation)]
     (. builder urlOperation data))
   (.build builder))
+
+
+(defn cfn-template-visual-custom-action-operation-property-builder
+  ""
+  [id config]
+  (build-cfn-template-visual-custom-action-operation-property-builder (new CfnTemplate$VisualCustomActionOperationProperty$Builder) id config))
 
 
 (defn build-cfn-template-visual-custom-action-property-builder
@@ -38463,6 +47679,12 @@
   (.build builder))
 
 
+(defn cfn-template-visual-custom-action-property-builder
+  ""
+  [id config]
+  (build-cfn-template-visual-custom-action-property-builder (new CfnTemplate$VisualCustomActionProperty$Builder) id config))
+
+
 (defn build-cfn-template-visual-palette-property-builder
   "The build-cfn-template-visual-palette-property-builder function updates a CfnTemplate$VisualPaletteProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$VisualPaletteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -38481,6 +47703,12 @@
   (when-let [data (lookup-entry config id :color-map)]
     (. builder colorMap data))
   (.build builder))
+
+
+(defn cfn-template-visual-palette-property-builder
+  ""
+  [id config]
+  (build-cfn-template-visual-palette-property-builder (new CfnTemplate$VisualPaletteProperty$Builder) id config))
 
 
 (defn build-cfn-template-visual-property-builder
@@ -38566,6 +47794,12 @@
   (.build builder))
 
 
+(defn cfn-template-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-visual-property-builder (new CfnTemplate$VisualProperty$Builder) id config))
+
+
 (defn build-cfn-template-visual-subtitle-label-options-property-builder
   "The build-cfn-template-visual-subtitle-label-options-property-builder function updates a CfnTemplate$VisualSubtitleLabelOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$VisualSubtitleLabelOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -38586,6 +47820,12 @@
   (.build builder))
 
 
+(defn cfn-template-visual-subtitle-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-visual-subtitle-label-options-property-builder (new CfnTemplate$VisualSubtitleLabelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-visual-title-label-options-property-builder
   "The build-cfn-template-visual-title-label-options-property-builder function updates a CfnTemplate$VisualTitleLabelOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$VisualTitleLabelOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -38604,6 +47844,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-template-visual-title-label-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-visual-title-label-options-property-builder (new CfnTemplate$VisualTitleLabelOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-waterfall-chart-aggregated-field-wells-property-builder
@@ -38629,6 +47875,12 @@
   (.build builder))
 
 
+(defn cfn-template-waterfall-chart-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-waterfall-chart-aggregated-field-wells-property-builder (new CfnTemplate$WaterfallChartAggregatedFieldWellsProperty$Builder) id config))
+
+
 (defn build-cfn-template-waterfall-chart-color-configuration-property-builder
   "The build-cfn-template-waterfall-chart-color-configuration-property-builder function updates a CfnTemplate$WaterfallChartColorConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$WaterfallChartColorConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -38644,6 +47896,12 @@
   (when-let [data (lookup-entry config id :group-color-configuration)]
     (. builder groupColorConfiguration data))
   (.build builder))
+
+
+(defn cfn-template-waterfall-chart-color-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-waterfall-chart-color-configuration-property-builder (new CfnTemplate$WaterfallChartColorConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-waterfall-chart-configuration-property-builder
@@ -38693,6 +47951,12 @@
   (.build builder))
 
 
+(defn cfn-template-waterfall-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-waterfall-chart-configuration-property-builder (new CfnTemplate$WaterfallChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-waterfall-chart-field-wells-property-builder
   "The build-cfn-template-waterfall-chart-field-wells-property-builder function updates a CfnTemplate$WaterfallChartFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$WaterfallChartFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -38708,6 +47972,12 @@
   (when-let [data (lookup-entry config id :waterfall-chart-aggregated-field-wells)]
     (. builder waterfallChartAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-template-waterfall-chart-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-waterfall-chart-field-wells-property-builder (new CfnTemplate$WaterfallChartFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-waterfall-chart-group-color-configuration-property-builder
@@ -38733,6 +48003,12 @@
   (.build builder))
 
 
+(defn cfn-template-waterfall-chart-group-color-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-waterfall-chart-group-color-configuration-property-builder (new CfnTemplate$WaterfallChartGroupColorConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-waterfall-chart-options-property-builder
   "The build-cfn-template-waterfall-chart-options-property-builder function updates a CfnTemplate$WaterfallChartOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$WaterfallChartOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -38748,6 +48024,12 @@
   (when-let [data (lookup-entry config id :total-bar-label)]
     (. builder totalBarLabel data))
   (.build builder))
+
+
+(defn cfn-template-waterfall-chart-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-waterfall-chart-options-property-builder (new CfnTemplate$WaterfallChartOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-template-waterfall-chart-sort-configuration-property-builder
@@ -38768,6 +48050,12 @@
   (when-let [data (lookup-entry config id :category-sort)]
     (. builder categorySort data))
   (.build builder))
+
+
+(defn cfn-template-waterfall-chart-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-waterfall-chart-sort-configuration-property-builder (new CfnTemplate$WaterfallChartSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-waterfall-visual-property-builder
@@ -38802,6 +48090,12 @@
   (.build builder))
 
 
+(defn cfn-template-waterfall-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-waterfall-visual-property-builder (new CfnTemplate$WaterfallVisualProperty$Builder) id config))
+
+
 (defn build-cfn-template-what-if-point-scenario-property-builder
   "The build-cfn-template-what-if-point-scenario-property-builder function updates a CfnTemplate$WhatIfPointScenarioProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$WhatIfPointScenarioProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -38820,6 +48114,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-template-what-if-point-scenario-property-builder
+  ""
+  [id config]
+  (build-cfn-template-what-if-point-scenario-property-builder (new CfnTemplate$WhatIfPointScenarioProperty$Builder) id config))
 
 
 (defn build-cfn-template-what-if-range-scenario-property-builder
@@ -38845,6 +48145,12 @@
   (.build builder))
 
 
+(defn cfn-template-what-if-range-scenario-property-builder
+  ""
+  [id config]
+  (build-cfn-template-what-if-range-scenario-property-builder (new CfnTemplate$WhatIfRangeScenarioProperty$Builder) id config))
+
+
 (defn build-cfn-template-word-cloud-aggregated-field-wells-property-builder
   "The build-cfn-template-word-cloud-aggregated-field-wells-property-builder function updates a CfnTemplate$WordCloudAggregatedFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$WordCloudAggregatedFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -38863,6 +48169,12 @@
   (when-let [data (lookup-entry config id :size)]
     (. builder size data))
   (.build builder))
+
+
+(defn cfn-template-word-cloud-aggregated-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-word-cloud-aggregated-field-wells-property-builder (new CfnTemplate$WordCloudAggregatedFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-word-cloud-chart-configuration-property-builder
@@ -38891,6 +48203,12 @@
   (.build builder))
 
 
+(defn cfn-template-word-cloud-chart-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-word-cloud-chart-configuration-property-builder (new CfnTemplate$WordCloudChartConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-template-word-cloud-field-wells-property-builder
   "The build-cfn-template-word-cloud-field-wells-property-builder function updates a CfnTemplate$WordCloudFieldWellsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$WordCloudFieldWellsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -38906,6 +48224,12 @@
   (when-let [data (lookup-entry config id :word-cloud-aggregated-field-wells)]
     (. builder wordCloudAggregatedFieldWells data))
   (.build builder))
+
+
+(defn cfn-template-word-cloud-field-wells-property-builder
+  ""
+  [id config]
+  (build-cfn-template-word-cloud-field-wells-property-builder (new CfnTemplate$WordCloudFieldWellsProperty$Builder) id config))
 
 
 (defn build-cfn-template-word-cloud-options-property-builder
@@ -38940,6 +48264,12 @@
   (.build builder))
 
 
+(defn cfn-template-word-cloud-options-property-builder
+  ""
+  [id config]
+  (build-cfn-template-word-cloud-options-property-builder (new CfnTemplate$WordCloudOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-template-word-cloud-sort-configuration-property-builder
   "The build-cfn-template-word-cloud-sort-configuration-property-builder function updates a CfnTemplate$WordCloudSortConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$WordCloudSortConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -38958,6 +48288,12 @@
   (when-let [data (lookup-entry config id :category-sort)]
     (. builder categorySort data))
   (.build builder))
+
+
+(defn cfn-template-word-cloud-sort-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-template-word-cloud-sort-configuration-property-builder (new CfnTemplate$WordCloudSortConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-template-word-cloud-visual-property-builder
@@ -38992,6 +48328,12 @@
   (.build builder))
 
 
+(defn cfn-template-word-cloud-visual-property-builder
+  ""
+  [id config]
+  (build-cfn-template-word-cloud-visual-property-builder (new CfnTemplate$WordCloudVisualProperty$Builder) id config))
+
+
 (defn build-cfn-theme-border-style-property-builder
   "The build-cfn-theme-border-style-property-builder function updates a CfnTheme$BorderStyleProperty$Builder instance using the provided configuration.
   The function takes the CfnTheme$BorderStyleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -39007,6 +48349,12 @@
   (when-let [data (lookup-entry config id :show)]
     (. builder show data))
   (.build builder))
+
+
+(defn cfn-theme-border-style-property-builder
+  ""
+  [id config]
+  (build-cfn-theme-border-style-property-builder (new CfnTheme$BorderStyleProperty$Builder) id config))
 
 
 (defn build-cfn-theme-builder
@@ -39047,6 +48395,12 @@
   (.build builder))
 
 
+(defn cfn-theme-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-theme-builder (CfnTheme$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-theme-data-color-palette-property-builder
   "The build-cfn-theme-data-color-palette-property-builder function updates a CfnTheme$DataColorPaletteProperty$Builder instance using the provided configuration.
   The function takes the CfnTheme$DataColorPaletteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -39070,6 +48424,12 @@
   (.build builder))
 
 
+(defn cfn-theme-data-color-palette-property-builder
+  ""
+  [id config]
+  (build-cfn-theme-data-color-palette-property-builder (new CfnTheme$DataColorPaletteProperty$Builder) id config))
+
+
 (defn build-cfn-theme-font-property-builder
   "The build-cfn-theme-font-property-builder function updates a CfnTheme$FontProperty$Builder instance using the provided configuration.
   The function takes the CfnTheme$FontProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -39085,6 +48445,12 @@
   (when-let [data (lookup-entry config id :font-family)]
     (. builder fontFamily data))
   (.build builder))
+
+
+(defn cfn-theme-font-property-builder
+  ""
+  [id config]
+  (build-cfn-theme-font-property-builder (new CfnTheme$FontProperty$Builder) id config))
 
 
 (defn build-cfn-theme-gutter-style-property-builder
@@ -39104,6 +48470,12 @@
   (.build builder))
 
 
+(defn cfn-theme-gutter-style-property-builder
+  ""
+  [id config]
+  (build-cfn-theme-gutter-style-property-builder (new CfnTheme$GutterStyleProperty$Builder) id config))
+
+
 (defn build-cfn-theme-margin-style-property-builder
   "The build-cfn-theme-margin-style-property-builder function updates a CfnTheme$MarginStyleProperty$Builder instance using the provided configuration.
   The function takes the CfnTheme$MarginStyleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -39119,6 +48491,12 @@
   (when-let [data (lookup-entry config id :show)]
     (. builder show data))
   (.build builder))
+
+
+(defn cfn-theme-margin-style-property-builder
+  ""
+  [id config]
+  (build-cfn-theme-margin-style-property-builder (new CfnTheme$MarginStyleProperty$Builder) id config))
 
 
 (defn build-cfn-theme-props-builder
@@ -39159,6 +48537,12 @@
   (.build builder))
 
 
+(defn cfn-theme-props-builder
+  ""
+  [id config]
+  (build-cfn-theme-props-builder (new CfnThemeProps$Builder) id config))
+
+
 (defn build-cfn-theme-resource-permission-property-builder
   "The build-cfn-theme-resource-permission-property-builder function updates a CfnTheme$ResourcePermissionProperty$Builder instance using the provided configuration.
   The function takes the CfnTheme$ResourcePermissionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -39182,6 +48566,12 @@
   (.build builder))
 
 
+(defn cfn-theme-resource-permission-property-builder
+  ""
+  [id config]
+  (build-cfn-theme-resource-permission-property-builder (new CfnTheme$ResourcePermissionProperty$Builder) id config))
+
+
 (defn build-cfn-theme-sheet-style-property-builder
   "The build-cfn-theme-sheet-style-property-builder function updates a CfnTheme$SheetStyleProperty$Builder instance using the provided configuration.
   The function takes the CfnTheme$SheetStyleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -39200,6 +48590,12 @@
   (when-let [data (lookup-entry config id :tile-layout)]
     (. builder tileLayout data))
   (.build builder))
+
+
+(defn cfn-theme-sheet-style-property-builder
+  ""
+  [id config]
+  (build-cfn-theme-sheet-style-property-builder (new CfnTheme$SheetStyleProperty$Builder) id config))
 
 
 (defn build-cfn-theme-theme-configuration-property-builder
@@ -39228,6 +48624,12 @@
   (.build builder))
 
 
+(defn cfn-theme-theme-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-theme-theme-configuration-property-builder (new CfnTheme$ThemeConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-theme-theme-error-property-builder
   "The build-cfn-theme-theme-error-property-builder function updates a CfnTheme$ThemeErrorProperty$Builder instance using the provided configuration.
   The function takes the CfnTheme$ThemeErrorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -39246,6 +48648,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-theme-theme-error-property-builder
+  ""
+  [id config]
+  (build-cfn-theme-theme-error-property-builder (new CfnTheme$ThemeErrorProperty$Builder) id config))
 
 
 (defn build-cfn-theme-theme-version-property-builder
@@ -39286,6 +48694,12 @@
   (.build builder))
 
 
+(defn cfn-theme-theme-version-property-builder
+  ""
+  [id config]
+  (build-cfn-theme-theme-version-property-builder (new CfnTheme$ThemeVersionProperty$Builder) id config))
+
+
 (defn build-cfn-theme-tile-layout-style-property-builder
   "The build-cfn-theme-tile-layout-style-property-builder function updates a CfnTheme$TileLayoutStyleProperty$Builder instance using the provided configuration.
   The function takes the CfnTheme$TileLayoutStyleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -39306,6 +48720,12 @@
   (.build builder))
 
 
+(defn cfn-theme-tile-layout-style-property-builder
+  ""
+  [id config]
+  (build-cfn-theme-tile-layout-style-property-builder (new CfnTheme$TileLayoutStyleProperty$Builder) id config))
+
+
 (defn build-cfn-theme-tile-style-property-builder
   "The build-cfn-theme-tile-style-property-builder function updates a CfnTheme$TileStyleProperty$Builder instance using the provided configuration.
   The function takes the CfnTheme$TileStyleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -39323,6 +48743,12 @@
   (.build builder))
 
 
+(defn cfn-theme-tile-style-property-builder
+  ""
+  [id config]
+  (build-cfn-theme-tile-style-property-builder (new CfnTheme$TileStyleProperty$Builder) id config))
+
+
 (defn build-cfn-theme-typography-property-builder
   "The build-cfn-theme-typography-property-builder function updates a CfnTheme$TypographyProperty$Builder instance using the provided configuration.
   The function takes the CfnTheme$TypographyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -39338,6 +48764,12 @@
   (when-let [data (lookup-entry config id :font-families)]
     (. builder fontFamilies data))
   (.build builder))
+
+
+(defn cfn-theme-typography-property-builder
+  ""
+  [id config]
+  (build-cfn-theme-typography-property-builder (new CfnTheme$TypographyProperty$Builder) id config))
 
 
 (defn build-cfn-theme-ui-color-palette-property-builder
@@ -39402,6 +48834,12 @@
   (.build builder))
 
 
+(defn cfn-theme-ui-color-palette-property-builder
+  ""
+  [id config]
+  (build-cfn-theme-ui-color-palette-property-builder (new CfnTheme$UIColorPaletteProperty$Builder) id config))
+
+
 (defn build-cfn-topic-builder
   "The build-cfn-topic-builder function updates a CfnTopic$Builder instance using the provided configuration.
   The function takes the CfnTopic$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -39434,6 +48872,12 @@
   (.build builder))
 
 
+(defn cfn-topic-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-topic-builder (CfnTopic$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-topic-cell-value-synonym-property-builder
   "The build-cfn-topic-cell-value-synonym-property-builder function updates a CfnTopic$CellValueSynonymProperty$Builder instance using the provided configuration.
   The function takes the CfnTopic$CellValueSynonymProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -39454,6 +48898,12 @@
   (.build builder))
 
 
+(defn cfn-topic-cell-value-synonym-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-cell-value-synonym-property-builder (new CfnTopic$CellValueSynonymProperty$Builder) id config))
+
+
 (defn build-cfn-topic-collective-constant-property-builder
   "The build-cfn-topic-collective-constant-property-builder function updates a CfnTopic$CollectiveConstantProperty$Builder instance using the provided configuration.
   The function takes the CfnTopic$CollectiveConstantProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -39469,6 +48919,12 @@
   (when-let [data (lookup-entry config id :value-list)]
     (. builder valueList data))
   (.build builder))
+
+
+(defn cfn-topic-collective-constant-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-collective-constant-property-builder (new CfnTopic$CollectiveConstantProperty$Builder) id config))
 
 
 (defn build-cfn-topic-comparative-order-property-builder
@@ -39494,6 +48950,12 @@
   (.build builder))
 
 
+(defn cfn-topic-comparative-order-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-comparative-order-property-builder (new CfnTopic$ComparativeOrderProperty$Builder) id config))
+
+
 (defn build-cfn-topic-data-aggregation-property-builder
   "The build-cfn-topic-data-aggregation-property-builder function updates a CfnTopic$DataAggregationProperty$Builder instance using the provided configuration.
   The function takes the CfnTopic$DataAggregationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -39512,6 +48974,12 @@
   (when-let [data (lookup-entry config id :default-date-column-name)]
     (. builder defaultDateColumnName data))
   (.build builder))
+
+
+(defn cfn-topic-data-aggregation-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-data-aggregation-property-builder (new CfnTopic$DataAggregationProperty$Builder) id config))
 
 
 (defn build-cfn-topic-dataset-metadata-property-builder
@@ -39552,6 +49020,12 @@
   (.build builder))
 
 
+(defn cfn-topic-dataset-metadata-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-dataset-metadata-property-builder (new CfnTopic$DatasetMetadataProperty$Builder) id config))
+
+
 (defn build-cfn-topic-default-formatting-property-builder
   "The build-cfn-topic-default-formatting-property-builder function updates a CfnTopic$DefaultFormattingProperty$Builder instance using the provided configuration.
   The function takes the CfnTopic$DefaultFormattingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -39570,6 +49044,12 @@
   (when-let [data (lookup-entry config id :display-format-options)]
     (. builder displayFormatOptions data))
   (.build builder))
+
+
+(defn cfn-topic-default-formatting-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-default-formatting-property-builder (new CfnTopic$DefaultFormattingProperty$Builder) id config))
 
 
 (defn build-cfn-topic-display-format-options-property-builder
@@ -39622,6 +49102,12 @@
   (.build builder))
 
 
+(defn cfn-topic-display-format-options-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-display-format-options-property-builder (new CfnTopic$DisplayFormatOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-topic-named-entity-definition-metric-property-builder
   "The build-cfn-topic-named-entity-definition-metric-property-builder function updates a CfnTopic$NamedEntityDefinitionMetricProperty$Builder instance using the provided configuration.
   The function takes the CfnTopic$NamedEntityDefinitionMetricProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -39640,6 +49126,12 @@
   (when-let [data (lookup-entry config id :aggregation-function-parameters)]
     (. builder aggregationFunctionParameters data))
   (.build builder))
+
+
+(defn cfn-topic-named-entity-definition-metric-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-named-entity-definition-metric-property-builder (new CfnTopic$NamedEntityDefinitionMetricProperty$Builder) id config))
 
 
 (defn build-cfn-topic-named-entity-definition-property-builder
@@ -39671,6 +49163,12 @@
   (.build builder))
 
 
+(defn cfn-topic-named-entity-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-named-entity-definition-property-builder (new CfnTopic$NamedEntityDefinitionProperty$Builder) id config))
+
+
 (defn build-cfn-topic-negative-format-property-builder
   "The build-cfn-topic-negative-format-property-builder function updates a CfnTopic$NegativeFormatProperty$Builder instance using the provided configuration.
   The function takes the CfnTopic$NegativeFormatProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -39689,6 +49187,12 @@
   (when-let [data (lookup-entry config id :suffix)]
     (. builder suffix data))
   (.build builder))
+
+
+(defn cfn-topic-negative-format-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-negative-format-property-builder (new CfnTopic$NegativeFormatProperty$Builder) id config))
 
 
 (defn build-cfn-topic-props-builder
@@ -39723,6 +49227,12 @@
   (.build builder))
 
 
+(defn cfn-topic-props-builder
+  ""
+  [id config]
+  (build-cfn-topic-props-builder (new CfnTopicProps$Builder) id config))
+
+
 (defn build-cfn-topic-range-constant-property-builder
   "The build-cfn-topic-range-constant-property-builder function updates a CfnTopic$RangeConstantProperty$Builder instance using the provided configuration.
   The function takes the CfnTopic$RangeConstantProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -39741,6 +49251,12 @@
   (when-let [data (lookup-entry config id :minimum)]
     (. builder minimum data))
   (.build builder))
+
+
+(defn cfn-topic-range-constant-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-range-constant-property-builder (new CfnTopic$RangeConstantProperty$Builder) id config))
 
 
 (defn build-cfn-topic-semantic-entity-type-property-builder
@@ -39764,6 +49280,12 @@
   (when-let [data (lookup-entry config id :type-parameters)]
     (. builder typeParameters data))
   (.build builder))
+
+
+(defn cfn-topic-semantic-entity-type-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-semantic-entity-type-property-builder (new CfnTopic$SemanticEntityTypeProperty$Builder) id config))
 
 
 (defn build-cfn-topic-semantic-type-property-builder
@@ -39799,6 +49321,12 @@
   (when-let [data (lookup-entry config id :type-parameters)]
     (. builder typeParameters data))
   (.build builder))
+
+
+(defn cfn-topic-semantic-type-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-semantic-type-property-builder (new CfnTopic$SemanticTypeProperty$Builder) id config))
 
 
 (defn build-cfn-topic-topic-calculated-field-property-builder
@@ -39866,6 +49394,12 @@
   (.build builder))
 
 
+(defn cfn-topic-topic-calculated-field-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-topic-calculated-field-property-builder (new CfnTopic$TopicCalculatedFieldProperty$Builder) id config))
+
+
 (defn build-cfn-topic-topic-category-filter-constant-property-builder
   "The build-cfn-topic-topic-category-filter-constant-property-builder function updates a CfnTopic$TopicCategoryFilterConstantProperty$Builder instance using the provided configuration.
   The function takes the CfnTopic$TopicCategoryFilterConstantProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -39887,6 +49421,12 @@
   (when-let [data (lookup-entry config id :singular-constant)]
     (. builder singularConstant data))
   (.build builder))
+
+
+(defn cfn-topic-topic-category-filter-constant-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-topic-category-filter-constant-property-builder (new CfnTopic$TopicCategoryFilterConstantProperty$Builder) id config))
 
 
 (defn build-cfn-topic-topic-category-filter-property-builder
@@ -39913,6 +49453,12 @@
   (when-let [data (lookup-entry config id :inverse)]
     (. builder inverse data))
   (.build builder))
+
+
+(defn cfn-topic-topic-category-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-topic-category-filter-property-builder (new CfnTopic$TopicCategoryFilterProperty$Builder) id config))
 
 
 (defn build-cfn-topic-topic-column-property-builder
@@ -39980,6 +49526,12 @@
   (.build builder))
 
 
+(defn cfn-topic-topic-column-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-topic-column-property-builder (new CfnTopic$TopicColumnProperty$Builder) id config))
+
+
 (defn build-cfn-topic-topic-date-range-filter-property-builder
   "The build-cfn-topic-topic-date-range-filter-property-builder function updates a CfnTopic$TopicDateRangeFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnTopic$TopicDateRangeFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -39998,6 +49550,12 @@
   (when-let [data (lookup-entry config id :inclusive)]
     (. builder inclusive data))
   (.build builder))
+
+
+(defn cfn-topic-topic-date-range-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-topic-date-range-filter-property-builder (new CfnTopic$TopicDateRangeFilterProperty$Builder) id config))
 
 
 (defn build-cfn-topic-topic-filter-property-builder
@@ -40047,6 +49605,12 @@
   (.build builder))
 
 
+(defn cfn-topic-topic-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-topic-filter-property-builder (new CfnTopic$TopicFilterProperty$Builder) id config))
+
+
 (defn build-cfn-topic-topic-named-entity-property-builder
   "The build-cfn-topic-topic-named-entity-property-builder function updates a CfnTopic$TopicNamedEntityProperty$Builder instance using the provided configuration.
   The function takes the CfnTopic$TopicNamedEntityProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -40076,6 +49640,12 @@
   (.build builder))
 
 
+(defn cfn-topic-topic-named-entity-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-topic-named-entity-property-builder (new CfnTopic$TopicNamedEntityProperty$Builder) id config))
+
+
 (defn build-cfn-topic-topic-numeric-equality-filter-property-builder
   "The build-cfn-topic-topic-numeric-equality-filter-property-builder function updates a CfnTopic$TopicNumericEqualityFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnTopic$TopicNumericEqualityFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -40094,6 +49664,12 @@
   (when-let [data (lookup-entry config id :constant)]
     (. builder constant data))
   (.build builder))
+
+
+(defn cfn-topic-topic-numeric-equality-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-topic-numeric-equality-filter-property-builder (new CfnTopic$TopicNumericEqualityFilterProperty$Builder) id config))
 
 
 (defn build-cfn-topic-topic-numeric-range-filter-property-builder
@@ -40119,6 +49695,12 @@
   (.build builder))
 
 
+(defn cfn-topic-topic-numeric-range-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-topic-numeric-range-filter-property-builder (new CfnTopic$TopicNumericRangeFilterProperty$Builder) id config))
+
+
 (defn build-cfn-topic-topic-range-filter-constant-property-builder
   "The build-cfn-topic-topic-range-filter-constant-property-builder function updates a CfnTopic$TopicRangeFilterConstantProperty$Builder instance using the provided configuration.
   The function takes the CfnTopic$TopicRangeFilterConstantProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -40137,6 +49719,12 @@
   (when-let [data (lookup-entry config id :range-constant)]
     (. builder rangeConstant data))
   (.build builder))
+
+
+(defn cfn-topic-topic-range-filter-constant-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-topic-range-filter-constant-property-builder (new CfnTopic$TopicRangeFilterConstantProperty$Builder) id config))
 
 
 (defn build-cfn-topic-topic-relative-date-filter-property-builder
@@ -40162,6 +49750,12 @@
   (.build builder))
 
 
+(defn cfn-topic-topic-relative-date-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-topic-relative-date-filter-property-builder (new CfnTopic$TopicRelativeDateFilterProperty$Builder) id config))
+
+
 (defn build-cfn-topic-topic-singular-filter-constant-property-builder
   "The build-cfn-topic-topic-singular-filter-constant-property-builder function updates a CfnTopic$TopicSingularFilterConstantProperty$Builder instance using the provided configuration.
   The function takes the CfnTopic$TopicSingularFilterConstantProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -40180,6 +49774,12 @@
   (when-let [data (lookup-entry config id :singular-constant)]
     (. builder singularConstant data))
   (.build builder))
+
+
+(defn cfn-topic-topic-singular-filter-constant-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-topic-singular-filter-constant-property-builder (new CfnTopic$TopicSingularFilterConstantProperty$Builder) id config))
 
 
 (defn build-cfn-vpc-connection-builder
@@ -40223,6 +49823,12 @@
   (.build builder))
 
 
+(defn cfn-vpc-connection-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-vpc-connection-builder (CfnVPCConnection$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-vpc-connection-network-interface-property-builder
   "The build-cfn-vpc-connection-network-interface-property-builder function updates a CfnVPCConnection$NetworkInterfaceProperty$Builder instance using the provided configuration.
   The function takes the CfnVPCConnection$NetworkInterfaceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -40250,6 +49856,12 @@
   (when-let [data (lookup-entry config id :subnet-id)]
     (. builder subnetId data))
   (.build builder))
+
+
+(defn cfn-vpc-connection-network-interface-property-builder
+  ""
+  [id config]
+  (build-cfn-vpc-connection-network-interface-property-builder (new CfnVPCConnection$NetworkInterfaceProperty$Builder) id config))
 
 
 (defn build-cfn-vpc-connection-props-builder
@@ -40291,3 +49903,9 @@
   (when-let [data (lookup-entry config id :vpc-connection-id)]
     (. builder vpcConnectionId data))
   (.build builder))
+
+
+(defn cfn-vpc-connection-props-builder
+  ""
+  [id config]
+  (build-cfn-vpc-connection-props-builder (new CfnVPCConnectionProps$Builder) id config))

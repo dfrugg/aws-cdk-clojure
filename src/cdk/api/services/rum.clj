@@ -53,6 +53,12 @@
   (.build builder))
 
 
+(defn cfn-app-monitor-app-monitor-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-app-monitor-app-monitor-configuration-property-builder (new CfnAppMonitor$AppMonitorConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-app-monitor-builder
   "The build-cfn-app-monitor-builder function updates a CfnAppMonitor$Builder instance using the provided configuration.
   The function takes the CfnAppMonitor$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -85,6 +91,12 @@
   (.build builder))
 
 
+(defn cfn-app-monitor-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-app-monitor-builder (CfnAppMonitor$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-app-monitor-custom-events-property-builder
   "The build-cfn-app-monitor-custom-events-property-builder function updates a CfnAppMonitor$CustomEventsProperty$Builder instance using the provided configuration.
   The function takes the CfnAppMonitor$CustomEventsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -100,6 +112,12 @@
   (when-let [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
+
+
+(defn cfn-app-monitor-custom-events-property-builder
+  ""
+  [id config]
+  (build-cfn-app-monitor-custom-events-property-builder (new CfnAppMonitor$CustomEventsProperty$Builder) id config))
 
 
 (defn build-cfn-app-monitor-metric-definition-property-builder
@@ -134,6 +152,12 @@
   (.build builder))
 
 
+(defn cfn-app-monitor-metric-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-app-monitor-metric-definition-property-builder (new CfnAppMonitor$MetricDefinitionProperty$Builder) id config))
+
+
 (defn build-cfn-app-monitor-metric-destination-property-builder
   "The build-cfn-app-monitor-metric-destination-property-builder function updates a CfnAppMonitor$MetricDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnAppMonitor$MetricDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -158,6 +182,12 @@
   (when-let [data (lookup-entry config id :metric-definitions)]
     (. builder metricDefinitions data))
   (.build builder))
+
+
+(defn cfn-app-monitor-metric-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-app-monitor-metric-destination-property-builder (new CfnAppMonitor$MetricDestinationProperty$Builder) id config))
 
 
 (defn build-cfn-app-monitor-props-builder
@@ -190,3 +220,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-app-monitor-props-builder
+  ""
+  [id config]
+  (build-cfn-app-monitor-props-builder (new CfnAppMonitorProps$Builder) id config))

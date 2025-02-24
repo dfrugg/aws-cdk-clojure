@@ -66,6 +66,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-cluster-builder (CfnCluster$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-cluster-props-builder
   "The build-cfn-cluster-props-builder function updates a CfnClusterProps$Builder instance using the provided configuration.
   The function takes the CfnClusterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -122,6 +128,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-props-builder
+  ""
+  [id config]
+  (build-cfn-cluster-props-builder (new CfnClusterProps$Builder) id config))
+
+
 (defn build-cfn-cluster-sse-specification-property-builder
   "The build-cfn-cluster-sse-specification-property-builder function updates a CfnCluster$SSESpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$SSESpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -137,6 +149,12 @@
   (when-let [data (lookup-entry config id :sse-enabled)]
     (. builder sseEnabled data))
   (.build builder))
+
+
+(defn cfn-cluster-sse-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-sse-specification-property-builder (new CfnCluster$SSESpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-parameter-group-builder
@@ -162,6 +180,12 @@
   (.build builder))
 
 
+(defn cfn-parameter-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-parameter-group-builder (CfnParameterGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-parameter-group-props-builder
   "The build-cfn-parameter-group-props-builder function updates a CfnParameterGroupProps$Builder instance using the provided configuration.
   The function takes the CfnParameterGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -183,6 +207,12 @@
   (when-let [data (lookup-entry config id :parameter-name-values)]
     (. builder parameterNameValues data))
   (.build builder))
+
+
+(defn cfn-parameter-group-props-builder
+  ""
+  [id config]
+  (build-cfn-parameter-group-props-builder (new CfnParameterGroupProps$Builder) id config))
 
 
 (defn build-cfn-subnet-group-builder
@@ -208,6 +238,12 @@
   (.build builder))
 
 
+(defn cfn-subnet-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-subnet-group-builder (CfnSubnetGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-subnet-group-props-builder
   "The build-cfn-subnet-group-props-builder function updates a CfnSubnetGroupProps$Builder instance using the provided configuration.
   The function takes the CfnSubnetGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -229,3 +265,9 @@
   (when-let [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
+
+
+(defn cfn-subnet-group-props-builder
+  ""
+  [id config]
+  (build-cfn-subnet-group-props-builder (new CfnSubnetGroupProps$Builder) id config))

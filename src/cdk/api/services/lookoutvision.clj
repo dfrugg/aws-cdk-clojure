@@ -22,6 +22,12 @@
   (.build builder))
 
 
+(defn cfn-project-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-project-builder (CfnProject$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-project-props-builder
   "The build-cfn-project-props-builder function updates a CfnProjectProps$Builder instance using the provided configuration.
   The function takes the CfnProjectProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37,3 +43,9 @@
   (when-let [data (lookup-entry config id :project-name)]
     (. builder projectName data))
   (.build builder))
+
+
+(defn cfn-project-props-builder
+  ""
+  [id config]
+  (build-cfn-project-props-builder (new CfnProjectProps$Builder) id config))

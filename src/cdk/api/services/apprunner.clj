@@ -60,6 +60,12 @@
   (.build builder))
 
 
+(defn cfn-auto-scaling-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-auto-scaling-configuration-builder (CfnAutoScalingConfiguration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-auto-scaling-configuration-props-builder
   "The build-cfn-auto-scaling-configuration-props-builder function updates a CfnAutoScalingConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnAutoScalingConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -89,6 +95,12 @@
   (.build builder))
 
 
+(defn cfn-auto-scaling-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-configuration-props-builder (new CfnAutoScalingConfigurationProps$Builder) id config))
+
+
 (defn build-cfn-observability-configuration-builder
   "The build-cfn-observability-configuration-builder function updates a CfnObservabilityConfiguration$Builder instance using the provided configuration.
   The function takes the CfnObservabilityConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -110,6 +122,12 @@
   (when-let [data (lookup-entry config id :trace-configuration)]
     (. builder traceConfiguration data))
   (.build builder))
+
+
+(defn cfn-observability-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-observability-configuration-builder (CfnObservabilityConfiguration$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-observability-configuration-props-builder
@@ -135,6 +153,12 @@
   (.build builder))
 
 
+(defn cfn-observability-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-observability-configuration-props-builder (new CfnObservabilityConfigurationProps$Builder) id config))
+
+
 (defn build-cfn-observability-configuration-trace-configuration-property-builder
   "The build-cfn-observability-configuration-trace-configuration-property-builder function updates a CfnObservabilityConfiguration$TraceConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnObservabilityConfiguration$TraceConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -150,6 +174,12 @@
   (when-let [data (lookup-entry config id :vendor)]
     (. builder vendor data))
   (.build builder))
+
+
+(defn cfn-observability-configuration-trace-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-observability-configuration-trace-configuration-property-builder (new CfnObservabilityConfiguration$TraceConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-service-authentication-configuration-property-builder
@@ -170,6 +200,12 @@
   (when-let [data (lookup-entry config id :connection-arn)]
     (. builder connectionArn data))
   (.build builder))
+
+
+(defn cfn-service-authentication-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-service-authentication-configuration-property-builder (new CfnService$AuthenticationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-service-builder
@@ -213,6 +249,12 @@
   (.build builder))
 
 
+(defn cfn-service-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-service-builder (CfnService$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-service-code-configuration-property-builder
   "The build-cfn-service-code-configuration-property-builder function updates a CfnService$CodeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnService$CodeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -231,6 +273,12 @@
   (when-let [data (lookup-entry config id :configuration-source)]
     (. builder configurationSource data))
   (.build builder))
+
+
+(defn cfn-service-code-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-service-code-configuration-property-builder (new CfnService$CodeConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-service-code-configuration-values-property-builder
@@ -265,6 +313,12 @@
   (.build builder))
 
 
+(defn cfn-service-code-configuration-values-property-builder
+  ""
+  [id config]
+  (build-cfn-service-code-configuration-values-property-builder (new CfnService$CodeConfigurationValuesProperty$Builder) id config))
+
+
 (defn build-cfn-service-code-repository-property-builder
   "The build-cfn-service-code-repository-property-builder function updates a CfnService$CodeRepositoryProperty$Builder instance using the provided configuration.
   The function takes the CfnService$CodeRepositoryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -291,6 +345,12 @@
   (.build builder))
 
 
+(defn cfn-service-code-repository-property-builder
+  ""
+  [id config]
+  (build-cfn-service-code-repository-property-builder (new CfnService$CodeRepositoryProperty$Builder) id config))
+
+
 (defn build-cfn-service-egress-configuration-property-builder
   "The build-cfn-service-egress-configuration-property-builder function updates a CfnService$EgressConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnService$EgressConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -311,6 +371,12 @@
   (.build builder))
 
 
+(defn cfn-service-egress-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-service-egress-configuration-property-builder (new CfnService$EgressConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-service-encryption-configuration-property-builder
   "The build-cfn-service-encryption-configuration-property-builder function updates a CfnService$EncryptionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnService$EncryptionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -326,6 +392,12 @@
   (when-let [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
   (.build builder))
+
+
+(defn cfn-service-encryption-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-service-encryption-configuration-property-builder (new CfnService$EncryptionConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-service-health-check-configuration-property-builder
@@ -360,6 +432,12 @@
   (.build builder))
 
 
+(defn cfn-service-health-check-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-service-health-check-configuration-property-builder (new CfnService$HealthCheckConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-service-image-configuration-property-builder
   "The build-cfn-service-image-configuration-property-builder function updates a CfnService$ImageConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnService$ImageConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -386,6 +464,12 @@
   (.build builder))
 
 
+(defn cfn-service-image-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-service-image-configuration-property-builder (new CfnService$ImageConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-service-image-repository-property-builder
   "The build-cfn-service-image-repository-property-builder function updates a CfnService$ImageRepositoryProperty$Builder instance using the provided configuration.
   The function takes the CfnService$ImageRepositoryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -409,6 +493,12 @@
   (.build builder))
 
 
+(defn cfn-service-image-repository-property-builder
+  ""
+  [id config]
+  (build-cfn-service-image-repository-property-builder (new CfnService$ImageRepositoryProperty$Builder) id config))
+
+
 (defn build-cfn-service-ingress-configuration-property-builder
   "The build-cfn-service-ingress-configuration-property-builder function updates a CfnService$IngressConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnService$IngressConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -424,6 +514,12 @@
   (when-let [data (lookup-entry config id :is-publicly-accessible)]
     (. builder isPubliclyAccessible data))
   (.build builder))
+
+
+(defn cfn-service-ingress-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-service-ingress-configuration-property-builder (new CfnService$IngressConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-service-instance-configuration-property-builder
@@ -449,6 +545,12 @@
   (.build builder))
 
 
+(defn cfn-service-instance-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-service-instance-configuration-property-builder (new CfnService$InstanceConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-service-key-value-pair-property-builder
   "The build-cfn-service-key-value-pair-property-builder function updates a CfnService$KeyValuePairProperty$Builder instance using the provided configuration.
   The function takes the CfnService$KeyValuePairProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -467,6 +569,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-service-key-value-pair-property-builder
+  ""
+  [id config]
+  (build-cfn-service-key-value-pair-property-builder (new CfnService$KeyValuePairProperty$Builder) id config))
 
 
 (defn build-cfn-service-network-configuration-property-builder
@@ -490,6 +598,12 @@
   (when-let [data (lookup-entry config id :ip-address-type)]
     (. builder ipAddressType data))
   (.build builder))
+
+
+(defn cfn-service-network-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-service-network-configuration-property-builder (new CfnService$NetworkConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-service-props-builder
@@ -533,6 +647,12 @@
   (.build builder))
 
 
+(defn cfn-service-props-builder
+  ""
+  [id config]
+  (build-cfn-service-props-builder (new CfnServiceProps$Builder) id config))
+
+
 (defn build-cfn-service-service-observability-configuration-property-builder
   "The build-cfn-service-service-observability-configuration-property-builder function updates a CfnService$ServiceObservabilityConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnService$ServiceObservabilityConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -553,6 +673,12 @@
   (.build builder))
 
 
+(defn cfn-service-service-observability-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-service-service-observability-configuration-property-builder (new CfnService$ServiceObservabilityConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-service-source-code-version-property-builder
   "The build-cfn-service-source-code-version-property-builder function updates a CfnService$SourceCodeVersionProperty$Builder instance using the provided configuration.
   The function takes the CfnService$SourceCodeVersionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -571,6 +697,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-service-source-code-version-property-builder
+  ""
+  [id config]
+  (build-cfn-service-source-code-version-property-builder (new CfnService$SourceCodeVersionProperty$Builder) id config))
 
 
 (defn build-cfn-service-source-configuration-property-builder
@@ -599,6 +731,12 @@
   (.build builder))
 
 
+(defn cfn-service-source-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-service-source-configuration-property-builder (new CfnService$SourceConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-vpc-connector-builder
   "The build-cfn-vpc-connector-builder function updates a CfnVpcConnector$Builder instance using the provided configuration.
   The function takes the CfnVpcConnector$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -623,6 +761,12 @@
   (when-let [data (lookup-entry config id :vpc-connector-name)]
     (. builder vpcConnectorName data))
   (.build builder))
+
+
+(defn cfn-vpc-connector-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-vpc-connector-builder (CfnVpcConnector$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-vpc-connector-props-builder
@@ -651,6 +795,12 @@
   (.build builder))
 
 
+(defn cfn-vpc-connector-props-builder
+  ""
+  [id config]
+  (build-cfn-vpc-connector-props-builder (new CfnVpcConnectorProps$Builder) id config))
+
+
 (defn build-cfn-vpc-ingress-connection-builder
   "The build-cfn-vpc-ingress-connection-builder function updates a CfnVpcIngressConnection$Builder instance using the provided configuration.
   The function takes the CfnVpcIngressConnection$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -677,6 +827,12 @@
   (.build builder))
 
 
+(defn cfn-vpc-ingress-connection-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-vpc-ingress-connection-builder (CfnVpcIngressConnection$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-vpc-ingress-connection-ingress-vpc-configuration-property-builder
   "The build-cfn-vpc-ingress-connection-ingress-vpc-configuration-property-builder function updates a CfnVpcIngressConnection$IngressVpcConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnVpcIngressConnection$IngressVpcConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -695,6 +851,12 @@
   (when-let [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
+
+
+(defn cfn-vpc-ingress-connection-ingress-vpc-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-vpc-ingress-connection-ingress-vpc-configuration-property-builder (new CfnVpcIngressConnection$IngressVpcConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-vpc-ingress-connection-props-builder
@@ -721,3 +883,9 @@
   (when-let [data (lookup-entry config id :vpc-ingress-connection-name)]
     (. builder vpcIngressConnectionName data))
   (.build builder))
+
+
+(defn cfn-vpc-ingress-connection-props-builder
+  ""
+  [id config]
+  (build-cfn-vpc-ingress-connection-props-builder (new CfnVpcIngressConnectionProps$Builder) id config))

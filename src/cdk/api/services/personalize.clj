@@ -51,6 +51,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-dataset-builder (CfnDataset$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-dataset-data-source-property-builder
   "The build-cfn-dataset-data-source-property-builder function updates a CfnDataset$DataSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$DataSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -66,6 +72,12 @@
   (when-let [data (lookup-entry config id :data-location)]
     (. builder dataLocation data))
   (.build builder))
+
+
+(defn cfn-dataset-data-source-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-data-source-property-builder (new CfnDataset$DataSourceProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-dataset-import-job-property-builder
@@ -97,6 +109,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-dataset-import-job-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-dataset-import-job-property-builder (new CfnDataset$DatasetImportJobProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-group-builder
   "The build-cfn-dataset-group-builder function updates a CfnDatasetGroup$Builder instance using the provided configuration.
   The function takes the CfnDatasetGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -123,6 +141,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-dataset-group-builder (CfnDatasetGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-dataset-group-props-builder
   "The build-cfn-dataset-group-props-builder function updates a CfnDatasetGroupProps$Builder instance using the provided configuration.
   The function takes the CfnDatasetGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -147,6 +171,12 @@
   (when-let [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
+
+
+(defn cfn-dataset-group-props-builder
+  ""
+  [id config]
+  (build-cfn-dataset-group-props-builder (new CfnDatasetGroupProps$Builder) id config))
 
 
 (defn build-cfn-dataset-props-builder
@@ -178,6 +208,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-props-builder
+  ""
+  [id config]
+  (build-cfn-dataset-props-builder (new CfnDatasetProps$Builder) id config))
+
+
 (defn build-cfn-schema-builder
   "The build-cfn-schema-builder function updates a CfnSchema$Builder instance using the provided configuration.
   The function takes the CfnSchema$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -199,6 +235,12 @@
   (when-let [data (lookup-entry config id :schema)]
     (. builder schema data))
   (.build builder))
+
+
+(defn cfn-schema-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-schema-builder (CfnSchema$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-schema-props-builder
@@ -224,6 +266,12 @@
   (.build builder))
 
 
+(defn cfn-schema-props-builder
+  ""
+  [id config]
+  (build-cfn-schema-props-builder (new CfnSchemaProps$Builder) id config))
+
+
 (defn build-cfn-solution-algorithm-hyper-parameter-ranges-property-builder
   "The build-cfn-solution-algorithm-hyper-parameter-ranges-property-builder function updates a CfnSolution$AlgorithmHyperParameterRangesProperty$Builder instance using the provided configuration.
   The function takes the CfnSolution$AlgorithmHyperParameterRangesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -247,6 +295,12 @@
   (.build builder))
 
 
+(defn cfn-solution-algorithm-hyper-parameter-ranges-property-builder
+  ""
+  [id config]
+  (build-cfn-solution-algorithm-hyper-parameter-ranges-property-builder (new CfnSolution$AlgorithmHyperParameterRangesProperty$Builder) id config))
+
+
 (defn build-cfn-solution-auto-ml-config-property-builder
   "The build-cfn-solution-auto-ml-config-property-builder function updates a CfnSolution$AutoMLConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnSolution$AutoMLConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -265,6 +319,12 @@
   (when-let [data (lookup-entry config id :recipe-list)]
     (. builder recipeList data))
   (.build builder))
+
+
+(defn cfn-solution-auto-ml-config-property-builder
+  ""
+  [id config]
+  (build-cfn-solution-auto-ml-config-property-builder (new CfnSolution$AutoMLConfigProperty$Builder) id config))
 
 
 (defn build-cfn-solution-builder
@@ -302,6 +362,12 @@
   (.build builder))
 
 
+(defn cfn-solution-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-solution-builder (CfnSolution$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-solution-categorical-hyper-parameter-range-property-builder
   "The build-cfn-solution-categorical-hyper-parameter-range-property-builder function updates a CfnSolution$CategoricalHyperParameterRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnSolution$CategoricalHyperParameterRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -320,6 +386,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-solution-categorical-hyper-parameter-range-property-builder
+  ""
+  [id config]
+  (build-cfn-solution-categorical-hyper-parameter-range-property-builder (new CfnSolution$CategoricalHyperParameterRangeProperty$Builder) id config))
 
 
 (defn build-cfn-solution-continuous-hyper-parameter-range-property-builder
@@ -345,6 +417,12 @@
   (.build builder))
 
 
+(defn cfn-solution-continuous-hyper-parameter-range-property-builder
+  ""
+  [id config]
+  (build-cfn-solution-continuous-hyper-parameter-range-property-builder (new CfnSolution$ContinuousHyperParameterRangeProperty$Builder) id config))
+
+
 (defn build-cfn-solution-hpo-config-property-builder
   "The build-cfn-solution-hpo-config-property-builder function updates a CfnSolution$HpoConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnSolution$HpoConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -366,6 +444,12 @@
   (when-let [data (lookup-entry config id :hpo-resource-config)]
     (. builder hpoResourceConfig data))
   (.build builder))
+
+
+(defn cfn-solution-hpo-config-property-builder
+  ""
+  [id config]
+  (build-cfn-solution-hpo-config-property-builder (new CfnSolution$HpoConfigProperty$Builder) id config))
 
 
 (defn build-cfn-solution-hpo-objective-property-builder
@@ -391,6 +475,12 @@
   (.build builder))
 
 
+(defn cfn-solution-hpo-objective-property-builder
+  ""
+  [id config]
+  (build-cfn-solution-hpo-objective-property-builder (new CfnSolution$HpoObjectiveProperty$Builder) id config))
+
+
 (defn build-cfn-solution-hpo-resource-config-property-builder
   "The build-cfn-solution-hpo-resource-config-property-builder function updates a CfnSolution$HpoResourceConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnSolution$HpoResourceConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -409,6 +499,12 @@
   (when-let [data (lookup-entry config id :max-parallel-training-jobs)]
     (. builder maxParallelTrainingJobs data))
   (.build builder))
+
+
+(defn cfn-solution-hpo-resource-config-property-builder
+  ""
+  [id config]
+  (build-cfn-solution-hpo-resource-config-property-builder (new CfnSolution$HpoResourceConfigProperty$Builder) id config))
 
 
 (defn build-cfn-solution-integer-hyper-parameter-range-property-builder
@@ -432,6 +528,12 @@
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-solution-integer-hyper-parameter-range-property-builder
+  ""
+  [id config]
+  (build-cfn-solution-integer-hyper-parameter-range-property-builder (new CfnSolution$IntegerHyperParameterRangeProperty$Builder) id config))
 
 
 (defn build-cfn-solution-props-builder
@@ -469,6 +571,12 @@
   (.build builder))
 
 
+(defn cfn-solution-props-builder
+  ""
+  [id config]
+  (build-cfn-solution-props-builder (new CfnSolutionProps$Builder) id config))
+
+
 (defn build-cfn-solution-solution-config-property-builder
   "The build-cfn-solution-solution-config-property-builder function updates a CfnSolution$SolutionConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnSolution$SolutionConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -496,3 +604,9 @@
   (when-let [data (lookup-entry config id :hpo-config)]
     (. builder hpoConfig data))
   (.build builder))
+
+
+(defn cfn-solution-solution-config-property-builder
+  ""
+  [id config]
+  (build-cfn-solution-solution-config-property-builder (new CfnSolution$SolutionConfigProperty$Builder) id config))

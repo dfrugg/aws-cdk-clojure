@@ -99,6 +99,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-public-repository-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-public-repository-builder (CfnPublicRepository$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-public-repository-props-builder
   "The build-cfn-public-repository-props-builder function updates a CfnPublicRepositoryProps$Builder instance using the provided configuration.
   The function takes the CfnPublicRepositoryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -123,6 +129,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-public-repository-props-builder
+  ""
+  [id config]
+  (build-cfn-public-repository-props-builder (new CfnPublicRepositoryProps$Builder) id config))
 
 
 (defn build-cfn-public-repository-repository-catalog-data-property-builder
@@ -154,6 +166,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-public-repository-repository-catalog-data-property-builder
+  ""
+  [id config]
+  (build-cfn-public-repository-repository-catalog-data-property-builder (new CfnPublicRepository$RepositoryCatalogDataProperty$Builder) id config))
+
+
 (defn build-cfn-pull-through-cache-rule-builder
   "The build-cfn-pull-through-cache-rule-builder function updates a CfnPullThroughCacheRule$Builder instance using the provided configuration.
   The function takes the CfnPullThroughCacheRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -178,6 +196,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :upstream-registry-url)]
     (. builder upstreamRegistryUrl data))
   (.build builder))
+
+
+(defn cfn-pull-through-cache-rule-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-pull-through-cache-rule-builder (CfnPullThroughCacheRule$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-pull-through-cache-rule-props-builder
@@ -206,6 +230,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-pull-through-cache-rule-props-builder
+  ""
+  [id config]
+  (build-cfn-pull-through-cache-rule-props-builder (new CfnPullThroughCacheRuleProps$Builder) id config))
+
+
 (defn build-cfn-registry-policy-builder
   "The build-cfn-registry-policy-builder function updates a CfnRegistryPolicy$Builder instance using the provided configuration.
   The function takes the CfnRegistryPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -221,6 +251,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :policy-text)]
     (. builder policyText data))
   (.build builder))
+
+
+(defn cfn-registry-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-registry-policy-builder (CfnRegistryPolicy$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-registry-policy-props-builder
@@ -240,6 +276,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-registry-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-registry-policy-props-builder (new CfnRegistryPolicyProps$Builder) id config))
+
+
 (defn build-cfn-replication-configuration-builder
   "The build-cfn-replication-configuration-builder function updates a CfnReplicationConfiguration$Builder instance using the provided configuration.
   The function takes the CfnReplicationConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -255,6 +297,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :replication-configuration)]
     (. builder replicationConfiguration data))
   (.build builder))
+
+
+(defn cfn-replication-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-replication-configuration-builder (CfnReplicationConfiguration$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-replication-configuration-props-builder
@@ -274,6 +322,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-replication-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-replication-configuration-props-builder (new CfnReplicationConfigurationProps$Builder) id config))
+
+
 (defn build-cfn-replication-configuration-replication-configuration-property-builder
   "The build-cfn-replication-configuration-replication-configuration-property-builder function updates a CfnReplicationConfiguration$ReplicationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnReplicationConfiguration$ReplicationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -289,6 +343,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :rules)]
     (. builder rules data))
   (.build builder))
+
+
+(defn cfn-replication-configuration-replication-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-replication-configuration-replication-configuration-property-builder (new CfnReplicationConfiguration$ReplicationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-replication-configuration-replication-destination-property-builder
@@ -311,6 +371,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-replication-configuration-replication-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-replication-configuration-replication-destination-property-builder (new CfnReplicationConfiguration$ReplicationDestinationProperty$Builder) id config))
+
+
 (defn build-cfn-replication-configuration-replication-rule-property-builder
   "The build-cfn-replication-configuration-replication-rule-property-builder function updates a CfnReplicationConfiguration$ReplicationRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnReplicationConfiguration$ReplicationRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -331,6 +397,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-replication-configuration-replication-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-replication-configuration-replication-rule-property-builder (new CfnReplicationConfiguration$ReplicationRuleProperty$Builder) id config))
+
+
 (defn build-cfn-replication-configuration-repository-filter-property-builder
   "The build-cfn-replication-configuration-repository-filter-property-builder function updates a CfnReplicationConfiguration$RepositoryFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnReplicationConfiguration$RepositoryFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -349,6 +421,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :filter-type)]
     (. builder filterType data))
   (.build builder))
+
+
+(defn cfn-replication-configuration-repository-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-replication-configuration-repository-filter-property-builder (new CfnReplicationConfiguration$RepositoryFilterProperty$Builder) id config))
 
 
 (defn build-cfn-repository-builder
@@ -389,6 +467,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-repository-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-repository-builder (CfnRepository$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-repository-creation-template-builder
   "The build-cfn-repository-creation-template-builder function updates a CfnRepositoryCreationTemplate$Builder instance using the provided configuration.
   The function takes the CfnRepositoryCreationTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -427,6 +511,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-repository-creation-template-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-repository-creation-template-builder (CfnRepositoryCreationTemplate$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-repository-creation-template-encryption-configuration-property-builder
   "The build-cfn-repository-creation-template-encryption-configuration-property-builder function updates a CfnRepositoryCreationTemplate$EncryptionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnRepositoryCreationTemplate$EncryptionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -445,6 +535,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
   (.build builder))
+
+
+(defn cfn-repository-creation-template-encryption-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-repository-creation-template-encryption-configuration-property-builder (new CfnRepositoryCreationTemplate$EncryptionConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-repository-creation-template-props-builder
@@ -485,6 +581,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-repository-creation-template-props-builder
+  ""
+  [id config]
+  (build-cfn-repository-creation-template-props-builder (new CfnRepositoryCreationTemplateProps$Builder) id config))
+
+
 (defn build-cfn-repository-encryption-configuration-property-builder
   "The build-cfn-repository-encryption-configuration-property-builder function updates a CfnRepository$EncryptionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnRepository$EncryptionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -505,6 +607,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-repository-encryption-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-repository-encryption-configuration-property-builder (new CfnRepository$EncryptionConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-repository-image-scanning-configuration-property-builder
   "The build-cfn-repository-image-scanning-configuration-property-builder function updates a CfnRepository$ImageScanningConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnRepository$ImageScanningConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -520,6 +628,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :scan-on-push)]
     (. builder scanOnPush data))
   (.build builder))
+
+
+(defn cfn-repository-image-scanning-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-repository-image-scanning-configuration-property-builder (new CfnRepository$ImageScanningConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-repository-lifecycle-policy-property-builder
@@ -540,6 +654,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :registry-id)]
     (. builder registryId data))
   (.build builder))
+
+
+(defn cfn-repository-lifecycle-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-repository-lifecycle-policy-property-builder (new CfnRepository$LifecyclePolicyProperty$Builder) id config))
 
 
 (defn build-cfn-repository-props-builder
@@ -580,6 +700,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-repository-props-builder
+  ""
+  [id config]
+  (build-cfn-repository-props-builder (new CfnRepositoryProps$Builder) id config))
+
+
 (defn build-lifecycle-rule-builder
   "The build-lifecycle-rule-builder function updates a LifecycleRule$Builder instance using the provided configuration.
   The function takes the LifecycleRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -615,6 +741,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn lifecycle-rule-builder
+  ""
+  [id config]
+  (build-lifecycle-rule-builder (new LifecycleRule$Builder) id config))
+
+
 (defn build-on-cloud-trail-image-pushed-options-builder
   "The build-on-cloud-trail-image-pushed-options-builder function updates a OnCloudTrailImagePushedOptions$Builder instance using the provided configuration.
   The function takes the OnCloudTrailImagePushedOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -645,6 +777,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
+
+
+(defn on-cloud-trail-image-pushed-options-builder
+  ""
+  [id config]
+  (build-on-cloud-trail-image-pushed-options-builder (new OnCloudTrailImagePushedOptions$Builder) id config))
 
 
 (defn build-on-image-scan-completed-options-builder
@@ -679,6 +817,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn on-image-scan-completed-options-builder
+  ""
+  [id config]
+  (build-on-image-scan-completed-options-builder (new OnImageScanCompletedOptions$Builder) id config))
+
+
 (defn build-repository-attributes-builder
   "The build-repository-attributes-builder function updates a RepositoryAttributes$Builder instance using the provided configuration.
   The function takes the RepositoryAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -697,6 +841,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
   (.build builder))
+
+
+(defn repository-attributes-builder
+  ""
+  [id config]
+  (build-repository-attributes-builder (new RepositoryAttributes$Builder) id config))
 
 
 (defn build-repository-builder
@@ -743,6 +893,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn repository-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-repository-builder (Repository$Builder/create scope (name id)) id config))
+
+
 (defn build-repository-props-builder
   "The build-repository-props-builder function updates a RepositoryProps$Builder instance using the provided configuration.
   The function takes the RepositoryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -785,3 +941,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
   (.build builder))
+
+
+(defn repository-props-builder
+  ""
+  [id config]
+  (build-repository-props-builder (new RepositoryProps$Builder) id config))

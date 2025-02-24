@@ -83,6 +83,12 @@
   (.build builder))
 
 
+(defn cfn-server-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-server-builder (CfnServer$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-server-engine-attribute-property-builder
   "The build-cfn-server-engine-attribute-property-builder function updates a CfnServer$EngineAttributeProperty$Builder instance using the provided configuration.
   The function takes the CfnServer$EngineAttributeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -101,6 +107,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-server-engine-attribute-property-builder
+  ""
+  [id config]
+  (build-cfn-server-engine-attribute-property-builder (new CfnServer$EngineAttributeProperty$Builder) id config))
 
 
 (defn build-cfn-server-props-builder
@@ -178,3 +190,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-server-props-builder
+  ""
+  [id config]
+  (build-cfn-server-props-builder (new CfnServerProps$Builder) id config))

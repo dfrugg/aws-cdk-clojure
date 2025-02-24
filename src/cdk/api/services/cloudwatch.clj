@@ -504,6 +504,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn alarm-action-config-builder
+  ""
+  [id config]
+  (build-alarm-action-config-builder (new AlarmActionConfig$Builder) id config))
+
+
 (defn build-alarm-builder
   "The build-alarm-builder function updates a Alarm$Builder instance using the provided configuration.
   The function takes the Alarm$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -546,6 +552,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (treat-missing-data config id :treat-missing-data)]
     (. builder treatMissingData data))
   (.build builder))
+
+
+(defn alarm-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-alarm-builder (Alarm$Builder/create scope (name id)) id config))
 
 
 (defn build-alarm-props-builder
@@ -592,6 +604,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn alarm-props-builder
+  ""
+  [id config]
+  (build-alarm-props-builder (new AlarmProps$Builder) id config))
+
+
 (defn build-alarm-status-widget-builder
   "The build-alarm-status-widget-builder function updates a AlarmStatusWidget$Builder instance using the provided configuration.
   The function takes the AlarmStatusWidget$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -622,6 +640,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
+
+
+(defn alarm-status-widget-builder
+  ""
+  [id config]
+  (build-alarm-status-widget-builder (AlarmStatusWidget$Builder/create) id config))
 
 
 (defn build-alarm-status-widget-props-builder
@@ -656,6 +680,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn alarm-status-widget-props-builder
+  ""
+  [id config]
+  (build-alarm-status-widget-props-builder (new AlarmStatusWidgetProps$Builder) id config))
+
+
 (defn build-alarm-widget-builder
   "The build-alarm-widget-builder function updates a AlarmWidget$Builder instance using the provided configuration.
   The function takes the AlarmWidget$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -688,6 +718,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn alarm-widget-builder
+  ""
+  [id config]
+  (build-alarm-widget-builder (AlarmWidget$Builder/create) id config))
+
+
 (defn build-alarm-widget-props-builder
   "The build-alarm-widget-props-builder function updates a AlarmWidgetProps$Builder instance using the provided configuration.
   The function takes the AlarmWidgetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -718,6 +754,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
+
+
+(defn alarm-widget-props-builder
+  ""
+  [id config]
+  (build-alarm-widget-props-builder (new AlarmWidgetProps$Builder) id config))
 
 
 (defn build-cfn-alarm-builder
@@ -800,6 +842,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-alarm-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-alarm-builder (CfnAlarm$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-alarm-dimension-property-builder
   "The build-cfn-alarm-dimension-property-builder function updates a CfnAlarm$DimensionProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarm$DimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -818,6 +866,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-alarm-dimension-property-builder
+  ""
+  [id config]
+  (build-cfn-alarm-dimension-property-builder (new CfnAlarm$DimensionProperty$Builder) id config))
 
 
 (defn build-cfn-alarm-metric-data-query-property-builder
@@ -855,6 +909,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-alarm-metric-data-query-property-builder
+  ""
+  [id config]
+  (build-cfn-alarm-metric-data-query-property-builder (new CfnAlarm$MetricDataQueryProperty$Builder) id config))
+
+
 (defn build-cfn-alarm-metric-property-builder
   "The build-cfn-alarm-metric-property-builder function updates a CfnAlarm$MetricProperty$Builder instance using the provided configuration.
   The function takes the CfnAlarm$MetricProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -876,6 +936,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :namespace)]
     (. builder namespace data))
   (.build builder))
+
+
+(defn cfn-alarm-metric-property-builder
+  ""
+  [id config]
+  (build-cfn-alarm-metric-property-builder (new CfnAlarm$MetricProperty$Builder) id config))
 
 
 (defn build-cfn-alarm-metric-stat-property-builder
@@ -902,6 +968,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :unit)]
     (. builder unit data))
   (.build builder))
+
+
+(defn cfn-alarm-metric-stat-property-builder
+  ""
+  [id config]
+  (build-cfn-alarm-metric-stat-property-builder (new CfnAlarm$MetricStatProperty$Builder) id config))
 
 
 (defn build-cfn-alarm-props-builder
@@ -984,6 +1056,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-alarm-props-builder
+  ""
+  [id config]
+  (build-cfn-alarm-props-builder (new CfnAlarmProps$Builder) id config))
+
+
 (defn build-cfn-anomaly-detector-builder
   "The build-cfn-anomaly-detector-builder function updates a CfnAnomalyDetector$Builder instance using the provided configuration.
   The function takes the CfnAnomalyDetector$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1022,6 +1100,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-anomaly-detector-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-anomaly-detector-builder (CfnAnomalyDetector$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-anomaly-detector-configuration-property-builder
   "The build-cfn-anomaly-detector-configuration-property-builder function updates a CfnAnomalyDetector$ConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnomalyDetector$ConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1040,6 +1124,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :metric-time-zone)]
     (. builder metricTimeZone data))
   (.build builder))
+
+
+(defn cfn-anomaly-detector-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-configuration-property-builder (new CfnAnomalyDetector$ConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-anomaly-detector-dimension-property-builder
@@ -1062,6 +1152,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-anomaly-detector-dimension-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-dimension-property-builder (new CfnAnomalyDetector$DimensionProperty$Builder) id config))
+
+
 (defn build-cfn-anomaly-detector-metric-characteristics-property-builder
   "The build-cfn-anomaly-detector-metric-characteristics-property-builder function updates a CfnAnomalyDetector$MetricCharacteristicsProperty$Builder instance using the provided configuration.
   The function takes the CfnAnomalyDetector$MetricCharacteristicsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1077,6 +1173,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :periodic-spikes)]
     (. builder periodicSpikes data))
   (.build builder))
+
+
+(defn cfn-anomaly-detector-metric-characteristics-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-metric-characteristics-property-builder (new CfnAnomalyDetector$MetricCharacteristicsProperty$Builder) id config))
 
 
 (defn build-cfn-anomaly-detector-metric-data-query-property-builder
@@ -1114,6 +1216,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-anomaly-detector-metric-data-query-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-metric-data-query-property-builder (new CfnAnomalyDetector$MetricDataQueryProperty$Builder) id config))
+
+
 (defn build-cfn-anomaly-detector-metric-math-anomaly-detector-property-builder
   "The build-cfn-anomaly-detector-metric-math-anomaly-detector-property-builder function updates a CfnAnomalyDetector$MetricMathAnomalyDetectorProperty$Builder instance using the provided configuration.
   The function takes the CfnAnomalyDetector$MetricMathAnomalyDetectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1129,6 +1237,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :metric-data-queries)]
     (. builder metricDataQueries data))
   (.build builder))
+
+
+(defn cfn-anomaly-detector-metric-math-anomaly-detector-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-metric-math-anomaly-detector-property-builder (new CfnAnomalyDetector$MetricMathAnomalyDetectorProperty$Builder) id config))
 
 
 (defn build-cfn-anomaly-detector-metric-property-builder
@@ -1152,6 +1266,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :namespace)]
     (. builder namespace data))
   (.build builder))
+
+
+(defn cfn-anomaly-detector-metric-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-metric-property-builder (new CfnAnomalyDetector$MetricProperty$Builder) id config))
 
 
 (defn build-cfn-anomaly-detector-metric-stat-property-builder
@@ -1178,6 +1298,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :unit)]
     (. builder unit data))
   (.build builder))
+
+
+(defn cfn-anomaly-detector-metric-stat-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-metric-stat-property-builder (new CfnAnomalyDetector$MetricStatProperty$Builder) id config))
 
 
 (defn build-cfn-anomaly-detector-props-builder
@@ -1218,6 +1344,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-anomaly-detector-props-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-props-builder (new CfnAnomalyDetectorProps$Builder) id config))
+
+
 (defn build-cfn-anomaly-detector-range-property-builder
   "The build-cfn-anomaly-detector-range-property-builder function updates a CfnAnomalyDetector$RangeProperty$Builder instance using the provided configuration.
   The function takes the CfnAnomalyDetector$RangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1236,6 +1368,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :start-time)]
     (. builder startTime data))
   (.build builder))
+
+
+(defn cfn-anomaly-detector-range-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-range-property-builder (new CfnAnomalyDetector$RangeProperty$Builder) id config))
 
 
 (defn build-cfn-anomaly-detector-single-metric-anomaly-detector-property-builder
@@ -1265,6 +1403,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :stat)]
     (. builder stat data))
   (.build builder))
+
+
+(defn cfn-anomaly-detector-single-metric-anomaly-detector-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-single-metric-anomaly-detector-property-builder (new CfnAnomalyDetector$SingleMetricAnomalyDetectorProperty$Builder) id config))
 
 
 (defn build-cfn-composite-alarm-builder
@@ -1314,6 +1458,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-composite-alarm-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-composite-alarm-builder (CfnCompositeAlarm$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-composite-alarm-props-builder
   "The build-cfn-composite-alarm-props-builder function updates a CfnCompositeAlarmProps$Builder instance using the provided configuration.
   The function takes the CfnCompositeAlarmProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1361,6 +1511,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-composite-alarm-props-builder
+  ""
+  [id config]
+  (build-cfn-composite-alarm-props-builder (new CfnCompositeAlarmProps$Builder) id config))
+
+
 (defn build-cfn-dashboard-builder
   "The build-cfn-dashboard-builder function updates a CfnDashboard$Builder instance using the provided configuration.
   The function takes the CfnDashboard$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1381,6 +1537,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-dashboard-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-dashboard-builder (CfnDashboard$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-dashboard-props-builder
   "The build-cfn-dashboard-props-builder function updates a CfnDashboardProps$Builder instance using the provided configuration.
   The function takes the CfnDashboardProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1399,6 +1561,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :dashboard-name)]
     (. builder dashboardName data))
   (.build builder))
+
+
+(defn cfn-dashboard-props-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-props-builder (new CfnDashboardProps$Builder) id config))
 
 
 (defn build-cfn-insight-rule-builder
@@ -1427,6 +1595,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-insight-rule-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-insight-rule-builder (CfnInsightRule$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-insight-rule-props-builder
   "The build-cfn-insight-rule-props-builder function updates a CfnInsightRuleProps$Builder instance using the provided configuration.
   The function takes the CfnInsightRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1451,6 +1625,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-insight-rule-props-builder
+  ""
+  [id config]
+  (build-cfn-insight-rule-props-builder (new CfnInsightRuleProps$Builder) id config))
 
 
 (defn build-cfn-metric-stream-builder
@@ -1494,6 +1674,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-metric-stream-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-metric-stream-builder (CfnMetricStream$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-metric-stream-metric-stream-filter-property-builder
   "The build-cfn-metric-stream-metric-stream-filter-property-builder function updates a CfnMetricStream$MetricStreamFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnMetricStream$MetricStreamFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1512,6 +1698,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :namespace)]
     (. builder namespace data))
   (.build builder))
+
+
+(defn cfn-metric-stream-metric-stream-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-metric-stream-metric-stream-filter-property-builder (new CfnMetricStream$MetricStreamFilterProperty$Builder) id config))
 
 
 (defn build-cfn-metric-stream-metric-stream-statistics-configuration-property-builder
@@ -1534,6 +1726,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-metric-stream-metric-stream-statistics-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-metric-stream-metric-stream-statistics-configuration-property-builder (new CfnMetricStream$MetricStreamStatisticsConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-metric-stream-metric-stream-statistics-metric-property-builder
   "The build-cfn-metric-stream-metric-stream-statistics-metric-property-builder function updates a CfnMetricStream$MetricStreamStatisticsMetricProperty$Builder instance using the provided configuration.
   The function takes the CfnMetricStream$MetricStreamStatisticsMetricProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1552,6 +1750,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :namespace)]
     (. builder namespace data))
   (.build builder))
+
+
+(defn cfn-metric-stream-metric-stream-statistics-metric-property-builder
+  ""
+  [id config]
+  (build-cfn-metric-stream-metric-stream-statistics-metric-property-builder (new CfnMetricStream$MetricStreamStatisticsMetricProperty$Builder) id config))
 
 
 (defn build-cfn-metric-stream-props-builder
@@ -1595,6 +1799,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-metric-stream-props-builder
+  ""
+  [id config]
+  (build-cfn-metric-stream-props-builder (new CfnMetricStreamProps$Builder) id config))
+
+
 (defn build-common-metric-options-builder
   "The build-common-metric-options-builder function updates a CommonMetricOptions$Builder instance using the provided configuration.
   The function takes the CommonMetricOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1633,6 +1843,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn common-metric-options-builder
+  ""
+  [id config]
+  (build-common-metric-options-builder (new CommonMetricOptions$Builder) id config))
+
+
 (defn build-composite-alarm-builder
   "The build-composite-alarm-builder function updates a CompositeAlarm$Builder instance using the provided configuration.
   The function takes the CompositeAlarm$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1668,6 +1884,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn composite-alarm-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-composite-alarm-builder (CompositeAlarm$Builder/create scope (name id)) id config))
+
+
 (defn build-composite-alarm-props-builder
   "The build-composite-alarm-props-builder function updates a CompositeAlarmProps$Builder instance using the provided configuration.
   The function takes the CompositeAlarmProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1701,6 +1923,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :composite-alarm-name)]
     (. builder compositeAlarmName data))
   (.build builder))
+
+
+(defn composite-alarm-props-builder
+  ""
+  [id config]
+  (build-composite-alarm-props-builder (new CompositeAlarmProps$Builder) id config))
 
 
 (defn build-create-alarm-options-builder
@@ -1744,6 +1972,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn create-alarm-options-builder
+  ""
+  [id config]
+  (build-create-alarm-options-builder (new CreateAlarmOptions$Builder) id config))
+
+
 (defn build-custom-widget-builder
   "The build-custom-widget-builder function updates a CustomWidget$Builder instance using the provided configuration.
   The function takes the CustomWidget$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1780,6 +2014,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
+
+
+(defn custom-widget-builder
+  ""
+  [id config]
+  (build-custom-widget-builder (CustomWidget$Builder/create) id config))
 
 
 (defn build-custom-widget-props-builder
@@ -1820,6 +2060,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn custom-widget-props-builder
+  ""
+  [id config]
+  (build-custom-widget-props-builder (new CustomWidgetProps$Builder) id config))
+
+
 (defn build-dashboard-builder
   "The build-dashboard-builder function updates a Dashboard$Builder instance using the provided configuration.
   The function takes the Dashboard$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1855,6 +2101,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn dashboard-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-dashboard-builder (Dashboard$Builder/create scope (name id)) id config))
+
+
 (defn build-dashboard-props-builder
   "The build-dashboard-props-builder function updates a DashboardProps$Builder instance using the provided configuration.
   The function takes the DashboardProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1888,6 +2140,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :widgets)]
     (. builder widgets data))
   (.build builder))
+
+
+(defn dashboard-props-builder
+  ""
+  [id config]
+  (build-dashboard-props-builder (new DashboardProps$Builder) id config))
 
 
 (defn build-dashboard-variable-builder
@@ -1928,6 +2186,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn dashboard-variable-builder
+  ""
+  [id config]
+  (build-dashboard-variable-builder (DashboardVariable$Builder/create) id config))
+
+
 (defn build-dashboard-variable-options-builder
   "The build-dashboard-variable-options-builder function updates a DashboardVariableOptions$Builder instance using the provided configuration.
   The function takes the DashboardVariableOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1966,6 +2230,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn dashboard-variable-options-builder
+  ""
+  [id config]
+  (build-dashboard-variable-options-builder (new DashboardVariableOptions$Builder) id config))
+
+
 (defn build-dimension-builder
   "The build-dimension-builder function updates a Dimension$Builder instance using the provided configuration.
   The function takes the Dimension$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1984,6 +2254,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn dimension-builder
+  ""
+  [id config]
+  (build-dimension-builder (new Dimension$Builder) id config))
 
 
 (defn build-gauge-widget-builder
@@ -2042,6 +2318,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn gauge-widget-builder
+  ""
+  [id config]
+  (build-gauge-widget-builder (GaugeWidget$Builder/create) id config))
+
+
 (defn build-gauge-widget-props-builder
   "The build-gauge-widget-props-builder function updates a GaugeWidgetProps$Builder instance using the provided configuration.
   The function takes the GaugeWidgetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2096,6 +2378,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
+
+
+(defn gauge-widget-props-builder
+  ""
+  [id config]
+  (build-gauge-widget-props-builder (new GaugeWidgetProps$Builder) id config))
 
 
 (defn build-graph-widget-builder
@@ -2172,6 +2460,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn graph-widget-builder
+  ""
+  [id config]
+  (build-graph-widget-builder (GraphWidget$Builder/create) id config))
+
+
 (defn build-graph-widget-props-builder
   "The build-graph-widget-props-builder function updates a GraphWidgetProps$Builder instance using the provided configuration.
   The function takes the GraphWidgetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2246,6 +2540,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn graph-widget-props-builder
+  ""
+  [id config]
+  (build-graph-widget-props-builder (new GraphWidgetProps$Builder) id config))
+
+
 (defn build-horizontal-annotation-builder
   "The build-horizontal-annotation-builder function updates a HorizontalAnnotation$Builder instance using the provided configuration.
   The function takes the HorizontalAnnotation$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2273,6 +2573,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :visible)]
     (. builder visible data))
   (.build builder))
+
+
+(defn horizontal-annotation-builder
+  ""
+  [id config]
+  (build-horizontal-annotation-builder (new HorizontalAnnotation$Builder) id config))
 
 
 (defn build-log-query-widget-builder
@@ -2313,6 +2619,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn log-query-widget-builder
+  ""
+  [id config]
+  (build-log-query-widget-builder (LogQueryWidget$Builder/create) id config))
+
+
 (defn build-log-query-widget-props-builder
   "The build-log-query-widget-props-builder function updates a LogQueryWidgetProps$Builder instance using the provided configuration.
   The function takes the LogQueryWidgetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2351,6 +2663,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn log-query-widget-props-builder
+  ""
+  [id config]
+  (build-log-query-widget-props-builder (new LogQueryWidgetProps$Builder) id config))
+
+
 (defn build-math-expression-builder
   "The build-math-expression-builder function updates a MathExpression$Builder instance using the provided configuration.
   The function takes the MathExpression$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2386,6 +2704,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn math-expression-builder
+  ""
+  [id config]
+  (build-math-expression-builder (MathExpression$Builder/create) id config))
+
+
 (defn build-math-expression-options-builder
   "The build-math-expression-options-builder function updates a MathExpressionOptions$Builder instance using the provided configuration.
   The function takes the MathExpressionOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2413,6 +2737,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :search-region)]
     (. builder searchRegion data))
   (.build builder))
+
+
+(defn math-expression-options-builder
+  ""
+  [id config]
+  (build-math-expression-options-builder (new MathExpressionOptions$Builder) id config))
 
 
 (defn build-math-expression-props-builder
@@ -2448,6 +2778,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :using-metrics)]
     (. builder usingMetrics data))
   (.build builder))
+
+
+(defn math-expression-props-builder
+  ""
+  [id config]
+  (build-math-expression-props-builder (new MathExpressionProps$Builder) id config))
 
 
 (defn build-metric-builder
@@ -2494,6 +2830,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn metric-builder
+  ""
+  [id config]
+  (build-metric-builder (Metric$Builder/create) id config))
+
+
 (defn build-metric-config-builder
   "The build-metric-config-builder function updates a MetricConfig$Builder instance using the provided configuration.
   The function takes the MetricConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2515,6 +2857,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :rendering-properties)]
     (. builder renderingProperties data))
   (.build builder))
+
+
+(defn metric-config-builder
+  ""
+  [id config]
+  (build-metric-config-builder (new MetricConfig$Builder) id config))
 
 
 (defn build-metric-expression-config-builder
@@ -2544,6 +2892,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :using-metrics)]
     (. builder usingMetrics data))
   (.build builder))
+
+
+(defn metric-expression-config-builder
+  ""
+  [id config]
+  (build-metric-expression-config-builder (new MetricExpressionConfig$Builder) id config))
 
 
 (defn build-metric-options-builder
@@ -2582,6 +2936,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (unit config id :unit)]
     (. builder unit data))
   (.build builder))
+
+
+(defn metric-options-builder
+  ""
+  [id config]
+  (build-metric-options-builder (new MetricOptions$Builder) id config))
 
 
 (defn build-metric-props-builder
@@ -2628,6 +2988,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn metric-props-builder
+  ""
+  [id config]
+  (build-metric-props-builder (new MetricProps$Builder) id config))
+
+
 (defn build-metric-stat-config-builder
   "The build-metric-stat-config-builder function updates a MetricStatConfig$Builder instance using the provided configuration.
   The function takes the MetricStatConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2666,6 +3032,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn metric-stat-config-builder
+  ""
+  [id config]
+  (build-metric-stat-config-builder (new MetricStatConfig$Builder) id config))
+
+
 (defn build-metric-widget-props-builder
   "The build-metric-widget-props-builder function updates a MetricWidgetProps$Builder instance using the provided configuration.
   The function takes the MetricWidgetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2692,6 +3064,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn metric-widget-props-builder
+  ""
+  [id config]
+  (build-metric-widget-props-builder (new MetricWidgetProps$Builder) id config))
+
+
 (defn build-search-components-builder
   "The build-search-components-builder function updates a SearchComponents$Builder instance using the provided configuration.
   The function takes the SearchComponents$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2716,6 +3094,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :populate-from)]
     (. builder populateFrom data))
   (.build builder))
+
+
+(defn search-components-builder
+  ""
+  [id config]
+  (build-search-components-builder (new SearchComponents$Builder) id config))
 
 
 (defn build-single-value-widget-builder
@@ -2765,6 +3149,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn single-value-widget-builder
+  ""
+  [id config]
+  (build-single-value-widget-builder (SingleValueWidget$Builder/create) id config))
+
+
 (defn build-single-value-widget-props-builder
   "The build-single-value-widget-props-builder function updates a SingleValueWidgetProps$Builder instance using the provided configuration.
   The function takes the SingleValueWidgetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2812,6 +3202,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn single-value-widget-props-builder
+  ""
+  [id config]
+  (build-single-value-widget-props-builder (new SingleValueWidgetProps$Builder) id config))
+
+
 (defn build-spacer-builder
   "The build-spacer-builder function updates a Spacer$Builder instance using the provided configuration.
   The function takes the Spacer$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2832,6 +3228,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn spacer-builder
+  ""
+  [id config]
+  (build-spacer-builder (Spacer$Builder/create) id config))
+
+
 (defn build-spacer-props-builder
   "The build-spacer-props-builder function updates a SpacerProps$Builder instance using the provided configuration.
   The function takes the SpacerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2850,6 +3252,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
+
+
+(defn spacer-props-builder
+  ""
+  [id config]
+  (build-spacer-props-builder (new SpacerProps$Builder) id config))
 
 
 (defn build-table-summary-props-builder
@@ -2873,6 +3281,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :sticky)]
     (. builder sticky data))
   (.build builder))
+
+
+(defn table-summary-props-builder
+  ""
+  [id config]
+  (build-table-summary-props-builder (new TableSummaryProps$Builder) id config))
 
 
 (defn build-table-widget-builder
@@ -2937,6 +3351,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn table-widget-builder
+  ""
+  [id config]
+  (build-table-widget-builder (TableWidget$Builder/create) id config))
+
+
 (defn build-table-widget-props-builder
   "The build-table-widget-props-builder function updates a TableWidgetProps$Builder instance using the provided configuration.
   The function takes the TableWidgetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2999,6 +3419,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn table-widget-props-builder
+  ""
+  [id config]
+  (build-table-widget-props-builder (new TableWidgetProps$Builder) id config))
+
+
 (defn build-text-widget-builder
   "The build-text-widget-builder function updates a TextWidget$Builder instance using the provided configuration.
   The function takes the TextWidget$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3023,6 +3449,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :width)]
     (. builder width data))
   (.build builder))
+
+
+(defn text-widget-builder
+  ""
+  [id config]
+  (build-text-widget-builder (TextWidget$Builder/create) id config))
 
 
 (defn build-text-widget-props-builder
@@ -3051,6 +3483,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn text-widget-props-builder
+  ""
+  [id config]
+  (build-text-widget-props-builder (new TextWidgetProps$Builder) id config))
+
+
 (defn build-variable-value-builder
   "The build-variable-value-builder function updates a VariableValue$Builder instance using the provided configuration.
   The function takes the VariableValue$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3069,6 +3507,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn variable-value-builder
+  ""
+  [id config]
+  (build-variable-value-builder (new VariableValue$Builder) id config))
 
 
 (defn build-vertical-annotation-builder
@@ -3100,6 +3544,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn vertical-annotation-builder
+  ""
+  [id config]
+  (build-vertical-annotation-builder (new VerticalAnnotation$Builder) id config))
+
+
 (defn build-y-axis-props-builder
   "The build-y-axis-props-builder function updates a YAxisProps$Builder instance using the provided configuration.
   The function takes the YAxisProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3124,3 +3574,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :show-units)]
     (. builder showUnits data))
   (.build builder))
+
+
+(defn y-axis-props-builder
+  ""
+  [id config]
+  (build-y-axis-props-builder (new YAxisProps$Builder) id config))

@@ -198,6 +198,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-cluster-builder (CfnCluster$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-cluster-endpoint-property-builder
   "The build-cfn-cluster-endpoint-property-builder function updates a CfnCluster$EndpointProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$EndpointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -218,6 +224,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-endpoint-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-endpoint-property-builder (new CfnCluster$EndpointProperty$Builder) id config))
+
+
 (defn build-cfn-cluster-logging-properties-property-builder
   "The build-cfn-cluster-logging-properties-property-builder function updates a CfnCluster$LoggingPropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$LoggingPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -236,6 +248,12 @@
   (when-let [data (lookup-entry config id :s3-key-prefix)]
     (. builder s3KeyPrefix data))
   (.build builder))
+
+
+(defn cfn-cluster-logging-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-logging-properties-property-builder (new CfnCluster$LoggingPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-cluster-parameter-group-builder
@@ -267,6 +285,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-parameter-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-cluster-parameter-group-builder (CfnClusterParameterGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-cluster-parameter-group-parameter-property-builder
   "The build-cfn-cluster-parameter-group-parameter-property-builder function updates a CfnClusterParameterGroup$ParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnClusterParameterGroup$ParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -285,6 +309,12 @@
   (when-let [data (lookup-entry config id :parameter-value)]
     (. builder parameterValue data))
   (.build builder))
+
+
+(defn cfn-cluster-parameter-group-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-parameter-group-parameter-property-builder (new CfnClusterParameterGroup$ParameterProperty$Builder) id config))
 
 
 (defn build-cfn-cluster-parameter-group-props-builder
@@ -314,6 +344,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-cluster-parameter-group-props-builder
+  ""
+  [id config]
+  (build-cfn-cluster-parameter-group-props-builder (new CfnClusterParameterGroupProps$Builder) id config))
 
 
 (defn build-cfn-cluster-props-builder
@@ -483,6 +519,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-props-builder
+  ""
+  [id config]
+  (build-cfn-cluster-props-builder (new CfnClusterProps$Builder) id config))
+
+
 (defn build-cfn-cluster-security-group-builder
   "The build-cfn-cluster-security-group-builder function updates a CfnClusterSecurityGroup$Builder instance using the provided configuration.
   The function takes the CfnClusterSecurityGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -501,6 +543,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-cluster-security-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-cluster-security-group-builder (CfnClusterSecurityGroup$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-cluster-security-group-ingress-builder
@@ -529,6 +577,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-security-group-ingress-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-cluster-security-group-ingress-builder (CfnClusterSecurityGroupIngress$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-cluster-security-group-ingress-props-builder
   "The build-cfn-cluster-security-group-ingress-props-builder function updates a CfnClusterSecurityGroupIngressProps$Builder instance using the provided configuration.
   The function takes the CfnClusterSecurityGroupIngressProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -555,6 +609,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-security-group-ingress-props-builder
+  ""
+  [id config]
+  (build-cfn-cluster-security-group-ingress-props-builder (new CfnClusterSecurityGroupIngressProps$Builder) id config))
+
+
 (defn build-cfn-cluster-security-group-props-builder
   "The build-cfn-cluster-security-group-props-builder function updates a CfnClusterSecurityGroupProps$Builder instance using the provided configuration.
   The function takes the CfnClusterSecurityGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -573,6 +633,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-cluster-security-group-props-builder
+  ""
+  [id config]
+  (build-cfn-cluster-security-group-props-builder (new CfnClusterSecurityGroupProps$Builder) id config))
 
 
 (defn build-cfn-cluster-subnet-group-builder
@@ -598,6 +664,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-subnet-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-cluster-subnet-group-builder (CfnClusterSubnetGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-cluster-subnet-group-props-builder
   "The build-cfn-cluster-subnet-group-props-builder function updates a CfnClusterSubnetGroupProps$Builder instance using the provided configuration.
   The function takes the CfnClusterSubnetGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -619,6 +691,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-cluster-subnet-group-props-builder
+  ""
+  [id config]
+  (build-cfn-cluster-subnet-group-props-builder (new CfnClusterSubnetGroupProps$Builder) id config))
 
 
 (defn build-cfn-endpoint-access-builder
@@ -650,6 +728,12 @@
   (.build builder))
 
 
+(defn cfn-endpoint-access-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-endpoint-access-builder (CfnEndpointAccess$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-endpoint-access-network-interface-property-builder
   "The build-cfn-endpoint-access-network-interface-property-builder function updates a CfnEndpointAccess$NetworkInterfaceProperty$Builder instance using the provided configuration.
   The function takes the CfnEndpointAccess$NetworkInterfaceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -674,6 +758,12 @@
   (when-let [data (lookup-entry config id :subnet-id)]
     (. builder subnetId data))
   (.build builder))
+
+
+(defn cfn-endpoint-access-network-interface-property-builder
+  ""
+  [id config]
+  (build-cfn-endpoint-access-network-interface-property-builder (new CfnEndpointAccess$NetworkInterfaceProperty$Builder) id config))
 
 
 (defn build-cfn-endpoint-access-props-builder
@@ -705,6 +795,12 @@
   (.build builder))
 
 
+(defn cfn-endpoint-access-props-builder
+  ""
+  [id config]
+  (build-cfn-endpoint-access-props-builder (new CfnEndpointAccessProps$Builder) id config))
+
+
 (defn build-cfn-endpoint-access-vpc-endpoint-property-builder
   "The build-cfn-endpoint-access-vpc-endpoint-property-builder function updates a CfnEndpointAccess$VpcEndpointProperty$Builder instance using the provided configuration.
   The function takes the CfnEndpointAccess$VpcEndpointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -728,6 +824,12 @@
   (.build builder))
 
 
+(defn cfn-endpoint-access-vpc-endpoint-property-builder
+  ""
+  [id config]
+  (build-cfn-endpoint-access-vpc-endpoint-property-builder (new CfnEndpointAccess$VpcEndpointProperty$Builder) id config))
+
+
 (defn build-cfn-endpoint-access-vpc-security-group-property-builder
   "The build-cfn-endpoint-access-vpc-security-group-property-builder function updates a CfnEndpointAccess$VpcSecurityGroupProperty$Builder instance using the provided configuration.
   The function takes the CfnEndpointAccess$VpcSecurityGroupProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -746,6 +848,12 @@
   (when-let [data (lookup-entry config id :vpc-security-group-id)]
     (. builder vpcSecurityGroupId data))
   (.build builder))
+
+
+(defn cfn-endpoint-access-vpc-security-group-property-builder
+  ""
+  [id config]
+  (build-cfn-endpoint-access-vpc-security-group-property-builder (new CfnEndpointAccess$VpcSecurityGroupProperty$Builder) id config))
 
 
 (defn build-cfn-endpoint-authorization-builder
@@ -774,6 +882,12 @@
   (.build builder))
 
 
+(defn cfn-endpoint-authorization-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-endpoint-authorization-builder (CfnEndpointAuthorization$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-endpoint-authorization-props-builder
   "The build-cfn-endpoint-authorization-props-builder function updates a CfnEndpointAuthorizationProps$Builder instance using the provided configuration.
   The function takes the CfnEndpointAuthorizationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -798,6 +912,12 @@
   (when-let [data (lookup-entry config id :vpc-ids)]
     (. builder vpcIds data))
   (.build builder))
+
+
+(defn cfn-endpoint-authorization-props-builder
+  ""
+  [id config]
+  (build-cfn-endpoint-authorization-props-builder (new CfnEndpointAuthorizationProps$Builder) id config))
 
 
 (defn build-cfn-event-subscription-builder
@@ -838,6 +958,12 @@
   (.build builder))
 
 
+(defn cfn-event-subscription-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-event-subscription-builder (CfnEventSubscription$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-event-subscription-props-builder
   "The build-cfn-event-subscription-props-builder function updates a CfnEventSubscriptionProps$Builder instance using the provided configuration.
   The function takes the CfnEventSubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -874,6 +1000,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-event-subscription-props-builder
+  ""
+  [id config]
+  (build-cfn-event-subscription-props-builder (new CfnEventSubscriptionProps$Builder) id config))
 
 
 (defn build-cfn-scheduled-action-builder
@@ -914,6 +1046,12 @@
   (.build builder))
 
 
+(defn cfn-scheduled-action-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-scheduled-action-builder (CfnScheduledAction$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-scheduled-action-pause-cluster-message-property-builder
   "The build-cfn-scheduled-action-pause-cluster-message-property-builder function updates a CfnScheduledAction$PauseClusterMessageProperty$Builder instance using the provided configuration.
   The function takes the CfnScheduledAction$PauseClusterMessageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -929,6 +1067,12 @@
   (when-let [data (lookup-entry config id :cluster-identifier)]
     (. builder clusterIdentifier data))
   (.build builder))
+
+
+(defn cfn-scheduled-action-pause-cluster-message-property-builder
+  ""
+  [id config]
+  (build-cfn-scheduled-action-pause-cluster-message-property-builder (new CfnScheduledAction$PauseClusterMessageProperty$Builder) id config))
 
 
 (defn build-cfn-scheduled-action-props-builder
@@ -969,6 +1113,12 @@
   (.build builder))
 
 
+(defn cfn-scheduled-action-props-builder
+  ""
+  [id config]
+  (build-cfn-scheduled-action-props-builder (new CfnScheduledActionProps$Builder) id config))
+
+
 (defn build-cfn-scheduled-action-resize-cluster-message-property-builder
   "The build-cfn-scheduled-action-resize-cluster-message-property-builder function updates a CfnScheduledAction$ResizeClusterMessageProperty$Builder instance using the provided configuration.
   The function takes the CfnScheduledAction$ResizeClusterMessageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -998,6 +1148,12 @@
   (.build builder))
 
 
+(defn cfn-scheduled-action-resize-cluster-message-property-builder
+  ""
+  [id config]
+  (build-cfn-scheduled-action-resize-cluster-message-property-builder (new CfnScheduledAction$ResizeClusterMessageProperty$Builder) id config))
+
+
 (defn build-cfn-scheduled-action-resume-cluster-message-property-builder
   "The build-cfn-scheduled-action-resume-cluster-message-property-builder function updates a CfnScheduledAction$ResumeClusterMessageProperty$Builder instance using the provided configuration.
   The function takes the CfnScheduledAction$ResumeClusterMessageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1013,6 +1169,12 @@
   (when-let [data (lookup-entry config id :cluster-identifier)]
     (. builder clusterIdentifier data))
   (.build builder))
+
+
+(defn cfn-scheduled-action-resume-cluster-message-property-builder
+  ""
+  [id config]
+  (build-cfn-scheduled-action-resume-cluster-message-property-builder (new CfnScheduledAction$ResumeClusterMessageProperty$Builder) id config))
 
 
 (defn build-cfn-scheduled-action-scheduled-action-type-property-builder
@@ -1036,3 +1198,9 @@
   (when-let [data (lookup-entry config id :resume-cluster)]
     (. builder resumeCluster data))
   (.build builder))
+
+
+(defn cfn-scheduled-action-scheduled-action-type-property-builder
+  ""
+  [id config]
+  (build-cfn-scheduled-action-scheduled-action-type-property-builder (new CfnScheduledAction$ScheduledActionTypeProperty$Builder) id config))

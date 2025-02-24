@@ -120,6 +120,12 @@
   (.build builder))
 
 
+(defn api-destination-props-builder
+  ""
+  [id config]
+  (build-api-destination-props-builder (new ApiDestinationProps$Builder) id config))
+
+
 (defn build-api-gateway-builder
   "The build-api-gateway-builder function updates a ApiGateway$Builder instance using the provided configuration.
   The function takes the ApiGateway$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -214,6 +220,12 @@
   (.build builder))
 
 
+(defn api-gateway-props-builder
+  ""
+  [id config]
+  (build-api-gateway-props-builder (new ApiGatewayProps$Builder) id config))
+
+
 (defn build-app-sync-builder
   "The build-app-sync-builder function updates a AppSync$Builder instance using the provided configuration.
   The function takes the AppSync$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -278,6 +290,12 @@
   (.build builder))
 
 
+(defn app-sync-graph-ql-api-props-builder
+  ""
+  [id config]
+  (build-app-sync-graph-ql-api-props-builder (new AppSyncGraphQLApiProps$Builder) id config))
+
+
 (defn build-aws-api-builder
   "The build-aws-api-builder function updates a AwsApi$Builder instance using the provided configuration.
   The function takes the AwsApi$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -310,6 +328,12 @@
   (.build builder))
 
 
+(defn aws-api-builder
+  ""
+  [id config]
+  (build-aws-api-builder (AwsApi$Builder/create) id config))
+
+
 (defn build-aws-api-input-builder
   "The build-aws-api-input-builder function updates a AwsApiInput$Builder instance using the provided configuration.
   The function takes the AwsApiInput$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -337,6 +361,12 @@
   (when-let [data (lookup-entry config id :service)]
     (. builder service data))
   (.build builder))
+
+
+(defn aws-api-input-builder
+  ""
+  [id config]
+  (build-aws-api-input-builder (new AwsApiInput$Builder) id config))
 
 
 (defn build-aws-api-props-builder
@@ -369,6 +399,12 @@
   (when-let [data (lookup-entry config id :service)]
     (. builder service data))
   (.build builder))
+
+
+(defn aws-api-props-builder
+  ""
+  [id config]
+  (build-aws-api-props-builder (new AwsApiProps$Builder) id config))
 
 
 (defn build-batch-job-builder
@@ -439,6 +475,12 @@
   (when-let [data (lookup-entry config id :size)]
     (. builder size data))
   (.build builder))
+
+
+(defn batch-job-props-builder
+  ""
+  [id config]
+  (build-batch-job-props-builder (new BatchJobProps$Builder) id config))
 
 
 (defn build-cloud-watch-log-group-builder
@@ -531,6 +573,12 @@
   (.build builder))
 
 
+(defn code-build-project-props-builder
+  ""
+  [id config]
+  (build-code-build-project-props-builder (new CodeBuildProjectProps$Builder) id config))
+
+
 (defn build-code-pipeline-builder
   "The build-code-pipeline-builder function updates a CodePipeline$Builder instance using the provided configuration.
   The function takes the CodePipeline$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -583,6 +631,12 @@
   (.build builder))
 
 
+(defn code-pipeline-target-options-builder
+  ""
+  [id config]
+  (build-code-pipeline-target-options-builder (new CodePipelineTargetOptions$Builder) id config))
+
+
 (defn build-container-override-builder
   "The build-container-override-builder function updates a ContainerOverride$Builder instance using the provided configuration.
   The function takes the ContainerOverride$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -613,6 +667,12 @@
   (when-let [data (lookup-entry config id :memory-reservation)]
     (. builder memoryReservation data))
   (.build builder))
+
+
+(defn container-override-builder
+  ""
+  [id config]
+  (build-container-override-builder (new ContainerOverride$Builder) id config))
 
 
 (defn build-ecs-task-builder
@@ -677,6 +737,12 @@
   (.build builder))
 
 
+(defn ecs-task-builder
+  ""
+  [id config]
+  (build-ecs-task-builder (EcsTask$Builder/create) id config))
+
+
 (defn build-ecs-task-props-builder
   "The build-ecs-task-props-builder function updates a EcsTaskProps$Builder instance using the provided configuration.
   The function takes the EcsTaskProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -739,6 +805,12 @@
   (.build builder))
 
 
+(defn ecs-task-props-builder
+  ""
+  [id config]
+  (build-ecs-task-props-builder (new EcsTaskProps$Builder) id config))
+
+
 (defn build-event-bus-builder
   "The build-event-bus-builder function updates a EventBus$Builder instance using the provided configuration.
   The function takes the EventBus$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -779,6 +851,12 @@
   (.build builder))
 
 
+(defn event-bus-props-builder
+  ""
+  [id config]
+  (build-event-bus-props-builder (new EventBusProps$Builder) id config))
+
+
 (defn build-kinesis-firehose-stream-props-builder
   "The build-kinesis-firehose-stream-props-builder function updates a KinesisFirehoseStreamProps$Builder instance using the provided configuration.
   The function takes the KinesisFirehoseStreamProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -794,6 +872,12 @@
   (when-let [data (lookup-entry config id :message)]
     (. builder message data))
   (.build builder))
+
+
+(defn kinesis-firehose-stream-props-builder
+  ""
+  [id config]
+  (build-kinesis-firehose-stream-props-builder (new KinesisFirehoseStreamProps$Builder) id config))
 
 
 (defn build-kinesis-firehose-stream-v2-builder
@@ -853,6 +937,12 @@
   (.build builder))
 
 
+(defn kinesis-stream-props-builder
+  ""
+  [id config]
+  (build-kinesis-stream-props-builder (new KinesisStreamProps$Builder) id config))
+
+
 (defn build-lambda-function-builder
   "The build-lambda-function-builder function updates a LambdaFunction$Builder instance using the provided configuration.
   The function takes the LambdaFunction$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -905,6 +995,12 @@
   (.build builder))
 
 
+(defn lambda-function-props-builder
+  ""
+  [id config]
+  (build-lambda-function-props-builder (new LambdaFunctionProps$Builder) id config))
+
+
 (defn build-log-group-props-builder
   "The build-log-group-props-builder function updates a LogGroupProps$Builder instance using the provided configuration.
   The function takes the LogGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -937,6 +1033,12 @@
   (.build builder))
 
 
+(defn log-group-props-builder
+  ""
+  [id config]
+  (build-log-group-props-builder (new LogGroupProps$Builder) id config))
+
+
 (defn build-log-group-target-input-options-builder
   "The build-log-group-target-input-options-builder function updates a LogGroupTargetInputOptions$Builder instance using the provided configuration.
   The function takes the LogGroupTargetInputOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -955,6 +1057,12 @@
   (when-let [data (lookup-entry config id :timestamp)]
     (. builder timestamp data))
   (.build builder))
+
+
+(defn log-group-target-input-options-builder
+  ""
+  [id config]
+  (build-log-group-target-input-options-builder (new LogGroupTargetInputOptions$Builder) id config))
 
 
 (defn build-sfn-state-machine-builder
@@ -1015,6 +1123,12 @@
   (.build builder))
 
 
+(defn sfn-state-machine-props-builder
+  ""
+  [id config]
+  (build-sfn-state-machine-props-builder (new SfnStateMachineProps$Builder) id config))
+
+
 (defn build-sns-topic-builder
   "The build-sns-topic-builder function updates a SnsTopic$Builder instance using the provided configuration.
   The function takes the SnsTopic$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1065,6 +1179,12 @@
   (when-let [data (lookup-entry config id :retry-attempts)]
     (. builder retryAttempts data))
   (.build builder))
+
+
+(defn sns-topic-props-builder
+  ""
+  [id config]
+  (build-sns-topic-props-builder (new SnsTopicProps$Builder) id config))
 
 
 (defn build-sqs-queue-builder
@@ -1125,6 +1245,12 @@
   (.build builder))
 
 
+(defn sqs-queue-props-builder
+  ""
+  [id config]
+  (build-sqs-queue-props-builder (new SqsQueueProps$Builder) id config))
+
+
 (defn build-tag-builder
   "The build-tag-builder function updates a Tag$Builder instance using the provided configuration.
   The function takes the Tag$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1143,6 +1269,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn tag-builder
+  ""
+  [id config]
+  (build-tag-builder (new Tag$Builder) id config))
 
 
 (defn build-target-base-props-builder
@@ -1168,6 +1300,12 @@
   (.build builder))
 
 
+(defn target-base-props-builder
+  ""
+  [id config]
+  (build-target-base-props-builder (new TargetBaseProps$Builder) id config))
+
+
 (defn build-task-environment-variable-builder
   "The build-task-environment-variable-builder function updates a TaskEnvironmentVariable$Builder instance using the provided configuration.
   The function takes the TaskEnvironmentVariable$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1186,3 +1324,9 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn task-environment-variable-builder
+  ""
+  [id config]
+  (build-task-environment-variable-builder (new TaskEnvironmentVariable$Builder) id config))

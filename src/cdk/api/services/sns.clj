@@ -146,6 +146,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn between-condition-builder
+  ""
+  [id config]
+  (build-between-condition-builder (new BetweenCondition$Builder) id config))
+
+
 (defn build-cfn-subscription-builder
   "The build-cfn-subscription-builder function updates a CfnSubscription$Builder instance using the provided configuration.
   The function takes the CfnSubscription$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -193,6 +199,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-subscription-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-subscription-builder (CfnSubscription$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-subscription-props-builder
   "The build-cfn-subscription-props-builder function updates a CfnSubscriptionProps$Builder instance using the provided configuration.
   The function takes the CfnSubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -238,6 +250,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
+
+
+(defn cfn-subscription-props-builder
+  ""
+  [id config]
+  (build-cfn-subscription-props-builder (new CfnSubscriptionProps$Builder) id config))
 
 
 (defn build-cfn-topic-builder
@@ -290,6 +308,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-topic-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-topic-builder (CfnTopic$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-topic-inline-policy-builder
   "The build-cfn-topic-inline-policy-builder function updates a CfnTopicInlinePolicy$Builder instance using the provided configuration.
   The function takes the CfnTopicInlinePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -310,6 +334,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-topic-inline-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-topic-inline-policy-builder (CfnTopicInlinePolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-topic-inline-policy-props-builder
   "The build-cfn-topic-inline-policy-props-builder function updates a CfnTopicInlinePolicyProps$Builder instance using the provided configuration.
   The function takes the CfnTopicInlinePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -328,6 +358,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
+
+
+(defn cfn-topic-inline-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-topic-inline-policy-props-builder (new CfnTopicInlinePolicyProps$Builder) id config))
 
 
 (defn build-cfn-topic-logging-config-property-builder
@@ -356,6 +392,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-topic-logging-config-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-logging-config-property-builder (new CfnTopic$LoggingConfigProperty$Builder) id config))
+
+
 (defn build-cfn-topic-policy-builder
   "The build-cfn-topic-policy-builder function updates a CfnTopicPolicy$Builder instance using the provided configuration.
   The function takes the CfnTopicPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -376,6 +418,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-topic-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-topic-policy-builder (CfnTopicPolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-topic-policy-props-builder
   "The build-cfn-topic-policy-props-builder function updates a CfnTopicPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnTopicPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -394,6 +442,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :topics)]
     (. builder topics data))
   (.build builder))
+
+
+(defn cfn-topic-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-topic-policy-props-builder (new CfnTopicPolicyProps$Builder) id config))
 
 
 (defn build-cfn-topic-props-builder
@@ -446,6 +500,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-topic-props-builder
+  ""
+  [id config]
+  (build-cfn-topic-props-builder (new CfnTopicProps$Builder) id config))
+
+
 (defn build-cfn-topic-subscription-property-builder
   "The build-cfn-topic-subscription-property-builder function updates a CfnTopic$SubscriptionProperty$Builder instance using the provided configuration.
   The function takes the CfnTopic$SubscriptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -464,6 +524,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :protocol)]
     (. builder protocol data))
   (.build builder))
+
+
+(defn cfn-topic-subscription-property-builder
+  ""
+  [id config]
+  (build-cfn-topic-subscription-property-builder (new CfnTopic$SubscriptionProperty$Builder) id config))
 
 
 (defn build-logging-config-builder
@@ -490,6 +556,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :success-feedback-sample-rate)]
     (. builder successFeedbackSampleRate data))
   (.build builder))
+
+
+(defn logging-config-builder
+  ""
+  [id config]
+  (build-logging-config-builder (new LoggingConfig$Builder) id config))
 
 
 (defn build-numeric-conditions-builder
@@ -527,6 +599,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn numeric-conditions-builder
+  ""
+  [id config]
+  (build-numeric-conditions-builder (new NumericConditions$Builder) id config))
+
+
 (defn build-string-conditions-builder
   "The build-string-conditions-builder function updates a StringConditions$Builder instance using the provided configuration.
   The function takes the StringConditions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -551,6 +629,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :match-suffixes)]
     (. builder matchSuffixes data))
   (.build builder))
+
+
+(defn string-conditions-builder
+  ""
+  [id config]
+  (build-string-conditions-builder (new StringConditions$Builder) id config))
 
 
 (defn build-subscription-builder
@@ -594,6 +678,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn subscription-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-subscription-builder (Subscription$Builder/create scope (name id)) id config))
+
+
 (defn build-subscription-options-builder
   "The build-subscription-options-builder function updates a SubscriptionOptions$Builder instance using the provided configuration.
   The function takes the SubscriptionOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -630,6 +720,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :subscription-role-arn)]
     (. builder subscriptionRoleArn data))
   (.build builder))
+
+
+(defn subscription-options-builder
+  ""
+  [id config]
+  (build-subscription-options-builder (new SubscriptionOptions$Builder) id config))
 
 
 (defn build-subscription-props-builder
@@ -673,6 +769,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn subscription-props-builder
+  ""
+  [id config]
+  (build-subscription-props-builder (new SubscriptionProps$Builder) id config))
+
+
 (defn build-topic-attributes-builder
   "The build-topic-attributes-builder function updates a TopicAttributes$Builder instance using the provided configuration.
   The function takes the TopicAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -691,6 +793,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
+
+
+(defn topic-attributes-builder
+  ""
+  [id config]
+  (build-topic-attributes-builder (new TopicAttributes$Builder) id config))
 
 
 (defn build-topic-builder
@@ -737,6 +845,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn topic-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-topic-builder (Topic$Builder/create scope (name id)) id config))
+
+
 (defn build-topic-policy-builder
   "The build-topic-policy-builder function updates a TopicPolicy$Builder instance using the provided configuration.
   The function takes the TopicPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -760,6 +874,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn topic-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-topic-policy-builder (TopicPolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-topic-policy-props-builder
   "The build-topic-policy-props-builder function updates a TopicPolicyProps$Builder instance using the provided configuration.
   The function takes the TopicPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -781,6 +901,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :topics)]
     (. builder topics data))
   (.build builder))
+
+
+(defn topic-policy-props-builder
+  ""
+  [id config]
+  (build-topic-policy-props-builder (new TopicPolicyProps$Builder) id config))
 
 
 (defn build-topic-props-builder
@@ -825,6 +951,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (tracing-config config id :tracing-config)]
     (. builder tracingConfig data))
   (.build builder))
+
+
+(defn topic-props-builder
+  ""
+  [id config]
+  (build-topic-props-builder (new TopicProps$Builder) id config))
 
 
 (defn build-topic-subscription-config-builder
@@ -872,3 +1004,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :subscription-role-arn)]
     (. builder subscriptionRoleArn data))
   (.build builder))
+
+
+(defn topic-subscription-config-builder
+  ""
+  [id config]
+  (build-topic-subscription-config-builder (new TopicSubscriptionConfig$Builder) id config))

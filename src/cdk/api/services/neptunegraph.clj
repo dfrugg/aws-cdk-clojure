@@ -43,6 +43,12 @@
   (.build builder))
 
 
+(defn cfn-graph-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-graph-builder (CfnGraph$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-graph-props-builder
   "The build-cfn-graph-props-builder function updates a CfnGraphProps$Builder instance using the provided configuration.
   The function takes the CfnGraphProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -78,6 +84,12 @@
   (.build builder))
 
 
+(defn cfn-graph-props-builder
+  ""
+  [id config]
+  (build-cfn-graph-props-builder (new CfnGraphProps$Builder) id config))
+
+
 (defn build-cfn-graph-vector-search-configuration-property-builder
   "The build-cfn-graph-vector-search-configuration-property-builder function updates a CfnGraph$VectorSearchConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnGraph$VectorSearchConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -93,6 +105,12 @@
   (when-let [data (lookup-entry config id :vector-search-dimension)]
     (. builder vectorSearchDimension data))
   (.build builder))
+
+
+(defn cfn-graph-vector-search-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-graph-vector-search-configuration-property-builder (new CfnGraph$VectorSearchConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-private-graph-endpoint-builder
@@ -121,6 +139,12 @@
   (.build builder))
 
 
+(defn cfn-private-graph-endpoint-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-private-graph-endpoint-builder (CfnPrivateGraphEndpoint$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-private-graph-endpoint-props-builder
   "The build-cfn-private-graph-endpoint-props-builder function updates a CfnPrivateGraphEndpointProps$Builder instance using the provided configuration.
   The function takes the CfnPrivateGraphEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -145,3 +169,9 @@
   (when-let [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
+
+
+(defn cfn-private-graph-endpoint-props-builder
+  ""
+  [id config]
+  (build-cfn-private-graph-endpoint-props-builder (new CfnPrivateGraphEndpointProps$Builder) id config))

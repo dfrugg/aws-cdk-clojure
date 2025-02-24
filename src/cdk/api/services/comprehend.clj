@@ -42,6 +42,12 @@
   (.build builder))
 
 
+(defn cfn-document-classifier-augmented-manifests-list-item-property-builder
+  ""
+  [id config]
+  (build-cfn-document-classifier-augmented-manifests-list-item-property-builder (new CfnDocumentClassifier$AugmentedManifestsListItemProperty$Builder) id config))
+
+
 (defn build-cfn-document-classifier-builder
   "The build-cfn-document-classifier-builder function updates a CfnDocumentClassifier$Builder instance using the provided configuration.
   The function takes the CfnDocumentClassifier$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -92,6 +98,12 @@
   (.build builder))
 
 
+(defn cfn-document-classifier-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-document-classifier-builder (CfnDocumentClassifier$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-document-classifier-document-classifier-documents-property-builder
   "The build-cfn-document-classifier-document-classifier-documents-property-builder function updates a CfnDocumentClassifier$DocumentClassifierDocumentsProperty$Builder instance using the provided configuration.
   The function takes the CfnDocumentClassifier$DocumentClassifierDocumentsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -110,6 +122,12 @@
   (when-let [data (lookup-entry config id :test-s3-uri)]
     (. builder testS3Uri data))
   (.build builder))
+
+
+(defn cfn-document-classifier-document-classifier-documents-property-builder
+  ""
+  [id config]
+  (build-cfn-document-classifier-document-classifier-documents-property-builder (new CfnDocumentClassifier$DocumentClassifierDocumentsProperty$Builder) id config))
 
 
 (defn build-cfn-document-classifier-document-classifier-input-data-config-property-builder
@@ -150,6 +168,12 @@
   (.build builder))
 
 
+(defn cfn-document-classifier-document-classifier-input-data-config-property-builder
+  ""
+  [id config]
+  (build-cfn-document-classifier-document-classifier-input-data-config-property-builder (new CfnDocumentClassifier$DocumentClassifierInputDataConfigProperty$Builder) id config))
+
+
 (defn build-cfn-document-classifier-document-classifier-output-data-config-property-builder
   "The build-cfn-document-classifier-document-classifier-output-data-config-property-builder function updates a CfnDocumentClassifier$DocumentClassifierOutputDataConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDocumentClassifier$DocumentClassifierOutputDataConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -168,6 +192,12 @@
   (when-let [data (lookup-entry config id :s3-uri)]
     (. builder s3Uri data))
   (.build builder))
+
+
+(defn cfn-document-classifier-document-classifier-output-data-config-property-builder
+  ""
+  [id config]
+  (build-cfn-document-classifier-document-classifier-output-data-config-property-builder (new CfnDocumentClassifier$DocumentClassifierOutputDataConfigProperty$Builder) id config))
 
 
 (defn build-cfn-document-classifier-document-reader-config-property-builder
@@ -191,6 +221,12 @@
   (when-let [data (lookup-entry config id :feature-types)]
     (. builder featureTypes data))
   (.build builder))
+
+
+(defn cfn-document-classifier-document-reader-config-property-builder
+  ""
+  [id config]
+  (build-cfn-document-classifier-document-reader-config-property-builder (new CfnDocumentClassifier$DocumentReaderConfigProperty$Builder) id config))
 
 
 (defn build-cfn-document-classifier-props-builder
@@ -243,6 +279,12 @@
   (.build builder))
 
 
+(defn cfn-document-classifier-props-builder
+  ""
+  [id config]
+  (build-cfn-document-classifier-props-builder (new CfnDocumentClassifierProps$Builder) id config))
+
+
 (defn build-cfn-document-classifier-vpc-config-property-builder
   "The build-cfn-document-classifier-vpc-config-property-builder function updates a CfnDocumentClassifier$VpcConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDocumentClassifier$VpcConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -261,6 +303,12 @@
   (when-let [data (lookup-entry config id :subnets)]
     (. builder subnets data))
   (.build builder))
+
+
+(defn cfn-document-classifier-vpc-config-property-builder
+  ""
+  [id config]
+  (build-cfn-document-classifier-vpc-config-property-builder (new CfnDocumentClassifier$VpcConfigProperty$Builder) id config))
 
 
 (defn build-cfn-flywheel-builder
@@ -301,6 +349,12 @@
   (.build builder))
 
 
+(defn cfn-flywheel-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-flywheel-builder (CfnFlywheel$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-flywheel-data-security-config-property-builder
   "The build-cfn-flywheel-data-security-config-property-builder function updates a CfnFlywheel$DataSecurityConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnFlywheel$DataSecurityConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -327,6 +381,12 @@
   (.build builder))
 
 
+(defn cfn-flywheel-data-security-config-property-builder
+  ""
+  [id config]
+  (build-cfn-flywheel-data-security-config-property-builder (new CfnFlywheel$DataSecurityConfigProperty$Builder) id config))
+
+
 (defn build-cfn-flywheel-document-classification-config-property-builder
   "The build-cfn-flywheel-document-classification-config-property-builder function updates a CfnFlywheel$DocumentClassificationConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnFlywheel$DocumentClassificationConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -347,6 +407,12 @@
   (.build builder))
 
 
+(defn cfn-flywheel-document-classification-config-property-builder
+  ""
+  [id config]
+  (build-cfn-flywheel-document-classification-config-property-builder (new CfnFlywheel$DocumentClassificationConfigProperty$Builder) id config))
+
+
 (defn build-cfn-flywheel-entity-recognition-config-property-builder
   "The build-cfn-flywheel-entity-recognition-config-property-builder function updates a CfnFlywheel$EntityRecognitionConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnFlywheel$EntityRecognitionConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -364,6 +430,12 @@
   (.build builder))
 
 
+(defn cfn-flywheel-entity-recognition-config-property-builder
+  ""
+  [id config]
+  (build-cfn-flywheel-entity-recognition-config-property-builder (new CfnFlywheel$EntityRecognitionConfigProperty$Builder) id config))
+
+
 (defn build-cfn-flywheel-entity-types-list-item-property-builder
   "The build-cfn-flywheel-entity-types-list-item-property-builder function updates a CfnFlywheel$EntityTypesListItemProperty$Builder instance using the provided configuration.
   The function takes the CfnFlywheel$EntityTypesListItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -379,6 +451,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-flywheel-entity-types-list-item-property-builder
+  ""
+  [id config]
+  (build-cfn-flywheel-entity-types-list-item-property-builder (new CfnFlywheel$EntityTypesListItemProperty$Builder) id config))
 
 
 (defn build-cfn-flywheel-props-builder
@@ -419,6 +497,12 @@
   (.build builder))
 
 
+(defn cfn-flywheel-props-builder
+  ""
+  [id config]
+  (build-cfn-flywheel-props-builder (new CfnFlywheelProps$Builder) id config))
+
+
 (defn build-cfn-flywheel-task-config-property-builder
   "The build-cfn-flywheel-task-config-property-builder function updates a CfnFlywheel$TaskConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnFlywheel$TaskConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -442,6 +526,12 @@
   (.build builder))
 
 
+(defn cfn-flywheel-task-config-property-builder
+  ""
+  [id config]
+  (build-cfn-flywheel-task-config-property-builder (new CfnFlywheel$TaskConfigProperty$Builder) id config))
+
+
 (defn build-cfn-flywheel-vpc-config-property-builder
   "The build-cfn-flywheel-vpc-config-property-builder function updates a CfnFlywheel$VpcConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnFlywheel$VpcConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -460,3 +550,9 @@
   (when-let [data (lookup-entry config id :subnets)]
     (. builder subnets data))
   (.build builder))
+
+
+(defn cfn-flywheel-vpc-config-property-builder
+  ""
+  [id config]
+  (build-cfn-flywheel-vpc-config-property-builder (new CfnFlywheel$VpcConfigProperty$Builder) id config))

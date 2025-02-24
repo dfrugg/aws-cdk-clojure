@@ -55,6 +55,12 @@
   (.build builder))
 
 
+(defn cfn-report-definition-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-report-definition-builder (CfnReportDefinition$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-report-definition-props-builder
   "The build-cfn-report-definition-props-builder function updates a CfnReportDefinitionProps$Builder instance using the provided configuration.
   The function takes the CfnReportDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -103,3 +109,9 @@
   (when-let [data (lookup-entry config id :time-unit)]
     (. builder timeUnit data))
   (.build builder))
+
+
+(defn cfn-report-definition-props-builder
+  ""
+  [id config]
+  (build-cfn-report-definition-props-builder (new CfnReportDefinitionProps$Builder) id config))

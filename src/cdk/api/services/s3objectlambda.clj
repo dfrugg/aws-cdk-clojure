@@ -34,6 +34,12 @@
   (.build builder))
 
 
+(defn cfn-access-point-alias-property-builder
+  ""
+  [id config]
+  (build-cfn-access-point-alias-property-builder (new CfnAccessPoint$AliasProperty$Builder) id config))
+
+
 (defn build-cfn-access-point-aws-lambda-property-builder
   "The build-cfn-access-point-aws-lambda-property-builder function updates a CfnAccessPoint$AwsLambdaProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPoint$AwsLambdaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -52,6 +58,12 @@
   (when-let [data (lookup-entry config id :function-payload)]
     (. builder functionPayload data))
   (.build builder))
+
+
+(defn cfn-access-point-aws-lambda-property-builder
+  ""
+  [id config]
+  (build-cfn-access-point-aws-lambda-property-builder (new CfnAccessPoint$AwsLambdaProperty$Builder) id config))
 
 
 (defn build-cfn-access-point-builder
@@ -74,6 +86,12 @@
   (.build builder))
 
 
+(defn cfn-access-point-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-access-point-builder (CfnAccessPoint$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-access-point-content-transformation-property-builder
   "The build-cfn-access-point-content-transformation-property-builder function updates a CfnAccessPoint$ContentTransformationProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPoint$ContentTransformationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -89,6 +107,12 @@
   (when-let [data (lookup-entry config id :aws-lambda)]
     (. builder awsLambda data))
   (.build builder))
+
+
+(defn cfn-access-point-content-transformation-property-builder
+  ""
+  [id config]
+  (build-cfn-access-point-content-transformation-property-builder (new CfnAccessPoint$ContentTransformationProperty$Builder) id config))
 
 
 (defn build-cfn-access-point-object-lambda-configuration-property-builder
@@ -117,6 +141,12 @@
   (.build builder))
 
 
+(defn cfn-access-point-object-lambda-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-access-point-object-lambda-configuration-property-builder (new CfnAccessPoint$ObjectLambdaConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-access-point-policy-builder
   "The build-cfn-access-point-policy-builder function updates a CfnAccessPointPolicy$Builder instance using the provided configuration.
   The function takes the CfnAccessPointPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -135,6 +165,12 @@
   (when-let [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
   (.build builder))
+
+
+(defn cfn-access-point-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-access-point-policy-builder (CfnAccessPointPolicy$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-access-point-policy-props-builder
@@ -157,6 +193,12 @@
   (.build builder))
 
 
+(defn cfn-access-point-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-access-point-policy-props-builder (new CfnAccessPointPolicyProps$Builder) id config))
+
+
 (defn build-cfn-access-point-policy-status-property-builder
   "The build-cfn-access-point-policy-status-property-builder function updates a CfnAccessPoint$PolicyStatusProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPoint$PolicyStatusProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -172,6 +214,12 @@
   (when-let [data (lookup-entry config id :is-public)]
     (. builder isPublic data))
   (.build builder))
+
+
+(defn cfn-access-point-policy-status-property-builder
+  ""
+  [id config]
+  (build-cfn-access-point-policy-status-property-builder (new CfnAccessPoint$PolicyStatusProperty$Builder) id config))
 
 
 (defn build-cfn-access-point-props-builder
@@ -192,6 +240,12 @@
   (when-let [data (lookup-entry config id :object-lambda-configuration)]
     (. builder objectLambdaConfiguration data))
   (.build builder))
+
+
+(defn cfn-access-point-props-builder
+  ""
+  [id config]
+  (build-cfn-access-point-props-builder (new CfnAccessPointProps$Builder) id config))
 
 
 (defn build-cfn-access-point-public-access-block-configuration-property-builder
@@ -220,6 +274,12 @@
   (.build builder))
 
 
+(defn cfn-access-point-public-access-block-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-access-point-public-access-block-configuration-property-builder (new CfnAccessPoint$PublicAccessBlockConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-access-point-transformation-configuration-property-builder
   "The build-cfn-access-point-transformation-configuration-property-builder function updates a CfnAccessPoint$TransformationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPoint$TransformationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -238,3 +298,9 @@
   (when-let [data (lookup-entry config id :content-transformation)]
     (. builder contentTransformation data))
   (.build builder))
+
+
+(defn cfn-access-point-transformation-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-access-point-transformation-configuration-property-builder (new CfnAccessPoint$TransformationConfigurationProperty$Builder) id config))

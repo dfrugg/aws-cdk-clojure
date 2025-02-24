@@ -42,6 +42,12 @@
   (.build builder))
 
 
+(defn cfn-fhir-datastore-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-fhir-datastore-builder (CfnFHIRDatastore$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-fhir-datastore-created-at-property-builder
   "The build-cfn-fhir-datastore-created-at-property-builder function updates a CfnFHIRDatastore$CreatedAtProperty$Builder instance using the provided configuration.
   The function takes the CfnFHIRDatastore$CreatedAtProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -60,6 +66,12 @@
   (when-let [data (lookup-entry config id :seconds)]
     (. builder seconds data))
   (.build builder))
+
+
+(defn cfn-fhir-datastore-created-at-property-builder
+  ""
+  [id config]
+  (build-cfn-fhir-datastore-created-at-property-builder (new CfnFHIRDatastore$CreatedAtProperty$Builder) id config))
 
 
 (defn build-cfn-fhir-datastore-identity-provider-configuration-property-builder
@@ -88,6 +100,12 @@
   (.build builder))
 
 
+(defn cfn-fhir-datastore-identity-provider-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-fhir-datastore-identity-provider-configuration-property-builder (new CfnFHIRDatastore$IdentityProviderConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-fhir-datastore-kms-encryption-config-property-builder
   "The build-cfn-fhir-datastore-kms-encryption-config-property-builder function updates a CfnFHIRDatastore$KmsEncryptionConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnFHIRDatastore$KmsEncryptionConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -108,6 +126,12 @@
   (.build builder))
 
 
+(defn cfn-fhir-datastore-kms-encryption-config-property-builder
+  ""
+  [id config]
+  (build-cfn-fhir-datastore-kms-encryption-config-property-builder (new CfnFHIRDatastore$KmsEncryptionConfigProperty$Builder) id config))
+
+
 (defn build-cfn-fhir-datastore-preload-data-config-property-builder
   "The build-cfn-fhir-datastore-preload-data-config-property-builder function updates a CfnFHIRDatastore$PreloadDataConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnFHIRDatastore$PreloadDataConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -123,6 +147,12 @@
   (when-let [data (lookup-entry config id :preload-data-type)]
     (. builder preloadDataType data))
   (.build builder))
+
+
+(defn cfn-fhir-datastore-preload-data-config-property-builder
+  ""
+  [id config]
+  (build-cfn-fhir-datastore-preload-data-config-property-builder (new CfnFHIRDatastore$PreloadDataConfigProperty$Builder) id config))
 
 
 (defn build-cfn-fhir-datastore-props-builder
@@ -157,6 +187,12 @@
   (.build builder))
 
 
+(defn cfn-fhir-datastore-props-builder
+  ""
+  [id config]
+  (build-cfn-fhir-datastore-props-builder (new CfnFHIRDatastoreProps$Builder) id config))
+
+
 (defn build-cfn-fhir-datastore-sse-configuration-property-builder
   "The build-cfn-fhir-datastore-sse-configuration-property-builder function updates a CfnFHIRDatastore$SseConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnFHIRDatastore$SseConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -172,3 +208,9 @@
   (when-let [data (lookup-entry config id :kms-encryption-config)]
     (. builder kmsEncryptionConfig data))
   (.build builder))
+
+
+(defn cfn-fhir-datastore-sse-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-fhir-datastore-sse-configuration-property-builder (new CfnFHIRDatastore$SseConfigurationProperty$Builder) id config))

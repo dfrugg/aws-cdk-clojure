@@ -53,6 +53,12 @@
   (.build builder))
 
 
+(defn cfn-app-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-app-builder (CfnApp$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-app-event-subscription-property-builder
   "The build-cfn-app-event-subscription-property-builder function updates a CfnApp$EventSubscriptionProperty$Builder instance using the provided configuration.
   The function takes the CfnApp$EventSubscriptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -76,6 +82,12 @@
   (.build builder))
 
 
+(defn cfn-app-event-subscription-property-builder
+  ""
+  [id config]
+  (build-cfn-app-event-subscription-property-builder (new CfnApp$EventSubscriptionProperty$Builder) id config))
+
+
 (defn build-cfn-app-permission-model-property-builder
   "The build-cfn-app-permission-model-property-builder function updates a CfnApp$PermissionModelProperty$Builder instance using the provided configuration.
   The function takes the CfnApp$PermissionModelProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -97,6 +109,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-app-permission-model-property-builder
+  ""
+  [id config]
+  (build-cfn-app-permission-model-property-builder (new CfnApp$PermissionModelProperty$Builder) id config))
 
 
 (defn build-cfn-app-physical-resource-id-property-builder
@@ -123,6 +141,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-app-physical-resource-id-property-builder
+  ""
+  [id config]
+  (build-cfn-app-physical-resource-id-property-builder (new CfnApp$PhysicalResourceIdProperty$Builder) id config))
 
 
 (defn build-cfn-app-props-builder
@@ -166,6 +190,12 @@
   (.build builder))
 
 
+(defn cfn-app-props-builder
+  ""
+  [id config]
+  (build-cfn-app-props-builder (new CfnAppProps$Builder) id config))
+
+
 (defn build-cfn-app-resource-mapping-property-builder
   "The build-cfn-app-resource-mapping-property-builder function updates a CfnApp$ResourceMappingProperty$Builder instance using the provided configuration.
   The function takes the CfnApp$ResourceMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -196,6 +226,12 @@
   (when-let [data (lookup-entry config id :terraform-source-name)]
     (. builder terraformSourceName data))
   (.build builder))
+
+
+(defn cfn-app-resource-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-app-resource-mapping-property-builder (new CfnApp$ResourceMappingProperty$Builder) id config))
 
 
 (defn build-cfn-resiliency-policy-builder
@@ -230,6 +266,12 @@
   (.build builder))
 
 
+(defn cfn-resiliency-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-resiliency-policy-builder (CfnResiliencyPolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-resiliency-policy-failure-policy-property-builder
   "The build-cfn-resiliency-policy-failure-policy-property-builder function updates a CfnResiliencyPolicy$FailurePolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnResiliencyPolicy$FailurePolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -248,6 +290,12 @@
   (when-let [data (lookup-entry config id :rto-in-secs)]
     (. builder rtoInSecs data))
   (.build builder))
+
+
+(defn cfn-resiliency-policy-failure-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-resiliency-policy-failure-policy-property-builder (new CfnResiliencyPolicy$FailurePolicyProperty$Builder) id config))
 
 
 (defn build-cfn-resiliency-policy-props-builder
@@ -280,3 +328,9 @@
   (when-let [data (lookup-entry config id :tier)]
     (. builder tier data))
   (.build builder))
+
+
+(defn cfn-resiliency-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-resiliency-policy-props-builder (new CfnResiliencyPolicyProps$Builder) id config))

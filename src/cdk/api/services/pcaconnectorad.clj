@@ -71,6 +71,12 @@
   (.build builder))
 
 
+(defn cfn-connector-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-connector-builder (CfnConnector$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-connector-props-builder
   "The build-cfn-connector-props-builder function updates a CfnConnectorProps$Builder instance using the provided configuration.
   The function takes the CfnConnectorProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -97,6 +103,12 @@
   (.build builder))
 
 
+(defn cfn-connector-props-builder
+  ""
+  [id config]
+  (build-cfn-connector-props-builder (new CfnConnectorProps$Builder) id config))
+
+
 (defn build-cfn-connector-vpc-information-property-builder
   "The build-cfn-connector-vpc-information-property-builder function updates a CfnConnector$VpcInformationProperty$Builder instance using the provided configuration.
   The function takes the CfnConnector$VpcInformationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -112,6 +124,12 @@
   (when-let [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
   (.build builder))
+
+
+(defn cfn-connector-vpc-information-property-builder
+  ""
+  [id config]
+  (build-cfn-connector-vpc-information-property-builder (new CfnConnector$VpcInformationProperty$Builder) id config))
 
 
 (defn build-cfn-directory-registration-builder
@@ -134,6 +152,12 @@
   (.build builder))
 
 
+(defn cfn-directory-registration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-directory-registration-builder (CfnDirectoryRegistration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-directory-registration-props-builder
   "The build-cfn-directory-registration-props-builder function updates a CfnDirectoryRegistrationProps$Builder instance using the provided configuration.
   The function takes the CfnDirectoryRegistrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -152,6 +176,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-directory-registration-props-builder
+  ""
+  [id config]
+  (build-cfn-directory-registration-props-builder (new CfnDirectoryRegistrationProps$Builder) id config))
 
 
 (defn build-cfn-service-principal-name-builder
@@ -174,6 +204,12 @@
   (.build builder))
 
 
+(defn cfn-service-principal-name-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-service-principal-name-builder (CfnServicePrincipalName$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-service-principal-name-props-builder
   "The build-cfn-service-principal-name-props-builder function updates a CfnServicePrincipalNameProps$Builder instance using the provided configuration.
   The function takes the CfnServicePrincipalNameProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -192,6 +228,12 @@
   (when-let [data (lookup-entry config id :directory-registration-arn)]
     (. builder directoryRegistrationArn data))
   (.build builder))
+
+
+(defn cfn-service-principal-name-props-builder
+  ""
+  [id config]
+  (build-cfn-service-principal-name-props-builder (new CfnServicePrincipalNameProps$Builder) id config))
 
 
 (defn build-cfn-template-application-policies-property-builder
@@ -214,6 +256,12 @@
   (.build builder))
 
 
+(defn cfn-template-application-policies-property-builder
+  ""
+  [id config]
+  (build-cfn-template-application-policies-property-builder (new CfnTemplate$ApplicationPoliciesProperty$Builder) id config))
+
+
 (defn build-cfn-template-application-policy-property-builder
   "The build-cfn-template-application-policy-property-builder function updates a CfnTemplate$ApplicationPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ApplicationPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -232,6 +280,12 @@
   (when-let [data (lookup-entry config id :policy-type)]
     (. builder policyType data))
   (.build builder))
+
+
+(defn cfn-template-application-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-template-application-policy-property-builder (new CfnTemplate$ApplicationPolicyProperty$Builder) id config))
 
 
 (defn build-cfn-template-builder
@@ -263,6 +317,12 @@
   (.build builder))
 
 
+(defn cfn-template-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-template-builder (CfnTemplate$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-template-certificate-validity-property-builder
   "The build-cfn-template-certificate-validity-property-builder function updates a CfnTemplate$CertificateValidityProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$CertificateValidityProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -281,6 +341,12 @@
   (when-let [data (lookup-entry config id :validity-period)]
     (. builder validityPeriod data))
   (.build builder))
+
+
+(defn cfn-template-certificate-validity-property-builder
+  ""
+  [id config]
+  (build-cfn-template-certificate-validity-property-builder (new CfnTemplate$CertificateValidityProperty$Builder) id config))
 
 
 (defn build-cfn-template-enrollment-flags-v2-property-builder
@@ -312,6 +378,12 @@
   (.build builder))
 
 
+(defn cfn-template-enrollment-flags-v2-property-builder
+  ""
+  [id config]
+  (build-cfn-template-enrollment-flags-v2-property-builder (new CfnTemplate$EnrollmentFlagsV2Property$Builder) id config))
+
+
 (defn build-cfn-template-enrollment-flags-v3-property-builder
   "The build-cfn-template-enrollment-flags-v3-property-builder function updates a CfnTemplate$EnrollmentFlagsV3Property$Builder instance using the provided configuration.
   The function takes the CfnTemplate$EnrollmentFlagsV3Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -339,6 +411,12 @@
   (when-let [data (lookup-entry config id :user-interaction-required)]
     (. builder userInteractionRequired data))
   (.build builder))
+
+
+(defn cfn-template-enrollment-flags-v3-property-builder
+  ""
+  [id config]
+  (build-cfn-template-enrollment-flags-v3-property-builder (new CfnTemplate$EnrollmentFlagsV3Property$Builder) id config))
 
 
 (defn build-cfn-template-enrollment-flags-v4-property-builder
@@ -370,6 +448,12 @@
   (.build builder))
 
 
+(defn cfn-template-enrollment-flags-v4-property-builder
+  ""
+  [id config]
+  (build-cfn-template-enrollment-flags-v4-property-builder (new CfnTemplate$EnrollmentFlagsV4Property$Builder) id config))
+
+
 (defn build-cfn-template-extensions-v2-property-builder
   "The build-cfn-template-extensions-v2-property-builder function updates a CfnTemplate$ExtensionsV2Property$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ExtensionsV2Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -388,6 +472,12 @@
   (when-let [data (lookup-entry config id :key-usage)]
     (. builder keyUsage data))
   (.build builder))
+
+
+(defn cfn-template-extensions-v2-property-builder
+  ""
+  [id config]
+  (build-cfn-template-extensions-v2-property-builder (new CfnTemplate$ExtensionsV2Property$Builder) id config))
 
 
 (defn build-cfn-template-extensions-v3-property-builder
@@ -410,6 +500,12 @@
   (.build builder))
 
 
+(defn cfn-template-extensions-v3-property-builder
+  ""
+  [id config]
+  (build-cfn-template-extensions-v3-property-builder (new CfnTemplate$ExtensionsV3Property$Builder) id config))
+
+
 (defn build-cfn-template-extensions-v4-property-builder
   "The build-cfn-template-extensions-v4-property-builder function updates a CfnTemplate$ExtensionsV4Property$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ExtensionsV4Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -428,6 +524,12 @@
   (when-let [data (lookup-entry config id :key-usage)]
     (. builder keyUsage data))
   (.build builder))
+
+
+(defn cfn-template-extensions-v4-property-builder
+  ""
+  [id config]
+  (build-cfn-template-extensions-v4-property-builder (new CfnTemplate$ExtensionsV4Property$Builder) id config))
 
 
 (defn build-cfn-template-general-flags-v2-property-builder
@@ -450,6 +552,12 @@
   (.build builder))
 
 
+(defn cfn-template-general-flags-v2-property-builder
+  ""
+  [id config]
+  (build-cfn-template-general-flags-v2-property-builder (new CfnTemplate$GeneralFlagsV2Property$Builder) id config))
+
+
 (defn build-cfn-template-general-flags-v3-property-builder
   "The build-cfn-template-general-flags-v3-property-builder function updates a CfnTemplate$GeneralFlagsV3Property$Builder instance using the provided configuration.
   The function takes the CfnTemplate$GeneralFlagsV3Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -468,6 +576,12 @@
   (when-let [data (lookup-entry config id :machine-type)]
     (. builder machineType data))
   (.build builder))
+
+
+(defn cfn-template-general-flags-v3-property-builder
+  ""
+  [id config]
+  (build-cfn-template-general-flags-v3-property-builder (new CfnTemplate$GeneralFlagsV3Property$Builder) id config))
 
 
 (defn build-cfn-template-general-flags-v4-property-builder
@@ -490,6 +604,12 @@
   (.build builder))
 
 
+(defn cfn-template-general-flags-v4-property-builder
+  ""
+  [id config]
+  (build-cfn-template-general-flags-v4-property-builder (new CfnTemplate$GeneralFlagsV4Property$Builder) id config))
+
+
 (defn build-cfn-template-group-access-control-entry-access-rights-property-builder
   "The build-cfn-template-group-access-control-entry-access-rights-property-builder function updates a CfnTemplateGroupAccessControlEntry$AccessRightsProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplateGroupAccessControlEntry$AccessRightsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -508,6 +628,12 @@
   (when-let [data (lookup-entry config id :enroll)]
     (. builder enroll data))
   (.build builder))
+
+
+(defn cfn-template-group-access-control-entry-access-rights-property-builder
+  ""
+  [id config]
+  (build-cfn-template-group-access-control-entry-access-rights-property-builder (new CfnTemplateGroupAccessControlEntry$AccessRightsProperty$Builder) id config))
 
 
 (defn build-cfn-template-group-access-control-entry-builder
@@ -536,6 +662,12 @@
   (.build builder))
 
 
+(defn cfn-template-group-access-control-entry-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-template-group-access-control-entry-builder (CfnTemplateGroupAccessControlEntry$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-template-group-access-control-entry-props-builder
   "The build-cfn-template-group-access-control-entry-props-builder function updates a CfnTemplateGroupAccessControlEntryProps$Builder instance using the provided configuration.
   The function takes the CfnTemplateGroupAccessControlEntryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -560,6 +692,12 @@
   (when-let [data (lookup-entry config id :template-arn)]
     (. builder templateArn data))
   (.build builder))
+
+
+(defn cfn-template-group-access-control-entry-props-builder
+  ""
+  [id config]
+  (build-cfn-template-group-access-control-entry-props-builder (new CfnTemplateGroupAccessControlEntryProps$Builder) id config))
 
 
 (defn build-cfn-template-key-usage-flags-property-builder
@@ -591,6 +729,12 @@
   (.build builder))
 
 
+(defn cfn-template-key-usage-flags-property-builder
+  ""
+  [id config]
+  (build-cfn-template-key-usage-flags-property-builder (new CfnTemplate$KeyUsageFlagsProperty$Builder) id config))
+
+
 (defn build-cfn-template-key-usage-property-builder
   "The build-cfn-template-key-usage-property-builder function updates a CfnTemplate$KeyUsageProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$KeyUsageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -609,6 +753,12 @@
   (when-let [data (lookup-entry config id :usage-flags)]
     (. builder usageFlags data))
   (.build builder))
+
+
+(defn cfn-template-key-usage-property-builder
+  ""
+  [id config]
+  (build-cfn-template-key-usage-property-builder (new CfnTemplate$KeyUsageProperty$Builder) id config))
 
 
 (defn build-cfn-template-key-usage-property-flags-property-builder
@@ -634,6 +784,12 @@
   (.build builder))
 
 
+(defn cfn-template-key-usage-property-flags-property-builder
+  ""
+  [id config]
+  (build-cfn-template-key-usage-property-flags-property-builder (new CfnTemplate$KeyUsagePropertyFlagsProperty$Builder) id config))
+
+
 (defn build-cfn-template-key-usage-property-property-builder
   "The build-cfn-template-key-usage-property-property-builder function updates a CfnTemplate$KeyUsagePropertyProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$KeyUsagePropertyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -652,6 +808,12 @@
   (when-let [data (lookup-entry config id :property-type)]
     (. builder propertyType data))
   (.build builder))
+
+
+(defn cfn-template-key-usage-property-property-builder
+  ""
+  [id config]
+  (build-cfn-template-key-usage-property-property-builder (new CfnTemplate$KeyUsagePropertyProperty$Builder) id config))
 
 
 (defn build-cfn-template-private-key-attributes-v2-property-builder
@@ -675,6 +837,12 @@
   (when-let [data (lookup-entry config id :minimal-key-length)]
     (. builder minimalKeyLength data))
   (.build builder))
+
+
+(defn cfn-template-private-key-attributes-v2-property-builder
+  ""
+  [id config]
+  (build-cfn-template-private-key-attributes-v2-property-builder (new CfnTemplate$PrivateKeyAttributesV2Property$Builder) id config))
 
 
 (defn build-cfn-template-private-key-attributes-v3-property-builder
@@ -706,6 +874,12 @@
   (.build builder))
 
 
+(defn cfn-template-private-key-attributes-v3-property-builder
+  ""
+  [id config]
+  (build-cfn-template-private-key-attributes-v3-property-builder (new CfnTemplate$PrivateKeyAttributesV3Property$Builder) id config))
+
+
 (defn build-cfn-template-private-key-attributes-v4-property-builder
   "The build-cfn-template-private-key-attributes-v4-property-builder function updates a CfnTemplate$PrivateKeyAttributesV4Property$Builder instance using the provided configuration.
   The function takes the CfnTemplate$PrivateKeyAttributesV4Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -735,6 +909,12 @@
   (.build builder))
 
 
+(defn cfn-template-private-key-attributes-v4-property-builder
+  ""
+  [id config]
+  (build-cfn-template-private-key-attributes-v4-property-builder (new CfnTemplate$PrivateKeyAttributesV4Property$Builder) id config))
+
+
 (defn build-cfn-template-private-key-flags-v2-property-builder
   "The build-cfn-template-private-key-flags-v2-property-builder function updates a CfnTemplate$PrivateKeyFlagsV2Property$Builder instance using the provided configuration.
   The function takes the CfnTemplate$PrivateKeyFlagsV2Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -756,6 +936,12 @@
   (when-let [data (lookup-entry config id :strong-key-protection-required)]
     (. builder strongKeyProtectionRequired data))
   (.build builder))
+
+
+(defn cfn-template-private-key-flags-v2-property-builder
+  ""
+  [id config]
+  (build-cfn-template-private-key-flags-v2-property-builder (new CfnTemplate$PrivateKeyFlagsV2Property$Builder) id config))
 
 
 (defn build-cfn-template-private-key-flags-v3-property-builder
@@ -782,6 +968,12 @@
   (when-let [data (lookup-entry config id :strong-key-protection-required)]
     (. builder strongKeyProtectionRequired data))
   (.build builder))
+
+
+(defn cfn-template-private-key-flags-v3-property-builder
+  ""
+  [id config]
+  (build-cfn-template-private-key-flags-v3-property-builder (new CfnTemplate$PrivateKeyFlagsV3Property$Builder) id config))
 
 
 (defn build-cfn-template-private-key-flags-v4-property-builder
@@ -816,6 +1008,12 @@
   (.build builder))
 
 
+(defn cfn-template-private-key-flags-v4-property-builder
+  ""
+  [id config]
+  (build-cfn-template-private-key-flags-v4-property-builder (new CfnTemplate$PrivateKeyFlagsV4Property$Builder) id config))
+
+
 (defn build-cfn-template-props-builder
   "The build-cfn-template-props-builder function updates a CfnTemplateProps$Builder instance using the provided configuration.
   The function takes the CfnTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -843,6 +1041,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-template-props-builder
+  ""
+  [id config]
+  (build-cfn-template-props-builder (new CfnTemplateProps$Builder) id config))
 
 
 (defn build-cfn-template-subject-name-flags-v2-property-builder
@@ -889,6 +1093,12 @@
   (.build builder))
 
 
+(defn cfn-template-subject-name-flags-v2-property-builder
+  ""
+  [id config]
+  (build-cfn-template-subject-name-flags-v2-property-builder (new CfnTemplate$SubjectNameFlagsV2Property$Builder) id config))
+
+
 (defn build-cfn-template-subject-name-flags-v3-property-builder
   "The build-cfn-template-subject-name-flags-v3-property-builder function updates a CfnTemplate$SubjectNameFlagsV3Property$Builder instance using the provided configuration.
   The function takes the CfnTemplate$SubjectNameFlagsV3Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -931,6 +1141,12 @@
   (when-let [data (lookup-entry config id :san-require-upn)]
     (. builder sanRequireUpn data))
   (.build builder))
+
+
+(defn cfn-template-subject-name-flags-v3-property-builder
+  ""
+  [id config]
+  (build-cfn-template-subject-name-flags-v3-property-builder (new CfnTemplate$SubjectNameFlagsV3Property$Builder) id config))
 
 
 (defn build-cfn-template-subject-name-flags-v4-property-builder
@@ -977,6 +1193,12 @@
   (.build builder))
 
 
+(defn cfn-template-subject-name-flags-v4-property-builder
+  ""
+  [id config]
+  (build-cfn-template-subject-name-flags-v4-property-builder (new CfnTemplate$SubjectNameFlagsV4Property$Builder) id config))
+
+
 (defn build-cfn-template-template-definition-property-builder
   "The build-cfn-template-template-definition-property-builder function updates a CfnTemplate$TemplateDefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TemplateDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -998,6 +1220,12 @@
   (when-let [data (lookup-entry config id :template-v4)]
     (. builder templateV4 data))
   (.build builder))
+
+
+(defn cfn-template-template-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-template-template-definition-property-builder (new CfnTemplate$TemplateDefinitionProperty$Builder) id config))
 
 
 (defn build-cfn-template-template-v2-property-builder
@@ -1036,6 +1264,12 @@
   (when-let [data (lookup-entry config id :superseded-templates)]
     (. builder supersededTemplates data))
   (.build builder))
+
+
+(defn cfn-template-template-v2-property-builder
+  ""
+  [id config]
+  (build-cfn-template-template-v2-property-builder (new CfnTemplate$TemplateV2Property$Builder) id config))
 
 
 (defn build-cfn-template-template-v3-property-builder
@@ -1079,6 +1313,12 @@
   (.build builder))
 
 
+(defn cfn-template-template-v3-property-builder
+  ""
+  [id config]
+  (build-cfn-template-template-v3-property-builder (new CfnTemplate$TemplateV3Property$Builder) id config))
+
+
 (defn build-cfn-template-template-v4-property-builder
   "The build-cfn-template-template-v4-property-builder function updates a CfnTemplate$TemplateV4Property$Builder instance using the provided configuration.
   The function takes the CfnTemplate$TemplateV4Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1120,6 +1360,12 @@
   (.build builder))
 
 
+(defn cfn-template-template-v4-property-builder
+  ""
+  [id config]
+  (build-cfn-template-template-v4-property-builder (new CfnTemplate$TemplateV4Property$Builder) id config))
+
+
 (defn build-cfn-template-validity-period-property-builder
   "The build-cfn-template-validity-period-property-builder function updates a CfnTemplate$ValidityPeriodProperty$Builder instance using the provided configuration.
   The function takes the CfnTemplate$ValidityPeriodProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1138,3 +1384,9 @@
   (when-let [data (lookup-entry config id :period-type)]
     (. builder periodType data))
   (.build builder))
+
+
+(defn cfn-template-validity-period-property-builder
+  ""
+  [id config]
+  (build-cfn-template-validity-period-property-builder (new CfnTemplate$ValidityPeriodProperty$Builder) id config))

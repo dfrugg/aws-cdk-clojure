@@ -32,6 +32,12 @@
   (.build builder))
 
 
+(defn cfn-assistant-association-association-data-property-builder
+  ""
+  [id config]
+  (build-cfn-assistant-association-association-data-property-builder (new CfnAssistantAssociation$AssociationDataProperty$Builder) id config))
+
+
 (defn build-cfn-assistant-association-builder
   "The build-cfn-assistant-association-builder function updates a CfnAssistantAssociation$Builder instance using the provided configuration.
   The function takes the CfnAssistantAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -58,6 +64,12 @@
   (.build builder))
 
 
+(defn cfn-assistant-association-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-assistant-association-builder (CfnAssistantAssociation$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-assistant-association-props-builder
   "The build-cfn-assistant-association-props-builder function updates a CfnAssistantAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnAssistantAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -82,6 +94,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-assistant-association-props-builder
+  ""
+  [id config]
+  (build-cfn-assistant-association-props-builder (new CfnAssistantAssociationProps$Builder) id config))
 
 
 (defn build-cfn-assistant-builder
@@ -113,6 +131,12 @@
   (.build builder))
 
 
+(defn cfn-assistant-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-assistant-builder (CfnAssistant$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-assistant-props-builder
   "The build-cfn-assistant-props-builder function updates a CfnAssistantProps$Builder instance using the provided configuration.
   The function takes the CfnAssistantProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -142,6 +166,12 @@
   (.build builder))
 
 
+(defn cfn-assistant-props-builder
+  ""
+  [id config]
+  (build-cfn-assistant-props-builder (new CfnAssistantProps$Builder) id config))
+
+
 (defn build-cfn-assistant-server-side-encryption-configuration-property-builder
   "The build-cfn-assistant-server-side-encryption-configuration-property-builder function updates a CfnAssistant$ServerSideEncryptionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAssistant$ServerSideEncryptionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -157,6 +187,12 @@
   (when-let [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
   (.build builder))
+
+
+(defn cfn-assistant-server-side-encryption-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-assistant-server-side-encryption-configuration-property-builder (new CfnAssistant$ServerSideEncryptionConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-knowledge-base-app-integrations-configuration-property-builder
@@ -177,6 +213,12 @@
   (when-let [data (lookup-entry config id :object-fields)]
     (. builder objectFields data))
   (.build builder))
+
+
+(defn cfn-knowledge-base-app-integrations-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-knowledge-base-app-integrations-configuration-property-builder (new CfnKnowledgeBase$AppIntegrationsConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-knowledge-base-builder
@@ -214,6 +256,12 @@
   (.build builder))
 
 
+(defn cfn-knowledge-base-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-knowledge-base-builder (CfnKnowledgeBase$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-knowledge-base-props-builder
   "The build-cfn-knowledge-base-props-builder function updates a CfnKnowledgeBaseProps$Builder instance using the provided configuration.
   The function takes the CfnKnowledgeBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -249,6 +297,12 @@
   (.build builder))
 
 
+(defn cfn-knowledge-base-props-builder
+  ""
+  [id config]
+  (build-cfn-knowledge-base-props-builder (new CfnKnowledgeBaseProps$Builder) id config))
+
+
 (defn build-cfn-knowledge-base-rendering-configuration-property-builder
   "The build-cfn-knowledge-base-rendering-configuration-property-builder function updates a CfnKnowledgeBase$RenderingConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnKnowledgeBase$RenderingConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -264,6 +318,12 @@
   (when-let [data (lookup-entry config id :template-uri)]
     (. builder templateUri data))
   (.build builder))
+
+
+(defn cfn-knowledge-base-rendering-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-knowledge-base-rendering-configuration-property-builder (new CfnKnowledgeBase$RenderingConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-knowledge-base-server-side-encryption-configuration-property-builder
@@ -283,6 +343,12 @@
   (.build builder))
 
 
+(defn cfn-knowledge-base-server-side-encryption-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-knowledge-base-server-side-encryption-configuration-property-builder (new CfnKnowledgeBase$ServerSideEncryptionConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-knowledge-base-source-configuration-property-builder
   "The build-cfn-knowledge-base-source-configuration-property-builder function updates a CfnKnowledgeBase$SourceConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnKnowledgeBase$SourceConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -298,3 +364,9 @@
   (when-let [data (lookup-entry config id :app-integrations)]
     (. builder appIntegrations data))
   (.build builder))
+
+
+(defn cfn-knowledge-base-source-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-knowledge-base-source-configuration-property-builder (new CfnKnowledgeBase$SourceConfigurationProperty$Builder) id config))

@@ -118,6 +118,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn base-stream-event-source-props-builder
+  ""
+  [id config]
+  (build-base-stream-event-source-props-builder (new BaseStreamEventSourceProps$Builder) id config))
+
+
 (defn build-dynamo-event-source-builder
   "The build-dynamo-event-source-builder function updates a DynamoEventSource$Builder instance using the provided configuration.
   The function takes the DynamoEventSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -218,6 +224,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn dynamo-event-source-props-builder
+  ""
+  [id config]
+  (build-dynamo-event-source-props-builder (new DynamoEventSourceProps$Builder) id config))
+
+
 (defn build-kafka-event-source-props-builder
   "The build-kafka-event-source-props-builder function updates a KafkaEventSourceProps$Builder instance using the provided configuration.
   The function takes the KafkaEventSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -257,6 +269,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
+
+
+(defn kafka-event-source-props-builder
+  ""
+  [id config]
+  (build-kafka-event-source-props-builder (new KafkaEventSourceProps$Builder) id config))
 
 
 (defn build-kinesis-event-source-builder
@@ -365,6 +383,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn kinesis-event-source-props-builder
+  ""
+  [id config]
+  (build-kinesis-event-source-props-builder (new KinesisEventSourceProps$Builder) id config))
+
+
 (defn build-managed-kafka-event-source-builder
   "The build-managed-kafka-event-source-builder function updates a ManagedKafkaEventSource$Builder instance using the provided configuration.
   The function takes the ManagedKafkaEventSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -407,6 +431,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
+
+
+(defn managed-kafka-event-source-builder
+  ""
+  [id config]
+  (build-managed-kafka-event-source-builder (ManagedKafkaEventSource$Builder/create) id config))
 
 
 (defn build-managed-kafka-event-source-props-builder
@@ -453,6 +483,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn managed-kafka-event-source-props-builder
+  ""
+  [id config]
+  (build-managed-kafka-event-source-props-builder (new ManagedKafkaEventSourceProps$Builder) id config))
+
+
 (defn build-s3-event-source-builder
   "The build-s3-event-source-builder function updates a S3EventSource$Builder instance using the provided configuration.
   The function takes the S3EventSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -491,6 +527,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :filters)]
     (. builder filters data))
   (.build builder))
+
+
+(defn s3-event-source-props-builder
+  ""
+  [id config]
+  (build-s3-event-source-props-builder (new S3EventSourceProps$Builder) id config))
 
 
 (defn build-s3-event-source-v2-builder
@@ -572,6 +614,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn self-managed-kafka-event-source-builder
+  ""
+  [id config]
+  (build-self-managed-kafka-event-source-builder (SelfManagedKafkaEventSource$Builder/create) id config))
+
+
 (defn build-self-managed-kafka-event-source-props-builder
   "The build-self-managed-kafka-event-source-props-builder function updates a SelfManagedKafkaEventSourceProps$Builder instance using the provided configuration.
   The function takes the SelfManagedKafkaEventSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -631,6 +679,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn self-managed-kafka-event-source-props-builder
+  ""
+  [id config]
+  (build-self-managed-kafka-event-source-props-builder (new SelfManagedKafkaEventSourceProps$Builder) id config))
+
+
 (defn build-sns-event-source-builder
   "The build-sns-event-source-builder function updates a SnsEventSource$Builder instance using the provided configuration.
   The function takes the SnsEventSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -675,6 +729,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
     (. builder filterPolicyWithMessageBody data))
   (.build builder))
+
+
+(defn sns-event-source-props-builder
+  ""
+  [id config]
+  (build-sns-event-source-props-builder (new SnsEventSourceProps$Builder) id config))
 
 
 (defn build-sqs-event-source-builder
@@ -741,6 +801,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn sqs-event-source-props-builder
+  ""
+  [id config]
+  (build-sqs-event-source-props-builder (new SqsEventSourceProps$Builder) id config))
+
+
 (defn build-stream-event-source-props-builder
   "The build-stream-event-source-props-builder function updates a StreamEventSourceProps$Builder instance using the provided configuration.
   The function takes the StreamEventSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -789,3 +855,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tumbling-window)]
     (. builder tumblingWindow data))
   (.build builder))
+
+
+(defn stream-event-source-props-builder
+  ""
+  [id config]
+  (build-stream-event-source-props-builder (new StreamEventSourceProps$Builder) id config))

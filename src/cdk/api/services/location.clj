@@ -43,6 +43,12 @@
   (.build builder))
 
 
+(defn cfn-api-key-api-key-restrictions-property-builder
+  ""
+  [id config]
+  (build-cfn-api-key-api-key-restrictions-property-builder (new CfnAPIKey$ApiKeyRestrictionsProperty$Builder) id config))
+
+
 (defn build-cfn-api-key-builder
   "The build-cfn-api-key-builder function updates a CfnAPIKey$Builder instance using the provided configuration.
   The function takes the CfnAPIKey$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -79,6 +85,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-api-key-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-api-key-builder (CfnAPIKey$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-api-key-props-builder
@@ -119,6 +131,12 @@
   (.build builder))
 
 
+(defn cfn-api-key-props-builder
+  ""
+  [id config]
+  (build-cfn-api-key-props-builder (new CfnAPIKeyProps$Builder) id config))
+
+
 (defn build-cfn-geofence-collection-builder
   "The build-cfn-geofence-collection-builder function updates a CfnGeofenceCollection$Builder instance using the provided configuration.
   The function takes the CfnGeofenceCollection$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -149,6 +167,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-geofence-collection-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-geofence-collection-builder (CfnGeofenceCollection$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-geofence-collection-props-builder
@@ -183,6 +207,12 @@
   (.build builder))
 
 
+(defn cfn-geofence-collection-props-builder
+  ""
+  [id config]
+  (build-cfn-geofence-collection-props-builder (new CfnGeofenceCollectionProps$Builder) id config))
+
+
 (defn build-cfn-map-builder
   "The build-cfn-map-builder function updates a CfnMap$Builder instance using the provided configuration.
   The function takes the CfnMap$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -212,6 +242,12 @@
   (.build builder))
 
 
+(defn cfn-map-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-map-builder (CfnMap$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-map-map-configuration-property-builder
   "The build-cfn-map-map-configuration-property-builder function updates a CfnMap$MapConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnMap$MapConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -233,6 +269,12 @@
   (when-let [data (lookup-entry config id :style)]
     (. builder style data))
   (.build builder))
+
+
+(defn cfn-map-map-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-map-map-configuration-property-builder (new CfnMap$MapConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-map-props-builder
@@ -262,6 +304,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-map-props-builder
+  ""
+  [id config]
+  (build-cfn-map-props-builder (new CfnMapProps$Builder) id config))
 
 
 (defn build-cfn-place-index-builder
@@ -296,6 +344,12 @@
   (.build builder))
 
 
+(defn cfn-place-index-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-place-index-builder (CfnPlaceIndex$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-place-index-data-source-configuration-property-builder
   "The build-cfn-place-index-data-source-configuration-property-builder function updates a CfnPlaceIndex$DataSourceConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnPlaceIndex$DataSourceConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -311,6 +365,12 @@
   (when-let [data (lookup-entry config id :intended-use)]
     (. builder intendedUse data))
   (.build builder))
+
+
+(defn cfn-place-index-data-source-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-place-index-data-source-configuration-property-builder (new CfnPlaceIndex$DataSourceConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-place-index-props-builder
@@ -345,6 +405,12 @@
   (.build builder))
 
 
+(defn cfn-place-index-props-builder
+  ""
+  [id config]
+  (build-cfn-place-index-props-builder (new CfnPlaceIndexProps$Builder) id config))
+
+
 (defn build-cfn-route-calculator-builder
   "The build-cfn-route-calculator-builder function updates a CfnRouteCalculator$Builder instance using the provided configuration.
   The function takes the CfnRouteCalculator$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -374,6 +440,12 @@
   (.build builder))
 
 
+(defn cfn-route-calculator-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-route-calculator-builder (CfnRouteCalculator$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-route-calculator-props-builder
   "The build-cfn-route-calculator-props-builder function updates a CfnRouteCalculatorProps$Builder instance using the provided configuration.
   The function takes the CfnRouteCalculatorProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -401,6 +473,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-route-calculator-props-builder
+  ""
+  [id config]
+  (build-cfn-route-calculator-props-builder (new CfnRouteCalculatorProps$Builder) id config))
 
 
 (defn build-cfn-tracker-builder
@@ -444,6 +522,12 @@
   (.build builder))
 
 
+(defn cfn-tracker-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-tracker-builder (CfnTracker$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-tracker-consumer-builder
   "The build-cfn-tracker-consumer-builder function updates a CfnTrackerConsumer$Builder instance using the provided configuration.
   The function takes the CfnTrackerConsumer$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -464,6 +548,12 @@
   (.build builder))
 
 
+(defn cfn-tracker-consumer-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-tracker-consumer-builder (CfnTrackerConsumer$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-tracker-consumer-props-builder
   "The build-cfn-tracker-consumer-props-builder function updates a CfnTrackerConsumerProps$Builder instance using the provided configuration.
   The function takes the CfnTrackerConsumerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -482,6 +572,12 @@
   (when-let [data (lookup-entry config id :tracker-name)]
     (. builder trackerName data))
   (.build builder))
+
+
+(defn cfn-tracker-consumer-props-builder
+  ""
+  [id config]
+  (build-cfn-tracker-consumer-props-builder (new CfnTrackerConsumerProps$Builder) id config))
 
 
 (defn build-cfn-tracker-props-builder
@@ -523,3 +619,9 @@
   (when-let [data (lookup-entry config id :tracker-name)]
     (. builder trackerName data))
   (.build builder))
+
+
+(defn cfn-tracker-props-builder
+  ""
+  [id config]
+  (build-cfn-tracker-props-builder (new CfnTrackerProps$Builder) id config))

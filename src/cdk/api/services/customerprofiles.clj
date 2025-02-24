@@ -70,6 +70,12 @@
   (.build builder))
 
 
+(defn cfn-calculated-attribute-definition-attribute-details-property-builder
+  ""
+  [id config]
+  (build-cfn-calculated-attribute-definition-attribute-details-property-builder (new CfnCalculatedAttributeDefinition$AttributeDetailsProperty$Builder) id config))
+
+
 (defn build-cfn-calculated-attribute-definition-attribute-item-property-builder
   "The build-cfn-calculated-attribute-definition-attribute-item-property-builder function updates a CfnCalculatedAttributeDefinition$AttributeItemProperty$Builder instance using the provided configuration.
   The function takes the CfnCalculatedAttributeDefinition$AttributeItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -85,6 +91,12 @@
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-calculated-attribute-definition-attribute-item-property-builder
+  ""
+  [id config]
+  (build-cfn-calculated-attribute-definition-attribute-item-property-builder (new CfnCalculatedAttributeDefinition$AttributeItemProperty$Builder) id config))
 
 
 (defn build-cfn-calculated-attribute-definition-builder
@@ -125,6 +137,12 @@
   (.build builder))
 
 
+(defn cfn-calculated-attribute-definition-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-calculated-attribute-definition-builder (CfnCalculatedAttributeDefinition$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-calculated-attribute-definition-conditions-property-builder
   "The build-cfn-calculated-attribute-definition-conditions-property-builder function updates a CfnCalculatedAttributeDefinition$ConditionsProperty$Builder instance using the provided configuration.
   The function takes the CfnCalculatedAttributeDefinition$ConditionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -146,6 +164,12 @@
   (when-let [data (lookup-entry config id :threshold)]
     (. builder threshold data))
   (.build builder))
+
+
+(defn cfn-calculated-attribute-definition-conditions-property-builder
+  ""
+  [id config]
+  (build-cfn-calculated-attribute-definition-conditions-property-builder (new CfnCalculatedAttributeDefinition$ConditionsProperty$Builder) id config))
 
 
 (defn build-cfn-calculated-attribute-definition-props-builder
@@ -186,6 +210,12 @@
   (.build builder))
 
 
+(defn cfn-calculated-attribute-definition-props-builder
+  ""
+  [id config]
+  (build-cfn-calculated-attribute-definition-props-builder (new CfnCalculatedAttributeDefinitionProps$Builder) id config))
+
+
 (defn build-cfn-calculated-attribute-definition-range-property-builder
   "The build-cfn-calculated-attribute-definition-range-property-builder function updates a CfnCalculatedAttributeDefinition$RangeProperty$Builder instance using the provided configuration.
   The function takes the CfnCalculatedAttributeDefinition$RangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -206,6 +236,12 @@
   (.build builder))
 
 
+(defn cfn-calculated-attribute-definition-range-property-builder
+  ""
+  [id config]
+  (build-cfn-calculated-attribute-definition-range-property-builder (new CfnCalculatedAttributeDefinition$RangeProperty$Builder) id config))
+
+
 (defn build-cfn-calculated-attribute-definition-threshold-property-builder
   "The build-cfn-calculated-attribute-definition-threshold-property-builder function updates a CfnCalculatedAttributeDefinition$ThresholdProperty$Builder instance using the provided configuration.
   The function takes the CfnCalculatedAttributeDefinition$ThresholdProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -224,6 +260,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-calculated-attribute-definition-threshold-property-builder
+  ""
+  [id config]
+  (build-cfn-calculated-attribute-definition-threshold-property-builder (new CfnCalculatedAttributeDefinition$ThresholdProperty$Builder) id config))
 
 
 (defn build-cfn-domain-attribute-types-selector-property-builder
@@ -252,6 +294,12 @@
   (.build builder))
 
 
+(defn cfn-domain-attribute-types-selector-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-attribute-types-selector-property-builder (new CfnDomain$AttributeTypesSelectorProperty$Builder) id config))
+
+
 (defn build-cfn-domain-auto-merging-property-builder
   "The build-cfn-domain-auto-merging-property-builder function updates a CfnDomain$AutoMergingProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$AutoMergingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -276,6 +324,12 @@
   (when-let [data (lookup-entry config id :min-allowed-confidence-score-for-merging)]
     (. builder minAllowedConfidenceScoreForMerging data))
   (.build builder))
+
+
+(defn cfn-domain-auto-merging-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-auto-merging-property-builder (new CfnDomain$AutoMergingProperty$Builder) id config))
 
 
 (defn build-cfn-domain-builder
@@ -313,6 +367,12 @@
   (.build builder))
 
 
+(defn cfn-domain-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-domain-builder (CfnDomain$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-domain-conflict-resolution-property-builder
   "The build-cfn-domain-conflict-resolution-property-builder function updates a CfnDomain$ConflictResolutionProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$ConflictResolutionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -333,6 +393,12 @@
   (.build builder))
 
 
+(defn cfn-domain-conflict-resolution-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-conflict-resolution-property-builder (new CfnDomain$ConflictResolutionProperty$Builder) id config))
+
+
 (defn build-cfn-domain-consolidation-property-builder
   "The build-cfn-domain-consolidation-property-builder function updates a CfnDomain$ConsolidationProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$ConsolidationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -348,6 +414,12 @@
   (when-let [data (lookup-entry config id :matching-attributes-list)]
     (. builder matchingAttributesList data))
   (.build builder))
+
+
+(defn cfn-domain-consolidation-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-consolidation-property-builder (new CfnDomain$ConsolidationProperty$Builder) id config))
 
 
 (defn build-cfn-domain-domain-stats-property-builder
@@ -376,6 +448,12 @@
   (.build builder))
 
 
+(defn cfn-domain-domain-stats-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-domain-stats-property-builder (new CfnDomain$DomainStatsProperty$Builder) id config))
+
+
 (defn build-cfn-domain-exporting-config-property-builder
   "The build-cfn-domain-exporting-config-property-builder function updates a CfnDomain$ExportingConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$ExportingConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -391,6 +469,12 @@
   (when-let [data (lookup-entry config id :s3-exporting)]
     (. builder s3Exporting data))
   (.build builder))
+
+
+(defn cfn-domain-exporting-config-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-exporting-config-property-builder (new CfnDomain$ExportingConfigProperty$Builder) id config))
 
 
 (defn build-cfn-domain-job-schedule-property-builder
@@ -411,6 +495,12 @@
   (when-let [data (lookup-entry config id :time)]
     (. builder time data))
   (.build builder))
+
+
+(defn cfn-domain-job-schedule-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-job-schedule-property-builder (new CfnDomain$JobScheduleProperty$Builder) id config))
 
 
 (defn build-cfn-domain-matching-property-builder
@@ -439,6 +529,12 @@
   (.build builder))
 
 
+(defn cfn-domain-matching-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-matching-property-builder (new CfnDomain$MatchingProperty$Builder) id config))
+
+
 (defn build-cfn-domain-matching-rule-property-builder
   "The build-cfn-domain-matching-rule-property-builder function updates a CfnDomain$MatchingRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$MatchingRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -454,6 +550,12 @@
   (when-let [data (lookup-entry config id :rule)]
     (. builder rule data))
   (.build builder))
+
+
+(defn cfn-domain-matching-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-matching-rule-property-builder (new CfnDomain$MatchingRuleProperty$Builder) id config))
 
 
 (defn build-cfn-domain-props-builder
@@ -489,6 +591,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-domain-props-builder
+  ""
+  [id config]
+  (build-cfn-domain-props-builder (new CfnDomainProps$Builder) id config))
 
 
 (defn build-cfn-domain-rule-based-matching-property-builder
@@ -529,6 +637,12 @@
   (.build builder))
 
 
+(defn cfn-domain-rule-based-matching-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-rule-based-matching-property-builder (new CfnDomain$RuleBasedMatchingProperty$Builder) id config))
+
+
 (defn build-cfn-domain-s3-exporting-config-property-builder
   "The build-cfn-domain-s3-exporting-config-property-builder function updates a CfnDomain$S3ExportingConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$S3ExportingConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -547,6 +661,12 @@
   (when-let [data (lookup-entry config id :s3-key-name)]
     (. builder s3KeyName data))
   (.build builder))
+
+
+(defn cfn-domain-s3-exporting-config-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-s3-exporting-config-property-builder (new CfnDomain$S3ExportingConfigProperty$Builder) id config))
 
 
 (defn build-cfn-event-stream-builder
@@ -575,6 +695,12 @@
   (.build builder))
 
 
+(defn cfn-event-stream-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-event-stream-builder (CfnEventStream$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-event-stream-destination-details-property-builder
   "The build-cfn-event-stream-destination-details-property-builder function updates a CfnEventStream$DestinationDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnEventStream$DestinationDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -593,6 +719,12 @@
   (when-let [data (lookup-entry config id :uri)]
     (. builder uri data))
   (.build builder))
+
+
+(defn cfn-event-stream-destination-details-property-builder
+  ""
+  [id config]
+  (build-cfn-event-stream-destination-details-property-builder (new CfnEventStream$DestinationDetailsProperty$Builder) id config))
 
 
 (defn build-cfn-event-stream-props-builder
@@ -619,6 +751,12 @@
   (when-let [data (lookup-entry config id :uri)]
     (. builder uri data))
   (.build builder))
+
+
+(defn cfn-event-stream-props-builder
+  ""
+  [id config]
+  (build-cfn-event-stream-props-builder (new CfnEventStreamProps$Builder) id config))
 
 
 (defn build-cfn-integration-builder
@@ -653,6 +791,12 @@
   (.build builder))
 
 
+(defn cfn-integration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-integration-builder (CfnIntegration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-integration-connector-operator-property-builder
   "The build-cfn-integration-connector-operator-property-builder function updates a CfnIntegration$ConnectorOperatorProperty$Builder instance using the provided configuration.
   The function takes the CfnIntegration$ConnectorOperatorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -680,6 +824,12 @@
   (when-let [data (lookup-entry config id :zendesk)]
     (. builder zendesk data))
   (.build builder))
+
+
+(defn cfn-integration-connector-operator-property-builder
+  ""
+  [id config]
+  (build-cfn-integration-connector-operator-property-builder (new CfnIntegration$ConnectorOperatorProperty$Builder) id config))
 
 
 (defn build-cfn-integration-flow-definition-property-builder
@@ -714,6 +864,12 @@
   (.build builder))
 
 
+(defn cfn-integration-flow-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-integration-flow-definition-property-builder (new CfnIntegration$FlowDefinitionProperty$Builder) id config))
+
+
 (defn build-cfn-integration-incremental-pull-config-property-builder
   "The build-cfn-integration-incremental-pull-config-property-builder function updates a CfnIntegration$IncrementalPullConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnIntegration$IncrementalPullConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -731,6 +887,12 @@
   (.build builder))
 
 
+(defn cfn-integration-incremental-pull-config-property-builder
+  ""
+  [id config]
+  (build-cfn-integration-incremental-pull-config-property-builder (new CfnIntegration$IncrementalPullConfigProperty$Builder) id config))
+
+
 (defn build-cfn-integration-marketo-source-properties-property-builder
   "The build-cfn-integration-marketo-source-properties-property-builder function updates a CfnIntegration$MarketoSourcePropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnIntegration$MarketoSourcePropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -746,6 +908,12 @@
   (when-let [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
+
+
+(defn cfn-integration-marketo-source-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-integration-marketo-source-properties-property-builder (new CfnIntegration$MarketoSourcePropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-integration-object-type-mapping-property-builder
@@ -766,6 +934,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-integration-object-type-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-integration-object-type-mapping-property-builder (new CfnIntegration$ObjectTypeMappingProperty$Builder) id config))
 
 
 (defn build-cfn-integration-props-builder
@@ -800,6 +974,12 @@
   (.build builder))
 
 
+(defn cfn-integration-props-builder
+  ""
+  [id config]
+  (build-cfn-integration-props-builder (new CfnIntegrationProps$Builder) id config))
+
+
 (defn build-cfn-integration-s3-source-properties-property-builder
   "The build-cfn-integration-s3-source-properties-property-builder function updates a CfnIntegration$S3SourcePropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnIntegration$S3SourcePropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -818,6 +998,12 @@
   (when-let [data (lookup-entry config id :bucket-prefix)]
     (. builder bucketPrefix data))
   (.build builder))
+
+
+(defn cfn-integration-s3-source-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-integration-s3-source-properties-property-builder (new CfnIntegration$S3SourcePropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-integration-salesforce-source-properties-property-builder
@@ -841,6 +1027,12 @@
   (when-let [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
+
+
+(defn cfn-integration-salesforce-source-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-integration-salesforce-source-properties-property-builder (new CfnIntegration$SalesforceSourcePropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-integration-scheduled-trigger-properties-property-builder
@@ -878,6 +1070,12 @@
   (.build builder))
 
 
+(defn cfn-integration-scheduled-trigger-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-integration-scheduled-trigger-properties-property-builder (new CfnIntegration$ScheduledTriggerPropertiesProperty$Builder) id config))
+
+
 (defn build-cfn-integration-service-now-source-properties-property-builder
   "The build-cfn-integration-service-now-source-properties-property-builder function updates a CfnIntegration$ServiceNowSourcePropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnIntegration$ServiceNowSourcePropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -893,6 +1091,12 @@
   (when-let [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
+
+
+(defn cfn-integration-service-now-source-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-integration-service-now-source-properties-property-builder (new CfnIntegration$ServiceNowSourcePropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-integration-source-connector-properties-property-builder
@@ -924,6 +1128,12 @@
   (.build builder))
 
 
+(defn cfn-integration-source-connector-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-integration-source-connector-properties-property-builder (new CfnIntegration$SourceConnectorPropertiesProperty$Builder) id config))
+
+
 (defn build-cfn-integration-source-flow-config-property-builder
   "The build-cfn-integration-source-flow-config-property-builder function updates a CfnIntegration$SourceFlowConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnIntegration$SourceFlowConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -950,6 +1160,12 @@
   (.build builder))
 
 
+(defn cfn-integration-source-flow-config-property-builder
+  ""
+  [id config]
+  (build-cfn-integration-source-flow-config-property-builder (new CfnIntegration$SourceFlowConfigProperty$Builder) id config))
+
+
 (defn build-cfn-integration-task-properties-map-property-builder
   "The build-cfn-integration-task-properties-map-property-builder function updates a CfnIntegration$TaskPropertiesMapProperty$Builder instance using the provided configuration.
   The function takes the CfnIntegration$TaskPropertiesMapProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -968,6 +1184,12 @@
   (when-let [data (lookup-entry config id :property)]
     (. builder property data))
   (.build builder))
+
+
+(defn cfn-integration-task-properties-map-property-builder
+  ""
+  [id config]
+  (build-cfn-integration-task-properties-map-property-builder (new CfnIntegration$TaskPropertiesMapProperty$Builder) id config))
 
 
 (defn build-cfn-integration-task-property-builder
@@ -999,6 +1221,12 @@
   (.build builder))
 
 
+(defn cfn-integration-task-property-builder
+  ""
+  [id config]
+  (build-cfn-integration-task-property-builder (new CfnIntegration$TaskProperty$Builder) id config))
+
+
 (defn build-cfn-integration-trigger-config-property-builder
   "The build-cfn-integration-trigger-config-property-builder function updates a CfnIntegration$TriggerConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnIntegration$TriggerConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1019,6 +1247,12 @@
   (.build builder))
 
 
+(defn cfn-integration-trigger-config-property-builder
+  ""
+  [id config]
+  (build-cfn-integration-trigger-config-property-builder (new CfnIntegration$TriggerConfigProperty$Builder) id config))
+
+
 (defn build-cfn-integration-trigger-properties-property-builder
   "The build-cfn-integration-trigger-properties-property-builder function updates a CfnIntegration$TriggerPropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnIntegration$TriggerPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1036,6 +1270,12 @@
   (.build builder))
 
 
+(defn cfn-integration-trigger-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-integration-trigger-properties-property-builder (new CfnIntegration$TriggerPropertiesProperty$Builder) id config))
+
+
 (defn build-cfn-integration-zendesk-source-properties-property-builder
   "The build-cfn-integration-zendesk-source-properties-property-builder function updates a CfnIntegration$ZendeskSourcePropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnIntegration$ZendeskSourcePropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1051,6 +1291,12 @@
   (when-let [data (lookup-entry config id :object)]
     (. builder object data))
   (.build builder))
+
+
+(defn cfn-integration-zendesk-source-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-integration-zendesk-source-properties-property-builder (new CfnIntegration$ZendeskSourcePropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-object-type-builder
@@ -1100,6 +1346,12 @@
   (.build builder))
 
 
+(defn cfn-object-type-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-object-type-builder (CfnObjectType$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-object-type-field-map-property-builder
   "The build-cfn-object-type-field-map-property-builder function updates a CfnObjectType$FieldMapProperty$Builder instance using the provided configuration.
   The function takes the CfnObjectType$FieldMapProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1120,6 +1372,12 @@
   (.build builder))
 
 
+(defn cfn-object-type-field-map-property-builder
+  ""
+  [id config]
+  (build-cfn-object-type-field-map-property-builder (new CfnObjectType$FieldMapProperty$Builder) id config))
+
+
 (defn build-cfn-object-type-key-map-property-builder
   "The build-cfn-object-type-key-map-property-builder function updates a CfnObjectType$KeyMapProperty$Builder instance using the provided configuration.
   The function takes the CfnObjectType$KeyMapProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1138,6 +1396,12 @@
   (when-let [data (lookup-entry config id :object-type-key-list)]
     (. builder objectTypeKeyList data))
   (.build builder))
+
+
+(defn cfn-object-type-key-map-property-builder
+  ""
+  [id config]
+  (build-cfn-object-type-key-map-property-builder (new CfnObjectType$KeyMapProperty$Builder) id config))
 
 
 (defn build-cfn-object-type-object-type-field-property-builder
@@ -1163,6 +1427,12 @@
   (.build builder))
 
 
+(defn cfn-object-type-object-type-field-property-builder
+  ""
+  [id config]
+  (build-cfn-object-type-object-type-field-property-builder (new CfnObjectType$ObjectTypeFieldProperty$Builder) id config))
+
+
 (defn build-cfn-object-type-object-type-key-property-builder
   "The build-cfn-object-type-object-type-key-property-builder function updates a CfnObjectType$ObjectTypeKeyProperty$Builder instance using the provided configuration.
   The function takes the CfnObjectType$ObjectTypeKeyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1181,6 +1451,12 @@
   (when-let [data (lookup-entry config id :standard-identifiers)]
     (. builder standardIdentifiers data))
   (.build builder))
+
+
+(defn cfn-object-type-object-type-key-property-builder
+  ""
+  [id config]
+  (build-cfn-object-type-object-type-key-property-builder (new CfnObjectType$ObjectTypeKeyProperty$Builder) id config))
 
 
 (defn build-cfn-object-type-props-builder
@@ -1228,3 +1504,9 @@
   (when-let [data (lookup-entry config id :template-id)]
     (. builder templateId data))
   (.build builder))
+
+
+(defn cfn-object-type-props-builder
+  ""
+  [id config]
+  (build-cfn-object-type-props-builder (new CfnObjectTypeProps$Builder) id config))

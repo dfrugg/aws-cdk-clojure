@@ -123,6 +123,12 @@
   (.build builder))
 
 
+(defn cfn-bot-advanced-recognition-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-advanced-recognition-setting-property-builder (new CfnBot$AdvancedRecognitionSettingProperty$Builder) id config))
+
+
 (defn build-cfn-bot-alias-audio-log-destination-property-builder
   "The build-cfn-bot-alias-audio-log-destination-property-builder function updates a CfnBotAlias$AudioLogDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$AudioLogDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -138,6 +144,12 @@
   (when-let [data (lookup-entry config id :s3-bucket)]
     (. builder s3Bucket data))
   (.build builder))
+
+
+(defn cfn-bot-alias-audio-log-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-alias-audio-log-destination-property-builder (new CfnBotAlias$AudioLogDestinationProperty$Builder) id config))
 
 
 (defn build-cfn-bot-alias-audio-log-setting-property-builder
@@ -160,6 +172,12 @@
   (.build builder))
 
 
+(defn cfn-bot-alias-audio-log-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-alias-audio-log-setting-property-builder (new CfnBotAlias$AudioLogSettingProperty$Builder) id config))
+
+
 (defn build-cfn-bot-alias-bot-alias-locale-settings-item-property-builder
   "The build-cfn-bot-alias-bot-alias-locale-settings-item-property-builder function updates a CfnBotAlias$BotAliasLocaleSettingsItemProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$BotAliasLocaleSettingsItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -180,6 +198,12 @@
   (.build builder))
 
 
+(defn cfn-bot-alias-bot-alias-locale-settings-item-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-alias-bot-alias-locale-settings-item-property-builder (new CfnBotAlias$BotAliasLocaleSettingsItemProperty$Builder) id config))
+
+
 (defn build-cfn-bot-alias-bot-alias-locale-settings-property-builder
   "The build-cfn-bot-alias-bot-alias-locale-settings-property-builder function updates a CfnBotAlias$BotAliasLocaleSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$BotAliasLocaleSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -198,6 +222,12 @@
   (when-let [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
+
+
+(defn cfn-bot-alias-bot-alias-locale-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-alias-bot-alias-locale-settings-property-builder (new CfnBotAlias$BotAliasLocaleSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-bot-alias-builder
@@ -238,6 +268,12 @@
   (.build builder))
 
 
+(defn cfn-bot-alias-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-bot-alias-builder (CfnBotAlias$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-bot-alias-cloud-watch-log-group-log-destination-property-builder
   "The build-cfn-bot-alias-cloud-watch-log-group-log-destination-property-builder function updates a CfnBotAlias$CloudWatchLogGroupLogDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$CloudWatchLogGroupLogDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -258,6 +294,12 @@
   (.build builder))
 
 
+(defn cfn-bot-alias-cloud-watch-log-group-log-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-alias-cloud-watch-log-group-log-destination-property-builder (new CfnBotAlias$CloudWatchLogGroupLogDestinationProperty$Builder) id config))
+
+
 (defn build-cfn-bot-alias-code-hook-specification-property-builder
   "The build-cfn-bot-alias-code-hook-specification-property-builder function updates a CfnBotAlias$CodeHookSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$CodeHookSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -273,6 +315,12 @@
   (when-let [data (lookup-entry config id :lambda-code-hook)]
     (. builder lambdaCodeHook data))
   (.build builder))
+
+
+(defn cfn-bot-alias-code-hook-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-alias-code-hook-specification-property-builder (new CfnBotAlias$CodeHookSpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-bot-alias-conversation-log-settings-property-builder
@@ -295,6 +343,12 @@
   (.build builder))
 
 
+(defn cfn-bot-alias-conversation-log-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-alias-conversation-log-settings-property-builder (new CfnBotAlias$ConversationLogSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-bot-alias-lambda-code-hook-property-builder
   "The build-cfn-bot-alias-lambda-code-hook-property-builder function updates a CfnBotAlias$LambdaCodeHookProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$LambdaCodeHookProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -313,6 +367,12 @@
   (when-let [data (lookup-entry config id :lambda-arn)]
     (. builder lambdaArn data))
   (.build builder))
+
+
+(defn cfn-bot-alias-lambda-code-hook-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-alias-lambda-code-hook-property-builder (new CfnBotAlias$LambdaCodeHookProperty$Builder) id config))
 
 
 (defn build-cfn-bot-alias-props-builder
@@ -353,6 +413,12 @@
   (.build builder))
 
 
+(defn cfn-bot-alias-props-builder
+  ""
+  [id config]
+  (build-cfn-bot-alias-props-builder (new CfnBotAliasProps$Builder) id config))
+
+
 (defn build-cfn-bot-alias-s3-bucket-log-destination-property-builder
   "The build-cfn-bot-alias-s3-bucket-log-destination-property-builder function updates a CfnBotAlias$S3BucketLogDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$S3BucketLogDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -376,6 +442,12 @@
   (.build builder))
 
 
+(defn cfn-bot-alias-s3-bucket-log-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-alias-s3-bucket-log-destination-property-builder (new CfnBotAlias$S3BucketLogDestinationProperty$Builder) id config))
+
+
 (defn build-cfn-bot-alias-sentiment-analysis-settings-property-builder
   "The build-cfn-bot-alias-sentiment-analysis-settings-property-builder function updates a CfnBotAlias$SentimentAnalysisSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$SentimentAnalysisSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -393,6 +465,12 @@
   (.build builder))
 
 
+(defn cfn-bot-alias-sentiment-analysis-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-alias-sentiment-analysis-settings-property-builder (new CfnBotAlias$SentimentAnalysisSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-bot-alias-text-log-destination-property-builder
   "The build-cfn-bot-alias-text-log-destination-property-builder function updates a CfnBotAlias$TextLogDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnBotAlias$TextLogDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -408,6 +486,12 @@
   (when-let [data (lookup-entry config id :cloud-watch)]
     (. builder cloudWatch data))
   (.build builder))
+
+
+(defn cfn-bot-alias-text-log-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-alias-text-log-destination-property-builder (new CfnBotAlias$TextLogDestinationProperty$Builder) id config))
 
 
 (defn build-cfn-bot-alias-text-log-setting-property-builder
@@ -430,6 +514,12 @@
   (.build builder))
 
 
+(defn cfn-bot-alias-text-log-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-alias-text-log-setting-property-builder (new CfnBotAlias$TextLogSettingProperty$Builder) id config))
+
+
 (defn build-cfn-bot-allowed-input-types-property-builder
   "The build-cfn-bot-allowed-input-types-property-builder function updates a CfnBot$AllowedInputTypesProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$AllowedInputTypesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -448,6 +538,12 @@
   (when-let [data (lookup-entry config id :allow-dtmf-input)]
     (. builder allowDtmfInput data))
   (.build builder))
+
+
+(defn cfn-bot-allowed-input-types-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-allowed-input-types-property-builder (new CfnBot$AllowedInputTypesProperty$Builder) id config))
 
 
 (defn build-cfn-bot-audio-and-dtmf-input-specification-property-builder
@@ -473,6 +569,12 @@
   (.build builder))
 
 
+(defn cfn-bot-audio-and-dtmf-input-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-audio-and-dtmf-input-specification-property-builder (new CfnBot$AudioAndDTMFInputSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-bot-audio-log-destination-property-builder
   "The build-cfn-bot-audio-log-destination-property-builder function updates a CfnBot$AudioLogDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$AudioLogDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -488,6 +590,12 @@
   (when-let [data (lookup-entry config id :s3-bucket)]
     (. builder s3Bucket data))
   (.build builder))
+
+
+(defn cfn-bot-audio-log-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-audio-log-destination-property-builder (new CfnBot$AudioLogDestinationProperty$Builder) id config))
 
 
 (defn build-cfn-bot-audio-log-setting-property-builder
@@ -510,6 +618,12 @@
   (.build builder))
 
 
+(defn cfn-bot-audio-log-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-audio-log-setting-property-builder (new CfnBot$AudioLogSettingProperty$Builder) id config))
+
+
 (defn build-cfn-bot-audio-specification-property-builder
   "The build-cfn-bot-audio-specification-property-builder function updates a CfnBot$AudioSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$AudioSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -528,6 +642,12 @@
   (when-let [data (lookup-entry config id :max-length-ms)]
     (. builder maxLengthMs data))
   (.build builder))
+
+
+(defn cfn-bot-audio-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-audio-specification-property-builder (new CfnBot$AudioSpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-bot-bot-alias-locale-settings-item-property-builder
@@ -550,6 +670,12 @@
   (.build builder))
 
 
+(defn cfn-bot-bot-alias-locale-settings-item-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-bot-alias-locale-settings-item-property-builder (new CfnBot$BotAliasLocaleSettingsItemProperty$Builder) id config))
+
+
 (defn build-cfn-bot-bot-alias-locale-settings-property-builder
   "The build-cfn-bot-bot-alias-locale-settings-property-builder function updates a CfnBot$BotAliasLocaleSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$BotAliasLocaleSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -568,6 +694,12 @@
   (when-let [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
+
+
+(defn cfn-bot-bot-alias-locale-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-bot-alias-locale-settings-property-builder (new CfnBot$BotAliasLocaleSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-bot-bot-locale-property-builder
@@ -603,6 +735,12 @@
   (when-let [data (lookup-entry config id :voice-settings)]
     (. builder voiceSettings data))
   (.build builder))
+
+
+(defn cfn-bot-bot-locale-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-bot-locale-property-builder (new CfnBot$BotLocaleProperty$Builder) id config))
 
 
 (defn build-cfn-bot-builder
@@ -652,6 +790,12 @@
   (.build builder))
 
 
+(defn cfn-bot-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-bot-builder (CfnBot$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-bot-button-property-builder
   "The build-cfn-bot-button-property-builder function updates a CfnBot$ButtonProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$ButtonProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -670,6 +814,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-bot-button-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-button-property-builder (new CfnBot$ButtonProperty$Builder) id config))
 
 
 (defn build-cfn-bot-cloud-watch-log-group-log-destination-property-builder
@@ -692,6 +842,12 @@
   (.build builder))
 
 
+(defn cfn-bot-cloud-watch-log-group-log-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-cloud-watch-log-group-log-destination-property-builder (new CfnBot$CloudWatchLogGroupLogDestinationProperty$Builder) id config))
+
+
 (defn build-cfn-bot-code-hook-specification-property-builder
   "The build-cfn-bot-code-hook-specification-property-builder function updates a CfnBot$CodeHookSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$CodeHookSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -709,6 +865,12 @@
   (.build builder))
 
 
+(defn cfn-bot-code-hook-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-code-hook-specification-property-builder (new CfnBot$CodeHookSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-bot-condition-property-builder
   "The build-cfn-bot-condition-property-builder function updates a CfnBot$ConditionProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$ConditionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -724,6 +886,12 @@
   (when-let [data (lookup-entry config id :expression-string)]
     (. builder expressionString data))
   (.build builder))
+
+
+(defn cfn-bot-condition-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-condition-property-builder (new CfnBot$ConditionProperty$Builder) id config))
 
 
 (defn build-cfn-bot-conditional-branch-property-builder
@@ -752,6 +920,12 @@
   (.build builder))
 
 
+(defn cfn-bot-conditional-branch-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-conditional-branch-property-builder (new CfnBot$ConditionalBranchProperty$Builder) id config))
+
+
 (defn build-cfn-bot-conditional-specification-property-builder
   "The build-cfn-bot-conditional-specification-property-builder function updates a CfnBot$ConditionalSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$ConditionalSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -775,6 +949,12 @@
   (.build builder))
 
 
+(defn cfn-bot-conditional-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-conditional-specification-property-builder (new CfnBot$ConditionalSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-bot-conversation-log-settings-property-builder
   "The build-cfn-bot-conversation-log-settings-property-builder function updates a CfnBot$ConversationLogSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$ConversationLogSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -795,6 +975,12 @@
   (.build builder))
 
 
+(defn cfn-bot-conversation-log-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-conversation-log-settings-property-builder (new CfnBot$ConversationLogSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-bot-custom-payload-property-builder
   "The build-cfn-bot-custom-payload-property-builder function updates a CfnBot$CustomPayloadProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$CustomPayloadProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -810,6 +996,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-bot-custom-payload-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-custom-payload-property-builder (new CfnBot$CustomPayloadProperty$Builder) id config))
 
 
 (defn build-cfn-bot-custom-vocabulary-item-property-builder
@@ -835,6 +1027,12 @@
   (.build builder))
 
 
+(defn cfn-bot-custom-vocabulary-item-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-custom-vocabulary-item-property-builder (new CfnBot$CustomVocabularyItemProperty$Builder) id config))
+
+
 (defn build-cfn-bot-custom-vocabulary-property-builder
   "The build-cfn-bot-custom-vocabulary-property-builder function updates a CfnBot$CustomVocabularyProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$CustomVocabularyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -852,6 +1050,12 @@
   (.build builder))
 
 
+(defn cfn-bot-custom-vocabulary-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-custom-vocabulary-property-builder (new CfnBot$CustomVocabularyProperty$Builder) id config))
+
+
 (defn build-cfn-bot-data-privacy-property-builder
   "The build-cfn-bot-data-privacy-property-builder function updates a CfnBot$DataPrivacyProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$DataPrivacyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -867,6 +1071,12 @@
   (when-let [data (lookup-entry config id :child-directed)]
     (. builder childDirected data))
   (.build builder))
+
+
+(defn cfn-bot-data-privacy-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-data-privacy-property-builder (new CfnBot$DataPrivacyProperty$Builder) id config))
 
 
 (defn build-cfn-bot-default-conditional-branch-property-builder
@@ -887,6 +1097,12 @@
   (when-let [data (lookup-entry config id :response)]
     (. builder response data))
   (.build builder))
+
+
+(defn cfn-bot-default-conditional-branch-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-default-conditional-branch-property-builder (new CfnBot$DefaultConditionalBranchProperty$Builder) id config))
 
 
 (defn build-cfn-bot-dialog-action-property-builder
@@ -910,6 +1126,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-bot-dialog-action-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-dialog-action-property-builder (new CfnBot$DialogActionProperty$Builder) id config))
 
 
 (defn build-cfn-bot-dialog-code-hook-invocation-setting-property-builder
@@ -938,6 +1160,12 @@
   (.build builder))
 
 
+(defn cfn-bot-dialog-code-hook-invocation-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-dialog-code-hook-invocation-setting-property-builder (new CfnBot$DialogCodeHookInvocationSettingProperty$Builder) id config))
+
+
 (defn build-cfn-bot-dialog-code-hook-setting-property-builder
   "The build-cfn-bot-dialog-code-hook-setting-property-builder function updates a CfnBot$DialogCodeHookSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$DialogCodeHookSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -953,6 +1181,12 @@
   (when-let [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
+
+
+(defn cfn-bot-dialog-code-hook-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-dialog-code-hook-setting-property-builder (new CfnBot$DialogCodeHookSettingProperty$Builder) id config))
 
 
 (defn build-cfn-bot-dialog-state-property-builder
@@ -976,6 +1210,12 @@
   (when-let [data (lookup-entry config id :session-attributes)]
     (. builder sessionAttributes data))
   (.build builder))
+
+
+(defn cfn-bot-dialog-state-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-dialog-state-property-builder (new CfnBot$DialogStateProperty$Builder) id config))
 
 
 (defn build-cfn-bot-dtmf-specification-property-builder
@@ -1004,6 +1244,12 @@
   (.build builder))
 
 
+(defn cfn-bot-dtmf-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-dtmf-specification-property-builder (new CfnBot$DTMFSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-bot-elicitation-code-hook-invocation-setting-property-builder
   "The build-cfn-bot-elicitation-code-hook-invocation-setting-property-builder function updates a CfnBot$ElicitationCodeHookInvocationSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$ElicitationCodeHookInvocationSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1024,6 +1270,12 @@
   (.build builder))
 
 
+(defn cfn-bot-elicitation-code-hook-invocation-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-elicitation-code-hook-invocation-setting-property-builder (new CfnBot$ElicitationCodeHookInvocationSettingProperty$Builder) id config))
+
+
 (defn build-cfn-bot-external-source-setting-property-builder
   "The build-cfn-bot-external-source-setting-property-builder function updates a CfnBot$ExternalSourceSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$ExternalSourceSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1039,6 +1291,12 @@
   (when-let [data (lookup-entry config id :grammar-slot-type-setting)]
     (. builder grammarSlotTypeSetting data))
   (.build builder))
+
+
+(defn cfn-bot-external-source-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-external-source-setting-property-builder (new CfnBot$ExternalSourceSettingProperty$Builder) id config))
 
 
 (defn build-cfn-bot-fulfillment-code-hook-setting-property-builder
@@ -1067,6 +1325,12 @@
   (.build builder))
 
 
+(defn cfn-bot-fulfillment-code-hook-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-fulfillment-code-hook-setting-property-builder (new CfnBot$FulfillmentCodeHookSettingProperty$Builder) id config))
+
+
 (defn build-cfn-bot-fulfillment-start-response-specification-property-builder
   "The build-cfn-bot-fulfillment-start-response-specification-property-builder function updates a CfnBot$FulfillmentStartResponseSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$FulfillmentStartResponseSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1090,6 +1354,12 @@
   (.build builder))
 
 
+(defn cfn-bot-fulfillment-start-response-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-fulfillment-start-response-specification-property-builder (new CfnBot$FulfillmentStartResponseSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-bot-fulfillment-update-response-specification-property-builder
   "The build-cfn-bot-fulfillment-update-response-specification-property-builder function updates a CfnBot$FulfillmentUpdateResponseSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$FulfillmentUpdateResponseSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1111,6 +1381,12 @@
   (when-let [data (lookup-entry config id :message-groups)]
     (. builder messageGroups data))
   (.build builder))
+
+
+(defn cfn-bot-fulfillment-update-response-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-fulfillment-update-response-specification-property-builder (new CfnBot$FulfillmentUpdateResponseSpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-bot-fulfillment-updates-specification-property-builder
@@ -1139,6 +1415,12 @@
   (.build builder))
 
 
+(defn cfn-bot-fulfillment-updates-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-fulfillment-updates-specification-property-builder (new CfnBot$FulfillmentUpdatesSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-bot-grammar-slot-type-setting-property-builder
   "The build-cfn-bot-grammar-slot-type-setting-property-builder function updates a CfnBot$GrammarSlotTypeSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$GrammarSlotTypeSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1154,6 +1436,12 @@
   (when-let [data (lookup-entry config id :source)]
     (. builder source data))
   (.build builder))
+
+
+(defn cfn-bot-grammar-slot-type-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-grammar-slot-type-setting-property-builder (new CfnBot$GrammarSlotTypeSettingProperty$Builder) id config))
 
 
 (defn build-cfn-bot-grammar-slot-type-source-property-builder
@@ -1177,6 +1465,12 @@
   (when-let [data (lookup-entry config id :s3-object-key)]
     (. builder s3ObjectKey data))
   (.build builder))
+
+
+(defn cfn-bot-grammar-slot-type-source-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-grammar-slot-type-source-property-builder (new CfnBot$GrammarSlotTypeSourceProperty$Builder) id config))
 
 
 (defn build-cfn-bot-image-response-card-property-builder
@@ -1205,6 +1499,12 @@
   (.build builder))
 
 
+(defn cfn-bot-image-response-card-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-image-response-card-property-builder (new CfnBot$ImageResponseCardProperty$Builder) id config))
+
+
 (defn build-cfn-bot-initial-response-setting-property-builder
   "The build-cfn-bot-initial-response-setting-property-builder function updates a CfnBot$InitialResponseSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$InitialResponseSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1231,6 +1531,12 @@
   (.build builder))
 
 
+(defn cfn-bot-initial-response-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-initial-response-setting-property-builder (new CfnBot$InitialResponseSettingProperty$Builder) id config))
+
+
 (defn build-cfn-bot-input-context-property-builder
   "The build-cfn-bot-input-context-property-builder function updates a CfnBot$InputContextProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$InputContextProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1246,6 +1552,12 @@
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-bot-input-context-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-input-context-property-builder (new CfnBot$InputContextProperty$Builder) id config))
 
 
 (defn build-cfn-bot-intent-closing-setting-property-builder
@@ -1272,6 +1584,12 @@
   (when-let [data (lookup-entry config id :next-step)]
     (. builder nextStep data))
   (.build builder))
+
+
+(defn cfn-bot-intent-closing-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-intent-closing-setting-property-builder (new CfnBot$IntentClosingSettingProperty$Builder) id config))
 
 
 (defn build-cfn-bot-intent-confirmation-setting-property-builder
@@ -1327,6 +1645,12 @@
   (.build builder))
 
 
+(defn cfn-bot-intent-confirmation-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-intent-confirmation-setting-property-builder (new CfnBot$IntentConfirmationSettingProperty$Builder) id config))
+
+
 (defn build-cfn-bot-intent-override-property-builder
   "The build-cfn-bot-intent-override-property-builder function updates a CfnBot$IntentOverrideProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$IntentOverrideProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1345,6 +1669,12 @@
   (when-let [data (lookup-entry config id :slots)]
     (. builder slots data))
   (.build builder))
+
+
+(defn cfn-bot-intent-override-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-intent-override-property-builder (new CfnBot$IntentOverrideProperty$Builder) id config))
 
 
 (defn build-cfn-bot-intent-property-builder
@@ -1403,6 +1733,12 @@
   (.build builder))
 
 
+(defn cfn-bot-intent-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-intent-property-builder (new CfnBot$IntentProperty$Builder) id config))
+
+
 (defn build-cfn-bot-kendra-configuration-property-builder
   "The build-cfn-bot-kendra-configuration-property-builder function updates a CfnBot$KendraConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$KendraConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1426,6 +1762,12 @@
   (.build builder))
 
 
+(defn cfn-bot-kendra-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-kendra-configuration-property-builder (new CfnBot$KendraConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-bot-lambda-code-hook-property-builder
   "The build-cfn-bot-lambda-code-hook-property-builder function updates a CfnBot$LambdaCodeHookProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$LambdaCodeHookProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1446,6 +1788,12 @@
   (.build builder))
 
 
+(defn cfn-bot-lambda-code-hook-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-lambda-code-hook-property-builder (new CfnBot$LambdaCodeHookProperty$Builder) id config))
+
+
 (defn build-cfn-bot-message-group-property-builder
   "The build-cfn-bot-message-group-property-builder function updates a CfnBot$MessageGroupProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$MessageGroupProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1464,6 +1812,12 @@
   (when-let [data (lookup-entry config id :variations)]
     (. builder variations data))
   (.build builder))
+
+
+(defn cfn-bot-message-group-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-message-group-property-builder (new CfnBot$MessageGroupProperty$Builder) id config))
 
 
 (defn build-cfn-bot-message-property-builder
@@ -1492,6 +1846,12 @@
   (.build builder))
 
 
+(defn cfn-bot-message-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-message-property-builder (new CfnBot$MessageProperty$Builder) id config))
+
+
 (defn build-cfn-bot-multiple-values-setting-property-builder
   "The build-cfn-bot-multiple-values-setting-property-builder function updates a CfnBot$MultipleValuesSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$MultipleValuesSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1509,6 +1869,12 @@
   (.build builder))
 
 
+(defn cfn-bot-multiple-values-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-multiple-values-setting-property-builder (new CfnBot$MultipleValuesSettingProperty$Builder) id config))
+
+
 (defn build-cfn-bot-obfuscation-setting-property-builder
   "The build-cfn-bot-obfuscation-setting-property-builder function updates a CfnBot$ObfuscationSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$ObfuscationSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1524,6 +1890,12 @@
   (when-let [data (lookup-entry config id :obfuscation-setting-type)]
     (. builder obfuscationSettingType data))
   (.build builder))
+
+
+(defn cfn-bot-obfuscation-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-obfuscation-setting-property-builder (new CfnBot$ObfuscationSettingProperty$Builder) id config))
 
 
 (defn build-cfn-bot-output-context-property-builder
@@ -1549,6 +1921,12 @@
   (.build builder))
 
 
+(defn cfn-bot-output-context-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-output-context-property-builder (new CfnBot$OutputContextProperty$Builder) id config))
+
+
 (defn build-cfn-bot-plain-text-message-property-builder
   "The build-cfn-bot-plain-text-message-property-builder function updates a CfnBot$PlainTextMessageProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$PlainTextMessageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1564,6 +1942,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-bot-plain-text-message-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-plain-text-message-property-builder (new CfnBot$PlainTextMessageProperty$Builder) id config))
 
 
 (defn build-cfn-bot-post-dialog-code-hook-invocation-specification-property-builder
@@ -1607,6 +1991,12 @@
   (.build builder))
 
 
+(defn cfn-bot-post-dialog-code-hook-invocation-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-post-dialog-code-hook-invocation-specification-property-builder (new CfnBot$PostDialogCodeHookInvocationSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-bot-post-fulfillment-status-specification-property-builder
   "The build-cfn-bot-post-fulfillment-status-specification-property-builder function updates a CfnBot$PostFulfillmentStatusSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$PostFulfillmentStatusSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1648,6 +2038,12 @@
   (.build builder))
 
 
+(defn cfn-bot-post-fulfillment-status-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-post-fulfillment-status-specification-property-builder (new CfnBot$PostFulfillmentStatusSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-bot-prompt-attempt-specification-property-builder
   "The build-cfn-bot-prompt-attempt-specification-property-builder function updates a CfnBot$PromptAttemptSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$PromptAttemptSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1672,6 +2068,12 @@
   (when-let [data (lookup-entry config id :text-input-specification)]
     (. builder textInputSpecification data))
   (.build builder))
+
+
+(defn cfn-bot-prompt-attempt-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-prompt-attempt-specification-property-builder (new CfnBot$PromptAttemptSpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-bot-prompt-specification-property-builder
@@ -1701,6 +2103,12 @@
   (when-let [data (lookup-entry config id :prompt-attempts-specification)]
     (. builder promptAttemptsSpecification data))
   (.build builder))
+
+
+(defn cfn-bot-prompt-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-prompt-specification-property-builder (new CfnBot$PromptSpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-bot-props-builder
@@ -1750,6 +2158,12 @@
   (.build builder))
 
 
+(defn cfn-bot-props-builder
+  ""
+  [id config]
+  (build-cfn-bot-props-builder (new CfnBotProps$Builder) id config))
+
+
 (defn build-cfn-bot-response-specification-property-builder
   "The build-cfn-bot-response-specification-property-builder function updates a CfnBot$ResponseSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$ResponseSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1768,6 +2182,12 @@
   (when-let [data (lookup-entry config id :message-groups-list)]
     (. builder messageGroupsList data))
   (.build builder))
+
+
+(defn cfn-bot-response-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-response-specification-property-builder (new CfnBot$ResponseSpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-bot-s3-bucket-log-destination-property-builder
@@ -1793,6 +2213,12 @@
   (.build builder))
 
 
+(defn cfn-bot-s3-bucket-log-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-s3-bucket-log-destination-property-builder (new CfnBot$S3BucketLogDestinationProperty$Builder) id config))
+
+
 (defn build-cfn-bot-s3-location-property-builder
   "The build-cfn-bot-s3-location-property-builder function updates a CfnBot$S3LocationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$S3LocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1816,6 +2242,12 @@
   (.build builder))
 
 
+(defn cfn-bot-s3-location-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-s3-location-property-builder (new CfnBot$S3LocationProperty$Builder) id config))
+
+
 (defn build-cfn-bot-sample-utterance-property-builder
   "The build-cfn-bot-sample-utterance-property-builder function updates a CfnBot$SampleUtteranceProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SampleUtteranceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1831,6 +2263,12 @@
   (when-let [data (lookup-entry config id :utterance)]
     (. builder utterance data))
   (.build builder))
+
+
+(defn cfn-bot-sample-utterance-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-sample-utterance-property-builder (new CfnBot$SampleUtteranceProperty$Builder) id config))
 
 
 (defn build-cfn-bot-sample-value-property-builder
@@ -1850,6 +2288,12 @@
   (.build builder))
 
 
+(defn cfn-bot-sample-value-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-sample-value-property-builder (new CfnBot$SampleValueProperty$Builder) id config))
+
+
 (defn build-cfn-bot-sentiment-analysis-settings-property-builder
   "The build-cfn-bot-sentiment-analysis-settings-property-builder function updates a CfnBot$SentimentAnalysisSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SentimentAnalysisSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1865,6 +2309,12 @@
   (when-let [data (lookup-entry config id :detect-sentiment)]
     (. builder detectSentiment data))
   (.build builder))
+
+
+(defn cfn-bot-sentiment-analysis-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-sentiment-analysis-settings-property-builder (new CfnBot$SentimentAnalysisSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-bot-session-attribute-property-builder
@@ -1885,6 +2335,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-bot-session-attribute-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-session-attribute-property-builder (new CfnBot$SessionAttributeProperty$Builder) id config))
 
 
 (defn build-cfn-bot-slot-capture-setting-property-builder
@@ -1925,6 +2381,12 @@
   (.build builder))
 
 
+(defn cfn-bot-slot-capture-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-slot-capture-setting-property-builder (new CfnBot$SlotCaptureSettingProperty$Builder) id config))
+
+
 (defn build-cfn-bot-slot-default-value-property-builder
   "The build-cfn-bot-slot-default-value-property-builder function updates a CfnBot$SlotDefaultValueProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SlotDefaultValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1942,6 +2404,12 @@
   (.build builder))
 
 
+(defn cfn-bot-slot-default-value-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-slot-default-value-property-builder (new CfnBot$SlotDefaultValueProperty$Builder) id config))
+
+
 (defn build-cfn-bot-slot-default-value-specification-property-builder
   "The build-cfn-bot-slot-default-value-specification-property-builder function updates a CfnBot$SlotDefaultValueSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SlotDefaultValueSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1957,6 +2425,12 @@
   (when-let [data (lookup-entry config id :default-value-list)]
     (. builder defaultValueList data))
   (.build builder))
+
+
+(defn cfn-bot-slot-default-value-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-slot-default-value-specification-property-builder (new CfnBot$SlotDefaultValueSpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-bot-slot-priority-property-builder
@@ -1977,6 +2451,12 @@
   (when-let [data (lookup-entry config id :slot-name)]
     (. builder slotName data))
   (.build builder))
+
+
+(defn cfn-bot-slot-priority-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-slot-priority-property-builder (new CfnBot$SlotPriorityProperty$Builder) id config))
 
 
 (defn build-cfn-bot-slot-property-builder
@@ -2011,6 +2491,12 @@
   (.build builder))
 
 
+(defn cfn-bot-slot-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-slot-property-builder (new CfnBot$SlotProperty$Builder) id config))
+
+
 (defn build-cfn-bot-slot-type-property-builder
   "The build-cfn-bot-slot-type-property-builder function updates a CfnBot$SlotTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SlotTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2043,6 +2529,12 @@
   (.build builder))
 
 
+(defn cfn-bot-slot-type-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-slot-type-property-builder (new CfnBot$SlotTypeProperty$Builder) id config))
+
+
 (defn build-cfn-bot-slot-type-value-property-builder
   "The build-cfn-bot-slot-type-value-property-builder function updates a CfnBot$SlotTypeValueProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SlotTypeValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2061,6 +2553,12 @@
   (when-let [data (lookup-entry config id :synonyms)]
     (. builder synonyms data))
   (.build builder))
+
+
+(defn cfn-bot-slot-type-value-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-slot-type-value-property-builder (new CfnBot$SlotTypeValueProperty$Builder) id config))
 
 
 (defn build-cfn-bot-slot-value-elicitation-setting-property-builder
@@ -2095,6 +2593,12 @@
   (.build builder))
 
 
+(defn cfn-bot-slot-value-elicitation-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-slot-value-elicitation-setting-property-builder (new CfnBot$SlotValueElicitationSettingProperty$Builder) id config))
+
+
 (defn build-cfn-bot-slot-value-override-map-property-builder
   "The build-cfn-bot-slot-value-override-map-property-builder function updates a CfnBot$SlotValueOverrideMapProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SlotValueOverrideMapProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2113,6 +2617,12 @@
   (when-let [data (lookup-entry config id :slot-value-override)]
     (. builder slotValueOverride data))
   (.build builder))
+
+
+(defn cfn-bot-slot-value-override-map-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-slot-value-override-map-property-builder (new CfnBot$SlotValueOverrideMapProperty$Builder) id config))
 
 
 (defn build-cfn-bot-slot-value-override-property-builder
@@ -2138,6 +2648,12 @@
   (.build builder))
 
 
+(defn cfn-bot-slot-value-override-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-slot-value-override-property-builder (new CfnBot$SlotValueOverrideProperty$Builder) id config))
+
+
 (defn build-cfn-bot-slot-value-property-builder
   "The build-cfn-bot-slot-value-property-builder function updates a CfnBot$SlotValueProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SlotValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2155,6 +2671,12 @@
   (.build builder))
 
 
+(defn cfn-bot-slot-value-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-slot-value-property-builder (new CfnBot$SlotValueProperty$Builder) id config))
+
+
 (defn build-cfn-bot-slot-value-regex-filter-property-builder
   "The build-cfn-bot-slot-value-regex-filter-property-builder function updates a CfnBot$SlotValueRegexFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SlotValueRegexFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2170,6 +2692,12 @@
   (when-let [data (lookup-entry config id :pattern)]
     (. builder pattern data))
   (.build builder))
+
+
+(defn cfn-bot-slot-value-regex-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-slot-value-regex-filter-property-builder (new CfnBot$SlotValueRegexFilterProperty$Builder) id config))
 
 
 (defn build-cfn-bot-slot-value-selection-setting-property-builder
@@ -2195,6 +2723,12 @@
   (.build builder))
 
 
+(defn cfn-bot-slot-value-selection-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-slot-value-selection-setting-property-builder (new CfnBot$SlotValueSelectionSettingProperty$Builder) id config))
+
+
 (defn build-cfn-bot-ssml-message-property-builder
   "The build-cfn-bot-ssml-message-property-builder function updates a CfnBot$SSMLMessageProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$SSMLMessageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2210,6 +2744,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-bot-ssml-message-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-ssml-message-property-builder (new CfnBot$SSMLMessageProperty$Builder) id config))
 
 
 (defn build-cfn-bot-still-waiting-response-specification-property-builder
@@ -2238,6 +2778,12 @@
   (.build builder))
 
 
+(defn cfn-bot-still-waiting-response-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-still-waiting-response-specification-property-builder (new CfnBot$StillWaitingResponseSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-bot-test-bot-alias-settings-property-builder
   "The build-cfn-bot-test-bot-alias-settings-property-builder function updates a CfnBot$TestBotAliasSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$TestBotAliasSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2264,6 +2810,12 @@
   (.build builder))
 
 
+(defn cfn-bot-test-bot-alias-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-test-bot-alias-settings-property-builder (new CfnBot$TestBotAliasSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-bot-text-input-specification-property-builder
   "The build-cfn-bot-text-input-specification-property-builder function updates a CfnBot$TextInputSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$TextInputSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2281,6 +2833,12 @@
   (.build builder))
 
 
+(defn cfn-bot-text-input-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-text-input-specification-property-builder (new CfnBot$TextInputSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-bot-text-log-destination-property-builder
   "The build-cfn-bot-text-log-destination-property-builder function updates a CfnBot$TextLogDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$TextLogDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2296,6 +2854,12 @@
   (when-let [data (lookup-entry config id :cloud-watch)]
     (. builder cloudWatch data))
   (.build builder))
+
+
+(defn cfn-bot-text-log-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-text-log-destination-property-builder (new CfnBot$TextLogDestinationProperty$Builder) id config))
 
 
 (defn build-cfn-bot-text-log-setting-property-builder
@@ -2318,6 +2882,12 @@
   (.build builder))
 
 
+(defn cfn-bot-text-log-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-text-log-setting-property-builder (new CfnBot$TextLogSettingProperty$Builder) id config))
+
+
 (defn build-cfn-bot-version-bot-version-locale-details-property-builder
   "The build-cfn-bot-version-bot-version-locale-details-property-builder function updates a CfnBotVersion$BotVersionLocaleDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnBotVersion$BotVersionLocaleDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2333,6 +2903,12 @@
   (when-let [data (lookup-entry config id :source-bot-version)]
     (. builder sourceBotVersion data))
   (.build builder))
+
+
+(defn cfn-bot-version-bot-version-locale-details-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-version-bot-version-locale-details-property-builder (new CfnBotVersion$BotVersionLocaleDetailsProperty$Builder) id config))
 
 
 (defn build-cfn-bot-version-bot-version-locale-specification-property-builder
@@ -2353,6 +2929,12 @@
   (when-let [data (lookup-entry config id :locale-id)]
     (. builder localeId data))
   (.build builder))
+
+
+(defn cfn-bot-version-bot-version-locale-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-version-bot-version-locale-specification-property-builder (new CfnBotVersion$BotVersionLocaleSpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-bot-version-builder
@@ -2378,6 +2960,12 @@
   (.build builder))
 
 
+(defn cfn-bot-version-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-bot-version-builder (CfnBotVersion$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-bot-version-props-builder
   "The build-cfn-bot-version-props-builder function updates a CfnBotVersionProps$Builder instance using the provided configuration.
   The function takes the CfnBotVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2401,6 +2989,12 @@
   (.build builder))
 
 
+(defn cfn-bot-version-props-builder
+  ""
+  [id config]
+  (build-cfn-bot-version-props-builder (new CfnBotVersionProps$Builder) id config))
+
+
 (defn build-cfn-bot-voice-settings-property-builder
   "The build-cfn-bot-voice-settings-property-builder function updates a CfnBot$VoiceSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnBot$VoiceSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2419,6 +3013,12 @@
   (when-let [data (lookup-entry config id :voice-id)]
     (. builder voiceId data))
   (.build builder))
+
+
+(defn cfn-bot-voice-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-voice-settings-property-builder (new CfnBot$VoiceSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-bot-wait-and-continue-specification-property-builder
@@ -2447,6 +3047,12 @@
   (.build builder))
 
 
+(defn cfn-bot-wait-and-continue-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-bot-wait-and-continue-specification-property-builder (new CfnBot$WaitAndContinueSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-resource-policy-builder
   "The build-cfn-resource-policy-builder function updates a CfnResourcePolicy$Builder instance using the provided configuration.
   The function takes the CfnResourcePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2467,6 +3073,12 @@
   (.build builder))
 
 
+(defn cfn-resource-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-resource-policy-builder (CfnResourcePolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-resource-policy-props-builder
   "The build-cfn-resource-policy-props-builder function updates a CfnResourcePolicyProps$Builder instance using the provided configuration.
   The function takes the CfnResourcePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2485,3 +3097,9 @@
   (when-let [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
   (.build builder))
+
+
+(defn cfn-resource-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-resource-policy-props-builder (new CfnResourcePolicyProps$Builder) id config))

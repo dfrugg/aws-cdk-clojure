@@ -85,6 +85,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn trigger-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-trigger-builder (Trigger$Builder/create scope (name id)) id config))
+
+
 (defn build-trigger-function-builder
   "The build-trigger-function-builder function updates a TriggerFunction$Builder instance using the provided configuration.
   The function takes the TriggerFunction$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -256,6 +262,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
   (.build builder))
+
+
+(defn trigger-function-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-trigger-function-builder (TriggerFunction$Builder/create scope (name id)) id config))
 
 
 (defn build-trigger-function-props-builder
@@ -431,6 +443,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn trigger-function-props-builder
+  ""
+  [id config]
+  (build-trigger-function-props-builder (new TriggerFunctionProps$Builder) id config))
+
+
 (defn build-trigger-options-builder
   "The build-trigger-options-builder function updates a TriggerOptions$Builder instance using the provided configuration.
   The function takes the TriggerOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -452,6 +470,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :execute-on-handler-change)]
     (. builder executeOnHandlerChange data))
   (.build builder))
+
+
+(defn trigger-options-builder
+  ""
+  [id config]
+  (build-trigger-options-builder (new TriggerOptions$Builder) id config))
 
 
 (defn build-trigger-props-builder
@@ -484,3 +508,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
+
+
+(defn trigger-props-builder
+  ""
+  [id config]
+  (build-trigger-props-builder (new TriggerProps$Builder) id config))

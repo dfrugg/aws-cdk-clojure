@@ -83,6 +83,12 @@
   (.build builder))
 
 
+(defn cfn-bridge-bridge-flow-source-property-builder
+  ""
+  [id config]
+  (build-cfn-bridge-bridge-flow-source-property-builder (new CfnBridge$BridgeFlowSourceProperty$Builder) id config))
+
+
 (defn build-cfn-bridge-bridge-network-output-property-builder
   "The build-cfn-bridge-bridge-network-output-property-builder function updates a CfnBridge$BridgeNetworkOutputProperty$Builder instance using the provided configuration.
   The function takes the CfnBridge$BridgeNetworkOutputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -115,6 +121,12 @@
   (.build builder))
 
 
+(defn cfn-bridge-bridge-network-output-property-builder
+  ""
+  [id config]
+  (build-cfn-bridge-bridge-network-output-property-builder (new CfnBridge$BridgeNetworkOutputProperty$Builder) id config))
+
+
 (defn build-cfn-bridge-bridge-network-source-property-builder
   "The build-cfn-bridge-bridge-network-source-property-builder function updates a CfnBridge$BridgeNetworkSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnBridge$BridgeNetworkSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -144,6 +156,12 @@
   (.build builder))
 
 
+(defn cfn-bridge-bridge-network-source-property-builder
+  ""
+  [id config]
+  (build-cfn-bridge-bridge-network-source-property-builder (new CfnBridge$BridgeNetworkSourceProperty$Builder) id config))
+
+
 (defn build-cfn-bridge-bridge-output-property-builder
   "The build-cfn-bridge-bridge-output-property-builder function updates a CfnBridge$BridgeOutputProperty$Builder instance using the provided configuration.
   The function takes the CfnBridge$BridgeOutputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -159,6 +177,12 @@
   (when-let [data (lookup-entry config id :network-output)]
     (. builder networkOutput data))
   (.build builder))
+
+
+(defn cfn-bridge-bridge-output-property-builder
+  ""
+  [id config]
+  (build-cfn-bridge-bridge-output-property-builder (new CfnBridge$BridgeOutputProperty$Builder) id config))
 
 
 (defn build-cfn-bridge-bridge-source-property-builder
@@ -179,6 +203,12 @@
   (when-let [data (lookup-entry config id :network-source)]
     (. builder networkSource data))
   (.build builder))
+
+
+(defn cfn-bridge-bridge-source-property-builder
+  ""
+  [id config]
+  (build-cfn-bridge-bridge-source-property-builder (new CfnBridge$BridgeSourceProperty$Builder) id config))
 
 
 (defn build-cfn-bridge-builder
@@ -216,6 +246,12 @@
   (.build builder))
 
 
+(defn cfn-bridge-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-bridge-builder (CfnBridge$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-bridge-egress-gateway-bridge-property-builder
   "The build-cfn-bridge-egress-gateway-bridge-property-builder function updates a CfnBridge$EgressGatewayBridgeProperty$Builder instance using the provided configuration.
   The function takes the CfnBridge$EgressGatewayBridgeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -231,6 +267,12 @@
   (when-let [data (lookup-entry config id :max-bitrate)]
     (. builder maxBitrate data))
   (.build builder))
+
+
+(defn cfn-bridge-egress-gateway-bridge-property-builder
+  ""
+  [id config]
+  (build-cfn-bridge-egress-gateway-bridge-property-builder (new CfnBridge$EgressGatewayBridgeProperty$Builder) id config))
 
 
 (defn build-cfn-bridge-failover-config-property-builder
@@ -256,6 +298,12 @@
   (.build builder))
 
 
+(defn cfn-bridge-failover-config-property-builder
+  ""
+  [id config]
+  (build-cfn-bridge-failover-config-property-builder (new CfnBridge$FailoverConfigProperty$Builder) id config))
+
+
 (defn build-cfn-bridge-ingress-gateway-bridge-property-builder
   "The build-cfn-bridge-ingress-gateway-bridge-property-builder function updates a CfnBridge$IngressGatewayBridgeProperty$Builder instance using the provided configuration.
   The function takes the CfnBridge$IngressGatewayBridgeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -274,6 +322,12 @@
   (when-let [data (lookup-entry config id :max-outputs)]
     (. builder maxOutputs data))
   (.build builder))
+
+
+(defn cfn-bridge-ingress-gateway-bridge-property-builder
+  ""
+  [id config]
+  (build-cfn-bridge-ingress-gateway-bridge-property-builder (new CfnBridge$IngressGatewayBridgeProperty$Builder) id config))
 
 
 (defn build-cfn-bridge-output-bridge-network-output-property-builder
@@ -305,6 +359,12 @@
   (.build builder))
 
 
+(defn cfn-bridge-output-bridge-network-output-property-builder
+  ""
+  [id config]
+  (build-cfn-bridge-output-bridge-network-output-property-builder (new CfnBridgeOutput$BridgeNetworkOutputProperty$Builder) id config))
+
+
 (defn build-cfn-bridge-output-builder
   "The build-cfn-bridge-output-builder function updates a CfnBridgeOutput$Builder instance using the provided configuration.
   The function takes the CfnBridgeOutput$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -328,6 +388,12 @@
   (.build builder))
 
 
+(defn cfn-bridge-output-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-bridge-output-builder (CfnBridgeOutput$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-bridge-output-props-builder
   "The build-cfn-bridge-output-props-builder function updates a CfnBridgeOutputProps$Builder instance using the provided configuration.
   The function takes the CfnBridgeOutputProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -349,6 +415,12 @@
   (when-let [data (lookup-entry config id :network-output)]
     (. builder networkOutput data))
   (.build builder))
+
+
+(defn cfn-bridge-output-props-builder
+  ""
+  [id config]
+  (build-cfn-bridge-output-props-builder (new CfnBridgeOutputProps$Builder) id config))
 
 
 (defn build-cfn-bridge-props-builder
@@ -386,6 +458,12 @@
   (.build builder))
 
 
+(defn cfn-bridge-props-builder
+  ""
+  [id config]
+  (build-cfn-bridge-props-builder (new CfnBridgeProps$Builder) id config))
+
+
 (defn build-cfn-bridge-source-bridge-flow-source-property-builder
   "The build-cfn-bridge-source-bridge-flow-source-property-builder function updates a CfnBridgeSource$BridgeFlowSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnBridgeSource$BridgeFlowSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -404,6 +482,12 @@
   (when-let [data (lookup-entry config id :flow-vpc-interface-attachment)]
     (. builder flowVpcInterfaceAttachment data))
   (.build builder))
+
+
+(defn cfn-bridge-source-bridge-flow-source-property-builder
+  ""
+  [id config]
+  (build-cfn-bridge-source-bridge-flow-source-property-builder (new CfnBridgeSource$BridgeFlowSourceProperty$Builder) id config))
 
 
 (defn build-cfn-bridge-source-bridge-network-source-property-builder
@@ -432,6 +516,12 @@
   (.build builder))
 
 
+(defn cfn-bridge-source-bridge-network-source-property-builder
+  ""
+  [id config]
+  (build-cfn-bridge-source-bridge-network-source-property-builder (new CfnBridgeSource$BridgeNetworkSourceProperty$Builder) id config))
+
+
 (defn build-cfn-bridge-source-builder
   "The build-cfn-bridge-source-builder function updates a CfnBridgeSource$Builder instance using the provided configuration.
   The function takes the CfnBridgeSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -458,6 +548,12 @@
   (.build builder))
 
 
+(defn cfn-bridge-source-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-bridge-source-builder (CfnBridgeSource$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-bridge-source-priority-property-builder
   "The build-cfn-bridge-source-priority-property-builder function updates a CfnBridge$SourcePriorityProperty$Builder instance using the provided configuration.
   The function takes the CfnBridge$SourcePriorityProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -473,6 +569,12 @@
   (when-let [data (lookup-entry config id :primary-source)]
     (. builder primarySource data))
   (.build builder))
+
+
+(defn cfn-bridge-source-priority-property-builder
+  ""
+  [id config]
+  (build-cfn-bridge-source-priority-property-builder (new CfnBridge$SourcePriorityProperty$Builder) id config))
 
 
 (defn build-cfn-bridge-source-props-builder
@@ -501,6 +603,12 @@
   (.build builder))
 
 
+(defn cfn-bridge-source-props-builder
+  ""
+  [id config]
+  (build-cfn-bridge-source-props-builder (new CfnBridgeSourceProps$Builder) id config))
+
+
 (defn build-cfn-bridge-source-vpc-interface-attachment-property-builder
   "The build-cfn-bridge-source-vpc-interface-attachment-property-builder function updates a CfnBridgeSource$VpcInterfaceAttachmentProperty$Builder instance using the provided configuration.
   The function takes the CfnBridgeSource$VpcInterfaceAttachmentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -518,6 +626,12 @@
   (.build builder))
 
 
+(defn cfn-bridge-source-vpc-interface-attachment-property-builder
+  ""
+  [id config]
+  (build-cfn-bridge-source-vpc-interface-attachment-property-builder (new CfnBridgeSource$VpcInterfaceAttachmentProperty$Builder) id config))
+
+
 (defn build-cfn-bridge-vpc-interface-attachment-property-builder
   "The build-cfn-bridge-vpc-interface-attachment-property-builder function updates a CfnBridge$VpcInterfaceAttachmentProperty$Builder instance using the provided configuration.
   The function takes the CfnBridge$VpcInterfaceAttachmentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -533,6 +647,12 @@
   (when-let [data (lookup-entry config id :vpc-interface-name)]
     (. builder vpcInterfaceName data))
   (.build builder))
+
+
+(defn cfn-bridge-vpc-interface-attachment-property-builder
+  ""
+  [id config]
+  (build-cfn-bridge-vpc-interface-attachment-property-builder (new CfnBridge$VpcInterfaceAttachmentProperty$Builder) id config))
 
 
 (defn build-cfn-flow-builder
@@ -568,6 +688,12 @@
   (when-let [data (lookup-entry config id :vpc-interfaces)]
     (. builder vpcInterfaces data))
   (.build builder))
+
+
+(defn cfn-flow-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-flow-builder (CfnFlow$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-flow-encryption-property-builder
@@ -611,6 +737,12 @@
   (.build builder))
 
 
+(defn cfn-flow-encryption-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-encryption-property-builder (new CfnFlow$EncryptionProperty$Builder) id config))
+
+
 (defn build-cfn-flow-entitlement-builder
   "The build-cfn-flow-entitlement-builder function updates a CfnFlowEntitlement$Builder instance using the provided configuration.
   The function takes the CfnFlowEntitlement$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -644,6 +776,12 @@
   (when-let [data (lookup-entry config id :subscribers)]
     (. builder subscribers data))
   (.build builder))
+
+
+(defn cfn-flow-entitlement-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-flow-entitlement-builder (CfnFlowEntitlement$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-flow-entitlement-encryption-property-builder
@@ -687,6 +825,12 @@
   (.build builder))
 
 
+(defn cfn-flow-entitlement-encryption-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-entitlement-encryption-property-builder (new CfnFlowEntitlement$EncryptionProperty$Builder) id config))
+
+
 (defn build-cfn-flow-entitlement-props-builder
   "The build-cfn-flow-entitlement-props-builder function updates a CfnFlowEntitlementProps$Builder instance using the provided configuration.
   The function takes the CfnFlowEntitlementProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -722,6 +866,12 @@
   (.build builder))
 
 
+(defn cfn-flow-entitlement-props-builder
+  ""
+  [id config]
+  (build-cfn-flow-entitlement-props-builder (new CfnFlowEntitlementProps$Builder) id config))
+
+
 (defn build-cfn-flow-failover-config-property-builder
   "The build-cfn-flow-failover-config-property-builder function updates a CfnFlow$FailoverConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$FailoverConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -746,6 +896,12 @@
   (when-let [data (lookup-entry config id :state)]
     (. builder state data))
   (.build builder))
+
+
+(defn cfn-flow-failover-config-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-failover-config-property-builder (new CfnFlow$FailoverConfigProperty$Builder) id config))
 
 
 (defn build-cfn-flow-fmtp-property-builder
@@ -783,6 +939,12 @@
   (.build builder))
 
 
+(defn cfn-flow-fmtp-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-fmtp-property-builder (new CfnFlow$FmtpProperty$Builder) id config))
+
+
 (defn build-cfn-flow-gateway-bridge-source-property-builder
   "The build-cfn-flow-gateway-bridge-source-property-builder function updates a CfnFlow$GatewayBridgeSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$GatewayBridgeSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -801,6 +963,12 @@
   (when-let [data (lookup-entry config id :vpc-interface-attachment)]
     (. builder vpcInterfaceAttachment data))
   (.build builder))
+
+
+(defn cfn-flow-gateway-bridge-source-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-gateway-bridge-source-property-builder (new CfnFlow$GatewayBridgeSourceProperty$Builder) id config))
 
 
 (defn build-cfn-flow-input-configuration-property-builder
@@ -823,6 +991,12 @@
   (.build builder))
 
 
+(defn cfn-flow-input-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-input-configuration-property-builder (new CfnFlow$InputConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-flow-interface-property-builder
   "The build-cfn-flow-interface-property-builder function updates a CfnFlow$InterfaceProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$InterfaceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -838,6 +1012,12 @@
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-flow-interface-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-interface-property-builder (new CfnFlow$InterfaceProperty$Builder) id config))
 
 
 (defn build-cfn-flow-maintenance-property-builder
@@ -860,6 +1040,12 @@
   (.build builder))
 
 
+(defn cfn-flow-maintenance-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-maintenance-property-builder (new CfnFlow$MaintenanceProperty$Builder) id config))
+
+
 (defn build-cfn-flow-media-stream-attributes-property-builder
   "The build-cfn-flow-media-stream-attributes-property-builder function updates a CfnFlow$MediaStreamAttributesProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$MediaStreamAttributesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -878,6 +1064,12 @@
   (when-let [data (lookup-entry config id :lang)]
     (. builder lang data))
   (.build builder))
+
+
+(defn cfn-flow-media-stream-attributes-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-media-stream-attributes-property-builder (new CfnFlow$MediaStreamAttributesProperty$Builder) id config))
 
 
 (defn build-cfn-flow-media-stream-property-builder
@@ -918,6 +1110,12 @@
   (.build builder))
 
 
+(defn cfn-flow-media-stream-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-media-stream-property-builder (new CfnFlow$MediaStreamProperty$Builder) id config))
+
+
 (defn build-cfn-flow-media-stream-source-configuration-property-builder
   "The build-cfn-flow-media-stream-source-configuration-property-builder function updates a CfnFlow$MediaStreamSourceConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$MediaStreamSourceConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -939,6 +1137,12 @@
   (when-let [data (lookup-entry config id :media-stream-name)]
     (. builder mediaStreamName data))
   (.build builder))
+
+
+(defn cfn-flow-media-stream-source-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-media-stream-source-configuration-property-builder (new CfnFlow$MediaStreamSourceConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-flow-output-builder
@@ -1000,6 +1204,12 @@
   (.build builder))
 
 
+(defn cfn-flow-output-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-flow-output-builder (CfnFlowOutput$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-flow-output-destination-configuration-property-builder
   "The build-cfn-flow-output-destination-configuration-property-builder function updates a CfnFlowOutput$DestinationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnFlowOutput$DestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1023,6 +1233,12 @@
   (.build builder))
 
 
+(defn cfn-flow-output-destination-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-output-destination-configuration-property-builder (new CfnFlowOutput$DestinationConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-flow-output-encoding-parameters-property-builder
   "The build-cfn-flow-output-encoding-parameters-property-builder function updates a CfnFlowOutput$EncodingParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnFlowOutput$EncodingParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1041,6 +1257,12 @@
   (when-let [data (lookup-entry config id :encoder-profile)]
     (. builder encoderProfile data))
   (.build builder))
+
+
+(defn cfn-flow-output-encoding-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-output-encoding-parameters-property-builder (new CfnFlowOutput$EncodingParametersProperty$Builder) id config))
 
 
 (defn build-cfn-flow-output-encryption-property-builder
@@ -1069,6 +1291,12 @@
   (.build builder))
 
 
+(defn cfn-flow-output-encryption-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-output-encryption-property-builder (new CfnFlowOutput$EncryptionProperty$Builder) id config))
+
+
 (defn build-cfn-flow-output-interface-property-builder
   "The build-cfn-flow-output-interface-property-builder function updates a CfnFlowOutput$InterfaceProperty$Builder instance using the provided configuration.
   The function takes the CfnFlowOutput$InterfaceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1084,6 +1312,12 @@
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-flow-output-interface-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-output-interface-property-builder (new CfnFlowOutput$InterfaceProperty$Builder) id config))
 
 
 (defn build-cfn-flow-output-media-stream-output-configuration-property-builder
@@ -1110,6 +1344,12 @@
   (when-let [data (lookup-entry config id :media-stream-name)]
     (. builder mediaStreamName data))
   (.build builder))
+
+
+(defn cfn-flow-output-media-stream-output-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-output-media-stream-output-configuration-property-builder (new CfnFlowOutput$MediaStreamOutputConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-flow-output-props-builder
@@ -1171,6 +1411,12 @@
   (.build builder))
 
 
+(defn cfn-flow-output-props-builder
+  ""
+  [id config]
+  (build-cfn-flow-output-props-builder (new CfnFlowOutputProps$Builder) id config))
+
+
 (defn build-cfn-flow-output-vpc-interface-attachment-property-builder
   "The build-cfn-flow-output-vpc-interface-attachment-property-builder function updates a CfnFlowOutput$VpcInterfaceAttachmentProperty$Builder instance using the provided configuration.
   The function takes the CfnFlowOutput$VpcInterfaceAttachmentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1186,6 +1432,12 @@
   (when-let [data (lookup-entry config id :vpc-interface-name)]
     (. builder vpcInterfaceName data))
   (.build builder))
+
+
+(defn cfn-flow-output-vpc-interface-attachment-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-output-vpc-interface-attachment-property-builder (new CfnFlowOutput$VpcInterfaceAttachmentProperty$Builder) id config))
 
 
 (defn build-cfn-flow-props-builder
@@ -1221,6 +1473,12 @@
   (when-let [data (lookup-entry config id :vpc-interfaces)]
     (. builder vpcInterfaces data))
   (.build builder))
+
+
+(defn cfn-flow-props-builder
+  ""
+  [id config]
+  (build-cfn-flow-props-builder (new CfnFlowProps$Builder) id config))
 
 
 (defn build-cfn-flow-source-builder
@@ -1291,6 +1549,12 @@
   (.build builder))
 
 
+(defn cfn-flow-source-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-flow-source-builder (CfnFlowSource$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-flow-source-encryption-property-builder
   "The build-cfn-flow-source-encryption-property-builder function updates a CfnFlowSource$EncryptionProperty$Builder instance using the provided configuration.
   The function takes the CfnFlowSource$EncryptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1332,6 +1596,12 @@
   (.build builder))
 
 
+(defn cfn-flow-source-encryption-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-source-encryption-property-builder (new CfnFlowSource$EncryptionProperty$Builder) id config))
+
+
 (defn build-cfn-flow-source-gateway-bridge-source-property-builder
   "The build-cfn-flow-source-gateway-bridge-source-property-builder function updates a CfnFlowSource$GatewayBridgeSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnFlowSource$GatewayBridgeSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1352,6 +1622,12 @@
   (.build builder))
 
 
+(defn cfn-flow-source-gateway-bridge-source-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-source-gateway-bridge-source-property-builder (new CfnFlowSource$GatewayBridgeSourceProperty$Builder) id config))
+
+
 (defn build-cfn-flow-source-priority-property-builder
   "The build-cfn-flow-source-priority-property-builder function updates a CfnFlow$SourcePriorityProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$SourcePriorityProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1367,6 +1643,12 @@
   (when-let [data (lookup-entry config id :primary-source)]
     (. builder primarySource data))
   (.build builder))
+
+
+(defn cfn-flow-source-priority-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-source-priority-property-builder (new CfnFlow$SourcePriorityProperty$Builder) id config))
 
 
 (defn build-cfn-flow-source-property-builder
@@ -1449,6 +1731,12 @@
   (.build builder))
 
 
+(defn cfn-flow-source-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-source-property-builder (new CfnFlow$SourceProperty$Builder) id config))
+
+
 (defn build-cfn-flow-source-props-builder
   "The build-cfn-flow-source-props-builder function updates a CfnFlowSourceProps$Builder instance using the provided configuration.
   The function takes the CfnFlowSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1517,6 +1805,12 @@
   (.build builder))
 
 
+(defn cfn-flow-source-props-builder
+  ""
+  [id config]
+  (build-cfn-flow-source-props-builder (new CfnFlowSourceProps$Builder) id config))
+
+
 (defn build-cfn-flow-source-vpc-interface-attachment-property-builder
   "The build-cfn-flow-source-vpc-interface-attachment-property-builder function updates a CfnFlowSource$VpcInterfaceAttachmentProperty$Builder instance using the provided configuration.
   The function takes the CfnFlowSource$VpcInterfaceAttachmentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1534,6 +1828,12 @@
   (.build builder))
 
 
+(defn cfn-flow-source-vpc-interface-attachment-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-source-vpc-interface-attachment-property-builder (new CfnFlowSource$VpcInterfaceAttachmentProperty$Builder) id config))
+
+
 (defn build-cfn-flow-vpc-interface-attachment-property-builder
   "The build-cfn-flow-vpc-interface-attachment-property-builder function updates a CfnFlow$VpcInterfaceAttachmentProperty$Builder instance using the provided configuration.
   The function takes the CfnFlow$VpcInterfaceAttachmentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1549,6 +1849,12 @@
   (when-let [data (lookup-entry config id :vpc-interface-name)]
     (. builder vpcInterfaceName data))
   (.build builder))
+
+
+(defn cfn-flow-vpc-interface-attachment-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-vpc-interface-attachment-property-builder (new CfnFlow$VpcInterfaceAttachmentProperty$Builder) id config))
 
 
 (defn build-cfn-flow-vpc-interface-builder
@@ -1578,6 +1884,12 @@
   (when-let [data (lookup-entry config id :subnet-id)]
     (. builder subnetId data))
   (.build builder))
+
+
+(defn cfn-flow-vpc-interface-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-flow-vpc-interface-builder (CfnFlowVpcInterface$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-flow-vpc-interface-property-builder
@@ -1612,6 +1924,12 @@
   (.build builder))
 
 
+(defn cfn-flow-vpc-interface-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-vpc-interface-property-builder (new CfnFlow$VpcInterfaceProperty$Builder) id config))
+
+
 (defn build-cfn-flow-vpc-interface-props-builder
   "The build-cfn-flow-vpc-interface-props-builder function updates a CfnFlowVpcInterfaceProps$Builder instance using the provided configuration.
   The function takes the CfnFlowVpcInterfaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1641,6 +1959,12 @@
   (.build builder))
 
 
+(defn cfn-flow-vpc-interface-props-builder
+  ""
+  [id config]
+  (build-cfn-flow-vpc-interface-props-builder (new CfnFlowVpcInterfaceProps$Builder) id config))
+
+
 (defn build-cfn-gateway-builder
   "The build-cfn-gateway-builder function updates a CfnGateway$Builder instance using the provided configuration.
   The function takes the CfnGateway$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1664,6 +1988,12 @@
   (.build builder))
 
 
+(defn cfn-gateway-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-gateway-builder (CfnGateway$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-gateway-gateway-network-property-builder
   "The build-cfn-gateway-gateway-network-property-builder function updates a CfnGateway$GatewayNetworkProperty$Builder instance using the provided configuration.
   The function takes the CfnGateway$GatewayNetworkProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1682,6 +2012,12 @@
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-gateway-gateway-network-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-gateway-network-property-builder (new CfnGateway$GatewayNetworkProperty$Builder) id config))
 
 
 (defn build-cfn-gateway-props-builder
@@ -1705,3 +2041,9 @@
   (when-let [data (lookup-entry config id :networks)]
     (. builder networks data))
   (.build builder))
+
+
+(defn cfn-gateway-props-builder
+  ""
+  [id config]
+  (build-cfn-gateway-props-builder (new CfnGatewayProps$Builder) id config))

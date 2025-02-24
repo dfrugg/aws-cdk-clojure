@@ -48,6 +48,12 @@
   (.build builder))
 
 
+(defn cfn-browser-settings-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-browser-settings-builder (CfnBrowserSettings$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-browser-settings-props-builder
   "The build-cfn-browser-settings-props-builder function updates a CfnBrowserSettingsProps$Builder instance using the provided configuration.
   The function takes the CfnBrowserSettingsProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -72,6 +78,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-browser-settings-props-builder
+  ""
+  [id config]
+  (build-cfn-browser-settings-props-builder (new CfnBrowserSettingsProps$Builder) id config))
 
 
 (defn build-cfn-identity-provider-builder
@@ -100,6 +112,12 @@
   (.build builder))
 
 
+(defn cfn-identity-provider-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-identity-provider-builder (CfnIdentityProvider$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-identity-provider-props-builder
   "The build-cfn-identity-provider-props-builder function updates a CfnIdentityProviderProps$Builder instance using the provided configuration.
   The function takes the CfnIdentityProviderProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -124,6 +142,12 @@
   (when-let [data (lookup-entry config id :portal-arn)]
     (. builder portalArn data))
   (.build builder))
+
+
+(defn cfn-identity-provider-props-builder
+  ""
+  [id config]
+  (build-cfn-identity-provider-props-builder (new CfnIdentityProviderProps$Builder) id config))
 
 
 (defn build-cfn-ip-access-settings-builder
@@ -158,6 +182,12 @@
   (.build builder))
 
 
+(defn cfn-ip-access-settings-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-ip-access-settings-builder (CfnIpAccessSettings$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-ip-access-settings-ip-rule-property-builder
   "The build-cfn-ip-access-settings-ip-rule-property-builder function updates a CfnIpAccessSettings$IpRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnIpAccessSettings$IpRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -176,6 +206,12 @@
   (when-let [data (lookup-entry config id :ip-range)]
     (. builder ipRange data))
   (.build builder))
+
+
+(defn cfn-ip-access-settings-ip-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-ip-access-settings-ip-rule-property-builder (new CfnIpAccessSettings$IpRuleProperty$Builder) id config))
 
 
 (defn build-cfn-ip-access-settings-props-builder
@@ -210,6 +246,12 @@
   (.build builder))
 
 
+(defn cfn-ip-access-settings-props-builder
+  ""
+  [id config]
+  (build-cfn-ip-access-settings-props-builder (new CfnIpAccessSettingsProps$Builder) id config))
+
+
 (defn build-cfn-network-settings-builder
   "The build-cfn-network-settings-builder function updates a CfnNetworkSettings$Builder instance using the provided configuration.
   The function takes the CfnNetworkSettings$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -236,6 +278,12 @@
   (.build builder))
 
 
+(defn cfn-network-settings-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-network-settings-builder (CfnNetworkSettings$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-network-settings-props-builder
   "The build-cfn-network-settings-props-builder function updates a CfnNetworkSettingsProps$Builder instance using the provided configuration.
   The function takes the CfnNetworkSettingsProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -260,6 +308,12 @@
   (when-let [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
+
+
+(defn cfn-network-settings-props-builder
+  ""
+  [id config]
+  (build-cfn-network-settings-props-builder (new CfnNetworkSettingsProps$Builder) id config))
 
 
 (defn build-cfn-portal-builder
@@ -315,6 +369,12 @@
   (.build builder))
 
 
+(defn cfn-portal-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-portal-builder (CfnPortal$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-portal-props-builder
   "The build-cfn-portal-props-builder function updates a CfnPortalProps$Builder instance using the provided configuration.
   The function takes the CfnPortalProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -368,6 +428,12 @@
   (.build builder))
 
 
+(defn cfn-portal-props-builder
+  ""
+  [id config]
+  (build-cfn-portal-props-builder (new CfnPortalProps$Builder) id config))
+
+
 (defn build-cfn-trust-store-builder
   "The build-cfn-trust-store-builder function updates a CfnTrustStore$Builder instance using the provided configuration.
   The function takes the CfnTrustStore$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -386,6 +452,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-trust-store-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-trust-store-builder (CfnTrustStore$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-trust-store-props-builder
@@ -408,6 +480,12 @@
   (.build builder))
 
 
+(defn cfn-trust-store-props-builder
+  ""
+  [id config]
+  (build-cfn-trust-store-props-builder (new CfnTrustStoreProps$Builder) id config))
+
+
 (defn build-cfn-user-access-logging-settings-builder
   "The build-cfn-user-access-logging-settings-builder function updates a CfnUserAccessLoggingSettings$Builder instance using the provided configuration.
   The function takes the CfnUserAccessLoggingSettings$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -428,6 +506,12 @@
   (.build builder))
 
 
+(defn cfn-user-access-logging-settings-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-user-access-logging-settings-builder (CfnUserAccessLoggingSettings$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-user-access-logging-settings-props-builder
   "The build-cfn-user-access-logging-settings-props-builder function updates a CfnUserAccessLoggingSettingsProps$Builder instance using the provided configuration.
   The function takes the CfnUserAccessLoggingSettingsProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -446,6 +530,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-user-access-logging-settings-props-builder
+  ""
+  [id config]
+  (build-cfn-user-access-logging-settings-props-builder (new CfnUserAccessLoggingSettingsProps$Builder) id config))
 
 
 (defn build-cfn-user-settings-builder
@@ -495,6 +585,12 @@
   (.build builder))
 
 
+(defn cfn-user-settings-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-user-settings-builder (CfnUserSettings$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-user-settings-cookie-specification-property-builder
   "The build-cfn-user-settings-cookie-specification-property-builder function updates a CfnUserSettings$CookieSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnUserSettings$CookieSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -518,6 +614,12 @@
   (.build builder))
 
 
+(defn cfn-user-settings-cookie-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-user-settings-cookie-specification-property-builder (new CfnUserSettings$CookieSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-user-settings-cookie-synchronization-configuration-property-builder
   "The build-cfn-user-settings-cookie-synchronization-configuration-property-builder function updates a CfnUserSettings$CookieSynchronizationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnUserSettings$CookieSynchronizationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -536,6 +638,12 @@
   (when-let [data (lookup-entry config id :blocklist)]
     (. builder blocklist data))
   (.build builder))
+
+
+(defn cfn-user-settings-cookie-synchronization-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-user-settings-cookie-synchronization-configuration-property-builder (new CfnUserSettings$CookieSynchronizationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-user-settings-props-builder
@@ -583,3 +691,9 @@
   (when-let [data (lookup-entry config id :upload-allowed)]
     (. builder uploadAllowed data))
   (.build builder))
+
+
+(defn cfn-user-settings-props-builder
+  ""
+  [id config]
+  (build-cfn-user-settings-props-builder (new CfnUserSettingsProps$Builder) id config))

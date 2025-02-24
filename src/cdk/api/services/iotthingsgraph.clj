@@ -26,6 +26,12 @@
   (.build builder))
 
 
+(defn cfn-flow-template-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-flow-template-builder (CfnFlowTemplate$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-flow-template-definition-document-property-builder
   "The build-cfn-flow-template-definition-document-property-builder function updates a CfnFlowTemplate$DefinitionDocumentProperty$Builder instance using the provided configuration.
   The function takes the CfnFlowTemplate$DefinitionDocumentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -46,6 +52,12 @@
   (.build builder))
 
 
+(defn cfn-flow-template-definition-document-property-builder
+  ""
+  [id config]
+  (build-cfn-flow-template-definition-document-property-builder (new CfnFlowTemplate$DefinitionDocumentProperty$Builder) id config))
+
+
 (defn build-cfn-flow-template-props-builder
   "The build-cfn-flow-template-props-builder function updates a CfnFlowTemplateProps$Builder instance using the provided configuration.
   The function takes the CfnFlowTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -64,3 +76,9 @@
   (when-let [data (lookup-entry config id :definition)]
     (. builder definition data))
   (.build builder))
+
+
+(defn cfn-flow-template-props-builder
+  ""
+  [id config]
+  (build-cfn-flow-template-props-builder (new CfnFlowTemplateProps$Builder) id config))

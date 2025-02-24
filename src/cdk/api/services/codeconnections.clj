@@ -31,6 +31,12 @@
   (.build builder))
 
 
+(defn cfn-connection-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-connection-builder (CfnConnection$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-connection-props-builder
   "The build-cfn-connection-props-builder function updates a CfnConnectionProps$Builder instance using the provided configuration.
   The function takes the CfnConnectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -55,3 +61,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-connection-props-builder
+  ""
+  [id config]
+  (build-cfn-connection-props-builder (new CfnConnectionProps$Builder) id config))

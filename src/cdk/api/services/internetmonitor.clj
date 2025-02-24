@@ -59,6 +59,12 @@
   (.build builder))
 
 
+(defn cfn-monitor-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-monitor-builder (CfnMonitor$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-monitor-health-events-config-property-builder
   "The build-cfn-monitor-health-events-config-property-builder function updates a CfnMonitor$HealthEventsConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnMonitor$HealthEventsConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -85,6 +91,12 @@
   (.build builder))
 
 
+(defn cfn-monitor-health-events-config-property-builder
+  ""
+  [id config]
+  (build-cfn-monitor-health-events-config-property-builder (new CfnMonitor$HealthEventsConfigProperty$Builder) id config))
+
+
 (defn build-cfn-monitor-internet-measurements-log-delivery-property-builder
   "The build-cfn-monitor-internet-measurements-log-delivery-property-builder function updates a CfnMonitor$InternetMeasurementsLogDeliveryProperty$Builder instance using the provided configuration.
   The function takes the CfnMonitor$InternetMeasurementsLogDeliveryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -100,6 +112,12 @@
   (when-let [data (lookup-entry config id :s3-config)]
     (. builder s3Config data))
   (.build builder))
+
+
+(defn cfn-monitor-internet-measurements-log-delivery-property-builder
+  ""
+  [id config]
+  (build-cfn-monitor-internet-measurements-log-delivery-property-builder (new CfnMonitor$InternetMeasurementsLogDeliveryProperty$Builder) id config))
 
 
 (defn build-cfn-monitor-local-health-events-config-property-builder
@@ -123,6 +141,12 @@
   (when-let [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
+
+
+(defn cfn-monitor-local-health-events-config-property-builder
+  ""
+  [id config]
+  (build-cfn-monitor-local-health-events-config-property-builder (new CfnMonitor$LocalHealthEventsConfigProperty$Builder) id config))
 
 
 (defn build-cfn-monitor-props-builder
@@ -175,6 +199,12 @@
   (.build builder))
 
 
+(defn cfn-monitor-props-builder
+  ""
+  [id config]
+  (build-cfn-monitor-props-builder (new CfnMonitorProps$Builder) id config))
+
+
 (defn build-cfn-monitor-s3-config-property-builder
   "The build-cfn-monitor-s3-config-property-builder function updates a CfnMonitor$S3ConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnMonitor$S3ConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -196,3 +226,9 @@
   (when-let [data (lookup-entry config id :log-delivery-status)]
     (. builder logDeliveryStatus data))
   (.build builder))
+
+
+(defn cfn-monitor-s3-config-property-builder
+  ""
+  [id config]
+  (build-cfn-monitor-s3-config-property-builder (new CfnMonitor$S3ConfigProperty$Builder) id config))

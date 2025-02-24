@@ -33,6 +33,12 @@
   (.build builder))
 
 
+(defn cfn-permission-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-permission-builder (CfnPermission$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-permission-props-builder
   "The build-cfn-permission-props-builder function updates a CfnPermissionProps$Builder instance using the provided configuration.
   The function takes the CfnPermissionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -57,6 +63,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-permission-props-builder
+  ""
+  [id config]
+  (build-cfn-permission-props-builder (new CfnPermissionProps$Builder) id config))
 
 
 (defn build-cfn-resource-share-builder
@@ -94,6 +106,12 @@
   (.build builder))
 
 
+(defn cfn-resource-share-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-resource-share-builder (CfnResourceShare$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-resource-share-props-builder
   "The build-cfn-resource-share-props-builder function updates a CfnResourceShareProps$Builder instance using the provided configuration.
   The function takes the CfnResourceShareProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -127,3 +145,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-resource-share-props-builder
+  ""
+  [id config]
+  (build-cfn-resource-share-props-builder (new CfnResourceShareProps$Builder) id config))

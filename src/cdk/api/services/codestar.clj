@@ -45,6 +45,12 @@
   (.build builder))
 
 
+(defn cfn-git-hub-repository-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-git-hub-repository-builder (CfnGitHubRepository$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-git-hub-repository-code-property-builder
   "The build-cfn-git-hub-repository-code-property-builder function updates a CfnGitHubRepository$CodeProperty$Builder instance using the provided configuration.
   The function takes the CfnGitHubRepository$CodeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -60,6 +66,12 @@
   (when-let [data (lookup-entry config id :s3)]
     (. builder s3 data))
   (.build builder))
+
+
+(defn cfn-git-hub-repository-code-property-builder
+  ""
+  [id config]
+  (build-cfn-git-hub-repository-code-property-builder (new CfnGitHubRepository$CodeProperty$Builder) id config))
 
 
 (defn build-cfn-git-hub-repository-props-builder
@@ -100,6 +112,12 @@
   (.build builder))
 
 
+(defn cfn-git-hub-repository-props-builder
+  ""
+  [id config]
+  (build-cfn-git-hub-repository-props-builder (new CfnGitHubRepositoryProps$Builder) id config))
+
+
 (defn build-cfn-git-hub-repository-s3-property-builder
   "The build-cfn-git-hub-repository-s3-property-builder function updates a CfnGitHubRepository$S3Property$Builder instance using the provided configuration.
   The function takes the CfnGitHubRepository$S3Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -121,3 +139,9 @@
   (when-let [data (lookup-entry config id :object-version)]
     (. builder objectVersion data))
   (.build builder))
+
+
+(defn cfn-git-hub-repository-s3-property-builder
+  ""
+  [id config]
+  (build-cfn-git-hub-repository-s3-property-builder (new CfnGitHubRepository$S3Property$Builder) id config))

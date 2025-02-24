@@ -67,6 +67,12 @@
   (.build builder))
 
 
+(defn email-subscription-props-builder
+  ""
+  [id config]
+  (build-email-subscription-props-builder (new EmailSubscriptionProps$Builder) id config))
+
+
 (defn build-lambda-subscription-builder
   "The build-lambda-subscription-builder function updates a LambdaSubscription$Builder instance using the provided configuration.
   The function takes the LambdaSubscription$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -113,6 +119,12 @@
   (.build builder))
 
 
+(defn lambda-subscription-props-builder
+  ""
+  [id config]
+  (build-lambda-subscription-props-builder (new LambdaSubscriptionProps$Builder) id config))
+
+
 (defn build-sms-subscription-builder
   "The build-sms-subscription-builder function updates a SmsSubscription$Builder instance using the provided configuration.
   The function takes the SmsSubscription$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -157,6 +169,12 @@
   (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
     (. builder filterPolicyWithMessageBody data))
   (.build builder))
+
+
+(defn sms-subscription-props-builder
+  ""
+  [id config]
+  (build-sms-subscription-props-builder (new SmsSubscriptionProps$Builder) id config))
 
 
 (defn build-sqs-subscription-builder
@@ -211,6 +229,12 @@
   (.build builder))
 
 
+(defn sqs-subscription-props-builder
+  ""
+  [id config]
+  (build-sqs-subscription-props-builder (new SqsSubscriptionProps$Builder) id config))
+
+
 (defn build-subscription-props-builder
   "The build-subscription-props-builder function updates a SubscriptionProps$Builder instance using the provided configuration.
   The function takes the SubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -232,6 +256,12 @@
   (when-let [data (lookup-entry config id :filter-policy-with-message-body)]
     (. builder filterPolicyWithMessageBody data))
   (.build builder))
+
+
+(defn subscription-props-builder
+  ""
+  [id config]
+  (build-subscription-props-builder (new SubscriptionProps$Builder) id config))
 
 
 (defn build-url-subscription-builder
@@ -290,3 +320,9 @@
   (when-let [data (lookup-entry config id :raw-message-delivery)]
     (. builder rawMessageDelivery data))
   (.build builder))
+
+
+(defn url-subscription-props-builder
+  ""
+  [id config]
+  (build-url-subscription-props-builder (new UrlSubscriptionProps$Builder) id config))

@@ -53,6 +53,12 @@
   (.build builder))
 
 
+(defn cfn-experiment-template-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-experiment-template-builder (CfnExperimentTemplate$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-experiment-template-cloud-watch-logs-configuration-property-builder
   "The build-cfn-experiment-template-cloud-watch-logs-configuration-property-builder function updates a CfnExperimentTemplate$CloudWatchLogsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnExperimentTemplate$CloudWatchLogsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -68,6 +74,12 @@
   (when-let [data (lookup-entry config id :log-group-arn)]
     (. builder logGroupArn data))
   (.build builder))
+
+
+(defn cfn-experiment-template-cloud-watch-logs-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-experiment-template-cloud-watch-logs-configuration-property-builder (new CfnExperimentTemplate$CloudWatchLogsConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-experiment-template-experiment-template-action-property-builder
@@ -99,6 +111,12 @@
   (.build builder))
 
 
+(defn cfn-experiment-template-experiment-template-action-property-builder
+  ""
+  [id config]
+  (build-cfn-experiment-template-experiment-template-action-property-builder (new CfnExperimentTemplate$ExperimentTemplateActionProperty$Builder) id config))
+
+
 (defn build-cfn-experiment-template-experiment-template-experiment-options-property-builder
   "The build-cfn-experiment-template-experiment-template-experiment-options-property-builder function updates a CfnExperimentTemplate$ExperimentTemplateExperimentOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnExperimentTemplate$ExperimentTemplateExperimentOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -117,6 +135,12 @@
   (when-let [data (lookup-entry config id :empty-target-resolution-mode)]
     (. builder emptyTargetResolutionMode data))
   (.build builder))
+
+
+(defn cfn-experiment-template-experiment-template-experiment-options-property-builder
+  ""
+  [id config]
+  (build-cfn-experiment-template-experiment-template-experiment-options-property-builder (new CfnExperimentTemplate$ExperimentTemplateExperimentOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-experiment-template-experiment-template-log-configuration-property-builder
@@ -142,6 +166,12 @@
   (.build builder))
 
 
+(defn cfn-experiment-template-experiment-template-log-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-experiment-template-experiment-template-log-configuration-property-builder (new CfnExperimentTemplate$ExperimentTemplateLogConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-experiment-template-experiment-template-stop-condition-property-builder
   "The build-cfn-experiment-template-experiment-template-stop-condition-property-builder function updates a CfnExperimentTemplate$ExperimentTemplateStopConditionProperty$Builder instance using the provided configuration.
   The function takes the CfnExperimentTemplate$ExperimentTemplateStopConditionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -162,6 +192,12 @@
   (.build builder))
 
 
+(defn cfn-experiment-template-experiment-template-stop-condition-property-builder
+  ""
+  [id config]
+  (build-cfn-experiment-template-experiment-template-stop-condition-property-builder (new CfnExperimentTemplate$ExperimentTemplateStopConditionProperty$Builder) id config))
+
+
 (defn build-cfn-experiment-template-experiment-template-target-filter-property-builder
   "The build-cfn-experiment-template-experiment-template-target-filter-property-builder function updates a CfnExperimentTemplate$ExperimentTemplateTargetFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnExperimentTemplate$ExperimentTemplateTargetFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -180,6 +216,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-experiment-template-experiment-template-target-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-experiment-template-experiment-template-target-filter-property-builder (new CfnExperimentTemplate$ExperimentTemplateTargetFilterProperty$Builder) id config))
 
 
 (defn build-cfn-experiment-template-experiment-template-target-property-builder
@@ -212,6 +254,12 @@
   (when-let [data (lookup-entry config id :selection-mode)]
     (. builder selectionMode data))
   (.build builder))
+
+
+(defn cfn-experiment-template-experiment-template-target-property-builder
+  ""
+  [id config]
+  (build-cfn-experiment-template-experiment-template-target-property-builder (new CfnExperimentTemplate$ExperimentTemplateTargetProperty$Builder) id config))
 
 
 (defn build-cfn-experiment-template-props-builder
@@ -252,6 +300,12 @@
   (.build builder))
 
 
+(defn cfn-experiment-template-props-builder
+  ""
+  [id config]
+  (build-cfn-experiment-template-props-builder (new CfnExperimentTemplateProps$Builder) id config))
+
+
 (defn build-cfn-experiment-template-s3-configuration-property-builder
   "The build-cfn-experiment-template-s3-configuration-property-builder function updates a CfnExperimentTemplate$S3ConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnExperimentTemplate$S3ConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -270,6 +324,12 @@
   (when-let [data (lookup-entry config id :prefix)]
     (. builder prefix data))
   (.build builder))
+
+
+(defn cfn-experiment-template-s3-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-experiment-template-s3-configuration-property-builder (new CfnExperimentTemplate$S3ConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-target-account-configuration-builder
@@ -298,6 +358,12 @@
   (.build builder))
 
 
+(defn cfn-target-account-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-target-account-configuration-builder (CfnTargetAccountConfiguration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-target-account-configuration-props-builder
   "The build-cfn-target-account-configuration-props-builder function updates a CfnTargetAccountConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnTargetAccountConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -322,3 +388,9 @@
   (when-let [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
+
+
+(defn cfn-target-account-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-target-account-configuration-props-builder (new CfnTargetAccountConfigurationProps$Builder) id config))

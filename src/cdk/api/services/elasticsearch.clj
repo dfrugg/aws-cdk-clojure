@@ -44,6 +44,12 @@
   (.build builder))
 
 
+(defn cfn-domain-advanced-security-options-input-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-advanced-security-options-input-property-builder (new CfnDomain$AdvancedSecurityOptionsInputProperty$Builder) id config))
+
+
 (defn build-cfn-domain-builder
   "The build-cfn-domain-builder function updates a CfnDomain$Builder instance using the provided configuration.
   The function takes the CfnDomain$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -106,6 +112,12 @@
   (.build builder))
 
 
+(defn cfn-domain-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-domain-builder (CfnDomain$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-domain-cognito-options-property-builder
   "The build-cfn-domain-cognito-options-property-builder function updates a CfnDomain$CognitoOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$CognitoOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -132,6 +144,12 @@
   (.build builder))
 
 
+(defn cfn-domain-cognito-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-cognito-options-property-builder (new CfnDomain$CognitoOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-domain-cold-storage-options-property-builder
   "The build-cfn-domain-cold-storage-options-property-builder function updates a CfnDomain$ColdStorageOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$ColdStorageOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -147,6 +165,12 @@
   (when-let [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
+
+
+(defn cfn-domain-cold-storage-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-cold-storage-options-property-builder (new CfnDomain$ColdStorageOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-domain-domain-endpoint-options-property-builder
@@ -178,6 +202,12 @@
   (.build builder))
 
 
+(defn cfn-domain-domain-endpoint-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-domain-endpoint-options-property-builder (new CfnDomain$DomainEndpointOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-domain-ebs-options-property-builder
   "The build-cfn-domain-ebs-options-property-builder function updates a CfnDomain$EBSOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$EBSOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -202,6 +232,12 @@
   (when-let [data (lookup-entry config id :volume-type)]
     (. builder volumeType data))
   (.build builder))
+
+
+(defn cfn-domain-ebs-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-ebs-options-property-builder (new CfnDomain$EBSOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-domain-elasticsearch-cluster-config-property-builder
@@ -251,6 +287,12 @@
   (.build builder))
 
 
+(defn cfn-domain-elasticsearch-cluster-config-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-elasticsearch-cluster-config-property-builder (new CfnDomain$ElasticsearchClusterConfigProperty$Builder) id config))
+
+
 (defn build-cfn-domain-encryption-at-rest-options-property-builder
   "The build-cfn-domain-encryption-at-rest-options-property-builder function updates a CfnDomain$EncryptionAtRestOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$EncryptionAtRestOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -271,6 +313,12 @@
   (.build builder))
 
 
+(defn cfn-domain-encryption-at-rest-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-encryption-at-rest-options-property-builder (new CfnDomain$EncryptionAtRestOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-domain-log-publishing-option-property-builder
   "The build-cfn-domain-log-publishing-option-property-builder function updates a CfnDomain$LogPublishingOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$LogPublishingOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -289,6 +337,12 @@
   (when-let [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
+
+
+(defn cfn-domain-log-publishing-option-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-log-publishing-option-property-builder (new CfnDomain$LogPublishingOptionProperty$Builder) id config))
 
 
 (defn build-cfn-domain-master-user-options-property-builder
@@ -314,6 +368,12 @@
   (.build builder))
 
 
+(defn cfn-domain-master-user-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-master-user-options-property-builder (new CfnDomain$MasterUserOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-domain-node-to-node-encryption-options-property-builder
   "The build-cfn-domain-node-to-node-encryption-options-property-builder function updates a CfnDomain$NodeToNodeEncryptionOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$NodeToNodeEncryptionOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -329,6 +389,12 @@
   (when-let [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
+
+
+(defn cfn-domain-node-to-node-encryption-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-node-to-node-encryption-options-property-builder (new CfnDomain$NodeToNodeEncryptionOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-domain-props-builder
@@ -393,6 +459,12 @@
   (.build builder))
 
 
+(defn cfn-domain-props-builder
+  ""
+  [id config]
+  (build-cfn-domain-props-builder (new CfnDomainProps$Builder) id config))
+
+
 (defn build-cfn-domain-snapshot-options-property-builder
   "The build-cfn-domain-snapshot-options-property-builder function updates a CfnDomain$SnapshotOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$SnapshotOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -408,6 +480,12 @@
   (when-let [data (lookup-entry config id :automated-snapshot-start-hour)]
     (. builder automatedSnapshotStartHour data))
   (.build builder))
+
+
+(defn cfn-domain-snapshot-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-snapshot-options-property-builder (new CfnDomain$SnapshotOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-domain-vpc-options-property-builder
@@ -430,6 +508,12 @@
   (.build builder))
 
 
+(defn cfn-domain-vpc-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-vpc-options-property-builder (new CfnDomain$VPCOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-domain-zone-awareness-config-property-builder
   "The build-cfn-domain-zone-awareness-config-property-builder function updates a CfnDomain$ZoneAwarenessConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$ZoneAwarenessConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -445,3 +529,9 @@
   (when-let [data (lookup-entry config id :availability-zone-count)]
     (. builder availabilityZoneCount data))
   (.build builder))
+
+
+(defn cfn-domain-zone-awareness-config-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-zone-awareness-config-property-builder (new CfnDomain$ZoneAwarenessConfigProperty$Builder) id config))

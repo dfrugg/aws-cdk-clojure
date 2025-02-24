@@ -33,6 +33,12 @@
   (.build builder))
 
 
+(defn cfn-signaling-channel-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-signaling-channel-builder (CfnSignalingChannel$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-signaling-channel-props-builder
   "The build-cfn-signaling-channel-props-builder function updates a CfnSignalingChannelProps$Builder instance using the provided configuration.
   The function takes the CfnSignalingChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -57,6 +63,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-signaling-channel-props-builder
+  ""
+  [id config]
+  (build-cfn-signaling-channel-props-builder (new CfnSignalingChannelProps$Builder) id config))
 
 
 (defn build-cfn-stream-builder
@@ -91,6 +103,12 @@
   (.build builder))
 
 
+(defn cfn-stream-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-stream-builder (CfnStream$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-stream-props-builder
   "The build-cfn-stream-props-builder function updates a CfnStreamProps$Builder instance using the provided configuration.
   The function takes the CfnStreamProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -121,3 +139,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-stream-props-builder
+  ""
+  [id config]
+  (build-cfn-stream-props-builder (new CfnStreamProps$Builder) id config))

@@ -54,6 +54,12 @@
   (.build builder))
 
 
+(defn cfn-configuration-set-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-configuration-set-builder (CfnConfigurationSet$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-configuration-set-delivery-options-property-builder
   "The build-cfn-configuration-set-delivery-options-property-builder function updates a CfnConfigurationSet$DeliveryOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnConfigurationSet$DeliveryOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -69,6 +75,12 @@
   (when-let [data (lookup-entry config id :sending-pool-name)]
     (. builder sendingPoolName data))
   (.build builder))
+
+
+(defn cfn-configuration-set-delivery-options-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-delivery-options-property-builder (new CfnConfigurationSet$DeliveryOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-configuration-set-event-destination-builder
@@ -94,6 +106,12 @@
   (.build builder))
 
 
+(defn cfn-configuration-set-event-destination-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-configuration-set-event-destination-builder (CfnConfigurationSetEventDestination$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-configuration-set-event-destination-cloud-watch-destination-property-builder
   "The build-cfn-configuration-set-event-destination-cloud-watch-destination-property-builder function updates a CfnConfigurationSetEventDestination$CloudWatchDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnConfigurationSetEventDestination$CloudWatchDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -109,6 +127,12 @@
   (when-let [data (lookup-entry config id :dimension-configurations)]
     (. builder dimensionConfigurations data))
   (.build builder))
+
+
+(defn cfn-configuration-set-event-destination-cloud-watch-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-event-destination-cloud-watch-destination-property-builder (new CfnConfigurationSetEventDestination$CloudWatchDestinationProperty$Builder) id config))
 
 
 (defn build-cfn-configuration-set-event-destination-dimension-configuration-property-builder
@@ -132,6 +156,12 @@
   (when-let [data (lookup-entry config id :dimension-value-source)]
     (. builder dimensionValueSource data))
   (.build builder))
+
+
+(defn cfn-configuration-set-event-destination-dimension-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-event-destination-dimension-configuration-property-builder (new CfnConfigurationSetEventDestination$DimensionConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-configuration-set-event-destination-event-destination-property-builder
@@ -166,6 +196,12 @@
   (.build builder))
 
 
+(defn cfn-configuration-set-event-destination-event-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-event-destination-event-destination-property-builder (new CfnConfigurationSetEventDestination$EventDestinationProperty$Builder) id config))
+
+
 (defn build-cfn-configuration-set-event-destination-kinesis-firehose-destination-property-builder
   "The build-cfn-configuration-set-event-destination-kinesis-firehose-destination-property-builder function updates a CfnConfigurationSetEventDestination$KinesisFirehoseDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnConfigurationSetEventDestination$KinesisFirehoseDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -186,6 +222,12 @@
   (.build builder))
 
 
+(defn cfn-configuration-set-event-destination-kinesis-firehose-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-event-destination-kinesis-firehose-destination-property-builder (new CfnConfigurationSetEventDestination$KinesisFirehoseDestinationProperty$Builder) id config))
+
+
 (defn build-cfn-configuration-set-event-destination-pinpoint-destination-property-builder
   "The build-cfn-configuration-set-event-destination-pinpoint-destination-property-builder function updates a CfnConfigurationSetEventDestination$PinpointDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnConfigurationSetEventDestination$PinpointDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -201,6 +243,12 @@
   (when-let [data (lookup-entry config id :application-arn)]
     (. builder applicationArn data))
   (.build builder))
+
+
+(defn cfn-configuration-set-event-destination-pinpoint-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-event-destination-pinpoint-destination-property-builder (new CfnConfigurationSetEventDestination$PinpointDestinationProperty$Builder) id config))
 
 
 (defn build-cfn-configuration-set-event-destination-props-builder
@@ -226,6 +274,12 @@
   (.build builder))
 
 
+(defn cfn-configuration-set-event-destination-props-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-event-destination-props-builder (new CfnConfigurationSetEventDestinationProps$Builder) id config))
+
+
 (defn build-cfn-configuration-set-event-destination-sns-destination-property-builder
   "The build-cfn-configuration-set-event-destination-sns-destination-property-builder function updates a CfnConfigurationSetEventDestination$SnsDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnConfigurationSetEventDestination$SnsDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -241,6 +295,12 @@
   (when-let [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
+
+
+(defn cfn-configuration-set-event-destination-sns-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-event-destination-sns-destination-property-builder (new CfnConfigurationSetEventDestination$SnsDestinationProperty$Builder) id config))
 
 
 (defn build-cfn-configuration-set-props-builder
@@ -275,6 +335,12 @@
   (.build builder))
 
 
+(defn cfn-configuration-set-props-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-props-builder (new CfnConfigurationSetProps$Builder) id config))
+
+
 (defn build-cfn-configuration-set-reputation-options-property-builder
   "The build-cfn-configuration-set-reputation-options-property-builder function updates a CfnConfigurationSet$ReputationOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnConfigurationSet$ReputationOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -290,6 +356,12 @@
   (when-let [data (lookup-entry config id :reputation-metrics-enabled)]
     (. builder reputationMetricsEnabled data))
   (.build builder))
+
+
+(defn cfn-configuration-set-reputation-options-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-reputation-options-property-builder (new CfnConfigurationSet$ReputationOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-configuration-set-sending-options-property-builder
@@ -309,6 +381,12 @@
   (.build builder))
 
 
+(defn cfn-configuration-set-sending-options-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-sending-options-property-builder (new CfnConfigurationSet$SendingOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-configuration-set-tracking-options-property-builder
   "The build-cfn-configuration-set-tracking-options-property-builder function updates a CfnConfigurationSet$TrackingOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnConfigurationSet$TrackingOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -324,6 +402,12 @@
   (when-let [data (lookup-entry config id :custom-redirect-domain)]
     (. builder customRedirectDomain data))
   (.build builder))
+
+
+(defn cfn-configuration-set-tracking-options-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-set-tracking-options-property-builder (new CfnConfigurationSet$TrackingOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dedicated-ip-pool-builder
@@ -346,6 +430,12 @@
   (.build builder))
 
 
+(defn cfn-dedicated-ip-pool-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-dedicated-ip-pool-builder (CfnDedicatedIpPool$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-dedicated-ip-pool-props-builder
   "The build-cfn-dedicated-ip-pool-props-builder function updates a CfnDedicatedIpPoolProps$Builder instance using the provided configuration.
   The function takes the CfnDedicatedIpPoolProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -364,6 +454,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-dedicated-ip-pool-props-builder
+  ""
+  [id config]
+  (build-cfn-dedicated-ip-pool-props-builder (new CfnDedicatedIpPoolProps$Builder) id config))
 
 
 (defn build-cfn-identity-builder
@@ -395,6 +491,12 @@
   (.build builder))
 
 
+(defn cfn-identity-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-identity-builder (CfnIdentity$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-identity-mail-from-attributes-property-builder
   "The build-cfn-identity-mail-from-attributes-property-builder function updates a CfnIdentity$MailFromAttributesProperty$Builder instance using the provided configuration.
   The function takes the CfnIdentity$MailFromAttributesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -413,6 +515,12 @@
   (when-let [data (lookup-entry config id :mail-from-domain)]
     (. builder mailFromDomain data))
   (.build builder))
+
+
+(defn cfn-identity-mail-from-attributes-property-builder
+  ""
+  [id config]
+  (build-cfn-identity-mail-from-attributes-property-builder (new CfnIdentity$MailFromAttributesProperty$Builder) id config))
 
 
 (defn build-cfn-identity-props-builder
@@ -442,3 +550,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-identity-props-builder
+  ""
+  [id config]
+  (build-cfn-identity-props-builder (new CfnIdentityProps$Builder) id config))

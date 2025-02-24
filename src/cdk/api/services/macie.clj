@@ -42,6 +42,12 @@
   (.build builder))
 
 
+(defn cfn-allow-list-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-allow-list-builder (CfnAllowList$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-allow-list-criteria-property-builder
   "The build-cfn-allow-list-criteria-property-builder function updates a CfnAllowList$CriteriaProperty$Builder instance using the provided configuration.
   The function takes the CfnAllowList$CriteriaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -60,6 +66,12 @@
   (when-let [data (lookup-entry config id :s3-words-list)]
     (. builder s3WordsList data))
   (.build builder))
+
+
+(defn cfn-allow-list-criteria-property-builder
+  ""
+  [id config]
+  (build-cfn-allow-list-criteria-property-builder (new CfnAllowList$CriteriaProperty$Builder) id config))
 
 
 (defn build-cfn-allow-list-props-builder
@@ -88,6 +100,12 @@
   (.build builder))
 
 
+(defn cfn-allow-list-props-builder
+  ""
+  [id config]
+  (build-cfn-allow-list-props-builder (new CfnAllowListProps$Builder) id config))
+
+
 (defn build-cfn-allow-list-s3-words-list-property-builder
   "The build-cfn-allow-list-s3-words-list-property-builder function updates a CfnAllowList$S3WordsListProperty$Builder instance using the provided configuration.
   The function takes the CfnAllowList$S3WordsListProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -106,6 +124,12 @@
   (when-let [data (lookup-entry config id :object-key)]
     (. builder objectKey data))
   (.build builder))
+
+
+(defn cfn-allow-list-s3-words-list-property-builder
+  ""
+  [id config]
+  (build-cfn-allow-list-s3-words-list-property-builder (new CfnAllowList$S3WordsListProperty$Builder) id config))
 
 
 (defn build-cfn-custom-data-identifier-builder
@@ -143,6 +167,12 @@
   (.build builder))
 
 
+(defn cfn-custom-data-identifier-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-custom-data-identifier-builder (CfnCustomDataIdentifier$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-custom-data-identifier-props-builder
   "The build-cfn-custom-data-identifier-props-builder function updates a CfnCustomDataIdentifierProps$Builder instance using the provided configuration.
   The function takes the CfnCustomDataIdentifierProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -178,6 +208,12 @@
   (.build builder))
 
 
+(defn cfn-custom-data-identifier-props-builder
+  ""
+  [id config]
+  (build-cfn-custom-data-identifier-props-builder (new CfnCustomDataIdentifierProps$Builder) id config))
+
+
 (defn build-cfn-findings-filter-builder
   "The build-cfn-findings-filter-builder function updates a CfnFindingsFilter$Builder instance using the provided configuration.
   The function takes the CfnFindingsFilter$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -208,6 +244,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-findings-filter-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-findings-filter-builder (CfnFindingsFilter$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-findings-filter-criterion-additional-properties-property-builder
@@ -242,6 +284,12 @@
   (.build builder))
 
 
+(defn cfn-findings-filter-criterion-additional-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-findings-filter-criterion-additional-properties-property-builder (new CfnFindingsFilter$CriterionAdditionalPropertiesProperty$Builder) id config))
+
+
 (defn build-cfn-findings-filter-finding-criteria-property-builder
   "The build-cfn-findings-filter-finding-criteria-property-builder function updates a CfnFindingsFilter$FindingCriteriaProperty$Builder instance using the provided configuration.
   The function takes the CfnFindingsFilter$FindingCriteriaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -257,6 +305,12 @@
   (when-let [data (lookup-entry config id :criterion)]
     (. builder criterion data))
   (.build builder))
+
+
+(defn cfn-findings-filter-finding-criteria-property-builder
+  ""
+  [id config]
+  (build-cfn-findings-filter-finding-criteria-property-builder (new CfnFindingsFilter$FindingCriteriaProperty$Builder) id config))
 
 
 (defn build-cfn-findings-filter-findings-filter-list-item-property-builder
@@ -277,6 +331,12 @@
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-findings-filter-findings-filter-list-item-property-builder
+  ""
+  [id config]
+  (build-cfn-findings-filter-findings-filter-list-item-property-builder (new CfnFindingsFilter$FindingsFilterListItemProperty$Builder) id config))
 
 
 (defn build-cfn-findings-filter-props-builder
@@ -311,6 +371,12 @@
   (.build builder))
 
 
+(defn cfn-findings-filter-props-builder
+  ""
+  [id config]
+  (build-cfn-findings-filter-props-builder (new CfnFindingsFilterProps$Builder) id config))
+
+
 (defn build-cfn-session-builder
   "The build-cfn-session-builder function updates a CfnSession$Builder instance using the provided configuration.
   The function takes the CfnSession$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -331,6 +397,12 @@
   (.build builder))
 
 
+(defn cfn-session-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-session-builder (CfnSession$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-session-props-builder
   "The build-cfn-session-props-builder function updates a CfnSessionProps$Builder instance using the provided configuration.
   The function takes the CfnSessionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -349,3 +421,9 @@
   (when-let [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
+
+
+(defn cfn-session-props-builder
+  ""
+  [id config]
+  (build-cfn-session-props-builder (new CfnSessionProps$Builder) id config))

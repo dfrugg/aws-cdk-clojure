@@ -86,6 +86,12 @@
   (.build builder))
 
 
+(defn cfn-channel-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-channel-builder (CfnChannel$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-channel-channel-storage-property-builder
   "The build-cfn-channel-channel-storage-property-builder function updates a CfnChannel$ChannelStorageProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$ChannelStorageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -104,6 +110,12 @@
   (when-let [data (lookup-entry config id :service-managed-s3)]
     (. builder serviceManagedS3 data))
   (.build builder))
+
+
+(defn cfn-channel-channel-storage-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-channel-storage-property-builder (new CfnChannel$ChannelStorageProperty$Builder) id config))
 
 
 (defn build-cfn-channel-customer-managed-s3-property-builder
@@ -127,6 +139,12 @@
   (when-let [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
+
+
+(defn cfn-channel-customer-managed-s3-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-customer-managed-s3-property-builder (new CfnChannel$CustomerManagedS3Property$Builder) id config))
 
 
 (defn build-cfn-channel-props-builder
@@ -155,6 +173,12 @@
   (.build builder))
 
 
+(defn cfn-channel-props-builder
+  ""
+  [id config]
+  (build-cfn-channel-props-builder (new CfnChannelProps$Builder) id config))
+
+
 (defn build-cfn-channel-retention-period-property-builder
   "The build-cfn-channel-retention-period-property-builder function updates a CfnChannel$RetentionPeriodProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$RetentionPeriodProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -173,6 +197,12 @@
   (when-let [data (lookup-entry config id :unlimited)]
     (. builder unlimited data))
   (.build builder))
+
+
+(defn cfn-channel-retention-period-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-retention-period-property-builder (new CfnChannel$RetentionPeriodProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-action-property-builder
@@ -196,6 +226,12 @@
   (when-let [data (lookup-entry config id :query-action)]
     (. builder queryAction data))
   (.build builder))
+
+
+(defn cfn-dataset-action-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-action-property-builder (new CfnDataset$ActionProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-builder
@@ -236,6 +272,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-dataset-builder (CfnDataset$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-dataset-container-action-property-builder
   "The build-cfn-dataset-container-action-property-builder function updates a CfnDataset$ContainerActionProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$ContainerActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -262,6 +304,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-container-action-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-container-action-property-builder (new CfnDataset$ContainerActionProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-dataset-content-delivery-rule-destination-property-builder
   "The build-cfn-dataset-dataset-content-delivery-rule-destination-property-builder function updates a CfnDataset$DatasetContentDeliveryRuleDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$DatasetContentDeliveryRuleDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -280,6 +328,12 @@
   (when-let [data (lookup-entry config id :s3-destination-configuration)]
     (. builder s3DestinationConfiguration data))
   (.build builder))
+
+
+(defn cfn-dataset-dataset-content-delivery-rule-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-dataset-content-delivery-rule-destination-property-builder (new CfnDataset$DatasetContentDeliveryRuleDestinationProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-dataset-content-delivery-rule-property-builder
@@ -302,6 +356,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-dataset-content-delivery-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-dataset-content-delivery-rule-property-builder (new CfnDataset$DatasetContentDeliveryRuleProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-dataset-content-version-value-property-builder
   "The build-cfn-dataset-dataset-content-version-value-property-builder function updates a CfnDataset$DatasetContentVersionValueProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$DatasetContentVersionValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -317,6 +377,12 @@
   (when-let [data (lookup-entry config id :dataset-name)]
     (. builder datasetName data))
   (.build builder))
+
+
+(defn cfn-dataset-dataset-content-version-value-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-dataset-content-version-value-property-builder (new CfnDataset$DatasetContentVersionValueProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-delta-time-property-builder
@@ -339,6 +405,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-delta-time-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-delta-time-property-builder (new CfnDataset$DeltaTimeProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-delta-time-session-window-configuration-property-builder
   "The build-cfn-dataset-delta-time-session-window-configuration-property-builder function updates a CfnDataset$DeltaTimeSessionWindowConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$DeltaTimeSessionWindowConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -356,6 +428,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-delta-time-session-window-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-delta-time-session-window-configuration-property-builder (new CfnDataset$DeltaTimeSessionWindowConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-filter-property-builder
   "The build-cfn-dataset-filter-property-builder function updates a CfnDataset$FilterProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$FilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -371,6 +449,12 @@
   (when-let [data (lookup-entry config id :delta-time)]
     (. builder deltaTime data))
   (.build builder))
+
+
+(defn cfn-dataset-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-filter-property-builder (new CfnDataset$FilterProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-glue-configuration-property-builder
@@ -393,6 +477,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-glue-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-glue-configuration-property-builder (new CfnDataset$GlueConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-iot-events-destination-configuration-property-builder
   "The build-cfn-dataset-iot-events-destination-configuration-property-builder function updates a CfnDataset$IotEventsDestinationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$IotEventsDestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -413,6 +503,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-iot-events-destination-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-iot-events-destination-configuration-property-builder (new CfnDataset$IotEventsDestinationConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-late-data-rule-configuration-property-builder
   "The build-cfn-dataset-late-data-rule-configuration-property-builder function updates a CfnDataset$LateDataRuleConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$LateDataRuleConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -428,6 +524,12 @@
   (when-let [data (lookup-entry config id :delta-time-session-window-configuration)]
     (. builder deltaTimeSessionWindowConfiguration data))
   (.build builder))
+
+
+(defn cfn-dataset-late-data-rule-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-late-data-rule-configuration-property-builder (new CfnDataset$LateDataRuleConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-late-data-rule-property-builder
@@ -450,6 +552,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-late-data-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-late-data-rule-property-builder (new CfnDataset$LateDataRuleProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-output-file-uri-value-property-builder
   "The build-cfn-dataset-output-file-uri-value-property-builder function updates a CfnDataset$OutputFileUriValueProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$OutputFileUriValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -465,6 +573,12 @@
   (when-let [data (lookup-entry config id :file-name)]
     (. builder fileName data))
   (.build builder))
+
+
+(defn cfn-dataset-output-file-uri-value-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-output-file-uri-value-property-builder (new CfnDataset$OutputFileUriValueProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-props-builder
@@ -505,6 +619,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-props-builder
+  ""
+  [id config]
+  (build-cfn-dataset-props-builder (new CfnDatasetProps$Builder) id config))
+
+
 (defn build-cfn-dataset-query-action-property-builder
   "The build-cfn-dataset-query-action-property-builder function updates a CfnDataset$QueryActionProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$QueryActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -523,6 +643,12 @@
   (when-let [data (lookup-entry config id :sql-query)]
     (. builder sqlQuery data))
   (.build builder))
+
+
+(defn cfn-dataset-query-action-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-query-action-property-builder (new CfnDataset$QueryActionProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-resource-configuration-property-builder
@@ -545,6 +671,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-resource-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-resource-configuration-property-builder (new CfnDataset$ResourceConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-retention-period-property-builder
   "The build-cfn-dataset-retention-period-property-builder function updates a CfnDataset$RetentionPeriodProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$RetentionPeriodProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -563,6 +695,12 @@
   (when-let [data (lookup-entry config id :unlimited)]
     (. builder unlimited data))
   (.build builder))
+
+
+(defn cfn-dataset-retention-period-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-retention-period-property-builder (new CfnDataset$RetentionPeriodProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-s3-destination-configuration-property-builder
@@ -591,6 +729,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-s3-destination-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-s3-destination-configuration-property-builder (new CfnDataset$S3DestinationConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-schedule-property-builder
   "The build-cfn-dataset-schedule-property-builder function updates a CfnDataset$ScheduleProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$ScheduleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -606,6 +750,12 @@
   (when-let [data (lookup-entry config id :schedule-expression)]
     (. builder scheduleExpression data))
   (.build builder))
+
+
+(defn cfn-dataset-schedule-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-schedule-property-builder (new CfnDataset$ScheduleProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-trigger-property-builder
@@ -628,6 +778,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-trigger-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-trigger-property-builder (new CfnDataset$TriggerProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-triggering-dataset-property-builder
   "The build-cfn-dataset-triggering-dataset-property-builder function updates a CfnDataset$TriggeringDatasetProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$TriggeringDatasetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -643,6 +799,12 @@
   (when-let [data (lookup-entry config id :dataset-name)]
     (. builder datasetName data))
   (.build builder))
+
+
+(defn cfn-dataset-triggering-dataset-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-triggering-dataset-property-builder (new CfnDataset$TriggeringDatasetProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-variable-property-builder
@@ -674,6 +836,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-variable-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-variable-property-builder (new CfnDataset$VariableProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-versioning-configuration-property-builder
   "The build-cfn-dataset-versioning-configuration-property-builder function updates a CfnDataset$VersioningConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$VersioningConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -692,6 +860,12 @@
   (when-let [data (lookup-entry config id :unlimited)]
     (. builder unlimited data))
   (.build builder))
+
+
+(defn cfn-dataset-versioning-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-versioning-configuration-property-builder (new CfnDataset$VersioningConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-datastore-builder
@@ -726,6 +900,12 @@
   (.build builder))
 
 
+(defn cfn-datastore-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-datastore-builder (CfnDatastore$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-datastore-column-property-builder
   "The build-cfn-datastore-column-property-builder function updates a CfnDatastore$ColumnProperty$Builder instance using the provided configuration.
   The function takes the CfnDatastore$ColumnProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -744,6 +924,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-datastore-column-property-builder
+  ""
+  [id config]
+  (build-cfn-datastore-column-property-builder (new CfnDatastore$ColumnProperty$Builder) id config))
 
 
 (defn build-cfn-datastore-customer-managed-s3-property-builder
@@ -769,6 +955,12 @@
   (.build builder))
 
 
+(defn cfn-datastore-customer-managed-s3-property-builder
+  ""
+  [id config]
+  (build-cfn-datastore-customer-managed-s3-property-builder (new CfnDatastore$CustomerManagedS3Property$Builder) id config))
+
+
 (defn build-cfn-datastore-customer-managed-s3-storage-property-builder
   "The build-cfn-datastore-customer-managed-s3-storage-property-builder function updates a CfnDatastore$CustomerManagedS3StorageProperty$Builder instance using the provided configuration.
   The function takes the CfnDatastore$CustomerManagedS3StorageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -787,6 +979,12 @@
   (when-let [data (lookup-entry config id :key-prefix)]
     (. builder keyPrefix data))
   (.build builder))
+
+
+(defn cfn-datastore-customer-managed-s3-storage-property-builder
+  ""
+  [id config]
+  (build-cfn-datastore-customer-managed-s3-storage-property-builder (new CfnDatastore$CustomerManagedS3StorageProperty$Builder) id config))
 
 
 (defn build-cfn-datastore-datastore-partition-property-builder
@@ -809,6 +1007,12 @@
   (.build builder))
 
 
+(defn cfn-datastore-datastore-partition-property-builder
+  ""
+  [id config]
+  (build-cfn-datastore-datastore-partition-property-builder (new CfnDatastore$DatastorePartitionProperty$Builder) id config))
+
+
 (defn build-cfn-datastore-datastore-partitions-property-builder
   "The build-cfn-datastore-datastore-partitions-property-builder function updates a CfnDatastore$DatastorePartitionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDatastore$DatastorePartitionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -824,6 +1028,12 @@
   (when-let [data (lookup-entry config id :partitions)]
     (. builder partitions data))
   (.build builder))
+
+
+(defn cfn-datastore-datastore-partitions-property-builder
+  ""
+  [id config]
+  (build-cfn-datastore-datastore-partitions-property-builder (new CfnDatastore$DatastorePartitionsProperty$Builder) id config))
 
 
 (defn build-cfn-datastore-datastore-storage-property-builder
@@ -849,6 +1059,12 @@
   (.build builder))
 
 
+(defn cfn-datastore-datastore-storage-property-builder
+  ""
+  [id config]
+  (build-cfn-datastore-datastore-storage-property-builder (new CfnDatastore$DatastoreStorageProperty$Builder) id config))
+
+
 (defn build-cfn-datastore-file-format-configuration-property-builder
   "The build-cfn-datastore-file-format-configuration-property-builder function updates a CfnDatastore$FileFormatConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDatastore$FileFormatConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -869,6 +1085,12 @@
   (.build builder))
 
 
+(defn cfn-datastore-file-format-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-datastore-file-format-configuration-property-builder (new CfnDatastore$FileFormatConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-datastore-iot-site-wise-multi-layer-storage-property-builder
   "The build-cfn-datastore-iot-site-wise-multi-layer-storage-property-builder function updates a CfnDatastore$IotSiteWiseMultiLayerStorageProperty$Builder instance using the provided configuration.
   The function takes the CfnDatastore$IotSiteWiseMultiLayerStorageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -884,6 +1106,12 @@
   (when-let [data (lookup-entry config id :customer-managed-s3-storage)]
     (. builder customerManagedS3Storage data))
   (.build builder))
+
+
+(defn cfn-datastore-iot-site-wise-multi-layer-storage-property-builder
+  ""
+  [id config]
+  (build-cfn-datastore-iot-site-wise-multi-layer-storage-property-builder (new CfnDatastore$IotSiteWiseMultiLayerStorageProperty$Builder) id config))
 
 
 (defn build-cfn-datastore-parquet-configuration-property-builder
@@ -903,6 +1131,12 @@
   (.build builder))
 
 
+(defn cfn-datastore-parquet-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-datastore-parquet-configuration-property-builder (new CfnDatastore$ParquetConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-datastore-partition-property-builder
   "The build-cfn-datastore-partition-property-builder function updates a CfnDatastore$PartitionProperty$Builder instance using the provided configuration.
   The function takes the CfnDatastore$PartitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -918,6 +1152,12 @@
   (when-let [data (lookup-entry config id :attribute-name)]
     (. builder attributeName data))
   (.build builder))
+
+
+(defn cfn-datastore-partition-property-builder
+  ""
+  [id config]
+  (build-cfn-datastore-partition-property-builder (new CfnDatastore$PartitionProperty$Builder) id config))
 
 
 (defn build-cfn-datastore-props-builder
@@ -952,6 +1192,12 @@
   (.build builder))
 
 
+(defn cfn-datastore-props-builder
+  ""
+  [id config]
+  (build-cfn-datastore-props-builder (new CfnDatastoreProps$Builder) id config))
+
+
 (defn build-cfn-datastore-retention-period-property-builder
   "The build-cfn-datastore-retention-period-property-builder function updates a CfnDatastore$RetentionPeriodProperty$Builder instance using the provided configuration.
   The function takes the CfnDatastore$RetentionPeriodProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -972,6 +1218,12 @@
   (.build builder))
 
 
+(defn cfn-datastore-retention-period-property-builder
+  ""
+  [id config]
+  (build-cfn-datastore-retention-period-property-builder (new CfnDatastore$RetentionPeriodProperty$Builder) id config))
+
+
 (defn build-cfn-datastore-schema-definition-property-builder
   "The build-cfn-datastore-schema-definition-property-builder function updates a CfnDatastore$SchemaDefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnDatastore$SchemaDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -987,6 +1239,12 @@
   (when-let [data (lookup-entry config id :columns)]
     (. builder columns data))
   (.build builder))
+
+
+(defn cfn-datastore-schema-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-datastore-schema-definition-property-builder (new CfnDatastore$SchemaDefinitionProperty$Builder) id config))
 
 
 (defn build-cfn-datastore-timestamp-partition-property-builder
@@ -1007,6 +1265,12 @@
   (when-let [data (lookup-entry config id :timestamp-format)]
     (. builder timestampFormat data))
   (.build builder))
+
+
+(defn cfn-datastore-timestamp-partition-property-builder
+  ""
+  [id config]
+  (build-cfn-datastore-timestamp-partition-property-builder (new CfnDatastore$TimestampPartitionProperty$Builder) id config))
 
 
 (defn build-cfn-pipeline-activity-property-builder
@@ -1053,6 +1317,12 @@
   (.build builder))
 
 
+(defn cfn-pipeline-activity-property-builder
+  ""
+  [id config]
+  (build-cfn-pipeline-activity-property-builder (new CfnPipeline$ActivityProperty$Builder) id config))
+
+
 (defn build-cfn-pipeline-add-attributes-property-builder
   "The build-cfn-pipeline-add-attributes-property-builder function updates a CfnPipeline$AddAttributesProperty$Builder instance using the provided configuration.
   The function takes the CfnPipeline$AddAttributesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1074,6 +1344,12 @@
   (when-let [data (lookup-entry config id :next)]
     (. builder next data))
   (.build builder))
+
+
+(defn cfn-pipeline-add-attributes-property-builder
+  ""
+  [id config]
+  (build-cfn-pipeline-add-attributes-property-builder (new CfnPipeline$AddAttributesProperty$Builder) id config))
 
 
 (defn build-cfn-pipeline-builder
@@ -1099,6 +1375,12 @@
   (.build builder))
 
 
+(defn cfn-pipeline-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-pipeline-builder (CfnPipeline$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-pipeline-channel-property-builder
   "The build-cfn-pipeline-channel-property-builder function updates a CfnPipeline$ChannelProperty$Builder instance using the provided configuration.
   The function takes the CfnPipeline$ChannelProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1122,6 +1404,12 @@
   (.build builder))
 
 
+(defn cfn-pipeline-channel-property-builder
+  ""
+  [id config]
+  (build-cfn-pipeline-channel-property-builder (new CfnPipeline$ChannelProperty$Builder) id config))
+
+
 (defn build-cfn-pipeline-datastore-property-builder
   "The build-cfn-pipeline-datastore-property-builder function updates a CfnPipeline$DatastoreProperty$Builder instance using the provided configuration.
   The function takes the CfnPipeline$DatastoreProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1140,6 +1428,12 @@
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-pipeline-datastore-property-builder
+  ""
+  [id config]
+  (build-cfn-pipeline-datastore-property-builder (new CfnPipeline$DatastoreProperty$Builder) id config))
 
 
 (defn build-cfn-pipeline-device-registry-enrich-property-builder
@@ -1171,6 +1465,12 @@
   (.build builder))
 
 
+(defn cfn-pipeline-device-registry-enrich-property-builder
+  ""
+  [id config]
+  (build-cfn-pipeline-device-registry-enrich-property-builder (new CfnPipeline$DeviceRegistryEnrichProperty$Builder) id config))
+
+
 (defn build-cfn-pipeline-device-shadow-enrich-property-builder
   "The build-cfn-pipeline-device-shadow-enrich-property-builder function updates a CfnPipeline$DeviceShadowEnrichProperty$Builder instance using the provided configuration.
   The function takes the CfnPipeline$DeviceShadowEnrichProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1200,6 +1500,12 @@
   (.build builder))
 
 
+(defn cfn-pipeline-device-shadow-enrich-property-builder
+  ""
+  [id config]
+  (build-cfn-pipeline-device-shadow-enrich-property-builder (new CfnPipeline$DeviceShadowEnrichProperty$Builder) id config))
+
+
 (defn build-cfn-pipeline-filter-property-builder
   "The build-cfn-pipeline-filter-property-builder function updates a CfnPipeline$FilterProperty$Builder instance using the provided configuration.
   The function takes the CfnPipeline$FilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1221,6 +1527,12 @@
   (when-let [data (lookup-entry config id :next)]
     (. builder next data))
   (.build builder))
+
+
+(defn cfn-pipeline-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-pipeline-filter-property-builder (new CfnPipeline$FilterProperty$Builder) id config))
 
 
 (defn build-cfn-pipeline-lambda-property-builder
@@ -1249,6 +1561,12 @@
   (.build builder))
 
 
+(defn cfn-pipeline-lambda-property-builder
+  ""
+  [id config]
+  (build-cfn-pipeline-lambda-property-builder (new CfnPipeline$LambdaProperty$Builder) id config))
+
+
 (defn build-cfn-pipeline-math-property-builder
   "The build-cfn-pipeline-math-property-builder function updates a CfnPipeline$MathProperty$Builder instance using the provided configuration.
   The function takes the CfnPipeline$MathProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1275,6 +1593,12 @@
   (.build builder))
 
 
+(defn cfn-pipeline-math-property-builder
+  ""
+  [id config]
+  (build-cfn-pipeline-math-property-builder (new CfnPipeline$MathProperty$Builder) id config))
+
+
 (defn build-cfn-pipeline-props-builder
   "The build-cfn-pipeline-props-builder function updates a CfnPipelineProps$Builder instance using the provided configuration.
   The function takes the CfnPipelineProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1296,6 +1620,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-pipeline-props-builder
+  ""
+  [id config]
+  (build-cfn-pipeline-props-builder (new CfnPipelineProps$Builder) id config))
 
 
 (defn build-cfn-pipeline-remove-attributes-property-builder
@@ -1321,6 +1651,12 @@
   (.build builder))
 
 
+(defn cfn-pipeline-remove-attributes-property-builder
+  ""
+  [id config]
+  (build-cfn-pipeline-remove-attributes-property-builder (new CfnPipeline$RemoveAttributesProperty$Builder) id config))
+
+
 (defn build-cfn-pipeline-select-attributes-property-builder
   "The build-cfn-pipeline-select-attributes-property-builder function updates a CfnPipeline$SelectAttributesProperty$Builder instance using the provided configuration.
   The function takes the CfnPipeline$SelectAttributesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1342,3 +1678,9 @@
   (when-let [data (lookup-entry config id :next)]
     (. builder next data))
   (.build builder))
+
+
+(defn cfn-pipeline-select-attributes-property-builder
+  ""
+  [id config]
+  (build-cfn-pipeline-select-attributes-property-builder (new CfnPipeline$SelectAttributesProperty$Builder) id config))

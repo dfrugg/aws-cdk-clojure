@@ -58,6 +58,12 @@
   (.build builder))
 
 
+(defn cfn-certificate-api-passthrough-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-api-passthrough-property-builder (new CfnCertificate$ApiPassthroughProperty$Builder) id config))
+
+
 (defn build-cfn-certificate-authority-access-description-property-builder
   "The build-cfn-certificate-authority-access-description-property-builder function updates a CfnCertificateAuthority$AccessDescriptionProperty$Builder instance using the provided configuration.
   The function takes the CfnCertificateAuthority$AccessDescriptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -78,6 +84,12 @@
   (.build builder))
 
 
+(defn cfn-certificate-authority-access-description-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-authority-access-description-property-builder (new CfnCertificateAuthority$AccessDescriptionProperty$Builder) id config))
+
+
 (defn build-cfn-certificate-authority-access-method-property-builder
   "The build-cfn-certificate-authority-access-method-property-builder function updates a CfnCertificateAuthority$AccessMethodProperty$Builder instance using the provided configuration.
   The function takes the CfnCertificateAuthority$AccessMethodProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -96,6 +108,12 @@
   (when-let [data (lookup-entry config id :custom-object-identifier)]
     (. builder customObjectIdentifier data))
   (.build builder))
+
+
+(defn cfn-certificate-authority-access-method-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-authority-access-method-property-builder (new CfnCertificateAuthority$AccessMethodProperty$Builder) id config))
 
 
 (defn build-cfn-certificate-authority-activation-builder
@@ -124,6 +142,12 @@
   (.build builder))
 
 
+(defn cfn-certificate-authority-activation-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-certificate-authority-activation-builder (CfnCertificateAuthorityActivation$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-certificate-authority-activation-props-builder
   "The build-cfn-certificate-authority-activation-props-builder function updates a CfnCertificateAuthorityActivationProps$Builder instance using the provided configuration.
   The function takes the CfnCertificateAuthorityActivationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -148,6 +172,12 @@
   (when-let [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
+
+
+(defn cfn-certificate-authority-activation-props-builder
+  ""
+  [id config]
+  (build-cfn-certificate-authority-activation-props-builder (new CfnCertificateAuthorityActivationProps$Builder) id config))
 
 
 (defn build-cfn-certificate-authority-builder
@@ -191,6 +221,12 @@
   (.build builder))
 
 
+(defn cfn-certificate-authority-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-certificate-authority-builder (CfnCertificateAuthority$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-certificate-authority-crl-configuration-property-builder
   "The build-cfn-certificate-authority-crl-configuration-property-builder function updates a CfnCertificateAuthority$CrlConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnCertificateAuthority$CrlConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -223,6 +259,12 @@
   (.build builder))
 
 
+(defn cfn-certificate-authority-crl-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-authority-crl-configuration-property-builder (new CfnCertificateAuthority$CrlConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-certificate-authority-crl-distribution-point-extension-configuration-property-builder
   "The build-cfn-certificate-authority-crl-distribution-point-extension-configuration-property-builder function updates a CfnCertificateAuthority$CrlDistributionPointExtensionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnCertificateAuthority$CrlDistributionPointExtensionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -238,6 +280,12 @@
   (when-let [data (lookup-entry config id :omit-extension)]
     (. builder omitExtension data))
   (.build builder))
+
+
+(defn cfn-certificate-authority-crl-distribution-point-extension-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-authority-crl-distribution-point-extension-configuration-property-builder (new CfnCertificateAuthority$CrlDistributionPointExtensionConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-certificate-authority-csr-extensions-property-builder
@@ -260,6 +308,12 @@
   (.build builder))
 
 
+(defn cfn-certificate-authority-csr-extensions-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-authority-csr-extensions-property-builder (new CfnCertificateAuthority$CsrExtensionsProperty$Builder) id config))
+
+
 (defn build-cfn-certificate-authority-custom-attribute-property-builder
   "The build-cfn-certificate-authority-custom-attribute-property-builder function updates a CfnCertificateAuthority$CustomAttributeProperty$Builder instance using the provided configuration.
   The function takes the CfnCertificateAuthority$CustomAttributeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -280,6 +334,12 @@
   (.build builder))
 
 
+(defn cfn-certificate-authority-custom-attribute-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-authority-custom-attribute-property-builder (new CfnCertificateAuthority$CustomAttributeProperty$Builder) id config))
+
+
 (defn build-cfn-certificate-authority-edi-party-name-property-builder
   "The build-cfn-certificate-authority-edi-party-name-property-builder function updates a CfnCertificateAuthority$EdiPartyNameProperty$Builder instance using the provided configuration.
   The function takes the CfnCertificateAuthority$EdiPartyNameProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -298,6 +358,12 @@
   (when-let [data (lookup-entry config id :party-name)]
     (. builder partyName data))
   (.build builder))
+
+
+(defn cfn-certificate-authority-edi-party-name-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-authority-edi-party-name-property-builder (new CfnCertificateAuthority$EdiPartyNameProperty$Builder) id config))
 
 
 (defn build-cfn-certificate-authority-general-name-property-builder
@@ -336,6 +402,12 @@
   (when-let [data (lookup-entry config id :uniform-resource-identifier)]
     (. builder uniformResourceIdentifier data))
   (.build builder))
+
+
+(defn cfn-certificate-authority-general-name-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-authority-general-name-property-builder (new CfnCertificateAuthority$GeneralNameProperty$Builder) id config))
 
 
 (defn build-cfn-certificate-authority-key-usage-property-builder
@@ -379,6 +451,12 @@
   (.build builder))
 
 
+(defn cfn-certificate-authority-key-usage-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-authority-key-usage-property-builder (new CfnCertificateAuthority$KeyUsageProperty$Builder) id config))
+
+
 (defn build-cfn-certificate-authority-ocsp-configuration-property-builder
   "The build-cfn-certificate-authority-ocsp-configuration-property-builder function updates a CfnCertificateAuthority$OcspConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnCertificateAuthority$OcspConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -399,6 +477,12 @@
   (.build builder))
 
 
+(defn cfn-certificate-authority-ocsp-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-authority-ocsp-configuration-property-builder (new CfnCertificateAuthority$OcspConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-certificate-authority-other-name-property-builder
   "The build-cfn-certificate-authority-other-name-property-builder function updates a CfnCertificateAuthority$OtherNameProperty$Builder instance using the provided configuration.
   The function takes the CfnCertificateAuthority$OtherNameProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -417,6 +501,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-certificate-authority-other-name-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-authority-other-name-property-builder (new CfnCertificateAuthority$OtherNameProperty$Builder) id config))
 
 
 (defn build-cfn-certificate-authority-props-builder
@@ -460,6 +550,12 @@
   (.build builder))
 
 
+(defn cfn-certificate-authority-props-builder
+  ""
+  [id config]
+  (build-cfn-certificate-authority-props-builder (new CfnCertificateAuthorityProps$Builder) id config))
+
+
 (defn build-cfn-certificate-authority-revocation-configuration-property-builder
   "The build-cfn-certificate-authority-revocation-configuration-property-builder function updates a CfnCertificateAuthority$RevocationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnCertificateAuthority$RevocationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -478,6 +574,12 @@
   (when-let [data (lookup-entry config id :ocsp-configuration)]
     (. builder ocspConfiguration data))
   (.build builder))
+
+
+(defn cfn-certificate-authority-revocation-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-authority-revocation-configuration-property-builder (new CfnCertificateAuthority$RevocationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-certificate-authority-subject-property-builder
@@ -539,6 +641,12 @@
   (.build builder))
 
 
+(defn cfn-certificate-authority-subject-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-authority-subject-property-builder (new CfnCertificateAuthority$SubjectProperty$Builder) id config))
+
+
 (defn build-cfn-certificate-builder
   "The build-cfn-certificate-builder function updates a CfnCertificate$Builder instance using the provided configuration.
   The function takes the CfnCertificate$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -574,6 +682,12 @@
   (.build builder))
 
 
+(defn cfn-certificate-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-certificate-builder (CfnCertificate$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-certificate-custom-attribute-property-builder
   "The build-cfn-certificate-custom-attribute-property-builder function updates a CfnCertificate$CustomAttributeProperty$Builder instance using the provided configuration.
   The function takes the CfnCertificate$CustomAttributeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -592,6 +706,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-certificate-custom-attribute-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-custom-attribute-property-builder (new CfnCertificate$CustomAttributeProperty$Builder) id config))
 
 
 (defn build-cfn-certificate-custom-extension-property-builder
@@ -617,6 +737,12 @@
   (.build builder))
 
 
+(defn cfn-certificate-custom-extension-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-custom-extension-property-builder (new CfnCertificate$CustomExtensionProperty$Builder) id config))
+
+
 (defn build-cfn-certificate-edi-party-name-property-builder
   "The build-cfn-certificate-edi-party-name-property-builder function updates a CfnCertificate$EdiPartyNameProperty$Builder instance using the provided configuration.
   The function takes the CfnCertificate$EdiPartyNameProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -637,6 +763,12 @@
   (.build builder))
 
 
+(defn cfn-certificate-edi-party-name-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-edi-party-name-property-builder (new CfnCertificate$EdiPartyNameProperty$Builder) id config))
+
+
 (defn build-cfn-certificate-extended-key-usage-property-builder
   "The build-cfn-certificate-extended-key-usage-property-builder function updates a CfnCertificate$ExtendedKeyUsageProperty$Builder instance using the provided configuration.
   The function takes the CfnCertificate$ExtendedKeyUsageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -655,6 +787,12 @@
   (when-let [data (lookup-entry config id :extended-key-usage-type)]
     (. builder extendedKeyUsageType data))
   (.build builder))
+
+
+(defn cfn-certificate-extended-key-usage-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-extended-key-usage-property-builder (new CfnCertificate$ExtendedKeyUsageProperty$Builder) id config))
 
 
 (defn build-cfn-certificate-extensions-property-builder
@@ -684,6 +822,12 @@
   (when-let [data (lookup-entry config id :subject-alternative-names)]
     (. builder subjectAlternativeNames data))
   (.build builder))
+
+
+(defn cfn-certificate-extensions-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-extensions-property-builder (new CfnCertificate$ExtensionsProperty$Builder) id config))
 
 
 (defn build-cfn-certificate-general-name-property-builder
@@ -722,6 +866,12 @@
   (when-let [data (lookup-entry config id :uniform-resource-identifier)]
     (. builder uniformResourceIdentifier data))
   (.build builder))
+
+
+(defn cfn-certificate-general-name-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-general-name-property-builder (new CfnCertificate$GeneralNameProperty$Builder) id config))
 
 
 (defn build-cfn-certificate-key-usage-property-builder
@@ -765,6 +915,12 @@
   (.build builder))
 
 
+(defn cfn-certificate-key-usage-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-key-usage-property-builder (new CfnCertificate$KeyUsageProperty$Builder) id config))
+
+
 (defn build-cfn-certificate-other-name-property-builder
   "The build-cfn-certificate-other-name-property-builder function updates a CfnCertificate$OtherNameProperty$Builder instance using the provided configuration.
   The function takes the CfnCertificate$OtherNameProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -783,6 +939,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-certificate-other-name-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-other-name-property-builder (new CfnCertificate$OtherNameProperty$Builder) id config))
 
 
 (defn build-cfn-certificate-policy-information-property-builder
@@ -805,6 +967,12 @@
   (.build builder))
 
 
+(defn cfn-certificate-policy-information-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-policy-information-property-builder (new CfnCertificate$PolicyInformationProperty$Builder) id config))
+
+
 (defn build-cfn-certificate-policy-qualifier-info-property-builder
   "The build-cfn-certificate-policy-qualifier-info-property-builder function updates a CfnCertificate$PolicyQualifierInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnCertificate$PolicyQualifierInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -823,6 +991,12 @@
   (when-let [data (lookup-entry config id :qualifier)]
     (. builder qualifier data))
   (.build builder))
+
+
+(defn cfn-certificate-policy-qualifier-info-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-policy-qualifier-info-property-builder (new CfnCertificate$PolicyQualifierInfoProperty$Builder) id config))
 
 
 (defn build-cfn-certificate-props-builder
@@ -860,6 +1034,12 @@
   (.build builder))
 
 
+(defn cfn-certificate-props-builder
+  ""
+  [id config]
+  (build-cfn-certificate-props-builder (new CfnCertificateProps$Builder) id config))
+
+
 (defn build-cfn-certificate-qualifier-property-builder
   "The build-cfn-certificate-qualifier-property-builder function updates a CfnCertificate$QualifierProperty$Builder instance using the provided configuration.
   The function takes the CfnCertificate$QualifierProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -875,6 +1055,12 @@
   (when-let [data (lookup-entry config id :cps-uri)]
     (. builder cpsUri data))
   (.build builder))
+
+
+(defn cfn-certificate-qualifier-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-qualifier-property-builder (new CfnCertificate$QualifierProperty$Builder) id config))
 
 
 (defn build-cfn-certificate-subject-property-builder
@@ -936,6 +1122,12 @@
   (.build builder))
 
 
+(defn cfn-certificate-subject-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-subject-property-builder (new CfnCertificate$SubjectProperty$Builder) id config))
+
+
 (defn build-cfn-certificate-validity-property-builder
   "The build-cfn-certificate-validity-property-builder function updates a CfnCertificate$ValidityProperty$Builder instance using the provided configuration.
   The function takes the CfnCertificate$ValidityProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -954,6 +1146,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-certificate-validity-property-builder
+  ""
+  [id config]
+  (build-cfn-certificate-validity-property-builder (new CfnCertificate$ValidityProperty$Builder) id config))
 
 
 (defn build-cfn-permission-builder
@@ -982,6 +1180,12 @@
   (.build builder))
 
 
+(defn cfn-permission-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-permission-builder (CfnPermission$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-permission-props-builder
   "The build-cfn-permission-props-builder function updates a CfnPermissionProps$Builder instance using the provided configuration.
   The function takes the CfnPermissionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1006,3 +1210,9 @@
   (when-let [data (lookup-entry config id :source-account)]
     (. builder sourceAccount data))
   (.build builder))
+
+
+(defn cfn-permission-props-builder
+  ""
+  [id config]
+  (build-cfn-permission-props-builder (new CfnPermissionProps$Builder) id config))

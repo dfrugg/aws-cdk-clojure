@@ -31,6 +31,12 @@
   (.build builder))
 
 
+(defn cfn-application-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-builder (CfnApplication$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-application-props-builder
   "The build-cfn-application-props-builder function updates a CfnApplicationProps$Builder instance using the provided configuration.
   The function takes the CfnApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -55,3 +61,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-application-props-builder
+  ""
+  [id config]
+  (build-cfn-application-props-builder (new CfnApplicationProps$Builder) id config))

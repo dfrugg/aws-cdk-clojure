@@ -37,6 +37,12 @@
   (.build builder))
 
 
+(defn cfn-application-alarm-metric-property-builder
+  ""
+  [id config]
+  (build-cfn-application-alarm-metric-property-builder (new CfnApplication$AlarmMetricProperty$Builder) id config))
+
+
 (defn build-cfn-application-alarm-property-builder
   "The build-cfn-application-alarm-property-builder function updates a CfnApplication$AlarmProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$AlarmProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -55,6 +61,12 @@
   (when-let [data (lookup-entry config id :severity)]
     (. builder severity data))
   (.build builder))
+
+
+(defn cfn-application-alarm-property-builder
+  ""
+  [id config]
+  (build-cfn-application-alarm-property-builder (new CfnApplication$AlarmProperty$Builder) id config))
 
 
 (defn build-cfn-application-builder
@@ -104,6 +116,12 @@
   (.build builder))
 
 
+(defn cfn-application-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-builder (CfnApplication$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-application-component-configuration-property-builder
   "The build-cfn-application-component-configuration-property-builder function updates a CfnApplication$ComponentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$ComponentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -122,6 +140,12 @@
   (when-let [data (lookup-entry config id :sub-component-type-configurations)]
     (. builder subComponentTypeConfigurations data))
   (.build builder))
+
+
+(defn cfn-application-component-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-component-configuration-property-builder (new CfnApplication$ComponentConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-application-component-monitoring-setting-property-builder
@@ -154,6 +178,12 @@
   (when-let [data (lookup-entry config id :tier)]
     (. builder tier data))
   (.build builder))
+
+
+(defn cfn-application-component-monitoring-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-application-component-monitoring-setting-property-builder (new CfnApplication$ComponentMonitoringSettingProperty$Builder) id config))
 
 
 (defn build-cfn-application-configuration-details-property-builder
@@ -191,6 +221,12 @@
   (.build builder))
 
 
+(defn cfn-application-configuration-details-property-builder
+  ""
+  [id config]
+  (build-cfn-application-configuration-details-property-builder (new CfnApplication$ConfigurationDetailsProperty$Builder) id config))
+
+
 (defn build-cfn-application-custom-component-property-builder
   "The build-cfn-application-custom-component-property-builder function updates a CfnApplication$CustomComponentProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$CustomComponentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -211,6 +247,12 @@
   (.build builder))
 
 
+(defn cfn-application-custom-component-property-builder
+  ""
+  [id config]
+  (build-cfn-application-custom-component-property-builder (new CfnApplication$CustomComponentProperty$Builder) id config))
+
+
 (defn build-cfn-application-ha-cluster-prometheus-exporter-property-builder
   "The build-cfn-application-ha-cluster-prometheus-exporter-property-builder function updates a CfnApplication$HAClusterPrometheusExporterProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$HAClusterPrometheusExporterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -226,6 +268,12 @@
   (when-let [data (lookup-entry config id :prometheus-port)]
     (. builder prometheusPort data))
   (.build builder))
+
+
+(defn cfn-application-ha-cluster-prometheus-exporter-property-builder
+  ""
+  [id config]
+  (build-cfn-application-ha-cluster-prometheus-exporter-property-builder (new CfnApplication$HAClusterPrometheusExporterProperty$Builder) id config))
 
 
 (defn build-cfn-application-hana-prometheus-exporter-property-builder
@@ -257,6 +305,12 @@
   (.build builder))
 
 
+(defn cfn-application-hana-prometheus-exporter-property-builder
+  ""
+  [id config]
+  (build-cfn-application-hana-prometheus-exporter-property-builder (new CfnApplication$HANAPrometheusExporterProperty$Builder) id config))
+
+
 (defn build-cfn-application-jmx-prometheus-exporter-property-builder
   "The build-cfn-application-jmx-prometheus-exporter-property-builder function updates a CfnApplication$JMXPrometheusExporterProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$JMXPrometheusExporterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -278,6 +332,12 @@
   (when-let [data (lookup-entry config id :prometheus-port)]
     (. builder prometheusPort data))
   (.build builder))
+
+
+(defn cfn-application-jmx-prometheus-exporter-property-builder
+  ""
+  [id config]
+  (build-cfn-application-jmx-prometheus-exporter-property-builder (new CfnApplication$JMXPrometheusExporterProperty$Builder) id config))
 
 
 (defn build-cfn-application-log-pattern-property-builder
@@ -303,6 +363,12 @@
   (.build builder))
 
 
+(defn cfn-application-log-pattern-property-builder
+  ""
+  [id config]
+  (build-cfn-application-log-pattern-property-builder (new CfnApplication$LogPatternProperty$Builder) id config))
+
+
 (defn build-cfn-application-log-pattern-set-property-builder
   "The build-cfn-application-log-pattern-set-property-builder function updates a CfnApplication$LogPatternSetProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$LogPatternSetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -321,6 +387,12 @@
   (when-let [data (lookup-entry config id :pattern-set-name)]
     (. builder patternSetName data))
   (.build builder))
+
+
+(defn cfn-application-log-pattern-set-property-builder
+  ""
+  [id config]
+  (build-cfn-application-log-pattern-set-property-builder (new CfnApplication$LogPatternSetProperty$Builder) id config))
 
 
 (defn build-cfn-application-log-property-builder
@@ -350,6 +422,12 @@
   (when-let [data (lookup-entry config id :pattern-set)]
     (. builder patternSet data))
   (.build builder))
+
+
+(defn cfn-application-log-property-builder
+  ""
+  [id config]
+  (build-cfn-application-log-property-builder (new CfnApplication$LogProperty$Builder) id config))
 
 
 (defn build-cfn-application-props-builder
@@ -399,6 +477,12 @@
   (.build builder))
 
 
+(defn cfn-application-props-builder
+  ""
+  [id config]
+  (build-cfn-application-props-builder (new CfnApplicationProps$Builder) id config))
+
+
 (defn build-cfn-application-sub-component-configuration-details-property-builder
   "The build-cfn-application-sub-component-configuration-details-property-builder function updates a CfnApplication$SubComponentConfigurationDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$SubComponentConfigurationDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -422,6 +506,12 @@
   (.build builder))
 
 
+(defn cfn-application-sub-component-configuration-details-property-builder
+  ""
+  [id config]
+  (build-cfn-application-sub-component-configuration-details-property-builder (new CfnApplication$SubComponentConfigurationDetailsProperty$Builder) id config))
+
+
 (defn build-cfn-application-sub-component-type-configuration-property-builder
   "The build-cfn-application-sub-component-type-configuration-property-builder function updates a CfnApplication$SubComponentTypeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$SubComponentTypeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -440,6 +530,12 @@
   (when-let [data (lookup-entry config id :sub-component-type)]
     (. builder subComponentType data))
   (.build builder))
+
+
+(defn cfn-application-sub-component-type-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-sub-component-type-configuration-property-builder (new CfnApplication$SubComponentTypeConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-application-windows-event-property-builder
@@ -466,3 +562,9 @@
   (when-let [data (lookup-entry config id :pattern-set)]
     (. builder patternSet data))
   (.build builder))
+
+
+(defn cfn-application-windows-event-property-builder
+  ""
+  [id config]
+  (build-cfn-application-windows-event-property-builder (new CfnApplication$WindowsEventProperty$Builder) id config))

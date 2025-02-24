@@ -32,6 +32,12 @@
   (.build builder))
 
 
+(defn cfn-export-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-export-builder (CfnExport$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-export-data-query-property-builder
   "The build-cfn-export-data-query-property-builder function updates a CfnExport$DataQueryProperty$Builder instance using the provided configuration.
   The function takes the CfnExport$DataQueryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -52,6 +58,12 @@
   (.build builder))
 
 
+(defn cfn-export-data-query-property-builder
+  ""
+  [id config]
+  (build-cfn-export-data-query-property-builder (new CfnExport$DataQueryProperty$Builder) id config))
+
+
 (defn build-cfn-export-destination-configurations-property-builder
   "The build-cfn-export-destination-configurations-property-builder function updates a CfnExport$DestinationConfigurationsProperty$Builder instance using the provided configuration.
   The function takes the CfnExport$DestinationConfigurationsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -67,6 +79,12 @@
   (when-let [data (lookup-entry config id :s3-destination)]
     (. builder s3Destination data))
   (.build builder))
+
+
+(defn cfn-export-destination-configurations-property-builder
+  ""
+  [id config]
+  (build-cfn-export-destination-configurations-property-builder (new CfnExport$DestinationConfigurationsProperty$Builder) id config))
 
 
 (defn build-cfn-export-export-property-builder
@@ -101,6 +119,12 @@
   (.build builder))
 
 
+(defn cfn-export-export-property-builder
+  ""
+  [id config]
+  (build-cfn-export-export-property-builder (new CfnExport$ExportProperty$Builder) id config))
+
+
 (defn build-cfn-export-props-builder
   "The build-cfn-export-props-builder function updates a CfnExportProps$Builder instance using the provided configuration.
   The function takes the CfnExportProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -121,6 +145,12 @@
   (.build builder))
 
 
+(defn cfn-export-props-builder
+  ""
+  [id config]
+  (build-cfn-export-props-builder (new CfnExportProps$Builder) id config))
+
+
 (defn build-cfn-export-refresh-cadence-property-builder
   "The build-cfn-export-refresh-cadence-property-builder function updates a CfnExport$RefreshCadenceProperty$Builder instance using the provided configuration.
   The function takes the CfnExport$RefreshCadenceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -136,6 +166,12 @@
   (when-let [data (lookup-entry config id :frequency)]
     (. builder frequency data))
   (.build builder))
+
+
+(defn cfn-export-refresh-cadence-property-builder
+  ""
+  [id config]
+  (build-cfn-export-refresh-cadence-property-builder (new CfnExport$RefreshCadenceProperty$Builder) id config))
 
 
 (defn build-cfn-export-resource-tag-property-builder
@@ -156,6 +192,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-export-resource-tag-property-builder
+  ""
+  [id config]
+  (build-cfn-export-resource-tag-property-builder (new CfnExport$ResourceTagProperty$Builder) id config))
 
 
 (defn build-cfn-export-s3-destination-property-builder
@@ -184,6 +226,12 @@
   (.build builder))
 
 
+(defn cfn-export-s3-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-export-s3-destination-property-builder (new CfnExport$S3DestinationProperty$Builder) id config))
+
+
 (defn build-cfn-export-s3-output-configurations-property-builder
   "The build-cfn-export-s3-output-configurations-property-builder function updates a CfnExport$S3OutputConfigurationsProperty$Builder instance using the provided configuration.
   The function takes the CfnExport$S3OutputConfigurationsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -208,3 +256,9 @@
   (when-let [data (lookup-entry config id :overwrite)]
     (. builder overwrite data))
   (.build builder))
+
+
+(defn cfn-export-s3-output-configurations-property-builder
+  ""
+  [id config]
+  (build-cfn-export-s3-output-configurations-property-builder (new CfnExport$S3OutputConfigurationsProperty$Builder) id config))

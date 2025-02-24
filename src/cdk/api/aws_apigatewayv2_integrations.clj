@@ -76,6 +76,12 @@
   (.build builder))
 
 
+(defn http-alb-integration-props-builder
+  ""
+  [id config]
+  (build-http-alb-integration-props-builder (new HttpAlbIntegrationProps$Builder) id config))
+
+
 (defn build-http-lambda-integration-builder
   "The build-http-lambda-integration-builder function updates a HttpLambdaIntegration$Builder instance using the provided configuration.
   The function takes the HttpLambdaIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -114,6 +120,12 @@
   (when-let [data (lookup-entry config id :payload-format-version)]
     (. builder payloadFormatVersion data))
   (.build builder))
+
+
+(defn http-lambda-integration-props-builder
+  ""
+  [id config]
+  (build-http-lambda-integration-props-builder (new HttpLambdaIntegrationProps$Builder) id config))
 
 
 (defn build-http-nlb-integration-builder
@@ -168,6 +180,12 @@
   (.build builder))
 
 
+(defn http-nlb-integration-props-builder
+  ""
+  [id config]
+  (build-http-nlb-integration-props-builder (new HttpNlbIntegrationProps$Builder) id config))
+
+
 (defn build-http-private-integration-options-builder
   "The build-http-private-integration-options-builder function updates a HttpPrivateIntegrationOptions$Builder instance using the provided configuration.
   The function takes the HttpPrivateIntegrationOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -192,6 +210,12 @@
   (when-let [data (lookup-entry config id :vpc-link)]
     (. builder vpcLink data))
   (.build builder))
+
+
+(defn http-private-integration-options-builder
+  ""
+  [id config]
+  (build-http-private-integration-options-builder (new HttpPrivateIntegrationOptions$Builder) id config))
 
 
 (defn build-http-service-discovery-integration-builder
@@ -246,6 +270,12 @@
   (.build builder))
 
 
+(defn http-service-discovery-integration-props-builder
+  ""
+  [id config]
+  (build-http-service-discovery-integration-props-builder (new HttpServiceDiscoveryIntegrationProps$Builder) id config))
+
+
 (defn build-http-step-functions-integration-builder
   "The build-http-step-functions-integration-builder function updates a HttpStepFunctionsIntegration$Builder instance using the provided configuration.
   The function takes the HttpStepFunctionsIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -292,6 +322,12 @@
   (.build builder))
 
 
+(defn http-step-functions-integration-props-builder
+  ""
+  [id config]
+  (build-http-step-functions-integration-props-builder (new HttpStepFunctionsIntegrationProps$Builder) id config))
+
+
 (defn build-http-url-integration-builder
   "The build-http-url-integration-builder function updates a HttpUrlIntegration$Builder instance using the provided configuration.
   The function takes the HttpUrlIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -330,6 +366,12 @@
   (when-let [data (lookup-entry config id :parameter-mapping)]
     (. builder parameterMapping data))
   (.build builder))
+
+
+(defn http-url-integration-props-builder
+  ""
+  [id config]
+  (build-http-url-integration-props-builder (new HttpUrlIntegrationProps$Builder) id config))
 
 
 (defn build-web-socket-aws-integration-builder
@@ -414,6 +456,12 @@
   (.build builder))
 
 
+(defn web-socket-aws-integration-props-builder
+  ""
+  [id config]
+  (build-web-socket-aws-integration-props-builder (new WebSocketAwsIntegrationProps$Builder) id config))
+
+
 (defn build-web-socket-lambda-integration-builder
   "The build-web-socket-lambda-integration-builder function updates a WebSocketLambdaIntegration$Builder instance using the provided configuration.
   The function takes the WebSocketLambdaIntegration$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -452,3 +500,9 @@
   (when-let [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
+
+
+(defn web-socket-lambda-integration-props-builder
+  ""
+  [id config]
+  (build-web-socket-lambda-integration-props-builder (new WebSocketLambdaIntegrationProps$Builder) id config))

@@ -94,6 +94,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-data-source-builder (CfnDataSource$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-data-source-data-source-configuration-input-property-builder
   "The build-cfn-data-source-data-source-configuration-input-property-builder function updates a CfnDataSource$DataSourceConfigurationInputProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$DataSourceConfigurationInputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -114,6 +120,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-data-source-configuration-input-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-data-source-configuration-input-property-builder (new CfnDataSource$DataSourceConfigurationInputProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-filter-expression-property-builder
   "The build-cfn-data-source-filter-expression-property-builder function updates a CfnDataSource$FilterExpressionProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$FilterExpressionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -132,6 +144,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-data-source-filter-expression-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-filter-expression-property-builder (new CfnDataSource$FilterExpressionProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-form-input-property-builder
@@ -160,6 +178,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-form-input-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-form-input-property-builder (new CfnDataSource$FormInputProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-glue-run-configuration-input-property-builder
   "The build-cfn-data-source-glue-run-configuration-input-property-builder function updates a CfnDataSource$GlueRunConfigurationInputProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$GlueRunConfigurationInputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -181,6 +205,12 @@
   (when-let [data (lookup-entry config id :relational-filter-configurations)]
     (. builder relationalFilterConfigurations data))
   (.build builder))
+
+
+(defn cfn-data-source-glue-run-configuration-input-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-glue-run-configuration-input-property-builder (new CfnDataSource$GlueRunConfigurationInputProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-props-builder
@@ -233,6 +263,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-props-builder
+  ""
+  [id config]
+  (build-cfn-data-source-props-builder (new CfnDataSourceProps$Builder) id config))
+
+
 (defn build-cfn-data-source-recommendation-configuration-property-builder
   "The build-cfn-data-source-recommendation-configuration-property-builder function updates a CfnDataSource$RecommendationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$RecommendationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -248,6 +284,12 @@
   (when-let [data (lookup-entry config id :enable-business-name-generation)]
     (. builder enableBusinessNameGeneration data))
   (.build builder))
+
+
+(defn cfn-data-source-recommendation-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-recommendation-configuration-property-builder (new CfnDataSource$RecommendationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-redshift-cluster-storage-property-builder
@@ -267,6 +309,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-redshift-cluster-storage-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-redshift-cluster-storage-property-builder (new CfnDataSource$RedshiftClusterStorageProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-redshift-credential-configuration-property-builder
   "The build-cfn-data-source-redshift-credential-configuration-property-builder function updates a CfnDataSource$RedshiftCredentialConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$RedshiftCredentialConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -282,6 +330,12 @@
   (when-let [data (lookup-entry config id :secret-manager-arn)]
     (. builder secretManagerArn data))
   (.build builder))
+
+
+(defn cfn-data-source-redshift-credential-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-redshift-credential-configuration-property-builder (new CfnDataSource$RedshiftCredentialConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-redshift-run-configuration-input-property-builder
@@ -310,6 +364,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-redshift-run-configuration-input-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-redshift-run-configuration-input-property-builder (new CfnDataSource$RedshiftRunConfigurationInputProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-redshift-serverless-storage-property-builder
   "The build-cfn-data-source-redshift-serverless-storage-property-builder function updates a CfnDataSource$RedshiftServerlessStorageProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$RedshiftServerlessStorageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -325,6 +385,12 @@
   (when-let [data (lookup-entry config id :workgroup-name)]
     (. builder workgroupName data))
   (.build builder))
+
+
+(defn cfn-data-source-redshift-serverless-storage-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-redshift-serverless-storage-property-builder (new CfnDataSource$RedshiftServerlessStorageProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-redshift-storage-property-builder
@@ -345,6 +411,12 @@
   (when-let [data (lookup-entry config id :redshift-serverless-source)]
     (. builder redshiftServerlessSource data))
   (.build builder))
+
+
+(defn cfn-data-source-redshift-storage-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-redshift-storage-property-builder (new CfnDataSource$RedshiftStorageProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-relational-filter-configuration-property-builder
@@ -370,6 +442,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-relational-filter-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-relational-filter-configuration-property-builder (new CfnDataSource$RelationalFilterConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-schedule-configuration-property-builder
   "The build-cfn-data-source-schedule-configuration-property-builder function updates a CfnDataSource$ScheduleConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$ScheduleConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -388,6 +466,12 @@
   (when-let [data (lookup-entry config id :timezone)]
     (. builder timezone data))
   (.build builder))
+
+
+(defn cfn-data-source-schedule-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-schedule-configuration-property-builder (new CfnDataSource$ScheduleConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-domain-builder
@@ -422,6 +506,12 @@
   (.build builder))
 
 
+(defn cfn-domain-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-domain-builder (CfnDomain$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-domain-props-builder
   "The build-cfn-domain-props-builder function updates a CfnDomainProps$Builder instance using the provided configuration.
   The function takes the CfnDomainProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -454,6 +544,12 @@
   (.build builder))
 
 
+(defn cfn-domain-props-builder
+  ""
+  [id config]
+  (build-cfn-domain-props-builder (new CfnDomainProps$Builder) id config))
+
+
 (defn build-cfn-domain-single-sign-on-property-builder
   "The build-cfn-domain-single-sign-on-property-builder function updates a CfnDomain$SingleSignOnProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$SingleSignOnProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -472,6 +568,12 @@
   (when-let [data (lookup-entry config id :user-assignment)]
     (. builder userAssignment data))
   (.build builder))
+
+
+(defn cfn-domain-single-sign-on-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-single-sign-on-property-builder (new CfnDomain$SingleSignOnProperty$Builder) id config))
 
 
 (defn build-cfn-environment-blueprint-configuration-builder
@@ -506,6 +608,12 @@
   (.build builder))
 
 
+(defn cfn-environment-blueprint-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-environment-blueprint-configuration-builder (CfnEnvironmentBlueprintConfiguration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-environment-blueprint-configuration-props-builder
   "The build-cfn-environment-blueprint-configuration-props-builder function updates a CfnEnvironmentBlueprintConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnEnvironmentBlueprintConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -538,6 +646,12 @@
   (.build builder))
 
 
+(defn cfn-environment-blueprint-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-environment-blueprint-configuration-props-builder (new CfnEnvironmentBlueprintConfigurationProps$Builder) id config))
+
+
 (defn build-cfn-environment-blueprint-configuration-regional-parameter-property-builder
   "The build-cfn-environment-blueprint-configuration-regional-parameter-property-builder function updates a CfnEnvironmentBlueprintConfiguration$RegionalParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironmentBlueprintConfiguration$RegionalParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -556,6 +670,12 @@
   (when-let [data (lookup-entry config id :region)]
     (. builder region data))
   (.build builder))
+
+
+(defn cfn-environment-blueprint-configuration-regional-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-environment-blueprint-configuration-regional-parameter-property-builder (new CfnEnvironmentBlueprintConfiguration$RegionalParameterProperty$Builder) id config))
 
 
 (defn build-cfn-environment-builder
@@ -593,6 +713,12 @@
   (.build builder))
 
 
+(defn cfn-environment-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-environment-builder (CfnEnvironment$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-environment-environment-parameter-property-builder
   "The build-cfn-environment-environment-parameter-property-builder function updates a CfnEnvironment$EnvironmentParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$EnvironmentParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -611,6 +737,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-environment-environment-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-environment-environment-parameter-property-builder (new CfnEnvironment$EnvironmentParameterProperty$Builder) id config))
 
 
 (defn build-cfn-environment-profile-builder
@@ -651,6 +783,12 @@
   (.build builder))
 
 
+(defn cfn-environment-profile-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-environment-profile-builder (CfnEnvironmentProfile$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-environment-profile-environment-parameter-property-builder
   "The build-cfn-environment-profile-environment-parameter-property-builder function updates a CfnEnvironmentProfile$EnvironmentParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironmentProfile$EnvironmentParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -669,6 +807,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-environment-profile-environment-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-environment-profile-environment-parameter-property-builder (new CfnEnvironmentProfile$EnvironmentParameterProperty$Builder) id config))
 
 
 (defn build-cfn-environment-profile-props-builder
@@ -709,6 +853,12 @@
   (.build builder))
 
 
+(defn cfn-environment-profile-props-builder
+  ""
+  [id config]
+  (build-cfn-environment-profile-props-builder (new CfnEnvironmentProfileProps$Builder) id config))
+
+
 (defn build-cfn-environment-props-builder
   "The build-cfn-environment-props-builder function updates a CfnEnvironmentProps$Builder instance using the provided configuration.
   The function takes the CfnEnvironmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -744,6 +894,12 @@
   (.build builder))
 
 
+(defn cfn-environment-props-builder
+  ""
+  [id config]
+  (build-cfn-environment-props-builder (new CfnEnvironmentProps$Builder) id config))
+
+
 (defn build-cfn-group-profile-builder
   "The build-cfn-group-profile-builder function updates a CfnGroupProfile$Builder instance using the provided configuration.
   The function takes the CfnGroupProfile$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -767,6 +923,12 @@
   (.build builder))
 
 
+(defn cfn-group-profile-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-group-profile-builder (CfnGroupProfile$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-group-profile-props-builder
   "The build-cfn-group-profile-props-builder function updates a CfnGroupProfileProps$Builder instance using the provided configuration.
   The function takes the CfnGroupProfileProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -788,6 +950,12 @@
   (when-let [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
+
+
+(defn cfn-group-profile-props-builder
+  ""
+  [id config]
+  (build-cfn-group-profile-props-builder (new CfnGroupProfileProps$Builder) id config))
 
 
 (defn build-cfn-project-builder
@@ -816,6 +984,12 @@
   (.build builder))
 
 
+(defn cfn-project-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-project-builder (CfnProject$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-project-membership-builder
   "The build-cfn-project-membership-builder function updates a CfnProjectMembership$Builder instance using the provided configuration.
   The function takes the CfnProjectMembership$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -842,6 +1016,12 @@
   (.build builder))
 
 
+(defn cfn-project-membership-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-project-membership-builder (CfnProjectMembership$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-project-membership-member-property-builder
   "The build-cfn-project-membership-member-property-builder function updates a CfnProjectMembership$MemberProperty$Builder instance using the provided configuration.
   The function takes the CfnProjectMembership$MemberProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -860,6 +1040,12 @@
   (when-let [data (lookup-entry config id :user-identifier)]
     (. builder userIdentifier data))
   (.build builder))
+
+
+(defn cfn-project-membership-member-property-builder
+  ""
+  [id config]
+  (build-cfn-project-membership-member-property-builder (new CfnProjectMembership$MemberProperty$Builder) id config))
 
 
 (defn build-cfn-project-membership-props-builder
@@ -888,6 +1074,12 @@
   (.build builder))
 
 
+(defn cfn-project-membership-props-builder
+  ""
+  [id config]
+  (build-cfn-project-membership-props-builder (new CfnProjectMembershipProps$Builder) id config))
+
+
 (defn build-cfn-project-props-builder
   "The build-cfn-project-props-builder function updates a CfnProjectProps$Builder instance using the provided configuration.
   The function takes the CfnProjectProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -912,6 +1104,12 @@
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-project-props-builder
+  ""
+  [id config]
+  (build-cfn-project-props-builder (new CfnProjectProps$Builder) id config))
 
 
 (defn build-cfn-subscription-target-builder
@@ -955,6 +1153,12 @@
   (.build builder))
 
 
+(defn cfn-subscription-target-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-subscription-target-builder (CfnSubscriptionTarget$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-subscription-target-props-builder
   "The build-cfn-subscription-target-props-builder function updates a CfnSubscriptionTargetProps$Builder instance using the provided configuration.
   The function takes the CfnSubscriptionTargetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -996,6 +1200,12 @@
   (.build builder))
 
 
+(defn cfn-subscription-target-props-builder
+  ""
+  [id config]
+  (build-cfn-subscription-target-props-builder (new CfnSubscriptionTargetProps$Builder) id config))
+
+
 (defn build-cfn-subscription-target-subscription-target-form-property-builder
   "The build-cfn-subscription-target-subscription-target-form-property-builder function updates a CfnSubscriptionTarget$SubscriptionTargetFormProperty$Builder instance using the provided configuration.
   The function takes the CfnSubscriptionTarget$SubscriptionTargetFormProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1014,6 +1224,12 @@
   (when-let [data (lookup-entry config id :form-name)]
     (. builder formName data))
   (.build builder))
+
+
+(defn cfn-subscription-target-subscription-target-form-property-builder
+  ""
+  [id config]
+  (build-cfn-subscription-target-subscription-target-form-property-builder (new CfnSubscriptionTarget$SubscriptionTargetFormProperty$Builder) id config))
 
 
 (defn build-cfn-user-profile-builder
@@ -1042,6 +1258,12 @@
   (.build builder))
 
 
+(defn cfn-user-profile-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-user-profile-builder (CfnUserProfile$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-user-profile-iam-user-profile-details-property-builder
   "The build-cfn-user-profile-iam-user-profile-details-property-builder function updates a CfnUserProfile$IamUserProfileDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnUserProfile$IamUserProfileDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1057,6 +1279,12 @@
   (when-let [data (lookup-entry config id :arn)]
     (. builder arn data))
   (.build builder))
+
+
+(defn cfn-user-profile-iam-user-profile-details-property-builder
+  ""
+  [id config]
+  (build-cfn-user-profile-iam-user-profile-details-property-builder (new CfnUserProfile$IamUserProfileDetailsProperty$Builder) id config))
 
 
 (defn build-cfn-user-profile-props-builder
@@ -1085,6 +1313,12 @@
   (.build builder))
 
 
+(defn cfn-user-profile-props-builder
+  ""
+  [id config]
+  (build-cfn-user-profile-props-builder (new CfnUserProfileProps$Builder) id config))
+
+
 (defn build-cfn-user-profile-sso-user-profile-details-property-builder
   "The build-cfn-user-profile-sso-user-profile-details-property-builder function updates a CfnUserProfile$SsoUserProfileDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnUserProfile$SsoUserProfileDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1108,6 +1342,12 @@
   (.build builder))
 
 
+(defn cfn-user-profile-sso-user-profile-details-property-builder
+  ""
+  [id config]
+  (build-cfn-user-profile-sso-user-profile-details-property-builder (new CfnUserProfile$SsoUserProfileDetailsProperty$Builder) id config))
+
+
 (defn build-cfn-user-profile-user-profile-details-property-builder
   "The build-cfn-user-profile-user-profile-details-property-builder function updates a CfnUserProfile$UserProfileDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnUserProfile$UserProfileDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1126,3 +1366,9 @@
   (when-let [data (lookup-entry config id :sso)]
     (. builder sso data))
   (.build builder))
+
+
+(defn cfn-user-profile-user-profile-details-property-builder
+  ""
+  [id config]
+  (build-cfn-user-profile-user-profile-details-property-builder (new CfnUserProfile$UserProfileDetailsProperty$Builder) id config))

@@ -26,6 +26,12 @@
   (.build builder))
 
 
+(defn cfn-account-alias-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-account-alias-builder (CfnAccountAlias$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-account-alias-props-builder
   "The build-cfn-account-alias-props-builder function updates a CfnAccountAliasProps$Builder instance using the provided configuration.
   The function takes the CfnAccountAliasProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -41,6 +47,12 @@
   (when-let [data (lookup-entry config id :account-alias)]
     (. builder accountAlias data))
   (.build builder))
+
+
+(defn cfn-account-alias-props-builder
+  ""
+  [id config]
+  (build-cfn-account-alias-props-builder (new CfnAccountAliasProps$Builder) id config))
 
 
 (defn build-cfn-slack-channel-configuration-builder
@@ -81,6 +93,12 @@
   (.build builder))
 
 
+(defn cfn-slack-channel-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-slack-channel-configuration-builder (CfnSlackChannelConfiguration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-slack-channel-configuration-props-builder
   "The build-cfn-slack-channel-configuration-props-builder function updates a CfnSlackChannelConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnSlackChannelConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -119,6 +137,12 @@
   (.build builder))
 
 
+(defn cfn-slack-channel-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-slack-channel-configuration-props-builder (new CfnSlackChannelConfigurationProps$Builder) id config))
+
+
 (defn build-cfn-slack-workspace-configuration-builder
   "The build-cfn-slack-workspace-configuration-builder function updates a CfnSlackWorkspaceConfiguration$Builder instance using the provided configuration.
   The function takes the CfnSlackWorkspaceConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -139,6 +163,12 @@
   (.build builder))
 
 
+(defn cfn-slack-workspace-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-slack-workspace-configuration-builder (CfnSlackWorkspaceConfiguration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-slack-workspace-configuration-props-builder
   "The build-cfn-slack-workspace-configuration-props-builder function updates a CfnSlackWorkspaceConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnSlackWorkspaceConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -157,3 +187,9 @@
   (when-let [data (lookup-entry config id :version-id)]
     (. builder versionId data))
   (.build builder))
+
+
+(defn cfn-slack-workspace-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-slack-workspace-configuration-props-builder (new CfnSlackWorkspaceConfigurationProps$Builder) id config))

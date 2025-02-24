@@ -28,6 +28,12 @@
   (.build builder))
 
 
+(defn cfn-environment-attribute-map-items-property-builder
+  ""
+  [id config]
+  (build-cfn-environment-attribute-map-items-property-builder (new CfnEnvironment$AttributeMapItemsProperty$Builder) id config))
+
+
 (defn build-cfn-environment-builder
   "The build-cfn-environment-builder function updates a CfnEnvironment$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -66,6 +72,12 @@
   (.build builder))
 
 
+(defn cfn-environment-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-environment-builder (CfnEnvironment$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-environment-federation-parameters-property-builder
   "The build-cfn-environment-federation-parameters-property-builder function updates a CfnEnvironment$FederationParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$FederationParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -96,6 +108,12 @@
   (when-let [data (lookup-entry config id :saml-metadata-url)]
     (. builder samlMetadataUrl data))
   (.build builder))
+
+
+(defn cfn-environment-federation-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-environment-federation-parameters-property-builder (new CfnEnvironment$FederationParametersProperty$Builder) id config))
 
 
 (defn build-cfn-environment-props-builder
@@ -136,6 +154,12 @@
   (.build builder))
 
 
+(defn cfn-environment-props-builder
+  ""
+  [id config]
+  (build-cfn-environment-props-builder (new CfnEnvironmentProps$Builder) id config))
+
+
 (defn build-cfn-environment-superuser-parameters-property-builder
   "The build-cfn-environment-superuser-parameters-property-builder function updates a CfnEnvironment$SuperuserParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$SuperuserParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -157,3 +181,9 @@
   (when-let [data (lookup-entry config id :last-name)]
     (. builder lastName data))
   (.build builder))
+
+
+(defn cfn-environment-superuser-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-environment-superuser-parameters-property-builder (new CfnEnvironment$SuperuserParametersProperty$Builder) id config))

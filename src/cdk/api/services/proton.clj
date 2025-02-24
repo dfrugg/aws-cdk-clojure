@@ -44,6 +44,12 @@
   (.build builder))
 
 
+(defn cfn-environment-account-connection-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-environment-account-connection-builder (CfnEnvironmentAccountConnection$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-environment-account-connection-props-builder
   "The build-cfn-environment-account-connection-props-builder function updates a CfnEnvironmentAccountConnectionProps$Builder instance using the provided configuration.
   The function takes the CfnEnvironmentAccountConnectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -79,6 +85,12 @@
   (.build builder))
 
 
+(defn cfn-environment-account-connection-props-builder
+  ""
+  [id config]
+  (build-cfn-environment-account-connection-props-builder (new CfnEnvironmentAccountConnectionProps$Builder) id config))
+
+
 (defn build-cfn-environment-template-builder
   "The build-cfn-environment-template-builder function updates a CfnEnvironmentTemplate$Builder instance using the provided configuration.
   The function takes the CfnEnvironmentTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -109,6 +121,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-environment-template-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-environment-template-builder (CfnEnvironmentTemplate$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-environment-template-props-builder
@@ -143,6 +161,12 @@
   (.build builder))
 
 
+(defn cfn-environment-template-props-builder
+  ""
+  [id config]
+  (build-cfn-environment-template-props-builder (new CfnEnvironmentTemplateProps$Builder) id config))
+
+
 (defn build-cfn-service-template-builder
   "The build-cfn-service-template-builder function updates a CfnServiceTemplate$Builder instance using the provided configuration.
   The function takes the CfnServiceTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -175,6 +199,12 @@
   (.build builder))
 
 
+(defn cfn-service-template-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-service-template-builder (CfnServiceTemplate$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-service-template-props-builder
   "The build-cfn-service-template-props-builder function updates a CfnServiceTemplateProps$Builder instance using the provided configuration.
   The function takes the CfnServiceTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -205,3 +235,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-service-template-props-builder
+  ""
+  [id config]
+  (build-cfn-service-template-props-builder (new CfnServiceTemplateProps$Builder) id config))

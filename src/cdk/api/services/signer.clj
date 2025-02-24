@@ -40,6 +40,12 @@
   (.build builder))
 
 
+(defn cfn-profile-permission-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-profile-permission-builder (CfnProfilePermission$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-profile-permission-props-builder
   "The build-cfn-profile-permission-props-builder function updates a CfnProfilePermissionProps$Builder instance using the provided configuration.
   The function takes the CfnProfilePermissionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -69,6 +75,12 @@
   (.build builder))
 
 
+(defn cfn-profile-permission-props-builder
+  ""
+  [id config]
+  (build-cfn-profile-permission-props-builder (new CfnProfilePermissionProps$Builder) id config))
+
+
 (defn build-cfn-signing-profile-builder
   "The build-cfn-signing-profile-builder function updates a CfnSigningProfile$Builder instance using the provided configuration.
   The function takes the CfnSigningProfile$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -90,6 +102,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-signing-profile-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-signing-profile-builder (CfnSigningProfile$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-signing-profile-props-builder
@@ -115,6 +133,12 @@
   (.build builder))
 
 
+(defn cfn-signing-profile-props-builder
+  ""
+  [id config]
+  (build-cfn-signing-profile-props-builder (new CfnSigningProfileProps$Builder) id config))
+
+
 (defn build-cfn-signing-profile-signature-validity-period-property-builder
   "The build-cfn-signing-profile-signature-validity-period-property-builder function updates a CfnSigningProfile$SignatureValidityPeriodProperty$Builder instance using the provided configuration.
   The function takes the CfnSigningProfile$SignatureValidityPeriodProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -135,6 +159,12 @@
   (.build builder))
 
 
+(defn cfn-signing-profile-signature-validity-period-property-builder
+  ""
+  [id config]
+  (build-cfn-signing-profile-signature-validity-period-property-builder (new CfnSigningProfile$SignatureValidityPeriodProperty$Builder) id config))
+
+
 (defn build-signing-profile-attributes-builder
   "The build-signing-profile-attributes-builder function updates a SigningProfileAttributes$Builder instance using the provided configuration.
   The function takes the SigningProfileAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -153,6 +183,12 @@
   (when-let [data (lookup-entry config id :signing-profile-version)]
     (. builder signingProfileVersion data))
   (.build builder))
+
+
+(defn signing-profile-attributes-builder
+  ""
+  [id config]
+  (build-signing-profile-attributes-builder (new SigningProfileAttributes$Builder) id config))
 
 
 (defn build-signing-profile-builder
@@ -178,6 +214,12 @@
   (.build builder))
 
 
+(defn signing-profile-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-signing-profile-builder (SigningProfile$Builder/create scope (name id)) id config))
+
+
 (defn build-signing-profile-props-builder
   "The build-signing-profile-props-builder function updates a SigningProfileProps$Builder instance using the provided configuration.
   The function takes the SigningProfileProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -199,3 +241,9 @@
   (when-let [data (lookup-entry config id :signing-profile-name)]
     (. builder signingProfileName data))
   (.build builder))
+
+
+(defn signing-profile-props-builder
+  ""
+  [id config]
+  (build-signing-profile-props-builder (new SigningProfileProps$Builder) id config))

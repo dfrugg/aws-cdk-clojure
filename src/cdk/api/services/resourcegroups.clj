@@ -42,6 +42,12 @@
   (.build builder))
 
 
+(defn cfn-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-group-builder (CfnGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-group-configuration-item-property-builder
   "The build-cfn-group-configuration-item-property-builder function updates a CfnGroup$ConfigurationItemProperty$Builder instance using the provided configuration.
   The function takes the CfnGroup$ConfigurationItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -62,6 +68,12 @@
   (.build builder))
 
 
+(defn cfn-group-configuration-item-property-builder
+  ""
+  [id config]
+  (build-cfn-group-configuration-item-property-builder (new CfnGroup$ConfigurationItemProperty$Builder) id config))
+
+
 (defn build-cfn-group-configuration-parameter-property-builder
   "The build-cfn-group-configuration-parameter-property-builder function updates a CfnGroup$ConfigurationParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnGroup$ConfigurationParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -80,6 +92,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-group-configuration-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-group-configuration-parameter-property-builder (new CfnGroup$ConfigurationParameterProperty$Builder) id config))
 
 
 (defn build-cfn-group-props-builder
@@ -114,6 +132,12 @@
   (.build builder))
 
 
+(defn cfn-group-props-builder
+  ""
+  [id config]
+  (build-cfn-group-props-builder (new CfnGroupProps$Builder) id config))
+
+
 (defn build-cfn-group-query-property-builder
   "The build-cfn-group-query-property-builder function updates a CfnGroup$QueryProperty$Builder instance using the provided configuration.
   The function takes the CfnGroup$QueryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -137,6 +161,12 @@
   (.build builder))
 
 
+(defn cfn-group-query-property-builder
+  ""
+  [id config]
+  (build-cfn-group-query-property-builder (new CfnGroup$QueryProperty$Builder) id config))
+
+
 (defn build-cfn-group-resource-query-property-builder
   "The build-cfn-group-resource-query-property-builder function updates a CfnGroup$ResourceQueryProperty$Builder instance using the provided configuration.
   The function takes the CfnGroup$ResourceQueryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -157,6 +187,12 @@
   (.build builder))
 
 
+(defn cfn-group-resource-query-property-builder
+  ""
+  [id config]
+  (build-cfn-group-resource-query-property-builder (new CfnGroup$ResourceQueryProperty$Builder) id config))
+
+
 (defn build-cfn-group-tag-filter-property-builder
   "The build-cfn-group-tag-filter-property-builder function updates a CfnGroup$TagFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnGroup$TagFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -175,3 +211,9 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-group-tag-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-group-tag-filter-property-builder (new CfnGroup$TagFilterProperty$Builder) id config))

@@ -47,6 +47,12 @@
   (.build builder))
 
 
+(defn cfn-environment-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-environment-builder (CfnEnvironment$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-environment-maintenance-window-property-builder
   "The build-cfn-environment-maintenance-window-property-builder function updates a CfnEnvironment$MaintenanceWindowProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$MaintenanceWindowProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -80,6 +86,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-environment-maintenance-window-property-builder
+  ""
+  [id config]
+  (build-cfn-environment-maintenance-window-property-builder (new CfnEnvironment$MaintenanceWindowProperty$Builder) id config))
 
 
 (defn build-cfn-environment-props-builder
@@ -121,3 +133,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-environment-props-builder
+  ""
+  [id config]
+  (build-cfn-environment-props-builder (new CfnEnvironmentProps$Builder) id config))

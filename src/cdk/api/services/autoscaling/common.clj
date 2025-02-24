@@ -27,6 +27,12 @@
   (.build builder))
 
 
+(defn alarms-builder
+  ""
+  [id config]
+  (build-alarms-builder (new Alarms$Builder) id config))
+
+
 (defn build-arbitrary-intervals-builder
   "The build-arbitrary-intervals-builder function updates a ArbitraryIntervals$Builder instance using the provided configuration.
   The function takes the ArbitraryIntervals$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -45,6 +51,12 @@
   (when-let [data (lookup-entry config id :intervals)]
     (. builder intervals data))
   (.build builder))
+
+
+(defn arbitrary-intervals-builder
+  ""
+  [id config]
+  (build-arbitrary-intervals-builder (new ArbitraryIntervals$Builder) id config))
 
 
 (defn build-complete-scaling-interval-builder
@@ -70,6 +82,12 @@
   (.build builder))
 
 
+(defn complete-scaling-interval-builder
+  ""
+  [id config]
+  (build-complete-scaling-interval-builder (new CompleteScalingInterval$Builder) id config))
+
+
 (defn build-scaling-interval-builder
   "The build-scaling-interval-builder function updates a ScalingInterval$Builder instance using the provided configuration.
   The function takes the ScalingInterval$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -91,3 +109,9 @@
   (when-let [data (lookup-entry config id :upper)]
     (. builder upper data))
   (.build builder))
+
+
+(defn scaling-interval-builder
+  ""
+  [id config]
+  (build-scaling-interval-builder (new ScalingInterval$Builder) id config))

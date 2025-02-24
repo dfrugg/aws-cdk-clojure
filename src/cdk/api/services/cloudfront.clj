@@ -543,6 +543,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn add-behavior-options-builder
+  ""
+  [id config]
+  (build-add-behavior-options-builder (new AddBehaviorOptions$Builder) id config))
+
+
 (defn build-asset-import-source-builder
   "The build-asset-import-source-builder function updates a AssetImportSource$Builder instance using the provided configuration.
   The function takes the AssetImportSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -637,6 +643,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn behavior-builder
+  ""
+  [id config]
+  (build-behavior-builder (new Behavior$Builder) id config))
+
+
 (defn build-behavior-options-builder
   "The build-behavior-options-builder function updates a BehaviorOptions$Builder instance using the provided configuration.
   The function takes the BehaviorOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -690,6 +702,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn behavior-options-builder
+  ""
+  [id config]
+  (build-behavior-options-builder (new BehaviorOptions$Builder) id config))
+
+
 (defn build-cache-policy-builder
   "The build-cache-policy-builder function updates a CachePolicy$Builder instance using the provided configuration.
   The function takes the CachePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -732,6 +750,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :query-string-behavior)]
     (. builder queryStringBehavior data))
   (.build builder))
+
+
+(defn cache-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cache-policy-builder (CachePolicy$Builder/create scope (name id)) id config))
 
 
 (defn build-cache-policy-props-builder
@@ -778,6 +802,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cache-policy-props-builder
+  ""
+  [id config]
+  (build-cache-policy-props-builder (new CachePolicyProps$Builder) id config))
+
+
 (defn build-cfn-cache-policy-builder
   "The build-cfn-cache-policy-builder function updates a CfnCachePolicy$Builder instance using the provided configuration.
   The function takes the CfnCachePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -793,6 +823,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :cache-policy-config)]
     (. builder cachePolicyConfig data))
   (.build builder))
+
+
+(defn cfn-cache-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-cache-policy-builder (CfnCachePolicy$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-cache-policy-cache-policy-config-property-builder
@@ -827,6 +863,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-cache-policy-cache-policy-config-property-builder
+  ""
+  [id config]
+  (build-cfn-cache-policy-cache-policy-config-property-builder (new CfnCachePolicy$CachePolicyConfigProperty$Builder) id config))
+
+
 (defn build-cfn-cache-policy-cookies-config-property-builder
   "The build-cfn-cache-policy-cookies-config-property-builder function updates a CfnCachePolicy$CookiesConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCachePolicy$CookiesConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -847,6 +889,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-cache-policy-cookies-config-property-builder
+  ""
+  [id config]
+  (build-cfn-cache-policy-cookies-config-property-builder (new CfnCachePolicy$CookiesConfigProperty$Builder) id config))
+
+
 (defn build-cfn-cache-policy-headers-config-property-builder
   "The build-cfn-cache-policy-headers-config-property-builder function updates a CfnCachePolicy$HeadersConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCachePolicy$HeadersConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -865,6 +913,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :headers)]
     (. builder headers data))
   (.build builder))
+
+
+(defn cfn-cache-policy-headers-config-property-builder
+  ""
+  [id config]
+  (build-cfn-cache-policy-headers-config-property-builder (new CfnCachePolicy$HeadersConfigProperty$Builder) id config))
 
 
 (defn build-cfn-cache-policy-parameters-in-cache-key-and-forwarded-to-origin-property-builder
@@ -896,6 +950,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-cache-policy-parameters-in-cache-key-and-forwarded-to-origin-property-builder
+  ""
+  [id config]
+  (build-cfn-cache-policy-parameters-in-cache-key-and-forwarded-to-origin-property-builder (new CfnCachePolicy$ParametersInCacheKeyAndForwardedToOriginProperty$Builder) id config))
+
+
 (defn build-cfn-cache-policy-props-builder
   "The build-cfn-cache-policy-props-builder function updates a CfnCachePolicyProps$Builder instance using the provided configuration.
   The function takes the CfnCachePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -911,6 +971,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :cache-policy-config)]
     (. builder cachePolicyConfig data))
   (.build builder))
+
+
+(defn cfn-cache-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-cache-policy-props-builder (new CfnCachePolicyProps$Builder) id config))
 
 
 (defn build-cfn-cache-policy-query-strings-config-property-builder
@@ -933,6 +999,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-cache-policy-query-strings-config-property-builder
+  ""
+  [id config]
+  (build-cfn-cache-policy-query-strings-config-property-builder (new CfnCachePolicy$QueryStringsConfigProperty$Builder) id config))
+
+
 (defn build-cfn-cloud-front-origin-access-identity-builder
   "The build-cfn-cloud-front-origin-access-identity-builder function updates a CfnCloudFrontOriginAccessIdentity$Builder instance using the provided configuration.
   The function takes the CfnCloudFrontOriginAccessIdentity$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -948,6 +1020,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :cloud-front-origin-access-identity-config)]
     (. builder cloudFrontOriginAccessIdentityConfig data))
   (.build builder))
+
+
+(defn cfn-cloud-front-origin-access-identity-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-cloud-front-origin-access-identity-builder (CfnCloudFrontOriginAccessIdentity$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-cloud-front-origin-access-identity-cloud-front-origin-access-identity-config-property-builder
@@ -967,6 +1045,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-cloud-front-origin-access-identity-cloud-front-origin-access-identity-config-property-builder
+  ""
+  [id config]
+  (build-cfn-cloud-front-origin-access-identity-cloud-front-origin-access-identity-config-property-builder (new CfnCloudFrontOriginAccessIdentity$CloudFrontOriginAccessIdentityConfigProperty$Builder) id config))
+
+
 (defn build-cfn-cloud-front-origin-access-identity-props-builder
   "The build-cfn-cloud-front-origin-access-identity-props-builder function updates a CfnCloudFrontOriginAccessIdentityProps$Builder instance using the provided configuration.
   The function takes the CfnCloudFrontOriginAccessIdentityProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -984,6 +1068,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-cloud-front-origin-access-identity-props-builder
+  ""
+  [id config]
+  (build-cfn-cloud-front-origin-access-identity-props-builder (new CfnCloudFrontOriginAccessIdentityProps$Builder) id config))
+
+
 (defn build-cfn-continuous-deployment-policy-builder
   "The build-cfn-continuous-deployment-policy-builder function updates a CfnContinuousDeploymentPolicy$Builder instance using the provided configuration.
   The function takes the CfnContinuousDeploymentPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -999,6 +1089,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :continuous-deployment-policy-config)]
     (. builder continuousDeploymentPolicyConfig data))
   (.build builder))
+
+
+(defn cfn-continuous-deployment-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-continuous-deployment-policy-builder (CfnContinuousDeploymentPolicy$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-continuous-deployment-policy-continuous-deployment-policy-config-property-builder
@@ -1033,6 +1129,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-continuous-deployment-policy-continuous-deployment-policy-config-property-builder
+  ""
+  [id config]
+  (build-cfn-continuous-deployment-policy-continuous-deployment-policy-config-property-builder (new CfnContinuousDeploymentPolicy$ContinuousDeploymentPolicyConfigProperty$Builder) id config))
+
+
 (defn build-cfn-continuous-deployment-policy-props-builder
   "The build-cfn-continuous-deployment-policy-props-builder function updates a CfnContinuousDeploymentPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnContinuousDeploymentPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1048,6 +1150,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :continuous-deployment-policy-config)]
     (. builder continuousDeploymentPolicyConfig data))
   (.build builder))
+
+
+(defn cfn-continuous-deployment-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-continuous-deployment-policy-props-builder (new CfnContinuousDeploymentPolicyProps$Builder) id config))
 
 
 (defn build-cfn-continuous-deployment-policy-session-stickiness-config-property-builder
@@ -1070,6 +1178,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-continuous-deployment-policy-session-stickiness-config-property-builder
+  ""
+  [id config]
+  (build-cfn-continuous-deployment-policy-session-stickiness-config-property-builder (new CfnContinuousDeploymentPolicy$SessionStickinessConfigProperty$Builder) id config))
+
+
 (defn build-cfn-continuous-deployment-policy-single-header-config-property-builder
   "The build-cfn-continuous-deployment-policy-single-header-config-property-builder function updates a CfnContinuousDeploymentPolicy$SingleHeaderConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnContinuousDeploymentPolicy$SingleHeaderConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1088,6 +1202,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-continuous-deployment-policy-single-header-config-property-builder
+  ""
+  [id config]
+  (build-cfn-continuous-deployment-policy-single-header-config-property-builder (new CfnContinuousDeploymentPolicy$SingleHeaderConfigProperty$Builder) id config))
 
 
 (defn build-cfn-continuous-deployment-policy-single-header-policy-config-property-builder
@@ -1110,6 +1230,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-continuous-deployment-policy-single-header-policy-config-property-builder
+  ""
+  [id config]
+  (build-cfn-continuous-deployment-policy-single-header-policy-config-property-builder (new CfnContinuousDeploymentPolicy$SingleHeaderPolicyConfigProperty$Builder) id config))
+
+
 (defn build-cfn-continuous-deployment-policy-single-weight-config-property-builder
   "The build-cfn-continuous-deployment-policy-single-weight-config-property-builder function updates a CfnContinuousDeploymentPolicy$SingleWeightConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnContinuousDeploymentPolicy$SingleWeightConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1130,6 +1256,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-continuous-deployment-policy-single-weight-config-property-builder
+  ""
+  [id config]
+  (build-cfn-continuous-deployment-policy-single-weight-config-property-builder (new CfnContinuousDeploymentPolicy$SingleWeightConfigProperty$Builder) id config))
+
+
 (defn build-cfn-continuous-deployment-policy-single-weight-policy-config-property-builder
   "The build-cfn-continuous-deployment-policy-single-weight-policy-config-property-builder function updates a CfnContinuousDeploymentPolicy$SingleWeightPolicyConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnContinuousDeploymentPolicy$SingleWeightPolicyConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1148,6 +1280,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
+
+
+(defn cfn-continuous-deployment-policy-single-weight-policy-config-property-builder
+  ""
+  [id config]
+  (build-cfn-continuous-deployment-policy-single-weight-policy-config-property-builder (new CfnContinuousDeploymentPolicy$SingleWeightPolicyConfigProperty$Builder) id config))
 
 
 (defn build-cfn-continuous-deployment-policy-traffic-config-property-builder
@@ -1173,6 +1311,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-continuous-deployment-policy-traffic-config-property-builder
+  ""
+  [id config]
+  (build-cfn-continuous-deployment-policy-traffic-config-property-builder (new CfnContinuousDeploymentPolicy$TrafficConfigProperty$Builder) id config))
+
+
 (defn build-cfn-distribution-builder
   "The build-cfn-distribution-builder function updates a CfnDistribution$Builder instance using the provided configuration.
   The function takes the CfnDistribution$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1191,6 +1335,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-distribution-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-distribution-builder (CfnDistribution$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-distribution-cache-behavior-property-builder
@@ -1267,6 +1417,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-distribution-cache-behavior-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-cache-behavior-property-builder (new CfnDistribution$CacheBehaviorProperty$Builder) id config))
+
+
 (defn build-cfn-distribution-cookies-property-builder
   "The build-cfn-distribution-cookies-property-builder function updates a CfnDistribution$CookiesProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$CookiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1285,6 +1441,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :whitelisted-names)]
     (. builder whitelistedNames data))
   (.build builder))
+
+
+(defn cfn-distribution-cookies-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-cookies-property-builder (new CfnDistribution$CookiesProperty$Builder) id config))
 
 
 (defn build-cfn-distribution-custom-error-response-property-builder
@@ -1311,6 +1473,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :response-page-path)]
     (. builder responsePagePath data))
   (.build builder))
+
+
+(defn cfn-distribution-custom-error-response-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-custom-error-response-property-builder (new CfnDistribution$CustomErrorResponseProperty$Builder) id config))
 
 
 (defn build-cfn-distribution-custom-origin-config-property-builder
@@ -1343,6 +1511,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :origin-ssl-protocols)]
     (. builder originSslProtocols data))
   (.build builder))
+
+
+(defn cfn-distribution-custom-origin-config-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-custom-origin-config-property-builder (new CfnDistribution$CustomOriginConfigProperty$Builder) id config))
 
 
 (defn build-cfn-distribution-default-cache-behavior-property-builder
@@ -1414,6 +1588,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :viewer-protocol-policy)]
     (. builder viewerProtocolPolicy data))
   (.build builder))
+
+
+(defn cfn-distribution-default-cache-behavior-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-default-cache-behavior-property-builder (new CfnDistribution$DefaultCacheBehaviorProperty$Builder) id config))
 
 
 (defn build-cfn-distribution-distribution-config-property-builder
@@ -1493,6 +1673,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-distribution-distribution-config-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-distribution-config-property-builder (new CfnDistribution$DistributionConfigProperty$Builder) id config))
+
+
 (defn build-cfn-distribution-forwarded-values-property-builder
   "The build-cfn-distribution-forwarded-values-property-builder function updates a CfnDistribution$ForwardedValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$ForwardedValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1519,6 +1705,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-distribution-forwarded-values-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-forwarded-values-property-builder (new CfnDistribution$ForwardedValuesProperty$Builder) id config))
+
+
 (defn build-cfn-distribution-function-association-property-builder
   "The build-cfn-distribution-function-association-property-builder function updates a CfnDistribution$FunctionAssociationProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$FunctionAssociationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1539,6 +1731,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-distribution-function-association-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-function-association-property-builder (new CfnDistribution$FunctionAssociationProperty$Builder) id config))
+
+
 (defn build-cfn-distribution-geo-restriction-property-builder
   "The build-cfn-distribution-geo-restriction-property-builder function updates a CfnDistribution$GeoRestrictionProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$GeoRestrictionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1557,6 +1755,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :restriction-type)]
     (. builder restrictionType data))
   (.build builder))
+
+
+(defn cfn-distribution-geo-restriction-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-geo-restriction-property-builder (new CfnDistribution$GeoRestrictionProperty$Builder) id config))
 
 
 (defn build-cfn-distribution-lambda-function-association-property-builder
@@ -1580,6 +1784,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :lambda-function-arn)]
     (. builder lambdaFunctionArn data))
   (.build builder))
+
+
+(defn cfn-distribution-lambda-function-association-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-lambda-function-association-property-builder (new CfnDistribution$LambdaFunctionAssociationProperty$Builder) id config))
 
 
 (defn build-cfn-distribution-legacy-custom-origin-property-builder
@@ -1611,6 +1821,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-distribution-legacy-custom-origin-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-legacy-custom-origin-property-builder (new CfnDistribution$LegacyCustomOriginProperty$Builder) id config))
+
+
 (defn build-cfn-distribution-legacy-s3-origin-property-builder
   "The build-cfn-distribution-legacy-s3-origin-property-builder function updates a CfnDistribution$LegacyS3OriginProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$LegacyS3OriginProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1629,6 +1845,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :origin-access-identity)]
     (. builder originAccessIdentity data))
   (.build builder))
+
+
+(defn cfn-distribution-legacy-s3-origin-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-legacy-s3-origin-property-builder (new CfnDistribution$LegacyS3OriginProperty$Builder) id config))
 
 
 (defn build-cfn-distribution-logging-property-builder
@@ -1654,6 +1876,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-distribution-logging-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-logging-property-builder (new CfnDistribution$LoggingProperty$Builder) id config))
+
+
 (defn build-cfn-distribution-origin-custom-header-property-builder
   "The build-cfn-distribution-origin-custom-header-property-builder function updates a CfnDistribution$OriginCustomHeaderProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$OriginCustomHeaderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1674,6 +1902,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-distribution-origin-custom-header-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-origin-custom-header-property-builder (new CfnDistribution$OriginCustomHeaderProperty$Builder) id config))
+
+
 (defn build-cfn-distribution-origin-group-failover-criteria-property-builder
   "The build-cfn-distribution-origin-group-failover-criteria-property-builder function updates a CfnDistribution$OriginGroupFailoverCriteriaProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$OriginGroupFailoverCriteriaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1691,6 +1925,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-distribution-origin-group-failover-criteria-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-origin-group-failover-criteria-property-builder (new CfnDistribution$OriginGroupFailoverCriteriaProperty$Builder) id config))
+
+
 (defn build-cfn-distribution-origin-group-member-property-builder
   "The build-cfn-distribution-origin-group-member-property-builder function updates a CfnDistribution$OriginGroupMemberProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$OriginGroupMemberProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1706,6 +1946,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :origin-id)]
     (. builder originId data))
   (.build builder))
+
+
+(defn cfn-distribution-origin-group-member-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-origin-group-member-property-builder (new CfnDistribution$OriginGroupMemberProperty$Builder) id config))
 
 
 (defn build-cfn-distribution-origin-group-members-property-builder
@@ -1726,6 +1972,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :quantity)]
     (. builder quantity data))
   (.build builder))
+
+
+(defn cfn-distribution-origin-group-members-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-origin-group-members-property-builder (new CfnDistribution$OriginGroupMembersProperty$Builder) id config))
 
 
 (defn build-cfn-distribution-origin-group-property-builder
@@ -1751,6 +2003,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-distribution-origin-group-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-origin-group-property-builder (new CfnDistribution$OriginGroupProperty$Builder) id config))
+
+
 (defn build-cfn-distribution-origin-groups-property-builder
   "The build-cfn-distribution-origin-groups-property-builder function updates a CfnDistribution$OriginGroupsProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$OriginGroupsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1769,6 +2027,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :quantity)]
     (. builder quantity data))
   (.build builder))
+
+
+(defn cfn-distribution-origin-groups-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-origin-groups-property-builder (new CfnDistribution$OriginGroupsProperty$Builder) id config))
 
 
 (defn build-cfn-distribution-origin-property-builder
@@ -1815,6 +2079,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-distribution-origin-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-origin-property-builder (new CfnDistribution$OriginProperty$Builder) id config))
+
+
 (defn build-cfn-distribution-origin-shield-property-builder
   "The build-cfn-distribution-origin-shield-property-builder function updates a CfnDistribution$OriginShieldProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$OriginShieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1833,6 +2103,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :origin-shield-region)]
     (. builder originShieldRegion data))
   (.build builder))
+
+
+(defn cfn-distribution-origin-shield-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-origin-shield-property-builder (new CfnDistribution$OriginShieldProperty$Builder) id config))
 
 
 (defn build-cfn-distribution-props-builder
@@ -1855,6 +2131,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-distribution-props-builder
+  ""
+  [id config]
+  (build-cfn-distribution-props-builder (new CfnDistributionProps$Builder) id config))
+
+
 (defn build-cfn-distribution-restrictions-property-builder
   "The build-cfn-distribution-restrictions-property-builder function updates a CfnDistribution$RestrictionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$RestrictionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1872,6 +2154,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-distribution-restrictions-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-restrictions-property-builder (new CfnDistribution$RestrictionsProperty$Builder) id config))
+
+
 (defn build-cfn-distribution-s3-origin-config-property-builder
   "The build-cfn-distribution-s3-origin-config-property-builder function updates a CfnDistribution$S3OriginConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDistribution$S3OriginConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1887,6 +2175,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :origin-access-identity)]
     (. builder originAccessIdentity data))
   (.build builder))
+
+
+(defn cfn-distribution-s3-origin-config-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-s3-origin-config-property-builder (new CfnDistribution$S3OriginConfigProperty$Builder) id config))
 
 
 (defn build-cfn-distribution-status-codes-property-builder
@@ -1907,6 +2201,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :quantity)]
     (. builder quantity data))
   (.build builder))
+
+
+(defn cfn-distribution-status-codes-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-status-codes-property-builder (new CfnDistribution$StatusCodesProperty$Builder) id config))
 
 
 (defn build-cfn-distribution-viewer-certificate-property-builder
@@ -1938,6 +2238,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-distribution-viewer-certificate-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-viewer-certificate-property-builder (new CfnDistribution$ViewerCertificateProperty$Builder) id config))
+
+
 (defn build-cfn-function-builder
   "The build-cfn-function-builder function updates a CfnFunction$Builder instance using the provided configuration.
   The function takes the CfnFunction$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1967,6 +2273,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-function-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-function-builder (CfnFunction$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-function-function-config-property-builder
   "The build-cfn-function-function-config-property-builder function updates a CfnFunction$FunctionConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnFunction$FunctionConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1990,6 +2302,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-function-function-config-property-builder
+  ""
+  [id config]
+  (build-cfn-function-function-config-property-builder (new CfnFunction$FunctionConfigProperty$Builder) id config))
+
+
 (defn build-cfn-function-function-metadata-property-builder
   "The build-cfn-function-function-metadata-property-builder function updates a CfnFunction$FunctionMetadataProperty$Builder instance using the provided configuration.
   The function takes the CfnFunction$FunctionMetadataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2007,6 +2325,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-function-function-metadata-property-builder
+  ""
+  [id config]
+  (build-cfn-function-function-metadata-property-builder (new CfnFunction$FunctionMetadataProperty$Builder) id config))
+
+
 (defn build-cfn-function-key-value-store-association-property-builder
   "The build-cfn-function-key-value-store-association-property-builder function updates a CfnFunction$KeyValueStoreAssociationProperty$Builder instance using the provided configuration.
   The function takes the CfnFunction$KeyValueStoreAssociationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2022,6 +2346,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :key-value-store-arn)]
     (. builder keyValueStoreArn data))
   (.build builder))
+
+
+(defn cfn-function-key-value-store-association-property-builder
+  ""
+  [id config]
+  (build-cfn-function-key-value-store-association-property-builder (new CfnFunction$KeyValueStoreAssociationProperty$Builder) id config))
 
 
 (defn build-cfn-function-props-builder
@@ -2053,6 +2383,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-function-props-builder
+  ""
+  [id config]
+  (build-cfn-function-props-builder (new CfnFunctionProps$Builder) id config))
+
+
 (defn build-cfn-key-group-builder
   "The build-cfn-key-group-builder function updates a CfnKeyGroup$Builder instance using the provided configuration.
   The function takes the CfnKeyGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2068,6 +2404,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :key-group-config)]
     (. builder keyGroupConfig data))
   (.build builder))
+
+
+(defn cfn-key-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-key-group-builder (CfnKeyGroup$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-key-group-key-group-config-property-builder
@@ -2093,6 +2435,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-key-group-key-group-config-property-builder
+  ""
+  [id config]
+  (build-cfn-key-group-key-group-config-property-builder (new CfnKeyGroup$KeyGroupConfigProperty$Builder) id config))
+
+
 (defn build-cfn-key-group-props-builder
   "The build-cfn-key-group-props-builder function updates a CfnKeyGroupProps$Builder instance using the provided configuration.
   The function takes the CfnKeyGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2108,6 +2456,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :key-group-config)]
     (. builder keyGroupConfig data))
   (.build builder))
+
+
+(defn cfn-key-group-props-builder
+  ""
+  [id config]
+  (build-cfn-key-group-props-builder (new CfnKeyGroupProps$Builder) id config))
 
 
 (defn build-cfn-key-value-store-builder
@@ -2133,6 +2487,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-key-value-store-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-key-value-store-builder (CfnKeyValueStore$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-key-value-store-import-source-property-builder
   "The build-cfn-key-value-store-import-source-property-builder function updates a CfnKeyValueStore$ImportSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnKeyValueStore$ImportSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2151,6 +2511,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :source-type)]
     (. builder sourceType data))
   (.build builder))
+
+
+(defn cfn-key-value-store-import-source-property-builder
+  ""
+  [id config]
+  (build-cfn-key-value-store-import-source-property-builder (new CfnKeyValueStore$ImportSourceProperty$Builder) id config))
 
 
 (defn build-cfn-key-value-store-props-builder
@@ -2176,6 +2542,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-key-value-store-props-builder
+  ""
+  [id config]
+  (build-cfn-key-value-store-props-builder (new CfnKeyValueStoreProps$Builder) id config))
+
+
 (defn build-cfn-monitoring-subscription-builder
   "The build-cfn-monitoring-subscription-builder function updates a CfnMonitoringSubscription$Builder instance using the provided configuration.
   The function takes the CfnMonitoringSubscription$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2196,6 +2568,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-monitoring-subscription-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-monitoring-subscription-builder (CfnMonitoringSubscription$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-monitoring-subscription-monitoring-subscription-property-builder
   "The build-cfn-monitoring-subscription-monitoring-subscription-property-builder function updates a CfnMonitoringSubscription$MonitoringSubscriptionProperty$Builder instance using the provided configuration.
   The function takes the CfnMonitoringSubscription$MonitoringSubscriptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2211,6 +2589,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :realtime-metrics-subscription-config)]
     (. builder realtimeMetricsSubscriptionConfig data))
   (.build builder))
+
+
+(defn cfn-monitoring-subscription-monitoring-subscription-property-builder
+  ""
+  [id config]
+  (build-cfn-monitoring-subscription-monitoring-subscription-property-builder (new CfnMonitoringSubscription$MonitoringSubscriptionProperty$Builder) id config))
 
 
 (defn build-cfn-monitoring-subscription-props-builder
@@ -2233,6 +2617,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-monitoring-subscription-props-builder
+  ""
+  [id config]
+  (build-cfn-monitoring-subscription-props-builder (new CfnMonitoringSubscriptionProps$Builder) id config))
+
+
 (defn build-cfn-monitoring-subscription-realtime-metrics-subscription-config-property-builder
   "The build-cfn-monitoring-subscription-realtime-metrics-subscription-config-property-builder function updates a CfnMonitoringSubscription$RealtimeMetricsSubscriptionConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnMonitoringSubscription$RealtimeMetricsSubscriptionConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2250,6 +2640,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-monitoring-subscription-realtime-metrics-subscription-config-property-builder
+  ""
+  [id config]
+  (build-cfn-monitoring-subscription-realtime-metrics-subscription-config-property-builder (new CfnMonitoringSubscription$RealtimeMetricsSubscriptionConfigProperty$Builder) id config))
+
+
 (defn build-cfn-origin-access-control-builder
   "The build-cfn-origin-access-control-builder function updates a CfnOriginAccessControl$Builder instance using the provided configuration.
   The function takes the CfnOriginAccessControl$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2265,6 +2661,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :origin-access-control-config)]
     (. builder originAccessControlConfig data))
   (.build builder))
+
+
+(defn cfn-origin-access-control-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-origin-access-control-builder (CfnOriginAccessControl$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-origin-access-control-origin-access-control-config-property-builder
@@ -2296,6 +2698,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-origin-access-control-origin-access-control-config-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-access-control-origin-access-control-config-property-builder (new CfnOriginAccessControl$OriginAccessControlConfigProperty$Builder) id config))
+
+
 (defn build-cfn-origin-access-control-props-builder
   "The build-cfn-origin-access-control-props-builder function updates a CfnOriginAccessControlProps$Builder instance using the provided configuration.
   The function takes the CfnOriginAccessControlProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2313,6 +2721,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-origin-access-control-props-builder
+  ""
+  [id config]
+  (build-cfn-origin-access-control-props-builder (new CfnOriginAccessControlProps$Builder) id config))
+
+
 (defn build-cfn-origin-request-policy-builder
   "The build-cfn-origin-request-policy-builder function updates a CfnOriginRequestPolicy$Builder instance using the provided configuration.
   The function takes the CfnOriginRequestPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2328,6 +2742,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :origin-request-policy-config)]
     (. builder originRequestPolicyConfig data))
   (.build builder))
+
+
+(defn cfn-origin-request-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-origin-request-policy-builder (CfnOriginRequestPolicy$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-origin-request-policy-cookies-config-property-builder
@@ -2350,6 +2770,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-origin-request-policy-cookies-config-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-request-policy-cookies-config-property-builder (new CfnOriginRequestPolicy$CookiesConfigProperty$Builder) id config))
+
+
 (defn build-cfn-origin-request-policy-headers-config-property-builder
   "The build-cfn-origin-request-policy-headers-config-property-builder function updates a CfnOriginRequestPolicy$HeadersConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnOriginRequestPolicy$HeadersConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2368,6 +2794,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :headers)]
     (. builder headers data))
   (.build builder))
+
+
+(defn cfn-origin-request-policy-headers-config-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-request-policy-headers-config-property-builder (new CfnOriginRequestPolicy$HeadersConfigProperty$Builder) id config))
 
 
 (defn build-cfn-origin-request-policy-origin-request-policy-config-property-builder
@@ -2399,6 +2831,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-origin-request-policy-origin-request-policy-config-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-request-policy-origin-request-policy-config-property-builder (new CfnOriginRequestPolicy$OriginRequestPolicyConfigProperty$Builder) id config))
+
+
 (defn build-cfn-origin-request-policy-props-builder
   "The build-cfn-origin-request-policy-props-builder function updates a CfnOriginRequestPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnOriginRequestPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2414,6 +2852,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :origin-request-policy-config)]
     (. builder originRequestPolicyConfig data))
   (.build builder))
+
+
+(defn cfn-origin-request-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-origin-request-policy-props-builder (new CfnOriginRequestPolicyProps$Builder) id config))
 
 
 (defn build-cfn-origin-request-policy-query-strings-config-property-builder
@@ -2436,6 +2880,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-origin-request-policy-query-strings-config-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-request-policy-query-strings-config-property-builder (new CfnOriginRequestPolicy$QueryStringsConfigProperty$Builder) id config))
+
+
 (defn build-cfn-public-key-builder
   "The build-cfn-public-key-builder function updates a CfnPublicKey$Builder instance using the provided configuration.
   The function takes the CfnPublicKey$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2453,6 +2903,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-public-key-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-public-key-builder (CfnPublicKey$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-public-key-props-builder
   "The build-cfn-public-key-props-builder function updates a CfnPublicKeyProps$Builder instance using the provided configuration.
   The function takes the CfnPublicKeyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2468,6 +2924,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :public-key-config)]
     (. builder publicKeyConfig data))
   (.build builder))
+
+
+(defn cfn-public-key-props-builder
+  ""
+  [id config]
+  (build-cfn-public-key-props-builder (new CfnPublicKeyProps$Builder) id config))
 
 
 (defn build-cfn-public-key-public-key-config-property-builder
@@ -2496,6 +2958,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-public-key-public-key-config-property-builder
+  ""
+  [id config]
+  (build-cfn-public-key-public-key-config-property-builder (new CfnPublicKey$PublicKeyConfigProperty$Builder) id config))
+
+
 (defn build-cfn-realtime-log-config-builder
   "The build-cfn-realtime-log-config-builder function updates a CfnRealtimeLogConfig$Builder instance using the provided configuration.
   The function takes the CfnRealtimeLogConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2522,6 +2990,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-realtime-log-config-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-realtime-log-config-builder (CfnRealtimeLogConfig$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-realtime-log-config-end-point-property-builder
   "The build-cfn-realtime-log-config-end-point-property-builder function updates a CfnRealtimeLogConfig$EndPointProperty$Builder instance using the provided configuration.
   The function takes the CfnRealtimeLogConfig$EndPointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2542,6 +3016,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-realtime-log-config-end-point-property-builder
+  ""
+  [id config]
+  (build-cfn-realtime-log-config-end-point-property-builder (new CfnRealtimeLogConfig$EndPointProperty$Builder) id config))
+
+
 (defn build-cfn-realtime-log-config-kinesis-stream-config-property-builder
   "The build-cfn-realtime-log-config-kinesis-stream-config-property-builder function updates a CfnRealtimeLogConfig$KinesisStreamConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnRealtimeLogConfig$KinesisStreamConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2560,6 +3040,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :stream-arn)]
     (. builder streamArn data))
   (.build builder))
+
+
+(defn cfn-realtime-log-config-kinesis-stream-config-property-builder
+  ""
+  [id config]
+  (build-cfn-realtime-log-config-kinesis-stream-config-property-builder (new CfnRealtimeLogConfig$KinesisStreamConfigProperty$Builder) id config))
 
 
 (defn build-cfn-realtime-log-config-props-builder
@@ -2588,6 +3074,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-realtime-log-config-props-builder
+  ""
+  [id config]
+  (build-cfn-realtime-log-config-props-builder (new CfnRealtimeLogConfigProps$Builder) id config))
+
+
 (defn build-cfn-response-headers-policy-access-control-allow-headers-property-builder
   "The build-cfn-response-headers-policy-access-control-allow-headers-property-builder function updates a CfnResponseHeadersPolicy$AccessControlAllowHeadersProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$AccessControlAllowHeadersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2603,6 +3095,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :items)]
     (. builder items data))
   (.build builder))
+
+
+(defn cfn-response-headers-policy-access-control-allow-headers-property-builder
+  ""
+  [id config]
+  (build-cfn-response-headers-policy-access-control-allow-headers-property-builder (new CfnResponseHeadersPolicy$AccessControlAllowHeadersProperty$Builder) id config))
 
 
 (defn build-cfn-response-headers-policy-access-control-allow-methods-property-builder
@@ -2622,6 +3120,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-response-headers-policy-access-control-allow-methods-property-builder
+  ""
+  [id config]
+  (build-cfn-response-headers-policy-access-control-allow-methods-property-builder (new CfnResponseHeadersPolicy$AccessControlAllowMethodsProperty$Builder) id config))
+
+
 (defn build-cfn-response-headers-policy-access-control-allow-origins-property-builder
   "The build-cfn-response-headers-policy-access-control-allow-origins-property-builder function updates a CfnResponseHeadersPolicy$AccessControlAllowOriginsProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$AccessControlAllowOriginsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2637,6 +3141,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :items)]
     (. builder items data))
   (.build builder))
+
+
+(defn cfn-response-headers-policy-access-control-allow-origins-property-builder
+  ""
+  [id config]
+  (build-cfn-response-headers-policy-access-control-allow-origins-property-builder (new CfnResponseHeadersPolicy$AccessControlAllowOriginsProperty$Builder) id config))
 
 
 (defn build-cfn-response-headers-policy-access-control-expose-headers-property-builder
@@ -2656,6 +3166,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-response-headers-policy-access-control-expose-headers-property-builder
+  ""
+  [id config]
+  (build-cfn-response-headers-policy-access-control-expose-headers-property-builder (new CfnResponseHeadersPolicy$AccessControlExposeHeadersProperty$Builder) id config))
+
+
 (defn build-cfn-response-headers-policy-builder
   "The build-cfn-response-headers-policy-builder function updates a CfnResponseHeadersPolicy$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2671,6 +3187,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :response-headers-policy-config)]
     (. builder responseHeadersPolicyConfig data))
   (.build builder))
+
+
+(defn cfn-response-headers-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-response-headers-policy-builder (CfnResponseHeadersPolicy$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-response-headers-policy-content-security-policy-property-builder
@@ -2693,6 +3215,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-response-headers-policy-content-security-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-response-headers-policy-content-security-policy-property-builder (new CfnResponseHeadersPolicy$ContentSecurityPolicyProperty$Builder) id config))
+
+
 (defn build-cfn-response-headers-policy-content-type-options-property-builder
   "The build-cfn-response-headers-policy-content-type-options-property-builder function updates a CfnResponseHeadersPolicy$ContentTypeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$ContentTypeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2708,6 +3236,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :override)]
     (. builder override data))
   (.build builder))
+
+
+(defn cfn-response-headers-policy-content-type-options-property-builder
+  ""
+  [id config]
+  (build-cfn-response-headers-policy-content-type-options-property-builder (new CfnResponseHeadersPolicy$ContentTypeOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-response-headers-policy-cors-config-property-builder
@@ -2745,6 +3279,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-response-headers-policy-cors-config-property-builder
+  ""
+  [id config]
+  (build-cfn-response-headers-policy-cors-config-property-builder (new CfnResponseHeadersPolicy$CorsConfigProperty$Builder) id config))
+
+
 (defn build-cfn-response-headers-policy-custom-header-property-builder
   "The build-cfn-response-headers-policy-custom-header-property-builder function updates a CfnResponseHeadersPolicy$CustomHeaderProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$CustomHeaderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2768,6 +3308,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-response-headers-policy-custom-header-property-builder
+  ""
+  [id config]
+  (build-cfn-response-headers-policy-custom-header-property-builder (new CfnResponseHeadersPolicy$CustomHeaderProperty$Builder) id config))
+
+
 (defn build-cfn-response-headers-policy-custom-headers-config-property-builder
   "The build-cfn-response-headers-policy-custom-headers-config-property-builder function updates a CfnResponseHeadersPolicy$CustomHeadersConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$CustomHeadersConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2783,6 +3329,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :items)]
     (. builder items data))
   (.build builder))
+
+
+(defn cfn-response-headers-policy-custom-headers-config-property-builder
+  ""
+  [id config]
+  (build-cfn-response-headers-policy-custom-headers-config-property-builder (new CfnResponseHeadersPolicy$CustomHeadersConfigProperty$Builder) id config))
 
 
 (defn build-cfn-response-headers-policy-frame-options-property-builder
@@ -2805,6 +3357,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-response-headers-policy-frame-options-property-builder
+  ""
+  [id config]
+  (build-cfn-response-headers-policy-frame-options-property-builder (new CfnResponseHeadersPolicy$FrameOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-response-headers-policy-props-builder
   "The build-cfn-response-headers-policy-props-builder function updates a CfnResponseHeadersPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2820,6 +3378,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :response-headers-policy-config)]
     (. builder responseHeadersPolicyConfig data))
   (.build builder))
+
+
+(defn cfn-response-headers-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-response-headers-policy-props-builder (new CfnResponseHeadersPolicyProps$Builder) id config))
 
 
 (defn build-cfn-response-headers-policy-referrer-policy-property-builder
@@ -2842,6 +3406,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-response-headers-policy-referrer-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-response-headers-policy-referrer-policy-property-builder (new CfnResponseHeadersPolicy$ReferrerPolicyProperty$Builder) id config))
+
+
 (defn build-cfn-response-headers-policy-remove-header-property-builder
   "The build-cfn-response-headers-policy-remove-header-property-builder function updates a CfnResponseHeadersPolicy$RemoveHeaderProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$RemoveHeaderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2859,6 +3429,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-response-headers-policy-remove-header-property-builder
+  ""
+  [id config]
+  (build-cfn-response-headers-policy-remove-header-property-builder (new CfnResponseHeadersPolicy$RemoveHeaderProperty$Builder) id config))
+
+
 (defn build-cfn-response-headers-policy-remove-headers-config-property-builder
   "The build-cfn-response-headers-policy-remove-headers-config-property-builder function updates a CfnResponseHeadersPolicy$RemoveHeadersConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$RemoveHeadersConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2874,6 +3450,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :items)]
     (. builder items data))
   (.build builder))
+
+
+(defn cfn-response-headers-policy-remove-headers-config-property-builder
+  ""
+  [id config]
+  (build-cfn-response-headers-policy-remove-headers-config-property-builder (new CfnResponseHeadersPolicy$RemoveHeadersConfigProperty$Builder) id config))
 
 
 (defn build-cfn-response-headers-policy-response-headers-policy-config-property-builder
@@ -2911,6 +3493,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-response-headers-policy-response-headers-policy-config-property-builder
+  ""
+  [id config]
+  (build-cfn-response-headers-policy-response-headers-policy-config-property-builder (new CfnResponseHeadersPolicy$ResponseHeadersPolicyConfigProperty$Builder) id config))
+
+
 (defn build-cfn-response-headers-policy-security-headers-config-property-builder
   "The build-cfn-response-headers-policy-security-headers-config-property-builder function updates a CfnResponseHeadersPolicy$SecurityHeadersConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$SecurityHeadersConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2943,6 +3531,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-response-headers-policy-security-headers-config-property-builder
+  ""
+  [id config]
+  (build-cfn-response-headers-policy-security-headers-config-property-builder (new CfnResponseHeadersPolicy$SecurityHeadersConfigProperty$Builder) id config))
+
+
 (defn build-cfn-response-headers-policy-server-timing-headers-config-property-builder
   "The build-cfn-response-headers-policy-server-timing-headers-config-property-builder function updates a CfnResponseHeadersPolicy$ServerTimingHeadersConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$ServerTimingHeadersConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2961,6 +3555,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :sampling-rate)]
     (. builder samplingRate data))
   (.build builder))
+
+
+(defn cfn-response-headers-policy-server-timing-headers-config-property-builder
+  ""
+  [id config]
+  (build-cfn-response-headers-policy-server-timing-headers-config-property-builder (new CfnResponseHeadersPolicy$ServerTimingHeadersConfigProperty$Builder) id config))
 
 
 (defn build-cfn-response-headers-policy-strict-transport-security-property-builder
@@ -2989,6 +3589,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-response-headers-policy-strict-transport-security-property-builder
+  ""
+  [id config]
+  (build-cfn-response-headers-policy-strict-transport-security-property-builder (new CfnResponseHeadersPolicy$StrictTransportSecurityProperty$Builder) id config))
+
+
 (defn build-cfn-response-headers-policy-xss-protection-property-builder
   "The build-cfn-response-headers-policy-xss-protection-property-builder function updates a CfnResponseHeadersPolicy$XSSProtectionProperty$Builder instance using the provided configuration.
   The function takes the CfnResponseHeadersPolicy$XSSProtectionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3015,6 +3621,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-response-headers-policy-xss-protection-property-builder
+  ""
+  [id config]
+  (build-cfn-response-headers-policy-xss-protection-property-builder (new CfnResponseHeadersPolicy$XSSProtectionProperty$Builder) id config))
+
+
 (defn build-cfn-streaming-distribution-builder
   "The build-cfn-streaming-distribution-builder function updates a CfnStreamingDistribution$Builder instance using the provided configuration.
   The function takes the CfnStreamingDistribution$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3033,6 +3645,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-streaming-distribution-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-streaming-distribution-builder (CfnStreamingDistribution$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-streaming-distribution-logging-property-builder
@@ -3058,6 +3676,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-streaming-distribution-logging-property-builder
+  ""
+  [id config]
+  (build-cfn-streaming-distribution-logging-property-builder (new CfnStreamingDistribution$LoggingProperty$Builder) id config))
+
+
 (defn build-cfn-streaming-distribution-props-builder
   "The build-cfn-streaming-distribution-props-builder function updates a CfnStreamingDistributionProps$Builder instance using the provided configuration.
   The function takes the CfnStreamingDistributionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3078,6 +3702,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-streaming-distribution-props-builder
+  ""
+  [id config]
+  (build-cfn-streaming-distribution-props-builder (new CfnStreamingDistributionProps$Builder) id config))
+
+
 (defn build-cfn-streaming-distribution-s3-origin-property-builder
   "The build-cfn-streaming-distribution-s3-origin-property-builder function updates a CfnStreamingDistribution$S3OriginProperty$Builder instance using the provided configuration.
   The function takes the CfnStreamingDistribution$S3OriginProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3096,6 +3726,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :origin-access-identity)]
     (. builder originAccessIdentity data))
   (.build builder))
+
+
+(defn cfn-streaming-distribution-s3-origin-property-builder
+  ""
+  [id config]
+  (build-cfn-streaming-distribution-s3-origin-property-builder (new CfnStreamingDistribution$S3OriginProperty$Builder) id config))
 
 
 (defn build-cfn-streaming-distribution-streaming-distribution-config-property-builder
@@ -3133,6 +3769,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-streaming-distribution-streaming-distribution-config-property-builder
+  ""
+  [id config]
+  (build-cfn-streaming-distribution-streaming-distribution-config-property-builder (new CfnStreamingDistribution$StreamingDistributionConfigProperty$Builder) id config))
+
+
 (defn build-cfn-streaming-distribution-trusted-signers-property-builder
   "The build-cfn-streaming-distribution-trusted-signers-property-builder function updates a CfnStreamingDistribution$TrustedSignersProperty$Builder instance using the provided configuration.
   The function takes the CfnStreamingDistribution$TrustedSignersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3153,6 +3795,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-streaming-distribution-trusted-signers-property-builder
+  ""
+  [id config]
+  (build-cfn-streaming-distribution-trusted-signers-property-builder (new CfnStreamingDistribution$TrustedSignersProperty$Builder) id config))
+
+
 (defn build-cloud-front-web-distribution-attributes-builder
   "The build-cloud-front-web-distribution-attributes-builder function updates a CloudFrontWebDistributionAttributes$Builder instance using the provided configuration.
   The function takes the CloudFrontWebDistributionAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3171,6 +3819,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
   (.build builder))
+
+
+(defn cloud-front-web-distribution-attributes-builder
+  ""
+  [id config]
+  (build-cloud-front-web-distribution-attributes-builder (new CloudFrontWebDistributionAttributes$Builder) id config))
 
 
 (defn build-cloud-front-web-distribution-builder
@@ -3226,6 +3880,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cloud-front-web-distribution-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cloud-front-web-distribution-builder (CloudFrontWebDistribution$Builder/create scope (name id)) id config))
+
+
 (defn build-cloud-front-web-distribution-props-builder
   "The build-cloud-front-web-distribution-props-builder function updates a CloudFrontWebDistributionProps$Builder instance using the provided configuration.
   The function takes the CloudFrontWebDistributionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3279,6 +3939,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cloud-front-web-distribution-props-builder
+  ""
+  [id config]
+  (build-cloud-front-web-distribution-props-builder (new CloudFrontWebDistributionProps$Builder) id config))
+
+
 (defn build-custom-origin-config-builder
   "The build-custom-origin-config-builder function updates a CustomOriginConfig$Builder instance using the provided configuration.
   The function takes the CustomOriginConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3323,6 +3989,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn custom-origin-config-builder
+  ""
+  [id config]
+  (build-custom-origin-config-builder (new CustomOriginConfig$Builder) id config))
+
+
 (defn build-distribution-attributes-builder
   "The build-distribution-attributes-builder function updates a DistributionAttributes$Builder instance using the provided configuration.
   The function takes the DistributionAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3341,6 +4013,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :domain-name)]
     (. builder domainName data))
   (.build builder))
+
+
+(defn distribution-attributes-builder
+  ""
+  [id config]
+  (build-distribution-attributes-builder (new DistributionAttributes$Builder) id config))
 
 
 (defn build-distribution-builder
@@ -3417,6 +4095,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn distribution-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-distribution-builder (Distribution$Builder/create scope (name id)) id config))
+
+
 (defn build-distribution-props-builder
   "The build-distribution-props-builder function updates a DistributionProps$Builder instance using the provided configuration.
   The function takes the DistributionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3491,6 +4175,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn distribution-props-builder
+  ""
+  [id config]
+  (build-distribution-props-builder (new DistributionProps$Builder) id config))
+
+
 (defn build-edge-lambda-builder
   "The build-edge-lambda-builder function updates a EdgeLambda$Builder instance using the provided configuration.
   The function takes the EdgeLambda$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3512,6 +4202,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :include-body)]
     (. builder includeBody data))
   (.build builder))
+
+
+(defn edge-lambda-builder
+  ""
+  [id config]
+  (build-edge-lambda-builder (new EdgeLambda$Builder) id config))
 
 
 (defn build-error-response-builder
@@ -3540,6 +4236,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn error-response-builder
+  ""
+  [id config]
+  (build-error-response-builder (new ErrorResponse$Builder) id config))
+
+
 (defn build-file-code-options-builder
   "The build-file-code-options-builder function updates a FileCodeOptions$Builder instance using the provided configuration.
   The function takes the FileCodeOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3555,6 +4257,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :file-path)]
     (. builder filePath data))
   (.build builder))
+
+
+(defn file-code-options-builder
+  ""
+  [id config]
+  (build-file-code-options-builder (new FileCodeOptions$Builder) id config))
 
 
 (defn build-function-association-builder
@@ -3575,6 +4283,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :function)]
     (. builder function data))
   (.build builder))
+
+
+(defn function-association-builder
+  ""
+  [id config]
+  (build-function-association-builder (new FunctionAssociation$Builder) id config))
 
 
 (defn build-function-attributes-builder
@@ -3598,6 +4312,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :function-runtime)]
     (. builder functionRuntime data))
   (.build builder))
+
+
+(defn function-attributes-builder
+  ""
+  [id config]
+  (build-function-attributes-builder (new FunctionAttributes$Builder) id config))
 
 
 (defn build-function-builder
@@ -3632,6 +4352,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn function-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-function-builder (Function$Builder/create scope (name id)) id config))
+
+
 (defn build-function-props-builder
   "The build-function-props-builder function updates a FunctionProps$Builder instance using the provided configuration.
   The function takes the FunctionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3664,6 +4390,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn function-props-builder
+  ""
+  [id config]
+  (build-function-props-builder (new FunctionProps$Builder) id config))
+
+
 (defn build-key-group-builder
   "The build-key-group-builder function updates a KeyGroup$Builder instance using the provided configuration.
   The function takes the KeyGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3685,6 +4417,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :key-group-name)]
     (. builder keyGroupName data))
   (.build builder))
+
+
+(defn key-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-key-group-builder (KeyGroup$Builder/create scope (name id)) id config))
 
 
 (defn build-key-group-props-builder
@@ -3710,6 +4448,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn key-group-props-builder
+  ""
+  [id config]
+  (build-key-group-props-builder (new KeyGroupProps$Builder) id config))
+
+
 (defn build-key-value-store-builder
   "The build-key-value-store-builder function updates a KeyValueStore$Builder instance using the provided configuration.
   The function takes the KeyValueStore$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3731,6 +4475,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :source)]
     (. builder source data))
   (.build builder))
+
+
+(defn key-value-store-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-key-value-store-builder (KeyValueStore$Builder/create scope (name id)) id config))
 
 
 (defn build-key-value-store-props-builder
@@ -3756,6 +4506,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn key-value-store-props-builder
+  ""
+  [id config]
+  (build-key-value-store-props-builder (new KeyValueStoreProps$Builder) id config))
+
+
 (defn build-lambda-function-association-builder
   "The build-lambda-function-association-builder function updates a LambdaFunctionAssociation$Builder instance using the provided configuration.
   The function takes the LambdaFunctionAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3777,6 +4533,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :lambda-function)]
     (. builder lambdaFunction data))
   (.build builder))
+
+
+(defn lambda-function-association-builder
+  ""
+  [id config]
+  (build-lambda-function-association-builder (new LambdaFunctionAssociation$Builder) id config))
 
 
 (defn build-logging-configuration-builder
@@ -3802,6 +4564,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn logging-configuration-builder
+  ""
+  [id config]
+  (build-logging-configuration-builder (new LoggingConfiguration$Builder) id config))
+
+
 (defn build-origin-access-identity-builder
   "The build-origin-access-identity-builder function updates a OriginAccessIdentity$Builder instance using the provided configuration.
   The function takes the OriginAccessIdentity$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3819,6 +4587,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn origin-access-identity-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-origin-access-identity-builder (OriginAccessIdentity$Builder/create scope (name id)) id config))
+
+
 (defn build-origin-access-identity-props-builder
   "The build-origin-access-identity-props-builder function updates a OriginAccessIdentityProps$Builder instance using the provided configuration.
   The function takes the OriginAccessIdentityProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3834,6 +4608,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :comment)]
     (. builder comment data))
   (.build builder))
+
+
+(defn origin-access-identity-props-builder
+  ""
+  [id config]
+  (build-origin-access-identity-props-builder (new OriginAccessIdentityProps$Builder) id config))
 
 
 (defn build-origin-bind-config-builder
@@ -3856,6 +4636,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn origin-bind-config-builder
+  ""
+  [id config]
+  (build-origin-bind-config-builder (new OriginBindConfig$Builder) id config))
+
+
 (defn build-origin-bind-options-builder
   "The build-origin-bind-options-builder function updates a OriginBindOptions$Builder instance using the provided configuration.
   The function takes the OriginBindOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3871,6 +4657,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :origin-id)]
     (. builder originId data))
   (.build builder))
+
+
+(defn origin-bind-options-builder
+  ""
+  [id config]
+  (build-origin-bind-options-builder (new OriginBindOptions$Builder) id config))
 
 
 (defn build-origin-failover-config-builder
@@ -3891,6 +4683,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :status-codes)]
     (. builder statusCodes data))
   (.build builder))
+
+
+(defn origin-failover-config-builder
+  ""
+  [id config]
+  (build-origin-failover-config-builder (new OriginFailoverConfig$Builder) id config))
 
 
 (defn build-origin-options-builder
@@ -3923,6 +4721,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :origin-shield-region)]
     (. builder originShieldRegion data))
   (.build builder))
+
+
+(defn origin-options-builder
+  ""
+  [id config]
+  (build-origin-options-builder (new OriginOptions$Builder) id config))
 
 
 (defn build-origin-props-builder
@@ -3960,6 +4764,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn origin-props-builder
+  ""
+  [id config]
+  (build-origin-props-builder (new OriginProps$Builder) id config))
+
+
 (defn build-origin-request-policy-builder
   "The build-origin-request-policy-builder function updates a OriginRequestPolicy$Builder instance using the provided configuration.
   The function takes the OriginRequestPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3987,6 +4797,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :query-string-behavior)]
     (. builder queryStringBehavior data))
   (.build builder))
+
+
+(defn origin-request-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-origin-request-policy-builder (OriginRequestPolicy$Builder/create scope (name id)) id config))
 
 
 (defn build-origin-request-policy-props-builder
@@ -4018,6 +4834,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn origin-request-policy-props-builder
+  ""
+  [id config]
+  (build-origin-request-policy-props-builder (new OriginRequestPolicyProps$Builder) id config))
+
+
 (defn build-public-key-builder
   "The build-public-key-builder function updates a PublicKey$Builder instance using the provided configuration.
   The function takes the PublicKey$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4041,6 +4863,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn public-key-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-public-key-builder (PublicKey$Builder/create scope (name id)) id config))
+
+
 (defn build-public-key-props-builder
   "The build-public-key-props-builder function updates a PublicKeyProps$Builder instance using the provided configuration.
   The function takes the PublicKeyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4062,6 +4890,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :public-key-name)]
     (. builder publicKeyName data))
   (.build builder))
+
+
+(defn public-key-props-builder
+  ""
+  [id config]
+  (build-public-key-props-builder (new PublicKeyProps$Builder) id config))
 
 
 (defn build-realtime-log-config-builder
@@ -4090,6 +4924,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn realtime-log-config-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-realtime-log-config-builder (RealtimeLogConfig$Builder/create scope (name id)) id config))
+
+
 (defn build-realtime-log-config-props-builder
   "The build-realtime-log-config-props-builder function updates a RealtimeLogConfigProps$Builder instance using the provided configuration.
   The function takes the RealtimeLogConfigProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4116,6 +4956,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn realtime-log-config-props-builder
+  ""
+  [id config]
+  (build-realtime-log-config-props-builder (new RealtimeLogConfigProps$Builder) id config))
+
+
 (defn build-response-custom-header-builder
   "The build-response-custom-header-builder function updates a ResponseCustomHeader$Builder instance using the provided configuration.
   The function takes the ResponseCustomHeader$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4139,6 +4985,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn response-custom-header-builder
+  ""
+  [id config]
+  (build-response-custom-header-builder (new ResponseCustomHeader$Builder) id config))
+
+
 (defn build-response-custom-headers-behavior-builder
   "The build-response-custom-headers-behavior-builder function updates a ResponseCustomHeadersBehavior$Builder instance using the provided configuration.
   The function takes the ResponseCustomHeadersBehavior$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4154,6 +5006,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :custom-headers)]
     (. builder customHeaders data))
   (.build builder))
+
+
+(defn response-custom-headers-behavior-builder
+  ""
+  [id config]
+  (build-response-custom-headers-behavior-builder (new ResponseCustomHeadersBehavior$Builder) id config))
 
 
 (defn build-response-headers-content-security-policy-builder
@@ -4176,6 +5034,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn response-headers-content-security-policy-builder
+  ""
+  [id config]
+  (build-response-headers-content-security-policy-builder (new ResponseHeadersContentSecurityPolicy$Builder) id config))
+
+
 (defn build-response-headers-content-type-options-builder
   "The build-response-headers-content-type-options-builder function updates a ResponseHeadersContentTypeOptions$Builder instance using the provided configuration.
   The function takes the ResponseHeadersContentTypeOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4191,6 +5055,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :override)]
     (. builder override data))
   (.build builder))
+
+
+(defn response-headers-content-type-options-builder
+  ""
+  [id config]
+  (build-response-headers-content-type-options-builder (new ResponseHeadersContentTypeOptions$Builder) id config))
 
 
 (defn build-response-headers-cors-behavior-builder
@@ -4228,6 +5098,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn response-headers-cors-behavior-builder
+  ""
+  [id config]
+  (build-response-headers-cors-behavior-builder (new ResponseHeadersCorsBehavior$Builder) id config))
+
+
 (defn build-response-headers-frame-options-builder
   "The build-response-headers-frame-options-builder function updates a ResponseHeadersFrameOptions$Builder instance using the provided configuration.
   The function takes the ResponseHeadersFrameOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4246,6 +5122,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :override)]
     (. builder override data))
   (.build builder))
+
+
+(defn response-headers-frame-options-builder
+  ""
+  [id config]
+  (build-response-headers-frame-options-builder (new ResponseHeadersFrameOptions$Builder) id config))
 
 
 (defn build-response-headers-policy-builder
@@ -4283,6 +5165,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn response-headers-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-response-headers-policy-builder (ResponseHeadersPolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-response-headers-policy-props-builder
   "The build-response-headers-policy-props-builder function updates a ResponseHeadersPolicyProps$Builder instance using the provided configuration.
   The function takes the ResponseHeadersPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4318,6 +5206,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn response-headers-policy-props-builder
+  ""
+  [id config]
+  (build-response-headers-policy-props-builder (new ResponseHeadersPolicyProps$Builder) id config))
+
+
 (defn build-response-headers-referrer-policy-builder
   "The build-response-headers-referrer-policy-builder function updates a ResponseHeadersReferrerPolicy$Builder instance using the provided configuration.
   The function takes the ResponseHeadersReferrerPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4336,6 +5230,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (headers-referrer-policy config id :referrer-policy)]
     (. builder referrerPolicy data))
   (.build builder))
+
+
+(defn response-headers-referrer-policy-builder
+  ""
+  [id config]
+  (build-response-headers-referrer-policy-builder (new ResponseHeadersReferrerPolicy$Builder) id config))
 
 
 (defn build-response-headers-strict-transport-security-builder
@@ -4364,6 +5264,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn response-headers-strict-transport-security-builder
+  ""
+  [id config]
+  (build-response-headers-strict-transport-security-builder (new ResponseHeadersStrictTransportSecurity$Builder) id config))
+
+
 (defn build-response-headers-xss-protection-builder
   "The build-response-headers-xss-protection-builder function updates a ResponseHeadersXSSProtection$Builder instance using the provided configuration.
   The function takes the ResponseHeadersXSSProtection$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4388,6 +5294,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :report-uri)]
     (. builder reportUri data))
   (.build builder))
+
+
+(defn response-headers-xss-protection-builder
+  ""
+  [id config]
+  (build-response-headers-xss-protection-builder (new ResponseHeadersXSSProtection$Builder) id config))
 
 
 (defn build-response-security-headers-behavior-builder
@@ -4422,6 +5334,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn response-security-headers-behavior-builder
+  ""
+  [id config]
+  (build-response-security-headers-behavior-builder (new ResponseSecurityHeadersBehavior$Builder) id config))
+
+
 (defn build-s3-origin-config-builder
   "The build-s3-origin-config-builder function updates a S3OriginConfig$Builder instance using the provided configuration.
   The function takes the S3OriginConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4449,6 +5367,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :s3-bucket-source)]
     (. builder s3BucketSource data))
   (.build builder))
+
+
+(defn s3-origin-config-builder
+  ""
+  [id config]
+  (build-s3-origin-config-builder (new S3OriginConfig$Builder) id config))
 
 
 (defn build-source-configuration-builder
@@ -4492,6 +5416,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn source-configuration-builder
+  ""
+  [id config]
+  (build-source-configuration-builder (new SourceConfiguration$Builder) id config))
+
+
 (defn build-viewer-certificate-options-builder
   "The build-viewer-certificate-options-builder function updates a ViewerCertificateOptions$Builder instance using the provided configuration.
   The function takes the ViewerCertificateOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4513,3 +5443,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (ssl-method config id :ssl-method)]
     (. builder sslMethod data))
   (.build builder))
+
+
+(defn viewer-certificate-options-builder
+  ""
+  [id config]
+  (build-viewer-certificate-options-builder (new ViewerCertificateOptions$Builder) id config))

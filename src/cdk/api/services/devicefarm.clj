@@ -50,6 +50,12 @@
   (.build builder))
 
 
+(defn cfn-device-pool-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-device-pool-builder (CfnDevicePool$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-device-pool-props-builder
   "The build-cfn-device-pool-props-builder function updates a CfnDevicePoolProps$Builder instance using the provided configuration.
   The function takes the CfnDevicePoolProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -82,6 +88,12 @@
   (.build builder))
 
 
+(defn cfn-device-pool-props-builder
+  ""
+  [id config]
+  (build-cfn-device-pool-props-builder (new CfnDevicePoolProps$Builder) id config))
+
+
 (defn build-cfn-device-pool-rule-property-builder
   "The build-cfn-device-pool-rule-property-builder function updates a CfnDevicePool$RuleProperty$Builder instance using the provided configuration.
   The function takes the CfnDevicePool$RuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -103,6 +115,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-device-pool-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-device-pool-rule-property-builder (new CfnDevicePool$RuleProperty$Builder) id config))
 
 
 (defn build-cfn-instance-profile-builder
@@ -137,6 +155,12 @@
   (.build builder))
 
 
+(defn cfn-instance-profile-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-instance-profile-builder (CfnInstanceProfile$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-instance-profile-props-builder
   "The build-cfn-instance-profile-props-builder function updates a CfnInstanceProfileProps$Builder instance using the provided configuration.
   The function takes the CfnInstanceProfileProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -167,6 +191,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-instance-profile-props-builder
+  ""
+  [id config]
+  (build-cfn-instance-profile-props-builder (new CfnInstanceProfileProps$Builder) id config))
 
 
 (defn build-cfn-network-profile-builder
@@ -219,6 +249,12 @@
   (.build builder))
 
 
+(defn cfn-network-profile-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-network-profile-builder (CfnNetworkProfile$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-network-profile-props-builder
   "The build-cfn-network-profile-props-builder function updates a CfnNetworkProfileProps$Builder instance using the provided configuration.
   The function takes the CfnNetworkProfileProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -269,6 +305,12 @@
   (.build builder))
 
 
+(defn cfn-network-profile-props-builder
+  ""
+  [id config]
+  (build-cfn-network-profile-props-builder (new CfnNetworkProfileProps$Builder) id config))
+
+
 (defn build-cfn-project-builder
   "The build-cfn-project-builder function updates a CfnProject$Builder instance using the provided configuration.
   The function takes the CfnProject$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -293,6 +335,12 @@
   (when-let [data (lookup-entry config id :vpc-config)]
     (. builder vpcConfig data))
   (.build builder))
+
+
+(defn cfn-project-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-project-builder (CfnProject$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-project-props-builder
@@ -321,6 +369,12 @@
   (.build builder))
 
 
+(defn cfn-project-props-builder
+  ""
+  [id config]
+  (build-cfn-project-props-builder (new CfnProjectProps$Builder) id config))
+
+
 (defn build-cfn-project-vpc-config-property-builder
   "The build-cfn-project-vpc-config-property-builder function updates a CfnProject$VpcConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnProject$VpcConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -342,6 +396,12 @@
   (when-let [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
+
+
+(defn cfn-project-vpc-config-property-builder
+  ""
+  [id config]
+  (build-cfn-project-vpc-config-property-builder (new CfnProject$VpcConfigProperty$Builder) id config))
 
 
 (defn build-cfn-test-grid-project-builder
@@ -370,6 +430,12 @@
   (.build builder))
 
 
+(defn cfn-test-grid-project-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-test-grid-project-builder (CfnTestGridProject$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-test-grid-project-props-builder
   "The build-cfn-test-grid-project-props-builder function updates a CfnTestGridProjectProps$Builder instance using the provided configuration.
   The function takes the CfnTestGridProjectProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -396,6 +462,12 @@
   (.build builder))
 
 
+(defn cfn-test-grid-project-props-builder
+  ""
+  [id config]
+  (build-cfn-test-grid-project-props-builder (new CfnTestGridProjectProps$Builder) id config))
+
+
 (defn build-cfn-test-grid-project-vpc-config-property-builder
   "The build-cfn-test-grid-project-vpc-config-property-builder function updates a CfnTestGridProject$VpcConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnTestGridProject$VpcConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -417,6 +489,12 @@
   (when-let [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
+
+
+(defn cfn-test-grid-project-vpc-config-property-builder
+  ""
+  [id config]
+  (build-cfn-test-grid-project-vpc-config-property-builder (new CfnTestGridProject$VpcConfigProperty$Builder) id config))
 
 
 (defn build-cfn-vpce-configuration-builder
@@ -448,6 +526,12 @@
   (.build builder))
 
 
+(defn cfn-vpce-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-vpce-configuration-builder (CfnVPCEConfiguration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-vpce-configuration-props-builder
   "The build-cfn-vpce-configuration-props-builder function updates a CfnVPCEConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnVPCEConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -475,3 +559,9 @@
   (when-let [data (lookup-entry config id :vpce-service-name)]
     (. builder vpceServiceName data))
   (.build builder))
+
+
+(defn cfn-vpce-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-vpce-configuration-props-builder (new CfnVPCEConfigurationProps$Builder) id config))

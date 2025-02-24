@@ -50,6 +50,12 @@
   (.build builder))
 
 
+(defn cfn-contact-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-contact-builder (CfnContact$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-contact-channel-builder
   "The build-cfn-contact-channel-builder function updates a CfnContactChannel$Builder instance using the provided configuration.
   The function takes the CfnContactChannel$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -77,6 +83,12 @@
   (when-let [data (lookup-entry config id :defer-activation)]
     (. builder deferActivation data))
   (.build builder))
+
+
+(defn cfn-contact-channel-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-contact-channel-builder (CfnContactChannel$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-contact-channel-props-builder
@@ -108,6 +120,12 @@
   (.build builder))
 
 
+(defn cfn-contact-channel-props-builder
+  ""
+  [id config]
+  (build-cfn-contact-channel-props-builder (new CfnContactChannelProps$Builder) id config))
+
+
 (defn build-cfn-contact-channel-target-info-property-builder
   "The build-cfn-contact-channel-target-info-property-builder function updates a CfnContact$ChannelTargetInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnContact$ChannelTargetInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -128,6 +146,12 @@
   (.build builder))
 
 
+(defn cfn-contact-channel-target-info-property-builder
+  ""
+  [id config]
+  (build-cfn-contact-channel-target-info-property-builder (new CfnContact$ChannelTargetInfoProperty$Builder) id config))
+
+
 (defn build-cfn-contact-contact-target-info-property-builder
   "The build-cfn-contact-contact-target-info-property-builder function updates a CfnContact$ContactTargetInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnContact$ContactTargetInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -146,6 +170,12 @@
   (when-let [data (lookup-entry config id :is-essential)]
     (. builder isEssential data))
   (.build builder))
+
+
+(defn cfn-contact-contact-target-info-property-builder
+  ""
+  [id config]
+  (build-cfn-contact-contact-target-info-property-builder (new CfnContact$ContactTargetInfoProperty$Builder) id config))
 
 
 (defn build-cfn-contact-props-builder
@@ -174,6 +204,12 @@
   (.build builder))
 
 
+(defn cfn-contact-props-builder
+  ""
+  [id config]
+  (build-cfn-contact-props-builder (new CfnContactProps$Builder) id config))
+
+
 (defn build-cfn-contact-stage-property-builder
   "The build-cfn-contact-stage-property-builder function updates a CfnContact$StageProperty$Builder instance using the provided configuration.
   The function takes the CfnContact$StageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -197,6 +233,12 @@
   (.build builder))
 
 
+(defn cfn-contact-stage-property-builder
+  ""
+  [id config]
+  (build-cfn-contact-stage-property-builder (new CfnContact$StageProperty$Builder) id config))
+
+
 (defn build-cfn-contact-targets-property-builder
   "The build-cfn-contact-targets-property-builder function updates a CfnContact$TargetsProperty$Builder instance using the provided configuration.
   The function takes the CfnContact$TargetsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -215,6 +257,12 @@
   (when-let [data (lookup-entry config id :contact-target-info)]
     (. builder contactTargetInfo data))
   (.build builder))
+
+
+(defn cfn-contact-targets-property-builder
+  ""
+  [id config]
+  (build-cfn-contact-targets-property-builder (new CfnContact$TargetsProperty$Builder) id config))
 
 
 (defn build-cfn-plan-builder
@@ -240,6 +288,12 @@
   (.build builder))
 
 
+(defn cfn-plan-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-plan-builder (CfnPlan$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-plan-channel-target-info-property-builder
   "The build-cfn-plan-channel-target-info-property-builder function updates a CfnPlan$ChannelTargetInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnPlan$ChannelTargetInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -260,6 +314,12 @@
   (.build builder))
 
 
+(defn cfn-plan-channel-target-info-property-builder
+  ""
+  [id config]
+  (build-cfn-plan-channel-target-info-property-builder (new CfnPlan$ChannelTargetInfoProperty$Builder) id config))
+
+
 (defn build-cfn-plan-contact-target-info-property-builder
   "The build-cfn-plan-contact-target-info-property-builder function updates a CfnPlan$ContactTargetInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnPlan$ContactTargetInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -278,6 +338,12 @@
   (when-let [data (lookup-entry config id :is-essential)]
     (. builder isEssential data))
   (.build builder))
+
+
+(defn cfn-plan-contact-target-info-property-builder
+  ""
+  [id config]
+  (build-cfn-plan-contact-target-info-property-builder (new CfnPlan$ContactTargetInfoProperty$Builder) id config))
 
 
 (defn build-cfn-plan-props-builder
@@ -303,6 +369,12 @@
   (.build builder))
 
 
+(defn cfn-plan-props-builder
+  ""
+  [id config]
+  (build-cfn-plan-props-builder (new CfnPlanProps$Builder) id config))
+
+
 (defn build-cfn-plan-stage-property-builder
   "The build-cfn-plan-stage-property-builder function updates a CfnPlan$StageProperty$Builder instance using the provided configuration.
   The function takes the CfnPlan$StageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -323,6 +395,12 @@
   (.build builder))
 
 
+(defn cfn-plan-stage-property-builder
+  ""
+  [id config]
+  (build-cfn-plan-stage-property-builder (new CfnPlan$StageProperty$Builder) id config))
+
+
 (defn build-cfn-plan-targets-property-builder
   "The build-cfn-plan-targets-property-builder function updates a CfnPlan$TargetsProperty$Builder instance using the provided configuration.
   The function takes the CfnPlan$TargetsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -341,6 +419,12 @@
   (when-let [data (lookup-entry config id :contact-target-info)]
     (. builder contactTargetInfo data))
   (.build builder))
+
+
+(defn cfn-plan-targets-property-builder
+  ""
+  [id config]
+  (build-cfn-plan-targets-property-builder (new CfnPlan$TargetsProperty$Builder) id config))
 
 
 (defn build-cfn-rotation-builder
@@ -375,6 +459,12 @@
   (.build builder))
 
 
+(defn cfn-rotation-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-rotation-builder (CfnRotation$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-rotation-coverage-time-property-builder
   "The build-cfn-rotation-coverage-time-property-builder function updates a CfnRotation$CoverageTimeProperty$Builder instance using the provided configuration.
   The function takes the CfnRotation$CoverageTimeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -395,6 +485,12 @@
   (.build builder))
 
 
+(defn cfn-rotation-coverage-time-property-builder
+  ""
+  [id config]
+  (build-cfn-rotation-coverage-time-property-builder (new CfnRotation$CoverageTimeProperty$Builder) id config))
+
+
 (defn build-cfn-rotation-monthly-setting-property-builder
   "The build-cfn-rotation-monthly-setting-property-builder function updates a CfnRotation$MonthlySettingProperty$Builder instance using the provided configuration.
   The function takes the CfnRotation$MonthlySettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -413,6 +509,12 @@
   (when-let [data (lookup-entry config id :hand-off-time)]
     (. builder handOffTime data))
   (.build builder))
+
+
+(defn cfn-rotation-monthly-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-rotation-monthly-setting-property-builder (new CfnRotation$MonthlySettingProperty$Builder) id config))
 
 
 (defn build-cfn-rotation-props-builder
@@ -447,6 +549,12 @@
   (.build builder))
 
 
+(defn cfn-rotation-props-builder
+  ""
+  [id config]
+  (build-cfn-rotation-props-builder (new CfnRotationProps$Builder) id config))
+
+
 (defn build-cfn-rotation-recurrence-settings-property-builder
   "The build-cfn-rotation-recurrence-settings-property-builder function updates a CfnRotation$RecurrenceSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnRotation$RecurrenceSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -479,6 +587,12 @@
   (.build builder))
 
 
+(defn cfn-rotation-recurrence-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-rotation-recurrence-settings-property-builder (new CfnRotation$RecurrenceSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-rotation-shift-coverage-property-builder
   "The build-cfn-rotation-shift-coverage-property-builder function updates a CfnRotation$ShiftCoverageProperty$Builder instance using the provided configuration.
   The function takes the CfnRotation$ShiftCoverageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -499,6 +613,12 @@
   (.build builder))
 
 
+(defn cfn-rotation-shift-coverage-property-builder
+  ""
+  [id config]
+  (build-cfn-rotation-shift-coverage-property-builder (new CfnRotation$ShiftCoverageProperty$Builder) id config))
+
+
 (defn build-cfn-rotation-weekly-setting-property-builder
   "The build-cfn-rotation-weekly-setting-property-builder function updates a CfnRotation$WeeklySettingProperty$Builder instance using the provided configuration.
   The function takes the CfnRotation$WeeklySettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -517,3 +637,9 @@
   (when-let [data (lookup-entry config id :hand-off-time)]
     (. builder handOffTime data))
   (.build builder))
+
+
+(defn cfn-rotation-weekly-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-rotation-weekly-setting-property-builder (new CfnRotation$WeeklySettingProperty$Builder) id config))

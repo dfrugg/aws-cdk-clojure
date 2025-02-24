@@ -49,6 +49,12 @@
   (.build builder))
 
 
+(defn cfn-capacity-reservation-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-capacity-reservation-builder (CfnCapacityReservation$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-capacity-reservation-capacity-assignment-configuration-property-builder
   "The build-cfn-capacity-reservation-capacity-assignment-configuration-property-builder function updates a CfnCapacityReservation$CapacityAssignmentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnCapacityReservation$CapacityAssignmentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -66,6 +72,12 @@
   (.build builder))
 
 
+(defn cfn-capacity-reservation-capacity-assignment-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-capacity-reservation-capacity-assignment-configuration-property-builder (new CfnCapacityReservation$CapacityAssignmentConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-capacity-reservation-capacity-assignment-property-builder
   "The build-cfn-capacity-reservation-capacity-assignment-property-builder function updates a CfnCapacityReservation$CapacityAssignmentProperty$Builder instance using the provided configuration.
   The function takes the CfnCapacityReservation$CapacityAssignmentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -81,6 +93,12 @@
   (when-let [data (lookup-entry config id :workgroup-names)]
     (. builder workgroupNames data))
   (.build builder))
+
+
+(defn cfn-capacity-reservation-capacity-assignment-property-builder
+  ""
+  [id config]
+  (build-cfn-capacity-reservation-capacity-assignment-property-builder (new CfnCapacityReservation$CapacityAssignmentProperty$Builder) id config))
 
 
 (defn build-cfn-capacity-reservation-props-builder
@@ -107,6 +125,12 @@
   (when-let [data (lookup-entry config id :target-dpus)]
     (. builder targetDpus data))
   (.build builder))
+
+
+(defn cfn-capacity-reservation-props-builder
+  ""
+  [id config]
+  (build-cfn-capacity-reservation-props-builder (new CfnCapacityReservationProps$Builder) id config))
 
 
 (defn build-cfn-data-catalog-builder
@@ -138,6 +162,12 @@
   (.build builder))
 
 
+(defn cfn-data-catalog-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-data-catalog-builder (CfnDataCatalog$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-data-catalog-props-builder
   "The build-cfn-data-catalog-props-builder function updates a CfnDataCatalogProps$Builder instance using the provided configuration.
   The function takes the CfnDataCatalogProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -165,6 +195,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-data-catalog-props-builder
+  ""
+  [id config]
+  (build-cfn-data-catalog-props-builder (new CfnDataCatalogProps$Builder) id config))
 
 
 (defn build-cfn-named-query-builder
@@ -196,6 +232,12 @@
   (.build builder))
 
 
+(defn cfn-named-query-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-named-query-builder (CfnNamedQuery$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-named-query-props-builder
   "The build-cfn-named-query-props-builder function updates a CfnNamedQueryProps$Builder instance using the provided configuration.
   The function takes the CfnNamedQueryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -225,6 +267,12 @@
   (.build builder))
 
 
+(defn cfn-named-query-props-builder
+  ""
+  [id config]
+  (build-cfn-named-query-props-builder (new CfnNamedQueryProps$Builder) id config))
+
+
 (defn build-cfn-prepared-statement-builder
   "The build-cfn-prepared-statement-builder function updates a CfnPreparedStatement$Builder instance using the provided configuration.
   The function takes the CfnPreparedStatement$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -249,6 +297,12 @@
   (when-let [data (lookup-entry config id :work-group)]
     (. builder workGroup data))
   (.build builder))
+
+
+(defn cfn-prepared-statement-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-prepared-statement-builder (CfnPreparedStatement$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-prepared-statement-props-builder
@@ -277,6 +331,12 @@
   (.build builder))
 
 
+(defn cfn-prepared-statement-props-builder
+  ""
+  [id config]
+  (build-cfn-prepared-statement-props-builder (new CfnPreparedStatementProps$Builder) id config))
+
+
 (defn build-cfn-work-group-acl-configuration-property-builder
   "The build-cfn-work-group-acl-configuration-property-builder function updates a CfnWorkGroup$AclConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkGroup$AclConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -292,6 +352,12 @@
   (when-let [data (lookup-entry config id :s3-acl-option)]
     (. builder s3AclOption data))
   (.build builder))
+
+
+(defn cfn-work-group-acl-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-work-group-acl-configuration-property-builder (new CfnWorkGroup$AclConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-work-group-builder
@@ -329,6 +395,12 @@
   (.build builder))
 
 
+(defn cfn-work-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-work-group-builder (CfnWorkGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-work-group-customer-content-encryption-configuration-property-builder
   "The build-cfn-work-group-customer-content-encryption-configuration-property-builder function updates a CfnWorkGroup$CustomerContentEncryptionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkGroup$CustomerContentEncryptionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -344,6 +416,12 @@
   (when-let [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
   (.build builder))
+
+
+(defn cfn-work-group-customer-content-encryption-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-work-group-customer-content-encryption-configuration-property-builder (new CfnWorkGroup$CustomerContentEncryptionConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-work-group-encryption-configuration-property-builder
@@ -366,6 +444,12 @@
   (.build builder))
 
 
+(defn cfn-work-group-encryption-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-work-group-encryption-configuration-property-builder (new CfnWorkGroup$EncryptionConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-work-group-engine-version-property-builder
   "The build-cfn-work-group-engine-version-property-builder function updates a CfnWorkGroup$EngineVersionProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkGroup$EngineVersionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -384,6 +468,12 @@
   (when-let [data (lookup-entry config id :selected-engine-version)]
     (. builder selectedEngineVersion data))
   (.build builder))
+
+
+(defn cfn-work-group-engine-version-property-builder
+  ""
+  [id config]
+  (build-cfn-work-group-engine-version-property-builder (new CfnWorkGroup$EngineVersionProperty$Builder) id config))
 
 
 (defn build-cfn-work-group-props-builder
@@ -421,6 +511,12 @@
   (.build builder))
 
 
+(defn cfn-work-group-props-builder
+  ""
+  [id config]
+  (build-cfn-work-group-props-builder (new CfnWorkGroupProps$Builder) id config))
+
+
 (defn build-cfn-work-group-result-configuration-property-builder
   "The build-cfn-work-group-result-configuration-property-builder function updates a CfnWorkGroup$ResultConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkGroup$ResultConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -445,6 +541,12 @@
   (when-let [data (lookup-entry config id :output-location)]
     (. builder outputLocation data))
   (.build builder))
+
+
+(defn cfn-work-group-result-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-work-group-result-configuration-property-builder (new CfnWorkGroup$ResultConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-work-group-result-configuration-updates-property-builder
@@ -483,6 +585,12 @@
   (when-let [data (lookup-entry config id :remove-output-location)]
     (. builder removeOutputLocation data))
   (.build builder))
+
+
+(defn cfn-work-group-result-configuration-updates-property-builder
+  ""
+  [id config]
+  (build-cfn-work-group-result-configuration-updates-property-builder (new CfnWorkGroup$ResultConfigurationUpdatesProperty$Builder) id config))
 
 
 (defn build-cfn-work-group-work-group-configuration-property-builder
@@ -524,6 +632,12 @@
   (when-let [data (lookup-entry config id :result-configuration)]
     (. builder resultConfiguration data))
   (.build builder))
+
+
+(defn cfn-work-group-work-group-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-work-group-work-group-configuration-property-builder (new CfnWorkGroup$WorkGroupConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-work-group-work-group-configuration-updates-property-builder
@@ -571,3 +685,9 @@
   (when-let [data (lookup-entry config id :result-configuration-updates)]
     (. builder resultConfigurationUpdates data))
   (.build builder))
+
+
+(defn cfn-work-group-work-group-configuration-updates-property-builder
+  ""
+  [id config]
+  (build-cfn-work-group-work-group-configuration-updates-property-builder (new CfnWorkGroup$WorkGroupConfigurationUpdatesProperty$Builder) id config))

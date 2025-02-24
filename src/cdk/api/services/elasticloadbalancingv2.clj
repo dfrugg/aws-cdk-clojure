@@ -485,6 +485,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn add-application-action-props-builder
+  ""
+  [id config]
+  (build-add-application-action-props-builder (new AddApplicationActionProps$Builder) id config))
+
+
 (defn build-add-application-target-groups-props-builder
   "The build-add-application-target-groups-props-builder function updates a AddApplicationTargetGroupsProps$Builder instance using the provided configuration.
   The function takes the AddApplicationTargetGroupsProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -506,6 +512,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :target-groups)]
     (. builder targetGroups data))
   (.build builder))
+
+
+(defn add-application-target-groups-props-builder
+  ""
+  [id config]
+  (build-add-application-target-groups-props-builder (new AddApplicationTargetGroupsProps$Builder) id config))
 
 
 (defn build-add-application-targets-props-builder
@@ -561,6 +573,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn add-application-targets-props-builder
+  ""
+  [id config]
+  (build-add-application-targets-props-builder (new AddApplicationTargetsProps$Builder) id config))
+
+
 (defn build-add-network-action-props-builder
   "The build-add-network-action-props-builder function updates a AddNetworkActionProps$Builder instance using the provided configuration.
   The function takes the AddNetworkActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -576,6 +594,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :action)]
     (. builder action data))
   (.build builder))
+
+
+(defn add-network-action-props-builder
+  ""
+  [id config]
+  (build-add-network-action-props-builder (new AddNetworkActionProps$Builder) id config))
 
 
 (defn build-add-network-targets-props-builder
@@ -616,6 +640,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn add-network-targets-props-builder
+  ""
+  [id config]
+  (build-add-network-targets-props-builder (new AddNetworkTargetsProps$Builder) id config))
+
+
 (defn build-add-rule-props-builder
   "The build-add-rule-props-builder function updates a AddRuleProps$Builder instance using the provided configuration.
   The function takes the AddRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -634,6 +664,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :priority)]
     (. builder priority data))
   (.build builder))
+
+
+(defn add-rule-props-builder
+  ""
+  [id config]
+  (build-add-rule-props-builder (new AddRuleProps$Builder) id config))
 
 
 (defn build-application-listener-attributes-builder
@@ -657,6 +693,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :security-group)]
     (. builder securityGroup data))
   (.build builder))
+
+
+(defn application-listener-attributes-builder
+  ""
+  [id config]
+  (build-application-listener-attributes-builder (new ApplicationListenerAttributes$Builder) id config))
 
 
 (defn build-application-listener-builder
@@ -697,6 +739,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn application-listener-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-application-listener-builder (ApplicationListener$Builder/create scope (name id)) id config))
+
+
 (defn build-application-listener-certificate-builder
   "The build-application-listener-certificate-builder function updates a ApplicationListenerCertificate$Builder instance using the provided configuration.
   The function takes the ApplicationListenerCertificate$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -717,6 +765,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn application-listener-certificate-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-application-listener-certificate-builder (ApplicationListenerCertificate$Builder/create scope (name id)) id config))
+
+
 (defn build-application-listener-certificate-props-builder
   "The build-application-listener-certificate-props-builder function updates a ApplicationListenerCertificateProps$Builder instance using the provided configuration.
   The function takes the ApplicationListenerCertificateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -735,6 +789,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :listener)]
     (. builder listener data))
   (.build builder))
+
+
+(defn application-listener-certificate-props-builder
+  ""
+  [id config]
+  (build-application-listener-certificate-props-builder (new ApplicationListenerCertificateProps$Builder) id config))
 
 
 (defn build-application-listener-lookup-options-builder
@@ -764,6 +824,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :load-balancer-tags)]
     (. builder loadBalancerTags data))
   (.build builder))
+
+
+(defn application-listener-lookup-options-builder
+  ""
+  [id config]
+  (build-application-listener-lookup-options-builder (new ApplicationListenerLookupOptions$Builder) id config))
 
 
 (defn build-application-listener-props-builder
@@ -804,6 +870,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn application-listener-props-builder
+  ""
+  [id config]
+  (build-application-listener-props-builder (new ApplicationListenerProps$Builder) id config))
+
+
 (defn build-application-listener-rule-builder
   "The build-application-listener-rule-builder function updates a ApplicationListenerRule$Builder instance using the provided configuration.
   The function takes the ApplicationListenerRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -833,6 +905,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn application-listener-rule-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-application-listener-rule-builder (ApplicationListenerRule$Builder/create scope (name id)) id config))
+
+
 (defn build-application-listener-rule-props-builder
   "The build-application-listener-rule-props-builder function updates a ApplicationListenerRuleProps$Builder instance using the provided configuration.
   The function takes the ApplicationListenerRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -860,6 +938,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :target-groups)]
     (. builder targetGroups data))
   (.build builder))
+
+
+(defn application-listener-rule-props-builder
+  ""
+  [id config]
+  (build-application-listener-rule-props-builder (new ApplicationListenerRuleProps$Builder) id config))
 
 
 (defn build-application-load-balancer-attributes-builder
@@ -892,6 +976,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
+
+
+(defn application-load-balancer-attributes-builder
+  ""
+  [id config]
+  (build-application-load-balancer-attributes-builder (new ApplicationLoadBalancerAttributes$Builder) id config))
 
 
 (defn build-application-load-balancer-builder
@@ -965,6 +1055,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn application-load-balancer-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-application-load-balancer-builder (ApplicationLoadBalancer$Builder/create scope (name id)) id config))
+
+
 (defn build-application-load-balancer-lookup-options-builder
   "The build-application-load-balancer-lookup-options-builder function updates a ApplicationLoadBalancerLookupOptions$Builder instance using the provided configuration.
   The function takes the ApplicationLoadBalancerLookupOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -983,6 +1079,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :load-balancer-tags)]
     (. builder loadBalancerTags data))
   (.build builder))
+
+
+(defn application-load-balancer-lookup-options-builder
+  ""
+  [id config]
+  (build-application-load-balancer-lookup-options-builder (new ApplicationLoadBalancerLookupOptions$Builder) id config))
 
 
 (defn build-application-load-balancer-props-builder
@@ -1056,6 +1158,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn application-load-balancer-props-builder
+  ""
+  [id config]
+  (build-application-load-balancer-props-builder (new ApplicationLoadBalancerProps$Builder) id config))
+
+
 (defn build-application-load-balancer-redirect-config-builder
   "The build-application-load-balancer-redirect-config-builder function updates a ApplicationLoadBalancerRedirectConfig$Builder instance using the provided configuration.
   The function takes the ApplicationLoadBalancerRedirectConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1083,6 +1191,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (application-protocol config id :target-protocol)]
     (. builder targetProtocol data))
   (.build builder))
+
+
+(defn application-load-balancer-redirect-config-builder
+  ""
+  [id config]
+  (build-application-load-balancer-redirect-config-builder (new ApplicationLoadBalancerRedirectConfig$Builder) id config))
 
 
 (defn build-application-target-group-builder
@@ -1138,6 +1252,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn application-target-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-application-target-group-builder (ApplicationTargetGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-application-target-group-props-builder
   "The build-application-target-group-props-builder function updates a ApplicationTargetGroupProps$Builder instance using the provided configuration.
   The function takes the ApplicationTargetGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1189,6 +1309,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
+
+
+(defn application-target-group-props-builder
+  ""
+  [id config]
+  (build-application-target-group-props-builder (new ApplicationTargetGroupProps$Builder) id config))
 
 
 (defn build-authenticate-oidc-options-builder
@@ -1244,6 +1370,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn authenticate-oidc-options-builder
+  ""
+  [id config]
+  (build-authenticate-oidc-options-builder (new AuthenticateOidcOptions$Builder) id config))
+
+
 (defn build-base-application-listener-props-builder
   "The build-base-application-listener-props-builder function updates a BaseApplicationListenerProps$Builder instance using the provided configuration.
   The function takes the BaseApplicationListenerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1279,6 +1411,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn base-application-listener-props-builder
+  ""
+  [id config]
+  (build-base-application-listener-props-builder (new BaseApplicationListenerProps$Builder) id config))
+
+
 (defn build-base-application-listener-rule-props-builder
   "The build-base-application-listener-rule-props-builder function updates a BaseApplicationListenerRuleProps$Builder instance using the provided configuration.
   The function takes the BaseApplicationListenerRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1305,6 +1443,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn base-application-listener-rule-props-builder
+  ""
+  [id config]
+  (build-base-application-listener-rule-props-builder (new BaseApplicationListenerRuleProps$Builder) id config))
+
+
 (defn build-base-listener-lookup-options-builder
   "The build-base-listener-lookup-options-builder function updates a BaseListenerLookupOptions$Builder instance using the provided configuration.
   The function takes the BaseListenerLookupOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1328,6 +1472,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn base-listener-lookup-options-builder
+  ""
+  [id config]
+  (build-base-listener-lookup-options-builder (new BaseListenerLookupOptions$Builder) id config))
+
+
 (defn build-base-load-balancer-lookup-options-builder
   "The build-base-load-balancer-lookup-options-builder function updates a BaseLoadBalancerLookupOptions$Builder instance using the provided configuration.
   The function takes the BaseLoadBalancerLookupOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1346,6 +1496,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :load-balancer-tags)]
     (. builder loadBalancerTags data))
   (.build builder))
+
+
+(defn base-load-balancer-lookup-options-builder
+  ""
+  [id config]
+  (build-base-load-balancer-lookup-options-builder (new BaseLoadBalancerLookupOptions$Builder) id config))
 
 
 (defn build-base-load-balancer-props-builder
@@ -1383,6 +1539,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn base-load-balancer-props-builder
+  ""
+  [id config]
+  (build-base-load-balancer-props-builder (new BaseLoadBalancerProps$Builder) id config))
+
+
 (defn build-base-network-listener-props-builder
   "The build-base-network-listener-props-builder function updates a BaseNetworkListenerProps$Builder instance using the provided configuration.
   The function takes the BaseNetworkListenerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1418,6 +1580,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn base-network-listener-props-builder
+  ""
+  [id config]
+  (build-base-network-listener-props-builder (new BaseNetworkListenerProps$Builder) id config))
+
+
 (defn build-base-target-group-props-builder
   "The build-base-target-group-props-builder function updates a BaseTargetGroupProps$Builder instance using the provided configuration.
   The function takes the BaseTargetGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1445,6 +1613,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
+
+
+(defn base-target-group-props-builder
+  ""
+  [id config]
+  (build-base-target-group-props-builder (new BaseTargetGroupProps$Builder) id config))
 
 
 (defn build-cfn-listener-action-property-builder
@@ -1485,6 +1659,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-listener-action-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-action-property-builder (new CfnListener$ActionProperty$Builder) id config))
+
+
 (defn build-cfn-listener-authenticate-cognito-config-property-builder
   "The build-cfn-listener-authenticate-cognito-config-property-builder function updates a CfnListener$AuthenticateCognitoConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnListener$AuthenticateCognitoConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1521,6 +1701,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :user-pool-domain)]
     (. builder userPoolDomain data))
   (.build builder))
+
+
+(defn cfn-listener-authenticate-cognito-config-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-authenticate-cognito-config-property-builder (new CfnListener$AuthenticateCognitoConfigProperty$Builder) id config))
 
 
 (defn build-cfn-listener-authenticate-oidc-config-property-builder
@@ -1573,6 +1759,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-listener-authenticate-oidc-config-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-authenticate-oidc-config-property-builder (new CfnListener$AuthenticateOidcConfigProperty$Builder) id config))
+
+
 (defn build-cfn-listener-builder
   "The build-cfn-listener-builder function updates a CfnListener$Builder instance using the provided configuration.
   The function takes the CfnListener$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1611,6 +1803,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-listener-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-listener-builder (CfnListener$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-listener-certificate-builder
   "The build-cfn-listener-certificate-builder function updates a CfnListenerCertificate$Builder instance using the provided configuration.
   The function takes the CfnListenerCertificate$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1631,6 +1829,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-listener-certificate-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-listener-certificate-builder (CfnListenerCertificate$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-listener-certificate-certificate-property-builder
   "The build-cfn-listener-certificate-certificate-property-builder function updates a CfnListenerCertificate$CertificateProperty$Builder instance using the provided configuration.
   The function takes the CfnListenerCertificate$CertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1648,6 +1852,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-listener-certificate-certificate-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-certificate-certificate-property-builder (new CfnListenerCertificate$CertificateProperty$Builder) id config))
+
+
 (defn build-cfn-listener-certificate-property-builder
   "The build-cfn-listener-certificate-property-builder function updates a CfnListener$CertificateProperty$Builder instance using the provided configuration.
   The function takes the CfnListener$CertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1663,6 +1873,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :certificate-arn)]
     (. builder certificateArn data))
   (.build builder))
+
+
+(defn cfn-listener-certificate-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-certificate-property-builder (new CfnListener$CertificateProperty$Builder) id config))
 
 
 (defn build-cfn-listener-certificate-props-builder
@@ -1683,6 +1899,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :listener-arn)]
     (. builder listenerArn data))
   (.build builder))
+
+
+(defn cfn-listener-certificate-props-builder
+  ""
+  [id config]
+  (build-cfn-listener-certificate-props-builder (new CfnListenerCertificateProps$Builder) id config))
 
 
 (defn build-cfn-listener-fixed-response-config-property-builder
@@ -1708,6 +1930,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-listener-fixed-response-config-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-fixed-response-config-property-builder (new CfnListener$FixedResponseConfigProperty$Builder) id config))
+
+
 (defn build-cfn-listener-forward-config-property-builder
   "The build-cfn-listener-forward-config-property-builder function updates a CfnListener$ForwardConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnListener$ForwardConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1726,6 +1954,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :target-groups)]
     (. builder targetGroups data))
   (.build builder))
+
+
+(defn cfn-listener-forward-config-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-forward-config-property-builder (new CfnListener$ForwardConfigProperty$Builder) id config))
 
 
 (defn build-cfn-listener-mutual-authentication-property-builder
@@ -1749,6 +1983,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :trust-store-arn)]
     (. builder trustStoreArn data))
   (.build builder))
+
+
+(defn cfn-listener-mutual-authentication-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-mutual-authentication-property-builder (new CfnListener$MutualAuthenticationProperty$Builder) id config))
 
 
 (defn build-cfn-listener-props-builder
@@ -1789,6 +2029,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-listener-props-builder
+  ""
+  [id config]
+  (build-cfn-listener-props-builder (new CfnListenerProps$Builder) id config))
+
+
 (defn build-cfn-listener-redirect-config-property-builder
   "The build-cfn-listener-redirect-config-property-builder function updates a CfnListener$RedirectConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnListener$RedirectConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1819,6 +2065,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
   (.build builder))
+
+
+(defn cfn-listener-redirect-config-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-redirect-config-property-builder (new CfnListener$RedirectConfigProperty$Builder) id config))
 
 
 (defn build-cfn-listener-rule-action-property-builder
@@ -1859,6 +2111,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-listener-rule-action-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-rule-action-property-builder (new CfnListenerRule$ActionProperty$Builder) id config))
+
+
 (defn build-cfn-listener-rule-authenticate-cognito-config-property-builder
   "The build-cfn-listener-rule-authenticate-cognito-config-property-builder function updates a CfnListenerRule$AuthenticateCognitoConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnListenerRule$AuthenticateCognitoConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1895,6 +2153,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :user-pool-domain)]
     (. builder userPoolDomain data))
   (.build builder))
+
+
+(defn cfn-listener-rule-authenticate-cognito-config-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-rule-authenticate-cognito-config-property-builder (new CfnListenerRule$AuthenticateCognitoConfigProperty$Builder) id config))
 
 
 (defn build-cfn-listener-rule-authenticate-oidc-config-property-builder
@@ -1947,6 +2211,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-listener-rule-authenticate-oidc-config-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-rule-authenticate-oidc-config-property-builder (new CfnListenerRule$AuthenticateOidcConfigProperty$Builder) id config))
+
+
 (defn build-cfn-listener-rule-builder
   "The build-cfn-listener-rule-builder function updates a CfnListenerRule$Builder instance using the provided configuration.
   The function takes the CfnListenerRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1973,6 +2243,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-listener-rule-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-listener-rule-builder (CfnListenerRule$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-listener-rule-fixed-response-config-property-builder
   "The build-cfn-listener-rule-fixed-response-config-property-builder function updates a CfnListenerRule$FixedResponseConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnListenerRule$FixedResponseConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1996,6 +2272,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-listener-rule-fixed-response-config-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-rule-fixed-response-config-property-builder (new CfnListenerRule$FixedResponseConfigProperty$Builder) id config))
+
+
 (defn build-cfn-listener-rule-forward-config-property-builder
   "The build-cfn-listener-rule-forward-config-property-builder function updates a CfnListenerRule$ForwardConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnListenerRule$ForwardConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2016,6 +2298,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-listener-rule-forward-config-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-rule-forward-config-property-builder (new CfnListenerRule$ForwardConfigProperty$Builder) id config))
+
+
 (defn build-cfn-listener-rule-host-header-config-property-builder
   "The build-cfn-listener-rule-host-header-config-property-builder function updates a CfnListenerRule$HostHeaderConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnListenerRule$HostHeaderConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2031,6 +2319,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-listener-rule-host-header-config-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-rule-host-header-config-property-builder (new CfnListenerRule$HostHeaderConfigProperty$Builder) id config))
 
 
 (defn build-cfn-listener-rule-http-header-config-property-builder
@@ -2053,6 +2347,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-listener-rule-http-header-config-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-rule-http-header-config-property-builder (new CfnListenerRule$HttpHeaderConfigProperty$Builder) id config))
+
+
 (defn build-cfn-listener-rule-http-request-method-config-property-builder
   "The build-cfn-listener-rule-http-request-method-config-property-builder function updates a CfnListenerRule$HttpRequestMethodConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnListenerRule$HttpRequestMethodConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2070,6 +2370,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-listener-rule-http-request-method-config-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-rule-http-request-method-config-property-builder (new CfnListenerRule$HttpRequestMethodConfigProperty$Builder) id config))
+
+
 (defn build-cfn-listener-rule-path-pattern-config-property-builder
   "The build-cfn-listener-rule-path-pattern-config-property-builder function updates a CfnListenerRule$PathPatternConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnListenerRule$PathPatternConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2085,6 +2391,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-listener-rule-path-pattern-config-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-rule-path-pattern-config-property-builder (new CfnListenerRule$PathPatternConfigProperty$Builder) id config))
 
 
 (defn build-cfn-listener-rule-props-builder
@@ -2113,6 +2425,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-listener-rule-props-builder
+  ""
+  [id config]
+  (build-cfn-listener-rule-props-builder (new CfnListenerRuleProps$Builder) id config))
+
+
 (defn build-cfn-listener-rule-query-string-config-property-builder
   "The build-cfn-listener-rule-query-string-config-property-builder function updates a CfnListenerRule$QueryStringConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnListenerRule$QueryStringConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2128,6 +2446,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-listener-rule-query-string-config-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-rule-query-string-config-property-builder (new CfnListenerRule$QueryStringConfigProperty$Builder) id config))
 
 
 (defn build-cfn-listener-rule-query-string-key-value-property-builder
@@ -2148,6 +2472,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-listener-rule-query-string-key-value-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-rule-query-string-key-value-property-builder (new CfnListenerRule$QueryStringKeyValueProperty$Builder) id config))
 
 
 (defn build-cfn-listener-rule-redirect-config-property-builder
@@ -2180,6 +2510,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
   (.build builder))
+
+
+(defn cfn-listener-rule-redirect-config-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-rule-redirect-config-property-builder (new CfnListenerRule$RedirectConfigProperty$Builder) id config))
 
 
 (defn build-cfn-listener-rule-rule-condition-property-builder
@@ -2220,6 +2556,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-listener-rule-rule-condition-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-rule-rule-condition-property-builder (new CfnListenerRule$RuleConditionProperty$Builder) id config))
+
+
 (defn build-cfn-listener-rule-source-ip-config-property-builder
   "The build-cfn-listener-rule-source-ip-config-property-builder function updates a CfnListenerRule$SourceIpConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnListenerRule$SourceIpConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2235,6 +2577,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-listener-rule-source-ip-config-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-rule-source-ip-config-property-builder (new CfnListenerRule$SourceIpConfigProperty$Builder) id config))
 
 
 (defn build-cfn-listener-rule-target-group-stickiness-config-property-builder
@@ -2257,6 +2605,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-listener-rule-target-group-stickiness-config-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-rule-target-group-stickiness-config-property-builder (new CfnListenerRule$TargetGroupStickinessConfigProperty$Builder) id config))
+
+
 (defn build-cfn-listener-rule-target-group-tuple-property-builder
   "The build-cfn-listener-rule-target-group-tuple-property-builder function updates a CfnListenerRule$TargetGroupTupleProperty$Builder instance using the provided configuration.
   The function takes the CfnListenerRule$TargetGroupTupleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2275,6 +2629,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
+
+
+(defn cfn-listener-rule-target-group-tuple-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-rule-target-group-tuple-property-builder (new CfnListenerRule$TargetGroupTupleProperty$Builder) id config))
 
 
 (defn build-cfn-listener-target-group-stickiness-config-property-builder
@@ -2297,6 +2657,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-listener-target-group-stickiness-config-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-target-group-stickiness-config-property-builder (new CfnListener$TargetGroupStickinessConfigProperty$Builder) id config))
+
+
 (defn build-cfn-listener-target-group-tuple-property-builder
   "The build-cfn-listener-target-group-tuple-property-builder function updates a CfnListener$TargetGroupTupleProperty$Builder instance using the provided configuration.
   The function takes the CfnListener$TargetGroupTupleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2315,6 +2681,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
+
+
+(defn cfn-listener-target-group-tuple-property-builder
+  ""
+  [id config]
+  (build-cfn-listener-target-group-tuple-property-builder (new CfnListener$TargetGroupTupleProperty$Builder) id config))
 
 
 (defn build-cfn-load-balancer-builder
@@ -2361,6 +2733,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-load-balancer-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-load-balancer-builder (CfnLoadBalancer$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-load-balancer-load-balancer-attribute-property-builder
   "The build-cfn-load-balancer-load-balancer-attribute-property-builder function updates a CfnLoadBalancer$LoadBalancerAttributeProperty$Builder instance using the provided configuration.
   The function takes the CfnLoadBalancer$LoadBalancerAttributeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2379,6 +2757,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-load-balancer-load-balancer-attribute-property-builder
+  ""
+  [id config]
+  (build-cfn-load-balancer-load-balancer-attribute-property-builder (new CfnLoadBalancer$LoadBalancerAttributeProperty$Builder) id config))
 
 
 (defn build-cfn-load-balancer-props-builder
@@ -2425,6 +2809,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-load-balancer-props-builder
+  ""
+  [id config]
+  (build-cfn-load-balancer-props-builder (new CfnLoadBalancerProps$Builder) id config))
+
+
 (defn build-cfn-load-balancer-subnet-mapping-property-builder
   "The build-cfn-load-balancer-subnet-mapping-property-builder function updates a CfnLoadBalancer$SubnetMappingProperty$Builder instance using the provided configuration.
   The function takes the CfnLoadBalancer$SubnetMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2449,6 +2839,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :subnet-id)]
     (. builder subnetId data))
   (.build builder))
+
+
+(defn cfn-load-balancer-subnet-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-load-balancer-subnet-mapping-property-builder (new CfnLoadBalancer$SubnetMappingProperty$Builder) id config))
 
 
 (defn build-cfn-target-group-builder
@@ -2522,6 +2918,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-target-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-target-group-builder (CfnTargetGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-target-group-matcher-property-builder
   "The build-cfn-target-group-matcher-property-builder function updates a CfnTargetGroup$MatcherProperty$Builder instance using the provided configuration.
   The function takes the CfnTargetGroup$MatcherProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2540,6 +2942,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :http-code)]
     (. builder httpCode data))
   (.build builder))
+
+
+(defn cfn-target-group-matcher-property-builder
+  ""
+  [id config]
+  (build-cfn-target-group-matcher-property-builder (new CfnTargetGroup$MatcherProperty$Builder) id config))
 
 
 (defn build-cfn-target-group-props-builder
@@ -2613,6 +3021,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-target-group-props-builder
+  ""
+  [id config]
+  (build-cfn-target-group-props-builder (new CfnTargetGroupProps$Builder) id config))
+
+
 (defn build-cfn-target-group-target-description-property-builder
   "The build-cfn-target-group-target-description-property-builder function updates a CfnTargetGroup$TargetDescriptionProperty$Builder instance using the provided configuration.
   The function takes the CfnTargetGroup$TargetDescriptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2636,6 +3050,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-target-group-target-description-property-builder
+  ""
+  [id config]
+  (build-cfn-target-group-target-description-property-builder (new CfnTargetGroup$TargetDescriptionProperty$Builder) id config))
+
+
 (defn build-cfn-target-group-target-group-attribute-property-builder
   "The build-cfn-target-group-target-group-attribute-property-builder function updates a CfnTargetGroup$TargetGroupAttributeProperty$Builder instance using the provided configuration.
   The function takes the CfnTargetGroup$TargetGroupAttributeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2654,6 +3074,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-target-group-target-group-attribute-property-builder
+  ""
+  [id config]
+  (build-cfn-target-group-target-group-attribute-property-builder (new CfnTargetGroup$TargetGroupAttributeProperty$Builder) id config))
 
 
 (defn build-cfn-trust-store-builder
@@ -2685,6 +3111,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-trust-store-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-trust-store-builder (CfnTrustStore$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-trust-store-props-builder
   "The build-cfn-trust-store-props-builder function updates a CfnTrustStoreProps$Builder instance using the provided configuration.
   The function takes the CfnTrustStoreProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2714,6 +3146,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-trust-store-props-builder
+  ""
+  [id config]
+  (build-cfn-trust-store-props-builder (new CfnTrustStoreProps$Builder) id config))
+
+
 (defn build-cfn-trust-store-revocation-builder
   "The build-cfn-trust-store-revocation-builder function updates a CfnTrustStoreRevocation$Builder instance using the provided configuration.
   The function takes the CfnTrustStoreRevocation$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2734,6 +3172,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-trust-store-revocation-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-trust-store-revocation-builder (CfnTrustStoreRevocation$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-trust-store-revocation-props-builder
   "The build-cfn-trust-store-revocation-props-builder function updates a CfnTrustStoreRevocationProps$Builder instance using the provided configuration.
   The function takes the CfnTrustStoreRevocationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2752,6 +3196,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :trust-store-arn)]
     (. builder trustStoreArn data))
   (.build builder))
+
+
+(defn cfn-trust-store-revocation-props-builder
+  ""
+  [id config]
+  (build-cfn-trust-store-revocation-props-builder (new CfnTrustStoreRevocationProps$Builder) id config))
 
 
 (defn build-cfn-trust-store-revocation-revocation-content-property-builder
@@ -2780,6 +3230,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-trust-store-revocation-revocation-content-property-builder
+  ""
+  [id config]
+  (build-cfn-trust-store-revocation-revocation-content-property-builder (new CfnTrustStoreRevocation$RevocationContentProperty$Builder) id config))
+
+
 (defn build-cfn-trust-store-revocation-trust-store-revocation-property-builder
   "The build-cfn-trust-store-revocation-trust-store-revocation-property-builder function updates a CfnTrustStoreRevocation$TrustStoreRevocationProperty$Builder instance using the provided configuration.
   The function takes the CfnTrustStoreRevocation$TrustStoreRevocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2806,6 +3262,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-trust-store-revocation-trust-store-revocation-property-builder
+  ""
+  [id config]
+  (build-cfn-trust-store-revocation-trust-store-revocation-property-builder (new CfnTrustStoreRevocation$TrustStoreRevocationProperty$Builder) id config))
+
+
 (defn build-fixed-response-options-builder
   "The build-fixed-response-options-builder function updates a FixedResponseOptions$Builder instance using the provided configuration.
   The function takes the FixedResponseOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2826,6 +3288,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn fixed-response-options-builder
+  ""
+  [id config]
+  (build-fixed-response-options-builder (new FixedResponseOptions$Builder) id config))
+
+
 (defn build-forward-options-builder
   "The build-forward-options-builder function updates a ForwardOptions$Builder instance using the provided configuration.
   The function takes the ForwardOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2841,6 +3309,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :stickiness-duration)]
     (. builder stickinessDuration data))
   (.build builder))
+
+
+(defn forward-options-builder
+  ""
+  [id config]
+  (build-forward-options-builder (new ForwardOptions$Builder) id config))
 
 
 (defn build-health-check-builder
@@ -2887,6 +3361,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn health-check-builder
+  ""
+  [id config]
+  (build-health-check-builder (new HealthCheck$Builder) id config))
+
+
 (defn build-load-balancer-target-props-builder
   "The build-load-balancer-target-props-builder function updates a LoadBalancerTargetProps$Builder instance using the provided configuration.
   The function takes the LoadBalancerTargetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2907,6 +3387,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn load-balancer-target-props-builder
+  ""
+  [id config]
+  (build-load-balancer-target-props-builder (new LoadBalancerTargetProps$Builder) id config))
+
+
 (defn build-network-forward-options-builder
   "The build-network-forward-options-builder function updates a NetworkForwardOptions$Builder instance using the provided configuration.
   The function takes the NetworkForwardOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2922,6 +3408,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :stickiness-duration)]
     (. builder stickinessDuration data))
   (.build builder))
+
+
+(defn network-forward-options-builder
+  ""
+  [id config]
+  (build-network-forward-options-builder (new NetworkForwardOptions$Builder) id config))
 
 
 (defn build-network-listener-builder
@@ -2962,6 +3454,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn network-listener-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-network-listener-builder (NetworkListener$Builder/create scope (name id)) id config))
+
+
 (defn build-network-listener-lookup-options-builder
   "The build-network-listener-lookup-options-builder function updates a NetworkListenerLookupOptions$Builder instance using the provided configuration.
   The function takes the NetworkListenerLookupOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2986,6 +3484,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :load-balancer-tags)]
     (. builder loadBalancerTags data))
   (.build builder))
+
+
+(defn network-listener-lookup-options-builder
+  ""
+  [id config]
+  (build-network-listener-lookup-options-builder (new NetworkListenerLookupOptions$Builder) id config))
 
 
 (defn build-network-listener-props-builder
@@ -3026,6 +3530,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn network-listener-props-builder
+  ""
+  [id config]
+  (build-network-listener-props-builder (new NetworkListenerProps$Builder) id config))
+
+
 (defn build-network-load-balancer-attributes-builder
   "The build-network-load-balancer-attributes-builder function updates a NetworkLoadBalancerAttributes$Builder instance using the provided configuration.
   The function takes the NetworkLoadBalancerAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3053,6 +3563,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
+
+
+(defn network-load-balancer-attributes-builder
+  ""
+  [id config]
+  (build-network-load-balancer-attributes-builder (new NetworkLoadBalancerAttributes$Builder) id config))
 
 
 (defn build-network-load-balancer-builder
@@ -3102,6 +3618,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn network-load-balancer-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-network-load-balancer-builder (NetworkLoadBalancer$Builder/create scope (name id)) id config))
+
+
 (defn build-network-load-balancer-lookup-options-builder
   "The build-network-load-balancer-lookup-options-builder function updates a NetworkLoadBalancerLookupOptions$Builder instance using the provided configuration.
   The function takes the NetworkLoadBalancerLookupOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3120,6 +3642,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :load-balancer-tags)]
     (. builder loadBalancerTags data))
   (.build builder))
+
+
+(defn network-load-balancer-lookup-options-builder
+  ""
+  [id config]
+  (build-network-load-balancer-lookup-options-builder (new NetworkLoadBalancerLookupOptions$Builder) id config))
 
 
 (defn build-network-load-balancer-props-builder
@@ -3169,6 +3697,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn network-load-balancer-props-builder
+  ""
+  [id config]
+  (build-network-load-balancer-props-builder (new NetworkLoadBalancerProps$Builder) id config))
+
+
 (defn build-network-target-group-builder
   "The build-network-target-group-builder function updates a NetworkTargetGroup$Builder instance using the provided configuration.
   The function takes the NetworkTargetGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3214,6 +3748,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
+
+
+(defn network-target-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-network-target-group-builder (NetworkTargetGroup$Builder/create scope (name id)) id config))
 
 
 (defn build-network-target-group-props-builder
@@ -3263,6 +3803,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn network-target-group-props-builder
+  ""
+  [id config]
+  (build-network-target-group-props-builder (new NetworkTargetGroupProps$Builder) id config))
+
+
 (defn build-network-weighted-target-group-builder
   "The build-network-weighted-target-group-builder function updates a NetworkWeightedTargetGroup$Builder instance using the provided configuration.
   The function takes the NetworkWeightedTargetGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3283,6 +3829,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn network-weighted-target-group-builder
+  ""
+  [id config]
+  (build-network-weighted-target-group-builder (new NetworkWeightedTargetGroup$Builder) id config))
+
+
 (defn build-query-string-condition-builder
   "The build-query-string-condition-builder function updates a QueryStringCondition$Builder instance using the provided configuration.
   The function takes the QueryStringCondition$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3301,6 +3853,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn query-string-condition-builder
+  ""
+  [id config]
+  (build-query-string-condition-builder (new QueryStringCondition$Builder) id config))
 
 
 (defn build-redirect-options-builder
@@ -3335,6 +3893,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn redirect-options-builder
+  ""
+  [id config]
+  (build-redirect-options-builder (new RedirectOptions$Builder) id config))
+
+
 (defn build-target-group-attributes-builder
   "The build-target-group-attributes-builder function updates a TargetGroupAttributes$Builder instance using the provided configuration.
   The function takes the TargetGroupAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3355,6 +3919,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn target-group-attributes-builder
+  ""
+  [id config]
+  (build-target-group-attributes-builder (new TargetGroupAttributes$Builder) id config))
+
+
 (defn build-weighted-target-group-builder
   "The build-weighted-target-group-builder function updates a WeightedTargetGroup$Builder instance using the provided configuration.
   The function takes the WeightedTargetGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3373,3 +3943,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
+
+
+(defn weighted-target-group-builder
+  ""
+  [id config]
+  (build-weighted-target-group-builder (new WeightedTargetGroup$Builder) id config))

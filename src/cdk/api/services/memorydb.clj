@@ -38,6 +38,12 @@
   (.build builder))
 
 
+(defn cfn-acl-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-acl-builder (CfnACL$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-acl-props-builder
   "The build-cfn-acl-props-builder function updates a CfnACLProps$Builder instance using the provided configuration.
   The function takes the CfnACLProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -59,6 +65,12 @@
   (when-let [data (lookup-entry config id :user-names)]
     (. builder userNames data))
   (.build builder))
+
+
+(defn cfn-acl-props-builder
+  ""
+  [id config]
+  (build-cfn-acl-props-builder (new CfnACLProps$Builder) id config))
 
 
 (defn build-cfn-cluster-builder
@@ -150,6 +162,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-cluster-builder (CfnCluster$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-cluster-endpoint-property-builder
   "The build-cfn-cluster-endpoint-property-builder function updates a CfnCluster$EndpointProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$EndpointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -168,6 +186,12 @@
   (when-let [data (lookup-entry config id :port)]
     (. builder port data))
   (.build builder))
+
+
+(defn cfn-cluster-endpoint-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-endpoint-property-builder (new CfnCluster$EndpointProperty$Builder) id config))
 
 
 (defn build-cfn-cluster-props-builder
@@ -259,6 +283,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-props-builder
+  ""
+  [id config]
+  (build-cfn-cluster-props-builder (new CfnClusterProps$Builder) id config))
+
+
 (defn build-cfn-parameter-group-builder
   "The build-cfn-parameter-group-builder function updates a CfnParameterGroup$Builder instance using the provided configuration.
   The function takes the CfnParameterGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -286,6 +316,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-parameter-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-parameter-group-builder (CfnParameterGroup$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-parameter-group-props-builder
@@ -317,6 +353,12 @@
   (.build builder))
 
 
+(defn cfn-parameter-group-props-builder
+  ""
+  [id config]
+  (build-cfn-parameter-group-props-builder (new CfnParameterGroupProps$Builder) id config))
+
+
 (defn build-cfn-subnet-group-builder
   "The build-cfn-subnet-group-builder function updates a CfnSubnetGroup$Builder instance using the provided configuration.
   The function takes the CfnSubnetGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -341,6 +383,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-subnet-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-subnet-group-builder (CfnSubnetGroup$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-subnet-group-props-builder
@@ -369,6 +417,12 @@
   (.build builder))
 
 
+(defn cfn-subnet-group-props-builder
+  ""
+  [id config]
+  (build-cfn-subnet-group-props-builder (new CfnSubnetGroupProps$Builder) id config))
+
+
 (defn build-cfn-user-authentication-mode-property-builder
   "The build-cfn-user-authentication-mode-property-builder function updates a CfnUser$AuthenticationModeProperty$Builder instance using the provided configuration.
   The function takes the CfnUser$AuthenticationModeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -387,6 +441,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-user-authentication-mode-property-builder
+  ""
+  [id config]
+  (build-cfn-user-authentication-mode-property-builder (new CfnUser$AuthenticationModeProperty$Builder) id config))
 
 
 (defn build-cfn-user-builder
@@ -415,6 +475,12 @@
   (.build builder))
 
 
+(defn cfn-user-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-user-builder (CfnUser$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-user-props-builder
   "The build-cfn-user-props-builder function updates a CfnUserProps$Builder instance using the provided configuration.
   The function takes the CfnUserProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -439,3 +505,9 @@
   (when-let [data (lookup-entry config id :user-name)]
     (. builder userName data))
   (.build builder))
+
+
+(defn cfn-user-props-builder
+  ""
+  [id config]
+  (build-cfn-user-props-builder (new CfnUserProps$Builder) id config))

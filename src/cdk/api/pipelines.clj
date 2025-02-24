@@ -101,6 +101,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn add-stage-opts-builder
+  ""
+  [id config]
+  (build-add-stage-opts-builder (new AddStageOpts$Builder) id config))
+
+
 (defn build-code-build-options-builder
   "The build-code-build-options-builder function updates a CodeBuildOptions$Builder instance using the provided configuration.
   The function takes the CodeBuildOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -143,6 +149,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
+
+
+(defn code-build-options-builder
+  ""
+  [id config]
+  (build-code-build-options-builder (new CodeBuildOptions$Builder) id config))
 
 
 (defn build-code-build-step-builder
@@ -293,6 +305,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn code-build-step-props-builder
+  ""
+  [id config]
+  (build-code-build-step-props-builder (new CodeBuildStepProps$Builder) id config))
+
+
 (defn build-code-commit-source-options-builder
   "The build-code-commit-source-options-builder function updates a CodeCommitSourceOptions$Builder instance using the provided configuration.
   The function takes the CodeCommitSourceOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -319,6 +337,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn code-commit-source-options-builder
+  ""
+  [id config]
+  (build-code-commit-source-options-builder (new CodeCommitSourceOptions$Builder) id config))
+
+
 (defn build-code-pipeline-action-factory-result-builder
   "The build-code-pipeline-action-factory-result-builder function updates a CodePipelineActionFactoryResult$Builder instance using the provided configuration.
   The function takes the CodePipelineActionFactoryResult$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -337,6 +361,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :run-orders-consumed)]
     (. builder runOrdersConsumed data))
   (.build builder))
+
+
+(defn code-pipeline-action-factory-result-builder
+  ""
+  [id config]
+  (build-code-pipeline-action-factory-result-builder (new CodePipelineActionFactoryResult$Builder) id config))
 
 
 (defn build-code-pipeline-builder
@@ -413,6 +443,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn code-pipeline-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-code-pipeline-builder (CodePipeline$Builder/create scope (name id)) id config))
+
+
 (defn build-code-pipeline-props-builder
   "The build-code-pipeline-props-builder function updates a CodePipelineProps$Builder instance using the provided configuration.
   The function takes the CodePipelineProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -487,6 +523,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn code-pipeline-props-builder
+  ""
+  [id config]
+  (build-code-pipeline-props-builder (new CodePipelineProps$Builder) id config))
+
+
 (defn build-confirm-permissions-broadening-builder
   "The build-confirm-permissions-broadening-builder function updates a ConfirmPermissionsBroadening$Builder instance using the provided configuration.
   The function takes the ConfirmPermissionsBroadening$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -533,6 +575,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn connection-source-options-builder
+  ""
+  [id config]
+  (build-connection-source-options-builder (new ConnectionSourceOptions$Builder) id config))
+
+
 (defn build-ecr-docker-credential-options-builder
   "The build-ecr-docker-credential-options-builder function updates a EcrDockerCredentialOptions$Builder instance using the provided configuration.
   The function takes the EcrDockerCredentialOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -553,6 +601,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn ecr-docker-credential-options-builder
+  ""
+  [id config]
+  (build-ecr-docker-credential-options-builder (new EcrDockerCredentialOptions$Builder) id config))
+
+
 (defn build-ecr-source-options-builder
   "The build-ecr-source-options-builder function updates a ECRSourceOptions$Builder instance using the provided configuration.
   The function takes the ECRSourceOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -571,6 +625,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :image-tag)]
     (. builder imageTag data))
   (.build builder))
+
+
+(defn ecr-source-options-builder
+  ""
+  [id config]
+  (build-ecr-source-options-builder (new ECRSourceOptions$Builder) id config))
 
 
 (defn build-external-docker-credential-options-builder
@@ -599,6 +659,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn external-docker-credential-options-builder
+  ""
+  [id config]
+  (build-external-docker-credential-options-builder (new ExternalDockerCredentialOptions$Builder) id config))
+
+
 (defn build-file-set-location-builder
   "The build-file-set-location-builder function updates a FileSetLocation$Builder instance using the provided configuration.
   The function takes the FileSetLocation$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -617,6 +683,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :file-set)]
     (. builder fileSet data))
   (.build builder))
+
+
+(defn file-set-location-builder
+  ""
+  [id config]
+  (build-file-set-location-builder (new FileSetLocation$Builder) id config))
 
 
 (defn build-git-hub-source-options-builder
@@ -640,6 +712,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (git-hub-trigger config id :trigger)]
     (. builder trigger data))
   (.build builder))
+
+
+(defn git-hub-source-options-builder
+  ""
+  [id config]
+  (build-git-hub-source-options-builder (new GitHubSourceOptions$Builder) id config))
 
 
 (defn build-manual-approval-step-builder
@@ -676,6 +754,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn manual-approval-step-props-builder
+  ""
+  [id config]
+  (build-manual-approval-step-props-builder (new ManualApprovalStepProps$Builder) id config))
+
+
 (defn build-permissions-broadening-check-props-builder
   "The build-permissions-broadening-check-props-builder function updates a PermissionsBroadeningCheckProps$Builder instance using the provided configuration.
   The function takes the PermissionsBroadeningCheckProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -696,6 +780,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn permissions-broadening-check-props-builder
+  ""
+  [id config]
+  (build-permissions-broadening-check-props-builder (new PermissionsBroadeningCheckProps$Builder) id config))
+
+
 (defn build-pipeline-base-props-builder
   "The build-pipeline-base-props-builder function updates a PipelineBaseProps$Builder instance using the provided configuration.
   The function takes the PipelineBaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -711,6 +801,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :synth)]
     (. builder synth data))
   (.build builder))
+
+
+(defn pipeline-base-props-builder
+  ""
+  [id config]
+  (build-pipeline-base-props-builder (new PipelineBaseProps$Builder) id config))
 
 
 (defn build-produce-action-options-builder
@@ -757,6 +853,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn produce-action-options-builder
+  ""
+  [id config]
+  (build-produce-action-options-builder (new ProduceActionOptions$Builder) id config))
+
+
 (defn build-s3-source-options-builder
   "The build-s3-source-options-builder function updates a S3SourceOptions$Builder instance using the provided configuration.
   The function takes the S3SourceOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -778,6 +880,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (s3-trigger config id :trigger)]
     (. builder trigger data))
   (.build builder))
+
+
+(defn s3-source-options-builder
+  ""
+  [id config]
+  (build-s3-source-options-builder (new S3SourceOptions$Builder) id config))
 
 
 (defn build-shell-step-builder
@@ -850,6 +958,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn shell-step-props-builder
+  ""
+  [id config]
+  (build-shell-step-props-builder (new ShellStepProps$Builder) id config))
+
+
 (defn build-stack-asset-builder
   "The build-stack-asset-builder function updates a StackAsset$Builder instance using the provided configuration.
   The function takes the StackAsset$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -880,6 +994,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :is-template)]
     (. builder isTemplate data))
   (.build builder))
+
+
+(defn stack-asset-builder
+  ""
+  [id config]
+  (build-stack-asset-builder (new StackAsset$Builder) id config))
 
 
 (defn build-stack-deployment-props-builder
@@ -929,6 +1049,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn stack-deployment-props-builder
+  ""
+  [id config]
+  (build-stack-deployment-props-builder (new StackDeploymentProps$Builder) id config))
+
+
 (defn build-stack-steps-builder
   "The build-stack-steps-builder function updates a StackSteps$Builder instance using the provided configuration.
   The function takes the StackSteps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -955,6 +1081,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn stack-steps-builder
+  ""
+  [id config]
+  (build-stack-steps-builder (new StackSteps$Builder) id config))
+
+
 (defn build-stage-deployment-props-builder
   "The build-stage-deployment-props-builder function updates a StageDeploymentProps$Builder instance using the provided configuration.
   The function takes the StageDeploymentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -979,6 +1111,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :stage-name)]
     (. builder stageName data))
   (.build builder))
+
+
+(defn stage-deployment-props-builder
+  ""
+  [id config]
+  (build-stage-deployment-props-builder (new StageDeploymentProps$Builder) id config))
 
 
 (defn build-wave-builder
@@ -1021,6 +1159,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn wave-options-builder
+  ""
+  [id config]
+  (build-wave-options-builder (new WaveOptions$Builder) id config))
+
+
 (defn build-wave-props-builder
   "The build-wave-props-builder function updates a WaveProps$Builder instance using the provided configuration.
   The function takes the WaveProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1039,3 +1183,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :pre)]
     (. builder pre data))
   (.build builder))
+
+
+(defn wave-props-builder
+  ""
+  [id config]
+  (build-wave-props-builder (new WaveProps$Builder) id config))

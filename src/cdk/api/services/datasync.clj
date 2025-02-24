@@ -95,6 +95,12 @@
   (.build builder))
 
 
+(defn cfn-agent-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-agent-builder (CfnAgent$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-agent-props-builder
   "The build-cfn-agent-props-builder function updates a CfnAgentProps$Builder instance using the provided configuration.
   The function takes the CfnAgentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -127,6 +133,12 @@
   (.build builder))
 
 
+(defn cfn-agent-props-builder
+  ""
+  [id config]
+  (build-cfn-agent-props-builder (new CfnAgentProps$Builder) id config))
+
+
 (defn build-cfn-location-azure-blob-azure-blob-sas-configuration-property-builder
   "The build-cfn-location-azure-blob-azure-blob-sas-configuration-property-builder function updates a CfnLocationAzureBlob$AzureBlobSasConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnLocationAzureBlob$AzureBlobSasConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -142,6 +154,12 @@
   (when-let [data (lookup-entry config id :azure-blob-sas-token)]
     (. builder azureBlobSasToken data))
   (.build builder))
+
+
+(defn cfn-location-azure-blob-azure-blob-sas-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-location-azure-blob-azure-blob-sas-configuration-property-builder (new CfnLocationAzureBlob$AzureBlobSasConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-location-azure-blob-builder
@@ -182,6 +200,12 @@
   (.build builder))
 
 
+(defn cfn-location-azure-blob-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-location-azure-blob-builder (CfnLocationAzureBlob$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-location-azure-blob-props-builder
   "The build-cfn-location-azure-blob-props-builder function updates a CfnLocationAzureBlobProps$Builder instance using the provided configuration.
   The function takes the CfnLocationAzureBlobProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -220,6 +244,12 @@
   (.build builder))
 
 
+(defn cfn-location-azure-blob-props-builder
+  ""
+  [id config]
+  (build-cfn-location-azure-blob-props-builder (new CfnLocationAzureBlobProps$Builder) id config))
+
+
 (defn build-cfn-location-efs-builder
   "The build-cfn-location-efs-builder function updates a CfnLocationEFS$Builder instance using the provided configuration.
   The function takes the CfnLocationEFS$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -255,6 +285,12 @@
   (.build builder))
 
 
+(defn cfn-location-efs-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-location-efs-builder (CfnLocationEFS$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-location-efs-ec2-config-property-builder
   "The build-cfn-location-efs-ec2-config-property-builder function updates a CfnLocationEFS$Ec2ConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnLocationEFS$Ec2ConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -273,6 +309,12 @@
   (when-let [data (lookup-entry config id :subnet-arn)]
     (. builder subnetArn data))
   (.build builder))
+
+
+(defn cfn-location-efs-ec2-config-property-builder
+  ""
+  [id config]
+  (build-cfn-location-efs-ec2-config-property-builder (new CfnLocationEFS$Ec2ConfigProperty$Builder) id config))
 
 
 (defn build-cfn-location-efs-props-builder
@@ -310,6 +352,12 @@
   (.build builder))
 
 
+(defn cfn-location-efs-props-builder
+  ""
+  [id config]
+  (build-cfn-location-efs-props-builder (new CfnLocationEFSProps$Builder) id config))
+
+
 (defn build-cfn-location-f-sx-lustre-builder
   "The build-cfn-location-f-sx-lustre-builder function updates a CfnLocationFSxLustre$Builder instance using the provided configuration.
   The function takes the CfnLocationFSxLustre$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -336,6 +384,12 @@
   (.build builder))
 
 
+(defn cfn-location-f-sx-lustre-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-location-f-sx-lustre-builder (CfnLocationFSxLustre$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-location-f-sx-lustre-props-builder
   "The build-cfn-location-f-sx-lustre-props-builder function updates a CfnLocationFSxLustreProps$Builder instance using the provided configuration.
   The function takes the CfnLocationFSxLustreProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -360,6 +414,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-location-f-sx-lustre-props-builder
+  ""
+  [id config]
+  (build-cfn-location-f-sx-lustre-props-builder (new CfnLocationFSxLustreProps$Builder) id config))
 
 
 (defn build-cfn-location-f-sx-ontap-builder
@@ -391,6 +451,12 @@
   (.build builder))
 
 
+(defn cfn-location-f-sx-ontap-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-location-f-sx-ontap-builder (CfnLocationFSxONTAP$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-location-f-sx-ontap-nfs-mount-options-property-builder
   "The build-cfn-location-f-sx-ontap-nfs-mount-options-property-builder function updates a CfnLocationFSxONTAP$NfsMountOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnLocationFSxONTAP$NfsMountOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -408,6 +474,12 @@
   (.build builder))
 
 
+(defn cfn-location-f-sx-ontap-nfs-mount-options-property-builder
+  ""
+  [id config]
+  (build-cfn-location-f-sx-ontap-nfs-mount-options-property-builder (new CfnLocationFSxONTAP$NfsMountOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-location-f-sx-ontap-nfs-property-builder
   "The build-cfn-location-f-sx-ontap-nfs-property-builder function updates a CfnLocationFSxONTAP$NFSProperty$Builder instance using the provided configuration.
   The function takes the CfnLocationFSxONTAP$NFSProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -423,6 +495,12 @@
   (when-let [data (lookup-entry config id :mount-options)]
     (. builder mountOptions data))
   (.build builder))
+
+
+(defn cfn-location-f-sx-ontap-nfs-property-builder
+  ""
+  [id config]
+  (build-cfn-location-f-sx-ontap-nfs-property-builder (new CfnLocationFSxONTAP$NFSProperty$Builder) id config))
 
 
 (defn build-cfn-location-f-sx-ontap-props-builder
@@ -454,6 +532,12 @@
   (.build builder))
 
 
+(defn cfn-location-f-sx-ontap-props-builder
+  ""
+  [id config]
+  (build-cfn-location-f-sx-ontap-props-builder (new CfnLocationFSxONTAPProps$Builder) id config))
+
+
 (defn build-cfn-location-f-sx-ontap-protocol-property-builder
   "The build-cfn-location-f-sx-ontap-protocol-property-builder function updates a CfnLocationFSxONTAP$ProtocolProperty$Builder instance using the provided configuration.
   The function takes the CfnLocationFSxONTAP$ProtocolProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -474,6 +558,12 @@
   (.build builder))
 
 
+(defn cfn-location-f-sx-ontap-protocol-property-builder
+  ""
+  [id config]
+  (build-cfn-location-f-sx-ontap-protocol-property-builder (new CfnLocationFSxONTAP$ProtocolProperty$Builder) id config))
+
+
 (defn build-cfn-location-f-sx-ontap-smb-mount-options-property-builder
   "The build-cfn-location-f-sx-ontap-smb-mount-options-property-builder function updates a CfnLocationFSxONTAP$SmbMountOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnLocationFSxONTAP$SmbMountOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -489,6 +579,12 @@
   (when-let [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
+
+
+(defn cfn-location-f-sx-ontap-smb-mount-options-property-builder
+  ""
+  [id config]
+  (build-cfn-location-f-sx-ontap-smb-mount-options-property-builder (new CfnLocationFSxONTAP$SmbMountOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-location-f-sx-ontap-smb-property-builder
@@ -515,6 +611,12 @@
   (when-let [data (lookup-entry config id :user)]
     (. builder user data))
   (.build builder))
+
+
+(defn cfn-location-f-sx-ontap-smb-property-builder
+  ""
+  [id config]
+  (build-cfn-location-f-sx-ontap-smb-property-builder (new CfnLocationFSxONTAP$SMBProperty$Builder) id config))
 
 
 (defn build-cfn-location-f-sx-open-zfs-builder
@@ -546,6 +648,12 @@
   (.build builder))
 
 
+(defn cfn-location-f-sx-open-zfs-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-location-f-sx-open-zfs-builder (CfnLocationFSxOpenZFS$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-location-f-sx-open-zfs-mount-options-property-builder
   "The build-cfn-location-f-sx-open-zfs-mount-options-property-builder function updates a CfnLocationFSxOpenZFS$MountOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnLocationFSxOpenZFS$MountOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -563,6 +671,12 @@
   (.build builder))
 
 
+(defn cfn-location-f-sx-open-zfs-mount-options-property-builder
+  ""
+  [id config]
+  (build-cfn-location-f-sx-open-zfs-mount-options-property-builder (new CfnLocationFSxOpenZFS$MountOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-location-f-sx-open-zfs-nfs-property-builder
   "The build-cfn-location-f-sx-open-zfs-nfs-property-builder function updates a CfnLocationFSxOpenZFS$NFSProperty$Builder instance using the provided configuration.
   The function takes the CfnLocationFSxOpenZFS$NFSProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -578,6 +692,12 @@
   (when-let [data (lookup-entry config id :mount-options)]
     (. builder mountOptions data))
   (.build builder))
+
+
+(defn cfn-location-f-sx-open-zfs-nfs-property-builder
+  ""
+  [id config]
+  (build-cfn-location-f-sx-open-zfs-nfs-property-builder (new CfnLocationFSxOpenZFS$NFSProperty$Builder) id config))
 
 
 (defn build-cfn-location-f-sx-open-zfs-props-builder
@@ -609,6 +729,12 @@
   (.build builder))
 
 
+(defn cfn-location-f-sx-open-zfs-props-builder
+  ""
+  [id config]
+  (build-cfn-location-f-sx-open-zfs-props-builder (new CfnLocationFSxOpenZFSProps$Builder) id config))
+
+
 (defn build-cfn-location-f-sx-open-zfs-protocol-property-builder
   "The build-cfn-location-f-sx-open-zfs-protocol-property-builder function updates a CfnLocationFSxOpenZFS$ProtocolProperty$Builder instance using the provided configuration.
   The function takes the CfnLocationFSxOpenZFS$ProtocolProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -624,6 +750,12 @@
   (when-let [data (lookup-entry config id :nfs)]
     (. builder nfs data))
   (.build builder))
+
+
+(defn cfn-location-f-sx-open-zfs-protocol-property-builder
+  ""
+  [id config]
+  (build-cfn-location-f-sx-open-zfs-protocol-property-builder (new CfnLocationFSxOpenZFS$ProtocolProperty$Builder) id config))
 
 
 (defn build-cfn-location-f-sx-windows-builder
@@ -661,6 +793,12 @@
   (.build builder))
 
 
+(defn cfn-location-f-sx-windows-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-location-f-sx-windows-builder (CfnLocationFSxWindows$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-location-f-sx-windows-props-builder
   "The build-cfn-location-f-sx-windows-props-builder function updates a CfnLocationFSxWindowsProps$Builder instance using the provided configuration.
   The function takes the CfnLocationFSxWindowsProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -694,6 +832,12 @@
   (when-let [data (lookup-entry config id :user)]
     (. builder user data))
   (.build builder))
+
+
+(defn cfn-location-f-sx-windows-props-builder
+  ""
+  [id config]
+  (build-cfn-location-f-sx-windows-props-builder (new CfnLocationFSxWindowsProps$Builder) id config))
 
 
 (defn build-cfn-location-hdfs-builder
@@ -749,6 +893,12 @@
   (.build builder))
 
 
+(defn cfn-location-hdfs-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-location-hdfs-builder (CfnLocationHDFS$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-location-hdfs-name-node-property-builder
   "The build-cfn-location-hdfs-name-node-property-builder function updates a CfnLocationHDFS$NameNodeProperty$Builder instance using the provided configuration.
   The function takes the CfnLocationHDFS$NameNodeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -767,6 +917,12 @@
   (when-let [data (lookup-entry config id :port)]
     (. builder port data))
   (.build builder))
+
+
+(defn cfn-location-hdfs-name-node-property-builder
+  ""
+  [id config]
+  (build-cfn-location-hdfs-name-node-property-builder (new CfnLocationHDFS$NameNodeProperty$Builder) id config))
 
 
 (defn build-cfn-location-hdfs-props-builder
@@ -822,6 +978,12 @@
   (.build builder))
 
 
+(defn cfn-location-hdfs-props-builder
+  ""
+  [id config]
+  (build-cfn-location-hdfs-props-builder (new CfnLocationHDFSProps$Builder) id config))
+
+
 (defn build-cfn-location-hdfs-qop-configuration-property-builder
   "The build-cfn-location-hdfs-qop-configuration-property-builder function updates a CfnLocationHDFS$QopConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnLocationHDFS$QopConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -840,6 +1002,12 @@
   (when-let [data (lookup-entry config id :rpc-protection)]
     (. builder rpcProtection data))
   (.build builder))
+
+
+(defn cfn-location-hdfs-qop-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-location-hdfs-qop-configuration-property-builder (new CfnLocationHDFS$QopConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-location-nfs-builder
@@ -871,6 +1039,12 @@
   (.build builder))
 
 
+(defn cfn-location-nfs-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-location-nfs-builder (CfnLocationNFS$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-location-nfs-mount-options-property-builder
   "The build-cfn-location-nfs-mount-options-property-builder function updates a CfnLocationNFS$MountOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnLocationNFS$MountOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -888,6 +1062,12 @@
   (.build builder))
 
 
+(defn cfn-location-nfs-mount-options-property-builder
+  ""
+  [id config]
+  (build-cfn-location-nfs-mount-options-property-builder (new CfnLocationNFS$MountOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-location-nfs-on-prem-config-property-builder
   "The build-cfn-location-nfs-on-prem-config-property-builder function updates a CfnLocationNFS$OnPremConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnLocationNFS$OnPremConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -903,6 +1083,12 @@
   (when-let [data (lookup-entry config id :agent-arns)]
     (. builder agentArns data))
   (.build builder))
+
+
+(defn cfn-location-nfs-on-prem-config-property-builder
+  ""
+  [id config]
+  (build-cfn-location-nfs-on-prem-config-property-builder (new CfnLocationNFS$OnPremConfigProperty$Builder) id config))
 
 
 (defn build-cfn-location-nfs-props-builder
@@ -932,6 +1118,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-location-nfs-props-builder
+  ""
+  [id config]
+  (build-cfn-location-nfs-props-builder (new CfnLocationNFSProps$Builder) id config))
 
 
 (defn build-cfn-location-object-storage-builder
@@ -978,6 +1170,12 @@
   (.build builder))
 
 
+(defn cfn-location-object-storage-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-location-object-storage-builder (CfnLocationObjectStorage$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-location-object-storage-props-builder
   "The build-cfn-location-object-storage-props-builder function updates a CfnLocationObjectStorageProps$Builder instance using the provided configuration.
   The function takes the CfnLocationObjectStorageProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1022,6 +1220,12 @@
   (.build builder))
 
 
+(defn cfn-location-object-storage-props-builder
+  ""
+  [id config]
+  (build-cfn-location-object-storage-props-builder (new CfnLocationObjectStorageProps$Builder) id config))
+
+
 (defn build-cfn-location-s3-builder
   "The build-cfn-location-s3-builder function updates a CfnLocationS3$Builder instance using the provided configuration.
   The function takes the CfnLocationS3$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1049,6 +1253,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-location-s3-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-location-s3-builder (CfnLocationS3$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-location-s3-props-builder
@@ -1080,6 +1290,12 @@
   (.build builder))
 
 
+(defn cfn-location-s3-props-builder
+  ""
+  [id config]
+  (build-cfn-location-s3-props-builder (new CfnLocationS3Props$Builder) id config))
+
+
 (defn build-cfn-location-s3-s3-config-property-builder
   "The build-cfn-location-s3-s3-config-property-builder function updates a CfnLocationS3$S3ConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnLocationS3$S3ConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1095,6 +1311,12 @@
   (when-let [data (lookup-entry config id :bucket-access-role-arn)]
     (. builder bucketAccessRoleArn data))
   (.build builder))
+
+
+(defn cfn-location-s3-s3-config-property-builder
+  ""
+  [id config]
+  (build-cfn-location-s3-s3-config-property-builder (new CfnLocationS3$S3ConfigProperty$Builder) id config))
 
 
 (defn build-cfn-location-smb-builder
@@ -1135,6 +1357,12 @@
   (.build builder))
 
 
+(defn cfn-location-smb-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-location-smb-builder (CfnLocationSMB$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-location-smb-mount-options-property-builder
   "The build-cfn-location-smb-mount-options-property-builder function updates a CfnLocationSMB$MountOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnLocationSMB$MountOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1150,6 +1378,12 @@
   (when-let [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
+
+
+(defn cfn-location-smb-mount-options-property-builder
+  ""
+  [id config]
+  (build-cfn-location-smb-mount-options-property-builder (new CfnLocationSMB$MountOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-location-smb-props-builder
@@ -1190,6 +1424,12 @@
   (.build builder))
 
 
+(defn cfn-location-smb-props-builder
+  ""
+  [id config]
+  (build-cfn-location-smb-props-builder (new CfnLocationSMBProps$Builder) id config))
+
+
 (defn build-cfn-storage-system-builder
   "The build-cfn-storage-system-builder function updates a CfnStorageSystem$Builder instance using the provided configuration.
   The function takes the CfnStorageSystem$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1223,6 +1463,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-storage-system-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-storage-system-builder (CfnStorageSystem$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-storage-system-props-builder
@@ -1260,6 +1506,12 @@
   (.build builder))
 
 
+(defn cfn-storage-system-props-builder
+  ""
+  [id config]
+  (build-cfn-storage-system-props-builder (new CfnStorageSystemProps$Builder) id config))
+
+
 (defn build-cfn-storage-system-server-configuration-property-builder
   "The build-cfn-storage-system-server-configuration-property-builder function updates a CfnStorageSystem$ServerConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnStorageSystem$ServerConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1280,6 +1532,12 @@
   (.build builder))
 
 
+(defn cfn-storage-system-server-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-storage-system-server-configuration-property-builder (new CfnStorageSystem$ServerConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-storage-system-server-credentials-property-builder
   "The build-cfn-storage-system-server-credentials-property-builder function updates a CfnStorageSystem$ServerCredentialsProperty$Builder instance using the provided configuration.
   The function takes the CfnStorageSystem$ServerCredentialsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1298,6 +1556,12 @@
   (when-let [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
+
+
+(defn cfn-storage-system-server-credentials-property-builder
+  ""
+  [id config]
+  (build-cfn-storage-system-server-credentials-property-builder (new CfnStorageSystem$ServerCredentialsProperty$Builder) id config))
 
 
 (defn build-cfn-task-builder
@@ -1347,6 +1611,12 @@
   (.build builder))
 
 
+(defn cfn-task-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-task-builder (CfnTask$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-task-deleted-property-builder
   "The build-cfn-task-deleted-property-builder function updates a CfnTask$DeletedProperty$Builder instance using the provided configuration.
   The function takes the CfnTask$DeletedProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1364,6 +1634,12 @@
   (.build builder))
 
 
+(defn cfn-task-deleted-property-builder
+  ""
+  [id config]
+  (build-cfn-task-deleted-property-builder (new CfnTask$DeletedProperty$Builder) id config))
+
+
 (defn build-cfn-task-destination-property-builder
   "The build-cfn-task-destination-property-builder function updates a CfnTask$DestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnTask$DestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1379,6 +1655,12 @@
   (when-let [data (lookup-entry config id :s3)]
     (. builder s3 data))
   (.build builder))
+
+
+(defn cfn-task-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-task-destination-property-builder (new CfnTask$DestinationProperty$Builder) id config))
 
 
 (defn build-cfn-task-filter-rule-property-builder
@@ -1399,6 +1681,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-task-filter-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-task-filter-rule-property-builder (new CfnTask$FilterRuleProperty$Builder) id config))
 
 
 (defn build-cfn-task-manifest-config-property-builder
@@ -1422,6 +1710,12 @@
   (when-let [data (lookup-entry config id :source)]
     (. builder source data))
   (.build builder))
+
+
+(defn cfn-task-manifest-config-property-builder
+  ""
+  [id config]
+  (build-cfn-task-manifest-config-property-builder (new CfnTask$ManifestConfigProperty$Builder) id config))
 
 
 (defn build-cfn-task-manifest-config-source-s3-property-builder
@@ -1448,6 +1742,12 @@
   (when-let [data (lookup-entry config id :s3-bucket-arn)]
     (. builder s3BucketArn data))
   (.build builder))
+
+
+(defn cfn-task-manifest-config-source-s3-property-builder
+  ""
+  [id config]
+  (build-cfn-task-manifest-config-source-s3-property-builder (new CfnTask$ManifestConfigSourceS3Property$Builder) id config))
 
 
 (defn build-cfn-task-options-property-builder
@@ -1509,6 +1809,12 @@
   (.build builder))
 
 
+(defn cfn-task-options-property-builder
+  ""
+  [id config]
+  (build-cfn-task-options-property-builder (new CfnTask$OptionsProperty$Builder) id config))
+
+
 (defn build-cfn-task-overrides-property-builder
   "The build-cfn-task-overrides-property-builder function updates a CfnTask$OverridesProperty$Builder instance using the provided configuration.
   The function takes the CfnTask$OverridesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1533,6 +1839,12 @@
   (when-let [data (lookup-entry config id :verified)]
     (. builder verified data))
   (.build builder))
+
+
+(defn cfn-task-overrides-property-builder
+  ""
+  [id config]
+  (build-cfn-task-overrides-property-builder (new CfnTask$OverridesProperty$Builder) id config))
 
 
 (defn build-cfn-task-props-builder
@@ -1582,6 +1894,12 @@
   (.build builder))
 
 
+(defn cfn-task-props-builder
+  ""
+  [id config]
+  (build-cfn-task-props-builder (new CfnTaskProps$Builder) id config))
+
+
 (defn build-cfn-task-s3-property-builder
   "The build-cfn-task-s3-property-builder function updates a CfnTask$S3Property$Builder instance using the provided configuration.
   The function takes the CfnTask$S3Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1605,6 +1923,12 @@
   (.build builder))
 
 
+(defn cfn-task-s3-property-builder
+  ""
+  [id config]
+  (build-cfn-task-s3-property-builder (new CfnTask$S3Property$Builder) id config))
+
+
 (defn build-cfn-task-skipped-property-builder
   "The build-cfn-task-skipped-property-builder function updates a CfnTask$SkippedProperty$Builder instance using the provided configuration.
   The function takes the CfnTask$SkippedProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1622,6 +1946,12 @@
   (.build builder))
 
 
+(defn cfn-task-skipped-property-builder
+  ""
+  [id config]
+  (build-cfn-task-skipped-property-builder (new CfnTask$SkippedProperty$Builder) id config))
+
+
 (defn build-cfn-task-source-property-builder
   "The build-cfn-task-source-property-builder function updates a CfnTask$SourceProperty$Builder instance using the provided configuration.
   The function takes the CfnTask$SourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1637,6 +1967,12 @@
   (when-let [data (lookup-entry config id :s3)]
     (. builder s3 data))
   (.build builder))
+
+
+(defn cfn-task-source-property-builder
+  ""
+  [id config]
+  (build-cfn-task-source-property-builder (new CfnTask$SourceProperty$Builder) id config))
 
 
 (defn build-cfn-task-task-report-config-property-builder
@@ -1668,6 +2004,12 @@
   (.build builder))
 
 
+(defn cfn-task-task-report-config-property-builder
+  ""
+  [id config]
+  (build-cfn-task-task-report-config-property-builder (new CfnTask$TaskReportConfigProperty$Builder) id config))
+
+
 (defn build-cfn-task-task-schedule-property-builder
   "The build-cfn-task-task-schedule-property-builder function updates a CfnTask$TaskScheduleProperty$Builder instance using the provided configuration.
   The function takes the CfnTask$TaskScheduleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1688,6 +2030,12 @@
   (.build builder))
 
 
+(defn cfn-task-task-schedule-property-builder
+  ""
+  [id config]
+  (build-cfn-task-task-schedule-property-builder (new CfnTask$TaskScheduleProperty$Builder) id config))
+
+
 (defn build-cfn-task-transferred-property-builder
   "The build-cfn-task-transferred-property-builder function updates a CfnTask$TransferredProperty$Builder instance using the provided configuration.
   The function takes the CfnTask$TransferredProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1705,6 +2053,12 @@
   (.build builder))
 
 
+(defn cfn-task-transferred-property-builder
+  ""
+  [id config]
+  (build-cfn-task-transferred-property-builder (new CfnTask$TransferredProperty$Builder) id config))
+
+
 (defn build-cfn-task-verified-property-builder
   "The build-cfn-task-verified-property-builder function updates a CfnTask$VerifiedProperty$Builder instance using the provided configuration.
   The function takes the CfnTask$VerifiedProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1720,3 +2074,9 @@
   (when-let [data (lookup-entry config id :report-level)]
     (. builder reportLevel data))
   (.build builder))
+
+
+(defn cfn-task-verified-property-builder
+  ""
+  [id config]
+  (build-cfn-task-verified-property-builder (new CfnTask$VerifiedProperty$Builder) id config))

@@ -26,6 +26,12 @@
   (.build builder))
 
 
+(defn cfn-analyzer-analyzer-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analyzer-analyzer-configuration-property-builder (new CfnAnalyzer$AnalyzerConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-analyzer-archive-rule-property-builder
   "The build-cfn-analyzer-archive-rule-property-builder function updates a CfnAnalyzer$ArchiveRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalyzer$ArchiveRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -44,6 +50,12 @@
   (when-let [data (lookup-entry config id :rule-name)]
     (. builder ruleName data))
   (.build builder))
+
+
+(defn cfn-analyzer-archive-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-analyzer-archive-rule-property-builder (new CfnAnalyzer$ArchiveRuleProperty$Builder) id config))
 
 
 (defn build-cfn-analyzer-builder
@@ -75,6 +87,12 @@
   (.build builder))
 
 
+(defn cfn-analyzer-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-analyzer-builder (CfnAnalyzer$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-analyzer-filter-property-builder
   "The build-cfn-analyzer-filter-property-builder function updates a CfnAnalyzer$FilterProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalyzer$FilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -102,6 +120,12 @@
   (when-let [data (lookup-entry config id :property)]
     (. builder property data))
   (.build builder))
+
+
+(defn cfn-analyzer-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-analyzer-filter-property-builder (new CfnAnalyzer$FilterProperty$Builder) id config))
 
 
 (defn build-cfn-analyzer-props-builder
@@ -133,6 +157,12 @@
   (.build builder))
 
 
+(defn cfn-analyzer-props-builder
+  ""
+  [id config]
+  (build-cfn-analyzer-props-builder (new CfnAnalyzerProps$Builder) id config))
+
+
 (defn build-cfn-analyzer-unused-access-configuration-property-builder
   "The build-cfn-analyzer-unused-access-configuration-property-builder function updates a CfnAnalyzer$UnusedAccessConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalyzer$UnusedAccessConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -148,3 +178,9 @@
   (when-let [data (lookup-entry config id :unused-access-age)]
     (. builder unusedAccessAge data))
   (.build builder))
+
+
+(defn cfn-analyzer-unused-access-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-analyzer-unused-access-configuration-property-builder (new CfnAnalyzer$UnusedAccessConfigurationProperty$Builder) id config))

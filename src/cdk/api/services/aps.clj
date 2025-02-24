@@ -41,6 +41,12 @@
   (.build builder))
 
 
+(defn cfn-rule-groups-namespace-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-rule-groups-namespace-builder (CfnRuleGroupsNamespace$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-rule-groups-namespace-props-builder
   "The build-cfn-rule-groups-namespace-props-builder function updates a CfnRuleGroupsNamespaceProps$Builder instance using the provided configuration.
   The function takes the CfnRuleGroupsNamespaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -67,6 +73,12 @@
   (.build builder))
 
 
+(defn cfn-rule-groups-namespace-props-builder
+  ""
+  [id config]
+  (build-cfn-rule-groups-namespace-props-builder (new CfnRuleGroupsNamespaceProps$Builder) id config))
+
+
 (defn build-cfn-scraper-amp-configuration-property-builder
   "The build-cfn-scraper-amp-configuration-property-builder function updates a CfnScraper$AmpConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnScraper$AmpConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -82,6 +94,12 @@
   (when-let [data (lookup-entry config id :workspace-arn)]
     (. builder workspaceArn data))
   (.build builder))
+
+
+(defn cfn-scraper-amp-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-scraper-amp-configuration-property-builder (new CfnScraper$AmpConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-scraper-builder
@@ -113,6 +131,12 @@
   (.build builder))
 
 
+(defn cfn-scraper-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-scraper-builder (CfnScraper$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-scraper-destination-property-builder
   "The build-cfn-scraper-destination-property-builder function updates a CfnScraper$DestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnScraper$DestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -128,6 +152,12 @@
   (when-let [data (lookup-entry config id :amp-configuration)]
     (. builder ampConfiguration data))
   (.build builder))
+
+
+(defn cfn-scraper-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-scraper-destination-property-builder (new CfnScraper$DestinationProperty$Builder) id config))
 
 
 (defn build-cfn-scraper-eks-configuration-property-builder
@@ -151,6 +181,12 @@
   (when-let [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
+
+
+(defn cfn-scraper-eks-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-scraper-eks-configuration-property-builder (new CfnScraper$EksConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-scraper-props-builder
@@ -182,6 +218,12 @@
   (.build builder))
 
 
+(defn cfn-scraper-props-builder
+  ""
+  [id config]
+  (build-cfn-scraper-props-builder (new CfnScraperProps$Builder) id config))
+
+
 (defn build-cfn-scraper-scrape-configuration-property-builder
   "The build-cfn-scraper-scrape-configuration-property-builder function updates a CfnScraper$ScrapeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnScraper$ScrapeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -199,6 +241,12 @@
   (.build builder))
 
 
+(defn cfn-scraper-scrape-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-scraper-scrape-configuration-property-builder (new CfnScraper$ScrapeConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-scraper-source-property-builder
   "The build-cfn-scraper-source-property-builder function updates a CfnScraper$SourceProperty$Builder instance using the provided configuration.
   The function takes the CfnScraper$SourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -214,6 +262,12 @@
   (when-let [data (lookup-entry config id :eks-configuration)]
     (. builder eksConfiguration data))
   (.build builder))
+
+
+(defn cfn-scraper-source-property-builder
+  ""
+  [id config]
+  (build-cfn-scraper-source-property-builder (new CfnScraper$SourceProperty$Builder) id config))
 
 
 (defn build-cfn-workspace-builder
@@ -245,6 +299,12 @@
   (.build builder))
 
 
+(defn cfn-workspace-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-workspace-builder (CfnWorkspace$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-workspace-logging-configuration-property-builder
   "The build-cfn-workspace-logging-configuration-property-builder function updates a CfnWorkspace$LoggingConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkspace$LoggingConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -260,6 +320,12 @@
   (when-let [data (lookup-entry config id :log-group-arn)]
     (. builder logGroupArn data))
   (.build builder))
+
+
+(defn cfn-workspace-logging-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-workspace-logging-configuration-property-builder (new CfnWorkspace$LoggingConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-workspace-props-builder
@@ -289,3 +355,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-workspace-props-builder
+  ""
+  [id config]
+  (build-cfn-workspace-props-builder (new CfnWorkspaceProps$Builder) id config))

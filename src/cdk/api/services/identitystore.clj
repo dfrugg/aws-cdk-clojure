@@ -31,6 +31,12 @@
   (.build builder))
 
 
+(defn cfn-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-group-builder (CfnGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-group-membership-builder
   "The build-cfn-group-membership-builder function updates a CfnGroupMembership$Builder instance using the provided configuration.
   The function takes the CfnGroupMembership$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -54,6 +60,12 @@
   (.build builder))
 
 
+(defn cfn-group-membership-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-group-membership-builder (CfnGroupMembership$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-group-membership-member-id-property-builder
   "The build-cfn-group-membership-member-id-property-builder function updates a CfnGroupMembership$MemberIdProperty$Builder instance using the provided configuration.
   The function takes the CfnGroupMembership$MemberIdProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -69,6 +81,12 @@
   (when-let [data (lookup-entry config id :user-id)]
     (. builder userId data))
   (.build builder))
+
+
+(defn cfn-group-membership-member-id-property-builder
+  ""
+  [id config]
+  (build-cfn-group-membership-member-id-property-builder (new CfnGroupMembership$MemberIdProperty$Builder) id config))
 
 
 (defn build-cfn-group-membership-props-builder
@@ -94,6 +112,12 @@
   (.build builder))
 
 
+(defn cfn-group-membership-props-builder
+  ""
+  [id config]
+  (build-cfn-group-membership-props-builder (new CfnGroupMembershipProps$Builder) id config))
+
+
 (defn build-cfn-group-props-builder
   "The build-cfn-group-props-builder function updates a CfnGroupProps$Builder instance using the provided configuration.
   The function takes the CfnGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -115,3 +139,9 @@
   (when-let [data (lookup-entry config id :identity-store-id)]
     (. builder identityStoreId data))
   (.build builder))
+
+
+(defn cfn-group-props-builder
+  ""
+  [id config]
+  (build-cfn-group-props-builder (new CfnGroupProps$Builder) id config))

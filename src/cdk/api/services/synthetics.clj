@@ -87,6 +87,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn artifacts-bucket-location-builder
+  ""
+  [id config]
+  (build-artifacts-bucket-location-builder (new ArtifactsBucketLocation$Builder) id config))
+
+
 (defn build-asset-code-builder
   "The build-asset-code-builder function updates a AssetCode$Builder instance using the provided configuration.
   The function takes the AssetCode$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -187,6 +193,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn canary-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-canary-builder (Canary$Builder/create scope (name id)) id config))
+
+
 (defn build-canary-props-builder
   "The build-canary-props-builder function updates a CanaryProps$Builder instance using the provided configuration.
   The function takes the CanaryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -249,6 +261,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn canary-props-builder
+  ""
+  [id config]
+  (build-canary-props-builder (new CanaryProps$Builder) id config))
+
+
 (defn build-cfn-canary-artifact-config-property-builder
   "The build-cfn-canary-artifact-config-property-builder function updates a CfnCanary$ArtifactConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCanary$ArtifactConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -264,6 +282,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :s3-encryption)]
     (. builder s3Encryption data))
   (.build builder))
+
+
+(defn cfn-canary-artifact-config-property-builder
+  ""
+  [id config]
+  (build-cfn-canary-artifact-config-property-builder (new CfnCanary$ArtifactConfigProperty$Builder) id config))
 
 
 (defn build-cfn-canary-base-screenshot-property-builder
@@ -284,6 +308,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :screenshot-name)]
     (. builder screenshotName data))
   (.build builder))
+
+
+(defn cfn-canary-base-screenshot-property-builder
+  ""
+  [id config]
+  (build-cfn-canary-base-screenshot-property-builder (new CfnCanary$BaseScreenshotProperty$Builder) id config))
 
 
 (defn build-cfn-canary-builder
@@ -345,6 +375,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-canary-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-canary-builder (CfnCanary$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-canary-code-property-builder
   "The build-cfn-canary-code-property-builder function updates a CfnCanary$CodeProperty$Builder instance using the provided configuration.
   The function takes the CfnCanary$CodeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -375,6 +411,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :source-location-arn)]
     (. builder sourceLocationArn data))
   (.build builder))
+
+
+(defn cfn-canary-code-property-builder
+  ""
+  [id config]
+  (build-cfn-canary-code-property-builder (new CfnCanary$CodeProperty$Builder) id config))
 
 
 (defn build-cfn-canary-props-builder
@@ -436,6 +478,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-canary-props-builder
+  ""
+  [id config]
+  (build-cfn-canary-props-builder (new CfnCanaryProps$Builder) id config))
+
+
 (defn build-cfn-canary-run-config-property-builder
   "The build-cfn-canary-run-config-property-builder function updates a CfnCanary$RunConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCanary$RunConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -462,6 +510,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-canary-run-config-property-builder
+  ""
+  [id config]
+  (build-cfn-canary-run-config-property-builder (new CfnCanary$RunConfigProperty$Builder) id config))
+
+
 (defn build-cfn-canary-s3-encryption-property-builder
   "The build-cfn-canary-s3-encryption-property-builder function updates a CfnCanary$S3EncryptionProperty$Builder instance using the provided configuration.
   The function takes the CfnCanary$S3EncryptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -480,6 +534,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
   (.build builder))
+
+
+(defn cfn-canary-s3-encryption-property-builder
+  ""
+  [id config]
+  (build-cfn-canary-s3-encryption-property-builder (new CfnCanary$S3EncryptionProperty$Builder) id config))
 
 
 (defn build-cfn-canary-schedule-property-builder
@@ -502,6 +562,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-canary-schedule-property-builder
+  ""
+  [id config]
+  (build-cfn-canary-schedule-property-builder (new CfnCanary$ScheduleProperty$Builder) id config))
+
+
 (defn build-cfn-canary-visual-reference-property-builder
   "The build-cfn-canary-visual-reference-property-builder function updates a CfnCanary$VisualReferenceProperty$Builder instance using the provided configuration.
   The function takes the CfnCanary$VisualReferenceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -520,6 +586,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :base-screenshots)]
     (. builder baseScreenshots data))
   (.build builder))
+
+
+(defn cfn-canary-visual-reference-property-builder
+  ""
+  [id config]
+  (build-cfn-canary-visual-reference-property-builder (new CfnCanary$VisualReferenceProperty$Builder) id config))
 
 
 (defn build-cfn-canary-vpc-config-property-builder
@@ -545,6 +617,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-canary-vpc-config-property-builder
+  ""
+  [id config]
+  (build-cfn-canary-vpc-config-property-builder (new CfnCanary$VPCConfigProperty$Builder) id config))
+
+
 (defn build-cfn-group-builder
   "The build-cfn-group-builder function updates a CfnGroup$Builder instance using the provided configuration.
   The function takes the CfnGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -566,6 +644,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-group-builder (CfnGroup$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-group-props-builder
@@ -591,6 +675,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-group-props-builder
+  ""
+  [id config]
+  (build-cfn-group-props-builder (new CfnGroupProps$Builder) id config))
+
+
 (defn build-code-config-builder
   "The build-code-config-builder function updates a CodeConfig$Builder instance using the provided configuration.
   The function takes the CodeConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -609,6 +699,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :s3-location)]
     (. builder s3Location data))
   (.build builder))
+
+
+(defn code-config-builder
+  ""
+  [id config]
+  (build-code-config-builder (new CodeConfig$Builder) id config))
 
 
 (defn build-cron-options-builder
@@ -640,6 +736,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cron-options-builder
+  ""
+  [id config]
+  (build-cron-options-builder (new CronOptions$Builder) id config))
+
+
 (defn build-custom-test-options-builder
   "The build-custom-test-options-builder function updates a CustomTestOptions$Builder instance using the provided configuration.
   The function takes the CustomTestOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -658,3 +760,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :handler)]
     (. builder handler data))
   (.build builder))
+
+
+(defn custom-test-options-builder
+  ""
+  [id config]
+  (build-custom-test-options-builder (new CustomTestOptions$Builder) id config))

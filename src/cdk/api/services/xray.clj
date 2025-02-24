@@ -39,6 +39,12 @@
   (.build builder))
 
 
+(defn cfn-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-group-builder (CfnGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-group-insights-configuration-property-builder
   "The build-cfn-group-insights-configuration-property-builder function updates a CfnGroup$InsightsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnGroup$InsightsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -57,6 +63,12 @@
   (when-let [data (lookup-entry config id :notifications-enabled)]
     (. builder notificationsEnabled data))
   (.build builder))
+
+
+(defn cfn-group-insights-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-group-insights-configuration-property-builder (new CfnGroup$InsightsConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-group-props-builder
@@ -85,6 +97,12 @@
   (.build builder))
 
 
+(defn cfn-group-props-builder
+  ""
+  [id config]
+  (build-cfn-group-props-builder (new CfnGroupProps$Builder) id config))
+
+
 (defn build-cfn-resource-policy-builder
   "The build-cfn-resource-policy-builder function updates a CfnResourcePolicy$Builder instance using the provided configuration.
   The function takes the CfnResourcePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -108,6 +126,12 @@
   (.build builder))
 
 
+(defn cfn-resource-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-resource-policy-builder (CfnResourcePolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-resource-policy-props-builder
   "The build-cfn-resource-policy-props-builder function updates a CfnResourcePolicyProps$Builder instance using the provided configuration.
   The function takes the CfnResourcePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -129,6 +153,12 @@
   (when-let [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
   (.build builder))
+
+
+(defn cfn-resource-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-resource-policy-props-builder (new CfnResourcePolicyProps$Builder) id config))
 
 
 (defn build-cfn-sampling-rule-builder
@@ -160,6 +190,12 @@
   (.build builder))
 
 
+(defn cfn-sampling-rule-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-sampling-rule-builder (CfnSamplingRule$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-sampling-rule-props-builder
   "The build-cfn-sampling-rule-props-builder function updates a CfnSamplingRuleProps$Builder instance using the provided configuration.
   The function takes the CfnSamplingRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -187,6 +223,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-sampling-rule-props-builder
+  ""
+  [id config]
+  (build-cfn-sampling-rule-props-builder (new CfnSamplingRuleProps$Builder) id config))
 
 
 (defn build-cfn-sampling-rule-sampling-rule-property-builder
@@ -242,6 +284,12 @@
   (.build builder))
 
 
+(defn cfn-sampling-rule-sampling-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-sampling-rule-sampling-rule-property-builder (new CfnSamplingRule$SamplingRuleProperty$Builder) id config))
+
+
 (defn build-cfn-sampling-rule-sampling-rule-record-property-builder
   "The build-cfn-sampling-rule-sampling-rule-record-property-builder function updates a CfnSamplingRule$SamplingRuleRecordProperty$Builder instance using the provided configuration.
   The function takes the CfnSamplingRule$SamplingRuleRecordProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -263,6 +311,12 @@
   (when-let [data (lookup-entry config id :sampling-rule)]
     (. builder samplingRule data))
   (.build builder))
+
+
+(defn cfn-sampling-rule-sampling-rule-record-property-builder
+  ""
+  [id config]
+  (build-cfn-sampling-rule-sampling-rule-record-property-builder (new CfnSamplingRule$SamplingRuleRecordProperty$Builder) id config))
 
 
 (defn build-cfn-sampling-rule-sampling-rule-update-property-builder
@@ -313,3 +367,9 @@
   (when-let [data (lookup-entry config id :url-path)]
     (. builder urlPath data))
   (.build builder))
+
+
+(defn cfn-sampling-rule-sampling-rule-update-property-builder
+  ""
+  [id config]
+  (build-cfn-sampling-rule-sampling-rule-update-property-builder (new CfnSamplingRule$SamplingRuleUpdateProperty$Builder) id config))

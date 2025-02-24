@@ -46,6 +46,12 @@
   (.build builder))
 
 
+(defn cfn-grant-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-grant-builder (CfnGrant$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-grant-props-builder
   "The build-cfn-grant-props-builder function updates a CfnGrantProps$Builder instance using the provided configuration.
   The function takes the CfnGrantProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -78,6 +84,12 @@
   (.build builder))
 
 
+(defn cfn-grant-props-builder
+  ""
+  [id config]
+  (build-cfn-grant-props-builder (new CfnGrantProps$Builder) id config))
+
+
 (defn build-cfn-license-borrow-configuration-property-builder
   "The build-cfn-license-borrow-configuration-property-builder function updates a CfnLicense$BorrowConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnLicense$BorrowConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -96,6 +108,12 @@
   (when-let [data (lookup-entry config id :max-time-to-live-in-minutes)]
     (. builder maxTimeToLiveInMinutes data))
   (.build builder))
+
+
+(defn cfn-license-borrow-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-license-borrow-configuration-property-builder (new CfnLicense$BorrowConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-license-builder
@@ -145,6 +163,12 @@
   (.build builder))
 
 
+(defn cfn-license-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-license-builder (CfnLicense$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-license-consumption-configuration-property-builder
   "The build-cfn-license-consumption-configuration-property-builder function updates a CfnLicense$ConsumptionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnLicense$ConsumptionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -166,6 +190,12 @@
   (when-let [data (lookup-entry config id :renew-type)]
     (. builder renewType data))
   (.build builder))
+
+
+(defn cfn-license-consumption-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-license-consumption-configuration-property-builder (new CfnLicense$ConsumptionConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-license-entitlement-property-builder
@@ -200,6 +230,12 @@
   (.build builder))
 
 
+(defn cfn-license-entitlement-property-builder
+  ""
+  [id config]
+  (build-cfn-license-entitlement-property-builder (new CfnLicense$EntitlementProperty$Builder) id config))
+
+
 (defn build-cfn-license-issuer-data-property-builder
   "The build-cfn-license-issuer-data-property-builder function updates a CfnLicense$IssuerDataProperty$Builder instance using the provided configuration.
   The function takes the CfnLicense$IssuerDataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -220,6 +256,12 @@
   (.build builder))
 
 
+(defn cfn-license-issuer-data-property-builder
+  ""
+  [id config]
+  (build-cfn-license-issuer-data-property-builder (new CfnLicense$IssuerDataProperty$Builder) id config))
+
+
 (defn build-cfn-license-metadata-property-builder
   "The build-cfn-license-metadata-property-builder function updates a CfnLicense$MetadataProperty$Builder instance using the provided configuration.
   The function takes the CfnLicense$MetadataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -238,6 +280,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-license-metadata-property-builder
+  ""
+  [id config]
+  (build-cfn-license-metadata-property-builder (new CfnLicense$MetadataProperty$Builder) id config))
 
 
 (defn build-cfn-license-props-builder
@@ -287,6 +335,12 @@
   (.build builder))
 
 
+(defn cfn-license-props-builder
+  ""
+  [id config]
+  (build-cfn-license-props-builder (new CfnLicenseProps$Builder) id config))
+
+
 (defn build-cfn-license-provisional-configuration-property-builder
   "The build-cfn-license-provisional-configuration-property-builder function updates a CfnLicense$ProvisionalConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnLicense$ProvisionalConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -302,6 +356,12 @@
   (when-let [data (lookup-entry config id :max-time-to-live-in-minutes)]
     (. builder maxTimeToLiveInMinutes data))
   (.build builder))
+
+
+(defn cfn-license-provisional-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-license-provisional-configuration-property-builder (new CfnLicense$ProvisionalConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-license-validity-date-format-property-builder
@@ -322,3 +382,9 @@
   (when-let [data (lookup-entry config id :end)]
     (. builder end data))
   (.build builder))
+
+
+(defn cfn-license-validity-date-format-property-builder
+  ""
+  [id config]
+  (build-cfn-license-validity-date-format-property-builder (new CfnLicense$ValidityDateFormatProperty$Builder) id config))

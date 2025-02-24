@@ -106,6 +106,12 @@
   (.build builder))
 
 
+(defn cfn-db-cluster-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-db-cluster-builder (CfnDBCluster$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-db-cluster-db-cluster-role-property-builder
   "The build-cfn-db-cluster-db-cluster-role-property-builder function updates a CfnDBCluster$DBClusterRoleProperty$Builder instance using the provided configuration.
   The function takes the CfnDBCluster$DBClusterRoleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -124,6 +130,12 @@
   (when-let [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
+
+
+(defn cfn-db-cluster-db-cluster-role-property-builder
+  ""
+  [id config]
+  (build-cfn-db-cluster-db-cluster-role-property-builder (new CfnDBCluster$DBClusterRoleProperty$Builder) id config))
 
 
 (defn build-cfn-db-cluster-parameter-group-builder
@@ -155,6 +167,12 @@
   (.build builder))
 
 
+(defn cfn-db-cluster-parameter-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-db-cluster-parameter-group-builder (CfnDBClusterParameterGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-db-cluster-parameter-group-props-builder
   "The build-cfn-db-cluster-parameter-group-props-builder function updates a CfnDBClusterParameterGroupProps$Builder instance using the provided configuration.
   The function takes the CfnDBClusterParameterGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -182,6 +200,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-db-cluster-parameter-group-props-builder
+  ""
+  [id config]
+  (build-cfn-db-cluster-parameter-group-props-builder (new CfnDBClusterParameterGroupProps$Builder) id config))
 
 
 (defn build-cfn-db-cluster-props-builder
@@ -273,6 +297,12 @@
   (.build builder))
 
 
+(defn cfn-db-cluster-props-builder
+  ""
+  [id config]
+  (build-cfn-db-cluster-props-builder (new CfnDBClusterProps$Builder) id config))
+
+
 (defn build-cfn-db-cluster-serverless-scaling-configuration-property-builder
   "The build-cfn-db-cluster-serverless-scaling-configuration-property-builder function updates a CfnDBCluster$ServerlessScalingConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDBCluster$ServerlessScalingConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -291,6 +321,12 @@
   (when-let [data (lookup-entry config id :min-capacity)]
     (. builder minCapacity data))
   (.build builder))
+
+
+(defn cfn-db-cluster-serverless-scaling-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-db-cluster-serverless-scaling-configuration-property-builder (new CfnDBCluster$ServerlessScalingConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-db-instance-builder
@@ -340,6 +376,12 @@
   (.build builder))
 
 
+(defn cfn-db-instance-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-db-instance-builder (CfnDBInstance$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-db-instance-props-builder
   "The build-cfn-db-instance-props-builder function updates a CfnDBInstanceProps$Builder instance using the provided configuration.
   The function takes the CfnDBInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -387,6 +429,12 @@
   (.build builder))
 
 
+(defn cfn-db-instance-props-builder
+  ""
+  [id config]
+  (build-cfn-db-instance-props-builder (new CfnDBInstanceProps$Builder) id config))
+
+
 (defn build-cfn-db-parameter-group-builder
   "The build-cfn-db-parameter-group-builder function updates a CfnDBParameterGroup$Builder instance using the provided configuration.
   The function takes the CfnDBParameterGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -414,6 +462,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-db-parameter-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-db-parameter-group-builder (CfnDBParameterGroup$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-db-parameter-group-props-builder
@@ -445,6 +499,12 @@
   (.build builder))
 
 
+(defn cfn-db-parameter-group-props-builder
+  ""
+  [id config]
+  (build-cfn-db-parameter-group-props-builder (new CfnDBParameterGroupProps$Builder) id config))
+
+
 (defn build-cfn-db-subnet-group-builder
   "The build-cfn-db-subnet-group-builder function updates a CfnDBSubnetGroup$Builder instance using the provided configuration.
   The function takes the CfnDBSubnetGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -471,6 +531,12 @@
   (.build builder))
 
 
+(defn cfn-db-subnet-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-db-subnet-group-builder (CfnDBSubnetGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-db-subnet-group-props-builder
   "The build-cfn-db-subnet-group-props-builder function updates a CfnDBSubnetGroupProps$Builder instance using the provided configuration.
   The function takes the CfnDBSubnetGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -495,6 +561,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-db-subnet-group-props-builder
+  ""
+  [id config]
+  (build-cfn-db-subnet-group-props-builder (new CfnDBSubnetGroupProps$Builder) id config))
 
 
 (defn build-cfn-event-subscription-builder
@@ -526,6 +598,12 @@
   (.build builder))
 
 
+(defn cfn-event-subscription-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-event-subscription-builder (CfnEventSubscription$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-event-subscription-props-builder
   "The build-cfn-event-subscription-props-builder function updates a CfnEventSubscriptionProps$Builder instance using the provided configuration.
   The function takes the CfnEventSubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -553,3 +631,9 @@
   (when-let [data (lookup-entry config id :source-type)]
     (. builder sourceType data))
   (.build builder))
+
+
+(defn cfn-event-subscription-props-builder
+  ""
+  [id config]
+  (build-cfn-event-subscription-props-builder (new CfnEventSubscriptionProps$Builder) id config))

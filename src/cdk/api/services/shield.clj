@@ -34,6 +34,12 @@
   (.build builder))
 
 
+(defn cfn-drt-access-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-drt-access-builder (CfnDRTAccess$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-drt-access-props-builder
   "The build-cfn-drt-access-props-builder function updates a CfnDRTAccessProps$Builder instance using the provided configuration.
   The function takes the CfnDRTAccessProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -54,6 +60,12 @@
   (.build builder))
 
 
+(defn cfn-drt-access-props-builder
+  ""
+  [id config]
+  (build-cfn-drt-access-props-builder (new CfnDRTAccessProps$Builder) id config))
+
+
 (defn build-cfn-proactive-engagement-builder
   "The build-cfn-proactive-engagement-builder function updates a CfnProactiveEngagement$Builder instance using the provided configuration.
   The function takes the CfnProactiveEngagement$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -72,6 +84,12 @@
   (when-let [data (lookup-entry config id :proactive-engagement-status)]
     (. builder proactiveEngagementStatus data))
   (.build builder))
+
+
+(defn cfn-proactive-engagement-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-proactive-engagement-builder (CfnProactiveEngagement$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-proactive-engagement-emergency-contact-property-builder
@@ -97,6 +115,12 @@
   (.build builder))
 
 
+(defn cfn-proactive-engagement-emergency-contact-property-builder
+  ""
+  [id config]
+  (build-cfn-proactive-engagement-emergency-contact-property-builder (new CfnProactiveEngagement$EmergencyContactProperty$Builder) id config))
+
+
 (defn build-cfn-proactive-engagement-props-builder
   "The build-cfn-proactive-engagement-props-builder function updates a CfnProactiveEngagementProps$Builder instance using the provided configuration.
   The function takes the CfnProactiveEngagementProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -115,6 +139,12 @@
   (when-let [data (lookup-entry config id :proactive-engagement-status)]
     (. builder proactiveEngagementStatus data))
   (.build builder))
+
+
+(defn cfn-proactive-engagement-props-builder
+  ""
+  [id config]
+  (build-cfn-proactive-engagement-props-builder (new CfnProactiveEngagementProps$Builder) id config))
 
 
 (defn build-cfn-protection-action-property-builder
@@ -137,6 +167,12 @@
   (.build builder))
 
 
+(defn cfn-protection-action-property-builder
+  ""
+  [id config]
+  (build-cfn-protection-action-property-builder (new CfnProtection$ActionProperty$Builder) id config))
+
+
 (defn build-cfn-protection-application-layer-automatic-response-configuration-property-builder
   "The build-cfn-protection-application-layer-automatic-response-configuration-property-builder function updates a CfnProtection$ApplicationLayerAutomaticResponseConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnProtection$ApplicationLayerAutomaticResponseConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -155,6 +191,12 @@
   (when-let [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
+
+
+(defn cfn-protection-application-layer-automatic-response-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-protection-application-layer-automatic-response-configuration-property-builder (new CfnProtection$ApplicationLayerAutomaticResponseConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-protection-builder
@@ -184,6 +226,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-protection-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-protection-builder (CfnProtection$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-protection-group-builder
@@ -218,6 +266,12 @@
   (.build builder))
 
 
+(defn cfn-protection-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-protection-group-builder (CfnProtectionGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-protection-group-props-builder
   "The build-cfn-protection-group-props-builder function updates a CfnProtectionGroupProps$Builder instance using the provided configuration.
   The function takes the CfnProtectionGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -250,6 +304,12 @@
   (.build builder))
 
 
+(defn cfn-protection-group-props-builder
+  ""
+  [id config]
+  (build-cfn-protection-group-props-builder (new CfnProtectionGroupProps$Builder) id config))
+
+
 (defn build-cfn-protection-props-builder
   "The build-cfn-protection-props-builder function updates a CfnProtectionProps$Builder instance using the provided configuration.
   The function takes the CfnProtectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -277,3 +337,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-protection-props-builder
+  ""
+  [id config]
+  (build-cfn-protection-props-builder (new CfnProtectionProps$Builder) id config))

@@ -83,6 +83,12 @@
   (.build builder))
 
 
+(defn cfn-component-action-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-component-action-parameters-property-builder (new CfnComponent$ActionParametersProperty$Builder) id config))
+
+
 (defn build-cfn-component-builder
   "The build-cfn-component-builder function updates a CfnComponent$Builder instance using the provided configuration.
   The function takes the CfnComponent$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -139,6 +145,12 @@
   (.build builder))
 
 
+(defn cfn-component-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-component-builder (CfnComponent$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-component-component-binding-properties-value-properties-property-builder
   "The build-cfn-component-component-binding-properties-value-properties-property-builder function updates a CfnComponent$ComponentBindingPropertiesValuePropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnComponent$ComponentBindingPropertiesValuePropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -177,6 +189,12 @@
   (.build builder))
 
 
+(defn cfn-component-component-binding-properties-value-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-component-component-binding-properties-value-properties-property-builder (new CfnComponent$ComponentBindingPropertiesValuePropertiesProperty$Builder) id config))
+
+
 (defn build-cfn-component-component-binding-properties-value-property-builder
   "The build-cfn-component-component-binding-properties-value-property-builder function updates a CfnComponent$ComponentBindingPropertiesValueProperty$Builder instance using the provided configuration.
   The function takes the CfnComponent$ComponentBindingPropertiesValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -198,6 +216,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-component-component-binding-properties-value-property-builder
+  ""
+  [id config]
+  (build-cfn-component-component-binding-properties-value-property-builder (new CfnComponent$ComponentBindingPropertiesValueProperty$Builder) id config))
 
 
 (defn build-cfn-component-component-child-property-builder
@@ -230,6 +254,12 @@
   (when-let [data (lookup-entry config id :source-id)]
     (. builder sourceId data))
   (.build builder))
+
+
+(defn cfn-component-component-child-property-builder
+  ""
+  [id config]
+  (build-cfn-component-component-child-property-builder (new CfnComponent$ComponentChildProperty$Builder) id config))
 
 
 (defn build-cfn-component-component-condition-property-property-builder
@@ -267,6 +297,12 @@
   (.build builder))
 
 
+(defn cfn-component-component-condition-property-property-builder
+  ""
+  [id config]
+  (build-cfn-component-component-condition-property-property-builder (new CfnComponent$ComponentConditionPropertyProperty$Builder) id config))
+
+
 (defn build-cfn-component-component-data-configuration-property-builder
   "The build-cfn-component-component-data-configuration-property-builder function updates a CfnComponent$ComponentDataConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnComponent$ComponentDataConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -293,6 +329,12 @@
   (.build builder))
 
 
+(defn cfn-component-component-data-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-component-component-data-configuration-property-builder (new CfnComponent$ComponentDataConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-component-component-event-property-builder
   "The build-cfn-component-component-event-property-builder function updates a CfnComponent$ComponentEventProperty$Builder instance using the provided configuration.
   The function takes the CfnComponent$ComponentEventProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -316,6 +358,12 @@
   (.build builder))
 
 
+(defn cfn-component-component-event-property-builder
+  ""
+  [id config]
+  (build-cfn-component-component-event-property-builder (new CfnComponent$ComponentEventProperty$Builder) id config))
+
+
 (defn build-cfn-component-component-property-binding-properties-property-builder
   "The build-cfn-component-component-property-binding-properties-property-builder function updates a CfnComponent$ComponentPropertyBindingPropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnComponent$ComponentPropertyBindingPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -334,6 +382,12 @@
   (when-let [data (lookup-entry config id :property)]
     (. builder property data))
   (.build builder))
+
+
+(defn cfn-component-component-property-binding-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-component-component-property-binding-properties-property-builder (new CfnComponent$ComponentPropertyBindingPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-component-component-property-property-builder
@@ -395,6 +449,12 @@
   (.build builder))
 
 
+(defn cfn-component-component-property-property-builder
+  ""
+  [id config]
+  (build-cfn-component-component-property-property-builder (new CfnComponent$ComponentPropertyProperty$Builder) id config))
+
+
 (defn build-cfn-component-component-variant-property-builder
   "The build-cfn-component-component-variant-property-builder function updates a CfnComponent$ComponentVariantProperty$Builder instance using the provided configuration.
   The function takes the CfnComponent$ComponentVariantProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -415,6 +475,12 @@
   (.build builder))
 
 
+(defn cfn-component-component-variant-property-builder
+  ""
+  [id config]
+  (build-cfn-component-component-variant-property-builder (new CfnComponent$ComponentVariantProperty$Builder) id config))
+
+
 (defn build-cfn-component-form-binding-element-property-builder
   "The build-cfn-component-form-binding-element-property-builder function updates a CfnComponent$FormBindingElementProperty$Builder instance using the provided configuration.
   The function takes the CfnComponent$FormBindingElementProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -433,6 +499,12 @@
   (when-let [data (lookup-entry config id :property)]
     (. builder property data))
   (.build builder))
+
+
+(defn cfn-component-form-binding-element-property-builder
+  ""
+  [id config]
+  (build-cfn-component-form-binding-element-property-builder (new CfnComponent$FormBindingElementProperty$Builder) id config))
 
 
 (defn build-cfn-component-mutation-action-set-state-parameter-property-builder
@@ -456,6 +528,12 @@
   (when-let [data (lookup-entry config id :set)]
     (. builder set data))
   (.build builder))
+
+
+(defn cfn-component-mutation-action-set-state-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-component-mutation-action-set-state-parameter-property-builder (new CfnComponent$MutationActionSetStateParameterProperty$Builder) id config))
 
 
 (defn build-cfn-component-predicate-property-builder
@@ -488,6 +566,12 @@
   (when-let [data (lookup-entry config id :or)]
     (. builder or data))
   (.build builder))
+
+
+(defn cfn-component-predicate-property-builder
+  ""
+  [id config]
+  (build-cfn-component-predicate-property-builder (new CfnComponent$PredicateProperty$Builder) id config))
 
 
 (defn build-cfn-component-props-builder
@@ -546,6 +630,12 @@
   (.build builder))
 
 
+(defn cfn-component-props-builder
+  ""
+  [id config]
+  (build-cfn-component-props-builder (new CfnComponentProps$Builder) id config))
+
+
 (defn build-cfn-component-sort-property-property-builder
   "The build-cfn-component-sort-property-property-builder function updates a CfnComponent$SortPropertyProperty$Builder instance using the provided configuration.
   The function takes the CfnComponent$SortPropertyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -564,6 +654,12 @@
   (when-let [data (lookup-entry config id :field)]
     (. builder field data))
   (.build builder))
+
+
+(defn cfn-component-sort-property-property-builder
+  ""
+  [id config]
+  (build-cfn-component-sort-property-property-builder (new CfnComponent$SortPropertyProperty$Builder) id config))
 
 
 (defn build-cfn-form-builder
@@ -616,6 +712,12 @@
   (.build builder))
 
 
+(defn cfn-form-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-form-builder (CfnForm$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-form-field-config-property-builder
   "The build-cfn-form-field-config-property-builder function updates a CfnForm$FieldConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnForm$FieldConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -643,6 +745,12 @@
   (when-let [data (lookup-entry config id :validations)]
     (. builder validations data))
   (.build builder))
+
+
+(defn cfn-form-field-config-property-builder
+  ""
+  [id config]
+  (build-cfn-form-field-config-property-builder (new CfnForm$FieldConfigProperty$Builder) id config))
 
 
 (defn build-cfn-form-field-input-config-property-builder
@@ -707,6 +815,12 @@
   (.build builder))
 
 
+(defn cfn-form-field-input-config-property-builder
+  ""
+  [id config]
+  (build-cfn-form-field-input-config-property-builder (new CfnForm$FieldInputConfigProperty$Builder) id config))
+
+
 (defn build-cfn-form-field-position-property-builder
   "The build-cfn-form-field-position-property-builder function updates a CfnForm$FieldPositionProperty$Builder instance using the provided configuration.
   The function takes the CfnForm$FieldPositionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -728,6 +842,12 @@
   (when-let [data (lookup-entry config id :right-of)]
     (. builder rightOf data))
   (.build builder))
+
+
+(defn cfn-form-field-position-property-builder
+  ""
+  [id config]
+  (build-cfn-form-field-position-property-builder (new CfnForm$FieldPositionProperty$Builder) id config))
 
 
 (defn build-cfn-form-field-validation-configuration-property-builder
@@ -754,6 +874,12 @@
   (when-let [data (lookup-entry config id :validation-message)]
     (. builder validationMessage data))
   (.build builder))
+
+
+(defn cfn-form-field-validation-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-form-field-validation-configuration-property-builder (new CfnForm$FieldValidationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-form-file-uploader-field-config-property-builder
@@ -788,6 +914,12 @@
   (.build builder))
 
 
+(defn cfn-form-file-uploader-field-config-property-builder
+  ""
+  [id config]
+  (build-cfn-form-file-uploader-field-config-property-builder (new CfnForm$FileUploaderFieldConfigProperty$Builder) id config))
+
+
 (defn build-cfn-form-form-button-property-builder
   "The build-cfn-form-form-button-property-builder function updates a CfnForm$FormButtonProperty$Builder instance using the provided configuration.
   The function takes the CfnForm$FormButtonProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -809,6 +941,12 @@
   (when-let [data (lookup-entry config id :position)]
     (. builder position data))
   (.build builder))
+
+
+(defn cfn-form-form-button-property-builder
+  ""
+  [id config]
+  (build-cfn-form-form-button-property-builder (new CfnForm$FormButtonProperty$Builder) id config))
 
 
 (defn build-cfn-form-form-cta-property-builder
@@ -837,6 +975,12 @@
   (.build builder))
 
 
+(defn cfn-form-form-cta-property-builder
+  ""
+  [id config]
+  (build-cfn-form-form-cta-property-builder (new CfnForm$FormCTAProperty$Builder) id config))
+
+
 (defn build-cfn-form-form-data-type-config-property-builder
   "The build-cfn-form-form-data-type-config-property-builder function updates a CfnForm$FormDataTypeConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnForm$FormDataTypeConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -857,6 +1001,12 @@
   (.build builder))
 
 
+(defn cfn-form-form-data-type-config-property-builder
+  ""
+  [id config]
+  (build-cfn-form-form-data-type-config-property-builder (new CfnForm$FormDataTypeConfigProperty$Builder) id config))
+
+
 (defn build-cfn-form-form-input-binding-properties-value-properties-property-builder
   "The build-cfn-form-form-input-binding-properties-value-properties-property-builder function updates a CfnForm$FormInputBindingPropertiesValuePropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnForm$FormInputBindingPropertiesValuePropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -872,6 +1022,12 @@
   (when-let [data (lookup-entry config id :model)]
     (. builder model data))
   (.build builder))
+
+
+(defn cfn-form-form-input-binding-properties-value-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-form-form-input-binding-properties-value-properties-property-builder (new CfnForm$FormInputBindingPropertiesValuePropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-form-form-input-binding-properties-value-property-builder
@@ -894,6 +1050,12 @@
   (.build builder))
 
 
+(defn cfn-form-form-input-binding-properties-value-property-builder
+  ""
+  [id config]
+  (build-cfn-form-form-input-binding-properties-value-property-builder (new CfnForm$FormInputBindingPropertiesValueProperty$Builder) id config))
+
+
 (defn build-cfn-form-form-input-value-property-binding-properties-property-builder
   "The build-cfn-form-form-input-value-property-binding-properties-property-builder function updates a CfnForm$FormInputValuePropertyBindingPropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnForm$FormInputValuePropertyBindingPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -912,6 +1074,12 @@
   (when-let [data (lookup-entry config id :property)]
     (. builder property data))
   (.build builder))
+
+
+(defn cfn-form-form-input-value-property-binding-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-form-form-input-value-property-binding-properties-property-builder (new CfnForm$FormInputValuePropertyBindingPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-form-form-input-value-property-property-builder
@@ -937,6 +1105,12 @@
   (.build builder))
 
 
+(defn cfn-form-form-input-value-property-property-builder
+  ""
+  [id config]
+  (build-cfn-form-form-input-value-property-property-builder (new CfnForm$FormInputValuePropertyProperty$Builder) id config))
+
+
 (defn build-cfn-form-form-style-config-property-builder
   "The build-cfn-form-form-style-config-property-builder function updates a CfnForm$FormStyleConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnForm$FormStyleConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -955,6 +1129,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-form-form-style-config-property-builder
+  ""
+  [id config]
+  (build-cfn-form-form-style-config-property-builder (new CfnForm$FormStyleConfigProperty$Builder) id config))
 
 
 (defn build-cfn-form-form-style-property-builder
@@ -978,6 +1158,12 @@
   (when-let [data (lookup-entry config id :vertical-gap)]
     (. builder verticalGap data))
   (.build builder))
+
+
+(defn cfn-form-form-style-property-builder
+  ""
+  [id config]
+  (build-cfn-form-form-style-property-builder (new CfnForm$FormStyleProperty$Builder) id config))
 
 
 (defn build-cfn-form-props-builder
@@ -1030,6 +1216,12 @@
   (.build builder))
 
 
+(defn cfn-form-props-builder
+  ""
+  [id config]
+  (build-cfn-form-props-builder (new CfnFormProps$Builder) id config))
+
+
 (defn build-cfn-form-sectional-element-property-builder
   "The build-cfn-form-sectional-element-property-builder function updates a CfnForm$SectionalElementProperty$Builder instance using the provided configuration.
   The function takes the CfnForm$SectionalElementProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1062,6 +1254,12 @@
   (.build builder))
 
 
+(defn cfn-form-sectional-element-property-builder
+  ""
+  [id config]
+  (build-cfn-form-sectional-element-property-builder (new CfnForm$SectionalElementProperty$Builder) id config))
+
+
 (defn build-cfn-form-value-mapping-property-builder
   "The build-cfn-form-value-mapping-property-builder function updates a CfnForm$ValueMappingProperty$Builder instance using the provided configuration.
   The function takes the CfnForm$ValueMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1082,6 +1280,12 @@
   (.build builder))
 
 
+(defn cfn-form-value-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-form-value-mapping-property-builder (new CfnForm$ValueMappingProperty$Builder) id config))
+
+
 (defn build-cfn-form-value-mappings-property-builder
   "The build-cfn-form-value-mappings-property-builder function updates a CfnForm$ValueMappingsProperty$Builder instance using the provided configuration.
   The function takes the CfnForm$ValueMappingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1100,6 +1304,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-form-value-mappings-property-builder
+  ""
+  [id config]
+  (build-cfn-form-value-mappings-property-builder (new CfnForm$ValueMappingsProperty$Builder) id config))
 
 
 (defn build-cfn-theme-builder
@@ -1134,6 +1344,12 @@
   (.build builder))
 
 
+(defn cfn-theme-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-theme-builder (CfnTheme$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-theme-props-builder
   "The build-cfn-theme-props-builder function updates a CfnThemeProps$Builder instance using the provided configuration.
   The function takes the CfnThemeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1166,6 +1382,12 @@
   (.build builder))
 
 
+(defn cfn-theme-props-builder
+  ""
+  [id config]
+  (build-cfn-theme-props-builder (new CfnThemeProps$Builder) id config))
+
+
 (defn build-cfn-theme-theme-value-property-builder
   "The build-cfn-theme-theme-value-property-builder function updates a CfnTheme$ThemeValueProperty$Builder instance using the provided configuration.
   The function takes the CfnTheme$ThemeValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1186,6 +1408,12 @@
   (.build builder))
 
 
+(defn cfn-theme-theme-value-property-builder
+  ""
+  [id config]
+  (build-cfn-theme-theme-value-property-builder (new CfnTheme$ThemeValueProperty$Builder) id config))
+
+
 (defn build-cfn-theme-theme-values-property-builder
   "The build-cfn-theme-theme-values-property-builder function updates a CfnTheme$ThemeValuesProperty$Builder instance using the provided configuration.
   The function takes the CfnTheme$ThemeValuesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1204,3 +1432,9 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-theme-theme-values-property-builder
+  ""
+  [id config]
+  (build-cfn-theme-theme-values-property-builder (new CfnTheme$ThemeValuesProperty$Builder) id config))

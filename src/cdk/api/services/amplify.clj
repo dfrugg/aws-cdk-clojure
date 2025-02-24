@@ -66,6 +66,12 @@
   (.build builder))
 
 
+(defn cfn-app-auto-branch-creation-config-property-builder
+  ""
+  [id config]
+  (build-cfn-app-auto-branch-creation-config-property-builder (new CfnApp$AutoBranchCreationConfigProperty$Builder) id config))
+
+
 (defn build-cfn-app-basic-auth-config-property-builder
   "The build-cfn-app-basic-auth-config-property-builder function updates a CfnApp$BasicAuthConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnApp$BasicAuthConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -87,6 +93,12 @@
   (when-let [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
+
+
+(defn cfn-app-basic-auth-config-property-builder
+  ""
+  [id config]
+  (build-cfn-app-basic-auth-config-property-builder (new CfnApp$BasicAuthConfigProperty$Builder) id config))
 
 
 (defn build-cfn-app-builder
@@ -148,6 +160,12 @@
   (.build builder))
 
 
+(defn cfn-app-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-app-builder (CfnApp$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-app-custom-rule-property-builder
   "The build-cfn-app-custom-rule-property-builder function updates a CfnApp$CustomRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnApp$CustomRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -174,6 +192,12 @@
   (.build builder))
 
 
+(defn cfn-app-custom-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-app-custom-rule-property-builder (new CfnApp$CustomRuleProperty$Builder) id config))
+
+
 (defn build-cfn-app-environment-variable-property-builder
   "The build-cfn-app-environment-variable-property-builder function updates a CfnApp$EnvironmentVariableProperty$Builder instance using the provided configuration.
   The function takes the CfnApp$EnvironmentVariableProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -192,6 +216,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-app-environment-variable-property-builder
+  ""
+  [id config]
+  (build-cfn-app-environment-variable-property-builder (new CfnApp$EnvironmentVariableProperty$Builder) id config))
 
 
 (defn build-cfn-app-props-builder
@@ -253,6 +283,12 @@
   (.build builder))
 
 
+(defn cfn-app-props-builder
+  ""
+  [id config]
+  (build-cfn-app-props-builder (new CfnAppProps$Builder) id config))
+
+
 (defn build-cfn-branch-backend-property-builder
   "The build-cfn-branch-backend-property-builder function updates a CfnBranch$BackendProperty$Builder instance using the provided configuration.
   The function takes the CfnBranch$BackendProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -268,6 +304,12 @@
   (when-let [data (lookup-entry config id :stack-arn)]
     (. builder stackArn data))
   (.build builder))
+
+
+(defn cfn-branch-backend-property-builder
+  ""
+  [id config]
+  (build-cfn-branch-backend-property-builder (new CfnBranch$BackendProperty$Builder) id config))
 
 
 (defn build-cfn-branch-basic-auth-config-property-builder
@@ -291,6 +333,12 @@
   (when-let [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
+
+
+(defn cfn-branch-basic-auth-config-property-builder
+  ""
+  [id config]
+  (build-cfn-branch-basic-auth-config-property-builder (new CfnBranch$BasicAuthConfigProperty$Builder) id config))
 
 
 (defn build-cfn-branch-builder
@@ -349,6 +397,12 @@
   (.build builder))
 
 
+(defn cfn-branch-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-branch-builder (CfnBranch$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-branch-environment-variable-property-builder
   "The build-cfn-branch-environment-variable-property-builder function updates a CfnBranch$EnvironmentVariableProperty$Builder instance using the provided configuration.
   The function takes the CfnBranch$EnvironmentVariableProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -367,6 +421,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-branch-environment-variable-property-builder
+  ""
+  [id config]
+  (build-cfn-branch-environment-variable-property-builder (new CfnBranch$EnvironmentVariableProperty$Builder) id config))
 
 
 (defn build-cfn-branch-props-builder
@@ -425,6 +485,12 @@
   (.build builder))
 
 
+(defn cfn-branch-props-builder
+  ""
+  [id config]
+  (build-cfn-branch-props-builder (new CfnBranchProps$Builder) id config))
+
+
 (defn build-cfn-domain-builder
   "The build-cfn-domain-builder function updates a CfnDomain$Builder instance using the provided configuration.
   The function takes the CfnDomain$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -460,6 +526,12 @@
   (.build builder))
 
 
+(defn cfn-domain-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-domain-builder (CfnDomain$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-domain-certificate-property-builder
   "The build-cfn-domain-certificate-property-builder function updates a CfnDomain$CertificateProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$CertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -483,6 +555,12 @@
   (.build builder))
 
 
+(defn cfn-domain-certificate-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-certificate-property-builder (new CfnDomain$CertificateProperty$Builder) id config))
+
+
 (defn build-cfn-domain-certificate-settings-property-builder
   "The build-cfn-domain-certificate-settings-property-builder function updates a CfnDomain$CertificateSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$CertificateSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -501,6 +579,12 @@
   (when-let [data (lookup-entry config id :custom-certificate-arn)]
     (. builder customCertificateArn data))
   (.build builder))
+
+
+(defn cfn-domain-certificate-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-certificate-settings-property-builder (new CfnDomain$CertificateSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-domain-props-builder
@@ -538,6 +622,12 @@
   (.build builder))
 
 
+(defn cfn-domain-props-builder
+  ""
+  [id config]
+  (build-cfn-domain-props-builder (new CfnDomainProps$Builder) id config))
+
+
 (defn build-cfn-domain-sub-domain-setting-property-builder
   "The build-cfn-domain-sub-domain-setting-property-builder function updates a CfnDomain$SubDomainSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$SubDomainSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -556,3 +646,9 @@
   (when-let [data (lookup-entry config id :prefix)]
     (. builder prefix data))
   (.build builder))
+
+
+(defn cfn-domain-sub-domain-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-sub-domain-setting-property-builder (new CfnDomain$SubDomainSettingProperty$Builder) id config))

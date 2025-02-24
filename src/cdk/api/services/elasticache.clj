@@ -129,6 +129,12 @@
   (.build builder))
 
 
+(defn cfn-cache-cluster-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-cache-cluster-builder (CfnCacheCluster$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-cache-cluster-cloud-watch-logs-destination-details-property-builder
   "The build-cfn-cache-cluster-cloud-watch-logs-destination-details-property-builder function updates a CfnCacheCluster$CloudWatchLogsDestinationDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnCacheCluster$CloudWatchLogsDestinationDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -144,6 +150,12 @@
   (when-let [data (lookup-entry config id :log-group)]
     (. builder logGroup data))
   (.build builder))
+
+
+(defn cfn-cache-cluster-cloud-watch-logs-destination-details-property-builder
+  ""
+  [id config]
+  (build-cfn-cache-cluster-cloud-watch-logs-destination-details-property-builder (new CfnCacheCluster$CloudWatchLogsDestinationDetailsProperty$Builder) id config))
 
 
 (defn build-cfn-cache-cluster-destination-details-property-builder
@@ -166,6 +178,12 @@
   (.build builder))
 
 
+(defn cfn-cache-cluster-destination-details-property-builder
+  ""
+  [id config]
+  (build-cfn-cache-cluster-destination-details-property-builder (new CfnCacheCluster$DestinationDetailsProperty$Builder) id config))
+
+
 (defn build-cfn-cache-cluster-kinesis-firehose-destination-details-property-builder
   "The build-cfn-cache-cluster-kinesis-firehose-destination-details-property-builder function updates a CfnCacheCluster$KinesisFirehoseDestinationDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnCacheCluster$KinesisFirehoseDestinationDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -181,6 +199,12 @@
   (when-let [data (lookup-entry config id :delivery-stream)]
     (. builder deliveryStream data))
   (.build builder))
+
+
+(defn cfn-cache-cluster-kinesis-firehose-destination-details-property-builder
+  ""
+  [id config]
+  (build-cfn-cache-cluster-kinesis-firehose-destination-details-property-builder (new CfnCacheCluster$KinesisFirehoseDestinationDetailsProperty$Builder) id config))
 
 
 (defn build-cfn-cache-cluster-log-delivery-configuration-request-property-builder
@@ -207,6 +231,12 @@
   (when-let [data (lookup-entry config id :log-type)]
     (. builder logType data))
   (.build builder))
+
+
+(defn cfn-cache-cluster-log-delivery-configuration-request-property-builder
+  ""
+  [id config]
+  (build-cfn-cache-cluster-log-delivery-configuration-request-property-builder (new CfnCacheCluster$LogDeliveryConfigurationRequestProperty$Builder) id config))
 
 
 (defn build-cfn-cache-cluster-props-builder
@@ -298,6 +328,12 @@
   (.build builder))
 
 
+(defn cfn-cache-cluster-props-builder
+  ""
+  [id config]
+  (build-cfn-cache-cluster-props-builder (new CfnCacheClusterProps$Builder) id config))
+
+
 (defn build-cfn-global-replication-group-builder
   "The build-cfn-global-replication-group-builder function updates a CfnGlobalReplicationGroup$Builder instance using the provided configuration.
   The function takes the CfnGlobalReplicationGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -339,6 +375,12 @@
   (.build builder))
 
 
+(defn cfn-global-replication-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-global-replication-group-builder (CfnGlobalReplicationGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-global-replication-group-global-replication-group-member-property-builder
   "The build-cfn-global-replication-group-global-replication-group-member-property-builder function updates a CfnGlobalReplicationGroup$GlobalReplicationGroupMemberProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalReplicationGroup$GlobalReplicationGroupMemberProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -360,6 +402,12 @@
   (when-let [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
+
+
+(defn cfn-global-replication-group-global-replication-group-member-property-builder
+  ""
+  [id config]
+  (build-cfn-global-replication-group-global-replication-group-member-property-builder (new CfnGlobalReplicationGroup$GlobalReplicationGroupMemberProperty$Builder) id config))
 
 
 (defn build-cfn-global-replication-group-props-builder
@@ -403,6 +451,12 @@
   (.build builder))
 
 
+(defn cfn-global-replication-group-props-builder
+  ""
+  [id config]
+  (build-cfn-global-replication-group-props-builder (new CfnGlobalReplicationGroupProps$Builder) id config))
+
+
 (defn build-cfn-global-replication-group-regional-configuration-property-builder
   "The build-cfn-global-replication-group-regional-configuration-property-builder function updates a CfnGlobalReplicationGroup$RegionalConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalReplicationGroup$RegionalConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -426,6 +480,12 @@
   (.build builder))
 
 
+(defn cfn-global-replication-group-regional-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-global-replication-group-regional-configuration-property-builder (new CfnGlobalReplicationGroup$RegionalConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-global-replication-group-resharding-configuration-property-builder
   "The build-cfn-global-replication-group-resharding-configuration-property-builder function updates a CfnGlobalReplicationGroup$ReshardingConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalReplicationGroup$ReshardingConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -444,6 +504,12 @@
   (when-let [data (lookup-entry config id :preferred-availability-zones)]
     (. builder preferredAvailabilityZones data))
   (.build builder))
+
+
+(defn cfn-global-replication-group-resharding-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-global-replication-group-resharding-configuration-property-builder (new CfnGlobalReplicationGroup$ReshardingConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-parameter-group-builder
@@ -472,6 +538,12 @@
   (.build builder))
 
 
+(defn cfn-parameter-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-parameter-group-builder (CfnParameterGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-parameter-group-props-builder
   "The build-cfn-parameter-group-props-builder function updates a CfnParameterGroupProps$Builder instance using the provided configuration.
   The function takes the CfnParameterGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -496,6 +568,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-parameter-group-props-builder
+  ""
+  [id config]
+  (build-cfn-parameter-group-props-builder (new CfnParameterGroupProps$Builder) id config))
 
 
 (defn build-cfn-replication-group-builder
@@ -629,6 +707,12 @@
   (.build builder))
 
 
+(defn cfn-replication-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-replication-group-builder (CfnReplicationGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-replication-group-cloud-watch-logs-destination-details-property-builder
   "The build-cfn-replication-group-cloud-watch-logs-destination-details-property-builder function updates a CfnReplicationGroup$CloudWatchLogsDestinationDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnReplicationGroup$CloudWatchLogsDestinationDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -644,6 +728,12 @@
   (when-let [data (lookup-entry config id :log-group)]
     (. builder logGroup data))
   (.build builder))
+
+
+(defn cfn-replication-group-cloud-watch-logs-destination-details-property-builder
+  ""
+  [id config]
+  (build-cfn-replication-group-cloud-watch-logs-destination-details-property-builder (new CfnReplicationGroup$CloudWatchLogsDestinationDetailsProperty$Builder) id config))
 
 
 (defn build-cfn-replication-group-destination-details-property-builder
@@ -666,6 +756,12 @@
   (.build builder))
 
 
+(defn cfn-replication-group-destination-details-property-builder
+  ""
+  [id config]
+  (build-cfn-replication-group-destination-details-property-builder (new CfnReplicationGroup$DestinationDetailsProperty$Builder) id config))
+
+
 (defn build-cfn-replication-group-kinesis-firehose-destination-details-property-builder
   "The build-cfn-replication-group-kinesis-firehose-destination-details-property-builder function updates a CfnReplicationGroup$KinesisFirehoseDestinationDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnReplicationGroup$KinesisFirehoseDestinationDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -681,6 +777,12 @@
   (when-let [data (lookup-entry config id :delivery-stream)]
     (. builder deliveryStream data))
   (.build builder))
+
+
+(defn cfn-replication-group-kinesis-firehose-destination-details-property-builder
+  ""
+  [id config]
+  (build-cfn-replication-group-kinesis-firehose-destination-details-property-builder (new CfnReplicationGroup$KinesisFirehoseDestinationDetailsProperty$Builder) id config))
 
 
 (defn build-cfn-replication-group-log-delivery-configuration-request-property-builder
@@ -707,6 +809,12 @@
   (when-let [data (lookup-entry config id :log-type)]
     (. builder logType data))
   (.build builder))
+
+
+(defn cfn-replication-group-log-delivery-configuration-request-property-builder
+  ""
+  [id config]
+  (build-cfn-replication-group-log-delivery-configuration-request-property-builder (new CfnReplicationGroup$LogDeliveryConfigurationRequestProperty$Builder) id config))
 
 
 (defn build-cfn-replication-group-node-group-configuration-property-builder
@@ -736,6 +844,12 @@
   (when-let [data (lookup-entry config id :slots)]
     (. builder slots data))
   (.build builder))
+
+
+(defn cfn-replication-group-node-group-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-replication-group-node-group-configuration-property-builder (new CfnReplicationGroup$NodeGroupConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-replication-group-props-builder
@@ -869,6 +983,12 @@
   (.build builder))
 
 
+(defn cfn-replication-group-props-builder
+  ""
+  [id config]
+  (build-cfn-replication-group-props-builder (new CfnReplicationGroupProps$Builder) id config))
+
+
 (defn build-cfn-security-group-builder
   "The build-cfn-security-group-builder function updates a CfnSecurityGroup$Builder instance using the provided configuration.
   The function takes the CfnSecurityGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -887,6 +1007,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-security-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-security-group-builder (CfnSecurityGroup$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-security-group-ingress-builder
@@ -912,6 +1038,12 @@
   (.build builder))
 
 
+(defn cfn-security-group-ingress-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-security-group-ingress-builder (CfnSecurityGroupIngress$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-security-group-ingress-props-builder
   "The build-cfn-security-group-ingress-props-builder function updates a CfnSecurityGroupIngressProps$Builder instance using the provided configuration.
   The function takes the CfnSecurityGroupIngressProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -935,6 +1067,12 @@
   (.build builder))
 
 
+(defn cfn-security-group-ingress-props-builder
+  ""
+  [id config]
+  (build-cfn-security-group-ingress-props-builder (new CfnSecurityGroupIngressProps$Builder) id config))
+
+
 (defn build-cfn-security-group-props-builder
   "The build-cfn-security-group-props-builder function updates a CfnSecurityGroupProps$Builder instance using the provided configuration.
   The function takes the CfnSecurityGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -953,6 +1091,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-security-group-props-builder
+  ""
+  [id config]
+  (build-cfn-security-group-props-builder (new CfnSecurityGroupProps$Builder) id config))
 
 
 (defn build-cfn-serverless-cache-builder
@@ -1017,6 +1161,12 @@
   (.build builder))
 
 
+(defn cfn-serverless-cache-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-serverless-cache-builder (CfnServerlessCache$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-serverless-cache-cache-usage-limits-property-builder
   "The build-cfn-serverless-cache-cache-usage-limits-property-builder function updates a CfnServerlessCache$CacheUsageLimitsProperty$Builder instance using the provided configuration.
   The function takes the CfnServerlessCache$CacheUsageLimitsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1035,6 +1185,12 @@
   (when-let [data (lookup-entry config id :ecpu-per-second)]
     (. builder ecpuPerSecond data))
   (.build builder))
+
+
+(defn cfn-serverless-cache-cache-usage-limits-property-builder
+  ""
+  [id config]
+  (build-cfn-serverless-cache-cache-usage-limits-property-builder (new CfnServerlessCache$CacheUsageLimitsProperty$Builder) id config))
 
 
 (defn build-cfn-serverless-cache-data-storage-property-builder
@@ -1060,6 +1216,12 @@
   (.build builder))
 
 
+(defn cfn-serverless-cache-data-storage-property-builder
+  ""
+  [id config]
+  (build-cfn-serverless-cache-data-storage-property-builder (new CfnServerlessCache$DataStorageProperty$Builder) id config))
+
+
 (defn build-cfn-serverless-cache-ecpu-per-second-property-builder
   "The build-cfn-serverless-cache-ecpu-per-second-property-builder function updates a CfnServerlessCache$ECPUPerSecondProperty$Builder instance using the provided configuration.
   The function takes the CfnServerlessCache$ECPUPerSecondProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1080,6 +1242,12 @@
   (.build builder))
 
 
+(defn cfn-serverless-cache-ecpu-per-second-property-builder
+  ""
+  [id config]
+  (build-cfn-serverless-cache-ecpu-per-second-property-builder (new CfnServerlessCache$ECPUPerSecondProperty$Builder) id config))
+
+
 (defn build-cfn-serverless-cache-endpoint-property-builder
   "The build-cfn-serverless-cache-endpoint-property-builder function updates a CfnServerlessCache$EndpointProperty$Builder instance using the provided configuration.
   The function takes the CfnServerlessCache$EndpointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1098,6 +1266,12 @@
   (when-let [data (lookup-entry config id :port)]
     (. builder port data))
   (.build builder))
+
+
+(defn cfn-serverless-cache-endpoint-property-builder
+  ""
+  [id config]
+  (build-cfn-serverless-cache-endpoint-property-builder (new CfnServerlessCache$EndpointProperty$Builder) id config))
 
 
 (defn build-cfn-serverless-cache-props-builder
@@ -1162,6 +1336,12 @@
   (.build builder))
 
 
+(defn cfn-serverless-cache-props-builder
+  ""
+  [id config]
+  (build-cfn-serverless-cache-props-builder (new CfnServerlessCacheProps$Builder) id config))
+
+
 (defn build-cfn-subnet-group-builder
   "The build-cfn-subnet-group-builder function updates a CfnSubnetGroup$Builder instance using the provided configuration.
   The function takes the CfnSubnetGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1186,6 +1366,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-subnet-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-subnet-group-builder (CfnSubnetGroup$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-subnet-group-props-builder
@@ -1214,6 +1400,12 @@
   (.build builder))
 
 
+(defn cfn-subnet-group-props-builder
+  ""
+  [id config]
+  (build-cfn-subnet-group-props-builder (new CfnSubnetGroupProps$Builder) id config))
+
+
 (defn build-cfn-user-authentication-mode-property-builder
   "The build-cfn-user-authentication-mode-property-builder function updates a CfnUser$AuthenticationModeProperty$Builder instance using the provided configuration.
   The function takes the CfnUser$AuthenticationModeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1232,6 +1424,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-user-authentication-mode-property-builder
+  ""
+  [id config]
+  (build-cfn-user-authentication-mode-property-builder (new CfnUser$AuthenticationModeProperty$Builder) id config))
 
 
 (defn build-cfn-user-builder
@@ -1272,6 +1470,12 @@
   (.build builder))
 
 
+(defn cfn-user-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-user-builder (CfnUser$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-user-group-builder
   "The build-cfn-user-group-builder function updates a CfnUserGroup$Builder instance using the provided configuration.
   The function takes the CfnUserGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1298,6 +1502,12 @@
   (.build builder))
 
 
+(defn cfn-user-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-user-group-builder (CfnUserGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-user-group-props-builder
   "The build-cfn-user-group-props-builder function updates a CfnUserGroupProps$Builder instance using the provided configuration.
   The function takes the CfnUserGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1322,6 +1532,12 @@
   (when-let [data (lookup-entry config id :user-ids)]
     (. builder userIds data))
   (.build builder))
+
+
+(defn cfn-user-group-props-builder
+  ""
+  [id config]
+  (build-cfn-user-group-props-builder (new CfnUserGroupProps$Builder) id config))
 
 
 (defn build-cfn-user-props-builder
@@ -1360,3 +1576,9 @@
   (when-let [data (lookup-entry config id :user-name)]
     (. builder userName data))
   (.build builder))
+
+
+(defn cfn-user-props-builder
+  ""
+  [id config]
+  (build-cfn-user-props-builder (new CfnUserProps$Builder) id config))

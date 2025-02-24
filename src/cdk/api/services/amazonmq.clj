@@ -92,6 +92,12 @@
   (.build builder))
 
 
+(defn cfn-broker-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-broker-builder (CfnBroker$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-broker-configuration-id-property-builder
   "The build-cfn-broker-configuration-id-property-builder function updates a CfnBroker$ConfigurationIdProperty$Builder instance using the provided configuration.
   The function takes the CfnBroker$ConfigurationIdProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -112,6 +118,12 @@
   (.build builder))
 
 
+(defn cfn-broker-configuration-id-property-builder
+  ""
+  [id config]
+  (build-cfn-broker-configuration-id-property-builder (new CfnBroker$ConfigurationIdProperty$Builder) id config))
+
+
 (defn build-cfn-broker-encryption-options-property-builder
   "The build-cfn-broker-encryption-options-property-builder function updates a CfnBroker$EncryptionOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnBroker$EncryptionOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -130,6 +142,12 @@
   (when-let [data (lookup-entry config id :use-aws-owned-key)]
     (. builder useAwsOwnedKey data))
   (.build builder))
+
+
+(defn cfn-broker-encryption-options-property-builder
+  ""
+  [id config]
+  (build-cfn-broker-encryption-options-property-builder (new CfnBroker$EncryptionOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-broker-ldap-server-metadata-property-builder
@@ -179,6 +197,12 @@
   (.build builder))
 
 
+(defn cfn-broker-ldap-server-metadata-property-builder
+  ""
+  [id config]
+  (build-cfn-broker-ldap-server-metadata-property-builder (new CfnBroker$LdapServerMetadataProperty$Builder) id config))
+
+
 (defn build-cfn-broker-log-list-property-builder
   "The build-cfn-broker-log-list-property-builder function updates a CfnBroker$LogListProperty$Builder instance using the provided configuration.
   The function takes the CfnBroker$LogListProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -197,6 +221,12 @@
   (when-let [data (lookup-entry config id :general)]
     (. builder general data))
   (.build builder))
+
+
+(defn cfn-broker-log-list-property-builder
+  ""
+  [id config]
+  (build-cfn-broker-log-list-property-builder (new CfnBroker$LogListProperty$Builder) id config))
 
 
 (defn build-cfn-broker-maintenance-window-property-builder
@@ -220,6 +250,12 @@
   (when-let [data (lookup-entry config id :time-zone)]
     (. builder timeZone data))
   (.build builder))
+
+
+(defn cfn-broker-maintenance-window-property-builder
+  ""
+  [id config]
+  (build-cfn-broker-maintenance-window-property-builder (new CfnBroker$MaintenanceWindowProperty$Builder) id config))
 
 
 (defn build-cfn-broker-props-builder
@@ -296,6 +332,12 @@
   (.build builder))
 
 
+(defn cfn-broker-props-builder
+  ""
+  [id config]
+  (build-cfn-broker-props-builder (new CfnBrokerProps$Builder) id config))
+
+
 (defn build-cfn-broker-tags-entry-property-builder
   "The build-cfn-broker-tags-entry-property-builder function updates a CfnBroker$TagsEntryProperty$Builder instance using the provided configuration.
   The function takes the CfnBroker$TagsEntryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -314,6 +356,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-broker-tags-entry-property-builder
+  ""
+  [id config]
+  (build-cfn-broker-tags-entry-property-builder (new CfnBroker$TagsEntryProperty$Builder) id config))
 
 
 (defn build-cfn-broker-user-property-builder
@@ -345,6 +393,12 @@
   (.build builder))
 
 
+(defn cfn-broker-user-property-builder
+  ""
+  [id config]
+  (build-cfn-broker-user-property-builder (new CfnBroker$UserProperty$Builder) id config))
+
+
 (defn build-cfn-configuration-association-builder
   "The build-cfn-configuration-association-builder function updates a CfnConfigurationAssociation$Builder instance using the provided configuration.
   The function takes the CfnConfigurationAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -363,6 +417,12 @@
   (when-let [data (lookup-entry config id :configuration)]
     (. builder configuration data))
   (.build builder))
+
+
+(defn cfn-configuration-association-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-configuration-association-builder (CfnConfigurationAssociation$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-configuration-association-configuration-id-property-builder
@@ -385,6 +445,12 @@
   (.build builder))
 
 
+(defn cfn-configuration-association-configuration-id-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-association-configuration-id-property-builder (new CfnConfigurationAssociation$ConfigurationIdProperty$Builder) id config))
+
+
 (defn build-cfn-configuration-association-props-builder
   "The build-cfn-configuration-association-props-builder function updates a CfnConfigurationAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnConfigurationAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -403,6 +469,12 @@
   (when-let [data (lookup-entry config id :configuration)]
     (. builder configuration data))
   (.build builder))
+
+
+(defn cfn-configuration-association-props-builder
+  ""
+  [id config]
+  (build-cfn-configuration-association-props-builder (new CfnConfigurationAssociationProps$Builder) id config))
 
 
 (defn build-cfn-configuration-builder
@@ -440,6 +512,12 @@
   (.build builder))
 
 
+(defn cfn-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-configuration-builder (CfnConfiguration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-configuration-props-builder
   "The build-cfn-configuration-props-builder function updates a CfnConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -475,6 +553,12 @@
   (.build builder))
 
 
+(defn cfn-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-configuration-props-builder (new CfnConfigurationProps$Builder) id config))
+
+
 (defn build-cfn-configuration-tags-entry-property-builder
   "The build-cfn-configuration-tags-entry-property-builder function updates a CfnConfiguration$TagsEntryProperty$Builder instance using the provided configuration.
   The function takes the CfnConfiguration$TagsEntryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -493,3 +577,9 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-configuration-tags-entry-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-tags-entry-property-builder (new CfnConfiguration$TagsEntryProperty$Builder) id config))

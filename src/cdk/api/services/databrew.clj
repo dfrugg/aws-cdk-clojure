@@ -95,6 +95,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-dataset-builder (CfnDataset$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-dataset-csv-options-property-builder
   "The build-cfn-dataset-csv-options-property-builder function updates a CfnDataset$CsvOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$CsvOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -113,6 +119,12 @@
   (when-let [data (lookup-entry config id :header-row)]
     (. builder headerRow data))
   (.build builder))
+
+
+(defn cfn-dataset-csv-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-csv-options-property-builder (new CfnDataset$CsvOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-data-catalog-input-definition-property-builder
@@ -141,6 +153,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-data-catalog-input-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-data-catalog-input-definition-property-builder (new CfnDataset$DataCatalogInputDefinitionProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-database-input-definition-property-builder
   "The build-cfn-dataset-database-input-definition-property-builder function updates a CfnDataset$DatabaseInputDefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$DatabaseInputDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -165,6 +183,12 @@
   (when-let [data (lookup-entry config id :temp-directory)]
     (. builder tempDirectory data))
   (.build builder))
+
+
+(defn cfn-dataset-database-input-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-database-input-definition-property-builder (new CfnDataset$DatabaseInputDefinitionProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-dataset-parameter-property-builder
@@ -196,6 +220,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-dataset-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-dataset-parameter-property-builder (new CfnDataset$DatasetParameterProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-datetime-options-property-builder
   "The build-cfn-dataset-datetime-options-property-builder function updates a CfnDataset$DatetimeOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$DatetimeOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -217,6 +247,12 @@
   (when-let [data (lookup-entry config id :timezone-offset)]
     (. builder timezoneOffset data))
   (.build builder))
+
+
+(defn cfn-dataset-datetime-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-datetime-options-property-builder (new CfnDataset$DatetimeOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-excel-options-property-builder
@@ -242,6 +278,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-excel-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-excel-options-property-builder (new CfnDataset$ExcelOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-files-limit-property-builder
   "The build-cfn-dataset-files-limit-property-builder function updates a CfnDataset$FilesLimitProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$FilesLimitProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -265,6 +307,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-files-limit-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-files-limit-property-builder (new CfnDataset$FilesLimitProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-filter-expression-property-builder
   "The build-cfn-dataset-filter-expression-property-builder function updates a CfnDataset$FilterExpressionProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$FilterExpressionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -285,6 +333,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-filter-expression-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-filter-expression-property-builder (new CfnDataset$FilterExpressionProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-filter-value-property-builder
   "The build-cfn-dataset-filter-value-property-builder function updates a CfnDataset$FilterValueProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$FilterValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -303,6 +357,12 @@
   (when-let [data (lookup-entry config id :value-reference)]
     (. builder valueReference data))
   (.build builder))
+
+
+(defn cfn-dataset-filter-value-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-filter-value-property-builder (new CfnDataset$FilterValueProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-format-options-property-builder
@@ -326,6 +386,12 @@
   (when-let [data (lookup-entry config id :json)]
     (. builder json data))
   (.build builder))
+
+
+(defn cfn-dataset-format-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-format-options-property-builder (new CfnDataset$FormatOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-input-property-builder
@@ -354,6 +420,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-input-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-input-property-builder (new CfnDataset$InputProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-json-options-property-builder
   "The build-cfn-dataset-json-options-property-builder function updates a CfnDataset$JsonOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$JsonOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -371,6 +443,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-json-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-json-options-property-builder (new CfnDataset$JsonOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-metadata-property-builder
   "The build-cfn-dataset-metadata-property-builder function updates a CfnDataset$MetadataProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$MetadataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -386,6 +464,12 @@
   (when-let [data (lookup-entry config id :source-arn)]
     (. builder sourceArn data))
   (.build builder))
+
+
+(defn cfn-dataset-metadata-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-metadata-property-builder (new CfnDataset$MetadataProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-path-options-property-builder
@@ -411,6 +495,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-path-options-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-path-options-property-builder (new CfnDataset$PathOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-path-parameter-property-builder
   "The build-cfn-dataset-path-parameter-property-builder function updates a CfnDataset$PathParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$PathParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -429,6 +519,12 @@
   (when-let [data (lookup-entry config id :path-parameter-name)]
     (. builder pathParameterName data))
   (.build builder))
+
+
+(defn cfn-dataset-path-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-path-parameter-property-builder (new CfnDataset$PathParameterProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-props-builder
@@ -463,6 +559,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-props-builder
+  ""
+  [id config]
+  (build-cfn-dataset-props-builder (new CfnDatasetProps$Builder) id config))
+
+
 (defn build-cfn-dataset-s3-location-property-builder
   "The build-cfn-dataset-s3-location-property-builder function updates a CfnDataset$S3LocationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$S3LocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -483,6 +585,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-s3-location-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-s3-location-property-builder (new CfnDataset$S3LocationProperty$Builder) id config))
+
+
 (defn build-cfn-job-allowed-statistics-property-builder
   "The build-cfn-job-allowed-statistics-property-builder function updates a CfnJob$AllowedStatisticsProperty$Builder instance using the provided configuration.
   The function takes the CfnJob$AllowedStatisticsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -498,6 +606,12 @@
   (when-let [data (lookup-entry config id :statistics)]
     (. builder statistics data))
   (.build builder))
+
+
+(defn cfn-job-allowed-statistics-property-builder
+  ""
+  [id config]
+  (build-cfn-job-allowed-statistics-property-builder (new CfnJob$AllowedStatisticsProperty$Builder) id config))
 
 
 (defn build-cfn-job-builder
@@ -574,6 +688,12 @@
   (.build builder))
 
 
+(defn cfn-job-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-job-builder (CfnJob$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-job-column-selector-property-builder
   "The build-cfn-job-column-selector-property-builder function updates a CfnJob$ColumnSelectorProperty$Builder instance using the provided configuration.
   The function takes the CfnJob$ColumnSelectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -592,6 +712,12 @@
   (when-let [data (lookup-entry config id :regex)]
     (. builder regex data))
   (.build builder))
+
+
+(defn cfn-job-column-selector-property-builder
+  ""
+  [id config]
+  (build-cfn-job-column-selector-property-builder (new CfnJob$ColumnSelectorProperty$Builder) id config))
 
 
 (defn build-cfn-job-column-statistics-configuration-property-builder
@@ -614,6 +740,12 @@
   (.build builder))
 
 
+(defn cfn-job-column-statistics-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-job-column-statistics-configuration-property-builder (new CfnJob$ColumnStatisticsConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-job-csv-output-options-property-builder
   "The build-cfn-job-csv-output-options-property-builder function updates a CfnJob$CsvOutputOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnJob$CsvOutputOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -629,6 +761,12 @@
   (when-let [data (lookup-entry config id :delimiter)]
     (. builder delimiter data))
   (.build builder))
+
+
+(defn cfn-job-csv-output-options-property-builder
+  ""
+  [id config]
+  (build-cfn-job-csv-output-options-property-builder (new CfnJob$CsvOutputOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-job-data-catalog-output-property-builder
@@ -663,6 +801,12 @@
   (.build builder))
 
 
+(defn cfn-job-data-catalog-output-property-builder
+  ""
+  [id config]
+  (build-cfn-job-data-catalog-output-property-builder (new CfnJob$DataCatalogOutputProperty$Builder) id config))
+
+
 (defn build-cfn-job-database-output-property-builder
   "The build-cfn-job-database-output-property-builder function updates a CfnJob$DatabaseOutputProperty$Builder instance using the provided configuration.
   The function takes the CfnJob$DatabaseOutputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -686,6 +830,12 @@
   (.build builder))
 
 
+(defn cfn-job-database-output-property-builder
+  ""
+  [id config]
+  (build-cfn-job-database-output-property-builder (new CfnJob$DatabaseOutputProperty$Builder) id config))
+
+
 (defn build-cfn-job-database-table-output-options-property-builder
   "The build-cfn-job-database-table-output-options-property-builder function updates a CfnJob$DatabaseTableOutputOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnJob$DatabaseTableOutputOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -704,6 +854,12 @@
   (when-let [data (lookup-entry config id :temp-directory)]
     (. builder tempDirectory data))
   (.build builder))
+
+
+(defn cfn-job-database-table-output-options-property-builder
+  ""
+  [id config]
+  (build-cfn-job-database-table-output-options-property-builder (new CfnJob$DatabaseTableOutputOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-job-entity-detector-configuration-property-builder
@@ -726,6 +882,12 @@
   (.build builder))
 
 
+(defn cfn-job-entity-detector-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-job-entity-detector-configuration-property-builder (new CfnJob$EntityDetectorConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-job-job-sample-property-builder
   "The build-cfn-job-job-sample-property-builder function updates a CfnJob$JobSampleProperty$Builder instance using the provided configuration.
   The function takes the CfnJob$JobSampleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -746,6 +908,12 @@
   (.build builder))
 
 
+(defn cfn-job-job-sample-property-builder
+  ""
+  [id config]
+  (build-cfn-job-job-sample-property-builder (new CfnJob$JobSampleProperty$Builder) id config))
+
+
 (defn build-cfn-job-output-format-options-property-builder
   "The build-cfn-job-output-format-options-property-builder function updates a CfnJob$OutputFormatOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnJob$OutputFormatOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -761,6 +929,12 @@
   (when-let [data (lookup-entry config id :csv)]
     (. builder csv data))
   (.build builder))
+
+
+(defn cfn-job-output-format-options-property-builder
+  ""
+  [id config]
+  (build-cfn-job-output-format-options-property-builder (new CfnJob$OutputFormatOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-job-output-location-property-builder
@@ -784,6 +958,12 @@
   (when-let [data (lookup-entry config id :key)]
     (. builder key data))
   (.build builder))
+
+
+(defn cfn-job-output-location-property-builder
+  ""
+  [id config]
+  (build-cfn-job-output-location-property-builder (new CfnJob$OutputLocationProperty$Builder) id config))
 
 
 (defn build-cfn-job-output-property-builder
@@ -821,6 +1001,12 @@
   (.build builder))
 
 
+(defn cfn-job-output-property-builder
+  ""
+  [id config]
+  (build-cfn-job-output-property-builder (new CfnJob$OutputProperty$Builder) id config))
+
+
 (defn build-cfn-job-profile-configuration-property-builder
   "The build-cfn-job-profile-configuration-property-builder function updates a CfnJob$ProfileConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnJob$ProfileConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -845,6 +1031,12 @@
   (when-let [data (lookup-entry config id :profile-columns)]
     (. builder profileColumns data))
   (.build builder))
+
+
+(defn cfn-job-profile-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-job-profile-configuration-property-builder (new CfnJob$ProfileConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-job-props-builder
@@ -921,6 +1113,12 @@
   (.build builder))
 
 
+(defn cfn-job-props-builder
+  ""
+  [id config]
+  (build-cfn-job-props-builder (new CfnJobProps$Builder) id config))
+
+
 (defn build-cfn-job-recipe-property-builder
   "The build-cfn-job-recipe-property-builder function updates a CfnJob$RecipeProperty$Builder instance using the provided configuration.
   The function takes the CfnJob$RecipeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -939,6 +1137,12 @@
   (when-let [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
+
+
+(defn cfn-job-recipe-property-builder
+  ""
+  [id config]
+  (build-cfn-job-recipe-property-builder (new CfnJob$RecipeProperty$Builder) id config))
 
 
 (defn build-cfn-job-s3-location-property-builder
@@ -964,6 +1168,12 @@
   (.build builder))
 
 
+(defn cfn-job-s3-location-property-builder
+  ""
+  [id config]
+  (build-cfn-job-s3-location-property-builder (new CfnJob$S3LocationProperty$Builder) id config))
+
+
 (defn build-cfn-job-s3-table-output-options-property-builder
   "The build-cfn-job-s3-table-output-options-property-builder function updates a CfnJob$S3TableOutputOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnJob$S3TableOutputOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -979,6 +1189,12 @@
   (when-let [data (lookup-entry config id :location)]
     (. builder location data))
   (.build builder))
+
+
+(defn cfn-job-s3-table-output-options-property-builder
+  ""
+  [id config]
+  (build-cfn-job-s3-table-output-options-property-builder (new CfnJob$S3TableOutputOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-job-statistic-override-property-builder
@@ -1001,6 +1217,12 @@
   (.build builder))
 
 
+(defn cfn-job-statistic-override-property-builder
+  ""
+  [id config]
+  (build-cfn-job-statistic-override-property-builder (new CfnJob$StatisticOverrideProperty$Builder) id config))
+
+
 (defn build-cfn-job-statistics-configuration-property-builder
   "The build-cfn-job-statistics-configuration-property-builder function updates a CfnJob$StatisticsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnJob$StatisticsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1021,6 +1243,12 @@
   (.build builder))
 
 
+(defn cfn-job-statistics-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-job-statistics-configuration-property-builder (new CfnJob$StatisticsConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-job-validation-configuration-property-builder
   "The build-cfn-job-validation-configuration-property-builder function updates a CfnJob$ValidationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnJob$ValidationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1039,6 +1267,12 @@
   (when-let [data (lookup-entry config id :validation-mode)]
     (. builder validationMode data))
   (.build builder))
+
+
+(defn cfn-job-validation-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-job-validation-configuration-property-builder (new CfnJob$ValidationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-project-builder
@@ -1073,6 +1307,12 @@
   (.build builder))
 
 
+(defn cfn-project-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-project-builder (CfnProject$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-project-props-builder
   "The build-cfn-project-props-builder function updates a CfnProjectProps$Builder instance using the provided configuration.
   The function takes the CfnProjectProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1105,6 +1345,12 @@
   (.build builder))
 
 
+(defn cfn-project-props-builder
+  ""
+  [id config]
+  (build-cfn-project-props-builder (new CfnProjectProps$Builder) id config))
+
+
 (defn build-cfn-project-sample-property-builder
   "The build-cfn-project-sample-property-builder function updates a CfnProject$SampleProperty$Builder instance using the provided configuration.
   The function takes the CfnProject$SampleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1125,6 +1371,12 @@
   (.build builder))
 
 
+(defn cfn-project-sample-property-builder
+  ""
+  [id config]
+  (build-cfn-project-sample-property-builder (new CfnProject$SampleProperty$Builder) id config))
+
+
 (defn build-cfn-recipe-action-property-builder
   "The build-cfn-recipe-action-property-builder function updates a CfnRecipe$ActionProperty$Builder instance using the provided configuration.
   The function takes the CfnRecipe$ActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1143,6 +1395,12 @@
   (when-let [data (lookup-entry config id :parameters)]
     (. builder parameters data))
   (.build builder))
+
+
+(defn cfn-recipe-action-property-builder
+  ""
+  [id config]
+  (build-cfn-recipe-action-property-builder (new CfnRecipe$ActionProperty$Builder) id config))
 
 
 (defn build-cfn-recipe-builder
@@ -1171,6 +1429,12 @@
   (.build builder))
 
 
+(defn cfn-recipe-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-recipe-builder (CfnRecipe$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-recipe-condition-expression-property-builder
   "The build-cfn-recipe-condition-expression-property-builder function updates a CfnRecipe$ConditionExpressionProperty$Builder instance using the provided configuration.
   The function takes the CfnRecipe$ConditionExpressionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1192,6 +1456,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-recipe-condition-expression-property-builder
+  ""
+  [id config]
+  (build-cfn-recipe-condition-expression-property-builder (new CfnRecipe$ConditionExpressionProperty$Builder) id config))
 
 
 (defn build-cfn-recipe-data-catalog-input-definition-property-builder
@@ -1220,6 +1490,12 @@
   (.build builder))
 
 
+(defn cfn-recipe-data-catalog-input-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-recipe-data-catalog-input-definition-property-builder (new CfnRecipe$DataCatalogInputDefinitionProperty$Builder) id config))
+
+
 (defn build-cfn-recipe-input-property-builder
   "The build-cfn-recipe-input-property-builder function updates a CfnRecipe$InputProperty$Builder instance using the provided configuration.
   The function takes the CfnRecipe$InputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1238,6 +1514,12 @@
   (when-let [data (lookup-entry config id :s3-input-definition)]
     (. builder s3InputDefinition data))
   (.build builder))
+
+
+(defn cfn-recipe-input-property-builder
+  ""
+  [id config]
+  (build-cfn-recipe-input-property-builder (new CfnRecipe$InputProperty$Builder) id config))
 
 
 (defn build-cfn-recipe-props-builder
@@ -1264,6 +1546,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-recipe-props-builder
+  ""
+  [id config]
+  (build-cfn-recipe-props-builder (new CfnRecipeProps$Builder) id config))
 
 
 (defn build-cfn-recipe-recipe-parameters-property-builder
@@ -1583,6 +1871,12 @@
   (.build builder))
 
 
+(defn cfn-recipe-recipe-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-recipe-recipe-parameters-property-builder (new CfnRecipe$RecipeParametersProperty$Builder) id config))
+
+
 (defn build-cfn-recipe-recipe-step-property-builder
   "The build-cfn-recipe-recipe-step-property-builder function updates a CfnRecipe$RecipeStepProperty$Builder instance using the provided configuration.
   The function takes the CfnRecipe$RecipeStepProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1601,6 +1895,12 @@
   (when-let [data (lookup-entry config id :condition-expressions)]
     (. builder conditionExpressions data))
   (.build builder))
+
+
+(defn cfn-recipe-recipe-step-property-builder
+  ""
+  [id config]
+  (build-cfn-recipe-recipe-step-property-builder (new CfnRecipe$RecipeStepProperty$Builder) id config))
 
 
 (defn build-cfn-recipe-s3-location-property-builder
@@ -1623,6 +1923,12 @@
   (.build builder))
 
 
+(defn cfn-recipe-s3-location-property-builder
+  ""
+  [id config]
+  (build-cfn-recipe-s3-location-property-builder (new CfnRecipe$S3LocationProperty$Builder) id config))
+
+
 (defn build-cfn-recipe-secondary-input-property-builder
   "The build-cfn-recipe-secondary-input-property-builder function updates a CfnRecipe$SecondaryInputProperty$Builder instance using the provided configuration.
   The function takes the CfnRecipe$SecondaryInputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1641,6 +1947,12 @@
   (when-let [data (lookup-entry config id :s3-input-definition)]
     (. builder s3InputDefinition data))
   (.build builder))
+
+
+(defn cfn-recipe-secondary-input-property-builder
+  ""
+  [id config]
+  (build-cfn-recipe-secondary-input-property-builder (new CfnRecipe$SecondaryInputProperty$Builder) id config))
 
 
 (defn build-cfn-ruleset-builder
@@ -1672,6 +1984,12 @@
   (.build builder))
 
 
+(defn cfn-ruleset-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-ruleset-builder (CfnRuleset$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-ruleset-column-selector-property-builder
   "The build-cfn-ruleset-column-selector-property-builder function updates a CfnRuleset$ColumnSelectorProperty$Builder instance using the provided configuration.
   The function takes the CfnRuleset$ColumnSelectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1690,6 +2008,12 @@
   (when-let [data (lookup-entry config id :regex)]
     (. builder regex data))
   (.build builder))
+
+
+(defn cfn-ruleset-column-selector-property-builder
+  ""
+  [id config]
+  (build-cfn-ruleset-column-selector-property-builder (new CfnRuleset$ColumnSelectorProperty$Builder) id config))
 
 
 (defn build-cfn-ruleset-props-builder
@@ -1719,6 +2043,12 @@
   (when-let [data (lookup-entry config id :target-arn)]
     (. builder targetArn data))
   (.build builder))
+
+
+(defn cfn-ruleset-props-builder
+  ""
+  [id config]
+  (build-cfn-ruleset-props-builder (new CfnRulesetProps$Builder) id config))
 
 
 (defn build-cfn-ruleset-rule-property-builder
@@ -1753,6 +2083,12 @@
   (.build builder))
 
 
+(defn cfn-ruleset-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-ruleset-rule-property-builder (new CfnRuleset$RuleProperty$Builder) id config))
+
+
 (defn build-cfn-ruleset-substitution-value-property-builder
   "The build-cfn-ruleset-substitution-value-property-builder function updates a CfnRuleset$SubstitutionValueProperty$Builder instance using the provided configuration.
   The function takes the CfnRuleset$SubstitutionValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1771,6 +2107,12 @@
   (when-let [data (lookup-entry config id :value-reference)]
     (. builder valueReference data))
   (.build builder))
+
+
+(defn cfn-ruleset-substitution-value-property-builder
+  ""
+  [id config]
+  (build-cfn-ruleset-substitution-value-property-builder (new CfnRuleset$SubstitutionValueProperty$Builder) id config))
 
 
 (defn build-cfn-ruleset-threshold-property-builder
@@ -1794,6 +2136,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-ruleset-threshold-property-builder
+  ""
+  [id config]
+  (build-cfn-ruleset-threshold-property-builder (new CfnRuleset$ThresholdProperty$Builder) id config))
 
 
 (defn build-cfn-schedule-builder
@@ -1822,6 +2170,12 @@
   (.build builder))
 
 
+(defn cfn-schedule-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-schedule-builder (CfnSchedule$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-schedule-props-builder
   "The build-cfn-schedule-props-builder function updates a CfnScheduleProps$Builder instance using the provided configuration.
   The function takes the CfnScheduleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1846,3 +2200,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-schedule-props-builder
+  ""
+  [id config]
+  (build-cfn-schedule-props-builder (new CfnScheduleProps$Builder) id config))

@@ -41,6 +41,12 @@
   (.build builder))
 
 
+(defn cfn-crl-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-crl-builder (CfnCRL$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-crl-props-builder
   "The build-cfn-crl-props-builder function updates a CfnCRLProps$Builder instance using the provided configuration.
   The function takes the CfnCRLProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -68,6 +74,12 @@
   (when-let [data (lookup-entry config id :trust-anchor-arn)]
     (. builder trustAnchorArn data))
   (.build builder))
+
+
+(defn cfn-crl-props-builder
+  ""
+  [id config]
+  (build-cfn-crl-props-builder (new CfnCRLProps$Builder) id config))
 
 
 (defn build-cfn-profile-builder
@@ -108,6 +120,12 @@
   (.build builder))
 
 
+(defn cfn-profile-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-profile-builder (CfnProfile$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-profile-props-builder
   "The build-cfn-profile-props-builder function updates a CfnProfileProps$Builder instance using the provided configuration.
   The function takes the CfnProfileProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -146,6 +164,12 @@
   (.build builder))
 
 
+(defn cfn-profile-props-builder
+  ""
+  [id config]
+  (build-cfn-profile-props-builder (new CfnProfileProps$Builder) id config))
+
+
 (defn build-cfn-trust-anchor-builder
   "The build-cfn-trust-anchor-builder function updates a CfnTrustAnchor$Builder instance using the provided configuration.
   The function takes the CfnTrustAnchor$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -175,6 +199,12 @@
   (.build builder))
 
 
+(defn cfn-trust-anchor-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-trust-anchor-builder (CfnTrustAnchor$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-trust-anchor-notification-setting-property-builder
   "The build-cfn-trust-anchor-notification-setting-property-builder function updates a CfnTrustAnchor$NotificationSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnTrustAnchor$NotificationSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -199,6 +229,12 @@
   (when-let [data (lookup-entry config id :threshold)]
     (. builder threshold data))
   (.build builder))
+
+
+(defn cfn-trust-anchor-notification-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-trust-anchor-notification-setting-property-builder (new CfnTrustAnchor$NotificationSettingProperty$Builder) id config))
 
 
 (defn build-cfn-trust-anchor-props-builder
@@ -230,6 +266,12 @@
   (.build builder))
 
 
+(defn cfn-trust-anchor-props-builder
+  ""
+  [id config]
+  (build-cfn-trust-anchor-props-builder (new CfnTrustAnchorProps$Builder) id config))
+
+
 (defn build-cfn-trust-anchor-source-data-property-builder
   "The build-cfn-trust-anchor-source-data-property-builder function updates a CfnTrustAnchor$SourceDataProperty$Builder instance using the provided configuration.
   The function takes the CfnTrustAnchor$SourceDataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -250,6 +292,12 @@
   (.build builder))
 
 
+(defn cfn-trust-anchor-source-data-property-builder
+  ""
+  [id config]
+  (build-cfn-trust-anchor-source-data-property-builder (new CfnTrustAnchor$SourceDataProperty$Builder) id config))
+
+
 (defn build-cfn-trust-anchor-source-property-builder
   "The build-cfn-trust-anchor-source-property-builder function updates a CfnTrustAnchor$SourceProperty$Builder instance using the provided configuration.
   The function takes the CfnTrustAnchor$SourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -268,3 +316,9 @@
   (when-let [data (lookup-entry config id :source-type)]
     (. builder sourceType data))
   (.build builder))
+
+
+(defn cfn-trust-anchor-source-property-builder
+  ""
+  [id config]
+  (build-cfn-trust-anchor-source-property-builder (new CfnTrustAnchor$SourceProperty$Builder) id config))

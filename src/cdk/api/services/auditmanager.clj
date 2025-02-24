@@ -31,6 +31,12 @@
   (.build builder))
 
 
+(defn cfn-assessment-assessment-reports-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-assessment-assessment-reports-destination-property-builder (new CfnAssessment$AssessmentReportsDestinationProperty$Builder) id config))
+
+
 (defn build-cfn-assessment-aws-account-property-builder
   "The build-cfn-assessment-aws-account-property-builder function updates a CfnAssessment$AWSAccountProperty$Builder instance using the provided configuration.
   The function takes the CfnAssessment$AWSAccountProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -54,6 +60,12 @@
   (.build builder))
 
 
+(defn cfn-assessment-aws-account-property-builder
+  ""
+  [id config]
+  (build-cfn-assessment-aws-account-property-builder (new CfnAssessment$AWSAccountProperty$Builder) id config))
+
+
 (defn build-cfn-assessment-aws-service-property-builder
   "The build-cfn-assessment-aws-service-property-builder function updates a CfnAssessment$AWSServiceProperty$Builder instance using the provided configuration.
   The function takes the CfnAssessment$AWSServiceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -69,6 +81,12 @@
   (when-let [data (lookup-entry config id :service-name)]
     (. builder serviceName data))
   (.build builder))
+
+
+(defn cfn-assessment-aws-service-property-builder
+  ""
+  [id config]
+  (build-cfn-assessment-aws-service-property-builder (new CfnAssessment$AWSServiceProperty$Builder) id config))
 
 
 (defn build-cfn-assessment-builder
@@ -113,6 +131,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-assessment-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-assessment-builder (CfnAssessment$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-assessment-delegation-property-builder
@@ -162,6 +186,12 @@
   (.build builder))
 
 
+(defn cfn-assessment-delegation-property-builder
+  ""
+  [id config]
+  (build-cfn-assessment-delegation-property-builder (new CfnAssessment$DelegationProperty$Builder) id config))
+
+
 (defn build-cfn-assessment-props-builder
   "The build-cfn-assessment-props-builder function updates a CfnAssessmentProps$Builder instance using the provided configuration.
   The function takes the CfnAssessmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -206,6 +236,12 @@
   (.build builder))
 
 
+(defn cfn-assessment-props-builder
+  ""
+  [id config]
+  (build-cfn-assessment-props-builder (new CfnAssessmentProps$Builder) id config))
+
+
 (defn build-cfn-assessment-role-property-builder
   "The build-cfn-assessment-role-property-builder function updates a CfnAssessment$RoleProperty$Builder instance using the provided configuration.
   The function takes the CfnAssessment$RoleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -226,6 +262,12 @@
   (.build builder))
 
 
+(defn cfn-assessment-role-property-builder
+  ""
+  [id config]
+  (build-cfn-assessment-role-property-builder (new CfnAssessment$RoleProperty$Builder) id config))
+
+
 (defn build-cfn-assessment-scope-property-builder
   "The build-cfn-assessment-scope-property-builder function updates a CfnAssessment$ScopeProperty$Builder instance using the provided configuration.
   The function takes the CfnAssessment$ScopeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -244,3 +286,9 @@
   (when-let [data (lookup-entry config id :aws-services)]
     (. builder awsServices data))
   (.build builder))
+
+
+(defn cfn-assessment-scope-property-builder
+  ""
+  [id config]
+  (build-cfn-assessment-scope-property-builder (new CfnAssessment$ScopeProperty$Builder) id config))

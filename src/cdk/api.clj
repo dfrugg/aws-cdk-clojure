@@ -605,6 +605,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn app-builder
+  ""
+  [id config]
+  (build-app-builder (App$Builder/create) id config))
+
+
 (defn build-app-props-builder
   "The build-app-props-builder function updates a AppProps$Builder instance using the provided configuration.
   The function takes the AppProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -646,6 +652,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn app-props-builder
+  ""
+  [id config]
+  (build-app-props-builder (new AppProps$Builder) id config))
+
+
 (defn build-arn-components-builder
   "The build-arn-components-builder function updates a ArnComponents$Builder instance using the provided configuration.
   The function takes the ArnComponents$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -681,6 +693,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn arn-components-builder
+  ""
+  [id config]
+  (build-arn-components-builder (new ArnComponents$Builder) id config))
+
+
 (defn build-asset-manifest-docker-image-destination-builder
   "The build-asset-manifest-docker-image-destination-builder function updates a AssetManifestDockerImageDestination$Builder instance using the provided configuration.
   The function takes the AssetManifestDockerImageDestination$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -702,6 +720,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
+
+
+(defn asset-manifest-docker-image-destination-builder
+  ""
+  [id config]
+  (build-asset-manifest-docker-image-destination-builder (new AssetManifestDockerImageDestination$Builder) id config))
 
 
 (defn build-asset-manifest-file-destination-builder
@@ -727,6 +751,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn asset-manifest-file-destination-builder
+  ""
+  [id config]
+  (build-asset-manifest-file-destination-builder (new AssetManifestFileDestination$Builder) id config))
+
+
 (defn build-asset-options-builder
   "The build-asset-options-builder function updates a AssetOptions$Builder instance using the provided configuration.
   The function takes the AssetOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -748,6 +778,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :bundling)]
     (. builder bundling data))
   (.build builder))
+
+
+(defn asset-options-builder
+  ""
+  [id config]
+  (build-asset-options-builder (new AssetOptions$Builder) id config))
 
 
 (defn build-asset-staging-builder
@@ -788,6 +824,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn asset-staging-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-asset-staging-builder (AssetStaging$Builder/create scope (name id)) id config))
+
+
 (defn build-asset-staging-props-builder
   "The build-asset-staging-props-builder function updates a AssetStagingProps$Builder instance using the provided configuration.
   The function takes the AssetStagingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -826,6 +868,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn asset-staging-props-builder
+  ""
+  [id config]
+  (build-asset-staging-props-builder (new AssetStagingProps$Builder) id config))
+
+
 (defn build-bootstrapless-synthesizer-builder
   "The build-bootstrapless-synthesizer-builder function updates a BootstraplessSynthesizer$Builder instance using the provided configuration.
   The function takes the BootstraplessSynthesizer$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -846,6 +894,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn bootstrapless-synthesizer-builder
+  ""
+  [id config]
+  (build-bootstrapless-synthesizer-builder (BootstraplessSynthesizer$Builder/create) id config))
+
+
 (defn build-bootstrapless-synthesizer-props-builder
   "The build-bootstrapless-synthesizer-props-builder function updates a BootstraplessSynthesizerProps$Builder instance using the provided configuration.
   The function takes the BootstraplessSynthesizerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -864,6 +918,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :deploy-role-arn)]
     (. builder deployRoleArn data))
   (.build builder))
+
+
+(defn bootstrapless-synthesizer-props-builder
+  ""
+  [id config]
+  (build-bootstrapless-synthesizer-props-builder (new BootstraplessSynthesizerProps$Builder) id config))
 
 
 (defn build-bundling-options-builder
@@ -922,6 +982,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn bundling-options-builder
+  ""
+  [id config]
+  (build-bundling-options-builder (new BundlingOptions$Builder) id config))
+
+
 (defn build-cfn-auto-scaling-replacing-update-builder
   "The build-cfn-auto-scaling-replacing-update-builder function updates a CfnAutoScalingReplacingUpdate$Builder instance using the provided configuration.
   The function takes the CfnAutoScalingReplacingUpdate$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -937,6 +1003,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :will-replace)]
     (. builder willReplace data))
   (.build builder))
+
+
+(defn cfn-auto-scaling-replacing-update-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-replacing-update-builder (new CfnAutoScalingReplacingUpdate$Builder) id config))
 
 
 (defn build-cfn-auto-scaling-rolling-update-builder
@@ -971,6 +1043,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-auto-scaling-rolling-update-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-rolling-update-builder (new CfnAutoScalingRollingUpdate$Builder) id config))
+
+
 (defn build-cfn-auto-scaling-scheduled-action-builder
   "The build-cfn-auto-scaling-scheduled-action-builder function updates a CfnAutoScalingScheduledAction$Builder instance using the provided configuration.
   The function takes the CfnAutoScalingScheduledAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -988,6 +1066,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-auto-scaling-scheduled-action-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-scheduled-action-builder (new CfnAutoScalingScheduledAction$Builder) id config))
+
+
 (defn build-cfn-code-deploy-blue-green-additional-options-builder
   "The build-cfn-code-deploy-blue-green-additional-options-builder function updates a CfnCodeDeployBlueGreenAdditionalOptions$Builder instance using the provided configuration.
   The function takes the CfnCodeDeployBlueGreenAdditionalOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1003,6 +1087,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :termination-wait-time-in-minutes)]
     (. builder terminationWaitTimeInMinutes data))
   (.build builder))
+
+
+(defn cfn-code-deploy-blue-green-additional-options-builder
+  ""
+  [id config]
+  (build-cfn-code-deploy-blue-green-additional-options-builder (new CfnCodeDeployBlueGreenAdditionalOptions$Builder) id config))
 
 
 (defn build-cfn-code-deploy-blue-green-application-builder
@@ -1025,6 +1115,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-code-deploy-blue-green-application-builder
+  ""
+  [id config]
+  (build-cfn-code-deploy-blue-green-application-builder (new CfnCodeDeployBlueGreenApplication$Builder) id config))
+
+
 (defn build-cfn-code-deploy-blue-green-application-target-builder
   "The build-cfn-code-deploy-blue-green-application-target-builder function updates a CfnCodeDeployBlueGreenApplicationTarget$Builder instance using the provided configuration.
   The function takes the CfnCodeDeployBlueGreenApplicationTarget$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1043,6 +1139,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-code-deploy-blue-green-application-target-builder
+  ""
+  [id config]
+  (build-cfn-code-deploy-blue-green-application-target-builder (new CfnCodeDeployBlueGreenApplicationTarget$Builder) id config))
 
 
 (defn build-cfn-code-deploy-blue-green-ecs-attributes-builder
@@ -1066,6 +1168,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :traffic-routing)]
     (. builder trafficRouting data))
   (.build builder))
+
+
+(defn cfn-code-deploy-blue-green-ecs-attributes-builder
+  ""
+  [id config]
+  (build-cfn-code-deploy-blue-green-ecs-attributes-builder (new CfnCodeDeployBlueGreenEcsAttributes$Builder) id config))
 
 
 (defn build-cfn-code-deploy-blue-green-hook-builder
@@ -1097,6 +1205,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-code-deploy-blue-green-hook-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-code-deploy-blue-green-hook-builder (CfnCodeDeployBlueGreenHook$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-code-deploy-blue-green-hook-props-builder
   "The build-cfn-code-deploy-blue-green-hook-props-builder function updates a CfnCodeDeployBlueGreenHookProps$Builder instance using the provided configuration.
   The function takes the CfnCodeDeployBlueGreenHookProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1124,6 +1238,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :traffic-routing-config)]
     (. builder trafficRoutingConfig data))
   (.build builder))
+
+
+(defn cfn-code-deploy-blue-green-hook-props-builder
+  ""
+  [id config]
+  (build-cfn-code-deploy-blue-green-hook-props-builder (new CfnCodeDeployBlueGreenHookProps$Builder) id config))
 
 
 (defn build-cfn-code-deploy-blue-green-lifecycle-event-hooks-builder
@@ -1155,6 +1275,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-code-deploy-blue-green-lifecycle-event-hooks-builder
+  ""
+  [id config]
+  (build-cfn-code-deploy-blue-green-lifecycle-event-hooks-builder (new CfnCodeDeployBlueGreenLifecycleEventHooks$Builder) id config))
+
+
 (defn build-cfn-code-deploy-lambda-alias-update-builder
   "The build-cfn-code-deploy-lambda-alias-update-builder function updates a CfnCodeDeployLambdaAliasUpdate$Builder instance using the provided configuration.
   The function takes the CfnCodeDeployLambdaAliasUpdate$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1181,6 +1307,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-code-deploy-lambda-alias-update-builder
+  ""
+  [id config]
+  (build-cfn-code-deploy-lambda-alias-update-builder (new CfnCodeDeployLambdaAliasUpdate$Builder) id config))
+
+
 (defn build-cfn-condition-builder
   "The build-cfn-condition-builder function updates a CfnCondition$Builder instance using the provided configuration.
   The function takes the CfnCondition$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1198,6 +1330,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-condition-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-condition-builder (CfnCondition$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-condition-props-builder
   "The build-cfn-condition-props-builder function updates a CfnConditionProps$Builder instance using the provided configuration.
   The function takes the CfnConditionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1213,6 +1351,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :expression)]
     (. builder expression data))
   (.build builder))
+
+
+(defn cfn-condition-props-builder
+  ""
+  [id config]
+  (build-cfn-condition-props-builder (new CfnConditionProps$Builder) id config))
 
 
 (defn build-cfn-creation-policy-builder
@@ -1238,6 +1382,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-creation-policy-builder
+  ""
+  [id config]
+  (build-cfn-creation-policy-builder (new CfnCreationPolicy$Builder) id config))
+
+
 (defn build-cfn-custom-resource-builder
   "The build-cfn-custom-resource-builder function updates a CfnCustomResource$Builder instance using the provided configuration.
   The function takes the CfnCustomResource$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1255,6 +1405,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-custom-resource-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-custom-resource-builder (CfnCustomResource$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-custom-resource-props-builder
   "The build-cfn-custom-resource-props-builder function updates a CfnCustomResourceProps$Builder instance using the provided configuration.
   The function takes the CfnCustomResourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1270,6 +1426,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :service-token)]
     (. builder serviceToken data))
   (.build builder))
+
+
+(defn cfn-custom-resource-props-builder
+  ""
+  [id config]
+  (build-cfn-custom-resource-props-builder (new CfnCustomResourceProps$Builder) id config))
 
 
 (defn build-cfn-dynamic-reference-props-builder
@@ -1292,6 +1454,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-dynamic-reference-props-builder
+  ""
+  [id config]
+  (build-cfn-dynamic-reference-props-builder (new CfnDynamicReferenceProps$Builder) id config))
+
+
 (defn build-cfn-hook-builder
   "The build-cfn-hook-builder function updates a CfnHook$Builder instance using the provided configuration.
   The function takes the CfnHook$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1310,6 +1478,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-hook-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-hook-builder (CfnHook$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-hook-default-version-builder
@@ -1335,6 +1509,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-hook-default-version-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-hook-default-version-builder (CfnHookDefaultVersion$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-hook-default-version-props-builder
   "The build-cfn-hook-default-version-props-builder function updates a CfnHookDefaultVersionProps$Builder instance using the provided configuration.
   The function takes the CfnHookDefaultVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1358,6 +1538,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-hook-default-version-props-builder
+  ""
+  [id config]
+  (build-cfn-hook-default-version-props-builder (new CfnHookDefaultVersionProps$Builder) id config))
+
+
 (defn build-cfn-hook-props-builder
   "The build-cfn-hook-props-builder function updates a CfnHookProps$Builder instance using the provided configuration.
   The function takes the CfnHookProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1376,6 +1562,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-hook-props-builder
+  ""
+  [id config]
+  (build-cfn-hook-props-builder (new CfnHookProps$Builder) id config))
 
 
 (defn build-cfn-hook-type-config-builder
@@ -1404,6 +1596,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-hook-type-config-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-hook-type-config-builder (CfnHookTypeConfig$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-hook-type-config-props-builder
   "The build-cfn-hook-type-config-props-builder function updates a CfnHookTypeConfigProps$Builder instance using the provided configuration.
   The function takes the CfnHookTypeConfigProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1428,6 +1626,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :type-name)]
     (. builder typeName data))
   (.build builder))
+
+
+(defn cfn-hook-type-config-props-builder
+  ""
+  [id config]
+  (build-cfn-hook-type-config-props-builder (new CfnHookTypeConfigProps$Builder) id config))
 
 
 (defn build-cfn-hook-version-builder
@@ -1456,6 +1660,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-hook-version-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-hook-version-builder (CfnHookVersion$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-hook-version-logging-config-property-builder
   "The build-cfn-hook-version-logging-config-property-builder function updates a CfnHookVersion$LoggingConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnHookVersion$LoggingConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1474,6 +1684,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :log-role-arn)]
     (. builder logRoleArn data))
   (.build builder))
+
+
+(defn cfn-hook-version-logging-config-property-builder
+  ""
+  [id config]
+  (build-cfn-hook-version-logging-config-property-builder (new CfnHookVersion$LoggingConfigProperty$Builder) id config))
 
 
 (defn build-cfn-hook-version-props-builder
@@ -1502,6 +1718,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-hook-version-props-builder
+  ""
+  [id config]
+  (build-cfn-hook-version-props-builder (new CfnHookVersionProps$Builder) id config))
+
+
 (defn build-cfn-json-builder
   "The build-cfn-json-builder function updates a CfnJson$Builder instance using the provided configuration.
   The function takes the CfnJson$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1519,6 +1741,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-json-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-json-builder (CfnJson$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-json-props-builder
   "The build-cfn-json-props-builder function updates a CfnJsonProps$Builder instance using the provided configuration.
   The function takes the CfnJsonProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1534,6 +1762,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-json-props-builder
+  ""
+  [id config]
+  (build-cfn-json-props-builder (new CfnJsonProps$Builder) id config))
 
 
 (defn build-cfn-macro-builder
@@ -1565,6 +1799,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-macro-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-macro-builder (CfnMacro$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-macro-props-builder
   "The build-cfn-macro-props-builder function updates a CfnMacroProps$Builder instance using the provided configuration.
   The function takes the CfnMacroProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1594,6 +1834,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-macro-props-builder
+  ""
+  [id config]
+  (build-cfn-macro-props-builder (new CfnMacroProps$Builder) id config))
+
+
 (defn build-cfn-mapping-builder
   "The build-cfn-mapping-builder function updates a CfnMapping$Builder instance using the provided configuration.
   The function takes the CfnMapping$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1614,6 +1860,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-mapping-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-mapping-builder (CfnMapping$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-mapping-props-builder
   "The build-cfn-mapping-props-builder function updates a CfnMappingProps$Builder instance using the provided configuration.
   The function takes the CfnMappingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1632,6 +1884,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :mapping)]
     (. builder mapping data))
   (.build builder))
+
+
+(defn cfn-mapping-props-builder
+  ""
+  [id config]
+  (build-cfn-mapping-props-builder (new CfnMappingProps$Builder) id config))
 
 
 (defn build-cfn-module-default-version-builder
@@ -1657,6 +1915,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-module-default-version-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-module-default-version-builder (CfnModuleDefaultVersion$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-module-default-version-props-builder
   "The build-cfn-module-default-version-props-builder function updates a CfnModuleDefaultVersionProps$Builder instance using the provided configuration.
   The function takes the CfnModuleDefaultVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1680,6 +1944,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-module-default-version-props-builder
+  ""
+  [id config]
+  (build-cfn-module-default-version-props-builder (new CfnModuleDefaultVersionProps$Builder) id config))
+
+
 (defn build-cfn-module-version-builder
   "The build-cfn-module-version-builder function updates a CfnModuleVersion$Builder instance using the provided configuration.
   The function takes the CfnModuleVersion$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1700,6 +1970,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-module-version-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-module-version-builder (CfnModuleVersion$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-module-version-props-builder
   "The build-cfn-module-version-props-builder function updates a CfnModuleVersionProps$Builder instance using the provided configuration.
   The function takes the CfnModuleVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1718,6 +1994,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :module-package)]
     (. builder modulePackage data))
   (.build builder))
+
+
+(defn cfn-module-version-props-builder
+  ""
+  [id config]
+  (build-cfn-module-version-props-builder (new CfnModuleVersionProps$Builder) id config))
 
 
 (defn build-cfn-output-builder
@@ -1749,6 +2031,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-output-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-output-builder (CfnOutput$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-output-props-builder
   "The build-cfn-output-props-builder function updates a CfnOutputProps$Builder instance using the provided configuration.
   The function takes the CfnOutputProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1776,6 +2064,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-output-props-builder
+  ""
+  [id config]
+  (build-cfn-output-props-builder (new CfnOutputProps$Builder) id config))
 
 
 (defn build-cfn-parameter-builder
@@ -1825,6 +2119,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-parameter-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-parameter-builder (CfnParameter$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-parameter-props-builder
   "The build-cfn-parameter-props-builder function updates a CfnParameterProps$Builder instance using the provided configuration.
   The function takes the CfnParameterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1872,6 +2172,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-parameter-props-builder
+  ""
+  [id config]
+  (build-cfn-parameter-props-builder (new CfnParameterProps$Builder) id config))
+
+
 (defn build-cfn-public-type-version-builder
   "The build-cfn-public-type-version-builder function updates a CfnPublicTypeVersion$Builder instance using the provided configuration.
   The function takes the CfnPublicTypeVersion$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1899,6 +2205,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :type-name)]
     (. builder typeName data))
   (.build builder))
+
+
+(defn cfn-public-type-version-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-public-type-version-builder (CfnPublicTypeVersion$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-public-type-version-props-builder
@@ -1930,6 +2242,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-public-type-version-props-builder
+  ""
+  [id config]
+  (build-cfn-public-type-version-props-builder (new CfnPublicTypeVersionProps$Builder) id config))
+
+
 (defn build-cfn-publisher-builder
   "The build-cfn-publisher-builder function updates a CfnPublisher$Builder instance using the provided configuration.
   The function takes the CfnPublisher$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1948,6 +2266,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :connection-arn)]
     (. builder connectionArn data))
   (.build builder))
+
+
+(defn cfn-publisher-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-publisher-builder (CfnPublisher$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-publisher-props-builder
@@ -1970,6 +2294,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-publisher-props-builder
+  ""
+  [id config]
+  (build-cfn-publisher-props-builder (new CfnPublisherProps$Builder) id config))
+
+
 (defn build-cfn-resource-auto-scaling-creation-policy-builder
   "The build-cfn-resource-auto-scaling-creation-policy-builder function updates a CfnResourceAutoScalingCreationPolicy$Builder instance using the provided configuration.
   The function takes the CfnResourceAutoScalingCreationPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1985,6 +2315,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :min-successful-instances-percent)]
     (. builder minSuccessfulInstancesPercent data))
   (.build builder))
+
+
+(defn cfn-resource-auto-scaling-creation-policy-builder
+  ""
+  [id config]
+  (build-cfn-resource-auto-scaling-creation-policy-builder (new CfnResourceAutoScalingCreationPolicy$Builder) id config))
 
 
 (defn build-cfn-resource-builder
@@ -2005,6 +2341,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-resource-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-resource-builder (CfnResource$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-resource-default-version-builder
@@ -2030,6 +2372,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-resource-default-version-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-resource-default-version-builder (CfnResourceDefaultVersion$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-resource-default-version-props-builder
   "The build-cfn-resource-default-version-props-builder function updates a CfnResourceDefaultVersionProps$Builder instance using the provided configuration.
   The function takes the CfnResourceDefaultVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2053,6 +2401,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-resource-default-version-props-builder
+  ""
+  [id config]
+  (build-cfn-resource-default-version-props-builder (new CfnResourceDefaultVersionProps$Builder) id config))
+
+
 (defn build-cfn-resource-props-builder
   "The build-cfn-resource-props-builder function updates a CfnResourceProps$Builder instance using the provided configuration.
   The function takes the CfnResourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2073,6 +2427,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-resource-props-builder
+  ""
+  [id config]
+  (build-cfn-resource-props-builder (new CfnResourceProps$Builder) id config))
+
+
 (defn build-cfn-resource-signal-builder
   "The build-cfn-resource-signal-builder function updates a CfnResourceSignal$Builder instance using the provided configuration.
   The function takes the CfnResourceSignal$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2091,6 +2451,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
+
+
+(defn cfn-resource-signal-builder
+  ""
+  [id config]
+  (build-cfn-resource-signal-builder (new CfnResourceSignal$Builder) id config))
 
 
 (defn build-cfn-resource-version-builder
@@ -2119,6 +2485,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-resource-version-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-resource-version-builder (CfnResourceVersion$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-resource-version-logging-config-property-builder
   "The build-cfn-resource-version-logging-config-property-builder function updates a CfnResourceVersion$LoggingConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnResourceVersion$LoggingConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2137,6 +2509,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :log-role-arn)]
     (. builder logRoleArn data))
   (.build builder))
+
+
+(defn cfn-resource-version-logging-config-property-builder
+  ""
+  [id config]
+  (build-cfn-resource-version-logging-config-property-builder (new CfnResourceVersion$LoggingConfigProperty$Builder) id config))
 
 
 (defn build-cfn-resource-version-props-builder
@@ -2165,6 +2543,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-resource-version-props-builder
+  ""
+  [id config]
+  (build-cfn-resource-version-props-builder (new CfnResourceVersionProps$Builder) id config))
+
+
 (defn build-cfn-rule-assertion-builder
   "The build-cfn-rule-assertion-builder function updates a CfnRuleAssertion$Builder instance using the provided configuration.
   The function takes the CfnRuleAssertion$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2183,6 +2567,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :assert-value)]
     (. builder assertValue data))
   (.build builder))
+
+
+(defn cfn-rule-assertion-builder
+  ""
+  [id config]
+  (build-cfn-rule-assertion-builder (new CfnRuleAssertion$Builder) id config))
 
 
 (defn build-cfn-rule-builder
@@ -2205,6 +2595,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-rule-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-rule-builder (CfnRule$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-rule-props-builder
   "The build-cfn-rule-props-builder function updates a CfnRuleProps$Builder instance using the provided configuration.
   The function takes the CfnRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2223,6 +2619,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :rule-condition)]
     (. builder ruleCondition data))
   (.build builder))
+
+
+(defn cfn-rule-props-builder
+  ""
+  [id config]
+  (build-cfn-rule-props-builder (new CfnRuleProps$Builder) id config))
 
 
 (defn build-cfn-stack-builder
@@ -2254,6 +2656,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-stack-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-stack-builder (CfnStack$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-stack-output-property-builder
   "The build-cfn-stack-output-property-builder function updates a CfnStack$OutputProperty$Builder instance using the provided configuration.
   The function takes the CfnStack$OutputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2278,6 +2686,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :output-value)]
     (. builder outputValue data))
   (.build builder))
+
+
+(defn cfn-stack-output-property-builder
+  ""
+  [id config]
+  (build-cfn-stack-output-property-builder (new CfnStack$OutputProperty$Builder) id config))
 
 
 (defn build-cfn-stack-props-builder
@@ -2309,6 +2723,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-stack-props-builder
+  ""
+  [id config]
+  (build-cfn-stack-props-builder (new CfnStackProps$Builder) id config))
+
+
 (defn build-cfn-stack-set-auto-deployment-property-builder
   "The build-cfn-stack-set-auto-deployment-property-builder function updates a CfnStackSet$AutoDeploymentProperty$Builder instance using the provided configuration.
   The function takes the CfnStackSet$AutoDeploymentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2327,6 +2747,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :retain-stacks-on-account-removal)]
     (. builder retainStacksOnAccountRemoval data))
   (.build builder))
+
+
+(defn cfn-stack-set-auto-deployment-property-builder
+  ""
+  [id config]
+  (build-cfn-stack-set-auto-deployment-property-builder (new CfnStackSet$AutoDeploymentProperty$Builder) id config))
 
 
 (defn build-cfn-stack-set-builder
@@ -2388,6 +2814,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-stack-set-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-stack-set-builder (CfnStackSet$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-stack-set-deployment-targets-property-builder
   "The build-cfn-stack-set-deployment-targets-property-builder function updates a CfnStackSet$DeploymentTargetsProperty$Builder instance using the provided configuration.
   The function takes the CfnStackSet$DeploymentTargetsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2414,6 +2846,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-stack-set-deployment-targets-property-builder
+  ""
+  [id config]
+  (build-cfn-stack-set-deployment-targets-property-builder (new CfnStackSet$DeploymentTargetsProperty$Builder) id config))
+
+
 (defn build-cfn-stack-set-managed-execution-property-builder
   "The build-cfn-stack-set-managed-execution-property-builder function updates a CfnStackSet$ManagedExecutionProperty$Builder instance using the provided configuration.
   The function takes the CfnStackSet$ManagedExecutionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2429,6 +2867,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :active)]
     (. builder active data))
   (.build builder))
+
+
+(defn cfn-stack-set-managed-execution-property-builder
+  ""
+  [id config]
+  (build-cfn-stack-set-managed-execution-property-builder (new CfnStackSet$ManagedExecutionProperty$Builder) id config))
 
 
 (defn build-cfn-stack-set-operation-preferences-property-builder
@@ -2463,6 +2907,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-stack-set-operation-preferences-property-builder
+  ""
+  [id config]
+  (build-cfn-stack-set-operation-preferences-property-builder (new CfnStackSet$OperationPreferencesProperty$Builder) id config))
+
+
 (defn build-cfn-stack-set-parameter-property-builder
   "The build-cfn-stack-set-parameter-property-builder function updates a CfnStackSet$ParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnStackSet$ParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2481,6 +2931,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :parameter-value)]
     (. builder parameterValue data))
   (.build builder))
+
+
+(defn cfn-stack-set-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-stack-set-parameter-property-builder (new CfnStackSet$ParameterProperty$Builder) id config))
 
 
 (defn build-cfn-stack-set-props-builder
@@ -2542,6 +2998,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-stack-set-props-builder
+  ""
+  [id config]
+  (build-cfn-stack-set-props-builder (new CfnStackSetProps$Builder) id config))
+
+
 (defn build-cfn-stack-set-stack-instances-property-builder
   "The build-cfn-stack-set-stack-instances-property-builder function updates a CfnStackSet$StackInstancesProperty$Builder instance using the provided configuration.
   The function takes the CfnStackSet$StackInstancesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2565,6 +3027,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-stack-set-stack-instances-property-builder
+  ""
+  [id config]
+  (build-cfn-stack-set-stack-instances-property-builder (new CfnStackSet$StackInstancesProperty$Builder) id config))
+
+
 (defn build-cfn-tag-builder
   "The build-cfn-tag-builder function updates a CfnTag$Builder instance using the provided configuration.
   The function takes the CfnTag$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2585,6 +3053,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-tag-builder
+  ""
+  [id config]
+  (build-cfn-tag-builder (new CfnTag$Builder) id config))
+
+
 (defn build-cfn-traffic-route-builder
   "The build-cfn-traffic-route-builder function updates a CfnTrafficRoute$Builder instance using the provided configuration.
   The function takes the CfnTrafficRoute$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2603,6 +3077,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-traffic-route-builder
+  ""
+  [id config]
+  (build-cfn-traffic-route-builder (new CfnTrafficRoute$Builder) id config))
 
 
 (defn build-cfn-traffic-routing-builder
@@ -2628,6 +3108,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-traffic-routing-builder
+  ""
+  [id config]
+  (build-cfn-traffic-routing-builder (new CfnTrafficRouting$Builder) id config))
+
+
 (defn build-cfn-traffic-routing-config-builder
   "The build-cfn-traffic-routing-config-builder function updates a CfnTrafficRoutingConfig$Builder instance using the provided configuration.
   The function takes the CfnTrafficRoutingConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2651,6 +3137,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-traffic-routing-config-builder
+  ""
+  [id config]
+  (build-cfn-traffic-routing-config-builder (new CfnTrafficRoutingConfig$Builder) id config))
+
+
 (defn build-cfn-traffic-routing-time-based-canary-builder
   "The build-cfn-traffic-routing-time-based-canary-builder function updates a CfnTrafficRoutingTimeBasedCanary$Builder instance using the provided configuration.
   The function takes the CfnTrafficRoutingTimeBasedCanary$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2671,6 +3163,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-traffic-routing-time-based-canary-builder
+  ""
+  [id config]
+  (build-cfn-traffic-routing-time-based-canary-builder (new CfnTrafficRoutingTimeBasedCanary$Builder) id config))
+
+
 (defn build-cfn-traffic-routing-time-based-linear-builder
   "The build-cfn-traffic-routing-time-based-linear-builder function updates a CfnTrafficRoutingTimeBasedLinear$Builder instance using the provided configuration.
   The function takes the CfnTrafficRoutingTimeBasedLinear$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2689,6 +3187,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :step-percentage)]
     (. builder stepPercentage data))
   (.build builder))
+
+
+(defn cfn-traffic-routing-time-based-linear-builder
+  ""
+  [id config]
+  (build-cfn-traffic-routing-time-based-linear-builder (new CfnTrafficRoutingTimeBasedLinear$Builder) id config))
 
 
 (defn build-cfn-type-activation-builder
@@ -2735,6 +3239,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-type-activation-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-type-activation-builder (CfnTypeActivation$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-type-activation-logging-config-property-builder
   "The build-cfn-type-activation-logging-config-property-builder function updates a CfnTypeActivation$LoggingConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnTypeActivation$LoggingConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2753,6 +3263,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :log-role-arn)]
     (. builder logRoleArn data))
   (.build builder))
+
+
+(defn cfn-type-activation-logging-config-property-builder
+  ""
+  [id config]
+  (build-cfn-type-activation-logging-config-property-builder (new CfnTypeActivation$LoggingConfigProperty$Builder) id config))
 
 
 (defn build-cfn-type-activation-props-builder
@@ -2799,6 +3315,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-type-activation-props-builder
+  ""
+  [id config]
+  (build-cfn-type-activation-props-builder (new CfnTypeActivationProps$Builder) id config))
+
+
 (defn build-cfn-update-policy-builder
   "The build-cfn-update-policy-builder function updates a CfnUpdatePolicy$Builder instance using the provided configuration.
   The function takes the CfnUpdatePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2831,6 +3353,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-update-policy-builder
+  ""
+  [id config]
+  (build-cfn-update-policy-builder (new CfnUpdatePolicy$Builder) id config))
+
+
 (defn build-cfn-wait-condition-builder
   "The build-cfn-wait-condition-builder function updates a CfnWaitCondition$Builder instance using the provided configuration.
   The function takes the CfnWaitCondition$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2854,6 +3382,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-wait-condition-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-wait-condition-builder (CfnWaitCondition$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-wait-condition-handle-builder
   "The build-cfn-wait-condition-handle-builder function updates a CfnWaitConditionHandle$Builder instance using the provided configuration.
   The function takes the CfnWaitConditionHandle$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2868,6 +3402,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-wait-condition-handle-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-wait-condition-handle-builder (CfnWaitConditionHandle$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-wait-condition-handle-props-builder
   "The build-cfn-wait-condition-handle-props-builder function updates a CfnWaitConditionHandleProps$Builder instance using the provided configuration.
   The function takes the CfnWaitConditionHandleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2880,6 +3420,12 @@ function on the data with the provided namespace id and item-key.  The found val
 "
   [^CfnWaitConditionHandleProps$Builder builder id config]
   (.build builder))
+
+
+(defn cfn-wait-condition-handle-props-builder
+  ""
+  [id config]
+  (build-cfn-wait-condition-handle-props-builder (new CfnWaitConditionHandleProps$Builder) id config))
 
 
 (defn build-cfn-wait-condition-props-builder
@@ -2903,6 +3449,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
+
+
+(defn cfn-wait-condition-props-builder
+  ""
+  [id config]
+  (build-cfn-wait-condition-props-builder (new CfnWaitConditionProps$Builder) id config))
 
 
 (defn build-cli-credentials-stack-synthesizer-builder
@@ -2934,6 +3486,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cli-credentials-stack-synthesizer-builder
+  ""
+  [id config]
+  (build-cli-credentials-stack-synthesizer-builder (CliCredentialsStackSynthesizer$Builder/create) id config))
+
+
 (defn build-cli-credentials-stack-synthesizer-props-builder
   "The build-cli-credentials-stack-synthesizer-props-builder function updates a CliCredentialsStackSynthesizerProps$Builder instance using the provided configuration.
   The function takes the CliCredentialsStackSynthesizerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2963,6 +3521,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cli-credentials-stack-synthesizer-props-builder
+  ""
+  [id config]
+  (build-cli-credentials-stack-synthesizer-props-builder (new CliCredentialsStackSynthesizerProps$Builder) id config))
+
+
 (defn build-copy-options-builder
   "The build-copy-options-builder function updates a CopyOptions$Builder instance using the provided configuration.
   The function takes the CopyOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2984,6 +3548,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (ignore-mode config id :ignore-mode)]
     (. builder ignoreMode data))
   (.build builder))
+
+
+(defn copy-options-builder
+  ""
+  [id config]
+  (build-copy-options-builder (new CopyOptions$Builder) id config))
 
 
 (defn build-custom-resource-builder
@@ -3015,6 +3585,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn custom-resource-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-custom-resource-builder (CustomResource$Builder/create scope (name id)) id config))
+
+
 (defn build-custom-resource-props-builder
   "The build-custom-resource-props-builder function updates a CustomResourceProps$Builder instance using the provided configuration.
   The function takes the CustomResourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3042,6 +3618,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :service-token)]
     (. builder serviceToken data))
   (.build builder))
+
+
+(defn custom-resource-props-builder
+  ""
+  [id config]
+  (build-custom-resource-props-builder (new CustomResourceProps$Builder) id config))
 
 
 (defn build-custom-resource-provider-base-props-builder
@@ -3082,6 +3664,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn custom-resource-provider-base-props-builder
+  ""
+  [id config]
+  (build-custom-resource-provider-base-props-builder (new CustomResourceProviderBaseProps$Builder) id config))
+
+
 (defn build-custom-resource-provider-options-builder
   "The build-custom-resource-provider-options-builder function updates a CustomResourceProviderOptions$Builder instance using the provided configuration.
   The function takes the CustomResourceProviderOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3112,6 +3700,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :use-cfn-response-wrapper)]
     (. builder useCfnResponseWrapper data))
   (.build builder))
+
+
+(defn custom-resource-provider-options-builder
+  ""
+  [id config]
+  (build-custom-resource-provider-options-builder (new CustomResourceProviderOptions$Builder) id config))
 
 
 (defn build-custom-resource-provider-props-builder
@@ -3150,6 +3744,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :use-cfn-response-wrapper)]
     (. builder useCfnResponseWrapper data))
   (.build builder))
+
+
+(defn custom-resource-provider-props-builder
+  ""
+  [id config]
+  (build-custom-resource-provider-props-builder (new CustomResourceProviderProps$Builder) id config))
 
 
 (defn build-default-stack-synthesizer-builder
@@ -3217,6 +3817,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn default-stack-synthesizer-builder
+  ""
+  [id config]
+  (build-default-stack-synthesizer-builder (DefaultStackSynthesizer$Builder/create) id config))
+
+
 (defn build-default-stack-synthesizer-props-builder
   "The build-default-stack-synthesizer-props-builder function updates a DefaultStackSynthesizerProps$Builder instance using the provided configuration.
   The function takes the DefaultStackSynthesizerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3282,6 +3888,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn default-stack-synthesizer-props-builder
+  ""
+  [id config]
+  (build-default-stack-synthesizer-props-builder (new DefaultStackSynthesizerProps$Builder) id config))
+
+
 (defn build-docker-build-options-builder
   "The build-docker-build-options-builder function updates a DockerBuildOptions$Builder instance using the provided configuration.
   The function takes the DockerBuildOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3317,6 +3929,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn docker-build-options-builder
+  ""
+  [id config]
+  (build-docker-build-options-builder (new DockerBuildOptions$Builder) id config))
+
+
 (defn build-docker-cache-option-builder
   "The build-docker-cache-option-builder function updates a DockerCacheOption$Builder instance using the provided configuration.
   The function takes the DockerCacheOption$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3335,6 +3953,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn docker-cache-option-builder
+  ""
+  [id config]
+  (build-docker-cache-option-builder (new DockerCacheOption$Builder) id config))
 
 
 (defn build-docker-image-asset-location-builder
@@ -3358,6 +3982,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
   (.build builder))
+
+
+(defn docker-image-asset-location-builder
+  ""
+  [id config]
+  (build-docker-image-asset-location-builder (new DockerImageAssetLocation$Builder) id config))
 
 
 (defn build-docker-image-asset-source-builder
@@ -3419,6 +4049,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn docker-image-asset-source-builder
+  ""
+  [id config]
+  (build-docker-image-asset-source-builder (new DockerImageAssetSource$Builder) id config))
+
+
 (defn build-docker-run-options-builder
   "The build-docker-run-options-builder function updates a DockerRunOptions$Builder instance using the provided configuration.
   The function takes the DockerRunOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3463,6 +4099,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn docker-run-options-builder
+  ""
+  [id config]
+  (build-docker-run-options-builder (new DockerRunOptions$Builder) id config))
+
+
 (defn build-docker-volume-builder
   "The build-docker-volume-builder function updates a DockerVolume$Builder instance using the provided configuration.
   The function takes the DockerVolume$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3486,6 +4128,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn docker-volume-builder
+  ""
+  [id config]
+  (build-docker-volume-builder (new DockerVolume$Builder) id config))
+
+
 (defn build-encoding-options-builder
   "The build-encoding-options-builder function updates a EncodingOptions$Builder instance using the provided configuration.
   The function takes the EncodingOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3501,6 +4149,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :display-hint)]
     (. builder displayHint data))
   (.build builder))
+
+
+(defn encoding-options-builder
+  ""
+  [id config]
+  (build-encoding-options-builder (new EncodingOptions$Builder) id config))
 
 
 (defn build-environment-builder
@@ -3523,6 +4177,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn environment-builder
+  ""
+  [id config]
+  (build-environment-builder (new Environment$Builder) id config))
+
+
 (defn build-export-value-options-builder
   "The build-export-value-options-builder function updates a ExportValueOptions$Builder instance using the provided configuration.
   The function takes the ExportValueOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3541,6 +4201,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn export-value-options-builder
+  ""
+  [id config]
+  (build-export-value-options-builder (new ExportValueOptions$Builder) id config))
 
 
 (defn build-file-asset-location-builder
@@ -3575,6 +4241,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn file-asset-location-builder
+  ""
+  [id config]
+  (build-file-asset-location-builder (new FileAssetLocation$Builder) id config))
+
+
 (defn build-file-asset-source-builder
   "The build-file-asset-source-builder function updates a FileAssetSource$Builder instance using the provided configuration.
   The function takes the FileAssetSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3604,6 +4276,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn file-asset-source-builder
+  ""
+  [id config]
+  (build-file-asset-source-builder (new FileAssetSource$Builder) id config))
+
+
 (defn build-file-copy-options-builder
   "The build-file-copy-options-builder function updates a FileCopyOptions$Builder instance using the provided configuration.
   The function takes the FileCopyOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3625,6 +4303,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (ignore-mode config id :ignore-mode)]
     (. builder ignoreMode data))
   (.build builder))
+
+
+(defn file-copy-options-builder
+  ""
+  [id config]
+  (build-file-copy-options-builder (new FileCopyOptions$Builder) id config))
 
 
 (defn build-file-fingerprint-options-builder
@@ -3653,6 +4337,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn file-fingerprint-options-builder
+  ""
+  [id config]
+  (build-file-fingerprint-options-builder (new FileFingerprintOptions$Builder) id config))
+
+
 (defn build-fingerprint-options-builder
   "The build-fingerprint-options-builder function updates a FingerprintOptions$Builder instance using the provided configuration.
   The function takes the FingerprintOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3679,6 +4369,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn fingerprint-options-builder
+  ""
+  [id config]
+  (build-fingerprint-options-builder (new FingerprintOptions$Builder) id config))
+
+
 (defn build-get-context-key-options-builder
   "The build-get-context-key-options-builder function updates a GetContextKeyOptions$Builder instance using the provided configuration.
   The function takes the GetContextKeyOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3702,6 +4398,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn get-context-key-options-builder
+  ""
+  [id config]
+  (build-get-context-key-options-builder (new GetContextKeyOptions$Builder) id config))
+
+
 (defn build-get-context-key-result-builder
   "The build-get-context-key-result-builder function updates a GetContextKeyResult$Builder instance using the provided configuration.
   The function takes the GetContextKeyResult$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3720,6 +4422,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :props)]
     (. builder props data))
   (.build builder))
+
+
+(defn get-context-key-result-builder
+  ""
+  [id config]
+  (build-get-context-key-result-builder (new GetContextKeyResult$Builder) id config))
 
 
 (defn build-get-context-value-options-builder
@@ -3748,6 +4456,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn get-context-value-options-builder
+  ""
+  [id config]
+  (build-get-context-value-options-builder (new GetContextValueOptions$Builder) id config))
+
+
 (defn build-get-context-value-result-builder
   "The build-get-context-value-result-builder function updates a GetContextValueResult$Builder instance using the provided configuration.
   The function takes the GetContextValueResult$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3763,6 +4477,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn get-context-value-result-builder
+  ""
+  [id config]
+  (build-get-context-value-result-builder (new GetContextValueResult$Builder) id config))
 
 
 (defn build-intrinsic-props-builder
@@ -3785,6 +4505,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn intrinsic-props-builder
+  ""
+  [id config]
+  (build-intrinsic-props-builder (new IntrinsicProps$Builder) id config))
+
+
 (defn build-lazy-any-value-options-builder
   "The build-lazy-any-value-options-builder function updates a LazyAnyValueOptions$Builder instance using the provided configuration.
   The function takes the LazyAnyValueOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3803,6 +4529,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :omit-empty-array)]
     (. builder omitEmptyArray data))
   (.build builder))
+
+
+(defn lazy-any-value-options-builder
+  ""
+  [id config]
+  (build-lazy-any-value-options-builder (new LazyAnyValueOptions$Builder) id config))
 
 
 (defn build-lazy-list-value-options-builder
@@ -3825,6 +4557,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn lazy-list-value-options-builder
+  ""
+  [id config]
+  (build-lazy-list-value-options-builder (new LazyListValueOptions$Builder) id config))
+
+
 (defn build-lazy-string-value-options-builder
   "The build-lazy-string-value-options-builder function updates a LazyStringValueOptions$Builder instance using the provided configuration.
   The function takes the LazyStringValueOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3840,6 +4578,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :display-hint)]
     (. builder displayHint data))
   (.build builder))
+
+
+(defn lazy-string-value-options-builder
+  ""
+  [id config]
+  (build-lazy-string-value-options-builder (new LazyStringValueOptions$Builder) id config))
 
 
 (defn build-nested-stack-builder
@@ -3871,6 +4615,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn nested-stack-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-nested-stack-builder (NestedStack$Builder/create scope (name id)) id config))
+
+
 (defn build-nested-stack-props-builder
   "The build-nested-stack-props-builder function updates a NestedStackProps$Builder instance using the provided configuration.
   The function takes the NestedStackProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3900,6 +4650,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn nested-stack-props-builder
+  ""
+  [id config]
+  (build-nested-stack-props-builder (new NestedStackProps$Builder) id config))
+
+
 (defn build-permissions-boundary-bind-options-builder
   "The build-permissions-boundary-bind-options-builder function updates a PermissionsBoundaryBindOptions$Builder instance using the provided configuration.
   The function takes the PermissionsBoundaryBindOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3912,6 +4668,12 @@ function on the data with the provided namespace id and item-key.  The found val
 "
   [^PermissionsBoundaryBindOptions$Builder builder id config]
   (.build builder))
+
+
+(defn permissions-boundary-bind-options-builder
+  ""
+  [id config]
+  (build-permissions-boundary-bind-options-builder (new PermissionsBoundaryBindOptions$Builder) id config))
 
 
 (defn build-policy-validation-plugin-report-beta1-builder
@@ -3940,6 +4702,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn policy-validation-plugin-report-beta1-builder
+  ""
+  [id config]
+  (build-policy-validation-plugin-report-beta1-builder (new PolicyValidationPluginReportBeta1$Builder) id config))
+
+
 (defn build-policy-violating-resource-beta1-builder
   "The build-policy-violating-resource-beta1-builder function updates a PolicyViolatingResourceBeta1$Builder instance using the provided configuration.
   The function takes the PolicyViolatingResourceBeta1$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3961,6 +4729,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :template-path)]
     (. builder templatePath data))
   (.build builder))
+
+
+(defn policy-violating-resource-beta1-builder
+  ""
+  [id config]
+  (build-policy-violating-resource-beta1-builder (new PolicyViolatingResourceBeta1$Builder) id config))
 
 
 (defn build-policy-violation-beta1-builder
@@ -3995,6 +4769,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn policy-violation-beta1-builder
+  ""
+  [id config]
+  (build-policy-violation-beta1-builder (new PolicyViolationBeta1$Builder) id config))
+
+
 (defn build-removal-policy-options-builder
   "The build-removal-policy-options-builder function updates a RemovalPolicyOptions$Builder instance using the provided configuration.
   The function takes the RemovalPolicyOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4013,6 +4793,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (removal-policy config id :default-value)]
     (. builder defaultValue data))
   (.build builder))
+
+
+(defn removal-policy-options-builder
+  ""
+  [id config]
+  (build-removal-policy-options-builder (new RemovalPolicyOptions$Builder) id config))
 
 
 (defn build-remove-tag-builder
@@ -4061,6 +4847,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn resolve-change-context-options-builder
+  ""
+  [id config]
+  (build-resolve-change-context-options-builder (new ResolveChangeContextOptions$Builder) id config))
+
+
 (defn build-resolve-options-builder
   "The build-resolve-options-builder function updates a ResolveOptions$Builder instance using the provided configuration.
   The function takes the ResolveOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4087,6 +4879,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn resolve-options-builder
+  ""
+  [id config]
+  (build-resolve-options-builder (new ResolveOptions$Builder) id config))
+
+
 (defn build-resource-environment-builder
   "The build-resource-environment-builder function updates a ResourceEnvironment$Builder instance using the provided configuration.
   The function takes the ResourceEnvironment$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4105,6 +4903,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :region)]
     (. builder region data))
   (.build builder))
+
+
+(defn resource-environment-builder
+  ""
+  [id config]
+  (build-resource-environment-builder (new ResourceEnvironment$Builder) id config))
 
 
 (defn build-resource-props-builder
@@ -4133,6 +4937,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn resource-props-builder
+  ""
+  [id config]
+  (build-resource-props-builder (new ResourceProps$Builder) id config))
+
+
 (defn build-reverse-options-builder
   "The build-reverse-options-builder function updates a ReverseOptions$Builder instance using the provided configuration.
   The function takes the ReverseOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4148,6 +4958,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :fail-concat)]
     (. builder failConcat data))
   (.build builder))
+
+
+(defn reverse-options-builder
+  ""
+  [id config]
+  (build-reverse-options-builder (new ReverseOptions$Builder) id config))
 
 
 (defn build-role-options-builder
@@ -4168,6 +4984,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :assume-role-external-id)]
     (. builder assumeRoleExternalId data))
   (.build builder))
+
+
+(defn role-options-builder
+  ""
+  [id config]
+  (build-role-options-builder (new RoleOptions$Builder) id config))
 
 
 (defn build-secret-value-builder
@@ -4213,6 +5035,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn secrets-manager-secret-options-builder
+  ""
+  [id config]
+  (build-secrets-manager-secret-options-builder (new SecretsManagerSecretOptions$Builder) id config))
+
+
 (defn build-size-conversion-options-builder
   "The build-size-conversion-options-builder function updates a SizeConversionOptions$Builder instance using the provided configuration.
   The function takes the SizeConversionOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4228,6 +5056,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (size-rounding-behavior config id :rounding)]
     (. builder rounding data))
   (.build builder))
+
+
+(defn size-conversion-options-builder
+  ""
+  [id config]
+  (build-size-conversion-options-builder (new SizeConversionOptions$Builder) id config))
 
 
 (defn build-stack-builder
@@ -4318,6 +5152,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn stack-props-builder
+  ""
+  [id config]
+  (build-stack-props-builder (new StackProps$Builder) id config))
+
+
 (defn build-stage-builder
   "The build-stage-builder function updates a Stage$Builder instance using the provided configuration.
   The function takes the Stage$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4345,6 +5185,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :stage-name)]
     (. builder stageName data))
   (.build builder))
+
+
+(defn stage-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-stage-builder (Stage$Builder/create scope (name id)) id config))
 
 
 (defn build-stage-props-builder
@@ -4376,6 +5222,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn stage-props-builder
+  ""
+  [id config]
+  (build-stage-props-builder (new StageProps$Builder) id config))
+
+
 (defn build-stage-synthesis-options-builder
   "The build-stage-synthesis-options-builder function updates a StageSynthesisOptions$Builder instance using the provided configuration.
   The function takes the StageSynthesisOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4397,6 +5249,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :validate-on-synthesis)]
     (. builder validateOnSynthesis data))
   (.build builder))
+
+
+(defn stage-synthesis-options-builder
+  ""
+  [id config]
+  (build-stage-synthesis-options-builder (new StageSynthesisOptions$Builder) id config))
 
 
 (defn build-synthesize-stack-artifact-options-builder
@@ -4438,6 +5296,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :stack-template-asset-object-url)]
     (. builder stackTemplateAssetObjectUrl data))
   (.build builder))
+
+
+(defn synthesize-stack-artifact-options-builder
+  ""
+  [id config]
+  (build-synthesize-stack-artifact-options-builder (new SynthesizeStackArtifactOptions$Builder) id config))
 
 
 (defn build-tag-builder
@@ -4500,6 +5364,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn tag-manager-options-builder
+  ""
+  [id config]
+  (build-tag-manager-options-builder (new TagManagerOptions$Builder) id config))
+
+
 (defn build-tag-props-builder
   "The build-tag-props-builder function updates a TagProps$Builder instance using the provided configuration.
   The function takes the TagProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4526,6 +5396,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn tag-props-builder
+  ""
+  [id config]
+  (build-tag-props-builder (new TagProps$Builder) id config))
+
+
 (defn build-time-conversion-options-builder
   "The build-time-conversion-options-builder function updates a TimeConversionOptions$Builder instance using the provided configuration.
   The function takes the TimeConversionOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4541,6 +5417,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :integral)]
     (. builder integral data))
   (.build builder))
+
+
+(defn time-conversion-options-builder
+  ""
+  [id config]
+  (build-time-conversion-options-builder (new TimeConversionOptions$Builder) id config))
 
 
 (defn build-unique-resource-name-options-builder
@@ -4564,3 +5446,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :separator)]
     (. builder separator data))
   (.build builder))
+
+
+(defn unique-resource-name-options-builder
+  ""
+  [id config]
+  (build-unique-resource-name-options-builder (new UniqueResourceNameOptions$Builder) id config))

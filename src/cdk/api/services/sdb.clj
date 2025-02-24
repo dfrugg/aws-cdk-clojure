@@ -22,6 +22,12 @@
   (.build builder))
 
 
+(defn cfn-domain-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-domain-builder (CfnDomain$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-domain-props-builder
   "The build-cfn-domain-props-builder function updates a CfnDomainProps$Builder instance using the provided configuration.
   The function takes the CfnDomainProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -37,3 +43,9 @@
   (when-let [data (lookup-entry config id :description)]
     (. builder description data))
   (.build builder))
+
+
+(defn cfn-domain-props-builder
+  ""
+  [id config]
+  (build-cfn-domain-props-builder (new CfnDomainProps$Builder) id config))

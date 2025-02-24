@@ -61,6 +61,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-cluster-builder (CfnCluster$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-cluster-props-builder
   "The build-cfn-cluster-props-builder function updates a CfnClusterProps$Builder instance using the provided configuration.
   The function takes the CfnClusterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -115,3 +121,9 @@
   (when-let [data (lookup-entry config id :vpc-security-group-ids)]
     (. builder vpcSecurityGroupIds data))
   (.build builder))
+
+
+(defn cfn-cluster-props-builder
+  ""
+  [id config]
+  (build-cfn-cluster-props-builder (new CfnClusterProps$Builder) id config))

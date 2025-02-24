@@ -32,6 +32,12 @@
   (.build builder))
 
 
+(defn docker-cache-option-builder
+  ""
+  [id config]
+  (build-docker-cache-option-builder (new DockerCacheOption$Builder) id config))
+
+
 (defn build-docker-image-asset-builder
   "The build-docker-image-asset-builder function updates a DockerImageAsset$Builder instance using the provided configuration.
   The function takes the DockerImageAsset$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -100,6 +106,12 @@
   (.build builder))
 
 
+(defn docker-image-asset-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-docker-image-asset-builder (DockerImageAsset$Builder/create scope (name id)) id config))
+
+
 (defn build-docker-image-asset-invalidation-options-builder
   "The build-docker-image-asset-invalidation-options-builder function updates a DockerImageAssetInvalidationOptions$Builder instance using the provided configuration.
   The function takes the DockerImageAssetInvalidationOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -142,6 +154,12 @@
   (when-let [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
+
+
+(defn docker-image-asset-invalidation-options-builder
+  ""
+  [id config]
+  (build-docker-image-asset-invalidation-options-builder (new DockerImageAssetInvalidationOptions$Builder) id config))
 
 
 (defn build-docker-image-asset-options-builder
@@ -207,6 +225,12 @@
   (when-let [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
+
+
+(defn docker-image-asset-options-builder
+  ""
+  [id config]
+  (build-docker-image-asset-options-builder (new DockerImageAssetOptions$Builder) id config))
 
 
 (defn build-docker-image-asset-props-builder
@@ -277,6 +301,12 @@
   (.build builder))
 
 
+(defn docker-image-asset-props-builder
+  ""
+  [id config]
+  (build-docker-image-asset-props-builder (new DockerImageAssetProps$Builder) id config))
+
+
 (defn build-tarball-image-asset-builder
   "The build-tarball-image-asset-builder function updates a TarballImageAsset$Builder instance using the provided configuration.
   The function takes the TarballImageAsset$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -294,6 +324,12 @@
   (.build builder))
 
 
+(defn tarball-image-asset-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-tarball-image-asset-builder (TarballImageAsset$Builder/create scope (name id)) id config))
+
+
 (defn build-tarball-image-asset-props-builder
   "The build-tarball-image-asset-props-builder function updates a TarballImageAssetProps$Builder instance using the provided configuration.
   The function takes the TarballImageAssetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -309,3 +345,9 @@
   (when-let [data (lookup-entry config id :tarball-file)]
     (. builder tarballFile data))
   (.build builder))
+
+
+(defn tarball-image-asset-props-builder
+  ""
+  [id config]
+  (build-tarball-image-asset-props-builder (new TarballImageAssetProps$Builder) id config))

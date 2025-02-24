@@ -28,6 +28,12 @@
   (.build builder))
 
 
+(defn cfn-datastore-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-datastore-builder (CfnDatastore$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-datastore-props-builder
   "The build-cfn-datastore-props-builder function updates a CfnDatastoreProps$Builder instance using the provided configuration.
   The function takes the CfnDatastoreProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -49,3 +55,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-datastore-props-builder
+  ""
+  [id config]
+  (build-cfn-datastore-props-builder (new CfnDatastoreProps$Builder) id config))

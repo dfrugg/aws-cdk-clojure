@@ -97,6 +97,12 @@
   (.build builder))
 
 
+(defn cfn-environment-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-environment-builder (CfnEnvironment$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-environment-logging-configuration-property-builder
   "The build-cfn-environment-logging-configuration-property-builder function updates a CfnEnvironment$LoggingConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$LoggingConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -126,6 +132,12 @@
   (.build builder))
 
 
+(defn cfn-environment-logging-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-environment-logging-configuration-property-builder (new CfnEnvironment$LoggingConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-environment-module-logging-configuration-property-builder
   "The build-cfn-environment-module-logging-configuration-property-builder function updates a CfnEnvironment$ModuleLoggingConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$ModuleLoggingConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -149,6 +161,12 @@
   (.build builder))
 
 
+(defn cfn-environment-module-logging-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-environment-module-logging-configuration-property-builder (new CfnEnvironment$ModuleLoggingConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-environment-network-configuration-property-builder
   "The build-cfn-environment-network-configuration-property-builder function updates a CfnEnvironment$NetworkConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$NetworkConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -167,6 +185,12 @@
   (when-let [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
+
+
+(defn cfn-environment-network-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-environment-network-configuration-property-builder (new CfnEnvironment$NetworkConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-environment-props-builder
@@ -256,3 +280,9 @@
   (when-let [data (lookup-entry config id :weekly-maintenance-window-start)]
     (. builder weeklyMaintenanceWindowStart data))
   (.build builder))
+
+
+(defn cfn-environment-props-builder
+  ""
+  [id config]
+  (build-cfn-environment-props-builder (new CfnEnvironmentProps$Builder) id config))

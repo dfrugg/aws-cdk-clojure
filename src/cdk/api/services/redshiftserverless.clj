@@ -76,6 +76,12 @@
   (.build builder))
 
 
+(defn cfn-namespace-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-namespace-builder (CfnNamespace$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-namespace-namespace-property-builder
   "The build-cfn-namespace-namespace-property-builder function updates a CfnNamespace$NamespaceProperty$Builder instance using the provided configuration.
   The function takes the CfnNamespace$NamespaceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -127,6 +133,12 @@
   (when-let [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
+
+
+(defn cfn-namespace-namespace-property-builder
+  ""
+  [id config]
+  (build-cfn-namespace-namespace-property-builder (new CfnNamespace$NamespaceProperty$Builder) id config))
 
 
 (defn build-cfn-namespace-props-builder
@@ -191,6 +203,12 @@
   (.build builder))
 
 
+(defn cfn-namespace-props-builder
+  ""
+  [id config]
+  (build-cfn-namespace-props-builder (new CfnNamespaceProps$Builder) id config))
+
+
 (defn build-cfn-namespace-snapshot-copy-configuration-property-builder
   "The build-cfn-namespace-snapshot-copy-configuration-property-builder function updates a CfnNamespace$SnapshotCopyConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnNamespace$SnapshotCopyConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -212,6 +230,12 @@
   (when-let [data (lookup-entry config id :snapshot-retention-period)]
     (. builder snapshotRetentionPeriod data))
   (.build builder))
+
+
+(defn cfn-namespace-snapshot-copy-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-namespace-snapshot-copy-configuration-property-builder (new CfnNamespace$SnapshotCopyConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-workgroup-builder
@@ -261,6 +285,12 @@
   (.build builder))
 
 
+(defn cfn-workgroup-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-workgroup-builder (CfnWorkgroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-workgroup-config-parameter-property-builder
   "The build-cfn-workgroup-config-parameter-property-builder function updates a CfnWorkgroup$ConfigParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkgroup$ConfigParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -279,6 +309,12 @@
   (when-let [data (lookup-entry config id :parameter-value)]
     (. builder parameterValue data))
   (.build builder))
+
+
+(defn cfn-workgroup-config-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-workgroup-config-parameter-property-builder (new CfnWorkgroup$ConfigParameterProperty$Builder) id config))
 
 
 (defn build-cfn-workgroup-endpoint-property-builder
@@ -302,6 +338,12 @@
   (when-let [data (lookup-entry config id :vpc-endpoints)]
     (. builder vpcEndpoints data))
   (.build builder))
+
+
+(defn cfn-workgroup-endpoint-property-builder
+  ""
+  [id config]
+  (build-cfn-workgroup-endpoint-property-builder (new CfnWorkgroup$EndpointProperty$Builder) id config))
 
 
 (defn build-cfn-workgroup-network-interface-property-builder
@@ -328,6 +370,12 @@
   (when-let [data (lookup-entry config id :subnet-id)]
     (. builder subnetId data))
   (.build builder))
+
+
+(defn cfn-workgroup-network-interface-property-builder
+  ""
+  [id config]
+  (build-cfn-workgroup-network-interface-property-builder (new CfnWorkgroup$NetworkInterfaceProperty$Builder) id config))
 
 
 (defn build-cfn-workgroup-props-builder
@@ -377,6 +425,12 @@
   (.build builder))
 
 
+(defn cfn-workgroup-props-builder
+  ""
+  [id config]
+  (build-cfn-workgroup-props-builder (new CfnWorkgroupProps$Builder) id config))
+
+
 (defn build-cfn-workgroup-vpc-endpoint-property-builder
   "The build-cfn-workgroup-vpc-endpoint-property-builder function updates a CfnWorkgroup$VpcEndpointProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkgroup$VpcEndpointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -398,6 +452,12 @@
   (when-let [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
+
+
+(defn cfn-workgroup-vpc-endpoint-property-builder
+  ""
+  [id config]
+  (build-cfn-workgroup-vpc-endpoint-property-builder (new CfnWorkgroup$VpcEndpointProperty$Builder) id config))
 
 
 (defn build-cfn-workgroup-workgroup-property-builder
@@ -454,3 +514,9 @@
   (when-let [data (lookup-entry config id :workgroup-name)]
     (. builder workgroupName data))
   (.build builder))
+
+
+(defn cfn-workgroup-workgroup-property-builder
+  ""
+  [id config]
+  (build-cfn-workgroup-workgroup-property-builder (new CfnWorkgroup$WorkgroupProperty$Builder) id config))

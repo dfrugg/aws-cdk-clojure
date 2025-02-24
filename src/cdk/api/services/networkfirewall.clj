@@ -98,6 +98,12 @@
   (.build builder))
 
 
+(defn cfn-firewall-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-firewall-builder (CfnFirewall$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-firewall-policy-action-definition-property-builder
   "The build-cfn-firewall-policy-action-definition-property-builder function updates a CfnFirewallPolicy$ActionDefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnFirewallPolicy$ActionDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -113,6 +119,12 @@
   (when-let [data (lookup-entry config id :publish-metric-action)]
     (. builder publishMetricAction data))
   (.build builder))
+
+
+(defn cfn-firewall-policy-action-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-firewall-policy-action-definition-property-builder (new CfnFirewallPolicy$ActionDefinitionProperty$Builder) id config))
 
 
 (defn build-cfn-firewall-policy-builder
@@ -141,6 +153,12 @@
   (.build builder))
 
 
+(defn cfn-firewall-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-firewall-policy-builder (CfnFirewallPolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-firewall-policy-custom-action-property-builder
   "The build-cfn-firewall-policy-custom-action-property-builder function updates a CfnFirewallPolicy$CustomActionProperty$Builder instance using the provided configuration.
   The function takes the CfnFirewallPolicy$CustomActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -161,6 +179,12 @@
   (.build builder))
 
 
+(defn cfn-firewall-policy-custom-action-property-builder
+  ""
+  [id config]
+  (build-cfn-firewall-policy-custom-action-property-builder (new CfnFirewallPolicy$CustomActionProperty$Builder) id config))
+
+
 (defn build-cfn-firewall-policy-dimension-property-builder
   "The build-cfn-firewall-policy-dimension-property-builder function updates a CfnFirewallPolicy$DimensionProperty$Builder instance using the provided configuration.
   The function takes the CfnFirewallPolicy$DimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -176,6 +200,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-firewall-policy-dimension-property-builder
+  ""
+  [id config]
+  (build-cfn-firewall-policy-dimension-property-builder (new CfnFirewallPolicy$DimensionProperty$Builder) id config))
 
 
 (defn build-cfn-firewall-policy-firewall-policy-property-builder
@@ -219,6 +249,12 @@
   (.build builder))
 
 
+(defn cfn-firewall-policy-firewall-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-firewall-policy-firewall-policy-property-builder (new CfnFirewallPolicy$FirewallPolicyProperty$Builder) id config))
+
+
 (defn build-cfn-firewall-policy-ip-set-property-builder
   "The build-cfn-firewall-policy-ip-set-property-builder function updates a CfnFirewallPolicy$IPSetProperty$Builder instance using the provided configuration.
   The function takes the CfnFirewallPolicy$IPSetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -236,6 +272,12 @@
   (.build builder))
 
 
+(defn cfn-firewall-policy-ip-set-property-builder
+  ""
+  [id config]
+  (build-cfn-firewall-policy-ip-set-property-builder (new CfnFirewallPolicy$IPSetProperty$Builder) id config))
+
+
 (defn build-cfn-firewall-policy-policy-variables-property-builder
   "The build-cfn-firewall-policy-policy-variables-property-builder function updates a CfnFirewallPolicy$PolicyVariablesProperty$Builder instance using the provided configuration.
   The function takes the CfnFirewallPolicy$PolicyVariablesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -251,6 +293,12 @@
   (when-let [data (lookup-entry config id :rule-variables)]
     (. builder ruleVariables data))
   (.build builder))
+
+
+(defn cfn-firewall-policy-policy-variables-property-builder
+  ""
+  [id config]
+  (build-cfn-firewall-policy-policy-variables-property-builder (new CfnFirewallPolicy$PolicyVariablesProperty$Builder) id config))
 
 
 (defn build-cfn-firewall-policy-props-builder
@@ -279,6 +327,12 @@
   (.build builder))
 
 
+(defn cfn-firewall-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-firewall-policy-props-builder (new CfnFirewallPolicyProps$Builder) id config))
+
+
 (defn build-cfn-firewall-policy-publish-metric-action-property-builder
   "The build-cfn-firewall-policy-publish-metric-action-property-builder function updates a CfnFirewallPolicy$PublishMetricActionProperty$Builder instance using the provided configuration.
   The function takes the CfnFirewallPolicy$PublishMetricActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -294,6 +348,12 @@
   (when-let [data (lookup-entry config id :dimensions)]
     (. builder dimensions data))
   (.build builder))
+
+
+(defn cfn-firewall-policy-publish-metric-action-property-builder
+  ""
+  [id config]
+  (build-cfn-firewall-policy-publish-metric-action-property-builder (new CfnFirewallPolicy$PublishMetricActionProperty$Builder) id config))
 
 
 (defn build-cfn-firewall-policy-stateful-engine-options-property-builder
@@ -316,6 +376,12 @@
   (.build builder))
 
 
+(defn cfn-firewall-policy-stateful-engine-options-property-builder
+  ""
+  [id config]
+  (build-cfn-firewall-policy-stateful-engine-options-property-builder (new CfnFirewallPolicy$StatefulEngineOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-firewall-policy-stateful-rule-group-override-property-builder
   "The build-cfn-firewall-policy-stateful-rule-group-override-property-builder function updates a CfnFirewallPolicy$StatefulRuleGroupOverrideProperty$Builder instance using the provided configuration.
   The function takes the CfnFirewallPolicy$StatefulRuleGroupOverrideProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -331,6 +397,12 @@
   (when-let [data (lookup-entry config id :action)]
     (. builder action data))
   (.build builder))
+
+
+(defn cfn-firewall-policy-stateful-rule-group-override-property-builder
+  ""
+  [id config]
+  (build-cfn-firewall-policy-stateful-rule-group-override-property-builder (new CfnFirewallPolicy$StatefulRuleGroupOverrideProperty$Builder) id config))
 
 
 (defn build-cfn-firewall-policy-stateful-rule-group-reference-property-builder
@@ -356,6 +428,12 @@
   (.build builder))
 
 
+(defn cfn-firewall-policy-stateful-rule-group-reference-property-builder
+  ""
+  [id config]
+  (build-cfn-firewall-policy-stateful-rule-group-reference-property-builder (new CfnFirewallPolicy$StatefulRuleGroupReferenceProperty$Builder) id config))
+
+
 (defn build-cfn-firewall-policy-stateless-rule-group-reference-property-builder
   "The build-cfn-firewall-policy-stateless-rule-group-reference-property-builder function updates a CfnFirewallPolicy$StatelessRuleGroupReferenceProperty$Builder instance using the provided configuration.
   The function takes the CfnFirewallPolicy$StatelessRuleGroupReferenceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -374,6 +452,12 @@
   (when-let [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
   (.build builder))
+
+
+(defn cfn-firewall-policy-stateless-rule-group-reference-property-builder
+  ""
+  [id config]
+  (build-cfn-firewall-policy-stateless-rule-group-reference-property-builder (new CfnFirewallPolicy$StatelessRuleGroupReferenceProperty$Builder) id config))
 
 
 (defn build-cfn-firewall-props-builder
@@ -417,6 +501,12 @@
   (.build builder))
 
 
+(defn cfn-firewall-props-builder
+  ""
+  [id config]
+  (build-cfn-firewall-props-builder (new CfnFirewallProps$Builder) id config))
+
+
 (defn build-cfn-firewall-subnet-mapping-property-builder
   "The build-cfn-firewall-subnet-mapping-property-builder function updates a CfnFirewall$SubnetMappingProperty$Builder instance using the provided configuration.
   The function takes the CfnFirewall$SubnetMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -435,6 +525,12 @@
   (when-let [data (lookup-entry config id :subnet-id)]
     (. builder subnetId data))
   (.build builder))
+
+
+(defn cfn-firewall-subnet-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-firewall-subnet-mapping-property-builder (new CfnFirewall$SubnetMappingProperty$Builder) id config))
 
 
 (defn build-cfn-logging-configuration-builder
@@ -460,6 +556,12 @@
   (.build builder))
 
 
+(defn cfn-logging-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-logging-configuration-builder (CfnLoggingConfiguration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-logging-configuration-log-destination-config-property-builder
   "The build-cfn-logging-configuration-log-destination-config-property-builder function updates a CfnLoggingConfiguration$LogDestinationConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnLoggingConfiguration$LogDestinationConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -483,6 +585,12 @@
   (.build builder))
 
 
+(defn cfn-logging-configuration-log-destination-config-property-builder
+  ""
+  [id config]
+  (build-cfn-logging-configuration-log-destination-config-property-builder (new CfnLoggingConfiguration$LogDestinationConfigProperty$Builder) id config))
+
+
 (defn build-cfn-logging-configuration-logging-configuration-property-builder
   "The build-cfn-logging-configuration-logging-configuration-property-builder function updates a CfnLoggingConfiguration$LoggingConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnLoggingConfiguration$LoggingConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -498,6 +606,12 @@
   (when-let [data (lookup-entry config id :log-destination-configs)]
     (. builder logDestinationConfigs data))
   (.build builder))
+
+
+(defn cfn-logging-configuration-logging-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-logging-configuration-logging-configuration-property-builder (new CfnLoggingConfiguration$LoggingConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-logging-configuration-props-builder
@@ -523,6 +637,12 @@
   (.build builder))
 
 
+(defn cfn-logging-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-logging-configuration-props-builder (new CfnLoggingConfigurationProps$Builder) id config))
+
+
 (defn build-cfn-rule-group-action-definition-property-builder
   "The build-cfn-rule-group-action-definition-property-builder function updates a CfnRuleGroup$ActionDefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnRuleGroup$ActionDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -540,6 +660,12 @@
   (.build builder))
 
 
+(defn cfn-rule-group-action-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-action-definition-property-builder (new CfnRuleGroup$ActionDefinitionProperty$Builder) id config))
+
+
 (defn build-cfn-rule-group-address-property-builder
   "The build-cfn-rule-group-address-property-builder function updates a CfnRuleGroup$AddressProperty$Builder instance using the provided configuration.
   The function takes the CfnRuleGroup$AddressProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -555,6 +681,12 @@
   (when-let [data (lookup-entry config id :address-definition)]
     (. builder addressDefinition data))
   (.build builder))
+
+
+(defn cfn-rule-group-address-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-address-property-builder (new CfnRuleGroup$AddressProperty$Builder) id config))
 
 
 (defn build-cfn-rule-group-builder
@@ -589,6 +721,12 @@
   (.build builder))
 
 
+(defn cfn-rule-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-rule-group-builder (CfnRuleGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-rule-group-custom-action-property-builder
   "The build-cfn-rule-group-custom-action-property-builder function updates a CfnRuleGroup$CustomActionProperty$Builder instance using the provided configuration.
   The function takes the CfnRuleGroup$CustomActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -609,6 +747,12 @@
   (.build builder))
 
 
+(defn cfn-rule-group-custom-action-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-custom-action-property-builder (new CfnRuleGroup$CustomActionProperty$Builder) id config))
+
+
 (defn build-cfn-rule-group-dimension-property-builder
   "The build-cfn-rule-group-dimension-property-builder function updates a CfnRuleGroup$DimensionProperty$Builder instance using the provided configuration.
   The function takes the CfnRuleGroup$DimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -624,6 +768,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-rule-group-dimension-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-dimension-property-builder (new CfnRuleGroup$DimensionProperty$Builder) id config))
 
 
 (defn build-cfn-rule-group-header-property-builder
@@ -658,6 +808,12 @@
   (.build builder))
 
 
+(defn cfn-rule-group-header-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-header-property-builder (new CfnRuleGroup$HeaderProperty$Builder) id config))
+
+
 (defn build-cfn-rule-group-ip-set-property-builder
   "The build-cfn-rule-group-ip-set-property-builder function updates a CfnRuleGroup$IPSetProperty$Builder instance using the provided configuration.
   The function takes the CfnRuleGroup$IPSetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -675,6 +831,12 @@
   (.build builder))
 
 
+(defn cfn-rule-group-ip-set-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-ip-set-property-builder (new CfnRuleGroup$IPSetProperty$Builder) id config))
+
+
 (defn build-cfn-rule-group-ip-set-reference-property-builder
   "The build-cfn-rule-group-ip-set-reference-property-builder function updates a CfnRuleGroup$IPSetReferenceProperty$Builder instance using the provided configuration.
   The function takes the CfnRuleGroup$IPSetReferenceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -690,6 +852,12 @@
   (when-let [data (lookup-entry config id :reference-arn)]
     (. builder referenceArn data))
   (.build builder))
+
+
+(defn cfn-rule-group-ip-set-reference-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-ip-set-reference-property-builder (new CfnRuleGroup$IPSetReferenceProperty$Builder) id config))
 
 
 (defn build-cfn-rule-group-match-attributes-property-builder
@@ -724,6 +892,12 @@
   (.build builder))
 
 
+(defn cfn-rule-group-match-attributes-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-match-attributes-property-builder (new CfnRuleGroup$MatchAttributesProperty$Builder) id config))
+
+
 (defn build-cfn-rule-group-port-range-property-builder
   "The build-cfn-rule-group-port-range-property-builder function updates a CfnRuleGroup$PortRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnRuleGroup$PortRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -744,6 +918,12 @@
   (.build builder))
 
 
+(defn cfn-rule-group-port-range-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-port-range-property-builder (new CfnRuleGroup$PortRangeProperty$Builder) id config))
+
+
 (defn build-cfn-rule-group-port-set-property-builder
   "The build-cfn-rule-group-port-set-property-builder function updates a CfnRuleGroup$PortSetProperty$Builder instance using the provided configuration.
   The function takes the CfnRuleGroup$PortSetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -759,6 +939,12 @@
   (when-let [data (lookup-entry config id :definition)]
     (. builder definition data))
   (.build builder))
+
+
+(defn cfn-rule-group-port-set-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-port-set-property-builder (new CfnRuleGroup$PortSetProperty$Builder) id config))
 
 
 (defn build-cfn-rule-group-props-builder
@@ -793,6 +979,12 @@
   (.build builder))
 
 
+(defn cfn-rule-group-props-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-props-builder (new CfnRuleGroupProps$Builder) id config))
+
+
 (defn build-cfn-rule-group-publish-metric-action-property-builder
   "The build-cfn-rule-group-publish-metric-action-property-builder function updates a CfnRuleGroup$PublishMetricActionProperty$Builder instance using the provided configuration.
   The function takes the CfnRuleGroup$PublishMetricActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -810,6 +1002,12 @@
   (.build builder))
 
 
+(defn cfn-rule-group-publish-metric-action-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-publish-metric-action-property-builder (new CfnRuleGroup$PublishMetricActionProperty$Builder) id config))
+
+
 (defn build-cfn-rule-group-reference-sets-property-builder
   "The build-cfn-rule-group-reference-sets-property-builder function updates a CfnRuleGroup$ReferenceSetsProperty$Builder instance using the provided configuration.
   The function takes the CfnRuleGroup$ReferenceSetsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -825,6 +1023,12 @@
   (when-let [data (lookup-entry config id :ip-set-references)]
     (. builder ipSetReferences data))
   (.build builder))
+
+
+(defn cfn-rule-group-reference-sets-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-reference-sets-property-builder (new CfnRuleGroup$ReferenceSetsProperty$Builder) id config))
 
 
 (defn build-cfn-rule-group-rule-definition-property-builder
@@ -845,6 +1049,12 @@
   (when-let [data (lookup-entry config id :match-attributes)]
     (. builder matchAttributes data))
   (.build builder))
+
+
+(defn cfn-rule-group-rule-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-rule-definition-property-builder (new CfnRuleGroup$RuleDefinitionProperty$Builder) id config))
 
 
 (defn build-cfn-rule-group-rule-group-property-builder
@@ -873,6 +1083,12 @@
   (.build builder))
 
 
+(defn cfn-rule-group-rule-group-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-rule-group-property-builder (new CfnRuleGroup$RuleGroupProperty$Builder) id config))
+
+
 (defn build-cfn-rule-group-rule-option-property-builder
   "The build-cfn-rule-group-rule-option-property-builder function updates a CfnRuleGroup$RuleOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnRuleGroup$RuleOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -893,6 +1109,12 @@
   (.build builder))
 
 
+(defn cfn-rule-group-rule-option-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-rule-option-property-builder (new CfnRuleGroup$RuleOptionProperty$Builder) id config))
+
+
 (defn build-cfn-rule-group-rule-variables-property-builder
   "The build-cfn-rule-group-rule-variables-property-builder function updates a CfnRuleGroup$RuleVariablesProperty$Builder instance using the provided configuration.
   The function takes the CfnRuleGroup$RuleVariablesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -911,6 +1133,12 @@
   (when-let [data (lookup-entry config id :port-sets)]
     (. builder portSets data))
   (.build builder))
+
+
+(defn cfn-rule-group-rule-variables-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-rule-variables-property-builder (new CfnRuleGroup$RuleVariablesProperty$Builder) id config))
 
 
 (defn build-cfn-rule-group-rules-source-list-property-builder
@@ -934,6 +1162,12 @@
   (when-let [data (lookup-entry config id :targets)]
     (. builder targets data))
   (.build builder))
+
+
+(defn cfn-rule-group-rules-source-list-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-rules-source-list-property-builder (new CfnRuleGroup$RulesSourceListProperty$Builder) id config))
 
 
 (defn build-cfn-rule-group-rules-source-property-builder
@@ -962,6 +1196,12 @@
   (.build builder))
 
 
+(defn cfn-rule-group-rules-source-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-rules-source-property-builder (new CfnRuleGroup$RulesSourceProperty$Builder) id config))
+
+
 (defn build-cfn-rule-group-stateful-rule-options-property-builder
   "The build-cfn-rule-group-stateful-rule-options-property-builder function updates a CfnRuleGroup$StatefulRuleOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnRuleGroup$StatefulRuleOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -977,6 +1217,12 @@
   (when-let [data (lookup-entry config id :rule-order)]
     (. builder ruleOrder data))
   (.build builder))
+
+
+(defn cfn-rule-group-stateful-rule-options-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-stateful-rule-options-property-builder (new CfnRuleGroup$StatefulRuleOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-rule-group-stateful-rule-property-builder
@@ -1002,6 +1248,12 @@
   (.build builder))
 
 
+(defn cfn-rule-group-stateful-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-stateful-rule-property-builder (new CfnRuleGroup$StatefulRuleProperty$Builder) id config))
+
+
 (defn build-cfn-rule-group-stateless-rule-property-builder
   "The build-cfn-rule-group-stateless-rule-property-builder function updates a CfnRuleGroup$StatelessRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnRuleGroup$StatelessRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1020,6 +1272,12 @@
   (when-let [data (lookup-entry config id :rule-definition)]
     (. builder ruleDefinition data))
   (.build builder))
+
+
+(defn cfn-rule-group-stateless-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-stateless-rule-property-builder (new CfnRuleGroup$StatelessRuleProperty$Builder) id config))
 
 
 (defn build-cfn-rule-group-stateless-rules-and-custom-actions-property-builder
@@ -1042,6 +1300,12 @@
   (.build builder))
 
 
+(defn cfn-rule-group-stateless-rules-and-custom-actions-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-stateless-rules-and-custom-actions-property-builder (new CfnRuleGroup$StatelessRulesAndCustomActionsProperty$Builder) id config))
+
+
 (defn build-cfn-rule-group-tcp-flag-field-property-builder
   "The build-cfn-rule-group-tcp-flag-field-property-builder function updates a CfnRuleGroup$TCPFlagFieldProperty$Builder instance using the provided configuration.
   The function takes the CfnRuleGroup$TCPFlagFieldProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1062,6 +1326,12 @@
   (.build builder))
 
 
+(defn cfn-rule-group-tcp-flag-field-property-builder
+  ""
+  [id config]
+  (build-cfn-rule-group-tcp-flag-field-property-builder (new CfnRuleGroup$TCPFlagFieldProperty$Builder) id config))
+
+
 (defn build-cfn-tls-inspection-configuration-address-property-builder
   "The build-cfn-tls-inspection-configuration-address-property-builder function updates a CfnTLSInspectionConfiguration$AddressProperty$Builder instance using the provided configuration.
   The function takes the CfnTLSInspectionConfiguration$AddressProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1077,6 +1347,12 @@
   (when-let [data (lookup-entry config id :address-definition)]
     (. builder addressDefinition data))
   (.build builder))
+
+
+(defn cfn-tls-inspection-configuration-address-property-builder
+  ""
+  [id config]
+  (build-cfn-tls-inspection-configuration-address-property-builder (new CfnTLSInspectionConfiguration$AddressProperty$Builder) id config))
 
 
 (defn build-cfn-tls-inspection-configuration-builder
@@ -1105,6 +1381,12 @@
   (.build builder))
 
 
+(defn cfn-tls-inspection-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-tls-inspection-configuration-builder (CfnTLSInspectionConfiguration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-tls-inspection-configuration-check-certificate-revocation-status-property-builder
   "The build-cfn-tls-inspection-configuration-check-certificate-revocation-status-property-builder function updates a CfnTLSInspectionConfiguration$CheckCertificateRevocationStatusProperty$Builder instance using the provided configuration.
   The function takes the CfnTLSInspectionConfiguration$CheckCertificateRevocationStatusProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1125,6 +1407,12 @@
   (.build builder))
 
 
+(defn cfn-tls-inspection-configuration-check-certificate-revocation-status-property-builder
+  ""
+  [id config]
+  (build-cfn-tls-inspection-configuration-check-certificate-revocation-status-property-builder (new CfnTLSInspectionConfiguration$CheckCertificateRevocationStatusProperty$Builder) id config))
+
+
 (defn build-cfn-tls-inspection-configuration-port-range-property-builder
   "The build-cfn-tls-inspection-configuration-port-range-property-builder function updates a CfnTLSInspectionConfiguration$PortRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnTLSInspectionConfiguration$PortRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1143,6 +1431,12 @@
   (when-let [data (lookup-entry config id :to-port)]
     (. builder toPort data))
   (.build builder))
+
+
+(defn cfn-tls-inspection-configuration-port-range-property-builder
+  ""
+  [id config]
+  (build-cfn-tls-inspection-configuration-port-range-property-builder (new CfnTLSInspectionConfiguration$PortRangeProperty$Builder) id config))
 
 
 (defn build-cfn-tls-inspection-configuration-props-builder
@@ -1171,6 +1465,12 @@
   (.build builder))
 
 
+(defn cfn-tls-inspection-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-tls-inspection-configuration-props-builder (new CfnTLSInspectionConfigurationProps$Builder) id config))
+
+
 (defn build-cfn-tls-inspection-configuration-server-certificate-configuration-property-builder
   "The build-cfn-tls-inspection-configuration-server-certificate-configuration-property-builder function updates a CfnTLSInspectionConfiguration$ServerCertificateConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTLSInspectionConfiguration$ServerCertificateConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1197,6 +1497,12 @@
   (.build builder))
 
 
+(defn cfn-tls-inspection-configuration-server-certificate-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-tls-inspection-configuration-server-certificate-configuration-property-builder (new CfnTLSInspectionConfiguration$ServerCertificateConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-tls-inspection-configuration-server-certificate-property-builder
   "The build-cfn-tls-inspection-configuration-server-certificate-property-builder function updates a CfnTLSInspectionConfiguration$ServerCertificateProperty$Builder instance using the provided configuration.
   The function takes the CfnTLSInspectionConfiguration$ServerCertificateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1212,6 +1518,12 @@
   (when-let [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
   (.build builder))
+
+
+(defn cfn-tls-inspection-configuration-server-certificate-property-builder
+  ""
+  [id config]
+  (build-cfn-tls-inspection-configuration-server-certificate-property-builder (new CfnTLSInspectionConfiguration$ServerCertificateProperty$Builder) id config))
 
 
 (defn build-cfn-tls-inspection-configuration-server-certificate-scope-property-builder
@@ -1243,6 +1555,12 @@
   (.build builder))
 
 
+(defn cfn-tls-inspection-configuration-server-certificate-scope-property-builder
+  ""
+  [id config]
+  (build-cfn-tls-inspection-configuration-server-certificate-scope-property-builder (new CfnTLSInspectionConfiguration$ServerCertificateScopeProperty$Builder) id config))
+
+
 (defn build-cfn-tls-inspection-configuration-tls-inspection-configuration-property-builder
   "The build-cfn-tls-inspection-configuration-tls-inspection-configuration-property-builder function updates a CfnTLSInspectionConfiguration$TLSInspectionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnTLSInspectionConfiguration$TLSInspectionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1258,3 +1576,9 @@
   (when-let [data (lookup-entry config id :server-certificate-configurations)]
     (. builder serverCertificateConfigurations data))
   (.build builder))
+
+
+(defn cfn-tls-inspection-configuration-tls-inspection-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-tls-inspection-configuration-tls-inspection-configuration-property-builder (new CfnTLSInspectionConfiguration$TLSInspectionConfigurationProperty$Builder) id config))

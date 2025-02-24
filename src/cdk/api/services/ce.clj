@@ -41,6 +41,12 @@
   (.build builder))
 
 
+(defn cfn-anomaly-monitor-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-anomaly-monitor-builder (CfnAnomalyMonitor$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-anomaly-monitor-props-builder
   "The build-cfn-anomaly-monitor-props-builder function updates a CfnAnomalyMonitorProps$Builder instance using the provided configuration.
   The function takes the CfnAnomalyMonitorProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -70,6 +76,12 @@
   (.build builder))
 
 
+(defn cfn-anomaly-monitor-props-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-monitor-props-builder (new CfnAnomalyMonitorProps$Builder) id config))
+
+
 (defn build-cfn-anomaly-monitor-resource-tag-property-builder
   "The build-cfn-anomaly-monitor-resource-tag-property-builder function updates a CfnAnomalyMonitor$ResourceTagProperty$Builder instance using the provided configuration.
   The function takes the CfnAnomalyMonitor$ResourceTagProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -88,6 +100,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-anomaly-monitor-resource-tag-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-monitor-resource-tag-property-builder (new CfnAnomalyMonitor$ResourceTagProperty$Builder) id config))
 
 
 (defn build-cfn-anomaly-subscription-builder
@@ -125,6 +143,12 @@
   (.build builder))
 
 
+(defn cfn-anomaly-subscription-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-anomaly-subscription-builder (CfnAnomalySubscription$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-anomaly-subscription-props-builder
   "The build-cfn-anomaly-subscription-props-builder function updates a CfnAnomalySubscriptionProps$Builder instance using the provided configuration.
   The function takes the CfnAnomalySubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -160,6 +184,12 @@
   (.build builder))
 
 
+(defn cfn-anomaly-subscription-props-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-subscription-props-builder (new CfnAnomalySubscriptionProps$Builder) id config))
+
+
 (defn build-cfn-anomaly-subscription-resource-tag-property-builder
   "The build-cfn-anomaly-subscription-resource-tag-property-builder function updates a CfnAnomalySubscription$ResourceTagProperty$Builder instance using the provided configuration.
   The function takes the CfnAnomalySubscription$ResourceTagProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -178,6 +208,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-anomaly-subscription-resource-tag-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-subscription-resource-tag-property-builder (new CfnAnomalySubscription$ResourceTagProperty$Builder) id config))
 
 
 (defn build-cfn-anomaly-subscription-subscriber-property-builder
@@ -201,6 +237,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-anomaly-subscription-subscriber-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-subscription-subscriber-property-builder (new CfnAnomalySubscription$SubscriberProperty$Builder) id config))
 
 
 (defn build-cfn-cost-category-builder
@@ -232,6 +274,12 @@
   (.build builder))
 
 
+(defn cfn-cost-category-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-cost-category-builder (CfnCostCategory$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-cost-category-props-builder
   "The build-cfn-cost-category-props-builder function updates a CfnCostCategoryProps$Builder instance using the provided configuration.
   The function takes the CfnCostCategoryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -259,3 +307,9 @@
   (when-let [data (lookup-entry config id :split-charge-rules)]
     (. builder splitChargeRules data))
   (.build builder))
+
+
+(defn cfn-cost-category-props-builder
+  ""
+  [id config]
+  (build-cfn-cost-category-props-builder (new CfnCostCategoryProps$Builder) id config))

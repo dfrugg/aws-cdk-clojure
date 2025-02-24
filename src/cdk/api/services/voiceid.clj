@@ -32,6 +32,12 @@
   (.build builder))
 
 
+(defn cfn-domain-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-domain-builder (CfnDomain$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-domain-props-builder
   "The build-cfn-domain-props-builder function updates a CfnDomainProps$Builder instance using the provided configuration.
   The function takes the CfnDomainProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -58,6 +64,12 @@
   (.build builder))
 
 
+(defn cfn-domain-props-builder
+  ""
+  [id config]
+  (build-cfn-domain-props-builder (new CfnDomainProps$Builder) id config))
+
+
 (defn build-cfn-domain-server-side-encryption-configuration-property-builder
   "The build-cfn-domain-server-side-encryption-configuration-property-builder function updates a CfnDomain$ServerSideEncryptionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$ServerSideEncryptionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -73,3 +85,9 @@
   (when-let [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
   (.build builder))
+
+
+(defn cfn-domain-server-side-encryption-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-server-side-encryption-configuration-property-builder (new CfnDomain$ServerSideEncryptionConfigurationProperty$Builder) id config))

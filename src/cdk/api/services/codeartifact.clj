@@ -38,6 +38,12 @@
   (.build builder))
 
 
+(defn cfn-domain-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-domain-builder (CfnDomain$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-domain-props-builder
   "The build-cfn-domain-props-builder function updates a CfnDomainProps$Builder instance using the provided configuration.
   The function takes the CfnDomainProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -62,6 +68,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-domain-props-builder
+  ""
+  [id config]
+  (build-cfn-domain-props-builder (new CfnDomainProps$Builder) id config))
 
 
 (defn build-cfn-package-group-builder
@@ -99,6 +111,12 @@
   (.build builder))
 
 
+(defn cfn-package-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-package-group-builder (CfnPackageGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-package-group-origin-configuration-property-builder
   "The build-cfn-package-group-origin-configuration-property-builder function updates a CfnPackageGroup$OriginConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnPackageGroup$OriginConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -114,6 +132,12 @@
   (when-let [data (lookup-entry config id :restrictions)]
     (. builder restrictions data))
   (.build builder))
+
+
+(defn cfn-package-group-origin-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-package-group-origin-configuration-property-builder (new CfnPackageGroup$OriginConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-package-group-props-builder
@@ -151,6 +175,12 @@
   (.build builder))
 
 
+(defn cfn-package-group-props-builder
+  ""
+  [id config]
+  (build-cfn-package-group-props-builder (new CfnPackageGroupProps$Builder) id config))
+
+
 (defn build-cfn-package-group-restriction-type-property-builder
   "The build-cfn-package-group-restriction-type-property-builder function updates a CfnPackageGroup$RestrictionTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnPackageGroup$RestrictionTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -169,6 +199,12 @@
   (when-let [data (lookup-entry config id :restriction-mode)]
     (. builder restrictionMode data))
   (.build builder))
+
+
+(defn cfn-package-group-restriction-type-property-builder
+  ""
+  [id config]
+  (build-cfn-package-group-restriction-type-property-builder (new CfnPackageGroup$RestrictionTypeProperty$Builder) id config))
 
 
 (defn build-cfn-package-group-restrictions-property-builder
@@ -192,6 +228,12 @@
   (when-let [data (lookup-entry config id :publish)]
     (. builder publish data))
   (.build builder))
+
+
+(defn cfn-package-group-restrictions-property-builder
+  ""
+  [id config]
+  (build-cfn-package-group-restrictions-property-builder (new CfnPackageGroup$RestrictionsProperty$Builder) id config))
 
 
 (defn build-cfn-repository-builder
@@ -232,6 +274,12 @@
   (.build builder))
 
 
+(defn cfn-repository-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-repository-builder (CfnRepository$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-repository-props-builder
   "The build-cfn-repository-props-builder function updates a CfnRepositoryProps$Builder instance using the provided configuration.
   The function takes the CfnRepositoryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -268,3 +316,9 @@
   (when-let [data (lookup-entry config id :upstreams)]
     (. builder upstreams data))
   (.build builder))
+
+
+(defn cfn-repository-props-builder
+  ""
+  [id config]
+  (build-cfn-repository-props-builder (new CfnRepositoryProps$Builder) id config))

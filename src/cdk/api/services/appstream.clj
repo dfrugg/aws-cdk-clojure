@@ -87,6 +87,12 @@
   (.build builder))
 
 
+(defn cfn-app-block-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-app-block-builder (CfnAppBlock$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-app-block-builder-access-endpoint-property-builder
   "The build-cfn-app-block-builder-access-endpoint-property-builder function updates a CfnAppBlockBuilder$AccessEndpointProperty$Builder instance using the provided configuration.
   The function takes the CfnAppBlockBuilder$AccessEndpointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -105,6 +111,12 @@
   (when-let [data (lookup-entry config id :vpce-id)]
     (. builder vpceId data))
   (.build builder))
+
+
+(defn cfn-app-block-builder-access-endpoint-property-builder
+  ""
+  [id config]
+  (build-cfn-app-block-builder-access-endpoint-property-builder (new CfnAppBlockBuilder$AccessEndpointProperty$Builder) id config))
 
 
 (defn build-cfn-app-block-builder-builder
@@ -154,6 +166,12 @@
   (.build builder))
 
 
+(defn cfn-app-block-builder-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-app-block-builder-builder (CfnAppBlockBuilder$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-app-block-builder-props-builder
   "The build-cfn-app-block-builder-props-builder function updates a CfnAppBlockBuilderProps$Builder instance using the provided configuration.
   The function takes the CfnAppBlockBuilderProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -201,6 +219,12 @@
   (.build builder))
 
 
+(defn cfn-app-block-builder-props-builder
+  ""
+  [id config]
+  (build-cfn-app-block-builder-props-builder (new CfnAppBlockBuilderProps$Builder) id config))
+
+
 (defn build-cfn-app-block-builder-vpc-config-property-builder
   "The build-cfn-app-block-builder-vpc-config-property-builder function updates a CfnAppBlockBuilder$VpcConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnAppBlockBuilder$VpcConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -219,6 +243,12 @@
   (when-let [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
+
+
+(defn cfn-app-block-builder-vpc-config-property-builder
+  ""
+  [id config]
+  (build-cfn-app-block-builder-vpc-config-property-builder (new CfnAppBlockBuilder$VpcConfigProperty$Builder) id config))
 
 
 (defn build-cfn-app-block-props-builder
@@ -259,6 +289,12 @@
   (.build builder))
 
 
+(defn cfn-app-block-props-builder
+  ""
+  [id config]
+  (build-cfn-app-block-props-builder (new CfnAppBlockProps$Builder) id config))
+
+
 (defn build-cfn-app-block-s3-location-property-builder
   "The build-cfn-app-block-s3-location-property-builder function updates a CfnAppBlock$S3LocationProperty$Builder instance using the provided configuration.
   The function takes the CfnAppBlock$S3LocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -277,6 +313,12 @@
   (when-let [data (lookup-entry config id :s3-key)]
     (. builder s3Key data))
   (.build builder))
+
+
+(defn cfn-app-block-s3-location-property-builder
+  ""
+  [id config]
+  (build-cfn-app-block-s3-location-property-builder (new CfnAppBlock$S3LocationProperty$Builder) id config))
 
 
 (defn build-cfn-app-block-script-details-property-builder
@@ -303,6 +345,12 @@
   (when-let [data (lookup-entry config id :timeout-in-seconds)]
     (. builder timeoutInSeconds data))
   (.build builder))
+
+
+(defn cfn-app-block-script-details-property-builder
+  ""
+  [id config]
+  (build-cfn-app-block-script-details-property-builder (new CfnAppBlock$ScriptDetailsProperty$Builder) id config))
 
 
 (defn build-cfn-application-builder
@@ -355,6 +403,12 @@
   (.build builder))
 
 
+(defn cfn-application-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-builder (CfnApplication$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-application-entitlement-association-builder
   "The build-cfn-application-entitlement-association-builder function updates a CfnApplicationEntitlementAssociation$Builder instance using the provided configuration.
   The function takes the CfnApplicationEntitlementAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -376,6 +430,12 @@
   (when-let [data (lookup-entry config id :stack-name)]
     (. builder stackName data))
   (.build builder))
+
+
+(defn cfn-application-entitlement-association-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-entitlement-association-builder (CfnApplicationEntitlementAssociation$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-application-entitlement-association-props-builder
@@ -401,6 +461,12 @@
   (.build builder))
 
 
+(defn cfn-application-entitlement-association-props-builder
+  ""
+  [id config]
+  (build-cfn-application-entitlement-association-props-builder (new CfnApplicationEntitlementAssociationProps$Builder) id config))
+
+
 (defn build-cfn-application-fleet-association-builder
   "The build-cfn-application-fleet-association-builder function updates a CfnApplicationFleetAssociation$Builder instance using the provided configuration.
   The function takes the CfnApplicationFleetAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -421,6 +487,12 @@
   (.build builder))
 
 
+(defn cfn-application-fleet-association-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-fleet-association-builder (CfnApplicationFleetAssociation$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-application-fleet-association-props-builder
   "The build-cfn-application-fleet-association-props-builder function updates a CfnApplicationFleetAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnApplicationFleetAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -439,6 +511,12 @@
   (when-let [data (lookup-entry config id :fleet-name)]
     (. builder fleetName data))
   (.build builder))
+
+
+(defn cfn-application-fleet-association-props-builder
+  ""
+  [id config]
+  (build-cfn-application-fleet-association-props-builder (new CfnApplicationFleetAssociationProps$Builder) id config))
 
 
 (defn build-cfn-application-props-builder
@@ -491,6 +569,12 @@
   (.build builder))
 
 
+(defn cfn-application-props-builder
+  ""
+  [id config]
+  (build-cfn-application-props-builder (new CfnApplicationProps$Builder) id config))
+
+
 (defn build-cfn-application-s3-location-property-builder
   "The build-cfn-application-s3-location-property-builder function updates a CfnApplication$S3LocationProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$S3LocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -509,6 +593,12 @@
   (when-let [data (lookup-entry config id :s3-key)]
     (. builder s3Key data))
   (.build builder))
+
+
+(defn cfn-application-s3-location-property-builder
+  ""
+  [id config]
+  (build-cfn-application-s3-location-property-builder (new CfnApplication$S3LocationProperty$Builder) id config))
 
 
 (defn build-cfn-directory-config-builder
@@ -537,6 +627,12 @@
   (.build builder))
 
 
+(defn cfn-directory-config-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-directory-config-builder (CfnDirectoryConfig$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-directory-config-certificate-based-auth-properties-property-builder
   "The build-cfn-directory-config-certificate-based-auth-properties-property-builder function updates a CfnDirectoryConfig$CertificateBasedAuthPropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnDirectoryConfig$CertificateBasedAuthPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -555,6 +651,12 @@
   (when-let [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
+
+
+(defn cfn-directory-config-certificate-based-auth-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-directory-config-certificate-based-auth-properties-property-builder (new CfnDirectoryConfig$CertificateBasedAuthPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-directory-config-props-builder
@@ -583,6 +685,12 @@
   (.build builder))
 
 
+(defn cfn-directory-config-props-builder
+  ""
+  [id config]
+  (build-cfn-directory-config-props-builder (new CfnDirectoryConfigProps$Builder) id config))
+
+
 (defn build-cfn-directory-config-service-account-credentials-property-builder
   "The build-cfn-directory-config-service-account-credentials-property-builder function updates a CfnDirectoryConfig$ServiceAccountCredentialsProperty$Builder instance using the provided configuration.
   The function takes the CfnDirectoryConfig$ServiceAccountCredentialsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -603,6 +711,12 @@
   (.build builder))
 
 
+(defn cfn-directory-config-service-account-credentials-property-builder
+  ""
+  [id config]
+  (build-cfn-directory-config-service-account-credentials-property-builder (new CfnDirectoryConfig$ServiceAccountCredentialsProperty$Builder) id config))
+
+
 (defn build-cfn-entitlement-attribute-property-builder
   "The build-cfn-entitlement-attribute-property-builder function updates a CfnEntitlement$AttributeProperty$Builder instance using the provided configuration.
   The function takes the CfnEntitlement$AttributeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -621,6 +735,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-entitlement-attribute-property-builder
+  ""
+  [id config]
+  (build-cfn-entitlement-attribute-property-builder (new CfnEntitlement$AttributeProperty$Builder) id config))
 
 
 (defn build-cfn-entitlement-builder
@@ -652,6 +772,12 @@
   (.build builder))
 
 
+(defn cfn-entitlement-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-entitlement-builder (CfnEntitlement$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-entitlement-props-builder
   "The build-cfn-entitlement-props-builder function updates a CfnEntitlementProps$Builder instance using the provided configuration.
   The function takes the CfnEntitlementProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -679,6 +805,12 @@
   (when-let [data (lookup-entry config id :stack-name)]
     (. builder stackName data))
   (.build builder))
+
+
+(defn cfn-entitlement-props-builder
+  ""
+  [id config]
+  (build-cfn-entitlement-props-builder (new CfnEntitlementProps$Builder) id config))
 
 
 (defn build-cfn-fleet-builder
@@ -761,6 +893,12 @@
   (.build builder))
 
 
+(defn cfn-fleet-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-fleet-builder (CfnFleet$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-fleet-compute-capacity-property-builder
   "The build-cfn-fleet-compute-capacity-property-builder function updates a CfnFleet$ComputeCapacityProperty$Builder instance using the provided configuration.
   The function takes the CfnFleet$ComputeCapacityProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -781,6 +919,12 @@
   (.build builder))
 
 
+(defn cfn-fleet-compute-capacity-property-builder
+  ""
+  [id config]
+  (build-cfn-fleet-compute-capacity-property-builder (new CfnFleet$ComputeCapacityProperty$Builder) id config))
+
+
 (defn build-cfn-fleet-domain-join-info-property-builder
   "The build-cfn-fleet-domain-join-info-property-builder function updates a CfnFleet$DomainJoinInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnFleet$DomainJoinInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -799,6 +943,12 @@
   (when-let [data (lookup-entry config id :organizational-unit-distinguished-name)]
     (. builder organizationalUnitDistinguishedName data))
   (.build builder))
+
+
+(defn cfn-fleet-domain-join-info-property-builder
+  ""
+  [id config]
+  (build-cfn-fleet-domain-join-info-property-builder (new CfnFleet$DomainJoinInfoProperty$Builder) id config))
 
 
 (defn build-cfn-fleet-props-builder
@@ -881,6 +1031,12 @@
   (.build builder))
 
 
+(defn cfn-fleet-props-builder
+  ""
+  [id config]
+  (build-cfn-fleet-props-builder (new CfnFleetProps$Builder) id config))
+
+
 (defn build-cfn-fleet-s3-location-property-builder
   "The build-cfn-fleet-s3-location-property-builder function updates a CfnFleet$S3LocationProperty$Builder instance using the provided configuration.
   The function takes the CfnFleet$S3LocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -899,6 +1055,12 @@
   (when-let [data (lookup-entry config id :s3-key)]
     (. builder s3Key data))
   (.build builder))
+
+
+(defn cfn-fleet-s3-location-property-builder
+  ""
+  [id config]
+  (build-cfn-fleet-s3-location-property-builder (new CfnFleet$S3LocationProperty$Builder) id config))
 
 
 (defn build-cfn-fleet-vpc-config-property-builder
@@ -921,6 +1083,12 @@
   (.build builder))
 
 
+(defn cfn-fleet-vpc-config-property-builder
+  ""
+  [id config]
+  (build-cfn-fleet-vpc-config-property-builder (new CfnFleet$VpcConfigProperty$Builder) id config))
+
+
 (defn build-cfn-image-builder-access-endpoint-property-builder
   "The build-cfn-image-builder-access-endpoint-property-builder function updates a CfnImageBuilder$AccessEndpointProperty$Builder instance using the provided configuration.
   The function takes the CfnImageBuilder$AccessEndpointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -939,6 +1107,12 @@
   (when-let [data (lookup-entry config id :vpce-id)]
     (. builder vpceId data))
   (.build builder))
+
+
+(defn cfn-image-builder-access-endpoint-property-builder
+  ""
+  [id config]
+  (build-cfn-image-builder-access-endpoint-property-builder (new CfnImageBuilder$AccessEndpointProperty$Builder) id config))
 
 
 (defn build-cfn-image-builder-builder
@@ -994,6 +1168,12 @@
   (.build builder))
 
 
+(defn cfn-image-builder-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-image-builder-builder (CfnImageBuilder$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-image-builder-domain-join-info-property-builder
   "The build-cfn-image-builder-domain-join-info-property-builder function updates a CfnImageBuilder$DomainJoinInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnImageBuilder$DomainJoinInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1012,6 +1192,12 @@
   (when-let [data (lookup-entry config id :organizational-unit-distinguished-name)]
     (. builder organizationalUnitDistinguishedName data))
   (.build builder))
+
+
+(defn cfn-image-builder-domain-join-info-property-builder
+  ""
+  [id config]
+  (build-cfn-image-builder-domain-join-info-property-builder (new CfnImageBuilder$DomainJoinInfoProperty$Builder) id config))
 
 
 (defn build-cfn-image-builder-props-builder
@@ -1067,6 +1253,12 @@
   (.build builder))
 
 
+(defn cfn-image-builder-props-builder
+  ""
+  [id config]
+  (build-cfn-image-builder-props-builder (new CfnImageBuilderProps$Builder) id config))
+
+
 (defn build-cfn-image-builder-vpc-config-property-builder
   "The build-cfn-image-builder-vpc-config-property-builder function updates a CfnImageBuilder$VpcConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnImageBuilder$VpcConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1085,6 +1277,12 @@
   (when-let [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
+
+
+(defn cfn-image-builder-vpc-config-property-builder
+  ""
+  [id config]
+  (build-cfn-image-builder-vpc-config-property-builder (new CfnImageBuilder$VpcConfigProperty$Builder) id config))
 
 
 (defn build-cfn-stack-access-endpoint-property-builder
@@ -1107,6 +1305,12 @@
   (.build builder))
 
 
+(defn cfn-stack-access-endpoint-property-builder
+  ""
+  [id config]
+  (build-cfn-stack-access-endpoint-property-builder (new CfnStack$AccessEndpointProperty$Builder) id config))
+
+
 (defn build-cfn-stack-application-settings-property-builder
   "The build-cfn-stack-application-settings-property-builder function updates a CfnStack$ApplicationSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnStack$ApplicationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1125,6 +1329,12 @@
   (when-let [data (lookup-entry config id :settings-group)]
     (. builder settingsGroup data))
   (.build builder))
+
+
+(defn cfn-stack-application-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-stack-application-settings-property-builder (new CfnStack$ApplicationSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-stack-builder
@@ -1183,6 +1393,12 @@
   (.build builder))
 
 
+(defn cfn-stack-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-stack-builder (CfnStack$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-stack-fleet-association-builder
   "The build-cfn-stack-fleet-association-builder function updates a CfnStackFleetAssociation$Builder instance using the provided configuration.
   The function takes the CfnStackFleetAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1203,6 +1419,12 @@
   (.build builder))
 
 
+(defn cfn-stack-fleet-association-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-stack-fleet-association-builder (CfnStackFleetAssociation$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-stack-fleet-association-props-builder
   "The build-cfn-stack-fleet-association-props-builder function updates a CfnStackFleetAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnStackFleetAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1221,6 +1443,12 @@
   (when-let [data (lookup-entry config id :stack-name)]
     (. builder stackName data))
   (.build builder))
+
+
+(defn cfn-stack-fleet-association-props-builder
+  ""
+  [id config]
+  (build-cfn-stack-fleet-association-props-builder (new CfnStackFleetAssociationProps$Builder) id config))
 
 
 (defn build-cfn-stack-props-builder
@@ -1279,6 +1507,12 @@
   (.build builder))
 
 
+(defn cfn-stack-props-builder
+  ""
+  [id config]
+  (build-cfn-stack-props-builder (new CfnStackProps$Builder) id config))
+
+
 (defn build-cfn-stack-storage-connector-property-builder
   "The build-cfn-stack-storage-connector-property-builder function updates a CfnStack$StorageConnectorProperty$Builder instance using the provided configuration.
   The function takes the CfnStack$StorageConnectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1302,6 +1536,12 @@
   (.build builder))
 
 
+(defn cfn-stack-storage-connector-property-builder
+  ""
+  [id config]
+  (build-cfn-stack-storage-connector-property-builder (new CfnStack$StorageConnectorProperty$Builder) id config))
+
+
 (defn build-cfn-stack-streaming-experience-settings-property-builder
   "The build-cfn-stack-streaming-experience-settings-property-builder function updates a CfnStack$StreamingExperienceSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnStack$StreamingExperienceSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1317,6 +1557,12 @@
   (when-let [data (lookup-entry config id :preferred-protocol)]
     (. builder preferredProtocol data))
   (.build builder))
+
+
+(defn cfn-stack-streaming-experience-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-stack-streaming-experience-settings-property-builder (new CfnStack$StreamingExperienceSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-stack-user-association-builder
@@ -1345,6 +1591,12 @@
   (.build builder))
 
 
+(defn cfn-stack-user-association-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-stack-user-association-builder (CfnStackUserAssociation$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-stack-user-association-props-builder
   "The build-cfn-stack-user-association-props-builder function updates a CfnStackUserAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnStackUserAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1371,6 +1623,12 @@
   (.build builder))
 
 
+(defn cfn-stack-user-association-props-builder
+  ""
+  [id config]
+  (build-cfn-stack-user-association-props-builder (new CfnStackUserAssociationProps$Builder) id config))
+
+
 (defn build-cfn-stack-user-setting-property-builder
   "The build-cfn-stack-user-setting-property-builder function updates a CfnStack$UserSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnStack$UserSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1392,6 +1650,12 @@
   (when-let [data (lookup-entry config id :permission)]
     (. builder permission data))
   (.build builder))
+
+
+(defn cfn-stack-user-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-stack-user-setting-property-builder (new CfnStack$UserSettingProperty$Builder) id config))
 
 
 (defn build-cfn-user-builder
@@ -1423,6 +1687,12 @@
   (.build builder))
 
 
+(defn cfn-user-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-user-builder (CfnUser$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-user-props-builder
   "The build-cfn-user-props-builder function updates a CfnUserProps$Builder instance using the provided configuration.
   The function takes the CfnUserProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1450,3 +1720,9 @@
   (when-let [data (lookup-entry config id :user-name)]
     (. builder userName data))
   (.build builder))
+
+
+(defn cfn-user-props-builder
+  ""
+  [id config]
+  (build-cfn-user-props-builder (new CfnUserProps$Builder) id config))

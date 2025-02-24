@@ -80,6 +80,12 @@
   (.build builder))
 
 
+(defn cfn-batch-scram-secret-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-batch-scram-secret-builder (CfnBatchScramSecret$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-batch-scram-secret-props-builder
   "The build-cfn-batch-scram-secret-props-builder function updates a CfnBatchScramSecretProps$Builder instance using the provided configuration.
   The function takes the CfnBatchScramSecretProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -98,6 +104,12 @@
   (when-let [data (lookup-entry config id :secret-arn-list)]
     (. builder secretArnList data))
   (.build builder))
+
+
+(defn cfn-batch-scram-secret-props-builder
+  ""
+  [id config]
+  (build-cfn-batch-scram-secret-props-builder (new CfnBatchScramSecretProps$Builder) id config))
 
 
 (defn build-cfn-cluster-broker-logs-property-builder
@@ -121,6 +133,12 @@
   (when-let [data (lookup-entry config id :s3)]
     (. builder s3 data))
   (.build builder))
+
+
+(defn cfn-cluster-broker-logs-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-broker-logs-property-builder (new CfnCluster$BrokerLogsProperty$Builder) id config))
 
 
 (defn build-cfn-cluster-broker-node-group-info-property-builder
@@ -153,6 +171,12 @@
   (when-let [data (lookup-entry config id :storage-info)]
     (. builder storageInfo data))
   (.build builder))
+
+
+(defn cfn-cluster-broker-node-group-info-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-broker-node-group-info-property-builder (new CfnCluster$BrokerNodeGroupInfoProperty$Builder) id config))
 
 
 (defn build-cfn-cluster-builder
@@ -208,6 +232,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-cluster-builder (CfnCluster$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-cluster-client-authentication-property-builder
   "The build-cfn-cluster-client-authentication-property-builder function updates a CfnCluster$ClientAuthenticationProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$ClientAuthenticationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -231,6 +261,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-client-authentication-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-client-authentication-property-builder (new CfnCluster$ClientAuthenticationProperty$Builder) id config))
+
+
 (defn build-cfn-cluster-cloud-watch-logs-property-builder
   "The build-cfn-cluster-cloud-watch-logs-property-builder function updates a CfnCluster$CloudWatchLogsProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$CloudWatchLogsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -249,6 +285,12 @@
   (when-let [data (lookup-entry config id :log-group)]
     (. builder logGroup data))
   (.build builder))
+
+
+(defn cfn-cluster-cloud-watch-logs-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-cloud-watch-logs-property-builder (new CfnCluster$CloudWatchLogsProperty$Builder) id config))
 
 
 (defn build-cfn-cluster-configuration-info-property-builder
@@ -271,6 +313,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-configuration-info-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-configuration-info-property-builder (new CfnCluster$ConfigurationInfoProperty$Builder) id config))
+
+
 (defn build-cfn-cluster-connectivity-info-property-builder
   "The build-cfn-cluster-connectivity-info-property-builder function updates a CfnCluster$ConnectivityInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$ConnectivityInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -289,6 +337,12 @@
   (when-let [data (lookup-entry config id :vpc-connectivity)]
     (. builder vpcConnectivity data))
   (.build builder))
+
+
+(defn cfn-cluster-connectivity-info-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-connectivity-info-property-builder (new CfnCluster$ConnectivityInfoProperty$Builder) id config))
 
 
 (defn build-cfn-cluster-ebs-storage-info-property-builder
@@ -311,6 +365,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-ebs-storage-info-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-ebs-storage-info-property-builder (new CfnCluster$EBSStorageInfoProperty$Builder) id config))
+
+
 (defn build-cfn-cluster-encryption-at-rest-property-builder
   "The build-cfn-cluster-encryption-at-rest-property-builder function updates a CfnCluster$EncryptionAtRestProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$EncryptionAtRestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -326,6 +386,12 @@
   (when-let [data (lookup-entry config id :data-volume-kms-key-id)]
     (. builder dataVolumeKmsKeyId data))
   (.build builder))
+
+
+(defn cfn-cluster-encryption-at-rest-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-encryption-at-rest-property-builder (new CfnCluster$EncryptionAtRestProperty$Builder) id config))
 
 
 (defn build-cfn-cluster-encryption-in-transit-property-builder
@@ -348,6 +414,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-encryption-in-transit-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-encryption-in-transit-property-builder (new CfnCluster$EncryptionInTransitProperty$Builder) id config))
+
+
 (defn build-cfn-cluster-encryption-info-property-builder
   "The build-cfn-cluster-encryption-info-property-builder function updates a CfnCluster$EncryptionInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$EncryptionInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -366,6 +438,12 @@
   (when-let [data (lookup-entry config id :encryption-in-transit)]
     (. builder encryptionInTransit data))
   (.build builder))
+
+
+(defn cfn-cluster-encryption-info-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-encryption-info-property-builder (new CfnCluster$EncryptionInfoProperty$Builder) id config))
 
 
 (defn build-cfn-cluster-firehose-property-builder
@@ -388,6 +466,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-firehose-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-firehose-property-builder (new CfnCluster$FirehoseProperty$Builder) id config))
+
+
 (defn build-cfn-cluster-iam-property-builder
   "The build-cfn-cluster-iam-property-builder function updates a CfnCluster$IamProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$IamProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -403,6 +487,12 @@
   (when-let [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
+
+
+(defn cfn-cluster-iam-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-iam-property-builder (new CfnCluster$IamProperty$Builder) id config))
 
 
 (defn build-cfn-cluster-jmx-exporter-property-builder
@@ -422,6 +512,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-jmx-exporter-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-jmx-exporter-property-builder (new CfnCluster$JmxExporterProperty$Builder) id config))
+
+
 (defn build-cfn-cluster-logging-info-property-builder
   "The build-cfn-cluster-logging-info-property-builder function updates a CfnCluster$LoggingInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$LoggingInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -437,6 +533,12 @@
   (when-let [data (lookup-entry config id :broker-logs)]
     (. builder brokerLogs data))
   (.build builder))
+
+
+(defn cfn-cluster-logging-info-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-logging-info-property-builder (new CfnCluster$LoggingInfoProperty$Builder) id config))
 
 
 (defn build-cfn-cluster-node-exporter-property-builder
@@ -456,6 +558,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-node-exporter-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-node-exporter-property-builder (new CfnCluster$NodeExporterProperty$Builder) id config))
+
+
 (defn build-cfn-cluster-open-monitoring-property-builder
   "The build-cfn-cluster-open-monitoring-property-builder function updates a CfnCluster$OpenMonitoringProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$OpenMonitoringProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -471,6 +579,12 @@
   (when-let [data (lookup-entry config id :prometheus)]
     (. builder prometheus data))
   (.build builder))
+
+
+(defn cfn-cluster-open-monitoring-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-open-monitoring-property-builder (new CfnCluster$OpenMonitoringProperty$Builder) id config))
 
 
 (defn build-cfn-cluster-policy-builder
@@ -493,6 +607,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-cluster-policy-builder (CfnClusterPolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-cluster-policy-props-builder
   "The build-cfn-cluster-policy-props-builder function updates a CfnClusterPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnClusterPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -513,6 +633,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-cluster-policy-props-builder (new CfnClusterPolicyProps$Builder) id config))
+
+
 (defn build-cfn-cluster-prometheus-property-builder
   "The build-cfn-cluster-prometheus-property-builder function updates a CfnCluster$PrometheusProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$PrometheusProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -531,6 +657,12 @@
   (when-let [data (lookup-entry config id :node-exporter)]
     (. builder nodeExporter data))
   (.build builder))
+
+
+(defn cfn-cluster-prometheus-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-prometheus-property-builder (new CfnCluster$PrometheusProperty$Builder) id config))
 
 
 (defn build-cfn-cluster-props-builder
@@ -586,6 +718,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-props-builder
+  ""
+  [id config]
+  (build-cfn-cluster-props-builder (new CfnClusterProps$Builder) id config))
+
+
 (defn build-cfn-cluster-provisioned-throughput-property-builder
   "The build-cfn-cluster-provisioned-throughput-property-builder function updates a CfnCluster$ProvisionedThroughputProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$ProvisionedThroughputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -606,6 +744,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-provisioned-throughput-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-provisioned-throughput-property-builder (new CfnCluster$ProvisionedThroughputProperty$Builder) id config))
+
+
 (defn build-cfn-cluster-public-access-property-builder
   "The build-cfn-cluster-public-access-property-builder function updates a CfnCluster$PublicAccessProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$PublicAccessProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -621,6 +765,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-cluster-public-access-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-public-access-property-builder (new CfnCluster$PublicAccessProperty$Builder) id config))
 
 
 (defn build-cfn-cluster-s3-property-builder
@@ -646,6 +796,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-s3-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-s3-property-builder (new CfnCluster$S3Property$Builder) id config))
+
+
 (defn build-cfn-cluster-sasl-property-builder
   "The build-cfn-cluster-sasl-property-builder function updates a CfnCluster$SaslProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$SaslProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -666,6 +822,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-sasl-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-sasl-property-builder (new CfnCluster$SaslProperty$Builder) id config))
+
+
 (defn build-cfn-cluster-scram-property-builder
   "The build-cfn-cluster-scram-property-builder function updates a CfnCluster$ScramProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$ScramProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -683,6 +845,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-scram-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-scram-property-builder (new CfnCluster$ScramProperty$Builder) id config))
+
+
 (defn build-cfn-cluster-storage-info-property-builder
   "The build-cfn-cluster-storage-info-property-builder function updates a CfnCluster$StorageInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$StorageInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -698,6 +866,12 @@
   (when-let [data (lookup-entry config id :ebs-storage-info)]
     (. builder ebsStorageInfo data))
   (.build builder))
+
+
+(defn cfn-cluster-storage-info-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-storage-info-property-builder (new CfnCluster$StorageInfoProperty$Builder) id config))
 
 
 (defn build-cfn-cluster-tls-property-builder
@@ -720,6 +894,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-tls-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-tls-property-builder (new CfnCluster$TlsProperty$Builder) id config))
+
+
 (defn build-cfn-cluster-unauthenticated-property-builder
   "The build-cfn-cluster-unauthenticated-property-builder function updates a CfnCluster$UnauthenticatedProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$UnauthenticatedProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -735,6 +915,12 @@
   (when-let [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
+
+
+(defn cfn-cluster-unauthenticated-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-unauthenticated-property-builder (new CfnCluster$UnauthenticatedProperty$Builder) id config))
 
 
 (defn build-cfn-cluster-vpc-connectivity-client-authentication-property-builder
@@ -757,6 +943,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-vpc-connectivity-client-authentication-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-vpc-connectivity-client-authentication-property-builder (new CfnCluster$VpcConnectivityClientAuthenticationProperty$Builder) id config))
+
+
 (defn build-cfn-cluster-vpc-connectivity-iam-property-builder
   "The build-cfn-cluster-vpc-connectivity-iam-property-builder function updates a CfnCluster$VpcConnectivityIamProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$VpcConnectivityIamProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -774,6 +966,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-vpc-connectivity-iam-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-vpc-connectivity-iam-property-builder (new CfnCluster$VpcConnectivityIamProperty$Builder) id config))
+
+
 (defn build-cfn-cluster-vpc-connectivity-property-builder
   "The build-cfn-cluster-vpc-connectivity-property-builder function updates a CfnCluster$VpcConnectivityProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$VpcConnectivityProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -789,6 +987,12 @@
   (when-let [data (lookup-entry config id :client-authentication)]
     (. builder clientAuthentication data))
   (.build builder))
+
+
+(defn cfn-cluster-vpc-connectivity-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-vpc-connectivity-property-builder (new CfnCluster$VpcConnectivityProperty$Builder) id config))
 
 
 (defn build-cfn-cluster-vpc-connectivity-sasl-property-builder
@@ -811,6 +1015,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-vpc-connectivity-sasl-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-vpc-connectivity-sasl-property-builder (new CfnCluster$VpcConnectivitySaslProperty$Builder) id config))
+
+
 (defn build-cfn-cluster-vpc-connectivity-scram-property-builder
   "The build-cfn-cluster-vpc-connectivity-scram-property-builder function updates a CfnCluster$VpcConnectivityScramProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$VpcConnectivityScramProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -828,6 +1038,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-vpc-connectivity-scram-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-vpc-connectivity-scram-property-builder (new CfnCluster$VpcConnectivityScramProperty$Builder) id config))
+
+
 (defn build-cfn-cluster-vpc-connectivity-tls-property-builder
   "The build-cfn-cluster-vpc-connectivity-tls-property-builder function updates a CfnCluster$VpcConnectivityTlsProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$VpcConnectivityTlsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -843,6 +1059,12 @@
   (when-let [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
+
+
+(defn cfn-cluster-vpc-connectivity-tls-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-vpc-connectivity-tls-property-builder (new CfnCluster$VpcConnectivityTlsProperty$Builder) id config))
 
 
 (defn build-cfn-configuration-builder
@@ -874,6 +1096,12 @@
   (.build builder))
 
 
+(defn cfn-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-configuration-builder (CfnConfiguration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-configuration-latest-revision-property-builder
   "The build-cfn-configuration-latest-revision-property-builder function updates a CfnConfiguration$LatestRevisionProperty$Builder instance using the provided configuration.
   The function takes the CfnConfiguration$LatestRevisionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -895,6 +1123,12 @@
   (when-let [data (lookup-entry config id :revision)]
     (. builder revision data))
   (.build builder))
+
+
+(defn cfn-configuration-latest-revision-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-latest-revision-property-builder (new CfnConfiguration$LatestRevisionProperty$Builder) id config))
 
 
 (defn build-cfn-configuration-props-builder
@@ -926,6 +1160,12 @@
   (.build builder))
 
 
+(defn cfn-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-configuration-props-builder (new CfnConfigurationProps$Builder) id config))
+
+
 (defn build-cfn-replicator-amazon-msk-cluster-property-builder
   "The build-cfn-replicator-amazon-msk-cluster-property-builder function updates a CfnReplicator$AmazonMskClusterProperty$Builder instance using the provided configuration.
   The function takes the CfnReplicator$AmazonMskClusterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -941,6 +1181,12 @@
   (when-let [data (lookup-entry config id :msk-cluster-arn)]
     (. builder mskClusterArn data))
   (.build builder))
+
+
+(defn cfn-replicator-amazon-msk-cluster-property-builder
+  ""
+  [id config]
+  (build-cfn-replicator-amazon-msk-cluster-property-builder (new CfnReplicator$AmazonMskClusterProperty$Builder) id config))
 
 
 (defn build-cfn-replicator-builder
@@ -978,6 +1224,12 @@
   (.build builder))
 
 
+(defn cfn-replicator-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-replicator-builder (CfnReplicator$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-replicator-consumer-group-replication-property-builder
   "The build-cfn-replicator-consumer-group-replication-property-builder function updates a CfnReplicator$ConsumerGroupReplicationProperty$Builder instance using the provided configuration.
   The function takes the CfnReplicator$ConsumerGroupReplicationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1004,6 +1256,12 @@
   (.build builder))
 
 
+(defn cfn-replicator-consumer-group-replication-property-builder
+  ""
+  [id config]
+  (build-cfn-replicator-consumer-group-replication-property-builder (new CfnReplicator$ConsumerGroupReplicationProperty$Builder) id config))
+
+
 (defn build-cfn-replicator-kafka-cluster-client-vpc-config-property-builder
   "The build-cfn-replicator-kafka-cluster-client-vpc-config-property-builder function updates a CfnReplicator$KafkaClusterClientVpcConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnReplicator$KafkaClusterClientVpcConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1024,6 +1282,12 @@
   (.build builder))
 
 
+(defn cfn-replicator-kafka-cluster-client-vpc-config-property-builder
+  ""
+  [id config]
+  (build-cfn-replicator-kafka-cluster-client-vpc-config-property-builder (new CfnReplicator$KafkaClusterClientVpcConfigProperty$Builder) id config))
+
+
 (defn build-cfn-replicator-kafka-cluster-property-builder
   "The build-cfn-replicator-kafka-cluster-property-builder function updates a CfnReplicator$KafkaClusterProperty$Builder instance using the provided configuration.
   The function takes the CfnReplicator$KafkaClusterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1042,6 +1306,12 @@
   (when-let [data (lookup-entry config id :vpc-config)]
     (. builder vpcConfig data))
   (.build builder))
+
+
+(defn cfn-replicator-kafka-cluster-property-builder
+  ""
+  [id config]
+  (build-cfn-replicator-kafka-cluster-property-builder (new CfnReplicator$KafkaClusterProperty$Builder) id config))
 
 
 (defn build-cfn-replicator-props-builder
@@ -1079,6 +1349,12 @@
   (.build builder))
 
 
+(defn cfn-replicator-props-builder
+  ""
+  [id config]
+  (build-cfn-replicator-props-builder (new CfnReplicatorProps$Builder) id config))
+
+
 (defn build-cfn-replicator-replication-info-property-builder
   "The build-cfn-replicator-replication-info-property-builder function updates a CfnReplicator$ReplicationInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnReplicator$ReplicationInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1108,6 +1384,12 @@
   (.build builder))
 
 
+(defn cfn-replicator-replication-info-property-builder
+  ""
+  [id config]
+  (build-cfn-replicator-replication-info-property-builder (new CfnReplicator$ReplicationInfoProperty$Builder) id config))
+
+
 (defn build-cfn-replicator-replication-starting-position-property-builder
   "The build-cfn-replicator-replication-starting-position-property-builder function updates a CfnReplicator$ReplicationStartingPositionProperty$Builder instance using the provided configuration.
   The function takes the CfnReplicator$ReplicationStartingPositionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1123,6 +1405,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-replicator-replication-starting-position-property-builder
+  ""
+  [id config]
+  (build-cfn-replicator-replication-starting-position-property-builder (new CfnReplicator$ReplicationStartingPositionProperty$Builder) id config))
 
 
 (defn build-cfn-replicator-topic-replication-property-builder
@@ -1157,6 +1445,12 @@
   (.build builder))
 
 
+(defn cfn-replicator-topic-replication-property-builder
+  ""
+  [id config]
+  (build-cfn-replicator-topic-replication-property-builder (new CfnReplicator$TopicReplicationProperty$Builder) id config))
+
+
 (defn build-cfn-serverless-cluster-builder
   "The build-cfn-serverless-cluster-builder function updates a CfnServerlessCluster$Builder instance using the provided configuration.
   The function takes the CfnServerlessCluster$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1183,6 +1477,12 @@
   (.build builder))
 
 
+(defn cfn-serverless-cluster-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-serverless-cluster-builder (CfnServerlessCluster$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-serverless-cluster-client-authentication-property-builder
   "The build-cfn-serverless-cluster-client-authentication-property-builder function updates a CfnServerlessCluster$ClientAuthenticationProperty$Builder instance using the provided configuration.
   The function takes the CfnServerlessCluster$ClientAuthenticationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1200,6 +1500,12 @@
   (.build builder))
 
 
+(defn cfn-serverless-cluster-client-authentication-property-builder
+  ""
+  [id config]
+  (build-cfn-serverless-cluster-client-authentication-property-builder (new CfnServerlessCluster$ClientAuthenticationProperty$Builder) id config))
+
+
 (defn build-cfn-serverless-cluster-iam-property-builder
   "The build-cfn-serverless-cluster-iam-property-builder function updates a CfnServerlessCluster$IamProperty$Builder instance using the provided configuration.
   The function takes the CfnServerlessCluster$IamProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1215,6 +1521,12 @@
   (when-let [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
+
+
+(defn cfn-serverless-cluster-iam-property-builder
+  ""
+  [id config]
+  (build-cfn-serverless-cluster-iam-property-builder (new CfnServerlessCluster$IamProperty$Builder) id config))
 
 
 (defn build-cfn-serverless-cluster-props-builder
@@ -1243,6 +1555,12 @@
   (.build builder))
 
 
+(defn cfn-serverless-cluster-props-builder
+  ""
+  [id config]
+  (build-cfn-serverless-cluster-props-builder (new CfnServerlessClusterProps$Builder) id config))
+
+
 (defn build-cfn-serverless-cluster-sasl-property-builder
   "The build-cfn-serverless-cluster-sasl-property-builder function updates a CfnServerlessCluster$SaslProperty$Builder instance using the provided configuration.
   The function takes the CfnServerlessCluster$SaslProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1258,6 +1576,12 @@
   (when-let [data (lookup-entry config id :iam)]
     (. builder iam data))
   (.build builder))
+
+
+(defn cfn-serverless-cluster-sasl-property-builder
+  ""
+  [id config]
+  (build-cfn-serverless-cluster-sasl-property-builder (new CfnServerlessCluster$SaslProperty$Builder) id config))
 
 
 (defn build-cfn-serverless-cluster-vpc-config-property-builder
@@ -1278,6 +1602,12 @@
   (when-let [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
+
+
+(defn cfn-serverless-cluster-vpc-config-property-builder
+  ""
+  [id config]
+  (build-cfn-serverless-cluster-vpc-config-property-builder (new CfnServerlessCluster$VpcConfigProperty$Builder) id config))
 
 
 (defn build-cfn-vpc-connection-builder
@@ -1312,6 +1642,12 @@
   (.build builder))
 
 
+(defn cfn-vpc-connection-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-vpc-connection-builder (CfnVpcConnection$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-vpc-connection-props-builder
   "The build-cfn-vpc-connection-props-builder function updates a CfnVpcConnectionProps$Builder instance using the provided configuration.
   The function takes the CfnVpcConnectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1342,3 +1678,9 @@
   (when-let [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
+
+
+(defn cfn-vpc-connection-props-builder
+  ""
+  [id config]
+  (build-cfn-vpc-connection-props-builder (new CfnVpcConnectionProps$Builder) id config))

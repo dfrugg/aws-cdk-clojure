@@ -39,6 +39,12 @@
   (.build builder))
 
 
+(defn cfn-training-dataset-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-training-dataset-builder (CfnTrainingDataset$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-training-dataset-column-schema-property-builder
   "The build-cfn-training-dataset-column-schema-property-builder function updates a CfnTrainingDataset$ColumnSchemaProperty$Builder instance using the provided configuration.
   The function takes the CfnTrainingDataset$ColumnSchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -59,6 +65,12 @@
   (.build builder))
 
 
+(defn cfn-training-dataset-column-schema-property-builder
+  ""
+  [id config]
+  (build-cfn-training-dataset-column-schema-property-builder (new CfnTrainingDataset$ColumnSchemaProperty$Builder) id config))
+
+
 (defn build-cfn-training-dataset-data-source-property-builder
   "The build-cfn-training-dataset-data-source-property-builder function updates a CfnTrainingDataset$DataSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnTrainingDataset$DataSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -74,6 +86,12 @@
   (when-let [data (lookup-entry config id :glue-data-source)]
     (. builder glueDataSource data))
   (.build builder))
+
+
+(defn cfn-training-dataset-data-source-property-builder
+  ""
+  [id config]
+  (build-cfn-training-dataset-data-source-property-builder (new CfnTrainingDataset$DataSourceProperty$Builder) id config))
 
 
 (defn build-cfn-training-dataset-dataset-input-config-property-builder
@@ -96,6 +114,12 @@
   (.build builder))
 
 
+(defn cfn-training-dataset-dataset-input-config-property-builder
+  ""
+  [id config]
+  (build-cfn-training-dataset-dataset-input-config-property-builder (new CfnTrainingDataset$DatasetInputConfigProperty$Builder) id config))
+
+
 (defn build-cfn-training-dataset-dataset-property-builder
   "The build-cfn-training-dataset-dataset-property-builder function updates a CfnTrainingDataset$DatasetProperty$Builder instance using the provided configuration.
   The function takes the CfnTrainingDataset$DatasetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -114,6 +138,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-training-dataset-dataset-property-builder
+  ""
+  [id config]
+  (build-cfn-training-dataset-dataset-property-builder (new CfnTrainingDataset$DatasetProperty$Builder) id config))
 
 
 (defn build-cfn-training-dataset-glue-data-source-property-builder
@@ -137,6 +167,12 @@
   (when-let [data (lookup-entry config id :table-name)]
     (. builder tableName data))
   (.build builder))
+
+
+(defn cfn-training-dataset-glue-data-source-property-builder
+  ""
+  [id config]
+  (build-cfn-training-dataset-glue-data-source-property-builder (new CfnTrainingDataset$GlueDataSourceProperty$Builder) id config))
 
 
 (defn build-cfn-training-dataset-props-builder
@@ -166,3 +202,9 @@
   (when-let [data (lookup-entry config id :training-data)]
     (. builder trainingData data))
   (.build builder))
+
+
+(defn cfn-training-dataset-props-builder
+  ""
+  [id config]
+  (build-cfn-training-dataset-props-builder (new CfnTrainingDatasetProps$Builder) id config))

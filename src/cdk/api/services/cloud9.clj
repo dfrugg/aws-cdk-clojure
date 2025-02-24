@@ -50,6 +50,12 @@
   (.build builder))
 
 
+(defn cfn-environment-ec2-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-environment-ec2-builder (CfnEnvironmentEC2$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-environment-ec2-props-builder
   "The build-cfn-environment-ec2-props-builder function updates a CfnEnvironmentEC2Props$Builder instance using the provided configuration.
   The function takes the CfnEnvironmentEC2Props$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -94,6 +100,12 @@
   (.build builder))
 
 
+(defn cfn-environment-ec2-props-builder
+  ""
+  [id config]
+  (build-cfn-environment-ec2-props-builder (new CfnEnvironmentEC2Props$Builder) id config))
+
+
 (defn build-cfn-environment-ec2-repository-property-builder
   "The build-cfn-environment-ec2-repository-property-builder function updates a CfnEnvironmentEC2$RepositoryProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironmentEC2$RepositoryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -112,3 +124,9 @@
   (when-let [data (lookup-entry config id :repository-url)]
     (. builder repositoryUrl data))
   (.build builder))
+
+
+(defn cfn-environment-ec2-repository-property-builder
+  ""
+  [id config]
+  (build-cfn-environment-ec2-repository-property-builder (new CfnEnvironmentEC2$RepositoryProperty$Builder) id config))

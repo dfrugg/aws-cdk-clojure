@@ -1,7 +1,6 @@
 (ns engine
   "Generates the clojure files from the configuration."
-  (:require [config :refer [config]]
-            [filesystem :refer [as-directory-and-file
+  (:require [filesystem :refer [as-directory-and-file
                                 ensure-directory
                                 write-file]]
             [model :refer [add-source-function
@@ -28,7 +27,7 @@
                           process-builders)
         source (->> [(:source-namespace-code package-coded)
                      (sort (:source-enums-code package-coded))
-                     (sort (:source-builders-code package-coded))]
+                     (:source-builders-code package-coded)]
                     flatten
                     (str/join function-spacer))
 
@@ -129,7 +128,7 @@ and the namespace to use, etc.  Should have the following fields added to the pa
 
 (defn build
   "Builds everthing."
-  ([] (build @packages @config))
+  ([config] (build @packages config))
   ([packages config]
    (ensure-directory (:source-namespace-path config))
    (ensure-directory (:test-namespace-path config))

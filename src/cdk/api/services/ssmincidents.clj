@@ -43,6 +43,12 @@
   (.build builder))
 
 
+(defn cfn-replication-set-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-replication-set-builder (CfnReplicationSet$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-replication-set-props-builder
   "The build-cfn-replication-set-props-builder function updates a CfnReplicationSetProps$Builder instance using the provided configuration.
   The function takes the CfnReplicationSetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -66,6 +72,12 @@
   (.build builder))
 
 
+(defn cfn-replication-set-props-builder
+  ""
+  [id config]
+  (build-cfn-replication-set-props-builder (new CfnReplicationSetProps$Builder) id config))
+
+
 (defn build-cfn-replication-set-region-configuration-property-builder
   "The build-cfn-replication-set-region-configuration-property-builder function updates a CfnReplicationSet$RegionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnReplicationSet$RegionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -81,6 +93,12 @@
   (when-let [data (lookup-entry config id :sse-kms-key-id)]
     (. builder sseKmsKeyId data))
   (.build builder))
+
+
+(defn cfn-replication-set-region-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-replication-set-region-configuration-property-builder (new CfnReplicationSet$RegionConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-replication-set-replication-region-property-builder
@@ -103,6 +121,12 @@
   (.build builder))
 
 
+(defn cfn-replication-set-replication-region-property-builder
+  ""
+  [id config]
+  (build-cfn-replication-set-replication-region-property-builder (new CfnReplicationSet$ReplicationRegionProperty$Builder) id config))
+
+
 (defn build-cfn-response-plan-action-property-builder
   "The build-cfn-response-plan-action-property-builder function updates a CfnResponsePlan$ActionProperty$Builder instance using the provided configuration.
   The function takes the CfnResponsePlan$ActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -118,6 +142,12 @@
   (when-let [data (lookup-entry config id :ssm-automation)]
     (. builder ssmAutomation data))
   (.build builder))
+
+
+(defn cfn-response-plan-action-property-builder
+  ""
+  [id config]
+  (build-cfn-response-plan-action-property-builder (new CfnResponsePlan$ActionProperty$Builder) id config))
 
 
 (defn build-cfn-response-plan-builder
@@ -158,6 +188,12 @@
   (.build builder))
 
 
+(defn cfn-response-plan-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-response-plan-builder (CfnResponsePlan$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-response-plan-chat-channel-property-builder
   "The build-cfn-response-plan-chat-channel-property-builder function updates a CfnResponsePlan$ChatChannelProperty$Builder instance using the provided configuration.
   The function takes the CfnResponsePlan$ChatChannelProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -173,6 +209,12 @@
   (when-let [data (lookup-entry config id :chatbot-sns)]
     (. builder chatbotSns data))
   (.build builder))
+
+
+(defn cfn-response-plan-chat-channel-property-builder
+  ""
+  [id config]
+  (build-cfn-response-plan-chat-channel-property-builder (new CfnResponsePlan$ChatChannelProperty$Builder) id config))
 
 
 (defn build-cfn-response-plan-dynamic-ssm-parameter-property-builder
@@ -195,6 +237,12 @@
   (.build builder))
 
 
+(defn cfn-response-plan-dynamic-ssm-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-response-plan-dynamic-ssm-parameter-property-builder (new CfnResponsePlan$DynamicSsmParameterProperty$Builder) id config))
+
+
 (defn build-cfn-response-plan-dynamic-ssm-parameter-value-property-builder
   "The build-cfn-response-plan-dynamic-ssm-parameter-value-property-builder function updates a CfnResponsePlan$DynamicSsmParameterValueProperty$Builder instance using the provided configuration.
   The function takes the CfnResponsePlan$DynamicSsmParameterValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -210,6 +258,12 @@
   (when-let [data (lookup-entry config id :variable)]
     (. builder variable data))
   (.build builder))
+
+
+(defn cfn-response-plan-dynamic-ssm-parameter-value-property-builder
+  ""
+  [id config]
+  (build-cfn-response-plan-dynamic-ssm-parameter-value-property-builder (new CfnResponsePlan$DynamicSsmParameterValueProperty$Builder) id config))
 
 
 (defn build-cfn-response-plan-incident-template-property-builder
@@ -244,6 +298,12 @@
   (.build builder))
 
 
+(defn cfn-response-plan-incident-template-property-builder
+  ""
+  [id config]
+  (build-cfn-response-plan-incident-template-property-builder (new CfnResponsePlan$IncidentTemplateProperty$Builder) id config))
+
+
 (defn build-cfn-response-plan-integration-property-builder
   "The build-cfn-response-plan-integration-property-builder function updates a CfnResponsePlan$IntegrationProperty$Builder instance using the provided configuration.
   The function takes the CfnResponsePlan$IntegrationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -261,6 +321,12 @@
   (.build builder))
 
 
+(defn cfn-response-plan-integration-property-builder
+  ""
+  [id config]
+  (build-cfn-response-plan-integration-property-builder (new CfnResponsePlan$IntegrationProperty$Builder) id config))
+
+
 (defn build-cfn-response-plan-notification-target-item-property-builder
   "The build-cfn-response-plan-notification-target-item-property-builder function updates a CfnResponsePlan$NotificationTargetItemProperty$Builder instance using the provided configuration.
   The function takes the CfnResponsePlan$NotificationTargetItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -276,6 +342,12 @@
   (when-let [data (lookup-entry config id :sns-topic-arn)]
     (. builder snsTopicArn data))
   (.build builder))
+
+
+(defn cfn-response-plan-notification-target-item-property-builder
+  ""
+  [id config]
+  (build-cfn-response-plan-notification-target-item-property-builder (new CfnResponsePlan$NotificationTargetItemProperty$Builder) id config))
 
 
 (defn build-cfn-response-plan-pager-duty-configuration-property-builder
@@ -301,6 +373,12 @@
   (.build builder))
 
 
+(defn cfn-response-plan-pager-duty-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-response-plan-pager-duty-configuration-property-builder (new CfnResponsePlan$PagerDutyConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-response-plan-pager-duty-incident-configuration-property-builder
   "The build-cfn-response-plan-pager-duty-incident-configuration-property-builder function updates a CfnResponsePlan$PagerDutyIncidentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnResponsePlan$PagerDutyIncidentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -316,6 +394,12 @@
   (when-let [data (lookup-entry config id :service-id)]
     (. builder serviceId data))
   (.build builder))
+
+
+(defn cfn-response-plan-pager-duty-incident-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-response-plan-pager-duty-incident-configuration-property-builder (new CfnResponsePlan$PagerDutyIncidentConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-response-plan-props-builder
@@ -356,6 +440,12 @@
   (.build builder))
 
 
+(defn cfn-response-plan-props-builder
+  ""
+  [id config]
+  (build-cfn-response-plan-props-builder (new CfnResponsePlanProps$Builder) id config))
+
+
 (defn build-cfn-response-plan-ssm-automation-property-builder
   "The build-cfn-response-plan-ssm-automation-property-builder function updates a CfnResponsePlan$SsmAutomationProperty$Builder instance using the provided configuration.
   The function takes the CfnResponsePlan$SsmAutomationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -388,6 +478,12 @@
   (.build builder))
 
 
+(defn cfn-response-plan-ssm-automation-property-builder
+  ""
+  [id config]
+  (build-cfn-response-plan-ssm-automation-property-builder (new CfnResponsePlan$SsmAutomationProperty$Builder) id config))
+
+
 (defn build-cfn-response-plan-ssm-parameter-property-builder
   "The build-cfn-response-plan-ssm-parameter-property-builder function updates a CfnResponsePlan$SsmParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnResponsePlan$SsmParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -406,3 +502,9 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-response-plan-ssm-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-response-plan-ssm-parameter-property-builder (new CfnResponsePlan$SsmParameterProperty$Builder) id config))

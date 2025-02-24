@@ -29,6 +29,12 @@
   (.build builder))
 
 
+(defn cfn-log-anomaly-detection-integration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-log-anomaly-detection-integration-builder (CfnLogAnomalyDetectionIntegration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-log-anomaly-detection-integration-props-builder
   "The build-cfn-log-anomaly-detection-integration-props-builder function updates a CfnLogAnomalyDetectionIntegrationProps$Builder instance using the provided configuration.
   The function takes the CfnLogAnomalyDetectionIntegrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -41,6 +47,12 @@
 "
   [^CfnLogAnomalyDetectionIntegrationProps$Builder builder id config]
   (.build builder))
+
+
+(defn cfn-log-anomaly-detection-integration-props-builder
+  ""
+  [id config]
+  (build-cfn-log-anomaly-detection-integration-props-builder (new CfnLogAnomalyDetectionIntegrationProps$Builder) id config))
 
 
 (defn build-cfn-notification-channel-builder
@@ -58,6 +70,12 @@
   (when-let [data (lookup-entry config id :config)]
     (. builder config data))
   (.build builder))
+
+
+(defn cfn-notification-channel-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-notification-channel-builder (CfnNotificationChannel$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-notification-channel-notification-channel-config-property-builder
@@ -80,6 +98,12 @@
   (.build builder))
 
 
+(defn cfn-notification-channel-notification-channel-config-property-builder
+  ""
+  [id config]
+  (build-cfn-notification-channel-notification-channel-config-property-builder (new CfnNotificationChannel$NotificationChannelConfigProperty$Builder) id config))
+
+
 (defn build-cfn-notification-channel-notification-filter-config-property-builder
   "The build-cfn-notification-channel-notification-filter-config-property-builder function updates a CfnNotificationChannel$NotificationFilterConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnNotificationChannel$NotificationFilterConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -100,6 +124,12 @@
   (.build builder))
 
 
+(defn cfn-notification-channel-notification-filter-config-property-builder
+  ""
+  [id config]
+  (build-cfn-notification-channel-notification-filter-config-property-builder (new CfnNotificationChannel$NotificationFilterConfigProperty$Builder) id config))
+
+
 (defn build-cfn-notification-channel-props-builder
   "The build-cfn-notification-channel-props-builder function updates a CfnNotificationChannelProps$Builder instance using the provided configuration.
   The function takes the CfnNotificationChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -115,6 +145,12 @@
   (when-let [data (lookup-entry config id :config)]
     (. builder config data))
   (.build builder))
+
+
+(defn cfn-notification-channel-props-builder
+  ""
+  [id config]
+  (build-cfn-notification-channel-props-builder (new CfnNotificationChannelProps$Builder) id config))
 
 
 (defn build-cfn-notification-channel-sns-channel-config-property-builder
@@ -134,6 +170,12 @@
   (.build builder))
 
 
+(defn cfn-notification-channel-sns-channel-config-property-builder
+  ""
+  [id config]
+  (build-cfn-notification-channel-sns-channel-config-property-builder (new CfnNotificationChannel$SnsChannelConfigProperty$Builder) id config))
+
+
 (defn build-cfn-resource-collection-builder
   "The build-cfn-resource-collection-builder function updates a CfnResourceCollection$Builder instance using the provided configuration.
   The function takes the CfnResourceCollection$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -149,6 +191,12 @@
   (when-let [data (lookup-entry config id :resource-collection-filter)]
     (. builder resourceCollectionFilter data))
   (.build builder))
+
+
+(defn cfn-resource-collection-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-resource-collection-builder (CfnResourceCollection$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-resource-collection-cloud-formation-collection-filter-property-builder
@@ -168,6 +216,12 @@
   (.build builder))
 
 
+(defn cfn-resource-collection-cloud-formation-collection-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-resource-collection-cloud-formation-collection-filter-property-builder (new CfnResourceCollection$CloudFormationCollectionFilterProperty$Builder) id config))
+
+
 (defn build-cfn-resource-collection-props-builder
   "The build-cfn-resource-collection-props-builder function updates a CfnResourceCollectionProps$Builder instance using the provided configuration.
   The function takes the CfnResourceCollectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -183,6 +237,12 @@
   (when-let [data (lookup-entry config id :resource-collection-filter)]
     (. builder resourceCollectionFilter data))
   (.build builder))
+
+
+(defn cfn-resource-collection-props-builder
+  ""
+  [id config]
+  (build-cfn-resource-collection-props-builder (new CfnResourceCollectionProps$Builder) id config))
 
 
 (defn build-cfn-resource-collection-resource-collection-filter-property-builder
@@ -205,6 +265,12 @@
   (.build builder))
 
 
+(defn cfn-resource-collection-resource-collection-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-resource-collection-resource-collection-filter-property-builder (new CfnResourceCollection$ResourceCollectionFilterProperty$Builder) id config))
+
+
 (defn build-cfn-resource-collection-tag-collection-property-builder
   "The build-cfn-resource-collection-tag-collection-property-builder function updates a CfnResourceCollection$TagCollectionProperty$Builder instance using the provided configuration.
   The function takes the CfnResourceCollection$TagCollectionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -223,3 +289,9 @@
   (when-let [data (lookup-entry config id :tag-values)]
     (. builder tagValues data))
   (.build builder))
+
+
+(defn cfn-resource-collection-tag-collection-property-builder
+  ""
+  [id config]
+  (build-cfn-resource-collection-tag-collection-property-builder (new CfnResourceCollection$TagCollectionProperty$Builder) id config))

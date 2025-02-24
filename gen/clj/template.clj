@@ -1,6 +1,6 @@
 (ns template
   "Provides functions for generating content."
-  (:require [clojure.set :refer [superset?]]
+  (:require [util :refer [scope-id?]]
             [clojure.string :as str]))
 
 
@@ -15,7 +15,6 @@
 (def template-namespace-start
   "(ns %s
   \"Functions that represent AWS CDK enums and builders in the %s package. \"")
-
 
 
 (defn namespace-require-item
@@ -202,74 +201,8 @@
             str/join)
        "\n"))
 
+
 ; Builder Creates
-(def template-builder-create-no-args
-  "
-  (let [builder (%s/create)]")
-
-
-(def template-builder-create-stack-id
-  "
-  (let [builder (%s/create stack id)]")
-
-
-(def template-builder-create-other-arg
-  "
-  (let [builder (%s/create%s)]")
-
-
-(def template-builder-construct-no-args
-  "
-  (let [builder (%s.)]")
-
-
-(def template-builder-construct-stack-id
-  "
-  (let [builder (%s. stack id)]")
-
-
-(def template-builder-construct-other-arg
-  "
-  (let [builder (%s.%s)]")
-
-
-(defn builder-source-name-args
-  "Takes a vector of vectors with arg and types and turns it into a call name."
-  [name-args]
-  (if (empty? name-args)
-    ""
-    (->> (mapv #(str " ^" (second %) " " (first %))  name-args)
-         str/join)))
-
-
-(defn template-builder-create
-  [{:keys [class-name init]} init-data]
-  (cond
-    ; Create No Args
-    (and (= :create init) (= :no-arg (:init-type init-data)))
-    (format template-builder-create-no-args class-name)
-
-    ; Create Stack ID Args
-    (and (= :create init) (= :stack-id (:init-type init-data)))
-    (format template-builder-create-stack-id class-name)
-
-    ; Create Other Args
-    (and (= :create init) (= :other-arg (:init-type init-data)))
-    (format template-builder-create-other-arg class-name (builder-source-name-args (:init-name-args init-data)))
-
-    ; Construct No Args
-    (and (= :construct init) (= :no-arg (:init-type init-data)))
-    (format template-builder-construct-no-args class-name)
-
-    ; Construct Stack ID Args
-    (and (= :construct init) (= :stack-id (:init-type init-data)))
-    (format template-builder-construct-stack-id class-name)
-
-    ; Create Other Args
-    (and (= :construct init) (= :other-arg (:init-type init-data)))
-    (format template-builder-construct-other-arg class-name (builder-source-name-args (:init-name-args init-data)))))
-
-
 ; Builder Methods
 (def template-builder-method-lookup
   "
@@ -292,7 +225,7 @@
 
 (defn build-builder-source-function
   "Generates code when builders have single constructor options"
-  [{:keys [methods fn-name class-name] :as builder-data}]
+  [{:keys [methods fn-name class-name]}]
   (let [docstring (template-builder-docstring methods fn-name class-name)
         builder-header (format template-build-builder-start fn-name docstring class-name)
         builder-sets (->> (mapv template-builder-method methods)
@@ -300,41 +233,51 @@
     (str builder-header builder-sets template-builder-end)))
 
 
-(defn builder-source-function-single-inits
-  "Generates code when builders have single constructor options"
-  [{:keys [methods fn-name class-name inits] :as builder-data}]
-  (let [docstring (template-builder-docstring methods fn-name class-name)
-        init (first inits)
-        builder-args (builder-source-name-args (:builder-name-args init))
-        builder-header (format template-builder-start fn-name docstring builder-args)
-        builder-create (template-builder-create builder-data init)
-        builder-sets (->> (mapv template-builder-method methods)
-                          str/join)]
-    (str builder-header builder-create builder-sets template-builder-end)))
+(def template-init-no-arg-create
+  "(defn %s
+  \"%s\"
+  [id config]
+  (build-%s (%s/create) id config))")
 
 
-(defn builder-source-function-multi-inits
-  "Generates code when builders have multiple constructor options"
-  [builder-data])
+(def template-init-no-arg-construct
+  "(defn %s
+  \"%s\"
+  [id config]
+  (build-%s (new %s) id config))")
+
+
+(def template-init-scope-id-create
+  "(defn %s
+  \"%s\"
+  [^software.constructs.Construct scope id config]
+  (build-%s (%s/create scope (name id)) id config))")
 
 
 (defn builder-source-function
   "Builds out the source code for for the builders on a package"
-  [{:keys [inits] :as builder-data}]
-  (comment
+  [{:keys [inits fn-name class-name] :as builder-data}]
+  (let [build (build-builder-source-function builder-data)]
     (cond
-    ; Only 1
-      (= 1 (count inits))
-      (builder-source-function-single-inits builder-data)
-    ; Only use stack ID
-      (superset? #{:no-arg :stack-id} (->> inits (mapv :init-type) set))
-      (->> (filterv #(= :stack-id (:init-type %)) inits)
-           (assoc builder-data :inits)
-           builder-source-function-single-inits)
-    ;Use Multi Inits
-      :else
-      (builder-source-function-multi-inits builder-data))
-    )
-  (build-builder-source-function builder-data)
+      ; The rare no arg creates, like the
+      (and (= 1 (count inits))
+           (= :create (-> inits first :init-type))
+           (= 0 (-> inits first :parameter-types count)))
+      [build (format template-init-no-arg-create fn-name "" fn-name class-name)]
 
-  )
+      ; The rare no arg construct, like the
+      (and (= 1 (count inits))
+           (= :construct (-> inits first :init-type))
+           (= 0 (-> inits first :parameter-types count)))
+      [build (format template-init-no-arg-construct fn-name "" fn-name class-name)]
+
+      ; The very common scope ID combination
+      (and (= 1 (count inits))
+           (= :create (-> inits first :init-type))
+           (-> inits first scope-id?))
+      [build (format template-init-scope-id-create fn-name "" fn-name class-name)]
+      ; Begin Catch All
+      :else
+      (do
+        (spit "inits.txt" (str "fn-name: " fn-name "\nclass-name: " class-name "\ninits: " (pr-str inits) "\n\n") :append true)
+        [build]))))

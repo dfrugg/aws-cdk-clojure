@@ -26,6 +26,12 @@
   (.build builder))
 
 
+(defn match-capture-builder
+  ""
+  [id config]
+  (build-match-capture-builder (new MatchCapture$Builder) id config))
+
+
 (defn build-match-failure-builder
   "The build-match-failure-builder function updates a MatchFailure$Builder instance using the provided configuration.
   The function takes the MatchFailure$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -52,6 +58,12 @@
   (.build builder))
 
 
+(defn match-failure-builder
+  ""
+  [id config]
+  (build-match-failure-builder (new MatchFailure$Builder) id config))
+
+
 (defn build-template-parsing-options-builder
   "The build-template-parsing-options-builder function updates a TemplateParsingOptions$Builder instance using the provided configuration.
   The function takes the TemplateParsingOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -67,3 +79,9 @@
   (when-let [data (lookup-entry config id :skip-cyclical-dependencies-check)]
     (. builder skipCyclicalDependenciesCheck data))
   (.build builder))
+
+
+(defn template-parsing-options-builder
+  ""
+  [id config]
+  (build-template-parsing-options-builder (new TemplateParsingOptions$Builder) id config))

@@ -80,6 +80,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-aws-vpc-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-aws-vpc-configuration-property-builder (new CfnPipe$AwsVpcConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-batch-array-properties-property-builder
   "The build-cfn-pipe-batch-array-properties-property-builder function updates a CfnPipe$BatchArrayPropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$BatchArrayPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -95,6 +101,12 @@
   (when-let [data (lookup-entry config id :size)]
     (. builder size data))
   (.build builder))
+
+
+(defn cfn-pipe-batch-array-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-batch-array-properties-property-builder (new CfnPipe$BatchArrayPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-batch-container-overrides-property-builder
@@ -123,6 +135,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-batch-container-overrides-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-batch-container-overrides-property-builder (new CfnPipe$BatchContainerOverridesProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-batch-environment-variable-property-builder
   "The build-cfn-pipe-batch-environment-variable-property-builder function updates a CfnPipe$BatchEnvironmentVariableProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$BatchEnvironmentVariableProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -141,6 +159,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-pipe-batch-environment-variable-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-batch-environment-variable-property-builder (new CfnPipe$BatchEnvironmentVariableProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-batch-job-dependency-property-builder
@@ -163,6 +187,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-batch-job-dependency-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-batch-job-dependency-property-builder (new CfnPipe$BatchJobDependencyProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-batch-resource-requirement-property-builder
   "The build-cfn-pipe-batch-resource-requirement-property-builder function updates a CfnPipe$BatchResourceRequirementProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$BatchResourceRequirementProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -183,6 +213,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-batch-resource-requirement-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-batch-resource-requirement-property-builder (new CfnPipe$BatchResourceRequirementProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-batch-retry-strategy-property-builder
   "The build-cfn-pipe-batch-retry-strategy-property-builder function updates a CfnPipe$BatchRetryStrategyProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$BatchRetryStrategyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -198,6 +234,12 @@
   (when-let [data (lookup-entry config id :attempts)]
     (. builder attempts data))
   (.build builder))
+
+
+(defn cfn-pipe-batch-retry-strategy-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-batch-retry-strategy-property-builder (new CfnPipe$BatchRetryStrategyProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-builder
@@ -250,6 +292,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-pipe-builder (CfnPipe$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-pipe-capacity-provider-strategy-item-property-builder
   "The build-cfn-pipe-capacity-provider-strategy-item-property-builder function updates a CfnPipe$CapacityProviderStrategyItemProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$CapacityProviderStrategyItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -273,6 +321,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-capacity-provider-strategy-item-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-capacity-provider-strategy-item-property-builder (new CfnPipe$CapacityProviderStrategyItemProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-cloudwatch-logs-log-destination-property-builder
   "The build-cfn-pipe-cloudwatch-logs-log-destination-property-builder function updates a CfnPipe$CloudwatchLogsLogDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$CloudwatchLogsLogDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -290,6 +344,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-cloudwatch-logs-log-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-cloudwatch-logs-log-destination-property-builder (new CfnPipe$CloudwatchLogsLogDestinationProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-dead-letter-config-property-builder
   "The build-cfn-pipe-dead-letter-config-property-builder function updates a CfnPipe$DeadLetterConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$DeadLetterConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -305,6 +365,12 @@
   (when-let [data (lookup-entry config id :arn)]
     (. builder arn data))
   (.build builder))
+
+
+(defn cfn-pipe-dead-letter-config-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-dead-letter-config-property-builder (new CfnPipe$DeadLetterConfigProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-ecs-container-override-property-builder
@@ -345,6 +411,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-ecs-container-override-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-ecs-container-override-property-builder (new CfnPipe$EcsContainerOverrideProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-ecs-environment-file-property-builder
   "The build-cfn-pipe-ecs-environment-file-property-builder function updates a CfnPipe$EcsEnvironmentFileProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$EcsEnvironmentFileProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -363,6 +435,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-pipe-ecs-environment-file-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-ecs-environment-file-property-builder (new CfnPipe$EcsEnvironmentFileProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-ecs-environment-variable-property-builder
@@ -385,6 +463,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-ecs-environment-variable-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-ecs-environment-variable-property-builder (new CfnPipe$EcsEnvironmentVariableProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-ecs-ephemeral-storage-property-builder
   "The build-cfn-pipe-ecs-ephemeral-storage-property-builder function updates a CfnPipe$EcsEphemeralStorageProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$EcsEphemeralStorageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -400,6 +484,12 @@
   (when-let [data (lookup-entry config id :size-in-gi-b)]
     (. builder sizeInGiB data))
   (.build builder))
+
+
+(defn cfn-pipe-ecs-ephemeral-storage-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-ecs-ephemeral-storage-property-builder (new CfnPipe$EcsEphemeralStorageProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-ecs-inference-accelerator-override-property-builder
@@ -422,6 +512,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-ecs-inference-accelerator-override-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-ecs-inference-accelerator-override-property-builder (new CfnPipe$EcsInferenceAcceleratorOverrideProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-ecs-resource-requirement-property-builder
   "The build-cfn-pipe-ecs-resource-requirement-property-builder function updates a CfnPipe$EcsResourceRequirementProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$EcsResourceRequirementProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -440,6 +536,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-pipe-ecs-resource-requirement-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-ecs-resource-requirement-property-builder (new CfnPipe$EcsResourceRequirementProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-ecs-task-override-property-builder
@@ -477,6 +579,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-ecs-task-override-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-ecs-task-override-property-builder (new CfnPipe$EcsTaskOverrideProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-filter-criteria-property-builder
   "The build-cfn-pipe-filter-criteria-property-builder function updates a CfnPipe$FilterCriteriaProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$FilterCriteriaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -492,6 +600,12 @@
   (when-let [data (lookup-entry config id :filters)]
     (. builder filters data))
   (.build builder))
+
+
+(defn cfn-pipe-filter-criteria-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-filter-criteria-property-builder (new CfnPipe$FilterCriteriaProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-filter-property-builder
@@ -511,6 +625,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-filter-property-builder (new CfnPipe$FilterProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-firehose-log-destination-property-builder
   "The build-cfn-pipe-firehose-log-destination-property-builder function updates a CfnPipe$FirehoseLogDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$FirehoseLogDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -528,6 +648,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-firehose-log-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-firehose-log-destination-property-builder (new CfnPipe$FirehoseLogDestinationProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-mq-broker-access-credentials-property-builder
   "The build-cfn-pipe-mq-broker-access-credentials-property-builder function updates a CfnPipe$MQBrokerAccessCredentialsProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$MQBrokerAccessCredentialsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -543,6 +669,12 @@
   (when-let [data (lookup-entry config id :basic-auth)]
     (. builder basicAuth data))
   (.build builder))
+
+
+(defn cfn-pipe-mq-broker-access-credentials-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-mq-broker-access-credentials-property-builder (new CfnPipe$MQBrokerAccessCredentialsProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-msk-access-credentials-property-builder
@@ -565,6 +697,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-msk-access-credentials-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-msk-access-credentials-property-builder (new CfnPipe$MSKAccessCredentialsProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-network-configuration-property-builder
   "The build-cfn-pipe-network-configuration-property-builder function updates a CfnPipe$NetworkConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$NetworkConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -580,6 +718,12 @@
   (when-let [data (lookup-entry config id :awsvpc-configuration)]
     (. builder awsvpcConfiguration data))
   (.build builder))
+
+
+(defn cfn-pipe-network-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-network-configuration-property-builder (new CfnPipe$NetworkConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-pipe-enrichment-http-parameters-property-builder
@@ -605,6 +749,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-pipe-enrichment-http-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-enrichment-http-parameters-property-builder (new CfnPipe$PipeEnrichmentHttpParametersProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-pipe-enrichment-parameters-property-builder
   "The build-cfn-pipe-pipe-enrichment-parameters-property-builder function updates a CfnPipe$PipeEnrichmentParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$PipeEnrichmentParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -623,6 +773,12 @@
   (when-let [data (lookup-entry config id :input-template)]
     (. builder inputTemplate data))
   (.build builder))
+
+
+(defn cfn-pipe-pipe-enrichment-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-enrichment-parameters-property-builder (new CfnPipe$PipeEnrichmentParametersProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-pipe-log-configuration-property-builder
@@ -654,6 +810,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-pipe-log-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-log-configuration-property-builder (new CfnPipe$PipeLogConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-pipe-source-active-mq-broker-parameters-property-builder
   "The build-cfn-pipe-pipe-source-active-mq-broker-parameters-property-builder function updates a CfnPipe$PipeSourceActiveMQBrokerParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$PipeSourceActiveMQBrokerParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -678,6 +840,12 @@
   (when-let [data (lookup-entry config id :queue-name)]
     (. builder queueName data))
   (.build builder))
+
+
+(defn cfn-pipe-pipe-source-active-mq-broker-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-source-active-mq-broker-parameters-property-builder (new CfnPipe$PipeSourceActiveMQBrokerParametersProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-pipe-source-dynamo-db-stream-parameters-property-builder
@@ -716,6 +884,12 @@
   (when-let [data (lookup-entry config id :starting-position)]
     (. builder startingPosition data))
   (.build builder))
+
+
+(defn cfn-pipe-pipe-source-dynamo-db-stream-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-source-dynamo-db-stream-parameters-property-builder (new CfnPipe$PipeSourceDynamoDBStreamParametersProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-pipe-source-kinesis-stream-parameters-property-builder
@@ -759,6 +933,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-pipe-source-kinesis-stream-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-source-kinesis-stream-parameters-property-builder (new CfnPipe$PipeSourceKinesisStreamParametersProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-pipe-source-managed-streaming-kafka-parameters-property-builder
   "The build-cfn-pipe-pipe-source-managed-streaming-kafka-parameters-property-builder function updates a CfnPipe$PipeSourceManagedStreamingKafkaParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$PipeSourceManagedStreamingKafkaParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -789,6 +969,12 @@
   (when-let [data (lookup-entry config id :topic-name)]
     (. builder topicName data))
   (.build builder))
+
+
+(defn cfn-pipe-pipe-source-managed-streaming-kafka-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-source-managed-streaming-kafka-parameters-property-builder (new CfnPipe$PipeSourceManagedStreamingKafkaParametersProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-pipe-source-parameters-property-builder
@@ -829,6 +1015,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-pipe-source-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-source-parameters-property-builder (new CfnPipe$PipeSourceParametersProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-pipe-source-rabbit-mq-broker-parameters-property-builder
   "The build-cfn-pipe-pipe-source-rabbit-mq-broker-parameters-property-builder function updates a CfnPipe$PipeSourceRabbitMQBrokerParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$PipeSourceRabbitMQBrokerParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -856,6 +1048,12 @@
   (when-let [data (lookup-entry config id :virtual-host)]
     (. builder virtualHost data))
   (.build builder))
+
+
+(defn cfn-pipe-pipe-source-rabbit-mq-broker-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-source-rabbit-mq-broker-parameters-property-builder (new CfnPipe$PipeSourceRabbitMQBrokerParametersProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-pipe-source-self-managed-kafka-parameters-property-builder
@@ -899,6 +1097,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-pipe-source-self-managed-kafka-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-source-self-managed-kafka-parameters-property-builder (new CfnPipe$PipeSourceSelfManagedKafkaParametersProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-pipe-source-sqs-queue-parameters-property-builder
   "The build-cfn-pipe-pipe-source-sqs-queue-parameters-property-builder function updates a CfnPipe$PipeSourceSqsQueueParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$PipeSourceSqsQueueParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -917,6 +1121,12 @@
   (when-let [data (lookup-entry config id :maximum-batching-window-in-seconds)]
     (. builder maximumBatchingWindowInSeconds data))
   (.build builder))
+
+
+(defn cfn-pipe-pipe-source-sqs-queue-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-source-sqs-queue-parameters-property-builder (new CfnPipe$PipeSourceSqsQueueParametersProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-pipe-target-batch-job-parameters-property-builder
@@ -954,6 +1164,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-pipe-target-batch-job-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-target-batch-job-parameters-property-builder (new CfnPipe$PipeTargetBatchJobParametersProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-pipe-target-cloud-watch-logs-parameters-property-builder
   "The build-cfn-pipe-pipe-target-cloud-watch-logs-parameters-property-builder function updates a CfnPipe$PipeTargetCloudWatchLogsParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$PipeTargetCloudWatchLogsParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -972,6 +1188,12 @@
   (when-let [data (lookup-entry config id :timestamp)]
     (. builder timestamp data))
   (.build builder))
+
+
+(defn cfn-pipe-pipe-target-cloud-watch-logs-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-target-cloud-watch-logs-parameters-property-builder (new CfnPipe$PipeTargetCloudWatchLogsParametersProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-pipe-target-ecs-task-parameters-property-builder
@@ -1033,6 +1255,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-pipe-target-ecs-task-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-target-ecs-task-parameters-property-builder (new CfnPipe$PipeTargetEcsTaskParametersProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-pipe-target-event-bridge-event-bus-parameters-property-builder
   "The build-cfn-pipe-pipe-target-event-bridge-event-bus-parameters-property-builder function updates a CfnPipe$PipeTargetEventBridgeEventBusParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$PipeTargetEventBridgeEventBusParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1062,6 +1290,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-pipe-target-event-bridge-event-bus-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-target-event-bridge-event-bus-parameters-property-builder (new CfnPipe$PipeTargetEventBridgeEventBusParametersProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-pipe-target-http-parameters-property-builder
   "The build-cfn-pipe-pipe-target-http-parameters-property-builder function updates a CfnPipe$PipeTargetHttpParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$PipeTargetHttpParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1085,6 +1319,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-pipe-target-http-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-target-http-parameters-property-builder (new CfnPipe$PipeTargetHttpParametersProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-pipe-target-kinesis-stream-parameters-property-builder
   "The build-cfn-pipe-pipe-target-kinesis-stream-parameters-property-builder function updates a CfnPipe$PipeTargetKinesisStreamParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$PipeTargetKinesisStreamParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1102,6 +1342,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-pipe-target-kinesis-stream-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-target-kinesis-stream-parameters-property-builder (new CfnPipe$PipeTargetKinesisStreamParametersProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-pipe-target-lambda-function-parameters-property-builder
   "The build-cfn-pipe-pipe-target-lambda-function-parameters-property-builder function updates a CfnPipe$PipeTargetLambdaFunctionParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$PipeTargetLambdaFunctionParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1117,6 +1363,12 @@
   (when-let [data (lookup-entry config id :invocation-type)]
     (. builder invocationType data))
   (.build builder))
+
+
+(defn cfn-pipe-pipe-target-lambda-function-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-target-lambda-function-parameters-property-builder (new CfnPipe$PipeTargetLambdaFunctionParametersProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-pipe-target-parameters-property-builder
@@ -1169,6 +1421,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-pipe-target-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-target-parameters-property-builder (new CfnPipe$PipeTargetParametersProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-pipe-target-redshift-data-parameters-property-builder
   "The build-cfn-pipe-pipe-target-redshift-data-parameters-property-builder function updates a CfnPipe$PipeTargetRedshiftDataParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$PipeTargetRedshiftDataParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1201,6 +1459,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-pipe-target-redshift-data-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-target-redshift-data-parameters-property-builder (new CfnPipe$PipeTargetRedshiftDataParametersProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-pipe-target-sage-maker-pipeline-parameters-property-builder
   "The build-cfn-pipe-pipe-target-sage-maker-pipeline-parameters-property-builder function updates a CfnPipe$PipeTargetSageMakerPipelineParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$PipeTargetSageMakerPipelineParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1216,6 +1480,12 @@
   (when-let [data (lookup-entry config id :pipeline-parameter-list)]
     (. builder pipelineParameterList data))
   (.build builder))
+
+
+(defn cfn-pipe-pipe-target-sage-maker-pipeline-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-target-sage-maker-pipeline-parameters-property-builder (new CfnPipe$PipeTargetSageMakerPipelineParametersProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-pipe-target-sqs-queue-parameters-property-builder
@@ -1238,6 +1508,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-pipe-target-sqs-queue-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-target-sqs-queue-parameters-property-builder (new CfnPipe$PipeTargetSqsQueueParametersProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-pipe-target-state-machine-parameters-property-builder
   "The build-cfn-pipe-pipe-target-state-machine-parameters-property-builder function updates a CfnPipe$PipeTargetStateMachineParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$PipeTargetStateMachineParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1253,6 +1529,12 @@
   (when-let [data (lookup-entry config id :invocation-type)]
     (. builder invocationType data))
   (.build builder))
+
+
+(defn cfn-pipe-pipe-target-state-machine-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-pipe-target-state-machine-parameters-property-builder (new CfnPipe$PipeTargetStateMachineParametersProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-placement-constraint-property-builder
@@ -1275,6 +1557,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-placement-constraint-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-placement-constraint-property-builder (new CfnPipe$PlacementConstraintProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-placement-strategy-property-builder
   "The build-cfn-pipe-placement-strategy-property-builder function updates a CfnPipe$PlacementStrategyProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$PlacementStrategyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1293,6 +1581,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-pipe-placement-strategy-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-placement-strategy-property-builder (new CfnPipe$PlacementStrategyProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-props-builder
@@ -1345,6 +1639,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-props-builder
+  ""
+  [id config]
+  (build-cfn-pipe-props-builder (new CfnPipeProps$Builder) id config))
+
+
 (defn build-cfn-pipe-s3-log-destination-property-builder
   "The build-cfn-pipe-s3-log-destination-property-builder function updates a CfnPipe$S3LogDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$S3LogDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1371,6 +1671,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-s3-log-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-s3-log-destination-property-builder (new CfnPipe$S3LogDestinationProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-sage-maker-pipeline-parameter-property-builder
   "The build-cfn-pipe-sage-maker-pipeline-parameter-property-builder function updates a CfnPipe$SageMakerPipelineParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$SageMakerPipelineParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1389,6 +1695,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-pipe-sage-maker-pipeline-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-sage-maker-pipeline-parameter-property-builder (new CfnPipe$SageMakerPipelineParameterProperty$Builder) id config))
 
 
 (defn build-cfn-pipe-self-managed-kafka-access-configuration-credentials-property-builder
@@ -1417,6 +1729,12 @@
   (.build builder))
 
 
+(defn cfn-pipe-self-managed-kafka-access-configuration-credentials-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-self-managed-kafka-access-configuration-credentials-property-builder (new CfnPipe$SelfManagedKafkaAccessConfigurationCredentialsProperty$Builder) id config))
+
+
 (defn build-cfn-pipe-self-managed-kafka-access-configuration-vpc-property-builder
   "The build-cfn-pipe-self-managed-kafka-access-configuration-vpc-property-builder function updates a CfnPipe$SelfManagedKafkaAccessConfigurationVpcProperty$Builder instance using the provided configuration.
   The function takes the CfnPipe$SelfManagedKafkaAccessConfigurationVpcProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1435,3 +1753,9 @@
   (when-let [data (lookup-entry config id :subnets)]
     (. builder subnets data))
   (.build builder))
+
+
+(defn cfn-pipe-self-managed-kafka-access-configuration-vpc-property-builder
+  ""
+  [id config]
+  (build-cfn-pipe-self-managed-kafka-access-configuration-vpc-property-builder (new CfnPipe$SelfManagedKafkaAccessConfigurationVpcProperty$Builder) id config))

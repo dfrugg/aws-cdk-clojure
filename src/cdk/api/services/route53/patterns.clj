@@ -31,6 +31,12 @@
   (.build builder))
 
 
+(defn https-redirect-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-https-redirect-builder (HttpsRedirect$Builder/create scope (name id)) id config))
+
+
 (defn build-https-redirect-props-builder
   "The build-https-redirect-props-builder function updates a HttpsRedirectProps$Builder instance using the provided configuration.
   The function takes the HttpsRedirectProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -55,3 +61,9 @@
   (when-let [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
+
+
+(defn https-redirect-props-builder
+  ""
+  [id config]
+  (build-https-redirect-props-builder (new HttpsRedirectProps$Builder) id config))

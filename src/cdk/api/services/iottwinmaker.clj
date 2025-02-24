@@ -80,6 +80,12 @@
   (.build builder))
 
 
+(defn cfn-component-type-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-component-type-builder (CfnComponentType$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-component-type-composite-component-type-property-builder
   "The build-cfn-component-type-composite-component-type-property-builder function updates a CfnComponentType$CompositeComponentTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnComponentType$CompositeComponentTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -95,6 +101,12 @@
   (when-let [data (lookup-entry config id :component-type-id)]
     (. builder componentTypeId data))
   (.build builder))
+
+
+(defn cfn-component-type-composite-component-type-property-builder
+  ""
+  [id config]
+  (build-cfn-component-type-composite-component-type-property-builder (new CfnComponentType$CompositeComponentTypeProperty$Builder) id config))
 
 
 (defn build-cfn-component-type-data-connector-property-builder
@@ -115,6 +127,12 @@
   (when-let [data (lookup-entry config id :lambda)]
     (. builder lambda data))
   (.build builder))
+
+
+(defn cfn-component-type-data-connector-property-builder
+  ""
+  [id config]
+  (build-cfn-component-type-data-connector-property-builder (new CfnComponentType$DataConnectorProperty$Builder) id config))
 
 
 (defn build-cfn-component-type-data-type-property-builder
@@ -144,6 +162,12 @@
   (when-let [data (lookup-entry config id :unit-of-measure)]
     (. builder unitOfMeasure data))
   (.build builder))
+
+
+(defn cfn-component-type-data-type-property-builder
+  ""
+  [id config]
+  (build-cfn-component-type-data-type-property-builder (new CfnComponentType$DataTypeProperty$Builder) id config))
 
 
 (defn build-cfn-component-type-data-value-property-builder
@@ -187,6 +211,12 @@
   (.build builder))
 
 
+(defn cfn-component-type-data-value-property-builder
+  ""
+  [id config]
+  (build-cfn-component-type-data-value-property-builder (new CfnComponentType$DataValueProperty$Builder) id config))
+
+
 (defn build-cfn-component-type-error-property-builder
   "The build-cfn-component-type-error-property-builder function updates a CfnComponentType$ErrorProperty$Builder instance using the provided configuration.
   The function takes the CfnComponentType$ErrorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -205,6 +235,12 @@
   (when-let [data (lookup-entry config id :message)]
     (. builder message data))
   (.build builder))
+
+
+(defn cfn-component-type-error-property-builder
+  ""
+  [id config]
+  (build-cfn-component-type-error-property-builder (new CfnComponentType$ErrorProperty$Builder) id config))
 
 
 (defn build-cfn-component-type-function-property-builder
@@ -230,6 +266,12 @@
   (.build builder))
 
 
+(defn cfn-component-type-function-property-builder
+  ""
+  [id config]
+  (build-cfn-component-type-function-property-builder (new CfnComponentType$FunctionProperty$Builder) id config))
+
+
 (defn build-cfn-component-type-lambda-function-property-builder
   "The build-cfn-component-type-lambda-function-property-builder function updates a CfnComponentType$LambdaFunctionProperty$Builder instance using the provided configuration.
   The function takes the CfnComponentType$LambdaFunctionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -245,6 +287,12 @@
   (when-let [data (lookup-entry config id :arn)]
     (. builder arn data))
   (.build builder))
+
+
+(defn cfn-component-type-lambda-function-property-builder
+  ""
+  [id config]
+  (build-cfn-component-type-lambda-function-property-builder (new CfnComponentType$LambdaFunctionProperty$Builder) id config))
 
 
 (defn build-cfn-component-type-property-definition-property-builder
@@ -282,6 +330,12 @@
   (.build builder))
 
 
+(defn cfn-component-type-property-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-component-type-property-definition-property-builder (new CfnComponentType$PropertyDefinitionProperty$Builder) id config))
+
+
 (defn build-cfn-component-type-property-group-property-builder
   "The build-cfn-component-type-property-group-property-builder function updates a CfnComponentType$PropertyGroupProperty$Builder instance using the provided configuration.
   The function takes the CfnComponentType$PropertyGroupProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -300,6 +354,12 @@
   (when-let [data (lookup-entry config id :property-names)]
     (. builder propertyNames data))
   (.build builder))
+
+
+(defn cfn-component-type-property-group-property-builder
+  ""
+  [id config]
+  (build-cfn-component-type-property-group-property-builder (new CfnComponentType$PropertyGroupProperty$Builder) id config))
 
 
 (defn build-cfn-component-type-props-builder
@@ -346,6 +406,12 @@
   (.build builder))
 
 
+(defn cfn-component-type-props-builder
+  ""
+  [id config]
+  (build-cfn-component-type-props-builder (new CfnComponentTypeProps$Builder) id config))
+
+
 (defn build-cfn-component-type-relationship-property-builder
   "The build-cfn-component-type-relationship-property-builder function updates a CfnComponentType$RelationshipProperty$Builder instance using the provided configuration.
   The function takes the CfnComponentType$RelationshipProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -364,6 +430,12 @@
   (when-let [data (lookup-entry config id :target-component-type-id)]
     (. builder targetComponentTypeId data))
   (.build builder))
+
+
+(defn cfn-component-type-relationship-property-builder
+  ""
+  [id config]
+  (build-cfn-component-type-relationship-property-builder (new CfnComponentType$RelationshipProperty$Builder) id config))
 
 
 (defn build-cfn-component-type-relationship-value-property-builder
@@ -386,6 +458,12 @@
   (.build builder))
 
 
+(defn cfn-component-type-relationship-value-property-builder
+  ""
+  [id config]
+  (build-cfn-component-type-relationship-value-property-builder (new CfnComponentType$RelationshipValueProperty$Builder) id config))
+
+
 (defn build-cfn-component-type-status-property-builder
   "The build-cfn-component-type-status-property-builder function updates a CfnComponentType$StatusProperty$Builder instance using the provided configuration.
   The function takes the CfnComponentType$StatusProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -404,6 +482,12 @@
   (when-let [data (lookup-entry config id :state)]
     (. builder state data))
   (.build builder))
+
+
+(defn cfn-component-type-status-property-builder
+  ""
+  [id config]
+  (build-cfn-component-type-status-property-builder (new CfnComponentType$StatusProperty$Builder) id config))
 
 
 (defn build-cfn-entity-builder
@@ -444,6 +528,12 @@
   (.build builder))
 
 
+(defn cfn-entity-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-entity-builder (CfnEntity$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-entity-component-property-builder
   "The build-cfn-entity-component-property-builder function updates a CfnEntity$ComponentProperty$Builder instance using the provided configuration.
   The function takes the CfnEntity$ComponentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -477,6 +567,12 @@
   (when-let [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
+
+
+(defn cfn-entity-component-property-builder
+  ""
+  [id config]
+  (build-cfn-entity-component-property-builder (new CfnEntity$ComponentProperty$Builder) id config))
 
 
 (defn build-cfn-entity-composite-component-property-builder
@@ -514,6 +610,12 @@
   (.build builder))
 
 
+(defn cfn-entity-composite-component-property-builder
+  ""
+  [id config]
+  (build-cfn-entity-composite-component-property-builder (new CfnEntity$CompositeComponentProperty$Builder) id config))
+
+
 (defn build-cfn-entity-data-type-property-builder
   "The build-cfn-entity-data-type-property-builder function updates a CfnEntity$DataTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnEntity$DataTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -541,6 +643,12 @@
   (when-let [data (lookup-entry config id :unit-of-measure)]
     (. builder unitOfMeasure data))
   (.build builder))
+
+
+(defn cfn-entity-data-type-property-builder
+  ""
+  [id config]
+  (build-cfn-entity-data-type-property-builder (new CfnEntity$DataTypeProperty$Builder) id config))
 
 
 (defn build-cfn-entity-data-value-property-builder
@@ -582,6 +690,12 @@
   (when-let [data (lookup-entry config id :string-value)]
     (. builder stringValue data))
   (.build builder))
+
+
+(defn cfn-entity-data-value-property-builder
+  ""
+  [id config]
+  (build-cfn-entity-data-value-property-builder (new CfnEntity$DataValueProperty$Builder) id config))
 
 
 (defn build-cfn-entity-definition-property-builder
@@ -628,6 +742,12 @@
   (.build builder))
 
 
+(defn cfn-entity-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-entity-definition-property-builder (new CfnEntity$DefinitionProperty$Builder) id config))
+
+
 (defn build-cfn-entity-error-property-builder
   "The build-cfn-entity-error-property-builder function updates a CfnEntity$ErrorProperty$Builder instance using the provided configuration.
   The function takes the CfnEntity$ErrorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -646,6 +766,12 @@
   (when-let [data (lookup-entry config id :message)]
     (. builder message data))
   (.build builder))
+
+
+(defn cfn-entity-error-property-builder
+  ""
+  [id config]
+  (build-cfn-entity-error-property-builder (new CfnEntity$ErrorProperty$Builder) id config))
 
 
 (defn build-cfn-entity-property-group-property-builder
@@ -668,6 +794,12 @@
   (.build builder))
 
 
+(defn cfn-entity-property-group-property-builder
+  ""
+  [id config]
+  (build-cfn-entity-property-group-property-builder (new CfnEntity$PropertyGroupProperty$Builder) id config))
+
+
 (defn build-cfn-entity-property-property-builder
   "The build-cfn-entity-property-property-builder function updates a CfnEntity$PropertyProperty$Builder instance using the provided configuration.
   The function takes the CfnEntity$PropertyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -686,6 +818,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-entity-property-property-builder
+  ""
+  [id config]
+  (build-cfn-entity-property-property-builder (new CfnEntity$PropertyProperty$Builder) id config))
 
 
 (defn build-cfn-entity-props-builder
@@ -726,6 +864,12 @@
   (.build builder))
 
 
+(defn cfn-entity-props-builder
+  ""
+  [id config]
+  (build-cfn-entity-props-builder (new CfnEntityProps$Builder) id config))
+
+
 (defn build-cfn-entity-relationship-property-builder
   "The build-cfn-entity-relationship-property-builder function updates a CfnEntity$RelationshipProperty$Builder instance using the provided configuration.
   The function takes the CfnEntity$RelationshipProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -744,6 +888,12 @@
   (when-let [data (lookup-entry config id :target-component-type-id)]
     (. builder targetComponentTypeId data))
   (.build builder))
+
+
+(defn cfn-entity-relationship-property-builder
+  ""
+  [id config]
+  (build-cfn-entity-relationship-property-builder (new CfnEntity$RelationshipProperty$Builder) id config))
 
 
 (defn build-cfn-entity-relationship-value-property-builder
@@ -766,6 +916,12 @@
   (.build builder))
 
 
+(defn cfn-entity-relationship-value-property-builder
+  ""
+  [id config]
+  (build-cfn-entity-relationship-value-property-builder (new CfnEntity$RelationshipValueProperty$Builder) id config))
+
+
 (defn build-cfn-entity-status-property-builder
   "The build-cfn-entity-status-property-builder function updates a CfnEntity$StatusProperty$Builder instance using the provided configuration.
   The function takes the CfnEntity$StatusProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -784,6 +940,12 @@
   (when-let [data (lookup-entry config id :state)]
     (. builder state data))
   (.build builder))
+
+
+(defn cfn-entity-status-property-builder
+  ""
+  [id config]
+  (build-cfn-entity-status-property-builder (new CfnEntity$StatusProperty$Builder) id config))
 
 
 (defn build-cfn-scene-builder
@@ -821,6 +983,12 @@
   (.build builder))
 
 
+(defn cfn-scene-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-scene-builder (CfnScene$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-scene-props-builder
   "The build-cfn-scene-props-builder function updates a CfnSceneProps$Builder instance using the provided configuration.
   The function takes the CfnSceneProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -856,6 +1024,12 @@
   (.build builder))
 
 
+(defn cfn-scene-props-builder
+  ""
+  [id config]
+  (build-cfn-scene-props-builder (new CfnSceneProps$Builder) id config))
+
+
 (defn build-cfn-sync-job-builder
   "The build-cfn-sync-job-builder function updates a CfnSyncJob$Builder instance using the provided configuration.
   The function takes the CfnSyncJob$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -882,6 +1056,12 @@
   (.build builder))
 
 
+(defn cfn-sync-job-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-sync-job-builder (CfnSyncJob$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-sync-job-props-builder
   "The build-cfn-sync-job-props-builder function updates a CfnSyncJobProps$Builder instance using the provided configuration.
   The function takes the CfnSyncJobProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -906,6 +1086,12 @@
   (when-let [data (lookup-entry config id :workspace-id)]
     (. builder workspaceId data))
   (.build builder))
+
+
+(defn cfn-sync-job-props-builder
+  ""
+  [id config]
+  (build-cfn-sync-job-props-builder (new CfnSyncJobProps$Builder) id config))
 
 
 (defn build-cfn-workspace-builder
@@ -937,6 +1123,12 @@
   (.build builder))
 
 
+(defn cfn-workspace-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-workspace-builder (CfnWorkspace$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-workspace-props-builder
   "The build-cfn-workspace-props-builder function updates a CfnWorkspaceProps$Builder instance using the provided configuration.
   The function takes the CfnWorkspaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -964,3 +1156,9 @@
   (when-let [data (lookup-entry config id :workspace-id)]
     (. builder workspaceId data))
   (.build builder))
+
+
+(defn cfn-workspace-props-builder
+  ""
+  [id config]
+  (build-cfn-workspace-props-builder (new CfnWorkspaceProps$Builder) id config))

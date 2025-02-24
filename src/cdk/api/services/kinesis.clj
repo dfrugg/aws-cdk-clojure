@@ -87,6 +87,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-stream-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-stream-builder (CfnStream$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-stream-consumer-builder
   "The build-cfn-stream-consumer-builder function updates a CfnStreamConsumer$Builder instance using the provided configuration.
   The function takes the CfnStreamConsumer$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -107,6 +113,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-stream-consumer-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-stream-consumer-builder (CfnStreamConsumer$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-stream-consumer-props-builder
   "The build-cfn-stream-consumer-props-builder function updates a CfnStreamConsumerProps$Builder instance using the provided configuration.
   The function takes the CfnStreamConsumerProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -125,6 +137,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :stream-arn)]
     (. builder streamArn data))
   (.build builder))
+
+
+(defn cfn-stream-consumer-props-builder
+  ""
+  [id config]
+  (build-cfn-stream-consumer-props-builder (new CfnStreamConsumerProps$Builder) id config))
 
 
 (defn build-cfn-stream-props-builder
@@ -159,6 +177,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-stream-props-builder
+  ""
+  [id config]
+  (build-cfn-stream-props-builder (new CfnStreamProps$Builder) id config))
+
+
 (defn build-cfn-stream-stream-encryption-property-builder
   "The build-cfn-stream-stream-encryption-property-builder function updates a CfnStream$StreamEncryptionProperty$Builder instance using the provided configuration.
   The function takes the CfnStream$StreamEncryptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -179,6 +203,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-stream-stream-encryption-property-builder
+  ""
+  [id config]
+  (build-cfn-stream-stream-encryption-property-builder (new CfnStream$StreamEncryptionProperty$Builder) id config))
+
+
 (defn build-cfn-stream-stream-mode-details-property-builder
   "The build-cfn-stream-stream-mode-details-property-builder function updates a CfnStream$StreamModeDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnStream$StreamModeDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -194,6 +224,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :stream-mode)]
     (. builder streamMode data))
   (.build builder))
+
+
+(defn cfn-stream-stream-mode-details-property-builder
+  ""
+  [id config]
+  (build-cfn-stream-stream-mode-details-property-builder (new CfnStream$StreamModeDetailsProperty$Builder) id config))
 
 
 (defn build-stream-attributes-builder
@@ -214,6 +250,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :stream-arn)]
     (. builder streamArn data))
   (.build builder))
+
+
+(defn stream-attributes-builder
+  ""
+  [id config]
+  (build-stream-attributes-builder (new StreamAttributes$Builder) id config))
 
 
 (defn build-stream-builder
@@ -251,6 +293,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn stream-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-stream-builder (Stream$Builder/create scope (name id)) id config))
+
+
 (defn build-stream-props-builder
   "The build-stream-props-builder function updates a StreamProps$Builder instance using the provided configuration.
   The function takes the StreamProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -284,3 +332,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :stream-name)]
     (. builder streamName data))
   (.build builder))
+
+
+(defn stream-props-builder
+  ""
+  [id config]
+  (build-stream-props-builder (new StreamProps$Builder) id config))

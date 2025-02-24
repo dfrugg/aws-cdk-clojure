@@ -44,6 +44,12 @@
   (.build builder))
 
 
+(defn cfn-alert-action-property-builder
+  ""
+  [id config]
+  (build-cfn-alert-action-property-builder (new CfnAlert$ActionProperty$Builder) id config))
+
+
 (defn build-cfn-alert-builder
   "The build-cfn-alert-builder function updates a CfnAlert$Builder instance using the provided configuration.
   The function takes the CfnAlert$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -73,6 +79,12 @@
   (.build builder))
 
 
+(defn cfn-alert-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-alert-builder (CfnAlert$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-alert-lambda-configuration-property-builder
   "The build-cfn-alert-lambda-configuration-property-builder function updates a CfnAlert$LambdaConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAlert$LambdaConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -91,6 +103,12 @@
   (when-let [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
+
+
+(defn cfn-alert-lambda-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-alert-lambda-configuration-property-builder (new CfnAlert$LambdaConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-alert-props-builder
@@ -122,6 +140,12 @@
   (.build builder))
 
 
+(defn cfn-alert-props-builder
+  ""
+  [id config]
+  (build-cfn-alert-props-builder (new CfnAlertProps$Builder) id config))
+
+
 (defn build-cfn-alert-sns-configuration-property-builder
   "The build-cfn-alert-sns-configuration-property-builder function updates a CfnAlert$SNSConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAlert$SNSConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -142,6 +166,12 @@
   (.build builder))
 
 
+(defn cfn-alert-sns-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-alert-sns-configuration-property-builder (new CfnAlert$SNSConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-anomaly-detector-anomaly-detector-config-property-builder
   "The build-cfn-anomaly-detector-anomaly-detector-config-property-builder function updates a CfnAnomalyDetector$AnomalyDetectorConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnAnomalyDetector$AnomalyDetectorConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -157,6 +187,12 @@
   (when-let [data (lookup-entry config id :anomaly-detector-frequency)]
     (. builder anomalyDetectorFrequency data))
   (.build builder))
+
+
+(defn cfn-anomaly-detector-anomaly-detector-config-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-anomaly-detector-config-property-builder (new CfnAnomalyDetector$AnomalyDetectorConfigProperty$Builder) id config))
 
 
 (defn build-cfn-anomaly-detector-app-flow-config-property-builder
@@ -177,6 +213,12 @@
   (when-let [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
+
+
+(defn cfn-anomaly-detector-app-flow-config-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-app-flow-config-property-builder (new CfnAnomalyDetector$AppFlowConfigProperty$Builder) id config))
 
 
 (defn build-cfn-anomaly-detector-builder
@@ -208,6 +250,12 @@
   (.build builder))
 
 
+(defn cfn-anomaly-detector-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-anomaly-detector-builder (CfnAnomalyDetector$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-anomaly-detector-cloudwatch-config-property-builder
   "The build-cfn-anomaly-detector-cloudwatch-config-property-builder function updates a CfnAnomalyDetector$CloudwatchConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnAnomalyDetector$CloudwatchConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -223,6 +271,12 @@
   (when-let [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
+
+
+(defn cfn-anomaly-detector-cloudwatch-config-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-cloudwatch-config-property-builder (new CfnAnomalyDetector$CloudwatchConfigProperty$Builder) id config))
 
 
 (defn build-cfn-anomaly-detector-csv-format-descriptor-property-builder
@@ -257,6 +311,12 @@
   (.build builder))
 
 
+(defn cfn-anomaly-detector-csv-format-descriptor-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-csv-format-descriptor-property-builder (new CfnAnomalyDetector$CsvFormatDescriptorProperty$Builder) id config))
+
+
 (defn build-cfn-anomaly-detector-file-format-descriptor-property-builder
   "The build-cfn-anomaly-detector-file-format-descriptor-property-builder function updates a CfnAnomalyDetector$FileFormatDescriptorProperty$Builder instance using the provided configuration.
   The function takes the CfnAnomalyDetector$FileFormatDescriptorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -277,6 +337,12 @@
   (.build builder))
 
 
+(defn cfn-anomaly-detector-file-format-descriptor-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-file-format-descriptor-property-builder (new CfnAnomalyDetector$FileFormatDescriptorProperty$Builder) id config))
+
+
 (defn build-cfn-anomaly-detector-json-format-descriptor-property-builder
   "The build-cfn-anomaly-detector-json-format-descriptor-property-builder function updates a CfnAnomalyDetector$JsonFormatDescriptorProperty$Builder instance using the provided configuration.
   The function takes the CfnAnomalyDetector$JsonFormatDescriptorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -295,6 +361,12 @@
   (when-let [data (lookup-entry config id :file-compression)]
     (. builder fileCompression data))
   (.build builder))
+
+
+(defn cfn-anomaly-detector-json-format-descriptor-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-json-format-descriptor-property-builder (new CfnAnomalyDetector$JsonFormatDescriptorProperty$Builder) id config))
 
 
 (defn build-cfn-anomaly-detector-metric-property-builder
@@ -318,6 +390,12 @@
   (when-let [data (lookup-entry config id :namespace)]
     (. builder namespace data))
   (.build builder))
+
+
+(defn cfn-anomaly-detector-metric-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-metric-property-builder (new CfnAnomalyDetector$MetricProperty$Builder) id config))
 
 
 (defn build-cfn-anomaly-detector-metric-set-property-builder
@@ -361,6 +439,12 @@
   (.build builder))
 
 
+(defn cfn-anomaly-detector-metric-set-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-metric-set-property-builder (new CfnAnomalyDetector$MetricSetProperty$Builder) id config))
+
+
 (defn build-cfn-anomaly-detector-metric-source-property-builder
   "The build-cfn-anomaly-detector-metric-source-property-builder function updates a CfnAnomalyDetector$MetricSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnAnomalyDetector$MetricSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -390,6 +474,12 @@
   (.build builder))
 
 
+(defn cfn-anomaly-detector-metric-source-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-metric-source-property-builder (new CfnAnomalyDetector$MetricSourceProperty$Builder) id config))
+
+
 (defn build-cfn-anomaly-detector-props-builder
   "The build-cfn-anomaly-detector-props-builder function updates a CfnAnomalyDetectorProps$Builder instance using the provided configuration.
   The function takes the CfnAnomalyDetectorProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -417,6 +507,12 @@
   (when-let [data (lookup-entry config id :metric-set-list)]
     (. builder metricSetList data))
   (.build builder))
+
+
+(defn cfn-anomaly-detector-props-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-props-builder (new CfnAnomalyDetectorProps$Builder) id config))
 
 
 (defn build-cfn-anomaly-detector-rds-source-config-property-builder
@@ -457,6 +553,12 @@
   (.build builder))
 
 
+(defn cfn-anomaly-detector-rds-source-config-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-rds-source-config-property-builder (new CfnAnomalyDetector$RDSSourceConfigProperty$Builder) id config))
+
+
 (defn build-cfn-anomaly-detector-redshift-source-config-property-builder
   "The build-cfn-anomaly-detector-redshift-source-config-property-builder function updates a CfnAnomalyDetector$RedshiftSourceConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnAnomalyDetector$RedshiftSourceConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -495,6 +597,12 @@
   (.build builder))
 
 
+(defn cfn-anomaly-detector-redshift-source-config-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-redshift-source-config-property-builder (new CfnAnomalyDetector$RedshiftSourceConfigProperty$Builder) id config))
+
+
 (defn build-cfn-anomaly-detector-s3-source-config-property-builder
   "The build-cfn-anomaly-detector-s3-source-config-property-builder function updates a CfnAnomalyDetector$S3SourceConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnAnomalyDetector$S3SourceConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -521,6 +629,12 @@
   (.build builder))
 
 
+(defn cfn-anomaly-detector-s3-source-config-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-s3-source-config-property-builder (new CfnAnomalyDetector$S3SourceConfigProperty$Builder) id config))
+
+
 (defn build-cfn-anomaly-detector-timestamp-column-property-builder
   "The build-cfn-anomaly-detector-timestamp-column-property-builder function updates a CfnAnomalyDetector$TimestampColumnProperty$Builder instance using the provided configuration.
   The function takes the CfnAnomalyDetector$TimestampColumnProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -541,6 +655,12 @@
   (.build builder))
 
 
+(defn cfn-anomaly-detector-timestamp-column-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-timestamp-column-property-builder (new CfnAnomalyDetector$TimestampColumnProperty$Builder) id config))
+
+
 (defn build-cfn-anomaly-detector-vpc-configuration-property-builder
   "The build-cfn-anomaly-detector-vpc-configuration-property-builder function updates a CfnAnomalyDetector$VpcConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAnomalyDetector$VpcConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -559,3 +679,9 @@
   (when-let [data (lookup-entry config id :subnet-id-list)]
     (. builder subnetIdList data))
   (.build builder))
+
+
+(defn cfn-anomaly-detector-vpc-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-anomaly-detector-vpc-configuration-property-builder (new CfnAnomalyDetector$VpcConfigurationProperty$Builder) id config))

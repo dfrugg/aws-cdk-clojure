@@ -47,6 +47,12 @@
   (.build builder))
 
 
+(defn cfn-application-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-builder (CfnApplication$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-application-definition-property-builder
   "The build-cfn-application-definition-property-builder function updates a CfnApplication$DefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$DefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -65,6 +71,12 @@
   (when-let [data (lookup-entry config id :s3-location)]
     (. builder s3Location data))
   (.build builder))
+
+
+(defn cfn-application-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-application-definition-property-builder (new CfnApplication$DefinitionProperty$Builder) id config))
 
 
 (defn build-cfn-application-props-builder
@@ -100,6 +112,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-application-props-builder
+  ""
+  [id config]
+  (build-cfn-application-props-builder (new CfnApplicationProps$Builder) id config))
 
 
 (defn build-cfn-environment-builder
@@ -155,6 +173,12 @@
   (.build builder))
 
 
+(defn cfn-environment-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-environment-builder (CfnEnvironment$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-environment-efs-storage-configuration-property-builder
   "The build-cfn-environment-efs-storage-configuration-property-builder function updates a CfnEnvironment$EfsStorageConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$EfsStorageConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -173,6 +197,12 @@
   (when-let [data (lookup-entry config id :mount-point)]
     (. builder mountPoint data))
   (.build builder))
+
+
+(defn cfn-environment-efs-storage-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-environment-efs-storage-configuration-property-builder (new CfnEnvironment$EfsStorageConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-environment-fsx-storage-configuration-property-builder
@@ -195,6 +225,12 @@
   (.build builder))
 
 
+(defn cfn-environment-fsx-storage-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-environment-fsx-storage-configuration-property-builder (new CfnEnvironment$FsxStorageConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-environment-high-availability-config-property-builder
   "The build-cfn-environment-high-availability-config-property-builder function updates a CfnEnvironment$HighAvailabilityConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$HighAvailabilityConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -210,6 +246,12 @@
   (when-let [data (lookup-entry config id :desired-capacity)]
     (. builder desiredCapacity data))
   (.build builder))
+
+
+(defn cfn-environment-high-availability-config-property-builder
+  ""
+  [id config]
+  (build-cfn-environment-high-availability-config-property-builder (new CfnEnvironment$HighAvailabilityConfigProperty$Builder) id config))
 
 
 (defn build-cfn-environment-props-builder
@@ -265,6 +307,12 @@
   (.build builder))
 
 
+(defn cfn-environment-props-builder
+  ""
+  [id config]
+  (build-cfn-environment-props-builder (new CfnEnvironmentProps$Builder) id config))
+
+
 (defn build-cfn-environment-storage-configuration-property-builder
   "The build-cfn-environment-storage-configuration-property-builder function updates a CfnEnvironment$StorageConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$StorageConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -283,3 +331,9 @@
   (when-let [data (lookup-entry config id :fsx)]
     (. builder fsx data))
   (.build builder))
+
+
+(defn cfn-environment-storage-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-environment-storage-configuration-property-builder (new CfnEnvironment$StorageConfigurationProperty$Builder) id config))

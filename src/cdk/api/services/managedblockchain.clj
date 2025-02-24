@@ -41,6 +41,12 @@
   (.build builder))
 
 
+(defn cfn-accessor-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-accessor-builder (CfnAccessor$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-accessor-props-builder
   "The build-cfn-accessor-props-builder function updates a CfnAccessorProps$Builder instance using the provided configuration.
   The function takes the CfnAccessorProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -64,6 +70,12 @@
   (.build builder))
 
 
+(defn cfn-accessor-props-builder
+  ""
+  [id config]
+  (build-cfn-accessor-props-builder (new CfnAccessorProps$Builder) id config))
+
+
 (defn build-cfn-member-approval-threshold-policy-property-builder
   "The build-cfn-member-approval-threshold-policy-property-builder function updates a CfnMember$ApprovalThresholdPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnMember$ApprovalThresholdPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -85,6 +97,12 @@
   (when-let [data (lookup-entry config id :threshold-percentage)]
     (. builder thresholdPercentage data))
   (.build builder))
+
+
+(defn cfn-member-approval-threshold-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-member-approval-threshold-policy-property-builder (new CfnMember$ApprovalThresholdPolicyProperty$Builder) id config))
 
 
 (defn build-cfn-member-builder
@@ -113,6 +131,12 @@
   (.build builder))
 
 
+(defn cfn-member-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-member-builder (CfnMember$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-member-member-configuration-property-builder
   "The build-cfn-member-member-configuration-property-builder function updates a CfnMember$MemberConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnMember$MemberConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -136,6 +160,12 @@
   (.build builder))
 
 
+(defn cfn-member-member-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-member-member-configuration-property-builder (new CfnMember$MemberConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-member-member-fabric-configuration-property-builder
   "The build-cfn-member-member-fabric-configuration-property-builder function updates a CfnMember$MemberFabricConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnMember$MemberFabricConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -156,6 +186,12 @@
   (.build builder))
 
 
+(defn cfn-member-member-fabric-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-member-member-fabric-configuration-property-builder (new CfnMember$MemberFabricConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-member-member-framework-configuration-property-builder
   "The build-cfn-member-member-framework-configuration-property-builder function updates a CfnMember$MemberFrameworkConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnMember$MemberFrameworkConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -171,6 +207,12 @@
   (when-let [data (lookup-entry config id :member-fabric-configuration)]
     (. builder memberFabricConfiguration data))
   (.build builder))
+
+
+(defn cfn-member-member-framework-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-member-member-framework-configuration-property-builder (new CfnMember$MemberFrameworkConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-member-network-configuration-property-builder
@@ -205,6 +247,12 @@
   (.build builder))
 
 
+(defn cfn-member-network-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-member-network-configuration-property-builder (new CfnMember$NetworkConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-member-network-fabric-configuration-property-builder
   "The build-cfn-member-network-fabric-configuration-property-builder function updates a CfnMember$NetworkFabricConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnMember$NetworkFabricConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -222,6 +270,12 @@
   (.build builder))
 
 
+(defn cfn-member-network-fabric-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-member-network-fabric-configuration-property-builder (new CfnMember$NetworkFabricConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-member-network-framework-configuration-property-builder
   "The build-cfn-member-network-framework-configuration-property-builder function updates a CfnMember$NetworkFrameworkConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnMember$NetworkFrameworkConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -237,6 +291,12 @@
   (when-let [data (lookup-entry config id :network-fabric-configuration)]
     (. builder networkFabricConfiguration data))
   (.build builder))
+
+
+(defn cfn-member-network-framework-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-member-network-framework-configuration-property-builder (new CfnMember$NetworkFrameworkConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-member-props-builder
@@ -265,6 +325,12 @@
   (.build builder))
 
 
+(defn cfn-member-props-builder
+  ""
+  [id config]
+  (build-cfn-member-props-builder (new CfnMemberProps$Builder) id config))
+
+
 (defn build-cfn-member-voting-policy-property-builder
   "The build-cfn-member-voting-policy-property-builder function updates a CfnMember$VotingPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnMember$VotingPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -280,6 +346,12 @@
   (when-let [data (lookup-entry config id :approval-threshold-policy)]
     (. builder approvalThresholdPolicy data))
   (.build builder))
+
+
+(defn cfn-member-voting-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-member-voting-policy-property-builder (new CfnMember$VotingPolicyProperty$Builder) id config))
 
 
 (defn build-cfn-node-builder
@@ -305,6 +377,12 @@
   (.build builder))
 
 
+(defn cfn-node-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-node-builder (CfnNode$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-node-node-configuration-property-builder
   "The build-cfn-node-node-configuration-property-builder function updates a CfnNode$NodeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnNode$NodeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -323,6 +401,12 @@
   (when-let [data (lookup-entry config id :instance-type)]
     (. builder instanceType data))
   (.build builder))
+
+
+(defn cfn-node-node-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-node-node-configuration-property-builder (new CfnNode$NodeConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-node-props-builder
@@ -346,3 +430,9 @@
   (when-let [data (lookup-entry config id :node-configuration)]
     (. builder nodeConfiguration data))
   (.build builder))
+
+
+(defn cfn-node-props-builder
+  ""
+  [id config]
+  (build-cfn-node-props-builder (new CfnNodeProps$Builder) id config))

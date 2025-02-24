@@ -231,6 +231,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn alexa-skill-deploy-action-builder
+  ""
+  [id config]
+  (build-alexa-skill-deploy-action-builder (AlexaSkillDeployAction$Builder/create) id config))
+
+
 (defn build-alexa-skill-deploy-action-props-builder
   "The build-alexa-skill-deploy-action-props-builder function updates a AlexaSkillDeployActionProps$Builder instance using the provided configuration.
   The function takes the AlexaSkillDeployActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -270,6 +276,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :variables-namespace)]
     (. builder variablesNamespace data))
   (.build builder))
+
+
+(defn alexa-skill-deploy-action-props-builder
+  ""
+  [id config]
+  (build-alexa-skill-deploy-action-props-builder (new AlexaSkillDeployActionProps$Builder) id config))
 
 
 (defn build-cloud-formation-create-replace-change-set-action-builder
@@ -337,6 +349,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cloud-formation-create-replace-change-set-action-builder
+  ""
+  [id config]
+  (build-cloud-formation-create-replace-change-set-action-builder (CloudFormationCreateReplaceChangeSetAction$Builder/create) id config))
+
+
 (defn build-cloud-formation-create-replace-change-set-action-props-builder
   "The build-cloud-formation-create-replace-change-set-action-props-builder function updates a CloudFormationCreateReplaceChangeSetActionProps$Builder instance using the provided configuration.
   The function takes the CloudFormationCreateReplaceChangeSetActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -400,6 +418,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :variables-namespace)]
     (. builder variablesNamespace data))
   (.build builder))
+
+
+(defn cloud-formation-create-replace-change-set-action-props-builder
+  ""
+  [id config]
+  (build-cloud-formation-create-replace-change-set-action-props-builder (new CloudFormationCreateReplaceChangeSetActionProps$Builder) id config))
 
 
 (defn build-cloud-formation-create-update-stack-action-builder
@@ -467,6 +491,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cloud-formation-create-update-stack-action-builder
+  ""
+  [id config]
+  (build-cloud-formation-create-update-stack-action-builder (CloudFormationCreateUpdateStackAction$Builder/create) id config))
+
+
 (defn build-cloud-formation-create-update-stack-action-props-builder
   "The build-cloud-formation-create-update-stack-action-props-builder function updates a CloudFormationCreateUpdateStackActionProps$Builder instance using the provided configuration.
   The function takes the CloudFormationCreateUpdateStackActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -532,6 +562,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cloud-formation-create-update-stack-action-props-builder
+  ""
+  [id config]
+  (build-cloud-formation-create-update-stack-action-props-builder (new CloudFormationCreateUpdateStackActionProps$Builder) id config))
+
+
 (defn build-cloud-formation-delete-stack-action-builder
   "The build-cloud-formation-delete-stack-action-builder function updates a CloudFormationDeleteStackAction$Builder instance using the provided configuration.
   The function takes the CloudFormationDeleteStackAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -589,6 +625,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :variables-namespace)]
     (. builder variablesNamespace data))
   (.build builder))
+
+
+(defn cloud-formation-delete-stack-action-builder
+  ""
+  [id config]
+  (build-cloud-formation-delete-stack-action-builder (CloudFormationDeleteStackAction$Builder/create) id config))
 
 
 (defn build-cloud-formation-delete-stack-action-props-builder
@@ -650,6 +692,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cloud-formation-delete-stack-action-props-builder
+  ""
+  [id config]
+  (build-cloud-formation-delete-stack-action-props-builder (new CloudFormationDeleteStackActionProps$Builder) id config))
+
+
 (defn build-cloud-formation-deploy-stack-instances-action-builder
   "The build-cloud-formation-deploy-stack-instances-action-builder function updates a CloudFormationDeployStackInstancesAction$Builder instance using the provided configuration.
   The function takes the CloudFormationDeployStackInstancesAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -694,6 +742,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cloud-formation-deploy-stack-instances-action-builder
+  ""
+  [id config]
+  (build-cloud-formation-deploy-stack-instances-action-builder (CloudFormationDeployStackInstancesAction$Builder/create) id config))
+
+
 (defn build-cloud-formation-deploy-stack-instances-action-props-builder
   "The build-cloud-formation-deploy-stack-instances-action-props-builder function updates a CloudFormationDeployStackInstancesActionProps$Builder instance using the provided configuration.
   The function takes the CloudFormationDeployStackInstancesActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -736,6 +790,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :variables-namespace)]
     (. builder variablesNamespace data))
   (.build builder))
+
+
+(defn cloud-formation-deploy-stack-instances-action-props-builder
+  ""
+  [id config]
+  (build-cloud-formation-deploy-stack-instances-action-props-builder (new CloudFormationDeployStackInstancesActionProps$Builder) id config))
 
 
 (defn build-cloud-formation-deploy-stack-set-action-builder
@@ -794,6 +854,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cloud-formation-deploy-stack-set-action-builder
+  ""
+  [id config]
+  (build-cloud-formation-deploy-stack-set-action-builder (CloudFormationDeployStackSetAction$Builder/create) id config))
+
+
 (defn build-cloud-formation-deploy-stack-set-action-props-builder
   "The build-cloud-formation-deploy-stack-set-action-props-builder function updates a CloudFormationDeployStackSetActionProps$Builder instance using the provided configuration.
   The function takes the CloudFormationDeployStackSetActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -850,6 +916,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cloud-formation-deploy-stack-set-action-props-builder
+  ""
+  [id config]
+  (build-cloud-formation-deploy-stack-set-action-props-builder (new CloudFormationDeployStackSetActionProps$Builder) id config))
+
+
 (defn build-cloud-formation-execute-change-set-action-builder
   "The build-cloud-formation-execute-change-set-action-builder function updates a CloudFormationExecuteChangeSetAction$Builder instance using the provided configuration.
   The function takes the CloudFormationExecuteChangeSetAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -894,6 +966,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cloud-formation-execute-change-set-action-builder
+  ""
+  [id config]
+  (build-cloud-formation-execute-change-set-action-builder (CloudFormationExecuteChangeSetAction$Builder/create) id config))
+
+
 (defn build-cloud-formation-execute-change-set-action-props-builder
   "The build-cloud-formation-execute-change-set-action-props-builder function updates a CloudFormationExecuteChangeSetActionProps$Builder instance using the provided configuration.
   The function takes the CloudFormationExecuteChangeSetActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -936,6 +1014,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :variables-namespace)]
     (. builder variablesNamespace data))
   (.build builder))
+
+
+(defn cloud-formation-execute-change-set-action-props-builder
+  ""
+  [id config]
+  (build-cloud-formation-execute-change-set-action-props-builder (new CloudFormationExecuteChangeSetActionProps$Builder) id config))
 
 
 (defn build-code-build-action-builder
@@ -991,6 +1075,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn code-build-action-builder
+  ""
+  [id config]
+  (build-code-build-action-builder (CodeBuildAction$Builder/create) id config))
+
+
 (defn build-code-build-action-props-builder
   "The build-code-build-action-props-builder function updates a CodeBuildActionProps$Builder instance using the provided configuration.
   The function takes the CodeBuildActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1044,6 +1134,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn code-build-action-props-builder
+  ""
+  [id config]
+  (build-code-build-action-props-builder (new CodeBuildActionProps$Builder) id config))
+
+
 (defn build-code-commit-source-action-builder
   "The build-code-commit-source-action-builder function updates a CodeCommitSourceAction$Builder instance using the provided configuration.
   The function takes the CodeCommitSourceAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1089,6 +1185,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :variables-namespace)]
     (. builder variablesNamespace data))
   (.build builder))
+
+
+(defn code-commit-source-action-builder
+  ""
+  [id config]
+  (build-code-commit-source-action-builder (CodeCommitSourceAction$Builder/create) id config))
 
 
 (defn build-code-commit-source-action-props-builder
@@ -1138,6 +1240,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn code-commit-source-action-props-builder
+  ""
+  [id config]
+  (build-code-commit-source-action-props-builder (new CodeCommitSourceActionProps$Builder) id config))
+
+
 (defn build-code-commit-source-variables-builder
   "The build-code-commit-source-variables-builder function updates a CodeCommitSourceVariables$Builder instance using the provided configuration.
   The function takes the CodeCommitSourceVariables$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1170,6 +1278,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn code-commit-source-variables-builder
+  ""
+  [id config]
+  (build-code-commit-source-variables-builder (new CodeCommitSourceVariables$Builder) id config))
+
+
 (defn build-code-deploy-ecs-container-image-input-builder
   "The build-code-deploy-ecs-container-image-input-builder function updates a CodeDeployEcsContainerImageInput$Builder instance using the provided configuration.
   The function takes the CodeDeployEcsContainerImageInput$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1188,6 +1302,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :task-definition-placeholder)]
     (. builder taskDefinitionPlaceholder data))
   (.build builder))
+
+
+(defn code-deploy-ecs-container-image-input-builder
+  ""
+  [id config]
+  (build-code-deploy-ecs-container-image-input-builder (new CodeDeployEcsContainerImageInput$Builder) id config))
 
 
 (defn build-code-deploy-ecs-deploy-action-builder
@@ -1234,6 +1354,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn code-deploy-ecs-deploy-action-builder
+  ""
+  [id config]
+  (build-code-deploy-ecs-deploy-action-builder (CodeDeployEcsDeployAction$Builder/create) id config))
+
+
 (defn build-code-deploy-ecs-deploy-action-props-builder
   "The build-code-deploy-ecs-deploy-action-props-builder function updates a CodeDeployEcsDeployActionProps$Builder instance using the provided configuration.
   The function takes the CodeDeployEcsDeployActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1278,6 +1404,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn code-deploy-ecs-deploy-action-props-builder
+  ""
+  [id config]
+  (build-code-deploy-ecs-deploy-action-props-builder (new CodeDeployEcsDeployActionProps$Builder) id config))
+
+
 (defn build-code-deploy-server-deploy-action-builder
   "The build-code-deploy-server-deploy-action-builder function updates a CodeDeployServerDeployAction$Builder instance using the provided configuration.
   The function takes the CodeDeployServerDeployAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1310,6 +1442,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn code-deploy-server-deploy-action-builder
+  ""
+  [id config]
+  (build-code-deploy-server-deploy-action-builder (CodeDeployServerDeployAction$Builder/create) id config))
+
+
 (defn build-code-deploy-server-deploy-action-props-builder
   "The build-code-deploy-server-deploy-action-props-builder function updates a CodeDeployServerDeployActionProps$Builder instance using the provided configuration.
   The function takes the CodeDeployServerDeployActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1340,6 +1478,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :variables-namespace)]
     (. builder variablesNamespace data))
   (.build builder))
+
+
+(defn code-deploy-server-deploy-action-props-builder
+  ""
+  [id config]
+  (build-code-deploy-server-deploy-action-props-builder (new CodeDeployServerDeployActionProps$Builder) id config))
 
 
 (defn build-code-star-connections-source-action-builder
@@ -1389,6 +1533,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn code-star-connections-source-action-builder
+  ""
+  [id config]
+  (build-code-star-connections-source-action-builder (CodeStarConnectionsSourceAction$Builder/create) id config))
+
+
 (defn build-code-star-connections-source-action-props-builder
   "The build-code-star-connections-source-action-props-builder function updates a CodeStarConnectionsSourceActionProps$Builder instance using the provided configuration.
   The function takes the CodeStarConnectionsSourceActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1436,6 +1586,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn code-star-connections-source-action-props-builder
+  ""
+  [id config]
+  (build-code-star-connections-source-action-props-builder (new CodeStarConnectionsSourceActionProps$Builder) id config))
+
+
 (defn build-code-star-source-variables-builder
   "The build-code-star-source-variables-builder function updates a CodeStarSourceVariables$Builder instance using the provided configuration.
   The function takes the CodeStarSourceVariables$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1468,6 +1624,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn code-star-source-variables-builder
+  ""
+  [id config]
+  (build-code-star-source-variables-builder (new CodeStarSourceVariables$Builder) id config))
+
+
 (defn build-common-cloud-formation-stack-set-options-builder
   "The build-common-cloud-formation-stack-set-options-builder function updates a CommonCloudFormationStackSetOptions$Builder instance using the provided configuration.
   The function takes the CommonCloudFormationStackSetOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1489,6 +1651,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :stack-set-region)]
     (. builder stackSetRegion data))
   (.build builder))
+
+
+(defn common-cloud-formation-stack-set-options-builder
+  ""
+  [id config]
+  (build-common-cloud-formation-stack-set-options-builder (new CommonCloudFormationStackSetOptions$Builder) id config))
 
 
 (defn build-ecr-source-action-builder
@@ -1526,6 +1694,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn ecr-source-action-builder
+  ""
+  [id config]
+  (build-ecr-source-action-builder (EcrSourceAction$Builder/create) id config))
+
+
 (defn build-ecr-source-action-props-builder
   "The build-ecr-source-action-props-builder function updates a EcrSourceActionProps$Builder instance using the provided configuration.
   The function takes the EcrSourceActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1561,6 +1735,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn ecr-source-action-props-builder
+  ""
+  [id config]
+  (build-ecr-source-action-props-builder (new EcrSourceActionProps$Builder) id config))
+
+
 (defn build-ecr-source-variables-builder
   "The build-ecr-source-variables-builder function updates a EcrSourceVariables$Builder instance using the provided configuration.
   The function takes the EcrSourceVariables$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1588,6 +1768,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
   (.build builder))
+
+
+(defn ecr-source-variables-builder
+  ""
+  [id config]
+  (build-ecr-source-variables-builder (new EcrSourceVariables$Builder) id config))
 
 
 (defn build-ecs-deploy-action-builder
@@ -1628,6 +1814,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn ecs-deploy-action-builder
+  ""
+  [id config]
+  (build-ecs-deploy-action-builder (EcsDeployAction$Builder/create) id config))
+
+
 (defn build-ecs-deploy-action-props-builder
   "The build-ecs-deploy-action-props-builder function updates a EcsDeployActionProps$Builder instance using the provided configuration.
   The function takes the EcsDeployActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1666,6 +1858,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn ecs-deploy-action-props-builder
+  ""
+  [id config]
+  (build-ecs-deploy-action-props-builder (new EcsDeployActionProps$Builder) id config))
+
+
 (defn build-elastic-beanstalk-deploy-action-builder
   "The build-elastic-beanstalk-deploy-action-builder function updates a ElasticBeanstalkDeployAction$Builder instance using the provided configuration.
   The function takes the ElasticBeanstalkDeployAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1701,6 +1899,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn elastic-beanstalk-deploy-action-builder
+  ""
+  [id config]
+  (build-elastic-beanstalk-deploy-action-builder (ElasticBeanstalkDeployAction$Builder/create) id config))
+
+
 (defn build-elastic-beanstalk-deploy-action-props-builder
   "The build-elastic-beanstalk-deploy-action-props-builder function updates a ElasticBeanstalkDeployActionProps$Builder instance using the provided configuration.
   The function takes the ElasticBeanstalkDeployActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1734,6 +1938,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :variables-namespace)]
     (. builder variablesNamespace data))
   (.build builder))
+
+
+(defn elastic-beanstalk-deploy-action-props-builder
+  ""
+  [id config]
+  (build-elastic-beanstalk-deploy-action-props-builder (new ElasticBeanstalkDeployActionProps$Builder) id config))
 
 
 (defn build-git-hub-source-action-builder
@@ -1777,6 +1987,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn git-hub-source-action-builder
+  ""
+  [id config]
+  (build-git-hub-source-action-builder (GitHubSourceAction$Builder/create) id config))
+
+
 (defn build-git-hub-source-action-props-builder
   "The build-git-hub-source-action-props-builder function updates a GitHubSourceActionProps$Builder instance using the provided configuration.
   The function takes the GitHubSourceActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1818,6 +2034,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn git-hub-source-action-props-builder
+  ""
+  [id config]
+  (build-git-hub-source-action-props-builder (new GitHubSourceActionProps$Builder) id config))
+
+
 (defn build-git-hub-source-variables-builder
   "The build-git-hub-source-variables-builder function updates a GitHubSourceVariables$Builder instance using the provided configuration.
   The function takes the GitHubSourceVariables$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1851,6 +2073,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
   (.build builder))
+
+
+(defn git-hub-source-variables-builder
+  ""
+  [id config]
+  (build-git-hub-source-variables-builder (new GitHubSourceVariables$Builder) id config))
 
 
 (defn build-jenkins-action-builder
@@ -1891,6 +2119,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn jenkins-action-builder
+  ""
+  [id config]
+  (build-jenkins-action-builder (JenkinsAction$Builder/create) id config))
+
+
 (defn build-jenkins-action-props-builder
   "The build-jenkins-action-props-builder function updates a JenkinsActionProps$Builder instance using the provided configuration.
   The function takes the JenkinsActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1929,6 +2163,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn jenkins-action-props-builder
+  ""
+  [id config]
+  (build-jenkins-action-props-builder (new JenkinsActionProps$Builder) id config))
+
+
 (defn build-jenkins-provider-attributes-builder
   "The build-jenkins-provider-attributes-builder function updates a JenkinsProviderAttributes$Builder instance using the provided configuration.
   The function takes the JenkinsProviderAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1950,6 +2190,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
+
+
+(defn jenkins-provider-attributes-builder
+  ""
+  [id config]
+  (build-jenkins-provider-attributes-builder (new JenkinsProviderAttributes$Builder) id config))
 
 
 (defn build-jenkins-provider-builder
@@ -1981,6 +2227,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn jenkins-provider-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-jenkins-provider-builder (JenkinsProvider$Builder/create scope (name id)) id config))
+
+
 (defn build-jenkins-provider-props-builder
   "The build-jenkins-provider-props-builder function updates a JenkinsProviderProps$Builder instance using the provided configuration.
   The function takes the JenkinsProviderProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2008,6 +2260,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
+
+
+(defn jenkins-provider-props-builder
+  ""
+  [id config]
+  (build-jenkins-provider-props-builder (new JenkinsProviderProps$Builder) id config))
 
 
 (defn build-lambda-invoke-action-builder
@@ -2051,6 +2309,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn lambda-invoke-action-builder
+  ""
+  [id config]
+  (build-lambda-invoke-action-builder (LambdaInvokeAction$Builder/create) id config))
+
+
 (defn build-lambda-invoke-action-props-builder
   "The build-lambda-invoke-action-props-builder function updates a LambdaInvokeActionProps$Builder instance using the provided configuration.
   The function takes the LambdaInvokeActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2092,6 +2356,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn lambda-invoke-action-props-builder
+  ""
+  [id config]
+  (build-lambda-invoke-action-props-builder (new LambdaInvokeActionProps$Builder) id config))
+
+
 (defn build-manual-approval-action-builder
   "The build-manual-approval-action-builder function updates a ManualApprovalAction$Builder instance using the provided configuration.
   The function takes the ManualApprovalAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2128,6 +2398,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :variables-namespace)]
     (. builder variablesNamespace data))
   (.build builder))
+
+
+(defn manual-approval-action-builder
+  ""
+  [id config]
+  (build-manual-approval-action-builder (ManualApprovalAction$Builder/create) id config))
 
 
 (defn build-manual-approval-action-props-builder
@@ -2168,6 +2444,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn manual-approval-action-props-builder
+  ""
+  [id config]
+  (build-manual-approval-action-props-builder (new ManualApprovalActionProps$Builder) id config))
+
+
 (defn build-organizations-deployment-props-builder
   "The build-organizations-deployment-props-builder function updates a OrganizationsDeploymentProps$Builder instance using the provided configuration.
   The function takes the OrganizationsDeploymentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2183,6 +2465,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (stack-set-organizations-auto-deployment config id :auto-deployment)]
     (. builder autoDeployment data))
   (.build builder))
+
+
+(defn organizations-deployment-props-builder
+  ""
+  [id config]
+  (build-organizations-deployment-props-builder (new OrganizationsDeploymentProps$Builder) id config))
 
 
 (defn build-s3-deploy-action-builder
@@ -2232,6 +2520,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn s3-deploy-action-builder
+  ""
+  [id config]
+  (build-s3-deploy-action-builder (S3DeployAction$Builder/create) id config))
+
+
 (defn build-s3-deploy-action-props-builder
   "The build-s3-deploy-action-props-builder function updates a S3DeployActionProps$Builder instance using the provided configuration.
   The function takes the S3DeployActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2279,6 +2573,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn s3-deploy-action-props-builder
+  ""
+  [id config]
+  (build-s3-deploy-action-props-builder (new S3DeployActionProps$Builder) id config))
+
+
 (defn build-s3-source-action-builder
   "The build-s3-source-action-builder function updates a S3SourceAction$Builder instance using the provided configuration.
   The function takes the S3SourceAction$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2315,6 +2615,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :variables-namespace)]
     (. builder variablesNamespace data))
   (.build builder))
+
+
+(defn s3-source-action-builder
+  ""
+  [id config]
+  (build-s3-source-action-builder (S3SourceAction$Builder/create) id config))
 
 
 (defn build-s3-source-action-props-builder
@@ -2355,6 +2661,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn s3-source-action-props-builder
+  ""
+  [id config]
+  (build-s3-source-action-props-builder (new S3SourceActionProps$Builder) id config))
+
+
 (defn build-s3-source-variables-builder
   "The build-s3-source-variables-builder function updates a S3SourceVariables$Builder instance using the provided configuration.
   The function takes the S3SourceVariables$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2375,6 +2687,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn s3-source-variables-builder
+  ""
+  [id config]
+  (build-s3-source-variables-builder (new S3SourceVariables$Builder) id config))
+
+
 (defn build-self-managed-deployment-props-builder
   "The build-self-managed-deployment-props-builder function updates a SelfManagedDeploymentProps$Builder instance using the provided configuration.
   The function takes the SelfManagedDeploymentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2393,6 +2711,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :execution-role-name)]
     (. builder executionRoleName data))
   (.build builder))
+
+
+(defn self-managed-deployment-props-builder
+  ""
+  [id config]
+  (build-self-managed-deployment-props-builder (new SelfManagedDeploymentProps$Builder) id config))
 
 
 (defn build-service-catalog-deploy-action-beta1-builder
@@ -2433,6 +2757,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn service-catalog-deploy-action-beta1-builder
+  ""
+  [id config]
+  (build-service-catalog-deploy-action-beta1-builder (ServiceCatalogDeployActionBeta1$Builder/create) id config))
+
+
 (defn build-service-catalog-deploy-action-beta1-props-builder
   "The build-service-catalog-deploy-action-beta1-props-builder function updates a ServiceCatalogDeployActionBeta1Props$Builder instance using the provided configuration.
   The function takes the ServiceCatalogDeployActionBeta1Props$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2469,6 +2799,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :variables-namespace)]
     (. builder variablesNamespace data))
   (.build builder))
+
+
+(defn service-catalog-deploy-action-beta1-props-builder
+  ""
+  [id config]
+  (build-service-catalog-deploy-action-beta1-props-builder (new ServiceCatalogDeployActionBeta1Props$Builder) id config))
 
 
 (defn build-step-function-invoke-action-builder
@@ -2509,6 +2845,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn step-function-invoke-action-builder
+  ""
+  [id config]
+  (build-step-function-invoke-action-builder (StepFunctionInvokeAction$Builder/create) id config))
+
+
 (defn build-step-functions-invoke-action-props-builder
   "The build-step-functions-invoke-action-props-builder function updates a StepFunctionsInvokeActionProps$Builder instance using the provided configuration.
   The function takes the StepFunctionsInvokeActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2545,3 +2887,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :variables-namespace)]
     (. builder variablesNamespace data))
   (.build builder))
+
+
+(defn step-functions-invoke-action-props-builder
+  ""
+  [id config]
+  (build-step-functions-invoke-action-props-builder (new StepFunctionsInvokeActionProps$Builder) id config))

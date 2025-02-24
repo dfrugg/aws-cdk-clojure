@@ -50,6 +50,12 @@
   (.build builder))
 
 
+(defn cfn-channel-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-channel-builder (CfnChannel$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-channel-group-builder
   "The build-cfn-channel-group-builder function updates a CfnChannelGroup$Builder instance using the provided configuration.
   The function takes the CfnChannelGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -71,6 +77,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-channel-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-channel-group-builder (CfnChannelGroup$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-channel-group-props-builder
@@ -96,6 +108,12 @@
   (.build builder))
 
 
+(defn cfn-channel-group-props-builder
+  ""
+  [id config]
+  (build-cfn-channel-group-props-builder (new CfnChannelGroupProps$Builder) id config))
+
+
 (defn build-cfn-channel-ingest-endpoint-property-builder
   "The build-cfn-channel-ingest-endpoint-property-builder function updates a CfnChannel$IngestEndpointProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$IngestEndpointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -114,6 +132,12 @@
   (when-let [data (lookup-entry config id :url)]
     (. builder url data))
   (.build builder))
+
+
+(defn cfn-channel-ingest-endpoint-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-ingest-endpoint-property-builder (new CfnChannel$IngestEndpointProperty$Builder) id config))
 
 
 (defn build-cfn-channel-policy-builder
@@ -139,6 +163,12 @@
   (.build builder))
 
 
+(defn cfn-channel-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-channel-policy-builder (CfnChannelPolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-channel-policy-props-builder
   "The build-cfn-channel-policy-props-builder function updates a CfnChannelPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnChannelPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -160,6 +190,12 @@
   (when-let [data (lookup-entry config id :policy)]
     (. builder policy data))
   (.build builder))
+
+
+(defn cfn-channel-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-channel-policy-props-builder (new CfnChannelPolicyProps$Builder) id config))
 
 
 (defn build-cfn-channel-props-builder
@@ -186,6 +222,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-channel-props-builder
+  ""
+  [id config]
+  (build-cfn-channel-props-builder (new CfnChannelProps$Builder) id config))
 
 
 (defn build-cfn-origin-endpoint-builder
@@ -232,6 +274,12 @@
   (.build builder))
 
 
+(defn cfn-origin-endpoint-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-origin-endpoint-builder (CfnOriginEndpoint$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-origin-endpoint-encryption-contract-configuration-property-builder
   "The build-cfn-origin-endpoint-encryption-contract-configuration-property-builder function updates a CfnOriginEndpoint$EncryptionContractConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnOriginEndpoint$EncryptionContractConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -252,6 +300,12 @@
   (.build builder))
 
 
+(defn cfn-origin-endpoint-encryption-contract-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-encryption-contract-configuration-property-builder (new CfnOriginEndpoint$EncryptionContractConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-origin-endpoint-encryption-method-property-builder
   "The build-cfn-origin-endpoint-encryption-method-property-builder function updates a CfnOriginEndpoint$EncryptionMethodProperty$Builder instance using the provided configuration.
   The function takes the CfnOriginEndpoint$EncryptionMethodProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -270,6 +324,12 @@
   (when-let [data (lookup-entry config id :ts-encryption-method)]
     (. builder tsEncryptionMethod data))
   (.build builder))
+
+
+(defn cfn-origin-endpoint-encryption-method-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-encryption-method-property-builder (new CfnOriginEndpoint$EncryptionMethodProperty$Builder) id config))
 
 
 (defn build-cfn-origin-endpoint-encryption-property-builder
@@ -298,6 +358,12 @@
   (.build builder))
 
 
+(defn cfn-origin-endpoint-encryption-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-encryption-property-builder (new CfnOriginEndpoint$EncryptionProperty$Builder) id config))
+
+
 (defn build-cfn-origin-endpoint-filter-configuration-property-builder
   "The build-cfn-origin-endpoint-filter-configuration-property-builder function updates a CfnOriginEndpoint$FilterConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnOriginEndpoint$FilterConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -322,6 +388,12 @@
   (when-let [data (lookup-entry config id :time-delay-seconds)]
     (. builder timeDelaySeconds data))
   (.build builder))
+
+
+(defn cfn-origin-endpoint-filter-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-filter-configuration-property-builder (new CfnOriginEndpoint$FilterConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-origin-endpoint-hls-manifest-configuration-property-builder
@@ -359,6 +431,12 @@
   (.build builder))
 
 
+(defn cfn-origin-endpoint-hls-manifest-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-hls-manifest-configuration-property-builder (new CfnOriginEndpoint$HlsManifestConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-origin-endpoint-low-latency-hls-manifest-configuration-property-builder
   "The build-cfn-origin-endpoint-low-latency-hls-manifest-configuration-property-builder function updates a CfnOriginEndpoint$LowLatencyHlsManifestConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnOriginEndpoint$LowLatencyHlsManifestConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -394,6 +472,12 @@
   (.build builder))
 
 
+(defn cfn-origin-endpoint-low-latency-hls-manifest-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-low-latency-hls-manifest-configuration-property-builder (new CfnOriginEndpoint$LowLatencyHlsManifestConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-origin-endpoint-policy-builder
   "The build-cfn-origin-endpoint-policy-builder function updates a CfnOriginEndpointPolicy$Builder instance using the provided configuration.
   The function takes the CfnOriginEndpointPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -420,6 +504,12 @@
   (.build builder))
 
 
+(defn cfn-origin-endpoint-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-origin-endpoint-policy-builder (CfnOriginEndpointPolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-origin-endpoint-policy-props-builder
   "The build-cfn-origin-endpoint-policy-props-builder function updates a CfnOriginEndpointPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnOriginEndpointPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -444,6 +534,12 @@
   (when-let [data (lookup-entry config id :policy)]
     (. builder policy data))
   (.build builder))
+
+
+(defn cfn-origin-endpoint-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-policy-props-builder (new CfnOriginEndpointPolicyProps$Builder) id config))
 
 
 (defn build-cfn-origin-endpoint-props-builder
@@ -490,6 +586,12 @@
   (.build builder))
 
 
+(defn cfn-origin-endpoint-props-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-props-builder (new CfnOriginEndpointProps$Builder) id config))
+
+
 (defn build-cfn-origin-endpoint-scte-hls-property-builder
   "The build-cfn-origin-endpoint-scte-hls-property-builder function updates a CfnOriginEndpoint$ScteHlsProperty$Builder instance using the provided configuration.
   The function takes the CfnOriginEndpoint$ScteHlsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -507,6 +609,12 @@
   (.build builder))
 
 
+(defn cfn-origin-endpoint-scte-hls-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-scte-hls-property-builder (new CfnOriginEndpoint$ScteHlsProperty$Builder) id config))
+
+
 (defn build-cfn-origin-endpoint-scte-property-builder
   "The build-cfn-origin-endpoint-scte-property-builder function updates a CfnOriginEndpoint$ScteProperty$Builder instance using the provided configuration.
   The function takes the CfnOriginEndpoint$ScteProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -522,6 +630,12 @@
   (when-let [data (lookup-entry config id :scte-filter)]
     (. builder scteFilter data))
   (.build builder))
+
+
+(defn cfn-origin-endpoint-scte-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-scte-property-builder (new CfnOriginEndpoint$ScteProperty$Builder) id config))
 
 
 (defn build-cfn-origin-endpoint-segment-property-builder
@@ -559,6 +673,12 @@
   (.build builder))
 
 
+(defn cfn-origin-endpoint-segment-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-segment-property-builder (new CfnOriginEndpoint$SegmentProperty$Builder) id config))
+
+
 (defn build-cfn-origin-endpoint-speke-key-provider-property-builder
   "The build-cfn-origin-endpoint-speke-key-provider-property-builder function updates a CfnOriginEndpoint$SpekeKeyProviderProperty$Builder instance using the provided configuration.
   The function takes the CfnOriginEndpoint$SpekeKeyProviderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -586,3 +706,9 @@
   (when-let [data (lookup-entry config id :url)]
     (. builder url data))
   (.build builder))
+
+
+(defn cfn-origin-endpoint-speke-key-provider-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-speke-key-provider-property-builder (new CfnOriginEndpoint$SpekeKeyProviderProperty$Builder) id config))

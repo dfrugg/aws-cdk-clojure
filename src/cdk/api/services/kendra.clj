@@ -86,6 +86,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-access-control-list-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-access-control-list-configuration-property-builder (new CfnDataSource$AccessControlListConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-acl-configuration-property-builder
   "The build-cfn-data-source-acl-configuration-property-builder function updates a CfnDataSource$AclConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$AclConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -101,6 +107,12 @@
   (when-let [data (lookup-entry config id :allowed-groups-column-name)]
     (. builder allowedGroupsColumnName data))
   (.build builder))
+
+
+(defn cfn-data-source-acl-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-acl-configuration-property-builder (new CfnDataSource$AclConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-builder
@@ -147,6 +159,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-data-source-builder (CfnDataSource$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-data-source-column-configuration-property-builder
   "The build-cfn-data-source-column-configuration-property-builder function updates a CfnDataSource$ColumnConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$ColumnConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -176,6 +194,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-column-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-column-configuration-property-builder (new CfnDataSource$ColumnConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-confluence-attachment-configuration-property-builder
   "The build-cfn-data-source-confluence-attachment-configuration-property-builder function updates a CfnDataSource$ConfluenceAttachmentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$ConfluenceAttachmentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -194,6 +218,12 @@
   (when-let [data (lookup-entry config id :crawl-attachments)]
     (. builder crawlAttachments data))
   (.build builder))
+
+
+(defn cfn-data-source-confluence-attachment-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-confluence-attachment-configuration-property-builder (new CfnDataSource$ConfluenceAttachmentConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-confluence-attachment-to-index-field-mapping-property-builder
@@ -219,6 +249,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-confluence-attachment-to-index-field-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-confluence-attachment-to-index-field-mapping-property-builder (new CfnDataSource$ConfluenceAttachmentToIndexFieldMappingProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-confluence-blog-configuration-property-builder
   "The build-cfn-data-source-confluence-blog-configuration-property-builder function updates a CfnDataSource$ConfluenceBlogConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$ConfluenceBlogConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -234,6 +270,12 @@
   (when-let [data (lookup-entry config id :blog-field-mappings)]
     (. builder blogFieldMappings data))
   (.build builder))
+
+
+(defn cfn-data-source-confluence-blog-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-confluence-blog-configuration-property-builder (new CfnDataSource$ConfluenceBlogConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-confluence-blog-to-index-field-mapping-property-builder
@@ -257,6 +299,12 @@
   (when-let [data (lookup-entry config id :index-field-name)]
     (. builder indexFieldName data))
   (.build builder))
+
+
+(defn cfn-data-source-confluence-blog-to-index-field-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-confluence-blog-to-index-field-mapping-property-builder (new CfnDataSource$ConfluenceBlogToIndexFieldMappingProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-confluence-configuration-property-builder
@@ -303,6 +351,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-confluence-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-confluence-configuration-property-builder (new CfnDataSource$ConfluenceConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-confluence-page-configuration-property-builder
   "The build-cfn-data-source-confluence-page-configuration-property-builder function updates a CfnDataSource$ConfluencePageConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$ConfluencePageConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -318,6 +372,12 @@
   (when-let [data (lookup-entry config id :page-field-mappings)]
     (. builder pageFieldMappings data))
   (.build builder))
+
+
+(defn cfn-data-source-confluence-page-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-confluence-page-configuration-property-builder (new CfnDataSource$ConfluencePageConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-confluence-page-to-index-field-mapping-property-builder
@@ -341,6 +401,12 @@
   (when-let [data (lookup-entry config id :index-field-name)]
     (. builder indexFieldName data))
   (.build builder))
+
+
+(defn cfn-data-source-confluence-page-to-index-field-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-confluence-page-to-index-field-mapping-property-builder (new CfnDataSource$ConfluencePageToIndexFieldMappingProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-confluence-space-configuration-property-builder
@@ -372,6 +438,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-confluence-space-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-confluence-space-configuration-property-builder (new CfnDataSource$ConfluenceSpaceConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-confluence-space-to-index-field-mapping-property-builder
   "The build-cfn-data-source-confluence-space-to-index-field-mapping-property-builder function updates a CfnDataSource$ConfluenceSpaceToIndexFieldMappingProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$ConfluenceSpaceToIndexFieldMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -393,6 +465,12 @@
   (when-let [data (lookup-entry config id :index-field-name)]
     (. builder indexFieldName data))
   (.build builder))
+
+
+(defn cfn-data-source-confluence-space-to-index-field-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-confluence-space-to-index-field-mapping-property-builder (new CfnDataSource$ConfluenceSpaceToIndexFieldMappingProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-connection-configuration-property-builder
@@ -424,6 +502,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-connection-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-connection-configuration-property-builder (new CfnDataSource$ConnectionConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-custom-document-enrichment-configuration-property-builder
   "The build-cfn-data-source-custom-document-enrichment-configuration-property-builder function updates a CfnDataSource$CustomDocumentEnrichmentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$CustomDocumentEnrichmentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -448,6 +532,12 @@
   (when-let [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
+
+
+(defn cfn-data-source-custom-document-enrichment-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-custom-document-enrichment-configuration-property-builder (new CfnDataSource$CustomDocumentEnrichmentConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-data-source-configuration-property-builder
@@ -497,6 +587,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-data-source-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-data-source-configuration-property-builder (new CfnDataSource$DataSourceConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-data-source-to-index-field-mapping-property-builder
   "The build-cfn-data-source-data-source-to-index-field-mapping-property-builder function updates a CfnDataSource$DataSourceToIndexFieldMappingProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$DataSourceToIndexFieldMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -520,6 +616,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-data-source-to-index-field-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-data-source-to-index-field-mapping-property-builder (new CfnDataSource$DataSourceToIndexFieldMappingProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-data-source-vpc-configuration-property-builder
   "The build-cfn-data-source-data-source-vpc-configuration-property-builder function updates a CfnDataSource$DataSourceVpcConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$DataSourceVpcConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -538,6 +640,12 @@
   (when-let [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
+
+
+(defn cfn-data-source-data-source-vpc-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-data-source-vpc-configuration-property-builder (new CfnDataSource$DataSourceVpcConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-database-configuration-property-builder
@@ -572,6 +680,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-database-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-database-configuration-property-builder (new CfnDataSource$DatabaseConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-document-attribute-condition-property-builder
   "The build-cfn-data-source-document-attribute-condition-property-builder function updates a CfnDataSource$DocumentAttributeConditionProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$DocumentAttributeConditionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -595,6 +709,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-document-attribute-condition-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-document-attribute-condition-property-builder (new CfnDataSource$DocumentAttributeConditionProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-document-attribute-target-property-builder
   "The build-cfn-data-source-document-attribute-target-property-builder function updates a CfnDataSource$DocumentAttributeTargetProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$DocumentAttributeTargetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -616,6 +736,12 @@
   (when-let [data (lookup-entry config id :target-document-attribute-value-deletion)]
     (. builder targetDocumentAttributeValueDeletion data))
   (.build builder))
+
+
+(defn cfn-data-source-document-attribute-target-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-document-attribute-target-property-builder (new CfnDataSource$DocumentAttributeTargetProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-document-attribute-value-property-builder
@@ -644,6 +770,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-document-attribute-value-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-document-attribute-value-property-builder (new CfnDataSource$DocumentAttributeValueProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-documents-metadata-configuration-property-builder
   "The build-cfn-data-source-documents-metadata-configuration-property-builder function updates a CfnDataSource$DocumentsMetadataConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$DocumentsMetadataConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -659,6 +791,12 @@
   (when-let [data (lookup-entry config id :s3-prefix)]
     (. builder s3Prefix data))
   (.build builder))
+
+
+(defn cfn-data-source-documents-metadata-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-documents-metadata-configuration-property-builder (new CfnDataSource$DocumentsMetadataConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-google-drive-configuration-property-builder
@@ -696,6 +834,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-google-drive-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-google-drive-configuration-property-builder (new CfnDataSource$GoogleDriveConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-hook-configuration-property-builder
   "The build-cfn-data-source-hook-configuration-property-builder function updates a CfnDataSource$HookConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$HookConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -719,6 +863,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-hook-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-hook-configuration-property-builder (new CfnDataSource$HookConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-inline-custom-document-enrichment-configuration-property-builder
   "The build-cfn-data-source-inline-custom-document-enrichment-configuration-property-builder function updates a CfnDataSource$InlineCustomDocumentEnrichmentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$InlineCustomDocumentEnrichmentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -740,6 +890,12 @@
   (when-let [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
+
+
+(defn cfn-data-source-inline-custom-document-enrichment-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-inline-custom-document-enrichment-configuration-property-builder (new CfnDataSource$InlineCustomDocumentEnrichmentConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-one-drive-configuration-property-builder
@@ -777,6 +933,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-one-drive-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-one-drive-configuration-property-builder (new CfnDataSource$OneDriveConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-one-drive-users-property-builder
   "The build-cfn-data-source-one-drive-users-property-builder function updates a CfnDataSource$OneDriveUsersProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$OneDriveUsersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -795,6 +957,12 @@
   (when-let [data (lookup-entry config id :one-drive-user-s3-path)]
     (. builder oneDriveUserS3Path data))
   (.build builder))
+
+
+(defn cfn-data-source-one-drive-users-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-one-drive-users-property-builder (new CfnDataSource$OneDriveUsersProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-props-builder
@@ -841,6 +1009,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-props-builder
+  ""
+  [id config]
+  (build-cfn-data-source-props-builder (new CfnDataSourceProps$Builder) id config))
+
+
 (defn build-cfn-data-source-proxy-configuration-property-builder
   "The build-cfn-data-source-proxy-configuration-property-builder function updates a CfnDataSource$ProxyConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$ProxyConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -862,6 +1036,12 @@
   (when-let [data (lookup-entry config id :port)]
     (. builder port data))
   (.build builder))
+
+
+(defn cfn-data-source-proxy-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-proxy-configuration-property-builder (new CfnDataSource$ProxyConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-s3-data-source-configuration-property-builder
@@ -896,6 +1076,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-s3-data-source-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-s3-data-source-configuration-property-builder (new CfnDataSource$S3DataSourceConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-s3-path-property-builder
   "The build-cfn-data-source-s3-path-property-builder function updates a CfnDataSource$S3PathProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$S3PathProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -914,6 +1100,12 @@
   (when-let [data (lookup-entry config id :key)]
     (. builder key data))
   (.build builder))
+
+
+(defn cfn-data-source-s3-path-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-s3-path-property-builder (new CfnDataSource$S3PathProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-salesforce-chatter-feed-configuration-property-builder
@@ -940,6 +1132,12 @@
   (when-let [data (lookup-entry config id :include-filter-types)]
     (. builder includeFilterTypes data))
   (.build builder))
+
+
+(defn cfn-data-source-salesforce-chatter-feed-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-salesforce-chatter-feed-configuration-property-builder (new CfnDataSource$SalesforceChatterFeedConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-salesforce-configuration-property-builder
@@ -983,6 +1181,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-salesforce-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-salesforce-configuration-property-builder (new CfnDataSource$SalesforceConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-salesforce-custom-knowledge-article-type-configuration-property-builder
   "The build-cfn-data-source-salesforce-custom-knowledge-article-type-configuration-property-builder function updates a CfnDataSource$SalesforceCustomKnowledgeArticleTypeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$SalesforceCustomKnowledgeArticleTypeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1009,6 +1213,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-salesforce-custom-knowledge-article-type-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-salesforce-custom-knowledge-article-type-configuration-property-builder (new CfnDataSource$SalesforceCustomKnowledgeArticleTypeConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-salesforce-knowledge-article-configuration-property-builder
   "The build-cfn-data-source-salesforce-knowledge-article-configuration-property-builder function updates a CfnDataSource$SalesforceKnowledgeArticleConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$SalesforceKnowledgeArticleConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1030,6 +1240,12 @@
   (when-let [data (lookup-entry config id :standard-knowledge-article-type-configuration)]
     (. builder standardKnowledgeArticleTypeConfiguration data))
   (.build builder))
+
+
+(defn cfn-data-source-salesforce-knowledge-article-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-salesforce-knowledge-article-configuration-property-builder (new CfnDataSource$SalesforceKnowledgeArticleConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-salesforce-standard-knowledge-article-type-configuration-property-builder
@@ -1055,6 +1271,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-salesforce-standard-knowledge-article-type-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-salesforce-standard-knowledge-article-type-configuration-property-builder (new CfnDataSource$SalesforceStandardKnowledgeArticleTypeConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-salesforce-standard-object-attachment-configuration-property-builder
   "The build-cfn-data-source-salesforce-standard-object-attachment-configuration-property-builder function updates a CfnDataSource$SalesforceStandardObjectAttachmentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$SalesforceStandardObjectAttachmentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1073,6 +1295,12 @@
   (when-let [data (lookup-entry config id :field-mappings)]
     (. builder fieldMappings data))
   (.build builder))
+
+
+(defn cfn-data-source-salesforce-standard-object-attachment-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-salesforce-standard-object-attachment-configuration-property-builder (new CfnDataSource$SalesforceStandardObjectAttachmentConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-salesforce-standard-object-configuration-property-builder
@@ -1099,6 +1327,12 @@
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-data-source-salesforce-standard-object-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-salesforce-standard-object-configuration-property-builder (new CfnDataSource$SalesforceStandardObjectConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-service-now-configuration-property-builder
@@ -1131,6 +1365,12 @@
   (when-let [data (lookup-entry config id :service-now-build-version)]
     (. builder serviceNowBuildVersion data))
   (.build builder))
+
+
+(defn cfn-data-source-service-now-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-service-now-configuration-property-builder (new CfnDataSource$ServiceNowConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-service-now-knowledge-article-configuration-property-builder
@@ -1168,6 +1408,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-service-now-knowledge-article-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-service-now-knowledge-article-configuration-property-builder (new CfnDataSource$ServiceNowKnowledgeArticleConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-service-now-service-catalog-configuration-property-builder
   "The build-cfn-data-source-service-now-service-catalog-configuration-property-builder function updates a CfnDataSource$ServiceNowServiceCatalogConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$ServiceNowServiceCatalogConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1198,6 +1444,12 @@
   (when-let [data (lookup-entry config id :include-attachment-file-patterns)]
     (. builder includeAttachmentFilePatterns data))
   (.build builder))
+
+
+(defn cfn-data-source-service-now-service-catalog-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-service-now-service-catalog-configuration-property-builder (new CfnDataSource$ServiceNowServiceCatalogConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-share-point-configuration-property-builder
@@ -1250,6 +1502,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-share-point-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-share-point-configuration-property-builder (new CfnDataSource$SharePointConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-sql-configuration-property-builder
   "The build-cfn-data-source-sql-configuration-property-builder function updates a CfnDataSource$SqlConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$SqlConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1265,6 +1523,12 @@
   (when-let [data (lookup-entry config id :query-identifiers-enclosing-option)]
     (. builder queryIdentifiersEnclosingOption data))
   (.build builder))
+
+
+(defn cfn-data-source-sql-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-sql-configuration-property-builder (new CfnDataSource$SqlConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-template-configuration-property-builder
@@ -1284,6 +1548,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-template-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-template-configuration-property-builder (new CfnDataSource$TemplateConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-web-crawler-authentication-configuration-property-builder
   "The build-cfn-data-source-web-crawler-authentication-configuration-property-builder function updates a CfnDataSource$WebCrawlerAuthenticationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$WebCrawlerAuthenticationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1299,6 +1569,12 @@
   (when-let [data (lookup-entry config id :basic-authentication)]
     (. builder basicAuthentication data))
   (.build builder))
+
+
+(defn cfn-data-source-web-crawler-authentication-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-web-crawler-authentication-configuration-property-builder (new CfnDataSource$WebCrawlerAuthenticationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-web-crawler-basic-authentication-property-builder
@@ -1322,6 +1598,12 @@
   (when-let [data (lookup-entry config id :port)]
     (. builder port data))
   (.build builder))
+
+
+(defn cfn-data-source-web-crawler-basic-authentication-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-web-crawler-basic-authentication-property-builder (new CfnDataSource$WebCrawlerBasicAuthenticationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-web-crawler-configuration-property-builder
@@ -1365,6 +1647,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-web-crawler-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-web-crawler-configuration-property-builder (new CfnDataSource$WebCrawlerConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-web-crawler-seed-url-configuration-property-builder
   "The build-cfn-data-source-web-crawler-seed-url-configuration-property-builder function updates a CfnDataSource$WebCrawlerSeedUrlConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$WebCrawlerSeedUrlConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1385,6 +1673,12 @@
   (.build builder))
 
 
+(defn cfn-data-source-web-crawler-seed-url-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-web-crawler-seed-url-configuration-property-builder (new CfnDataSource$WebCrawlerSeedUrlConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-source-web-crawler-site-maps-configuration-property-builder
   "The build-cfn-data-source-web-crawler-site-maps-configuration-property-builder function updates a CfnDataSource$WebCrawlerSiteMapsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataSource$WebCrawlerSiteMapsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1400,6 +1694,12 @@
   (when-let [data (lookup-entry config id :site-maps)]
     (. builder siteMaps data))
   (.build builder))
+
+
+(defn cfn-data-source-web-crawler-site-maps-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-web-crawler-site-maps-configuration-property-builder (new CfnDataSource$WebCrawlerSiteMapsConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-web-crawler-urls-property-builder
@@ -1420,6 +1720,12 @@
   (when-let [data (lookup-entry config id :site-maps-configuration)]
     (. builder siteMapsConfiguration data))
   (.build builder))
+
+
+(defn cfn-data-source-web-crawler-urls-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-web-crawler-urls-property-builder (new CfnDataSource$WebCrawlerUrlsProperty$Builder) id config))
 
 
 (defn build-cfn-data-source-work-docs-configuration-property-builder
@@ -1452,6 +1758,12 @@
   (when-let [data (lookup-entry config id :use-change-log)]
     (. builder useChangeLog data))
   (.build builder))
+
+
+(defn cfn-data-source-work-docs-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-source-work-docs-configuration-property-builder (new CfnDataSource$WorkDocsConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-faq-builder
@@ -1492,6 +1804,12 @@
   (.build builder))
 
 
+(defn cfn-faq-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-faq-builder (CfnFaq$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-faq-props-builder
   "The build-cfn-faq-props-builder function updates a CfnFaqProps$Builder instance using the provided configuration.
   The function takes the CfnFaqProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1530,6 +1848,12 @@
   (.build builder))
 
 
+(defn cfn-faq-props-builder
+  ""
+  [id config]
+  (build-cfn-faq-props-builder (new CfnFaqProps$Builder) id config))
+
+
 (defn build-cfn-faq-s3-path-property-builder
   "The build-cfn-faq-s3-path-property-builder function updates a CfnFaq$S3PathProperty$Builder instance using the provided configuration.
   The function takes the CfnFaq$S3PathProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1548,6 +1872,12 @@
   (when-let [data (lookup-entry config id :key)]
     (. builder key data))
   (.build builder))
+
+
+(defn cfn-faq-s3-path-property-builder
+  ""
+  [id config]
+  (build-cfn-faq-s3-path-property-builder (new CfnFaq$S3PathProperty$Builder) id config))
 
 
 (defn build-cfn-index-builder
@@ -1594,6 +1924,12 @@
   (.build builder))
 
 
+(defn cfn-index-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-index-builder (CfnIndex$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-index-capacity-units-configuration-property-builder
   "The build-cfn-index-capacity-units-configuration-property-builder function updates a CfnIndex$CapacityUnitsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnIndex$CapacityUnitsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1612,6 +1948,12 @@
   (when-let [data (lookup-entry config id :storage-capacity-units)]
     (. builder storageCapacityUnits data))
   (.build builder))
+
+
+(defn cfn-index-capacity-units-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-index-capacity-units-configuration-property-builder (new CfnIndex$CapacityUnitsConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-index-document-metadata-configuration-property-builder
@@ -1640,6 +1982,12 @@
   (.build builder))
 
 
+(defn cfn-index-document-metadata-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-index-document-metadata-configuration-property-builder (new CfnIndex$DocumentMetadataConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-index-json-token-type-configuration-property-builder
   "The build-cfn-index-json-token-type-configuration-property-builder function updates a CfnIndex$JsonTokenTypeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnIndex$JsonTokenTypeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1658,6 +2006,12 @@
   (when-let [data (lookup-entry config id :user-name-attribute-field)]
     (. builder userNameAttributeField data))
   (.build builder))
+
+
+(defn cfn-index-json-token-type-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-index-json-token-type-configuration-property-builder (new CfnIndex$JsonTokenTypeConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-index-jwt-token-type-configuration-property-builder
@@ -1693,6 +2047,12 @@
   (when-let [data (lookup-entry config id :user-name-attribute-field)]
     (. builder userNameAttributeField data))
   (.build builder))
+
+
+(defn cfn-index-jwt-token-type-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-index-jwt-token-type-configuration-property-builder (new CfnIndex$JwtTokenTypeConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-index-props-builder
@@ -1739,6 +2099,12 @@
   (.build builder))
 
 
+(defn cfn-index-props-builder
+  ""
+  [id config]
+  (build-cfn-index-props-builder (new CfnIndexProps$Builder) id config))
+
+
 (defn build-cfn-index-relevance-property-builder
   "The build-cfn-index-relevance-property-builder function updates a CfnIndex$RelevanceProperty$Builder instance using the provided configuration.
   The function takes the CfnIndex$RelevanceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1768,6 +2134,12 @@
   (.build builder))
 
 
+(defn cfn-index-relevance-property-builder
+  ""
+  [id config]
+  (build-cfn-index-relevance-property-builder (new CfnIndex$RelevanceProperty$Builder) id config))
+
+
 (defn build-cfn-index-search-property-builder
   "The build-cfn-index-search-property-builder function updates a CfnIndex$SearchProperty$Builder instance using the provided configuration.
   The function takes the CfnIndex$SearchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1794,6 +2166,12 @@
   (.build builder))
 
 
+(defn cfn-index-search-property-builder
+  ""
+  [id config]
+  (build-cfn-index-search-property-builder (new CfnIndex$SearchProperty$Builder) id config))
+
+
 (defn build-cfn-index-server-side-encryption-configuration-property-builder
   "The build-cfn-index-server-side-encryption-configuration-property-builder function updates a CfnIndex$ServerSideEncryptionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnIndex$ServerSideEncryptionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1809,6 +2187,12 @@
   (when-let [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
   (.build builder))
+
+
+(defn cfn-index-server-side-encryption-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-index-server-side-encryption-configuration-property-builder (new CfnIndex$ServerSideEncryptionConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-index-user-token-configuration-property-builder
@@ -1831,6 +2215,12 @@
   (.build builder))
 
 
+(defn cfn-index-user-token-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-index-user-token-configuration-property-builder (new CfnIndex$UserTokenConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-index-value-importance-item-property-builder
   "The build-cfn-index-value-importance-item-property-builder function updates a CfnIndex$ValueImportanceItemProperty$Builder instance using the provided configuration.
   The function takes the CfnIndex$ValueImportanceItemProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1849,3 +2239,9 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-index-value-importance-item-property-builder
+  ""
+  [id config]
+  (build-cfn-index-value-importance-item-property-builder (new CfnIndex$ValueImportanceItemProperty$Builder) id config))

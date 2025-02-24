@@ -52,6 +52,12 @@
   (.build builder))
 
 
+(defn cfn-config-antenna-downlink-config-property-builder
+  ""
+  [id config]
+  (build-cfn-config-antenna-downlink-config-property-builder (new CfnConfig$AntennaDownlinkConfigProperty$Builder) id config))
+
+
 (defn build-cfn-config-antenna-downlink-demod-decode-config-property-builder
   "The build-cfn-config-antenna-downlink-demod-decode-config-property-builder function updates a CfnConfig$AntennaDownlinkDemodDecodeConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnConfig$AntennaDownlinkDemodDecodeConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -73,6 +79,12 @@
   (when-let [data (lookup-entry config id :spectrum-config)]
     (. builder spectrumConfig data))
   (.build builder))
+
+
+(defn cfn-config-antenna-downlink-demod-decode-config-property-builder
+  ""
+  [id config]
+  (build-cfn-config-antenna-downlink-demod-decode-config-property-builder (new CfnConfig$AntennaDownlinkDemodDecodeConfigProperty$Builder) id config))
 
 
 (defn build-cfn-config-antenna-uplink-config-property-builder
@@ -98,6 +110,12 @@
   (.build builder))
 
 
+(defn cfn-config-antenna-uplink-config-property-builder
+  ""
+  [id config]
+  (build-cfn-config-antenna-uplink-config-property-builder (new CfnConfig$AntennaUplinkConfigProperty$Builder) id config))
+
+
 (defn build-cfn-config-builder
   "The build-cfn-config-builder function updates a CfnConfig$Builder instance using the provided configuration.
   The function takes the CfnConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -119,6 +137,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-config-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-config-builder (CfnConfig$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-config-config-data-property-builder
@@ -156,6 +180,12 @@
   (.build builder))
 
 
+(defn cfn-config-config-data-property-builder
+  ""
+  [id config]
+  (build-cfn-config-config-data-property-builder (new CfnConfig$ConfigDataProperty$Builder) id config))
+
+
 (defn build-cfn-config-dataflow-endpoint-config-property-builder
   "The build-cfn-config-dataflow-endpoint-config-property-builder function updates a CfnConfig$DataflowEndpointConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnConfig$DataflowEndpointConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -176,6 +206,12 @@
   (.build builder))
 
 
+(defn cfn-config-dataflow-endpoint-config-property-builder
+  ""
+  [id config]
+  (build-cfn-config-dataflow-endpoint-config-property-builder (new CfnConfig$DataflowEndpointConfigProperty$Builder) id config))
+
+
 (defn build-cfn-config-decode-config-property-builder
   "The build-cfn-config-decode-config-property-builder function updates a CfnConfig$DecodeConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnConfig$DecodeConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -193,6 +229,12 @@
   (.build builder))
 
 
+(defn cfn-config-decode-config-property-builder
+  ""
+  [id config]
+  (build-cfn-config-decode-config-property-builder (new CfnConfig$DecodeConfigProperty$Builder) id config))
+
+
 (defn build-cfn-config-demodulation-config-property-builder
   "The build-cfn-config-demodulation-config-property-builder function updates a CfnConfig$DemodulationConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnConfig$DemodulationConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -208,6 +250,12 @@
   (when-let [data (lookup-entry config id :unvalidated-json)]
     (. builder unvalidatedJson data))
   (.build builder))
+
+
+(defn cfn-config-demodulation-config-property-builder
+  ""
+  [id config]
+  (build-cfn-config-demodulation-config-property-builder (new CfnConfig$DemodulationConfigProperty$Builder) id config))
 
 
 (defn build-cfn-config-eirp-property-builder
@@ -230,6 +278,12 @@
   (.build builder))
 
 
+(defn cfn-config-eirp-property-builder
+  ""
+  [id config]
+  (build-cfn-config-eirp-property-builder (new CfnConfig$EirpProperty$Builder) id config))
+
+
 (defn build-cfn-config-frequency-bandwidth-property-builder
   "The build-cfn-config-frequency-bandwidth-property-builder function updates a CfnConfig$FrequencyBandwidthProperty$Builder instance using the provided configuration.
   The function takes the CfnConfig$FrequencyBandwidthProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -250,6 +304,12 @@
   (.build builder))
 
 
+(defn cfn-config-frequency-bandwidth-property-builder
+  ""
+  [id config]
+  (build-cfn-config-frequency-bandwidth-property-builder (new CfnConfig$FrequencyBandwidthProperty$Builder) id config))
+
+
 (defn build-cfn-config-frequency-property-builder
   "The build-cfn-config-frequency-property-builder function updates a CfnConfig$FrequencyProperty$Builder instance using the provided configuration.
   The function takes the CfnConfig$FrequencyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -268,6 +328,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-config-frequency-property-builder
+  ""
+  [id config]
+  (build-cfn-config-frequency-property-builder (new CfnConfig$FrequencyProperty$Builder) id config))
 
 
 (defn build-cfn-config-props-builder
@@ -293,6 +359,12 @@
   (.build builder))
 
 
+(defn cfn-config-props-builder
+  ""
+  [id config]
+  (build-cfn-config-props-builder (new CfnConfigProps$Builder) id config))
+
+
 (defn build-cfn-config-s3-recording-config-property-builder
   "The build-cfn-config-s3-recording-config-property-builder function updates a CfnConfig$S3RecordingConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnConfig$S3RecordingConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -314,6 +386,12 @@
   (when-let [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
+
+
+(defn cfn-config-s3-recording-config-property-builder
+  ""
+  [id config]
+  (build-cfn-config-s3-recording-config-property-builder (new CfnConfig$S3RecordingConfigProperty$Builder) id config))
 
 
 (defn build-cfn-config-spectrum-config-property-builder
@@ -339,6 +417,12 @@
   (.build builder))
 
 
+(defn cfn-config-spectrum-config-property-builder
+  ""
+  [id config]
+  (build-cfn-config-spectrum-config-property-builder (new CfnConfig$SpectrumConfigProperty$Builder) id config))
+
+
 (defn build-cfn-config-tracking-config-property-builder
   "The build-cfn-config-tracking-config-property-builder function updates a CfnConfig$TrackingConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnConfig$TrackingConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -354,6 +438,12 @@
   (when-let [data (lookup-entry config id :autotrack)]
     (. builder autotrack data))
   (.build builder))
+
+
+(defn cfn-config-tracking-config-property-builder
+  ""
+  [id config]
+  (build-cfn-config-tracking-config-property-builder (new CfnConfig$TrackingConfigProperty$Builder) id config))
 
 
 (defn build-cfn-config-uplink-echo-config-property-builder
@@ -376,6 +466,12 @@
   (.build builder))
 
 
+(defn cfn-config-uplink-echo-config-property-builder
+  ""
+  [id config]
+  (build-cfn-config-uplink-echo-config-property-builder (new CfnConfig$UplinkEchoConfigProperty$Builder) id config))
+
+
 (defn build-cfn-config-uplink-spectrum-config-property-builder
   "The build-cfn-config-uplink-spectrum-config-property-builder function updates a CfnConfig$UplinkSpectrumConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnConfig$UplinkSpectrumConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -394,6 +490,12 @@
   (when-let [data (lookup-entry config id :polarization)]
     (. builder polarization data))
   (.build builder))
+
+
+(defn cfn-config-uplink-spectrum-config-property-builder
+  ""
+  [id config]
+  (build-cfn-config-uplink-spectrum-config-property-builder (new CfnConfig$UplinkSpectrumConfigProperty$Builder) id config))
 
 
 (defn build-cfn-dataflow-endpoint-group-aws-ground-station-agent-endpoint-property-builder
@@ -425,6 +527,12 @@
   (.build builder))
 
 
+(defn cfn-dataflow-endpoint-group-aws-ground-station-agent-endpoint-property-builder
+  ""
+  [id config]
+  (build-cfn-dataflow-endpoint-group-aws-ground-station-agent-endpoint-property-builder (new CfnDataflowEndpointGroup$AwsGroundStationAgentEndpointProperty$Builder) id config))
+
+
 (defn build-cfn-dataflow-endpoint-group-builder
   "The build-cfn-dataflow-endpoint-group-builder function updates a CfnDataflowEndpointGroup$Builder instance using the provided configuration.
   The function takes the CfnDataflowEndpointGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -451,6 +559,12 @@
   (.build builder))
 
 
+(defn cfn-dataflow-endpoint-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-dataflow-endpoint-group-builder (CfnDataflowEndpointGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-dataflow-endpoint-group-connection-details-property-builder
   "The build-cfn-dataflow-endpoint-group-connection-details-property-builder function updates a CfnDataflowEndpointGroup$ConnectionDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnDataflowEndpointGroup$ConnectionDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -469,6 +583,12 @@
   (when-let [data (lookup-entry config id :socket-address)]
     (. builder socketAddress data))
   (.build builder))
+
+
+(defn cfn-dataflow-endpoint-group-connection-details-property-builder
+  ""
+  [id config]
+  (build-cfn-dataflow-endpoint-group-connection-details-property-builder (new CfnDataflowEndpointGroup$ConnectionDetailsProperty$Builder) id config))
 
 
 (defn build-cfn-dataflow-endpoint-group-dataflow-endpoint-property-builder
@@ -494,6 +614,12 @@
   (.build builder))
 
 
+(defn cfn-dataflow-endpoint-group-dataflow-endpoint-property-builder
+  ""
+  [id config]
+  (build-cfn-dataflow-endpoint-group-dataflow-endpoint-property-builder (new CfnDataflowEndpointGroup$DataflowEndpointProperty$Builder) id config))
+
+
 (defn build-cfn-dataflow-endpoint-group-endpoint-details-property-builder
   "The build-cfn-dataflow-endpoint-group-endpoint-details-property-builder function updates a CfnDataflowEndpointGroup$EndpointDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnDataflowEndpointGroup$EndpointDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -517,6 +643,12 @@
   (.build builder))
 
 
+(defn cfn-dataflow-endpoint-group-endpoint-details-property-builder
+  ""
+  [id config]
+  (build-cfn-dataflow-endpoint-group-endpoint-details-property-builder (new CfnDataflowEndpointGroup$EndpointDetailsProperty$Builder) id config))
+
+
 (defn build-cfn-dataflow-endpoint-group-integer-range-property-builder
   "The build-cfn-dataflow-endpoint-group-integer-range-property-builder function updates a CfnDataflowEndpointGroup$IntegerRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnDataflowEndpointGroup$IntegerRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -535,6 +667,12 @@
   (when-let [data (lookup-entry config id :minimum)]
     (. builder minimum data))
   (.build builder))
+
+
+(defn cfn-dataflow-endpoint-group-integer-range-property-builder
+  ""
+  [id config]
+  (build-cfn-dataflow-endpoint-group-integer-range-property-builder (new CfnDataflowEndpointGroup$IntegerRangeProperty$Builder) id config))
 
 
 (defn build-cfn-dataflow-endpoint-group-props-builder
@@ -563,6 +701,12 @@
   (.build builder))
 
 
+(defn cfn-dataflow-endpoint-group-props-builder
+  ""
+  [id config]
+  (build-cfn-dataflow-endpoint-group-props-builder (new CfnDataflowEndpointGroupProps$Builder) id config))
+
+
 (defn build-cfn-dataflow-endpoint-group-ranged-connection-details-property-builder
   "The build-cfn-dataflow-endpoint-group-ranged-connection-details-property-builder function updates a CfnDataflowEndpointGroup$RangedConnectionDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnDataflowEndpointGroup$RangedConnectionDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -583,6 +727,12 @@
   (.build builder))
 
 
+(defn cfn-dataflow-endpoint-group-ranged-connection-details-property-builder
+  ""
+  [id config]
+  (build-cfn-dataflow-endpoint-group-ranged-connection-details-property-builder (new CfnDataflowEndpointGroup$RangedConnectionDetailsProperty$Builder) id config))
+
+
 (defn build-cfn-dataflow-endpoint-group-ranged-socket-address-property-builder
   "The build-cfn-dataflow-endpoint-group-ranged-socket-address-property-builder function updates a CfnDataflowEndpointGroup$RangedSocketAddressProperty$Builder instance using the provided configuration.
   The function takes the CfnDataflowEndpointGroup$RangedSocketAddressProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -601,6 +751,12 @@
   (when-let [data (lookup-entry config id :port-range)]
     (. builder portRange data))
   (.build builder))
+
+
+(defn cfn-dataflow-endpoint-group-ranged-socket-address-property-builder
+  ""
+  [id config]
+  (build-cfn-dataflow-endpoint-group-ranged-socket-address-property-builder (new CfnDataflowEndpointGroup$RangedSocketAddressProperty$Builder) id config))
 
 
 (defn build-cfn-dataflow-endpoint-group-security-details-property-builder
@@ -626,6 +782,12 @@
   (.build builder))
 
 
+(defn cfn-dataflow-endpoint-group-security-details-property-builder
+  ""
+  [id config]
+  (build-cfn-dataflow-endpoint-group-security-details-property-builder (new CfnDataflowEndpointGroup$SecurityDetailsProperty$Builder) id config))
+
+
 (defn build-cfn-dataflow-endpoint-group-socket-address-property-builder
   "The build-cfn-dataflow-endpoint-group-socket-address-property-builder function updates a CfnDataflowEndpointGroup$SocketAddressProperty$Builder instance using the provided configuration.
   The function takes the CfnDataflowEndpointGroup$SocketAddressProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -644,6 +806,12 @@
   (when-let [data (lookup-entry config id :port)]
     (. builder port data))
   (.build builder))
+
+
+(defn cfn-dataflow-endpoint-group-socket-address-property-builder
+  ""
+  [id config]
+  (build-cfn-dataflow-endpoint-group-socket-address-property-builder (new CfnDataflowEndpointGroup$SocketAddressProperty$Builder) id config))
 
 
 (defn build-cfn-mission-profile-builder
@@ -687,6 +855,12 @@
   (.build builder))
 
 
+(defn cfn-mission-profile-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-mission-profile-builder (CfnMissionProfile$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-mission-profile-dataflow-edge-property-builder
   "The build-cfn-mission-profile-dataflow-edge-property-builder function updates a CfnMissionProfile$DataflowEdgeProperty$Builder instance using the provided configuration.
   The function takes the CfnMissionProfile$DataflowEdgeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -705,6 +879,12 @@
   (when-let [data (lookup-entry config id :source)]
     (. builder source data))
   (.build builder))
+
+
+(defn cfn-mission-profile-dataflow-edge-property-builder
+  ""
+  [id config]
+  (build-cfn-mission-profile-dataflow-edge-property-builder (new CfnMissionProfile$DataflowEdgeProperty$Builder) id config))
 
 
 (defn build-cfn-mission-profile-props-builder
@@ -748,6 +928,12 @@
   (.build builder))
 
 
+(defn cfn-mission-profile-props-builder
+  ""
+  [id config]
+  (build-cfn-mission-profile-props-builder (new CfnMissionProfileProps$Builder) id config))
+
+
 (defn build-cfn-mission-profile-streams-kms-key-property-builder
   "The build-cfn-mission-profile-streams-kms-key-property-builder function updates a CfnMissionProfile$StreamsKmsKeyProperty$Builder instance using the provided configuration.
   The function takes the CfnMissionProfile$StreamsKmsKeyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -766,3 +952,9 @@
   (when-let [data (lookup-entry config id :kms-key-arn)]
     (. builder kmsKeyArn data))
   (.build builder))
+
+
+(defn cfn-mission-profile-streams-kms-key-property-builder
+  ""
+  [id config]
+  (build-cfn-mission-profile-streams-kms-key-property-builder (new CfnMissionProfile$StreamsKmsKeyProperty$Builder) id config))

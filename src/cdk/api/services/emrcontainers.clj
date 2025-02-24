@@ -31,6 +31,12 @@
   (.build builder))
 
 
+(defn cfn-virtual-cluster-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-virtual-cluster-builder (CfnVirtualCluster$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-virtual-cluster-container-info-property-builder
   "The build-cfn-virtual-cluster-container-info-property-builder function updates a CfnVirtualCluster$ContainerInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualCluster$ContainerInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -46,6 +52,12 @@
   (when-let [data (lookup-entry config id :eks-info)]
     (. builder eksInfo data))
   (.build builder))
+
+
+(defn cfn-virtual-cluster-container-info-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-cluster-container-info-property-builder (new CfnVirtualCluster$ContainerInfoProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-cluster-container-provider-property-builder
@@ -71,6 +83,12 @@
   (.build builder))
 
 
+(defn cfn-virtual-cluster-container-provider-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-cluster-container-provider-property-builder (new CfnVirtualCluster$ContainerProviderProperty$Builder) id config))
+
+
 (defn build-cfn-virtual-cluster-eks-info-property-builder
   "The build-cfn-virtual-cluster-eks-info-property-builder function updates a CfnVirtualCluster$EksInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnVirtualCluster$EksInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -86,6 +104,12 @@
   (when-let [data (lookup-entry config id :namespace)]
     (. builder namespace data))
   (.build builder))
+
+
+(defn cfn-virtual-cluster-eks-info-property-builder
+  ""
+  [id config]
+  (build-cfn-virtual-cluster-eks-info-property-builder (new CfnVirtualCluster$EksInfoProperty$Builder) id config))
 
 
 (defn build-cfn-virtual-cluster-props-builder
@@ -109,3 +133,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-virtual-cluster-props-builder
+  ""
+  [id config]
+  (build-cfn-virtual-cluster-props-builder (new CfnVirtualClusterProps$Builder) id config))

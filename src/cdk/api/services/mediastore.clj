@@ -43,6 +43,12 @@
   (.build builder))
 
 
+(defn cfn-container-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-container-builder (CfnContainer$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-container-cors-rule-property-builder
   "The build-cfn-container-cors-rule-property-builder function updates a CfnContainer$CorsRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnContainer$CorsRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -72,6 +78,12 @@
   (.build builder))
 
 
+(defn cfn-container-cors-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-container-cors-rule-property-builder (new CfnContainer$CorsRuleProperty$Builder) id config))
+
+
 (defn build-cfn-container-metric-policy-property-builder
   "The build-cfn-container-metric-policy-property-builder function updates a CfnContainer$MetricPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnContainer$MetricPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -92,6 +104,12 @@
   (.build builder))
 
 
+(defn cfn-container-metric-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-container-metric-policy-property-builder (new CfnContainer$MetricPolicyProperty$Builder) id config))
+
+
 (defn build-cfn-container-metric-policy-rule-property-builder
   "The build-cfn-container-metric-policy-rule-property-builder function updates a CfnContainer$MetricPolicyRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnContainer$MetricPolicyRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -110,6 +128,12 @@
   (when-let [data (lookup-entry config id :object-group-name)]
     (. builder objectGroupName data))
   (.build builder))
+
+
+(defn cfn-container-metric-policy-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-container-metric-policy-rule-property-builder (new CfnContainer$MetricPolicyRuleProperty$Builder) id config))
 
 
 (defn build-cfn-container-props-builder
@@ -145,3 +169,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-container-props-builder
+  ""
+  [id config]
+  (build-cfn-container-props-builder (new CfnContainerProps$Builder) id config))

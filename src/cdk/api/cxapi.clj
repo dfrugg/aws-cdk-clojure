@@ -103,6 +103,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn assembly-build-options-builder
+  ""
+  [id config]
+  (build-assembly-build-options-builder (new AssemblyBuildOptions$Builder) id config))
+
+
 (defn build-asset-manifest-artifact-builder
   "The build-asset-manifest-artifact-builder function updates a AssetManifestArtifact$Builder instance using the provided configuration.
   The function takes the AssetManifestArtifact$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -159,6 +165,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :termination-protection)]
     (. builder terminationProtection data))
   (.build builder))
+
+
+(defn aws-cloud-formation-stack-properties-builder
+  ""
+  [id config]
+  (build-aws-cloud-formation-stack-properties-builder (new AwsCloudFormationStackProperties$Builder) id config))
 
 
 (defn build-cloud-assembly-builder
@@ -224,6 +236,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cloud-assembly-builder-props-builder
+  ""
+  [id config]
+  (build-cloud-assembly-builder-props-builder (new CloudAssemblyBuilderProps$Builder) id config))
+
+
 (defn build-cloud-formation-stack-artifact-builder
   "The build-cloud-formation-stack-artifact-builder function updates a CloudFormationStackArtifact$Builder instance using the provided configuration.
   The function takes the CloudFormationStackArtifact$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -279,6 +297,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn endpoint-service-availability-zones-context-query-builder
+  ""
+  [id config]
+  (build-endpoint-service-availability-zones-context-query-builder (new EndpointServiceAvailabilityZonesContextQuery$Builder) id config))
+
+
 (defn build-environment-builder
   "The build-environment-builder function updates a Environment$Builder instance using the provided configuration.
   The function takes the Environment$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -300,6 +324,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :region)]
     (. builder region data))
   (.build builder))
+
+
+(defn environment-builder
+  ""
+  [id config]
+  (build-environment-builder (new Environment$Builder) id config))
 
 
 (defn build-environment-placeholder-values-builder
@@ -325,6 +355,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn environment-placeholder-values-builder
+  ""
+  [id config]
+  (build-environment-placeholder-values-builder (new EnvironmentPlaceholderValues$Builder) id config))
+
+
 (defn build-key-context-response-builder
   "The build-key-context-response-builder function updates a KeyContextResponse$Builder instance using the provided configuration.
   The function takes the KeyContextResponse$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -340,6 +376,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :key-id)]
     (. builder keyId data))
   (.build builder))
+
+
+(defn key-context-response-builder
+  ""
+  [id config]
+  (build-key-context-response-builder (new KeyContextResponse$Builder) id config))
 
 
 (defn build-load-balancer-context-response-builder
@@ -374,6 +416,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn load-balancer-context-response-builder
+  ""
+  [id config]
+  (build-load-balancer-context-response-builder (new LoadBalancerContextResponse$Builder) id config))
+
+
 (defn build-load-balancer-listener-context-response-builder
   "The build-load-balancer-listener-context-response-builder function updates a LoadBalancerListenerContextResponse$Builder instance using the provided configuration.
   The function takes the LoadBalancerListenerContextResponse$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -395,6 +443,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :security-group-ids)]
     (. builder securityGroupIds data))
   (.build builder))
+
+
+(defn load-balancer-listener-context-response-builder
+  ""
+  [id config]
+  (build-load-balancer-listener-context-response-builder (new LoadBalancerListenerContextResponse$Builder) id config))
 
 
 (defn build-metadata-entry-result-builder
@@ -421,6 +475,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn metadata-entry-result-builder
+  ""
+  [id config]
+  (build-metadata-entry-result-builder (new MetadataEntryResult$Builder) id config))
 
 
 (defn build-nested-cloud-assembly-artifact-builder
@@ -475,6 +535,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn security-group-context-response-builder
+  ""
+  [id config]
+  (build-security-group-context-response-builder (new SecurityGroupContextResponse$Builder) id config))
+
+
 (defn build-synthesis-message-builder
   "The build-synthesis-message-builder function updates a SynthesisMessage$Builder instance using the provided configuration.
   The function takes the SynthesisMessage$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -496,6 +562,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (synthesis-message-level config id :level)]
     (. builder level data))
   (.build builder))
+
+
+(defn synthesis-message-builder
+  ""
+  [id config]
+  (build-synthesis-message-builder (new SynthesisMessage$Builder) id config))
 
 
 (defn build-tree-cloud-artifact-builder
@@ -592,6 +664,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn vpc-context-response-builder
+  ""
+  [id config]
+  (build-vpc-context-response-builder (new VpcContextResponse$Builder) id config))
+
+
 (defn build-vpc-subnet-builder
   "The build-vpc-subnet-builder function updates a VpcSubnet$Builder instance using the provided configuration.
   The function takes the VpcSubnet$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -618,6 +696,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn vpc-subnet-builder
+  ""
+  [id config]
+  (build-vpc-subnet-builder (new VpcSubnet$Builder) id config))
+
+
 (defn build-vpc-subnet-group-builder
   "The build-vpc-subnet-group-builder function updates a VpcSubnetGroup$Builder instance using the provided configuration.
   The function takes the VpcSubnetGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -639,3 +723,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (vpc-subnet-group-type config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn vpc-subnet-group-builder
+  ""
+  [id config]
+  (build-vpc-subnet-group-builder (new VpcSubnetGroup$Builder) id config))

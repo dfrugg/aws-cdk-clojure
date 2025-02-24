@@ -50,6 +50,12 @@
   (.build builder))
 
 
+(defn authenticate-cognito-action-builder
+  ""
+  [id config]
+  (build-authenticate-cognito-action-builder (AuthenticateCognitoAction$Builder/create) id config))
+
+
 (defn build-authenticate-cognito-action-props-builder
   "The build-authenticate-cognito-action-props-builder function updates a AuthenticateCognitoActionProps$Builder instance using the provided configuration.
   The function takes the AuthenticateCognitoActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -92,3 +98,9 @@
   (when-let [data (lookup-entry config id :user-pool-domain)]
     (. builder userPoolDomain data))
   (.build builder))
+
+
+(defn authenticate-cognito-action-props-builder
+  ""
+  [id config]
+  (build-authenticate-cognito-action-props-builder (new AuthenticateCognitoActionProps$Builder) id config))

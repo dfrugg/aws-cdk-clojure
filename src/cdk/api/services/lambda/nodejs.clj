@@ -235,6 +235,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn bundling-options-builder
+  ""
+  [id config]
+  (build-bundling-options-builder (new BundlingOptions$Builder) id config))
+
+
 (defn build-nodejs-function-builder
   "The build-nodejs-function-builder function updates a NodejsFunction$Builder instance using the provided configuration.
   The function takes the NodejsFunction$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -414,6 +420,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn nodejs-function-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-nodejs-function-builder (NodejsFunction$Builder/create scope (name id)) id config))
+
+
 (defn build-nodejs-function-props-builder
   "The build-nodejs-function-props-builder function updates a NodejsFunctionProps$Builder instance using the provided configuration.
   The function takes the NodejsFunctionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -591,3 +603,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
   (.build builder))
+
+
+(defn nodejs-function-props-builder
+  ""
+  [id config]
+  (build-nodejs-function-props-builder (new NodejsFunctionProps$Builder) id config))

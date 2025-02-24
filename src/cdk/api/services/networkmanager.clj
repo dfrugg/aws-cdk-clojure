@@ -78,6 +78,12 @@
   (.build builder))
 
 
+(defn cfn-connect-attachment-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-connect-attachment-builder (CfnConnectAttachment$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-connect-attachment-connect-attachment-options-property-builder
   "The build-cfn-connect-attachment-connect-attachment-options-property-builder function updates a CfnConnectAttachment$ConnectAttachmentOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnConnectAttachment$ConnectAttachmentOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -93,6 +99,12 @@
   (when-let [data (lookup-entry config id :protocol)]
     (. builder protocol data))
   (.build builder))
+
+
+(defn cfn-connect-attachment-connect-attachment-options-property-builder
+  ""
+  [id config]
+  (build-cfn-connect-attachment-connect-attachment-options-property-builder (new CfnConnectAttachment$ConnectAttachmentOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-connect-attachment-proposed-segment-change-property-builder
@@ -116,6 +128,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-connect-attachment-proposed-segment-change-property-builder
+  ""
+  [id config]
+  (build-cfn-connect-attachment-proposed-segment-change-property-builder (new CfnConnectAttachment$ProposedSegmentChangeProperty$Builder) id config))
 
 
 (defn build-cfn-connect-attachment-props-builder
@@ -150,6 +168,12 @@
   (.build builder))
 
 
+(defn cfn-connect-attachment-props-builder
+  ""
+  [id config]
+  (build-cfn-connect-attachment-props-builder (new CfnConnectAttachmentProps$Builder) id config))
+
+
 (defn build-cfn-connect-peer-bgp-options-property-builder
   "The build-cfn-connect-peer-bgp-options-property-builder function updates a CfnConnectPeer$BgpOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnConnectPeer$BgpOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -165,6 +189,12 @@
   (when-let [data (lookup-entry config id :peer-asn)]
     (. builder peerAsn data))
   (.build builder))
+
+
+(defn cfn-connect-peer-bgp-options-property-builder
+  ""
+  [id config]
+  (build-cfn-connect-peer-bgp-options-property-builder (new CfnConnectPeer$BgpOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-connect-peer-builder
@@ -202,6 +232,12 @@
   (.build builder))
 
 
+(defn cfn-connect-peer-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-connect-peer-builder (CfnConnectPeer$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-connect-peer-connect-peer-bgp-configuration-property-builder
   "The build-cfn-connect-peer-connect-peer-bgp-configuration-property-builder function updates a CfnConnectPeer$ConnectPeerBgpConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnConnectPeer$ConnectPeerBgpConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -226,6 +262,12 @@
   (when-let [data (lookup-entry config id :peer-asn)]
     (. builder peerAsn data))
   (.build builder))
+
+
+(defn cfn-connect-peer-connect-peer-bgp-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-connect-peer-connect-peer-bgp-configuration-property-builder (new CfnConnectPeer$ConnectPeerBgpConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-connect-peer-connect-peer-configuration-property-builder
@@ -255,6 +297,12 @@
   (when-let [data (lookup-entry config id :protocol)]
     (. builder protocol data))
   (.build builder))
+
+
+(defn cfn-connect-peer-connect-peer-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-connect-peer-connect-peer-configuration-property-builder (new CfnConnectPeer$ConnectPeerConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-connect-peer-props-builder
@@ -292,6 +340,12 @@
   (.build builder))
 
 
+(defn cfn-connect-peer-props-builder
+  ""
+  [id config]
+  (build-cfn-connect-peer-props-builder (new CfnConnectPeerProps$Builder) id config))
+
+
 (defn build-cfn-core-network-builder
   "The build-cfn-core-network-builder function updates a CfnCoreNetwork$Builder instance using the provided configuration.
   The function takes the CfnCoreNetwork$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -318,6 +372,12 @@
   (.build builder))
 
 
+(defn cfn-core-network-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-core-network-builder (CfnCoreNetwork$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-core-network-core-network-edge-property-builder
   "The build-cfn-core-network-core-network-edge-property-builder function updates a CfnCoreNetwork$CoreNetworkEdgeProperty$Builder instance using the provided configuration.
   The function takes the CfnCoreNetwork$CoreNetworkEdgeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -341,6 +401,12 @@
   (.build builder))
 
 
+(defn cfn-core-network-core-network-edge-property-builder
+  ""
+  [id config]
+  (build-cfn-core-network-core-network-edge-property-builder (new CfnCoreNetwork$CoreNetworkEdgeProperty$Builder) id config))
+
+
 (defn build-cfn-core-network-core-network-segment-property-builder
   "The build-cfn-core-network-core-network-segment-property-builder function updates a CfnCoreNetwork$CoreNetworkSegmentProperty$Builder instance using the provided configuration.
   The function takes the CfnCoreNetwork$CoreNetworkSegmentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -362,6 +428,12 @@
   (when-let [data (lookup-entry config id :shared-segments)]
     (. builder sharedSegments data))
   (.build builder))
+
+
+(defn cfn-core-network-core-network-segment-property-builder
+  ""
+  [id config]
+  (build-cfn-core-network-core-network-segment-property-builder (new CfnCoreNetwork$CoreNetworkSegmentProperty$Builder) id config))
 
 
 (defn build-cfn-core-network-props-builder
@@ -390,6 +462,12 @@
   (.build builder))
 
 
+(defn cfn-core-network-props-builder
+  ""
+  [id config]
+  (build-cfn-core-network-props-builder (new CfnCoreNetworkProps$Builder) id config))
+
+
 (defn build-cfn-customer-gateway-association-builder
   "The build-cfn-customer-gateway-association-builder function updates a CfnCustomerGatewayAssociation$Builder instance using the provided configuration.
   The function takes the CfnCustomerGatewayAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -414,6 +492,12 @@
   (when-let [data (lookup-entry config id :link-id)]
     (. builder linkId data))
   (.build builder))
+
+
+(defn cfn-customer-gateway-association-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-customer-gateway-association-builder (CfnCustomerGatewayAssociation$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-customer-gateway-association-props-builder
@@ -442,6 +526,12 @@
   (.build builder))
 
 
+(defn cfn-customer-gateway-association-props-builder
+  ""
+  [id config]
+  (build-cfn-customer-gateway-association-props-builder (new CfnCustomerGatewayAssociationProps$Builder) id config))
+
+
 (defn build-cfn-device-aws-location-property-builder
   "The build-cfn-device-aws-location-property-builder function updates a CfnDevice$AWSLocationProperty$Builder instance using the provided configuration.
   The function takes the CfnDevice$AWSLocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -460,6 +550,12 @@
   (when-let [data (lookup-entry config id :zone)]
     (. builder zone data))
   (.build builder))
+
+
+(defn cfn-device-aws-location-property-builder
+  ""
+  [id config]
+  (build-cfn-device-aws-location-property-builder (new CfnDevice$AWSLocationProperty$Builder) id config))
 
 
 (defn build-cfn-device-builder
@@ -506,6 +602,12 @@
   (.build builder))
 
 
+(defn cfn-device-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-device-builder (CfnDevice$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-device-location-property-builder
   "The build-cfn-device-location-property-builder function updates a CfnDevice$LocationProperty$Builder instance using the provided configuration.
   The function takes the CfnDevice$LocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -527,6 +629,12 @@
   (when-let [data (lookup-entry config id :longitude)]
     (. builder longitude data))
   (.build builder))
+
+
+(defn cfn-device-location-property-builder
+  ""
+  [id config]
+  (build-cfn-device-location-property-builder (new CfnDevice$LocationProperty$Builder) id config))
 
 
 (defn build-cfn-device-props-builder
@@ -573,6 +681,12 @@
   (.build builder))
 
 
+(defn cfn-device-props-builder
+  ""
+  [id config]
+  (build-cfn-device-props-builder (new CfnDeviceProps$Builder) id config))
+
+
 (defn build-cfn-global-network-builder
   "The build-cfn-global-network-builder function updates a CfnGlobalNetwork$Builder instance using the provided configuration.
   The function takes the CfnGlobalNetwork$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -597,6 +711,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-global-network-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-global-network-builder (CfnGlobalNetwork$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-global-network-props-builder
@@ -625,6 +745,12 @@
   (.build builder))
 
 
+(defn cfn-global-network-props-builder
+  ""
+  [id config]
+  (build-cfn-global-network-props-builder (new CfnGlobalNetworkProps$Builder) id config))
+
+
 (defn build-cfn-link-association-builder
   "The build-cfn-link-association-builder function updates a CfnLinkAssociation$Builder instance using the provided configuration.
   The function takes the CfnLinkAssociation$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -646,6 +772,12 @@
   (when-let [data (lookup-entry config id :link-id)]
     (. builder linkId data))
   (.build builder))
+
+
+(defn cfn-link-association-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-link-association-builder (CfnLinkAssociation$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-link-association-props-builder
@@ -671,6 +803,12 @@
   (.build builder))
 
 
+(defn cfn-link-association-props-builder
+  ""
+  [id config]
+  (build-cfn-link-association-props-builder (new CfnLinkAssociationProps$Builder) id config))
+
+
 (defn build-cfn-link-bandwidth-property-builder
   "The build-cfn-link-bandwidth-property-builder function updates a CfnLink$BandwidthProperty$Builder instance using the provided configuration.
   The function takes the CfnLink$BandwidthProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -689,6 +827,12 @@
   (when-let [data (lookup-entry config id :upload-speed)]
     (. builder uploadSpeed data))
   (.build builder))
+
+
+(defn cfn-link-bandwidth-property-builder
+  ""
+  [id config]
+  (build-cfn-link-bandwidth-property-builder (new CfnLink$BandwidthProperty$Builder) id config))
 
 
 (defn build-cfn-link-builder
@@ -726,6 +870,12 @@
   (.build builder))
 
 
+(defn cfn-link-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-link-builder (CfnLink$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-link-props-builder
   "The build-cfn-link-props-builder function updates a CfnLinkProps$Builder instance using the provided configuration.
   The function takes the CfnLinkProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -761,6 +911,12 @@
   (.build builder))
 
 
+(defn cfn-link-props-builder
+  ""
+  [id config]
+  (build-cfn-link-props-builder (new CfnLinkProps$Builder) id config))
+
+
 (defn build-cfn-site-builder
   "The build-cfn-site-builder function updates a CfnSite$Builder instance using the provided configuration.
   The function takes the CfnSite$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -787,6 +943,12 @@
   (.build builder))
 
 
+(defn cfn-site-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-site-builder (CfnSite$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-site-location-property-builder
   "The build-cfn-site-location-property-builder function updates a CfnSite$LocationProperty$Builder instance using the provided configuration.
   The function takes the CfnSite$LocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -808,6 +970,12 @@
   (when-let [data (lookup-entry config id :longitude)]
     (. builder longitude data))
   (.build builder))
+
+
+(defn cfn-site-location-property-builder
+  ""
+  [id config]
+  (build-cfn-site-location-property-builder (new CfnSite$LocationProperty$Builder) id config))
 
 
 (defn build-cfn-site-props-builder
@@ -836,6 +1004,12 @@
   (.build builder))
 
 
+(defn cfn-site-props-builder
+  ""
+  [id config]
+  (build-cfn-site-props-builder (new CfnSiteProps$Builder) id config))
+
+
 (defn build-cfn-site-to-site-vpn-attachment-builder
   "The build-cfn-site-to-site-vpn-attachment-builder function updates a CfnSiteToSiteVpnAttachment$Builder instance using the provided configuration.
   The function takes the CfnSiteToSiteVpnAttachment$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -862,6 +1036,12 @@
   (.build builder))
 
 
+(defn cfn-site-to-site-vpn-attachment-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-site-to-site-vpn-attachment-builder (CfnSiteToSiteVpnAttachment$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-site-to-site-vpn-attachment-proposed-segment-change-property-builder
   "The build-cfn-site-to-site-vpn-attachment-proposed-segment-change-property-builder function updates a CfnSiteToSiteVpnAttachment$ProposedSegmentChangeProperty$Builder instance using the provided configuration.
   The function takes the CfnSiteToSiteVpnAttachment$ProposedSegmentChangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -883,6 +1063,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-site-to-site-vpn-attachment-proposed-segment-change-property-builder
+  ""
+  [id config]
+  (build-cfn-site-to-site-vpn-attachment-proposed-segment-change-property-builder (new CfnSiteToSiteVpnAttachment$ProposedSegmentChangeProperty$Builder) id config))
 
 
 (defn build-cfn-site-to-site-vpn-attachment-props-builder
@@ -911,6 +1097,12 @@
   (.build builder))
 
 
+(defn cfn-site-to-site-vpn-attachment-props-builder
+  ""
+  [id config]
+  (build-cfn-site-to-site-vpn-attachment-props-builder (new CfnSiteToSiteVpnAttachmentProps$Builder) id config))
+
+
 (defn build-cfn-transit-gateway-peering-builder
   "The build-cfn-transit-gateway-peering-builder function updates a CfnTransitGatewayPeering$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayPeering$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -932,6 +1124,12 @@
   (when-let [data (lookup-entry config id :transit-gateway-arn)]
     (. builder transitGatewayArn data))
   (.build builder))
+
+
+(defn cfn-transit-gateway-peering-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-transit-gateway-peering-builder (CfnTransitGatewayPeering$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-transit-gateway-peering-props-builder
@@ -957,6 +1155,12 @@
   (.build builder))
 
 
+(defn cfn-transit-gateway-peering-props-builder
+  ""
+  [id config]
+  (build-cfn-transit-gateway-peering-props-builder (new CfnTransitGatewayPeeringProps$Builder) id config))
+
+
 (defn build-cfn-transit-gateway-registration-builder
   "The build-cfn-transit-gateway-registration-builder function updates a CfnTransitGatewayRegistration$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayRegistration$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -977,6 +1181,12 @@
   (.build builder))
 
 
+(defn cfn-transit-gateway-registration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-transit-gateway-registration-builder (CfnTransitGatewayRegistration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-transit-gateway-registration-props-builder
   "The build-cfn-transit-gateway-registration-props-builder function updates a CfnTransitGatewayRegistrationProps$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayRegistrationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -995,6 +1205,12 @@
   (when-let [data (lookup-entry config id :transit-gateway-arn)]
     (. builder transitGatewayArn data))
   (.build builder))
+
+
+(defn cfn-transit-gateway-registration-props-builder
+  ""
+  [id config]
+  (build-cfn-transit-gateway-registration-props-builder (new CfnTransitGatewayRegistrationProps$Builder) id config))
 
 
 (defn build-cfn-transit-gateway-route-table-attachment-builder
@@ -1023,6 +1239,12 @@
   (.build builder))
 
 
+(defn cfn-transit-gateway-route-table-attachment-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-transit-gateway-route-table-attachment-builder (CfnTransitGatewayRouteTableAttachment$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-transit-gateway-route-table-attachment-proposed-segment-change-property-builder
   "The build-cfn-transit-gateway-route-table-attachment-proposed-segment-change-property-builder function updates a CfnTransitGatewayRouteTableAttachment$ProposedSegmentChangeProperty$Builder instance using the provided configuration.
   The function takes the CfnTransitGatewayRouteTableAttachment$ProposedSegmentChangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1044,6 +1266,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-transit-gateway-route-table-attachment-proposed-segment-change-property-builder
+  ""
+  [id config]
+  (build-cfn-transit-gateway-route-table-attachment-proposed-segment-change-property-builder (new CfnTransitGatewayRouteTableAttachment$ProposedSegmentChangeProperty$Builder) id config))
 
 
 (defn build-cfn-transit-gateway-route-table-attachment-props-builder
@@ -1070,6 +1298,12 @@
   (when-let [data (lookup-entry config id :transit-gateway-route-table-arn)]
     (. builder transitGatewayRouteTableArn data))
   (.build builder))
+
+
+(defn cfn-transit-gateway-route-table-attachment-props-builder
+  ""
+  [id config]
+  (build-cfn-transit-gateway-route-table-attachment-props-builder (new CfnTransitGatewayRouteTableAttachmentProps$Builder) id config))
 
 
 (defn build-cfn-vpc-attachment-builder
@@ -1104,6 +1338,12 @@
   (.build builder))
 
 
+(defn cfn-vpc-attachment-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-vpc-attachment-builder (CfnVpcAttachment$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-vpc-attachment-proposed-segment-change-property-builder
   "The build-cfn-vpc-attachment-proposed-segment-change-property-builder function updates a CfnVpcAttachment$ProposedSegmentChangeProperty$Builder instance using the provided configuration.
   The function takes the CfnVpcAttachment$ProposedSegmentChangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1125,6 +1365,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-vpc-attachment-proposed-segment-change-property-builder
+  ""
+  [id config]
+  (build-cfn-vpc-attachment-proposed-segment-change-property-builder (new CfnVpcAttachment$ProposedSegmentChangeProperty$Builder) id config))
 
 
 (defn build-cfn-vpc-attachment-props-builder
@@ -1159,6 +1405,12 @@
   (.build builder))
 
 
+(defn cfn-vpc-attachment-props-builder
+  ""
+  [id config]
+  (build-cfn-vpc-attachment-props-builder (new CfnVpcAttachmentProps$Builder) id config))
+
+
 (defn build-cfn-vpc-attachment-vpc-options-property-builder
   "The build-cfn-vpc-attachment-vpc-options-property-builder function updates a CfnVpcAttachment$VpcOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnVpcAttachment$VpcOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1177,3 +1429,9 @@
   (when-let [data (lookup-entry config id :ipv6-support)]
     (. builder ipv6Support data))
   (.build builder))
+
+
+(defn cfn-vpc-attachment-vpc-options-property-builder
+  ""
+  [id config]
+  (build-cfn-vpc-attachment-vpc-options-property-builder (new CfnVpcAttachment$VpcOptionsProperty$Builder) id config))

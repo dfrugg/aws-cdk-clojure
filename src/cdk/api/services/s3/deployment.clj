@@ -171,6 +171,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn bucket-deployment-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-bucket-deployment-builder (BucketDeployment$Builder/create scope (name id)) id config))
+
+
 (defn build-bucket-deployment-props-builder
   "The build-bucket-deployment-props-builder function updates a BucketDeploymentProps$Builder instance using the provided configuration.
   The function takes the BucketDeploymentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -281,6 +287,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn bucket-deployment-props-builder
+  ""
+  [id config]
+  (build-bucket-deployment-props-builder (new BucketDeploymentProps$Builder) id config))
+
+
 (defn build-deploy-time-substituted-file-builder
   "The build-deploy-time-substituted-file-builder function updates a DeployTimeSubstitutedFile$Builder instance using the provided configuration.
   The function takes the DeployTimeSubstitutedFile$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -308,6 +320,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :substitutions)]
     (. builder substitutions data))
   (.build builder))
+
+
+(defn deploy-time-substituted-file-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-deploy-time-substituted-file-builder (DeployTimeSubstitutedFile$Builder/create scope (name id)) id config))
 
 
 (defn build-deploy-time-substituted-file-props-builder
@@ -339,6 +357,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn deploy-time-substituted-file-props-builder
+  ""
+  [id config]
+  (build-deploy-time-substituted-file-props-builder (new DeployTimeSubstitutedFileProps$Builder) id config))
+
+
 (defn build-deployment-source-context-builder
   "The build-deployment-source-context-builder function updates a DeploymentSourceContext$Builder instance using the provided configuration.
   The function takes the DeploymentSourceContext$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -354,6 +378,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :handler-role)]
     (. builder handlerRole data))
   (.build builder))
+
+
+(defn deployment-source-context-builder
+  ""
+  [id config]
+  (build-deployment-source-context-builder (new DeploymentSourceContext$Builder) id config))
 
 
 (defn build-source-config-builder
@@ -377,3 +407,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :zip-object-key)]
     (. builder zipObjectKey data))
   (.build builder))
+
+
+(defn source-config-builder
+  ""
+  [id config]
+  (build-source-config-builder (new SourceConfig$Builder) id config))

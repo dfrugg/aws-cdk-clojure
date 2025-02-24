@@ -46,6 +46,12 @@
   (.build builder))
 
 
+(defn cfn-access-point-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-access-point-builder (CfnAccessPoint$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-access-point-props-builder
   "The build-cfn-access-point-props-builder function updates a CfnAccessPointProps$Builder instance using the provided configuration.
   The function takes the CfnAccessPointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -72,6 +78,12 @@
   (.build builder))
 
 
+(defn cfn-access-point-props-builder
+  ""
+  [id config]
+  (build-cfn-access-point-props-builder (new CfnAccessPointProps$Builder) id config))
+
+
 (defn build-cfn-access-point-vpc-configuration-property-builder
   "The build-cfn-access-point-vpc-configuration-property-builder function updates a CfnAccessPoint$VpcConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPoint$VpcConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -89,6 +101,12 @@
   (.build builder))
 
 
+(defn cfn-access-point-vpc-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-access-point-vpc-configuration-property-builder (new CfnAccessPoint$VpcConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-bucket-abort-incomplete-multipart-upload-property-builder
   "The build-cfn-bucket-abort-incomplete-multipart-upload-property-builder function updates a CfnBucket$AbortIncompleteMultipartUploadProperty$Builder instance using the provided configuration.
   The function takes the CfnBucket$AbortIncompleteMultipartUploadProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -104,6 +122,12 @@
   (when-let [data (lookup-entry config id :days-after-initiation)]
     (. builder daysAfterInitiation data))
   (.build builder))
+
+
+(defn cfn-bucket-abort-incomplete-multipart-upload-property-builder
+  ""
+  [id config]
+  (build-cfn-bucket-abort-incomplete-multipart-upload-property-builder (new CfnBucket$AbortIncompleteMultipartUploadProperty$Builder) id config))
 
 
 (defn build-cfn-bucket-builder
@@ -132,6 +156,12 @@
   (.build builder))
 
 
+(defn cfn-bucket-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-bucket-builder (CfnBucket$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-bucket-filter-and-operator-property-builder
   "The build-cfn-bucket-filter-and-operator-property-builder function updates a CfnBucket$FilterAndOperatorProperty$Builder instance using the provided configuration.
   The function takes the CfnBucket$FilterAndOperatorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -150,6 +180,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-bucket-filter-and-operator-property-builder
+  ""
+  [id config]
+  (build-cfn-bucket-filter-and-operator-property-builder (new CfnBucket$FilterAndOperatorProperty$Builder) id config))
 
 
 (defn build-cfn-bucket-filter-property-builder
@@ -175,6 +211,12 @@
   (.build builder))
 
 
+(defn cfn-bucket-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-bucket-filter-property-builder (new CfnBucket$FilterProperty$Builder) id config))
+
+
 (defn build-cfn-bucket-filter-tag-property-builder
   "The build-cfn-bucket-filter-tag-property-builder function updates a CfnBucket$FilterTagProperty$Builder instance using the provided configuration.
   The function takes the CfnBucket$FilterTagProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -195,6 +237,12 @@
   (.build builder))
 
 
+(defn cfn-bucket-filter-tag-property-builder
+  ""
+  [id config]
+  (build-cfn-bucket-filter-tag-property-builder (new CfnBucket$FilterTagProperty$Builder) id config))
+
+
 (defn build-cfn-bucket-lifecycle-configuration-property-builder
   "The build-cfn-bucket-lifecycle-configuration-property-builder function updates a CfnBucket$LifecycleConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnBucket$LifecycleConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -210,6 +258,12 @@
   (when-let [data (lookup-entry config id :rules)]
     (. builder rules data))
   (.build builder))
+
+
+(defn cfn-bucket-lifecycle-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-bucket-lifecycle-configuration-property-builder (new CfnBucket$LifecycleConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-bucket-policy-builder
@@ -232,6 +286,12 @@
   (.build builder))
 
 
+(defn cfn-bucket-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-bucket-policy-builder (CfnBucketPolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-bucket-policy-props-builder
   "The build-cfn-bucket-policy-props-builder function updates a CfnBucketPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnBucketPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -250,6 +310,12 @@
   (when-let [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
   (.build builder))
+
+
+(defn cfn-bucket-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-bucket-policy-props-builder (new CfnBucketPolicyProps$Builder) id config))
 
 
 (defn build-cfn-bucket-props-builder
@@ -276,6 +342,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-bucket-props-builder
+  ""
+  [id config]
+  (build-cfn-bucket-props-builder (new CfnBucketProps$Builder) id config))
 
 
 (defn build-cfn-bucket-rule-property-builder
@@ -310,6 +382,12 @@
   (.build builder))
 
 
+(defn cfn-bucket-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-bucket-rule-property-builder (new CfnBucket$RuleProperty$Builder) id config))
+
+
 (defn build-cfn-endpoint-builder
   "The build-cfn-endpoint-builder function updates a CfnEndpoint$Builder instance using the provided configuration.
   The function takes the CfnEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -342,6 +420,12 @@
   (.build builder))
 
 
+(defn cfn-endpoint-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-endpoint-builder (CfnEndpoint$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-endpoint-failed-reason-property-builder
   "The build-cfn-endpoint-failed-reason-property-builder function updates a CfnEndpoint$FailedReasonProperty$Builder instance using the provided configuration.
   The function takes the CfnEndpoint$FailedReasonProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -362,6 +446,12 @@
   (.build builder))
 
 
+(defn cfn-endpoint-failed-reason-property-builder
+  ""
+  [id config]
+  (build-cfn-endpoint-failed-reason-property-builder (new CfnEndpoint$FailedReasonProperty$Builder) id config))
+
+
 (defn build-cfn-endpoint-network-interface-property-builder
   "The build-cfn-endpoint-network-interface-property-builder function updates a CfnEndpoint$NetworkInterfaceProperty$Builder instance using the provided configuration.
   The function takes the CfnEndpoint$NetworkInterfaceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -377,6 +467,12 @@
   (when-let [data (lookup-entry config id :network-interface-id)]
     (. builder networkInterfaceId data))
   (.build builder))
+
+
+(defn cfn-endpoint-network-interface-property-builder
+  ""
+  [id config]
+  (build-cfn-endpoint-network-interface-property-builder (new CfnEndpoint$NetworkInterfaceProperty$Builder) id config))
 
 
 (defn build-cfn-endpoint-props-builder
@@ -409,3 +505,9 @@
   (when-let [data (lookup-entry config id :subnet-id)]
     (. builder subnetId data))
   (.build builder))
+
+
+(defn cfn-endpoint-props-builder
+  ""
+  [id config]
+  (build-cfn-endpoint-props-builder (new CfnEndpointProps$Builder) id config))

@@ -76,6 +76,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-microsoft-teams-channel-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-microsoft-teams-channel-configuration-builder (CfnMicrosoftTeamsChannelConfiguration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-microsoft-teams-channel-configuration-props-builder
   "The build-cfn-microsoft-teams-channel-configuration-props-builder function updates a CfnMicrosoftTeamsChannelConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnMicrosoftTeamsChannelConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -120,6 +126,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-microsoft-teams-channel-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-microsoft-teams-channel-configuration-props-builder (new CfnMicrosoftTeamsChannelConfigurationProps$Builder) id config))
+
+
 (defn build-cfn-slack-channel-configuration-builder
   "The build-cfn-slack-channel-configuration-builder function updates a CfnSlackChannelConfiguration$Builder instance using the provided configuration.
   The function takes the CfnSlackChannelConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -161,6 +173,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-slack-channel-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-slack-channel-configuration-builder (CfnSlackChannelConfiguration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-slack-channel-configuration-props-builder
   "The build-cfn-slack-channel-configuration-props-builder function updates a CfnSlackChannelConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnSlackChannelConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -200,6 +218,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :user-role-required)]
     (. builder userRoleRequired data))
   (.build builder))
+
+
+(defn cfn-slack-channel-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-slack-channel-configuration-props-builder (new CfnSlackChannelConfigurationProps$Builder) id config))
 
 
 (defn build-slack-channel-configuration-builder
@@ -246,6 +270,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn slack-channel-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-slack-channel-configuration-builder (SlackChannelConfiguration$Builder/create scope (name id)) id config))
+
+
 (defn build-slack-channel-configuration-props-builder
   "The build-slack-channel-configuration-props-builder function updates a SlackChannelConfigurationProps$Builder instance using the provided configuration.
   The function takes the SlackChannelConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -288,3 +318,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :slack-workspace-id)]
     (. builder slackWorkspaceId data))
   (.build builder))
+
+
+(defn slack-channel-configuration-props-builder
+  ""
+  [id config]
+  (build-slack-channel-configuration-props-builder (new SlackChannelConfigurationProps$Builder) id config))

@@ -75,6 +75,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-notification-rule-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-notification-rule-builder (CfnNotificationRule$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-notification-rule-props-builder
   "The build-cfn-notification-rule-props-builder function updates a CfnNotificationRuleProps$Builder instance using the provided configuration.
   The function takes the CfnNotificationRuleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -119,6 +125,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-notification-rule-props-builder
+  ""
+  [id config]
+  (build-cfn-notification-rule-props-builder (new CfnNotificationRuleProps$Builder) id config))
+
+
 (defn build-cfn-notification-rule-target-property-builder
   "The build-cfn-notification-rule-target-property-builder function updates a CfnNotificationRule$TargetProperty$Builder instance using the provided configuration.
   The function takes the CfnNotificationRule$TargetProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -137,6 +149,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :target-type)]
     (. builder targetType data))
   (.build builder))
+
+
+(defn cfn-notification-rule-target-property-builder
+  ""
+  [id config]
+  (build-cfn-notification-rule-target-property-builder (new CfnNotificationRule$TargetProperty$Builder) id config))
 
 
 (defn build-notification-rule-builder
@@ -171,6 +189,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn notification-rule-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-notification-rule-builder (NotificationRule$Builder/create scope (name id)) id config))
+
+
 (defn build-notification-rule-options-builder
   "The build-notification-rule-options-builder function updates a NotificationRuleOptions$Builder instance using the provided configuration.
   The function takes the NotificationRuleOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -192,6 +216,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :notification-rule-name)]
     (. builder notificationRuleName data))
   (.build builder))
+
+
+(defn notification-rule-options-builder
+  ""
+  [id config]
+  (build-notification-rule-options-builder (new NotificationRuleOptions$Builder) id config))
 
 
 (defn build-notification-rule-props-builder
@@ -226,6 +256,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn notification-rule-props-builder
+  ""
+  [id config]
+  (build-notification-rule-props-builder (new NotificationRuleProps$Builder) id config))
+
+
 (defn build-notification-rule-source-config-builder
   "The build-notification-rule-source-config-builder function updates a NotificationRuleSourceConfig$Builder instance using the provided configuration.
   The function takes the NotificationRuleSourceConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -241,6 +277,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :source-arn)]
     (. builder sourceArn data))
   (.build builder))
+
+
+(defn notification-rule-source-config-builder
+  ""
+  [id config]
+  (build-notification-rule-source-config-builder (new NotificationRuleSourceConfig$Builder) id config))
 
 
 (defn build-notification-rule-target-config-builder
@@ -261,3 +303,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :target-type)]
     (. builder targetType data))
   (.build builder))
+
+
+(defn notification-rule-target-config-builder
+  ""
+  [id config]
+  (build-notification-rule-target-config-builder (new NotificationRuleTargetConfig$Builder) id config))

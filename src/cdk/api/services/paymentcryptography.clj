@@ -29,6 +29,12 @@
   (.build builder))
 
 
+(defn cfn-alias-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-alias-builder (CfnAlias$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-alias-props-builder
   "The build-cfn-alias-props-builder function updates a CfnAliasProps$Builder instance using the provided configuration.
   The function takes the CfnAliasProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -47,6 +53,12 @@
   (when-let [data (lookup-entry config id :key-arn)]
     (. builder keyArn data))
   (.build builder))
+
+
+(defn cfn-alias-props-builder
+  ""
+  [id config]
+  (build-cfn-alias-props-builder (new CfnAliasProps$Builder) id config))
 
 
 (defn build-cfn-key-builder
@@ -78,6 +90,12 @@
   (.build builder))
 
 
+(defn cfn-key-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-key-builder (CfnKey$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-key-key-attributes-property-builder
   "The build-cfn-key-key-attributes-property-builder function updates a CfnKey$KeyAttributesProperty$Builder instance using the provided configuration.
   The function takes the CfnKey$KeyAttributesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -102,6 +120,12 @@
   (when-let [data (lookup-entry config id :key-usage)]
     (. builder keyUsage data))
   (.build builder))
+
+
+(defn cfn-key-key-attributes-property-builder
+  ""
+  [id config]
+  (build-cfn-key-key-attributes-property-builder (new CfnKey$KeyAttributesProperty$Builder) id config))
 
 
 (defn build-cfn-key-key-modes-of-use-property-builder
@@ -145,6 +169,12 @@
   (.build builder))
 
 
+(defn cfn-key-key-modes-of-use-property-builder
+  ""
+  [id config]
+  (build-cfn-key-key-modes-of-use-property-builder (new CfnKey$KeyModesOfUseProperty$Builder) id config))
+
+
 (defn build-cfn-key-props-builder
   "The build-cfn-key-props-builder function updates a CfnKeyProps$Builder instance using the provided configuration.
   The function takes the CfnKeyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -172,3 +202,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-key-props-builder
+  ""
+  [id config]
+  (build-cfn-key-props-builder (new CfnKeyProps$Builder) id config))

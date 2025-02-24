@@ -77,6 +77,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn http-jwt-authorizer-props-builder
+  ""
+  [id config]
+  (build-http-jwt-authorizer-props-builder (new HttpJwtAuthorizerProps$Builder) id config))
+
+
 (defn build-http-lambda-authorizer-builder
   "The build-http-lambda-authorizer-builder function updates a HttpLambdaAuthorizer$Builder instance using the provided configuration.
   The function takes the HttpLambdaAuthorizer$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -127,6 +133,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :results-cache-ttl)]
     (. builder resultsCacheTtl data))
   (.build builder))
+
+
+(defn http-lambda-authorizer-props-builder
+  ""
+  [id config]
+  (build-http-lambda-authorizer-props-builder (new HttpLambdaAuthorizerProps$Builder) id config))
 
 
 (defn build-http-user-pool-authorizer-builder
@@ -181,6 +193,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn http-user-pool-authorizer-props-builder
+  ""
+  [id config]
+  (build-http-user-pool-authorizer-props-builder (new HttpUserPoolAuthorizerProps$Builder) id config))
+
+
 (defn build-web-socket-lambda-authorizer-builder
   "The build-web-socket-lambda-authorizer-builder function updates a WebSocketLambdaAuthorizer$Builder instance using the provided configuration.
   The function takes the WebSocketLambdaAuthorizer$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -219,3 +237,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :identity-source)]
     (. builder identitySource data))
   (.build builder))
+
+
+(defn web-socket-lambda-authorizer-props-builder
+  ""
+  [id config]
+  (build-web-socket-lambda-authorizer-props-builder (new WebSocketLambdaAuthorizerProps$Builder) id config))

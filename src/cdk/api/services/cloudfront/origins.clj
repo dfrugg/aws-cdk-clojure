@@ -98,6 +98,12 @@
   (.build builder))
 
 
+(defn function-url-origin-props-builder
+  ""
+  [id config]
+  (build-function-url-origin-props-builder (new FunctionUrlOriginProps$Builder) id config))
+
+
 (defn build-http-origin-builder
   "The build-http-origin-builder function updates a HttpOrigin$Builder instance using the provided configuration.
   The function takes the HttpOrigin$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -202,6 +208,12 @@
   (when-let [data (lookup-entry config id :read-timeout)]
     (. builder readTimeout data))
   (.build builder))
+
+
+(defn http-origin-props-builder
+  ""
+  [id config]
+  (build-http-origin-props-builder (new HttpOriginProps$Builder) id config))
 
 
 (defn build-load-balancer-v2-origin-builder
@@ -310,6 +322,12 @@
   (.build builder))
 
 
+(defn load-balancer-v2-origin-props-builder
+  ""
+  [id config]
+  (build-load-balancer-v2-origin-props-builder (new LoadBalancerV2OriginProps$Builder) id config))
+
+
 (defn build-origin-group-builder
   "The build-origin-group-builder function updates a OriginGroup$Builder instance using the provided configuration.
   The function takes the OriginGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -333,6 +351,12 @@
   (.build builder))
 
 
+(defn origin-group-builder
+  ""
+  [id config]
+  (build-origin-group-builder (OriginGroup$Builder/create) id config))
+
+
 (defn build-origin-group-props-builder
   "The build-origin-group-props-builder function updates a OriginGroupProps$Builder instance using the provided configuration.
   The function takes the OriginGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -354,6 +378,12 @@
   (when-let [data (lookup-entry config id :primary-origin)]
     (. builder primaryOrigin data))
   (.build builder))
+
+
+(defn origin-group-props-builder
+  ""
+  [id config]
+  (build-origin-group-props-builder (new OriginGroupProps$Builder) id config))
 
 
 (defn build-rest-api-origin-builder
@@ -438,6 +468,12 @@
   (.build builder))
 
 
+(defn rest-api-origin-props-builder
+  ""
+  [id config]
+  (build-rest-api-origin-props-builder (new RestApiOriginProps$Builder) id config))
+
+
 (defn build-s3-origin-builder
   "The build-s3-origin-builder function updates a S3Origin$Builder instance using the provided configuration.
   The function takes the S3Origin$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -512,3 +548,9 @@
   (when-let [data (lookup-entry config id :origin-shield-region)]
     (. builder originShieldRegion data))
   (.build builder))
+
+
+(defn s3-origin-props-builder
+  ""
+  [id config]
+  (build-s3-origin-props-builder (new S3OriginProps$Builder) id config))

@@ -37,6 +37,12 @@
   (.build builder))
 
 
+(defn cfn-repository-association-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-repository-association-builder (CfnRepositoryAssociation$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-repository-association-props-builder
   "The build-cfn-repository-association-props-builder function updates a CfnRepositoryAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnRepositoryAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -67,3 +73,9 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-repository-association-props-builder
+  ""
+  [id config]
+  (build-cfn-repository-association-props-builder (new CfnRepositoryAssociationProps$Builder) id config))

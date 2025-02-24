@@ -116,6 +116,12 @@
   (.build builder))
 
 
+(defn cfn-adm-channel-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-adm-channel-builder (CfnADMChannel$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-adm-channel-props-builder
   "The build-cfn-adm-channel-props-builder function updates a CfnADMChannelProps$Builder instance using the provided configuration.
   The function takes the CfnADMChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -140,6 +146,12 @@
   (when-let [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
+
+
+(defn cfn-adm-channel-props-builder
+  ""
+  [id config]
+  (build-cfn-adm-channel-props-builder (new CfnADMChannelProps$Builder) id config))
 
 
 (defn build-cfn-apns-channel-builder
@@ -183,6 +195,12 @@
   (.build builder))
 
 
+(defn cfn-apns-channel-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-apns-channel-builder (CfnAPNSChannel$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-apns-channel-props-builder
   "The build-cfn-apns-channel-props-builder function updates a CfnAPNSChannelProps$Builder instance using the provided configuration.
   The function takes the CfnAPNSChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -222,6 +240,12 @@
   (when-let [data (lookup-entry config id :token-key-id)]
     (. builder tokenKeyId data))
   (.build builder))
+
+
+(defn cfn-apns-channel-props-builder
+  ""
+  [id config]
+  (build-cfn-apns-channel-props-builder (new CfnAPNSChannelProps$Builder) id config))
 
 
 (defn build-cfn-apns-sandbox-channel-builder
@@ -265,6 +289,12 @@
   (.build builder))
 
 
+(defn cfn-apns-sandbox-channel-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-apns-sandbox-channel-builder (CfnAPNSSandboxChannel$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-apns-sandbox-channel-props-builder
   "The build-cfn-apns-sandbox-channel-props-builder function updates a CfnAPNSSandboxChannelProps$Builder instance using the provided configuration.
   The function takes the CfnAPNSSandboxChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -304,6 +334,12 @@
   (when-let [data (lookup-entry config id :token-key-id)]
     (. builder tokenKeyId data))
   (.build builder))
+
+
+(defn cfn-apns-sandbox-channel-props-builder
+  ""
+  [id config]
+  (build-cfn-apns-sandbox-channel-props-builder (new CfnAPNSSandboxChannelProps$Builder) id config))
 
 
 (defn build-cfn-apns-voip-channel-builder
@@ -347,6 +383,12 @@
   (.build builder))
 
 
+(defn cfn-apns-voip-channel-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-apns-voip-channel-builder (CfnAPNSVoipChannel$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-apns-voip-channel-props-builder
   "The build-cfn-apns-voip-channel-props-builder function updates a CfnAPNSVoipChannelProps$Builder instance using the provided configuration.
   The function takes the CfnAPNSVoipChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -386,6 +428,12 @@
   (when-let [data (lookup-entry config id :token-key-id)]
     (. builder tokenKeyId data))
   (.build builder))
+
+
+(defn cfn-apns-voip-channel-props-builder
+  ""
+  [id config]
+  (build-cfn-apns-voip-channel-props-builder (new CfnAPNSVoipChannelProps$Builder) id config))
 
 
 (defn build-cfn-apns-voip-sandbox-channel-builder
@@ -429,6 +477,12 @@
   (.build builder))
 
 
+(defn cfn-apns-voip-sandbox-channel-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-apns-voip-sandbox-channel-builder (CfnAPNSVoipSandboxChannel$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-apns-voip-sandbox-channel-props-builder
   "The build-cfn-apns-voip-sandbox-channel-props-builder function updates a CfnAPNSVoipSandboxChannelProps$Builder instance using the provided configuration.
   The function takes the CfnAPNSVoipSandboxChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -470,6 +524,12 @@
   (.build builder))
 
 
+(defn cfn-apns-voip-sandbox-channel-props-builder
+  ""
+  [id config]
+  (build-cfn-apns-voip-sandbox-channel-props-builder (new CfnAPNSVoipSandboxChannelProps$Builder) id config))
+
+
 (defn build-cfn-app-builder
   "The build-cfn-app-builder function updates a CfnApp$Builder instance using the provided configuration.
   The function takes the CfnApp$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -490,6 +550,12 @@
   (.build builder))
 
 
+(defn cfn-app-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-app-builder (CfnApp$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-app-props-builder
   "The build-cfn-app-props-builder function updates a CfnAppProps$Builder instance using the provided configuration.
   The function takes the CfnAppProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -508,6 +574,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-app-props-builder
+  ""
+  [id config]
+  (build-cfn-app-props-builder (new CfnAppProps$Builder) id config))
 
 
 (defn build-cfn-application-settings-builder
@@ -539,6 +611,12 @@
   (.build builder))
 
 
+(defn cfn-application-settings-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-settings-builder (CfnApplicationSettings$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-application-settings-campaign-hook-property-builder
   "The build-cfn-application-settings-campaign-hook-property-builder function updates a CfnApplicationSettings$CampaignHookProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationSettings$CampaignHookProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -560,6 +638,12 @@
   (when-let [data (lookup-entry config id :web-url)]
     (. builder webUrl data))
   (.build builder))
+
+
+(defn cfn-application-settings-campaign-hook-property-builder
+  ""
+  [id config]
+  (build-cfn-application-settings-campaign-hook-property-builder (new CfnApplicationSettings$CampaignHookProperty$Builder) id config))
 
 
 (defn build-cfn-application-settings-limits-property-builder
@@ -586,6 +670,12 @@
   (when-let [data (lookup-entry config id :total)]
     (. builder total data))
   (.build builder))
+
+
+(defn cfn-application-settings-limits-property-builder
+  ""
+  [id config]
+  (build-cfn-application-settings-limits-property-builder (new CfnApplicationSettings$LimitsProperty$Builder) id config))
 
 
 (defn build-cfn-application-settings-props-builder
@@ -617,6 +707,12 @@
   (.build builder))
 
 
+(defn cfn-application-settings-props-builder
+  ""
+  [id config]
+  (build-cfn-application-settings-props-builder (new CfnApplicationSettingsProps$Builder) id config))
+
+
 (defn build-cfn-application-settings-quiet-time-property-builder
   "The build-cfn-application-settings-quiet-time-property-builder function updates a CfnApplicationSettings$QuietTimeProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationSettings$QuietTimeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -635,6 +731,12 @@
   (when-let [data (lookup-entry config id :start)]
     (. builder start data))
   (.build builder))
+
+
+(defn cfn-application-settings-quiet-time-property-builder
+  ""
+  [id config]
+  (build-cfn-application-settings-quiet-time-property-builder (new CfnApplicationSettings$QuietTimeProperty$Builder) id config))
 
 
 (defn build-cfn-baidu-channel-builder
@@ -663,6 +765,12 @@
   (.build builder))
 
 
+(defn cfn-baidu-channel-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-baidu-channel-builder (CfnBaiduChannel$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-baidu-channel-props-builder
   "The build-cfn-baidu-channel-props-builder function updates a CfnBaiduChannelProps$Builder instance using the provided configuration.
   The function takes the CfnBaiduChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -689,6 +797,12 @@
   (.build builder))
 
 
+(defn cfn-baidu-channel-props-builder
+  ""
+  [id config]
+  (build-cfn-baidu-channel-props-builder (new CfnBaiduChannelProps$Builder) id config))
+
+
 (defn build-cfn-campaign-attribute-dimension-property-builder
   "The build-cfn-campaign-attribute-dimension-property-builder function updates a CfnCampaign$AttributeDimensionProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$AttributeDimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -707,6 +821,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-campaign-attribute-dimension-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-attribute-dimension-property-builder (new CfnCampaign$AttributeDimensionProperty$Builder) id config))
 
 
 (defn build-cfn-campaign-builder
@@ -777,6 +897,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-campaign-builder (CfnCampaign$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-campaign-campaign-custom-message-property-builder
   "The build-cfn-campaign-campaign-custom-message-property-builder function updates a CfnCampaign$CampaignCustomMessageProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$CampaignCustomMessageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -792,6 +918,12 @@
   (when-let [data (lookup-entry config id :data)]
     (. builder data data))
   (.build builder))
+
+
+(defn cfn-campaign-campaign-custom-message-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-campaign-custom-message-property-builder (new CfnCampaign$CampaignCustomMessageProperty$Builder) id config))
 
 
 (defn build-cfn-campaign-campaign-email-message-property-builder
@@ -820,6 +952,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-campaign-email-message-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-campaign-email-message-property-builder (new CfnCampaign$CampaignEmailMessageProperty$Builder) id config))
+
+
 (defn build-cfn-campaign-campaign-event-filter-property-builder
   "The build-cfn-campaign-campaign-event-filter-property-builder function updates a CfnCampaign$CampaignEventFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$CampaignEventFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -838,6 +976,12 @@
   (when-let [data (lookup-entry config id :filter-type)]
     (. builder filterType data))
   (.build builder))
+
+
+(defn cfn-campaign-campaign-event-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-campaign-event-filter-property-builder (new CfnCampaign$CampaignEventFilterProperty$Builder) id config))
 
 
 (defn build-cfn-campaign-campaign-hook-property-builder
@@ -863,6 +1007,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-campaign-hook-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-campaign-hook-property-builder (new CfnCampaign$CampaignHookProperty$Builder) id config))
+
+
 (defn build-cfn-campaign-campaign-in-app-message-property-builder
   "The build-cfn-campaign-campaign-in-app-message-property-builder function updates a CfnCampaign$CampaignInAppMessageProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$CampaignInAppMessageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -884,6 +1034,12 @@
   (when-let [data (lookup-entry config id :layout)]
     (. builder layout data))
   (.build builder))
+
+
+(defn cfn-campaign-campaign-in-app-message-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-campaign-in-app-message-property-builder (new CfnCampaign$CampaignInAppMessageProperty$Builder) id config))
 
 
 (defn build-cfn-campaign-campaign-sms-message-property-builder
@@ -918,6 +1074,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-campaign-sms-message-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-campaign-sms-message-property-builder (new CfnCampaign$CampaignSmsMessageProperty$Builder) id config))
+
+
 (defn build-cfn-campaign-custom-delivery-configuration-property-builder
   "The build-cfn-campaign-custom-delivery-configuration-property-builder function updates a CfnCampaign$CustomDeliveryConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$CustomDeliveryConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -936,6 +1098,12 @@
   (when-let [data (lookup-entry config id :endpoint-types)]
     (. builder endpointTypes data))
   (.build builder))
+
+
+(defn cfn-campaign-custom-delivery-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-custom-delivery-configuration-property-builder (new CfnCampaign$CustomDeliveryConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-campaign-default-button-configuration-property-builder
@@ -970,6 +1138,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-default-button-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-default-button-configuration-property-builder (new CfnCampaign$DefaultButtonConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-campaign-event-dimensions-property-builder
   "The build-cfn-campaign-event-dimensions-property-builder function updates a CfnCampaign$EventDimensionsProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$EventDimensionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -993,6 +1167,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-event-dimensions-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-event-dimensions-property-builder (new CfnCampaign$EventDimensionsProperty$Builder) id config))
+
+
 (defn build-cfn-campaign-in-app-message-body-config-property-builder
   "The build-cfn-campaign-in-app-message-body-config-property-builder function updates a CfnCampaign$InAppMessageBodyConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$InAppMessageBodyConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1014,6 +1194,12 @@
   (when-let [data (lookup-entry config id :text-color)]
     (. builder textColor data))
   (.build builder))
+
+
+(defn cfn-campaign-in-app-message-body-config-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-in-app-message-body-config-property-builder (new CfnCampaign$InAppMessageBodyConfigProperty$Builder) id config))
 
 
 (defn build-cfn-campaign-in-app-message-button-property-builder
@@ -1040,6 +1226,12 @@
   (when-let [data (lookup-entry config id :web)]
     (. builder web data))
   (.build builder))
+
+
+(defn cfn-campaign-in-app-message-button-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-in-app-message-button-property-builder (new CfnCampaign$InAppMessageButtonProperty$Builder) id config))
 
 
 (defn build-cfn-campaign-in-app-message-content-property-builder
@@ -1074,6 +1266,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-in-app-message-content-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-in-app-message-content-property-builder (new CfnCampaign$InAppMessageContentProperty$Builder) id config))
+
+
 (defn build-cfn-campaign-in-app-message-header-config-property-builder
   "The build-cfn-campaign-in-app-message-header-config-property-builder function updates a CfnCampaign$InAppMessageHeaderConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$InAppMessageHeaderConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1095,6 +1293,12 @@
   (when-let [data (lookup-entry config id :text-color)]
     (. builder textColor data))
   (.build builder))
+
+
+(defn cfn-campaign-in-app-message-header-config-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-in-app-message-header-config-property-builder (new CfnCampaign$InAppMessageHeaderConfigProperty$Builder) id config))
 
 
 (defn build-cfn-campaign-limits-property-builder
@@ -1124,6 +1328,12 @@
   (when-let [data (lookup-entry config id :total)]
     (. builder total data))
   (.build builder))
+
+
+(defn cfn-campaign-limits-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-limits-property-builder (new CfnCampaign$LimitsProperty$Builder) id config))
 
 
 (defn build-cfn-campaign-message-configuration-property-builder
@@ -1165,6 +1375,12 @@
   (when-let [data (lookup-entry config id :sms-message)]
     (. builder smsMessage data))
   (.build builder))
+
+
+(defn cfn-campaign-message-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-message-configuration-property-builder (new CfnCampaign$MessageConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-campaign-message-property-builder
@@ -1217,6 +1433,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-message-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-message-property-builder (new CfnCampaign$MessageProperty$Builder) id config))
+
+
 (defn build-cfn-campaign-metric-dimension-property-builder
   "The build-cfn-campaign-metric-dimension-property-builder function updates a CfnCampaign$MetricDimensionProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$MetricDimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1237,6 +1459,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-metric-dimension-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-metric-dimension-property-builder (new CfnCampaign$MetricDimensionProperty$Builder) id config))
+
+
 (defn build-cfn-campaign-override-button-configuration-property-builder
   "The build-cfn-campaign-override-button-configuration-property-builder function updates a CfnCampaign$OverrideButtonConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$OverrideButtonConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1255,6 +1483,12 @@
   (when-let [data (lookup-entry config id :link)]
     (. builder link data))
   (.build builder))
+
+
+(defn cfn-campaign-override-button-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-override-button-configuration-property-builder (new CfnCampaign$OverrideButtonConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-campaign-props-builder
@@ -1325,6 +1559,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-props-builder
+  ""
+  [id config]
+  (build-cfn-campaign-props-builder (new CfnCampaignProps$Builder) id config))
+
+
 (defn build-cfn-campaign-quiet-time-property-builder
   "The build-cfn-campaign-quiet-time-property-builder function updates a CfnCampaign$QuietTimeProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$QuietTimeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1343,6 +1583,12 @@
   (when-let [data (lookup-entry config id :start)]
     (. builder start data))
   (.build builder))
+
+
+(defn cfn-campaign-quiet-time-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-quiet-time-property-builder (new CfnCampaign$QuietTimeProperty$Builder) id config))
 
 
 (defn build-cfn-campaign-schedule-property-builder
@@ -1380,6 +1626,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-schedule-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-schedule-property-builder (new CfnCampaign$ScheduleProperty$Builder) id config))
+
+
 (defn build-cfn-campaign-set-dimension-property-builder
   "The build-cfn-campaign-set-dimension-property-builder function updates a CfnCampaign$SetDimensionProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$SetDimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1398,6 +1650,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-campaign-set-dimension-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-set-dimension-property-builder (new CfnCampaign$SetDimensionProperty$Builder) id config))
 
 
 (defn build-cfn-campaign-template-configuration-property-builder
@@ -1426,6 +1684,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-template-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-template-configuration-property-builder (new CfnCampaign$TemplateConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-campaign-template-property-builder
   "The build-cfn-campaign-template-property-builder function updates a CfnCampaign$TemplateProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$TemplateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1444,6 +1708,12 @@
   (when-let [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
+
+
+(defn cfn-campaign-template-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-template-property-builder (new CfnCampaign$TemplateProperty$Builder) id config))
 
 
 (defn build-cfn-campaign-write-treatment-resource-property-builder
@@ -1481,6 +1751,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-write-treatment-resource-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-write-treatment-resource-property-builder (new CfnCampaign$WriteTreatmentResourceProperty$Builder) id config))
+
+
 (defn build-cfn-email-channel-builder
   "The build-cfn-email-channel-builder function updates a CfnEmailChannel$Builder instance using the provided configuration.
   The function takes the CfnEmailChannel$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1514,6 +1790,12 @@
   (when-let [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
+
+
+(defn cfn-email-channel-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-email-channel-builder (CfnEmailChannel$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-email-channel-props-builder
@@ -1551,6 +1833,12 @@
   (.build builder))
 
 
+(defn cfn-email-channel-props-builder
+  ""
+  [id config]
+  (build-cfn-email-channel-props-builder (new CfnEmailChannelProps$Builder) id config))
+
+
 (defn build-cfn-email-template-builder
   "The build-cfn-email-template-builder function updates a CfnEmailTemplate$Builder instance using the provided configuration.
   The function takes the CfnEmailTemplate$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1584,6 +1872,12 @@
   (when-let [data (lookup-entry config id :text-part)]
     (. builder textPart data))
   (.build builder))
+
+
+(defn cfn-email-template-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-email-template-builder (CfnEmailTemplate$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-email-template-props-builder
@@ -1621,6 +1915,12 @@
   (.build builder))
 
 
+(defn cfn-email-template-props-builder
+  ""
+  [id config]
+  (build-cfn-email-template-props-builder (new CfnEmailTemplateProps$Builder) id config))
+
+
 (defn build-cfn-event-stream-builder
   "The build-cfn-event-stream-builder function updates a CfnEventStream$Builder instance using the provided configuration.
   The function takes the CfnEventStream$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1644,6 +1944,12 @@
   (.build builder))
 
 
+(defn cfn-event-stream-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-event-stream-builder (CfnEventStream$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-event-stream-props-builder
   "The build-cfn-event-stream-props-builder function updates a CfnEventStreamProps$Builder instance using the provided configuration.
   The function takes the CfnEventStreamProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1665,6 +1971,12 @@
   (when-let [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
+
+
+(defn cfn-event-stream-props-builder
+  ""
+  [id config]
+  (build-cfn-event-stream-props-builder (new CfnEventStreamProps$Builder) id config))
 
 
 (defn build-cfn-gcm-channel-builder
@@ -1696,6 +2008,12 @@
   (.build builder))
 
 
+(defn cfn-gcm-channel-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-gcm-channel-builder (CfnGCMChannel$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-gcm-channel-props-builder
   "The build-cfn-gcm-channel-props-builder function updates a CfnGCMChannelProps$Builder instance using the provided configuration.
   The function takes the CfnGCMChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1725,6 +2043,12 @@
   (.build builder))
 
 
+(defn cfn-gcm-channel-props-builder
+  ""
+  [id config]
+  (build-cfn-gcm-channel-props-builder (new CfnGCMChannelProps$Builder) id config))
+
+
 (defn build-cfn-in-app-template-body-config-property-builder
   "The build-cfn-in-app-template-body-config-property-builder function updates a CfnInAppTemplate$BodyConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnInAppTemplate$BodyConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1746,6 +2070,12 @@
   (when-let [data (lookup-entry config id :text-color)]
     (. builder textColor data))
   (.build builder))
+
+
+(defn cfn-in-app-template-body-config-property-builder
+  ""
+  [id config]
+  (build-cfn-in-app-template-body-config-property-builder (new CfnInAppTemplate$BodyConfigProperty$Builder) id config))
 
 
 (defn build-cfn-in-app-template-builder
@@ -1780,6 +2110,12 @@
   (.build builder))
 
 
+(defn cfn-in-app-template-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-in-app-template-builder (CfnInAppTemplate$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-in-app-template-button-config-property-builder
   "The build-cfn-in-app-template-button-config-property-builder function updates a CfnInAppTemplate$ButtonConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnInAppTemplate$ButtonConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1804,6 +2140,12 @@
   (when-let [data (lookup-entry config id :web)]
     (. builder web data))
   (.build builder))
+
+
+(defn cfn-in-app-template-button-config-property-builder
+  ""
+  [id config]
+  (build-cfn-in-app-template-button-config-property-builder (new CfnInAppTemplate$ButtonConfigProperty$Builder) id config))
 
 
 (defn build-cfn-in-app-template-default-button-configuration-property-builder
@@ -1838,6 +2180,12 @@
   (.build builder))
 
 
+(defn cfn-in-app-template-default-button-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-in-app-template-default-button-configuration-property-builder (new CfnInAppTemplate$DefaultButtonConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-in-app-template-header-config-property-builder
   "The build-cfn-in-app-template-header-config-property-builder function updates a CfnInAppTemplate$HeaderConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnInAppTemplate$HeaderConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1859,6 +2207,12 @@
   (when-let [data (lookup-entry config id :text-color)]
     (. builder textColor data))
   (.build builder))
+
+
+(defn cfn-in-app-template-header-config-property-builder
+  ""
+  [id config]
+  (build-cfn-in-app-template-header-config-property-builder (new CfnInAppTemplate$HeaderConfigProperty$Builder) id config))
 
 
 (defn build-cfn-in-app-template-in-app-message-content-property-builder
@@ -1893,6 +2247,12 @@
   (.build builder))
 
 
+(defn cfn-in-app-template-in-app-message-content-property-builder
+  ""
+  [id config]
+  (build-cfn-in-app-template-in-app-message-content-property-builder (new CfnInAppTemplate$InAppMessageContentProperty$Builder) id config))
+
+
 (defn build-cfn-in-app-template-override-button-configuration-property-builder
   "The build-cfn-in-app-template-override-button-configuration-property-builder function updates a CfnInAppTemplate$OverrideButtonConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnInAppTemplate$OverrideButtonConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1911,6 +2271,12 @@
   (when-let [data (lookup-entry config id :link)]
     (. builder link data))
   (.build builder))
+
+
+(defn cfn-in-app-template-override-button-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-in-app-template-override-button-configuration-property-builder (new CfnInAppTemplate$OverrideButtonConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-in-app-template-props-builder
@@ -1943,6 +2309,12 @@
   (when-let [data (lookup-entry config id :template-name)]
     (. builder templateName data))
   (.build builder))
+
+
+(defn cfn-in-app-template-props-builder
+  ""
+  [id config]
+  (build-cfn-in-app-template-props-builder (new CfnInAppTemplateProps$Builder) id config))
 
 
 (defn build-cfn-push-template-android-push-notification-template-property-builder
@@ -1983,6 +2355,12 @@
   (.build builder))
 
 
+(defn cfn-push-template-android-push-notification-template-property-builder
+  ""
+  [id config]
+  (build-cfn-push-template-android-push-notification-template-property-builder (new CfnPushTemplate$AndroidPushNotificationTemplateProperty$Builder) id config))
+
+
 (defn build-cfn-push-template-apns-push-notification-template-property-builder
   "The build-cfn-push-template-apns-push-notification-template-property-builder function updates a CfnPushTemplate$APNSPushNotificationTemplateProperty$Builder instance using the provided configuration.
   The function takes the CfnPushTemplate$APNSPushNotificationTemplateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2013,6 +2391,12 @@
   (when-let [data (lookup-entry config id :url)]
     (. builder url data))
   (.build builder))
+
+
+(defn cfn-push-template-apns-push-notification-template-property-builder
+  ""
+  [id config]
+  (build-cfn-push-template-apns-push-notification-template-property-builder (new CfnPushTemplate$APNSPushNotificationTemplateProperty$Builder) id config))
 
 
 (defn build-cfn-push-template-builder
@@ -2056,6 +2440,12 @@
   (.build builder))
 
 
+(defn cfn-push-template-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-push-template-builder (CfnPushTemplate$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-push-template-default-push-notification-template-property-builder
   "The build-cfn-push-template-default-push-notification-template-property-builder function updates a CfnPushTemplate$DefaultPushNotificationTemplateProperty$Builder instance using the provided configuration.
   The function takes the CfnPushTemplate$DefaultPushNotificationTemplateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2083,6 +2473,12 @@
   (when-let [data (lookup-entry config id :url)]
     (. builder url data))
   (.build builder))
+
+
+(defn cfn-push-template-default-push-notification-template-property-builder
+  ""
+  [id config]
+  (build-cfn-push-template-default-push-notification-template-property-builder (new CfnPushTemplate$DefaultPushNotificationTemplateProperty$Builder) id config))
 
 
 (defn build-cfn-push-template-props-builder
@@ -2126,6 +2522,12 @@
   (.build builder))
 
 
+(defn cfn-push-template-props-builder
+  ""
+  [id config]
+  (build-cfn-push-template-props-builder (new CfnPushTemplateProps$Builder) id config))
+
+
 (defn build-cfn-segment-attribute-dimension-property-builder
   "The build-cfn-segment-attribute-dimension-property-builder function updates a CfnSegment$AttributeDimensionProperty$Builder instance using the provided configuration.
   The function takes the CfnSegment$AttributeDimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2146,6 +2548,12 @@
   (.build builder))
 
 
+(defn cfn-segment-attribute-dimension-property-builder
+  ""
+  [id config]
+  (build-cfn-segment-attribute-dimension-property-builder (new CfnSegment$AttributeDimensionProperty$Builder) id config))
+
+
 (defn build-cfn-segment-behavior-property-builder
   "The build-cfn-segment-behavior-property-builder function updates a CfnSegment$BehaviorProperty$Builder instance using the provided configuration.
   The function takes the CfnSegment$BehaviorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2161,6 +2569,12 @@
   (when-let [data (lookup-entry config id :recency)]
     (. builder recency data))
   (.build builder))
+
+
+(defn cfn-segment-behavior-property-builder
+  ""
+  [id config]
+  (build-cfn-segment-behavior-property-builder (new CfnSegment$BehaviorProperty$Builder) id config))
 
 
 (defn build-cfn-segment-builder
@@ -2192,6 +2606,12 @@
   (.build builder))
 
 
+(defn cfn-segment-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-segment-builder (CfnSegment$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-segment-coordinates-property-builder
   "The build-cfn-segment-coordinates-property-builder function updates a CfnSegment$CoordinatesProperty$Builder instance using the provided configuration.
   The function takes the CfnSegment$CoordinatesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2210,6 +2630,12 @@
   (when-let [data (lookup-entry config id :longitude)]
     (. builder longitude data))
   (.build builder))
+
+
+(defn cfn-segment-coordinates-property-builder
+  ""
+  [id config]
+  (build-cfn-segment-coordinates-property-builder (new CfnSegment$CoordinatesProperty$Builder) id config))
 
 
 (defn build-cfn-segment-demographic-property-builder
@@ -2244,6 +2670,12 @@
   (.build builder))
 
 
+(defn cfn-segment-demographic-property-builder
+  ""
+  [id config]
+  (build-cfn-segment-demographic-property-builder (new CfnSegment$DemographicProperty$Builder) id config))
+
+
 (defn build-cfn-segment-gps-point-property-builder
   "The build-cfn-segment-gps-point-property-builder function updates a CfnSegment$GPSPointProperty$Builder instance using the provided configuration.
   The function takes the CfnSegment$GPSPointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2262,6 +2694,12 @@
   (when-let [data (lookup-entry config id :range-in-kilometers)]
     (. builder rangeInKilometers data))
   (.build builder))
+
+
+(defn cfn-segment-gps-point-property-builder
+  ""
+  [id config]
+  (build-cfn-segment-gps-point-property-builder (new CfnSegment$GPSPointProperty$Builder) id config))
 
 
 (defn build-cfn-segment-groups-property-builder
@@ -2290,6 +2728,12 @@
   (.build builder))
 
 
+(defn cfn-segment-groups-property-builder
+  ""
+  [id config]
+  (build-cfn-segment-groups-property-builder (new CfnSegment$GroupsProperty$Builder) id config))
+
+
 (defn build-cfn-segment-location-property-builder
   "The build-cfn-segment-location-property-builder function updates a CfnSegment$LocationProperty$Builder instance using the provided configuration.
   The function takes the CfnSegment$LocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2308,6 +2752,12 @@
   (when-let [data (lookup-entry config id :gps-point)]
     (. builder gpsPoint data))
   (.build builder))
+
+
+(defn cfn-segment-location-property-builder
+  ""
+  [id config]
+  (build-cfn-segment-location-property-builder (new CfnSegment$LocationProperty$Builder) id config))
 
 
 (defn build-cfn-segment-props-builder
@@ -2339,6 +2789,12 @@
   (.build builder))
 
 
+(defn cfn-segment-props-builder
+  ""
+  [id config]
+  (build-cfn-segment-props-builder (new CfnSegmentProps$Builder) id config))
+
+
 (defn build-cfn-segment-recency-property-builder
   "The build-cfn-segment-recency-property-builder function updates a CfnSegment$RecencyProperty$Builder instance using the provided configuration.
   The function takes the CfnSegment$RecencyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2357,6 +2813,12 @@
   (when-let [data (lookup-entry config id :recency-type)]
     (. builder recencyType data))
   (.build builder))
+
+
+(defn cfn-segment-recency-property-builder
+  ""
+  [id config]
+  (build-cfn-segment-recency-property-builder (new CfnSegment$RecencyProperty$Builder) id config))
 
 
 (defn build-cfn-segment-segment-dimensions-property-builder
@@ -2391,6 +2853,12 @@
   (.build builder))
 
 
+(defn cfn-segment-segment-dimensions-property-builder
+  ""
+  [id config]
+  (build-cfn-segment-segment-dimensions-property-builder (new CfnSegment$SegmentDimensionsProperty$Builder) id config))
+
+
 (defn build-cfn-segment-segment-groups-property-builder
   "The build-cfn-segment-segment-groups-property-builder function updates a CfnSegment$SegmentGroupsProperty$Builder instance using the provided configuration.
   The function takes the CfnSegment$SegmentGroupsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2409,6 +2877,12 @@
   (when-let [data (lookup-entry config id :include)]
     (. builder include data))
   (.build builder))
+
+
+(defn cfn-segment-segment-groups-property-builder
+  ""
+  [id config]
+  (build-cfn-segment-segment-groups-property-builder (new CfnSegment$SegmentGroupsProperty$Builder) id config))
 
 
 (defn build-cfn-segment-set-dimension-property-builder
@@ -2431,6 +2905,12 @@
   (.build builder))
 
 
+(defn cfn-segment-set-dimension-property-builder
+  ""
+  [id config]
+  (build-cfn-segment-set-dimension-property-builder (new CfnSegment$SetDimensionProperty$Builder) id config))
+
+
 (defn build-cfn-segment-source-segments-property-builder
   "The build-cfn-segment-source-segments-property-builder function updates a CfnSegment$SourceSegmentsProperty$Builder instance using the provided configuration.
   The function takes the CfnSegment$SourceSegmentsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2449,6 +2929,12 @@
   (when-let [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
+
+
+(defn cfn-segment-source-segments-property-builder
+  ""
+  [id config]
+  (build-cfn-segment-source-segments-property-builder (new CfnSegment$SourceSegmentsProperty$Builder) id config))
 
 
 (defn build-cfn-sms-channel-builder
@@ -2477,6 +2963,12 @@
   (.build builder))
 
 
+(defn cfn-sms-channel-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-sms-channel-builder (CfnSMSChannel$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-sms-channel-props-builder
   "The build-cfn-sms-channel-props-builder function updates a CfnSMSChannelProps$Builder instance using the provided configuration.
   The function takes the CfnSMSChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2501,6 +2993,12 @@
   (when-let [data (lookup-entry config id :short-code)]
     (. builder shortCode data))
   (.build builder))
+
+
+(defn cfn-sms-channel-props-builder
+  ""
+  [id config]
+  (build-cfn-sms-channel-props-builder (new CfnSMSChannelProps$Builder) id config))
 
 
 (defn build-cfn-sms-template-builder
@@ -2532,6 +3030,12 @@
   (.build builder))
 
 
+(defn cfn-sms-template-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-sms-template-builder (CfnSmsTemplate$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-sms-template-props-builder
   "The build-cfn-sms-template-props-builder function updates a CfnSmsTemplateProps$Builder instance using the provided configuration.
   The function takes the CfnSmsTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2561,6 +3065,12 @@
   (.build builder))
 
 
+(defn cfn-sms-template-props-builder
+  ""
+  [id config]
+  (build-cfn-sms-template-props-builder (new CfnSmsTemplateProps$Builder) id config))
+
+
 (defn build-cfn-voice-channel-builder
   "The build-cfn-voice-channel-builder function updates a CfnVoiceChannel$Builder instance using the provided configuration.
   The function takes the CfnVoiceChannel$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2581,6 +3091,12 @@
   (.build builder))
 
 
+(defn cfn-voice-channel-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-voice-channel-builder (CfnVoiceChannel$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-voice-channel-props-builder
   "The build-cfn-voice-channel-props-builder function updates a CfnVoiceChannelProps$Builder instance using the provided configuration.
   The function takes the CfnVoiceChannelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2599,3 +3115,9 @@
   (when-let [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
+
+
+(defn cfn-voice-channel-props-builder
+  ""
+  [id config]
+  (build-cfn-voice-channel-props-builder (new CfnVoiceChannelProps$Builder) id config))

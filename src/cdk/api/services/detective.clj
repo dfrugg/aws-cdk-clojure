@@ -29,6 +29,12 @@
   (.build builder))
 
 
+(defn cfn-graph-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-graph-builder (CfnGraph$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-graph-props-builder
   "The build-cfn-graph-props-builder function updates a CfnGraphProps$Builder instance using the provided configuration.
   The function takes the CfnGraphProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -47,6 +53,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-graph-props-builder
+  ""
+  [id config]
+  (build-cfn-graph-props-builder (new CfnGraphProps$Builder) id config))
 
 
 (defn build-cfn-member-invitation-builder
@@ -78,6 +90,12 @@
   (.build builder))
 
 
+(defn cfn-member-invitation-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-member-invitation-builder (CfnMemberInvitation$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-member-invitation-props-builder
   "The build-cfn-member-invitation-props-builder function updates a CfnMemberInvitationProps$Builder instance using the provided configuration.
   The function takes the CfnMemberInvitationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -107,6 +125,12 @@
   (.build builder))
 
 
+(defn cfn-member-invitation-props-builder
+  ""
+  [id config]
+  (build-cfn-member-invitation-props-builder (new CfnMemberInvitationProps$Builder) id config))
+
+
 (defn build-cfn-organization-admin-builder
   "The build-cfn-organization-admin-builder function updates a CfnOrganizationAdmin$Builder instance using the provided configuration.
   The function takes the CfnOrganizationAdmin$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -124,6 +148,12 @@
   (.build builder))
 
 
+(defn cfn-organization-admin-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-organization-admin-builder (CfnOrganizationAdmin$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-organization-admin-props-builder
   "The build-cfn-organization-admin-props-builder function updates a CfnOrganizationAdminProps$Builder instance using the provided configuration.
   The function takes the CfnOrganizationAdminProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -139,3 +169,9 @@
   (when-let [data (lookup-entry config id :account-id)]
     (. builder accountId data))
   (.build builder))
+
+
+(defn cfn-organization-admin-props-builder
+  ""
+  [id config]
+  (build-cfn-organization-admin-props-builder (new CfnOrganizationAdminProps$Builder) id config))

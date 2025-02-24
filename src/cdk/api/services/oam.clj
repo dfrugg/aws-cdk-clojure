@@ -38,6 +38,12 @@
   (.build builder))
 
 
+(defn cfn-link-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-link-builder (CfnLink$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-link-link-configuration-property-builder
   "The build-cfn-link-link-configuration-property-builder function updates a CfnLink$LinkConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnLink$LinkConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -58,6 +64,12 @@
   (.build builder))
 
 
+(defn cfn-link-link-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-link-link-configuration-property-builder (new CfnLink$LinkConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-link-link-filter-property-builder
   "The build-cfn-link-link-filter-property-builder function updates a CfnLink$LinkFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnLink$LinkFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -73,6 +85,12 @@
   (when-let [data (lookup-entry config id :filter)]
     (. builder filter data))
   (.build builder))
+
+
+(defn cfn-link-link-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-link-link-filter-property-builder (new CfnLink$LinkFilterProperty$Builder) id config))
 
 
 (defn build-cfn-link-props-builder
@@ -104,6 +122,12 @@
   (.build builder))
 
 
+(defn cfn-link-props-builder
+  ""
+  [id config]
+  (build-cfn-link-props-builder (new CfnLinkProps$Builder) id config))
+
+
 (defn build-cfn-sink-builder
   "The build-cfn-sink-builder function updates a CfnSink$Builder instance using the provided configuration.
   The function takes the CfnSink$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -127,6 +151,12 @@
   (.build builder))
 
 
+(defn cfn-sink-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-sink-builder (CfnSink$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-sink-props-builder
   "The build-cfn-sink-props-builder function updates a CfnSinkProps$Builder instance using the provided configuration.
   The function takes the CfnSinkProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -148,3 +178,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-sink-props-builder
+  ""
+  [id config]
+  (build-cfn-sink-props-builder (new CfnSinkProps$Builder) id config))

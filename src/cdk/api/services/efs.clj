@@ -170,6 +170,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn access-point-attributes-builder
+  ""
+  [id config]
+  (build-access-point-attributes-builder (new AccessPointAttributes$Builder) id config))
+
+
 (defn build-access-point-builder
   "The build-access-point-builder function updates a AccessPoint$Builder instance using the provided configuration.
   The function takes the AccessPoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -196,6 +202,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn access-point-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-access-point-builder (AccessPoint$Builder/create scope (name id)) id config))
+
+
 (defn build-access-point-options-builder
   "The build-access-point-options-builder function updates a AccessPointOptions$Builder instance using the provided configuration.
   The function takes the AccessPointOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -217,6 +229,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :posix-user)]
     (. builder posixUser data))
   (.build builder))
+
+
+(defn access-point-options-builder
+  ""
+  [id config]
+  (build-access-point-options-builder (new AccessPointOptions$Builder) id config))
 
 
 (defn build-access-point-props-builder
@@ -245,6 +263,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn access-point-props-builder
+  ""
+  [id config]
+  (build-access-point-props-builder (new AccessPointProps$Builder) id config))
+
+
 (defn build-acl-builder
   "The build-acl-builder function updates a Acl$Builder instance using the provided configuration.
   The function takes the Acl$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -268,6 +292,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn acl-builder
+  ""
+  [id config]
+  (build-acl-builder (new Acl$Builder) id config))
+
+
 (defn build-cfn-access-point-access-point-tag-property-builder
   "The build-cfn-access-point-access-point-tag-property-builder function updates a CfnAccessPoint$AccessPointTagProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPoint$AccessPointTagProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -286,6 +316,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-access-point-access-point-tag-property-builder
+  ""
+  [id config]
+  (build-cfn-access-point-access-point-tag-property-builder (new CfnAccessPoint$AccessPointTagProperty$Builder) id config))
 
 
 (defn build-cfn-access-point-builder
@@ -317,6 +353,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-access-point-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-access-point-builder (CfnAccessPoint$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-access-point-creation-info-property-builder
   "The build-cfn-access-point-creation-info-property-builder function updates a CfnAccessPoint$CreationInfoProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPoint$CreationInfoProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -340,6 +382,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-access-point-creation-info-property-builder
+  ""
+  [id config]
+  (build-cfn-access-point-creation-info-property-builder (new CfnAccessPoint$CreationInfoProperty$Builder) id config))
+
+
 (defn build-cfn-access-point-posix-user-property-builder
   "The build-cfn-access-point-posix-user-property-builder function updates a CfnAccessPoint$PosixUserProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPoint$PosixUserProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -361,6 +409,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :uid)]
     (. builder uid data))
   (.build builder))
+
+
+(defn cfn-access-point-posix-user-property-builder
+  ""
+  [id config]
+  (build-cfn-access-point-posix-user-property-builder (new CfnAccessPoint$PosixUserProperty$Builder) id config))
 
 
 (defn build-cfn-access-point-props-builder
@@ -392,6 +446,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-access-point-props-builder
+  ""
+  [id config]
+  (build-cfn-access-point-props-builder (new CfnAccessPointProps$Builder) id config))
+
+
 (defn build-cfn-access-point-root-directory-property-builder
   "The build-cfn-access-point-root-directory-property-builder function updates a CfnAccessPoint$RootDirectoryProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPoint$RootDirectoryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -412,6 +472,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-access-point-root-directory-property-builder
+  ""
+  [id config]
+  (build-cfn-access-point-root-directory-property-builder (new CfnAccessPoint$RootDirectoryProperty$Builder) id config))
+
+
 (defn build-cfn-file-system-backup-policy-property-builder
   "The build-cfn-file-system-backup-policy-property-builder function updates a CfnFileSystem$BackupPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnFileSystem$BackupPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -427,6 +493,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
+
+
+(defn cfn-file-system-backup-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-file-system-backup-policy-property-builder (new CfnFileSystem$BackupPolicyProperty$Builder) id config))
 
 
 (defn build-cfn-file-system-builder
@@ -482,6 +554,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-file-system-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-file-system-builder (CfnFileSystem$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-file-system-elastic-file-system-tag-property-builder
   "The build-cfn-file-system-elastic-file-system-tag-property-builder function updates a CfnFileSystem$ElasticFileSystemTagProperty$Builder instance using the provided configuration.
   The function takes the CfnFileSystem$ElasticFileSystemTagProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -502,6 +580,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-file-system-elastic-file-system-tag-property-builder
+  ""
+  [id config]
+  (build-cfn-file-system-elastic-file-system-tag-property-builder (new CfnFileSystem$ElasticFileSystemTagProperty$Builder) id config))
+
+
 (defn build-cfn-file-system-file-system-protection-property-builder
   "The build-cfn-file-system-file-system-protection-property-builder function updates a CfnFileSystem$FileSystemProtectionProperty$Builder instance using the provided configuration.
   The function takes the CfnFileSystem$FileSystemProtectionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -517,6 +601,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :replication-overwrite-protection)]
     (. builder replicationOverwriteProtection data))
   (.build builder))
+
+
+(defn cfn-file-system-file-system-protection-property-builder
+  ""
+  [id config]
+  (build-cfn-file-system-file-system-protection-property-builder (new CfnFileSystem$FileSystemProtectionProperty$Builder) id config))
 
 
 (defn build-cfn-file-system-lifecycle-policy-property-builder
@@ -540,6 +630,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :transition-to-primary-storage-class)]
     (. builder transitionToPrimaryStorageClass data))
   (.build builder))
+
+
+(defn cfn-file-system-lifecycle-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-file-system-lifecycle-policy-property-builder (new CfnFileSystem$LifecyclePolicyProperty$Builder) id config))
 
 
 (defn build-cfn-file-system-props-builder
@@ -595,6 +691,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-file-system-props-builder
+  ""
+  [id config]
+  (build-cfn-file-system-props-builder (new CfnFileSystemProps$Builder) id config))
+
+
 (defn build-cfn-file-system-replication-configuration-property-builder
   "The build-cfn-file-system-replication-configuration-property-builder function updates a CfnFileSystem$ReplicationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnFileSystem$ReplicationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -610,6 +712,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :destinations)]
     (. builder destinations data))
   (.build builder))
+
+
+(defn cfn-file-system-replication-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-file-system-replication-configuration-property-builder (new CfnFileSystem$ReplicationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-file-system-replication-destination-property-builder
@@ -638,6 +746,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-file-system-replication-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-file-system-replication-destination-property-builder (new CfnFileSystem$ReplicationDestinationProperty$Builder) id config))
+
+
 (defn build-cfn-mount-target-builder
   "The build-cfn-mount-target-builder function updates a CfnMountTarget$Builder instance using the provided configuration.
   The function takes the CfnMountTarget$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -662,6 +776,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :subnet-id)]
     (. builder subnetId data))
   (.build builder))
+
+
+(defn cfn-mount-target-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-mount-target-builder (CfnMountTarget$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-mount-target-props-builder
@@ -690,6 +810,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-mount-target-props-builder
+  ""
+  [id config]
+  (build-cfn-mount-target-props-builder (new CfnMountTargetProps$Builder) id config))
+
+
 (defn build-existing-file-system-props-builder
   "The build-existing-file-system-props-builder function updates a ExistingFileSystemProps$Builder instance using the provided configuration.
   The function takes the ExistingFileSystemProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -705,6 +831,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :destination-file-system)]
     (. builder destinationFileSystem data))
   (.build builder))
+
+
+(defn existing-file-system-props-builder
+  ""
+  [id config]
+  (build-existing-file-system-props-builder (new ExistingFileSystemProps$Builder) id config))
 
 
 (defn build-file-system-attributes-builder
@@ -728,6 +860,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :security-group)]
     (. builder securityGroup data))
   (.build builder))
+
+
+(defn file-system-attributes-builder
+  ""
+  [id config]
+  (build-file-system-attributes-builder (new FileSystemAttributes$Builder) id config))
 
 
 (defn build-file-system-builder
@@ -801,6 +939,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn file-system-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-file-system-builder (FileSystem$Builder/create scope (name id)) id config))
+
+
 (defn build-file-system-props-builder
   "The build-file-system-props-builder function updates a FileSystemProps$Builder instance using the provided configuration.
   The function takes the FileSystemProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -872,6 +1016,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn file-system-props-builder
+  ""
+  [id config]
+  (build-file-system-props-builder (new FileSystemProps$Builder) id config))
+
+
 (defn build-one-zone-file-system-props-builder
   "The build-one-zone-file-system-props-builder function updates a OneZoneFileSystemProps$Builder instance using the provided configuration.
   The function takes the OneZoneFileSystemProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -893,6 +1043,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :region)]
     (. builder region data))
   (.build builder))
+
+
+(defn one-zone-file-system-props-builder
+  ""
+  [id config]
+  (build-one-zone-file-system-props-builder (new OneZoneFileSystemProps$Builder) id config))
 
 
 (defn build-posix-user-builder
@@ -918,6 +1074,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn posix-user-builder
+  ""
+  [id config]
+  (build-posix-user-builder (new PosixUser$Builder) id config))
+
+
 (defn build-regional-file-system-props-builder
   "The build-regional-file-system-props-builder function updates a RegionalFileSystemProps$Builder instance using the provided configuration.
   The function takes the RegionalFileSystemProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -936,6 +1098,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :region)]
     (. builder region data))
   (.build builder))
+
+
+(defn regional-file-system-props-builder
+  ""
+  [id config]
+  (build-regional-file-system-props-builder (new RegionalFileSystemProps$Builder) id config))
 
 
 (defn build-replication-configuration-props-builder
@@ -962,3 +1130,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :region)]
     (. builder region data))
   (.build builder))
+
+
+(defn replication-configuration-props-builder
+  ""
+  [id config]
+  (build-replication-configuration-props-builder (new ReplicationConfigurationProps$Builder) id config))

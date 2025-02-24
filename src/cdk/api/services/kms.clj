@@ -100,6 +100,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn alias-attributes-builder
+  ""
+  [id config]
+  (build-alias-attributes-builder (new AliasAttributes$Builder) id config))
+
+
 (defn build-alias-builder
   "The build-alias-builder function updates a Alias$Builder instance using the provided configuration.
   The function takes the Alias$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -121,6 +127,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :target-key)]
     (. builder targetKey data))
   (.build builder))
+
+
+(defn alias-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-alias-builder (Alias$Builder/create scope (name id)) id config))
 
 
 (defn build-alias-props-builder
@@ -146,6 +158,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn alias-props-builder
+  ""
+  [id config]
+  (build-alias-props-builder (new AliasProps$Builder) id config))
+
+
 (defn build-cfn-alias-builder
   "The build-cfn-alias-builder function updates a CfnAlias$Builder instance using the provided configuration.
   The function takes the CfnAlias$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -166,6 +184,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-alias-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-alias-builder (CfnAlias$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-alias-props-builder
   "The build-cfn-alias-props-builder function updates a CfnAliasProps$Builder instance using the provided configuration.
   The function takes the CfnAliasProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -184,6 +208,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :target-key-id)]
     (. builder targetKeyId data))
   (.build builder))
+
+
+(defn cfn-alias-props-builder
+  ""
+  [id config]
+  (build-cfn-alias-props-builder (new CfnAliasProps$Builder) id config))
 
 
 (defn build-cfn-key-builder
@@ -236,6 +266,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-key-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-key-builder (CfnKey$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-key-props-builder
   "The build-cfn-key-props-builder function updates a CfnKeyProps$Builder instance using the provided configuration.
   The function takes the CfnKeyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -286,6 +322,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-key-props-builder
+  ""
+  [id config]
+  (build-cfn-key-props-builder (new CfnKeyProps$Builder) id config))
+
+
 (defn build-cfn-replica-key-builder
   "The build-cfn-replica-key-builder function updates a CfnReplicaKey$Builder instance using the provided configuration.
   The function takes the CfnReplicaKey$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -318,6 +360,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-replica-key-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-replica-key-builder (CfnReplicaKey$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-replica-key-props-builder
   "The build-cfn-replica-key-props-builder function updates a CfnReplicaKeyProps$Builder instance using the provided configuration.
   The function takes the CfnReplicaKeyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -348,6 +396,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-replica-key-props-builder
+  ""
+  [id config]
+  (build-cfn-replica-key-props-builder (new CfnReplicaKeyProps$Builder) id config))
 
 
 (defn build-key-builder
@@ -397,6 +451,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn key-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-key-builder (Key$Builder/create scope (name id)) id config))
+
+
 (defn build-key-lookup-options-builder
   "The build-key-lookup-options-builder function updates a KeyLookupOptions$Builder instance using the provided configuration.
   The function takes the KeyLookupOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -412,6 +472,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :alias-name)]
     (. builder aliasName data))
   (.build builder))
+
+
+(defn key-lookup-options-builder
+  ""
+  [id config]
+  (build-key-lookup-options-builder (new KeyLookupOptions$Builder) id config))
 
 
 (defn build-key-props-builder
@@ -459,3 +525,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :rotation-period)]
     (. builder rotationPeriod data))
   (.build builder))
+
+
+(defn key-props-builder
+  ""
+  [id config]
+  (build-key-props-builder (new KeyProps$Builder) id config))

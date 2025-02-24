@@ -27,6 +27,12 @@
   (.build builder))
 
 
+(defn cfn-bucket-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-bucket-policy-builder (CfnBucketPolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-bucket-policy-props-builder
   "The build-cfn-bucket-policy-props-builder function updates a CfnBucketPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnBucketPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -45,6 +51,12 @@
   (when-let [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
   (.build builder))
+
+
+(defn cfn-bucket-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-bucket-policy-props-builder (new CfnBucketPolicyProps$Builder) id config))
 
 
 (defn build-cfn-directory-bucket-builder
@@ -70,6 +82,12 @@
   (.build builder))
 
 
+(defn cfn-directory-bucket-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-directory-bucket-builder (CfnDirectoryBucket$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-directory-bucket-props-builder
   "The build-cfn-directory-bucket-props-builder function updates a CfnDirectoryBucketProps$Builder instance using the provided configuration.
   The function takes the CfnDirectoryBucketProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -91,3 +109,9 @@
   (when-let [data (lookup-entry config id :location-name)]
     (. builder locationName data))
   (.build builder))
+
+
+(defn cfn-directory-bucket-props-builder
+  ""
+  [id config]
+  (build-cfn-directory-bucket-props-builder (new CfnDirectoryBucketProps$Builder) id config))

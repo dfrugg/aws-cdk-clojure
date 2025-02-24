@@ -40,6 +40,12 @@
   (.build builder))
 
 
+(defn cfn-application-application-resource-lifecycle-config-property-builder
+  ""
+  [id config]
+  (build-cfn-application-application-resource-lifecycle-config-property-builder (new CfnApplication$ApplicationResourceLifecycleConfigProperty$Builder) id config))
+
+
 (defn build-cfn-application-application-version-lifecycle-config-property-builder
   "The build-cfn-application-application-version-lifecycle-config-property-builder function updates a CfnApplication$ApplicationVersionLifecycleConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$ApplicationVersionLifecycleConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -58,6 +64,12 @@
   (when-let [data (lookup-entry config id :max-count-rule)]
     (. builder maxCountRule data))
   (.build builder))
+
+
+(defn cfn-application-application-version-lifecycle-config-property-builder
+  ""
+  [id config]
+  (build-cfn-application-application-version-lifecycle-config-property-builder (new CfnApplication$ApplicationVersionLifecycleConfigProperty$Builder) id config))
 
 
 (defn build-cfn-application-builder
@@ -83,6 +95,12 @@
   (.build builder))
 
 
+(defn cfn-application-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-builder (CfnApplication$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-application-max-age-rule-property-builder
   "The build-cfn-application-max-age-rule-property-builder function updates a CfnApplication$MaxAgeRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$MaxAgeRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -104,6 +122,12 @@
   (when-let [data (lookup-entry config id :max-age-in-days)]
     (. builder maxAgeInDays data))
   (.build builder))
+
+
+(defn cfn-application-max-age-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-application-max-age-rule-property-builder (new CfnApplication$MaxAgeRuleProperty$Builder) id config))
 
 
 (defn build-cfn-application-max-count-rule-property-builder
@@ -129,6 +153,12 @@
   (.build builder))
 
 
+(defn cfn-application-max-count-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-application-max-count-rule-property-builder (new CfnApplication$MaxCountRuleProperty$Builder) id config))
+
+
 (defn build-cfn-application-props-builder
   "The build-cfn-application-props-builder function updates a CfnApplicationProps$Builder instance using the provided configuration.
   The function takes the CfnApplicationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -150,6 +180,12 @@
   (when-let [data (lookup-entry config id :resource-lifecycle-config)]
     (. builder resourceLifecycleConfig data))
   (.build builder))
+
+
+(defn cfn-application-props-builder
+  ""
+  [id config]
+  (build-cfn-application-props-builder (new CfnApplicationProps$Builder) id config))
 
 
 (defn build-cfn-application-version-builder
@@ -175,6 +211,12 @@
   (.build builder))
 
 
+(defn cfn-application-version-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-version-builder (CfnApplicationVersion$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-application-version-props-builder
   "The build-cfn-application-version-props-builder function updates a CfnApplicationVersionProps$Builder instance using the provided configuration.
   The function takes the CfnApplicationVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -198,6 +240,12 @@
   (.build builder))
 
 
+(defn cfn-application-version-props-builder
+  ""
+  [id config]
+  (build-cfn-application-version-props-builder (new CfnApplicationVersionProps$Builder) id config))
+
+
 (defn build-cfn-application-version-source-bundle-property-builder
   "The build-cfn-application-version-source-bundle-property-builder function updates a CfnApplicationVersion$SourceBundleProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationVersion$SourceBundleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -216,6 +264,12 @@
   (when-let [data (lookup-entry config id :s3-key)]
     (. builder s3Key data))
   (.build builder))
+
+
+(defn cfn-application-version-source-bundle-property-builder
+  ""
+  [id config]
+  (build-cfn-application-version-source-bundle-property-builder (new CfnApplicationVersion$SourceBundleProperty$Builder) id config))
 
 
 (defn build-cfn-configuration-template-builder
@@ -253,6 +307,12 @@
   (.build builder))
 
 
+(defn cfn-configuration-template-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-configuration-template-builder (CfnConfigurationTemplate$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-configuration-template-configuration-option-setting-property-builder
   "The build-cfn-configuration-template-configuration-option-setting-property-builder function updates a CfnConfigurationTemplate$ConfigurationOptionSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnConfigurationTemplate$ConfigurationOptionSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -277,6 +337,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-configuration-template-configuration-option-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-template-configuration-option-setting-property-builder (new CfnConfigurationTemplate$ConfigurationOptionSettingProperty$Builder) id config))
 
 
 (defn build-cfn-configuration-template-props-builder
@@ -314,6 +380,12 @@
   (.build builder))
 
 
+(defn cfn-configuration-template-props-builder
+  ""
+  [id config]
+  (build-cfn-configuration-template-props-builder (new CfnConfigurationTemplateProps$Builder) id config))
+
+
 (defn build-cfn-configuration-template-source-configuration-property-builder
   "The build-cfn-configuration-template-source-configuration-property-builder function updates a CfnConfigurationTemplate$SourceConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnConfigurationTemplate$SourceConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -332,6 +404,12 @@
   (when-let [data (lookup-entry config id :template-name)]
     (. builder templateName data))
   (.build builder))
+
+
+(defn cfn-configuration-template-source-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-configuration-template-source-configuration-property-builder (new CfnConfigurationTemplate$SourceConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-environment-builder
@@ -384,6 +462,12 @@
   (.build builder))
 
 
+(defn cfn-environment-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-environment-builder (CfnEnvironment$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-environment-option-setting-property-builder
   "The build-cfn-environment-option-setting-property-builder function updates a CfnEnvironment$OptionSettingProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$OptionSettingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -408,6 +492,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-environment-option-setting-property-builder
+  ""
+  [id config]
+  (build-cfn-environment-option-setting-property-builder (new CfnEnvironment$OptionSettingProperty$Builder) id config))
 
 
 (defn build-cfn-environment-props-builder
@@ -460,6 +550,12 @@
   (.build builder))
 
 
+(defn cfn-environment-props-builder
+  ""
+  [id config]
+  (build-cfn-environment-props-builder (new CfnEnvironmentProps$Builder) id config))
+
+
 (defn build-cfn-environment-tier-property-builder
   "The build-cfn-environment-tier-property-builder function updates a CfnEnvironment$TierProperty$Builder instance using the provided configuration.
   The function takes the CfnEnvironment$TierProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -481,3 +577,9 @@
   (when-let [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
+
+
+(defn cfn-environment-tier-property-builder
+  ""
+  [id config]
+  (build-cfn-environment-tier-property-builder (new CfnEnvironment$TierProperty$Builder) id config))

@@ -35,6 +35,12 @@
   (.build builder))
 
 
+(defn cfn-logging-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-logging-configuration-builder (CfnLoggingConfiguration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-logging-configuration-cloud-watch-logs-destination-configuration-property-builder
   "The build-cfn-logging-configuration-cloud-watch-logs-destination-configuration-property-builder function updates a CfnLoggingConfiguration$CloudWatchLogsDestinationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnLoggingConfiguration$CloudWatchLogsDestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -50,6 +56,12 @@
   (when-let [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
   (.build builder))
+
+
+(defn cfn-logging-configuration-cloud-watch-logs-destination-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-logging-configuration-cloud-watch-logs-destination-configuration-property-builder (new CfnLoggingConfiguration$CloudWatchLogsDestinationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-logging-configuration-destination-configuration-property-builder
@@ -75,6 +87,12 @@
   (.build builder))
 
 
+(defn cfn-logging-configuration-destination-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-logging-configuration-destination-configuration-property-builder (new CfnLoggingConfiguration$DestinationConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-logging-configuration-firehose-destination-configuration-property-builder
   "The build-cfn-logging-configuration-firehose-destination-configuration-property-builder function updates a CfnLoggingConfiguration$FirehoseDestinationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnLoggingConfiguration$FirehoseDestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -90,6 +108,12 @@
   (when-let [data (lookup-entry config id :delivery-stream-name)]
     (. builder deliveryStreamName data))
   (.build builder))
+
+
+(defn cfn-logging-configuration-firehose-destination-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-logging-configuration-firehose-destination-configuration-property-builder (new CfnLoggingConfiguration$FirehoseDestinationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-logging-configuration-props-builder
@@ -115,6 +139,12 @@
   (.build builder))
 
 
+(defn cfn-logging-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-logging-configuration-props-builder (new CfnLoggingConfigurationProps$Builder) id config))
+
+
 (defn build-cfn-logging-configuration-s3-destination-configuration-property-builder
   "The build-cfn-logging-configuration-s3-destination-configuration-property-builder function updates a CfnLoggingConfiguration$S3DestinationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnLoggingConfiguration$S3DestinationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -130,6 +160,12 @@
   (when-let [data (lookup-entry config id :bucket-name)]
     (. builder bucketName data))
   (.build builder))
+
+
+(defn cfn-logging-configuration-s3-destination-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-logging-configuration-s3-destination-configuration-property-builder (new CfnLoggingConfiguration$S3DestinationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-room-builder
@@ -164,6 +200,12 @@
   (.build builder))
 
 
+(defn cfn-room-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-room-builder (CfnRoom$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-room-message-review-handler-property-builder
   "The build-cfn-room-message-review-handler-property-builder function updates a CfnRoom$MessageReviewHandlerProperty$Builder instance using the provided configuration.
   The function takes the CfnRoom$MessageReviewHandlerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -182,6 +224,12 @@
   (when-let [data (lookup-entry config id :uri)]
     (. builder uri data))
   (.build builder))
+
+
+(defn cfn-room-message-review-handler-property-builder
+  ""
+  [id config]
+  (build-cfn-room-message-review-handler-property-builder (new CfnRoom$MessageReviewHandlerProperty$Builder) id config))
 
 
 (defn build-cfn-room-props-builder
@@ -214,3 +262,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-room-props-builder
+  ""
+  [id config]
+  (build-cfn-room-props-builder (new CfnRoomProps$Builder) id config))

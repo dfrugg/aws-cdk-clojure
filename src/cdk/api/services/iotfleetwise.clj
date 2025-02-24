@@ -103,6 +103,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-campaign-builder (CfnCampaign$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-campaign-collection-scheme-property-builder
   "The build-cfn-campaign-collection-scheme-property-builder function updates a CfnCampaign$CollectionSchemeProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$CollectionSchemeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -121,6 +127,12 @@
   (when-let [data (lookup-entry config id :time-based-collection-scheme)]
     (. builder timeBasedCollectionScheme data))
   (.build builder))
+
+
+(defn cfn-campaign-collection-scheme-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-collection-scheme-property-builder (new CfnCampaign$CollectionSchemeProperty$Builder) id config))
 
 
 (defn build-cfn-campaign-condition-based-collection-scheme-property-builder
@@ -149,6 +161,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-condition-based-collection-scheme-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-condition-based-collection-scheme-property-builder (new CfnCampaign$ConditionBasedCollectionSchemeProperty$Builder) id config))
+
+
 (defn build-cfn-campaign-data-destination-config-property-builder
   "The build-cfn-campaign-data-destination-config-property-builder function updates a CfnCampaign$DataDestinationConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$DataDestinationConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -167,6 +185,12 @@
   (when-let [data (lookup-entry config id :timestream-config)]
     (. builder timestreamConfig data))
   (.build builder))
+
+
+(defn cfn-campaign-data-destination-config-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-data-destination-config-property-builder (new CfnCampaign$DataDestinationConfigProperty$Builder) id config))
 
 
 (defn build-cfn-campaign-props-builder
@@ -234,6 +258,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-props-builder
+  ""
+  [id config]
+  (build-cfn-campaign-props-builder (new CfnCampaignProps$Builder) id config))
+
+
 (defn build-cfn-campaign-s3-config-property-builder
   "The build-cfn-campaign-s3-config-property-builder function updates a CfnCampaign$S3ConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$S3ConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -260,6 +290,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-s3-config-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-s3-config-property-builder (new CfnCampaign$S3ConfigProperty$Builder) id config))
+
+
 (defn build-cfn-campaign-signal-information-property-builder
   "The build-cfn-campaign-signal-information-property-builder function updates a CfnCampaign$SignalInformationProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$SignalInformationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -283,6 +319,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-signal-information-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-signal-information-property-builder (new CfnCampaign$SignalInformationProperty$Builder) id config))
+
+
 (defn build-cfn-campaign-time-based-collection-scheme-property-builder
   "The build-cfn-campaign-time-based-collection-scheme-property-builder function updates a CfnCampaign$TimeBasedCollectionSchemeProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$TimeBasedCollectionSchemeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -298,6 +340,12 @@
   (when-let [data (lookup-entry config id :period-ms)]
     (. builder periodMs data))
   (.build builder))
+
+
+(defn cfn-campaign-time-based-collection-scheme-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-time-based-collection-scheme-property-builder (new CfnCampaign$TimeBasedCollectionSchemeProperty$Builder) id config))
 
 
 (defn build-cfn-campaign-timestream-config-property-builder
@@ -318,6 +366,12 @@
   (when-let [data (lookup-entry config id :timestream-table-arn)]
     (. builder timestreamTableArn data))
   (.build builder))
+
+
+(defn cfn-campaign-timestream-config-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-timestream-config-property-builder (new CfnCampaign$TimestreamConfigProperty$Builder) id config))
 
 
 (defn build-cfn-decoder-manifest-builder
@@ -355,6 +409,12 @@
   (.build builder))
 
 
+(defn cfn-decoder-manifest-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-decoder-manifest-builder (CfnDecoderManifest$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-decoder-manifest-can-interface-property-builder
   "The build-cfn-decoder-manifest-can-interface-property-builder function updates a CfnDecoderManifest$CanInterfaceProperty$Builder instance using the provided configuration.
   The function takes the CfnDecoderManifest$CanInterfaceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -378,6 +438,12 @@
   (.build builder))
 
 
+(defn cfn-decoder-manifest-can-interface-property-builder
+  ""
+  [id config]
+  (build-cfn-decoder-manifest-can-interface-property-builder (new CfnDecoderManifest$CanInterfaceProperty$Builder) id config))
+
+
 (defn build-cfn-decoder-manifest-can-network-interface-property-builder
   "The build-cfn-decoder-manifest-can-network-interface-property-builder function updates a CfnDecoderManifest$CanNetworkInterfaceProperty$Builder instance using the provided configuration.
   The function takes the CfnDecoderManifest$CanNetworkInterfaceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -399,6 +465,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-decoder-manifest-can-network-interface-property-builder
+  ""
+  [id config]
+  (build-cfn-decoder-manifest-can-network-interface-property-builder (new CfnDecoderManifest$CanNetworkInterfaceProperty$Builder) id config))
 
 
 (defn build-cfn-decoder-manifest-can-signal-decoder-property-builder
@@ -425,6 +497,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-decoder-manifest-can-signal-decoder-property-builder
+  ""
+  [id config]
+  (build-cfn-decoder-manifest-can-signal-decoder-property-builder (new CfnDecoderManifest$CanSignalDecoderProperty$Builder) id config))
 
 
 (defn build-cfn-decoder-manifest-can-signal-property-builder
@@ -465,6 +543,12 @@
   (.build builder))
 
 
+(defn cfn-decoder-manifest-can-signal-property-builder
+  ""
+  [id config]
+  (build-cfn-decoder-manifest-can-signal-property-builder (new CfnDecoderManifest$CanSignalProperty$Builder) id config))
+
+
 (defn build-cfn-decoder-manifest-network-interfaces-items-property-builder
   "The build-cfn-decoder-manifest-network-interfaces-items-property-builder function updates a CfnDecoderManifest$NetworkInterfacesItemsProperty$Builder instance using the provided configuration.
   The function takes the CfnDecoderManifest$NetworkInterfacesItemsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -489,6 +573,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-decoder-manifest-network-interfaces-items-property-builder
+  ""
+  [id config]
+  (build-cfn-decoder-manifest-network-interfaces-items-property-builder (new CfnDecoderManifest$NetworkInterfacesItemsProperty$Builder) id config))
 
 
 (defn build-cfn-decoder-manifest-obd-interface-property-builder
@@ -526,6 +616,12 @@
   (.build builder))
 
 
+(defn cfn-decoder-manifest-obd-interface-property-builder
+  ""
+  [id config]
+  (build-cfn-decoder-manifest-obd-interface-property-builder (new CfnDecoderManifest$ObdInterfaceProperty$Builder) id config))
+
+
 (defn build-cfn-decoder-manifest-obd-network-interface-property-builder
   "The build-cfn-decoder-manifest-obd-network-interface-property-builder function updates a CfnDecoderManifest$ObdNetworkInterfaceProperty$Builder instance using the provided configuration.
   The function takes the CfnDecoderManifest$ObdNetworkInterfaceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -547,6 +643,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-decoder-manifest-obd-network-interface-property-builder
+  ""
+  [id config]
+  (build-cfn-decoder-manifest-obd-network-interface-property-builder (new CfnDecoderManifest$ObdNetworkInterfaceProperty$Builder) id config))
 
 
 (defn build-cfn-decoder-manifest-obd-signal-decoder-property-builder
@@ -573,6 +675,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-decoder-manifest-obd-signal-decoder-property-builder
+  ""
+  [id config]
+  (build-cfn-decoder-manifest-obd-signal-decoder-property-builder (new CfnDecoderManifest$ObdSignalDecoderProperty$Builder) id config))
 
 
 (defn build-cfn-decoder-manifest-obd-signal-property-builder
@@ -616,6 +724,12 @@
   (.build builder))
 
 
+(defn cfn-decoder-manifest-obd-signal-property-builder
+  ""
+  [id config]
+  (build-cfn-decoder-manifest-obd-signal-property-builder (new CfnDecoderManifest$ObdSignalProperty$Builder) id config))
+
+
 (defn build-cfn-decoder-manifest-props-builder
   "The build-cfn-decoder-manifest-props-builder function updates a CfnDecoderManifestProps$Builder instance using the provided configuration.
   The function takes the CfnDecoderManifestProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -651,6 +765,12 @@
   (.build builder))
 
 
+(defn cfn-decoder-manifest-props-builder
+  ""
+  [id config]
+  (build-cfn-decoder-manifest-props-builder (new CfnDecoderManifestProps$Builder) id config))
+
+
 (defn build-cfn-decoder-manifest-signal-decoders-items-property-builder
   "The build-cfn-decoder-manifest-signal-decoders-items-property-builder function updates a CfnDecoderManifest$SignalDecodersItemsProperty$Builder instance using the provided configuration.
   The function takes the CfnDecoderManifest$SignalDecodersItemsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -680,6 +800,12 @@
   (.build builder))
 
 
+(defn cfn-decoder-manifest-signal-decoders-items-property-builder
+  ""
+  [id config]
+  (build-cfn-decoder-manifest-signal-decoders-items-property-builder (new CfnDecoderManifest$SignalDecodersItemsProperty$Builder) id config))
+
+
 (defn build-cfn-fleet-builder
   "The build-cfn-fleet-builder function updates a CfnFleet$Builder instance using the provided configuration.
   The function takes the CfnFleet$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -706,6 +832,12 @@
   (.build builder))
 
 
+(defn cfn-fleet-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-fleet-builder (CfnFleet$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-fleet-props-builder
   "The build-cfn-fleet-props-builder function updates a CfnFleetProps$Builder instance using the provided configuration.
   The function takes the CfnFleetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -730,6 +862,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-fleet-props-builder
+  ""
+  [id config]
+  (build-cfn-fleet-props-builder (new CfnFleetProps$Builder) id config))
 
 
 (defn build-cfn-model-manifest-builder
@@ -764,6 +902,12 @@
   (.build builder))
 
 
+(defn cfn-model-manifest-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-model-manifest-builder (CfnModelManifest$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-model-manifest-props-builder
   "The build-cfn-model-manifest-props-builder function updates a CfnModelManifestProps$Builder instance using the provided configuration.
   The function takes the CfnModelManifestProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -794,6 +938,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-model-manifest-props-builder
+  ""
+  [id config]
+  (build-cfn-model-manifest-props-builder (new CfnModelManifestProps$Builder) id config))
 
 
 (defn build-cfn-signal-catalog-actuator-property-builder
@@ -832,6 +982,12 @@
   (when-let [data (lookup-entry config id :unit)]
     (. builder unit data))
   (.build builder))
+
+
+(defn cfn-signal-catalog-actuator-property-builder
+  ""
+  [id config]
+  (build-cfn-signal-catalog-actuator-property-builder (new CfnSignalCatalog$ActuatorProperty$Builder) id config))
 
 
 (defn build-cfn-signal-catalog-attribute-property-builder
@@ -875,6 +1031,12 @@
   (.build builder))
 
 
+(defn cfn-signal-catalog-attribute-property-builder
+  ""
+  [id config]
+  (build-cfn-signal-catalog-attribute-property-builder (new CfnSignalCatalog$AttributeProperty$Builder) id config))
+
+
 (defn build-cfn-signal-catalog-branch-property-builder
   "The build-cfn-signal-catalog-branch-property-builder function updates a CfnSignalCatalog$BranchProperty$Builder instance using the provided configuration.
   The function takes the CfnSignalCatalog$BranchProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -893,6 +1055,12 @@
   (when-let [data (lookup-entry config id :fully-qualified-name)]
     (. builder fullyQualifiedName data))
   (.build builder))
+
+
+(defn cfn-signal-catalog-branch-property-builder
+  ""
+  [id config]
+  (build-cfn-signal-catalog-branch-property-builder (new CfnSignalCatalog$BranchProperty$Builder) id config))
 
 
 (defn build-cfn-signal-catalog-builder
@@ -924,6 +1092,12 @@
   (.build builder))
 
 
+(defn cfn-signal-catalog-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-signal-catalog-builder (CfnSignalCatalog$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-signal-catalog-node-counts-property-builder
   "The build-cfn-signal-catalog-node-counts-property-builder function updates a CfnSignalCatalog$NodeCountsProperty$Builder instance using the provided configuration.
   The function takes the CfnSignalCatalog$NodeCountsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -953,6 +1127,12 @@
   (.build builder))
 
 
+(defn cfn-signal-catalog-node-counts-property-builder
+  ""
+  [id config]
+  (build-cfn-signal-catalog-node-counts-property-builder (new CfnSignalCatalog$NodeCountsProperty$Builder) id config))
+
+
 (defn build-cfn-signal-catalog-node-property-builder
   "The build-cfn-signal-catalog-node-property-builder function updates a CfnSignalCatalog$NodeProperty$Builder instance using the provided configuration.
   The function takes the CfnSignalCatalog$NodeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -977,6 +1157,12 @@
   (when-let [data (lookup-entry config id :sensor)]
     (. builder sensor data))
   (.build builder))
+
+
+(defn cfn-signal-catalog-node-property-builder
+  ""
+  [id config]
+  (build-cfn-signal-catalog-node-property-builder (new CfnSignalCatalog$NodeProperty$Builder) id config))
 
 
 (defn build-cfn-signal-catalog-props-builder
@@ -1006,6 +1192,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-signal-catalog-props-builder
+  ""
+  [id config]
+  (build-cfn-signal-catalog-props-builder (new CfnSignalCatalogProps$Builder) id config))
 
 
 (defn build-cfn-signal-catalog-sensor-property-builder
@@ -1043,6 +1235,12 @@
   (.build builder))
 
 
+(defn cfn-signal-catalog-sensor-property-builder
+  ""
+  [id config]
+  (build-cfn-signal-catalog-sensor-property-builder (new CfnSignalCatalog$SensorProperty$Builder) id config))
+
+
 (defn build-cfn-vehicle-builder
   "The build-cfn-vehicle-builder function updates a CfnVehicle$Builder instance using the provided configuration.
   The function takes the CfnVehicle$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1075,6 +1273,12 @@
   (.build builder))
 
 
+(defn cfn-vehicle-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-vehicle-builder (CfnVehicle$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-vehicle-props-builder
   "The build-cfn-vehicle-props-builder function updates a CfnVehicleProps$Builder instance using the provided configuration.
   The function takes the CfnVehicleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1105,3 +1309,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-vehicle-props-builder
+  ""
+  [id config]
+  (build-cfn-vehicle-props-builder (new CfnVehicleProps$Builder) id config))

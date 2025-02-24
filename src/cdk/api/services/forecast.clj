@@ -31,6 +31,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-attributes-items-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-attributes-items-property-builder (new CfnDataset$AttributesItemsProperty$Builder) id config))
+
+
 (defn build-cfn-dataset-builder
   "The build-cfn-dataset-builder function updates a CfnDataset$Builder instance using the provided configuration.
   The function takes the CfnDataset$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -66,6 +72,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-dataset-builder (CfnDataset$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-dataset-encryption-config-property-builder
   "The build-cfn-dataset-encryption-config-property-builder function updates a CfnDataset$EncryptionConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$EncryptionConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -84,6 +96,12 @@
   (when-let [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
+
+
+(defn cfn-dataset-encryption-config-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-encryption-config-property-builder (new CfnDataset$EncryptionConfigProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-group-builder
@@ -112,6 +130,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-dataset-group-builder (CfnDatasetGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-dataset-group-props-builder
   "The build-cfn-dataset-group-props-builder function updates a CfnDatasetGroupProps$Builder instance using the provided configuration.
   The function takes the CfnDatasetGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -136,6 +160,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-dataset-group-props-builder
+  ""
+  [id config]
+  (build-cfn-dataset-group-props-builder (new CfnDatasetGroupProps$Builder) id config))
 
 
 (defn build-cfn-dataset-props-builder
@@ -173,6 +203,12 @@
   (.build builder))
 
 
+(defn cfn-dataset-props-builder
+  ""
+  [id config]
+  (build-cfn-dataset-props-builder (new CfnDatasetProps$Builder) id config))
+
+
 (defn build-cfn-dataset-schema-property-builder
   "The build-cfn-dataset-schema-property-builder function updates a CfnDataset$SchemaProperty$Builder instance using the provided configuration.
   The function takes the CfnDataset$SchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -188,6 +224,12 @@
   (when-let [data (lookup-entry config id :attributes)]
     (. builder attributes data))
   (.build builder))
+
+
+(defn cfn-dataset-schema-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-schema-property-builder (new CfnDataset$SchemaProperty$Builder) id config))
 
 
 (defn build-cfn-dataset-tags-items-property-builder
@@ -208,3 +250,9 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-dataset-tags-items-property-builder
+  ""
+  [id config]
+  (build-cfn-dataset-tags-items-property-builder (new CfnDataset$TagsItemsProperty$Builder) id config))

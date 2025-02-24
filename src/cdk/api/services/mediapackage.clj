@@ -81,6 +81,12 @@
   (.build builder))
 
 
+(defn cfn-asset-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-asset-builder (CfnAsset$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-asset-egress-endpoint-property-builder
   "The build-cfn-asset-egress-endpoint-property-builder function updates a CfnAsset$EgressEndpointProperty$Builder instance using the provided configuration.
   The function takes the CfnAsset$EgressEndpointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -99,6 +105,12 @@
   (when-let [data (lookup-entry config id :url)]
     (. builder url data))
   (.build builder))
+
+
+(defn cfn-asset-egress-endpoint-property-builder
+  ""
+  [id config]
+  (build-cfn-asset-egress-endpoint-property-builder (new CfnAsset$EgressEndpointProperty$Builder) id config))
 
 
 (defn build-cfn-asset-props-builder
@@ -136,6 +148,12 @@
   (.build builder))
 
 
+(defn cfn-asset-props-builder
+  ""
+  [id config]
+  (build-cfn-asset-props-builder (new CfnAssetProps$Builder) id config))
+
+
 (defn build-cfn-channel-builder
   "The build-cfn-channel-builder function updates a CfnChannel$Builder instance using the provided configuration.
   The function takes the CfnChannel$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -168,6 +186,12 @@
   (.build builder))
 
 
+(defn cfn-channel-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-channel-builder (CfnChannel$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-channel-hls-ingest-property-builder
   "The build-cfn-channel-hls-ingest-property-builder function updates a CfnChannel$HlsIngestProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$HlsIngestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -183,6 +207,12 @@
   (when-let [data (lookup-entry config id :ingest-endpoints)]
     (. builder ingestEndpoints data))
   (.build builder))
+
+
+(defn cfn-channel-hls-ingest-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-hls-ingest-property-builder (new CfnChannel$HlsIngestProperty$Builder) id config))
 
 
 (defn build-cfn-channel-ingest-endpoint-property-builder
@@ -211,6 +241,12 @@
   (.build builder))
 
 
+(defn cfn-channel-ingest-endpoint-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-ingest-endpoint-property-builder (new CfnChannel$IngestEndpointProperty$Builder) id config))
+
+
 (defn build-cfn-channel-log-configuration-property-builder
   "The build-cfn-channel-log-configuration-property-builder function updates a CfnChannel$LogConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$LogConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -226,6 +262,12 @@
   (when-let [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
   (.build builder))
+
+
+(defn cfn-channel-log-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-log-configuration-property-builder (new CfnChannel$LogConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-channel-props-builder
@@ -260,6 +302,12 @@
   (.build builder))
 
 
+(defn cfn-channel-props-builder
+  ""
+  [id config]
+  (build-cfn-channel-props-builder (new CfnChannelProps$Builder) id config))
+
+
 (defn build-cfn-origin-endpoint-authorization-property-builder
   "The build-cfn-origin-endpoint-authorization-property-builder function updates a CfnOriginEndpoint$AuthorizationProperty$Builder instance using the provided configuration.
   The function takes the CfnOriginEndpoint$AuthorizationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -278,6 +326,12 @@
   (when-let [data (lookup-entry config id :secrets-role-arn)]
     (. builder secretsRoleArn data))
   (.build builder))
+
+
+(defn cfn-origin-endpoint-authorization-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-authorization-property-builder (new CfnOriginEndpoint$AuthorizationProperty$Builder) id config))
 
 
 (defn build-cfn-origin-endpoint-builder
@@ -336,6 +390,12 @@
   (.build builder))
 
 
+(defn cfn-origin-endpoint-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-origin-endpoint-builder (CfnOriginEndpoint$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-origin-endpoint-cmaf-encryption-property-builder
   "The build-cfn-origin-endpoint-cmaf-encryption-property-builder function updates a CfnOriginEndpoint$CmafEncryptionProperty$Builder instance using the provided configuration.
   The function takes the CfnOriginEndpoint$CmafEncryptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -360,6 +420,12 @@
   (when-let [data (lookup-entry config id :speke-key-provider)]
     (. builder spekeKeyProvider data))
   (.build builder))
+
+
+(defn cfn-origin-endpoint-cmaf-encryption-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-cmaf-encryption-property-builder (new CfnOriginEndpoint$CmafEncryptionProperty$Builder) id config))
 
 
 (defn build-cfn-origin-endpoint-cmaf-package-property-builder
@@ -391,6 +457,12 @@
   (.build builder))
 
 
+(defn cfn-origin-endpoint-cmaf-package-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-cmaf-package-property-builder (new CfnOriginEndpoint$CmafPackageProperty$Builder) id config))
+
+
 (defn build-cfn-origin-endpoint-dash-encryption-property-builder
   "The build-cfn-origin-endpoint-dash-encryption-property-builder function updates a CfnOriginEndpoint$DashEncryptionProperty$Builder instance using the provided configuration.
   The function takes the CfnOriginEndpoint$DashEncryptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -409,6 +481,12 @@
   (when-let [data (lookup-entry config id :speke-key-provider)]
     (. builder spekeKeyProvider data))
   (.build builder))
+
+
+(defn cfn-origin-endpoint-dash-encryption-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-dash-encryption-property-builder (new CfnOriginEndpoint$DashEncryptionProperty$Builder) id config))
 
 
 (defn build-cfn-origin-endpoint-dash-package-property-builder
@@ -473,6 +551,12 @@
   (.build builder))
 
 
+(defn cfn-origin-endpoint-dash-package-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-dash-package-property-builder (new CfnOriginEndpoint$DashPackageProperty$Builder) id config))
+
+
 (defn build-cfn-origin-endpoint-encryption-contract-configuration-property-builder
   "The build-cfn-origin-endpoint-encryption-contract-configuration-property-builder function updates a CfnOriginEndpoint$EncryptionContractConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnOriginEndpoint$EncryptionContractConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -491,6 +575,12 @@
   (when-let [data (lookup-entry config id :preset-speke20-video)]
     (. builder presetSpeke20Video data))
   (.build builder))
+
+
+(defn cfn-origin-endpoint-encryption-contract-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-encryption-contract-configuration-property-builder (new CfnOriginEndpoint$EncryptionContractConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-origin-endpoint-hls-encryption-property-builder
@@ -520,6 +610,12 @@
   (when-let [data (lookup-entry config id :speke-key-provider)]
     (. builder spekeKeyProvider data))
   (.build builder))
+
+
+(defn cfn-origin-endpoint-hls-encryption-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-hls-encryption-property-builder (new CfnOriginEndpoint$HlsEncryptionProperty$Builder) id config))
 
 
 (defn build-cfn-origin-endpoint-hls-manifest-property-builder
@@ -564,6 +660,12 @@
   (when-let [data (lookup-entry config id :url)]
     (. builder url data))
   (.build builder))
+
+
+(defn cfn-origin-endpoint-hls-manifest-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-hls-manifest-property-builder (new CfnOriginEndpoint$HlsManifestProperty$Builder) id config))
 
 
 (defn build-cfn-origin-endpoint-hls-package-property-builder
@@ -616,6 +718,12 @@
   (.build builder))
 
 
+(defn cfn-origin-endpoint-hls-package-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-hls-package-property-builder (new CfnOriginEndpoint$HlsPackageProperty$Builder) id config))
+
+
 (defn build-cfn-origin-endpoint-mss-encryption-property-builder
   "The build-cfn-origin-endpoint-mss-encryption-property-builder function updates a CfnOriginEndpoint$MssEncryptionProperty$Builder instance using the provided configuration.
   The function takes the CfnOriginEndpoint$MssEncryptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -631,6 +739,12 @@
   (when-let [data (lookup-entry config id :speke-key-provider)]
     (. builder spekeKeyProvider data))
   (.build builder))
+
+
+(defn cfn-origin-endpoint-mss-encryption-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-mss-encryption-property-builder (new CfnOriginEndpoint$MssEncryptionProperty$Builder) id config))
 
 
 (defn build-cfn-origin-endpoint-mss-package-property-builder
@@ -657,6 +771,12 @@
   (when-let [data (lookup-entry config id :stream-selection)]
     (. builder streamSelection data))
   (.build builder))
+
+
+(defn cfn-origin-endpoint-mss-package-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-mss-package-property-builder (new CfnOriginEndpoint$MssPackageProperty$Builder) id config))
 
 
 (defn build-cfn-origin-endpoint-props-builder
@@ -715,6 +835,12 @@
   (.build builder))
 
 
+(defn cfn-origin-endpoint-props-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-props-builder (new CfnOriginEndpointProps$Builder) id config))
+
+
 (defn build-cfn-origin-endpoint-speke-key-provider-property-builder
   "The build-cfn-origin-endpoint-speke-key-provider-property-builder function updates a CfnOriginEndpoint$SpekeKeyProviderProperty$Builder instance using the provided configuration.
   The function takes the CfnOriginEndpoint$SpekeKeyProviderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -747,6 +873,12 @@
   (.build builder))
 
 
+(defn cfn-origin-endpoint-speke-key-provider-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-speke-key-provider-property-builder (new CfnOriginEndpoint$SpekeKeyProviderProperty$Builder) id config))
+
+
 (defn build-cfn-origin-endpoint-stream-selection-property-builder
   "The build-cfn-origin-endpoint-stream-selection-property-builder function updates a CfnOriginEndpoint$StreamSelectionProperty$Builder instance using the provided configuration.
   The function takes the CfnOriginEndpoint$StreamSelectionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -768,6 +900,12 @@
   (when-let [data (lookup-entry config id :stream-order)]
     (. builder streamOrder data))
   (.build builder))
+
+
+(defn cfn-origin-endpoint-stream-selection-property-builder
+  ""
+  [id config]
+  (build-cfn-origin-endpoint-stream-selection-property-builder (new CfnOriginEndpoint$StreamSelectionProperty$Builder) id config))
 
 
 (defn build-cfn-packaging-configuration-builder
@@ -805,6 +943,12 @@
   (.build builder))
 
 
+(defn cfn-packaging-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-packaging-configuration-builder (CfnPackagingConfiguration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-packaging-configuration-cmaf-encryption-property-builder
   "The build-cfn-packaging-configuration-cmaf-encryption-property-builder function updates a CfnPackagingConfiguration$CmafEncryptionProperty$Builder instance using the provided configuration.
   The function takes the CfnPackagingConfiguration$CmafEncryptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -820,6 +964,12 @@
   (when-let [data (lookup-entry config id :speke-key-provider)]
     (. builder spekeKeyProvider data))
   (.build builder))
+
+
+(defn cfn-packaging-configuration-cmaf-encryption-property-builder
+  ""
+  [id config]
+  (build-cfn-packaging-configuration-cmaf-encryption-property-builder (new CfnPackagingConfiguration$CmafEncryptionProperty$Builder) id config))
 
 
 (defn build-cfn-packaging-configuration-cmaf-package-property-builder
@@ -848,6 +998,12 @@
   (.build builder))
 
 
+(defn cfn-packaging-configuration-cmaf-package-property-builder
+  ""
+  [id config]
+  (build-cfn-packaging-configuration-cmaf-package-property-builder (new CfnPackagingConfiguration$CmafPackageProperty$Builder) id config))
+
+
 (defn build-cfn-packaging-configuration-dash-encryption-property-builder
   "The build-cfn-packaging-configuration-dash-encryption-property-builder function updates a CfnPackagingConfiguration$DashEncryptionProperty$Builder instance using the provided configuration.
   The function takes the CfnPackagingConfiguration$DashEncryptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -863,6 +1019,12 @@
   (when-let [data (lookup-entry config id :speke-key-provider)]
     (. builder spekeKeyProvider data))
   (.build builder))
+
+
+(defn cfn-packaging-configuration-dash-encryption-property-builder
+  ""
+  [id config]
+  (build-cfn-packaging-configuration-dash-encryption-property-builder (new CfnPackagingConfiguration$DashEncryptionProperty$Builder) id config))
 
 
 (defn build-cfn-packaging-configuration-dash-manifest-property-builder
@@ -895,6 +1057,12 @@
   (when-let [data (lookup-entry config id :stream-selection)]
     (. builder streamSelection data))
   (.build builder))
+
+
+(defn cfn-packaging-configuration-dash-manifest-property-builder
+  ""
+  [id config]
+  (build-cfn-packaging-configuration-dash-manifest-property-builder (new CfnPackagingConfiguration$DashManifestProperty$Builder) id config))
 
 
 (defn build-cfn-packaging-configuration-dash-package-property-builder
@@ -932,6 +1100,12 @@
   (.build builder))
 
 
+(defn cfn-packaging-configuration-dash-package-property-builder
+  ""
+  [id config]
+  (build-cfn-packaging-configuration-dash-package-property-builder (new CfnPackagingConfiguration$DashPackageProperty$Builder) id config))
+
+
 (defn build-cfn-packaging-configuration-encryption-contract-configuration-property-builder
   "The build-cfn-packaging-configuration-encryption-contract-configuration-property-builder function updates a CfnPackagingConfiguration$EncryptionContractConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnPackagingConfiguration$EncryptionContractConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -950,6 +1124,12 @@
   (when-let [data (lookup-entry config id :preset-speke20-video)]
     (. builder presetSpeke20Video data))
   (.build builder))
+
+
+(defn cfn-packaging-configuration-encryption-contract-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-packaging-configuration-encryption-contract-configuration-property-builder (new CfnPackagingConfiguration$EncryptionContractConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-packaging-configuration-hls-encryption-property-builder
@@ -973,6 +1153,12 @@
   (when-let [data (lookup-entry config id :speke-key-provider)]
     (. builder spekeKeyProvider data))
   (.build builder))
+
+
+(defn cfn-packaging-configuration-hls-encryption-property-builder
+  ""
+  [id config]
+  (build-cfn-packaging-configuration-hls-encryption-property-builder (new CfnPackagingConfiguration$HlsEncryptionProperty$Builder) id config))
 
 
 (defn build-cfn-packaging-configuration-hls-manifest-property-builder
@@ -1007,6 +1193,12 @@
   (.build builder))
 
 
+(defn cfn-packaging-configuration-hls-manifest-property-builder
+  ""
+  [id config]
+  (build-cfn-packaging-configuration-hls-manifest-property-builder (new CfnPackagingConfiguration$HlsManifestProperty$Builder) id config))
+
+
 (defn build-cfn-packaging-configuration-hls-package-property-builder
   "The build-cfn-packaging-configuration-hls-package-property-builder function updates a CfnPackagingConfiguration$HlsPackageProperty$Builder instance using the provided configuration.
   The function takes the CfnPackagingConfiguration$HlsPackageProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1036,6 +1228,12 @@
   (.build builder))
 
 
+(defn cfn-packaging-configuration-hls-package-property-builder
+  ""
+  [id config]
+  (build-cfn-packaging-configuration-hls-package-property-builder (new CfnPackagingConfiguration$HlsPackageProperty$Builder) id config))
+
+
 (defn build-cfn-packaging-configuration-mss-encryption-property-builder
   "The build-cfn-packaging-configuration-mss-encryption-property-builder function updates a CfnPackagingConfiguration$MssEncryptionProperty$Builder instance using the provided configuration.
   The function takes the CfnPackagingConfiguration$MssEncryptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1051,6 +1249,12 @@
   (when-let [data (lookup-entry config id :speke-key-provider)]
     (. builder spekeKeyProvider data))
   (.build builder))
+
+
+(defn cfn-packaging-configuration-mss-encryption-property-builder
+  ""
+  [id config]
+  (build-cfn-packaging-configuration-mss-encryption-property-builder (new CfnPackagingConfiguration$MssEncryptionProperty$Builder) id config))
 
 
 (defn build-cfn-packaging-configuration-mss-manifest-property-builder
@@ -1071,6 +1275,12 @@
   (when-let [data (lookup-entry config id :stream-selection)]
     (. builder streamSelection data))
   (.build builder))
+
+
+(defn cfn-packaging-configuration-mss-manifest-property-builder
+  ""
+  [id config]
+  (build-cfn-packaging-configuration-mss-manifest-property-builder (new CfnPackagingConfiguration$MssManifestProperty$Builder) id config))
 
 
 (defn build-cfn-packaging-configuration-mss-package-property-builder
@@ -1094,6 +1304,12 @@
   (when-let [data (lookup-entry config id :segment-duration-seconds)]
     (. builder segmentDurationSeconds data))
   (.build builder))
+
+
+(defn cfn-packaging-configuration-mss-package-property-builder
+  ""
+  [id config]
+  (build-cfn-packaging-configuration-mss-package-property-builder (new CfnPackagingConfiguration$MssPackageProperty$Builder) id config))
 
 
 (defn build-cfn-packaging-configuration-props-builder
@@ -1131,6 +1347,12 @@
   (.build builder))
 
 
+(defn cfn-packaging-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-packaging-configuration-props-builder (new CfnPackagingConfigurationProps$Builder) id config))
+
+
 (defn build-cfn-packaging-configuration-speke-key-provider-property-builder
   "The build-cfn-packaging-configuration-speke-key-provider-property-builder function updates a CfnPackagingConfiguration$SpekeKeyProviderProperty$Builder instance using the provided configuration.
   The function takes the CfnPackagingConfiguration$SpekeKeyProviderProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1157,6 +1379,12 @@
   (.build builder))
 
 
+(defn cfn-packaging-configuration-speke-key-provider-property-builder
+  ""
+  [id config]
+  (build-cfn-packaging-configuration-speke-key-provider-property-builder (new CfnPackagingConfiguration$SpekeKeyProviderProperty$Builder) id config))
+
+
 (defn build-cfn-packaging-configuration-stream-selection-property-builder
   "The build-cfn-packaging-configuration-stream-selection-property-builder function updates a CfnPackagingConfiguration$StreamSelectionProperty$Builder instance using the provided configuration.
   The function takes the CfnPackagingConfiguration$StreamSelectionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1180,6 +1408,12 @@
   (.build builder))
 
 
+(defn cfn-packaging-configuration-stream-selection-property-builder
+  ""
+  [id config]
+  (build-cfn-packaging-configuration-stream-selection-property-builder (new CfnPackagingConfiguration$StreamSelectionProperty$Builder) id config))
+
+
 (defn build-cfn-packaging-group-authorization-property-builder
   "The build-cfn-packaging-group-authorization-property-builder function updates a CfnPackagingGroup$AuthorizationProperty$Builder instance using the provided configuration.
   The function takes the CfnPackagingGroup$AuthorizationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1198,6 +1432,12 @@
   (when-let [data (lookup-entry config id :secrets-role-arn)]
     (. builder secretsRoleArn data))
   (.build builder))
+
+
+(defn cfn-packaging-group-authorization-property-builder
+  ""
+  [id config]
+  (build-cfn-packaging-group-authorization-property-builder (new CfnPackagingGroup$AuthorizationProperty$Builder) id config))
 
 
 (defn build-cfn-packaging-group-builder
@@ -1226,6 +1466,12 @@
   (.build builder))
 
 
+(defn cfn-packaging-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-packaging-group-builder (CfnPackagingGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-packaging-group-log-configuration-property-builder
   "The build-cfn-packaging-group-log-configuration-property-builder function updates a CfnPackagingGroup$LogConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnPackagingGroup$LogConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1241,6 +1487,12 @@
   (when-let [data (lookup-entry config id :log-group-name)]
     (. builder logGroupName data))
   (.build builder))
+
+
+(defn cfn-packaging-group-log-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-packaging-group-log-configuration-property-builder (new CfnPackagingGroup$LogConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-packaging-group-props-builder
@@ -1267,3 +1519,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-packaging-group-props-builder
+  ""
+  [id config]
+  (build-cfn-packaging-group-props-builder (new CfnPackagingGroupProps$Builder) id config))

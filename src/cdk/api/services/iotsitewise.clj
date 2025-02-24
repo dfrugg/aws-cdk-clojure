@@ -66,6 +66,12 @@
   (.build builder))
 
 
+(defn cfn-access-policy-access-policy-identity-property-builder
+  ""
+  [id config]
+  (build-cfn-access-policy-access-policy-identity-property-builder (new CfnAccessPolicy$AccessPolicyIdentityProperty$Builder) id config))
+
+
 (defn build-cfn-access-policy-access-policy-resource-property-builder
   "The build-cfn-access-policy-access-policy-resource-property-builder function updates a CfnAccessPolicy$AccessPolicyResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPolicy$AccessPolicyResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -84,6 +90,12 @@
   (when-let [data (lookup-entry config id :project)]
     (. builder project data))
   (.build builder))
+
+
+(defn cfn-access-policy-access-policy-resource-property-builder
+  ""
+  [id config]
+  (build-cfn-access-policy-access-policy-resource-property-builder (new CfnAccessPolicy$AccessPolicyResourceProperty$Builder) id config))
 
 
 (defn build-cfn-access-policy-builder
@@ -109,6 +121,12 @@
   (.build builder))
 
 
+(defn cfn-access-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-access-policy-builder (CfnAccessPolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-access-policy-iam-role-property-builder
   "The build-cfn-access-policy-iam-role-property-builder function updates a CfnAccessPolicy$IamRoleProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPolicy$IamRoleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -124,6 +142,12 @@
   (when-let [data (lookup-entry config id :arn)]
     (. builder arn data))
   (.build builder))
+
+
+(defn cfn-access-policy-iam-role-property-builder
+  ""
+  [id config]
+  (build-cfn-access-policy-iam-role-property-builder (new CfnAccessPolicy$IamRoleProperty$Builder) id config))
 
 
 (defn build-cfn-access-policy-iam-user-property-builder
@@ -143,6 +167,12 @@
   (.build builder))
 
 
+(defn cfn-access-policy-iam-user-property-builder
+  ""
+  [id config]
+  (build-cfn-access-policy-iam-user-property-builder (new CfnAccessPolicy$IamUserProperty$Builder) id config))
+
+
 (defn build-cfn-access-policy-portal-property-builder
   "The build-cfn-access-policy-portal-property-builder function updates a CfnAccessPolicy$PortalProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPolicy$PortalProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -160,6 +190,12 @@
   (.build builder))
 
 
+(defn cfn-access-policy-portal-property-builder
+  ""
+  [id config]
+  (build-cfn-access-policy-portal-property-builder (new CfnAccessPolicy$PortalProperty$Builder) id config))
+
+
 (defn build-cfn-access-policy-project-property-builder
   "The build-cfn-access-policy-project-property-builder function updates a CfnAccessPolicy$ProjectProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPolicy$ProjectProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -175,6 +211,12 @@
   (when-let [data (lookup-entry config id :id)]
     (. builder id data))
   (.build builder))
+
+
+(defn cfn-access-policy-project-property-builder
+  ""
+  [id config]
+  (build-cfn-access-policy-project-property-builder (new CfnAccessPolicy$ProjectProperty$Builder) id config))
 
 
 (defn build-cfn-access-policy-props-builder
@@ -200,6 +242,12 @@
   (.build builder))
 
 
+(defn cfn-access-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-access-policy-props-builder (new CfnAccessPolicyProps$Builder) id config))
+
+
 (defn build-cfn-access-policy-user-property-builder
   "The build-cfn-access-policy-user-property-builder function updates a CfnAccessPolicy$UserProperty$Builder instance using the provided configuration.
   The function takes the CfnAccessPolicy$UserProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -215,6 +263,12 @@
   (when-let [data (lookup-entry config id :id)]
     (. builder id data))
   (.build builder))
+
+
+(defn cfn-access-policy-user-property-builder
+  ""
+  [id config]
+  (build-cfn-access-policy-user-property-builder (new CfnAccessPolicy$UserProperty$Builder) id config))
 
 
 (defn build-cfn-asset-asset-hierarchy-property-builder
@@ -241,6 +295,12 @@
   (when-let [data (lookup-entry config id :logical-id)]
     (. builder logicalId data))
   (.build builder))
+
+
+(defn cfn-asset-asset-hierarchy-property-builder
+  ""
+  [id config]
+  (build-cfn-asset-asset-hierarchy-property-builder (new CfnAsset$AssetHierarchyProperty$Builder) id config))
 
 
 (defn build-cfn-asset-asset-property-property-builder
@@ -273,6 +333,12 @@
   (when-let [data (lookup-entry config id :unit)]
     (. builder unit data))
   (.build builder))
+
+
+(defn cfn-asset-asset-property-property-builder
+  ""
+  [id config]
+  (build-cfn-asset-asset-property-property-builder (new CfnAsset$AssetPropertyProperty$Builder) id config))
 
 
 (defn build-cfn-asset-builder
@@ -308,6 +374,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-asset-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-asset-builder (CfnAsset$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-asset-model-asset-model-composite-model-property-builder
@@ -351,6 +423,12 @@
   (.build builder))
 
 
+(defn cfn-asset-model-asset-model-composite-model-property-builder
+  ""
+  [id config]
+  (build-cfn-asset-model-asset-model-composite-model-property-builder (new CfnAssetModel$AssetModelCompositeModelProperty$Builder) id config))
+
+
 (defn build-cfn-asset-model-asset-model-hierarchy-property-builder
   "The build-cfn-asset-model-asset-model-hierarchy-property-builder function updates a CfnAssetModel$AssetModelHierarchyProperty$Builder instance using the provided configuration.
   The function takes the CfnAssetModel$AssetModelHierarchyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -378,6 +456,12 @@
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-asset-model-asset-model-hierarchy-property-builder
+  ""
+  [id config]
+  (build-cfn-asset-model-asset-model-hierarchy-property-builder (new CfnAssetModel$AssetModelHierarchyProperty$Builder) id config))
 
 
 (defn build-cfn-asset-model-asset-model-property-property-builder
@@ -418,6 +502,12 @@
   (.build builder))
 
 
+(defn cfn-asset-model-asset-model-property-property-builder
+  ""
+  [id config]
+  (build-cfn-asset-model-asset-model-property-property-builder (new CfnAssetModel$AssetModelPropertyProperty$Builder) id config))
+
+
 (defn build-cfn-asset-model-attribute-property-builder
   "The build-cfn-asset-model-attribute-property-builder function updates a CfnAssetModel$AttributeProperty$Builder instance using the provided configuration.
   The function takes the CfnAssetModel$AttributeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -433,6 +523,12 @@
   (when-let [data (lookup-entry config id :default-value)]
     (. builder defaultValue data))
   (.build builder))
+
+
+(defn cfn-asset-model-attribute-property-builder
+  ""
+  [id config]
+  (build-cfn-asset-model-attribute-property-builder (new CfnAssetModel$AttributeProperty$Builder) id config))
 
 
 (defn build-cfn-asset-model-builder
@@ -473,6 +569,12 @@
   (.build builder))
 
 
+(defn cfn-asset-model-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-asset-model-builder (CfnAssetModel$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-asset-model-expression-variable-property-builder
   "The build-cfn-asset-model-expression-variable-property-builder function updates a CfnAssetModel$ExpressionVariableProperty$Builder instance using the provided configuration.
   The function takes the CfnAssetModel$ExpressionVariableProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -491,6 +593,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-asset-model-expression-variable-property-builder
+  ""
+  [id config]
+  (build-cfn-asset-model-expression-variable-property-builder (new CfnAssetModel$ExpressionVariableProperty$Builder) id config))
 
 
 (defn build-cfn-asset-model-metric-property-builder
@@ -516,6 +624,12 @@
   (.build builder))
 
 
+(defn cfn-asset-model-metric-property-builder
+  ""
+  [id config]
+  (build-cfn-asset-model-metric-property-builder (new CfnAssetModel$MetricProperty$Builder) id config))
+
+
 (defn build-cfn-asset-model-metric-window-property-builder
   "The build-cfn-asset-model-metric-window-property-builder function updates a CfnAssetModel$MetricWindowProperty$Builder instance using the provided configuration.
   The function takes the CfnAssetModel$MetricWindowProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -533,6 +647,12 @@
   (.build builder))
 
 
+(defn cfn-asset-model-metric-window-property-builder
+  ""
+  [id config]
+  (build-cfn-asset-model-metric-window-property-builder (new CfnAssetModel$MetricWindowProperty$Builder) id config))
+
+
 (defn build-cfn-asset-model-property-path-definition-property-builder
   "The build-cfn-asset-model-property-path-definition-property-builder function updates a CfnAssetModel$PropertyPathDefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnAssetModel$PropertyPathDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -548,6 +668,12 @@
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-asset-model-property-path-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-asset-model-property-path-definition-property-builder (new CfnAssetModel$PropertyPathDefinitionProperty$Builder) id config))
 
 
 (defn build-cfn-asset-model-property-type-property-builder
@@ -574,6 +700,12 @@
   (when-let [data (lookup-entry config id :type-name)]
     (. builder typeName data))
   (.build builder))
+
+
+(defn cfn-asset-model-property-type-property-builder
+  ""
+  [id config]
+  (build-cfn-asset-model-property-type-property-builder (new CfnAssetModel$PropertyTypeProperty$Builder) id config))
 
 
 (defn build-cfn-asset-model-props-builder
@@ -614,6 +746,12 @@
   (.build builder))
 
 
+(defn cfn-asset-model-props-builder
+  ""
+  [id config]
+  (build-cfn-asset-model-props-builder (new CfnAssetModelProps$Builder) id config))
+
+
 (defn build-cfn-asset-model-transform-property-builder
   "The build-cfn-asset-model-transform-property-builder function updates a CfnAssetModel$TransformProperty$Builder instance using the provided configuration.
   The function takes the CfnAssetModel$TransformProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -634,6 +772,12 @@
   (.build builder))
 
 
+(defn cfn-asset-model-transform-property-builder
+  ""
+  [id config]
+  (build-cfn-asset-model-transform-property-builder (new CfnAssetModel$TransformProperty$Builder) id config))
+
+
 (defn build-cfn-asset-model-tumbling-window-property-builder
   "The build-cfn-asset-model-tumbling-window-property-builder function updates a CfnAssetModel$TumblingWindowProperty$Builder instance using the provided configuration.
   The function takes the CfnAssetModel$TumblingWindowProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -652,6 +796,12 @@
   (when-let [data (lookup-entry config id :offset)]
     (. builder offset data))
   (.build builder))
+
+
+(defn cfn-asset-model-tumbling-window-property-builder
+  ""
+  [id config]
+  (build-cfn-asset-model-tumbling-window-property-builder (new CfnAssetModel$TumblingWindowProperty$Builder) id config))
 
 
 (defn build-cfn-asset-model-variable-value-property-builder
@@ -689,6 +839,12 @@
   (.build builder))
 
 
+(defn cfn-asset-model-variable-value-property-builder
+  ""
+  [id config]
+  (build-cfn-asset-model-variable-value-property-builder (new CfnAssetModel$VariableValueProperty$Builder) id config))
+
+
 (defn build-cfn-asset-props-builder
   "The build-cfn-asset-props-builder function updates a CfnAssetProps$Builder instance using the provided configuration.
   The function takes the CfnAssetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -724,6 +880,12 @@
   (.build builder))
 
 
+(defn cfn-asset-props-builder
+  ""
+  [id config]
+  (build-cfn-asset-props-builder (new CfnAssetProps$Builder) id config))
+
+
 (defn build-cfn-dashboard-builder
   "The build-cfn-dashboard-builder function updates a CfnDashboard$Builder instance using the provided configuration.
   The function takes the CfnDashboard$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -751,6 +913,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-dashboard-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-dashboard-builder (CfnDashboard$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-dashboard-props-builder
@@ -782,6 +950,12 @@
   (.build builder))
 
 
+(defn cfn-dashboard-props-builder
+  ""
+  [id config]
+  (build-cfn-dashboard-props-builder (new CfnDashboardProps$Builder) id config))
+
+
 (defn build-cfn-gateway-builder
   "The build-cfn-gateway-builder function updates a CfnGateway$Builder instance using the provided configuration.
   The function takes the CfnGateway$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -808,6 +982,12 @@
   (.build builder))
 
 
+(defn cfn-gateway-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-gateway-builder (CfnGateway$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-gateway-gateway-capability-summary-property-builder
   "The build-cfn-gateway-gateway-capability-summary-property-builder function updates a CfnGateway$GatewayCapabilitySummaryProperty$Builder instance using the provided configuration.
   The function takes the CfnGateway$GatewayCapabilitySummaryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -826,6 +1006,12 @@
   (when-let [data (lookup-entry config id :capability-namespace)]
     (. builder capabilityNamespace data))
   (.build builder))
+
+
+(defn cfn-gateway-gateway-capability-summary-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-gateway-capability-summary-property-builder (new CfnGateway$GatewayCapabilitySummaryProperty$Builder) id config))
 
 
 (defn build-cfn-gateway-gateway-platform-property-builder
@@ -848,6 +1034,12 @@
   (.build builder))
 
 
+(defn cfn-gateway-gateway-platform-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-gateway-platform-property-builder (new CfnGateway$GatewayPlatformProperty$Builder) id config))
+
+
 (defn build-cfn-gateway-greengrass-property-builder
   "The build-cfn-gateway-greengrass-property-builder function updates a CfnGateway$GreengrassProperty$Builder instance using the provided configuration.
   The function takes the CfnGateway$GreengrassProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -865,6 +1057,12 @@
   (.build builder))
 
 
+(defn cfn-gateway-greengrass-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-greengrass-property-builder (new CfnGateway$GreengrassProperty$Builder) id config))
+
+
 (defn build-cfn-gateway-greengrass-v2-property-builder
   "The build-cfn-gateway-greengrass-v2-property-builder function updates a CfnGateway$GreengrassV2Property$Builder instance using the provided configuration.
   The function takes the CfnGateway$GreengrassV2Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -880,6 +1078,12 @@
   (when-let [data (lookup-entry config id :core-device-thing-name)]
     (. builder coreDeviceThingName data))
   (.build builder))
+
+
+(defn cfn-gateway-greengrass-v2-property-builder
+  ""
+  [id config]
+  (build-cfn-gateway-greengrass-v2-property-builder (new CfnGateway$GreengrassV2Property$Builder) id config))
 
 
 (defn build-cfn-gateway-props-builder
@@ -908,6 +1112,12 @@
   (.build builder))
 
 
+(defn cfn-gateway-props-builder
+  ""
+  [id config]
+  (build-cfn-gateway-props-builder (new CfnGatewayProps$Builder) id config))
+
+
 (defn build-cfn-portal-alarms-property-builder
   "The build-cfn-portal-alarms-property-builder function updates a CfnPortal$AlarmsProperty$Builder instance using the provided configuration.
   The function takes the CfnPortal$AlarmsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -926,6 +1136,12 @@
   (when-let [data (lookup-entry config id :notification-lambda-arn)]
     (. builder notificationLambdaArn data))
   (.build builder))
+
+
+(defn cfn-portal-alarms-property-builder
+  ""
+  [id config]
+  (build-cfn-portal-alarms-property-builder (new CfnPortal$AlarmsProperty$Builder) id config))
 
 
 (defn build-cfn-portal-builder
@@ -966,6 +1182,12 @@
   (.build builder))
 
 
+(defn cfn-portal-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-portal-builder (CfnPortal$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-portal-props-builder
   "The build-cfn-portal-props-builder function updates a CfnPortalProps$Builder instance using the provided configuration.
   The function takes the CfnPortalProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1004,6 +1226,12 @@
   (.build builder))
 
 
+(defn cfn-portal-props-builder
+  ""
+  [id config]
+  (build-cfn-portal-props-builder (new CfnPortalProps$Builder) id config))
+
+
 (defn build-cfn-project-builder
   "The build-cfn-project-builder function updates a CfnProject$Builder instance using the provided configuration.
   The function takes the CfnProject$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1033,6 +1261,12 @@
   (.build builder))
 
 
+(defn cfn-project-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-project-builder (CfnProject$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-project-props-builder
   "The build-cfn-project-props-builder function updates a CfnProjectProps$Builder instance using the provided configuration.
   The function takes the CfnProjectProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1060,3 +1294,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-project-props-builder
+  ""
+  [id config]
+  (build-cfn-project-props-builder (new CfnProjectProps$Builder) id config))

@@ -309,6 +309,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn attribute-builder
+  ""
+  [id config]
+  (build-attribute-builder (new Attribute$Builder) id config))
+
+
 (defn build-autoscaled-capacity-options-builder
   "The build-autoscaled-capacity-options-builder function updates a AutoscaledCapacityOptions$Builder instance using the provided configuration.
   The function takes the AutoscaledCapacityOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -335,6 +341,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn autoscaled-capacity-options-builder
+  ""
+  [id config]
+  (build-autoscaled-capacity-options-builder (new AutoscaledCapacityOptions$Builder) id config))
+
+
 (defn build-cfn-global-table-attribute-definition-property-builder
   "The build-cfn-global-table-attribute-definition-property-builder function updates a CfnGlobalTable$AttributeDefinitionProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$AttributeDefinitionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -353,6 +365,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :attribute-type)]
     (. builder attributeType data))
   (.build builder))
+
+
+(defn cfn-global-table-attribute-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-attribute-definition-property-builder (new CfnGlobalTable$AttributeDefinitionProperty$Builder) id config))
 
 
 (defn build-cfn-global-table-builder
@@ -405,6 +423,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-global-table-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-global-table-builder (CfnGlobalTable$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-global-table-capacity-auto-scaling-settings-property-builder
   "The build-cfn-global-table-capacity-auto-scaling-settings-property-builder function updates a CfnGlobalTable$CapacityAutoScalingSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$CapacityAutoScalingSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -431,6 +455,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-global-table-capacity-auto-scaling-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-capacity-auto-scaling-settings-property-builder (new CfnGlobalTable$CapacityAutoScalingSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-global-table-contributor-insights-specification-property-builder
   "The build-cfn-global-table-contributor-insights-specification-property-builder function updates a CfnGlobalTable$ContributorInsightsSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$ContributorInsightsSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -446,6 +476,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
+
+
+(defn cfn-global-table-contributor-insights-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-contributor-insights-specification-property-builder (new CfnGlobalTable$ContributorInsightsSpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-global-table-global-secondary-index-property-builder
@@ -477,6 +513,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-global-table-global-secondary-index-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-global-secondary-index-property-builder (new CfnGlobalTable$GlobalSecondaryIndexProperty$Builder) id config))
+
+
 (defn build-cfn-global-table-key-schema-property-builder
   "The build-cfn-global-table-key-schema-property-builder function updates a CfnGlobalTable$KeySchemaProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$KeySchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -497,6 +539,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-global-table-key-schema-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-key-schema-property-builder (new CfnGlobalTable$KeySchemaProperty$Builder) id config))
+
+
 (defn build-cfn-global-table-kinesis-stream-specification-property-builder
   "The build-cfn-global-table-kinesis-stream-specification-property-builder function updates a CfnGlobalTable$KinesisStreamSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$KinesisStreamSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -515,6 +563,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :stream-arn)]
     (. builder streamArn data))
   (.build builder))
+
+
+(defn cfn-global-table-kinesis-stream-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-kinesis-stream-specification-property-builder (new CfnGlobalTable$KinesisStreamSpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-global-table-local-secondary-index-property-builder
@@ -540,6 +594,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-global-table-local-secondary-index-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-local-secondary-index-property-builder (new CfnGlobalTable$LocalSecondaryIndexProperty$Builder) id config))
+
+
 (defn build-cfn-global-table-point-in-time-recovery-specification-property-builder
   "The build-cfn-global-table-point-in-time-recovery-specification-property-builder function updates a CfnGlobalTable$PointInTimeRecoverySpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$PointInTimeRecoverySpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -555,6 +615,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :point-in-time-recovery-enabled)]
     (. builder pointInTimeRecoveryEnabled data))
   (.build builder))
+
+
+(defn cfn-global-table-point-in-time-recovery-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-point-in-time-recovery-specification-property-builder (new CfnGlobalTable$PointInTimeRecoverySpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-global-table-projection-property-builder
@@ -575,6 +641,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :projection-type)]
     (. builder projectionType data))
   (.build builder))
+
+
+(defn cfn-global-table-projection-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-projection-property-builder (new CfnGlobalTable$ProjectionProperty$Builder) id config))
 
 
 (defn build-cfn-global-table-props-builder
@@ -627,6 +699,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-global-table-props-builder
+  ""
+  [id config]
+  (build-cfn-global-table-props-builder (new CfnGlobalTableProps$Builder) id config))
+
+
 (defn build-cfn-global-table-read-on-demand-throughput-settings-property-builder
   "The build-cfn-global-table-read-on-demand-throughput-settings-property-builder function updates a CfnGlobalTable$ReadOnDemandThroughputSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$ReadOnDemandThroughputSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -642,6 +720,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :max-read-request-units)]
     (. builder maxReadRequestUnits data))
   (.build builder))
+
+
+(defn cfn-global-table-read-on-demand-throughput-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-read-on-demand-throughput-settings-property-builder (new CfnGlobalTable$ReadOnDemandThroughputSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-global-table-read-provisioned-throughput-settings-property-builder
@@ -662,6 +746,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :read-capacity-units)]
     (. builder readCapacityUnits data))
   (.build builder))
+
+
+(defn cfn-global-table-read-provisioned-throughput-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-read-provisioned-throughput-settings-property-builder (new CfnGlobalTable$ReadProvisionedThroughputSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-global-table-replica-global-secondary-index-specification-property-builder
@@ -688,6 +778,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :read-provisioned-throughput-settings)]
     (. builder readProvisionedThroughputSettings data))
   (.build builder))
+
+
+(defn cfn-global-table-replica-global-secondary-index-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-replica-global-secondary-index-specification-property-builder (new CfnGlobalTable$ReplicaGlobalSecondaryIndexSpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-global-table-replica-specification-property-builder
@@ -743,6 +839,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-global-table-replica-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-replica-specification-property-builder (new CfnGlobalTable$ReplicaSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-global-table-replica-sse-specification-property-builder
   "The build-cfn-global-table-replica-sse-specification-property-builder function updates a CfnGlobalTable$ReplicaSSESpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$ReplicaSSESpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -758,6 +860,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :kms-master-key-id)]
     (. builder kmsMasterKeyId data))
   (.build builder))
+
+
+(defn cfn-global-table-replica-sse-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-replica-sse-specification-property-builder (new CfnGlobalTable$ReplicaSSESpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-global-table-replica-stream-specification-property-builder
@@ -777,6 +885,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-global-table-replica-stream-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-replica-stream-specification-property-builder (new CfnGlobalTable$ReplicaStreamSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-global-table-resource-policy-property-builder
   "The build-cfn-global-table-resource-policy-property-builder function updates a CfnGlobalTable$ResourcePolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$ResourcePolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -792,6 +906,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
   (.build builder))
+
+
+(defn cfn-global-table-resource-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-resource-policy-property-builder (new CfnGlobalTable$ResourcePolicyProperty$Builder) id config))
 
 
 (defn build-cfn-global-table-sse-specification-property-builder
@@ -814,6 +934,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-global-table-sse-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-sse-specification-property-builder (new CfnGlobalTable$SSESpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-global-table-stream-specification-property-builder
   "The build-cfn-global-table-stream-specification-property-builder function updates a CfnGlobalTable$StreamSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$StreamSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -829,6 +955,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :stream-view-type)]
     (. builder streamViewType data))
   (.build builder))
+
+
+(defn cfn-global-table-stream-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-stream-specification-property-builder (new CfnGlobalTable$StreamSpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-global-table-target-tracking-scaling-policy-configuration-property-builder
@@ -857,6 +989,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-global-table-target-tracking-scaling-policy-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-target-tracking-scaling-policy-configuration-property-builder (new CfnGlobalTable$TargetTrackingScalingPolicyConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-global-table-time-to-live-specification-property-builder
   "The build-cfn-global-table-time-to-live-specification-property-builder function updates a CfnGlobalTable$TimeToLiveSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$TimeToLiveSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -877,6 +1015,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-global-table-time-to-live-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-time-to-live-specification-property-builder (new CfnGlobalTable$TimeToLiveSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-global-table-write-on-demand-throughput-settings-property-builder
   "The build-cfn-global-table-write-on-demand-throughput-settings-property-builder function updates a CfnGlobalTable$WriteOnDemandThroughputSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$WriteOnDemandThroughputSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -894,6 +1038,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-global-table-write-on-demand-throughput-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-write-on-demand-throughput-settings-property-builder (new CfnGlobalTable$WriteOnDemandThroughputSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-global-table-write-provisioned-throughput-settings-property-builder
   "The build-cfn-global-table-write-provisioned-throughput-settings-property-builder function updates a CfnGlobalTable$WriteProvisionedThroughputSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnGlobalTable$WriteProvisionedThroughputSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -909,6 +1059,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :write-capacity-auto-scaling-settings)]
     (. builder writeCapacityAutoScalingSettings data))
   (.build builder))
+
+
+(defn cfn-global-table-write-provisioned-throughput-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-global-table-write-provisioned-throughput-settings-property-builder (new CfnGlobalTable$WriteProvisionedThroughputSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-table-attribute-definition-property-builder
@@ -929,6 +1085,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :attribute-type)]
     (. builder attributeType data))
   (.build builder))
+
+
+(defn cfn-table-attribute-definition-property-builder
+  ""
+  [id config]
+  (build-cfn-table-attribute-definition-property-builder (new CfnTable$AttributeDefinitionProperty$Builder) id config))
 
 
 (defn build-cfn-table-builder
@@ -1002,6 +1164,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-table-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-table-builder (CfnTable$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-table-contributor-insights-specification-property-builder
   "The build-cfn-table-contributor-insights-specification-property-builder function updates a CfnTable$ContributorInsightsSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$ContributorInsightsSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1017,6 +1185,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
+
+
+(defn cfn-table-contributor-insights-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-table-contributor-insights-specification-property-builder (new CfnTable$ContributorInsightsSpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-table-csv-property-builder
@@ -1037,6 +1211,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :header-list)]
     (. builder headerList data))
   (.build builder))
+
+
+(defn cfn-table-csv-property-builder
+  ""
+  [id config]
+  (build-cfn-table-csv-property-builder (new CfnTable$CsvProperty$Builder) id config))
 
 
 (defn build-cfn-table-global-secondary-index-property-builder
@@ -1071,6 +1251,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-table-global-secondary-index-property-builder
+  ""
+  [id config]
+  (build-cfn-table-global-secondary-index-property-builder (new CfnTable$GlobalSecondaryIndexProperty$Builder) id config))
+
+
 (defn build-cfn-table-import-source-specification-property-builder
   "The build-cfn-table-import-source-specification-property-builder function updates a CfnTable$ImportSourceSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$ImportSourceSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1097,6 +1283,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-table-import-source-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-table-import-source-specification-property-builder (new CfnTable$ImportSourceSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-table-input-format-options-property-builder
   "The build-cfn-table-input-format-options-property-builder function updates a CfnTable$InputFormatOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$InputFormatOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1112,6 +1304,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :csv)]
     (. builder csv data))
   (.build builder))
+
+
+(defn cfn-table-input-format-options-property-builder
+  ""
+  [id config]
+  (build-cfn-table-input-format-options-property-builder (new CfnTable$InputFormatOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-table-key-schema-property-builder
@@ -1134,6 +1332,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-table-key-schema-property-builder
+  ""
+  [id config]
+  (build-cfn-table-key-schema-property-builder (new CfnTable$KeySchemaProperty$Builder) id config))
+
+
 (defn build-cfn-table-kinesis-stream-specification-property-builder
   "The build-cfn-table-kinesis-stream-specification-property-builder function updates a CfnTable$KinesisStreamSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$KinesisStreamSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1152,6 +1356,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :stream-arn)]
     (. builder streamArn data))
   (.build builder))
+
+
+(defn cfn-table-kinesis-stream-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-table-kinesis-stream-specification-property-builder (new CfnTable$KinesisStreamSpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-table-local-secondary-index-property-builder
@@ -1177,6 +1387,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-table-local-secondary-index-property-builder
+  ""
+  [id config]
+  (build-cfn-table-local-secondary-index-property-builder (new CfnTable$LocalSecondaryIndexProperty$Builder) id config))
+
+
 (defn build-cfn-table-on-demand-throughput-property-builder
   "The build-cfn-table-on-demand-throughput-property-builder function updates a CfnTable$OnDemandThroughputProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$OnDemandThroughputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1197,6 +1413,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-table-on-demand-throughput-property-builder
+  ""
+  [id config]
+  (build-cfn-table-on-demand-throughput-property-builder (new CfnTable$OnDemandThroughputProperty$Builder) id config))
+
+
 (defn build-cfn-table-point-in-time-recovery-specification-property-builder
   "The build-cfn-table-point-in-time-recovery-specification-property-builder function updates a CfnTable$PointInTimeRecoverySpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$PointInTimeRecoverySpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1212,6 +1434,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :point-in-time-recovery-enabled)]
     (. builder pointInTimeRecoveryEnabled data))
   (.build builder))
+
+
+(defn cfn-table-point-in-time-recovery-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-table-point-in-time-recovery-specification-property-builder (new CfnTable$PointInTimeRecoverySpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-table-projection-property-builder
@@ -1232,6 +1460,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :projection-type)]
     (. builder projectionType data))
   (.build builder))
+
+
+(defn cfn-table-projection-property-builder
+  ""
+  [id config]
+  (build-cfn-table-projection-property-builder (new CfnTable$ProjectionProperty$Builder) id config))
 
 
 (defn build-cfn-table-props-builder
@@ -1305,6 +1539,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-table-props-builder
+  ""
+  [id config]
+  (build-cfn-table-props-builder (new CfnTableProps$Builder) id config))
+
+
 (defn build-cfn-table-provisioned-throughput-property-builder
   "The build-cfn-table-provisioned-throughput-property-builder function updates a CfnTable$ProvisionedThroughputProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$ProvisionedThroughputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1325,6 +1565,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-table-provisioned-throughput-property-builder
+  ""
+  [id config]
+  (build-cfn-table-provisioned-throughput-property-builder (new CfnTable$ProvisionedThroughputProperty$Builder) id config))
+
+
 (defn build-cfn-table-resource-policy-property-builder
   "The build-cfn-table-resource-policy-property-builder function updates a CfnTable$ResourcePolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$ResourcePolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1340,6 +1586,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :policy-document)]
     (. builder policyDocument data))
   (.build builder))
+
+
+(defn cfn-table-resource-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-table-resource-policy-property-builder (new CfnTable$ResourcePolicyProperty$Builder) id config))
 
 
 (defn build-cfn-table-s3-bucket-source-property-builder
@@ -1365,6 +1617,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-table-s3-bucket-source-property-builder
+  ""
+  [id config]
+  (build-cfn-table-s3-bucket-source-property-builder (new CfnTable$S3BucketSourceProperty$Builder) id config))
+
+
 (defn build-cfn-table-sse-specification-property-builder
   "The build-cfn-table-sse-specification-property-builder function updates a CfnTable$SSESpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$SSESpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1388,6 +1646,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-table-sse-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-table-sse-specification-property-builder (new CfnTable$SSESpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-table-stream-specification-property-builder
   "The build-cfn-table-stream-specification-property-builder function updates a CfnTable$StreamSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$StreamSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1406,6 +1670,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :stream-view-type)]
     (. builder streamViewType data))
   (.build builder))
+
+
+(defn cfn-table-stream-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-table-stream-specification-property-builder (new CfnTable$StreamSpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-table-time-to-live-specification-property-builder
@@ -1428,6 +1698,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-table-time-to-live-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-table-time-to-live-specification-property-builder (new CfnTable$TimeToLiveSpecificationProperty$Builder) id config))
+
+
 (defn build-csv-options-builder
   "The build-csv-options-builder function updates a CsvOptions$Builder instance using the provided configuration.
   The function takes the CsvOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1448,6 +1724,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn csv-options-builder
+  ""
+  [id config]
+  (build-csv-options-builder (new CsvOptions$Builder) id config))
+
+
 (defn build-enable-scaling-props-builder
   "The build-enable-scaling-props-builder function updates a EnableScalingProps$Builder instance using the provided configuration.
   The function takes the EnableScalingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1466,6 +1748,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :min-capacity)]
     (. builder minCapacity data))
   (.build builder))
+
+
+(defn enable-scaling-props-builder
+  ""
+  [id config]
+  (build-enable-scaling-props-builder (new EnableScalingProps$Builder) id config))
 
 
 (defn build-global-secondary-index-props-builder
@@ -1503,6 +1791,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn global-secondary-index-props-builder
+  ""
+  [id config]
+  (build-global-secondary-index-props-builder (new GlobalSecondaryIndexProps$Builder) id config))
+
+
 (defn build-global-secondary-index-props-v2-builder
   "The build-global-secondary-index-props-v2-builder function updates a GlobalSecondaryIndexPropsV2$Builder instance using the provided configuration.
   The function takes the GlobalSecondaryIndexPropsV2$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1538,6 +1832,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn global-secondary-index-props-v2-builder
+  ""
+  [id config]
+  (build-global-secondary-index-props-v2-builder (new GlobalSecondaryIndexPropsV2$Builder) id config))
+
+
 (defn build-import-source-specification-builder
   "The build-import-source-specification-builder function updates a ImportSourceSpecification$Builder instance using the provided configuration.
   The function takes the ImportSourceSpecification$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1567,6 +1867,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn import-source-specification-builder
+  ""
+  [id config]
+  (build-import-source-specification-builder (new ImportSourceSpecification$Builder) id config))
+
+
 (defn build-local-secondary-index-props-builder
   "The build-local-secondary-index-props-builder function updates a LocalSecondaryIndexProps$Builder instance using the provided configuration.
   The function takes the LocalSecondaryIndexProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1591,6 +1897,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :sort-key)]
     (. builder sortKey data))
   (.build builder))
+
+
+(defn local-secondary-index-props-builder
+  ""
+  [id config]
+  (build-local-secondary-index-props-builder (new LocalSecondaryIndexProps$Builder) id config))
 
 
 (defn build-operations-metric-options-builder
@@ -1634,6 +1946,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn operations-metric-options-builder
+  ""
+  [id config]
+  (build-operations-metric-options-builder (new OperationsMetricOptions$Builder) id config))
+
+
 (defn build-replica-global-secondary-index-options-builder
   "The build-replica-global-secondary-index-options-builder function updates a ReplicaGlobalSecondaryIndexOptions$Builder instance using the provided configuration.
   The function takes the ReplicaGlobalSecondaryIndexOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1652,6 +1970,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :read-capacity)]
     (. builder readCapacity data))
   (.build builder))
+
+
+(defn replica-global-secondary-index-options-builder
+  ""
+  [id config]
+  (build-replica-global-secondary-index-options-builder (new ReplicaGlobalSecondaryIndexOptions$Builder) id config))
 
 
 (defn build-replica-table-props-builder
@@ -1698,6 +2022,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn replica-table-props-builder
+  ""
+  [id config]
+  (build-replica-table-props-builder (new ReplicaTableProps$Builder) id config))
+
+
 (defn build-schema-options-builder
   "The build-schema-options-builder function updates a SchemaOptions$Builder instance using the provided configuration.
   The function takes the SchemaOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1716,6 +2046,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :sort-key)]
     (. builder sortKey data))
   (.build builder))
+
+
+(defn schema-options-builder
+  ""
+  [id config]
+  (build-schema-options-builder (new SchemaOptions$Builder) id config))
 
 
 (defn build-secondary-index-props-builder
@@ -1739,6 +2075,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (projection-type config id :projection-type)]
     (. builder projectionType data))
   (.build builder))
+
+
+(defn secondary-index-props-builder
+  ""
+  [id config]
+  (build-secondary-index-props-builder (new SecondaryIndexProps$Builder) id config))
 
 
 (defn build-system-errors-for-operations-metric-options-builder
@@ -1782,6 +2124,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn system-errors-for-operations-metric-options-builder
+  ""
+  [id config]
+  (build-system-errors-for-operations-metric-options-builder (new SystemErrorsForOperationsMetricOptions$Builder) id config))
+
+
 (defn build-table-attributes-builder
   "The build-table-attributes-builder function updates a TableAttributes$Builder instance using the provided configuration.
   The function takes the TableAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1815,6 +2163,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :table-stream-arn)]
     (. builder tableStreamArn data))
   (.build builder))
+
+
+(defn table-attributes-builder
+  ""
+  [id config]
+  (build-table-attributes-builder (new TableAttributes$Builder) id config))
 
 
 (defn build-table-attributes-v2-builder
@@ -1853,6 +2207,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :table-stream-arn)]
     (. builder tableStreamArn data))
   (.build builder))
+
+
+(defn table-attributes-v2-builder
+  ""
+  [id config]
+  (build-table-attributes-v2-builder (new TableAttributesV2$Builder) id config))
 
 
 (defn build-table-builder
@@ -1932,6 +2292,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn table-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-table-builder (Table$Builder/create scope (name id)) id config))
+
+
 (defn build-table-options-builder
   "The build-table-options-builder function updates a TableOptions$Builder instance using the provided configuration.
   The function takes the TableOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2003,6 +2369,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn table-options-builder
+  ""
+  [id config]
+  (build-table-options-builder (new TableOptions$Builder) id config))
+
+
 (defn build-table-options-v2-builder
   "The build-table-options-v2-builder function updates a TableOptionsV2$Builder instance using the provided configuration.
   The function takes the TableOptionsV2$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2036,6 +2408,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn table-options-v2-builder
+  ""
+  [id config]
+  (build-table-options-v2-builder (new TableOptionsV2$Builder) id config))
 
 
 (defn build-table-props-builder
@@ -2115,6 +2493,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn table-props-builder
+  ""
+  [id config]
+  (build-table-props-builder (new TableProps$Builder) id config))
+
+
 (defn build-table-props-v2-builder
   "The build-table-props-v2-builder function updates a TablePropsV2$Builder instance using the provided configuration.
   The function takes the TablePropsV2$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2181,6 +2565,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :time-to-live-attribute)]
     (. builder timeToLiveAttribute data))
   (.build builder))
+
+
+(defn table-props-v2-builder
+  ""
+  [id config]
+  (build-table-props-v2-builder (new TablePropsV2$Builder) id config))
 
 
 (defn build-table-v2-builder
@@ -2251,6 +2641,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn table-v2-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-table-v2-builder (TableV2$Builder/create scope (name id)) id config))
+
+
 (defn build-throughput-props-builder
   "The build-throughput-props-builder function updates a ThroughputProps$Builder instance using the provided configuration.
   The function takes the ThroughputProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2269,6 +2665,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :write-capacity)]
     (. builder writeCapacity data))
   (.build builder))
+
+
+(defn throughput-props-builder
+  ""
+  [id config]
+  (build-throughput-props-builder (new ThroughputProps$Builder) id config))
 
 
 (defn build-utilization-scaling-props-builder
@@ -2298,3 +2700,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :target-utilization-percent)]
     (. builder targetUtilizationPercent data))
   (.build builder))
+
+
+(defn utilization-scaling-props-builder
+  ""
+  [id config]
+  (build-utilization-scaling-props-builder (new UtilizationScalingProps$Builder) id config))

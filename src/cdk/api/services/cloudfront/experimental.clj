@@ -177,6 +177,12 @@
   (.build builder))
 
 
+(defn edge-function-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-edge-function-builder (EdgeFunction$Builder/create scope (name id)) id config))
+
+
 (defn build-edge-function-props-builder
   "The build-edge-function-props-builder function updates a EdgeFunctionProps$Builder instance using the provided configuration.
   The function takes the EdgeFunctionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -342,3 +348,9 @@
   (when-let [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
   (.build builder))
+
+
+(defn edge-function-props-builder
+  ""
+  [id config]
+  (build-edge-function-props-builder (new EdgeFunctionProps$Builder) id config))

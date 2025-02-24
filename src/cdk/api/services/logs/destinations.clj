@@ -41,6 +41,12 @@
   (.build builder))
 
 
+(defn kinesis-destination-props-builder
+  ""
+  [id config]
+  (build-kinesis-destination-props-builder (new KinesisDestinationProps$Builder) id config))
+
+
 (defn build-lambda-destination-builder
   "The build-lambda-destination-builder function updates a LambdaDestination$Builder instance using the provided configuration.
   The function takes the LambdaDestination$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -73,3 +79,9 @@
   (when-let [data (lookup-entry config id :add-permissions)]
     (. builder addPermissions data))
   (.build builder))
+
+
+(defn lambda-destination-options-builder
+  ""
+  [id config]
+  (build-lambda-destination-options-builder (new LambdaDestinationOptions$Builder) id config))

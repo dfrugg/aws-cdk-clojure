@@ -28,6 +28,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-agentless-dialer-config-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-agentless-dialer-config-property-builder (new CfnCampaign$AgentlessDialerConfigProperty$Builder) id config))
+
+
 (defn build-cfn-campaign-answer-machine-detection-config-property-builder
   "The build-cfn-campaign-answer-machine-detection-config-property-builder function updates a CfnCampaign$AnswerMachineDetectionConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$AnswerMachineDetectionConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -46,6 +52,12 @@
   (when-let [data (lookup-entry config id :enable-answer-machine-detection)]
     (. builder enableAnswerMachineDetection data))
   (.build builder))
+
+
+(defn cfn-campaign-answer-machine-detection-config-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-answer-machine-detection-config-property-builder (new CfnCampaign$AnswerMachineDetectionConfigProperty$Builder) id config))
 
 
 (defn build-cfn-campaign-builder
@@ -77,6 +89,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-campaign-builder (CfnCampaign$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-campaign-dialer-config-property-builder
   "The build-cfn-campaign-dialer-config-property-builder function updates a CfnCampaign$DialerConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$DialerConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -98,6 +116,12 @@
   (when-let [data (lookup-entry config id :progressive-dialer-config)]
     (. builder progressiveDialerConfig data))
   (.build builder))
+
+
+(defn cfn-campaign-dialer-config-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-dialer-config-property-builder (new CfnCampaign$DialerConfigProperty$Builder) id config))
 
 
 (defn build-cfn-campaign-outbound-call-config-property-builder
@@ -126,6 +150,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-outbound-call-config-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-outbound-call-config-property-builder (new CfnCampaign$OutboundCallConfigProperty$Builder) id config))
+
+
 (defn build-cfn-campaign-predictive-dialer-config-property-builder
   "The build-cfn-campaign-predictive-dialer-config-property-builder function updates a CfnCampaign$PredictiveDialerConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$PredictiveDialerConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -146,6 +176,12 @@
   (.build builder))
 
 
+(defn cfn-campaign-predictive-dialer-config-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-predictive-dialer-config-property-builder (new CfnCampaign$PredictiveDialerConfigProperty$Builder) id config))
+
+
 (defn build-cfn-campaign-progressive-dialer-config-property-builder
   "The build-cfn-campaign-progressive-dialer-config-property-builder function updates a CfnCampaign$ProgressiveDialerConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCampaign$ProgressiveDialerConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -164,6 +200,12 @@
   (when-let [data (lookup-entry config id :dialing-capacity)]
     (. builder dialingCapacity data))
   (.build builder))
+
+
+(defn cfn-campaign-progressive-dialer-config-property-builder
+  ""
+  [id config]
+  (build-cfn-campaign-progressive-dialer-config-property-builder (new CfnCampaign$ProgressiveDialerConfigProperty$Builder) id config))
 
 
 (defn build-cfn-campaign-props-builder
@@ -193,3 +235,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-campaign-props-builder
+  ""
+  [id config]
+  (build-cfn-campaign-props-builder (new CfnCampaignProps$Builder) id config))

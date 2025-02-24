@@ -47,6 +47,12 @@
   (.build builder))
 
 
+(defn cfn-capability-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-capability-builder (CfnCapability$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-capability-capability-configuration-property-builder
   "The build-cfn-capability-capability-configuration-property-builder function updates a CfnCapability$CapabilityConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnCapability$CapabilityConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -62,6 +68,12 @@
   (when-let [data (lookup-entry config id :edi)]
     (. builder edi data))
   (.build builder))
+
+
+(defn cfn-capability-capability-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-capability-capability-configuration-property-builder (new CfnCapability$CapabilityConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-capability-edi-configuration-property-builder
@@ -90,6 +102,12 @@
   (.build builder))
 
 
+(defn cfn-capability-edi-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-capability-edi-configuration-property-builder (new CfnCapability$EdiConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-capability-edi-type-property-builder
   "The build-cfn-capability-edi-type-property-builder function updates a CfnCapability$EdiTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnCapability$EdiTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -105,6 +123,12 @@
   (when-let [data (lookup-entry config id :x12-details)]
     (. builder x12Details data))
   (.build builder))
+
+
+(defn cfn-capability-edi-type-property-builder
+  ""
+  [id config]
+  (build-cfn-capability-edi-type-property-builder (new CfnCapability$EdiTypeProperty$Builder) id config))
 
 
 (defn build-cfn-capability-props-builder
@@ -136,6 +160,12 @@
   (.build builder))
 
 
+(defn cfn-capability-props-builder
+  ""
+  [id config]
+  (build-cfn-capability-props-builder (new CfnCapabilityProps$Builder) id config))
+
+
 (defn build-cfn-capability-s3-location-property-builder
   "The build-cfn-capability-s3-location-property-builder function updates a CfnCapability$S3LocationProperty$Builder instance using the provided configuration.
   The function takes the CfnCapability$S3LocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -156,6 +186,12 @@
   (.build builder))
 
 
+(defn cfn-capability-s3-location-property-builder
+  ""
+  [id config]
+  (build-cfn-capability-s3-location-property-builder (new CfnCapability$S3LocationProperty$Builder) id config))
+
+
 (defn build-cfn-capability-x12-details-property-builder
   "The build-cfn-capability-x12-details-property-builder function updates a CfnCapability$X12DetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnCapability$X12DetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -174,6 +210,12 @@
   (when-let [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
+
+
+(defn cfn-capability-x12-details-property-builder
+  ""
+  [id config]
+  (build-cfn-capability-x12-details-property-builder (new CfnCapability$X12DetailsProperty$Builder) id config))
 
 
 (defn build-cfn-partnership-builder
@@ -208,6 +250,12 @@
   (.build builder))
 
 
+(defn cfn-partnership-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-partnership-builder (CfnPartnership$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-partnership-props-builder
   "The build-cfn-partnership-props-builder function updates a CfnPartnershipProps$Builder instance using the provided configuration.
   The function takes the CfnPartnershipProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -238,6 +286,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-partnership-props-builder
+  ""
+  [id config]
+  (build-cfn-partnership-props-builder (new CfnPartnershipProps$Builder) id config))
 
 
 (defn build-cfn-profile-builder
@@ -272,6 +326,12 @@
   (.build builder))
 
 
+(defn cfn-profile-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-profile-builder (CfnProfile$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-profile-props-builder
   "The build-cfn-profile-props-builder function updates a CfnProfileProps$Builder instance using the provided configuration.
   The function takes the CfnProfileProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -302,6 +362,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-profile-props-builder
+  ""
+  [id config]
+  (build-cfn-profile-props-builder (new CfnProfileProps$Builder) id config))
 
 
 (defn build-cfn-transformer-builder
@@ -339,6 +405,12 @@
   (.build builder))
 
 
+(defn cfn-transformer-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-transformer-builder (CfnTransformer$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-transformer-edi-type-property-builder
   "The build-cfn-transformer-edi-type-property-builder function updates a CfnTransformer$EdiTypeProperty$Builder instance using the provided configuration.
   The function takes the CfnTransformer$EdiTypeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -354,6 +426,12 @@
   (when-let [data (lookup-entry config id :x12-details)]
     (. builder x12Details data))
   (.build builder))
+
+
+(defn cfn-transformer-edi-type-property-builder
+  ""
+  [id config]
+  (build-cfn-transformer-edi-type-property-builder (new CfnTransformer$EdiTypeProperty$Builder) id config))
 
 
 (defn build-cfn-transformer-props-builder
@@ -391,6 +469,12 @@
   (.build builder))
 
 
+(defn cfn-transformer-props-builder
+  ""
+  [id config]
+  (build-cfn-transformer-props-builder (new CfnTransformerProps$Builder) id config))
+
+
 (defn build-cfn-transformer-x12-details-property-builder
   "The build-cfn-transformer-x12-details-property-builder function updates a CfnTransformer$X12DetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnTransformer$X12DetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -409,3 +493,9 @@
   (when-let [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
+
+
+(defn cfn-transformer-x12-details-property-builder
+  ""
+  [id config]
+  (build-cfn-transformer-x12-details-property-builder (new CfnTransformer$X12DetailsProperty$Builder) id config))

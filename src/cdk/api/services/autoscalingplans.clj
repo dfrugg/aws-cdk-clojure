@@ -34,6 +34,12 @@
   (.build builder))
 
 
+(defn cfn-scaling-plan-application-source-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-plan-application-source-property-builder (new CfnScalingPlan$ApplicationSourceProperty$Builder) id config))
+
+
 (defn build-cfn-scaling-plan-builder
   "The build-cfn-scaling-plan-builder function updates a CfnScalingPlan$Builder instance using the provided configuration.
   The function takes the CfnScalingPlan$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -52,6 +58,12 @@
   (when-let [data (lookup-entry config id :scaling-instructions)]
     (. builder scalingInstructions data))
   (.build builder))
+
+
+(defn cfn-scaling-plan-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-scaling-plan-builder (CfnScalingPlan$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-scaling-plan-customized-load-metric-specification-property-builder
@@ -83,6 +95,12 @@
   (.build builder))
 
 
+(defn cfn-scaling-plan-customized-load-metric-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-plan-customized-load-metric-specification-property-builder (new CfnScalingPlan$CustomizedLoadMetricSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-scaling-plan-customized-scaling-metric-specification-property-builder
   "The build-cfn-scaling-plan-customized-scaling-metric-specification-property-builder function updates a CfnScalingPlan$CustomizedScalingMetricSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPlan$CustomizedScalingMetricSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -112,6 +130,12 @@
   (.build builder))
 
 
+(defn cfn-scaling-plan-customized-scaling-metric-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-plan-customized-scaling-metric-specification-property-builder (new CfnScalingPlan$CustomizedScalingMetricSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-scaling-plan-metric-dimension-property-builder
   "The build-cfn-scaling-plan-metric-dimension-property-builder function updates a CfnScalingPlan$MetricDimensionProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPlan$MetricDimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -130,6 +154,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-scaling-plan-metric-dimension-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-plan-metric-dimension-property-builder (new CfnScalingPlan$MetricDimensionProperty$Builder) id config))
 
 
 (defn build-cfn-scaling-plan-predefined-load-metric-specification-property-builder
@@ -152,6 +182,12 @@
   (.build builder))
 
 
+(defn cfn-scaling-plan-predefined-load-metric-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-plan-predefined-load-metric-specification-property-builder (new CfnScalingPlan$PredefinedLoadMetricSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-scaling-plan-predefined-scaling-metric-specification-property-builder
   "The build-cfn-scaling-plan-predefined-scaling-metric-specification-property-builder function updates a CfnScalingPlan$PredefinedScalingMetricSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPlan$PredefinedScalingMetricSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -172,6 +208,12 @@
   (.build builder))
 
 
+(defn cfn-scaling-plan-predefined-scaling-metric-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-plan-predefined-scaling-metric-specification-property-builder (new CfnScalingPlan$PredefinedScalingMetricSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-scaling-plan-props-builder
   "The build-cfn-scaling-plan-props-builder function updates a CfnScalingPlanProps$Builder instance using the provided configuration.
   The function takes the CfnScalingPlanProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -190,6 +232,12 @@
   (when-let [data (lookup-entry config id :scaling-instructions)]
     (. builder scalingInstructions data))
   (.build builder))
+
+
+(defn cfn-scaling-plan-props-builder
+  ""
+  [id config]
+  (build-cfn-scaling-plan-props-builder (new CfnScalingPlanProps$Builder) id config))
 
 
 (defn build-cfn-scaling-plan-scaling-instruction-property-builder
@@ -248,6 +296,12 @@
   (.build builder))
 
 
+(defn cfn-scaling-plan-scaling-instruction-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-plan-scaling-instruction-property-builder (new CfnScalingPlan$ScalingInstructionProperty$Builder) id config))
+
+
 (defn build-cfn-scaling-plan-tag-filter-property-builder
   "The build-cfn-scaling-plan-tag-filter-property-builder function updates a CfnScalingPlan$TagFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPlan$TagFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -266,6 +320,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-scaling-plan-tag-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-plan-tag-filter-property-builder (new CfnScalingPlan$TagFilterProperty$Builder) id config))
 
 
 (defn build-cfn-scaling-plan-target-tracking-configuration-property-builder
@@ -301,3 +361,9 @@
   (when-let [data (lookup-entry config id :target-value)]
     (. builder targetValue data))
   (.build builder))
+
+
+(defn cfn-scaling-plan-target-tracking-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-plan-target-tracking-configuration-property-builder (new CfnScalingPlan$TargetTrackingConfigurationProperty$Builder) id config))

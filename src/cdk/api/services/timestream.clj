@@ -53,6 +53,12 @@
   (.build builder))
 
 
+(defn cfn-database-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-database-builder (CfnDatabase$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-database-props-builder
   "The build-cfn-database-props-builder function updates a CfnDatabaseProps$Builder instance using the provided configuration.
   The function takes the CfnDatabaseProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -74,6 +80,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-database-props-builder
+  ""
+  [id config]
+  (build-cfn-database-props-builder (new CfnDatabaseProps$Builder) id config))
 
 
 (defn build-cfn-influx-db-instance-builder
@@ -135,6 +147,12 @@
   (.build builder))
 
 
+(defn cfn-influx-db-instance-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-influx-db-instance-builder (CfnInfluxDBInstance$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-influx-db-instance-log-delivery-configuration-property-builder
   "The build-cfn-influx-db-instance-log-delivery-configuration-property-builder function updates a CfnInfluxDBInstance$LogDeliveryConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnInfluxDBInstance$LogDeliveryConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -150,6 +168,12 @@
   (when-let [data (lookup-entry config id :s3-configuration)]
     (. builder s3Configuration data))
   (.build builder))
+
+
+(defn cfn-influx-db-instance-log-delivery-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-influx-db-instance-log-delivery-configuration-property-builder (new CfnInfluxDBInstance$LogDeliveryConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-influx-db-instance-props-builder
@@ -211,6 +235,12 @@
   (.build builder))
 
 
+(defn cfn-influx-db-instance-props-builder
+  ""
+  [id config]
+  (build-cfn-influx-db-instance-props-builder (new CfnInfluxDBInstanceProps$Builder) id config))
+
+
 (defn build-cfn-influx-db-instance-s3-configuration-property-builder
   "The build-cfn-influx-db-instance-s3-configuration-property-builder function updates a CfnInfluxDBInstance$S3ConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnInfluxDBInstance$S3ConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -229,6 +259,12 @@
   (when-let [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
+
+
+(defn cfn-influx-db-instance-s3-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-influx-db-instance-s3-configuration-property-builder (new CfnInfluxDBInstance$S3ConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-scheduled-query-builder
@@ -275,6 +311,12 @@
   (.build builder))
 
 
+(defn cfn-scheduled-query-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-scheduled-query-builder (CfnScheduledQuery$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-scheduled-query-dimension-mapping-property-builder
   "The build-cfn-scheduled-query-dimension-mapping-property-builder function updates a CfnScheduledQuery$DimensionMappingProperty$Builder instance using the provided configuration.
   The function takes the CfnScheduledQuery$DimensionMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -295,6 +337,12 @@
   (.build builder))
 
 
+(defn cfn-scheduled-query-dimension-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-scheduled-query-dimension-mapping-property-builder (new CfnScheduledQuery$DimensionMappingProperty$Builder) id config))
+
+
 (defn build-cfn-scheduled-query-error-report-configuration-property-builder
   "The build-cfn-scheduled-query-error-report-configuration-property-builder function updates a CfnScheduledQuery$ErrorReportConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnScheduledQuery$ErrorReportConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -310,6 +358,12 @@
   (when-let [data (lookup-entry config id :s3-configuration)]
     (. builder s3Configuration data))
   (.build builder))
+
+
+(defn cfn-scheduled-query-error-report-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-scheduled-query-error-report-configuration-property-builder (new CfnScheduledQuery$ErrorReportConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-scheduled-query-mixed-measure-mapping-property-builder
@@ -341,6 +395,12 @@
   (.build builder))
 
 
+(defn cfn-scheduled-query-mixed-measure-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-scheduled-query-mixed-measure-mapping-property-builder (new CfnScheduledQuery$MixedMeasureMappingProperty$Builder) id config))
+
+
 (defn build-cfn-scheduled-query-multi-measure-attribute-mapping-property-builder
   "The build-cfn-scheduled-query-multi-measure-attribute-mapping-property-builder function updates a CfnScheduledQuery$MultiMeasureAttributeMappingProperty$Builder instance using the provided configuration.
   The function takes the CfnScheduledQuery$MultiMeasureAttributeMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -364,6 +424,12 @@
   (.build builder))
 
 
+(defn cfn-scheduled-query-multi-measure-attribute-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-scheduled-query-multi-measure-attribute-mapping-property-builder (new CfnScheduledQuery$MultiMeasureAttributeMappingProperty$Builder) id config))
+
+
 (defn build-cfn-scheduled-query-multi-measure-mappings-property-builder
   "The build-cfn-scheduled-query-multi-measure-mappings-property-builder function updates a CfnScheduledQuery$MultiMeasureMappingsProperty$Builder instance using the provided configuration.
   The function takes the CfnScheduledQuery$MultiMeasureMappingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -384,6 +450,12 @@
   (.build builder))
 
 
+(defn cfn-scheduled-query-multi-measure-mappings-property-builder
+  ""
+  [id config]
+  (build-cfn-scheduled-query-multi-measure-mappings-property-builder (new CfnScheduledQuery$MultiMeasureMappingsProperty$Builder) id config))
+
+
 (defn build-cfn-scheduled-query-notification-configuration-property-builder
   "The build-cfn-scheduled-query-notification-configuration-property-builder function updates a CfnScheduledQuery$NotificationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnScheduledQuery$NotificationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -399,6 +471,12 @@
   (when-let [data (lookup-entry config id :sns-configuration)]
     (. builder snsConfiguration data))
   (.build builder))
+
+
+(defn cfn-scheduled-query-notification-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-scheduled-query-notification-configuration-property-builder (new CfnScheduledQuery$NotificationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-scheduled-query-props-builder
@@ -445,6 +523,12 @@
   (.build builder))
 
 
+(defn cfn-scheduled-query-props-builder
+  ""
+  [id config]
+  (build-cfn-scheduled-query-props-builder (new CfnScheduledQueryProps$Builder) id config))
+
+
 (defn build-cfn-scheduled-query-s3-configuration-property-builder
   "The build-cfn-scheduled-query-s3-configuration-property-builder function updates a CfnScheduledQuery$S3ConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnScheduledQuery$S3ConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -468,6 +552,12 @@
   (.build builder))
 
 
+(defn cfn-scheduled-query-s3-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-scheduled-query-s3-configuration-property-builder (new CfnScheduledQuery$S3ConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-scheduled-query-schedule-configuration-property-builder
   "The build-cfn-scheduled-query-schedule-configuration-property-builder function updates a CfnScheduledQuery$ScheduleConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnScheduledQuery$ScheduleConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -483,6 +573,12 @@
   (when-let [data (lookup-entry config id :schedule-expression)]
     (. builder scheduleExpression data))
   (.build builder))
+
+
+(defn cfn-scheduled-query-schedule-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-scheduled-query-schedule-configuration-property-builder (new CfnScheduledQuery$ScheduleConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-scheduled-query-sns-configuration-property-builder
@@ -502,6 +598,12 @@
   (.build builder))
 
 
+(defn cfn-scheduled-query-sns-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-scheduled-query-sns-configuration-property-builder (new CfnScheduledQuery$SnsConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-scheduled-query-target-configuration-property-builder
   "The build-cfn-scheduled-query-target-configuration-property-builder function updates a CfnScheduledQuery$TargetConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnScheduledQuery$TargetConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -517,6 +619,12 @@
   (when-let [data (lookup-entry config id :timestream-configuration)]
     (. builder timestreamConfiguration data))
   (.build builder))
+
+
+(defn cfn-scheduled-query-target-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-scheduled-query-target-configuration-property-builder (new CfnScheduledQuery$TargetConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-scheduled-query-timestream-configuration-property-builder
@@ -554,6 +662,12 @@
   (.build builder))
 
 
+(defn cfn-scheduled-query-timestream-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-scheduled-query-timestream-configuration-property-builder (new CfnScheduledQuery$TimestreamConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-table-builder
   "The build-cfn-table-builder function updates a CfnTable$Builder instance using the provided configuration.
   The function takes the CfnTable$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -586,6 +700,12 @@
   (.build builder))
 
 
+(defn cfn-table-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-table-builder (CfnTable$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-table-magnetic-store-rejected-data-location-property-builder
   "The build-cfn-table-magnetic-store-rejected-data-location-property-builder function updates a CfnTable$MagneticStoreRejectedDataLocationProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$MagneticStoreRejectedDataLocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -601,6 +721,12 @@
   (when-let [data (lookup-entry config id :s3-configuration)]
     (. builder s3Configuration data))
   (.build builder))
+
+
+(defn cfn-table-magnetic-store-rejected-data-location-property-builder
+  ""
+  [id config]
+  (build-cfn-table-magnetic-store-rejected-data-location-property-builder (new CfnTable$MagneticStoreRejectedDataLocationProperty$Builder) id config))
 
 
 (defn build-cfn-table-magnetic-store-write-properties-property-builder
@@ -621,6 +747,12 @@
   (when-let [data (lookup-entry config id :magnetic-store-rejected-data-location)]
     (. builder magneticStoreRejectedDataLocation data))
   (.build builder))
+
+
+(defn cfn-table-magnetic-store-write-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-table-magnetic-store-write-properties-property-builder (new CfnTable$MagneticStoreWritePropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-table-partition-key-property-builder
@@ -644,6 +776,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-table-partition-key-property-builder
+  ""
+  [id config]
+  (build-cfn-table-partition-key-property-builder (new CfnTable$PartitionKeyProperty$Builder) id config))
 
 
 (defn build-cfn-table-props-builder
@@ -678,6 +816,12 @@
   (.build builder))
 
 
+(defn cfn-table-props-builder
+  ""
+  [id config]
+  (build-cfn-table-props-builder (new CfnTableProps$Builder) id config))
+
+
 (defn build-cfn-table-retention-properties-property-builder
   "The build-cfn-table-retention-properties-property-builder function updates a CfnTable$RetentionPropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$RetentionPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -696,6 +840,12 @@
   (when-let [data (lookup-entry config id :memory-store-retention-period-in-hours)]
     (. builder memoryStoreRetentionPeriodInHours data))
   (.build builder))
+
+
+(defn cfn-table-retention-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-table-retention-properties-property-builder (new CfnTable$RetentionPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-table-s3-configuration-property-builder
@@ -724,6 +874,12 @@
   (.build builder))
 
 
+(defn cfn-table-s3-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-table-s3-configuration-property-builder (new CfnTable$S3ConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-table-schema-property-builder
   "The build-cfn-table-schema-property-builder function updates a CfnTable$SchemaProperty$Builder instance using the provided configuration.
   The function takes the CfnTable$SchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -739,3 +895,9 @@
   (when-let [data (lookup-entry config id :composite-partition-key)]
     (. builder compositePartitionKey data))
   (.build builder))
+
+
+(defn cfn-table-schema-property-builder
+  ""
+  [id config]
+  (build-cfn-table-schema-property-builder (new CfnTable$SchemaProperty$Builder) id config))

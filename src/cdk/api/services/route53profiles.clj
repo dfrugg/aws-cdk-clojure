@@ -38,6 +38,12 @@
   (.build builder))
 
 
+(defn cfn-profile-association-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-profile-association-builder (CfnProfileAssociation$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-profile-association-props-builder
   "The build-cfn-profile-association-props-builder function updates a CfnProfileAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnProfileAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -67,6 +73,12 @@
   (.build builder))
 
 
+(defn cfn-profile-association-props-builder
+  ""
+  [id config]
+  (build-cfn-profile-association-props-builder (new CfnProfileAssociationProps$Builder) id config))
+
+
 (defn build-cfn-profile-builder
   "The build-cfn-profile-builder function updates a CfnProfile$Builder instance using the provided configuration.
   The function takes the CfnProfile$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -87,6 +99,12 @@
   (.build builder))
 
 
+(defn cfn-profile-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-profile-builder (CfnProfile$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-profile-props-builder
   "The build-cfn-profile-props-builder function updates a CfnProfileProps$Builder instance using the provided configuration.
   The function takes the CfnProfileProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -105,6 +123,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-profile-props-builder
+  ""
+  [id config]
+  (build-cfn-profile-props-builder (new CfnProfileProps$Builder) id config))
 
 
 (defn build-cfn-profile-resource-association-builder
@@ -133,6 +157,12 @@
   (.build builder))
 
 
+(defn cfn-profile-resource-association-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-profile-resource-association-builder (CfnProfileResourceAssociation$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-profile-resource-association-props-builder
   "The build-cfn-profile-resource-association-props-builder function updates a CfnProfileResourceAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnProfileResourceAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -157,3 +187,9 @@
   (when-let [data (lookup-entry config id :resource-properties)]
     (. builder resourceProperties data))
   (.build builder))
+
+
+(defn cfn-profile-resource-association-props-builder
+  ""
+  [id config]
+  (build-cfn-profile-resource-association-props-builder (new CfnProfileResourceAssociationProps$Builder) id config))

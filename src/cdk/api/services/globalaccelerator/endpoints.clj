@@ -51,6 +51,12 @@
   (.build builder))
 
 
+(defn application-load-balancer-endpoint-options-builder
+  ""
+  [id config]
+  (build-application-load-balancer-endpoint-options-builder (new ApplicationLoadBalancerEndpointOptions$Builder) id config))
+
+
 (defn build-cfn-eip-endpoint-builder
   "The build-cfn-eip-endpoint-builder function updates a CfnEipEndpoint$Builder instance using the provided configuration.
   The function takes the CfnEipEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -83,6 +89,12 @@
   (when-let [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
+
+
+(defn cfn-eip-endpoint-props-builder
+  ""
+  [id config]
+  (build-cfn-eip-endpoint-props-builder (new CfnEipEndpointProps$Builder) id config))
 
 
 (defn build-instance-endpoint-builder
@@ -125,6 +137,12 @@
   (.build builder))
 
 
+(defn instance-endpoint-props-builder
+  ""
+  [id config]
+  (build-instance-endpoint-props-builder (new InstanceEndpointProps$Builder) id config))
+
+
 (defn build-network-load-balancer-endpoint-builder
   "The build-network-load-balancer-endpoint-builder function updates a NetworkLoadBalancerEndpoint$Builder instance using the provided configuration.
   The function takes the NetworkLoadBalancerEndpoint$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -157,3 +175,9 @@
   (when-let [data (lookup-entry config id :weight)]
     (. builder weight data))
   (.build builder))
+
+
+(defn network-load-balancer-endpoint-props-builder
+  ""
+  [id config]
+  (build-network-load-balancer-endpoint-props-builder (new NetworkLoadBalancerEndpointProps$Builder) id config))

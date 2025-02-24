@@ -1,7 +1,5 @@
 (ns inspect
-  (:require [model :refer [construct-sym
-                           string-sym
-                           java-class-info]]
+  (:require [model :refer [java-class-info]]
             [util :refer [conjv
                           constant-keyword
                           camel->kebab-case
@@ -33,8 +31,7 @@
                                         :builder-name-args [["types" "parameter.Types"]]}]
                                :methods [{:method 'methodSymbol
                                           :method-arg my.method.symbol.Type
-                                          :method-key :method-symbol}]}]}}
-  )
+                                          :method-key :method-symbol}]}]}})
 
 (def packages
   "A map of package names that contains all the enums and builder configurations within them."
@@ -44,6 +41,12 @@
 (def enums
   "Collection of enums that have been encountered."
   (atom {}))
+
+
+(defn clear!
+  []
+  (reset! packages {})
+  (reset! enums {}))
 
 
 (defn ignore?
@@ -140,7 +143,7 @@
 
 
 (defn public-methods
-  "Extracts all the public constructor and methods from a class or class symbol"
+  "Extracts all the public constructors and methods from a class or class symbol."
   [^Class target-class]
   (->> target-class
        ref/reflect
@@ -149,88 +152,23 @@
        (filter :parameter-types)))
 
 
-(defn no-arg?
-  "Checks if "
-  [{:keys [parameter-types] :as data}]
-  (and data (empty? parameter-types)))
-
-
-(defn stack-id?
-  [{:keys [parameter-types]}]
-  (and (= 2 (count parameter-types))
-       (= construct-sym (first parameter-types))
-       (= string-sym (second parameter-types))))
-
-
-(defn two-arg?
-  "Checks if the create is 2 args but not what we know."
-  [{:keys [parameter-types]}]
-  (= 2 (count parameter-types)))
-
-
-(defn one-arg?
-  "Checks if the create is 1 args but not what we know."
-  [{:keys [parameter-types]}]
-  (= 1 (count parameter-types)))
-
-
-(defn classify-create
-  [data]
-  (cond
-    (no-arg? data) {:init-type :no-arg}
-    (stack-id? data) {:init-type :stack-id :init-args (:parameter-types data)}
-    (some? data) {:init-type :other-arg :init-args (:parameter-types data)}))
-
-
-(defn classify-construct
-  [data]
-  (cond
-    (no-arg? data) {:init-type :no-arg :init-args (:parameter-types data)}
-    (stack-id? data) {:init-type :stack-id :init-args (:parameter-types data)}
-    (some? data) {:init-type :other-arg :init-args (:parameter-types data)}))
-
-
-(defn classify-init-args
-  "Inspects how a builder should be initialized and determine if extra args are needed."
-  [inits {:keys [package-name class-name]} config]
-  (let [init-args (get-in config [:inits package-name class-name])
-        init-counts (if (vector? (first init-args))
-                      (into {} (mapv (juxt count identity) init-args))
-                      {(count init-args) init-args})]
-    (if init-args
-      (reduce (fn [inits {args :init-args :as init}]
-                (let [names (get init-counts (count args))
-                      param-names (when names (map vector names args))
-                      builder-names (when names (remove (comp #{"stack" "id" "config"} first) param-names))]
-                  (if names
-                    (conj inits (assoc init :init-name-args param-names :builder-name-args builder-names))
-                    (conj inits init))))
-              []
-              inits)
-      inits)))
-
-
-(defn classify-init
-  "Determines what type of create to use."
-  [methods builder-data config]
-  ; TODO - Add arg mapping and multi create/constructs
+(defn determine-inits
+  [methods]
   (let [creates (->> methods
-                     (filter #(= create-method (:name %)))
-                     (mapv classify-create))
-        constructs (when-not (seq creates)
-                     (->> methods
-                          (filter #(= (:declaring-class %) (:name %)))
-                          (mapv classify-construct)))]
-    (cond
-      (seq creates)    {:init :create :inits (classify-init-args creates builder-data config)}
-      (seq constructs) {:init :construct :inits (classify-init-args constructs builder-data config)}
-      :else            {:init :no-init})))
+                     (filterv #(= create-method (:name %)))
+                     (filterv (comp :static :flags))
+                     (mapv #(assoc % :init-type :create)))]
+    (if (seq creates)
+      creates
+      (->> methods
+           (filter #(= (:declaring-class %) (:name %)))
+           (mapv #(assoc % :init-type :construct))))))
 
 
 (defn builder-methods
-  [{^Class builder-class :class :as builder-data} config]
-  (let [base-fields (public-methods builder-class)
-        init-classifier (classify-init base-fields builder-data config)
+  [{^Class builder-class :class :as builder-data} _]
+  (let [methods (public-methods builder-class)
+        inits (determine-inits methods)
         methods (->> (reduce (fn [field-map {field-name :name :as field}]
                                (if (or (get field-map field-name)
                                        (ignored-builder-methods field-name)
@@ -242,12 +180,12 @@
                                                                 :method-key (camel->kebab-case field-name)
                                                                 :method-enum (get @enums (str param))}))))
                              {}
-                             base-fields)
+                             methods)
                      vals
                      (sort-by :method)
                      vec)]
     (-> builder-data
-        (merge init-classifier)
+        (assoc :inits inits)
         (assoc :methods methods))))
 
 

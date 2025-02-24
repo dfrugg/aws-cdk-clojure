@@ -41,6 +41,12 @@
   (.build builder))
 
 
+(defn cfn-application-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-builder (CfnApplication$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-application-credential-property-builder
   "The build-cfn-application-credential-property-builder function updates a CfnApplication$CredentialProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$CredentialProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -62,6 +68,12 @@
   (when-let [data (lookup-entry config id :secret-id)]
     (. builder secretId data))
   (.build builder))
+
+
+(defn cfn-application-credential-property-builder
+  ""
+  [id config]
+  (build-cfn-application-credential-property-builder (new CfnApplication$CredentialProperty$Builder) id config))
 
 
 (defn build-cfn-application-props-builder
@@ -97,3 +109,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-application-props-builder
+  ""
+  [id config]
+  (build-cfn-application-props-builder (new CfnApplicationProps$Builder) id config))

@@ -262,6 +262,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn ami-context-query-builder
+  ""
+  [id config]
+  (build-ami-context-query-builder (new AmiContextQuery$Builder) id config))
+
+
 (defn build-artifact-manifest-builder
   "The build-artifact-manifest-builder function updates a ArtifactManifest$Builder instance using the provided configuration.
   The function takes the ArtifactManifest$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -294,6 +300,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn artifact-manifest-builder
+  ""
+  [id config]
+  (build-artifact-manifest-builder (new ArtifactManifest$Builder) id config))
+
+
 (defn build-assembly-manifest-builder
   "The build-assembly-manifest-builder function updates a AssemblyManifest$Builder instance using the provided configuration.
   The function takes the AssemblyManifest$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -320,6 +332,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn assembly-manifest-builder
+  ""
+  [id config]
+  (build-assembly-manifest-builder (new AssemblyManifest$Builder) id config))
+
+
 (defn build-asset-manifest-builder
   "The build-asset-manifest-builder function updates a AssetManifest$Builder instance using the provided configuration.
   The function takes the AssetManifest$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -343,6 +361,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn asset-manifest-builder
+  ""
+  [id config]
+  (build-asset-manifest-builder (new AssetManifest$Builder) id config))
+
+
 (defn build-asset-manifest-options-builder
   "The build-asset-manifest-options-builder function updates a AssetManifestOptions$Builder instance using the provided configuration.
   The function takes the AssetManifestOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -361,6 +385,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :requires-bootstrap-stack-version)]
     (. builder requiresBootstrapStackVersion data))
   (.build builder))
+
+
+(defn asset-manifest-options-builder
+  ""
+  [id config]
+  (build-asset-manifest-options-builder (new AssetManifestOptions$Builder) id config))
 
 
 (defn build-asset-manifest-properties-builder
@@ -386,6 +416,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn asset-manifest-properties-builder
+  ""
+  [id config]
+  (build-asset-manifest-properties-builder (new AssetManifestProperties$Builder) id config))
+
+
 (defn build-availability-zones-context-query-builder
   "The build-availability-zones-context-query-builder function updates a AvailabilityZonesContextQuery$Builder instance using the provided configuration.
   The function takes the AvailabilityZonesContextQuery$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -407,6 +443,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :region)]
     (. builder region data))
   (.build builder))
+
+
+(defn availability-zones-context-query-builder
+  ""
+  [id config]
+  (build-availability-zones-context-query-builder (new AvailabilityZonesContextQuery$Builder) id config))
 
 
 (defn build-aws-cloud-formation-stack-properties-builder
@@ -462,6 +504,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn aws-cloud-formation-stack-properties-builder
+  ""
+  [id config]
+  (build-aws-cloud-formation-stack-properties-builder (new AwsCloudFormationStackProperties$Builder) id config))
+
+
 (defn build-aws-destination-builder
   "The build-aws-destination-builder function updates a AwsDestination$Builder instance using the provided configuration.
   The function takes the AwsDestination$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -483,6 +531,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :region)]
     (. builder region data))
   (.build builder))
+
+
+(defn aws-destination-builder
+  ""
+  [id config]
+  (build-aws-destination-builder (new AwsDestination$Builder) id config))
 
 
 (defn build-bootstrap-role-builder
@@ -511,6 +565,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn bootstrap-role-builder
+  ""
+  [id config]
+  (build-bootstrap-role-builder (new BootstrapRole$Builder) id config))
+
+
 (defn build-cdk-command-builder
   "The build-cdk-command-builder function updates a CdkCommand$Builder instance using the provided configuration.
   The function takes the CdkCommand$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -534,6 +594,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cdk-command-builder
+  ""
+  [id config]
+  (build-cdk-command-builder (new CdkCommand$Builder) id config))
+
+
 (defn build-cdk-commands-builder
   "The build-cdk-commands-builder function updates a CdkCommands$Builder instance using the provided configuration.
   The function takes the CdkCommands$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -554,6 +620,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cdk-commands-builder
+  ""
+  [id config]
+  (build-cdk-commands-builder (new CdkCommands$Builder) id config))
+
+
 (defn build-container-image-asset-cache-option-builder
   "The build-container-image-asset-cache-option-builder function updates a ContainerImageAssetCacheOption$Builder instance using the provided configuration.
   The function takes the ContainerImageAssetCacheOption$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -572,6 +644,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn container-image-asset-cache-option-builder
+  ""
+  [id config]
+  (build-container-image-asset-cache-option-builder (new ContainerImageAssetCacheOption$Builder) id config))
 
 
 (defn build-container-image-asset-metadata-entry-builder
@@ -637,6 +715,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
+
+
+(defn container-image-asset-metadata-entry-builder
+  ""
+  [id config]
+  (build-container-image-asset-metadata-entry-builder (new ContainerImageAssetMetadataEntry$Builder) id config))
 
 
 (defn build-default-cdk-options-builder
@@ -722,6 +806,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn default-cdk-options-builder
+  ""
+  [id config]
+  (build-default-cdk-options-builder (new DefaultCdkOptions$Builder) id config))
+
+
 (defn build-deploy-command-builder
   "The build-deploy-command-builder function updates a DeployCommand$Builder instance using the provided configuration.
   The function takes the DeployCommand$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -746,6 +836,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :expected-message)]
     (. builder expectedMessage data))
   (.build builder))
+
+
+(defn deploy-command-builder
+  ""
+  [id config]
+  (build-deploy-command-builder (new DeployCommand$Builder) id config))
 
 
 (defn build-deploy-options-builder
@@ -873,6 +969,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn deploy-options-builder
+  ""
+  [id config]
+  (build-deploy-options-builder (new DeployOptions$Builder) id config))
+
+
 (defn build-destroy-command-builder
   "The build-destroy-command-builder function updates a DestroyCommand$Builder instance using the provided configuration.
   The function takes the DestroyCommand$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -897,6 +999,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :expected-message)]
     (. builder expectedMessage data))
   (.build builder))
+
+
+(defn destroy-command-builder
+  ""
+  [id config]
+  (build-destroy-command-builder (new DestroyCommand$Builder) id config))
 
 
 (defn build-destroy-options-builder
@@ -988,6 +1096,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn destroy-options-builder
+  ""
+  [id config]
+  (build-destroy-options-builder (new DestroyOptions$Builder) id config))
+
+
 (defn build-docker-cache-option-builder
   "The build-docker-cache-option-builder function updates a DockerCacheOption$Builder instance using the provided configuration.
   The function takes the DockerCacheOption$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1008,6 +1122,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn docker-cache-option-builder
+  ""
+  [id config]
+  (build-docker-cache-option-builder (new DockerCacheOption$Builder) id config))
+
+
 (defn build-docker-image-asset-builder
   "The build-docker-image-asset-builder function updates a DockerImageAsset$Builder instance using the provided configuration.
   The function takes the DockerImageAsset$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1026,6 +1146,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :source)]
     (. builder source data))
   (.build builder))
+
+
+(defn docker-image-asset-builder
+  ""
+  [id config]
+  (build-docker-image-asset-builder (new DockerImageAsset$Builder) id config))
 
 
 (defn build-docker-image-destination-builder
@@ -1055,6 +1181,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
   (.build builder))
+
+
+(defn docker-image-destination-builder
+  ""
+  [id config]
+  (build-docker-image-destination-builder (new DockerImageDestination$Builder) id config))
 
 
 (defn build-docker-image-source-builder
@@ -1110,6 +1242,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn docker-image-source-builder
+  ""
+  [id config]
+  (build-docker-image-source-builder (new DockerImageSource$Builder) id config))
+
+
 (defn build-endpoint-service-availability-zones-context-query-builder
   "The build-endpoint-service-availability-zones-context-query-builder function updates a EndpointServiceAvailabilityZonesContextQuery$Builder instance using the provided configuration.
   The function takes the EndpointServiceAvailabilityZonesContextQuery$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1136,6 +1274,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn endpoint-service-availability-zones-context-query-builder
+  ""
+  [id config]
+  (build-endpoint-service-availability-zones-context-query-builder (new EndpointServiceAvailabilityZonesContextQuery$Builder) id config))
+
+
 (defn build-file-asset-builder
   "The build-file-asset-builder function updates a FileAsset$Builder instance using the provided configuration.
   The function takes the FileAsset$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1154,6 +1298,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :source)]
     (. builder source data))
   (.build builder))
+
+
+(defn file-asset-builder
+  ""
+  [id config]
+  (build-file-asset-builder (new FileAsset$Builder) id config))
 
 
 (defn build-file-asset-metadata-entry-builder
@@ -1191,6 +1341,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn file-asset-metadata-entry-builder
+  ""
+  [id config]
+  (build-file-asset-metadata-entry-builder (new FileAssetMetadataEntry$Builder) id config))
+
+
 (defn build-file-destination-builder
   "The build-file-destination-builder function updates a FileDestination$Builder instance using the provided configuration.
   The function takes the FileDestination$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1220,6 +1376,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn file-destination-builder
+  ""
+  [id config]
+  (build-file-destination-builder (new FileDestination$Builder) id config))
+
+
 (defn build-file-source-builder
   "The build-file-source-builder function updates a FileSource$Builder instance using the provided configuration.
   The function takes the FileSource$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1241,6 +1403,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :path)]
     (. builder path data))
   (.build builder))
+
+
+(defn file-source-builder
+  ""
+  [id config]
+  (build-file-source-builder (new FileSource$Builder) id config))
 
 
 (defn build-hooks-builder
@@ -1267,6 +1435,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :pre-destroy)]
     (. builder preDestroy data))
   (.build builder))
+
+
+(defn hooks-builder
+  ""
+  [id config]
+  (build-hooks-builder (new Hooks$Builder) id config))
 
 
 (defn build-hosted-zone-context-query-builder
@@ -1301,6 +1475,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn hosted-zone-context-query-builder
+  ""
+  [id config]
+  (build-hosted-zone-context-query-builder (new HostedZoneContextQuery$Builder) id config))
+
+
 (defn build-integ-manifest-builder
   "The build-integ-manifest-builder function updates a IntegManifest$Builder instance using the provided configuration.
   The function takes the IntegManifest$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1327,6 +1507,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn integ-manifest-builder
+  ""
+  [id config]
+  (build-integ-manifest-builder (new IntegManifest$Builder) id config))
+
+
 (defn build-key-context-query-builder
   "The build-key-context-query-builder function updates a KeyContextQuery$Builder instance using the provided configuration.
   The function takes the KeyContextQuery$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1351,6 +1537,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :region)]
     (. builder region data))
   (.build builder))
+
+
+(defn key-context-query-builder
+  ""
+  [id config]
+  (build-key-context-query-builder (new KeyContextQuery$Builder) id config))
 
 
 (defn build-load-balancer-context-query-builder
@@ -1385,6 +1577,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn load-balancer-context-query-builder
+  ""
+  [id config]
+  (build-load-balancer-context-query-builder (new LoadBalancerContextQuery$Builder) id config))
+
+
 (defn build-load-balancer-filter-builder
   "The build-load-balancer-filter-builder function updates a LoadBalancerFilter$Builder instance using the provided configuration.
   The function takes the LoadBalancerFilter$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1406,6 +1604,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (load-balancer-type config id :load-balancer-type)]
     (. builder loadBalancerType data))
   (.build builder))
+
+
+(defn load-balancer-filter-builder
+  ""
+  [id config]
+  (build-load-balancer-filter-builder (new LoadBalancerFilter$Builder) id config))
 
 
 (defn build-load-balancer-listener-context-query-builder
@@ -1449,6 +1653,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn load-balancer-listener-context-query-builder
+  ""
+  [id config]
+  (build-load-balancer-listener-context-query-builder (new LoadBalancerListenerContextQuery$Builder) id config))
+
+
 (defn build-load-manifest-options-builder
   "The build-load-manifest-options-builder function updates a LoadManifestOptions$Builder instance using the provided configuration.
   The function takes the LoadManifestOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1470,6 +1680,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :topo-sort)]
     (. builder topoSort data))
   (.build builder))
+
+
+(defn load-manifest-options-builder
+  ""
+  [id config]
+  (build-load-manifest-options-builder (new LoadManifestOptions$Builder) id config))
 
 
 (defn build-metadata-entry-builder
@@ -1495,6 +1711,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn metadata-entry-builder
+  ""
+  [id config]
+  (build-metadata-entry-builder (new MetadataEntry$Builder) id config))
+
+
 (defn build-missing-context-builder
   "The build-missing-context-builder function updates a MissingContext$Builder instance using the provided configuration.
   The function takes the MissingContext$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1518,6 +1740,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn missing-context-builder
+  ""
+  [id config]
+  (build-missing-context-builder (new MissingContext$Builder) id config))
+
+
 (defn build-nested-cloud-assembly-properties-builder
   "The build-nested-cloud-assembly-properties-builder function updates a NestedCloudAssemblyProperties$Builder instance using the provided configuration.
   The function takes the NestedCloudAssemblyProperties$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1538,6 +1766,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn nested-cloud-assembly-properties-builder
+  ""
+  [id config]
+  (build-nested-cloud-assembly-properties-builder (new NestedCloudAssemblyProperties$Builder) id config))
+
+
 (defn build-plugin-context-query-builder
   "The build-plugin-context-query-builder function updates a PluginContextQuery$Builder instance using the provided configuration.
   The function takes the PluginContextQuery$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1555,6 +1789,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn plugin-context-query-builder
+  ""
+  [id config]
+  (build-plugin-context-query-builder (new PluginContextQuery$Builder) id config))
+
+
 (defn build-runtime-info-builder
   "The build-runtime-info-builder function updates a RuntimeInfo$Builder instance using the provided configuration.
   The function takes the RuntimeInfo$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1570,6 +1810,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :libraries)]
     (. builder libraries data))
   (.build builder))
+
+
+(defn runtime-info-builder
+  ""
+  [id config]
+  (build-runtime-info-builder (new RuntimeInfo$Builder) id config))
 
 
 (defn build-security-group-context-query-builder
@@ -1604,6 +1850,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn security-group-context-query-builder
+  ""
+  [id config]
+  (build-security-group-context-query-builder (new SecurityGroupContextQuery$Builder) id config))
+
+
 (defn build-ssm-parameter-context-query-builder
   "The build-ssm-parameter-context-query-builder function updates a SSMParameterContextQuery$Builder instance using the provided configuration.
   The function takes the SSMParameterContextQuery$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1630,6 +1882,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn ssm-parameter-context-query-builder
+  ""
+  [id config]
+  (build-ssm-parameter-context-query-builder (new SSMParameterContextQuery$Builder) id config))
+
+
 (defn build-tag-builder
   "The build-tag-builder function updates a Tag$Builder instance using the provided configuration.
   The function takes the Tag$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1648,6 +1906,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn tag-builder
+  ""
+  [id config]
+  (build-tag-builder (new Tag$Builder) id config))
 
 
 (defn build-test-case-builder
@@ -1691,6 +1955,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn test-case-builder
+  ""
+  [id config]
+  (build-test-case-builder (new TestCase$Builder) id config))
+
+
 (defn build-test-options-builder
   "The build-test-options-builder function updates a TestOptions$Builder instance using the provided configuration.
   The function takes the TestOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1723,6 +1993,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn test-options-builder
+  ""
+  [id config]
+  (build-test-options-builder (new TestOptions$Builder) id config))
+
+
 (defn build-tree-artifact-properties-builder
   "The build-tree-artifact-properties-builder function updates a TreeArtifactProperties$Builder instance using the provided configuration.
   The function takes the TreeArtifactProperties$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1738,6 +2014,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :file)]
     (. builder file data))
   (.build builder))
+
+
+(defn tree-artifact-properties-builder
+  ""
+  [id config]
+  (build-tree-artifact-properties-builder (new TreeArtifactProperties$Builder) id config))
 
 
 (defn build-vpc-context-query-builder
@@ -1773,3 +2055,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :subnet-group-name-tag)]
     (. builder subnetGroupNameTag data))
   (.build builder))
+
+
+(defn vpc-context-query-builder
+  ""
+  [id config]
+  (build-vpc-context-query-builder (new VpcContextQuery$Builder) id config))

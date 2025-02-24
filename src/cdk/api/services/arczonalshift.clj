@@ -30,6 +30,12 @@
   (.build builder))
 
 
+(defn cfn-zonal-autoshift-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-zonal-autoshift-configuration-builder (CfnZonalAutoshiftConfiguration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-zonal-autoshift-configuration-control-condition-property-builder
   "The build-cfn-zonal-autoshift-configuration-control-condition-property-builder function updates a CfnZonalAutoshiftConfiguration$ControlConditionProperty$Builder instance using the provided configuration.
   The function takes the CfnZonalAutoshiftConfiguration$ControlConditionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -48,6 +54,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-zonal-autoshift-configuration-control-condition-property-builder
+  ""
+  [id config]
+  (build-cfn-zonal-autoshift-configuration-control-condition-property-builder (new CfnZonalAutoshiftConfiguration$ControlConditionProperty$Builder) id config))
 
 
 (defn build-cfn-zonal-autoshift-configuration-practice-run-configuration-property-builder
@@ -76,6 +88,12 @@
   (.build builder))
 
 
+(defn cfn-zonal-autoshift-configuration-practice-run-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-zonal-autoshift-configuration-practice-run-configuration-property-builder (new CfnZonalAutoshiftConfiguration$PracticeRunConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-zonal-autoshift-configuration-props-builder
   "The build-cfn-zonal-autoshift-configuration-props-builder function updates a CfnZonalAutoshiftConfigurationProps$Builder instance using the provided configuration.
   The function takes the CfnZonalAutoshiftConfigurationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -97,3 +115,9 @@
   (when-let [data (lookup-entry config id :zonal-autoshift-status)]
     (. builder zonalAutoshiftStatus data))
   (.build builder))
+
+
+(defn cfn-zonal-autoshift-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-zonal-autoshift-configuration-props-builder (new CfnZonalAutoshiftConfigurationProps$Builder) id config))

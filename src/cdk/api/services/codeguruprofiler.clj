@@ -46,6 +46,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-profiling-group-agent-permissions-property-builder
+  ""
+  [id config]
+  (build-cfn-profiling-group-agent-permissions-property-builder (new CfnProfilingGroup$AgentPermissionsProperty$Builder) id config))
+
+
 (defn build-cfn-profiling-group-builder
   "The build-cfn-profiling-group-builder function updates a CfnProfilingGroup$Builder instance using the provided configuration.
   The function takes the CfnProfilingGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -75,6 +81,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-profiling-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-profiling-group-builder (CfnProfilingGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-profiling-group-channel-property-builder
   "The build-cfn-profiling-group-channel-property-builder function updates a CfnProfilingGroup$ChannelProperty$Builder instance using the provided configuration.
   The function takes the CfnProfilingGroup$ChannelProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -93,6 +105,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :channel-uri)]
     (. builder channelUri data))
   (.build builder))
+
+
+(defn cfn-profiling-group-channel-property-builder
+  ""
+  [id config]
+  (build-cfn-profiling-group-channel-property-builder (new CfnProfilingGroup$ChannelProperty$Builder) id config))
 
 
 (defn build-cfn-profiling-group-props-builder
@@ -124,6 +142,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-profiling-group-props-builder
+  ""
+  [id config]
+  (build-cfn-profiling-group-props-builder (new CfnProfilingGroupProps$Builder) id config))
+
+
 (defn build-profiling-group-builder
   "The build-profiling-group-builder function updates a ProfilingGroup$Builder instance using the provided configuration.
   The function takes the ProfilingGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -144,6 +168,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn profiling-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-profiling-group-builder (ProfilingGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-profiling-group-props-builder
   "The build-profiling-group-props-builder function updates a ProfilingGroupProps$Builder instance using the provided configuration.
   The function takes the ProfilingGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -162,3 +192,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :profiling-group-name)]
     (. builder profilingGroupName data))
   (.build builder))
+
+
+(defn profiling-group-props-builder
+  ""
+  [id config]
+  (build-profiling-group-props-builder (new ProfilingGroupProps$Builder) id config))

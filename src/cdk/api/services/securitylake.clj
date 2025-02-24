@@ -44,6 +44,12 @@
   (.build builder))
 
 
+(defn cfn-aws-log-source-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-aws-log-source-builder (CfnAwsLogSource$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-aws-log-source-props-builder
   "The build-cfn-aws-log-source-props-builder function updates a CfnAwsLogSourceProps$Builder instance using the provided configuration.
   The function takes the CfnAwsLogSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -68,6 +74,12 @@
   (when-let [data (lookup-entry config id :source-version)]
     (. builder sourceVersion data))
   (.build builder))
+
+
+(defn cfn-aws-log-source-props-builder
+  ""
+  [id config]
+  (build-cfn-aws-log-source-props-builder (new CfnAwsLogSourceProps$Builder) id config))
 
 
 (defn build-cfn-data-lake-builder
@@ -99,6 +111,12 @@
   (.build builder))
 
 
+(defn cfn-data-lake-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-data-lake-builder (CfnDataLake$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-data-lake-encryption-configuration-property-builder
   "The build-cfn-data-lake-encryption-configuration-property-builder function updates a CfnDataLake$EncryptionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataLake$EncryptionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -116,6 +134,12 @@
   (.build builder))
 
 
+(defn cfn-data-lake-encryption-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-lake-encryption-configuration-property-builder (new CfnDataLake$EncryptionConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-data-lake-expiration-property-builder
   "The build-cfn-data-lake-expiration-property-builder function updates a CfnDataLake$ExpirationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataLake$ExpirationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -131,6 +155,12 @@
   (when-let [data (lookup-entry config id :days)]
     (. builder days data))
   (.build builder))
+
+
+(defn cfn-data-lake-expiration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-lake-expiration-property-builder (new CfnDataLake$ExpirationProperty$Builder) id config))
 
 
 (defn build-cfn-data-lake-lifecycle-configuration-property-builder
@@ -151,6 +181,12 @@
   (when-let [data (lookup-entry config id :transitions)]
     (. builder transitions data))
   (.build builder))
+
+
+(defn cfn-data-lake-lifecycle-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-lake-lifecycle-configuration-property-builder (new CfnDataLake$LifecycleConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-lake-props-builder
@@ -182,6 +218,12 @@
   (.build builder))
 
 
+(defn cfn-data-lake-props-builder
+  ""
+  [id config]
+  (build-cfn-data-lake-props-builder (new CfnDataLakeProps$Builder) id config))
+
+
 (defn build-cfn-data-lake-replication-configuration-property-builder
   "The build-cfn-data-lake-replication-configuration-property-builder function updates a CfnDataLake$ReplicationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataLake$ReplicationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -200,6 +242,12 @@
   (when-let [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
+
+
+(defn cfn-data-lake-replication-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-lake-replication-configuration-property-builder (new CfnDataLake$ReplicationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-lake-transitions-property-builder
@@ -222,6 +270,12 @@
   (.build builder))
 
 
+(defn cfn-data-lake-transitions-property-builder
+  ""
+  [id config]
+  (build-cfn-data-lake-transitions-property-builder (new CfnDataLake$TransitionsProperty$Builder) id config))
+
+
 (defn build-cfn-subscriber-aws-log-source-property-builder
   "The build-cfn-subscriber-aws-log-source-property-builder function updates a CfnSubscriber$AwsLogSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnSubscriber$AwsLogSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -240,6 +294,12 @@
   (when-let [data (lookup-entry config id :source-version)]
     (. builder sourceVersion data))
   (.build builder))
+
+
+(defn cfn-subscriber-aws-log-source-property-builder
+  ""
+  [id config]
+  (build-cfn-subscriber-aws-log-source-property-builder (new CfnSubscriber$AwsLogSourceProperty$Builder) id config))
 
 
 (defn build-cfn-subscriber-builder
@@ -277,6 +337,12 @@
   (.build builder))
 
 
+(defn cfn-subscriber-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-subscriber-builder (CfnSubscriber$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-subscriber-custom-log-source-property-builder
   "The build-cfn-subscriber-custom-log-source-property-builder function updates a CfnSubscriber$CustomLogSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnSubscriber$CustomLogSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -295,6 +361,12 @@
   (when-let [data (lookup-entry config id :source-version)]
     (. builder sourceVersion data))
   (.build builder))
+
+
+(defn cfn-subscriber-custom-log-source-property-builder
+  ""
+  [id config]
+  (build-cfn-subscriber-custom-log-source-property-builder (new CfnSubscriber$CustomLogSourceProperty$Builder) id config))
 
 
 (defn build-cfn-subscriber-props-builder
@@ -332,6 +404,12 @@
   (.build builder))
 
 
+(defn cfn-subscriber-props-builder
+  ""
+  [id config]
+  (build-cfn-subscriber-props-builder (new CfnSubscriberProps$Builder) id config))
+
+
 (defn build-cfn-subscriber-source-property-builder
   "The build-cfn-subscriber-source-property-builder function updates a CfnSubscriber$SourceProperty$Builder instance using the provided configuration.
   The function takes the CfnSubscriber$SourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -352,6 +430,12 @@
   (.build builder))
 
 
+(defn cfn-subscriber-source-property-builder
+  ""
+  [id config]
+  (build-cfn-subscriber-source-property-builder (new CfnSubscriber$SourceProperty$Builder) id config))
+
+
 (defn build-cfn-subscriber-subscriber-identity-property-builder
   "The build-cfn-subscriber-subscriber-identity-property-builder function updates a CfnSubscriber$SubscriberIdentityProperty$Builder instance using the provided configuration.
   The function takes the CfnSubscriber$SubscriberIdentityProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -370,3 +454,9 @@
   (when-let [data (lookup-entry config id :principal)]
     (. builder principal data))
   (.build builder))
+
+
+(defn cfn-subscriber-subscriber-identity-property-builder
+  ""
+  [id config]
+  (build-cfn-subscriber-subscriber-identity-property-builder (new CfnSubscriber$SubscriberIdentityProperty$Builder) id config))

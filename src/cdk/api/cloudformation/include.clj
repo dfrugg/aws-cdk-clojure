@@ -35,6 +35,12 @@
   (.build builder))
 
 
+(defn cfn-include-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-include-builder (CfnInclude$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-include-props-builder
   "The build-cfn-include-props-builder function updates a CfnIncludeProps$Builder instance using the provided configuration.
   The function takes the CfnIncludeProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -64,6 +70,12 @@
   (.build builder))
 
 
+(defn cfn-include-props-builder
+  ""
+  [id config]
+  (build-cfn-include-props-builder (new CfnIncludeProps$Builder) id config))
+
+
 (defn build-included-nested-stack-builder
   "The build-included-nested-stack-builder function updates a IncludedNestedStack$Builder instance using the provided configuration.
   The function takes the IncludedNestedStack$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -82,3 +94,9 @@
   (when-let [data (lookup-entry config id :stack)]
     (. builder stack data))
   (.build builder))
+
+
+(defn included-nested-stack-builder
+  ""
+  [id config]
+  (build-included-nested-stack-builder (new IncludedNestedStack$Builder) id config))

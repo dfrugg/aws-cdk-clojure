@@ -81,6 +81,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn attached-secret-options-builder
+  ""
+  [id config]
+  (build-attached-secret-options-builder (new AttachedSecretOptions$Builder) id config))
+
+
 (defn build-cfn-resource-policy-builder
   "The build-cfn-resource-policy-builder function updates a CfnResourcePolicy$Builder instance using the provided configuration.
   The function takes the CfnResourcePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -104,6 +110,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-resource-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-resource-policy-builder (CfnResourcePolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-resource-policy-props-builder
   "The build-cfn-resource-policy-props-builder function updates a CfnResourcePolicyProps$Builder instance using the provided configuration.
   The function takes the CfnResourcePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -125,6 +137,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :secret-id)]
     (. builder secretId data))
   (.build builder))
+
+
+(defn cfn-resource-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-resource-policy-props-builder (new CfnResourcePolicyProps$Builder) id config))
 
 
 (defn build-cfn-rotation-schedule-builder
@@ -154,6 +172,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :secret-id)]
     (. builder secretId data))
   (.build builder))
+
+
+(defn cfn-rotation-schedule-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-rotation-schedule-builder (CfnRotationSchedule$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-rotation-schedule-hosted-rotation-lambda-property-builder
@@ -203,6 +227,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-rotation-schedule-hosted-rotation-lambda-property-builder
+  ""
+  [id config]
+  (build-cfn-rotation-schedule-hosted-rotation-lambda-property-builder (new CfnRotationSchedule$HostedRotationLambdaProperty$Builder) id config))
+
+
 (defn build-cfn-rotation-schedule-props-builder
   "The build-cfn-rotation-schedule-props-builder function updates a CfnRotationScheduleProps$Builder instance using the provided configuration.
   The function takes the CfnRotationScheduleProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -232,6 +262,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-rotation-schedule-props-builder
+  ""
+  [id config]
+  (build-cfn-rotation-schedule-props-builder (new CfnRotationScheduleProps$Builder) id config))
+
+
 (defn build-cfn-rotation-schedule-rotation-rules-property-builder
   "The build-cfn-rotation-schedule-rotation-rules-property-builder function updates a CfnRotationSchedule$RotationRulesProperty$Builder instance using the provided configuration.
   The function takes the CfnRotationSchedule$RotationRulesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -253,6 +289,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :schedule-expression)]
     (. builder scheduleExpression data))
   (.build builder))
+
+
+(defn cfn-rotation-schedule-rotation-rules-property-builder
+  ""
+  [id config]
+  (build-cfn-rotation-schedule-rotation-rules-property-builder (new CfnRotationSchedule$RotationRulesProperty$Builder) id config))
 
 
 (defn build-cfn-secret-builder
@@ -288,6 +330,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-secret-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-secret-builder (CfnSecret$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-secret-generate-secret-string-property-builder
@@ -334,6 +382,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-secret-generate-secret-string-property-builder
+  ""
+  [id config]
+  (build-cfn-secret-generate-secret-string-property-builder (new CfnSecret$GenerateSecretStringProperty$Builder) id config))
+
+
 (defn build-cfn-secret-props-builder
   "The build-cfn-secret-props-builder function updates a CfnSecretProps$Builder instance using the provided configuration.
   The function takes the CfnSecretProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -369,6 +423,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-secret-props-builder
+  ""
+  [id config]
+  (build-cfn-secret-props-builder (new CfnSecretProps$Builder) id config))
+
+
 (defn build-cfn-secret-replica-region-property-builder
   "The build-cfn-secret-replica-region-property-builder function updates a CfnSecret$ReplicaRegionProperty$Builder instance using the provided configuration.
   The function takes the CfnSecret$ReplicaRegionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -387,6 +447,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :region)]
     (. builder region data))
   (.build builder))
+
+
+(defn cfn-secret-replica-region-property-builder
+  ""
+  [id config]
+  (build-cfn-secret-replica-region-property-builder (new CfnSecret$ReplicaRegionProperty$Builder) id config))
 
 
 (defn build-cfn-secret-target-attachment-builder
@@ -412,6 +478,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-secret-target-attachment-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-secret-target-attachment-builder (CfnSecretTargetAttachment$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-secret-target-attachment-props-builder
   "The build-cfn-secret-target-attachment-props-builder function updates a CfnSecretTargetAttachmentProps$Builder instance using the provided configuration.
   The function takes the CfnSecretTargetAttachmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -433,6 +505,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :target-type)]
     (. builder targetType data))
   (.build builder))
+
+
+(defn cfn-secret-target-attachment-props-builder
+  ""
+  [id config]
+  (build-cfn-secret-target-attachment-props-builder (new CfnSecretTargetAttachmentProps$Builder) id config))
 
 
 (defn build-multi-user-hosted-rotation-options-builder
@@ -467,6 +545,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn multi-user-hosted-rotation-options-builder
+  ""
+  [id config]
+  (build-multi-user-hosted-rotation-options-builder (new MultiUserHostedRotationOptions$Builder) id config))
+
+
 (defn build-replica-region-builder
   "The build-replica-region-builder function updates a ReplicaRegion$Builder instance using the provided configuration.
   The function takes the ReplicaRegion$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -487,6 +571,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn replica-region-builder
+  ""
+  [id config]
+  (build-replica-region-builder (new ReplicaRegion$Builder) id config))
+
+
 (defn build-resource-policy-builder
   "The build-resource-policy-builder function updates a ResourcePolicy$Builder instance using the provided configuration.
   The function takes the ResourcePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -504,6 +594,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn resource-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-resource-policy-builder (ResourcePolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-resource-policy-props-builder
   "The build-resource-policy-props-builder function updates a ResourcePolicyProps$Builder instance using the provided configuration.
   The function takes the ResourcePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -519,6 +615,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :secret)]
     (. builder secret data))
   (.build builder))
+
+
+(defn resource-policy-props-builder
+  ""
+  [id config]
+  (build-resource-policy-props-builder (new ResourcePolicyProps$Builder) id config))
 
 
 (defn build-rotation-schedule-builder
@@ -550,6 +652,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn rotation-schedule-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-rotation-schedule-builder (RotationSchedule$Builder/create scope (name id)) id config))
+
+
 (defn build-rotation-schedule-options-builder
   "The build-rotation-schedule-options-builder function updates a RotationScheduleOptions$Builder instance using the provided configuration.
   The function takes the RotationScheduleOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -574,6 +682,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :rotation-lambda)]
     (. builder rotationLambda data))
   (.build builder))
+
+
+(defn rotation-schedule-options-builder
+  ""
+  [id config]
+  (build-rotation-schedule-options-builder (new RotationScheduleOptions$Builder) id config))
 
 
 (defn build-rotation-schedule-props-builder
@@ -605,6 +719,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn rotation-schedule-props-builder
+  ""
+  [id config]
+  (build-rotation-schedule-props-builder (new RotationScheduleProps$Builder) id config))
+
+
 (defn build-secret-attachment-target-props-builder
   "The build-secret-attachment-target-props-builder function updates a SecretAttachmentTargetProps$Builder instance using the provided configuration.
   The function takes the SecretAttachmentTargetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -623,6 +743,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (attachment-target-type config id :target-type)]
     (. builder targetType data))
   (.build builder))
+
+
+(defn secret-attachment-target-props-builder
+  ""
+  [id config]
+  (build-secret-attachment-target-props-builder (new SecretAttachmentTargetProps$Builder) id config))
 
 
 (defn build-secret-attributes-builder
@@ -646,6 +772,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :secret-partial-arn)]
     (. builder secretPartialArn data))
   (.build builder))
+
+
+(defn secret-attributes-builder
+  ""
+  [id config]
+  (build-secret-attributes-builder (new SecretAttributes$Builder) id config))
 
 
 (defn build-secret-builder
@@ -689,6 +821,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn secret-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-secret-builder (Secret$Builder/create scope (name id)) id config))
+
+
 (defn build-secret-props-builder
   "The build-secret-props-builder function updates a SecretProps$Builder instance using the provided configuration.
   The function takes the SecretProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -730,6 +868,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn secret-props-builder
+  ""
+  [id config]
+  (build-secret-props-builder (new SecretProps$Builder) id config))
+
+
 (defn build-secret-rotation-application-builder
   "The build-secret-rotation-application-builder function updates a SecretRotationApplication$Builder instance using the provided configuration.
   The function takes the SecretRotationApplication$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -762,6 +906,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :is-multi-user)]
     (. builder isMultiUser data))
   (.build builder))
+
+
+(defn secret-rotation-application-options-builder
+  ""
+  [id config]
+  (build-secret-rotation-application-options-builder (new SecretRotationApplicationOptions$Builder) id config))
 
 
 (defn build-secret-rotation-builder
@@ -811,6 +961,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn secret-rotation-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-secret-rotation-builder (SecretRotation$Builder/create scope (name id)) id config))
+
+
 (defn build-secret-rotation-props-builder
   "The build-secret-rotation-props-builder function updates a SecretRotationProps$Builder instance using the provided configuration.
   The function takes the SecretRotationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -858,6 +1014,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn secret-rotation-props-builder
+  ""
+  [id config]
+  (build-secret-rotation-props-builder (new SecretRotationProps$Builder) id config))
+
+
 (defn build-secret-string-generator-builder
   "The build-secret-string-generator-builder function updates a SecretStringGenerator$Builder instance using the provided configuration.
   The function takes the SecretStringGenerator$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -902,6 +1064,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn secret-string-generator-builder
+  ""
+  [id config]
+  (build-secret-string-generator-builder (new SecretStringGenerator$Builder) id config))
+
+
 (defn build-secret-target-attachment-builder
   "The build-secret-target-attachment-builder function updates a SecretTargetAttachment$Builder instance using the provided configuration.
   The function takes the SecretTargetAttachment$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -922,6 +1090,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn secret-target-attachment-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-secret-target-attachment-builder (SecretTargetAttachment$Builder/create scope (name id)) id config))
+
+
 (defn build-secret-target-attachment-props-builder
   "The build-secret-target-attachment-props-builder function updates a SecretTargetAttachmentProps$Builder instance using the provided configuration.
   The function takes the SecretTargetAttachmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -940,6 +1114,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :target)]
     (. builder target data))
   (.build builder))
+
+
+(defn secret-target-attachment-props-builder
+  ""
+  [id config]
+  (build-secret-target-attachment-props-builder (new SecretTargetAttachmentProps$Builder) id config))
 
 
 (defn build-single-user-hosted-rotation-options-builder
@@ -969,3 +1149,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :vpc-subnets)]
     (. builder vpcSubnets data))
   (.build builder))
+
+
+(defn single-user-hosted-rotation-options-builder
+  ""
+  [id config]
+  (build-single-user-hosted-rotation-options-builder (new SingleUserHostedRotationOptions$Builder) id config))

@@ -31,6 +31,12 @@
   (.build builder))
 
 
+(defn cfn-application-application-source-config-property-builder
+  ""
+  [id config]
+  (build-cfn-application-application-source-config-property-builder (new CfnApplication$ApplicationSourceConfigProperty$Builder) id config))
+
+
 (defn build-cfn-application-builder
   "The build-cfn-application-builder function updates a CfnApplication$Builder instance using the provided configuration.
   The function takes the CfnApplication$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -63,6 +69,12 @@
   (.build builder))
 
 
+(defn cfn-application-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-builder (CfnApplication$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-application-external-url-config-property-builder
   "The build-cfn-application-external-url-config-property-builder function updates a CfnApplication$ExternalUrlConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$ExternalUrlConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -81,6 +93,12 @@
   (when-let [data (lookup-entry config id :approved-origins)]
     (. builder approvedOrigins data))
   (.build builder))
+
+
+(defn cfn-application-external-url-config-property-builder
+  ""
+  [id config]
+  (build-cfn-application-external-url-config-property-builder (new CfnApplication$ExternalUrlConfigProperty$Builder) id config))
 
 
 (defn build-cfn-application-props-builder
@@ -113,6 +131,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-application-props-builder
+  ""
+  [id config]
+  (build-cfn-application-props-builder (new CfnApplicationProps$Builder) id config))
 
 
 (defn build-cfn-data-integration-builder
@@ -153,6 +177,12 @@
   (.build builder))
 
 
+(defn cfn-data-integration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-data-integration-builder (CfnDataIntegration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-data-integration-file-configuration-property-builder
   "The build-cfn-data-integration-file-configuration-property-builder function updates a CfnDataIntegration$FileConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDataIntegration$FileConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -171,6 +201,12 @@
   (when-let [data (lookup-entry config id :folders)]
     (. builder folders data))
   (.build builder))
+
+
+(defn cfn-data-integration-file-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-data-integration-file-configuration-property-builder (new CfnDataIntegration$FileConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-data-integration-props-builder
@@ -211,6 +247,12 @@
   (.build builder))
 
 
+(defn cfn-data-integration-props-builder
+  ""
+  [id config]
+  (build-cfn-data-integration-props-builder (new CfnDataIntegrationProps$Builder) id config))
+
+
 (defn build-cfn-data-integration-schedule-config-property-builder
   "The build-cfn-data-integration-schedule-config-property-builder function updates a CfnDataIntegration$ScheduleConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDataIntegration$ScheduleConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -232,6 +274,12 @@
   (when-let [data (lookup-entry config id :schedule-expression)]
     (. builder scheduleExpression data))
   (.build builder))
+
+
+(defn cfn-data-integration-schedule-config-property-builder
+  ""
+  [id config]
+  (build-cfn-data-integration-schedule-config-property-builder (new CfnDataIntegration$ScheduleConfigProperty$Builder) id config))
 
 
 (defn build-cfn-event-integration-builder
@@ -263,6 +311,12 @@
   (.build builder))
 
 
+(defn cfn-event-integration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-event-integration-builder (CfnEventIntegration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-event-integration-event-filter-property-builder
   "The build-cfn-event-integration-event-filter-property-builder function updates a CfnEventIntegration$EventFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnEventIntegration$EventFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -278,6 +332,12 @@
   (when-let [data (lookup-entry config id :source)]
     (. builder source data))
   (.build builder))
+
+
+(defn cfn-event-integration-event-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-event-integration-event-filter-property-builder (new CfnEventIntegration$EventFilterProperty$Builder) id config))
 
 
 (defn build-cfn-event-integration-props-builder
@@ -307,3 +367,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-event-integration-props-builder
+  ""
+  [id config]
+  (build-cfn-event-integration-props-builder (new CfnEventIntegrationProps$Builder) id config))

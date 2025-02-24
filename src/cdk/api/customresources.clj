@@ -75,6 +75,12 @@
   (.build builder))
 
 
+(defn aws-custom-resource-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-aws-custom-resource-builder (AwsCustomResource$Builder/create scope (name id)) id config))
+
+
 (defn build-aws-custom-resource-props-builder
   "The build-aws-custom-resource-props-builder function updates a AwsCustomResourceProps$Builder instance using the provided configuration.
   The function takes the AwsCustomResourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -134,6 +140,12 @@
   (.build builder))
 
 
+(defn aws-custom-resource-props-builder
+  ""
+  [id config]
+  (build-aws-custom-resource-props-builder (new AwsCustomResourceProps$Builder) id config))
+
+
 (defn build-aws-sdk-call-builder
   "The build-aws-sdk-call-builder function updates a AwsSdkCall$Builder instance using the provided configuration.
   The function takes the AwsSdkCall$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -178,6 +190,12 @@
   (.build builder))
 
 
+(defn aws-sdk-call-builder
+  ""
+  [id config]
+  (build-aws-sdk-call-builder (new AwsSdkCall$Builder) id config))
+
+
 (defn build-log-options-builder
   "The build-log-options-builder function updates a LogOptions$Builder instance using the provided configuration.
   The function takes the LogOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -201,6 +219,12 @@
   (.build builder))
 
 
+(defn log-options-builder
+  ""
+  [id config]
+  (build-log-options-builder (new LogOptions$Builder) id config))
+
+
 (defn build-logging-props-builder
   "The build-logging-props-builder function updates a LoggingProps$Builder instance using the provided configuration.
   The function takes the LoggingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -216,6 +240,12 @@
   (when-let [data (lookup-entry config id :log-api-response-data)]
     (. builder logApiResponseData data))
   (.build builder))
+
+
+(defn logging-props-builder
+  ""
+  [id config]
+  (build-logging-props-builder (new LoggingProps$Builder) id config))
 
 
 (defn build-provider-builder
@@ -274,6 +304,12 @@
   (.build builder))
 
 
+(defn provider-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-provider-builder (Provider$Builder/create scope (name id)) id config))
+
+
 (defn build-provider-props-builder
   "The build-provider-props-builder function updates a ProviderProps$Builder instance using the provided configuration.
   The function takes the ProviderProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -330,6 +366,12 @@
   (.build builder))
 
 
+(defn provider-props-builder
+  ""
+  [id config]
+  (build-provider-props-builder (new ProviderProps$Builder) id config))
+
+
 (defn build-sdk-calls-policy-options-builder
   "The build-sdk-calls-policy-options-builder function updates a SdkCallsPolicyOptions$Builder instance using the provided configuration.
   The function takes the SdkCallsPolicyOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -345,6 +387,12 @@
   (when-let [data (lookup-entry config id :resources)]
     (. builder resources data))
   (.build builder))
+
+
+(defn sdk-calls-policy-options-builder
+  ""
+  [id config]
+  (build-sdk-calls-policy-options-builder (new SdkCallsPolicyOptions$Builder) id config))
 
 
 (defn build-waiter-state-machine-builder
@@ -382,6 +430,12 @@
   (.build builder))
 
 
+(defn waiter-state-machine-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-waiter-state-machine-builder (WaiterStateMachine$Builder/create scope (name id)) id config))
+
+
 (defn build-waiter-state-machine-props-builder
   "The build-waiter-state-machine-props-builder function updates a WaiterStateMachineProps$Builder instance using the provided configuration.
   The function takes the WaiterStateMachineProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -415,3 +469,9 @@
   (when-let [data (lookup-entry config id :timeout-handler)]
     (. builder timeoutHandler data))
   (.build builder))
+
+
+(defn waiter-state-machine-props-builder
+  ""
+  [id config]
+  (build-waiter-state-machine-props-builder (new WaiterStateMachineProps$Builder) id config))

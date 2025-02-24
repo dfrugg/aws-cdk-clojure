@@ -40,6 +40,12 @@
   (.build builder))
 
 
+(defn cfn-enabled-baseline-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-enabled-baseline-builder (CfnEnabledBaseline$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-enabled-baseline-parameter-property-builder
   "The build-cfn-enabled-baseline-parameter-property-builder function updates a CfnEnabledBaseline$ParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnEnabledBaseline$ParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -58,6 +64,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-enabled-baseline-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-enabled-baseline-parameter-property-builder (new CfnEnabledBaseline$ParameterProperty$Builder) id config))
 
 
 (defn build-cfn-enabled-baseline-props-builder
@@ -89,6 +101,12 @@
   (.build builder))
 
 
+(defn cfn-enabled-baseline-props-builder
+  ""
+  [id config]
+  (build-cfn-enabled-baseline-props-builder (new CfnEnabledBaselineProps$Builder) id config))
+
+
 (defn build-cfn-enabled-control-builder
   "The build-cfn-enabled-control-builder function updates a CfnEnabledControl$Builder instance using the provided configuration.
   The function takes the CfnEnabledControl$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -115,6 +133,12 @@
   (.build builder))
 
 
+(defn cfn-enabled-control-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-enabled-control-builder (CfnEnabledControl$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-enabled-control-enabled-control-parameter-property-builder
   "The build-cfn-enabled-control-enabled-control-parameter-property-builder function updates a CfnEnabledControl$EnabledControlParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnEnabledControl$EnabledControlParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -133,6 +157,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-enabled-control-enabled-control-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-enabled-control-enabled-control-parameter-property-builder (new CfnEnabledControl$EnabledControlParameterProperty$Builder) id config))
 
 
 (defn build-cfn-enabled-control-props-builder
@@ -161,6 +191,12 @@
   (.build builder))
 
 
+(defn cfn-enabled-control-props-builder
+  ""
+  [id config]
+  (build-cfn-enabled-control-props-builder (new CfnEnabledControlProps$Builder) id config))
+
+
 (defn build-cfn-landing-zone-builder
   "The build-cfn-landing-zone-builder function updates a CfnLandingZone$Builder instance using the provided configuration.
   The function takes the CfnLandingZone$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -184,6 +220,12 @@
   (.build builder))
 
 
+(defn cfn-landing-zone-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-landing-zone-builder (CfnLandingZone$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-landing-zone-props-builder
   "The build-cfn-landing-zone-props-builder function updates a CfnLandingZoneProps$Builder instance using the provided configuration.
   The function takes the CfnLandingZoneProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -205,3 +247,9 @@
   (when-let [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
+
+
+(defn cfn-landing-zone-props-builder
+  ""
+  [id config]
+  (build-cfn-landing-zone-props-builder (new CfnLandingZoneProps$Builder) id config))

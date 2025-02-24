@@ -60,6 +60,12 @@
   (.build builder))
 
 
+(defn cfn-automation-rule-automation-rules-action-property-builder
+  ""
+  [id config]
+  (build-cfn-automation-rule-automation-rules-action-property-builder (new CfnAutomationRule$AutomationRulesActionProperty$Builder) id config))
+
+
 (defn build-cfn-automation-rule-automation-rules-finding-fields-update-property-builder
   "The build-cfn-automation-rule-automation-rules-finding-fields-update-property-builder function updates a CfnAutomationRule$AutomationRulesFindingFieldsUpdateProperty$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$AutomationRulesFindingFieldsUpdateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -99,6 +105,12 @@
   (when-let [data (lookup-entry config id :workflow)]
     (. builder workflow data))
   (.build builder))
+
+
+(defn cfn-automation-rule-automation-rules-finding-fields-update-property-builder
+  ""
+  [id config]
+  (build-cfn-automation-rule-automation-rules-finding-fields-update-property-builder (new CfnAutomationRule$AutomationRulesFindingFieldsUpdateProperty$Builder) id config))
 
 
 (defn build-cfn-automation-rule-automation-rules-finding-filters-property-builder
@@ -220,6 +232,12 @@
   (.build builder))
 
 
+(defn cfn-automation-rule-automation-rules-finding-filters-property-builder
+  ""
+  [id config]
+  (build-cfn-automation-rule-automation-rules-finding-filters-property-builder (new CfnAutomationRule$AutomationRulesFindingFiltersProperty$Builder) id config))
+
+
 (defn build-cfn-automation-rule-builder
   "The build-cfn-automation-rule-builder function updates a CfnAutomationRule$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -258,6 +276,12 @@
   (.build builder))
 
 
+(defn cfn-automation-rule-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-automation-rule-builder (CfnAutomationRule$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-automation-rule-date-filter-property-builder
   "The build-cfn-automation-rule-date-filter-property-builder function updates a CfnAutomationRule$DateFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$DateFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -281,6 +305,12 @@
   (.build builder))
 
 
+(defn cfn-automation-rule-date-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-automation-rule-date-filter-property-builder (new CfnAutomationRule$DateFilterProperty$Builder) id config))
+
+
 (defn build-cfn-automation-rule-date-range-property-builder
   "The build-cfn-automation-rule-date-range-property-builder function updates a CfnAutomationRule$DateRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$DateRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -299,6 +329,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-automation-rule-date-range-property-builder
+  ""
+  [id config]
+  (build-cfn-automation-rule-date-range-property-builder (new CfnAutomationRule$DateRangeProperty$Builder) id config))
 
 
 (defn build-cfn-automation-rule-map-filter-property-builder
@@ -324,6 +360,12 @@
   (.build builder))
 
 
+(defn cfn-automation-rule-map-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-automation-rule-map-filter-property-builder (new CfnAutomationRule$MapFilterProperty$Builder) id config))
+
+
 (defn build-cfn-automation-rule-note-update-property-builder
   "The build-cfn-automation-rule-note-update-property-builder function updates a CfnAutomationRule$NoteUpdateProperty$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$NoteUpdateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -342,6 +384,12 @@
   (when-let [data (lookup-entry config id :updated-by)]
     (. builder updatedBy data))
   (.build builder))
+
+
+(defn cfn-automation-rule-note-update-property-builder
+  ""
+  [id config]
+  (build-cfn-automation-rule-note-update-property-builder (new CfnAutomationRule$NoteUpdateProperty$Builder) id config))
 
 
 (defn build-cfn-automation-rule-number-filter-property-builder
@@ -365,6 +413,12 @@
   (when-let [data (lookup-entry config id :lte)]
     (. builder lte data))
   (.build builder))
+
+
+(defn cfn-automation-rule-number-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-automation-rule-number-filter-property-builder (new CfnAutomationRule$NumberFilterProperty$Builder) id config))
 
 
 (defn build-cfn-automation-rule-props-builder
@@ -405,6 +459,12 @@
   (.build builder))
 
 
+(defn cfn-automation-rule-props-builder
+  ""
+  [id config]
+  (build-cfn-automation-rule-props-builder (new CfnAutomationRuleProps$Builder) id config))
+
+
 (defn build-cfn-automation-rule-related-finding-property-builder
   "The build-cfn-automation-rule-related-finding-property-builder function updates a CfnAutomationRule$RelatedFindingProperty$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$RelatedFindingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -423,6 +483,12 @@
   (when-let [data (lookup-entry config id :product-arn)]
     (. builder productArn data))
   (.build builder))
+
+
+(defn cfn-automation-rule-related-finding-property-builder
+  ""
+  [id config]
+  (build-cfn-automation-rule-related-finding-property-builder (new CfnAutomationRule$RelatedFindingProperty$Builder) id config))
 
 
 (defn build-cfn-automation-rule-severity-update-property-builder
@@ -448,6 +514,12 @@
   (.build builder))
 
 
+(defn cfn-automation-rule-severity-update-property-builder
+  ""
+  [id config]
+  (build-cfn-automation-rule-severity-update-property-builder (new CfnAutomationRule$SeverityUpdateProperty$Builder) id config))
+
+
 (defn build-cfn-automation-rule-string-filter-property-builder
   "The build-cfn-automation-rule-string-filter-property-builder function updates a CfnAutomationRule$StringFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$StringFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -468,6 +540,12 @@
   (.build builder))
 
 
+(defn cfn-automation-rule-string-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-automation-rule-string-filter-property-builder (new CfnAutomationRule$StringFilterProperty$Builder) id config))
+
+
 (defn build-cfn-automation-rule-workflow-update-property-builder
   "The build-cfn-automation-rule-workflow-update-property-builder function updates a CfnAutomationRule$WorkflowUpdateProperty$Builder instance using the provided configuration.
   The function takes the CfnAutomationRule$WorkflowUpdateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -483,6 +561,12 @@
   (when-let [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
+
+
+(defn cfn-automation-rule-workflow-update-property-builder
+  ""
+  [id config]
+  (build-cfn-automation-rule-workflow-update-property-builder (new CfnAutomationRule$WorkflowUpdateProperty$Builder) id config))
 
 
 (defn build-cfn-delegated-admin-builder
@@ -502,6 +586,12 @@
   (.build builder))
 
 
+(defn cfn-delegated-admin-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-delegated-admin-builder (CfnDelegatedAdmin$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-delegated-admin-props-builder
   "The build-cfn-delegated-admin-props-builder function updates a CfnDelegatedAdminProps$Builder instance using the provided configuration.
   The function takes the CfnDelegatedAdminProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -517,6 +607,12 @@
   (when-let [data (lookup-entry config id :admin-account-id)]
     (. builder adminAccountId data))
   (.build builder))
+
+
+(defn cfn-delegated-admin-props-builder
+  ""
+  [id config]
+  (build-cfn-delegated-admin-props-builder (new CfnDelegatedAdminProps$Builder) id config))
 
 
 (defn build-cfn-hub-builder
@@ -545,6 +641,12 @@
   (.build builder))
 
 
+(defn cfn-hub-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-hub-builder (CfnHub$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-hub-props-builder
   "The build-cfn-hub-props-builder function updates a CfnHubProps$Builder instance using the provided configuration.
   The function takes the CfnHubProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -569,6 +671,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-hub-props-builder
+  ""
+  [id config]
+  (build-cfn-hub-props-builder (new CfnHubProps$Builder) id config))
 
 
 (defn build-cfn-insight-aws-security-finding-filters-property-builder
@@ -897,6 +1005,12 @@
   (.build builder))
 
 
+(defn cfn-insight-aws-security-finding-filters-property-builder
+  ""
+  [id config]
+  (build-cfn-insight-aws-security-finding-filters-property-builder (new CfnInsight$AwsSecurityFindingFiltersProperty$Builder) id config))
+
+
 (defn build-cfn-insight-boolean-filter-property-builder
   "The build-cfn-insight-boolean-filter-property-builder function updates a CfnInsight$BooleanFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnInsight$BooleanFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -912,6 +1026,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-insight-boolean-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-insight-boolean-filter-property-builder (new CfnInsight$BooleanFilterProperty$Builder) id config))
 
 
 (defn build-cfn-insight-builder
@@ -937,6 +1057,12 @@
   (.build builder))
 
 
+(defn cfn-insight-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-insight-builder (CfnInsight$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-insight-date-filter-property-builder
   "The build-cfn-insight-date-filter-property-builder function updates a CfnInsight$DateFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnInsight$DateFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -960,6 +1086,12 @@
   (.build builder))
 
 
+(defn cfn-insight-date-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-insight-date-filter-property-builder (new CfnInsight$DateFilterProperty$Builder) id config))
+
+
 (defn build-cfn-insight-date-range-property-builder
   "The build-cfn-insight-date-range-property-builder function updates a CfnInsight$DateRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnInsight$DateRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -980,6 +1112,12 @@
   (.build builder))
 
 
+(defn cfn-insight-date-range-property-builder
+  ""
+  [id config]
+  (build-cfn-insight-date-range-property-builder (new CfnInsight$DateRangeProperty$Builder) id config))
+
+
 (defn build-cfn-insight-ip-filter-property-builder
   "The build-cfn-insight-ip-filter-property-builder function updates a CfnInsight$IpFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnInsight$IpFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -997,6 +1135,12 @@
   (.build builder))
 
 
+(defn cfn-insight-ip-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-insight-ip-filter-property-builder (new CfnInsight$IpFilterProperty$Builder) id config))
+
+
 (defn build-cfn-insight-keyword-filter-property-builder
   "The build-cfn-insight-keyword-filter-property-builder function updates a CfnInsight$KeywordFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnInsight$KeywordFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1012,6 +1156,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-insight-keyword-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-insight-keyword-filter-property-builder (new CfnInsight$KeywordFilterProperty$Builder) id config))
 
 
 (defn build-cfn-insight-map-filter-property-builder
@@ -1037,6 +1187,12 @@
   (.build builder))
 
 
+(defn cfn-insight-map-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-insight-map-filter-property-builder (new CfnInsight$MapFilterProperty$Builder) id config))
+
+
 (defn build-cfn-insight-number-filter-property-builder
   "The build-cfn-insight-number-filter-property-builder function updates a CfnInsight$NumberFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnInsight$NumberFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1058,6 +1214,12 @@
   (when-let [data (lookup-entry config id :lte)]
     (. builder lte data))
   (.build builder))
+
+
+(defn cfn-insight-number-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-insight-number-filter-property-builder (new CfnInsight$NumberFilterProperty$Builder) id config))
 
 
 (defn build-cfn-insight-props-builder
@@ -1083,6 +1245,12 @@
   (.build builder))
 
 
+(defn cfn-insight-props-builder
+  ""
+  [id config]
+  (build-cfn-insight-props-builder (new CfnInsightProps$Builder) id config))
+
+
 (defn build-cfn-insight-string-filter-property-builder
   "The build-cfn-insight-string-filter-property-builder function updates a CfnInsight$StringFilterProperty$Builder instance using the provided configuration.
   The function takes the CfnInsight$StringFilterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1103,6 +1271,12 @@
   (.build builder))
 
 
+(defn cfn-insight-string-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-insight-string-filter-property-builder (new CfnInsight$StringFilterProperty$Builder) id config))
+
+
 (defn build-cfn-product-subscription-builder
   "The build-cfn-product-subscription-builder function updates a CfnProductSubscription$Builder instance using the provided configuration.
   The function takes the CfnProductSubscription$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1120,6 +1294,12 @@
   (.build builder))
 
 
+(defn cfn-product-subscription-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-product-subscription-builder (CfnProductSubscription$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-product-subscription-props-builder
   "The build-cfn-product-subscription-props-builder function updates a CfnProductSubscriptionProps$Builder instance using the provided configuration.
   The function takes the CfnProductSubscriptionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1135,6 +1315,12 @@
   (when-let [data (lookup-entry config id :product-arn)]
     (. builder productArn data))
   (.build builder))
+
+
+(defn cfn-product-subscription-props-builder
+  ""
+  [id config]
+  (build-cfn-product-subscription-props-builder (new CfnProductSubscriptionProps$Builder) id config))
 
 
 (defn build-cfn-security-control-builder
@@ -1163,6 +1349,12 @@
   (.build builder))
 
 
+(defn cfn-security-control-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-security-control-builder (CfnSecurityControl$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-security-control-parameter-configuration-property-builder
   "The build-cfn-security-control-parameter-configuration-property-builder function updates a CfnSecurityControl$ParameterConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnSecurityControl$ParameterConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1178,6 +1370,12 @@
   (when-let [data (lookup-entry config id :value-type)]
     (. builder valueType data))
   (.build builder))
+
+
+(defn cfn-security-control-parameter-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-security-control-parameter-configuration-property-builder (new CfnSecurityControl$ParameterConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-security-control-props-builder
@@ -1206,6 +1404,12 @@
   (.build builder))
 
 
+(defn cfn-security-control-props-builder
+  ""
+  [id config]
+  (build-cfn-security-control-props-builder (new CfnSecurityControlProps$Builder) id config))
+
+
 (defn build-cfn-standard-builder
   "The build-cfn-standard-builder function updates a CfnStandard$Builder instance using the provided configuration.
   The function takes the CfnStandard$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1224,6 +1428,12 @@
   (when-let [data (lookup-entry config id :standards-arn)]
     (. builder standardsArn data))
   (.build builder))
+
+
+(defn cfn-standard-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-standard-builder (CfnStandard$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-standard-props-builder
@@ -1246,6 +1456,12 @@
   (.build builder))
 
 
+(defn cfn-standard-props-builder
+  ""
+  [id config]
+  (build-cfn-standard-props-builder (new CfnStandardProps$Builder) id config))
+
+
 (defn build-cfn-standard-standards-control-property-builder
   "The build-cfn-standard-standards-control-property-builder function updates a CfnStandard$StandardsControlProperty$Builder instance using the provided configuration.
   The function takes the CfnStandard$StandardsControlProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1264,3 +1480,9 @@
   (when-let [data (lookup-entry config id :standards-control-arn)]
     (. builder standardsControlArn data))
   (.build builder))
+
+
+(defn cfn-standard-standards-control-property-builder
+  ""
+  [id config]
+  (build-cfn-standard-standards-control-property-builder (new CfnStandard$StandardsControlProperty$Builder) id config))

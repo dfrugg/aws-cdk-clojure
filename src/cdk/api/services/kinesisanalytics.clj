@@ -119,6 +119,12 @@
   (.build builder))
 
 
+(defn cfn-application-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-builder (CfnApplication$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-application-cloud-watch-logging-option-v2-builder
   "The build-cfn-application-cloud-watch-logging-option-v2-builder function updates a CfnApplicationCloudWatchLoggingOptionV2$Builder instance using the provided configuration.
   The function takes the CfnApplicationCloudWatchLoggingOptionV2$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -139,6 +145,12 @@
   (.build builder))
 
 
+(defn cfn-application-cloud-watch-logging-option-v2-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-cloud-watch-logging-option-v2-builder (CfnApplicationCloudWatchLoggingOptionV2$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-application-cloud-watch-logging-option-v2-cloud-watch-logging-option-property-builder
   "The build-cfn-application-cloud-watch-logging-option-v2-cloud-watch-logging-option-property-builder function updates a CfnApplicationCloudWatchLoggingOptionV2$CloudWatchLoggingOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationCloudWatchLoggingOptionV2$CloudWatchLoggingOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -154,6 +166,12 @@
   (when-let [data (lookup-entry config id :log-stream-arn)]
     (. builder logStreamArn data))
   (.build builder))
+
+
+(defn cfn-application-cloud-watch-logging-option-v2-cloud-watch-logging-option-property-builder
+  ""
+  [id config]
+  (build-cfn-application-cloud-watch-logging-option-v2-cloud-watch-logging-option-property-builder (new CfnApplicationCloudWatchLoggingOptionV2$CloudWatchLoggingOptionProperty$Builder) id config))
 
 
 (defn build-cfn-application-cloud-watch-logging-option-v2-props-builder
@@ -176,6 +194,12 @@
   (.build builder))
 
 
+(defn cfn-application-cloud-watch-logging-option-v2-props-builder
+  ""
+  [id config]
+  (build-cfn-application-cloud-watch-logging-option-v2-props-builder (new CfnApplicationCloudWatchLoggingOptionV2Props$Builder) id config))
+
+
 (defn build-cfn-application-csv-mapping-parameters-property-builder
   "The build-cfn-application-csv-mapping-parameters-property-builder function updates a CfnApplication$CSVMappingParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$CSVMappingParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -194,6 +218,12 @@
   (when-let [data (lookup-entry config id :record-row-delimiter)]
     (. builder recordRowDelimiter data))
   (.build builder))
+
+
+(defn cfn-application-csv-mapping-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-application-csv-mapping-parameters-property-builder (new CfnApplication$CSVMappingParametersProperty$Builder) id config))
 
 
 (defn build-cfn-application-input-lambda-processor-property-builder
@@ -216,6 +246,12 @@
   (.build builder))
 
 
+(defn cfn-application-input-lambda-processor-property-builder
+  ""
+  [id config]
+  (build-cfn-application-input-lambda-processor-property-builder (new CfnApplication$InputLambdaProcessorProperty$Builder) id config))
+
+
 (defn build-cfn-application-input-parallelism-property-builder
   "The build-cfn-application-input-parallelism-property-builder function updates a CfnApplication$InputParallelismProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$InputParallelismProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -233,6 +269,12 @@
   (.build builder))
 
 
+(defn cfn-application-input-parallelism-property-builder
+  ""
+  [id config]
+  (build-cfn-application-input-parallelism-property-builder (new CfnApplication$InputParallelismProperty$Builder) id config))
+
+
 (defn build-cfn-application-input-processing-configuration-property-builder
   "The build-cfn-application-input-processing-configuration-property-builder function updates a CfnApplication$InputProcessingConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$InputProcessingConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -248,6 +290,12 @@
   (when-let [data (lookup-entry config id :input-lambda-processor)]
     (. builder inputLambdaProcessor data))
   (.build builder))
+
+
+(defn cfn-application-input-processing-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-input-processing-configuration-property-builder (new CfnApplication$InputProcessingConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-application-input-property-builder
@@ -282,6 +330,12 @@
   (.build builder))
 
 
+(defn cfn-application-input-property-builder
+  ""
+  [id config]
+  (build-cfn-application-input-property-builder (new CfnApplication$InputProperty$Builder) id config))
+
+
 (defn build-cfn-application-input-schema-property-builder
   "The build-cfn-application-input-schema-property-builder function updates a CfnApplication$InputSchemaProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$InputSchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -305,6 +359,12 @@
   (.build builder))
 
 
+(defn cfn-application-input-schema-property-builder
+  ""
+  [id config]
+  (build-cfn-application-input-schema-property-builder (new CfnApplication$InputSchemaProperty$Builder) id config))
+
+
 (defn build-cfn-application-json-mapping-parameters-property-builder
   "The build-cfn-application-json-mapping-parameters-property-builder function updates a CfnApplication$JSONMappingParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$JSONMappingParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -320,6 +380,12 @@
   (when-let [data (lookup-entry config id :record-row-path)]
     (. builder recordRowPath data))
   (.build builder))
+
+
+(defn cfn-application-json-mapping-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-application-json-mapping-parameters-property-builder (new CfnApplication$JSONMappingParametersProperty$Builder) id config))
 
 
 (defn build-cfn-application-kinesis-firehose-input-property-builder
@@ -342,6 +408,12 @@
   (.build builder))
 
 
+(defn cfn-application-kinesis-firehose-input-property-builder
+  ""
+  [id config]
+  (build-cfn-application-kinesis-firehose-input-property-builder (new CfnApplication$KinesisFirehoseInputProperty$Builder) id config))
+
+
 (defn build-cfn-application-kinesis-streams-input-property-builder
   "The build-cfn-application-kinesis-streams-input-property-builder function updates a CfnApplication$KinesisStreamsInputProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$KinesisStreamsInputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -360,6 +432,12 @@
   (when-let [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
+
+
+(defn cfn-application-kinesis-streams-input-property-builder
+  ""
+  [id config]
+  (build-cfn-application-kinesis-streams-input-property-builder (new CfnApplication$KinesisStreamsInputProperty$Builder) id config))
 
 
 (defn build-cfn-application-mapping-parameters-property-builder
@@ -382,6 +460,12 @@
   (.build builder))
 
 
+(defn cfn-application-mapping-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-application-mapping-parameters-property-builder (new CfnApplication$MappingParametersProperty$Builder) id config))
+
+
 (defn build-cfn-application-output-builder
   "The build-cfn-application-output-builder function updates a CfnApplicationOutput$Builder instance using the provided configuration.
   The function takes the CfnApplicationOutput$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -402,6 +486,12 @@
   (.build builder))
 
 
+(defn cfn-application-output-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-output-builder (CfnApplicationOutput$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-application-output-destination-schema-property-builder
   "The build-cfn-application-output-destination-schema-property-builder function updates a CfnApplicationOutput$DestinationSchemaProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationOutput$DestinationSchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -417,6 +507,12 @@
   (when-let [data (lookup-entry config id :record-format-type)]
     (. builder recordFormatType data))
   (.build builder))
+
+
+(defn cfn-application-output-destination-schema-property-builder
+  ""
+  [id config]
+  (build-cfn-application-output-destination-schema-property-builder (new CfnApplicationOutput$DestinationSchemaProperty$Builder) id config))
 
 
 (defn build-cfn-application-output-kinesis-firehose-output-property-builder
@@ -439,6 +535,12 @@
   (.build builder))
 
 
+(defn cfn-application-output-kinesis-firehose-output-property-builder
+  ""
+  [id config]
+  (build-cfn-application-output-kinesis-firehose-output-property-builder (new CfnApplicationOutput$KinesisFirehoseOutputProperty$Builder) id config))
+
+
 (defn build-cfn-application-output-kinesis-streams-output-property-builder
   "The build-cfn-application-output-kinesis-streams-output-property-builder function updates a CfnApplicationOutput$KinesisStreamsOutputProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationOutput$KinesisStreamsOutputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -459,6 +561,12 @@
   (.build builder))
 
 
+(defn cfn-application-output-kinesis-streams-output-property-builder
+  ""
+  [id config]
+  (build-cfn-application-output-kinesis-streams-output-property-builder (new CfnApplicationOutput$KinesisStreamsOutputProperty$Builder) id config))
+
+
 (defn build-cfn-application-output-lambda-output-property-builder
   "The build-cfn-application-output-lambda-output-property-builder function updates a CfnApplicationOutput$LambdaOutputProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationOutput$LambdaOutputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -477,6 +585,12 @@
   (when-let [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
+
+
+(defn cfn-application-output-lambda-output-property-builder
+  ""
+  [id config]
+  (build-cfn-application-output-lambda-output-property-builder (new CfnApplicationOutput$LambdaOutputProperty$Builder) id config))
 
 
 (defn build-cfn-application-output-output-property-builder
@@ -508,6 +622,12 @@
   (.build builder))
 
 
+(defn cfn-application-output-output-property-builder
+  ""
+  [id config]
+  (build-cfn-application-output-output-property-builder (new CfnApplicationOutput$OutputProperty$Builder) id config))
+
+
 (defn build-cfn-application-output-props-builder
   "The build-cfn-application-output-props-builder function updates a CfnApplicationOutputProps$Builder instance using the provided configuration.
   The function takes the CfnApplicationOutputProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -526,6 +646,12 @@
   (when-let [data (lookup-entry config id :output)]
     (. builder output data))
   (.build builder))
+
+
+(defn cfn-application-output-props-builder
+  ""
+  [id config]
+  (build-cfn-application-output-props-builder (new CfnApplicationOutputProps$Builder) id config))
 
 
 (defn build-cfn-application-output-v2-builder
@@ -548,6 +674,12 @@
   (.build builder))
 
 
+(defn cfn-application-output-v2-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-output-v2-builder (CfnApplicationOutputV2$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-application-output-v2-destination-schema-property-builder
   "The build-cfn-application-output-v2-destination-schema-property-builder function updates a CfnApplicationOutputV2$DestinationSchemaProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationOutputV2$DestinationSchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -563,6 +695,12 @@
   (when-let [data (lookup-entry config id :record-format-type)]
     (. builder recordFormatType data))
   (.build builder))
+
+
+(defn cfn-application-output-v2-destination-schema-property-builder
+  ""
+  [id config]
+  (build-cfn-application-output-v2-destination-schema-property-builder (new CfnApplicationOutputV2$DestinationSchemaProperty$Builder) id config))
 
 
 (defn build-cfn-application-output-v2-kinesis-firehose-output-property-builder
@@ -582,6 +720,12 @@
   (.build builder))
 
 
+(defn cfn-application-output-v2-kinesis-firehose-output-property-builder
+  ""
+  [id config]
+  (build-cfn-application-output-v2-kinesis-firehose-output-property-builder (new CfnApplicationOutputV2$KinesisFirehoseOutputProperty$Builder) id config))
+
+
 (defn build-cfn-application-output-v2-kinesis-streams-output-property-builder
   "The build-cfn-application-output-v2-kinesis-streams-output-property-builder function updates a CfnApplicationOutputV2$KinesisStreamsOutputProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationOutputV2$KinesisStreamsOutputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -599,6 +743,12 @@
   (.build builder))
 
 
+(defn cfn-application-output-v2-kinesis-streams-output-property-builder
+  ""
+  [id config]
+  (build-cfn-application-output-v2-kinesis-streams-output-property-builder (new CfnApplicationOutputV2$KinesisStreamsOutputProperty$Builder) id config))
+
+
 (defn build-cfn-application-output-v2-lambda-output-property-builder
   "The build-cfn-application-output-v2-lambda-output-property-builder function updates a CfnApplicationOutputV2$LambdaOutputProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationOutputV2$LambdaOutputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -614,6 +764,12 @@
   (when-let [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
   (.build builder))
+
+
+(defn cfn-application-output-v2-lambda-output-property-builder
+  ""
+  [id config]
+  (build-cfn-application-output-v2-lambda-output-property-builder (new CfnApplicationOutputV2$LambdaOutputProperty$Builder) id config))
 
 
 (defn build-cfn-application-output-v2-output-property-builder
@@ -645,6 +801,12 @@
   (.build builder))
 
 
+(defn cfn-application-output-v2-output-property-builder
+  ""
+  [id config]
+  (build-cfn-application-output-v2-output-property-builder (new CfnApplicationOutputV2$OutputProperty$Builder) id config))
+
+
 (defn build-cfn-application-output-v2-props-builder
   "The build-cfn-application-output-v2-props-builder function updates a CfnApplicationOutputV2Props$Builder instance using the provided configuration.
   The function takes the CfnApplicationOutputV2Props$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -663,6 +825,12 @@
   (when-let [data (lookup-entry config id :output)]
     (. builder output data))
   (.build builder))
+
+
+(defn cfn-application-output-v2-props-builder
+  ""
+  [id config]
+  (build-cfn-application-output-v2-props-builder (new CfnApplicationOutputV2Props$Builder) id config))
 
 
 (defn build-cfn-application-props-builder
@@ -691,6 +859,12 @@
   (.build builder))
 
 
+(defn cfn-application-props-builder
+  ""
+  [id config]
+  (build-cfn-application-props-builder (new CfnApplicationProps$Builder) id config))
+
+
 (defn build-cfn-application-record-column-property-builder
   "The build-cfn-application-record-column-property-builder function updates a CfnApplication$RecordColumnProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$RecordColumnProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -714,6 +888,12 @@
   (.build builder))
 
 
+(defn cfn-application-record-column-property-builder
+  ""
+  [id config]
+  (build-cfn-application-record-column-property-builder (new CfnApplication$RecordColumnProperty$Builder) id config))
+
+
 (defn build-cfn-application-record-format-property-builder
   "The build-cfn-application-record-format-property-builder function updates a CfnApplication$RecordFormatProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$RecordFormatProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -732,6 +912,12 @@
   (when-let [data (lookup-entry config id :record-format-type)]
     (. builder recordFormatType data))
   (.build builder))
+
+
+(defn cfn-application-record-format-property-builder
+  ""
+  [id config]
+  (build-cfn-application-record-format-property-builder (new CfnApplication$RecordFormatProperty$Builder) id config))
 
 
 (defn build-cfn-application-reference-data-source-builder
@@ -754,6 +940,12 @@
   (.build builder))
 
 
+(defn cfn-application-reference-data-source-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-reference-data-source-builder (CfnApplicationReferenceDataSource$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-application-reference-data-source-csv-mapping-parameters-property-builder
   "The build-cfn-application-reference-data-source-csv-mapping-parameters-property-builder function updates a CfnApplicationReferenceDataSource$CSVMappingParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationReferenceDataSource$CSVMappingParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -774,6 +966,12 @@
   (.build builder))
 
 
+(defn cfn-application-reference-data-source-csv-mapping-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-application-reference-data-source-csv-mapping-parameters-property-builder (new CfnApplicationReferenceDataSource$CSVMappingParametersProperty$Builder) id config))
+
+
 (defn build-cfn-application-reference-data-source-json-mapping-parameters-property-builder
   "The build-cfn-application-reference-data-source-json-mapping-parameters-property-builder function updates a CfnApplicationReferenceDataSource$JSONMappingParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationReferenceDataSource$JSONMappingParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -789,6 +987,12 @@
   (when-let [data (lookup-entry config id :record-row-path)]
     (. builder recordRowPath data))
   (.build builder))
+
+
+(defn cfn-application-reference-data-source-json-mapping-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-application-reference-data-source-json-mapping-parameters-property-builder (new CfnApplicationReferenceDataSource$JSONMappingParametersProperty$Builder) id config))
 
 
 (defn build-cfn-application-reference-data-source-mapping-parameters-property-builder
@@ -811,6 +1015,12 @@
   (.build builder))
 
 
+(defn cfn-application-reference-data-source-mapping-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-application-reference-data-source-mapping-parameters-property-builder (new CfnApplicationReferenceDataSource$MappingParametersProperty$Builder) id config))
+
+
 (defn build-cfn-application-reference-data-source-props-builder
   "The build-cfn-application-reference-data-source-props-builder function updates a CfnApplicationReferenceDataSourceProps$Builder instance using the provided configuration.
   The function takes the CfnApplicationReferenceDataSourceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -829,6 +1039,12 @@
   (when-let [data (lookup-entry config id :reference-data-source)]
     (. builder referenceDataSource data))
   (.build builder))
+
+
+(defn cfn-application-reference-data-source-props-builder
+  ""
+  [id config]
+  (build-cfn-application-reference-data-source-props-builder (new CfnApplicationReferenceDataSourceProps$Builder) id config))
 
 
 (defn build-cfn-application-reference-data-source-record-column-property-builder
@@ -854,6 +1070,12 @@
   (.build builder))
 
 
+(defn cfn-application-reference-data-source-record-column-property-builder
+  ""
+  [id config]
+  (build-cfn-application-reference-data-source-record-column-property-builder (new CfnApplicationReferenceDataSource$RecordColumnProperty$Builder) id config))
+
+
 (defn build-cfn-application-reference-data-source-record-format-property-builder
   "The build-cfn-application-reference-data-source-record-format-property-builder function updates a CfnApplicationReferenceDataSource$RecordFormatProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationReferenceDataSource$RecordFormatProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -872,6 +1094,12 @@
   (when-let [data (lookup-entry config id :record-format-type)]
     (. builder recordFormatType data))
   (.build builder))
+
+
+(defn cfn-application-reference-data-source-record-format-property-builder
+  ""
+  [id config]
+  (build-cfn-application-reference-data-source-record-format-property-builder (new CfnApplicationReferenceDataSource$RecordFormatProperty$Builder) id config))
 
 
 (defn build-cfn-application-reference-data-source-reference-data-source-property-builder
@@ -897,6 +1125,12 @@
   (.build builder))
 
 
+(defn cfn-application-reference-data-source-reference-data-source-property-builder
+  ""
+  [id config]
+  (build-cfn-application-reference-data-source-reference-data-source-property-builder (new CfnApplicationReferenceDataSource$ReferenceDataSourceProperty$Builder) id config))
+
+
 (defn build-cfn-application-reference-data-source-reference-schema-property-builder
   "The build-cfn-application-reference-data-source-reference-schema-property-builder function updates a CfnApplicationReferenceDataSource$ReferenceSchemaProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationReferenceDataSource$ReferenceSchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -918,6 +1152,12 @@
   (when-let [data (lookup-entry config id :record-format)]
     (. builder recordFormat data))
   (.build builder))
+
+
+(defn cfn-application-reference-data-source-reference-schema-property-builder
+  ""
+  [id config]
+  (build-cfn-application-reference-data-source-reference-schema-property-builder (new CfnApplicationReferenceDataSource$ReferenceSchemaProperty$Builder) id config))
 
 
 (defn build-cfn-application-reference-data-source-s3-reference-data-source-property-builder
@@ -943,6 +1183,12 @@
   (.build builder))
 
 
+(defn cfn-application-reference-data-source-s3-reference-data-source-property-builder
+  ""
+  [id config]
+  (build-cfn-application-reference-data-source-s3-reference-data-source-property-builder (new CfnApplicationReferenceDataSource$S3ReferenceDataSourceProperty$Builder) id config))
+
+
 (defn build-cfn-application-reference-data-source-v2-builder
   "The build-cfn-application-reference-data-source-v2-builder function updates a CfnApplicationReferenceDataSourceV2$Builder instance using the provided configuration.
   The function takes the CfnApplicationReferenceDataSourceV2$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -961,6 +1207,12 @@
   (when-let [data (lookup-entry config id :reference-data-source)]
     (. builder referenceDataSource data))
   (.build builder))
+
+
+(defn cfn-application-reference-data-source-v2-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-reference-data-source-v2-builder (CfnApplicationReferenceDataSourceV2$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-application-reference-data-source-v2-csv-mapping-parameters-property-builder
@@ -983,6 +1235,12 @@
   (.build builder))
 
 
+(defn cfn-application-reference-data-source-v2-csv-mapping-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-application-reference-data-source-v2-csv-mapping-parameters-property-builder (new CfnApplicationReferenceDataSourceV2$CSVMappingParametersProperty$Builder) id config))
+
+
 (defn build-cfn-application-reference-data-source-v2-json-mapping-parameters-property-builder
   "The build-cfn-application-reference-data-source-v2-json-mapping-parameters-property-builder function updates a CfnApplicationReferenceDataSourceV2$JSONMappingParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationReferenceDataSourceV2$JSONMappingParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -998,6 +1256,12 @@
   (when-let [data (lookup-entry config id :record-row-path)]
     (. builder recordRowPath data))
   (.build builder))
+
+
+(defn cfn-application-reference-data-source-v2-json-mapping-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-application-reference-data-source-v2-json-mapping-parameters-property-builder (new CfnApplicationReferenceDataSourceV2$JSONMappingParametersProperty$Builder) id config))
 
 
 (defn build-cfn-application-reference-data-source-v2-mapping-parameters-property-builder
@@ -1020,6 +1284,12 @@
   (.build builder))
 
 
+(defn cfn-application-reference-data-source-v2-mapping-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-application-reference-data-source-v2-mapping-parameters-property-builder (new CfnApplicationReferenceDataSourceV2$MappingParametersProperty$Builder) id config))
+
+
 (defn build-cfn-application-reference-data-source-v2-props-builder
   "The build-cfn-application-reference-data-source-v2-props-builder function updates a CfnApplicationReferenceDataSourceV2Props$Builder instance using the provided configuration.
   The function takes the CfnApplicationReferenceDataSourceV2Props$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1038,6 +1308,12 @@
   (when-let [data (lookup-entry config id :reference-data-source)]
     (. builder referenceDataSource data))
   (.build builder))
+
+
+(defn cfn-application-reference-data-source-v2-props-builder
+  ""
+  [id config]
+  (build-cfn-application-reference-data-source-v2-props-builder (new CfnApplicationReferenceDataSourceV2Props$Builder) id config))
 
 
 (defn build-cfn-application-reference-data-source-v2-record-column-property-builder
@@ -1063,6 +1339,12 @@
   (.build builder))
 
 
+(defn cfn-application-reference-data-source-v2-record-column-property-builder
+  ""
+  [id config]
+  (build-cfn-application-reference-data-source-v2-record-column-property-builder (new CfnApplicationReferenceDataSourceV2$RecordColumnProperty$Builder) id config))
+
+
 (defn build-cfn-application-reference-data-source-v2-record-format-property-builder
   "The build-cfn-application-reference-data-source-v2-record-format-property-builder function updates a CfnApplicationReferenceDataSourceV2$RecordFormatProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationReferenceDataSourceV2$RecordFormatProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1081,6 +1363,12 @@
   (when-let [data (lookup-entry config id :record-format-type)]
     (. builder recordFormatType data))
   (.build builder))
+
+
+(defn cfn-application-reference-data-source-v2-record-format-property-builder
+  ""
+  [id config]
+  (build-cfn-application-reference-data-source-v2-record-format-property-builder (new CfnApplicationReferenceDataSourceV2$RecordFormatProperty$Builder) id config))
 
 
 (defn build-cfn-application-reference-data-source-v2-reference-data-source-property-builder
@@ -1106,6 +1394,12 @@
   (.build builder))
 
 
+(defn cfn-application-reference-data-source-v2-reference-data-source-property-builder
+  ""
+  [id config]
+  (build-cfn-application-reference-data-source-v2-reference-data-source-property-builder (new CfnApplicationReferenceDataSourceV2$ReferenceDataSourceProperty$Builder) id config))
+
+
 (defn build-cfn-application-reference-data-source-v2-reference-schema-property-builder
   "The build-cfn-application-reference-data-source-v2-reference-schema-property-builder function updates a CfnApplicationReferenceDataSourceV2$ReferenceSchemaProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationReferenceDataSourceV2$ReferenceSchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1129,6 +1423,12 @@
   (.build builder))
 
 
+(defn cfn-application-reference-data-source-v2-reference-schema-property-builder
+  ""
+  [id config]
+  (build-cfn-application-reference-data-source-v2-reference-schema-property-builder (new CfnApplicationReferenceDataSourceV2$ReferenceSchemaProperty$Builder) id config))
+
+
 (defn build-cfn-application-reference-data-source-v2-s3-reference-data-source-property-builder
   "The build-cfn-application-reference-data-source-v2-s3-reference-data-source-property-builder function updates a CfnApplicationReferenceDataSourceV2$S3ReferenceDataSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationReferenceDataSourceV2$S3ReferenceDataSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1149,6 +1449,12 @@
   (.build builder))
 
 
+(defn cfn-application-reference-data-source-v2-s3-reference-data-source-property-builder
+  ""
+  [id config]
+  (build-cfn-application-reference-data-source-v2-s3-reference-data-source-property-builder (new CfnApplicationReferenceDataSourceV2$S3ReferenceDataSourceProperty$Builder) id config))
+
+
 (defn build-cfn-application-v2-application-code-configuration-property-builder
   "The build-cfn-application-v2-application-code-configuration-property-builder function updates a CfnApplicationV2$ApplicationCodeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$ApplicationCodeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1167,6 +1473,12 @@
   (when-let [data (lookup-entry config id :code-content-type)]
     (. builder codeContentType data))
   (.build builder))
+
+
+(defn cfn-application-v2-application-code-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-application-code-configuration-property-builder (new CfnApplicationV2$ApplicationCodeConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-application-v2-application-configuration-property-builder
@@ -1204,6 +1516,12 @@
   (.build builder))
 
 
+(defn cfn-application-v2-application-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-application-configuration-property-builder (new CfnApplicationV2$ApplicationConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-application-v2-application-maintenance-configuration-property-builder
   "The build-cfn-application-v2-application-maintenance-configuration-property-builder function updates a CfnApplicationV2$ApplicationMaintenanceConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$ApplicationMaintenanceConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1219,6 +1537,12 @@
   (when-let [data (lookup-entry config id :application-maintenance-window-start-time)]
     (. builder applicationMaintenanceWindowStartTime data))
   (.build builder))
+
+
+(defn cfn-application-v2-application-maintenance-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-application-maintenance-configuration-property-builder (new CfnApplicationV2$ApplicationMaintenanceConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-application-v2-application-restore-configuration-property-builder
@@ -1241,6 +1565,12 @@
   (.build builder))
 
 
+(defn cfn-application-v2-application-restore-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-application-restore-configuration-property-builder (new CfnApplicationV2$ApplicationRestoreConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-application-v2-application-snapshot-configuration-property-builder
   "The build-cfn-application-v2-application-snapshot-configuration-property-builder function updates a CfnApplicationV2$ApplicationSnapshotConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$ApplicationSnapshotConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1256,6 +1586,12 @@
   (when-let [data (lookup-entry config id :snapshots-enabled)]
     (. builder snapshotsEnabled data))
   (.build builder))
+
+
+(defn cfn-application-v2-application-snapshot-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-application-snapshot-configuration-property-builder (new CfnApplicationV2$ApplicationSnapshotConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-application-v2-builder
@@ -1299,6 +1635,12 @@
   (.build builder))
 
 
+(defn cfn-application-v2-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-v2-builder (CfnApplicationV2$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-application-v2-catalog-configuration-property-builder
   "The build-cfn-application-v2-catalog-configuration-property-builder function updates a CfnApplicationV2$CatalogConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$CatalogConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1314,6 +1656,12 @@
   (when-let [data (lookup-entry config id :glue-data-catalog-configuration)]
     (. builder glueDataCatalogConfiguration data))
   (.build builder))
+
+
+(defn cfn-application-v2-catalog-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-catalog-configuration-property-builder (new CfnApplicationV2$CatalogConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-application-v2-checkpoint-configuration-property-builder
@@ -1342,6 +1690,12 @@
   (.build builder))
 
 
+(defn cfn-application-v2-checkpoint-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-checkpoint-configuration-property-builder (new CfnApplicationV2$CheckpointConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-application-v2-code-content-property-builder
   "The build-cfn-application-v2-code-content-property-builder function updates a CfnApplicationV2$CodeContentProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$CodeContentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1365,6 +1719,12 @@
   (.build builder))
 
 
+(defn cfn-application-v2-code-content-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-code-content-property-builder (new CfnApplicationV2$CodeContentProperty$Builder) id config))
+
+
 (defn build-cfn-application-v2-csv-mapping-parameters-property-builder
   "The build-cfn-application-v2-csv-mapping-parameters-property-builder function updates a CfnApplicationV2$CSVMappingParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$CSVMappingParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1383,6 +1743,12 @@
   (when-let [data (lookup-entry config id :record-row-delimiter)]
     (. builder recordRowDelimiter data))
   (.build builder))
+
+
+(defn cfn-application-v2-csv-mapping-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-csv-mapping-parameters-property-builder (new CfnApplicationV2$CSVMappingParametersProperty$Builder) id config))
 
 
 (defn build-cfn-application-v2-custom-artifact-configuration-property-builder
@@ -1408,6 +1774,12 @@
   (.build builder))
 
 
+(defn cfn-application-v2-custom-artifact-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-custom-artifact-configuration-property-builder (new CfnApplicationV2$CustomArtifactConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-application-v2-deploy-as-application-configuration-property-builder
   "The build-cfn-application-v2-deploy-as-application-configuration-property-builder function updates a CfnApplicationV2$DeployAsApplicationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$DeployAsApplicationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1425,6 +1797,12 @@
   (.build builder))
 
 
+(defn cfn-application-v2-deploy-as-application-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-deploy-as-application-configuration-property-builder (new CfnApplicationV2$DeployAsApplicationConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-application-v2-environment-properties-property-builder
   "The build-cfn-application-v2-environment-properties-property-builder function updates a CfnApplicationV2$EnvironmentPropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$EnvironmentPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1440,6 +1818,12 @@
   (when-let [data (lookup-entry config id :property-groups)]
     (. builder propertyGroups data))
   (.build builder))
+
+
+(defn cfn-application-v2-environment-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-environment-properties-property-builder (new CfnApplicationV2$EnvironmentPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-application-v2-flink-application-configuration-property-builder
@@ -1465,6 +1849,12 @@
   (.build builder))
 
 
+(defn cfn-application-v2-flink-application-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-flink-application-configuration-property-builder (new CfnApplicationV2$FlinkApplicationConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-application-v2-flink-run-configuration-property-builder
   "The build-cfn-application-v2-flink-run-configuration-property-builder function updates a CfnApplicationV2$FlinkRunConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$FlinkRunConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1480,6 +1870,12 @@
   (when-let [data (lookup-entry config id :allow-non-restored-state)]
     (. builder allowNonRestoredState data))
   (.build builder))
+
+
+(defn cfn-application-v2-flink-run-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-flink-run-configuration-property-builder (new CfnApplicationV2$FlinkRunConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-application-v2-glue-data-catalog-configuration-property-builder
@@ -1499,6 +1895,12 @@
   (.build builder))
 
 
+(defn cfn-application-v2-glue-data-catalog-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-glue-data-catalog-configuration-property-builder (new CfnApplicationV2$GlueDataCatalogConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-application-v2-input-lambda-processor-property-builder
   "The build-cfn-application-v2-input-lambda-processor-property-builder function updates a CfnApplicationV2$InputLambdaProcessorProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$InputLambdaProcessorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1514,6 +1916,12 @@
   (when-let [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
   (.build builder))
+
+
+(defn cfn-application-v2-input-lambda-processor-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-input-lambda-processor-property-builder (new CfnApplicationV2$InputLambdaProcessorProperty$Builder) id config))
 
 
 (defn build-cfn-application-v2-input-parallelism-property-builder
@@ -1533,6 +1941,12 @@
   (.build builder))
 
 
+(defn cfn-application-v2-input-parallelism-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-input-parallelism-property-builder (new CfnApplicationV2$InputParallelismProperty$Builder) id config))
+
+
 (defn build-cfn-application-v2-input-processing-configuration-property-builder
   "The build-cfn-application-v2-input-processing-configuration-property-builder function updates a CfnApplicationV2$InputProcessingConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$InputProcessingConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1548,6 +1962,12 @@
   (when-let [data (lookup-entry config id :input-lambda-processor)]
     (. builder inputLambdaProcessor data))
   (.build builder))
+
+
+(defn cfn-application-v2-input-processing-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-input-processing-configuration-property-builder (new CfnApplicationV2$InputProcessingConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-application-v2-input-property-builder
@@ -1582,6 +2002,12 @@
   (.build builder))
 
 
+(defn cfn-application-v2-input-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-input-property-builder (new CfnApplicationV2$InputProperty$Builder) id config))
+
+
 (defn build-cfn-application-v2-input-schema-property-builder
   "The build-cfn-application-v2-input-schema-property-builder function updates a CfnApplicationV2$InputSchemaProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$InputSchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1605,6 +2031,12 @@
   (.build builder))
 
 
+(defn cfn-application-v2-input-schema-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-input-schema-property-builder (new CfnApplicationV2$InputSchemaProperty$Builder) id config))
+
+
 (defn build-cfn-application-v2-json-mapping-parameters-property-builder
   "The build-cfn-application-v2-json-mapping-parameters-property-builder function updates a CfnApplicationV2$JSONMappingParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$JSONMappingParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1620,6 +2052,12 @@
   (when-let [data (lookup-entry config id :record-row-path)]
     (. builder recordRowPath data))
   (.build builder))
+
+
+(defn cfn-application-v2-json-mapping-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-json-mapping-parameters-property-builder (new CfnApplicationV2$JSONMappingParametersProperty$Builder) id config))
 
 
 (defn build-cfn-application-v2-kinesis-firehose-input-property-builder
@@ -1639,6 +2077,12 @@
   (.build builder))
 
 
+(defn cfn-application-v2-kinesis-firehose-input-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-kinesis-firehose-input-property-builder (new CfnApplicationV2$KinesisFirehoseInputProperty$Builder) id config))
+
+
 (defn build-cfn-application-v2-kinesis-streams-input-property-builder
   "The build-cfn-application-v2-kinesis-streams-input-property-builder function updates a CfnApplicationV2$KinesisStreamsInputProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$KinesisStreamsInputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1654,6 +2098,12 @@
   (when-let [data (lookup-entry config id :resource-arn)]
     (. builder resourceArn data))
   (.build builder))
+
+
+(defn cfn-application-v2-kinesis-streams-input-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-kinesis-streams-input-property-builder (new CfnApplicationV2$KinesisStreamsInputProperty$Builder) id config))
 
 
 (defn build-cfn-application-v2-mapping-parameters-property-builder
@@ -1674,6 +2124,12 @@
   (when-let [data (lookup-entry config id :json-mapping-parameters)]
     (. builder jsonMappingParameters data))
   (.build builder))
+
+
+(defn cfn-application-v2-mapping-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-mapping-parameters-property-builder (new CfnApplicationV2$MappingParametersProperty$Builder) id config))
 
 
 (defn build-cfn-application-v2-maven-reference-property-builder
@@ -1699,6 +2155,12 @@
   (.build builder))
 
 
+(defn cfn-application-v2-maven-reference-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-maven-reference-property-builder (new CfnApplicationV2$MavenReferenceProperty$Builder) id config))
+
+
 (defn build-cfn-application-v2-monitoring-configuration-property-builder
   "The build-cfn-application-v2-monitoring-configuration-property-builder function updates a CfnApplicationV2$MonitoringConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$MonitoringConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1720,6 +2182,12 @@
   (when-let [data (lookup-entry config id :metrics-level)]
     (. builder metricsLevel data))
   (.build builder))
+
+
+(defn cfn-application-v2-monitoring-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-monitoring-configuration-property-builder (new CfnApplicationV2$MonitoringConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-application-v2-parallelism-configuration-property-builder
@@ -1748,6 +2216,12 @@
   (.build builder))
 
 
+(defn cfn-application-v2-parallelism-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-parallelism-configuration-property-builder (new CfnApplicationV2$ParallelismConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-application-v2-property-group-property-builder
   "The build-cfn-application-v2-property-group-property-builder function updates a CfnApplicationV2$PropertyGroupProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$PropertyGroupProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1766,6 +2240,12 @@
   (when-let [data (lookup-entry config id :property-map)]
     (. builder propertyMap data))
   (.build builder))
+
+
+(defn cfn-application-v2-property-group-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-property-group-property-builder (new CfnApplicationV2$PropertyGroupProperty$Builder) id config))
 
 
 (defn build-cfn-application-v2-props-builder
@@ -1809,6 +2289,12 @@
   (.build builder))
 
 
+(defn cfn-application-v2-props-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-props-builder (new CfnApplicationV2Props$Builder) id config))
+
+
 (defn build-cfn-application-v2-record-column-property-builder
   "The build-cfn-application-v2-record-column-property-builder function updates a CfnApplicationV2$RecordColumnProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$RecordColumnProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1832,6 +2318,12 @@
   (.build builder))
 
 
+(defn cfn-application-v2-record-column-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-record-column-property-builder (new CfnApplicationV2$RecordColumnProperty$Builder) id config))
+
+
 (defn build-cfn-application-v2-record-format-property-builder
   "The build-cfn-application-v2-record-format-property-builder function updates a CfnApplicationV2$RecordFormatProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$RecordFormatProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1850,6 +2342,12 @@
   (when-let [data (lookup-entry config id :record-format-type)]
     (. builder recordFormatType data))
   (.build builder))
+
+
+(defn cfn-application-v2-record-format-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-record-format-property-builder (new CfnApplicationV2$RecordFormatProperty$Builder) id config))
 
 
 (defn build-cfn-application-v2-run-configuration-property-builder
@@ -1872,6 +2370,12 @@
   (.build builder))
 
 
+(defn cfn-application-v2-run-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-run-configuration-property-builder (new CfnApplicationV2$RunConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-application-v2-s3-content-base-location-property-builder
   "The build-cfn-application-v2-s3-content-base-location-property-builder function updates a CfnApplicationV2$S3ContentBaseLocationProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$S3ContentBaseLocationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1890,6 +2394,12 @@
   (when-let [data (lookup-entry config id :bucket-arn)]
     (. builder bucketArn data))
   (.build builder))
+
+
+(defn cfn-application-v2-s3-content-base-location-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-s3-content-base-location-property-builder (new CfnApplicationV2$S3ContentBaseLocationProperty$Builder) id config))
 
 
 (defn build-cfn-application-v2-s3-content-location-property-builder
@@ -1915,6 +2425,12 @@
   (.build builder))
 
 
+(defn cfn-application-v2-s3-content-location-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-s3-content-location-property-builder (new CfnApplicationV2$S3ContentLocationProperty$Builder) id config))
+
+
 (defn build-cfn-application-v2-sql-application-configuration-property-builder
   "The build-cfn-application-v2-sql-application-configuration-property-builder function updates a CfnApplicationV2$SqlApplicationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$SqlApplicationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1930,6 +2446,12 @@
   (when-let [data (lookup-entry config id :inputs)]
     (. builder inputs data))
   (.build builder))
+
+
+(defn cfn-application-v2-sql-application-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-sql-application-configuration-property-builder (new CfnApplicationV2$SqlApplicationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-application-v2-vpc-configuration-property-builder
@@ -1950,6 +2472,12 @@
   (when-let [data (lookup-entry config id :subnet-ids)]
     (. builder subnetIds data))
   (.build builder))
+
+
+(defn cfn-application-v2-vpc-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-vpc-configuration-property-builder (new CfnApplicationV2$VpcConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-application-v2-zeppelin-application-configuration-property-builder
@@ -1978,6 +2506,12 @@
   (.build builder))
 
 
+(defn cfn-application-v2-zeppelin-application-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-zeppelin-application-configuration-property-builder (new CfnApplicationV2$ZeppelinApplicationConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-application-v2-zeppelin-monitoring-configuration-property-builder
   "The build-cfn-application-v2-zeppelin-monitoring-configuration-property-builder function updates a CfnApplicationV2$ZeppelinMonitoringConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationV2$ZeppelinMonitoringConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1993,3 +2527,9 @@
   (when-let [data (lookup-entry config id :log-level)]
     (. builder logLevel data))
   (.build builder))
+
+
+(defn cfn-application-v2-zeppelin-monitoring-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-v2-zeppelin-monitoring-configuration-property-builder (new CfnApplicationV2$ZeppelinMonitoringConfigurationProperty$Builder) id config))

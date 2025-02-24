@@ -14,6 +14,12 @@
     :else (conj (vec coll) value)))
 
 
+(defn concatv
+  "concat that returns a vector."
+  [& colls]
+  (vec (apply concat colls)))
+
+
 (defn under>dash
   "Replaces underscores with dashes in a string."
   [^String data]
@@ -177,3 +183,33 @@ uppercase charaacter, which belongs to the next token.
       -1 ["" source]
       0 ["" (subs source 1)]
       [(subs source 0 index) (subs source (inc index))])))
+
+
+; Reflection Inspection
+
+(def construct-sym 'software.constructs.Construct)
+(def string-sym 'java.lang.String)
+
+(defn no-arg?
+  "Checks if a "
+  [{:keys [parameter-types] :as data}]
+  (and data (empty? parameter-types)))
+
+
+(defn scope-id?
+  [{:keys [parameter-types]}]
+  (and (= 2 (count parameter-types))
+       (= construct-sym (first parameter-types))
+       (= string-sym (second parameter-types))))
+
+
+(defn two-arg?
+  "Checks if the create is 2 args but not what we know."
+  [{:keys [parameter-types]}]
+  (= 2 (count parameter-types)))
+
+
+(defn one-arg?
+  "Checks if the create is 1 args but not what we know."
+  [{:keys [parameter-types]}]
+  (= 1 (count parameter-types)))

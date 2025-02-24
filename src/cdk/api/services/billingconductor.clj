@@ -40,6 +40,12 @@
   (.build builder))
 
 
+(defn cfn-billing-group-account-grouping-property-builder
+  ""
+  [id config]
+  (build-cfn-billing-group-account-grouping-property-builder (new CfnBillingGroup$AccountGroupingProperty$Builder) id config))
+
+
 (defn build-cfn-billing-group-builder
   "The build-cfn-billing-group-builder function updates a CfnBillingGroup$Builder instance using the provided configuration.
   The function takes the CfnBillingGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -72,6 +78,12 @@
   (.build builder))
 
 
+(defn cfn-billing-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-billing-group-builder (CfnBillingGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-billing-group-computation-preference-property-builder
   "The build-cfn-billing-group-computation-preference-property-builder function updates a CfnBillingGroup$ComputationPreferenceProperty$Builder instance using the provided configuration.
   The function takes the CfnBillingGroup$ComputationPreferenceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -87,6 +99,12 @@
   (when-let [data (lookup-entry config id :pricing-plan-arn)]
     (. builder pricingPlanArn data))
   (.build builder))
+
+
+(defn cfn-billing-group-computation-preference-property-builder
+  ""
+  [id config]
+  (build-cfn-billing-group-computation-preference-property-builder (new CfnBillingGroup$ComputationPreferenceProperty$Builder) id config))
 
 
 (defn build-cfn-billing-group-props-builder
@@ -121,6 +139,12 @@
   (.build builder))
 
 
+(defn cfn-billing-group-props-builder
+  ""
+  [id config]
+  (build-cfn-billing-group-props-builder (new CfnBillingGroupProps$Builder) id config))
+
+
 (defn build-cfn-custom-line-item-billing-period-range-property-builder
   "The build-cfn-custom-line-item-billing-period-range-property-builder function updates a CfnCustomLineItem$BillingPeriodRangeProperty$Builder instance using the provided configuration.
   The function takes the CfnCustomLineItem$BillingPeriodRangeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -139,6 +163,12 @@
   (when-let [data (lookup-entry config id :inclusive-start-billing-period)]
     (. builder inclusiveStartBillingPeriod data))
   (.build builder))
+
+
+(defn cfn-custom-line-item-billing-period-range-property-builder
+  ""
+  [id config]
+  (build-cfn-custom-line-item-billing-period-range-property-builder (new CfnCustomLineItem$BillingPeriodRangeProperty$Builder) id config))
 
 
 (defn build-cfn-custom-line-item-builder
@@ -176,6 +206,12 @@
   (.build builder))
 
 
+(defn cfn-custom-line-item-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-custom-line-item-builder (CfnCustomLineItem$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-custom-line-item-custom-line-item-charge-details-property-builder
   "The build-cfn-custom-line-item-custom-line-item-charge-details-property-builder function updates a CfnCustomLineItem$CustomLineItemChargeDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnCustomLineItem$CustomLineItemChargeDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -202,6 +238,12 @@
   (.build builder))
 
 
+(defn cfn-custom-line-item-custom-line-item-charge-details-property-builder
+  ""
+  [id config]
+  (build-cfn-custom-line-item-custom-line-item-charge-details-property-builder (new CfnCustomLineItem$CustomLineItemChargeDetailsProperty$Builder) id config))
+
+
 (defn build-cfn-custom-line-item-custom-line-item-flat-charge-details-property-builder
   "The build-cfn-custom-line-item-custom-line-item-flat-charge-details-property-builder function updates a CfnCustomLineItem$CustomLineItemFlatChargeDetailsProperty$Builder instance using the provided configuration.
   The function takes the CfnCustomLineItem$CustomLineItemFlatChargeDetailsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -217,6 +259,12 @@
   (when-let [data (lookup-entry config id :charge-value)]
     (. builder chargeValue data))
   (.build builder))
+
+
+(defn cfn-custom-line-item-custom-line-item-flat-charge-details-property-builder
+  ""
+  [id config]
+  (build-cfn-custom-line-item-custom-line-item-flat-charge-details-property-builder (new CfnCustomLineItem$CustomLineItemFlatChargeDetailsProperty$Builder) id config))
 
 
 (defn build-cfn-custom-line-item-custom-line-item-percentage-charge-details-property-builder
@@ -237,6 +285,12 @@
   (when-let [data (lookup-entry config id :percentage-value)]
     (. builder percentageValue data))
   (.build builder))
+
+
+(defn cfn-custom-line-item-custom-line-item-percentage-charge-details-property-builder
+  ""
+  [id config]
+  (build-cfn-custom-line-item-custom-line-item-percentage-charge-details-property-builder (new CfnCustomLineItem$CustomLineItemPercentageChargeDetailsProperty$Builder) id config))
 
 
 (defn build-cfn-custom-line-item-line-item-filter-property-builder
@@ -260,6 +314,12 @@
   (when-let [data (lookup-entry config id :values)]
     (. builder values data))
   (.build builder))
+
+
+(defn cfn-custom-line-item-line-item-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-custom-line-item-line-item-filter-property-builder (new CfnCustomLineItem$LineItemFilterProperty$Builder) id config))
 
 
 (defn build-cfn-custom-line-item-props-builder
@@ -297,6 +357,12 @@
   (.build builder))
 
 
+(defn cfn-custom-line-item-props-builder
+  ""
+  [id config]
+  (build-cfn-custom-line-item-props-builder (new CfnCustomLineItemProps$Builder) id config))
+
+
 (defn build-cfn-pricing-plan-builder
   "The build-cfn-pricing-plan-builder function updates a CfnPricingPlan$Builder instance using the provided configuration.
   The function takes the CfnPricingPlan$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -323,6 +389,12 @@
   (.build builder))
 
 
+(defn cfn-pricing-plan-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-pricing-plan-builder (CfnPricingPlan$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-pricing-plan-props-builder
   "The build-cfn-pricing-plan-props-builder function updates a CfnPricingPlanProps$Builder instance using the provided configuration.
   The function takes the CfnPricingPlanProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -347,6 +419,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-pricing-plan-props-builder
+  ""
+  [id config]
+  (build-cfn-pricing-plan-props-builder (new CfnPricingPlanProps$Builder) id config))
 
 
 (defn build-cfn-pricing-rule-builder
@@ -396,6 +474,12 @@
   (.build builder))
 
 
+(defn cfn-pricing-rule-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-pricing-rule-builder (CfnPricingRule$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-pricing-rule-free-tier-property-builder
   "The build-cfn-pricing-rule-free-tier-property-builder function updates a CfnPricingRule$FreeTierProperty$Builder instance using the provided configuration.
   The function takes the CfnPricingRule$FreeTierProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -411,6 +495,12 @@
   (when-let [data (lookup-entry config id :activated)]
     (. builder activated data))
   (.build builder))
+
+
+(defn cfn-pricing-rule-free-tier-property-builder
+  ""
+  [id config]
+  (build-cfn-pricing-rule-free-tier-property-builder (new CfnPricingRule$FreeTierProperty$Builder) id config))
 
 
 (defn build-cfn-pricing-rule-props-builder
@@ -460,6 +550,12 @@
   (.build builder))
 
 
+(defn cfn-pricing-rule-props-builder
+  ""
+  [id config]
+  (build-cfn-pricing-rule-props-builder (new CfnPricingRuleProps$Builder) id config))
+
+
 (defn build-cfn-pricing-rule-tiering-property-builder
   "The build-cfn-pricing-rule-tiering-property-builder function updates a CfnPricingRule$TieringProperty$Builder instance using the provided configuration.
   The function takes the CfnPricingRule$TieringProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -475,3 +571,9 @@
   (when-let [data (lookup-entry config id :free-tier)]
     (. builder freeTier data))
   (.build builder))
+
+
+(defn cfn-pricing-rule-tiering-property-builder
+  ""
+  [id config]
+  (build-cfn-pricing-rule-tiering-property-builder (new CfnPricingRule$TieringProperty$Builder) id config))

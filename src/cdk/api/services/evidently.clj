@@ -79,6 +79,12 @@
   (.build builder))
 
 
+(defn cfn-experiment-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-experiment-builder (CfnExperiment$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-experiment-metric-goal-object-property-builder
   "The build-cfn-experiment-metric-goal-object-property-builder function updates a CfnExperiment$MetricGoalObjectProperty$Builder instance using the provided configuration.
   The function takes the CfnExperiment$MetricGoalObjectProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -111,6 +117,12 @@
   (.build builder))
 
 
+(defn cfn-experiment-metric-goal-object-property-builder
+  ""
+  [id config]
+  (build-cfn-experiment-metric-goal-object-property-builder (new CfnExperiment$MetricGoalObjectProperty$Builder) id config))
+
+
 (defn build-cfn-experiment-online-ab-config-object-property-builder
   "The build-cfn-experiment-online-ab-config-object-property-builder function updates a CfnExperiment$OnlineAbConfigObjectProperty$Builder instance using the provided configuration.
   The function takes the CfnExperiment$OnlineAbConfigObjectProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -129,6 +141,12 @@
   (when-let [data (lookup-entry config id :treatment-weights)]
     (. builder treatmentWeights data))
   (.build builder))
+
+
+(defn cfn-experiment-online-ab-config-object-property-builder
+  ""
+  [id config]
+  (build-cfn-experiment-online-ab-config-object-property-builder (new CfnExperiment$OnlineAbConfigObjectProperty$Builder) id config))
 
 
 (defn build-cfn-experiment-props-builder
@@ -181,6 +199,12 @@
   (.build builder))
 
 
+(defn cfn-experiment-props-builder
+  ""
+  [id config]
+  (build-cfn-experiment-props-builder (new CfnExperimentProps$Builder) id config))
+
+
 (defn build-cfn-experiment-running-status-object-property-builder
   "The build-cfn-experiment-running-status-object-property-builder function updates a CfnExperiment$RunningStatusObjectProperty$Builder instance using the provided configuration.
   The function takes the CfnExperiment$RunningStatusObjectProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -205,6 +229,12 @@
   (when-let [data (lookup-entry config id :status)]
     (. builder status data))
   (.build builder))
+
+
+(defn cfn-experiment-running-status-object-property-builder
+  ""
+  [id config]
+  (build-cfn-experiment-running-status-object-property-builder (new CfnExperiment$RunningStatusObjectProperty$Builder) id config))
 
 
 (defn build-cfn-experiment-treatment-object-property-builder
@@ -233,6 +263,12 @@
   (.build builder))
 
 
+(defn cfn-experiment-treatment-object-property-builder
+  ""
+  [id config]
+  (build-cfn-experiment-treatment-object-property-builder (new CfnExperiment$TreatmentObjectProperty$Builder) id config))
+
+
 (defn build-cfn-experiment-treatment-to-weight-property-builder
   "The build-cfn-experiment-treatment-to-weight-property-builder function updates a CfnExperiment$TreatmentToWeightProperty$Builder instance using the provided configuration.
   The function takes the CfnExperiment$TreatmentToWeightProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -251,6 +287,12 @@
   (when-let [data (lookup-entry config id :treatment)]
     (. builder treatment data))
   (.build builder))
+
+
+(defn cfn-experiment-treatment-to-weight-property-builder
+  ""
+  [id config]
+  (build-cfn-experiment-treatment-to-weight-property-builder (new CfnExperiment$TreatmentToWeightProperty$Builder) id config))
 
 
 (defn build-cfn-feature-builder
@@ -291,6 +333,12 @@
   (.build builder))
 
 
+(defn cfn-feature-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-feature-builder (CfnFeature$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-feature-entity-override-property-builder
   "The build-cfn-feature-entity-override-property-builder function updates a CfnFeature$EntityOverrideProperty$Builder instance using the provided configuration.
   The function takes the CfnFeature$EntityOverrideProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -309,6 +357,12 @@
   (when-let [data (lookup-entry config id :variation)]
     (. builder variation data))
   (.build builder))
+
+
+(defn cfn-feature-entity-override-property-builder
+  ""
+  [id config]
+  (build-cfn-feature-entity-override-property-builder (new CfnFeature$EntityOverrideProperty$Builder) id config))
 
 
 (defn build-cfn-feature-props-builder
@@ -349,6 +403,12 @@
   (.build builder))
 
 
+(defn cfn-feature-props-builder
+  ""
+  [id config]
+  (build-cfn-feature-props-builder (new CfnFeatureProps$Builder) id config))
+
+
 (defn build-cfn-feature-variation-object-property-builder
   "The build-cfn-feature-variation-object-property-builder function updates a CfnFeature$VariationObjectProperty$Builder instance using the provided configuration.
   The function takes the CfnFeature$VariationObjectProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -376,6 +436,12 @@
   (when-let [data (lookup-entry config id :variation-name)]
     (. builder variationName data))
   (.build builder))
+
+
+(defn cfn-feature-variation-object-property-builder
+  ""
+  [id config]
+  (build-cfn-feature-variation-object-property-builder (new CfnFeature$VariationObjectProperty$Builder) id config))
 
 
 (defn build-cfn-launch-builder
@@ -419,6 +485,12 @@
   (.build builder))
 
 
+(defn cfn-launch-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-launch-builder (CfnLaunch$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-launch-execution-status-object-property-builder
   "The build-cfn-launch-execution-status-object-property-builder function updates a CfnLaunch$ExecutionStatusObjectProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunch$ExecutionStatusObjectProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -442,6 +514,12 @@
   (.build builder))
 
 
+(defn cfn-launch-execution-status-object-property-builder
+  ""
+  [id config]
+  (build-cfn-launch-execution-status-object-property-builder (new CfnLaunch$ExecutionStatusObjectProperty$Builder) id config))
+
+
 (defn build-cfn-launch-group-to-weight-property-builder
   "The build-cfn-launch-group-to-weight-property-builder function updates a CfnLaunch$GroupToWeightProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunch$GroupToWeightProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -460,6 +538,12 @@
   (when-let [data (lookup-entry config id :split-weight)]
     (. builder splitWeight data))
   (.build builder))
+
+
+(defn cfn-launch-group-to-weight-property-builder
+  ""
+  [id config]
+  (build-cfn-launch-group-to-weight-property-builder (new CfnLaunch$GroupToWeightProperty$Builder) id config))
 
 
 (defn build-cfn-launch-launch-group-object-property-builder
@@ -486,6 +570,12 @@
   (when-let [data (lookup-entry config id :variation)]
     (. builder variation data))
   (.build builder))
+
+
+(defn cfn-launch-launch-group-object-property-builder
+  ""
+  [id config]
+  (build-cfn-launch-launch-group-object-property-builder (new CfnLaunch$LaunchGroupObjectProperty$Builder) id config))
 
 
 (defn build-cfn-launch-metric-definition-object-property-builder
@@ -515,6 +605,12 @@
   (when-let [data (lookup-entry config id :value-key)]
     (. builder valueKey data))
   (.build builder))
+
+
+(defn cfn-launch-metric-definition-object-property-builder
+  ""
+  [id config]
+  (build-cfn-launch-metric-definition-object-property-builder (new CfnLaunch$MetricDefinitionObjectProperty$Builder) id config))
 
 
 (defn build-cfn-launch-props-builder
@@ -558,6 +654,12 @@
   (.build builder))
 
 
+(defn cfn-launch-props-builder
+  ""
+  [id config]
+  (build-cfn-launch-props-builder (new CfnLaunchProps$Builder) id config))
+
+
 (defn build-cfn-launch-segment-override-property-builder
   "The build-cfn-launch-segment-override-property-builder function updates a CfnLaunch$SegmentOverrideProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunch$SegmentOverrideProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -579,6 +681,12 @@
   (when-let [data (lookup-entry config id :weights)]
     (. builder weights data))
   (.build builder))
+
+
+(defn cfn-launch-segment-override-property-builder
+  ""
+  [id config]
+  (build-cfn-launch-segment-override-property-builder (new CfnLaunch$SegmentOverrideProperty$Builder) id config))
 
 
 (defn build-cfn-launch-step-config-property-builder
@@ -604,6 +712,12 @@
   (.build builder))
 
 
+(defn cfn-launch-step-config-property-builder
+  ""
+  [id config]
+  (build-cfn-launch-step-config-property-builder (new CfnLaunch$StepConfigProperty$Builder) id config))
+
+
 (defn build-cfn-project-app-config-resource-object-property-builder
   "The build-cfn-project-app-config-resource-object-property-builder function updates a CfnProject$AppConfigResourceObjectProperty$Builder instance using the provided configuration.
   The function takes the CfnProject$AppConfigResourceObjectProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -622,6 +736,12 @@
   (when-let [data (lookup-entry config id :environment-id)]
     (. builder environmentId data))
   (.build builder))
+
+
+(defn cfn-project-app-config-resource-object-property-builder
+  ""
+  [id config]
+  (build-cfn-project-app-config-resource-object-property-builder (new CfnProject$AppConfigResourceObjectProperty$Builder) id config))
 
 
 (defn build-cfn-project-builder
@@ -653,6 +773,12 @@
   (.build builder))
 
 
+(defn cfn-project-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-project-builder (CfnProject$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-project-data-delivery-object-property-builder
   "The build-cfn-project-data-delivery-object-property-builder function updates a CfnProject$DataDeliveryObjectProperty$Builder instance using the provided configuration.
   The function takes the CfnProject$DataDeliveryObjectProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -671,6 +797,12 @@
   (when-let [data (lookup-entry config id :s3)]
     (. builder s3 data))
   (.build builder))
+
+
+(defn cfn-project-data-delivery-object-property-builder
+  ""
+  [id config]
+  (build-cfn-project-data-delivery-object-property-builder (new CfnProject$DataDeliveryObjectProperty$Builder) id config))
 
 
 (defn build-cfn-project-props-builder
@@ -702,6 +834,12 @@
   (.build builder))
 
 
+(defn cfn-project-props-builder
+  ""
+  [id config]
+  (build-cfn-project-props-builder (new CfnProjectProps$Builder) id config))
+
+
 (defn build-cfn-project-s3-destination-property-builder
   "The build-cfn-project-s3-destination-property-builder function updates a CfnProject$S3DestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnProject$S3DestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -720,6 +858,12 @@
   (when-let [data (lookup-entry config id :prefix)]
     (. builder prefix data))
   (.build builder))
+
+
+(defn cfn-project-s3-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-project-s3-destination-property-builder (new CfnProject$S3DestinationProperty$Builder) id config))
 
 
 (defn build-cfn-segment-builder
@@ -748,6 +892,12 @@
   (.build builder))
 
 
+(defn cfn-segment-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-segment-builder (CfnSegment$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-segment-props-builder
   "The build-cfn-segment-props-builder function updates a CfnSegmentProps$Builder instance using the provided configuration.
   The function takes the CfnSegmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -772,3 +922,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-segment-props-builder
+  ""
+  [id config]
+  (build-cfn-segment-props-builder (new CfnSegmentProps$Builder) id config))

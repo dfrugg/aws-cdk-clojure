@@ -42,6 +42,12 @@
   (.build builder))
 
 
+(defn cfn-access-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-access-policy-builder (CfnAccessPolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-access-policy-props-builder
   "The build-cfn-access-policy-props-builder function updates a CfnAccessPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnAccessPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -66,6 +72,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-access-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-access-policy-props-builder (new CfnAccessPolicyProps$Builder) id config))
 
 
 (defn build-cfn-collection-builder
@@ -97,6 +109,12 @@
   (.build builder))
 
 
+(defn cfn-collection-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-collection-builder (CfnCollection$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-collection-props-builder
   "The build-cfn-collection-props-builder function updates a CfnCollectionProps$Builder instance using the provided configuration.
   The function takes the CfnCollectionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -126,6 +144,12 @@
   (.build builder))
 
 
+(defn cfn-collection-props-builder
+  ""
+  [id config]
+  (build-cfn-collection-props-builder (new CfnCollectionProps$Builder) id config))
+
+
 (defn build-cfn-lifecycle-policy-builder
   "The build-cfn-lifecycle-policy-builder function updates a CfnLifecyclePolicy$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -150,6 +174,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-lifecycle-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-lifecycle-policy-builder (CfnLifecyclePolicy$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-lifecycle-policy-props-builder
@@ -178,6 +208,12 @@
   (.build builder))
 
 
+(defn cfn-lifecycle-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-lifecycle-policy-props-builder (new CfnLifecyclePolicyProps$Builder) id config))
+
+
 (defn build-cfn-security-config-builder
   "The build-cfn-security-config-builder function updates a CfnSecurityConfig$Builder instance using the provided configuration.
   The function takes the CfnSecurityConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -202,6 +238,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-security-config-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-security-config-builder (CfnSecurityConfig$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-security-config-props-builder
@@ -230,6 +272,12 @@
   (.build builder))
 
 
+(defn cfn-security-config-props-builder
+  ""
+  [id config]
+  (build-cfn-security-config-props-builder (new CfnSecurityConfigProps$Builder) id config))
+
+
 (defn build-cfn-security-config-saml-config-options-property-builder
   "The build-cfn-security-config-saml-config-options-property-builder function updates a CfnSecurityConfig$SamlConfigOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnSecurityConfig$SamlConfigOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -254,6 +302,12 @@
   (when-let [data (lookup-entry config id :user-attribute)]
     (. builder userAttribute data))
   (.build builder))
+
+
+(defn cfn-security-config-saml-config-options-property-builder
+  ""
+  [id config]
+  (build-cfn-security-config-saml-config-options-property-builder (new CfnSecurityConfig$SamlConfigOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-security-policy-builder
@@ -282,6 +336,12 @@
   (.build builder))
 
 
+(defn cfn-security-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-security-policy-builder (CfnSecurityPolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-security-policy-props-builder
   "The build-cfn-security-policy-props-builder function updates a CfnSecurityPolicyProps$Builder instance using the provided configuration.
   The function takes the CfnSecurityPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -306,6 +366,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-security-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-security-policy-props-builder (new CfnSecurityPolicyProps$Builder) id config))
 
 
 (defn build-cfn-vpc-endpoint-builder
@@ -334,6 +400,12 @@
   (.build builder))
 
 
+(defn cfn-vpc-endpoint-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-vpc-endpoint-builder (CfnVpcEndpoint$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-vpc-endpoint-props-builder
   "The build-cfn-vpc-endpoint-props-builder function updates a CfnVpcEndpointProps$Builder instance using the provided configuration.
   The function takes the CfnVpcEndpointProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -358,3 +430,9 @@
   (when-let [data (lookup-entry config id :vpc-id)]
     (. builder vpcId data))
   (.build builder))
+
+
+(defn cfn-vpc-endpoint-props-builder
+  ""
+  [id config]
+  (build-cfn-vpc-endpoint-props-builder (new CfnVpcEndpointProps$Builder) id config))

@@ -29,6 +29,12 @@
   (.build builder))
 
 
+(defn cfn-connection-alias-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-connection-alias-builder (CfnConnectionAlias$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-connection-alias-connection-alias-association-property-builder
   "The build-cfn-connection-alias-connection-alias-association-property-builder function updates a CfnConnectionAlias$ConnectionAliasAssociationProperty$Builder instance using the provided configuration.
   The function takes the CfnConnectionAlias$ConnectionAliasAssociationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -55,6 +61,12 @@
   (.build builder))
 
 
+(defn cfn-connection-alias-connection-alias-association-property-builder
+  ""
+  [id config]
+  (build-cfn-connection-alias-connection-alias-association-property-builder (new CfnConnectionAlias$ConnectionAliasAssociationProperty$Builder) id config))
+
+
 (defn build-cfn-connection-alias-props-builder
   "The build-cfn-connection-alias-props-builder function updates a CfnConnectionAliasProps$Builder instance using the provided configuration.
   The function takes the CfnConnectionAliasProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -73,6 +85,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-connection-alias-props-builder
+  ""
+  [id config]
+  (build-cfn-connection-alias-props-builder (new CfnConnectionAliasProps$Builder) id config))
 
 
 (defn build-cfn-workspace-builder
@@ -113,6 +131,12 @@
   (.build builder))
 
 
+(defn cfn-workspace-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-workspace-builder (CfnWorkspace$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-workspace-props-builder
   "The build-cfn-workspace-props-builder function updates a CfnWorkspaceProps$Builder instance using the provided configuration.
   The function takes the CfnWorkspaceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -151,6 +175,12 @@
   (.build builder))
 
 
+(defn cfn-workspace-props-builder
+  ""
+  [id config]
+  (build-cfn-workspace-props-builder (new CfnWorkspaceProps$Builder) id config))
+
+
 (defn build-cfn-workspace-workspace-properties-property-builder
   "The build-cfn-workspace-workspace-properties-property-builder function updates a CfnWorkspace$WorkspacePropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnWorkspace$WorkspacePropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -178,3 +208,9 @@
   (when-let [data (lookup-entry config id :user-volume-size-gib)]
     (. builder userVolumeSizeGib data))
   (.build builder))
+
+
+(defn cfn-workspace-workspace-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-workspace-workspace-properties-property-builder (new CfnWorkspace$WorkspacePropertiesProperty$Builder) id config))

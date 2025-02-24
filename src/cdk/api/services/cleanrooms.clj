@@ -63,6 +63,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-template-analysis-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-template-analysis-parameter-property-builder (new CfnAnalysisTemplate$AnalysisParameterProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-template-analysis-schema-property-builder
   "The build-cfn-analysis-template-analysis-schema-property-builder function updates a CfnAnalysisTemplate$AnalysisSchemaProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysisTemplate$AnalysisSchemaProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -80,6 +86,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-template-analysis-schema-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-template-analysis-schema-property-builder (new CfnAnalysisTemplate$AnalysisSchemaProperty$Builder) id config))
+
+
 (defn build-cfn-analysis-template-analysis-source-property-builder
   "The build-cfn-analysis-template-analysis-source-property-builder function updates a CfnAnalysisTemplate$AnalysisSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnAnalysisTemplate$AnalysisSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -95,6 +107,12 @@
   (when-let [data (lookup-entry config id :text)]
     (. builder text data))
   (.build builder))
+
+
+(defn cfn-analysis-template-analysis-source-property-builder
+  ""
+  [id config]
+  (build-cfn-analysis-template-analysis-source-property-builder (new CfnAnalysisTemplate$AnalysisSourceProperty$Builder) id config))
 
 
 (defn build-cfn-analysis-template-builder
@@ -132,6 +150,12 @@
   (.build builder))
 
 
+(defn cfn-analysis-template-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-analysis-template-builder (CfnAnalysisTemplate$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-analysis-template-props-builder
   "The build-cfn-analysis-template-props-builder function updates a CfnAnalysisTemplateProps$Builder instance using the provided configuration.
   The function takes the CfnAnalysisTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -165,6 +189,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-analysis-template-props-builder
+  ""
+  [id config]
+  (build-cfn-analysis-template-props-builder (new CfnAnalysisTemplateProps$Builder) id config))
 
 
 (defn build-cfn-collaboration-builder
@@ -208,6 +238,12 @@
   (.build builder))
 
 
+(defn cfn-collaboration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-collaboration-builder (CfnCollaboration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-collaboration-data-encryption-metadata-property-builder
   "The build-cfn-collaboration-data-encryption-metadata-property-builder function updates a CfnCollaboration$DataEncryptionMetadataProperty$Builder instance using the provided configuration.
   The function takes the CfnCollaboration$DataEncryptionMetadataProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -232,6 +268,12 @@
   (when-let [data (lookup-entry config id :preserve-nulls)]
     (. builder preserveNulls data))
   (.build builder))
+
+
+(defn cfn-collaboration-data-encryption-metadata-property-builder
+  ""
+  [id config]
+  (build-cfn-collaboration-data-encryption-metadata-property-builder (new CfnCollaboration$DataEncryptionMetadataProperty$Builder) id config))
 
 
 (defn build-cfn-collaboration-member-specification-property-builder
@@ -260,6 +302,12 @@
   (.build builder))
 
 
+(defn cfn-collaboration-member-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-collaboration-member-specification-property-builder (new CfnCollaboration$MemberSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-collaboration-payment-configuration-property-builder
   "The build-cfn-collaboration-payment-configuration-property-builder function updates a CfnCollaboration$PaymentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnCollaboration$PaymentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -275,6 +323,12 @@
   (when-let [data (lookup-entry config id :query-compute)]
     (. builder queryCompute data))
   (.build builder))
+
+
+(defn cfn-collaboration-payment-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-collaboration-payment-configuration-property-builder (new CfnCollaboration$PaymentConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-collaboration-props-builder
@@ -318,6 +372,12 @@
   (.build builder))
 
 
+(defn cfn-collaboration-props-builder
+  ""
+  [id config]
+  (build-cfn-collaboration-props-builder (new CfnCollaborationProps$Builder) id config))
+
+
 (defn build-cfn-collaboration-query-compute-payment-config-property-builder
   "The build-cfn-collaboration-query-compute-payment-config-property-builder function updates a CfnCollaboration$QueryComputePaymentConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnCollaboration$QueryComputePaymentConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -333,6 +393,12 @@
   (when-let [data (lookup-entry config id :is-responsible)]
     (. builder isResponsible data))
   (.build builder))
+
+
+(defn cfn-collaboration-query-compute-payment-config-property-builder
+  ""
+  [id config]
+  (build-cfn-collaboration-query-compute-payment-config-property-builder (new CfnCollaboration$QueryComputePaymentConfigProperty$Builder) id config))
 
 
 (defn build-cfn-configured-table-aggregate-column-property-builder
@@ -353,6 +419,12 @@
   (when-let [data (lookup-entry config id :function)]
     (. builder function data))
   (.build builder))
+
+
+(defn cfn-configured-table-aggregate-column-property-builder
+  ""
+  [id config]
+  (build-cfn-configured-table-aggregate-column-property-builder (new CfnConfiguredTable$AggregateColumnProperty$Builder) id config))
 
 
 (defn build-cfn-configured-table-aggregation-constraint-property-builder
@@ -376,6 +448,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-configured-table-aggregation-constraint-property-builder
+  ""
+  [id config]
+  (build-cfn-configured-table-aggregation-constraint-property-builder (new CfnConfiguredTable$AggregationConstraintProperty$Builder) id config))
 
 
 (defn build-cfn-configured-table-analysis-rule-aggregation-property-builder
@@ -413,6 +491,12 @@
   (.build builder))
 
 
+(defn cfn-configured-table-analysis-rule-aggregation-property-builder
+  ""
+  [id config]
+  (build-cfn-configured-table-analysis-rule-aggregation-property-builder (new CfnConfiguredTable$AnalysisRuleAggregationProperty$Builder) id config))
+
+
 (defn build-cfn-configured-table-analysis-rule-custom-property-builder
   "The build-cfn-configured-table-analysis-rule-custom-property-builder function updates a CfnConfiguredTable$AnalysisRuleCustomProperty$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTable$AnalysisRuleCustomProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -434,6 +518,12 @@
   (when-let [data (lookup-entry config id :differential-privacy)]
     (. builder differentialPrivacy data))
   (.build builder))
+
+
+(defn cfn-configured-table-analysis-rule-custom-property-builder
+  ""
+  [id config]
+  (build-cfn-configured-table-analysis-rule-custom-property-builder (new CfnConfiguredTable$AnalysisRuleCustomProperty$Builder) id config))
 
 
 (defn build-cfn-configured-table-analysis-rule-list-property-builder
@@ -459,6 +549,12 @@
   (.build builder))
 
 
+(defn cfn-configured-table-analysis-rule-list-property-builder
+  ""
+  [id config]
+  (build-cfn-configured-table-analysis-rule-list-property-builder (new CfnConfiguredTable$AnalysisRuleListProperty$Builder) id config))
+
+
 (defn build-cfn-configured-table-analysis-rule-property-builder
   "The build-cfn-configured-table-analysis-rule-property-builder function updates a CfnConfiguredTable$AnalysisRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTable$AnalysisRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -477,6 +573,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-configured-table-analysis-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-configured-table-analysis-rule-property-builder (new CfnConfiguredTable$AnalysisRuleProperty$Builder) id config))
 
 
 (defn build-cfn-configured-table-association-builder
@@ -511,6 +613,12 @@
   (.build builder))
 
 
+(defn cfn-configured-table-association-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-configured-table-association-builder (CfnConfiguredTableAssociation$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-configured-table-association-props-builder
   "The build-cfn-configured-table-association-props-builder function updates a CfnConfiguredTableAssociationProps$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTableAssociationProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -541,6 +649,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-configured-table-association-props-builder
+  ""
+  [id config]
+  (build-cfn-configured-table-association-props-builder (new CfnConfiguredTableAssociationProps$Builder) id config))
 
 
 (defn build-cfn-configured-table-builder
@@ -578,6 +692,12 @@
   (.build builder))
 
 
+(defn cfn-configured-table-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-configured-table-builder (CfnConfiguredTable$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-configured-table-configured-table-analysis-rule-policy-property-builder
   "The build-cfn-configured-table-configured-table-analysis-rule-policy-property-builder function updates a CfnConfiguredTable$ConfiguredTableAnalysisRulePolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTable$ConfiguredTableAnalysisRulePolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -593,6 +713,12 @@
   (when-let [data (lookup-entry config id :v1)]
     (. builder v1 data))
   (.build builder))
+
+
+(defn cfn-configured-table-configured-table-analysis-rule-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-configured-table-configured-table-analysis-rule-policy-property-builder (new CfnConfiguredTable$ConfiguredTableAnalysisRulePolicyProperty$Builder) id config))
 
 
 (defn build-cfn-configured-table-configured-table-analysis-rule-policy-v1-property-builder
@@ -618,6 +744,12 @@
   (.build builder))
 
 
+(defn cfn-configured-table-configured-table-analysis-rule-policy-v1-property-builder
+  ""
+  [id config]
+  (build-cfn-configured-table-configured-table-analysis-rule-policy-v1-property-builder (new CfnConfiguredTable$ConfiguredTableAnalysisRulePolicyV1Property$Builder) id config))
+
+
 (defn build-cfn-configured-table-differential-privacy-column-property-builder
   "The build-cfn-configured-table-differential-privacy-column-property-builder function updates a CfnConfiguredTable$DifferentialPrivacyColumnProperty$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTable$DifferentialPrivacyColumnProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -635,6 +767,12 @@
   (.build builder))
 
 
+(defn cfn-configured-table-differential-privacy-column-property-builder
+  ""
+  [id config]
+  (build-cfn-configured-table-differential-privacy-column-property-builder (new CfnConfiguredTable$DifferentialPrivacyColumnProperty$Builder) id config))
+
+
 (defn build-cfn-configured-table-differential-privacy-property-builder
   "The build-cfn-configured-table-differential-privacy-property-builder function updates a CfnConfiguredTable$DifferentialPrivacyProperty$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTable$DifferentialPrivacyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -650,6 +788,12 @@
   (when-let [data (lookup-entry config id :columns)]
     (. builder columns data))
   (.build builder))
+
+
+(defn cfn-configured-table-differential-privacy-property-builder
+  ""
+  [id config]
+  (build-cfn-configured-table-differential-privacy-property-builder (new CfnConfiguredTable$DifferentialPrivacyProperty$Builder) id config))
 
 
 (defn build-cfn-configured-table-glue-table-reference-property-builder
@@ -670,6 +814,12 @@
   (when-let [data (lookup-entry config id :table-name)]
     (. builder tableName data))
   (.build builder))
+
+
+(defn cfn-configured-table-glue-table-reference-property-builder
+  ""
+  [id config]
+  (build-cfn-configured-table-glue-table-reference-property-builder (new CfnConfiguredTable$GlueTableReferenceProperty$Builder) id config))
 
 
 (defn build-cfn-configured-table-props-builder
@@ -707,6 +857,12 @@
   (.build builder))
 
 
+(defn cfn-configured-table-props-builder
+  ""
+  [id config]
+  (build-cfn-configured-table-props-builder (new CfnConfiguredTableProps$Builder) id config))
+
+
 (defn build-cfn-configured-table-table-reference-property-builder
   "The build-cfn-configured-table-table-reference-property-builder function updates a CfnConfiguredTable$TableReferenceProperty$Builder instance using the provided configuration.
   The function takes the CfnConfiguredTable$TableReferenceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -722,6 +878,12 @@
   (when-let [data (lookup-entry config id :glue)]
     (. builder glue data))
   (.build builder))
+
+
+(defn cfn-configured-table-table-reference-property-builder
+  ""
+  [id config]
+  (build-cfn-configured-table-table-reference-property-builder (new CfnConfiguredTable$TableReferenceProperty$Builder) id config))
 
 
 (defn build-cfn-membership-builder
@@ -753,6 +915,12 @@
   (.build builder))
 
 
+(defn cfn-membership-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-membership-builder (CfnMembership$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-membership-membership-payment-configuration-property-builder
   "The build-cfn-membership-membership-payment-configuration-property-builder function updates a CfnMembership$MembershipPaymentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnMembership$MembershipPaymentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -770,6 +938,12 @@
   (.build builder))
 
 
+(defn cfn-membership-membership-payment-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-membership-membership-payment-configuration-property-builder (new CfnMembership$MembershipPaymentConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-membership-membership-protected-query-output-configuration-property-builder
   "The build-cfn-membership-membership-protected-query-output-configuration-property-builder function updates a CfnMembership$MembershipProtectedQueryOutputConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnMembership$MembershipProtectedQueryOutputConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -785,6 +959,12 @@
   (when-let [data (lookup-entry config id :s3)]
     (. builder s3 data))
   (.build builder))
+
+
+(defn cfn-membership-membership-protected-query-output-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-membership-membership-protected-query-output-configuration-property-builder (new CfnMembership$MembershipProtectedQueryOutputConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-membership-membership-protected-query-result-configuration-property-builder
@@ -807,6 +987,12 @@
   (.build builder))
 
 
+(defn cfn-membership-membership-protected-query-result-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-membership-membership-protected-query-result-configuration-property-builder (new CfnMembership$MembershipProtectedQueryResultConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-membership-membership-query-compute-payment-config-property-builder
   "The build-cfn-membership-membership-query-compute-payment-config-property-builder function updates a CfnMembership$MembershipQueryComputePaymentConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnMembership$MembershipQueryComputePaymentConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -822,6 +1008,12 @@
   (when-let [data (lookup-entry config id :is-responsible)]
     (. builder isResponsible data))
   (.build builder))
+
+
+(defn cfn-membership-membership-query-compute-payment-config-property-builder
+  ""
+  [id config]
+  (build-cfn-membership-membership-query-compute-payment-config-property-builder (new CfnMembership$MembershipQueryComputePaymentConfigProperty$Builder) id config))
 
 
 (defn build-cfn-membership-props-builder
@@ -853,6 +1045,12 @@
   (.build builder))
 
 
+(defn cfn-membership-props-builder
+  ""
+  [id config]
+  (build-cfn-membership-props-builder (new CfnMembershipProps$Builder) id config))
+
+
 (defn build-cfn-membership-protected-query-s3-output-configuration-property-builder
   "The build-cfn-membership-protected-query-s3-output-configuration-property-builder function updates a CfnMembership$ProtectedQueryS3OutputConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnMembership$ProtectedQueryS3OutputConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -874,6 +1072,12 @@
   (when-let [data (lookup-entry config id :result-format)]
     (. builder resultFormat data))
   (.build builder))
+
+
+(defn cfn-membership-protected-query-s3-output-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-membership-protected-query-s3-output-configuration-property-builder (new CfnMembership$ProtectedQueryS3OutputConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-privacy-budget-template-builder
@@ -905,6 +1109,12 @@
   (.build builder))
 
 
+(defn cfn-privacy-budget-template-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-privacy-budget-template-builder (CfnPrivacyBudgetTemplate$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-privacy-budget-template-parameters-property-builder
   "The build-cfn-privacy-budget-template-parameters-property-builder function updates a CfnPrivacyBudgetTemplate$ParametersProperty$Builder instance using the provided configuration.
   The function takes the CfnPrivacyBudgetTemplate$ParametersProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -923,6 +1133,12 @@
   (when-let [data (lookup-entry config id :users-noise-per-query)]
     (. builder usersNoisePerQuery data))
   (.build builder))
+
+
+(defn cfn-privacy-budget-template-parameters-property-builder
+  ""
+  [id config]
+  (build-cfn-privacy-budget-template-parameters-property-builder (new CfnPrivacyBudgetTemplate$ParametersProperty$Builder) id config))
 
 
 (defn build-cfn-privacy-budget-template-props-builder
@@ -952,3 +1168,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-privacy-budget-template-props-builder
+  ""
+  [id config]
+  (build-cfn-privacy-budget-template-props-builder (new CfnPrivacyBudgetTemplateProps$Builder) id config))

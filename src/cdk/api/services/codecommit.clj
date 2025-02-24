@@ -109,6 +109,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-repository-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-repository-builder (CfnRepository$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-repository-code-property-builder
   "The build-cfn-repository-code-property-builder function updates a CfnRepository$CodeProperty$Builder instance using the provided configuration.
   The function takes the CfnRepository$CodeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -127,6 +133,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :s3)]
     (. builder s3 data))
   (.build builder))
+
+
+(defn cfn-repository-code-property-builder
+  ""
+  [id config]
+  (build-cfn-repository-code-property-builder (new CfnRepository$CodeProperty$Builder) id config))
 
 
 (defn build-cfn-repository-props-builder
@@ -161,6 +173,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-repository-props-builder
+  ""
+  [id config]
+  (build-cfn-repository-props-builder (new CfnRepositoryProps$Builder) id config))
+
+
 (defn build-cfn-repository-repository-trigger-property-builder
   "The build-cfn-repository-repository-trigger-property-builder function updates a CfnRepository$RepositoryTriggerProperty$Builder instance using the provided configuration.
   The function takes the CfnRepository$RepositoryTriggerProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -190,6 +208,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-repository-repository-trigger-property-builder
+  ""
+  [id config]
+  (build-cfn-repository-repository-trigger-property-builder (new CfnRepository$RepositoryTriggerProperty$Builder) id config))
+
+
 (defn build-cfn-repository-s3-property-builder
   "The build-cfn-repository-s3-property-builder function updates a CfnRepository$S3Property$Builder instance using the provided configuration.
   The function takes the CfnRepository$S3Property$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -213,6 +237,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-repository-s3-property-builder
+  ""
+  [id config]
+  (build-cfn-repository-s3-property-builder (new CfnRepository$S3Property$Builder) id config))
+
+
 (defn build-code-config-builder
   "The build-code-config-builder function updates a CodeConfig$Builder instance using the provided configuration.
   The function takes the CodeConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -228,6 +258,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :code)]
     (. builder code data))
   (.build builder))
+
+
+(defn code-config-builder
+  ""
+  [id config]
+  (build-code-config-builder (new CodeConfig$Builder) id config))
 
 
 (defn build-on-commit-options-builder
@@ -262,6 +298,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn on-commit-options-builder
+  ""
+  [id config]
+  (build-on-commit-options-builder (new OnCommitOptions$Builder) id config))
+
+
 (defn build-repository-builder
   "The build-repository-builder function updates a Repository$Builder instance using the provided configuration.
   The function takes the Repository$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -286,6 +328,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
   (.build builder))
+
+
+(defn repository-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-repository-builder (Repository$Builder/create scope (name id)) id config))
 
 
 (defn build-repository-notify-on-options-builder
@@ -314,6 +362,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn repository-notify-on-options-builder
+  ""
+  [id config]
+  (build-repository-notify-on-options-builder (new RepositoryNotifyOnOptions$Builder) id config))
+
+
 (defn build-repository-props-builder
   "The build-repository-props-builder function updates a RepositoryProps$Builder instance using the provided configuration.
   The function takes the RepositoryProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -340,6 +394,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn repository-props-builder
+  ""
+  [id config]
+  (build-repository-props-builder (new RepositoryProps$Builder) id config))
+
+
 (defn build-repository-trigger-options-builder
   "The build-repository-trigger-options-builder function updates a RepositoryTriggerOptions$Builder instance using the provided configuration.
   The function takes the RepositoryTriggerOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -364,3 +424,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn repository-trigger-options-builder
+  ""
+  [id config]
+  (build-repository-trigger-options-builder (new RepositoryTriggerOptions$Builder) id config))

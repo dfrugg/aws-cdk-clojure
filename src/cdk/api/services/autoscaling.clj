@@ -437,6 +437,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn adjustment-tier-builder
+  ""
+  [id config]
+  (build-adjustment-tier-builder (new AdjustmentTier$Builder) id config))
+
+
 (defn build-apply-cloud-formation-init-options-builder
   "The build-apply-cloud-formation-init-options-builder function updates a ApplyCloudFormationInitOptions$Builder instance using the provided configuration.
   The function takes the ApplyCloudFormationInitOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -467,6 +473,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :print-log)]
     (. builder printLog data))
   (.build builder))
+
+
+(defn apply-cloud-formation-init-options-builder
+  ""
+  [id config]
+  (build-apply-cloud-formation-init-options-builder (new ApplyCloudFormationInitOptions$Builder) id config))
 
 
 (defn build-auto-scaling-group-builder
@@ -600,6 +612,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn auto-scaling-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-auto-scaling-group-builder (AutoScalingGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-auto-scaling-group-props-builder
   "The build-auto-scaling-group-props-builder function updates a AutoScalingGroupProps$Builder instance using the provided configuration.
   The function takes the AutoScalingGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -731,6 +749,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn auto-scaling-group-props-builder
+  ""
+  [id config]
+  (build-auto-scaling-group-props-builder (new AutoScalingGroupProps$Builder) id config))
+
+
 (defn build-base-target-tracking-props-builder
   "The build-base-target-tracking-props-builder function updates a BaseTargetTrackingProps$Builder instance using the provided configuration.
   The function takes the BaseTargetTrackingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -752,6 +776,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :estimated-instance-warmup)]
     (. builder estimatedInstanceWarmup data))
   (.build builder))
+
+
+(defn base-target-tracking-props-builder
+  ""
+  [id config]
+  (build-base-target-tracking-props-builder (new BaseTargetTrackingProps$Builder) id config))
 
 
 (defn build-basic-lifecycle-hook-props-builder
@@ -789,6 +819,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn basic-lifecycle-hook-props-builder
+  ""
+  [id config]
+  (build-basic-lifecycle-hook-props-builder (new BasicLifecycleHookProps$Builder) id config))
+
+
 (defn build-basic-scheduled-action-props-builder
   "The build-basic-scheduled-action-props-builder function updates a BasicScheduledActionProps$Builder instance using the provided configuration.
   The function takes the BasicScheduledActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -822,6 +858,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :time-zone)]
     (. builder timeZone data))
   (.build builder))
+
+
+(defn basic-scheduled-action-props-builder
+  ""
+  [id config]
+  (build-basic-scheduled-action-props-builder (new BasicScheduledActionProps$Builder) id config))
 
 
 (defn build-basic-step-scaling-policy-props-builder
@@ -865,6 +907,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn basic-step-scaling-policy-props-builder
+  ""
+  [id config]
+  (build-basic-step-scaling-policy-props-builder (new BasicStepScalingPolicyProps$Builder) id config))
+
+
 (defn build-basic-target-tracking-scaling-policy-props-builder
   "The build-basic-target-tracking-scaling-policy-props-builder function updates a BasicTargetTrackingScalingPolicyProps$Builder instance using the provided configuration.
   The function takes the BasicTargetTrackingScalingPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -900,6 +948,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn basic-target-tracking-scaling-policy-props-builder
+  ""
+  [id config]
+  (build-basic-target-tracking-scaling-policy-props-builder (new BasicTargetTrackingScalingPolicyProps$Builder) id config))
+
+
 (defn build-bind-hook-target-options-builder
   "The build-bind-hook-target-options-builder function updates a BindHookTargetOptions$Builder instance using the provided configuration.
   The function takes the BindHookTargetOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -918,6 +972,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :role)]
     (. builder role data))
   (.build builder))
+
+
+(defn bind-hook-target-options-builder
+  ""
+  [id config]
+  (build-bind-hook-target-options-builder (new BindHookTargetOptions$Builder) id config))
 
 
 (defn build-block-device-builder
@@ -940,6 +1000,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn block-device-builder
+  ""
+  [id config]
+  (build-block-device-builder (new BlockDevice$Builder) id config))
+
+
 (defn build-cfn-auto-scaling-group-accelerator-count-request-property-builder
   "The build-cfn-auto-scaling-group-accelerator-count-request-property-builder function updates a CfnAutoScalingGroup$AcceleratorCountRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnAutoScalingGroup$AcceleratorCountRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -958,6 +1024,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :min)]
     (. builder min data))
   (.build builder))
+
+
+(defn cfn-auto-scaling-group-accelerator-count-request-property-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-accelerator-count-request-property-builder (new CfnAutoScalingGroup$AcceleratorCountRequestProperty$Builder) id config))
 
 
 (defn build-cfn-auto-scaling-group-accelerator-total-memory-mi-b-request-property-builder
@@ -980,6 +1052,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-auto-scaling-group-accelerator-total-memory-mi-b-request-property-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-accelerator-total-memory-mi-b-request-property-builder (new CfnAutoScalingGroup$AcceleratorTotalMemoryMiBRequestProperty$Builder) id config))
+
+
 (defn build-cfn-auto-scaling-group-baseline-ebs-bandwidth-mbps-request-property-builder
   "The build-cfn-auto-scaling-group-baseline-ebs-bandwidth-mbps-request-property-builder function updates a CfnAutoScalingGroup$BaselineEbsBandwidthMbpsRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnAutoScalingGroup$BaselineEbsBandwidthMbpsRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -998,6 +1076,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :min)]
     (. builder min data))
   (.build builder))
+
+
+(defn cfn-auto-scaling-group-baseline-ebs-bandwidth-mbps-request-property-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-baseline-ebs-bandwidth-mbps-request-property-builder (new CfnAutoScalingGroup$BaselineEbsBandwidthMbpsRequestProperty$Builder) id config))
 
 
 (defn build-cfn-auto-scaling-group-builder
@@ -1104,6 +1188,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-auto-scaling-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-auto-scaling-group-builder (CfnAutoScalingGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-auto-scaling-group-instance-maintenance-policy-property-builder
   "The build-cfn-auto-scaling-group-instance-maintenance-policy-property-builder function updates a CfnAutoScalingGroup$InstanceMaintenancePolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnAutoScalingGroup$InstanceMaintenancePolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1122,6 +1212,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :min-healthy-percentage)]
     (. builder minHealthyPercentage data))
   (.build builder))
+
+
+(defn cfn-auto-scaling-group-instance-maintenance-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-instance-maintenance-policy-property-builder (new CfnAutoScalingGroup$InstanceMaintenancePolicyProperty$Builder) id config))
 
 
 (defn build-cfn-auto-scaling-group-instance-requirements-property-builder
@@ -1210,6 +1306,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-auto-scaling-group-instance-requirements-property-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-instance-requirements-property-builder (new CfnAutoScalingGroup$InstanceRequirementsProperty$Builder) id config))
+
+
 (defn build-cfn-auto-scaling-group-instances-distribution-property-builder
   "The build-cfn-auto-scaling-group-instances-distribution-property-builder function updates a CfnAutoScalingGroup$InstancesDistributionProperty$Builder instance using the provided configuration.
   The function takes the CfnAutoScalingGroup$InstancesDistributionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1242,6 +1344,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-auto-scaling-group-instances-distribution-property-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-instances-distribution-property-builder (new CfnAutoScalingGroup$InstancesDistributionProperty$Builder) id config))
+
+
 (defn build-cfn-auto-scaling-group-launch-template-overrides-property-builder
   "The build-cfn-auto-scaling-group-launch-template-overrides-property-builder function updates a CfnAutoScalingGroup$LaunchTemplateOverridesProperty$Builder instance using the provided configuration.
   The function takes the CfnAutoScalingGroup$LaunchTemplateOverridesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1268,6 +1376,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-auto-scaling-group-launch-template-overrides-property-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-launch-template-overrides-property-builder (new CfnAutoScalingGroup$LaunchTemplateOverridesProperty$Builder) id config))
+
+
 (defn build-cfn-auto-scaling-group-launch-template-property-builder
   "The build-cfn-auto-scaling-group-launch-template-property-builder function updates a CfnAutoScalingGroup$LaunchTemplateProperty$Builder instance using the provided configuration.
   The function takes the CfnAutoScalingGroup$LaunchTemplateProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1286,6 +1400,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :overrides)]
     (. builder overrides data))
   (.build builder))
+
+
+(defn cfn-auto-scaling-group-launch-template-property-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-launch-template-property-builder (new CfnAutoScalingGroup$LaunchTemplateProperty$Builder) id config))
 
 
 (defn build-cfn-auto-scaling-group-launch-template-specification-property-builder
@@ -1309,6 +1429,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
+
+
+(defn cfn-auto-scaling-group-launch-template-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-launch-template-specification-property-builder (new CfnAutoScalingGroup$LaunchTemplateSpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-auto-scaling-group-lifecycle-hook-specification-property-builder
@@ -1346,6 +1472,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-auto-scaling-group-lifecycle-hook-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-lifecycle-hook-specification-property-builder (new CfnAutoScalingGroup$LifecycleHookSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-auto-scaling-group-memory-gi-b-per-v-cpu-request-property-builder
   "The build-cfn-auto-scaling-group-memory-gi-b-per-v-cpu-request-property-builder function updates a CfnAutoScalingGroup$MemoryGiBPerVCpuRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnAutoScalingGroup$MemoryGiBPerVCpuRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1364,6 +1496,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :min)]
     (. builder min data))
   (.build builder))
+
+
+(defn cfn-auto-scaling-group-memory-gi-b-per-v-cpu-request-property-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-memory-gi-b-per-v-cpu-request-property-builder (new CfnAutoScalingGroup$MemoryGiBPerVCpuRequestProperty$Builder) id config))
 
 
 (defn build-cfn-auto-scaling-group-memory-mi-b-request-property-builder
@@ -1386,6 +1524,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-auto-scaling-group-memory-mi-b-request-property-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-memory-mi-b-request-property-builder (new CfnAutoScalingGroup$MemoryMiBRequestProperty$Builder) id config))
+
+
 (defn build-cfn-auto-scaling-group-metrics-collection-property-builder
   "The build-cfn-auto-scaling-group-metrics-collection-property-builder function updates a CfnAutoScalingGroup$MetricsCollectionProperty$Builder instance using the provided configuration.
   The function takes the CfnAutoScalingGroup$MetricsCollectionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1404,6 +1548,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :metrics)]
     (. builder metrics data))
   (.build builder))
+
+
+(defn cfn-auto-scaling-group-metrics-collection-property-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-metrics-collection-property-builder (new CfnAutoScalingGroup$MetricsCollectionProperty$Builder) id config))
 
 
 (defn build-cfn-auto-scaling-group-mixed-instances-policy-property-builder
@@ -1426,6 +1576,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-auto-scaling-group-mixed-instances-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-mixed-instances-policy-property-builder (new CfnAutoScalingGroup$MixedInstancesPolicyProperty$Builder) id config))
+
+
 (defn build-cfn-auto-scaling-group-network-bandwidth-gbps-request-property-builder
   "The build-cfn-auto-scaling-group-network-bandwidth-gbps-request-property-builder function updates a CfnAutoScalingGroup$NetworkBandwidthGbpsRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnAutoScalingGroup$NetworkBandwidthGbpsRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1444,6 +1600,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :min)]
     (. builder min data))
   (.build builder))
+
+
+(defn cfn-auto-scaling-group-network-bandwidth-gbps-request-property-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-network-bandwidth-gbps-request-property-builder (new CfnAutoScalingGroup$NetworkBandwidthGbpsRequestProperty$Builder) id config))
 
 
 (defn build-cfn-auto-scaling-group-network-interface-count-request-property-builder
@@ -1466,6 +1628,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-auto-scaling-group-network-interface-count-request-property-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-network-interface-count-request-property-builder (new CfnAutoScalingGroup$NetworkInterfaceCountRequestProperty$Builder) id config))
+
+
 (defn build-cfn-auto-scaling-group-notification-configuration-property-builder
   "The build-cfn-auto-scaling-group-notification-configuration-property-builder function updates a CfnAutoScalingGroup$NotificationConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnAutoScalingGroup$NotificationConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1484,6 +1652,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :topic-arn)]
     (. builder topicArn data))
   (.build builder))
+
+
+(defn cfn-auto-scaling-group-notification-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-notification-configuration-property-builder (new CfnAutoScalingGroup$NotificationConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-auto-scaling-group-props-builder
@@ -1590,6 +1764,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-auto-scaling-group-props-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-props-builder (new CfnAutoScalingGroupProps$Builder) id config))
+
+
 (defn build-cfn-auto-scaling-group-tag-property-property-builder
   "The build-cfn-auto-scaling-group-tag-property-property-builder function updates a CfnAutoScalingGroup$TagPropertyProperty$Builder instance using the provided configuration.
   The function takes the CfnAutoScalingGroup$TagPropertyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1613,6 +1793,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-auto-scaling-group-tag-property-property-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-tag-property-property-builder (new CfnAutoScalingGroup$TagPropertyProperty$Builder) id config))
+
+
 (defn build-cfn-auto-scaling-group-total-local-storage-gb-request-property-builder
   "The build-cfn-auto-scaling-group-total-local-storage-gb-request-property-builder function updates a CfnAutoScalingGroup$TotalLocalStorageGBRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnAutoScalingGroup$TotalLocalStorageGBRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1633,6 +1819,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-auto-scaling-group-total-local-storage-gb-request-property-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-total-local-storage-gb-request-property-builder (new CfnAutoScalingGroup$TotalLocalStorageGBRequestProperty$Builder) id config))
+
+
 (defn build-cfn-auto-scaling-group-v-cpu-count-request-property-builder
   "The build-cfn-auto-scaling-group-v-cpu-count-request-property-builder function updates a CfnAutoScalingGroup$VCpuCountRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnAutoScalingGroup$VCpuCountRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1651,6 +1843,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :min)]
     (. builder min data))
   (.build builder))
+
+
+(defn cfn-auto-scaling-group-v-cpu-count-request-property-builder
+  ""
+  [id config]
+  (build-cfn-auto-scaling-group-v-cpu-count-request-property-builder (new CfnAutoScalingGroup$VCpuCountRequestProperty$Builder) id config))
 
 
 (defn build-cfn-launch-configuration-block-device-mapping-property-builder
@@ -1677,6 +1875,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :virtual-name)]
     (. builder virtualName data))
   (.build builder))
+
+
+(defn cfn-launch-configuration-block-device-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-launch-configuration-block-device-mapping-property-builder (new CfnLaunchConfiguration$BlockDeviceMappingProperty$Builder) id config))
 
 
 (defn build-cfn-launch-configuration-block-device-property-builder
@@ -1712,6 +1916,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :volume-type)]
     (. builder volumeType data))
   (.build builder))
+
+
+(defn cfn-launch-configuration-block-device-property-builder
+  ""
+  [id config]
+  (build-cfn-launch-configuration-block-device-property-builder (new CfnLaunchConfiguration$BlockDeviceProperty$Builder) id config))
 
 
 (defn build-cfn-launch-configuration-builder
@@ -1785,6 +1995,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-launch-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-launch-configuration-builder (CfnLaunchConfiguration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-launch-configuration-metadata-options-property-builder
   "The build-cfn-launch-configuration-metadata-options-property-builder function updates a CfnLaunchConfiguration$MetadataOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnLaunchConfiguration$MetadataOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1806,6 +2022,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :http-tokens)]
     (. builder httpTokens data))
   (.build builder))
+
+
+(defn cfn-launch-configuration-metadata-options-property-builder
+  ""
+  [id config]
+  (build-cfn-launch-configuration-metadata-options-property-builder (new CfnLaunchConfiguration$MetadataOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-launch-configuration-props-builder
@@ -1879,6 +2101,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-launch-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-launch-configuration-props-builder (new CfnLaunchConfigurationProps$Builder) id config))
+
+
 (defn build-cfn-lifecycle-hook-builder
   "The build-cfn-lifecycle-hook-builder function updates a CfnLifecycleHook$Builder instance using the provided configuration.
   The function takes the CfnLifecycleHook$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1917,6 +2145,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-lifecycle-hook-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-lifecycle-hook-builder (CfnLifecycleHook$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-lifecycle-hook-props-builder
   "The build-cfn-lifecycle-hook-props-builder function updates a CfnLifecycleHookProps$Builder instance using the provided configuration.
   The function takes the CfnLifecycleHookProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1953,6 +2187,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :role-arn)]
     (. builder roleArn data))
   (.build builder))
+
+
+(defn cfn-lifecycle-hook-props-builder
+  ""
+  [id config]
+  (build-cfn-lifecycle-hook-props-builder (new CfnLifecycleHookProps$Builder) id config))
 
 
 (defn build-cfn-scaling-policy-builder
@@ -2002,6 +2242,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-scaling-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-scaling-policy-builder (CfnScalingPolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-scaling-policy-customized-metric-specification-property-builder
   "The build-cfn-scaling-policy-customized-metric-specification-property-builder function updates a CfnScalingPolicy$CustomizedMetricSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicy$CustomizedMetricSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2029,6 +2275,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :unit)]
     (. builder unit data))
   (.build builder))
+
+
+(defn cfn-scaling-policy-customized-metric-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-policy-customized-metric-specification-property-builder (new CfnScalingPolicy$CustomizedMetricSpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-scaling-policy-metric-data-query-property-builder
@@ -2060,6 +2312,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-scaling-policy-metric-data-query-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-policy-metric-data-query-property-builder (new CfnScalingPolicy$MetricDataQueryProperty$Builder) id config))
+
+
 (defn build-cfn-scaling-policy-metric-dimension-property-builder
   "The build-cfn-scaling-policy-metric-dimension-property-builder function updates a CfnScalingPolicy$MetricDimensionProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicy$MetricDimensionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2078,6 +2336,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-scaling-policy-metric-dimension-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-policy-metric-dimension-property-builder (new CfnScalingPolicy$MetricDimensionProperty$Builder) id config))
 
 
 (defn build-cfn-scaling-policy-metric-property-builder
@@ -2103,6 +2367,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-scaling-policy-metric-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-policy-metric-property-builder (new CfnScalingPolicy$MetricProperty$Builder) id config))
+
+
 (defn build-cfn-scaling-policy-metric-stat-property-builder
   "The build-cfn-scaling-policy-metric-stat-property-builder function updates a CfnScalingPolicy$MetricStatProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicy$MetricStatProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2126,6 +2396,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-scaling-policy-metric-stat-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-policy-metric-stat-property-builder (new CfnScalingPolicy$MetricStatProperty$Builder) id config))
+
+
 (defn build-cfn-scaling-policy-predefined-metric-specification-property-builder
   "The build-cfn-scaling-policy-predefined-metric-specification-property-builder function updates a CfnScalingPolicy$PredefinedMetricSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicy$PredefinedMetricSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2144,6 +2420,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :resource-label)]
     (. builder resourceLabel data))
   (.build builder))
+
+
+(defn cfn-scaling-policy-predefined-metric-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-policy-predefined-metric-specification-property-builder (new CfnScalingPolicy$PredefinedMetricSpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-scaling-policy-predictive-scaling-configuration-property-builder
@@ -2175,6 +2457,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-scaling-policy-predictive-scaling-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-policy-predictive-scaling-configuration-property-builder (new CfnScalingPolicy$PredictiveScalingConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-scaling-policy-predictive-scaling-customized-capacity-metric-property-builder
   "The build-cfn-scaling-policy-predictive-scaling-customized-capacity-metric-property-builder function updates a CfnScalingPolicy$PredictiveScalingCustomizedCapacityMetricProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicy$PredictiveScalingCustomizedCapacityMetricProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2190,6 +2478,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :metric-data-queries)]
     (. builder metricDataQueries data))
   (.build builder))
+
+
+(defn cfn-scaling-policy-predictive-scaling-customized-capacity-metric-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-policy-predictive-scaling-customized-capacity-metric-property-builder (new CfnScalingPolicy$PredictiveScalingCustomizedCapacityMetricProperty$Builder) id config))
 
 
 (defn build-cfn-scaling-policy-predictive-scaling-customized-load-metric-property-builder
@@ -2209,6 +2503,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-scaling-policy-predictive-scaling-customized-load-metric-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-policy-predictive-scaling-customized-load-metric-property-builder (new CfnScalingPolicy$PredictiveScalingCustomizedLoadMetricProperty$Builder) id config))
+
+
 (defn build-cfn-scaling-policy-predictive-scaling-customized-scaling-metric-property-builder
   "The build-cfn-scaling-policy-predictive-scaling-customized-scaling-metric-property-builder function updates a CfnScalingPolicy$PredictiveScalingCustomizedScalingMetricProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicy$PredictiveScalingCustomizedScalingMetricProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2224,6 +2524,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :metric-data-queries)]
     (. builder metricDataQueries data))
   (.build builder))
+
+
+(defn cfn-scaling-policy-predictive-scaling-customized-scaling-metric-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-policy-predictive-scaling-customized-scaling-metric-property-builder (new CfnScalingPolicy$PredictiveScalingCustomizedScalingMetricProperty$Builder) id config))
 
 
 (defn build-cfn-scaling-policy-predictive-scaling-metric-specification-property-builder
@@ -2261,6 +2567,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-scaling-policy-predictive-scaling-metric-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-policy-predictive-scaling-metric-specification-property-builder (new CfnScalingPolicy$PredictiveScalingMetricSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-scaling-policy-predictive-scaling-predefined-load-metric-property-builder
   "The build-cfn-scaling-policy-predictive-scaling-predefined-load-metric-property-builder function updates a CfnScalingPolicy$PredictiveScalingPredefinedLoadMetricProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicy$PredictiveScalingPredefinedLoadMetricProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2279,6 +2591,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :resource-label)]
     (. builder resourceLabel data))
   (.build builder))
+
+
+(defn cfn-scaling-policy-predictive-scaling-predefined-load-metric-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-policy-predictive-scaling-predefined-load-metric-property-builder (new CfnScalingPolicy$PredictiveScalingPredefinedLoadMetricProperty$Builder) id config))
 
 
 (defn build-cfn-scaling-policy-predictive-scaling-predefined-metric-pair-property-builder
@@ -2301,6 +2619,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-scaling-policy-predictive-scaling-predefined-metric-pair-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-policy-predictive-scaling-predefined-metric-pair-property-builder (new CfnScalingPolicy$PredictiveScalingPredefinedMetricPairProperty$Builder) id config))
+
+
 (defn build-cfn-scaling-policy-predictive-scaling-predefined-scaling-metric-property-builder
   "The build-cfn-scaling-policy-predictive-scaling-predefined-scaling-metric-property-builder function updates a CfnScalingPolicy$PredictiveScalingPredefinedScalingMetricProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicy$PredictiveScalingPredefinedScalingMetricProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2319,6 +2643,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :resource-label)]
     (. builder resourceLabel data))
   (.build builder))
+
+
+(defn cfn-scaling-policy-predictive-scaling-predefined-scaling-metric-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-policy-predictive-scaling-predefined-scaling-metric-property-builder (new CfnScalingPolicy$PredictiveScalingPredefinedScalingMetricProperty$Builder) id config))
 
 
 (defn build-cfn-scaling-policy-props-builder
@@ -2368,6 +2698,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-scaling-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-scaling-policy-props-builder (new CfnScalingPolicyProps$Builder) id config))
+
+
 (defn build-cfn-scaling-policy-step-adjustment-property-builder
   "The build-cfn-scaling-policy-step-adjustment-property-builder function updates a CfnScalingPolicy$StepAdjustmentProperty$Builder instance using the provided configuration.
   The function takes the CfnScalingPolicy$StepAdjustmentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2389,6 +2725,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :scaling-adjustment)]
     (. builder scalingAdjustment data))
   (.build builder))
+
+
+(defn cfn-scaling-policy-step-adjustment-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-policy-step-adjustment-property-builder (new CfnScalingPolicy$StepAdjustmentProperty$Builder) id config))
 
 
 (defn build-cfn-scaling-policy-target-tracking-configuration-property-builder
@@ -2415,6 +2757,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :target-value)]
     (. builder targetValue data))
   (.build builder))
+
+
+(defn cfn-scaling-policy-target-tracking-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-scaling-policy-target-tracking-configuration-property-builder (new CfnScalingPolicy$TargetTrackingConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-scheduled-action-builder
@@ -2455,6 +2803,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-scheduled-action-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-scheduled-action-builder (CfnScheduledAction$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-scheduled-action-props-builder
   "The build-cfn-scheduled-action-props-builder function updates a CfnScheduledActionProps$Builder instance using the provided configuration.
   The function takes the CfnScheduledActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2493,6 +2847,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-scheduled-action-props-builder
+  ""
+  [id config]
+  (build-cfn-scheduled-action-props-builder (new CfnScheduledActionProps$Builder) id config))
+
+
 (defn build-cfn-warm-pool-builder
   "The build-cfn-warm-pool-builder function updates a CfnWarmPool$Builder instance using the provided configuration.
   The function takes the CfnWarmPool$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2522,6 +2882,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-warm-pool-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-warm-pool-builder (CfnWarmPool$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-warm-pool-instance-reuse-policy-property-builder
   "The build-cfn-warm-pool-instance-reuse-policy-property-builder function updates a CfnWarmPool$InstanceReusePolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnWarmPool$InstanceReusePolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2537,6 +2903,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :reuse-on-scale-in)]
     (. builder reuseOnScaleIn data))
   (.build builder))
+
+
+(defn cfn-warm-pool-instance-reuse-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-warm-pool-instance-reuse-policy-property-builder (new CfnWarmPool$InstanceReusePolicyProperty$Builder) id config))
 
 
 (defn build-cfn-warm-pool-props-builder
@@ -2566,6 +2938,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :pool-state)]
     (. builder poolState data))
   (.build builder))
+
+
+(defn cfn-warm-pool-props-builder
+  ""
+  [id config]
+  (build-cfn-warm-pool-props-builder (new CfnWarmPoolProps$Builder) id config))
 
 
 (defn build-common-auto-scaling-group-props-builder
@@ -2660,6 +3038,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn common-auto-scaling-group-props-builder
+  ""
+  [id config]
+  (build-common-auto-scaling-group-props-builder (new CommonAutoScalingGroupProps$Builder) id config))
+
+
 (defn build-cpu-utilization-scaling-props-builder
   "The build-cpu-utilization-scaling-props-builder function updates a CpuUtilizationScalingProps$Builder instance using the provided configuration.
   The function takes the CpuUtilizationScalingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2684,6 +3068,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :target-utilization-percent)]
     (. builder targetUtilizationPercent data))
   (.build builder))
+
+
+(defn cpu-utilization-scaling-props-builder
+  ""
+  [id config]
+  (build-cpu-utilization-scaling-props-builder (new CpuUtilizationScalingProps$Builder) id config))
 
 
 (defn build-cron-options-builder
@@ -2715,6 +3105,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cron-options-builder
+  ""
+  [id config]
+  (build-cron-options-builder (new CronOptions$Builder) id config))
+
+
 (defn build-ebs-device-options-base-builder
   "The build-ebs-device-options-base-builder function updates a EbsDeviceOptionsBase$Builder instance using the provided configuration.
   The function takes the EbsDeviceOptionsBase$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2739,6 +3135,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (ebs-device-volume-type config id :volume-type)]
     (. builder volumeType data))
   (.build builder))
+
+
+(defn ebs-device-options-base-builder
+  ""
+  [id config]
+  (build-ebs-device-options-base-builder (new EbsDeviceOptionsBase$Builder) id config))
 
 
 (defn build-ebs-device-options-builder
@@ -2768,6 +3170,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (ebs-device-volume-type config id :volume-type)]
     (. builder volumeType data))
   (.build builder))
+
+
+(defn ebs-device-options-builder
+  ""
+  [id config]
+  (build-ebs-device-options-builder (new EbsDeviceOptions$Builder) id config))
 
 
 (defn build-ebs-device-props-builder
@@ -2802,6 +3210,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn ebs-device-props-builder
+  ""
+  [id config]
+  (build-ebs-device-props-builder (new EbsDeviceProps$Builder) id config))
+
+
 (defn build-ebs-device-snapshot-options-builder
   "The build-ebs-device-snapshot-options-builder function updates a EbsDeviceSnapshotOptions$Builder instance using the provided configuration.
   The function takes the EbsDeviceSnapshotOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2831,6 +3245,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn ebs-device-snapshot-options-builder
+  ""
+  [id config]
+  (build-ebs-device-snapshot-options-builder (new EbsDeviceSnapshotOptions$Builder) id config))
+
+
 (defn build-ec2-health-check-options-builder
   "The build-ec2-health-check-options-builder function updates a Ec2HealthCheckOptions$Builder instance using the provided configuration.
   The function takes the Ec2HealthCheckOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2848,6 +3268,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn ec2-health-check-options-builder
+  ""
+  [id config]
+  (build-ec2-health-check-options-builder (new Ec2HealthCheckOptions$Builder) id config))
+
+
 (defn build-elb-health-check-options-builder
   "The build-elb-health-check-options-builder function updates a ElbHealthCheckOptions$Builder instance using the provided configuration.
   The function takes the ElbHealthCheckOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2863,6 +3289,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :grace)]
     (. builder grace data))
   (.build builder))
+
+
+(defn elb-health-check-options-builder
+  ""
+  [id config]
+  (build-elb-health-check-options-builder (new ElbHealthCheckOptions$Builder) id config))
 
 
 (defn build-instances-distribution-builder
@@ -2897,6 +3329,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn instances-distribution-builder
+  ""
+  [id config]
+  (build-instances-distribution-builder (new InstancesDistribution$Builder) id config))
+
+
 (defn build-launch-template-overrides-builder
   "The build-launch-template-overrides-builder function updates a LaunchTemplateOverrides$Builder instance using the provided configuration.
   The function takes the LaunchTemplateOverrides$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2921,6 +3359,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :weighted-capacity)]
     (. builder weightedCapacity data))
   (.build builder))
+
+
+(defn launch-template-overrides-builder
+  ""
+  [id config]
+  (build-launch-template-overrides-builder (new LaunchTemplateOverrides$Builder) id config))
 
 
 (defn build-lifecycle-hook-builder
@@ -2961,6 +3405,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn lifecycle-hook-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-lifecycle-hook-builder (LifecycleHook$Builder/create scope (name id)) id config))
+
+
 (defn build-lifecycle-hook-props-builder
   "The build-lifecycle-hook-props-builder function updates a LifecycleHookProps$Builder instance using the provided configuration.
   The function takes the LifecycleHookProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2999,6 +3449,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn lifecycle-hook-props-builder
+  ""
+  [id config]
+  (build-lifecycle-hook-props-builder (new LifecycleHookProps$Builder) id config))
+
+
 (defn build-lifecycle-hook-target-config-builder
   "The build-lifecycle-hook-target-config-builder function updates a LifecycleHookTargetConfig$Builder instance using the provided configuration.
   The function takes the LifecycleHookTargetConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3017,6 +3473,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :notification-target-arn)]
     (. builder notificationTargetArn data))
   (.build builder))
+
+
+(defn lifecycle-hook-target-config-builder
+  ""
+  [id config]
+  (build-lifecycle-hook-target-config-builder (new LifecycleHookTargetConfig$Builder) id config))
 
 
 (defn build-metric-target-tracking-props-builder
@@ -3048,6 +3510,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn metric-target-tracking-props-builder
+  ""
+  [id config]
+  (build-metric-target-tracking-props-builder (new MetricTargetTrackingProps$Builder) id config))
+
+
 (defn build-mixed-instances-policy-builder
   "The build-mixed-instances-policy-builder function updates a MixedInstancesPolicy$Builder instance using the provided configuration.
   The function takes the MixedInstancesPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3069,6 +3537,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :launch-template-overrides)]
     (. builder launchTemplateOverrides data))
   (.build builder))
+
+
+(defn mixed-instances-policy-builder
+  ""
+  [id config]
+  (build-mixed-instances-policy-builder (new MixedInstancesPolicy$Builder) id config))
 
 
 (defn build-network-utilization-scaling-props-builder
@@ -3097,6 +3571,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn network-utilization-scaling-props-builder
+  ""
+  [id config]
+  (build-network-utilization-scaling-props-builder (new NetworkUtilizationScalingProps$Builder) id config))
+
+
 (defn build-notification-configuration-builder
   "The build-notification-configuration-builder function updates a NotificationConfiguration$Builder instance using the provided configuration.
   The function takes the NotificationConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3117,6 +3597,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn notification-configuration-builder
+  ""
+  [id config]
+  (build-notification-configuration-builder (new NotificationConfiguration$Builder) id config))
+
+
 (defn build-render-signals-options-builder
   "The build-render-signals-options-builder function updates a RenderSignalsOptions$Builder instance using the provided configuration.
   The function takes the RenderSignalsOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3135,6 +3621,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :min-capacity)]
     (. builder minCapacity data))
   (.build builder))
+
+
+(defn render-signals-options-builder
+  ""
+  [id config]
+  (build-render-signals-options-builder (new RenderSignalsOptions$Builder) id config))
 
 
 (defn build-request-count-scaling-props-builder
@@ -3161,6 +3653,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :target-requests-per-minute)]
     (. builder targetRequestsPerMinute data))
   (.build builder))
+
+
+(defn request-count-scaling-props-builder
+  ""
+  [id config]
+  (build-request-count-scaling-props-builder (new RequestCountScalingProps$Builder) id config))
 
 
 (defn build-rolling-update-options-builder
@@ -3195,6 +3693,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn rolling-update-options-builder
+  ""
+  [id config]
+  (build-rolling-update-options-builder (new RollingUpdateOptions$Builder) id config))
+
+
 (defn build-scaling-interval-builder
   "The build-scaling-interval-builder function updates a ScalingInterval$Builder instance using the provided configuration.
   The function takes the ScalingInterval$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3216,6 +3720,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :upper)]
     (. builder upper data))
   (.build builder))
+
+
+(defn scaling-interval-builder
+  ""
+  [id config]
+  (build-scaling-interval-builder (new ScalingInterval$Builder) id config))
 
 
 (defn build-scheduled-action-builder
@@ -3256,6 +3766,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn scheduled-action-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-scheduled-action-builder (ScheduledAction$Builder/create scope (name id)) id config))
+
+
 (defn build-scheduled-action-props-builder
   "The build-scheduled-action-props-builder function updates a ScheduledActionProps$Builder instance using the provided configuration.
   The function takes the ScheduledActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3294,6 +3810,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn scheduled-action-props-builder
+  ""
+  [id config]
+  (build-scheduled-action-props-builder (new ScheduledActionProps$Builder) id config))
+
+
 (defn build-signals-options-builder
   "The build-signals-options-builder function updates a SignalsOptions$Builder instance using the provided configuration.
   The function takes the SignalsOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3312,6 +3834,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :timeout)]
     (. builder timeout data))
   (.build builder))
+
+
+(defn signals-options-builder
+  ""
+  [id config]
+  (build-signals-options-builder (new SignalsOptions$Builder) id config))
 
 
 (defn build-step-scaling-action-builder
@@ -3346,6 +3874,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn step-scaling-action-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-step-scaling-action-builder (StepScalingAction$Builder/create scope (name id)) id config))
+
+
 (defn build-step-scaling-action-props-builder
   "The build-step-scaling-action-props-builder function updates a StepScalingActionProps$Builder instance using the provided configuration.
   The function takes the StepScalingActionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3376,6 +3910,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :min-adjustment-magnitude)]
     (. builder minAdjustmentMagnitude data))
   (.build builder))
+
+
+(defn step-scaling-action-props-builder
+  ""
+  [id config]
+  (build-step-scaling-action-props-builder (new StepScalingActionProps$Builder) id config))
 
 
 (defn build-step-scaling-policy-builder
@@ -3422,6 +3962,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn step-scaling-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-step-scaling-policy-builder (StepScalingPolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-step-scaling-policy-props-builder
   "The build-step-scaling-policy-props-builder function updates a StepScalingPolicyProps$Builder instance using the provided configuration.
   The function takes the StepScalingPolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3466,6 +4012,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn step-scaling-policy-props-builder
+  ""
+  [id config]
+  (build-step-scaling-policy-props-builder (new StepScalingPolicyProps$Builder) id config))
+
+
 (defn build-target-tracking-scaling-policy-builder
   "The build-target-tracking-scaling-policy-builder function updates a TargetTrackingScalingPolicy$Builder instance using the provided configuration.
   The function takes the TargetTrackingScalingPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3502,6 +4054,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :target-value)]
     (. builder targetValue data))
   (.build builder))
+
+
+(defn target-tracking-scaling-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-target-tracking-scaling-policy-builder (TargetTrackingScalingPolicy$Builder/create scope (name id)) id config))
 
 
 (defn build-target-tracking-scaling-policy-props-builder
@@ -3542,6 +4100,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn target-tracking-scaling-policy-props-builder
+  ""
+  [id config]
+  (build-target-tracking-scaling-policy-props-builder (new TargetTrackingScalingPolicyProps$Builder) id config))
+
+
 (defn build-warm-pool-builder
   "The build-warm-pool-builder function updates a WarmPool$Builder instance using the provided configuration.
   The function takes the WarmPool$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3571,6 +4135,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn warm-pool-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-warm-pool-builder (WarmPool$Builder/create scope (name id)) id config))
+
+
 (defn build-warm-pool-options-builder
   "The build-warm-pool-options-builder function updates a WarmPoolOptions$Builder instance using the provided configuration.
   The function takes the WarmPoolOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3595,6 +4165,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :reuse-on-scale-in)]
     (. builder reuseOnScaleIn data))
   (.build builder))
+
+
+(defn warm-pool-options-builder
+  ""
+  [id config]
+  (build-warm-pool-options-builder (new WarmPoolOptions$Builder) id config))
 
 
 (defn build-warm-pool-props-builder
@@ -3624,3 +4200,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :reuse-on-scale-in)]
     (. builder reuseOnScaleIn data))
   (.build builder))
+
+
+(defn warm-pool-props-builder
+  ""
+  [id config]
+  (build-warm-pool-props-builder (new WarmPoolProps$Builder) id config))

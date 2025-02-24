@@ -111,6 +111,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn advanced-security-options-builder
+  ""
+  [id config]
+  (build-advanced-security-options-builder (new AdvancedSecurityOptions$Builder) id config))
+
+
 (defn build-capacity-config-builder
   "The build-capacity-config-builder function updates a CapacityConfig$Builder instance using the provided configuration.
   The function takes the CapacityConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -146,6 +152,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn capacity-config-builder
+  ""
+  [id config]
+  (build-capacity-config-builder (new CapacityConfig$Builder) id config))
+
+
 (defn build-cfn-domain-advanced-security-options-input-property-builder
   "The build-cfn-domain-advanced-security-options-input-property-builder function updates a CfnDomain$AdvancedSecurityOptionsInputProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$AdvancedSecurityOptionsInputProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -176,6 +188,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :saml-options)]
     (. builder samlOptions data))
   (.build builder))
+
+
+(defn cfn-domain-advanced-security-options-input-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-advanced-security-options-input-property-builder (new CfnDomain$AdvancedSecurityOptionsInputProperty$Builder) id config))
 
 
 (defn build-cfn-domain-builder
@@ -249,6 +267,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-domain-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-domain-builder (CfnDomain$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-domain-cluster-config-property-builder
   "The build-cfn-domain-cluster-config-property-builder function updates a CfnDomain$ClusterConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$ClusterConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -299,6 +323,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-domain-cluster-config-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-cluster-config-property-builder (new CfnDomain$ClusterConfigProperty$Builder) id config))
+
+
 (defn build-cfn-domain-cognito-options-property-builder
   "The build-cfn-domain-cognito-options-property-builder function updates a CfnDomain$CognitoOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$CognitoOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -325,6 +355,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-domain-cognito-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-cognito-options-property-builder (new CfnDomain$CognitoOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-domain-cold-storage-options-property-builder
   "The build-cfn-domain-cold-storage-options-property-builder function updates a CfnDomain$ColdStorageOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$ColdStorageOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -340,6 +376,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
+
+
+(defn cfn-domain-cold-storage-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-cold-storage-options-property-builder (new CfnDomain$ColdStorageOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-domain-domain-endpoint-options-property-builder
@@ -371,6 +413,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-domain-domain-endpoint-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-domain-endpoint-options-property-builder (new CfnDomain$DomainEndpointOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-domain-ebs-options-property-builder
   "The build-cfn-domain-ebs-options-property-builder function updates a CfnDomain$EBSOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$EBSOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -400,6 +448,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-domain-ebs-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-ebs-options-property-builder (new CfnDomain$EBSOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-domain-encryption-at-rest-options-property-builder
   "The build-cfn-domain-encryption-at-rest-options-property-builder function updates a CfnDomain$EncryptionAtRestOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$EncryptionAtRestOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -418,6 +472,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :kms-key-id)]
     (. builder kmsKeyId data))
   (.build builder))
+
+
+(defn cfn-domain-encryption-at-rest-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-encryption-at-rest-options-property-builder (new CfnDomain$EncryptionAtRestOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-domain-idp-property-builder
@@ -440,6 +500,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-domain-idp-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-idp-property-builder (new CfnDomain$IdpProperty$Builder) id config))
+
+
 (defn build-cfn-domain-log-publishing-option-property-builder
   "The build-cfn-domain-log-publishing-option-property-builder function updates a CfnDomain$LogPublishingOptionProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$LogPublishingOptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -458,6 +524,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
+
+
+(defn cfn-domain-log-publishing-option-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-log-publishing-option-property-builder (new CfnDomain$LogPublishingOptionProperty$Builder) id config))
 
 
 (defn build-cfn-domain-master-user-options-property-builder
@@ -483,6 +555,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-domain-master-user-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-master-user-options-property-builder (new CfnDomain$MasterUserOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-domain-node-to-node-encryption-options-property-builder
   "The build-cfn-domain-node-to-node-encryption-options-property-builder function updates a CfnDomain$NodeToNodeEncryptionOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$NodeToNodeEncryptionOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -498,6 +576,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
+
+
+(defn cfn-domain-node-to-node-encryption-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-node-to-node-encryption-options-property-builder (new CfnDomain$NodeToNodeEncryptionOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-domain-off-peak-window-options-property-builder
@@ -520,6 +604,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-domain-off-peak-window-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-off-peak-window-options-property-builder (new CfnDomain$OffPeakWindowOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-domain-off-peak-window-property-builder
   "The build-cfn-domain-off-peak-window-property-builder function updates a CfnDomain$OffPeakWindowProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$OffPeakWindowProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -535,6 +625,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :window-start-time)]
     (. builder windowStartTime data))
   (.build builder))
+
+
+(defn cfn-domain-off-peak-window-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-off-peak-window-property-builder (new CfnDomain$OffPeakWindowProperty$Builder) id config))
 
 
 (defn build-cfn-domain-props-builder
@@ -608,6 +704,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-domain-props-builder
+  ""
+  [id config]
+  (build-cfn-domain-props-builder (new CfnDomainProps$Builder) id config))
+
+
 (defn build-cfn-domain-saml-options-property-builder
   "The build-cfn-domain-saml-options-property-builder function updates a CfnDomain$SAMLOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$SAMLOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -641,6 +743,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :subject-key)]
     (. builder subjectKey data))
   (.build builder))
+
+
+(defn cfn-domain-saml-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-saml-options-property-builder (new CfnDomain$SAMLOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-domain-service-software-options-property-builder
@@ -681,6 +789,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-domain-service-software-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-service-software-options-property-builder (new CfnDomain$ServiceSoftwareOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-domain-snapshot-options-property-builder
   "The build-cfn-domain-snapshot-options-property-builder function updates a CfnDomain$SnapshotOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$SnapshotOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -698,6 +812,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-domain-snapshot-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-snapshot-options-property-builder (new CfnDomain$SnapshotOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-domain-software-update-options-property-builder
   "The build-cfn-domain-software-update-options-property-builder function updates a CfnDomain$SoftwareUpdateOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$SoftwareUpdateOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -713,6 +833,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :auto-software-update-enabled)]
     (. builder autoSoftwareUpdateEnabled data))
   (.build builder))
+
+
+(defn cfn-domain-software-update-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-software-update-options-property-builder (new CfnDomain$SoftwareUpdateOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-domain-vpc-options-property-builder
@@ -735,6 +861,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-domain-vpc-options-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-vpc-options-property-builder (new CfnDomain$VPCOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-domain-window-start-time-property-builder
   "The build-cfn-domain-window-start-time-property-builder function updates a CfnDomain$WindowStartTimeProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$WindowStartTimeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -755,6 +887,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-domain-window-start-time-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-window-start-time-property-builder (new CfnDomain$WindowStartTimeProperty$Builder) id config))
+
+
 (defn build-cfn-domain-zone-awareness-config-property-builder
   "The build-cfn-domain-zone-awareness-config-property-builder function updates a CfnDomain$ZoneAwarenessConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnDomain$ZoneAwarenessConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -770,6 +908,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :availability-zone-count)]
     (. builder availabilityZoneCount data))
   (.build builder))
+
+
+(defn cfn-domain-zone-awareness-config-property-builder
+  ""
+  [id config]
+  (build-cfn-domain-zone-awareness-config-property-builder (new CfnDomain$ZoneAwarenessConfigProperty$Builder) id config))
 
 
 (defn build-cognito-options-builder
@@ -795,6 +939,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cognito-options-builder
+  ""
+  [id config]
+  (build-cognito-options-builder (new CognitoOptions$Builder) id config))
+
+
 (defn build-custom-endpoint-options-builder
   "The build-custom-endpoint-options-builder function updates a CustomEndpointOptions$Builder instance using the provided configuration.
   The function takes the CustomEndpointOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -818,6 +968,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn custom-endpoint-options-builder
+  ""
+  [id config]
+  (build-custom-endpoint-options-builder (new CustomEndpointOptions$Builder) id config))
+
+
 (defn build-domain-attributes-builder
   "The build-domain-attributes-builder function updates a DomainAttributes$Builder instance using the provided configuration.
   The function takes the DomainAttributes$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -836,6 +992,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :domain-endpoint)]
     (. builder domainEndpoint data))
   (.build builder))
+
+
+(defn domain-attributes-builder
+  ""
+  [id config]
+  (build-domain-attributes-builder (new DomainAttributes$Builder) id config))
 
 
 (defn build-domain-builder
@@ -936,6 +1098,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn domain-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-domain-builder (Domain$Builder/create scope (name id)) id config))
+
+
 (defn build-domain-props-builder
   "The build-domain-props-builder function updates a DomainProps$Builder instance using the provided configuration.
   The function takes the DomainProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1034,6 +1202,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn domain-props-builder
+  ""
+  [id config]
+  (build-domain-props-builder (new DomainProps$Builder) id config))
+
+
 (defn build-ebs-options-builder
   "The build-ebs-options-builder function updates a EbsOptions$Builder instance using the provided configuration.
   The function takes the EbsOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1063,6 +1237,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn ebs-options-builder
+  ""
+  [id config]
+  (build-ebs-options-builder (new EbsOptions$Builder) id config))
+
+
 (defn build-encryption-at-rest-options-builder
   "The build-encryption-at-rest-options-builder function updates a EncryptionAtRestOptions$Builder instance using the provided configuration.
   The function takes the EncryptionAtRestOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1081,6 +1261,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :kms-key)]
     (. builder kmsKey data))
   (.build builder))
+
+
+(defn encryption-at-rest-options-builder
+  ""
+  [id config]
+  (build-encryption-at-rest-options-builder (new EncryptionAtRestOptions$Builder) id config))
 
 
 (defn build-logging-options-builder
@@ -1121,6 +1307,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn logging-options-builder
+  ""
+  [id config]
+  (build-logging-options-builder (new LoggingOptions$Builder) id config))
+
+
 (defn build-saml-options-property-builder
   "The build-saml-options-property-builder function updates a SAMLOptionsProperty$Builder instance using the provided configuration.
   The function takes the SAMLOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1156,6 +1348,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn saml-options-property-builder
+  ""
+  [id config]
+  (build-saml-options-property-builder (new SAMLOptionsProperty$Builder) id config))
+
+
 (defn build-window-start-time-builder
   "The build-window-start-time-builder function updates a WindowStartTime$Builder instance using the provided configuration.
   The function takes the WindowStartTime$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1176,6 +1374,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn window-start-time-builder
+  ""
+  [id config]
+  (build-window-start-time-builder (new WindowStartTime$Builder) id config))
+
+
 (defn build-zone-awareness-config-builder
   "The build-zone-awareness-config-builder function updates a ZoneAwarenessConfig$Builder instance using the provided configuration.
   The function takes the ZoneAwarenessConfig$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1194,3 +1398,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :enabled)]
     (. builder enabled data))
   (.build builder))
+
+
+(defn zone-awareness-config-builder
+  ""
+  [id config]
+  (build-zone-awareness-config-builder (new ZoneAwarenessConfig$Builder) id config))

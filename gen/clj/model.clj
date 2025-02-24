@@ -6,12 +6,8 @@
                               namespace-source-function
                               namespace-test-function]]
             [util :refer [camel->kebab-case
-                          conjv]]))
-
-
-
-(def construct-sym 'software.constructs.Construct)
-(def string-sym 'java.lang.String)
+                          conjv
+                          concatv]]))
 
 
 (defn java-class-info
@@ -104,10 +100,10 @@
   "Processes a single builder on a package."
   [package-data builder-data]
   (-> package-data
-      (update :source-builders-code conjv (builder-source-function builder-data))))
+      (update :source-builders-code concatv (builder-source-function builder-data))))
 
 
 (defn process-builders
   "Processes all of the builder definitions on a package."
   [package-data]
-  (reduce process-builder package-data (:builders package-data)))
+  (reduce process-builder package-data (sort-by :fn-name (:builders package-data))))

@@ -65,6 +65,12 @@
   (.build builder))
 
 
+(defn cfn-id-mapping-workflow-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-id-mapping-workflow-builder (CfnIdMappingWorkflow$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-id-mapping-workflow-id-mapping-techniques-property-builder
   "The build-cfn-id-mapping-workflow-id-mapping-techniques-property-builder function updates a CfnIdMappingWorkflow$IdMappingTechniquesProperty$Builder instance using the provided configuration.
   The function takes the CfnIdMappingWorkflow$IdMappingTechniquesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -83,6 +89,12 @@
   (when-let [data (lookup-entry config id :provider-properties)]
     (. builder providerProperties data))
   (.build builder))
+
+
+(defn cfn-id-mapping-workflow-id-mapping-techniques-property-builder
+  ""
+  [id config]
+  (build-cfn-id-mapping-workflow-id-mapping-techniques-property-builder (new CfnIdMappingWorkflow$IdMappingTechniquesProperty$Builder) id config))
 
 
 (defn build-cfn-id-mapping-workflow-id-mapping-workflow-input-source-property-builder
@@ -108,6 +120,12 @@
   (.build builder))
 
 
+(defn cfn-id-mapping-workflow-id-mapping-workflow-input-source-property-builder
+  ""
+  [id config]
+  (build-cfn-id-mapping-workflow-id-mapping-workflow-input-source-property-builder (new CfnIdMappingWorkflow$IdMappingWorkflowInputSourceProperty$Builder) id config))
+
+
 (defn build-cfn-id-mapping-workflow-id-mapping-workflow-output-source-property-builder
   "The build-cfn-id-mapping-workflow-id-mapping-workflow-output-source-property-builder function updates a CfnIdMappingWorkflow$IdMappingWorkflowOutputSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnIdMappingWorkflow$IdMappingWorkflowOutputSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -128,6 +146,12 @@
   (.build builder))
 
 
+(defn cfn-id-mapping-workflow-id-mapping-workflow-output-source-property-builder
+  ""
+  [id config]
+  (build-cfn-id-mapping-workflow-id-mapping-workflow-output-source-property-builder (new CfnIdMappingWorkflow$IdMappingWorkflowOutputSourceProperty$Builder) id config))
+
+
 (defn build-cfn-id-mapping-workflow-intermediate-source-configuration-property-builder
   "The build-cfn-id-mapping-workflow-intermediate-source-configuration-property-builder function updates a CfnIdMappingWorkflow$IntermediateSourceConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnIdMappingWorkflow$IntermediateSourceConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -143,6 +167,12 @@
   (when-let [data (lookup-entry config id :intermediate-s3-path)]
     (. builder intermediateS3Path data))
   (.build builder))
+
+
+(defn cfn-id-mapping-workflow-intermediate-source-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-id-mapping-workflow-intermediate-source-configuration-property-builder (new CfnIdMappingWorkflow$IntermediateSourceConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-id-mapping-workflow-props-builder
@@ -180,6 +210,12 @@
   (.build builder))
 
 
+(defn cfn-id-mapping-workflow-props-builder
+  ""
+  [id config]
+  (build-cfn-id-mapping-workflow-props-builder (new CfnIdMappingWorkflowProps$Builder) id config))
+
+
 (defn build-cfn-id-mapping-workflow-provider-properties-property-builder
   "The build-cfn-id-mapping-workflow-provider-properties-property-builder function updates a CfnIdMappingWorkflow$ProviderPropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnIdMappingWorkflow$ProviderPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -201,6 +237,12 @@
   (when-let [data (lookup-entry config id :provider-service-arn)]
     (. builder providerServiceArn data))
   (.build builder))
+
+
+(defn cfn-id-mapping-workflow-provider-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-id-mapping-workflow-provider-properties-property-builder (new CfnIdMappingWorkflow$ProviderPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-id-namespace-builder
@@ -238,6 +280,12 @@
   (.build builder))
 
 
+(defn cfn-id-namespace-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-id-namespace-builder (CfnIdNamespace$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-id-namespace-id-namespace-id-mapping-workflow-properties-property-builder
   "The build-cfn-id-namespace-id-namespace-id-mapping-workflow-properties-property-builder function updates a CfnIdNamespace$IdNamespaceIdMappingWorkflowPropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnIdNamespace$IdNamespaceIdMappingWorkflowPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -256,6 +304,12 @@
   (when-let [data (lookup-entry config id :provider-properties)]
     (. builder providerProperties data))
   (.build builder))
+
+
+(defn cfn-id-namespace-id-namespace-id-mapping-workflow-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-id-namespace-id-namespace-id-mapping-workflow-properties-property-builder (new CfnIdNamespace$IdNamespaceIdMappingWorkflowPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-id-namespace-id-namespace-input-source-property-builder
@@ -278,6 +332,12 @@
   (.build builder))
 
 
+(defn cfn-id-namespace-id-namespace-input-source-property-builder
+  ""
+  [id config]
+  (build-cfn-id-namespace-id-namespace-input-source-property-builder (new CfnIdNamespace$IdNamespaceInputSourceProperty$Builder) id config))
+
+
 (defn build-cfn-id-namespace-namespace-provider-properties-property-builder
   "The build-cfn-id-namespace-namespace-provider-properties-property-builder function updates a CfnIdNamespace$NamespaceProviderPropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnIdNamespace$NamespaceProviderPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -296,6 +356,12 @@
   (when-let [data (lookup-entry config id :provider-service-arn)]
     (. builder providerServiceArn data))
   (.build builder))
+
+
+(defn cfn-id-namespace-namespace-provider-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-id-namespace-namespace-provider-properties-property-builder (new CfnIdNamespace$NamespaceProviderPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-id-namespace-props-builder
@@ -333,6 +399,12 @@
   (.build builder))
 
 
+(defn cfn-id-namespace-props-builder
+  ""
+  [id config]
+  (build-cfn-id-namespace-props-builder (new CfnIdNamespaceProps$Builder) id config))
+
+
 (defn build-cfn-matching-workflow-builder
   "The build-cfn-matching-workflow-builder function updates a CfnMatchingWorkflow$Builder instance using the provided configuration.
   The function takes the CfnMatchingWorkflow$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -368,6 +440,12 @@
   (.build builder))
 
 
+(defn cfn-matching-workflow-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-matching-workflow-builder (CfnMatchingWorkflow$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-matching-workflow-input-source-property-builder
   "The build-cfn-matching-workflow-input-source-property-builder function updates a CfnMatchingWorkflow$InputSourceProperty$Builder instance using the provided configuration.
   The function takes the CfnMatchingWorkflow$InputSourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -391,6 +469,12 @@
   (.build builder))
 
 
+(defn cfn-matching-workflow-input-source-property-builder
+  ""
+  [id config]
+  (build-cfn-matching-workflow-input-source-property-builder (new CfnMatchingWorkflow$InputSourceProperty$Builder) id config))
+
+
 (defn build-cfn-matching-workflow-intermediate-source-configuration-property-builder
   "The build-cfn-matching-workflow-intermediate-source-configuration-property-builder function updates a CfnMatchingWorkflow$IntermediateSourceConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnMatchingWorkflow$IntermediateSourceConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -406,6 +490,12 @@
   (when-let [data (lookup-entry config id :intermediate-s3-path)]
     (. builder intermediateS3Path data))
   (.build builder))
+
+
+(defn cfn-matching-workflow-intermediate-source-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-matching-workflow-intermediate-source-configuration-property-builder (new CfnMatchingWorkflow$IntermediateSourceConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-matching-workflow-output-attribute-property-builder
@@ -426,6 +516,12 @@
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-matching-workflow-output-attribute-property-builder
+  ""
+  [id config]
+  (build-cfn-matching-workflow-output-attribute-property-builder (new CfnMatchingWorkflow$OutputAttributeProperty$Builder) id config))
 
 
 (defn build-cfn-matching-workflow-output-source-property-builder
@@ -452,6 +548,12 @@
   (when-let [data (lookup-entry config id :output-s3-path)]
     (. builder outputS3Path data))
   (.build builder))
+
+
+(defn cfn-matching-workflow-output-source-property-builder
+  ""
+  [id config]
+  (build-cfn-matching-workflow-output-source-property-builder (new CfnMatchingWorkflow$OutputSourceProperty$Builder) id config))
 
 
 (defn build-cfn-matching-workflow-props-builder
@@ -489,6 +591,12 @@
   (.build builder))
 
 
+(defn cfn-matching-workflow-props-builder
+  ""
+  [id config]
+  (build-cfn-matching-workflow-props-builder (new CfnMatchingWorkflowProps$Builder) id config))
+
+
 (defn build-cfn-matching-workflow-provider-properties-property-builder
   "The build-cfn-matching-workflow-provider-properties-property-builder function updates a CfnMatchingWorkflow$ProviderPropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnMatchingWorkflow$ProviderPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -510,6 +618,12 @@
   (when-let [data (lookup-entry config id :provider-service-arn)]
     (. builder providerServiceArn data))
   (.build builder))
+
+
+(defn cfn-matching-workflow-provider-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-matching-workflow-provider-properties-property-builder (new CfnMatchingWorkflow$ProviderPropertiesProperty$Builder) id config))
 
 
 (defn build-cfn-matching-workflow-resolution-techniques-property-builder
@@ -535,6 +649,12 @@
   (.build builder))
 
 
+(defn cfn-matching-workflow-resolution-techniques-property-builder
+  ""
+  [id config]
+  (build-cfn-matching-workflow-resolution-techniques-property-builder (new CfnMatchingWorkflow$ResolutionTechniquesProperty$Builder) id config))
+
+
 (defn build-cfn-matching-workflow-rule-based-properties-property-builder
   "The build-cfn-matching-workflow-rule-based-properties-property-builder function updates a CfnMatchingWorkflow$RuleBasedPropertiesProperty$Builder instance using the provided configuration.
   The function takes the CfnMatchingWorkflow$RuleBasedPropertiesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -555,6 +675,12 @@
   (.build builder))
 
 
+(defn cfn-matching-workflow-rule-based-properties-property-builder
+  ""
+  [id config]
+  (build-cfn-matching-workflow-rule-based-properties-property-builder (new CfnMatchingWorkflow$RuleBasedPropertiesProperty$Builder) id config))
+
+
 (defn build-cfn-matching-workflow-rule-property-builder
   "The build-cfn-matching-workflow-rule-property-builder function updates a CfnMatchingWorkflow$RuleProperty$Builder instance using the provided configuration.
   The function takes the CfnMatchingWorkflow$RuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -573,6 +699,12 @@
   (when-let [data (lookup-entry config id :rule-name)]
     (. builder ruleName data))
   (.build builder))
+
+
+(defn cfn-matching-workflow-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-matching-workflow-rule-property-builder (new CfnMatchingWorkflow$RuleProperty$Builder) id config))
 
 
 (defn build-cfn-policy-statement-builder
@@ -607,6 +739,12 @@
   (.build builder))
 
 
+(defn cfn-policy-statement-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-policy-statement-builder (CfnPolicyStatement$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-policy-statement-props-builder
   "The build-cfn-policy-statement-props-builder function updates a CfnPolicyStatementProps$Builder instance using the provided configuration.
   The function takes the CfnPolicyStatementProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -639,6 +777,12 @@
   (.build builder))
 
 
+(defn cfn-policy-statement-props-builder
+  ""
+  [id config]
+  (build-cfn-policy-statement-props-builder (new CfnPolicyStatementProps$Builder) id config))
+
+
 (defn build-cfn-schema-mapping-builder
   "The build-cfn-schema-mapping-builder function updates a CfnSchemaMapping$Builder instance using the provided configuration.
   The function takes the CfnSchemaMapping$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -665,6 +809,12 @@
   (.build builder))
 
 
+(defn cfn-schema-mapping-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-schema-mapping-builder (CfnSchemaMapping$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-schema-mapping-props-builder
   "The build-cfn-schema-mapping-props-builder function updates a CfnSchemaMappingProps$Builder instance using the provided configuration.
   The function takes the CfnSchemaMappingProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -689,6 +839,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-schema-mapping-props-builder
+  ""
+  [id config]
+  (build-cfn-schema-mapping-props-builder (new CfnSchemaMappingProps$Builder) id config))
 
 
 (defn build-cfn-schema-mapping-schema-input-attribute-property-builder
@@ -718,3 +874,9 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-schema-mapping-schema-input-attribute-property-builder
+  ""
+  [id config]
+  (build-cfn-schema-mapping-schema-input-attribute-property-builder (new CfnSchemaMapping$SchemaInputAttributeProperty$Builder) id config))

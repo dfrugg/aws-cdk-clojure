@@ -50,6 +50,12 @@
   (.build builder))
 
 
+(defn cfn-application-instance-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-instance-builder (CfnApplicationInstance$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-application-instance-manifest-overrides-payload-property-builder
   "The build-cfn-application-instance-manifest-overrides-payload-property-builder function updates a CfnApplicationInstance$ManifestOverridesPayloadProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationInstance$ManifestOverridesPayloadProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -67,6 +73,12 @@
   (.build builder))
 
 
+(defn cfn-application-instance-manifest-overrides-payload-property-builder
+  ""
+  [id config]
+  (build-cfn-application-instance-manifest-overrides-payload-property-builder (new CfnApplicationInstance$ManifestOverridesPayloadProperty$Builder) id config))
+
+
 (defn build-cfn-application-instance-manifest-payload-property-builder
   "The build-cfn-application-instance-manifest-payload-property-builder function updates a CfnApplicationInstance$ManifestPayloadProperty$Builder instance using the provided configuration.
   The function takes the CfnApplicationInstance$ManifestPayloadProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -82,6 +94,12 @@
   (when-let [data (lookup-entry config id :payload-data)]
     (. builder payloadData data))
   (.build builder))
+
+
+(defn cfn-application-instance-manifest-payload-property-builder
+  ""
+  [id config]
+  (build-cfn-application-instance-manifest-payload-property-builder (new CfnApplicationInstance$ManifestPayloadProperty$Builder) id config))
 
 
 (defn build-cfn-application-instance-props-builder
@@ -122,6 +140,12 @@
   (.build builder))
 
 
+(defn cfn-application-instance-props-builder
+  ""
+  [id config]
+  (build-cfn-application-instance-props-builder (new CfnApplicationInstanceProps$Builder) id config))
+
+
 (defn build-cfn-package-builder
   "The build-cfn-package-builder function updates a CfnPackage$Builder instance using the provided configuration.
   The function takes the CfnPackage$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -145,6 +169,12 @@
   (.build builder))
 
 
+(defn cfn-package-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-package-builder (CfnPackage$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-package-props-builder
   "The build-cfn-package-props-builder function updates a CfnPackageProps$Builder instance using the provided configuration.
   The function takes the CfnPackageProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -166,6 +196,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-package-props-builder
+  ""
+  [id config]
+  (build-cfn-package-props-builder (new CfnPackageProps$Builder) id config))
 
 
 (defn build-cfn-package-storage-location-property-builder
@@ -195,6 +231,12 @@
   (when-let [data (lookup-entry config id :repo-prefix-location)]
     (. builder repoPrefixLocation data))
   (.build builder))
+
+
+(defn cfn-package-storage-location-property-builder
+  ""
+  [id config]
+  (build-cfn-package-storage-location-property-builder (new CfnPackage$StorageLocationProperty$Builder) id config))
 
 
 (defn build-cfn-package-version-builder
@@ -229,6 +271,12 @@
   (.build builder))
 
 
+(defn cfn-package-version-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-package-version-builder (CfnPackageVersion$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-package-version-props-builder
   "The build-cfn-package-version-props-builder function updates a CfnPackageVersionProps$Builder instance using the provided configuration.
   The function takes the CfnPackageVersionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -259,3 +307,9 @@
   (when-let [data (lookup-entry config id :updated-latest-patch-version)]
     (. builder updatedLatestPatchVersion data))
   (.build builder))
+
+
+(defn cfn-package-version-props-builder
+  ""
+  [id config]
+  (build-cfn-package-version-props-builder (new CfnPackageVersionProps$Builder) id config))

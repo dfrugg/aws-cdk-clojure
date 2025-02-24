@@ -29,6 +29,12 @@
   (.build builder))
 
 
+(defn cfn-assessment-target-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-assessment-target-builder (CfnAssessmentTarget$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-assessment-target-props-builder
   "The build-cfn-assessment-target-props-builder function updates a CfnAssessmentTargetProps$Builder instance using the provided configuration.
   The function takes the CfnAssessmentTargetProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -47,6 +53,12 @@
   (when-let [data (lookup-entry config id :resource-group-arn)]
     (. builder resourceGroupArn data))
   (.build builder))
+
+
+(defn cfn-assessment-target-props-builder
+  ""
+  [id config]
+  (build-cfn-assessment-target-props-builder (new CfnAssessmentTargetProps$Builder) id config))
 
 
 (defn build-cfn-assessment-template-builder
@@ -78,6 +90,12 @@
   (.build builder))
 
 
+(defn cfn-assessment-template-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-assessment-template-builder (CfnAssessmentTemplate$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-assessment-template-props-builder
   "The build-cfn-assessment-template-props-builder function updates a CfnAssessmentTemplateProps$Builder instance using the provided configuration.
   The function takes the CfnAssessmentTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -107,6 +125,12 @@
   (.build builder))
 
 
+(defn cfn-assessment-template-props-builder
+  ""
+  [id config]
+  (build-cfn-assessment-template-props-builder (new CfnAssessmentTemplateProps$Builder) id config))
+
+
 (defn build-cfn-resource-group-builder
   "The build-cfn-resource-group-builder function updates a CfnResourceGroup$Builder instance using the provided configuration.
   The function takes the CfnResourceGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -124,6 +148,12 @@
   (.build builder))
 
 
+(defn cfn-resource-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-resource-group-builder (CfnResourceGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-resource-group-props-builder
   "The build-cfn-resource-group-props-builder function updates a CfnResourceGroupProps$Builder instance using the provided configuration.
   The function takes the CfnResourceGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -139,3 +169,9 @@
   (when-let [data (lookup-entry config id :resource-group-tags)]
     (. builder resourceGroupTags data))
   (.build builder))
+
+
+(defn cfn-resource-group-props-builder
+  ""
+  [id config]
+  (build-cfn-resource-group-props-builder (new CfnResourceGroupProps$Builder) id config))

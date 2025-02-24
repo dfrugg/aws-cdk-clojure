@@ -39,6 +39,12 @@
   (.build builder))
 
 
+(defn cfn-cell-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-cell-builder (CfnCell$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-cell-props-builder
   "The build-cfn-cell-props-builder function updates a CfnCellProps$Builder instance using the provided configuration.
   The function takes the CfnCellProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -60,6 +66,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-cell-props-builder
+  ""
+  [id config]
+  (build-cfn-cell-props-builder (new CfnCellProps$Builder) id config))
 
 
 (defn build-cfn-readiness-check-builder
@@ -85,6 +97,12 @@
   (.build builder))
 
 
+(defn cfn-readiness-check-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-readiness-check-builder (CfnReadinessCheck$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-readiness-check-props-builder
   "The build-cfn-readiness-check-props-builder function updates a CfnReadinessCheckProps$Builder instance using the provided configuration.
   The function takes the CfnReadinessCheckProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -106,6 +124,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-readiness-check-props-builder
+  ""
+  [id config]
+  (build-cfn-readiness-check-props-builder (new CfnReadinessCheckProps$Builder) id config))
 
 
 (defn build-cfn-recovery-group-builder
@@ -131,6 +155,12 @@
   (.build builder))
 
 
+(defn cfn-recovery-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-recovery-group-builder (CfnRecoveryGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-recovery-group-props-builder
   "The build-cfn-recovery-group-props-builder function updates a CfnRecoveryGroupProps$Builder instance using the provided configuration.
   The function takes the CfnRecoveryGroupProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -152,6 +182,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-recovery-group-props-builder
+  ""
+  [id config]
+  (build-cfn-recovery-group-props-builder (new CfnRecoveryGroupProps$Builder) id config))
 
 
 (defn build-cfn-resource-set-builder
@@ -178,6 +214,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-resource-set-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-resource-set-builder (CfnResourceSet$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-resource-set-dns-target-resource-property-builder
@@ -209,6 +251,12 @@
   (.build builder))
 
 
+(defn cfn-resource-set-dns-target-resource-property-builder
+  ""
+  [id config]
+  (build-cfn-resource-set-dns-target-resource-property-builder (new CfnResourceSet$DNSTargetResourceProperty$Builder) id config))
+
+
 (defn build-cfn-resource-set-nlb-resource-property-builder
   "The build-cfn-resource-set-nlb-resource-property-builder function updates a CfnResourceSet$NLBResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnResourceSet$NLBResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -224,6 +272,12 @@
   (when-let [data (lookup-entry config id :arn)]
     (. builder arn data))
   (.build builder))
+
+
+(defn cfn-resource-set-nlb-resource-property-builder
+  ""
+  [id config]
+  (build-cfn-resource-set-nlb-resource-property-builder (new CfnResourceSet$NLBResourceProperty$Builder) id config))
 
 
 (defn build-cfn-resource-set-props-builder
@@ -252,6 +306,12 @@
   (.build builder))
 
 
+(defn cfn-resource-set-props-builder
+  ""
+  [id config]
+  (build-cfn-resource-set-props-builder (new CfnResourceSetProps$Builder) id config))
+
+
 (defn build-cfn-resource-set-r53-resource-record-property-builder
   "The build-cfn-resource-set-r53-resource-record-property-builder function updates a CfnResourceSet$R53ResourceRecordProperty$Builder instance using the provided configuration.
   The function takes the CfnResourceSet$R53ResourceRecordProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -270,6 +330,12 @@
   (when-let [data (lookup-entry config id :record-set-id)]
     (. builder recordSetId data))
   (.build builder))
+
+
+(defn cfn-resource-set-r53-resource-record-property-builder
+  ""
+  [id config]
+  (build-cfn-resource-set-r53-resource-record-property-builder (new CfnResourceSet$R53ResourceRecordProperty$Builder) id config))
 
 
 (defn build-cfn-resource-set-resource-property-builder
@@ -298,6 +364,12 @@
   (.build builder))
 
 
+(defn cfn-resource-set-resource-property-builder
+  ""
+  [id config]
+  (build-cfn-resource-set-resource-property-builder (new CfnResourceSet$ResourceProperty$Builder) id config))
+
+
 (defn build-cfn-resource-set-target-resource-property-builder
   "The build-cfn-resource-set-target-resource-property-builder function updates a CfnResourceSet$TargetResourceProperty$Builder instance using the provided configuration.
   The function takes the CfnResourceSet$TargetResourceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -316,3 +388,9 @@
   (when-let [data (lookup-entry config id :r53-resource)]
     (. builder r53Resource data))
   (.build builder))
+
+
+(defn cfn-resource-set-target-resource-property-builder
+  ""
+  [id config]
+  (build-cfn-resource-set-target-resource-property-builder (new CfnResourceSet$TargetResourceProperty$Builder) id config))

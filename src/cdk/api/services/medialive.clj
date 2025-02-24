@@ -234,6 +234,12 @@
   (.build builder))
 
 
+(defn cfn-channel-aac-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-aac-settings-property-builder (new CfnChannel$AacSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-ac3-settings-property-builder
   "The build-cfn-channel-ac3-settings-property-builder function updates a CfnChannel$Ac3SettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$Ac3SettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -272,6 +278,12 @@
   (.build builder))
 
 
+(defn cfn-channel-ac3-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-ac3-settings-property-builder (new CfnChannel$Ac3SettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-ancillary-source-settings-property-builder
   "The build-cfn-channel-ancillary-source-settings-property-builder function updates a CfnChannel$AncillarySourceSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$AncillarySourceSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -289,6 +301,12 @@
   (.build builder))
 
 
+(defn cfn-channel-ancillary-source-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-ancillary-source-settings-property-builder (new CfnChannel$AncillarySourceSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-archive-cdn-settings-property-builder
   "The build-cfn-channel-archive-cdn-settings-property-builder function updates a CfnChannel$ArchiveCdnSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$ArchiveCdnSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -304,6 +322,12 @@
   (when-let [data (lookup-entry config id :archive-s3-settings)]
     (. builder archiveS3Settings data))
   (.build builder))
+
+
+(defn cfn-channel-archive-cdn-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-archive-cdn-settings-property-builder (new CfnChannel$ArchiveCdnSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-archive-container-settings-property-builder
@@ -324,6 +348,12 @@
   (when-let [data (lookup-entry config id :raw-settings)]
     (. builder rawSettings data))
   (.build builder))
+
+
+(defn cfn-channel-archive-container-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-archive-container-settings-property-builder (new CfnChannel$ArchiveContainerSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-archive-group-settings-property-builder
@@ -349,6 +379,12 @@
   (.build builder))
 
 
+(defn cfn-channel-archive-group-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-archive-group-settings-property-builder (new CfnChannel$ArchiveGroupSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-archive-output-settings-property-builder
   "The build-cfn-channel-archive-output-settings-property-builder function updates a CfnChannel$ArchiveOutputSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$ArchiveOutputSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -372,6 +408,12 @@
   (.build builder))
 
 
+(defn cfn-channel-archive-output-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-archive-output-settings-property-builder (new CfnChannel$ArchiveOutputSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-archive-s3-settings-property-builder
   "The build-cfn-channel-archive-s3-settings-property-builder function updates a CfnChannel$ArchiveS3SettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$ArchiveS3SettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -389,6 +431,12 @@
   (.build builder))
 
 
+(defn cfn-channel-archive-s3-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-archive-s3-settings-property-builder (new CfnChannel$ArchiveS3SettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-arib-destination-settings-property-builder
   "The build-cfn-channel-arib-destination-settings-property-builder function updates a CfnChannel$AribDestinationSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$AribDestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -403,6 +451,12 @@
   (.build builder))
 
 
+(defn cfn-channel-arib-destination-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-arib-destination-settings-property-builder (new CfnChannel$AribDestinationSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-arib-source-settings-property-builder
   "The build-cfn-channel-arib-source-settings-property-builder function updates a CfnChannel$AribSourceSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$AribSourceSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -415,6 +469,12 @@
 "
   [^CfnChannel$AribSourceSettingsProperty$Builder builder id config]
   (.build builder))
+
+
+(defn cfn-channel-arib-source-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-arib-source-settings-property-builder (new CfnChannel$AribSourceSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-audio-channel-mapping-property-builder
@@ -435,6 +495,12 @@
   (when-let [data (lookup-entry config id :output-channel)]
     (. builder outputChannel data))
   (.build builder))
+
+
+(defn cfn-channel-audio-channel-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-audio-channel-mapping-property-builder (new CfnChannel$AudioChannelMappingProperty$Builder) id config))
 
 
 (defn build-cfn-channel-audio-codec-settings-property-builder
@@ -470,6 +536,12 @@
   (when-let [data (lookup-entry config id :wav-settings)]
     (. builder wavSettings data))
   (.build builder))
+
+
+(defn cfn-channel-audio-codec-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-audio-codec-settings-property-builder (new CfnChannel$AudioCodecSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-audio-description-property-builder
@@ -525,6 +597,12 @@
   (.build builder))
 
 
+(defn cfn-channel-audio-description-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-audio-description-property-builder (new CfnChannel$AudioDescriptionProperty$Builder) id config))
+
+
 (defn build-cfn-channel-audio-dolby-e-decode-property-builder
   "The build-cfn-channel-audio-dolby-e-decode-property-builder function updates a CfnChannel$AudioDolbyEDecodeProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$AudioDolbyEDecodeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -540,6 +618,12 @@
   (when-let [data (lookup-entry config id :program-selection)]
     (. builder programSelection data))
   (.build builder))
+
+
+(defn cfn-channel-audio-dolby-e-decode-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-audio-dolby-e-decode-property-builder (new CfnChannel$AudioDolbyEDecodeProperty$Builder) id config))
 
 
 (defn build-cfn-channel-audio-hls-rendition-selection-property-builder
@@ -562,6 +646,12 @@
   (.build builder))
 
 
+(defn cfn-channel-audio-hls-rendition-selection-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-audio-hls-rendition-selection-property-builder (new CfnChannel$AudioHlsRenditionSelectionProperty$Builder) id config))
+
+
 (defn build-cfn-channel-audio-language-selection-property-builder
   "The build-cfn-channel-audio-language-selection-property-builder function updates a CfnChannel$AudioLanguageSelectionProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$AudioLanguageSelectionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -580,6 +670,12 @@
   (when-let [data (lookup-entry config id :language-selection-policy)]
     (. builder languageSelectionPolicy data))
   (.build builder))
+
+
+(defn cfn-channel-audio-language-selection-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-audio-language-selection-property-builder (new CfnChannel$AudioLanguageSelectionProperty$Builder) id config))
 
 
 (defn build-cfn-channel-audio-normalization-settings-property-builder
@@ -603,6 +699,12 @@
   (when-let [data (lookup-entry config id :target-lkfs)]
     (. builder targetLkfs data))
   (.build builder))
+
+
+(defn cfn-channel-audio-normalization-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-audio-normalization-settings-property-builder (new CfnChannel$AudioNormalizationSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-audio-only-hls-settings-property-builder
@@ -631,6 +733,12 @@
   (.build builder))
 
 
+(defn cfn-channel-audio-only-hls-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-audio-only-hls-settings-property-builder (new CfnChannel$AudioOnlyHlsSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-audio-pid-selection-property-builder
   "The build-cfn-channel-audio-pid-selection-property-builder function updates a CfnChannel$AudioPidSelectionProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$AudioPidSelectionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -646,6 +754,12 @@
   (when-let [data (lookup-entry config id :pid)]
     (. builder pid data))
   (.build builder))
+
+
+(defn cfn-channel-audio-pid-selection-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-audio-pid-selection-property-builder (new CfnChannel$AudioPidSelectionProperty$Builder) id config))
 
 
 (defn build-cfn-channel-audio-selector-property-builder
@@ -666,6 +780,12 @@
   (when-let [data (lookup-entry config id :selector-settings)]
     (. builder selectorSettings data))
   (.build builder))
+
+
+(defn cfn-channel-audio-selector-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-audio-selector-property-builder (new CfnChannel$AudioSelectorProperty$Builder) id config))
 
 
 (defn build-cfn-channel-audio-selector-settings-property-builder
@@ -694,6 +814,12 @@
   (.build builder))
 
 
+(defn cfn-channel-audio-selector-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-audio-selector-settings-property-builder (new CfnChannel$AudioSelectorSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-audio-silence-failover-settings-property-builder
   "The build-cfn-channel-audio-silence-failover-settings-property-builder function updates a CfnChannel$AudioSilenceFailoverSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$AudioSilenceFailoverSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -714,6 +840,12 @@
   (.build builder))
 
 
+(defn cfn-channel-audio-silence-failover-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-audio-silence-failover-settings-property-builder (new CfnChannel$AudioSilenceFailoverSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-audio-track-property-builder
   "The build-cfn-channel-audio-track-property-builder function updates a CfnChannel$AudioTrackProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$AudioTrackProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -729,6 +861,12 @@
   (when-let [data (lookup-entry config id :track)]
     (. builder track data))
   (.build builder))
+
+
+(defn cfn-channel-audio-track-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-audio-track-property-builder (new CfnChannel$AudioTrackProperty$Builder) id config))
 
 
 (defn build-cfn-channel-audio-track-selection-property-builder
@@ -751,6 +889,12 @@
   (.build builder))
 
 
+(defn cfn-channel-audio-track-selection-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-audio-track-selection-property-builder (new CfnChannel$AudioTrackSelectionProperty$Builder) id config))
+
+
 (defn build-cfn-channel-audio-watermark-settings-property-builder
   "The build-cfn-channel-audio-watermark-settings-property-builder function updates a CfnChannel$AudioWatermarkSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$AudioWatermarkSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -766,6 +910,12 @@
   (when-let [data (lookup-entry config id :nielsen-watermarks-settings)]
     (. builder nielsenWatermarksSettings data))
   (.build builder))
+
+
+(defn cfn-channel-audio-watermark-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-audio-watermark-settings-property-builder (new CfnChannel$AudioWatermarkSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-automatic-input-failover-settings-property-builder
@@ -794,6 +944,12 @@
   (.build builder))
 
 
+(defn cfn-channel-automatic-input-failover-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-automatic-input-failover-settings-property-builder (new CfnChannel$AutomaticInputFailoverSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-avail-blanking-property-builder
   "The build-cfn-channel-avail-blanking-property-builder function updates a CfnChannel$AvailBlankingProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$AvailBlankingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -814,6 +970,12 @@
   (.build builder))
 
 
+(defn cfn-channel-avail-blanking-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-avail-blanking-property-builder (new CfnChannel$AvailBlankingProperty$Builder) id config))
+
+
 (defn build-cfn-channel-avail-configuration-property-builder
   "The build-cfn-channel-avail-configuration-property-builder function updates a CfnChannel$AvailConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$AvailConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -832,6 +994,12 @@
   (when-let [data (lookup-entry config id :scte35-segmentation-scope)]
     (. builder scte35SegmentationScope data))
   (.build builder))
+
+
+(defn cfn-channel-avail-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-avail-configuration-property-builder (new CfnChannel$AvailConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-channel-avail-settings-property-builder
@@ -855,6 +1023,12 @@
   (when-let [data (lookup-entry config id :scte35-time-signal-apos)]
     (. builder scte35TimeSignalApos data))
   (.build builder))
+
+
+(defn cfn-channel-avail-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-avail-settings-property-builder (new CfnChannel$AvailSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-blackout-slate-property-builder
@@ -884,6 +1058,12 @@
   (when-let [data (lookup-entry config id :state)]
     (. builder state data))
   (.build builder))
+
+
+(defn cfn-channel-blackout-slate-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-blackout-slate-property-builder (new CfnChannel$BlackoutSlateProperty$Builder) id config))
 
 
 (defn build-cfn-channel-builder
@@ -934,6 +1114,12 @@
   (when-let [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
+
+
+(defn cfn-channel-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-channel-builder (CfnChannel$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-channel-burn-in-destination-settings-property-builder
@@ -1001,6 +1187,12 @@
   (.build builder))
 
 
+(defn cfn-channel-burn-in-destination-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-burn-in-destination-settings-property-builder (new CfnChannel$BurnInDestinationSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-caption-description-property-builder
   "The build-cfn-channel-caption-description-property-builder function updates a CfnChannel$CaptionDescriptionProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$CaptionDescriptionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1037,6 +1229,12 @@
   (when-let [data (lookup-entry config id :name)]
     (. builder name data))
   (.build builder))
+
+
+(defn cfn-channel-caption-description-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-caption-description-property-builder (new CfnChannel$CaptionDescriptionProperty$Builder) id config))
 
 
 (defn build-cfn-channel-caption-destination-settings-property-builder
@@ -1092,6 +1290,12 @@
   (.build builder))
 
 
+(defn cfn-channel-caption-destination-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-caption-destination-settings-property-builder (new CfnChannel$CaptionDestinationSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-caption-language-mapping-property-builder
   "The build-cfn-channel-caption-language-mapping-property-builder function updates a CfnChannel$CaptionLanguageMappingProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$CaptionLanguageMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1113,6 +1317,12 @@
   (when-let [data (lookup-entry config id :language-description)]
     (. builder languageDescription data))
   (.build builder))
+
+
+(defn cfn-channel-caption-language-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-caption-language-mapping-property-builder (new CfnChannel$CaptionLanguageMappingProperty$Builder) id config))
 
 
 (defn build-cfn-channel-caption-rectangle-property-builder
@@ -1141,6 +1351,12 @@
   (.build builder))
 
 
+(defn cfn-channel-caption-rectangle-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-caption-rectangle-property-builder (new CfnChannel$CaptionRectangleProperty$Builder) id config))
+
+
 (defn build-cfn-channel-caption-selector-property-builder
   "The build-cfn-channel-caption-selector-property-builder function updates a CfnChannel$CaptionSelectorProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$CaptionSelectorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1162,6 +1378,12 @@
   (when-let [data (lookup-entry config id :selector-settings)]
     (. builder selectorSettings data))
   (.build builder))
+
+
+(defn cfn-channel-caption-selector-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-caption-selector-property-builder (new CfnChannel$CaptionSelectorProperty$Builder) id config))
 
 
 (defn build-cfn-channel-caption-selector-settings-property-builder
@@ -1199,6 +1421,12 @@
   (.build builder))
 
 
+(defn cfn-channel-caption-selector-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-caption-selector-settings-property-builder (new CfnChannel$CaptionSelectorSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-cdi-input-specification-property-builder
   "The build-cfn-channel-cdi-input-specification-property-builder function updates a CfnChannel$CdiInputSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$CdiInputSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1214,6 +1442,12 @@
   (when-let [data (lookup-entry config id :resolution)]
     (. builder resolution data))
   (.build builder))
+
+
+(defn cfn-channel-cdi-input-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-cdi-input-specification-property-builder (new CfnChannel$CdiInputSpecificationProperty$Builder) id config))
 
 
 (defn build-cfn-channel-cmaf-ingest-group-settings-property-builder
@@ -1248,6 +1482,12 @@
   (.build builder))
 
 
+(defn cfn-channel-cmaf-ingest-group-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-cmaf-ingest-group-settings-property-builder (new CfnChannel$CmafIngestGroupSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-cmaf-ingest-output-settings-property-builder
   "The build-cfn-channel-cmaf-ingest-output-settings-property-builder function updates a CfnChannel$CmafIngestOutputSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$CmafIngestOutputSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1263,6 +1503,12 @@
   (when-let [data (lookup-entry config id :name-modifier)]
     (. builder nameModifier data))
   (.build builder))
+
+
+(defn cfn-channel-cmaf-ingest-output-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-cmaf-ingest-output-settings-property-builder (new CfnChannel$CmafIngestOutputSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-color-correction-property-builder
@@ -1288,6 +1534,12 @@
   (.build builder))
 
 
+(defn cfn-channel-color-correction-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-color-correction-property-builder (new CfnChannel$ColorCorrectionProperty$Builder) id config))
+
+
 (defn build-cfn-channel-color-correction-settings-property-builder
   "The build-cfn-channel-color-correction-settings-property-builder function updates a CfnChannel$ColorCorrectionSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$ColorCorrectionSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1305,6 +1557,12 @@
   (.build builder))
 
 
+(defn cfn-channel-color-correction-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-color-correction-settings-property-builder (new CfnChannel$ColorCorrectionSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-color-space-passthrough-settings-property-builder
   "The build-cfn-channel-color-space-passthrough-settings-property-builder function updates a CfnChannel$ColorSpacePassthroughSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$ColorSpacePassthroughSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1319,6 +1577,12 @@
   (.build builder))
 
 
+(defn cfn-channel-color-space-passthrough-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-color-space-passthrough-settings-property-builder (new CfnChannel$ColorSpacePassthroughSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-dolby-vision81-settings-property-builder
   "The build-cfn-channel-dolby-vision81-settings-property-builder function updates a CfnChannel$DolbyVision81SettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$DolbyVision81SettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1331,6 +1595,12 @@
 "
   [^CfnChannel$DolbyVision81SettingsProperty$Builder builder id config]
   (.build builder))
+
+
+(defn cfn-channel-dolby-vision81-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-dolby-vision81-settings-property-builder (new CfnChannel$DolbyVision81SettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-dvb-nit-settings-property-builder
@@ -1354,6 +1624,12 @@
   (when-let [data (lookup-entry config id :rep-interval)]
     (. builder repInterval data))
   (.build builder))
+
+
+(defn cfn-channel-dvb-nit-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-dvb-nit-settings-property-builder (new CfnChannel$DvbNitSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-dvb-sdt-settings-property-builder
@@ -1380,6 +1656,12 @@
   (when-let [data (lookup-entry config id :service-provider-name)]
     (. builder serviceProviderName data))
   (.build builder))
+
+
+(defn cfn-channel-dvb-sdt-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-dvb-sdt-settings-property-builder (new CfnChannel$DvbSdtSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-dvb-sub-destination-settings-property-builder
@@ -1447,6 +1729,12 @@
   (.build builder))
 
 
+(defn cfn-channel-dvb-sub-destination-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-dvb-sub-destination-settings-property-builder (new CfnChannel$DvbSubDestinationSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-dvb-sub-source-settings-property-builder
   "The build-cfn-channel-dvb-sub-source-settings-property-builder function updates a CfnChannel$DvbSubSourceSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$DvbSubSourceSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1467,6 +1755,12 @@
   (.build builder))
 
 
+(defn cfn-channel-dvb-sub-source-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-dvb-sub-source-settings-property-builder (new CfnChannel$DvbSubSourceSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-dvb-tdt-settings-property-builder
   "The build-cfn-channel-dvb-tdt-settings-property-builder function updates a CfnChannel$DvbTdtSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$DvbTdtSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1482,6 +1776,12 @@
   (when-let [data (lookup-entry config id :rep-interval)]
     (. builder repInterval data))
   (.build builder))
+
+
+(defn cfn-channel-dvb-tdt-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-dvb-tdt-settings-property-builder (new CfnChannel$DvbTdtSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-eac3-atmos-settings-property-builder
@@ -1517,6 +1817,12 @@
   (when-let [data (lookup-entry config id :surround-trim)]
     (. builder surroundTrim data))
   (.build builder))
+
+
+(defn cfn-channel-eac3-atmos-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-eac3-atmos-settings-property-builder (new CfnChannel$Eac3AtmosSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-eac3-settings-property-builder
@@ -1593,6 +1899,12 @@
   (.build builder))
 
 
+(defn cfn-channel-eac3-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-eac3-settings-property-builder (new CfnChannel$Eac3SettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-ebu-tt-d-destination-settings-property-builder
   "The build-cfn-channel-ebu-tt-d-destination-settings-property-builder function updates a CfnChannel$EbuTtDDestinationSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$EbuTtDDestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1619,6 +1931,12 @@
   (.build builder))
 
 
+(defn cfn-channel-ebu-tt-d-destination-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-ebu-tt-d-destination-settings-property-builder (new CfnChannel$EbuTtDDestinationSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-embedded-destination-settings-property-builder
   "The build-cfn-channel-embedded-destination-settings-property-builder function updates a CfnChannel$EmbeddedDestinationSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$EmbeddedDestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1633,6 +1951,12 @@
   (.build builder))
 
 
+(defn cfn-channel-embedded-destination-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-embedded-destination-settings-property-builder (new CfnChannel$EmbeddedDestinationSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-embedded-plus-scte20-destination-settings-property-builder
   "The build-cfn-channel-embedded-plus-scte20-destination-settings-property-builder function updates a CfnChannel$EmbeddedPlusScte20DestinationSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$EmbeddedPlusScte20DestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1645,6 +1969,12 @@
 "
   [^CfnChannel$EmbeddedPlusScte20DestinationSettingsProperty$Builder builder id config]
   (.build builder))
+
+
+(defn cfn-channel-embedded-plus-scte20-destination-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-embedded-plus-scte20-destination-settings-property-builder (new CfnChannel$EmbeddedPlusScte20DestinationSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-embedded-source-settings-property-builder
@@ -1671,6 +2001,12 @@
   (when-let [data (lookup-entry config id :source608-track-number)]
     (. builder source608TrackNumber data))
   (.build builder))
+
+
+(defn cfn-channel-embedded-source-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-embedded-source-settings-property-builder (new CfnChannel$EmbeddedSourceSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-encoder-settings-property-builder
@@ -1729,6 +2065,12 @@
   (.build builder))
 
 
+(defn cfn-channel-encoder-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-encoder-settings-property-builder (new CfnChannel$EncoderSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-epoch-locking-settings-property-builder
   "The build-cfn-channel-epoch-locking-settings-property-builder function updates a CfnChannel$EpochLockingSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$EpochLockingSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1747,6 +2089,12 @@
   (when-let [data (lookup-entry config id :jam-sync-time)]
     (. builder jamSyncTime data))
   (.build builder))
+
+
+(defn cfn-channel-epoch-locking-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-epoch-locking-settings-property-builder (new CfnChannel$EpochLockingSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-esam-property-builder
@@ -1781,6 +2129,12 @@
   (.build builder))
 
 
+(defn cfn-channel-esam-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-esam-property-builder (new CfnChannel$EsamProperty$Builder) id config))
+
+
 (defn build-cfn-channel-failover-condition-property-builder
   "The build-cfn-channel-failover-condition-property-builder function updates a CfnChannel$FailoverConditionProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$FailoverConditionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1796,6 +2150,12 @@
   (when-let [data (lookup-entry config id :failover-condition-settings)]
     (. builder failoverConditionSettings data))
   (.build builder))
+
+
+(defn cfn-channel-failover-condition-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-failover-condition-property-builder (new CfnChannel$FailoverConditionProperty$Builder) id config))
 
 
 (defn build-cfn-channel-failover-condition-settings-property-builder
@@ -1821,6 +2181,12 @@
   (.build builder))
 
 
+(defn cfn-channel-failover-condition-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-failover-condition-settings-property-builder (new CfnChannel$FailoverConditionSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-feature-activations-property-builder
   "The build-cfn-channel-feature-activations-property-builder function updates a CfnChannel$FeatureActivationsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$FeatureActivationsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1839,6 +2205,12 @@
   (when-let [data (lookup-entry config id :output-static-image-overlay-schedule-actions)]
     (. builder outputStaticImageOverlayScheduleActions data))
   (.build builder))
+
+
+(defn cfn-channel-feature-activations-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-feature-activations-property-builder (new CfnChannel$FeatureActivationsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-fec-output-settings-property-builder
@@ -1864,6 +2236,12 @@
   (.build builder))
 
 
+(defn cfn-channel-fec-output-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-fec-output-settings-property-builder (new CfnChannel$FecOutputSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-fmp4-hls-settings-property-builder
   "The build-cfn-channel-fmp4-hls-settings-property-builder function updates a CfnChannel$Fmp4HlsSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$Fmp4HlsSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1887,6 +2265,12 @@
   (.build builder))
 
 
+(defn cfn-channel-fmp4-hls-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-fmp4-hls-settings-property-builder (new CfnChannel$Fmp4HlsSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-frame-capture-cdn-settings-property-builder
   "The build-cfn-channel-frame-capture-cdn-settings-property-builder function updates a CfnChannel$FrameCaptureCdnSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$FrameCaptureCdnSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1902,6 +2286,12 @@
   (when-let [data (lookup-entry config id :frame-capture-s3-settings)]
     (. builder frameCaptureS3Settings data))
   (.build builder))
+
+
+(defn cfn-channel-frame-capture-cdn-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-frame-capture-cdn-settings-property-builder (new CfnChannel$FrameCaptureCdnSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-frame-capture-group-settings-property-builder
@@ -1924,6 +2314,12 @@
   (.build builder))
 
 
+(defn cfn-channel-frame-capture-group-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-frame-capture-group-settings-property-builder (new CfnChannel$FrameCaptureGroupSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-frame-capture-hls-settings-property-builder
   "The build-cfn-channel-frame-capture-hls-settings-property-builder function updates a CfnChannel$FrameCaptureHlsSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$FrameCaptureHlsSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1936,6 +2332,12 @@
 "
   [^CfnChannel$FrameCaptureHlsSettingsProperty$Builder builder id config]
   (.build builder))
+
+
+(defn cfn-channel-frame-capture-hls-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-frame-capture-hls-settings-property-builder (new CfnChannel$FrameCaptureHlsSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-frame-capture-output-settings-property-builder
@@ -1955,6 +2357,12 @@
   (.build builder))
 
 
+(defn cfn-channel-frame-capture-output-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-frame-capture-output-settings-property-builder (new CfnChannel$FrameCaptureOutputSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-frame-capture-s3-settings-property-builder
   "The build-cfn-channel-frame-capture-s3-settings-property-builder function updates a CfnChannel$FrameCaptureS3SettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$FrameCaptureS3SettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1970,6 +2378,12 @@
   (when-let [data (lookup-entry config id :canned-acl)]
     (. builder cannedAcl data))
   (.build builder))
+
+
+(defn cfn-channel-frame-capture-s3-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-frame-capture-s3-settings-property-builder (new CfnChannel$FrameCaptureS3SettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-frame-capture-settings-property-builder
@@ -1993,6 +2407,12 @@
   (when-let [data (lookup-entry config id :timecode-burnin-settings)]
     (. builder timecodeBurninSettings data))
   (.build builder))
+
+
+(defn cfn-channel-frame-capture-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-frame-capture-settings-property-builder (new CfnChannel$FrameCaptureSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-global-configuration-property-builder
@@ -2030,6 +2450,12 @@
   (.build builder))
 
 
+(defn cfn-channel-global-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-global-configuration-property-builder (new CfnChannel$GlobalConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-channel-h264-color-space-settings-property-builder
   "The build-cfn-channel-h264-color-space-settings-property-builder function updates a CfnChannel$H264ColorSpaceSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$H264ColorSpaceSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2053,6 +2479,12 @@
   (.build builder))
 
 
+(defn cfn-channel-h264-color-space-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-h264-color-space-settings-property-builder (new CfnChannel$H264ColorSpaceSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-h264-filter-settings-property-builder
   "The build-cfn-channel-h264-filter-settings-property-builder function updates a CfnChannel$H264FilterSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$H264FilterSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2068,6 +2500,12 @@
   (when-let [data (lookup-entry config id :temporal-filter-settings)]
     (. builder temporalFilterSettings data))
   (.build builder))
+
+
+(defn cfn-channel-h264-filter-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-h264-filter-settings-property-builder (new CfnChannel$H264FilterSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-h264-settings-property-builder
@@ -2210,6 +2648,12 @@
   (.build builder))
 
 
+(defn cfn-channel-h264-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-h264-settings-property-builder (new CfnChannel$H264SettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-h265-color-space-settings-property-builder
   "The build-cfn-channel-h265-color-space-settings-property-builder function updates a CfnChannel$H265ColorSpaceSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$H265ColorSpaceSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2239,6 +2683,12 @@
   (.build builder))
 
 
+(defn cfn-channel-h265-color-space-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-h265-color-space-settings-property-builder (new CfnChannel$H265ColorSpaceSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-h265-filter-settings-property-builder
   "The build-cfn-channel-h265-filter-settings-property-builder function updates a CfnChannel$H265FilterSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$H265FilterSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2254,6 +2704,12 @@
   (when-let [data (lookup-entry config id :temporal-filter-settings)]
     (. builder temporalFilterSettings data))
   (.build builder))
+
+
+(defn cfn-channel-h265-filter-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-h265-filter-settings-property-builder (new CfnChannel$H265FilterSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-h265-settings-property-builder
@@ -2378,6 +2834,12 @@
   (.build builder))
 
 
+(defn cfn-channel-h265-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-h265-settings-property-builder (new CfnChannel$H265SettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-hdr10-settings-property-builder
   "The build-cfn-channel-hdr10-settings-property-builder function updates a CfnChannel$Hdr10SettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$Hdr10SettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2396,6 +2858,12 @@
   (when-let [data (lookup-entry config id :max-fall)]
     (. builder maxFall data))
   (.build builder))
+
+
+(defn cfn-channel-hdr10-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-hdr10-settings-property-builder (new CfnChannel$Hdr10SettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-hls-akamai-settings-property-builder
@@ -2433,6 +2901,12 @@
   (.build builder))
 
 
+(defn cfn-channel-hls-akamai-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-hls-akamai-settings-property-builder (new CfnChannel$HlsAkamaiSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-hls-basic-put-settings-property-builder
   "The build-cfn-channel-hls-basic-put-settings-property-builder function updates a CfnChannel$HlsBasicPutSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$HlsBasicPutSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2457,6 +2931,12 @@
   (when-let [data (lookup-entry config id :restart-delay)]
     (. builder restartDelay data))
   (.build builder))
+
+
+(defn cfn-channel-hls-basic-put-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-hls-basic-put-settings-property-builder (new CfnChannel$HlsBasicPutSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-hls-cdn-settings-property-builder
@@ -2486,6 +2966,12 @@
   (when-let [data (lookup-entry config id :hls-webdav-settings)]
     (. builder hlsWebdavSettings data))
   (.build builder))
+
+
+(defn cfn-channel-hls-cdn-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-hls-cdn-settings-property-builder (new CfnChannel$HlsCdnSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-hls-group-settings-property-builder
@@ -2631,6 +3117,12 @@
   (.build builder))
 
 
+(defn cfn-channel-hls-group-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-hls-group-settings-property-builder (new CfnChannel$HlsGroupSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-hls-input-settings-property-builder
   "The build-cfn-channel-hls-input-settings-property-builder function updates a CfnChannel$HlsInputSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$HlsInputSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2658,6 +3150,12 @@
   (when-let [data (lookup-entry config id :scte35-source)]
     (. builder scte35Source data))
   (.build builder))
+
+
+(defn cfn-channel-hls-input-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-hls-input-settings-property-builder (new CfnChannel$HlsInputSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-hls-media-store-settings-property-builder
@@ -2689,6 +3187,12 @@
   (.build builder))
 
 
+(defn cfn-channel-hls-media-store-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-hls-media-store-settings-property-builder (new CfnChannel$HlsMediaStoreSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-hls-output-settings-property-builder
   "The build-cfn-channel-hls-output-settings-property-builder function updates a CfnChannel$HlsOutputSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$HlsOutputSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2715,6 +3219,12 @@
   (.build builder))
 
 
+(defn cfn-channel-hls-output-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-hls-output-settings-property-builder (new CfnChannel$HlsOutputSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-hls-s3-settings-property-builder
   "The build-cfn-channel-hls-s3-settings-property-builder function updates a CfnChannel$HlsS3SettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$HlsS3SettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2730,6 +3240,12 @@
   (when-let [data (lookup-entry config id :canned-acl)]
     (. builder cannedAcl data))
   (.build builder))
+
+
+(defn cfn-channel-hls-s3-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-hls-s3-settings-property-builder (new CfnChannel$HlsS3SettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-hls-settings-property-builder
@@ -2756,6 +3272,12 @@
   (when-let [data (lookup-entry config id :standard-hls-settings)]
     (. builder standardHlsSettings data))
   (.build builder))
+
+
+(defn cfn-channel-hls-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-hls-settings-property-builder (new CfnChannel$HlsSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-hls-webdav-settings-property-builder
@@ -2787,6 +3309,12 @@
   (.build builder))
 
 
+(defn cfn-channel-hls-webdav-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-hls-webdav-settings-property-builder (new CfnChannel$HlsWebdavSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-html-motion-graphics-settings-property-builder
   "The build-cfn-channel-html-motion-graphics-settings-property-builder function updates a CfnChannel$HtmlMotionGraphicsSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$HtmlMotionGraphicsSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2799,6 +3327,12 @@
 "
   [^CfnChannel$HtmlMotionGraphicsSettingsProperty$Builder builder id config]
   (.build builder))
+
+
+(defn cfn-channel-html-motion-graphics-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-html-motion-graphics-settings-property-builder (new CfnChannel$HtmlMotionGraphicsSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-input-attachment-property-builder
@@ -2827,6 +3361,12 @@
   (.build builder))
 
 
+(defn cfn-channel-input-attachment-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-input-attachment-property-builder (new CfnChannel$InputAttachmentProperty$Builder) id config))
+
+
 (defn build-cfn-channel-input-channel-level-property-builder
   "The build-cfn-channel-input-channel-level-property-builder function updates a CfnChannel$InputChannelLevelProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$InputChannelLevelProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2845,6 +3385,12 @@
   (when-let [data (lookup-entry config id :input-channel)]
     (. builder inputChannel data))
   (.build builder))
+
+
+(defn cfn-channel-input-channel-level-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-input-channel-level-property-builder (new CfnChannel$InputChannelLevelProperty$Builder) id config))
 
 
 (defn build-cfn-channel-input-location-property-builder
@@ -2868,6 +3414,12 @@
   (when-let [data (lookup-entry config id :username)]
     (. builder username data))
   (.build builder))
+
+
+(defn cfn-channel-input-location-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-input-location-property-builder (new CfnChannel$InputLocationProperty$Builder) id config))
 
 
 (defn build-cfn-channel-input-loss-behavior-property-builder
@@ -2899,6 +3451,12 @@
   (.build builder))
 
 
+(defn cfn-channel-input-loss-behavior-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-input-loss-behavior-property-builder (new CfnChannel$InputLossBehaviorProperty$Builder) id config))
+
+
 (defn build-cfn-channel-input-loss-failover-settings-property-builder
   "The build-cfn-channel-input-loss-failover-settings-property-builder function updates a CfnChannel$InputLossFailoverSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$InputLossFailoverSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2914,6 +3472,12 @@
   (when-let [data (lookup-entry config id :input-loss-threshold-msec)]
     (. builder inputLossThresholdMsec data))
   (.build builder))
+
+
+(defn cfn-channel-input-loss-failover-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-input-loss-failover-settings-property-builder (new CfnChannel$InputLossFailoverSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-input-settings-property-builder
@@ -2963,6 +3527,12 @@
   (.build builder))
 
 
+(defn cfn-channel-input-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-input-settings-property-builder (new CfnChannel$InputSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-input-specification-property-builder
   "The build-cfn-channel-input-specification-property-builder function updates a CfnChannel$InputSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$InputSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -2986,6 +3556,12 @@
   (.build builder))
 
 
+(defn cfn-channel-input-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-input-specification-property-builder (new CfnChannel$InputSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-channel-key-provider-settings-property-builder
   "The build-cfn-channel-key-provider-settings-property-builder function updates a CfnChannel$KeyProviderSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$KeyProviderSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3001,6 +3577,12 @@
   (when-let [data (lookup-entry config id :static-key-settings)]
     (. builder staticKeySettings data))
   (.build builder))
+
+
+(defn cfn-channel-key-provider-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-key-provider-settings-property-builder (new CfnChannel$KeyProviderSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-m2ts-settings-property-builder
@@ -3161,6 +3743,12 @@
   (.build builder))
 
 
+(defn cfn-channel-m2ts-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-m2ts-settings-property-builder (new CfnChannel$M2tsSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-m3u8-settings-property-builder
   "The build-cfn-channel-m3u8-settings-property-builder function updates a CfnChannel$M3u8SettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$M3u8SettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3232,6 +3820,12 @@
   (.build builder))
 
 
+(defn cfn-channel-m3u8-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-m3u8-settings-property-builder (new CfnChannel$M3u8SettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-maintenance-create-settings-property-builder
   "The build-cfn-channel-maintenance-create-settings-property-builder function updates a CfnChannel$MaintenanceCreateSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$MaintenanceCreateSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3250,6 +3844,12 @@
   (when-let [data (lookup-entry config id :maintenance-start-time)]
     (. builder maintenanceStartTime data))
   (.build builder))
+
+
+(defn cfn-channel-maintenance-create-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-maintenance-create-settings-property-builder (new CfnChannel$MaintenanceCreateSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-maintenance-update-settings-property-builder
@@ -3275,6 +3875,12 @@
   (.build builder))
 
 
+(defn cfn-channel-maintenance-update-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-maintenance-update-settings-property-builder (new CfnChannel$MaintenanceUpdateSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-media-package-group-settings-property-builder
   "The build-cfn-channel-media-package-group-settings-property-builder function updates a CfnChannel$MediaPackageGroupSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$MediaPackageGroupSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3290,6 +3896,12 @@
   (when-let [data (lookup-entry config id :destination)]
     (. builder destination data))
   (.build builder))
+
+
+(defn cfn-channel-media-package-group-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-media-package-group-settings-property-builder (new CfnChannel$MediaPackageGroupSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-media-package-output-destination-settings-property-builder
@@ -3309,6 +3921,12 @@
   (.build builder))
 
 
+(defn cfn-channel-media-package-output-destination-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-media-package-output-destination-settings-property-builder (new CfnChannel$MediaPackageOutputDestinationSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-media-package-output-settings-property-builder
   "The build-cfn-channel-media-package-output-settings-property-builder function updates a CfnChannel$MediaPackageOutputSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$MediaPackageOutputSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3321,6 +3939,12 @@
 "
   [^CfnChannel$MediaPackageOutputSettingsProperty$Builder builder id config]
   (.build builder))
+
+
+(defn cfn-channel-media-package-output-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-media-package-output-settings-property-builder (new CfnChannel$MediaPackageOutputSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-motion-graphics-configuration-property-builder
@@ -3343,6 +3967,12 @@
   (.build builder))
 
 
+(defn cfn-channel-motion-graphics-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-motion-graphics-configuration-property-builder (new CfnChannel$MotionGraphicsConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-channel-motion-graphics-settings-property-builder
   "The build-cfn-channel-motion-graphics-settings-property-builder function updates a CfnChannel$MotionGraphicsSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$MotionGraphicsSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3358,6 +3988,12 @@
   (when-let [data (lookup-entry config id :html-motion-graphics-settings)]
     (. builder htmlMotionGraphicsSettings data))
   (.build builder))
+
+
+(defn cfn-channel-motion-graphics-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-motion-graphics-settings-property-builder (new CfnChannel$MotionGraphicsSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-mp2-settings-property-builder
@@ -3383,6 +4019,12 @@
   (.build builder))
 
 
+(defn cfn-channel-mp2-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-mp2-settings-property-builder (new CfnChannel$Mp2SettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-mpeg2-filter-settings-property-builder
   "The build-cfn-channel-mpeg2-filter-settings-property-builder function updates a CfnChannel$Mpeg2FilterSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$Mpeg2FilterSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3398,6 +4040,12 @@
   (when-let [data (lookup-entry config id :temporal-filter-settings)]
     (. builder temporalFilterSettings data))
   (.build builder))
+
+
+(defn cfn-channel-mpeg2-filter-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-mpeg2-filter-settings-property-builder (new CfnChannel$Mpeg2FilterSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-mpeg2-settings-property-builder
@@ -3463,6 +4111,12 @@
   (when-let [data (lookup-entry config id :timecode-insertion)]
     (. builder timecodeInsertion data))
   (.build builder))
+
+
+(defn cfn-channel-mpeg2-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-mpeg2-settings-property-builder (new CfnChannel$Mpeg2SettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-ms-smooth-group-settings-property-builder
@@ -3536,6 +4190,12 @@
   (.build builder))
 
 
+(defn cfn-channel-ms-smooth-group-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-ms-smooth-group-settings-property-builder (new CfnChannel$MsSmoothGroupSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-ms-smooth-output-settings-property-builder
   "The build-cfn-channel-ms-smooth-output-settings-property-builder function updates a CfnChannel$MsSmoothOutputSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$MsSmoothOutputSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3556,6 +4216,12 @@
   (.build builder))
 
 
+(defn cfn-channel-ms-smooth-output-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-ms-smooth-output-settings-property-builder (new CfnChannel$MsSmoothOutputSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-multiplex-group-settings-property-builder
   "The build-cfn-channel-multiplex-group-settings-property-builder function updates a CfnChannel$MultiplexGroupSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$MultiplexGroupSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3568,6 +4234,12 @@
 "
   [^CfnChannel$MultiplexGroupSettingsProperty$Builder builder id config]
   (.build builder))
+
+
+(defn cfn-channel-multiplex-group-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-multiplex-group-settings-property-builder (new CfnChannel$MultiplexGroupSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-multiplex-output-settings-property-builder
@@ -3585,6 +4257,12 @@
   (when-let [data (lookup-entry config id :destination)]
     (. builder destination data))
   (.build builder))
+
+
+(defn cfn-channel-multiplex-output-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-multiplex-output-settings-property-builder (new CfnChannel$MultiplexOutputSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-multiplex-program-channel-destination-settings-property-builder
@@ -3607,6 +4285,12 @@
   (.build builder))
 
 
+(defn cfn-channel-multiplex-program-channel-destination-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-multiplex-program-channel-destination-settings-property-builder (new CfnChannel$MultiplexProgramChannelDestinationSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-network-input-settings-property-builder
   "The build-cfn-channel-network-input-settings-property-builder function updates a CfnChannel$NetworkInputSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$NetworkInputSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3625,6 +4309,12 @@
   (when-let [data (lookup-entry config id :server-validation)]
     (. builder serverValidation data))
   (.build builder))
+
+
+(defn cfn-channel-network-input-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-network-input-settings-property-builder (new CfnChannel$NetworkInputSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-nielsen-cbet-property-builder
@@ -3650,6 +4340,12 @@
   (.build builder))
 
 
+(defn cfn-channel-nielsen-cbet-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-nielsen-cbet-property-builder (new CfnChannel$NielsenCBETProperty$Builder) id config))
+
+
 (defn build-cfn-channel-nielsen-configuration-property-builder
   "The build-cfn-channel-nielsen-configuration-property-builder function updates a CfnChannel$NielsenConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$NielsenConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3668,6 +4364,12 @@
   (when-let [data (lookup-entry config id :nielsen-pcm-to-id3-tagging)]
     (. builder nielsenPcmToId3Tagging data))
   (.build builder))
+
+
+(defn cfn-channel-nielsen-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-nielsen-configuration-property-builder (new CfnChannel$NielsenConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-channel-nielsen-naes-ii-nw-property-builder
@@ -3693,6 +4395,12 @@
   (.build builder))
 
 
+(defn cfn-channel-nielsen-naes-ii-nw-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-nielsen-naes-ii-nw-property-builder (new CfnChannel$NielsenNaesIiNwProperty$Builder) id config))
+
+
 (defn build-cfn-channel-nielsen-watermarks-settings-property-builder
   "The build-cfn-channel-nielsen-watermarks-settings-property-builder function updates a CfnChannel$NielsenWatermarksSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$NielsenWatermarksSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3714,6 +4422,12 @@
   (when-let [data (lookup-entry config id :nielsen-naes-ii-nw-settings)]
     (. builder nielsenNaesIiNwSettings data))
   (.build builder))
+
+
+(defn cfn-channel-nielsen-watermarks-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-nielsen-watermarks-settings-property-builder (new CfnChannel$NielsenWatermarksSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-output-destination-property-builder
@@ -3742,6 +4456,12 @@
   (.build builder))
 
 
+(defn cfn-channel-output-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-output-destination-property-builder (new CfnChannel$OutputDestinationProperty$Builder) id config))
+
+
 (defn build-cfn-channel-output-destination-settings-property-builder
   "The build-cfn-channel-output-destination-settings-property-builder function updates a CfnChannel$OutputDestinationSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$OutputDestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3768,6 +4488,12 @@
   (.build builder))
 
 
+(defn cfn-channel-output-destination-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-output-destination-settings-property-builder (new CfnChannel$OutputDestinationSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-output-group-property-builder
   "The build-cfn-channel-output-group-property-builder function updates a CfnChannel$OutputGroupProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$OutputGroupProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3789,6 +4515,12 @@
   (when-let [data (lookup-entry config id :outputs)]
     (. builder outputs data))
   (.build builder))
+
+
+(defn cfn-channel-output-group-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-output-group-property-builder (new CfnChannel$OutputGroupProperty$Builder) id config))
 
 
 (defn build-cfn-channel-output-group-settings-property-builder
@@ -3832,6 +4564,12 @@
   (.build builder))
 
 
+(defn cfn-channel-output-group-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-output-group-settings-property-builder (new CfnChannel$OutputGroupSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-output-location-ref-property-builder
   "The build-cfn-channel-output-location-ref-property-builder function updates a CfnChannel$OutputLocationRefProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$OutputLocationRefProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3847,6 +4585,12 @@
   (when-let [data (lookup-entry config id :destination-ref-id)]
     (. builder destinationRefId data))
   (.build builder))
+
+
+(defn cfn-channel-output-location-ref-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-output-location-ref-property-builder (new CfnChannel$OutputLocationRefProperty$Builder) id config))
 
 
 (defn build-cfn-channel-output-locking-settings-property-builder
@@ -3867,6 +4611,12 @@
   (when-let [data (lookup-entry config id :pipeline-locking-settings)]
     (. builder pipelineLockingSettings data))
   (.build builder))
+
+
+(defn cfn-channel-output-locking-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-output-locking-settings-property-builder (new CfnChannel$OutputLockingSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-output-property-builder
@@ -3896,6 +4646,12 @@
   (when-let [data (lookup-entry config id :video-description-name)]
     (. builder videoDescriptionName data))
   (.build builder))
+
+
+(defn cfn-channel-output-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-output-property-builder (new CfnChannel$OutputProperty$Builder) id config))
 
 
 (defn build-cfn-channel-output-settings-property-builder
@@ -3939,6 +4695,12 @@
   (.build builder))
 
 
+(defn cfn-channel-output-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-output-settings-property-builder (new CfnChannel$OutputSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-pass-through-settings-property-builder
   "The build-cfn-channel-pass-through-settings-property-builder function updates a CfnChannel$PassThroughSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$PassThroughSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -3951,6 +4713,12 @@
 "
   [^CfnChannel$PassThroughSettingsProperty$Builder builder id config]
   (.build builder))
+
+
+(defn cfn-channel-pass-through-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-pass-through-settings-property-builder (new CfnChannel$PassThroughSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-props-builder
@@ -4003,6 +4771,12 @@
   (.build builder))
 
 
+(defn cfn-channel-props-builder
+  ""
+  [id config]
+  (build-cfn-channel-props-builder (new CfnChannelProps$Builder) id config))
+
+
 (defn build-cfn-channel-raw-settings-property-builder
   "The build-cfn-channel-raw-settings-property-builder function updates a CfnChannel$RawSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$RawSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4015,6 +4789,12 @@
 "
   [^CfnChannel$RawSettingsProperty$Builder builder id config]
   (.build builder))
+
+
+(defn cfn-channel-raw-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-raw-settings-property-builder (new CfnChannel$RawSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-rec601-settings-property-builder
@@ -4031,6 +4811,12 @@
   (.build builder))
 
 
+(defn cfn-channel-rec601-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-rec601-settings-property-builder (new CfnChannel$Rec601SettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-rec709-settings-property-builder
   "The build-cfn-channel-rec709-settings-property-builder function updates a CfnChannel$Rec709SettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$Rec709SettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4043,6 +4829,12 @@
 "
   [^CfnChannel$Rec709SettingsProperty$Builder builder id config]
   (.build builder))
+
+
+(defn cfn-channel-rec709-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-rec709-settings-property-builder (new CfnChannel$Rec709SettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-remix-settings-property-builder
@@ -4068,6 +4860,12 @@
   (.build builder))
 
 
+(defn cfn-channel-remix-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-remix-settings-property-builder (new CfnChannel$RemixSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-rtmp-caption-info-destination-settings-property-builder
   "The build-cfn-channel-rtmp-caption-info-destination-settings-property-builder function updates a CfnChannel$RtmpCaptionInfoDestinationSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$RtmpCaptionInfoDestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4080,6 +4878,12 @@
 "
   [^CfnChannel$RtmpCaptionInfoDestinationSettingsProperty$Builder builder id config]
   (.build builder))
+
+
+(defn cfn-channel-rtmp-caption-info-destination-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-rtmp-caption-info-destination-settings-property-builder (new CfnChannel$RtmpCaptionInfoDestinationSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-rtmp-group-settings-property-builder
@@ -4120,6 +4924,12 @@
   (.build builder))
 
 
+(defn cfn-channel-rtmp-group-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-rtmp-group-settings-property-builder (new CfnChannel$RtmpGroupSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-rtmp-output-settings-property-builder
   "The build-cfn-channel-rtmp-output-settings-property-builder function updates a CfnChannel$RtmpOutputSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$RtmpOutputSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4146,6 +4956,12 @@
   (.build builder))
 
 
+(defn cfn-channel-rtmp-output-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-rtmp-output-settings-property-builder (new CfnChannel$RtmpOutputSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-scte20-plus-embedded-destination-settings-property-builder
   "The build-cfn-channel-scte20-plus-embedded-destination-settings-property-builder function updates a CfnChannel$Scte20PlusEmbeddedDestinationSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$Scte20PlusEmbeddedDestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4158,6 +4974,12 @@
 "
   [^CfnChannel$Scte20PlusEmbeddedDestinationSettingsProperty$Builder builder id config]
   (.build builder))
+
+
+(defn cfn-channel-scte20-plus-embedded-destination-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-scte20-plus-embedded-destination-settings-property-builder (new CfnChannel$Scte20PlusEmbeddedDestinationSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-scte20-source-settings-property-builder
@@ -4180,6 +5002,12 @@
   (.build builder))
 
 
+(defn cfn-channel-scte20-source-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-scte20-source-settings-property-builder (new CfnChannel$Scte20SourceSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-scte27-destination-settings-property-builder
   "The build-cfn-channel-scte27-destination-settings-property-builder function updates a CfnChannel$Scte27DestinationSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$Scte27DestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4192,6 +5020,12 @@
 "
   [^CfnChannel$Scte27DestinationSettingsProperty$Builder builder id config]
   (.build builder))
+
+
+(defn cfn-channel-scte27-destination-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-scte27-destination-settings-property-builder (new CfnChannel$Scte27DestinationSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-scte27-source-settings-property-builder
@@ -4212,6 +5046,12 @@
   (when-let [data (lookup-entry config id :pid)]
     (. builder pid data))
   (.build builder))
+
+
+(defn cfn-channel-scte27-source-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-scte27-source-settings-property-builder (new CfnChannel$Scte27SourceSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-scte35-splice-insert-property-builder
@@ -4237,6 +5077,12 @@
   (.build builder))
 
 
+(defn cfn-channel-scte35-splice-insert-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-scte35-splice-insert-property-builder (new CfnChannel$Scte35SpliceInsertProperty$Builder) id config))
+
+
 (defn build-cfn-channel-scte35-time-signal-apos-property-builder
   "The build-cfn-channel-scte35-time-signal-apos-property-builder function updates a CfnChannel$Scte35TimeSignalAposProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$Scte35TimeSignalAposProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4260,6 +5106,12 @@
   (.build builder))
 
 
+(defn cfn-channel-scte35-time-signal-apos-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-scte35-time-signal-apos-property-builder (new CfnChannel$Scte35TimeSignalAposProperty$Builder) id config))
+
+
 (defn build-cfn-channel-smpte-tt-destination-settings-property-builder
   "The build-cfn-channel-smpte-tt-destination-settings-property-builder function updates a CfnChannel$SmpteTtDestinationSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$SmpteTtDestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4272,6 +5124,12 @@
 "
   [^CfnChannel$SmpteTtDestinationSettingsProperty$Builder builder id config]
   (.build builder))
+
+
+(defn cfn-channel-smpte-tt-destination-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-smpte-tt-destination-settings-property-builder (new CfnChannel$SmpteTtDestinationSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-standard-hls-settings-property-builder
@@ -4294,6 +5152,12 @@
   (.build builder))
 
 
+(defn cfn-channel-standard-hls-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-standard-hls-settings-property-builder (new CfnChannel$StandardHlsSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-static-key-settings-property-builder
   "The build-cfn-channel-static-key-settings-property-builder function updates a CfnChannel$StaticKeySettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$StaticKeySettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4314,6 +5178,12 @@
   (.build builder))
 
 
+(defn cfn-channel-static-key-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-static-key-settings-property-builder (new CfnChannel$StaticKeySettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-teletext-destination-settings-property-builder
   "The build-cfn-channel-teletext-destination-settings-property-builder function updates a CfnChannel$TeletextDestinationSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$TeletextDestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4326,6 +5196,12 @@
 "
   [^CfnChannel$TeletextDestinationSettingsProperty$Builder builder id config]
   (.build builder))
+
+
+(defn cfn-channel-teletext-destination-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-teletext-destination-settings-property-builder (new CfnChannel$TeletextDestinationSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-teletext-source-settings-property-builder
@@ -4348,6 +5224,12 @@
   (.build builder))
 
 
+(defn cfn-channel-teletext-source-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-teletext-source-settings-property-builder (new CfnChannel$TeletextSourceSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-temporal-filter-settings-property-builder
   "The build-cfn-channel-temporal-filter-settings-property-builder function updates a CfnChannel$TemporalFilterSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$TemporalFilterSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4368,6 +5250,12 @@
   (.build builder))
 
 
+(defn cfn-channel-temporal-filter-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-temporal-filter-settings-property-builder (new CfnChannel$TemporalFilterSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-thumbnail-configuration-property-builder
   "The build-cfn-channel-thumbnail-configuration-property-builder function updates a CfnChannel$ThumbnailConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$ThumbnailConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4383,6 +5271,12 @@
   (when-let [data (lookup-entry config id :state)]
     (. builder state data))
   (.build builder))
+
+
+(defn cfn-channel-thumbnail-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-thumbnail-configuration-property-builder (new CfnChannel$ThumbnailConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-channel-timecode-burnin-settings-property-builder
@@ -4408,6 +5302,12 @@
   (.build builder))
 
 
+(defn cfn-channel-timecode-burnin-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-timecode-burnin-settings-property-builder (new CfnChannel$TimecodeBurninSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-timecode-config-property-builder
   "The build-cfn-channel-timecode-config-property-builder function updates a CfnChannel$TimecodeConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$TimecodeConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4428,6 +5328,12 @@
   (.build builder))
 
 
+(defn cfn-channel-timecode-config-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-timecode-config-property-builder (new CfnChannel$TimecodeConfigProperty$Builder) id config))
+
+
 (defn build-cfn-channel-ttml-destination-settings-property-builder
   "The build-cfn-channel-ttml-destination-settings-property-builder function updates a CfnChannel$TtmlDestinationSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$TtmlDestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4445,6 +5351,12 @@
   (.build builder))
 
 
+(defn cfn-channel-ttml-destination-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-ttml-destination-settings-property-builder (new CfnChannel$TtmlDestinationSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-udp-container-settings-property-builder
   "The build-cfn-channel-udp-container-settings-property-builder function updates a CfnChannel$UdpContainerSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$UdpContainerSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4460,6 +5372,12 @@
   (when-let [data (lookup-entry config id :m2-ts-settings)]
     (. builder m2TsSettings data))
   (.build builder))
+
+
+(defn cfn-channel-udp-container-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-udp-container-settings-property-builder (new CfnChannel$UdpContainerSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-udp-group-settings-property-builder
@@ -4483,6 +5401,12 @@
   (when-let [data (lookup-entry config id :timed-metadata-id3-period)]
     (. builder timedMetadataId3Period data))
   (.build builder))
+
+
+(defn cfn-channel-udp-group-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-udp-group-settings-property-builder (new CfnChannel$UdpGroupSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-udp-output-settings-property-builder
@@ -4511,6 +5435,12 @@
   (.build builder))
 
 
+(defn cfn-channel-udp-output-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-udp-output-settings-property-builder (new CfnChannel$UdpOutputSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-video-black-failover-settings-property-builder
   "The build-cfn-channel-video-black-failover-settings-property-builder function updates a CfnChannel$VideoBlackFailoverSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$VideoBlackFailoverSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4529,6 +5459,12 @@
   (when-let [data (lookup-entry config id :video-black-threshold-msec)]
     (. builder videoBlackThresholdMsec data))
   (.build builder))
+
+
+(defn cfn-channel-video-black-failover-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-video-black-failover-settings-property-builder (new CfnChannel$VideoBlackFailoverSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-video-codec-settings-property-builder
@@ -4555,6 +5491,12 @@
   (when-let [data (lookup-entry config id :mpeg2-settings)]
     (. builder mpeg2Settings data))
   (.build builder))
+
+
+(defn cfn-channel-video-codec-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-video-codec-settings-property-builder (new CfnChannel$VideoCodecSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-video-description-property-builder
@@ -4592,6 +5534,12 @@
   (.build builder))
 
 
+(defn cfn-channel-video-description-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-video-description-property-builder (new CfnChannel$VideoDescriptionProperty$Builder) id config))
+
+
 (defn build-cfn-channel-video-selector-color-space-settings-property-builder
   "The build-cfn-channel-video-selector-color-space-settings-property-builder function updates a CfnChannel$VideoSelectorColorSpaceSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$VideoSelectorColorSpaceSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4607,6 +5555,12 @@
   (when-let [data (lookup-entry config id :hdr10-settings)]
     (. builder hdr10Settings data))
   (.build builder))
+
+
+(defn cfn-channel-video-selector-color-space-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-video-selector-color-space-settings-property-builder (new CfnChannel$VideoSelectorColorSpaceSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-video-selector-pid-property-builder
@@ -4626,6 +5580,12 @@
   (.build builder))
 
 
+(defn cfn-channel-video-selector-pid-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-video-selector-pid-property-builder (new CfnChannel$VideoSelectorPidProperty$Builder) id config))
+
+
 (defn build-cfn-channel-video-selector-program-id-property-builder
   "The build-cfn-channel-video-selector-program-id-property-builder function updates a CfnChannel$VideoSelectorProgramIdProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$VideoSelectorProgramIdProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4641,6 +5601,12 @@
   (when-let [data (lookup-entry config id :program-id)]
     (. builder programId data))
   (.build builder))
+
+
+(defn cfn-channel-video-selector-program-id-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-video-selector-program-id-property-builder (new CfnChannel$VideoSelectorProgramIdProperty$Builder) id config))
 
 
 (defn build-cfn-channel-video-selector-property-builder
@@ -4669,6 +5635,12 @@
   (.build builder))
 
 
+(defn cfn-channel-video-selector-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-video-selector-property-builder (new CfnChannel$VideoSelectorProperty$Builder) id config))
+
+
 (defn build-cfn-channel-video-selector-settings-property-builder
   "The build-cfn-channel-video-selector-settings-property-builder function updates a CfnChannel$VideoSelectorSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$VideoSelectorSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4687,6 +5659,12 @@
   (when-let [data (lookup-entry config id :video-selector-program-id)]
     (. builder videoSelectorProgramId data))
   (.build builder))
+
+
+(defn cfn-channel-video-selector-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-video-selector-settings-property-builder (new CfnChannel$VideoSelectorSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-channel-vpc-output-settings-property-builder
@@ -4712,6 +5690,12 @@
   (.build builder))
 
 
+(defn cfn-channel-vpc-output-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-vpc-output-settings-property-builder (new CfnChannel$VpcOutputSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-wav-settings-property-builder
   "The build-cfn-channel-wav-settings-property-builder function updates a CfnChannel$WavSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$WavSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4735,6 +5719,12 @@
   (.build builder))
 
 
+(defn cfn-channel-wav-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-wav-settings-property-builder (new CfnChannel$WavSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-channel-webvtt-destination-settings-property-builder
   "The build-cfn-channel-webvtt-destination-settings-property-builder function updates a CfnChannel$WebvttDestinationSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnChannel$WebvttDestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4750,6 +5740,12 @@
   (when-let [data (lookup-entry config id :style-control)]
     (. builder styleControl data))
   (.build builder))
+
+
+(defn cfn-channel-webvtt-destination-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-channel-webvtt-destination-settings-property-builder (new CfnChannel$WebvttDestinationSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-input-builder
@@ -4796,6 +5792,12 @@
   (.build builder))
 
 
+(defn cfn-input-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-input-builder (CfnInput$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-input-input-destination-request-property-builder
   "The build-cfn-input-input-destination-request-property-builder function updates a CfnInput$InputDestinationRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnInput$InputDestinationRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4811,6 +5813,12 @@
   (when-let [data (lookup-entry config id :stream-name)]
     (. builder streamName data))
   (.build builder))
+
+
+(defn cfn-input-input-destination-request-property-builder
+  ""
+  [id config]
+  (build-cfn-input-input-destination-request-property-builder (new CfnInput$InputDestinationRequestProperty$Builder) id config))
 
 
 (defn build-cfn-input-input-device-request-property-builder
@@ -4830,6 +5838,12 @@
   (.build builder))
 
 
+(defn cfn-input-input-device-request-property-builder
+  ""
+  [id config]
+  (build-cfn-input-input-device-request-property-builder (new CfnInput$InputDeviceRequestProperty$Builder) id config))
+
+
 (defn build-cfn-input-input-device-settings-property-builder
   "The build-cfn-input-input-device-settings-property-builder function updates a CfnInput$InputDeviceSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnInput$InputDeviceSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4845,6 +5859,12 @@
   (when-let [data (lookup-entry config id :id)]
     (. builder id data))
   (.build builder))
+
+
+(defn cfn-input-input-device-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-input-input-device-settings-property-builder (new CfnInput$InputDeviceSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-input-input-source-request-property-builder
@@ -4870,6 +5890,12 @@
   (.build builder))
 
 
+(defn cfn-input-input-source-request-property-builder
+  ""
+  [id config]
+  (build-cfn-input-input-source-request-property-builder (new CfnInput$InputSourceRequestProperty$Builder) id config))
+
+
 (defn build-cfn-input-input-vpc-request-property-builder
   "The build-cfn-input-input-vpc-request-property-builder function updates a CfnInput$InputVpcRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnInput$InputVpcRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4890,6 +5916,12 @@
   (.build builder))
 
 
+(defn cfn-input-input-vpc-request-property-builder
+  ""
+  [id config]
+  (build-cfn-input-input-vpc-request-property-builder (new CfnInput$InputVpcRequestProperty$Builder) id config))
+
+
 (defn build-cfn-input-media-connect-flow-request-property-builder
   "The build-cfn-input-media-connect-flow-request-property-builder function updates a CfnInput$MediaConnectFlowRequestProperty$Builder instance using the provided configuration.
   The function takes the CfnInput$MediaConnectFlowRequestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4905,6 +5937,12 @@
   (when-let [data (lookup-entry config id :flow-arn)]
     (. builder flowArn data))
   (.build builder))
+
+
+(defn cfn-input-media-connect-flow-request-property-builder
+  ""
+  [id config]
+  (build-cfn-input-media-connect-flow-request-property-builder (new CfnInput$MediaConnectFlowRequestProperty$Builder) id config))
 
 
 (defn build-cfn-input-props-builder
@@ -4951,6 +5989,12 @@
   (.build builder))
 
 
+(defn cfn-input-props-builder
+  ""
+  [id config]
+  (build-cfn-input-props-builder (new CfnInputProps$Builder) id config))
+
+
 (defn build-cfn-input-security-group-builder
   "The build-cfn-input-security-group-builder function updates a CfnInputSecurityGroup$Builder instance using the provided configuration.
   The function takes the CfnInputSecurityGroup$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4971,6 +6015,12 @@
   (.build builder))
 
 
+(defn cfn-input-security-group-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-input-security-group-builder (CfnInputSecurityGroup$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-input-security-group-input-whitelist-rule-cidr-property-builder
   "The build-cfn-input-security-group-input-whitelist-rule-cidr-property-builder function updates a CfnInputSecurityGroup$InputWhitelistRuleCidrProperty$Builder instance using the provided configuration.
   The function takes the CfnInputSecurityGroup$InputWhitelistRuleCidrProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4986,6 +6036,12 @@
   (when-let [data (lookup-entry config id :cidr)]
     (. builder cidr data))
   (.build builder))
+
+
+(defn cfn-input-security-group-input-whitelist-rule-cidr-property-builder
+  ""
+  [id config]
+  (build-cfn-input-security-group-input-whitelist-rule-cidr-property-builder (new CfnInputSecurityGroup$InputWhitelistRuleCidrProperty$Builder) id config))
 
 
 (defn build-cfn-input-security-group-props-builder
@@ -5006,6 +6062,12 @@
   (when-let [data (lookup-entry config id :whitelist-rules)]
     (. builder whitelistRules data))
   (.build builder))
+
+
+(defn cfn-input-security-group-props-builder
+  ""
+  [id config]
+  (build-cfn-input-security-group-props-builder (new CfnInputSecurityGroupProps$Builder) id config))
 
 
 (defn build-cfn-multiplex-builder
@@ -5037,6 +6099,12 @@
   (.build builder))
 
 
+(defn cfn-multiplex-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-multiplex-builder (CfnMultiplex$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-multiplex-multiplex-media-connect-output-destination-settings-property-builder
   "The build-cfn-multiplex-multiplex-media-connect-output-destination-settings-property-builder function updates a CfnMultiplex$MultiplexMediaConnectOutputDestinationSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnMultiplex$MultiplexMediaConnectOutputDestinationSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5054,6 +6122,12 @@
   (.build builder))
 
 
+(defn cfn-multiplex-multiplex-media-connect-output-destination-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-multiplex-multiplex-media-connect-output-destination-settings-property-builder (new CfnMultiplex$MultiplexMediaConnectOutputDestinationSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-multiplex-multiplex-output-destination-property-builder
   "The build-cfn-multiplex-multiplex-output-destination-property-builder function updates a CfnMultiplex$MultiplexOutputDestinationProperty$Builder instance using the provided configuration.
   The function takes the CfnMultiplex$MultiplexOutputDestinationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5069,6 +6143,12 @@
   (when-let [data (lookup-entry config id :multiplex-media-connect-output-destination-settings)]
     (. builder multiplexMediaConnectOutputDestinationSettings data))
   (.build builder))
+
+
+(defn cfn-multiplex-multiplex-output-destination-property-builder
+  ""
+  [id config]
+  (build-cfn-multiplex-multiplex-output-destination-property-builder (new CfnMultiplex$MultiplexOutputDestinationProperty$Builder) id config))
 
 
 (defn build-cfn-multiplex-multiplex-settings-property-builder
@@ -5095,6 +6175,12 @@
   (when-let [data (lookup-entry config id :transport-stream-reserved-bitrate)]
     (. builder transportStreamReservedBitrate data))
   (.build builder))
+
+
+(defn cfn-multiplex-multiplex-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-multiplex-multiplex-settings-property-builder (new CfnMultiplex$MultiplexSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-multiplex-props-builder
@@ -5124,6 +6210,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-multiplex-props-builder
+  ""
+  [id config]
+  (build-cfn-multiplex-props-builder (new CfnMultiplexProps$Builder) id config))
 
 
 (defn build-cfn-multiplexprogram-builder
@@ -5159,6 +6251,12 @@
   (when-let [data (lookup-entry config id :program-name)]
     (. builder programName data))
   (.build builder))
+
+
+(defn cfn-multiplexprogram-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-multiplexprogram-builder (CfnMultiplexprogram$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-multiplexprogram-multiplex-program-packet-identifiers-map-property-builder
@@ -5214,6 +6312,12 @@
   (.build builder))
 
 
+(defn cfn-multiplexprogram-multiplex-program-packet-identifiers-map-property-builder
+  ""
+  [id config]
+  (build-cfn-multiplexprogram-multiplex-program-packet-identifiers-map-property-builder (new CfnMultiplexprogram$MultiplexProgramPacketIdentifiersMapProperty$Builder) id config))
+
+
 (defn build-cfn-multiplexprogram-multiplex-program-pipeline-detail-property-builder
   "The build-cfn-multiplexprogram-multiplex-program-pipeline-detail-property-builder function updates a CfnMultiplexprogram$MultiplexProgramPipelineDetailProperty$Builder instance using the provided configuration.
   The function takes the CfnMultiplexprogram$MultiplexProgramPipelineDetailProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5234,6 +6338,12 @@
   (.build builder))
 
 
+(defn cfn-multiplexprogram-multiplex-program-pipeline-detail-property-builder
+  ""
+  [id config]
+  (build-cfn-multiplexprogram-multiplex-program-pipeline-detail-property-builder (new CfnMultiplexprogram$MultiplexProgramPipelineDetailProperty$Builder) id config))
+
+
 (defn build-cfn-multiplexprogram-multiplex-program-service-descriptor-property-builder
   "The build-cfn-multiplexprogram-multiplex-program-service-descriptor-property-builder function updates a CfnMultiplexprogram$MultiplexProgramServiceDescriptorProperty$Builder instance using the provided configuration.
   The function takes the CfnMultiplexprogram$MultiplexProgramServiceDescriptorProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5252,6 +6362,12 @@
   (when-let [data (lookup-entry config id :service-name)]
     (. builder serviceName data))
   (.build builder))
+
+
+(defn cfn-multiplexprogram-multiplex-program-service-descriptor-property-builder
+  ""
+  [id config]
+  (build-cfn-multiplexprogram-multiplex-program-service-descriptor-property-builder (new CfnMultiplexprogram$MultiplexProgramServiceDescriptorProperty$Builder) id config))
 
 
 (defn build-cfn-multiplexprogram-multiplex-program-settings-property-builder
@@ -5280,6 +6396,12 @@
   (.build builder))
 
 
+(defn cfn-multiplexprogram-multiplex-program-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-multiplexprogram-multiplex-program-settings-property-builder (new CfnMultiplexprogram$MultiplexProgramSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-multiplexprogram-multiplex-statmux-video-settings-property-builder
   "The build-cfn-multiplexprogram-multiplex-statmux-video-settings-property-builder function updates a CfnMultiplexprogram$MultiplexStatmuxVideoSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnMultiplexprogram$MultiplexStatmuxVideoSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5303,6 +6425,12 @@
   (.build builder))
 
 
+(defn cfn-multiplexprogram-multiplex-statmux-video-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-multiplexprogram-multiplex-statmux-video-settings-property-builder (new CfnMultiplexprogram$MultiplexStatmuxVideoSettingsProperty$Builder) id config))
+
+
 (defn build-cfn-multiplexprogram-multiplex-video-settings-property-builder
   "The build-cfn-multiplexprogram-multiplex-video-settings-property-builder function updates a CfnMultiplexprogram$MultiplexVideoSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnMultiplexprogram$MultiplexVideoSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5321,6 +6449,12 @@
   (when-let [data (lookup-entry config id :statmux-settings)]
     (. builder statmuxSettings data))
   (.build builder))
+
+
+(defn cfn-multiplexprogram-multiplex-video-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-multiplexprogram-multiplex-video-settings-property-builder (new CfnMultiplexprogram$MultiplexVideoSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-multiplexprogram-props-builder
@@ -5356,3 +6490,9 @@
   (when-let [data (lookup-entry config id :program-name)]
     (. builder programName data))
   (.build builder))
+
+
+(defn cfn-multiplexprogram-props-builder
+  ""
+  [id config]
+  (build-cfn-multiplexprogram-props-builder (new CfnMultiplexprogramProps$Builder) id config))

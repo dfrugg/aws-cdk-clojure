@@ -27,6 +27,12 @@
   (.build builder))
 
 
+(defn cfn-suite-definition-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-suite-definition-builder (CfnSuiteDefinition$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-suite-definition-device-under-test-property-builder
   "The build-cfn-suite-definition-device-under-test-property-builder function updates a CfnSuiteDefinition$DeviceUnderTestProperty$Builder instance using the provided configuration.
   The function takes the CfnSuiteDefinition$DeviceUnderTestProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -47,6 +53,12 @@
   (.build builder))
 
 
+(defn cfn-suite-definition-device-under-test-property-builder
+  ""
+  [id config]
+  (build-cfn-suite-definition-device-under-test-property-builder (new CfnSuiteDefinition$DeviceUnderTestProperty$Builder) id config))
+
+
 (defn build-cfn-suite-definition-props-builder
   "The build-cfn-suite-definition-props-builder function updates a CfnSuiteDefinitionProps$Builder instance using the provided configuration.
   The function takes the CfnSuiteDefinitionProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -65,6 +77,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-suite-definition-props-builder
+  ""
+  [id config]
+  (build-cfn-suite-definition-props-builder (new CfnSuiteDefinitionProps$Builder) id config))
 
 
 (defn build-cfn-suite-definition-suite-definition-configuration-property-builder
@@ -94,3 +112,9 @@
   (when-let [data (lookup-entry config id :suite-definition-name)]
     (. builder suiteDefinitionName data))
   (.build builder))
+
+
+(defn cfn-suite-definition-suite-definition-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-suite-definition-suite-definition-configuration-property-builder (new CfnSuiteDefinition$SuiteDefinitionConfigurationProperty$Builder) id config))

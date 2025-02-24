@@ -31,6 +31,12 @@
   (.build builder))
 
 
+(defn cfn-skill-authentication-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-skill-authentication-configuration-property-builder (new CfnSkill$AuthenticationConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-skill-builder
   "The build-cfn-skill-builder function updates a CfnSkill$Builder instance using the provided configuration.
   The function takes the CfnSkill$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -54,6 +60,12 @@
   (.build builder))
 
 
+(defn cfn-skill-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-skill-builder (CfnSkill$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-skill-overrides-property-builder
   "The build-cfn-skill-overrides-property-builder function updates a CfnSkill$OverridesProperty$Builder instance using the provided configuration.
   The function takes the CfnSkill$OverridesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -69,6 +81,12 @@
   (when-let [data (lookup-entry config id :manifest)]
     (. builder manifest data))
   (.build builder))
+
+
+(defn cfn-skill-overrides-property-builder
+  ""
+  [id config]
+  (build-cfn-skill-overrides-property-builder (new CfnSkill$OverridesProperty$Builder) id config))
 
 
 (defn build-cfn-skill-props-builder
@@ -92,6 +110,12 @@
   (when-let [data (lookup-entry config id :vendor-id)]
     (. builder vendorId data))
   (.build builder))
+
+
+(defn cfn-skill-props-builder
+  ""
+  [id config]
+  (build-cfn-skill-props-builder (new CfnSkillProps$Builder) id config))
 
 
 (defn build-cfn-skill-skill-package-property-builder
@@ -121,3 +145,9 @@
   (when-let [data (lookup-entry config id :s3-object-version)]
     (. builder s3ObjectVersion data))
   (.build builder))
+
+
+(defn cfn-skill-skill-package-property-builder
+  ""
+  [id config]
+  (build-cfn-skill-skill-package-property-builder (new CfnSkill$SkillPackageProperty$Builder) id config))

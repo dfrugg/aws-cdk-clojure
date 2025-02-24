@@ -165,6 +165,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-queue-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-queue-builder (CfnQueue$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-queue-inline-policy-builder
   "The build-cfn-queue-inline-policy-builder function updates a CfnQueueInlinePolicy$Builder instance using the provided configuration.
   The function takes the CfnQueueInlinePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -183,6 +189,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :queue)]
     (. builder queue data))
   (.build builder))
+
+
+(defn cfn-queue-inline-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-queue-inline-policy-builder (CfnQueueInlinePolicy$Builder/create scope (name id)) id config))
 
 
 (defn build-cfn-queue-inline-policy-props-builder
@@ -205,6 +217,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-queue-inline-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-queue-inline-policy-props-builder (new CfnQueueInlinePolicyProps$Builder) id config))
+
+
 (defn build-cfn-queue-policy-builder
   "The build-cfn-queue-policy-builder function updates a CfnQueuePolicy$Builder instance using the provided configuration.
   The function takes the CfnQueuePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -225,6 +243,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-queue-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-queue-policy-builder (CfnQueuePolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-queue-policy-props-builder
   "The build-cfn-queue-policy-props-builder function updates a CfnQueuePolicyProps$Builder instance using the provided configuration.
   The function takes the CfnQueuePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -243,6 +267,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :queues)]
     (. builder queues data))
   (.build builder))
+
+
+(defn cfn-queue-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-queue-policy-props-builder (new CfnQueuePolicyProps$Builder) id config))
 
 
 (defn build-cfn-queue-props-builder
@@ -307,6 +337,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-queue-props-builder
+  ""
+  [id config]
+  (build-cfn-queue-props-builder (new CfnQueueProps$Builder) id config))
+
+
 (defn build-dead-letter-queue-builder
   "The build-dead-letter-queue-builder function updates a DeadLetterQueue$Builder instance using the provided configuration.
   The function takes the DeadLetterQueue$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -325,6 +361,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :queue)]
     (. builder queue data))
   (.build builder))
+
+
+(defn dead-letter-queue-builder
+  ""
+  [id config]
+  (build-dead-letter-queue-builder (new DeadLetterQueue$Builder) id config))
 
 
 (defn build-queue-attributes-builder
@@ -354,6 +396,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :queue-url)]
     (. builder queueUrl data))
   (.build builder))
+
+
+(defn queue-attributes-builder
+  ""
+  [id config]
+  (build-queue-attributes-builder (new QueueAttributes$Builder) id config))
 
 
 (defn build-queue-builder
@@ -421,6 +469,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn queue-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-queue-builder (Queue$Builder/create scope (name id)) id config))
+
+
 (defn build-queue-policy-builder
   "The build-queue-policy-builder function updates a QueuePolicy$Builder instance using the provided configuration.
   The function takes the QueuePolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -438,6 +492,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn queue-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-queue-policy-builder (QueuePolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-queue-policy-props-builder
   "The build-queue-policy-props-builder function updates a QueuePolicyProps$Builder instance using the provided configuration.
   The function takes the QueuePolicyProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -453,6 +513,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :queues)]
     (. builder queues data))
   (.build builder))
+
+
+(defn queue-policy-props-builder
+  ""
+  [id config]
+  (build-queue-policy-props-builder (new QueuePolicyProps$Builder) id config))
 
 
 (defn build-queue-props-builder
@@ -520,6 +586,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn queue-props-builder
+  ""
+  [id config]
+  (build-queue-props-builder (new QueueProps$Builder) id config))
+
+
 (defn build-redrive-allow-policy-builder
   "The build-redrive-allow-policy-builder function updates a RedriveAllowPolicy$Builder instance using the provided configuration.
   The function takes the RedriveAllowPolicy$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -538,3 +610,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :source-queues)]
     (. builder sourceQueues data))
   (.build builder))
+
+
+(defn redrive-allow-policy-builder
+  ""
+  [id config]
+  (build-redrive-allow-policy-builder (new RedriveAllowPolicy$Builder) id config))

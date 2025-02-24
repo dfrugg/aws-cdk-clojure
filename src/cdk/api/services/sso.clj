@@ -45,6 +45,12 @@
   (.build builder))
 
 
+(defn cfn-application-assignment-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-assignment-builder (CfnApplicationAssignment$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-application-assignment-props-builder
   "The build-cfn-application-assignment-props-builder function updates a CfnApplicationAssignmentProps$Builder instance using the provided configuration.
   The function takes the CfnApplicationAssignmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -66,6 +72,12 @@
   (when-let [data (lookup-entry config id :principal-type)]
     (. builder principalType data))
   (.build builder))
+
+
+(defn cfn-application-assignment-props-builder
+  ""
+  [id config]
+  (build-cfn-application-assignment-props-builder (new CfnApplicationAssignmentProps$Builder) id config))
 
 
 (defn build-cfn-application-builder
@@ -103,6 +115,12 @@
   (.build builder))
 
 
+(defn cfn-application-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-application-builder (CfnApplication$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-application-portal-options-configuration-property-builder
   "The build-cfn-application-portal-options-configuration-property-builder function updates a CfnApplication$PortalOptionsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$PortalOptionsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -121,6 +139,12 @@
   (when-let [data (lookup-entry config id :visibility)]
     (. builder visibility data))
   (.build builder))
+
+
+(defn cfn-application-portal-options-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-application-portal-options-configuration-property-builder (new CfnApplication$PortalOptionsConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-application-props-builder
@@ -158,6 +182,12 @@
   (.build builder))
 
 
+(defn cfn-application-props-builder
+  ""
+  [id config]
+  (build-cfn-application-props-builder (new CfnApplicationProps$Builder) id config))
+
+
 (defn build-cfn-application-sign-in-options-property-builder
   "The build-cfn-application-sign-in-options-property-builder function updates a CfnApplication$SignInOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnApplication$SignInOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -176,6 +206,12 @@
   (when-let [data (lookup-entry config id :origin)]
     (. builder origin data))
   (.build builder))
+
+
+(defn cfn-application-sign-in-options-property-builder
+  ""
+  [id config]
+  (build-cfn-application-sign-in-options-property-builder (new CfnApplication$SignInOptionsProperty$Builder) id config))
 
 
 (defn build-cfn-assignment-builder
@@ -210,6 +246,12 @@
   (.build builder))
 
 
+(defn cfn-assignment-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-assignment-builder (CfnAssignment$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-assignment-props-builder
   "The build-cfn-assignment-props-builder function updates a CfnAssignmentProps$Builder instance using the provided configuration.
   The function takes the CfnAssignmentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -242,6 +284,12 @@
   (.build builder))
 
 
+(defn cfn-assignment-props-builder
+  ""
+  [id config]
+  (build-cfn-assignment-props-builder (new CfnAssignmentProps$Builder) id config))
+
+
 (defn build-cfn-instance-access-control-attribute-configuration-access-control-attribute-property-builder
   "The build-cfn-instance-access-control-attribute-configuration-access-control-attribute-property-builder function updates a CfnInstanceAccessControlAttributeConfiguration$AccessControlAttributeProperty$Builder instance using the provided configuration.
   The function takes the CfnInstanceAccessControlAttributeConfiguration$AccessControlAttributeProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -262,6 +310,12 @@
   (.build builder))
 
 
+(defn cfn-instance-access-control-attribute-configuration-access-control-attribute-property-builder
+  ""
+  [id config]
+  (build-cfn-instance-access-control-attribute-configuration-access-control-attribute-property-builder (new CfnInstanceAccessControlAttributeConfiguration$AccessControlAttributeProperty$Builder) id config))
+
+
 (defn build-cfn-instance-access-control-attribute-configuration-access-control-attribute-value-property-builder
   "The build-cfn-instance-access-control-attribute-configuration-access-control-attribute-value-property-builder function updates a CfnInstanceAccessControlAttributeConfiguration$AccessControlAttributeValueProperty$Builder instance using the provided configuration.
   The function takes the CfnInstanceAccessControlAttributeConfiguration$AccessControlAttributeValueProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -277,6 +331,12 @@
   (when-let [data (lookup-entry config id :source)]
     (. builder source data))
   (.build builder))
+
+
+(defn cfn-instance-access-control-attribute-configuration-access-control-attribute-value-property-builder
+  ""
+  [id config]
+  (build-cfn-instance-access-control-attribute-configuration-access-control-attribute-value-property-builder (new CfnInstanceAccessControlAttributeConfiguration$AccessControlAttributeValueProperty$Builder) id config))
 
 
 (defn build-cfn-instance-access-control-attribute-configuration-builder
@@ -302,6 +362,12 @@
   (.build builder))
 
 
+(defn cfn-instance-access-control-attribute-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-instance-access-control-attribute-configuration-builder (CfnInstanceAccessControlAttributeConfiguration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-instance-access-control-attribute-configuration-instance-access-control-attribute-configuration-property-builder
   "The build-cfn-instance-access-control-attribute-configuration-instance-access-control-attribute-configuration-property-builder function updates a CfnInstanceAccessControlAttributeConfiguration$InstanceAccessControlAttributeConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnInstanceAccessControlAttributeConfiguration$InstanceAccessControlAttributeConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -317,6 +383,12 @@
   (when-let [data (lookup-entry config id :access-control-attributes)]
     (. builder accessControlAttributes data))
   (.build builder))
+
+
+(defn cfn-instance-access-control-attribute-configuration-instance-access-control-attribute-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-instance-access-control-attribute-configuration-instance-access-control-attribute-configuration-property-builder (new CfnInstanceAccessControlAttributeConfiguration$InstanceAccessControlAttributeConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-instance-access-control-attribute-configuration-props-builder
@@ -342,6 +414,12 @@
   (.build builder))
 
 
+(defn cfn-instance-access-control-attribute-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-instance-access-control-attribute-configuration-props-builder (new CfnInstanceAccessControlAttributeConfigurationProps$Builder) id config))
+
+
 (defn build-cfn-instance-builder
   "The build-cfn-instance-builder function updates a CfnInstance$Builder instance using the provided configuration.
   The function takes the CfnInstance$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -362,6 +440,12 @@
   (.build builder))
 
 
+(defn cfn-instance-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-instance-builder (CfnInstance$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-instance-props-builder
   "The build-cfn-instance-props-builder function updates a CfnInstanceProps$Builder instance using the provided configuration.
   The function takes the CfnInstanceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -380,6 +464,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-instance-props-builder
+  ""
+  [id config]
+  (build-cfn-instance-props-builder (new CfnInstanceProps$Builder) id config))
 
 
 (defn build-cfn-permission-set-builder
@@ -426,6 +516,12 @@
   (.build builder))
 
 
+(defn cfn-permission-set-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-permission-set-builder (CfnPermissionSet$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-permission-set-customer-managed-policy-reference-property-builder
   "The build-cfn-permission-set-customer-managed-policy-reference-property-builder function updates a CfnPermissionSet$CustomerManagedPolicyReferenceProperty$Builder instance using the provided configuration.
   The function takes the CfnPermissionSet$CustomerManagedPolicyReferenceProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -446,6 +542,12 @@
   (.build builder))
 
 
+(defn cfn-permission-set-customer-managed-policy-reference-property-builder
+  ""
+  [id config]
+  (build-cfn-permission-set-customer-managed-policy-reference-property-builder (new CfnPermissionSet$CustomerManagedPolicyReferenceProperty$Builder) id config))
+
+
 (defn build-cfn-permission-set-permissions-boundary-property-builder
   "The build-cfn-permission-set-permissions-boundary-property-builder function updates a CfnPermissionSet$PermissionsBoundaryProperty$Builder instance using the provided configuration.
   The function takes the CfnPermissionSet$PermissionsBoundaryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -464,6 +566,12 @@
   (when-let [data (lookup-entry config id :managed-policy-arn)]
     (. builder managedPolicyArn data))
   (.build builder))
+
+
+(defn cfn-permission-set-permissions-boundary-property-builder
+  ""
+  [id config]
+  (build-cfn-permission-set-permissions-boundary-property-builder (new CfnPermissionSet$PermissionsBoundaryProperty$Builder) id config))
 
 
 (defn build-cfn-permission-set-props-builder
@@ -508,3 +616,9 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-permission-set-props-builder
+  ""
+  [id config]
+  (build-cfn-permission-set-props-builder (new CfnPermissionSetProps$Builder) id config))

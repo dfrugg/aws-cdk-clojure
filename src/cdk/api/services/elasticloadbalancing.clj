@@ -67,6 +67,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-load-balancer-access-logging-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-load-balancer-access-logging-policy-property-builder (new CfnLoadBalancer$AccessLoggingPolicyProperty$Builder) id config))
+
+
 (defn build-cfn-load-balancer-app-cookie-stickiness-policy-property-builder
   "The build-cfn-load-balancer-app-cookie-stickiness-policy-property-builder function updates a CfnLoadBalancer$AppCookieStickinessPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnLoadBalancer$AppCookieStickinessPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -85,6 +91,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
   (.build builder))
+
+
+(defn cfn-load-balancer-app-cookie-stickiness-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-load-balancer-app-cookie-stickiness-policy-property-builder (new CfnLoadBalancer$AppCookieStickinessPolicyProperty$Builder) id config))
 
 
 (defn build-cfn-load-balancer-builder
@@ -149,6 +161,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-load-balancer-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-load-balancer-builder (CfnLoadBalancer$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-load-balancer-connection-draining-policy-property-builder
   "The build-cfn-load-balancer-connection-draining-policy-property-builder function updates a CfnLoadBalancer$ConnectionDrainingPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnLoadBalancer$ConnectionDrainingPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -169,6 +187,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-load-balancer-connection-draining-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-load-balancer-connection-draining-policy-property-builder (new CfnLoadBalancer$ConnectionDrainingPolicyProperty$Builder) id config))
+
+
 (defn build-cfn-load-balancer-connection-settings-property-builder
   "The build-cfn-load-balancer-connection-settings-property-builder function updates a CfnLoadBalancer$ConnectionSettingsProperty$Builder instance using the provided configuration.
   The function takes the CfnLoadBalancer$ConnectionSettingsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -184,6 +208,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :idle-timeout)]
     (. builder idleTimeout data))
   (.build builder))
+
+
+(defn cfn-load-balancer-connection-settings-property-builder
+  ""
+  [id config]
+  (build-cfn-load-balancer-connection-settings-property-builder (new CfnLoadBalancer$ConnectionSettingsProperty$Builder) id config))
 
 
 (defn build-cfn-load-balancer-health-check-property-builder
@@ -215,6 +245,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-load-balancer-health-check-property-builder
+  ""
+  [id config]
+  (build-cfn-load-balancer-health-check-property-builder (new CfnLoadBalancer$HealthCheckProperty$Builder) id config))
+
+
 (defn build-cfn-load-balancer-lb-cookie-stickiness-policy-property-builder
   "The build-cfn-load-balancer-lb-cookie-stickiness-policy-property-builder function updates a CfnLoadBalancer$LBCookieStickinessPolicyProperty$Builder instance using the provided configuration.
   The function takes the CfnLoadBalancer$LBCookieStickinessPolicyProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -233,6 +269,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :policy-name)]
     (. builder policyName data))
   (.build builder))
+
+
+(defn cfn-load-balancer-lb-cookie-stickiness-policy-property-builder
+  ""
+  [id config]
+  (build-cfn-load-balancer-lb-cookie-stickiness-policy-property-builder (new CfnLoadBalancer$LBCookieStickinessPolicyProperty$Builder) id config))
 
 
 (defn build-cfn-load-balancer-listeners-property-builder
@@ -267,6 +309,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-load-balancer-listeners-property-builder
+  ""
+  [id config]
+  (build-cfn-load-balancer-listeners-property-builder (new CfnLoadBalancer$ListenersProperty$Builder) id config))
+
+
 (defn build-cfn-load-balancer-policies-property-builder
   "The build-cfn-load-balancer-policies-property-builder function updates a CfnLoadBalancer$PoliciesProperty$Builder instance using the provided configuration.
   The function takes the CfnLoadBalancer$PoliciesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -294,6 +342,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :policy-type)]
     (. builder policyType data))
   (.build builder))
+
+
+(defn cfn-load-balancer-policies-property-builder
+  ""
+  [id config]
+  (build-cfn-load-balancer-policies-property-builder (new CfnLoadBalancer$PoliciesProperty$Builder) id config))
 
 
 (defn build-cfn-load-balancer-props-builder
@@ -358,6 +412,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn cfn-load-balancer-props-builder
+  ""
+  [id config]
+  (build-cfn-load-balancer-props-builder (new CfnLoadBalancerProps$Builder) id config))
+
+
 (defn build-health-check-builder
   "The build-health-check-builder function updates a HealthCheck$Builder instance using the provided configuration.
   The function takes the HealthCheck$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -391,6 +451,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :unhealthy-threshold)]
     (. builder unhealthyThreshold data))
   (.build builder))
+
+
+(defn health-check-builder
+  ""
+  [id config]
+  (build-health-check-builder (new HealthCheck$Builder) id config))
 
 
 (defn build-load-balancer-builder
@@ -431,6 +497,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn load-balancer-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-load-balancer-builder (LoadBalancer$Builder/create scope (name id)) id config))
+
+
 (defn build-load-balancer-listener-builder
   "The build-load-balancer-listener-builder function updates a LoadBalancerListener$Builder instance using the provided configuration.
   The function takes the LoadBalancerListener$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -464,6 +536,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :ssl-certificate-arn)]
     (. builder sslCertificateArn data))
   (.build builder))
+
+
+(defn load-balancer-listener-builder
+  ""
+  [id config]
+  (build-load-balancer-listener-builder (new LoadBalancerListener$Builder) id config))
 
 
 (defn build-load-balancer-props-builder
@@ -502,3 +580,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :vpc)]
     (. builder vpc data))
   (.build builder))
+
+
+(defn load-balancer-props-builder
+  ""
+  [id config]
+  (build-load-balancer-props-builder (new LoadBalancerProps$Builder) id config))

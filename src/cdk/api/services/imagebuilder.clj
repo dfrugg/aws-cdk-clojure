@@ -109,6 +109,12 @@
   (.build builder))
 
 
+(defn cfn-component-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-component-builder (CfnComponent$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-component-props-builder
   "The build-cfn-component-props-builder function updates a CfnComponentProps$Builder instance using the provided configuration.
   The function takes the CfnComponentProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -151,6 +157,12 @@
   (when-let [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
+
+
+(defn cfn-component-props-builder
+  ""
+  [id config]
+  (build-cfn-component-props-builder (new CfnComponentProps$Builder) id config))
 
 
 (defn build-cfn-container-recipe-builder
@@ -212,6 +224,12 @@
   (.build builder))
 
 
+(defn cfn-container-recipe-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-container-recipe-builder (CfnContainerRecipe$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-container-recipe-component-configuration-property-builder
   "The build-cfn-container-recipe-component-configuration-property-builder function updates a CfnContainerRecipe$ComponentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnContainerRecipe$ComponentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -232,6 +250,12 @@
   (.build builder))
 
 
+(defn cfn-container-recipe-component-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-container-recipe-component-configuration-property-builder (new CfnContainerRecipe$ComponentConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-container-recipe-component-parameter-property-builder
   "The build-cfn-container-recipe-component-parameter-property-builder function updates a CfnContainerRecipe$ComponentParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnContainerRecipe$ComponentParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -250,6 +274,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-container-recipe-component-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-container-recipe-component-parameter-property-builder (new CfnContainerRecipe$ComponentParameterProperty$Builder) id config))
 
 
 (defn build-cfn-container-recipe-ebs-instance-block-device-specification-property-builder
@@ -290,6 +320,12 @@
   (.build builder))
 
 
+(defn cfn-container-recipe-ebs-instance-block-device-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-container-recipe-ebs-instance-block-device-specification-property-builder (new CfnContainerRecipe$EbsInstanceBlockDeviceSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-container-recipe-instance-block-device-mapping-property-builder
   "The build-cfn-container-recipe-instance-block-device-mapping-property-builder function updates a CfnContainerRecipe$InstanceBlockDeviceMappingProperty$Builder instance using the provided configuration.
   The function takes the CfnContainerRecipe$InstanceBlockDeviceMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -316,6 +352,12 @@
   (.build builder))
 
 
+(defn cfn-container-recipe-instance-block-device-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-container-recipe-instance-block-device-mapping-property-builder (new CfnContainerRecipe$InstanceBlockDeviceMappingProperty$Builder) id config))
+
+
 (defn build-cfn-container-recipe-instance-configuration-property-builder
   "The build-cfn-container-recipe-instance-configuration-property-builder function updates a CfnContainerRecipe$InstanceConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnContainerRecipe$InstanceConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -334,6 +376,12 @@
   (when-let [data (lookup-entry config id :image)]
     (. builder image data))
   (.build builder))
+
+
+(defn cfn-container-recipe-instance-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-container-recipe-instance-configuration-property-builder (new CfnContainerRecipe$InstanceConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-container-recipe-props-builder
@@ -395,6 +443,12 @@
   (.build builder))
 
 
+(defn cfn-container-recipe-props-builder
+  ""
+  [id config]
+  (build-cfn-container-recipe-props-builder (new CfnContainerRecipeProps$Builder) id config))
+
+
 (defn build-cfn-container-recipe-target-container-repository-property-builder
   "The build-cfn-container-recipe-target-container-repository-property-builder function updates a CfnContainerRecipe$TargetContainerRepositoryProperty$Builder instance using the provided configuration.
   The function takes the CfnContainerRecipe$TargetContainerRepositoryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -413,6 +467,12 @@
   (when-let [data (lookup-entry config id :service)]
     (. builder service data))
   (.build builder))
+
+
+(defn cfn-container-recipe-target-container-repository-property-builder
+  ""
+  [id config]
+  (build-cfn-container-recipe-target-container-repository-property-builder (new CfnContainerRecipe$TargetContainerRepositoryProperty$Builder) id config))
 
 
 (defn build-cfn-distribution-configuration-ami-distribution-configuration-property-builder
@@ -447,6 +507,12 @@
   (.build builder))
 
 
+(defn cfn-distribution-configuration-ami-distribution-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-configuration-ami-distribution-configuration-property-builder (new CfnDistributionConfiguration$AmiDistributionConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-distribution-configuration-builder
   "The build-cfn-distribution-configuration-builder function updates a CfnDistributionConfiguration$Builder instance using the provided configuration.
   The function takes the CfnDistributionConfiguration$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -473,6 +539,12 @@
   (.build builder))
 
 
+(defn cfn-distribution-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-distribution-configuration-builder (CfnDistributionConfiguration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-distribution-configuration-container-distribution-configuration-property-builder
   "The build-cfn-distribution-configuration-container-distribution-configuration-property-builder function updates a CfnDistributionConfiguration$ContainerDistributionConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDistributionConfiguration$ContainerDistributionConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -494,6 +566,12 @@
   (when-let [data (lookup-entry config id :target-repository)]
     (. builder targetRepository data))
   (.build builder))
+
+
+(defn cfn-distribution-configuration-container-distribution-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-configuration-container-distribution-configuration-property-builder (new CfnDistributionConfiguration$ContainerDistributionConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-distribution-configuration-distribution-property-builder
@@ -528,6 +606,12 @@
   (.build builder))
 
 
+(defn cfn-distribution-configuration-distribution-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-configuration-distribution-property-builder (new CfnDistributionConfiguration$DistributionProperty$Builder) id config))
+
+
 (defn build-cfn-distribution-configuration-fast-launch-configuration-property-builder
   "The build-cfn-distribution-configuration-fast-launch-configuration-property-builder function updates a CfnDistributionConfiguration$FastLaunchConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDistributionConfiguration$FastLaunchConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -557,6 +641,12 @@
   (.build builder))
 
 
+(defn cfn-distribution-configuration-fast-launch-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-configuration-fast-launch-configuration-property-builder (new CfnDistributionConfiguration$FastLaunchConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-distribution-configuration-fast-launch-launch-template-specification-property-builder
   "The build-cfn-distribution-configuration-fast-launch-launch-template-specification-property-builder function updates a CfnDistributionConfiguration$FastLaunchLaunchTemplateSpecificationProperty$Builder instance using the provided configuration.
   The function takes the CfnDistributionConfiguration$FastLaunchLaunchTemplateSpecificationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -580,6 +670,12 @@
   (.build builder))
 
 
+(defn cfn-distribution-configuration-fast-launch-launch-template-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-configuration-fast-launch-launch-template-specification-property-builder (new CfnDistributionConfiguration$FastLaunchLaunchTemplateSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-distribution-configuration-fast-launch-snapshot-configuration-property-builder
   "The build-cfn-distribution-configuration-fast-launch-snapshot-configuration-property-builder function updates a CfnDistributionConfiguration$FastLaunchSnapshotConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDistributionConfiguration$FastLaunchSnapshotConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -595,6 +691,12 @@
   (when-let [data (lookup-entry config id :target-resource-count)]
     (. builder targetResourceCount data))
   (.build builder))
+
+
+(defn cfn-distribution-configuration-fast-launch-snapshot-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-configuration-fast-launch-snapshot-configuration-property-builder (new CfnDistributionConfiguration$FastLaunchSnapshotConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-distribution-configuration-launch-permission-configuration-property-builder
@@ -623,6 +725,12 @@
   (.build builder))
 
 
+(defn cfn-distribution-configuration-launch-permission-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-configuration-launch-permission-configuration-property-builder (new CfnDistributionConfiguration$LaunchPermissionConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-distribution-configuration-launch-template-configuration-property-builder
   "The build-cfn-distribution-configuration-launch-template-configuration-property-builder function updates a CfnDistributionConfiguration$LaunchTemplateConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnDistributionConfiguration$LaunchTemplateConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -644,6 +752,12 @@
   (when-let [data (lookup-entry config id :set-default-version)]
     (. builder setDefaultVersion data))
   (.build builder))
+
+
+(defn cfn-distribution-configuration-launch-template-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-configuration-launch-template-configuration-property-builder (new CfnDistributionConfiguration$LaunchTemplateConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-distribution-configuration-props-builder
@@ -672,6 +786,12 @@
   (.build builder))
 
 
+(defn cfn-distribution-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-distribution-configuration-props-builder (new CfnDistributionConfigurationProps$Builder) id config))
+
+
 (defn build-cfn-distribution-configuration-target-container-repository-property-builder
   "The build-cfn-distribution-configuration-target-container-repository-property-builder function updates a CfnDistributionConfiguration$TargetContainerRepositoryProperty$Builder instance using the provided configuration.
   The function takes the CfnDistributionConfiguration$TargetContainerRepositoryProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -690,6 +810,12 @@
   (when-let [data (lookup-entry config id :service)]
     (. builder service data))
   (.build builder))
+
+
+(defn cfn-distribution-configuration-target-container-repository-property-builder
+  ""
+  [id config]
+  (build-cfn-distribution-configuration-target-container-repository-property-builder (new CfnDistributionConfiguration$TargetContainerRepositoryProperty$Builder) id config))
 
 
 (defn build-cfn-image-builder
@@ -736,6 +862,12 @@
   (.build builder))
 
 
+(defn cfn-image-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-image-builder (CfnImage$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-image-ecr-configuration-property-builder
   "The build-cfn-image-ecr-configuration-property-builder function updates a CfnImage$EcrConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnImage$EcrConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -754,6 +886,12 @@
   (when-let [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
   (.build builder))
+
+
+(defn cfn-image-ecr-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-image-ecr-configuration-property-builder (new CfnImage$EcrConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-image-image-scanning-configuration-property-builder
@@ -776,6 +914,12 @@
   (.build builder))
 
 
+(defn cfn-image-image-scanning-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-image-image-scanning-configuration-property-builder (new CfnImage$ImageScanningConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-image-image-tests-configuration-property-builder
   "The build-cfn-image-image-tests-configuration-property-builder function updates a CfnImage$ImageTestsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnImage$ImageTestsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -794,6 +938,12 @@
   (when-let [data (lookup-entry config id :timeout-minutes)]
     (. builder timeoutMinutes data))
   (.build builder))
+
+
+(defn cfn-image-image-tests-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-image-image-tests-configuration-property-builder (new CfnImage$ImageTestsConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-image-pipeline-builder
@@ -852,6 +1002,12 @@
   (.build builder))
 
 
+(defn cfn-image-pipeline-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-image-pipeline-builder (CfnImagePipeline$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-image-pipeline-ecr-configuration-property-builder
   "The build-cfn-image-pipeline-ecr-configuration-property-builder function updates a CfnImagePipeline$EcrConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnImagePipeline$EcrConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -870,6 +1026,12 @@
   (when-let [data (lookup-entry config id :repository-name)]
     (. builder repositoryName data))
   (.build builder))
+
+
+(defn cfn-image-pipeline-ecr-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-image-pipeline-ecr-configuration-property-builder (new CfnImagePipeline$EcrConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-image-pipeline-image-scanning-configuration-property-builder
@@ -892,6 +1054,12 @@
   (.build builder))
 
 
+(defn cfn-image-pipeline-image-scanning-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-image-pipeline-image-scanning-configuration-property-builder (new CfnImagePipeline$ImageScanningConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-image-pipeline-image-tests-configuration-property-builder
   "The build-cfn-image-pipeline-image-tests-configuration-property-builder function updates a CfnImagePipeline$ImageTestsConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnImagePipeline$ImageTestsConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -910,6 +1078,12 @@
   (when-let [data (lookup-entry config id :timeout-minutes)]
     (. builder timeoutMinutes data))
   (.build builder))
+
+
+(defn cfn-image-pipeline-image-tests-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-image-pipeline-image-tests-configuration-property-builder (new CfnImagePipeline$ImageTestsConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-image-pipeline-props-builder
@@ -968,6 +1142,12 @@
   (.build builder))
 
 
+(defn cfn-image-pipeline-props-builder
+  ""
+  [id config]
+  (build-cfn-image-pipeline-props-builder (new CfnImagePipelineProps$Builder) id config))
+
+
 (defn build-cfn-image-pipeline-schedule-property-builder
   "The build-cfn-image-pipeline-schedule-property-builder function updates a CfnImagePipeline$ScheduleProperty$Builder instance using the provided configuration.
   The function takes the CfnImagePipeline$ScheduleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -986,6 +1166,12 @@
   (when-let [data (lookup-entry config id :schedule-expression)]
     (. builder scheduleExpression data))
   (.build builder))
+
+
+(defn cfn-image-pipeline-schedule-property-builder
+  ""
+  [id config]
+  (build-cfn-image-pipeline-schedule-property-builder (new CfnImagePipeline$ScheduleProperty$Builder) id config))
 
 
 (defn build-cfn-image-pipeline-workflow-configuration-property-builder
@@ -1014,6 +1200,12 @@
   (.build builder))
 
 
+(defn cfn-image-pipeline-workflow-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-image-pipeline-workflow-configuration-property-builder (new CfnImagePipeline$WorkflowConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-image-pipeline-workflow-parameter-property-builder
   "The build-cfn-image-pipeline-workflow-parameter-property-builder function updates a CfnImagePipeline$WorkflowParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnImagePipeline$WorkflowParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1032,6 +1224,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-image-pipeline-workflow-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-image-pipeline-workflow-parameter-property-builder (new CfnImagePipeline$WorkflowParameterProperty$Builder) id config))
 
 
 (defn build-cfn-image-props-builder
@@ -1078,6 +1276,12 @@
   (.build builder))
 
 
+(defn cfn-image-props-builder
+  ""
+  [id config]
+  (build-cfn-image-props-builder (new CfnImageProps$Builder) id config))
+
+
 (defn build-cfn-image-recipe-additional-instance-configuration-property-builder
   "The build-cfn-image-recipe-additional-instance-configuration-property-builder function updates a CfnImageRecipe$AdditionalInstanceConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnImageRecipe$AdditionalInstanceConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1096,6 +1300,12 @@
   (when-let [data (lookup-entry config id :user-data-override)]
     (. builder userDataOverride data))
   (.build builder))
+
+
+(defn cfn-image-recipe-additional-instance-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-image-recipe-additional-instance-configuration-property-builder (new CfnImageRecipe$AdditionalInstanceConfigurationProperty$Builder) id config))
 
 
 (defn build-cfn-image-recipe-builder
@@ -1139,6 +1349,12 @@
   (.build builder))
 
 
+(defn cfn-image-recipe-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-image-recipe-builder (CfnImageRecipe$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-image-recipe-component-configuration-property-builder
   "The build-cfn-image-recipe-component-configuration-property-builder function updates a CfnImageRecipe$ComponentConfigurationProperty$Builder instance using the provided configuration.
   The function takes the CfnImageRecipe$ComponentConfigurationProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1159,6 +1375,12 @@
   (.build builder))
 
 
+(defn cfn-image-recipe-component-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-image-recipe-component-configuration-property-builder (new CfnImageRecipe$ComponentConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-image-recipe-component-parameter-property-builder
   "The build-cfn-image-recipe-component-parameter-property-builder function updates a CfnImageRecipe$ComponentParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnImageRecipe$ComponentParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1177,6 +1399,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-image-recipe-component-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-image-recipe-component-parameter-property-builder (new CfnImageRecipe$ComponentParameterProperty$Builder) id config))
 
 
 (defn build-cfn-image-recipe-ebs-instance-block-device-specification-property-builder
@@ -1217,6 +1445,12 @@
   (.build builder))
 
 
+(defn cfn-image-recipe-ebs-instance-block-device-specification-property-builder
+  ""
+  [id config]
+  (build-cfn-image-recipe-ebs-instance-block-device-specification-property-builder (new CfnImageRecipe$EbsInstanceBlockDeviceSpecificationProperty$Builder) id config))
+
+
 (defn build-cfn-image-recipe-instance-block-device-mapping-property-builder
   "The build-cfn-image-recipe-instance-block-device-mapping-property-builder function updates a CfnImageRecipe$InstanceBlockDeviceMappingProperty$Builder instance using the provided configuration.
   The function takes the CfnImageRecipe$InstanceBlockDeviceMappingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1241,6 +1475,12 @@
   (when-let [data (lookup-entry config id :virtual-name)]
     (. builder virtualName data))
   (.build builder))
+
+
+(defn cfn-image-recipe-instance-block-device-mapping-property-builder
+  ""
+  [id config]
+  (build-cfn-image-recipe-instance-block-device-mapping-property-builder (new CfnImageRecipe$InstanceBlockDeviceMappingProperty$Builder) id config))
 
 
 (defn build-cfn-image-recipe-props-builder
@@ -1284,6 +1524,12 @@
   (.build builder))
 
 
+(defn cfn-image-recipe-props-builder
+  ""
+  [id config]
+  (build-cfn-image-recipe-props-builder (new CfnImageRecipeProps$Builder) id config))
+
+
 (defn build-cfn-image-recipe-systems-manager-agent-property-builder
   "The build-cfn-image-recipe-systems-manager-agent-property-builder function updates a CfnImageRecipe$SystemsManagerAgentProperty$Builder instance using the provided configuration.
   The function takes the CfnImageRecipe$SystemsManagerAgentProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1299,6 +1545,12 @@
   (when-let [data (lookup-entry config id :uninstall-after-build)]
     (. builder uninstallAfterBuild data))
   (.build builder))
+
+
+(defn cfn-image-recipe-systems-manager-agent-property-builder
+  ""
+  [id config]
+  (build-cfn-image-recipe-systems-manager-agent-property-builder (new CfnImageRecipe$SystemsManagerAgentProperty$Builder) id config))
 
 
 (defn build-cfn-image-workflow-configuration-property-builder
@@ -1327,6 +1579,12 @@
   (.build builder))
 
 
+(defn cfn-image-workflow-configuration-property-builder
+  ""
+  [id config]
+  (build-cfn-image-workflow-configuration-property-builder (new CfnImage$WorkflowConfigurationProperty$Builder) id config))
+
+
 (defn build-cfn-image-workflow-parameter-property-builder
   "The build-cfn-image-workflow-parameter-property-builder function updates a CfnImage$WorkflowParameterProperty$Builder instance using the provided configuration.
   The function takes the CfnImage$WorkflowParameterProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1345,6 +1603,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-image-workflow-parameter-property-builder
+  ""
+  [id config]
+  (build-cfn-image-workflow-parameter-property-builder (new CfnImage$WorkflowParameterProperty$Builder) id config))
 
 
 (defn build-cfn-infrastructure-configuration-builder
@@ -1400,6 +1664,12 @@
   (.build builder))
 
 
+(defn cfn-infrastructure-configuration-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-infrastructure-configuration-builder (CfnInfrastructureConfiguration$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-infrastructure-configuration-instance-metadata-options-property-builder
   "The build-cfn-infrastructure-configuration-instance-metadata-options-property-builder function updates a CfnInfrastructureConfiguration$InstanceMetadataOptionsProperty$Builder instance using the provided configuration.
   The function takes the CfnInfrastructureConfiguration$InstanceMetadataOptionsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1420,6 +1690,12 @@
   (.build builder))
 
 
+(defn cfn-infrastructure-configuration-instance-metadata-options-property-builder
+  ""
+  [id config]
+  (build-cfn-infrastructure-configuration-instance-metadata-options-property-builder (new CfnInfrastructureConfiguration$InstanceMetadataOptionsProperty$Builder) id config))
+
+
 (defn build-cfn-infrastructure-configuration-logging-property-builder
   "The build-cfn-infrastructure-configuration-logging-property-builder function updates a CfnInfrastructureConfiguration$LoggingProperty$Builder instance using the provided configuration.
   The function takes the CfnInfrastructureConfiguration$LoggingProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1435,6 +1711,12 @@
   (when-let [data (lookup-entry config id :s3-logs)]
     (. builder s3Logs data))
   (.build builder))
+
+
+(defn cfn-infrastructure-configuration-logging-property-builder
+  ""
+  [id config]
+  (build-cfn-infrastructure-configuration-logging-property-builder (new CfnInfrastructureConfiguration$LoggingProperty$Builder) id config))
 
 
 (defn build-cfn-infrastructure-configuration-props-builder
@@ -1490,6 +1772,12 @@
   (.build builder))
 
 
+(defn cfn-infrastructure-configuration-props-builder
+  ""
+  [id config]
+  (build-cfn-infrastructure-configuration-props-builder (new CfnInfrastructureConfigurationProps$Builder) id config))
+
+
 (defn build-cfn-infrastructure-configuration-s3-logs-property-builder
   "The build-cfn-infrastructure-configuration-s3-logs-property-builder function updates a CfnInfrastructureConfiguration$S3LogsProperty$Builder instance using the provided configuration.
   The function takes the CfnInfrastructureConfiguration$S3LogsProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1510,6 +1798,12 @@
   (.build builder))
 
 
+(defn cfn-infrastructure-configuration-s3-logs-property-builder
+  ""
+  [id config]
+  (build-cfn-infrastructure-configuration-s3-logs-property-builder (new CfnInfrastructureConfiguration$S3LogsProperty$Builder) id config))
+
+
 (defn build-cfn-lifecycle-policy-action-property-builder
   "The build-cfn-lifecycle-policy-action-property-builder function updates a CfnLifecyclePolicy$ActionProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$ActionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1528,6 +1822,12 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-lifecycle-policy-action-property-builder
+  ""
+  [id config]
+  (build-cfn-lifecycle-policy-action-property-builder (new CfnLifecyclePolicy$ActionProperty$Builder) id config))
 
 
 (defn build-cfn-lifecycle-policy-ami-exclusion-rules-property-builder
@@ -1557,6 +1857,12 @@
   (when-let [data (lookup-entry config id :tag-map)]
     (. builder tagMap data))
   (.build builder))
+
+
+(defn cfn-lifecycle-policy-ami-exclusion-rules-property-builder
+  ""
+  [id config]
+  (build-cfn-lifecycle-policy-ami-exclusion-rules-property-builder (new CfnLifecyclePolicy$AmiExclusionRulesProperty$Builder) id config))
 
 
 (defn build-cfn-lifecycle-policy-builder
@@ -1597,6 +1903,12 @@
   (.build builder))
 
 
+(defn cfn-lifecycle-policy-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-lifecycle-policy-builder (CfnLifecyclePolicy$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-lifecycle-policy-exclusion-rules-property-builder
   "The build-cfn-lifecycle-policy-exclusion-rules-property-builder function updates a CfnLifecyclePolicy$ExclusionRulesProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$ExclusionRulesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1615,6 +1927,12 @@
   (when-let [data (lookup-entry config id :tag-map)]
     (. builder tagMap data))
   (.build builder))
+
+
+(defn cfn-lifecycle-policy-exclusion-rules-property-builder
+  ""
+  [id config]
+  (build-cfn-lifecycle-policy-exclusion-rules-property-builder (new CfnLifecyclePolicy$ExclusionRulesProperty$Builder) id config))
 
 
 (defn build-cfn-lifecycle-policy-filter-property-builder
@@ -1643,6 +1961,12 @@
   (.build builder))
 
 
+(defn cfn-lifecycle-policy-filter-property-builder
+  ""
+  [id config]
+  (build-cfn-lifecycle-policy-filter-property-builder (new CfnLifecyclePolicy$FilterProperty$Builder) id config))
+
+
 (defn build-cfn-lifecycle-policy-include-resources-property-builder
   "The build-cfn-lifecycle-policy-include-resources-property-builder function updates a CfnLifecyclePolicy$IncludeResourcesProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$IncludeResourcesProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1666,6 +1990,12 @@
   (.build builder))
 
 
+(defn cfn-lifecycle-policy-include-resources-property-builder
+  ""
+  [id config]
+  (build-cfn-lifecycle-policy-include-resources-property-builder (new CfnLifecyclePolicy$IncludeResourcesProperty$Builder) id config))
+
+
 (defn build-cfn-lifecycle-policy-last-launched-property-builder
   "The build-cfn-lifecycle-policy-last-launched-property-builder function updates a CfnLifecyclePolicy$LastLaunchedProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$LastLaunchedProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1684,6 +2014,12 @@
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn cfn-lifecycle-policy-last-launched-property-builder
+  ""
+  [id config]
+  (build-cfn-lifecycle-policy-last-launched-property-builder (new CfnLifecyclePolicy$LastLaunchedProperty$Builder) id config))
 
 
 (defn build-cfn-lifecycle-policy-policy-detail-property-builder
@@ -1707,6 +2043,12 @@
   (when-let [data (lookup-entry config id :filter)]
     (. builder filter data))
   (.build builder))
+
+
+(defn cfn-lifecycle-policy-policy-detail-property-builder
+  ""
+  [id config]
+  (build-cfn-lifecycle-policy-policy-detail-property-builder (new CfnLifecyclePolicy$PolicyDetailProperty$Builder) id config))
 
 
 (defn build-cfn-lifecycle-policy-props-builder
@@ -1747,6 +2089,12 @@
   (.build builder))
 
 
+(defn cfn-lifecycle-policy-props-builder
+  ""
+  [id config]
+  (build-cfn-lifecycle-policy-props-builder (new CfnLifecyclePolicyProps$Builder) id config))
+
+
 (defn build-cfn-lifecycle-policy-recipe-selection-property-builder
   "The build-cfn-lifecycle-policy-recipe-selection-property-builder function updates a CfnLifecyclePolicy$RecipeSelectionProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$RecipeSelectionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1767,6 +2115,12 @@
   (.build builder))
 
 
+(defn cfn-lifecycle-policy-recipe-selection-property-builder
+  ""
+  [id config]
+  (build-cfn-lifecycle-policy-recipe-selection-property-builder (new CfnLifecyclePolicy$RecipeSelectionProperty$Builder) id config))
+
+
 (defn build-cfn-lifecycle-policy-resource-selection-property-builder
   "The build-cfn-lifecycle-policy-resource-selection-property-builder function updates a CfnLifecyclePolicy$ResourceSelectionProperty$Builder instance using the provided configuration.
   The function takes the CfnLifecyclePolicy$ResourceSelectionProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1785,6 +2139,12 @@
   (when-let [data (lookup-entry config id :tag-map)]
     (. builder tagMap data))
   (.build builder))
+
+
+(defn cfn-lifecycle-policy-resource-selection-property-builder
+  ""
+  [id config]
+  (build-cfn-lifecycle-policy-resource-selection-property-builder (new CfnLifecyclePolicy$ResourceSelectionProperty$Builder) id config))
 
 
 (defn build-cfn-workflow-builder
@@ -1828,6 +2188,12 @@
   (.build builder))
 
 
+(defn cfn-workflow-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-workflow-builder (CfnWorkflow$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-workflow-props-builder
   "The build-cfn-workflow-props-builder function updates a CfnWorkflowProps$Builder instance using the provided configuration.
   The function takes the CfnWorkflowProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1867,3 +2233,9 @@
   (when-let [data (lookup-entry config id :version)]
     (. builder version data))
   (.build builder))
+
+
+(defn cfn-workflow-props-builder
+  ""
+  [id config]
+  (build-cfn-workflow-props-builder (new CfnWorkflowProps$Builder) id config))

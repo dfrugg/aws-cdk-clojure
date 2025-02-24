@@ -37,3 +37,9 @@
   (when-let [data (lookup-entry config id :response-only)]
     (. builder responseOnly data))
   (.build builder))
+
+
+(defn lambda-destination-options-builder
+  ""
+  [id config]
+  (build-lambda-destination-options-builder (new LambdaDestinationOptions$Builder) id config))

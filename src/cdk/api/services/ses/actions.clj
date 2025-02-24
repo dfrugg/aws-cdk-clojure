@@ -79,6 +79,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn add-header-builder
+  ""
+  [id config]
+  (build-add-header-builder (AddHeader$Builder/create) id config))
+
+
 (defn build-add-header-props-builder
   "The build-add-header-props-builder function updates a AddHeaderProps$Builder instance using the provided configuration.
   The function takes the AddHeaderProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -97,6 +103,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :value)]
     (. builder value data))
   (.build builder))
+
+
+(defn add-header-props-builder
+  ""
+  [id config]
+  (build-add-header-props-builder (new AddHeaderProps$Builder) id config))
 
 
 (defn build-bounce-builder
@@ -122,6 +134,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn bounce-builder
+  ""
+  [id config]
+  (build-bounce-builder (Bounce$Builder/create) id config))
+
+
 (defn build-bounce-props-builder
   "The build-bounce-props-builder function updates a BounceProps$Builder instance using the provided configuration.
   The function takes the BounceProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -143,6 +161,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
+
+
+(defn bounce-props-builder
+  ""
+  [id config]
+  (build-bounce-props-builder (new BounceProps$Builder) id config))
 
 
 (defn build-bounce-template-builder
@@ -168,6 +192,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn bounce-template-builder
+  ""
+  [id config]
+  (build-bounce-template-builder (BounceTemplate$Builder/create) id config))
+
+
 (defn build-bounce-template-props-builder
   "The build-bounce-template-props-builder function updates a BounceTemplateProps$Builder instance using the provided configuration.
   The function takes the BounceTemplateProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -189,6 +219,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :status-code)]
     (. builder statusCode data))
   (.build builder))
+
+
+(defn bounce-template-props-builder
+  ""
+  [id config]
+  (build-bounce-template-props-builder (new BounceTemplateProps$Builder) id config))
 
 
 (defn build-lambda-builder
@@ -214,6 +250,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn lambda-builder
+  ""
+  [id config]
+  (build-lambda-builder (Lambda$Builder/create) id config))
+
+
 (defn build-lambda-props-builder
   "The build-lambda-props-builder function updates a LambdaProps$Builder instance using the provided configuration.
   The function takes the LambdaProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -235,6 +277,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
+
+
+(defn lambda-props-builder
+  ""
+  [id config]
+  (build-lambda-props-builder (new LambdaProps$Builder) id config))
 
 
 (defn build-s3-builder
@@ -263,6 +311,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn s3-builder
+  ""
+  [id config]
+  (build-s3-builder (S3$Builder/create) id config))
+
+
 (defn build-s3-props-builder
   "The build-s3-props-builder function updates a S3Props$Builder instance using the provided configuration.
   The function takes the S3Props$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -289,6 +343,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn s3-props-builder
+  ""
+  [id config]
+  (build-s3-props-builder (new S3Props$Builder) id config))
+
+
 (defn build-sns-builder
   "The build-sns-builder function updates a Sns$Builder instance using the provided configuration.
   The function takes the Sns$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -307,6 +367,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
+
+
+(defn sns-builder
+  ""
+  [id config]
+  (build-sns-builder (Sns$Builder/create) id config))
 
 
 (defn build-sns-props-builder
@@ -329,6 +395,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn sns-props-builder
+  ""
+  [id config]
+  (build-sns-props-builder (new SnsProps$Builder) id config))
+
+
 (defn build-stop-builder
   "The build-stop-builder function updates a Stop$Builder instance using the provided configuration.
   The function takes the Stop$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -346,6 +418,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn stop-builder
+  ""
+  [id config]
+  (build-stop-builder (Stop$Builder/create) id config))
+
+
 (defn build-stop-props-builder
   "The build-stop-props-builder function updates a StopProps$Builder instance using the provided configuration.
   The function takes the StopProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -361,6 +439,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
+
+
+(defn stop-props-builder
+  ""
+  [id config]
+  (build-stop-props-builder (new StopProps$Builder) id config))
 
 
 (defn build-work-mail-builder
@@ -383,6 +467,12 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn work-mail-builder
+  ""
+  [id config]
+  (build-work-mail-builder (WorkMail$Builder/create) id config))
+
+
 (defn build-work-mail-props-builder
   "The build-work-mail-props-builder function updates a WorkMailProps$Builder instance using the provided configuration.
   The function takes the WorkMailProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -401,3 +491,9 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :topic)]
     (. builder topic data))
   (.build builder))
+
+
+(defn work-mail-props-builder
+  ""
+  [id config]
+  (build-work-mail-props-builder (new WorkMailProps$Builder) id config))

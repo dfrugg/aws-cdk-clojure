@@ -35,6 +35,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-cluster-builder (CfnCluster$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-cluster-cluster-endpoint-property-builder
   "The build-cfn-cluster-cluster-endpoint-property-builder function updates a CfnCluster$ClusterEndpointProperty$Builder instance using the provided configuration.
   The function takes the CfnCluster$ClusterEndpointProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -55,6 +61,12 @@
   (.build builder))
 
 
+(defn cfn-cluster-cluster-endpoint-property-builder
+  ""
+  [id config]
+  (build-cfn-cluster-cluster-endpoint-property-builder (new CfnCluster$ClusterEndpointProperty$Builder) id config))
+
+
 (defn build-cfn-cluster-props-builder
   "The build-cfn-cluster-props-builder function updates a CfnClusterProps$Builder instance using the provided configuration.
   The function takes the CfnClusterProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -73,6 +85,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-cluster-props-builder
+  ""
+  [id config]
+  (build-cfn-cluster-props-builder (new CfnClusterProps$Builder) id config))
 
 
 (defn build-cfn-control-panel-builder
@@ -98,6 +116,12 @@
   (.build builder))
 
 
+(defn cfn-control-panel-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-control-panel-builder (CfnControlPanel$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-control-panel-props-builder
   "The build-cfn-control-panel-props-builder function updates a CfnControlPanelProps$Builder instance using the provided configuration.
   The function takes the CfnControlPanelProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -119,6 +143,12 @@
   (when-let [data (lookup-entry config id :tags)]
     (. builder tags data))
   (.build builder))
+
+
+(defn cfn-control-panel-props-builder
+  ""
+  [id config]
+  (build-cfn-control-panel-props-builder (new CfnControlPanelProps$Builder) id config))
 
 
 (defn build-cfn-routing-control-builder
@@ -144,6 +174,12 @@
   (.build builder))
 
 
+(defn cfn-routing-control-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-routing-control-builder (CfnRoutingControl$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-routing-control-props-builder
   "The build-cfn-routing-control-props-builder function updates a CfnRoutingControlProps$Builder instance using the provided configuration.
   The function takes the CfnRoutingControlProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -167,6 +203,12 @@
   (.build builder))
 
 
+(defn cfn-routing-control-props-builder
+  ""
+  [id config]
+  (build-cfn-routing-control-props-builder (new CfnRoutingControlProps$Builder) id config))
+
+
 (defn build-cfn-safety-rule-assertion-rule-property-builder
   "The build-cfn-safety-rule-assertion-rule-property-builder function updates a CfnSafetyRule$AssertionRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnSafetyRule$AssertionRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -185,6 +227,12 @@
   (when-let [data (lookup-entry config id :wait-period-ms)]
     (. builder waitPeriodMs data))
   (.build builder))
+
+
+(defn cfn-safety-rule-assertion-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-safety-rule-assertion-rule-property-builder (new CfnSafetyRule$AssertionRuleProperty$Builder) id config))
 
 
 (defn build-cfn-safety-rule-builder
@@ -219,6 +267,12 @@
   (.build builder))
 
 
+(defn cfn-safety-rule-builder
+  ""
+  [^software.constructs.Construct scope id config]
+  (build-cfn-safety-rule-builder (CfnSafetyRule$Builder/create scope (name id)) id config))
+
+
 (defn build-cfn-safety-rule-gating-rule-property-builder
   "The build-cfn-safety-rule-gating-rule-property-builder function updates a CfnSafetyRule$GatingRuleProperty$Builder instance using the provided configuration.
   The function takes the CfnSafetyRule$GatingRuleProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -240,6 +294,12 @@
   (when-let [data (lookup-entry config id :wait-period-ms)]
     (. builder waitPeriodMs data))
   (.build builder))
+
+
+(defn cfn-safety-rule-gating-rule-property-builder
+  ""
+  [id config]
+  (build-cfn-safety-rule-gating-rule-property-builder (new CfnSafetyRule$GatingRuleProperty$Builder) id config))
 
 
 (defn build-cfn-safety-rule-props-builder
@@ -274,6 +334,12 @@
   (.build builder))
 
 
+(defn cfn-safety-rule-props-builder
+  ""
+  [id config]
+  (build-cfn-safety-rule-props-builder (new CfnSafetyRuleProps$Builder) id config))
+
+
 (defn build-cfn-safety-rule-rule-config-property-builder
   "The build-cfn-safety-rule-rule-config-property-builder function updates a CfnSafetyRule$RuleConfigProperty$Builder instance using the provided configuration.
   The function takes the CfnSafetyRule$RuleConfigProperty$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -295,3 +361,9 @@
   (when-let [data (lookup-entry config id :type)]
     (. builder type data))
   (.build builder))
+
+
+(defn cfn-safety-rule-rule-config-property-builder
+  ""
+  [id config]
+  (build-cfn-safety-rule-rule-config-property-builder (new CfnSafetyRule$RuleConfigProperty$Builder) id config))
