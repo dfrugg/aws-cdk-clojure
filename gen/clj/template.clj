@@ -361,7 +361,7 @@
       ; Process Multi Inits
       (and (< 1 (count inits))
            (= :create (-> inits first :init-type))
-           (some :hint inits))
+           (every? :hint inits))
       [build (builder-source-multi-init builder-data)]
 
       ; Begin Catch All
