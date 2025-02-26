@@ -77,7 +77,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-microsoft-teams-channel-configuration-builder
-  ""
+  "Creates a  `CfnMicrosoftTeamsChannelConfiguration$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-microsoft-teams-channel-configuration-builder (CfnMicrosoftTeamsChannelConfiguration$Builder/create scope (name id)) id config))
 
@@ -127,7 +132,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-microsoft-teams-channel-configuration-props-builder
-  ""
+  "Creates a  `CfnMicrosoftTeamsChannelConfigurationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-microsoft-teams-channel-configuration-props-builder (new CfnMicrosoftTeamsChannelConfigurationProps$Builder) id config))
 
@@ -174,7 +184,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-slack-channel-configuration-builder
-  ""
+  "Creates a  `CfnSlackChannelConfiguration$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-slack-channel-configuration-builder (CfnSlackChannelConfiguration$Builder/create scope (name id)) id config))
 
@@ -221,7 +236,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-slack-channel-configuration-props-builder
-  ""
+  "Creates a  `CfnSlackChannelConfigurationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-slack-channel-configuration-props-builder (new CfnSlackChannelConfigurationProps$Builder) id config))
 
@@ -271,7 +291,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn slack-channel-configuration-builder
-  ""
+  "Creates a  `SlackChannelConfiguration$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-slack-channel-configuration-builder (SlackChannelConfiguration$Builder/create scope (name id)) id config))
 
@@ -321,6 +346,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn slack-channel-configuration-props-builder
-  ""
+  "Creates a  `SlackChannelConfigurationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-slack-channel-configuration-props-builder (new SlackChannelConfigurationProps$Builder) id config))

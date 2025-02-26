@@ -47,7 +47,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-profiling-group-agent-permissions-property-builder
-  ""
+  "Creates a  `CfnProfilingGroup$AgentPermissionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-profiling-group-agent-permissions-property-builder (new CfnProfilingGroup$AgentPermissionsProperty$Builder) id config))
 
@@ -82,7 +87,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-profiling-group-builder
-  ""
+  "Creates a  `CfnProfilingGroup$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-profiling-group-builder (CfnProfilingGroup$Builder/create scope (name id)) id config))
 
@@ -108,7 +118,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-profiling-group-channel-property-builder
-  ""
+  "Creates a  `CfnProfilingGroup$ChannelProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-profiling-group-channel-property-builder (new CfnProfilingGroup$ChannelProperty$Builder) id config))
 
@@ -143,7 +158,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-profiling-group-props-builder
-  ""
+  "Creates a  `CfnProfilingGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-profiling-group-props-builder (new CfnProfilingGroupProps$Builder) id config))
 
@@ -169,7 +189,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn profiling-group-builder
-  ""
+  "Creates a  `ProfilingGroup$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-profiling-group-builder (ProfilingGroup$Builder/create scope (name id)) id config))
 
@@ -195,6 +220,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn profiling-group-props-builder
-  ""
+  "Creates a  `ProfilingGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-profiling-group-props-builder (new ProfilingGroupProps$Builder) id config))

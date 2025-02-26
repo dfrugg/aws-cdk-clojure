@@ -28,7 +28,12 @@
 
 
 (defn alarms-builder
-  ""
+  "Creates a  `Alarms$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-alarms-builder (new Alarms$Builder) id config))
 
@@ -54,7 +59,12 @@
 
 
 (defn arbitrary-intervals-builder
-  ""
+  "Creates a  `ArbitraryIntervals$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-arbitrary-intervals-builder (new ArbitraryIntervals$Builder) id config))
 
@@ -83,7 +93,12 @@
 
 
 (defn complete-scaling-interval-builder
-  ""
+  "Creates a  `CompleteScalingInterval$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-complete-scaling-interval-builder (new CompleteScalingInterval$Builder) id config))
 
@@ -112,6 +127,11 @@
 
 
 (defn scaling-interval-builder
-  ""
+  "Creates a  `ScalingInterval$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-scaling-interval-builder (new ScalingInterval$Builder) id config))

@@ -32,7 +32,12 @@
 
 
 (defn cfn-dataset-attributes-items-property-builder
-  ""
+  "Creates a  `CfnDataset$AttributesItemsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-dataset-attributes-items-property-builder (new CfnDataset$AttributesItemsProperty$Builder) id config))
 
@@ -73,7 +78,12 @@
 
 
 (defn cfn-dataset-builder
-  ""
+  "Creates a  `CfnDataset$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-dataset-builder (CfnDataset$Builder/create scope (name id)) id config))
 
@@ -99,7 +109,12 @@
 
 
 (defn cfn-dataset-encryption-config-property-builder
-  ""
+  "Creates a  `CfnDataset$EncryptionConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-dataset-encryption-config-property-builder (new CfnDataset$EncryptionConfigProperty$Builder) id config))
 
@@ -131,7 +146,12 @@
 
 
 (defn cfn-dataset-group-builder
-  ""
+  "Creates a  `CfnDatasetGroup$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-dataset-group-builder (CfnDatasetGroup$Builder/create scope (name id)) id config))
 
@@ -163,7 +183,12 @@
 
 
 (defn cfn-dataset-group-props-builder
-  ""
+  "Creates a  `CfnDatasetGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-dataset-group-props-builder (new CfnDatasetGroupProps$Builder) id config))
 
@@ -204,7 +229,12 @@
 
 
 (defn cfn-dataset-props-builder
-  ""
+  "Creates a  `CfnDatasetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-dataset-props-builder (new CfnDatasetProps$Builder) id config))
 
@@ -227,7 +257,12 @@
 
 
 (defn cfn-dataset-schema-property-builder
-  ""
+  "Creates a  `CfnDataset$SchemaProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-dataset-schema-property-builder (new CfnDataset$SchemaProperty$Builder) id config))
 
@@ -253,6 +288,11 @@
 
 
 (defn cfn-dataset-tags-items-property-builder
-  ""
+  "Creates a  `CfnDataset$TagsItemsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-dataset-tags-items-property-builder (new CfnDataset$TagsItemsProperty$Builder) id config))

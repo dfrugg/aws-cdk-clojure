@@ -171,7 +171,8 @@
                                    TagProps$Builder
                                    TagType
                                    TimeConversionOptions$Builder
-                                   UniqueResourceNameOptions$Builder]))
+                                   UniqueResourceNameOptions$Builder]
+           [software.constructs Construct]))
 
 
 (defn arn-format
@@ -606,7 +607,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn app-builder
-  ""
+  "Creates a  `App$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-app-builder (App$Builder/create) id config))
 
@@ -653,7 +659,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn app-props-builder
-  ""
+  "Creates a  `AppProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-app-props-builder (new AppProps$Builder) id config))
 
@@ -694,7 +705,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn arn-components-builder
-  ""
+  "Creates a  `ArnComponents$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-arn-components-builder (new ArnComponents$Builder) id config))
 
@@ -723,7 +739,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn asset-manifest-docker-image-destination-builder
-  ""
+  "Creates a  `AssetManifestDockerImageDestination$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-asset-manifest-docker-image-destination-builder (new AssetManifestDockerImageDestination$Builder) id config))
 
@@ -752,7 +773,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn asset-manifest-file-destination-builder
-  ""
+  "Creates a  `AssetManifestFileDestination$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-asset-manifest-file-destination-builder (new AssetManifestFileDestination$Builder) id config))
 
@@ -781,7 +807,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn asset-options-builder
-  ""
+  "Creates a  `AssetOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-asset-options-builder (new AssetOptions$Builder) id config))
 
@@ -825,7 +856,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn asset-staging-builder
-  ""
+  "Creates a  `AssetStaging$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-asset-staging-builder (AssetStaging$Builder/create scope (name id)) id config))
 
@@ -869,7 +905,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn asset-staging-props-builder
-  ""
+  "Creates a  `AssetStagingProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-asset-staging-props-builder (new AssetStagingProps$Builder) id config))
 
@@ -895,7 +936,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn bootstrapless-synthesizer-builder
-  ""
+  "Creates a  `BootstraplessSynthesizer$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-bootstrapless-synthesizer-builder (BootstraplessSynthesizer$Builder/create) id config))
 
@@ -921,7 +967,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn bootstrapless-synthesizer-props-builder
-  ""
+  "Creates a  `BootstraplessSynthesizerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-bootstrapless-synthesizer-props-builder (new BootstraplessSynthesizerProps$Builder) id config))
 
@@ -983,7 +1034,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn bundling-options-builder
-  ""
+  "Creates a  `BundlingOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-bundling-options-builder (new BundlingOptions$Builder) id config))
 
@@ -1006,7 +1062,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-auto-scaling-replacing-update-builder
-  ""
+  "Creates a  `CfnAutoScalingReplacingUpdate$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-auto-scaling-replacing-update-builder (new CfnAutoScalingReplacingUpdate$Builder) id config))
 
@@ -1044,7 +1105,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-auto-scaling-rolling-update-builder
-  ""
+  "Creates a  `CfnAutoScalingRollingUpdate$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-auto-scaling-rolling-update-builder (new CfnAutoScalingRollingUpdate$Builder) id config))
 
@@ -1067,7 +1133,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-auto-scaling-scheduled-action-builder
-  ""
+  "Creates a  `CfnAutoScalingScheduledAction$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-auto-scaling-scheduled-action-builder (new CfnAutoScalingScheduledAction$Builder) id config))
 
@@ -1090,7 +1161,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-code-deploy-blue-green-additional-options-builder
-  ""
+  "Creates a  `CfnCodeDeployBlueGreenAdditionalOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-code-deploy-blue-green-additional-options-builder (new CfnCodeDeployBlueGreenAdditionalOptions$Builder) id config))
 
@@ -1116,7 +1192,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-code-deploy-blue-green-application-builder
-  ""
+  "Creates a  `CfnCodeDeployBlueGreenApplication$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-code-deploy-blue-green-application-builder (new CfnCodeDeployBlueGreenApplication$Builder) id config))
 
@@ -1142,7 +1223,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-code-deploy-blue-green-application-target-builder
-  ""
+  "Creates a  `CfnCodeDeployBlueGreenApplicationTarget$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-code-deploy-blue-green-application-target-builder (new CfnCodeDeployBlueGreenApplicationTarget$Builder) id config))
 
@@ -1171,7 +1257,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-code-deploy-blue-green-ecs-attributes-builder
-  ""
+  "Creates a  `CfnCodeDeployBlueGreenEcsAttributes$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-code-deploy-blue-green-ecs-attributes-builder (new CfnCodeDeployBlueGreenEcsAttributes$Builder) id config))
 
@@ -1206,7 +1297,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-code-deploy-blue-green-hook-builder
-  ""
+  "Creates a  `CfnCodeDeployBlueGreenHook$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-code-deploy-blue-green-hook-builder (CfnCodeDeployBlueGreenHook$Builder/create scope (name id)) id config))
 
@@ -1241,7 +1337,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-code-deploy-blue-green-hook-props-builder
-  ""
+  "Creates a  `CfnCodeDeployBlueGreenHookProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-code-deploy-blue-green-hook-props-builder (new CfnCodeDeployBlueGreenHookProps$Builder) id config))
 
@@ -1276,7 +1377,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-code-deploy-blue-green-lifecycle-event-hooks-builder
-  ""
+  "Creates a  `CfnCodeDeployBlueGreenLifecycleEventHooks$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-code-deploy-blue-green-lifecycle-event-hooks-builder (new CfnCodeDeployBlueGreenLifecycleEventHooks$Builder) id config))
 
@@ -1308,7 +1414,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-code-deploy-lambda-alias-update-builder
-  ""
+  "Creates a  `CfnCodeDeployLambdaAliasUpdate$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-code-deploy-lambda-alias-update-builder (new CfnCodeDeployLambdaAliasUpdate$Builder) id config))
 
@@ -1331,7 +1442,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-condition-builder
-  ""
+  "Creates a  `CfnCondition$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-condition-builder (CfnCondition$Builder/create scope (name id)) id config))
 
@@ -1354,7 +1470,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-condition-props-builder
-  ""
+  "Creates a  `CfnConditionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-condition-props-builder (new CfnConditionProps$Builder) id config))
 
@@ -1383,7 +1504,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-creation-policy-builder
-  ""
+  "Creates a  `CfnCreationPolicy$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-creation-policy-builder (new CfnCreationPolicy$Builder) id config))
 
@@ -1406,7 +1532,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-custom-resource-builder
-  ""
+  "Creates a  `CfnCustomResource$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-custom-resource-builder (CfnCustomResource$Builder/create scope (name id)) id config))
 
@@ -1429,7 +1560,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-custom-resource-props-builder
-  ""
+  "Creates a  `CfnCustomResourceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-custom-resource-props-builder (new CfnCustomResourceProps$Builder) id config))
 
@@ -1455,7 +1591,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-dynamic-reference-props-builder
-  ""
+  "Creates a  `CfnDynamicReferenceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-dynamic-reference-props-builder (new CfnDynamicReferenceProps$Builder) id config))
 
@@ -1481,7 +1622,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-hook-builder
-  ""
+  "Creates a  `CfnHook$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-hook-builder (CfnHook$Builder/create scope (name id)) id config))
 
@@ -1510,7 +1656,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-hook-default-version-builder
-  ""
+  "Creates a  `CfnHookDefaultVersion$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-hook-default-version-builder (CfnHookDefaultVersion$Builder/create scope (name id)) id config))
 
@@ -1539,7 +1690,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-hook-default-version-props-builder
-  ""
+  "Creates a  `CfnHookDefaultVersionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-hook-default-version-props-builder (new CfnHookDefaultVersionProps$Builder) id config))
 
@@ -1565,7 +1721,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-hook-props-builder
-  ""
+  "Creates a  `CfnHookProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-hook-props-builder (new CfnHookProps$Builder) id config))
 
@@ -1597,7 +1758,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-hook-type-config-builder
-  ""
+  "Creates a  `CfnHookTypeConfig$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-hook-type-config-builder (CfnHookTypeConfig$Builder/create scope (name id)) id config))
 
@@ -1629,7 +1795,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-hook-type-config-props-builder
-  ""
+  "Creates a  `CfnHookTypeConfigProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-hook-type-config-props-builder (new CfnHookTypeConfigProps$Builder) id config))
 
@@ -1661,7 +1832,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-hook-version-builder
-  ""
+  "Creates a  `CfnHookVersion$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-hook-version-builder (CfnHookVersion$Builder/create scope (name id)) id config))
 
@@ -1687,7 +1863,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-hook-version-logging-config-property-builder
-  ""
+  "Creates a  `CfnHookVersion$LoggingConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-hook-version-logging-config-property-builder (new CfnHookVersion$LoggingConfigProperty$Builder) id config))
 
@@ -1719,7 +1900,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-hook-version-props-builder
-  ""
+  "Creates a  `CfnHookVersionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-hook-version-props-builder (new CfnHookVersionProps$Builder) id config))
 
@@ -1742,7 +1928,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-json-builder
-  ""
+  "Creates a  `CfnJson$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-json-builder (CfnJson$Builder/create scope (name id)) id config))
 
@@ -1765,7 +1956,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-json-props-builder
-  ""
+  "Creates a  `CfnJsonProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-json-props-builder (new CfnJsonProps$Builder) id config))
 
@@ -1800,7 +1996,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-macro-builder
-  ""
+  "Creates a  `CfnMacro$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-macro-builder (CfnMacro$Builder/create scope (name id)) id config))
 
@@ -1835,7 +2036,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-macro-props-builder
-  ""
+  "Creates a  `CfnMacroProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-macro-props-builder (new CfnMacroProps$Builder) id config))
 
@@ -1861,7 +2067,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-mapping-builder
-  ""
+  "Creates a  `CfnMapping$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-mapping-builder (CfnMapping$Builder/create scope (name id)) id config))
 
@@ -1887,7 +2098,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-mapping-props-builder
-  ""
+  "Creates a  `CfnMappingProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-mapping-props-builder (new CfnMappingProps$Builder) id config))
 
@@ -1916,7 +2132,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-module-default-version-builder
-  ""
+  "Creates a  `CfnModuleDefaultVersion$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-module-default-version-builder (CfnModuleDefaultVersion$Builder/create scope (name id)) id config))
 
@@ -1945,7 +2166,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-module-default-version-props-builder
-  ""
+  "Creates a  `CfnModuleDefaultVersionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-module-default-version-props-builder (new CfnModuleDefaultVersionProps$Builder) id config))
 
@@ -1971,7 +2197,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-module-version-builder
-  ""
+  "Creates a  `CfnModuleVersion$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-module-version-builder (CfnModuleVersion$Builder/create scope (name id)) id config))
 
@@ -1997,7 +2228,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-module-version-props-builder
-  ""
+  "Creates a  `CfnModuleVersionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-module-version-props-builder (new CfnModuleVersionProps$Builder) id config))
 
@@ -2032,7 +2268,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-output-builder
-  ""
+  "Creates a  `CfnOutput$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-output-builder (CfnOutput$Builder/create scope (name id)) id config))
 
@@ -2067,7 +2308,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-output-props-builder
-  ""
+  "Creates a  `CfnOutputProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-output-props-builder (new CfnOutputProps$Builder) id config))
 
@@ -2120,7 +2366,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-parameter-builder
-  ""
+  "Creates a  `CfnParameter$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-parameter-builder (CfnParameter$Builder/create scope (name id)) id config))
 
@@ -2173,7 +2424,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-parameter-props-builder
-  ""
+  "Creates a  `CfnParameterProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-parameter-props-builder (new CfnParameterProps$Builder) id config))
 
@@ -2208,7 +2464,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-public-type-version-builder
-  ""
+  "Creates a  `CfnPublicTypeVersion$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-public-type-version-builder (CfnPublicTypeVersion$Builder/create scope (name id)) id config))
 
@@ -2243,7 +2504,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-public-type-version-props-builder
-  ""
+  "Creates a  `CfnPublicTypeVersionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-public-type-version-props-builder (new CfnPublicTypeVersionProps$Builder) id config))
 
@@ -2269,7 +2535,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-publisher-builder
-  ""
+  "Creates a  `CfnPublisher$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-publisher-builder (CfnPublisher$Builder/create scope (name id)) id config))
 
@@ -2295,7 +2566,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-publisher-props-builder
-  ""
+  "Creates a  `CfnPublisherProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-publisher-props-builder (new CfnPublisherProps$Builder) id config))
 
@@ -2318,7 +2594,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-resource-auto-scaling-creation-policy-builder
-  ""
+  "Creates a  `CfnResourceAutoScalingCreationPolicy$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-resource-auto-scaling-creation-policy-builder (new CfnResourceAutoScalingCreationPolicy$Builder) id config))
 
@@ -2344,7 +2625,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-resource-builder
-  ""
+  "Creates a  `CfnResource$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-resource-builder (CfnResource$Builder/create scope (name id)) id config))
 
@@ -2373,7 +2659,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-resource-default-version-builder
-  ""
+  "Creates a  `CfnResourceDefaultVersion$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-resource-default-version-builder (CfnResourceDefaultVersion$Builder/create scope (name id)) id config))
 
@@ -2402,7 +2693,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-resource-default-version-props-builder
-  ""
+  "Creates a  `CfnResourceDefaultVersionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-resource-default-version-props-builder (new CfnResourceDefaultVersionProps$Builder) id config))
 
@@ -2428,7 +2724,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-resource-props-builder
-  ""
+  "Creates a  `CfnResourceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-resource-props-builder (new CfnResourceProps$Builder) id config))
 
@@ -2454,7 +2755,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-resource-signal-builder
-  ""
+  "Creates a  `CfnResourceSignal$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-resource-signal-builder (new CfnResourceSignal$Builder) id config))
 
@@ -2486,7 +2792,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-resource-version-builder
-  ""
+  "Creates a  `CfnResourceVersion$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-resource-version-builder (CfnResourceVersion$Builder/create scope (name id)) id config))
 
@@ -2512,7 +2823,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-resource-version-logging-config-property-builder
-  ""
+  "Creates a  `CfnResourceVersion$LoggingConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-resource-version-logging-config-property-builder (new CfnResourceVersion$LoggingConfigProperty$Builder) id config))
 
@@ -2544,7 +2860,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-resource-version-props-builder
-  ""
+  "Creates a  `CfnResourceVersionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-resource-version-props-builder (new CfnResourceVersionProps$Builder) id config))
 
@@ -2570,7 +2891,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-rule-assertion-builder
-  ""
+  "Creates a  `CfnRuleAssertion$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-assertion-builder (new CfnRuleAssertion$Builder) id config))
 
@@ -2596,7 +2922,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-rule-builder
-  ""
+  "Creates a  `CfnRule$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-rule-builder (CfnRule$Builder/create scope (name id)) id config))
 
@@ -2622,7 +2953,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-rule-props-builder
-  ""
+  "Creates a  `CfnRuleProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-props-builder (new CfnRuleProps$Builder) id config))
 
@@ -2657,7 +2993,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-stack-builder
-  ""
+  "Creates a  `CfnStack$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-stack-builder (CfnStack$Builder/create scope (name id)) id config))
 
@@ -2689,7 +3030,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-stack-output-property-builder
-  ""
+  "Creates a  `CfnStack$OutputProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stack-output-property-builder (new CfnStack$OutputProperty$Builder) id config))
 
@@ -2724,7 +3070,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-stack-props-builder
-  ""
+  "Creates a  `CfnStackProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stack-props-builder (new CfnStackProps$Builder) id config))
 
@@ -2750,7 +3101,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-stack-set-auto-deployment-property-builder
-  ""
+  "Creates a  `CfnStackSet$AutoDeploymentProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stack-set-auto-deployment-property-builder (new CfnStackSet$AutoDeploymentProperty$Builder) id config))
 
@@ -2815,7 +3171,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-stack-set-builder
-  ""
+  "Creates a  `CfnStackSet$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-stack-set-builder (CfnStackSet$Builder/create scope (name id)) id config))
 
@@ -2847,7 +3208,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-stack-set-deployment-targets-property-builder
-  ""
+  "Creates a  `CfnStackSet$DeploymentTargetsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stack-set-deployment-targets-property-builder (new CfnStackSet$DeploymentTargetsProperty$Builder) id config))
 
@@ -2870,7 +3236,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-stack-set-managed-execution-property-builder
-  ""
+  "Creates a  `CfnStackSet$ManagedExecutionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stack-set-managed-execution-property-builder (new CfnStackSet$ManagedExecutionProperty$Builder) id config))
 
@@ -2908,7 +3279,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-stack-set-operation-preferences-property-builder
-  ""
+  "Creates a  `CfnStackSet$OperationPreferencesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stack-set-operation-preferences-property-builder (new CfnStackSet$OperationPreferencesProperty$Builder) id config))
 
@@ -2934,7 +3310,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-stack-set-parameter-property-builder
-  ""
+  "Creates a  `CfnStackSet$ParameterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stack-set-parameter-property-builder (new CfnStackSet$ParameterProperty$Builder) id config))
 
@@ -2999,7 +3380,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-stack-set-props-builder
-  ""
+  "Creates a  `CfnStackSetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stack-set-props-builder (new CfnStackSetProps$Builder) id config))
 
@@ -3028,7 +3414,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-stack-set-stack-instances-property-builder
-  ""
+  "Creates a  `CfnStackSet$StackInstancesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stack-set-stack-instances-property-builder (new CfnStackSet$StackInstancesProperty$Builder) id config))
 
@@ -3054,7 +3445,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-tag-builder
-  ""
+  "Creates a  `CfnTag$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-tag-builder (new CfnTag$Builder) id config))
 
@@ -3080,7 +3476,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-traffic-route-builder
-  ""
+  "Creates a  `CfnTrafficRoute$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-traffic-route-builder (new CfnTrafficRoute$Builder) id config))
 
@@ -3109,7 +3510,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-traffic-routing-builder
-  ""
+  "Creates a  `CfnTrafficRouting$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-traffic-routing-builder (new CfnTrafficRouting$Builder) id config))
 
@@ -3138,7 +3544,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-traffic-routing-config-builder
-  ""
+  "Creates a  `CfnTrafficRoutingConfig$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-traffic-routing-config-builder (new CfnTrafficRoutingConfig$Builder) id config))
 
@@ -3164,7 +3575,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-traffic-routing-time-based-canary-builder
-  ""
+  "Creates a  `CfnTrafficRoutingTimeBasedCanary$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-traffic-routing-time-based-canary-builder (new CfnTrafficRoutingTimeBasedCanary$Builder) id config))
 
@@ -3190,7 +3606,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-traffic-routing-time-based-linear-builder
-  ""
+  "Creates a  `CfnTrafficRoutingTimeBasedLinear$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-traffic-routing-time-based-linear-builder (new CfnTrafficRoutingTimeBasedLinear$Builder) id config))
 
@@ -3240,7 +3661,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-type-activation-builder
-  ""
+  "Creates a  `CfnTypeActivation$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-type-activation-builder (CfnTypeActivation$Builder/create scope (name id)) id config))
 
@@ -3266,7 +3692,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-type-activation-logging-config-property-builder
-  ""
+  "Creates a  `CfnTypeActivation$LoggingConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-type-activation-logging-config-property-builder (new CfnTypeActivation$LoggingConfigProperty$Builder) id config))
 
@@ -3316,7 +3747,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-type-activation-props-builder
-  ""
+  "Creates a  `CfnTypeActivationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-type-activation-props-builder (new CfnTypeActivationProps$Builder) id config))
 
@@ -3354,7 +3790,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-update-policy-builder
-  ""
+  "Creates a  `CfnUpdatePolicy$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-update-policy-builder (new CfnUpdatePolicy$Builder) id config))
 
@@ -3383,7 +3824,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-wait-condition-builder
-  ""
+  "Creates a  `CfnWaitCondition$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-wait-condition-builder (CfnWaitCondition$Builder/create scope (name id)) id config))
 
@@ -3403,7 +3849,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-wait-condition-handle-builder
-  ""
+  "Creates a  `CfnWaitConditionHandle$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-wait-condition-handle-builder (CfnWaitConditionHandle$Builder/create scope (name id)) id config))
 
@@ -3423,7 +3874,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-wait-condition-handle-props-builder
-  ""
+  "Creates a  `CfnWaitConditionHandleProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-wait-condition-handle-props-builder (new CfnWaitConditionHandleProps$Builder) id config))
 
@@ -3452,7 +3908,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-wait-condition-props-builder
-  ""
+  "Creates a  `CfnWaitConditionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-wait-condition-props-builder (new CfnWaitConditionProps$Builder) id config))
 
@@ -3487,7 +3948,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cli-credentials-stack-synthesizer-builder
-  ""
+  "Creates a  `CliCredentialsStackSynthesizer$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cli-credentials-stack-synthesizer-builder (CliCredentialsStackSynthesizer$Builder/create) id config))
 
@@ -3522,7 +3988,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cli-credentials-stack-synthesizer-props-builder
-  ""
+  "Creates a  `CliCredentialsStackSynthesizerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cli-credentials-stack-synthesizer-props-builder (new CliCredentialsStackSynthesizerProps$Builder) id config))
 
@@ -3551,7 +4022,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn copy-options-builder
-  ""
+  "Creates a  `CopyOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-copy-options-builder (new CopyOptions$Builder) id config))
 
@@ -3586,7 +4062,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn custom-resource-builder
-  ""
+  "Creates a  `CustomResource$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-custom-resource-builder (CustomResource$Builder/create scope (name id)) id config))
 
@@ -3621,7 +4102,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn custom-resource-props-builder
-  ""
+  "Creates a  `CustomResourceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-custom-resource-props-builder (new CustomResourceProps$Builder) id config))
 
@@ -3665,7 +4151,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn custom-resource-provider-base-props-builder
-  ""
+  "Creates a  `CustomResourceProviderBaseProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-custom-resource-provider-base-props-builder (new CustomResourceProviderBaseProps$Builder) id config))
 
@@ -3703,7 +4194,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn custom-resource-provider-options-builder
-  ""
+  "Creates a  `CustomResourceProviderOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-custom-resource-provider-options-builder (new CustomResourceProviderOptions$Builder) id config))
 
@@ -3747,7 +4243,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn custom-resource-provider-props-builder
-  ""
+  "Creates a  `CustomResourceProviderProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-custom-resource-provider-props-builder (new CustomResourceProviderProps$Builder) id config))
 
@@ -3818,7 +4319,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn default-stack-synthesizer-builder
-  ""
+  "Creates a  `DefaultStackSynthesizer$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-default-stack-synthesizer-builder (DefaultStackSynthesizer$Builder/create) id config))
 
@@ -3889,7 +4395,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn default-stack-synthesizer-props-builder
-  ""
+  "Creates a  `DefaultStackSynthesizerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-default-stack-synthesizer-props-builder (new DefaultStackSynthesizerProps$Builder) id config))
 
@@ -3930,7 +4441,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn docker-build-options-builder
-  ""
+  "Creates a  `DockerBuildOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-docker-build-options-builder (new DockerBuildOptions$Builder) id config))
 
@@ -3956,7 +4472,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn docker-cache-option-builder
-  ""
+  "Creates a  `DockerCacheOption$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-docker-cache-option-builder (new DockerCacheOption$Builder) id config))
 
@@ -3985,7 +4506,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn docker-image-asset-location-builder
-  ""
+  "Creates a  `DockerImageAssetLocation$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-docker-image-asset-location-builder (new DockerImageAssetLocation$Builder) id config))
 
@@ -4050,7 +4576,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn docker-image-asset-source-builder
-  ""
+  "Creates a  `DockerImageAssetSource$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-docker-image-asset-source-builder (new DockerImageAssetSource$Builder) id config))
 
@@ -4100,7 +4631,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn docker-run-options-builder
-  ""
+  "Creates a  `DockerRunOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-docker-run-options-builder (new DockerRunOptions$Builder) id config))
 
@@ -4129,7 +4665,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn docker-volume-builder
-  ""
+  "Creates a  `DockerVolume$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-docker-volume-builder (new DockerVolume$Builder) id config))
 
@@ -4152,7 +4693,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn encoding-options-builder
-  ""
+  "Creates a  `EncodingOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-encoding-options-builder (new EncodingOptions$Builder) id config))
 
@@ -4178,7 +4724,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn environment-builder
-  ""
+  "Creates a  `Environment$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-environment-builder (new Environment$Builder) id config))
 
@@ -4204,7 +4755,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn export-value-options-builder
-  ""
+  "Creates a  `ExportValueOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-export-value-options-builder (new ExportValueOptions$Builder) id config))
 
@@ -4242,7 +4798,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn file-asset-location-builder
-  ""
+  "Creates a  `FileAssetLocation$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-file-asset-location-builder (new FileAssetLocation$Builder) id config))
 
@@ -4277,7 +4838,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn file-asset-source-builder
-  ""
+  "Creates a  `FileAssetSource$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-file-asset-source-builder (new FileAssetSource$Builder) id config))
 
@@ -4306,7 +4872,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn file-copy-options-builder
-  ""
+  "Creates a  `FileCopyOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-file-copy-options-builder (new FileCopyOptions$Builder) id config))
 
@@ -4338,7 +4909,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn file-fingerprint-options-builder
-  ""
+  "Creates a  `FileFingerprintOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-file-fingerprint-options-builder (new FileFingerprintOptions$Builder) id config))
 
@@ -4370,7 +4946,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn fingerprint-options-builder
-  ""
+  "Creates a  `FingerprintOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-fingerprint-options-builder (new FingerprintOptions$Builder) id config))
 
@@ -4399,7 +4980,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn get-context-key-options-builder
-  ""
+  "Creates a  `GetContextKeyOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-get-context-key-options-builder (new GetContextKeyOptions$Builder) id config))
 
@@ -4425,7 +5011,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn get-context-key-result-builder
-  ""
+  "Creates a  `GetContextKeyResult$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-get-context-key-result-builder (new GetContextKeyResult$Builder) id config))
 
@@ -4457,7 +5048,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn get-context-value-options-builder
-  ""
+  "Creates a  `GetContextValueOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-get-context-value-options-builder (new GetContextValueOptions$Builder) id config))
 
@@ -4480,7 +5076,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn get-context-value-result-builder
-  ""
+  "Creates a  `GetContextValueResult$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-get-context-value-result-builder (new GetContextValueResult$Builder) id config))
 
@@ -4506,7 +5107,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn intrinsic-props-builder
-  ""
+  "Creates a  `IntrinsicProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-intrinsic-props-builder (new IntrinsicProps$Builder) id config))
 
@@ -4532,7 +5138,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn lazy-any-value-options-builder
-  ""
+  "Creates a  `LazyAnyValueOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-lazy-any-value-options-builder (new LazyAnyValueOptions$Builder) id config))
 
@@ -4558,7 +5169,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn lazy-list-value-options-builder
-  ""
+  "Creates a  `LazyListValueOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-lazy-list-value-options-builder (new LazyListValueOptions$Builder) id config))
 
@@ -4581,7 +5197,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn lazy-string-value-options-builder
-  ""
+  "Creates a  `LazyStringValueOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-lazy-string-value-options-builder (new LazyStringValueOptions$Builder) id config))
 
@@ -4616,7 +5237,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn nested-stack-builder
-  ""
+  "Creates a  `NestedStack$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-nested-stack-builder (NestedStack$Builder/create scope (name id)) id config))
 
@@ -4651,7 +5277,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn nested-stack-props-builder
-  ""
+  "Creates a  `NestedStackProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-nested-stack-props-builder (new NestedStackProps$Builder) id config))
 
@@ -4671,7 +5302,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn permissions-boundary-bind-options-builder
-  ""
+  "Creates a  `PermissionsBoundaryBindOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-permissions-boundary-bind-options-builder (new PermissionsBoundaryBindOptions$Builder) id config))
 
@@ -4703,7 +5339,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn policy-validation-plugin-report-beta1-builder
-  ""
+  "Creates a  `PolicyValidationPluginReportBeta1$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-policy-validation-plugin-report-beta1-builder (new PolicyValidationPluginReportBeta1$Builder) id config))
 
@@ -4732,7 +5373,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn policy-violating-resource-beta1-builder
-  ""
+  "Creates a  `PolicyViolatingResourceBeta1$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-policy-violating-resource-beta1-builder (new PolicyViolatingResourceBeta1$Builder) id config))
 
@@ -4770,7 +5416,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn policy-violation-beta1-builder
-  ""
+  "Creates a  `PolicyViolationBeta1$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-policy-violation-beta1-builder (new PolicyViolationBeta1$Builder) id config))
 
@@ -4796,7 +5447,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn removal-policy-options-builder
-  ""
+  "Creates a  `RemovalPolicyOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-removal-policy-options-builder (new RemovalPolicyOptions$Builder) id config))
 
@@ -4827,6 +5483,20 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn remove-tag-builder
+  "Creates a  `RemoveTag$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
+
+
+__Create Form:__ ____[java.lang.String]___
+| Argument | DataType | Description |
+|---|---|---|
+| tag-key | java.lang.String |  |
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
+  [^String tag-key id config]
+  (build-remove-tag-builder (RemoveTag$Builder/create tag-key) id config))
+
+
 (defn build-resolve-change-context-options-builder
   "The build-resolve-change-context-options-builder function updates a ResolveChangeContextOptions$Builder instance using the provided configuration.
   The function takes the ResolveChangeContextOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -4848,7 +5518,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn resolve-change-context-options-builder
-  ""
+  "Creates a  `ResolveChangeContextOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-resolve-change-context-options-builder (new ResolveChangeContextOptions$Builder) id config))
 
@@ -4880,7 +5555,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn resolve-options-builder
-  ""
+  "Creates a  `ResolveOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-resolve-options-builder (new ResolveOptions$Builder) id config))
 
@@ -4906,7 +5586,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn resource-environment-builder
-  ""
+  "Creates a  `ResourceEnvironment$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-resource-environment-builder (new ResourceEnvironment$Builder) id config))
 
@@ -4938,7 +5623,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn resource-props-builder
-  ""
+  "Creates a  `ResourceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-resource-props-builder (new ResourceProps$Builder) id config))
 
@@ -4961,7 +5651,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn reverse-options-builder
-  ""
+  "Creates a  `ReverseOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-reverse-options-builder (new ReverseOptions$Builder) id config))
 
@@ -4987,7 +5682,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn role-options-builder
-  ""
+  "Creates a  `RoleOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-role-options-builder (new RoleOptions$Builder) id config))
 
@@ -5010,6 +5710,20 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (resolution-type-hint config id :type-hint)]
     (. builder typeHint data))
   (.build builder))
+
+
+(defn secret-value-builder
+  "Creates a  `SecretValue$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
+
+
+__Create Form:__ ____[java.lang.Object]___
+| Argument | DataType | Description |
+|---|---|---|
+| protected-value | java.lang.Object |  |
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
+  [^Object protected-value id config]
+  (build-secret-value-builder (SecretValue$Builder/create protected-value) id config))
 
 
 (defn build-secrets-manager-secret-options-builder
@@ -5036,7 +5750,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn secrets-manager-secret-options-builder
-  ""
+  "Creates a  `SecretsManagerSecretOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-secrets-manager-secret-options-builder (new SecretsManagerSecretOptions$Builder) id config))
 
@@ -5059,7 +5778,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn size-conversion-options-builder
-  ""
+  "Creates a  `SizeConversionOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-size-conversion-options-builder (new SizeConversionOptions$Builder) id config))
 
@@ -5108,6 +5832,30 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn stack-builder
+  "Creates a  `Stack$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
+
+
+__Create Form:__ ____[]___
+| Argument | DataType | Description |
+|---|---|---|
+
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |
+
+
+__Create Form:__ ____[software.constructs.Construct java.lang.String]___
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct |  |
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
+  ([id config]
+   (build-stack-builder (Stack$Builder/create) id config))
+  ([^Construct scope id config]
+   (build-stack-builder (Stack$Builder/create scope (name id)) id config)))
+
+
 (defn build-stack-props-builder
   "The build-stack-props-builder function updates a StackProps$Builder instance using the provided configuration.
   The function takes the StackProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5153,7 +5901,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn stack-props-builder
-  ""
+  "Creates a  `StackProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-stack-props-builder (new StackProps$Builder) id config))
 
@@ -5188,7 +5941,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn stage-builder
-  ""
+  "Creates a  `Stage$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-stage-builder (Stage$Builder/create scope (name id)) id config))
 
@@ -5223,7 +5981,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn stage-props-builder
-  ""
+  "Creates a  `StageProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-stage-props-builder (new StageProps$Builder) id config))
 
@@ -5252,7 +6015,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn stage-synthesis-options-builder
-  ""
+  "Creates a  `StageSynthesisOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-stage-synthesis-options-builder (new StageSynthesisOptions$Builder) id config))
 
@@ -5299,7 +6067,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn synthesize-stack-artifact-options-builder
-  ""
+  "Creates a  `SynthesizeStackArtifactOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-synthesize-stack-artifact-options-builder (new SynthesizeStackArtifactOptions$Builder) id config))
 
@@ -5330,6 +6103,21 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn tag-builder
+  "Creates a  `Tag$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
+
+
+__Create Form:__ ____[java.lang.String java.lang.String]___
+| Argument | DataType | Description |
+|---|---|---|
+| tag-key | java.lang.String |  |
+| tag-value | java.lang.String |  |
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
+  [^String tag-key ^String tag-value id config]
+  (build-tag-builder (Tag$Builder/create tag-key tag-value) id config))
+
+
 (defn build-tag-manager-builder
   "The build-tag-manager-builder function updates a TagManager$Builder instance using the provided configuration.
   The function takes the TagManager$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -5345,6 +6133,33 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :tag-property-name)]
     (. builder tagPropertyName data))
   (.build builder))
+
+
+(defn tag-manager-builder
+  "Creates a  `TagManager$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
+
+
+__Create Form:__ ____[software.amazon.awscdk.TagType java.lang.String]___
+| Argument | DataType | Description |
+|---|---|---|
+| tag-type | software.amazon.awscdk.TagType |  |
+| resource-manager | java.lang.String |  |
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |
+
+
+__Create Form:__ ____[software.amazon.awscdk.TagType java.lang.String java.lang.Object]___
+| Argument | DataType | Description |
+|---|---|---|
+| tag-type | software.amazon.awscdk.TagType |  |
+| resource-manager | java.lang.String |  |
+| initial-tags | java.lang.Object |  |
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
+  ([^TagType tag-type ^String resource-manager id config]
+   (build-tag-manager-builder (TagManager$Builder/create tag-type resource-manager) id config))
+  ([^TagType tag-type ^String resource-manager ^Object initial-tags id config]
+   (build-tag-manager-builder (TagManager$Builder/create tag-type resource-manager initial-tags) id config)))
 
 
 (defn build-tag-manager-options-builder
@@ -5365,7 +6180,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn tag-manager-options-builder
-  ""
+  "Creates a  `TagManagerOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-tag-manager-options-builder (new TagManagerOptions$Builder) id config))
 
@@ -5397,7 +6217,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn tag-props-builder
-  ""
+  "Creates a  `TagProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-tag-props-builder (new TagProps$Builder) id config))
 
@@ -5420,7 +6245,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn time-conversion-options-builder
-  ""
+  "Creates a  `TimeConversionOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-time-conversion-options-builder (new TimeConversionOptions$Builder) id config))
 
@@ -5449,6 +6279,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn unique-resource-name-options-builder
-  ""
+  "Creates a  `UniqueResourceNameOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-unique-resource-name-options-builder (new UniqueResourceNameOptions$Builder) id config))

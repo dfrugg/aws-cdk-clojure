@@ -55,7 +55,12 @@
 
 
 (defn cfn-configuration-set-builder
-  ""
+  "Creates a  `CfnConfigurationSet$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-configuration-set-builder (CfnConfigurationSet$Builder/create scope (name id)) id config))
 
@@ -78,7 +83,12 @@
 
 
 (defn cfn-configuration-set-delivery-options-property-builder
-  ""
+  "Creates a  `CfnConfigurationSet$DeliveryOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-configuration-set-delivery-options-property-builder (new CfnConfigurationSet$DeliveryOptionsProperty$Builder) id config))
 
@@ -107,7 +117,12 @@
 
 
 (defn cfn-configuration-set-event-destination-builder
-  ""
+  "Creates a  `CfnConfigurationSetEventDestination$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-configuration-set-event-destination-builder (CfnConfigurationSetEventDestination$Builder/create scope (name id)) id config))
 
@@ -130,7 +145,12 @@
 
 
 (defn cfn-configuration-set-event-destination-cloud-watch-destination-property-builder
-  ""
+  "Creates a  `CfnConfigurationSetEventDestination$CloudWatchDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-configuration-set-event-destination-cloud-watch-destination-property-builder (new CfnConfigurationSetEventDestination$CloudWatchDestinationProperty$Builder) id config))
 
@@ -159,7 +179,12 @@
 
 
 (defn cfn-configuration-set-event-destination-dimension-configuration-property-builder
-  ""
+  "Creates a  `CfnConfigurationSetEventDestination$DimensionConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-configuration-set-event-destination-dimension-configuration-property-builder (new CfnConfigurationSetEventDestination$DimensionConfigurationProperty$Builder) id config))
 
@@ -197,7 +222,12 @@
 
 
 (defn cfn-configuration-set-event-destination-event-destination-property-builder
-  ""
+  "Creates a  `CfnConfigurationSetEventDestination$EventDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-configuration-set-event-destination-event-destination-property-builder (new CfnConfigurationSetEventDestination$EventDestinationProperty$Builder) id config))
 
@@ -223,7 +253,12 @@
 
 
 (defn cfn-configuration-set-event-destination-kinesis-firehose-destination-property-builder
-  ""
+  "Creates a  `CfnConfigurationSetEventDestination$KinesisFirehoseDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-configuration-set-event-destination-kinesis-firehose-destination-property-builder (new CfnConfigurationSetEventDestination$KinesisFirehoseDestinationProperty$Builder) id config))
 
@@ -246,7 +281,12 @@
 
 
 (defn cfn-configuration-set-event-destination-pinpoint-destination-property-builder
-  ""
+  "Creates a  `CfnConfigurationSetEventDestination$PinpointDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-configuration-set-event-destination-pinpoint-destination-property-builder (new CfnConfigurationSetEventDestination$PinpointDestinationProperty$Builder) id config))
 
@@ -275,7 +315,12 @@
 
 
 (defn cfn-configuration-set-event-destination-props-builder
-  ""
+  "Creates a  `CfnConfigurationSetEventDestinationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-configuration-set-event-destination-props-builder (new CfnConfigurationSetEventDestinationProps$Builder) id config))
 
@@ -298,7 +343,12 @@
 
 
 (defn cfn-configuration-set-event-destination-sns-destination-property-builder
-  ""
+  "Creates a  `CfnConfigurationSetEventDestination$SnsDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-configuration-set-event-destination-sns-destination-property-builder (new CfnConfigurationSetEventDestination$SnsDestinationProperty$Builder) id config))
 
@@ -336,7 +386,12 @@
 
 
 (defn cfn-configuration-set-props-builder
-  ""
+  "Creates a  `CfnConfigurationSetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-configuration-set-props-builder (new CfnConfigurationSetProps$Builder) id config))
 
@@ -359,7 +414,12 @@
 
 
 (defn cfn-configuration-set-reputation-options-property-builder
-  ""
+  "Creates a  `CfnConfigurationSet$ReputationOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-configuration-set-reputation-options-property-builder (new CfnConfigurationSet$ReputationOptionsProperty$Builder) id config))
 
@@ -382,7 +442,12 @@
 
 
 (defn cfn-configuration-set-sending-options-property-builder
-  ""
+  "Creates a  `CfnConfigurationSet$SendingOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-configuration-set-sending-options-property-builder (new CfnConfigurationSet$SendingOptionsProperty$Builder) id config))
 
@@ -405,7 +470,12 @@
 
 
 (defn cfn-configuration-set-tracking-options-property-builder
-  ""
+  "Creates a  `CfnConfigurationSet$TrackingOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-configuration-set-tracking-options-property-builder (new CfnConfigurationSet$TrackingOptionsProperty$Builder) id config))
 
@@ -431,7 +501,12 @@
 
 
 (defn cfn-dedicated-ip-pool-builder
-  ""
+  "Creates a  `CfnDedicatedIpPool$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-dedicated-ip-pool-builder (CfnDedicatedIpPool$Builder/create scope (name id)) id config))
 
@@ -457,7 +532,12 @@
 
 
 (defn cfn-dedicated-ip-pool-props-builder
-  ""
+  "Creates a  `CfnDedicatedIpPoolProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-dedicated-ip-pool-props-builder (new CfnDedicatedIpPoolProps$Builder) id config))
 
@@ -492,7 +572,12 @@
 
 
 (defn cfn-identity-builder
-  ""
+  "Creates a  `CfnIdentity$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-identity-builder (CfnIdentity$Builder/create scope (name id)) id config))
 
@@ -518,7 +603,12 @@
 
 
 (defn cfn-identity-mail-from-attributes-property-builder
-  ""
+  "Creates a  `CfnIdentity$MailFromAttributesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-identity-mail-from-attributes-property-builder (new CfnIdentity$MailFromAttributesProperty$Builder) id config))
 
@@ -553,6 +643,11 @@
 
 
 (defn cfn-identity-props-builder
-  ""
+  "Creates a  `CfnIdentityProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-identity-props-builder (new CfnIdentityProps$Builder) id config))

@@ -29,7 +29,12 @@
 
 
 (defn cfn-pipeline-buffer-options-property-builder
-  ""
+  "Creates a  `CfnPipeline$BufferOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipeline-buffer-options-property-builder (new CfnPipeline$BufferOptionsProperty$Builder) id config))
 
@@ -76,7 +81,12 @@
 
 
 (defn cfn-pipeline-builder
-  ""
+  "Creates a  `CfnPipeline$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-pipeline-builder (CfnPipeline$Builder/create scope (name id)) id config))
 
@@ -99,7 +109,12 @@
 
 
 (defn cfn-pipeline-cloud-watch-log-destination-property-builder
-  ""
+  "Creates a  `CfnPipeline$CloudWatchLogDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipeline-cloud-watch-log-destination-property-builder (new CfnPipeline$CloudWatchLogDestinationProperty$Builder) id config))
 
@@ -122,7 +137,12 @@
 
 
 (defn cfn-pipeline-encryption-at-rest-options-property-builder
-  ""
+  "Creates a  `CfnPipeline$EncryptionAtRestOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipeline-encryption-at-rest-options-property-builder (new CfnPipeline$EncryptionAtRestOptionsProperty$Builder) id config))
 
@@ -148,7 +168,12 @@
 
 
 (defn cfn-pipeline-log-publishing-options-property-builder
-  ""
+  "Creates a  `CfnPipeline$LogPublishingOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipeline-log-publishing-options-property-builder (new CfnPipeline$LogPublishingOptionsProperty$Builder) id config))
 
@@ -195,7 +220,12 @@
 
 
 (defn cfn-pipeline-props-builder
-  ""
+  "Creates a  `CfnPipelineProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipeline-props-builder (new CfnPipelineProps$Builder) id config))
 
@@ -224,7 +254,12 @@
 
 
 (defn cfn-pipeline-vpc-endpoint-property-builder
-  ""
+  "Creates a  `CfnPipeline$VpcEndpointProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipeline-vpc-endpoint-property-builder (new CfnPipeline$VpcEndpointProperty$Builder) id config))
 
@@ -250,6 +285,11 @@
 
 
 (defn cfn-pipeline-vpc-options-property-builder
-  ""
+  "Creates a  `CfnPipeline$VpcOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipeline-vpc-options-property-builder (new CfnPipeline$VpcOptionsProperty$Builder) id config))

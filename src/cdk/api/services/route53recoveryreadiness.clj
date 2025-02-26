@@ -40,7 +40,12 @@
 
 
 (defn cfn-cell-builder
-  ""
+  "Creates a  `CfnCell$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-cell-builder (CfnCell$Builder/create scope (name id)) id config))
 
@@ -69,7 +74,12 @@
 
 
 (defn cfn-cell-props-builder
-  ""
+  "Creates a  `CfnCellProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-cell-props-builder (new CfnCellProps$Builder) id config))
 
@@ -98,7 +108,12 @@
 
 
 (defn cfn-readiness-check-builder
-  ""
+  "Creates a  `CfnReadinessCheck$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-readiness-check-builder (CfnReadinessCheck$Builder/create scope (name id)) id config))
 
@@ -127,7 +142,12 @@
 
 
 (defn cfn-readiness-check-props-builder
-  ""
+  "Creates a  `CfnReadinessCheckProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-readiness-check-props-builder (new CfnReadinessCheckProps$Builder) id config))
 
@@ -156,7 +176,12 @@
 
 
 (defn cfn-recovery-group-builder
-  ""
+  "Creates a  `CfnRecoveryGroup$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-recovery-group-builder (CfnRecoveryGroup$Builder/create scope (name id)) id config))
 
@@ -185,7 +210,12 @@
 
 
 (defn cfn-recovery-group-props-builder
-  ""
+  "Creates a  `CfnRecoveryGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-recovery-group-props-builder (new CfnRecoveryGroupProps$Builder) id config))
 
@@ -217,7 +247,12 @@
 
 
 (defn cfn-resource-set-builder
-  ""
+  "Creates a  `CfnResourceSet$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-resource-set-builder (CfnResourceSet$Builder/create scope (name id)) id config))
 
@@ -252,7 +287,12 @@
 
 
 (defn cfn-resource-set-dns-target-resource-property-builder
-  ""
+  "Creates a  `CfnResourceSet$DNSTargetResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-resource-set-dns-target-resource-property-builder (new CfnResourceSet$DNSTargetResourceProperty$Builder) id config))
 
@@ -275,7 +315,12 @@
 
 
 (defn cfn-resource-set-nlb-resource-property-builder
-  ""
+  "Creates a  `CfnResourceSet$NLBResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-resource-set-nlb-resource-property-builder (new CfnResourceSet$NLBResourceProperty$Builder) id config))
 
@@ -307,7 +352,12 @@
 
 
 (defn cfn-resource-set-props-builder
-  ""
+  "Creates a  `CfnResourceSetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-resource-set-props-builder (new CfnResourceSetProps$Builder) id config))
 
@@ -333,7 +383,12 @@
 
 
 (defn cfn-resource-set-r53-resource-record-property-builder
-  ""
+  "Creates a  `CfnResourceSet$R53ResourceRecordProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-resource-set-r53-resource-record-property-builder (new CfnResourceSet$R53ResourceRecordProperty$Builder) id config))
 
@@ -365,7 +420,12 @@
 
 
 (defn cfn-resource-set-resource-property-builder
-  ""
+  "Creates a  `CfnResourceSet$ResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-resource-set-resource-property-builder (new CfnResourceSet$ResourceProperty$Builder) id config))
 
@@ -391,6 +451,11 @@
 
 
 (defn cfn-resource-set-target-resource-property-builder
-  ""
+  "Creates a  `CfnResourceSet$TargetResourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-resource-set-target-resource-property-builder (new CfnResourceSet$TargetResourceProperty$Builder) id config))

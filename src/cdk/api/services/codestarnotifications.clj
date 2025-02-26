@@ -76,7 +76,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-notification-rule-builder
-  ""
+  "Creates a  `CfnNotificationRule$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-notification-rule-builder (CfnNotificationRule$Builder/create scope (name id)) id config))
 
@@ -126,7 +131,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-notification-rule-props-builder
-  ""
+  "Creates a  `CfnNotificationRuleProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-notification-rule-props-builder (new CfnNotificationRuleProps$Builder) id config))
 
@@ -152,7 +162,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-notification-rule-target-property-builder
-  ""
+  "Creates a  `CfnNotificationRule$TargetProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-notification-rule-target-property-builder (new CfnNotificationRule$TargetProperty$Builder) id config))
 
@@ -190,7 +205,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn notification-rule-builder
-  ""
+  "Creates a  `NotificationRule$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-notification-rule-builder (NotificationRule$Builder/create scope (name id)) id config))
 
@@ -219,7 +239,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn notification-rule-options-builder
-  ""
+  "Creates a  `NotificationRuleOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-notification-rule-options-builder (new NotificationRuleOptions$Builder) id config))
 
@@ -257,7 +282,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn notification-rule-props-builder
-  ""
+  "Creates a  `NotificationRuleProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-notification-rule-props-builder (new NotificationRuleProps$Builder) id config))
 
@@ -280,7 +310,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn notification-rule-source-config-builder
-  ""
+  "Creates a  `NotificationRuleSourceConfig$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-notification-rule-source-config-builder (new NotificationRuleSourceConfig$Builder) id config))
 
@@ -306,6 +341,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn notification-rule-target-config-builder
-  ""
+  "Creates a  `NotificationRuleTargetConfig$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-notification-rule-target-config-builder (new NotificationRuleTargetConfig$Builder) id config))

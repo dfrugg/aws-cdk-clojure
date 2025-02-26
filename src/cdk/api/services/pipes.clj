@@ -81,7 +81,12 @@
 
 
 (defn cfn-pipe-aws-vpc-configuration-property-builder
-  ""
+  "Creates a  `CfnPipe$AwsVpcConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-aws-vpc-configuration-property-builder (new CfnPipe$AwsVpcConfigurationProperty$Builder) id config))
 
@@ -104,7 +109,12 @@
 
 
 (defn cfn-pipe-batch-array-properties-property-builder
-  ""
+  "Creates a  `CfnPipe$BatchArrayPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-batch-array-properties-property-builder (new CfnPipe$BatchArrayPropertiesProperty$Builder) id config))
 
@@ -136,7 +146,12 @@
 
 
 (defn cfn-pipe-batch-container-overrides-property-builder
-  ""
+  "Creates a  `CfnPipe$BatchContainerOverridesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-batch-container-overrides-property-builder (new CfnPipe$BatchContainerOverridesProperty$Builder) id config))
 
@@ -162,7 +177,12 @@
 
 
 (defn cfn-pipe-batch-environment-variable-property-builder
-  ""
+  "Creates a  `CfnPipe$BatchEnvironmentVariableProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-batch-environment-variable-property-builder (new CfnPipe$BatchEnvironmentVariableProperty$Builder) id config))
 
@@ -188,7 +208,12 @@
 
 
 (defn cfn-pipe-batch-job-dependency-property-builder
-  ""
+  "Creates a  `CfnPipe$BatchJobDependencyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-batch-job-dependency-property-builder (new CfnPipe$BatchJobDependencyProperty$Builder) id config))
 
@@ -214,7 +239,12 @@
 
 
 (defn cfn-pipe-batch-resource-requirement-property-builder
-  ""
+  "Creates a  `CfnPipe$BatchResourceRequirementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-batch-resource-requirement-property-builder (new CfnPipe$BatchResourceRequirementProperty$Builder) id config))
 
@@ -237,7 +267,12 @@
 
 
 (defn cfn-pipe-batch-retry-strategy-property-builder
-  ""
+  "Creates a  `CfnPipe$BatchRetryStrategyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-batch-retry-strategy-property-builder (new CfnPipe$BatchRetryStrategyProperty$Builder) id config))
 
@@ -293,7 +328,12 @@
 
 
 (defn cfn-pipe-builder
-  ""
+  "Creates a  `CfnPipe$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-pipe-builder (CfnPipe$Builder/create scope (name id)) id config))
 
@@ -322,7 +362,12 @@
 
 
 (defn cfn-pipe-capacity-provider-strategy-item-property-builder
-  ""
+  "Creates a  `CfnPipe$CapacityProviderStrategyItemProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-capacity-provider-strategy-item-property-builder (new CfnPipe$CapacityProviderStrategyItemProperty$Builder) id config))
 
@@ -345,7 +390,12 @@
 
 
 (defn cfn-pipe-cloudwatch-logs-log-destination-property-builder
-  ""
+  "Creates a  `CfnPipe$CloudwatchLogsLogDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-cloudwatch-logs-log-destination-property-builder (new CfnPipe$CloudwatchLogsLogDestinationProperty$Builder) id config))
 
@@ -368,7 +418,12 @@
 
 
 (defn cfn-pipe-dead-letter-config-property-builder
-  ""
+  "Creates a  `CfnPipe$DeadLetterConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-dead-letter-config-property-builder (new CfnPipe$DeadLetterConfigProperty$Builder) id config))
 
@@ -412,7 +467,12 @@
 
 
 (defn cfn-pipe-ecs-container-override-property-builder
-  ""
+  "Creates a  `CfnPipe$EcsContainerOverrideProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-ecs-container-override-property-builder (new CfnPipe$EcsContainerOverrideProperty$Builder) id config))
 
@@ -438,7 +498,12 @@
 
 
 (defn cfn-pipe-ecs-environment-file-property-builder
-  ""
+  "Creates a  `CfnPipe$EcsEnvironmentFileProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-ecs-environment-file-property-builder (new CfnPipe$EcsEnvironmentFileProperty$Builder) id config))
 
@@ -464,7 +529,12 @@
 
 
 (defn cfn-pipe-ecs-environment-variable-property-builder
-  ""
+  "Creates a  `CfnPipe$EcsEnvironmentVariableProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-ecs-environment-variable-property-builder (new CfnPipe$EcsEnvironmentVariableProperty$Builder) id config))
 
@@ -487,7 +557,12 @@
 
 
 (defn cfn-pipe-ecs-ephemeral-storage-property-builder
-  ""
+  "Creates a  `CfnPipe$EcsEphemeralStorageProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-ecs-ephemeral-storage-property-builder (new CfnPipe$EcsEphemeralStorageProperty$Builder) id config))
 
@@ -513,7 +588,12 @@
 
 
 (defn cfn-pipe-ecs-inference-accelerator-override-property-builder
-  ""
+  "Creates a  `CfnPipe$EcsInferenceAcceleratorOverrideProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-ecs-inference-accelerator-override-property-builder (new CfnPipe$EcsInferenceAcceleratorOverrideProperty$Builder) id config))
 
@@ -539,7 +619,12 @@
 
 
 (defn cfn-pipe-ecs-resource-requirement-property-builder
-  ""
+  "Creates a  `CfnPipe$EcsResourceRequirementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-ecs-resource-requirement-property-builder (new CfnPipe$EcsResourceRequirementProperty$Builder) id config))
 
@@ -580,7 +665,12 @@
 
 
 (defn cfn-pipe-ecs-task-override-property-builder
-  ""
+  "Creates a  `CfnPipe$EcsTaskOverrideProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-ecs-task-override-property-builder (new CfnPipe$EcsTaskOverrideProperty$Builder) id config))
 
@@ -603,7 +693,12 @@
 
 
 (defn cfn-pipe-filter-criteria-property-builder
-  ""
+  "Creates a  `CfnPipe$FilterCriteriaProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-filter-criteria-property-builder (new CfnPipe$FilterCriteriaProperty$Builder) id config))
 
@@ -626,7 +721,12 @@
 
 
 (defn cfn-pipe-filter-property-builder
-  ""
+  "Creates a  `CfnPipe$FilterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-filter-property-builder (new CfnPipe$FilterProperty$Builder) id config))
 
@@ -649,7 +749,12 @@
 
 
 (defn cfn-pipe-firehose-log-destination-property-builder
-  ""
+  "Creates a  `CfnPipe$FirehoseLogDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-firehose-log-destination-property-builder (new CfnPipe$FirehoseLogDestinationProperty$Builder) id config))
 
@@ -672,7 +777,12 @@
 
 
 (defn cfn-pipe-mq-broker-access-credentials-property-builder
-  ""
+  "Creates a  `CfnPipe$MQBrokerAccessCredentialsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-mq-broker-access-credentials-property-builder (new CfnPipe$MQBrokerAccessCredentialsProperty$Builder) id config))
 
@@ -698,7 +808,12 @@
 
 
 (defn cfn-pipe-msk-access-credentials-property-builder
-  ""
+  "Creates a  `CfnPipe$MSKAccessCredentialsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-msk-access-credentials-property-builder (new CfnPipe$MSKAccessCredentialsProperty$Builder) id config))
 
@@ -721,7 +836,12 @@
 
 
 (defn cfn-pipe-network-configuration-property-builder
-  ""
+  "Creates a  `CfnPipe$NetworkConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-network-configuration-property-builder (new CfnPipe$NetworkConfigurationProperty$Builder) id config))
 
@@ -750,7 +870,12 @@
 
 
 (defn cfn-pipe-pipe-enrichment-http-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeEnrichmentHttpParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-enrichment-http-parameters-property-builder (new CfnPipe$PipeEnrichmentHttpParametersProperty$Builder) id config))
 
@@ -776,7 +901,12 @@
 
 
 (defn cfn-pipe-pipe-enrichment-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeEnrichmentParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-enrichment-parameters-property-builder (new CfnPipe$PipeEnrichmentParametersProperty$Builder) id config))
 
@@ -811,7 +941,12 @@
 
 
 (defn cfn-pipe-pipe-log-configuration-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeLogConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-log-configuration-property-builder (new CfnPipe$PipeLogConfigurationProperty$Builder) id config))
 
@@ -843,7 +978,12 @@
 
 
 (defn cfn-pipe-pipe-source-active-mq-broker-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeSourceActiveMQBrokerParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-source-active-mq-broker-parameters-property-builder (new CfnPipe$PipeSourceActiveMQBrokerParametersProperty$Builder) id config))
 
@@ -887,7 +1027,12 @@
 
 
 (defn cfn-pipe-pipe-source-dynamo-db-stream-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeSourceDynamoDBStreamParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-source-dynamo-db-stream-parameters-property-builder (new CfnPipe$PipeSourceDynamoDBStreamParametersProperty$Builder) id config))
 
@@ -934,7 +1079,12 @@
 
 
 (defn cfn-pipe-pipe-source-kinesis-stream-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeSourceKinesisStreamParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-source-kinesis-stream-parameters-property-builder (new CfnPipe$PipeSourceKinesisStreamParametersProperty$Builder) id config))
 
@@ -972,7 +1122,12 @@
 
 
 (defn cfn-pipe-pipe-source-managed-streaming-kafka-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeSourceManagedStreamingKafkaParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-source-managed-streaming-kafka-parameters-property-builder (new CfnPipe$PipeSourceManagedStreamingKafkaParametersProperty$Builder) id config))
 
@@ -1016,7 +1171,12 @@
 
 
 (defn cfn-pipe-pipe-source-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeSourceParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-source-parameters-property-builder (new CfnPipe$PipeSourceParametersProperty$Builder) id config))
 
@@ -1051,7 +1211,12 @@
 
 
 (defn cfn-pipe-pipe-source-rabbit-mq-broker-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeSourceRabbitMQBrokerParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-source-rabbit-mq-broker-parameters-property-builder (new CfnPipe$PipeSourceRabbitMQBrokerParametersProperty$Builder) id config))
 
@@ -1098,7 +1263,12 @@
 
 
 (defn cfn-pipe-pipe-source-self-managed-kafka-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeSourceSelfManagedKafkaParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-source-self-managed-kafka-parameters-property-builder (new CfnPipe$PipeSourceSelfManagedKafkaParametersProperty$Builder) id config))
 
@@ -1124,7 +1294,12 @@
 
 
 (defn cfn-pipe-pipe-source-sqs-queue-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeSourceSqsQueueParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-source-sqs-queue-parameters-property-builder (new CfnPipe$PipeSourceSqsQueueParametersProperty$Builder) id config))
 
@@ -1165,7 +1340,12 @@
 
 
 (defn cfn-pipe-pipe-target-batch-job-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeTargetBatchJobParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-target-batch-job-parameters-property-builder (new CfnPipe$PipeTargetBatchJobParametersProperty$Builder) id config))
 
@@ -1191,7 +1371,12 @@
 
 
 (defn cfn-pipe-pipe-target-cloud-watch-logs-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeTargetCloudWatchLogsParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-target-cloud-watch-logs-parameters-property-builder (new CfnPipe$PipeTargetCloudWatchLogsParametersProperty$Builder) id config))
 
@@ -1256,7 +1441,12 @@
 
 
 (defn cfn-pipe-pipe-target-ecs-task-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeTargetEcsTaskParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-target-ecs-task-parameters-property-builder (new CfnPipe$PipeTargetEcsTaskParametersProperty$Builder) id config))
 
@@ -1291,7 +1481,12 @@
 
 
 (defn cfn-pipe-pipe-target-event-bridge-event-bus-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeTargetEventBridgeEventBusParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-target-event-bridge-event-bus-parameters-property-builder (new CfnPipe$PipeTargetEventBridgeEventBusParametersProperty$Builder) id config))
 
@@ -1320,7 +1515,12 @@
 
 
 (defn cfn-pipe-pipe-target-http-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeTargetHttpParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-target-http-parameters-property-builder (new CfnPipe$PipeTargetHttpParametersProperty$Builder) id config))
 
@@ -1343,7 +1543,12 @@
 
 
 (defn cfn-pipe-pipe-target-kinesis-stream-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeTargetKinesisStreamParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-target-kinesis-stream-parameters-property-builder (new CfnPipe$PipeTargetKinesisStreamParametersProperty$Builder) id config))
 
@@ -1366,7 +1571,12 @@
 
 
 (defn cfn-pipe-pipe-target-lambda-function-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeTargetLambdaFunctionParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-target-lambda-function-parameters-property-builder (new CfnPipe$PipeTargetLambdaFunctionParametersProperty$Builder) id config))
 
@@ -1422,7 +1632,12 @@
 
 
 (defn cfn-pipe-pipe-target-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeTargetParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-target-parameters-property-builder (new CfnPipe$PipeTargetParametersProperty$Builder) id config))
 
@@ -1460,7 +1675,12 @@
 
 
 (defn cfn-pipe-pipe-target-redshift-data-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeTargetRedshiftDataParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-target-redshift-data-parameters-property-builder (new CfnPipe$PipeTargetRedshiftDataParametersProperty$Builder) id config))
 
@@ -1483,7 +1703,12 @@
 
 
 (defn cfn-pipe-pipe-target-sage-maker-pipeline-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeTargetSageMakerPipelineParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-target-sage-maker-pipeline-parameters-property-builder (new CfnPipe$PipeTargetSageMakerPipelineParametersProperty$Builder) id config))
 
@@ -1509,7 +1734,12 @@
 
 
 (defn cfn-pipe-pipe-target-sqs-queue-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeTargetSqsQueueParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-target-sqs-queue-parameters-property-builder (new CfnPipe$PipeTargetSqsQueueParametersProperty$Builder) id config))
 
@@ -1532,7 +1762,12 @@
 
 
 (defn cfn-pipe-pipe-target-state-machine-parameters-property-builder
-  ""
+  "Creates a  `CfnPipe$PipeTargetStateMachineParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-pipe-target-state-machine-parameters-property-builder (new CfnPipe$PipeTargetStateMachineParametersProperty$Builder) id config))
 
@@ -1558,7 +1793,12 @@
 
 
 (defn cfn-pipe-placement-constraint-property-builder
-  ""
+  "Creates a  `CfnPipe$PlacementConstraintProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-placement-constraint-property-builder (new CfnPipe$PlacementConstraintProperty$Builder) id config))
 
@@ -1584,7 +1824,12 @@
 
 
 (defn cfn-pipe-placement-strategy-property-builder
-  ""
+  "Creates a  `CfnPipe$PlacementStrategyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-placement-strategy-property-builder (new CfnPipe$PlacementStrategyProperty$Builder) id config))
 
@@ -1640,7 +1885,12 @@
 
 
 (defn cfn-pipe-props-builder
-  ""
+  "Creates a  `CfnPipeProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-props-builder (new CfnPipeProps$Builder) id config))
 
@@ -1672,7 +1922,12 @@
 
 
 (defn cfn-pipe-s3-log-destination-property-builder
-  ""
+  "Creates a  `CfnPipe$S3LogDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-s3-log-destination-property-builder (new CfnPipe$S3LogDestinationProperty$Builder) id config))
 
@@ -1698,7 +1953,12 @@
 
 
 (defn cfn-pipe-sage-maker-pipeline-parameter-property-builder
-  ""
+  "Creates a  `CfnPipe$SageMakerPipelineParameterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-sage-maker-pipeline-parameter-property-builder (new CfnPipe$SageMakerPipelineParameterProperty$Builder) id config))
 
@@ -1730,7 +1990,12 @@
 
 
 (defn cfn-pipe-self-managed-kafka-access-configuration-credentials-property-builder
-  ""
+  "Creates a  `CfnPipe$SelfManagedKafkaAccessConfigurationCredentialsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-self-managed-kafka-access-configuration-credentials-property-builder (new CfnPipe$SelfManagedKafkaAccessConfigurationCredentialsProperty$Builder) id config))
 
@@ -1756,6 +2021,11 @@
 
 
 (defn cfn-pipe-self-managed-kafka-access-configuration-vpc-property-builder
-  ""
+  "Creates a  `CfnPipe$SelfManagedKafkaAccessConfigurationVpcProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pipe-self-managed-kafka-access-configuration-vpc-property-builder (new CfnPipe$SelfManagedKafkaAccessConfigurationVpcProperty$Builder) id config))

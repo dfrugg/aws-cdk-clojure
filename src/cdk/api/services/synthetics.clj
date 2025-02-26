@@ -88,7 +88,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn artifacts-bucket-location-builder
-  ""
+  "Creates a  `ArtifactsBucketLocation$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-artifacts-bucket-location-builder (new ArtifactsBucketLocation$Builder) id config))
 
@@ -129,6 +134,20 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :readers)]
     (. builder readers data))
   (.build builder))
+
+
+(defn asset-code-builder
+  "Creates a  `AssetCode$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
+
+
+__Create Form:__ ____[java.lang.String]___
+| Argument | DataType | Description |
+|---|---|---|
+| path | java.lang.String |  |
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
+  [^String path id config]
+  (build-asset-code-builder (AssetCode$Builder/create path) id config))
 
 
 (defn build-canary-builder
@@ -194,7 +213,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn canary-builder
-  ""
+  "Creates a  `Canary$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-canary-builder (Canary$Builder/create scope (name id)) id config))
 
@@ -262,7 +286,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn canary-props-builder
-  ""
+  "Creates a  `CanaryProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-canary-props-builder (new CanaryProps$Builder) id config))
 
@@ -285,7 +314,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-canary-artifact-config-property-builder
-  ""
+  "Creates a  `CfnCanary$ArtifactConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-canary-artifact-config-property-builder (new CfnCanary$ArtifactConfigProperty$Builder) id config))
 
@@ -311,7 +345,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-canary-base-screenshot-property-builder
-  ""
+  "Creates a  `CfnCanary$BaseScreenshotProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-canary-base-screenshot-property-builder (new CfnCanary$BaseScreenshotProperty$Builder) id config))
 
@@ -376,7 +415,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-canary-builder
-  ""
+  "Creates a  `CfnCanary$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-canary-builder (CfnCanary$Builder/create scope (name id)) id config))
 
@@ -414,7 +458,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-canary-code-property-builder
-  ""
+  "Creates a  `CfnCanary$CodeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-canary-code-property-builder (new CfnCanary$CodeProperty$Builder) id config))
 
@@ -479,7 +528,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-canary-props-builder
-  ""
+  "Creates a  `CfnCanaryProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-canary-props-builder (new CfnCanaryProps$Builder) id config))
 
@@ -511,7 +565,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-canary-run-config-property-builder
-  ""
+  "Creates a  `CfnCanary$RunConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-canary-run-config-property-builder (new CfnCanary$RunConfigProperty$Builder) id config))
 
@@ -537,7 +596,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-canary-s3-encryption-property-builder
-  ""
+  "Creates a  `CfnCanary$S3EncryptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-canary-s3-encryption-property-builder (new CfnCanary$S3EncryptionProperty$Builder) id config))
 
@@ -563,7 +627,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-canary-schedule-property-builder
-  ""
+  "Creates a  `CfnCanary$ScheduleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-canary-schedule-property-builder (new CfnCanary$ScheduleProperty$Builder) id config))
 
@@ -589,7 +658,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-canary-visual-reference-property-builder
-  ""
+  "Creates a  `CfnCanary$VisualReferenceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-canary-visual-reference-property-builder (new CfnCanary$VisualReferenceProperty$Builder) id config))
 
@@ -618,7 +692,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-canary-vpc-config-property-builder
-  ""
+  "Creates a  `CfnCanary$VPCConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-canary-vpc-config-property-builder (new CfnCanary$VPCConfigProperty$Builder) id config))
 
@@ -647,7 +726,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-group-builder
-  ""
+  "Creates a  `CfnGroup$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-group-builder (CfnGroup$Builder/create scope (name id)) id config))
 
@@ -676,7 +760,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-group-props-builder
-  ""
+  "Creates a  `CfnGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-group-props-builder (new CfnGroupProps$Builder) id config))
 
@@ -702,7 +791,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-config-builder
-  ""
+  "Creates a  `CodeConfig$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-code-config-builder (new CodeConfig$Builder) id config))
 
@@ -737,7 +831,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cron-options-builder
-  ""
+  "Creates a  `CronOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cron-options-builder (new CronOptions$Builder) id config))
 
@@ -763,6 +862,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn custom-test-options-builder
-  ""
+  "Creates a  `CustomTestOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-custom-test-options-builder (new CustomTestOptions$Builder) id config))

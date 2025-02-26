@@ -42,7 +42,12 @@
 
 
 (defn cfn-accessor-builder
-  ""
+  "Creates a  `CfnAccessor$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-accessor-builder (CfnAccessor$Builder/create scope (name id)) id config))
 
@@ -71,7 +76,12 @@
 
 
 (defn cfn-accessor-props-builder
-  ""
+  "Creates a  `CfnAccessorProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-accessor-props-builder (new CfnAccessorProps$Builder) id config))
 
@@ -100,7 +110,12 @@
 
 
 (defn cfn-member-approval-threshold-policy-property-builder
-  ""
+  "Creates a  `CfnMember$ApprovalThresholdPolicyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-member-approval-threshold-policy-property-builder (new CfnMember$ApprovalThresholdPolicyProperty$Builder) id config))
 
@@ -132,7 +147,12 @@
 
 
 (defn cfn-member-builder
-  ""
+  "Creates a  `CfnMember$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-member-builder (CfnMember$Builder/create scope (name id)) id config))
 
@@ -161,7 +181,12 @@
 
 
 (defn cfn-member-member-configuration-property-builder
-  ""
+  "Creates a  `CfnMember$MemberConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-member-member-configuration-property-builder (new CfnMember$MemberConfigurationProperty$Builder) id config))
 
@@ -187,7 +212,12 @@
 
 
 (defn cfn-member-member-fabric-configuration-property-builder
-  ""
+  "Creates a  `CfnMember$MemberFabricConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-member-member-fabric-configuration-property-builder (new CfnMember$MemberFabricConfigurationProperty$Builder) id config))
 
@@ -210,7 +240,12 @@
 
 
 (defn cfn-member-member-framework-configuration-property-builder
-  ""
+  "Creates a  `CfnMember$MemberFrameworkConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-member-member-framework-configuration-property-builder (new CfnMember$MemberFrameworkConfigurationProperty$Builder) id config))
 
@@ -248,7 +283,12 @@
 
 
 (defn cfn-member-network-configuration-property-builder
-  ""
+  "Creates a  `CfnMember$NetworkConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-member-network-configuration-property-builder (new CfnMember$NetworkConfigurationProperty$Builder) id config))
 
@@ -271,7 +311,12 @@
 
 
 (defn cfn-member-network-fabric-configuration-property-builder
-  ""
+  "Creates a  `CfnMember$NetworkFabricConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-member-network-fabric-configuration-property-builder (new CfnMember$NetworkFabricConfigurationProperty$Builder) id config))
 
@@ -294,7 +339,12 @@
 
 
 (defn cfn-member-network-framework-configuration-property-builder
-  ""
+  "Creates a  `CfnMember$NetworkFrameworkConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-member-network-framework-configuration-property-builder (new CfnMember$NetworkFrameworkConfigurationProperty$Builder) id config))
 
@@ -326,7 +376,12 @@
 
 
 (defn cfn-member-props-builder
-  ""
+  "Creates a  `CfnMemberProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-member-props-builder (new CfnMemberProps$Builder) id config))
 
@@ -349,7 +404,12 @@
 
 
 (defn cfn-member-voting-policy-property-builder
-  ""
+  "Creates a  `CfnMember$VotingPolicyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-member-voting-policy-property-builder (new CfnMember$VotingPolicyProperty$Builder) id config))
 
@@ -378,7 +438,12 @@
 
 
 (defn cfn-node-builder
-  ""
+  "Creates a  `CfnNode$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-node-builder (CfnNode$Builder/create scope (name id)) id config))
 
@@ -404,7 +469,12 @@
 
 
 (defn cfn-node-node-configuration-property-builder
-  ""
+  "Creates a  `CfnNode$NodeConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-node-node-configuration-property-builder (new CfnNode$NodeConfigurationProperty$Builder) id config))
 
@@ -433,6 +503,11 @@
 
 
 (defn cfn-node-props-builder
-  ""
+  "Creates a  `CfnNodeProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-node-props-builder (new CfnNodeProps$Builder) id config))

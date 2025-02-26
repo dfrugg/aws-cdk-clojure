@@ -36,7 +36,12 @@
 
 
 (defn cfn-cluster-builder
-  ""
+  "Creates a  `CfnCluster$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-cluster-builder (CfnCluster$Builder/create scope (name id)) id config))
 
@@ -62,7 +67,12 @@
 
 
 (defn cfn-cluster-cluster-endpoint-property-builder
-  ""
+  "Creates a  `CfnCluster$ClusterEndpointProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-cluster-cluster-endpoint-property-builder (new CfnCluster$ClusterEndpointProperty$Builder) id config))
 
@@ -88,7 +98,12 @@
 
 
 (defn cfn-cluster-props-builder
-  ""
+  "Creates a  `CfnClusterProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-cluster-props-builder (new CfnClusterProps$Builder) id config))
 
@@ -117,7 +132,12 @@
 
 
 (defn cfn-control-panel-builder
-  ""
+  "Creates a  `CfnControlPanel$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-control-panel-builder (CfnControlPanel$Builder/create scope (name id)) id config))
 
@@ -146,7 +166,12 @@
 
 
 (defn cfn-control-panel-props-builder
-  ""
+  "Creates a  `CfnControlPanelProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-control-panel-props-builder (new CfnControlPanelProps$Builder) id config))
 
@@ -175,7 +200,12 @@
 
 
 (defn cfn-routing-control-builder
-  ""
+  "Creates a  `CfnRoutingControl$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-routing-control-builder (CfnRoutingControl$Builder/create scope (name id)) id config))
 
@@ -204,7 +234,12 @@
 
 
 (defn cfn-routing-control-props-builder
-  ""
+  "Creates a  `CfnRoutingControlProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-routing-control-props-builder (new CfnRoutingControlProps$Builder) id config))
 
@@ -230,7 +265,12 @@
 
 
 (defn cfn-safety-rule-assertion-rule-property-builder
-  ""
+  "Creates a  `CfnSafetyRule$AssertionRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-safety-rule-assertion-rule-property-builder (new CfnSafetyRule$AssertionRuleProperty$Builder) id config))
 
@@ -268,7 +308,12 @@
 
 
 (defn cfn-safety-rule-builder
-  ""
+  "Creates a  `CfnSafetyRule$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-safety-rule-builder (CfnSafetyRule$Builder/create scope (name id)) id config))
 
@@ -297,7 +342,12 @@
 
 
 (defn cfn-safety-rule-gating-rule-property-builder
-  ""
+  "Creates a  `CfnSafetyRule$GatingRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-safety-rule-gating-rule-property-builder (new CfnSafetyRule$GatingRuleProperty$Builder) id config))
 
@@ -335,7 +385,12 @@
 
 
 (defn cfn-safety-rule-props-builder
-  ""
+  "Creates a  `CfnSafetyRuleProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-safety-rule-props-builder (new CfnSafetyRuleProps$Builder) id config))
 
@@ -364,6 +419,11 @@
 
 
 (defn cfn-safety-rule-rule-config-property-builder
-  ""
+  "Creates a  `CfnSafetyRule$RuleConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-safety-rule-rule-config-property-builder (new CfnSafetyRule$RuleConfigProperty$Builder) id config))

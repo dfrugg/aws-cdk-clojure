@@ -232,7 +232,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn alexa-skill-deploy-action-builder
-  ""
+  "Creates a  `AlexaSkillDeployAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-alexa-skill-deploy-action-builder (AlexaSkillDeployAction$Builder/create) id config))
 
@@ -279,7 +284,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn alexa-skill-deploy-action-props-builder
-  ""
+  "Creates a  `AlexaSkillDeployActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-alexa-skill-deploy-action-props-builder (new AlexaSkillDeployActionProps$Builder) id config))
 
@@ -350,7 +360,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cloud-formation-create-replace-change-set-action-builder
-  ""
+  "Creates a  `CloudFormationCreateReplaceChangeSetAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cloud-formation-create-replace-change-set-action-builder (CloudFormationCreateReplaceChangeSetAction$Builder/create) id config))
 
@@ -421,7 +436,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cloud-formation-create-replace-change-set-action-props-builder
-  ""
+  "Creates a  `CloudFormationCreateReplaceChangeSetActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cloud-formation-create-replace-change-set-action-props-builder (new CloudFormationCreateReplaceChangeSetActionProps$Builder) id config))
 
@@ -492,7 +512,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cloud-formation-create-update-stack-action-builder
-  ""
+  "Creates a  `CloudFormationCreateUpdateStackAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cloud-formation-create-update-stack-action-builder (CloudFormationCreateUpdateStackAction$Builder/create) id config))
 
@@ -563,7 +588,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cloud-formation-create-update-stack-action-props-builder
-  ""
+  "Creates a  `CloudFormationCreateUpdateStackActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cloud-formation-create-update-stack-action-props-builder (new CloudFormationCreateUpdateStackActionProps$Builder) id config))
 
@@ -628,7 +658,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cloud-formation-delete-stack-action-builder
-  ""
+  "Creates a  `CloudFormationDeleteStackAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cloud-formation-delete-stack-action-builder (CloudFormationDeleteStackAction$Builder/create) id config))
 
@@ -693,7 +728,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cloud-formation-delete-stack-action-props-builder
-  ""
+  "Creates a  `CloudFormationDeleteStackActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cloud-formation-delete-stack-action-props-builder (new CloudFormationDeleteStackActionProps$Builder) id config))
 
@@ -743,7 +783,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cloud-formation-deploy-stack-instances-action-builder
-  ""
+  "Creates a  `CloudFormationDeployStackInstancesAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cloud-formation-deploy-stack-instances-action-builder (CloudFormationDeployStackInstancesAction$Builder/create) id config))
 
@@ -793,7 +838,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cloud-formation-deploy-stack-instances-action-props-builder
-  ""
+  "Creates a  `CloudFormationDeployStackInstancesActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cloud-formation-deploy-stack-instances-action-props-builder (new CloudFormationDeployStackInstancesActionProps$Builder) id config))
 
@@ -855,7 +905,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cloud-formation-deploy-stack-set-action-builder
-  ""
+  "Creates a  `CloudFormationDeployStackSetAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cloud-formation-deploy-stack-set-action-builder (CloudFormationDeployStackSetAction$Builder/create) id config))
 
@@ -917,7 +972,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cloud-formation-deploy-stack-set-action-props-builder
-  ""
+  "Creates a  `CloudFormationDeployStackSetActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cloud-formation-deploy-stack-set-action-props-builder (new CloudFormationDeployStackSetActionProps$Builder) id config))
 
@@ -967,7 +1027,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cloud-formation-execute-change-set-action-builder
-  ""
+  "Creates a  `CloudFormationExecuteChangeSetAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cloud-formation-execute-change-set-action-builder (CloudFormationExecuteChangeSetAction$Builder/create) id config))
 
@@ -1017,7 +1082,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cloud-formation-execute-change-set-action-props-builder
-  ""
+  "Creates a  `CloudFormationExecuteChangeSetActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cloud-formation-execute-change-set-action-props-builder (new CloudFormationExecuteChangeSetActionProps$Builder) id config))
 
@@ -1076,7 +1146,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-build-action-builder
-  ""
+  "Creates a  `CodeBuildAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-code-build-action-builder (CodeBuildAction$Builder/create) id config))
 
@@ -1135,7 +1210,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-build-action-props-builder
-  ""
+  "Creates a  `CodeBuildActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-code-build-action-props-builder (new CodeBuildActionProps$Builder) id config))
 
@@ -1188,7 +1268,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-commit-source-action-builder
-  ""
+  "Creates a  `CodeCommitSourceAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-code-commit-source-action-builder (CodeCommitSourceAction$Builder/create) id config))
 
@@ -1241,7 +1326,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-commit-source-action-props-builder
-  ""
+  "Creates a  `CodeCommitSourceActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-code-commit-source-action-props-builder (new CodeCommitSourceActionProps$Builder) id config))
 
@@ -1279,7 +1369,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-commit-source-variables-builder
-  ""
+  "Creates a  `CodeCommitSourceVariables$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-code-commit-source-variables-builder (new CodeCommitSourceVariables$Builder) id config))
 
@@ -1305,7 +1400,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-deploy-ecs-container-image-input-builder
-  ""
+  "Creates a  `CodeDeployEcsContainerImageInput$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-code-deploy-ecs-container-image-input-builder (new CodeDeployEcsContainerImageInput$Builder) id config))
 
@@ -1355,7 +1455,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-deploy-ecs-deploy-action-builder
-  ""
+  "Creates a  `CodeDeployEcsDeployAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-code-deploy-ecs-deploy-action-builder (CodeDeployEcsDeployAction$Builder/create) id config))
 
@@ -1405,7 +1510,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-deploy-ecs-deploy-action-props-builder
-  ""
+  "Creates a  `CodeDeployEcsDeployActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-code-deploy-ecs-deploy-action-props-builder (new CodeDeployEcsDeployActionProps$Builder) id config))
 
@@ -1443,7 +1553,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-deploy-server-deploy-action-builder
-  ""
+  "Creates a  `CodeDeployServerDeployAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-code-deploy-server-deploy-action-builder (CodeDeployServerDeployAction$Builder/create) id config))
 
@@ -1481,7 +1596,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-deploy-server-deploy-action-props-builder
-  ""
+  "Creates a  `CodeDeployServerDeployActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-code-deploy-server-deploy-action-props-builder (new CodeDeployServerDeployActionProps$Builder) id config))
 
@@ -1534,7 +1654,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-star-connections-source-action-builder
-  ""
+  "Creates a  `CodeStarConnectionsSourceAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-code-star-connections-source-action-builder (CodeStarConnectionsSourceAction$Builder/create) id config))
 
@@ -1587,7 +1712,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-star-connections-source-action-props-builder
-  ""
+  "Creates a  `CodeStarConnectionsSourceActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-code-star-connections-source-action-props-builder (new CodeStarConnectionsSourceActionProps$Builder) id config))
 
@@ -1625,7 +1755,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-star-source-variables-builder
-  ""
+  "Creates a  `CodeStarSourceVariables$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-code-star-source-variables-builder (new CodeStarSourceVariables$Builder) id config))
 
@@ -1654,7 +1789,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn common-cloud-formation-stack-set-options-builder
-  ""
+  "Creates a  `CommonCloudFormationStackSetOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-common-cloud-formation-stack-set-options-builder (new CommonCloudFormationStackSetOptions$Builder) id config))
 
@@ -1695,7 +1835,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ecr-source-action-builder
-  ""
+  "Creates a  `EcrSourceAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-ecr-source-action-builder (EcrSourceAction$Builder/create) id config))
 
@@ -1736,7 +1881,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ecr-source-action-props-builder
-  ""
+  "Creates a  `EcrSourceActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-ecr-source-action-props-builder (new EcrSourceActionProps$Builder) id config))
 
@@ -1771,7 +1921,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ecr-source-variables-builder
-  ""
+  "Creates a  `EcrSourceVariables$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-ecr-source-variables-builder (new EcrSourceVariables$Builder) id config))
 
@@ -1815,7 +1970,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ecs-deploy-action-builder
-  ""
+  "Creates a  `EcsDeployAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-ecs-deploy-action-builder (EcsDeployAction$Builder/create) id config))
 
@@ -1859,7 +2019,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ecs-deploy-action-props-builder
-  ""
+  "Creates a  `EcsDeployActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-ecs-deploy-action-props-builder (new EcsDeployActionProps$Builder) id config))
 
@@ -1900,7 +2065,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn elastic-beanstalk-deploy-action-builder
-  ""
+  "Creates a  `ElasticBeanstalkDeployAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-elastic-beanstalk-deploy-action-builder (ElasticBeanstalkDeployAction$Builder/create) id config))
 
@@ -1941,7 +2111,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn elastic-beanstalk-deploy-action-props-builder
-  ""
+  "Creates a  `ElasticBeanstalkDeployActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-elastic-beanstalk-deploy-action-props-builder (new ElasticBeanstalkDeployActionProps$Builder) id config))
 
@@ -1988,7 +2163,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn git-hub-source-action-builder
-  ""
+  "Creates a  `GitHubSourceAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-git-hub-source-action-builder (GitHubSourceAction$Builder/create) id config))
 
@@ -2035,7 +2215,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn git-hub-source-action-props-builder
-  ""
+  "Creates a  `GitHubSourceActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-git-hub-source-action-props-builder (new GitHubSourceActionProps$Builder) id config))
 
@@ -2076,7 +2261,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn git-hub-source-variables-builder
-  ""
+  "Creates a  `GitHubSourceVariables$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-git-hub-source-variables-builder (new GitHubSourceVariables$Builder) id config))
 
@@ -2120,7 +2310,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn jenkins-action-builder
-  ""
+  "Creates a  `JenkinsAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-jenkins-action-builder (JenkinsAction$Builder/create) id config))
 
@@ -2164,7 +2359,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn jenkins-action-props-builder
-  ""
+  "Creates a  `JenkinsActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-jenkins-action-props-builder (new JenkinsActionProps$Builder) id config))
 
@@ -2193,7 +2393,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn jenkins-provider-attributes-builder
-  ""
+  "Creates a  `JenkinsProviderAttributes$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-jenkins-provider-attributes-builder (new JenkinsProviderAttributes$Builder) id config))
 
@@ -2228,7 +2433,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn jenkins-provider-builder
-  ""
+  "Creates a  `JenkinsProvider$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-jenkins-provider-builder (JenkinsProvider$Builder/create scope (name id)) id config))
 
@@ -2263,7 +2473,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn jenkins-provider-props-builder
-  ""
+  "Creates a  `JenkinsProviderProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-jenkins-provider-props-builder (new JenkinsProviderProps$Builder) id config))
 
@@ -2310,7 +2525,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn lambda-invoke-action-builder
-  ""
+  "Creates a  `LambdaInvokeAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-lambda-invoke-action-builder (LambdaInvokeAction$Builder/create) id config))
 
@@ -2357,7 +2577,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn lambda-invoke-action-props-builder
-  ""
+  "Creates a  `LambdaInvokeActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-lambda-invoke-action-props-builder (new LambdaInvokeActionProps$Builder) id config))
 
@@ -2401,7 +2626,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn manual-approval-action-builder
-  ""
+  "Creates a  `ManualApprovalAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-manual-approval-action-builder (ManualApprovalAction$Builder/create) id config))
 
@@ -2445,7 +2675,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn manual-approval-action-props-builder
-  ""
+  "Creates a  `ManualApprovalActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-manual-approval-action-props-builder (new ManualApprovalActionProps$Builder) id config))
 
@@ -2468,7 +2703,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn organizations-deployment-props-builder
-  ""
+  "Creates a  `OrganizationsDeploymentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-organizations-deployment-props-builder (new OrganizationsDeploymentProps$Builder) id config))
 
@@ -2521,7 +2761,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn s3-deploy-action-builder
-  ""
+  "Creates a  `S3DeployAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-s3-deploy-action-builder (S3DeployAction$Builder/create) id config))
 
@@ -2574,7 +2819,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn s3-deploy-action-props-builder
-  ""
+  "Creates a  `S3DeployActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-s3-deploy-action-props-builder (new S3DeployActionProps$Builder) id config))
 
@@ -2618,7 +2868,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn s3-source-action-builder
-  ""
+  "Creates a  `S3SourceAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-s3-source-action-builder (S3SourceAction$Builder/create) id config))
 
@@ -2662,7 +2917,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn s3-source-action-props-builder
-  ""
+  "Creates a  `S3SourceActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-s3-source-action-props-builder (new S3SourceActionProps$Builder) id config))
 
@@ -2688,7 +2948,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn s3-source-variables-builder
-  ""
+  "Creates a  `S3SourceVariables$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-s3-source-variables-builder (new S3SourceVariables$Builder) id config))
 
@@ -2714,7 +2979,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn self-managed-deployment-props-builder
-  ""
+  "Creates a  `SelfManagedDeploymentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-self-managed-deployment-props-builder (new SelfManagedDeploymentProps$Builder) id config))
 
@@ -2758,7 +3028,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn service-catalog-deploy-action-beta1-builder
-  ""
+  "Creates a  `ServiceCatalogDeployActionBeta1$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-service-catalog-deploy-action-beta1-builder (ServiceCatalogDeployActionBeta1$Builder/create) id config))
 
@@ -2802,7 +3077,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn service-catalog-deploy-action-beta1-props-builder
-  ""
+  "Creates a  `ServiceCatalogDeployActionBeta1Props$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-service-catalog-deploy-action-beta1-props-builder (new ServiceCatalogDeployActionBeta1Props$Builder) id config))
 
@@ -2846,7 +3126,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn step-function-invoke-action-builder
-  ""
+  "Creates a  `StepFunctionInvokeAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-step-function-invoke-action-builder (StepFunctionInvokeAction$Builder/create) id config))
 
@@ -2890,6 +3175,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn step-functions-invoke-action-props-builder
-  ""
+  "Creates a  `StepFunctionsInvokeActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-step-functions-invoke-action-props-builder (new StepFunctionsInvokeActionProps$Builder) id config))

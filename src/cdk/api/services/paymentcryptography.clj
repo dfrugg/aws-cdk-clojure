@@ -30,7 +30,12 @@
 
 
 (defn cfn-alias-builder
-  ""
+  "Creates a  `CfnAlias$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-alias-builder (CfnAlias$Builder/create scope (name id)) id config))
 
@@ -56,7 +61,12 @@
 
 
 (defn cfn-alias-props-builder
-  ""
+  "Creates a  `CfnAliasProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alias-props-builder (new CfnAliasProps$Builder) id config))
 
@@ -91,7 +101,12 @@
 
 
 (defn cfn-key-builder
-  ""
+  "Creates a  `CfnKey$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-key-builder (CfnKey$Builder/create scope (name id)) id config))
 
@@ -123,7 +138,12 @@
 
 
 (defn cfn-key-key-attributes-property-builder
-  ""
+  "Creates a  `CfnKey$KeyAttributesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-key-key-attributes-property-builder (new CfnKey$KeyAttributesProperty$Builder) id config))
 
@@ -170,7 +190,12 @@
 
 
 (defn cfn-key-key-modes-of-use-property-builder
-  ""
+  "Creates a  `CfnKey$KeyModesOfUseProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-key-key-modes-of-use-property-builder (new CfnKey$KeyModesOfUseProperty$Builder) id config))
 
@@ -205,6 +230,11 @@
 
 
 (defn cfn-key-props-builder
-  ""
+  "Creates a  `CfnKeyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-key-props-builder (new CfnKeyProps$Builder) id config))

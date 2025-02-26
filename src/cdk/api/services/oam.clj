@@ -39,7 +39,12 @@
 
 
 (defn cfn-link-builder
-  ""
+  "Creates a  `CfnLink$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-link-builder (CfnLink$Builder/create scope (name id)) id config))
 
@@ -65,7 +70,12 @@
 
 
 (defn cfn-link-link-configuration-property-builder
-  ""
+  "Creates a  `CfnLink$LinkConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-link-link-configuration-property-builder (new CfnLink$LinkConfigurationProperty$Builder) id config))
 
@@ -88,7 +98,12 @@
 
 
 (defn cfn-link-link-filter-property-builder
-  ""
+  "Creates a  `CfnLink$LinkFilterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-link-link-filter-property-builder (new CfnLink$LinkFilterProperty$Builder) id config))
 
@@ -123,7 +138,12 @@
 
 
 (defn cfn-link-props-builder
-  ""
+  "Creates a  `CfnLinkProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-link-props-builder (new CfnLinkProps$Builder) id config))
 
@@ -152,7 +172,12 @@
 
 
 (defn cfn-sink-builder
-  ""
+  "Creates a  `CfnSink$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-sink-builder (CfnSink$Builder/create scope (name id)) id config))
 
@@ -181,6 +206,11 @@
 
 
 (defn cfn-sink-props-builder
-  ""
+  "Creates a  `CfnSinkProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-sink-props-builder (new CfnSinkProps$Builder) id config))

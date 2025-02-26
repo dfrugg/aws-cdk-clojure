@@ -30,7 +30,12 @@
 
 
 (defn cfn-assessment-target-builder
-  ""
+  "Creates a  `CfnAssessmentTarget$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-assessment-target-builder (CfnAssessmentTarget$Builder/create scope (name id)) id config))
 
@@ -56,7 +61,12 @@
 
 
 (defn cfn-assessment-target-props-builder
-  ""
+  "Creates a  `CfnAssessmentTargetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-assessment-target-props-builder (new CfnAssessmentTargetProps$Builder) id config))
 
@@ -91,7 +101,12 @@
 
 
 (defn cfn-assessment-template-builder
-  ""
+  "Creates a  `CfnAssessmentTemplate$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-assessment-template-builder (CfnAssessmentTemplate$Builder/create scope (name id)) id config))
 
@@ -126,7 +141,12 @@
 
 
 (defn cfn-assessment-template-props-builder
-  ""
+  "Creates a  `CfnAssessmentTemplateProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-assessment-template-props-builder (new CfnAssessmentTemplateProps$Builder) id config))
 
@@ -149,7 +169,12 @@
 
 
 (defn cfn-resource-group-builder
-  ""
+  "Creates a  `CfnResourceGroup$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-resource-group-builder (CfnResourceGroup$Builder/create scope (name id)) id config))
 
@@ -172,6 +197,11 @@
 
 
 (defn cfn-resource-group-props-builder
-  ""
+  "Creates a  `CfnResourceGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-resource-group-props-builder (new CfnResourceGroupProps$Builder) id config))

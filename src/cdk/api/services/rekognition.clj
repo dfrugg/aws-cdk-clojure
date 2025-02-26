@@ -39,7 +39,12 @@
 
 
 (defn cfn-collection-builder
-  ""
+  "Creates a  `CfnCollection$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-collection-builder (CfnCollection$Builder/create scope (name id)) id config))
 
@@ -65,7 +70,12 @@
 
 
 (defn cfn-collection-props-builder
-  ""
+  "Creates a  `CfnCollectionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-collection-props-builder (new CfnCollectionProps$Builder) id config))
 
@@ -88,7 +98,12 @@
 
 
 (defn cfn-project-builder
-  ""
+  "Creates a  `CfnProject$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-project-builder (CfnProject$Builder/create scope (name id)) id config))
 
@@ -111,7 +126,12 @@
 
 
 (defn cfn-project-props-builder
-  ""
+  "Creates a  `CfnProjectProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-project-props-builder (new CfnProjectProps$Builder) id config))
 
@@ -143,7 +163,12 @@
 
 
 (defn cfn-stream-processor-bounding-box-property-builder
-  ""
+  "Creates a  `CfnStreamProcessor$BoundingBoxProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stream-processor-bounding-box-property-builder (new CfnStreamProcessor$BoundingBoxProperty$Builder) id config))
 
@@ -202,7 +227,12 @@
 
 
 (defn cfn-stream-processor-builder
-  ""
+  "Creates a  `CfnStreamProcessor$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-stream-processor-builder (CfnStreamProcessor$Builder/create scope (name id)) id config))
 
@@ -228,7 +258,12 @@
 
 
 (defn cfn-stream-processor-connected-home-settings-property-builder
-  ""
+  "Creates a  `CfnStreamProcessor$ConnectedHomeSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stream-processor-connected-home-settings-property-builder (new CfnStreamProcessor$ConnectedHomeSettingsProperty$Builder) id config))
 
@@ -251,7 +286,12 @@
 
 
 (defn cfn-stream-processor-data-sharing-preference-property-builder
-  ""
+  "Creates a  `CfnStreamProcessor$DataSharingPreferenceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stream-processor-data-sharing-preference-property-builder (new CfnStreamProcessor$DataSharingPreferenceProperty$Builder) id config))
 
@@ -277,7 +317,12 @@
 
 
 (defn cfn-stream-processor-face-search-settings-property-builder
-  ""
+  "Creates a  `CfnStreamProcessor$FaceSearchSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stream-processor-face-search-settings-property-builder (new CfnStreamProcessor$FaceSearchSettingsProperty$Builder) id config))
 
@@ -300,7 +345,12 @@
 
 
 (defn cfn-stream-processor-kinesis-data-stream-property-builder
-  ""
+  "Creates a  `CfnStreamProcessor$KinesisDataStreamProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stream-processor-kinesis-data-stream-property-builder (new CfnStreamProcessor$KinesisDataStreamProperty$Builder) id config))
 
@@ -323,7 +373,12 @@
 
 
 (defn cfn-stream-processor-kinesis-video-stream-property-builder
-  ""
+  "Creates a  `CfnStreamProcessor$KinesisVideoStreamProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stream-processor-kinesis-video-stream-property-builder (new CfnStreamProcessor$KinesisVideoStreamProperty$Builder) id config))
 
@@ -346,7 +401,12 @@
 
 
 (defn cfn-stream-processor-notification-channel-property-builder
-  ""
+  "Creates a  `CfnStreamProcessor$NotificationChannelProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stream-processor-notification-channel-property-builder (new CfnStreamProcessor$NotificationChannelProperty$Builder) id config))
 
@@ -372,7 +432,12 @@
 
 
 (defn cfn-stream-processor-point-property-builder
-  ""
+  "Creates a  `CfnStreamProcessor$PointProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stream-processor-point-property-builder (new CfnStreamProcessor$PointProperty$Builder) id config))
 
@@ -431,7 +496,12 @@
 
 
 (defn cfn-stream-processor-props-builder
-  ""
+  "Creates a  `CfnStreamProcessorProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stream-processor-props-builder (new CfnStreamProcessorProps$Builder) id config))
 
@@ -457,6 +527,11 @@
 
 
 (defn cfn-stream-processor-s3-destination-property-builder
-  ""
+  "Creates a  `CfnStreamProcessor$S3DestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stream-processor-s3-destination-property-builder (new CfnStreamProcessor$S3DestinationProperty$Builder) id config))

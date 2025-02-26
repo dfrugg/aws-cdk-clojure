@@ -42,7 +42,12 @@
 
 
 (defn cfn-rule-groups-namespace-builder
-  ""
+  "Creates a  `CfnRuleGroupsNamespace$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-rule-groups-namespace-builder (CfnRuleGroupsNamespace$Builder/create scope (name id)) id config))
 
@@ -74,7 +79,12 @@
 
 
 (defn cfn-rule-groups-namespace-props-builder
-  ""
+  "Creates a  `CfnRuleGroupsNamespaceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-groups-namespace-props-builder (new CfnRuleGroupsNamespaceProps$Builder) id config))
 
@@ -97,7 +107,12 @@
 
 
 (defn cfn-scraper-amp-configuration-property-builder
-  ""
+  "Creates a  `CfnScraper$AmpConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scraper-amp-configuration-property-builder (new CfnScraper$AmpConfigurationProperty$Builder) id config))
 
@@ -132,7 +147,12 @@
 
 
 (defn cfn-scraper-builder
-  ""
+  "Creates a  `CfnScraper$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-scraper-builder (CfnScraper$Builder/create scope (name id)) id config))
 
@@ -155,7 +175,12 @@
 
 
 (defn cfn-scraper-destination-property-builder
-  ""
+  "Creates a  `CfnScraper$DestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scraper-destination-property-builder (new CfnScraper$DestinationProperty$Builder) id config))
 
@@ -184,7 +209,12 @@
 
 
 (defn cfn-scraper-eks-configuration-property-builder
-  ""
+  "Creates a  `CfnScraper$EksConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scraper-eks-configuration-property-builder (new CfnScraper$EksConfigurationProperty$Builder) id config))
 
@@ -219,7 +249,12 @@
 
 
 (defn cfn-scraper-props-builder
-  ""
+  "Creates a  `CfnScraperProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scraper-props-builder (new CfnScraperProps$Builder) id config))
 
@@ -242,7 +277,12 @@
 
 
 (defn cfn-scraper-scrape-configuration-property-builder
-  ""
+  "Creates a  `CfnScraper$ScrapeConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scraper-scrape-configuration-property-builder (new CfnScraper$ScrapeConfigurationProperty$Builder) id config))
 
@@ -265,7 +305,12 @@
 
 
 (defn cfn-scraper-source-property-builder
-  ""
+  "Creates a  `CfnScraper$SourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scraper-source-property-builder (new CfnScraper$SourceProperty$Builder) id config))
 
@@ -300,7 +345,12 @@
 
 
 (defn cfn-workspace-builder
-  ""
+  "Creates a  `CfnWorkspace$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-workspace-builder (CfnWorkspace$Builder/create scope (name id)) id config))
 
@@ -323,7 +373,12 @@
 
 
 (defn cfn-workspace-logging-configuration-property-builder
-  ""
+  "Creates a  `CfnWorkspace$LoggingConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-workspace-logging-configuration-property-builder (new CfnWorkspace$LoggingConfigurationProperty$Builder) id config))
 
@@ -358,6 +413,11 @@
 
 
 (defn cfn-workspace-props-builder
-  ""
+  "Creates a  `CfnWorkspaceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-workspace-props-builder (new CfnWorkspaceProps$Builder) id config))

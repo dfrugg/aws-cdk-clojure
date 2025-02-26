@@ -30,7 +30,12 @@
 
 
 (defn cfn-default-view-association-builder
-  ""
+  "Creates a  `CfnDefaultViewAssociation$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-default-view-association-builder (CfnDefaultViewAssociation$Builder/create scope (name id)) id config))
 
@@ -53,7 +58,12 @@
 
 
 (defn cfn-default-view-association-props-builder
-  ""
+  "Creates a  `CfnDefaultViewAssociationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-default-view-association-props-builder (new CfnDefaultViewAssociationProps$Builder) id config))
 
@@ -79,7 +89,12 @@
 
 
 (defn cfn-index-builder
-  ""
+  "Creates a  `CfnIndex$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-index-builder (CfnIndex$Builder/create scope (name id)) id config))
 
@@ -105,7 +120,12 @@
 
 
 (defn cfn-index-props-builder
-  ""
+  "Creates a  `CfnIndexProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-index-props-builder (new CfnIndexProps$Builder) id config))
 
@@ -140,7 +160,12 @@
 
 
 (defn cfn-view-builder
-  ""
+  "Creates a  `CfnView$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-view-builder (CfnView$Builder/create scope (name id)) id config))
 
@@ -163,7 +188,12 @@
 
 
 (defn cfn-view-filters-property-builder
-  ""
+  "Creates a  `CfnView$FiltersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-view-filters-property-builder (new CfnView$FiltersProperty$Builder) id config))
 
@@ -186,7 +216,12 @@
 
 
 (defn cfn-view-included-property-property-builder
-  ""
+  "Creates a  `CfnView$IncludedPropertyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-view-included-property-property-builder (new CfnView$IncludedPropertyProperty$Builder) id config))
 
@@ -221,7 +256,12 @@
 
 
 (defn cfn-view-props-builder
-  ""
+  "Creates a  `CfnViewProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-view-props-builder (new CfnViewProps$Builder) id config))
 
@@ -244,6 +284,11 @@
 
 
 (defn cfn-view-search-filter-property-builder
-  ""
+  "Creates a  `CfnView$SearchFilterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-view-search-filter-property-builder (new CfnView$SearchFilterProperty$Builder) id config))

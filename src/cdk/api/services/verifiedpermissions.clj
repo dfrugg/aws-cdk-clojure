@@ -45,7 +45,12 @@
 
 
 (defn cfn-identity-source-builder
-  ""
+  "Creates a  `CfnIdentitySource$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-identity-source-builder (CfnIdentitySource$Builder/create scope (name id)) id config))
 
@@ -68,7 +73,12 @@
 
 
 (defn cfn-identity-source-cognito-group-configuration-property-builder
-  ""
+  "Creates a  `CfnIdentitySource$CognitoGroupConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-identity-source-cognito-group-configuration-property-builder (new CfnIdentitySource$CognitoGroupConfigurationProperty$Builder) id config))
 
@@ -97,7 +107,12 @@
 
 
 (defn cfn-identity-source-cognito-user-pool-configuration-property-builder
-  ""
+  "Creates a  `CfnIdentitySource$CognitoUserPoolConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-identity-source-cognito-user-pool-configuration-property-builder (new CfnIdentitySource$CognitoUserPoolConfigurationProperty$Builder) id config))
 
@@ -120,7 +135,12 @@
 
 
 (defn cfn-identity-source-identity-source-configuration-property-builder
-  ""
+  "Creates a  `CfnIdentitySource$IdentitySourceConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-identity-source-identity-source-configuration-property-builder (new CfnIdentitySource$IdentitySourceConfigurationProperty$Builder) id config))
 
@@ -152,7 +172,12 @@
 
 
 (defn cfn-identity-source-identity-source-details-property-builder
-  ""
+  "Creates a  `CfnIdentitySource$IdentitySourceDetailsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-identity-source-identity-source-details-property-builder (new CfnIdentitySource$IdentitySourceDetailsProperty$Builder) id config))
 
@@ -181,7 +206,12 @@
 
 
 (defn cfn-identity-source-props-builder
-  ""
+  "Creates a  `CfnIdentitySourceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-identity-source-props-builder (new CfnIdentitySourceProps$Builder) id config))
 
@@ -207,7 +237,12 @@
 
 
 (defn cfn-policy-builder
-  ""
+  "Creates a  `CfnPolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-policy-builder (CfnPolicy$Builder/create scope (name id)) id config))
 
@@ -233,7 +268,12 @@
 
 
 (defn cfn-policy-entity-identifier-property-builder
-  ""
+  "Creates a  `CfnPolicy$EntityIdentifierProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-policy-entity-identifier-property-builder (new CfnPolicy$EntityIdentifierProperty$Builder) id config))
 
@@ -259,7 +299,12 @@
 
 
 (defn cfn-policy-policy-definition-property-builder
-  ""
+  "Creates a  `CfnPolicy$PolicyDefinitionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-policy-policy-definition-property-builder (new CfnPolicy$PolicyDefinitionProperty$Builder) id config))
 
@@ -285,7 +330,12 @@
 
 
 (defn cfn-policy-props-builder
-  ""
+  "Creates a  `CfnPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-policy-props-builder (new CfnPolicyProps$Builder) id config))
 
@@ -311,7 +361,12 @@
 
 
 (defn cfn-policy-static-policy-definition-property-builder
-  ""
+  "Creates a  `CfnPolicy$StaticPolicyDefinitionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-policy-static-policy-definition-property-builder (new CfnPolicy$StaticPolicyDefinitionProperty$Builder) id config))
 
@@ -340,7 +395,12 @@
 
 
 (defn cfn-policy-store-builder
-  ""
+  "Creates a  `CfnPolicyStore$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-policy-store-builder (CfnPolicyStore$Builder/create scope (name id)) id config))
 
@@ -369,7 +429,12 @@
 
 
 (defn cfn-policy-store-props-builder
-  ""
+  "Creates a  `CfnPolicyStoreProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-policy-store-props-builder (new CfnPolicyStoreProps$Builder) id config))
 
@@ -392,7 +457,12 @@
 
 
 (defn cfn-policy-store-schema-definition-property-builder
-  ""
+  "Creates a  `CfnPolicyStore$SchemaDefinitionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-policy-store-schema-definition-property-builder (new CfnPolicyStore$SchemaDefinitionProperty$Builder) id config))
 
@@ -415,7 +485,12 @@
 
 
 (defn cfn-policy-store-validation-settings-property-builder
-  ""
+  "Creates a  `CfnPolicyStore$ValidationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-policy-store-validation-settings-property-builder (new CfnPolicyStore$ValidationSettingsProperty$Builder) id config))
 
@@ -444,7 +519,12 @@
 
 
 (defn cfn-policy-template-builder
-  ""
+  "Creates a  `CfnPolicyTemplate$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-policy-template-builder (CfnPolicyTemplate$Builder/create scope (name id)) id config))
 
@@ -473,7 +553,12 @@
 
 
 (defn cfn-policy-template-linked-policy-definition-property-builder
-  ""
+  "Creates a  `CfnPolicy$TemplateLinkedPolicyDefinitionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-policy-template-linked-policy-definition-property-builder (new CfnPolicy$TemplateLinkedPolicyDefinitionProperty$Builder) id config))
 
@@ -502,6 +587,11 @@
 
 
 (defn cfn-policy-template-props-builder
-  ""
+  "Creates a  `CfnPolicyTemplateProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-policy-template-props-builder (new CfnPolicyTemplateProps$Builder) id config))

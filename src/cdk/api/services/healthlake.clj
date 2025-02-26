@@ -43,7 +43,12 @@
 
 
 (defn cfn-fhir-datastore-builder
-  ""
+  "Creates a  `CfnFHIRDatastore$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-fhir-datastore-builder (CfnFHIRDatastore$Builder/create scope (name id)) id config))
 
@@ -69,7 +74,12 @@
 
 
 (defn cfn-fhir-datastore-created-at-property-builder
-  ""
+  "Creates a  `CfnFHIRDatastore$CreatedAtProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-fhir-datastore-created-at-property-builder (new CfnFHIRDatastore$CreatedAtProperty$Builder) id config))
 
@@ -101,7 +111,12 @@
 
 
 (defn cfn-fhir-datastore-identity-provider-configuration-property-builder
-  ""
+  "Creates a  `CfnFHIRDatastore$IdentityProviderConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-fhir-datastore-identity-provider-configuration-property-builder (new CfnFHIRDatastore$IdentityProviderConfigurationProperty$Builder) id config))
 
@@ -127,7 +142,12 @@
 
 
 (defn cfn-fhir-datastore-kms-encryption-config-property-builder
-  ""
+  "Creates a  `CfnFHIRDatastore$KmsEncryptionConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-fhir-datastore-kms-encryption-config-property-builder (new CfnFHIRDatastore$KmsEncryptionConfigProperty$Builder) id config))
 
@@ -150,7 +170,12 @@
 
 
 (defn cfn-fhir-datastore-preload-data-config-property-builder
-  ""
+  "Creates a  `CfnFHIRDatastore$PreloadDataConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-fhir-datastore-preload-data-config-property-builder (new CfnFHIRDatastore$PreloadDataConfigProperty$Builder) id config))
 
@@ -188,7 +213,12 @@
 
 
 (defn cfn-fhir-datastore-props-builder
-  ""
+  "Creates a  `CfnFHIRDatastoreProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-fhir-datastore-props-builder (new CfnFHIRDatastoreProps$Builder) id config))
 
@@ -211,6 +241,11 @@
 
 
 (defn cfn-fhir-datastore-sse-configuration-property-builder
-  ""
+  "Creates a  `CfnFHIRDatastore$SseConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-fhir-datastore-sse-configuration-property-builder (new CfnFHIRDatastore$SseConfigurationProperty$Builder) id config))

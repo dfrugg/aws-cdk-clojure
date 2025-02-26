@@ -235,7 +235,12 @@
 
 
 (defn cfn-channel-aac-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$AacSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-aac-settings-property-builder (new CfnChannel$AacSettingsProperty$Builder) id config))
 
@@ -279,7 +284,12 @@
 
 
 (defn cfn-channel-ac3-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$Ac3SettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-ac3-settings-property-builder (new CfnChannel$Ac3SettingsProperty$Builder) id config))
 
@@ -302,7 +312,12 @@
 
 
 (defn cfn-channel-ancillary-source-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$AncillarySourceSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-ancillary-source-settings-property-builder (new CfnChannel$AncillarySourceSettingsProperty$Builder) id config))
 
@@ -325,7 +340,12 @@
 
 
 (defn cfn-channel-archive-cdn-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$ArchiveCdnSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-archive-cdn-settings-property-builder (new CfnChannel$ArchiveCdnSettingsProperty$Builder) id config))
 
@@ -351,7 +371,12 @@
 
 
 (defn cfn-channel-archive-container-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$ArchiveContainerSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-archive-container-settings-property-builder (new CfnChannel$ArchiveContainerSettingsProperty$Builder) id config))
 
@@ -380,7 +405,12 @@
 
 
 (defn cfn-channel-archive-group-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$ArchiveGroupSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-archive-group-settings-property-builder (new CfnChannel$ArchiveGroupSettingsProperty$Builder) id config))
 
@@ -409,7 +439,12 @@
 
 
 (defn cfn-channel-archive-output-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$ArchiveOutputSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-archive-output-settings-property-builder (new CfnChannel$ArchiveOutputSettingsProperty$Builder) id config))
 
@@ -432,7 +467,12 @@
 
 
 (defn cfn-channel-archive-s3-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$ArchiveS3SettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-archive-s3-settings-property-builder (new CfnChannel$ArchiveS3SettingsProperty$Builder) id config))
 
@@ -452,7 +492,12 @@
 
 
 (defn cfn-channel-arib-destination-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$AribDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-arib-destination-settings-property-builder (new CfnChannel$AribDestinationSettingsProperty$Builder) id config))
 
@@ -472,7 +517,12 @@
 
 
 (defn cfn-channel-arib-source-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$AribSourceSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-arib-source-settings-property-builder (new CfnChannel$AribSourceSettingsProperty$Builder) id config))
 
@@ -498,7 +548,12 @@
 
 
 (defn cfn-channel-audio-channel-mapping-property-builder
-  ""
+  "Creates a  `CfnChannel$AudioChannelMappingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-audio-channel-mapping-property-builder (new CfnChannel$AudioChannelMappingProperty$Builder) id config))
 
@@ -539,7 +594,12 @@
 
 
 (defn cfn-channel-audio-codec-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$AudioCodecSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-audio-codec-settings-property-builder (new CfnChannel$AudioCodecSettingsProperty$Builder) id config))
 
@@ -598,7 +658,12 @@
 
 
 (defn cfn-channel-audio-description-property-builder
-  ""
+  "Creates a  `CfnChannel$AudioDescriptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-audio-description-property-builder (new CfnChannel$AudioDescriptionProperty$Builder) id config))
 
@@ -621,7 +686,12 @@
 
 
 (defn cfn-channel-audio-dolby-e-decode-property-builder
-  ""
+  "Creates a  `CfnChannel$AudioDolbyEDecodeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-audio-dolby-e-decode-property-builder (new CfnChannel$AudioDolbyEDecodeProperty$Builder) id config))
 
@@ -647,7 +717,12 @@
 
 
 (defn cfn-channel-audio-hls-rendition-selection-property-builder
-  ""
+  "Creates a  `CfnChannel$AudioHlsRenditionSelectionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-audio-hls-rendition-selection-property-builder (new CfnChannel$AudioHlsRenditionSelectionProperty$Builder) id config))
 
@@ -673,7 +748,12 @@
 
 
 (defn cfn-channel-audio-language-selection-property-builder
-  ""
+  "Creates a  `CfnChannel$AudioLanguageSelectionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-audio-language-selection-property-builder (new CfnChannel$AudioLanguageSelectionProperty$Builder) id config))
 
@@ -702,7 +782,12 @@
 
 
 (defn cfn-channel-audio-normalization-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$AudioNormalizationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-audio-normalization-settings-property-builder (new CfnChannel$AudioNormalizationSettingsProperty$Builder) id config))
 
@@ -734,7 +819,12 @@
 
 
 (defn cfn-channel-audio-only-hls-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$AudioOnlyHlsSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-audio-only-hls-settings-property-builder (new CfnChannel$AudioOnlyHlsSettingsProperty$Builder) id config))
 
@@ -757,7 +847,12 @@
 
 
 (defn cfn-channel-audio-pid-selection-property-builder
-  ""
+  "Creates a  `CfnChannel$AudioPidSelectionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-audio-pid-selection-property-builder (new CfnChannel$AudioPidSelectionProperty$Builder) id config))
 
@@ -783,7 +878,12 @@
 
 
 (defn cfn-channel-audio-selector-property-builder
-  ""
+  "Creates a  `CfnChannel$AudioSelectorProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-audio-selector-property-builder (new CfnChannel$AudioSelectorProperty$Builder) id config))
 
@@ -815,7 +915,12 @@
 
 
 (defn cfn-channel-audio-selector-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$AudioSelectorSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-audio-selector-settings-property-builder (new CfnChannel$AudioSelectorSettingsProperty$Builder) id config))
 
@@ -841,7 +946,12 @@
 
 
 (defn cfn-channel-audio-silence-failover-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$AudioSilenceFailoverSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-audio-silence-failover-settings-property-builder (new CfnChannel$AudioSilenceFailoverSettingsProperty$Builder) id config))
 
@@ -864,7 +974,12 @@
 
 
 (defn cfn-channel-audio-track-property-builder
-  ""
+  "Creates a  `CfnChannel$AudioTrackProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-audio-track-property-builder (new CfnChannel$AudioTrackProperty$Builder) id config))
 
@@ -890,7 +1005,12 @@
 
 
 (defn cfn-channel-audio-track-selection-property-builder
-  ""
+  "Creates a  `CfnChannel$AudioTrackSelectionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-audio-track-selection-property-builder (new CfnChannel$AudioTrackSelectionProperty$Builder) id config))
 
@@ -913,7 +1033,12 @@
 
 
 (defn cfn-channel-audio-watermark-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$AudioWatermarkSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-audio-watermark-settings-property-builder (new CfnChannel$AudioWatermarkSettingsProperty$Builder) id config))
 
@@ -945,7 +1070,12 @@
 
 
 (defn cfn-channel-automatic-input-failover-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$AutomaticInputFailoverSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-automatic-input-failover-settings-property-builder (new CfnChannel$AutomaticInputFailoverSettingsProperty$Builder) id config))
 
@@ -971,7 +1101,12 @@
 
 
 (defn cfn-channel-avail-blanking-property-builder
-  ""
+  "Creates a  `CfnChannel$AvailBlankingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-avail-blanking-property-builder (new CfnChannel$AvailBlankingProperty$Builder) id config))
 
@@ -997,7 +1132,12 @@
 
 
 (defn cfn-channel-avail-configuration-property-builder
-  ""
+  "Creates a  `CfnChannel$AvailConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-avail-configuration-property-builder (new CfnChannel$AvailConfigurationProperty$Builder) id config))
 
@@ -1026,7 +1166,12 @@
 
 
 (defn cfn-channel-avail-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$AvailSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-avail-settings-property-builder (new CfnChannel$AvailSettingsProperty$Builder) id config))
 
@@ -1061,7 +1206,12 @@
 
 
 (defn cfn-channel-blackout-slate-property-builder
-  ""
+  "Creates a  `CfnChannel$BlackoutSlateProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-blackout-slate-property-builder (new CfnChannel$BlackoutSlateProperty$Builder) id config))
 
@@ -1117,7 +1267,12 @@
 
 
 (defn cfn-channel-builder
-  ""
+  "Creates a  `CfnChannel$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-channel-builder (CfnChannel$Builder/create scope (name id)) id config))
 
@@ -1188,7 +1343,12 @@
 
 
 (defn cfn-channel-burn-in-destination-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$BurnInDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-burn-in-destination-settings-property-builder (new CfnChannel$BurnInDestinationSettingsProperty$Builder) id config))
 
@@ -1232,7 +1392,12 @@
 
 
 (defn cfn-channel-caption-description-property-builder
-  ""
+  "Creates a  `CfnChannel$CaptionDescriptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-caption-description-property-builder (new CfnChannel$CaptionDescriptionProperty$Builder) id config))
 
@@ -1291,7 +1456,12 @@
 
 
 (defn cfn-channel-caption-destination-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$CaptionDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-caption-destination-settings-property-builder (new CfnChannel$CaptionDestinationSettingsProperty$Builder) id config))
 
@@ -1320,7 +1490,12 @@
 
 
 (defn cfn-channel-caption-language-mapping-property-builder
-  ""
+  "Creates a  `CfnChannel$CaptionLanguageMappingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-caption-language-mapping-property-builder (new CfnChannel$CaptionLanguageMappingProperty$Builder) id config))
 
@@ -1352,7 +1527,12 @@
 
 
 (defn cfn-channel-caption-rectangle-property-builder
-  ""
+  "Creates a  `CfnChannel$CaptionRectangleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-caption-rectangle-property-builder (new CfnChannel$CaptionRectangleProperty$Builder) id config))
 
@@ -1381,7 +1561,12 @@
 
 
 (defn cfn-channel-caption-selector-property-builder
-  ""
+  "Creates a  `CfnChannel$CaptionSelectorProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-caption-selector-property-builder (new CfnChannel$CaptionSelectorProperty$Builder) id config))
 
@@ -1422,7 +1607,12 @@
 
 
 (defn cfn-channel-caption-selector-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$CaptionSelectorSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-caption-selector-settings-property-builder (new CfnChannel$CaptionSelectorSettingsProperty$Builder) id config))
 
@@ -1445,7 +1635,12 @@
 
 
 (defn cfn-channel-cdi-input-specification-property-builder
-  ""
+  "Creates a  `CfnChannel$CdiInputSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-cdi-input-specification-property-builder (new CfnChannel$CdiInputSpecificationProperty$Builder) id config))
 
@@ -1483,7 +1678,12 @@
 
 
 (defn cfn-channel-cmaf-ingest-group-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$CmafIngestGroupSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-cmaf-ingest-group-settings-property-builder (new CfnChannel$CmafIngestGroupSettingsProperty$Builder) id config))
 
@@ -1506,7 +1706,12 @@
 
 
 (defn cfn-channel-cmaf-ingest-output-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$CmafIngestOutputSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-cmaf-ingest-output-settings-property-builder (new CfnChannel$CmafIngestOutputSettingsProperty$Builder) id config))
 
@@ -1535,7 +1740,12 @@
 
 
 (defn cfn-channel-color-correction-property-builder
-  ""
+  "Creates a  `CfnChannel$ColorCorrectionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-color-correction-property-builder (new CfnChannel$ColorCorrectionProperty$Builder) id config))
 
@@ -1558,7 +1768,12 @@
 
 
 (defn cfn-channel-color-correction-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$ColorCorrectionSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-color-correction-settings-property-builder (new CfnChannel$ColorCorrectionSettingsProperty$Builder) id config))
 
@@ -1578,7 +1793,12 @@
 
 
 (defn cfn-channel-color-space-passthrough-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$ColorSpacePassthroughSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-color-space-passthrough-settings-property-builder (new CfnChannel$ColorSpacePassthroughSettingsProperty$Builder) id config))
 
@@ -1598,7 +1818,12 @@
 
 
 (defn cfn-channel-dolby-vision81-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$DolbyVision81SettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-dolby-vision81-settings-property-builder (new CfnChannel$DolbyVision81SettingsProperty$Builder) id config))
 
@@ -1627,7 +1852,12 @@
 
 
 (defn cfn-channel-dvb-nit-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$DvbNitSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-dvb-nit-settings-property-builder (new CfnChannel$DvbNitSettingsProperty$Builder) id config))
 
@@ -1659,7 +1889,12 @@
 
 
 (defn cfn-channel-dvb-sdt-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$DvbSdtSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-dvb-sdt-settings-property-builder (new CfnChannel$DvbSdtSettingsProperty$Builder) id config))
 
@@ -1730,7 +1965,12 @@
 
 
 (defn cfn-channel-dvb-sub-destination-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$DvbSubDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-dvb-sub-destination-settings-property-builder (new CfnChannel$DvbSubDestinationSettingsProperty$Builder) id config))
 
@@ -1756,7 +1996,12 @@
 
 
 (defn cfn-channel-dvb-sub-source-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$DvbSubSourceSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-dvb-sub-source-settings-property-builder (new CfnChannel$DvbSubSourceSettingsProperty$Builder) id config))
 
@@ -1779,7 +2024,12 @@
 
 
 (defn cfn-channel-dvb-tdt-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$DvbTdtSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-dvb-tdt-settings-property-builder (new CfnChannel$DvbTdtSettingsProperty$Builder) id config))
 
@@ -1820,7 +2070,12 @@
 
 
 (defn cfn-channel-eac3-atmos-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$Eac3AtmosSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-eac3-atmos-settings-property-builder (new CfnChannel$Eac3AtmosSettingsProperty$Builder) id config))
 
@@ -1900,7 +2155,12 @@
 
 
 (defn cfn-channel-eac3-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$Eac3SettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-eac3-settings-property-builder (new CfnChannel$Eac3SettingsProperty$Builder) id config))
 
@@ -1932,7 +2192,12 @@
 
 
 (defn cfn-channel-ebu-tt-d-destination-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$EbuTtDDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-ebu-tt-d-destination-settings-property-builder (new CfnChannel$EbuTtDDestinationSettingsProperty$Builder) id config))
 
@@ -1952,7 +2217,12 @@
 
 
 (defn cfn-channel-embedded-destination-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$EmbeddedDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-embedded-destination-settings-property-builder (new CfnChannel$EmbeddedDestinationSettingsProperty$Builder) id config))
 
@@ -1972,7 +2242,12 @@
 
 
 (defn cfn-channel-embedded-plus-scte20-destination-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$EmbeddedPlusScte20DestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-embedded-plus-scte20-destination-settings-property-builder (new CfnChannel$EmbeddedPlusScte20DestinationSettingsProperty$Builder) id config))
 
@@ -2004,7 +2279,12 @@
 
 
 (defn cfn-channel-embedded-source-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$EmbeddedSourceSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-embedded-source-settings-property-builder (new CfnChannel$EmbeddedSourceSettingsProperty$Builder) id config))
 
@@ -2066,7 +2346,12 @@
 
 
 (defn cfn-channel-encoder-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$EncoderSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-encoder-settings-property-builder (new CfnChannel$EncoderSettingsProperty$Builder) id config))
 
@@ -2092,7 +2377,12 @@
 
 
 (defn cfn-channel-epoch-locking-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$EpochLockingSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-epoch-locking-settings-property-builder (new CfnChannel$EpochLockingSettingsProperty$Builder) id config))
 
@@ -2130,7 +2420,12 @@
 
 
 (defn cfn-channel-esam-property-builder
-  ""
+  "Creates a  `CfnChannel$EsamProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-esam-property-builder (new CfnChannel$EsamProperty$Builder) id config))
 
@@ -2153,7 +2448,12 @@
 
 
 (defn cfn-channel-failover-condition-property-builder
-  ""
+  "Creates a  `CfnChannel$FailoverConditionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-failover-condition-property-builder (new CfnChannel$FailoverConditionProperty$Builder) id config))
 
@@ -2182,7 +2482,12 @@
 
 
 (defn cfn-channel-failover-condition-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$FailoverConditionSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-failover-condition-settings-property-builder (new CfnChannel$FailoverConditionSettingsProperty$Builder) id config))
 
@@ -2208,7 +2513,12 @@
 
 
 (defn cfn-channel-feature-activations-property-builder
-  ""
+  "Creates a  `CfnChannel$FeatureActivationsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-feature-activations-property-builder (new CfnChannel$FeatureActivationsProperty$Builder) id config))
 
@@ -2237,7 +2547,12 @@
 
 
 (defn cfn-channel-fec-output-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$FecOutputSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-fec-output-settings-property-builder (new CfnChannel$FecOutputSettingsProperty$Builder) id config))
 
@@ -2266,7 +2581,12 @@
 
 
 (defn cfn-channel-fmp4-hls-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$Fmp4HlsSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-fmp4-hls-settings-property-builder (new CfnChannel$Fmp4HlsSettingsProperty$Builder) id config))
 
@@ -2289,7 +2609,12 @@
 
 
 (defn cfn-channel-frame-capture-cdn-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$FrameCaptureCdnSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-frame-capture-cdn-settings-property-builder (new CfnChannel$FrameCaptureCdnSettingsProperty$Builder) id config))
 
@@ -2315,7 +2640,12 @@
 
 
 (defn cfn-channel-frame-capture-group-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$FrameCaptureGroupSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-frame-capture-group-settings-property-builder (new CfnChannel$FrameCaptureGroupSettingsProperty$Builder) id config))
 
@@ -2335,7 +2665,12 @@
 
 
 (defn cfn-channel-frame-capture-hls-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$FrameCaptureHlsSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-frame-capture-hls-settings-property-builder (new CfnChannel$FrameCaptureHlsSettingsProperty$Builder) id config))
 
@@ -2358,7 +2693,12 @@
 
 
 (defn cfn-channel-frame-capture-output-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$FrameCaptureOutputSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-frame-capture-output-settings-property-builder (new CfnChannel$FrameCaptureOutputSettingsProperty$Builder) id config))
 
@@ -2381,7 +2721,12 @@
 
 
 (defn cfn-channel-frame-capture-s3-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$FrameCaptureS3SettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-frame-capture-s3-settings-property-builder (new CfnChannel$FrameCaptureS3SettingsProperty$Builder) id config))
 
@@ -2410,7 +2755,12 @@
 
 
 (defn cfn-channel-frame-capture-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$FrameCaptureSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-frame-capture-settings-property-builder (new CfnChannel$FrameCaptureSettingsProperty$Builder) id config))
 
@@ -2451,7 +2801,12 @@
 
 
 (defn cfn-channel-global-configuration-property-builder
-  ""
+  "Creates a  `CfnChannel$GlobalConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-global-configuration-property-builder (new CfnChannel$GlobalConfigurationProperty$Builder) id config))
 
@@ -2480,7 +2835,12 @@
 
 
 (defn cfn-channel-h264-color-space-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$H264ColorSpaceSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-h264-color-space-settings-property-builder (new CfnChannel$H264ColorSpaceSettingsProperty$Builder) id config))
 
@@ -2503,7 +2863,12 @@
 
 
 (defn cfn-channel-h264-filter-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$H264FilterSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-h264-filter-settings-property-builder (new CfnChannel$H264FilterSettingsProperty$Builder) id config))
 
@@ -2649,7 +3014,12 @@
 
 
 (defn cfn-channel-h264-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$H264SettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-h264-settings-property-builder (new CfnChannel$H264SettingsProperty$Builder) id config))
 
@@ -2684,7 +3054,12 @@
 
 
 (defn cfn-channel-h265-color-space-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$H265ColorSpaceSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-h265-color-space-settings-property-builder (new CfnChannel$H265ColorSpaceSettingsProperty$Builder) id config))
 
@@ -2707,7 +3082,12 @@
 
 
 (defn cfn-channel-h265-filter-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$H265FilterSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-h265-filter-settings-property-builder (new CfnChannel$H265FilterSettingsProperty$Builder) id config))
 
@@ -2835,7 +3215,12 @@
 
 
 (defn cfn-channel-h265-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$H265SettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-h265-settings-property-builder (new CfnChannel$H265SettingsProperty$Builder) id config))
 
@@ -2861,7 +3246,12 @@
 
 
 (defn cfn-channel-hdr10-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$Hdr10SettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-hdr10-settings-property-builder (new CfnChannel$Hdr10SettingsProperty$Builder) id config))
 
@@ -2902,7 +3292,12 @@
 
 
 (defn cfn-channel-hls-akamai-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$HlsAkamaiSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-hls-akamai-settings-property-builder (new CfnChannel$HlsAkamaiSettingsProperty$Builder) id config))
 
@@ -2934,7 +3329,12 @@
 
 
 (defn cfn-channel-hls-basic-put-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$HlsBasicPutSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-hls-basic-put-settings-property-builder (new CfnChannel$HlsBasicPutSettingsProperty$Builder) id config))
 
@@ -2969,7 +3369,12 @@
 
 
 (defn cfn-channel-hls-cdn-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$HlsCdnSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-hls-cdn-settings-property-builder (new CfnChannel$HlsCdnSettingsProperty$Builder) id config))
 
@@ -3118,7 +3523,12 @@
 
 
 (defn cfn-channel-hls-group-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$HlsGroupSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-hls-group-settings-property-builder (new CfnChannel$HlsGroupSettingsProperty$Builder) id config))
 
@@ -3153,7 +3563,12 @@
 
 
 (defn cfn-channel-hls-input-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$HlsInputSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-hls-input-settings-property-builder (new CfnChannel$HlsInputSettingsProperty$Builder) id config))
 
@@ -3188,7 +3603,12 @@
 
 
 (defn cfn-channel-hls-media-store-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$HlsMediaStoreSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-hls-media-store-settings-property-builder (new CfnChannel$HlsMediaStoreSettingsProperty$Builder) id config))
 
@@ -3220,7 +3640,12 @@
 
 
 (defn cfn-channel-hls-output-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$HlsOutputSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-hls-output-settings-property-builder (new CfnChannel$HlsOutputSettingsProperty$Builder) id config))
 
@@ -3243,7 +3668,12 @@
 
 
 (defn cfn-channel-hls-s3-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$HlsS3SettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-hls-s3-settings-property-builder (new CfnChannel$HlsS3SettingsProperty$Builder) id config))
 
@@ -3275,7 +3705,12 @@
 
 
 (defn cfn-channel-hls-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$HlsSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-hls-settings-property-builder (new CfnChannel$HlsSettingsProperty$Builder) id config))
 
@@ -3310,7 +3745,12 @@
 
 
 (defn cfn-channel-hls-webdav-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$HlsWebdavSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-hls-webdav-settings-property-builder (new CfnChannel$HlsWebdavSettingsProperty$Builder) id config))
 
@@ -3330,7 +3770,12 @@
 
 
 (defn cfn-channel-html-motion-graphics-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$HtmlMotionGraphicsSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-html-motion-graphics-settings-property-builder (new CfnChannel$HtmlMotionGraphicsSettingsProperty$Builder) id config))
 
@@ -3362,7 +3807,12 @@
 
 
 (defn cfn-channel-input-attachment-property-builder
-  ""
+  "Creates a  `CfnChannel$InputAttachmentProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-input-attachment-property-builder (new CfnChannel$InputAttachmentProperty$Builder) id config))
 
@@ -3388,7 +3838,12 @@
 
 
 (defn cfn-channel-input-channel-level-property-builder
-  ""
+  "Creates a  `CfnChannel$InputChannelLevelProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-input-channel-level-property-builder (new CfnChannel$InputChannelLevelProperty$Builder) id config))
 
@@ -3417,7 +3872,12 @@
 
 
 (defn cfn-channel-input-location-property-builder
-  ""
+  "Creates a  `CfnChannel$InputLocationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-input-location-property-builder (new CfnChannel$InputLocationProperty$Builder) id config))
 
@@ -3452,7 +3912,12 @@
 
 
 (defn cfn-channel-input-loss-behavior-property-builder
-  ""
+  "Creates a  `CfnChannel$InputLossBehaviorProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-input-loss-behavior-property-builder (new CfnChannel$InputLossBehaviorProperty$Builder) id config))
 
@@ -3475,7 +3940,12 @@
 
 
 (defn cfn-channel-input-loss-failover-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$InputLossFailoverSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-input-loss-failover-settings-property-builder (new CfnChannel$InputLossFailoverSettingsProperty$Builder) id config))
 
@@ -3528,7 +3998,12 @@
 
 
 (defn cfn-channel-input-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$InputSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-input-settings-property-builder (new CfnChannel$InputSettingsProperty$Builder) id config))
 
@@ -3557,7 +4032,12 @@
 
 
 (defn cfn-channel-input-specification-property-builder
-  ""
+  "Creates a  `CfnChannel$InputSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-input-specification-property-builder (new CfnChannel$InputSpecificationProperty$Builder) id config))
 
@@ -3580,7 +4060,12 @@
 
 
 (defn cfn-channel-key-provider-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$KeyProviderSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-key-provider-settings-property-builder (new CfnChannel$KeyProviderSettingsProperty$Builder) id config))
 
@@ -3744,7 +4229,12 @@
 
 
 (defn cfn-channel-m2ts-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$M2tsSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-m2ts-settings-property-builder (new CfnChannel$M2tsSettingsProperty$Builder) id config))
 
@@ -3821,7 +4311,12 @@
 
 
 (defn cfn-channel-m3u8-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$M3u8SettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-m3u8-settings-property-builder (new CfnChannel$M3u8SettingsProperty$Builder) id config))
 
@@ -3847,7 +4342,12 @@
 
 
 (defn cfn-channel-maintenance-create-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$MaintenanceCreateSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-maintenance-create-settings-property-builder (new CfnChannel$MaintenanceCreateSettingsProperty$Builder) id config))
 
@@ -3876,7 +4376,12 @@
 
 
 (defn cfn-channel-maintenance-update-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$MaintenanceUpdateSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-maintenance-update-settings-property-builder (new CfnChannel$MaintenanceUpdateSettingsProperty$Builder) id config))
 
@@ -3899,7 +4404,12 @@
 
 
 (defn cfn-channel-media-package-group-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$MediaPackageGroupSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-media-package-group-settings-property-builder (new CfnChannel$MediaPackageGroupSettingsProperty$Builder) id config))
 
@@ -3922,7 +4432,12 @@
 
 
 (defn cfn-channel-media-package-output-destination-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$MediaPackageOutputDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-media-package-output-destination-settings-property-builder (new CfnChannel$MediaPackageOutputDestinationSettingsProperty$Builder) id config))
 
@@ -3942,7 +4457,12 @@
 
 
 (defn cfn-channel-media-package-output-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$MediaPackageOutputSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-media-package-output-settings-property-builder (new CfnChannel$MediaPackageOutputSettingsProperty$Builder) id config))
 
@@ -3968,7 +4488,12 @@
 
 
 (defn cfn-channel-motion-graphics-configuration-property-builder
-  ""
+  "Creates a  `CfnChannel$MotionGraphicsConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-motion-graphics-configuration-property-builder (new CfnChannel$MotionGraphicsConfigurationProperty$Builder) id config))
 
@@ -3991,7 +4516,12 @@
 
 
 (defn cfn-channel-motion-graphics-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$MotionGraphicsSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-motion-graphics-settings-property-builder (new CfnChannel$MotionGraphicsSettingsProperty$Builder) id config))
 
@@ -4020,7 +4550,12 @@
 
 
 (defn cfn-channel-mp2-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$Mp2SettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-mp2-settings-property-builder (new CfnChannel$Mp2SettingsProperty$Builder) id config))
 
@@ -4043,7 +4578,12 @@
 
 
 (defn cfn-channel-mpeg2-filter-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$Mpeg2FilterSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-mpeg2-filter-settings-property-builder (new CfnChannel$Mpeg2FilterSettingsProperty$Builder) id config))
 
@@ -4114,7 +4654,12 @@
 
 
 (defn cfn-channel-mpeg2-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$Mpeg2SettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-mpeg2-settings-property-builder (new CfnChannel$Mpeg2SettingsProperty$Builder) id config))
 
@@ -4191,7 +4736,12 @@
 
 
 (defn cfn-channel-ms-smooth-group-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$MsSmoothGroupSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-ms-smooth-group-settings-property-builder (new CfnChannel$MsSmoothGroupSettingsProperty$Builder) id config))
 
@@ -4217,7 +4767,12 @@
 
 
 (defn cfn-channel-ms-smooth-output-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$MsSmoothOutputSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-ms-smooth-output-settings-property-builder (new CfnChannel$MsSmoothOutputSettingsProperty$Builder) id config))
 
@@ -4237,7 +4792,12 @@
 
 
 (defn cfn-channel-multiplex-group-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$MultiplexGroupSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-multiplex-group-settings-property-builder (new CfnChannel$MultiplexGroupSettingsProperty$Builder) id config))
 
@@ -4260,7 +4820,12 @@
 
 
 (defn cfn-channel-multiplex-output-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$MultiplexOutputSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-multiplex-output-settings-property-builder (new CfnChannel$MultiplexOutputSettingsProperty$Builder) id config))
 
@@ -4286,7 +4851,12 @@
 
 
 (defn cfn-channel-multiplex-program-channel-destination-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$MultiplexProgramChannelDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-multiplex-program-channel-destination-settings-property-builder (new CfnChannel$MultiplexProgramChannelDestinationSettingsProperty$Builder) id config))
 
@@ -4312,7 +4882,12 @@
 
 
 (defn cfn-channel-network-input-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$NetworkInputSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-network-input-settings-property-builder (new CfnChannel$NetworkInputSettingsProperty$Builder) id config))
 
@@ -4341,7 +4916,12 @@
 
 
 (defn cfn-channel-nielsen-cbet-property-builder
-  ""
+  "Creates a  `CfnChannel$NielsenCBETProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-nielsen-cbet-property-builder (new CfnChannel$NielsenCBETProperty$Builder) id config))
 
@@ -4367,7 +4947,12 @@
 
 
 (defn cfn-channel-nielsen-configuration-property-builder
-  ""
+  "Creates a  `CfnChannel$NielsenConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-nielsen-configuration-property-builder (new CfnChannel$NielsenConfigurationProperty$Builder) id config))
 
@@ -4396,7 +4981,12 @@
 
 
 (defn cfn-channel-nielsen-naes-ii-nw-property-builder
-  ""
+  "Creates a  `CfnChannel$NielsenNaesIiNwProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-nielsen-naes-ii-nw-property-builder (new CfnChannel$NielsenNaesIiNwProperty$Builder) id config))
 
@@ -4425,7 +5015,12 @@
 
 
 (defn cfn-channel-nielsen-watermarks-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$NielsenWatermarksSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-nielsen-watermarks-settings-property-builder (new CfnChannel$NielsenWatermarksSettingsProperty$Builder) id config))
 
@@ -4457,7 +5052,12 @@
 
 
 (defn cfn-channel-output-destination-property-builder
-  ""
+  "Creates a  `CfnChannel$OutputDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-output-destination-property-builder (new CfnChannel$OutputDestinationProperty$Builder) id config))
 
@@ -4489,7 +5089,12 @@
 
 
 (defn cfn-channel-output-destination-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$OutputDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-output-destination-settings-property-builder (new CfnChannel$OutputDestinationSettingsProperty$Builder) id config))
 
@@ -4518,7 +5123,12 @@
 
 
 (defn cfn-channel-output-group-property-builder
-  ""
+  "Creates a  `CfnChannel$OutputGroupProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-output-group-property-builder (new CfnChannel$OutputGroupProperty$Builder) id config))
 
@@ -4565,7 +5175,12 @@
 
 
 (defn cfn-channel-output-group-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$OutputGroupSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-output-group-settings-property-builder (new CfnChannel$OutputGroupSettingsProperty$Builder) id config))
 
@@ -4588,7 +5203,12 @@
 
 
 (defn cfn-channel-output-location-ref-property-builder
-  ""
+  "Creates a  `CfnChannel$OutputLocationRefProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-output-location-ref-property-builder (new CfnChannel$OutputLocationRefProperty$Builder) id config))
 
@@ -4614,7 +5234,12 @@
 
 
 (defn cfn-channel-output-locking-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$OutputLockingSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-output-locking-settings-property-builder (new CfnChannel$OutputLockingSettingsProperty$Builder) id config))
 
@@ -4649,7 +5274,12 @@
 
 
 (defn cfn-channel-output-property-builder
-  ""
+  "Creates a  `CfnChannel$OutputProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-output-property-builder (new CfnChannel$OutputProperty$Builder) id config))
 
@@ -4696,7 +5326,12 @@
 
 
 (defn cfn-channel-output-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$OutputSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-output-settings-property-builder (new CfnChannel$OutputSettingsProperty$Builder) id config))
 
@@ -4716,7 +5351,12 @@
 
 
 (defn cfn-channel-pass-through-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$PassThroughSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-pass-through-settings-property-builder (new CfnChannel$PassThroughSettingsProperty$Builder) id config))
 
@@ -4772,7 +5412,12 @@
 
 
 (defn cfn-channel-props-builder
-  ""
+  "Creates a  `CfnChannelProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-props-builder (new CfnChannelProps$Builder) id config))
 
@@ -4792,7 +5437,12 @@
 
 
 (defn cfn-channel-raw-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$RawSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-raw-settings-property-builder (new CfnChannel$RawSettingsProperty$Builder) id config))
 
@@ -4812,7 +5462,12 @@
 
 
 (defn cfn-channel-rec601-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$Rec601SettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-rec601-settings-property-builder (new CfnChannel$Rec601SettingsProperty$Builder) id config))
 
@@ -4832,7 +5487,12 @@
 
 
 (defn cfn-channel-rec709-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$Rec709SettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-rec709-settings-property-builder (new CfnChannel$Rec709SettingsProperty$Builder) id config))
 
@@ -4861,7 +5521,12 @@
 
 
 (defn cfn-channel-remix-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$RemixSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-remix-settings-property-builder (new CfnChannel$RemixSettingsProperty$Builder) id config))
 
@@ -4881,7 +5546,12 @@
 
 
 (defn cfn-channel-rtmp-caption-info-destination-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$RtmpCaptionInfoDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-rtmp-caption-info-destination-settings-property-builder (new CfnChannel$RtmpCaptionInfoDestinationSettingsProperty$Builder) id config))
 
@@ -4925,7 +5595,12 @@
 
 
 (defn cfn-channel-rtmp-group-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$RtmpGroupSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-rtmp-group-settings-property-builder (new CfnChannel$RtmpGroupSettingsProperty$Builder) id config))
 
@@ -4957,7 +5632,12 @@
 
 
 (defn cfn-channel-rtmp-output-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$RtmpOutputSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-rtmp-output-settings-property-builder (new CfnChannel$RtmpOutputSettingsProperty$Builder) id config))
 
@@ -4977,7 +5657,12 @@
 
 
 (defn cfn-channel-scte20-plus-embedded-destination-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$Scte20PlusEmbeddedDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-scte20-plus-embedded-destination-settings-property-builder (new CfnChannel$Scte20PlusEmbeddedDestinationSettingsProperty$Builder) id config))
 
@@ -5003,7 +5688,12 @@
 
 
 (defn cfn-channel-scte20-source-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$Scte20SourceSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-scte20-source-settings-property-builder (new CfnChannel$Scte20SourceSettingsProperty$Builder) id config))
 
@@ -5023,7 +5713,12 @@
 
 
 (defn cfn-channel-scte27-destination-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$Scte27DestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-scte27-destination-settings-property-builder (new CfnChannel$Scte27DestinationSettingsProperty$Builder) id config))
 
@@ -5049,7 +5744,12 @@
 
 
 (defn cfn-channel-scte27-source-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$Scte27SourceSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-scte27-source-settings-property-builder (new CfnChannel$Scte27SourceSettingsProperty$Builder) id config))
 
@@ -5078,7 +5778,12 @@
 
 
 (defn cfn-channel-scte35-splice-insert-property-builder
-  ""
+  "Creates a  `CfnChannel$Scte35SpliceInsertProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-scte35-splice-insert-property-builder (new CfnChannel$Scte35SpliceInsertProperty$Builder) id config))
 
@@ -5107,7 +5812,12 @@
 
 
 (defn cfn-channel-scte35-time-signal-apos-property-builder
-  ""
+  "Creates a  `CfnChannel$Scte35TimeSignalAposProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-scte35-time-signal-apos-property-builder (new CfnChannel$Scte35TimeSignalAposProperty$Builder) id config))
 
@@ -5127,7 +5837,12 @@
 
 
 (defn cfn-channel-smpte-tt-destination-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$SmpteTtDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-smpte-tt-destination-settings-property-builder (new CfnChannel$SmpteTtDestinationSettingsProperty$Builder) id config))
 
@@ -5153,7 +5868,12 @@
 
 
 (defn cfn-channel-standard-hls-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$StandardHlsSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-standard-hls-settings-property-builder (new CfnChannel$StandardHlsSettingsProperty$Builder) id config))
 
@@ -5179,7 +5899,12 @@
 
 
 (defn cfn-channel-static-key-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$StaticKeySettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-static-key-settings-property-builder (new CfnChannel$StaticKeySettingsProperty$Builder) id config))
 
@@ -5199,7 +5924,12 @@
 
 
 (defn cfn-channel-teletext-destination-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$TeletextDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-teletext-destination-settings-property-builder (new CfnChannel$TeletextDestinationSettingsProperty$Builder) id config))
 
@@ -5225,7 +5955,12 @@
 
 
 (defn cfn-channel-teletext-source-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$TeletextSourceSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-teletext-source-settings-property-builder (new CfnChannel$TeletextSourceSettingsProperty$Builder) id config))
 
@@ -5251,7 +5986,12 @@
 
 
 (defn cfn-channel-temporal-filter-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$TemporalFilterSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-temporal-filter-settings-property-builder (new CfnChannel$TemporalFilterSettingsProperty$Builder) id config))
 
@@ -5274,7 +6014,12 @@
 
 
 (defn cfn-channel-thumbnail-configuration-property-builder
-  ""
+  "Creates a  `CfnChannel$ThumbnailConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-thumbnail-configuration-property-builder (new CfnChannel$ThumbnailConfigurationProperty$Builder) id config))
 
@@ -5303,7 +6048,12 @@
 
 
 (defn cfn-channel-timecode-burnin-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$TimecodeBurninSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-timecode-burnin-settings-property-builder (new CfnChannel$TimecodeBurninSettingsProperty$Builder) id config))
 
@@ -5329,7 +6079,12 @@
 
 
 (defn cfn-channel-timecode-config-property-builder
-  ""
+  "Creates a  `CfnChannel$TimecodeConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-timecode-config-property-builder (new CfnChannel$TimecodeConfigProperty$Builder) id config))
 
@@ -5352,7 +6107,12 @@
 
 
 (defn cfn-channel-ttml-destination-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$TtmlDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-ttml-destination-settings-property-builder (new CfnChannel$TtmlDestinationSettingsProperty$Builder) id config))
 
@@ -5375,7 +6135,12 @@
 
 
 (defn cfn-channel-udp-container-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$UdpContainerSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-udp-container-settings-property-builder (new CfnChannel$UdpContainerSettingsProperty$Builder) id config))
 
@@ -5404,7 +6169,12 @@
 
 
 (defn cfn-channel-udp-group-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$UdpGroupSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-udp-group-settings-property-builder (new CfnChannel$UdpGroupSettingsProperty$Builder) id config))
 
@@ -5436,7 +6206,12 @@
 
 
 (defn cfn-channel-udp-output-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$UdpOutputSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-udp-output-settings-property-builder (new CfnChannel$UdpOutputSettingsProperty$Builder) id config))
 
@@ -5462,7 +6237,12 @@
 
 
 (defn cfn-channel-video-black-failover-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$VideoBlackFailoverSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-video-black-failover-settings-property-builder (new CfnChannel$VideoBlackFailoverSettingsProperty$Builder) id config))
 
@@ -5494,7 +6274,12 @@
 
 
 (defn cfn-channel-video-codec-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$VideoCodecSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-video-codec-settings-property-builder (new CfnChannel$VideoCodecSettingsProperty$Builder) id config))
 
@@ -5535,7 +6320,12 @@
 
 
 (defn cfn-channel-video-description-property-builder
-  ""
+  "Creates a  `CfnChannel$VideoDescriptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-video-description-property-builder (new CfnChannel$VideoDescriptionProperty$Builder) id config))
 
@@ -5558,7 +6348,12 @@
 
 
 (defn cfn-channel-video-selector-color-space-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$VideoSelectorColorSpaceSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-video-selector-color-space-settings-property-builder (new CfnChannel$VideoSelectorColorSpaceSettingsProperty$Builder) id config))
 
@@ -5581,7 +6376,12 @@
 
 
 (defn cfn-channel-video-selector-pid-property-builder
-  ""
+  "Creates a  `CfnChannel$VideoSelectorPidProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-video-selector-pid-property-builder (new CfnChannel$VideoSelectorPidProperty$Builder) id config))
 
@@ -5604,7 +6404,12 @@
 
 
 (defn cfn-channel-video-selector-program-id-property-builder
-  ""
+  "Creates a  `CfnChannel$VideoSelectorProgramIdProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-video-selector-program-id-property-builder (new CfnChannel$VideoSelectorProgramIdProperty$Builder) id config))
 
@@ -5636,7 +6441,12 @@
 
 
 (defn cfn-channel-video-selector-property-builder
-  ""
+  "Creates a  `CfnChannel$VideoSelectorProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-video-selector-property-builder (new CfnChannel$VideoSelectorProperty$Builder) id config))
 
@@ -5662,7 +6472,12 @@
 
 
 (defn cfn-channel-video-selector-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$VideoSelectorSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-video-selector-settings-property-builder (new CfnChannel$VideoSelectorSettingsProperty$Builder) id config))
 
@@ -5691,7 +6506,12 @@
 
 
 (defn cfn-channel-vpc-output-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$VpcOutputSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-vpc-output-settings-property-builder (new CfnChannel$VpcOutputSettingsProperty$Builder) id config))
 
@@ -5720,7 +6540,12 @@
 
 
 (defn cfn-channel-wav-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$WavSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-wav-settings-property-builder (new CfnChannel$WavSettingsProperty$Builder) id config))
 
@@ -5743,7 +6568,12 @@
 
 
 (defn cfn-channel-webvtt-destination-settings-property-builder
-  ""
+  "Creates a  `CfnChannel$WebvttDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-webvtt-destination-settings-property-builder (new CfnChannel$WebvttDestinationSettingsProperty$Builder) id config))
 
@@ -5793,7 +6623,12 @@
 
 
 (defn cfn-input-builder
-  ""
+  "Creates a  `CfnInput$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-input-builder (CfnInput$Builder/create scope (name id)) id config))
 
@@ -5816,7 +6651,12 @@
 
 
 (defn cfn-input-input-destination-request-property-builder
-  ""
+  "Creates a  `CfnInput$InputDestinationRequestProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-input-input-destination-request-property-builder (new CfnInput$InputDestinationRequestProperty$Builder) id config))
 
@@ -5839,7 +6679,12 @@
 
 
 (defn cfn-input-input-device-request-property-builder
-  ""
+  "Creates a  `CfnInput$InputDeviceRequestProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-input-input-device-request-property-builder (new CfnInput$InputDeviceRequestProperty$Builder) id config))
 
@@ -5862,7 +6707,12 @@
 
 
 (defn cfn-input-input-device-settings-property-builder
-  ""
+  "Creates a  `CfnInput$InputDeviceSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-input-input-device-settings-property-builder (new CfnInput$InputDeviceSettingsProperty$Builder) id config))
 
@@ -5891,7 +6741,12 @@
 
 
 (defn cfn-input-input-source-request-property-builder
-  ""
+  "Creates a  `CfnInput$InputSourceRequestProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-input-input-source-request-property-builder (new CfnInput$InputSourceRequestProperty$Builder) id config))
 
@@ -5917,7 +6772,12 @@
 
 
 (defn cfn-input-input-vpc-request-property-builder
-  ""
+  "Creates a  `CfnInput$InputVpcRequestProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-input-input-vpc-request-property-builder (new CfnInput$InputVpcRequestProperty$Builder) id config))
 
@@ -5940,7 +6800,12 @@
 
 
 (defn cfn-input-media-connect-flow-request-property-builder
-  ""
+  "Creates a  `CfnInput$MediaConnectFlowRequestProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-input-media-connect-flow-request-property-builder (new CfnInput$MediaConnectFlowRequestProperty$Builder) id config))
 
@@ -5990,7 +6855,12 @@
 
 
 (defn cfn-input-props-builder
-  ""
+  "Creates a  `CfnInputProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-input-props-builder (new CfnInputProps$Builder) id config))
 
@@ -6016,7 +6886,12 @@
 
 
 (defn cfn-input-security-group-builder
-  ""
+  "Creates a  `CfnInputSecurityGroup$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-input-security-group-builder (CfnInputSecurityGroup$Builder/create scope (name id)) id config))
 
@@ -6039,7 +6914,12 @@
 
 
 (defn cfn-input-security-group-input-whitelist-rule-cidr-property-builder
-  ""
+  "Creates a  `CfnInputSecurityGroup$InputWhitelistRuleCidrProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-input-security-group-input-whitelist-rule-cidr-property-builder (new CfnInputSecurityGroup$InputWhitelistRuleCidrProperty$Builder) id config))
 
@@ -6065,7 +6945,12 @@
 
 
 (defn cfn-input-security-group-props-builder
-  ""
+  "Creates a  `CfnInputSecurityGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-input-security-group-props-builder (new CfnInputSecurityGroupProps$Builder) id config))
 
@@ -6100,7 +6985,12 @@
 
 
 (defn cfn-multiplex-builder
-  ""
+  "Creates a  `CfnMultiplex$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-multiplex-builder (CfnMultiplex$Builder/create scope (name id)) id config))
 
@@ -6123,7 +7013,12 @@
 
 
 (defn cfn-multiplex-multiplex-media-connect-output-destination-settings-property-builder
-  ""
+  "Creates a  `CfnMultiplex$MultiplexMediaConnectOutputDestinationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-multiplex-multiplex-media-connect-output-destination-settings-property-builder (new CfnMultiplex$MultiplexMediaConnectOutputDestinationSettingsProperty$Builder) id config))
 
@@ -6146,7 +7041,12 @@
 
 
 (defn cfn-multiplex-multiplex-output-destination-property-builder
-  ""
+  "Creates a  `CfnMultiplex$MultiplexOutputDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-multiplex-multiplex-output-destination-property-builder (new CfnMultiplex$MultiplexOutputDestinationProperty$Builder) id config))
 
@@ -6178,7 +7078,12 @@
 
 
 (defn cfn-multiplex-multiplex-settings-property-builder
-  ""
+  "Creates a  `CfnMultiplex$MultiplexSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-multiplex-multiplex-settings-property-builder (new CfnMultiplex$MultiplexSettingsProperty$Builder) id config))
 
@@ -6213,7 +7118,12 @@
 
 
 (defn cfn-multiplex-props-builder
-  ""
+  "Creates a  `CfnMultiplexProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-multiplex-props-builder (new CfnMultiplexProps$Builder) id config))
 
@@ -6254,7 +7164,12 @@
 
 
 (defn cfn-multiplexprogram-builder
-  ""
+  "Creates a  `CfnMultiplexprogram$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-multiplexprogram-builder (CfnMultiplexprogram$Builder/create scope (name id)) id config))
 
@@ -6313,7 +7228,12 @@
 
 
 (defn cfn-multiplexprogram-multiplex-program-packet-identifiers-map-property-builder
-  ""
+  "Creates a  `CfnMultiplexprogram$MultiplexProgramPacketIdentifiersMapProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-multiplexprogram-multiplex-program-packet-identifiers-map-property-builder (new CfnMultiplexprogram$MultiplexProgramPacketIdentifiersMapProperty$Builder) id config))
 
@@ -6339,7 +7259,12 @@
 
 
 (defn cfn-multiplexprogram-multiplex-program-pipeline-detail-property-builder
-  ""
+  "Creates a  `CfnMultiplexprogram$MultiplexProgramPipelineDetailProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-multiplexprogram-multiplex-program-pipeline-detail-property-builder (new CfnMultiplexprogram$MultiplexProgramPipelineDetailProperty$Builder) id config))
 
@@ -6365,7 +7290,12 @@
 
 
 (defn cfn-multiplexprogram-multiplex-program-service-descriptor-property-builder
-  ""
+  "Creates a  `CfnMultiplexprogram$MultiplexProgramServiceDescriptorProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-multiplexprogram-multiplex-program-service-descriptor-property-builder (new CfnMultiplexprogram$MultiplexProgramServiceDescriptorProperty$Builder) id config))
 
@@ -6397,7 +7327,12 @@
 
 
 (defn cfn-multiplexprogram-multiplex-program-settings-property-builder
-  ""
+  "Creates a  `CfnMultiplexprogram$MultiplexProgramSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-multiplexprogram-multiplex-program-settings-property-builder (new CfnMultiplexprogram$MultiplexProgramSettingsProperty$Builder) id config))
 
@@ -6426,7 +7361,12 @@
 
 
 (defn cfn-multiplexprogram-multiplex-statmux-video-settings-property-builder
-  ""
+  "Creates a  `CfnMultiplexprogram$MultiplexStatmuxVideoSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-multiplexprogram-multiplex-statmux-video-settings-property-builder (new CfnMultiplexprogram$MultiplexStatmuxVideoSettingsProperty$Builder) id config))
 
@@ -6452,7 +7392,12 @@
 
 
 (defn cfn-multiplexprogram-multiplex-video-settings-property-builder
-  ""
+  "Creates a  `CfnMultiplexprogram$MultiplexVideoSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-multiplexprogram-multiplex-video-settings-property-builder (new CfnMultiplexprogram$MultiplexVideoSettingsProperty$Builder) id config))
 
@@ -6493,6 +7438,11 @@
 
 
 (defn cfn-multiplexprogram-props-builder
-  ""
+  "Creates a  `CfnMultiplexprogramProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-multiplexprogram-props-builder (new CfnMultiplexprogramProps$Builder) id config))

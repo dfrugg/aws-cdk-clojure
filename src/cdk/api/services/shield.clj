@@ -35,7 +35,12 @@
 
 
 (defn cfn-drt-access-builder
-  ""
+  "Creates a  `CfnDRTAccess$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-drt-access-builder (CfnDRTAccess$Builder/create scope (name id)) id config))
 
@@ -61,7 +66,12 @@
 
 
 (defn cfn-drt-access-props-builder
-  ""
+  "Creates a  `CfnDRTAccessProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-drt-access-props-builder (new CfnDRTAccessProps$Builder) id config))
 
@@ -87,7 +97,12 @@
 
 
 (defn cfn-proactive-engagement-builder
-  ""
+  "Creates a  `CfnProactiveEngagement$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-proactive-engagement-builder (CfnProactiveEngagement$Builder/create scope (name id)) id config))
 
@@ -116,7 +131,12 @@
 
 
 (defn cfn-proactive-engagement-emergency-contact-property-builder
-  ""
+  "Creates a  `CfnProactiveEngagement$EmergencyContactProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-proactive-engagement-emergency-contact-property-builder (new CfnProactiveEngagement$EmergencyContactProperty$Builder) id config))
 
@@ -142,7 +162,12 @@
 
 
 (defn cfn-proactive-engagement-props-builder
-  ""
+  "Creates a  `CfnProactiveEngagementProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-proactive-engagement-props-builder (new CfnProactiveEngagementProps$Builder) id config))
 
@@ -168,7 +193,12 @@
 
 
 (defn cfn-protection-action-property-builder
-  ""
+  "Creates a  `CfnProtection$ActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-protection-action-property-builder (new CfnProtection$ActionProperty$Builder) id config))
 
@@ -194,7 +224,12 @@
 
 
 (defn cfn-protection-application-layer-automatic-response-configuration-property-builder
-  ""
+  "Creates a  `CfnProtection$ApplicationLayerAutomaticResponseConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-protection-application-layer-automatic-response-configuration-property-builder (new CfnProtection$ApplicationLayerAutomaticResponseConfigurationProperty$Builder) id config))
 
@@ -229,7 +264,12 @@
 
 
 (defn cfn-protection-builder
-  ""
+  "Creates a  `CfnProtection$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-protection-builder (CfnProtection$Builder/create scope (name id)) id config))
 
@@ -267,7 +307,12 @@
 
 
 (defn cfn-protection-group-builder
-  ""
+  "Creates a  `CfnProtectionGroup$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-protection-group-builder (CfnProtectionGroup$Builder/create scope (name id)) id config))
 
@@ -305,7 +350,12 @@
 
 
 (defn cfn-protection-group-props-builder
-  ""
+  "Creates a  `CfnProtectionGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-protection-group-props-builder (new CfnProtectionGroupProps$Builder) id config))
 
@@ -340,6 +390,11 @@
 
 
 (defn cfn-protection-props-builder
-  ""
+  "Creates a  `CfnProtectionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-protection-props-builder (new CfnProtectionProps$Builder) id config))

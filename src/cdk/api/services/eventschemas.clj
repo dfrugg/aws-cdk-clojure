@@ -41,7 +41,12 @@
 
 
 (defn cfn-discoverer-builder
-  ""
+  "Creates a  `CfnDiscoverer$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-discoverer-builder (CfnDiscoverer$Builder/create scope (name id)) id config))
 
@@ -73,7 +78,12 @@
 
 
 (defn cfn-discoverer-props-builder
-  ""
+  "Creates a  `CfnDiscovererProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-discoverer-props-builder (new CfnDiscovererProps$Builder) id config))
 
@@ -99,7 +109,12 @@
 
 
 (defn cfn-discoverer-tags-entry-property-builder
-  ""
+  "Creates a  `CfnDiscoverer$TagsEntryProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-discoverer-tags-entry-property-builder (new CfnDiscoverer$TagsEntryProperty$Builder) id config))
 
@@ -128,7 +143,12 @@
 
 
 (defn cfn-registry-builder
-  ""
+  "Creates a  `CfnRegistry$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-registry-builder (CfnRegistry$Builder/create scope (name id)) id config))
 
@@ -157,7 +177,12 @@
 
 
 (defn cfn-registry-policy-builder
-  ""
+  "Creates a  `CfnRegistryPolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-registry-policy-builder (CfnRegistryPolicy$Builder/create scope (name id)) id config))
 
@@ -186,7 +211,12 @@
 
 
 (defn cfn-registry-policy-props-builder
-  ""
+  "Creates a  `CfnRegistryPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-registry-policy-props-builder (new CfnRegistryPolicyProps$Builder) id config))
 
@@ -215,7 +245,12 @@
 
 
 (defn cfn-registry-props-builder
-  ""
+  "Creates a  `CfnRegistryProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-registry-props-builder (new CfnRegistryProps$Builder) id config))
 
@@ -241,7 +276,12 @@
 
 
 (defn cfn-registry-tags-entry-property-builder
-  ""
+  "Creates a  `CfnRegistry$TagsEntryProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-registry-tags-entry-property-builder (new CfnRegistry$TagsEntryProperty$Builder) id config))
 
@@ -279,7 +319,12 @@
 
 
 (defn cfn-schema-builder
-  ""
+  "Creates a  `CfnSchema$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-schema-builder (CfnSchema$Builder/create scope (name id)) id config))
 
@@ -317,7 +362,12 @@
 
 
 (defn cfn-schema-props-builder
-  ""
+  "Creates a  `CfnSchemaProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-schema-props-builder (new CfnSchemaProps$Builder) id config))
 
@@ -343,6 +393,11 @@
 
 
 (defn cfn-schema-tags-entry-property-builder
-  ""
+  "Creates a  `CfnSchema$TagsEntryProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-schema-tags-entry-property-builder (new CfnSchema$TagsEntryProperty$Builder) id config))

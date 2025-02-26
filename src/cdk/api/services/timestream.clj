@@ -54,7 +54,12 @@
 
 
 (defn cfn-database-builder
-  ""
+  "Creates a  `CfnDatabase$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-database-builder (CfnDatabase$Builder/create scope (name id)) id config))
 
@@ -83,7 +88,12 @@
 
 
 (defn cfn-database-props-builder
-  ""
+  "Creates a  `CfnDatabaseProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-database-props-builder (new CfnDatabaseProps$Builder) id config))
 
@@ -148,7 +158,12 @@
 
 
 (defn cfn-influx-db-instance-builder
-  ""
+  "Creates a  `CfnInfluxDBInstance$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-influx-db-instance-builder (CfnInfluxDBInstance$Builder/create scope (name id)) id config))
 
@@ -171,7 +186,12 @@
 
 
 (defn cfn-influx-db-instance-log-delivery-configuration-property-builder
-  ""
+  "Creates a  `CfnInfluxDBInstance$LogDeliveryConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-influx-db-instance-log-delivery-configuration-property-builder (new CfnInfluxDBInstance$LogDeliveryConfigurationProperty$Builder) id config))
 
@@ -236,7 +256,12 @@
 
 
 (defn cfn-influx-db-instance-props-builder
-  ""
+  "Creates a  `CfnInfluxDBInstanceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-influx-db-instance-props-builder (new CfnInfluxDBInstanceProps$Builder) id config))
 
@@ -262,7 +287,12 @@
 
 
 (defn cfn-influx-db-instance-s3-configuration-property-builder
-  ""
+  "Creates a  `CfnInfluxDBInstance$S3ConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-influx-db-instance-s3-configuration-property-builder (new CfnInfluxDBInstance$S3ConfigurationProperty$Builder) id config))
 
@@ -312,7 +342,12 @@
 
 
 (defn cfn-scheduled-query-builder
-  ""
+  "Creates a  `CfnScheduledQuery$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-scheduled-query-builder (CfnScheduledQuery$Builder/create scope (name id)) id config))
 
@@ -338,7 +373,12 @@
 
 
 (defn cfn-scheduled-query-dimension-mapping-property-builder
-  ""
+  "Creates a  `CfnScheduledQuery$DimensionMappingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scheduled-query-dimension-mapping-property-builder (new CfnScheduledQuery$DimensionMappingProperty$Builder) id config))
 
@@ -361,7 +401,12 @@
 
 
 (defn cfn-scheduled-query-error-report-configuration-property-builder
-  ""
+  "Creates a  `CfnScheduledQuery$ErrorReportConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scheduled-query-error-report-configuration-property-builder (new CfnScheduledQuery$ErrorReportConfigurationProperty$Builder) id config))
 
@@ -396,7 +441,12 @@
 
 
 (defn cfn-scheduled-query-mixed-measure-mapping-property-builder
-  ""
+  "Creates a  `CfnScheduledQuery$MixedMeasureMappingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scheduled-query-mixed-measure-mapping-property-builder (new CfnScheduledQuery$MixedMeasureMappingProperty$Builder) id config))
 
@@ -425,7 +475,12 @@
 
 
 (defn cfn-scheduled-query-multi-measure-attribute-mapping-property-builder
-  ""
+  "Creates a  `CfnScheduledQuery$MultiMeasureAttributeMappingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scheduled-query-multi-measure-attribute-mapping-property-builder (new CfnScheduledQuery$MultiMeasureAttributeMappingProperty$Builder) id config))
 
@@ -451,7 +506,12 @@
 
 
 (defn cfn-scheduled-query-multi-measure-mappings-property-builder
-  ""
+  "Creates a  `CfnScheduledQuery$MultiMeasureMappingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scheduled-query-multi-measure-mappings-property-builder (new CfnScheduledQuery$MultiMeasureMappingsProperty$Builder) id config))
 
@@ -474,7 +534,12 @@
 
 
 (defn cfn-scheduled-query-notification-configuration-property-builder
-  ""
+  "Creates a  `CfnScheduledQuery$NotificationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scheduled-query-notification-configuration-property-builder (new CfnScheduledQuery$NotificationConfigurationProperty$Builder) id config))
 
@@ -524,7 +589,12 @@
 
 
 (defn cfn-scheduled-query-props-builder
-  ""
+  "Creates a  `CfnScheduledQueryProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scheduled-query-props-builder (new CfnScheduledQueryProps$Builder) id config))
 
@@ -553,7 +623,12 @@
 
 
 (defn cfn-scheduled-query-s3-configuration-property-builder
-  ""
+  "Creates a  `CfnScheduledQuery$S3ConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scheduled-query-s3-configuration-property-builder (new CfnScheduledQuery$S3ConfigurationProperty$Builder) id config))
 
@@ -576,7 +651,12 @@
 
 
 (defn cfn-scheduled-query-schedule-configuration-property-builder
-  ""
+  "Creates a  `CfnScheduledQuery$ScheduleConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scheduled-query-schedule-configuration-property-builder (new CfnScheduledQuery$ScheduleConfigurationProperty$Builder) id config))
 
@@ -599,7 +679,12 @@
 
 
 (defn cfn-scheduled-query-sns-configuration-property-builder
-  ""
+  "Creates a  `CfnScheduledQuery$SnsConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scheduled-query-sns-configuration-property-builder (new CfnScheduledQuery$SnsConfigurationProperty$Builder) id config))
 
@@ -622,7 +707,12 @@
 
 
 (defn cfn-scheduled-query-target-configuration-property-builder
-  ""
+  "Creates a  `CfnScheduledQuery$TargetConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scheduled-query-target-configuration-property-builder (new CfnScheduledQuery$TargetConfigurationProperty$Builder) id config))
 
@@ -663,7 +753,12 @@
 
 
 (defn cfn-scheduled-query-timestream-configuration-property-builder
-  ""
+  "Creates a  `CfnScheduledQuery$TimestreamConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scheduled-query-timestream-configuration-property-builder (new CfnScheduledQuery$TimestreamConfigurationProperty$Builder) id config))
 
@@ -701,7 +796,12 @@
 
 
 (defn cfn-table-builder
-  ""
+  "Creates a  `CfnTable$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-table-builder (CfnTable$Builder/create scope (name id)) id config))
 
@@ -724,7 +824,12 @@
 
 
 (defn cfn-table-magnetic-store-rejected-data-location-property-builder
-  ""
+  "Creates a  `CfnTable$MagneticStoreRejectedDataLocationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-magnetic-store-rejected-data-location-property-builder (new CfnTable$MagneticStoreRejectedDataLocationProperty$Builder) id config))
 
@@ -750,7 +855,12 @@
 
 
 (defn cfn-table-magnetic-store-write-properties-property-builder
-  ""
+  "Creates a  `CfnTable$MagneticStoreWritePropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-magnetic-store-write-properties-property-builder (new CfnTable$MagneticStoreWritePropertiesProperty$Builder) id config))
 
@@ -779,7 +889,12 @@
 
 
 (defn cfn-table-partition-key-property-builder
-  ""
+  "Creates a  `CfnTable$PartitionKeyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-partition-key-property-builder (new CfnTable$PartitionKeyProperty$Builder) id config))
 
@@ -817,7 +932,12 @@
 
 
 (defn cfn-table-props-builder
-  ""
+  "Creates a  `CfnTableProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-props-builder (new CfnTableProps$Builder) id config))
 
@@ -843,7 +963,12 @@
 
 
 (defn cfn-table-retention-properties-property-builder
-  ""
+  "Creates a  `CfnTable$RetentionPropertiesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-retention-properties-property-builder (new CfnTable$RetentionPropertiesProperty$Builder) id config))
 
@@ -875,7 +1000,12 @@
 
 
 (defn cfn-table-s3-configuration-property-builder
-  ""
+  "Creates a  `CfnTable$S3ConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-s3-configuration-property-builder (new CfnTable$S3ConfigurationProperty$Builder) id config))
 
@@ -898,6 +1028,11 @@
 
 
 (defn cfn-table-schema-property-builder
-  ""
+  "Creates a  `CfnTable$SchemaProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-schema-property-builder (new CfnTable$SchemaProperty$Builder) id config))

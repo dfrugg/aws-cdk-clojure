@@ -1,6 +1,10 @@
 (ns template
   "Provides functions for generating content."
-  (:require [util :refer [scope-id?]]
+  (:require [util :refer [construct-sym
+                          pad-left
+                          pad-right
+                          scope-id?
+                          tokenize]]
             [clojure.string :as str]))
 
 
@@ -48,7 +52,7 @@
           spacer (apply str (repeat (count k) " "))
           open-token (if (= 0 index)
                        (format "[%s %s" k (first vs))
-                       (format "           [%s %s" k (first vs)))
+                       (format "\n           [%s %s" k (first vs)))
           mid-token (->> (rest vs)
                          (mapv #(format "\n            %s %s" spacer %))
                          str/join)
@@ -60,8 +64,9 @@
   [java-classes]
   (when-not (empty? java-classes)
     (let [open-token "\n  (:import "
-          mid-token (-> (map-indexed namespace-import-item java-classes)
-                        str/join)
+          mid-token (->> (into (sorted-map) java-classes)
+                         (map-indexed namespace-import-item)
+                         str/join)
           close-token ")"]
       (str open-token mid-token close-token))))
 
@@ -233,6 +238,47 @@
     (str builder-header builder-sets template-builder-end)))
 
 
+; init defn docstrings
+
+(def arg-header "| Argument | DataType | Description |\n|---|---|---|")
+(def arg-id "| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |")
+(def arg-id-of-scope "| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |")
+(def arg-scope (str "| scope | " construct-sym " | The parent scope construct of the object being built. |"))
+(def arg-config "| config | map | Data configuration |")
+
+
+(defn template-init-docstring-no-arg
+  [{:keys [class-name]} type]
+  (str "Creates a  `" class-name "` instance using a no-argument " (name type) ", applies the data configuration, then builds it.  "
+       "Takes the following arguments: \n\n"
+       arg-header "\n" arg-id "\n" arg-config))
+
+
+(defn template-init-docstring-scope-id
+  [{:keys [class-name]}]
+  (str "Creates a  `" class-name "` instance using a scope and ID, applies the data configuration, then builds it.  "
+       "Takes the following arguments: \n"
+       arg-header "\n" arg-scope "\n" arg-id-of-scope "\n" arg-config))
+
+
+(defn template-init-docstring-hint-block
+  [{:keys [parameter-types hint]}]
+  (let [hint-block (->> (map #(str "| " %1 " | " %2 " |  |") (-> hint :init-args tokenize) parameter-types)
+                        (remove #(str/includes? % "(name id)"))
+                        (str/join "\n"))]
+    (str "\n\n__Create Form:__ ____" parameter-types "___\n" arg-header "\n" hint-block (when hint-block "\n") arg-id "\n" arg-config)))
+
+
+(defn template-init-docstring-hint
+  [{:keys [class-name inits]}]
+  (->> inits
+       (filterv :hint)
+       (mapv template-init-docstring-hint-block)
+       (str/join "\n")
+       (str "Creates a  `" class-name "` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: \n")))
+
+
+; init defn templates
 (def template-init-no-arg-create
   "(defn %s
   \"%s\"
@@ -254,6 +300,34 @@
   (build-%s (%s/create scope (name id)) id config))")
 
 
+(def template-init-hint
+  "(defn %s
+  \"%s\"
+  [%sid config]
+  (build-%s (%s/create%s) id config))")
+
+
+(def template-init-multi-defn
+  "(defn %s
+  \"%s\"%s)")
+
+
+(def template-init-multi-arity
+  "
+  ([%sid config]
+   (build-%s (%s/create%s) id config))")
+
+
+(defn builder-source-multi-init
+  [{:keys [inits fn-name class-name] :as builder-data}]
+  (->> inits
+       (filterv :hint)
+       (mapv #(let [{:keys [fn-args init-args]} (:hint %)]
+                (format template-init-multi-arity (pad-right fn-args) fn-name class-name (pad-left init-args))))
+       str/join
+       (format template-init-multi-defn fn-name (template-init-docstring-hint builder-data))))
+
+
 (defn builder-source-function
   "Builds out the source code for for the builders on a package"
   [{:keys [inits fn-name class-name] :as builder-data}]
@@ -263,19 +337,33 @@
       (and (= 1 (count inits))
            (= :create (-> inits first :init-type))
            (= 0 (-> inits first :parameter-types count)))
-      [build (format template-init-no-arg-create fn-name "" fn-name class-name)]
+      [build (format template-init-no-arg-create fn-name (template-init-docstring-no-arg builder-data :create) fn-name class-name)]
+
+      ; Process A Single Hinted Creator
+      (and (= 1 (count inits))
+           (= :create (-> inits first :init-type))
+           (-> inits first :hint some?))
+      (let [{:keys [fn-args init-args]} (-> inits first :hint)]
+        [build (format template-init-hint fn-name (template-init-docstring-hint builder-data) (pad-right fn-args) fn-name class-name (pad-left init-args))])
 
       ; The rare no arg construct, like the
       (and (= 1 (count inits))
            (= :construct (-> inits first :init-type))
            (= 0 (-> inits first :parameter-types count)))
-      [build (format template-init-no-arg-construct fn-name "" fn-name class-name)]
+      [build (format template-init-no-arg-construct fn-name (template-init-docstring-no-arg builder-data :constructor) fn-name class-name)]
 
       ; The very common scope ID combination
       (and (= 1 (count inits))
            (= :create (-> inits first :init-type))
            (-> inits first scope-id?))
-      [build (format template-init-scope-id-create fn-name "" fn-name class-name)]
+      [build (format template-init-scope-id-create fn-name (template-init-docstring-scope-id builder-data) fn-name class-name)]
+
+      ; Process Multi Inits
+      (and (< 1 (count inits))
+           (= :create (-> inits first :init-type))
+           (some :hint inits))
+      [build (builder-source-multi-init builder-data)]
+
       ; Begin Catch All
       :else
       (do

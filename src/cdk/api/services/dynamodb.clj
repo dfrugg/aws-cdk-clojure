@@ -310,7 +310,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn attribute-builder
-  ""
+  "Creates a  `Attribute$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-attribute-builder (new Attribute$Builder) id config))
 
@@ -342,7 +347,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn autoscaled-capacity-options-builder
-  ""
+  "Creates a  `AutoscaledCapacityOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-autoscaled-capacity-options-builder (new AutoscaledCapacityOptions$Builder) id config))
 
@@ -368,7 +378,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-attribute-definition-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$AttributeDefinitionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-attribute-definition-property-builder (new CfnGlobalTable$AttributeDefinitionProperty$Builder) id config))
 
@@ -424,7 +439,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-builder
-  ""
+  "Creates a  `CfnGlobalTable$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-global-table-builder (CfnGlobalTable$Builder/create scope (name id)) id config))
 
@@ -456,7 +476,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-capacity-auto-scaling-settings-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$CapacityAutoScalingSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-capacity-auto-scaling-settings-property-builder (new CfnGlobalTable$CapacityAutoScalingSettingsProperty$Builder) id config))
 
@@ -479,7 +504,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-contributor-insights-specification-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$ContributorInsightsSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-contributor-insights-specification-property-builder (new CfnGlobalTable$ContributorInsightsSpecificationProperty$Builder) id config))
 
@@ -514,7 +544,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-global-secondary-index-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$GlobalSecondaryIndexProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-global-secondary-index-property-builder (new CfnGlobalTable$GlobalSecondaryIndexProperty$Builder) id config))
 
@@ -540,7 +575,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-key-schema-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$KeySchemaProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-key-schema-property-builder (new CfnGlobalTable$KeySchemaProperty$Builder) id config))
 
@@ -566,7 +606,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-kinesis-stream-specification-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$KinesisStreamSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-kinesis-stream-specification-property-builder (new CfnGlobalTable$KinesisStreamSpecificationProperty$Builder) id config))
 
@@ -595,7 +640,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-local-secondary-index-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$LocalSecondaryIndexProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-local-secondary-index-property-builder (new CfnGlobalTable$LocalSecondaryIndexProperty$Builder) id config))
 
@@ -618,7 +668,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-point-in-time-recovery-specification-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$PointInTimeRecoverySpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-point-in-time-recovery-specification-property-builder (new CfnGlobalTable$PointInTimeRecoverySpecificationProperty$Builder) id config))
 
@@ -644,7 +699,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-projection-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$ProjectionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-projection-property-builder (new CfnGlobalTable$ProjectionProperty$Builder) id config))
 
@@ -700,7 +760,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-props-builder
-  ""
+  "Creates a  `CfnGlobalTableProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-props-builder (new CfnGlobalTableProps$Builder) id config))
 
@@ -723,7 +788,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-read-on-demand-throughput-settings-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$ReadOnDemandThroughputSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-read-on-demand-throughput-settings-property-builder (new CfnGlobalTable$ReadOnDemandThroughputSettingsProperty$Builder) id config))
 
@@ -749,7 +819,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-read-provisioned-throughput-settings-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$ReadProvisionedThroughputSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-read-provisioned-throughput-settings-property-builder (new CfnGlobalTable$ReadProvisionedThroughputSettingsProperty$Builder) id config))
 
@@ -781,7 +856,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-replica-global-secondary-index-specification-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$ReplicaGlobalSecondaryIndexSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-replica-global-secondary-index-specification-property-builder (new CfnGlobalTable$ReplicaGlobalSecondaryIndexSpecificationProperty$Builder) id config))
 
@@ -840,7 +920,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-replica-specification-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$ReplicaSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-replica-specification-property-builder (new CfnGlobalTable$ReplicaSpecificationProperty$Builder) id config))
 
@@ -863,7 +948,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-replica-sse-specification-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$ReplicaSSESpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-replica-sse-specification-property-builder (new CfnGlobalTable$ReplicaSSESpecificationProperty$Builder) id config))
 
@@ -886,7 +976,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-replica-stream-specification-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$ReplicaStreamSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-replica-stream-specification-property-builder (new CfnGlobalTable$ReplicaStreamSpecificationProperty$Builder) id config))
 
@@ -909,7 +1004,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-resource-policy-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$ResourcePolicyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-resource-policy-property-builder (new CfnGlobalTable$ResourcePolicyProperty$Builder) id config))
 
@@ -935,7 +1035,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-sse-specification-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$SSESpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-sse-specification-property-builder (new CfnGlobalTable$SSESpecificationProperty$Builder) id config))
 
@@ -958,7 +1063,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-stream-specification-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$StreamSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-stream-specification-property-builder (new CfnGlobalTable$StreamSpecificationProperty$Builder) id config))
 
@@ -990,7 +1100,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-target-tracking-scaling-policy-configuration-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$TargetTrackingScalingPolicyConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-target-tracking-scaling-policy-configuration-property-builder (new CfnGlobalTable$TargetTrackingScalingPolicyConfigurationProperty$Builder) id config))
 
@@ -1016,7 +1131,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-time-to-live-specification-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$TimeToLiveSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-time-to-live-specification-property-builder (new CfnGlobalTable$TimeToLiveSpecificationProperty$Builder) id config))
 
@@ -1039,7 +1159,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-write-on-demand-throughput-settings-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$WriteOnDemandThroughputSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-write-on-demand-throughput-settings-property-builder (new CfnGlobalTable$WriteOnDemandThroughputSettingsProperty$Builder) id config))
 
@@ -1062,7 +1187,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-global-table-write-provisioned-throughput-settings-property-builder
-  ""
+  "Creates a  `CfnGlobalTable$WriteProvisionedThroughputSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-global-table-write-provisioned-throughput-settings-property-builder (new CfnGlobalTable$WriteProvisionedThroughputSettingsProperty$Builder) id config))
 
@@ -1088,7 +1218,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-table-attribute-definition-property-builder
-  ""
+  "Creates a  `CfnTable$AttributeDefinitionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-attribute-definition-property-builder (new CfnTable$AttributeDefinitionProperty$Builder) id config))
 
@@ -1165,7 +1300,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-table-builder
-  ""
+  "Creates a  `CfnTable$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-table-builder (CfnTable$Builder/create scope (name id)) id config))
 
@@ -1188,7 +1328,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-table-contributor-insights-specification-property-builder
-  ""
+  "Creates a  `CfnTable$ContributorInsightsSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-contributor-insights-specification-property-builder (new CfnTable$ContributorInsightsSpecificationProperty$Builder) id config))
 
@@ -1214,7 +1359,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-table-csv-property-builder
-  ""
+  "Creates a  `CfnTable$CsvProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-csv-property-builder (new CfnTable$CsvProperty$Builder) id config))
 
@@ -1252,7 +1402,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-table-global-secondary-index-property-builder
-  ""
+  "Creates a  `CfnTable$GlobalSecondaryIndexProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-global-secondary-index-property-builder (new CfnTable$GlobalSecondaryIndexProperty$Builder) id config))
 
@@ -1284,7 +1439,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-table-import-source-specification-property-builder
-  ""
+  "Creates a  `CfnTable$ImportSourceSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-import-source-specification-property-builder (new CfnTable$ImportSourceSpecificationProperty$Builder) id config))
 
@@ -1307,7 +1467,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-table-input-format-options-property-builder
-  ""
+  "Creates a  `CfnTable$InputFormatOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-input-format-options-property-builder (new CfnTable$InputFormatOptionsProperty$Builder) id config))
 
@@ -1333,7 +1498,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-table-key-schema-property-builder
-  ""
+  "Creates a  `CfnTable$KeySchemaProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-key-schema-property-builder (new CfnTable$KeySchemaProperty$Builder) id config))
 
@@ -1359,7 +1529,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-table-kinesis-stream-specification-property-builder
-  ""
+  "Creates a  `CfnTable$KinesisStreamSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-kinesis-stream-specification-property-builder (new CfnTable$KinesisStreamSpecificationProperty$Builder) id config))
 
@@ -1388,7 +1563,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-table-local-secondary-index-property-builder
-  ""
+  "Creates a  `CfnTable$LocalSecondaryIndexProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-local-secondary-index-property-builder (new CfnTable$LocalSecondaryIndexProperty$Builder) id config))
 
@@ -1414,7 +1594,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-table-on-demand-throughput-property-builder
-  ""
+  "Creates a  `CfnTable$OnDemandThroughputProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-on-demand-throughput-property-builder (new CfnTable$OnDemandThroughputProperty$Builder) id config))
 
@@ -1437,7 +1622,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-table-point-in-time-recovery-specification-property-builder
-  ""
+  "Creates a  `CfnTable$PointInTimeRecoverySpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-point-in-time-recovery-specification-property-builder (new CfnTable$PointInTimeRecoverySpecificationProperty$Builder) id config))
 
@@ -1463,7 +1653,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-table-projection-property-builder
-  ""
+  "Creates a  `CfnTable$ProjectionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-projection-property-builder (new CfnTable$ProjectionProperty$Builder) id config))
 
@@ -1540,7 +1735,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-table-props-builder
-  ""
+  "Creates a  `CfnTableProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-props-builder (new CfnTableProps$Builder) id config))
 
@@ -1566,7 +1766,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-table-provisioned-throughput-property-builder
-  ""
+  "Creates a  `CfnTable$ProvisionedThroughputProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-provisioned-throughput-property-builder (new CfnTable$ProvisionedThroughputProperty$Builder) id config))
 
@@ -1589,7 +1794,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-table-resource-policy-property-builder
-  ""
+  "Creates a  `CfnTable$ResourcePolicyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-resource-policy-property-builder (new CfnTable$ResourcePolicyProperty$Builder) id config))
 
@@ -1618,7 +1828,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-table-s3-bucket-source-property-builder
-  ""
+  "Creates a  `CfnTable$S3BucketSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-s3-bucket-source-property-builder (new CfnTable$S3BucketSourceProperty$Builder) id config))
 
@@ -1647,7 +1862,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-table-sse-specification-property-builder
-  ""
+  "Creates a  `CfnTable$SSESpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-sse-specification-property-builder (new CfnTable$SSESpecificationProperty$Builder) id config))
 
@@ -1673,7 +1893,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-table-stream-specification-property-builder
-  ""
+  "Creates a  `CfnTable$StreamSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-stream-specification-property-builder (new CfnTable$StreamSpecificationProperty$Builder) id config))
 
@@ -1699,7 +1924,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-table-time-to-live-specification-property-builder
-  ""
+  "Creates a  `CfnTable$TimeToLiveSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-table-time-to-live-specification-property-builder (new CfnTable$TimeToLiveSpecificationProperty$Builder) id config))
 
@@ -1725,7 +1955,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn csv-options-builder
-  ""
+  "Creates a  `CsvOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-csv-options-builder (new CsvOptions$Builder) id config))
 
@@ -1751,7 +1986,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn enable-scaling-props-builder
-  ""
+  "Creates a  `EnableScalingProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-enable-scaling-props-builder (new EnableScalingProps$Builder) id config))
 
@@ -1792,7 +2032,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn global-secondary-index-props-builder
-  ""
+  "Creates a  `GlobalSecondaryIndexProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-global-secondary-index-props-builder (new GlobalSecondaryIndexProps$Builder) id config))
 
@@ -1833,7 +2078,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn global-secondary-index-props-v2-builder
-  ""
+  "Creates a  `GlobalSecondaryIndexPropsV2$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-global-secondary-index-props-v2-builder (new GlobalSecondaryIndexPropsV2$Builder) id config))
 
@@ -1868,7 +2118,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn import-source-specification-builder
-  ""
+  "Creates a  `ImportSourceSpecification$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-import-source-specification-builder (new ImportSourceSpecification$Builder) id config))
 
@@ -1900,7 +2155,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn local-secondary-index-props-builder
-  ""
+  "Creates a  `LocalSecondaryIndexProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-local-secondary-index-props-builder (new LocalSecondaryIndexProps$Builder) id config))
 
@@ -1947,7 +2207,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn operations-metric-options-builder
-  ""
+  "Creates a  `OperationsMetricOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-operations-metric-options-builder (new OperationsMetricOptions$Builder) id config))
 
@@ -1973,7 +2238,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn replica-global-secondary-index-options-builder
-  ""
+  "Creates a  `ReplicaGlobalSecondaryIndexOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-replica-global-secondary-index-options-builder (new ReplicaGlobalSecondaryIndexOptions$Builder) id config))
 
@@ -2023,7 +2293,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn replica-table-props-builder
-  ""
+  "Creates a  `ReplicaTableProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-replica-table-props-builder (new ReplicaTableProps$Builder) id config))
 
@@ -2049,7 +2324,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn schema-options-builder
-  ""
+  "Creates a  `SchemaOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-schema-options-builder (new SchemaOptions$Builder) id config))
 
@@ -2078,7 +2358,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn secondary-index-props-builder
-  ""
+  "Creates a  `SecondaryIndexProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-secondary-index-props-builder (new SecondaryIndexProps$Builder) id config))
 
@@ -2125,7 +2410,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn system-errors-for-operations-metric-options-builder
-  ""
+  "Creates a  `SystemErrorsForOperationsMetricOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-system-errors-for-operations-metric-options-builder (new SystemErrorsForOperationsMetricOptions$Builder) id config))
 
@@ -2166,7 +2456,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn table-attributes-builder
-  ""
+  "Creates a  `TableAttributes$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-table-attributes-builder (new TableAttributes$Builder) id config))
 
@@ -2210,7 +2505,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn table-attributes-v2-builder
-  ""
+  "Creates a  `TableAttributesV2$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-table-attributes-v2-builder (new TableAttributesV2$Builder) id config))
 
@@ -2293,7 +2593,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn table-builder
-  ""
+  "Creates a  `Table$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-table-builder (Table$Builder/create scope (name id)) id config))
 
@@ -2370,7 +2675,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn table-options-builder
-  ""
+  "Creates a  `TableOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-table-options-builder (new TableOptions$Builder) id config))
 
@@ -2411,7 +2721,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn table-options-v2-builder
-  ""
+  "Creates a  `TableOptionsV2$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-table-options-v2-builder (new TableOptionsV2$Builder) id config))
 
@@ -2494,7 +2809,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn table-props-builder
-  ""
+  "Creates a  `TableProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-table-props-builder (new TableProps$Builder) id config))
 
@@ -2568,7 +2888,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn table-props-v2-builder
-  ""
+  "Creates a  `TablePropsV2$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-table-props-v2-builder (new TablePropsV2$Builder) id config))
 
@@ -2642,7 +2967,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn table-v2-builder
-  ""
+  "Creates a  `TableV2$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-table-v2-builder (TableV2$Builder/create scope (name id)) id config))
 
@@ -2668,7 +2998,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn throughput-props-builder
-  ""
+  "Creates a  `ThroughputProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-throughput-props-builder (new ThroughputProps$Builder) id config))
 
@@ -2703,6 +3038,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn utilization-scaling-props-builder
-  ""
+  "Creates a  `UtilizationScalingProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-utilization-scaling-props-builder (new UtilizationScalingProps$Builder) id config))

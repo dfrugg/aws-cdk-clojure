@@ -59,7 +59,12 @@
 
 
 (defn cfn-certificate-api-passthrough-property-builder
-  ""
+  "Creates a  `CfnCertificate$ApiPassthroughProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-api-passthrough-property-builder (new CfnCertificate$ApiPassthroughProperty$Builder) id config))
 
@@ -85,7 +90,12 @@
 
 
 (defn cfn-certificate-authority-access-description-property-builder
-  ""
+  "Creates a  `CfnCertificateAuthority$AccessDescriptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-authority-access-description-property-builder (new CfnCertificateAuthority$AccessDescriptionProperty$Builder) id config))
 
@@ -111,7 +121,12 @@
 
 
 (defn cfn-certificate-authority-access-method-property-builder
-  ""
+  "Creates a  `CfnCertificateAuthority$AccessMethodProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-authority-access-method-property-builder (new CfnCertificateAuthority$AccessMethodProperty$Builder) id config))
 
@@ -143,7 +158,12 @@
 
 
 (defn cfn-certificate-authority-activation-builder
-  ""
+  "Creates a  `CfnCertificateAuthorityActivation$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-certificate-authority-activation-builder (CfnCertificateAuthorityActivation$Builder/create scope (name id)) id config))
 
@@ -175,7 +195,12 @@
 
 
 (defn cfn-certificate-authority-activation-props-builder
-  ""
+  "Creates a  `CfnCertificateAuthorityActivationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-authority-activation-props-builder (new CfnCertificateAuthorityActivationProps$Builder) id config))
 
@@ -222,7 +247,12 @@
 
 
 (defn cfn-certificate-authority-builder
-  ""
+  "Creates a  `CfnCertificateAuthority$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-certificate-authority-builder (CfnCertificateAuthority$Builder/create scope (name id)) id config))
 
@@ -260,7 +290,12 @@
 
 
 (defn cfn-certificate-authority-crl-configuration-property-builder
-  ""
+  "Creates a  `CfnCertificateAuthority$CrlConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-authority-crl-configuration-property-builder (new CfnCertificateAuthority$CrlConfigurationProperty$Builder) id config))
 
@@ -283,7 +318,12 @@
 
 
 (defn cfn-certificate-authority-crl-distribution-point-extension-configuration-property-builder
-  ""
+  "Creates a  `CfnCertificateAuthority$CrlDistributionPointExtensionConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-authority-crl-distribution-point-extension-configuration-property-builder (new CfnCertificateAuthority$CrlDistributionPointExtensionConfigurationProperty$Builder) id config))
 
@@ -309,7 +349,12 @@
 
 
 (defn cfn-certificate-authority-csr-extensions-property-builder
-  ""
+  "Creates a  `CfnCertificateAuthority$CsrExtensionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-authority-csr-extensions-property-builder (new CfnCertificateAuthority$CsrExtensionsProperty$Builder) id config))
 
@@ -335,7 +380,12 @@
 
 
 (defn cfn-certificate-authority-custom-attribute-property-builder
-  ""
+  "Creates a  `CfnCertificateAuthority$CustomAttributeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-authority-custom-attribute-property-builder (new CfnCertificateAuthority$CustomAttributeProperty$Builder) id config))
 
@@ -361,7 +411,12 @@
 
 
 (defn cfn-certificate-authority-edi-party-name-property-builder
-  ""
+  "Creates a  `CfnCertificateAuthority$EdiPartyNameProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-authority-edi-party-name-property-builder (new CfnCertificateAuthority$EdiPartyNameProperty$Builder) id config))
 
@@ -405,7 +460,12 @@
 
 
 (defn cfn-certificate-authority-general-name-property-builder
-  ""
+  "Creates a  `CfnCertificateAuthority$GeneralNameProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-authority-general-name-property-builder (new CfnCertificateAuthority$GeneralNameProperty$Builder) id config))
 
@@ -452,7 +512,12 @@
 
 
 (defn cfn-certificate-authority-key-usage-property-builder
-  ""
+  "Creates a  `CfnCertificateAuthority$KeyUsageProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-authority-key-usage-property-builder (new CfnCertificateAuthority$KeyUsageProperty$Builder) id config))
 
@@ -478,7 +543,12 @@
 
 
 (defn cfn-certificate-authority-ocsp-configuration-property-builder
-  ""
+  "Creates a  `CfnCertificateAuthority$OcspConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-authority-ocsp-configuration-property-builder (new CfnCertificateAuthority$OcspConfigurationProperty$Builder) id config))
 
@@ -504,7 +574,12 @@
 
 
 (defn cfn-certificate-authority-other-name-property-builder
-  ""
+  "Creates a  `CfnCertificateAuthority$OtherNameProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-authority-other-name-property-builder (new CfnCertificateAuthority$OtherNameProperty$Builder) id config))
 
@@ -551,7 +626,12 @@
 
 
 (defn cfn-certificate-authority-props-builder
-  ""
+  "Creates a  `CfnCertificateAuthorityProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-authority-props-builder (new CfnCertificateAuthorityProps$Builder) id config))
 
@@ -577,7 +657,12 @@
 
 
 (defn cfn-certificate-authority-revocation-configuration-property-builder
-  ""
+  "Creates a  `CfnCertificateAuthority$RevocationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-authority-revocation-configuration-property-builder (new CfnCertificateAuthority$RevocationConfigurationProperty$Builder) id config))
 
@@ -642,7 +727,12 @@
 
 
 (defn cfn-certificate-authority-subject-property-builder
-  ""
+  "Creates a  `CfnCertificateAuthority$SubjectProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-authority-subject-property-builder (new CfnCertificateAuthority$SubjectProperty$Builder) id config))
 
@@ -683,7 +773,12 @@
 
 
 (defn cfn-certificate-builder
-  ""
+  "Creates a  `CfnCertificate$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-certificate-builder (CfnCertificate$Builder/create scope (name id)) id config))
 
@@ -709,7 +804,12 @@
 
 
 (defn cfn-certificate-custom-attribute-property-builder
-  ""
+  "Creates a  `CfnCertificate$CustomAttributeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-custom-attribute-property-builder (new CfnCertificate$CustomAttributeProperty$Builder) id config))
 
@@ -738,7 +838,12 @@
 
 
 (defn cfn-certificate-custom-extension-property-builder
-  ""
+  "Creates a  `CfnCertificate$CustomExtensionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-custom-extension-property-builder (new CfnCertificate$CustomExtensionProperty$Builder) id config))
 
@@ -764,7 +869,12 @@
 
 
 (defn cfn-certificate-edi-party-name-property-builder
-  ""
+  "Creates a  `CfnCertificate$EdiPartyNameProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-edi-party-name-property-builder (new CfnCertificate$EdiPartyNameProperty$Builder) id config))
 
@@ -790,7 +900,12 @@
 
 
 (defn cfn-certificate-extended-key-usage-property-builder
-  ""
+  "Creates a  `CfnCertificate$ExtendedKeyUsageProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-extended-key-usage-property-builder (new CfnCertificate$ExtendedKeyUsageProperty$Builder) id config))
 
@@ -825,7 +940,12 @@
 
 
 (defn cfn-certificate-extensions-property-builder
-  ""
+  "Creates a  `CfnCertificate$ExtensionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-extensions-property-builder (new CfnCertificate$ExtensionsProperty$Builder) id config))
 
@@ -869,7 +989,12 @@
 
 
 (defn cfn-certificate-general-name-property-builder
-  ""
+  "Creates a  `CfnCertificate$GeneralNameProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-general-name-property-builder (new CfnCertificate$GeneralNameProperty$Builder) id config))
 
@@ -916,7 +1041,12 @@
 
 
 (defn cfn-certificate-key-usage-property-builder
-  ""
+  "Creates a  `CfnCertificate$KeyUsageProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-key-usage-property-builder (new CfnCertificate$KeyUsageProperty$Builder) id config))
 
@@ -942,7 +1072,12 @@
 
 
 (defn cfn-certificate-other-name-property-builder
-  ""
+  "Creates a  `CfnCertificate$OtherNameProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-other-name-property-builder (new CfnCertificate$OtherNameProperty$Builder) id config))
 
@@ -968,7 +1103,12 @@
 
 
 (defn cfn-certificate-policy-information-property-builder
-  ""
+  "Creates a  `CfnCertificate$PolicyInformationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-policy-information-property-builder (new CfnCertificate$PolicyInformationProperty$Builder) id config))
 
@@ -994,7 +1134,12 @@
 
 
 (defn cfn-certificate-policy-qualifier-info-property-builder
-  ""
+  "Creates a  `CfnCertificate$PolicyQualifierInfoProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-policy-qualifier-info-property-builder (new CfnCertificate$PolicyQualifierInfoProperty$Builder) id config))
 
@@ -1035,7 +1180,12 @@
 
 
 (defn cfn-certificate-props-builder
-  ""
+  "Creates a  `CfnCertificateProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-props-builder (new CfnCertificateProps$Builder) id config))
 
@@ -1058,7 +1208,12 @@
 
 
 (defn cfn-certificate-qualifier-property-builder
-  ""
+  "Creates a  `CfnCertificate$QualifierProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-qualifier-property-builder (new CfnCertificate$QualifierProperty$Builder) id config))
 
@@ -1123,7 +1278,12 @@
 
 
 (defn cfn-certificate-subject-property-builder
-  ""
+  "Creates a  `CfnCertificate$SubjectProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-subject-property-builder (new CfnCertificate$SubjectProperty$Builder) id config))
 
@@ -1149,7 +1309,12 @@
 
 
 (defn cfn-certificate-validity-property-builder
-  ""
+  "Creates a  `CfnCertificate$ValidityProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-certificate-validity-property-builder (new CfnCertificate$ValidityProperty$Builder) id config))
 
@@ -1181,7 +1346,12 @@
 
 
 (defn cfn-permission-builder
-  ""
+  "Creates a  `CfnPermission$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-permission-builder (CfnPermission$Builder/create scope (name id)) id config))
 
@@ -1213,6 +1383,11 @@
 
 
 (defn cfn-permission-props-builder
-  ""
+  "Creates a  `CfnPermissionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-permission-props-builder (new CfnPermissionProps$Builder) id config))

@@ -180,7 +180,12 @@
 
 
 (defn cfn-ip-set-builder
-  ""
+  "Creates a  `CfnIPSet$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-ip-set-builder (CfnIPSet$Builder/create scope (name id)) id config))
 
@@ -218,7 +223,12 @@
 
 
 (defn cfn-ip-set-props-builder
-  ""
+  "Creates a  `CfnIPSetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-ip-set-props-builder (new CfnIPSetProps$Builder) id config))
 
@@ -241,7 +251,12 @@
 
 
 (defn cfn-logging-configuration-action-condition-property-builder
-  ""
+  "Creates a  `CfnLoggingConfiguration$ActionConditionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-logging-configuration-action-condition-property-builder (new CfnLoggingConfiguration$ActionConditionProperty$Builder) id config))
 
@@ -273,7 +288,12 @@
 
 
 (defn cfn-logging-configuration-builder
-  ""
+  "Creates a  `CfnLoggingConfiguration$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-logging-configuration-builder (CfnLoggingConfiguration$Builder/create scope (name id)) id config))
 
@@ -299,7 +319,12 @@
 
 
 (defn cfn-logging-configuration-condition-property-builder
-  ""
+  "Creates a  `CfnLoggingConfiguration$ConditionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-logging-configuration-condition-property-builder (new CfnLoggingConfiguration$ConditionProperty$Builder) id config))
 
@@ -334,7 +359,12 @@
 
 
 (defn cfn-logging-configuration-field-to-match-property-builder
-  ""
+  "Creates a  `CfnLoggingConfiguration$FieldToMatchProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-logging-configuration-field-to-match-property-builder (new CfnLoggingConfiguration$FieldToMatchProperty$Builder) id config))
 
@@ -363,7 +393,12 @@
 
 
 (defn cfn-logging-configuration-filter-property-builder
-  ""
+  "Creates a  `CfnLoggingConfiguration$FilterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-logging-configuration-filter-property-builder (new CfnLoggingConfiguration$FilterProperty$Builder) id config))
 
@@ -392,7 +427,12 @@
 
 
 (defn cfn-logging-configuration-json-body-property-builder
-  ""
+  "Creates a  `CfnLoggingConfiguration$JsonBodyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-logging-configuration-json-body-property-builder (new CfnLoggingConfiguration$JsonBodyProperty$Builder) id config))
 
@@ -415,7 +455,12 @@
 
 
 (defn cfn-logging-configuration-label-name-condition-property-builder
-  ""
+  "Creates a  `CfnLoggingConfiguration$LabelNameConditionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-logging-configuration-label-name-condition-property-builder (new CfnLoggingConfiguration$LabelNameConditionProperty$Builder) id config))
 
@@ -441,7 +486,12 @@
 
 
 (defn cfn-logging-configuration-logging-filter-property-builder
-  ""
+  "Creates a  `CfnLoggingConfiguration$LoggingFilterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-logging-configuration-logging-filter-property-builder (new CfnLoggingConfiguration$LoggingFilterProperty$Builder) id config))
 
@@ -467,7 +517,12 @@
 
 
 (defn cfn-logging-configuration-match-pattern-property-builder
-  ""
+  "Creates a  `CfnLoggingConfiguration$MatchPatternProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-logging-configuration-match-pattern-property-builder (new CfnLoggingConfiguration$MatchPatternProperty$Builder) id config))
 
@@ -499,7 +554,12 @@
 
 
 (defn cfn-logging-configuration-props-builder
-  ""
+  "Creates a  `CfnLoggingConfigurationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-logging-configuration-props-builder (new CfnLoggingConfigurationProps$Builder) id config))
 
@@ -522,7 +582,12 @@
 
 
 (defn cfn-logging-configuration-single-header-property-builder
-  ""
+  "Creates a  `CfnLoggingConfiguration$SingleHeaderProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-logging-configuration-single-header-property-builder (new CfnLoggingConfiguration$SingleHeaderProperty$Builder) id config))
 
@@ -557,7 +622,12 @@
 
 
 (defn cfn-regex-pattern-set-builder
-  ""
+  "Creates a  `CfnRegexPatternSet$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-regex-pattern-set-builder (CfnRegexPatternSet$Builder/create scope (name id)) id config))
 
@@ -592,7 +662,12 @@
 
 
 (defn cfn-regex-pattern-set-props-builder
-  ""
+  "Creates a  `CfnRegexPatternSetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-regex-pattern-set-props-builder (new CfnRegexPatternSetProps$Builder) id config))
 
@@ -615,7 +690,12 @@
 
 
 (defn cfn-rule-group-allow-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$AllowProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-allow-property-builder (new CfnRuleGroup$AllowProperty$Builder) id config))
 
@@ -638,7 +718,12 @@
 
 
 (defn cfn-rule-group-and-statement-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$AndStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-and-statement-property-builder (new CfnRuleGroup$AndStatementProperty$Builder) id config))
 
@@ -661,7 +746,12 @@
 
 
 (defn cfn-rule-group-block-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$BlockProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-block-property-builder (new CfnRuleGroup$BlockProperty$Builder) id config))
 
@@ -684,7 +774,12 @@
 
 
 (defn cfn-rule-group-body-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$BodyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-body-property-builder (new CfnRuleGroup$BodyProperty$Builder) id config))
 
@@ -734,7 +829,12 @@
 
 
 (defn cfn-rule-group-builder
-  ""
+  "Creates a  `CfnRuleGroup$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-rule-group-builder (CfnRuleGroup$Builder/create scope (name id)) id config))
 
@@ -769,7 +869,12 @@
 
 
 (defn cfn-rule-group-byte-match-statement-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$ByteMatchStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-byte-match-statement-property-builder (new CfnRuleGroup$ByteMatchStatementProperty$Builder) id config))
 
@@ -792,7 +897,12 @@
 
 
 (defn cfn-rule-group-captcha-config-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$CaptchaConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-captcha-config-property-builder (new CfnRuleGroup$CaptchaConfigProperty$Builder) id config))
 
@@ -815,7 +925,12 @@
 
 
 (defn cfn-rule-group-captcha-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$CaptchaProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-captcha-property-builder (new CfnRuleGroup$CaptchaProperty$Builder) id config))
 
@@ -838,7 +953,12 @@
 
 
 (defn cfn-rule-group-challenge-config-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$ChallengeConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-challenge-config-property-builder (new CfnRuleGroup$ChallengeConfigProperty$Builder) id config))
 
@@ -861,7 +981,12 @@
 
 
 (defn cfn-rule-group-challenge-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$ChallengeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-challenge-property-builder (new CfnRuleGroup$ChallengeProperty$Builder) id config))
 
@@ -890,7 +1015,12 @@
 
 
 (defn cfn-rule-group-cookie-match-pattern-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$CookieMatchPatternProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-cookie-match-pattern-property-builder (new CfnRuleGroup$CookieMatchPatternProperty$Builder) id config))
 
@@ -919,7 +1049,12 @@
 
 
 (defn cfn-rule-group-cookies-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$CookiesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-cookies-property-builder (new CfnRuleGroup$CookiesProperty$Builder) id config))
 
@@ -942,7 +1077,12 @@
 
 
 (defn cfn-rule-group-count-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$CountProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-count-property-builder (new CfnRuleGroup$CountProperty$Builder) id config))
 
@@ -968,7 +1108,12 @@
 
 
 (defn cfn-rule-group-custom-http-header-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$CustomHTTPHeaderProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-custom-http-header-property-builder (new CfnRuleGroup$CustomHTTPHeaderProperty$Builder) id config))
 
@@ -991,7 +1136,12 @@
 
 
 (defn cfn-rule-group-custom-request-handling-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$CustomRequestHandlingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-custom-request-handling-property-builder (new CfnRuleGroup$CustomRequestHandlingProperty$Builder) id config))
 
@@ -1017,7 +1167,12 @@
 
 
 (defn cfn-rule-group-custom-response-body-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$CustomResponseBodyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-custom-response-body-property-builder (new CfnRuleGroup$CustomResponseBodyProperty$Builder) id config))
 
@@ -1046,7 +1201,12 @@
 
 
 (defn cfn-rule-group-custom-response-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$CustomResponseProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-custom-response-property-builder (new CfnRuleGroup$CustomResponseProperty$Builder) id config))
 
@@ -1099,7 +1259,12 @@
 
 
 (defn cfn-rule-group-field-to-match-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$FieldToMatchProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-field-to-match-property-builder (new CfnRuleGroup$FieldToMatchProperty$Builder) id config))
 
@@ -1125,7 +1290,12 @@
 
 
 (defn cfn-rule-group-forwarded-ip-configuration-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$ForwardedIPConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-forwarded-ip-configuration-property-builder (new CfnRuleGroup$ForwardedIPConfigurationProperty$Builder) id config))
 
@@ -1151,7 +1321,12 @@
 
 
 (defn cfn-rule-group-geo-match-statement-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$GeoMatchStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-geo-match-statement-property-builder (new CfnRuleGroup$GeoMatchStatementProperty$Builder) id config))
 
@@ -1180,7 +1355,12 @@
 
 
 (defn cfn-rule-group-header-match-pattern-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$HeaderMatchPatternProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-header-match-pattern-property-builder (new CfnRuleGroup$HeaderMatchPatternProperty$Builder) id config))
 
@@ -1209,7 +1389,12 @@
 
 
 (defn cfn-rule-group-headers-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$HeadersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-headers-property-builder (new CfnRuleGroup$HeadersProperty$Builder) id config))
 
@@ -1232,7 +1417,12 @@
 
 
 (defn cfn-rule-group-immunity-time-property-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$ImmunityTimePropertyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-immunity-time-property-property-builder (new CfnRuleGroup$ImmunityTimePropertyProperty$Builder) id config))
 
@@ -1261,7 +1451,12 @@
 
 
 (defn cfn-rule-group-ip-set-forwarded-ip-configuration-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$IPSetForwardedIPConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-ip-set-forwarded-ip-configuration-property-builder (new CfnRuleGroup$IPSetForwardedIPConfigurationProperty$Builder) id config))
 
@@ -1287,7 +1482,12 @@
 
 
 (defn cfn-rule-group-ip-set-reference-statement-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$IPSetReferenceStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-ip-set-reference-statement-property-builder (new CfnRuleGroup$IPSetReferenceStatementProperty$Builder) id config))
 
@@ -1310,7 +1510,12 @@
 
 
 (defn cfn-rule-group-ja3-fingerprint-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$JA3FingerprintProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-ja3-fingerprint-property-builder (new CfnRuleGroup$JA3FingerprintProperty$Builder) id config))
 
@@ -1342,7 +1547,12 @@
 
 
 (defn cfn-rule-group-json-body-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$JsonBodyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-json-body-property-builder (new CfnRuleGroup$JsonBodyProperty$Builder) id config))
 
@@ -1368,7 +1578,12 @@
 
 
 (defn cfn-rule-group-json-match-pattern-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$JsonMatchPatternProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-json-match-pattern-property-builder (new CfnRuleGroup$JsonMatchPatternProperty$Builder) id config))
 
@@ -1394,7 +1609,12 @@
 
 
 (defn cfn-rule-group-label-match-statement-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$LabelMatchStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-label-match-statement-property-builder (new CfnRuleGroup$LabelMatchStatementProperty$Builder) id config))
 
@@ -1417,7 +1637,12 @@
 
 
 (defn cfn-rule-group-label-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$LabelProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-label-property-builder (new CfnRuleGroup$LabelProperty$Builder) id config))
 
@@ -1440,7 +1665,12 @@
 
 
 (defn cfn-rule-group-label-summary-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$LabelSummaryProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-label-summary-property-builder (new CfnRuleGroup$LabelSummaryProperty$Builder) id config))
 
@@ -1463,7 +1693,12 @@
 
 
 (defn cfn-rule-group-not-statement-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$NotStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-not-statement-property-builder (new CfnRuleGroup$NotStatementProperty$Builder) id config))
 
@@ -1486,7 +1721,12 @@
 
 
 (defn cfn-rule-group-or-statement-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$OrStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-or-statement-property-builder (new CfnRuleGroup$OrStatementProperty$Builder) id config))
 
@@ -1536,7 +1776,12 @@
 
 
 (defn cfn-rule-group-props-builder
-  ""
+  "Creates a  `CfnRuleGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-props-builder (new CfnRuleGroupProps$Builder) id config))
 
@@ -1583,7 +1828,12 @@
 
 
 (defn cfn-rule-group-rate-based-statement-custom-key-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$RateBasedStatementCustomKeyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-rate-based-statement-custom-key-property-builder (new CfnRuleGroup$RateBasedStatementCustomKeyProperty$Builder) id config))
 
@@ -1621,7 +1871,12 @@
 
 
 (defn cfn-rule-group-rate-based-statement-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$RateBasedStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-rate-based-statement-property-builder (new CfnRuleGroup$RateBasedStatementProperty$Builder) id config))
 
@@ -1647,7 +1902,12 @@
 
 
 (defn cfn-rule-group-rate-limit-cookie-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$RateLimitCookieProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-rate-limit-cookie-property-builder (new CfnRuleGroup$RateLimitCookieProperty$Builder) id config))
 
@@ -1673,7 +1933,12 @@
 
 
 (defn cfn-rule-group-rate-limit-header-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$RateLimitHeaderProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-rate-limit-header-property-builder (new CfnRuleGroup$RateLimitHeaderProperty$Builder) id config))
 
@@ -1696,7 +1961,12 @@
 
 
 (defn cfn-rule-group-rate-limit-label-namespace-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$RateLimitLabelNamespaceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-rate-limit-label-namespace-property-builder (new CfnRuleGroup$RateLimitLabelNamespaceProperty$Builder) id config))
 
@@ -1722,7 +1992,12 @@
 
 
 (defn cfn-rule-group-rate-limit-query-argument-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$RateLimitQueryArgumentProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-rate-limit-query-argument-property-builder (new CfnRuleGroup$RateLimitQueryArgumentProperty$Builder) id config))
 
@@ -1745,7 +2020,12 @@
 
 
 (defn cfn-rule-group-rate-limit-query-string-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$RateLimitQueryStringProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-rate-limit-query-string-property-builder (new CfnRuleGroup$RateLimitQueryStringProperty$Builder) id config))
 
@@ -1768,7 +2048,12 @@
 
 
 (defn cfn-rule-group-rate-limit-uri-path-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$RateLimitUriPathProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-rate-limit-uri-path-property-builder (new CfnRuleGroup$RateLimitUriPathProperty$Builder) id config))
 
@@ -1797,7 +2082,12 @@
 
 
 (defn cfn-rule-group-regex-match-statement-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$RegexMatchStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-regex-match-statement-property-builder (new CfnRuleGroup$RegexMatchStatementProperty$Builder) id config))
 
@@ -1826,7 +2116,12 @@
 
 
 (defn cfn-rule-group-regex-pattern-set-reference-statement-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$RegexPatternSetReferenceStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-regex-pattern-set-reference-statement-property-builder (new CfnRuleGroup$RegexPatternSetReferenceStatementProperty$Builder) id config))
 
@@ -1861,7 +2156,12 @@
 
 
 (defn cfn-rule-group-rule-action-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$RuleActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-rule-action-property-builder (new CfnRuleGroup$RuleActionProperty$Builder) id config))
 
@@ -1905,7 +2205,12 @@
 
 
 (defn cfn-rule-group-rule-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$RuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-rule-property-builder (new CfnRuleGroup$RuleProperty$Builder) id config))
 
@@ -1928,7 +2233,12 @@
 
 
 (defn cfn-rule-group-single-header-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$SingleHeaderProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-single-header-property-builder (new CfnRuleGroup$SingleHeaderProperty$Builder) id config))
 
@@ -1951,7 +2261,12 @@
 
 
 (defn cfn-rule-group-single-query-argument-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$SingleQueryArgumentProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-single-query-argument-property-builder (new CfnRuleGroup$SingleQueryArgumentProperty$Builder) id config))
 
@@ -1983,7 +2298,12 @@
 
 
 (defn cfn-rule-group-size-constraint-statement-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$SizeConstraintStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-size-constraint-statement-property-builder (new CfnRuleGroup$SizeConstraintStatementProperty$Builder) id config))
 
@@ -2012,7 +2332,12 @@
 
 
 (defn cfn-rule-group-sqli-match-statement-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$SqliMatchStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-sqli-match-statement-property-builder (new CfnRuleGroup$SqliMatchStatementProperty$Builder) id config))
 
@@ -2071,7 +2396,12 @@
 
 
 (defn cfn-rule-group-statement-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$StatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-statement-property-builder (new CfnRuleGroup$StatementProperty$Builder) id config))
 
@@ -2097,7 +2427,12 @@
 
 
 (defn cfn-rule-group-text-transformation-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$TextTransformationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-text-transformation-property-builder (new CfnRuleGroup$TextTransformationProperty$Builder) id config))
 
@@ -2126,7 +2461,12 @@
 
 
 (defn cfn-rule-group-visibility-config-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$VisibilityConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-visibility-config-property-builder (new CfnRuleGroup$VisibilityConfigProperty$Builder) id config))
 
@@ -2152,7 +2492,12 @@
 
 
 (defn cfn-rule-group-xss-match-statement-property-builder
-  ""
+  "Creates a  `CfnRuleGroup$XssMatchStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-group-xss-match-statement-property-builder (new CfnRuleGroup$XssMatchStatementProperty$Builder) id config))
 
@@ -2175,7 +2520,12 @@
 
 
 (defn cfn-web-acl-allow-action-property-builder
-  ""
+  "Creates a  `CfnWebACL$AllowActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-allow-action-property-builder (new CfnWebACL$AllowActionProperty$Builder) id config))
 
@@ -2198,7 +2548,12 @@
 
 
 (defn cfn-web-acl-and-statement-property-builder
-  ""
+  "Creates a  `CfnWebACL$AndStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-and-statement-property-builder (new CfnWebACL$AndStatementProperty$Builder) id config))
 
@@ -2224,7 +2579,12 @@
 
 
 (defn cfn-web-acl-association-builder
-  ""
+  "Creates a  `CfnWebACLAssociation$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-web-acl-association-builder (CfnWebACLAssociation$Builder/create scope (name id)) id config))
 
@@ -2247,7 +2607,12 @@
 
 
 (defn cfn-web-acl-association-config-property-builder
-  ""
+  "Creates a  `CfnWebACL$AssociationConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-association-config-property-builder (new CfnWebACL$AssociationConfigProperty$Builder) id config))
 
@@ -2273,7 +2638,12 @@
 
 
 (defn cfn-web-acl-association-props-builder
-  ""
+  "Creates a  `CfnWebACLAssociationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-association-props-builder (new CfnWebACLAssociationProps$Builder) id config))
 
@@ -2308,7 +2678,12 @@
 
 
 (defn cfn-web-acl-aws-managed-rules-acfp-rule-set-property-builder
-  ""
+  "Creates a  `CfnWebACL$AWSManagedRulesACFPRuleSetProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-aws-managed-rules-acfp-rule-set-property-builder (new CfnWebACL$AWSManagedRulesACFPRuleSetProperty$Builder) id config))
 
@@ -2340,7 +2715,12 @@
 
 
 (defn cfn-web-acl-aws-managed-rules-atp-rule-set-property-builder
-  ""
+  "Creates a  `CfnWebACL$AWSManagedRulesATPRuleSetProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-aws-managed-rules-atp-rule-set-property-builder (new CfnWebACL$AWSManagedRulesATPRuleSetProperty$Builder) id config))
 
@@ -2366,7 +2746,12 @@
 
 
 (defn cfn-web-acl-aws-managed-rules-bot-control-rule-set-property-builder
-  ""
+  "Creates a  `CfnWebACL$AWSManagedRulesBotControlRuleSetProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-aws-managed-rules-bot-control-rule-set-property-builder (new CfnWebACL$AWSManagedRulesBotControlRuleSetProperty$Builder) id config))
 
@@ -2389,7 +2774,12 @@
 
 
 (defn cfn-web-acl-block-action-property-builder
-  ""
+  "Creates a  `CfnWebACL$BlockActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-block-action-property-builder (new CfnWebACL$BlockActionProperty$Builder) id config))
 
@@ -2412,7 +2802,12 @@
 
 
 (defn cfn-web-acl-body-property-builder
-  ""
+  "Creates a  `CfnWebACL$BodyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-body-property-builder (new CfnWebACL$BodyProperty$Builder) id config))
 
@@ -2468,7 +2863,12 @@
 
 
 (defn cfn-web-acl-builder
-  ""
+  "Creates a  `CfnWebACL$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-web-acl-builder (CfnWebACL$Builder/create scope (name id)) id config))
 
@@ -2503,7 +2903,12 @@
 
 
 (defn cfn-web-acl-byte-match-statement-property-builder
-  ""
+  "Creates a  `CfnWebACL$ByteMatchStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-byte-match-statement-property-builder (new CfnWebACL$ByteMatchStatementProperty$Builder) id config))
 
@@ -2526,7 +2931,12 @@
 
 
 (defn cfn-web-acl-captcha-action-property-builder
-  ""
+  "Creates a  `CfnWebACL$CaptchaActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-captcha-action-property-builder (new CfnWebACL$CaptchaActionProperty$Builder) id config))
 
@@ -2549,7 +2959,12 @@
 
 
 (defn cfn-web-acl-captcha-config-property-builder
-  ""
+  "Creates a  `CfnWebACL$CaptchaConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-captcha-config-property-builder (new CfnWebACL$CaptchaConfigProperty$Builder) id config))
 
@@ -2572,7 +2987,12 @@
 
 
 (defn cfn-web-acl-challenge-action-property-builder
-  ""
+  "Creates a  `CfnWebACL$ChallengeActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-challenge-action-property-builder (new CfnWebACL$ChallengeActionProperty$Builder) id config))
 
@@ -2595,7 +3015,12 @@
 
 
 (defn cfn-web-acl-challenge-config-property-builder
-  ""
+  "Creates a  `CfnWebACL$ChallengeConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-challenge-config-property-builder (new CfnWebACL$ChallengeConfigProperty$Builder) id config))
 
@@ -2624,7 +3049,12 @@
 
 
 (defn cfn-web-acl-cookie-match-pattern-property-builder
-  ""
+  "Creates a  `CfnWebACL$CookieMatchPatternProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-cookie-match-pattern-property-builder (new CfnWebACL$CookieMatchPatternProperty$Builder) id config))
 
@@ -2653,7 +3083,12 @@
 
 
 (defn cfn-web-acl-cookies-property-builder
-  ""
+  "Creates a  `CfnWebACL$CookiesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-cookies-property-builder (new CfnWebACL$CookiesProperty$Builder) id config))
 
@@ -2676,7 +3111,12 @@
 
 
 (defn cfn-web-acl-count-action-property-builder
-  ""
+  "Creates a  `CfnWebACL$CountActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-count-action-property-builder (new CfnWebACL$CountActionProperty$Builder) id config))
 
@@ -2702,7 +3142,12 @@
 
 
 (defn cfn-web-acl-custom-http-header-property-builder
-  ""
+  "Creates a  `CfnWebACL$CustomHTTPHeaderProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-custom-http-header-property-builder (new CfnWebACL$CustomHTTPHeaderProperty$Builder) id config))
 
@@ -2725,7 +3170,12 @@
 
 
 (defn cfn-web-acl-custom-request-handling-property-builder
-  ""
+  "Creates a  `CfnWebACL$CustomRequestHandlingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-custom-request-handling-property-builder (new CfnWebACL$CustomRequestHandlingProperty$Builder) id config))
 
@@ -2751,7 +3201,12 @@
 
 
 (defn cfn-web-acl-custom-response-body-property-builder
-  ""
+  "Creates a  `CfnWebACL$CustomResponseBodyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-custom-response-body-property-builder (new CfnWebACL$CustomResponseBodyProperty$Builder) id config))
 
@@ -2780,7 +3235,12 @@
 
 
 (defn cfn-web-acl-custom-response-property-builder
-  ""
+  "Creates a  `CfnWebACL$CustomResponseProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-custom-response-property-builder (new CfnWebACL$CustomResponseProperty$Builder) id config))
 
@@ -2806,7 +3266,12 @@
 
 
 (defn cfn-web-acl-default-action-property-builder
-  ""
+  "Creates a  `CfnWebACL$DefaultActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-default-action-property-builder (new CfnWebACL$DefaultActionProperty$Builder) id config))
 
@@ -2829,7 +3294,12 @@
 
 
 (defn cfn-web-acl-excluded-rule-property-builder
-  ""
+  "Creates a  `CfnWebACL$ExcludedRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-excluded-rule-property-builder (new CfnWebACL$ExcludedRuleProperty$Builder) id config))
 
@@ -2852,7 +3322,12 @@
 
 
 (defn cfn-web-acl-field-identifier-property-builder
-  ""
+  "Creates a  `CfnWebACL$FieldIdentifierProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-field-identifier-property-builder (new CfnWebACL$FieldIdentifierProperty$Builder) id config))
 
@@ -2905,7 +3380,12 @@
 
 
 (defn cfn-web-acl-field-to-match-property-builder
-  ""
+  "Creates a  `CfnWebACL$FieldToMatchProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-field-to-match-property-builder (new CfnWebACL$FieldToMatchProperty$Builder) id config))
 
@@ -2931,7 +3411,12 @@
 
 
 (defn cfn-web-acl-forwarded-ip-configuration-property-builder
-  ""
+  "Creates a  `CfnWebACL$ForwardedIPConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-forwarded-ip-configuration-property-builder (new CfnWebACL$ForwardedIPConfigurationProperty$Builder) id config))
 
@@ -2957,7 +3442,12 @@
 
 
 (defn cfn-web-acl-geo-match-statement-property-builder
-  ""
+  "Creates a  `CfnWebACL$GeoMatchStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-geo-match-statement-property-builder (new CfnWebACL$GeoMatchStatementProperty$Builder) id config))
 
@@ -2986,7 +3476,12 @@
 
 
 (defn cfn-web-acl-header-match-pattern-property-builder
-  ""
+  "Creates a  `CfnWebACL$HeaderMatchPatternProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-header-match-pattern-property-builder (new CfnWebACL$HeaderMatchPatternProperty$Builder) id config))
 
@@ -3015,7 +3510,12 @@
 
 
 (defn cfn-web-acl-headers-property-builder
-  ""
+  "Creates a  `CfnWebACL$HeadersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-headers-property-builder (new CfnWebACL$HeadersProperty$Builder) id config))
 
@@ -3038,7 +3538,12 @@
 
 
 (defn cfn-web-acl-immunity-time-property-property-builder
-  ""
+  "Creates a  `CfnWebACL$ImmunityTimePropertyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-immunity-time-property-property-builder (new CfnWebACL$ImmunityTimePropertyProperty$Builder) id config))
 
@@ -3067,7 +3572,12 @@
 
 
 (defn cfn-web-acl-ip-set-forwarded-ip-configuration-property-builder
-  ""
+  "Creates a  `CfnWebACL$IPSetForwardedIPConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-ip-set-forwarded-ip-configuration-property-builder (new CfnWebACL$IPSetForwardedIPConfigurationProperty$Builder) id config))
 
@@ -3093,7 +3603,12 @@
 
 
 (defn cfn-web-acl-ip-set-reference-statement-property-builder
-  ""
+  "Creates a  `CfnWebACL$IPSetReferenceStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-ip-set-reference-statement-property-builder (new CfnWebACL$IPSetReferenceStatementProperty$Builder) id config))
 
@@ -3116,7 +3631,12 @@
 
 
 (defn cfn-web-acl-ja3-fingerprint-property-builder
-  ""
+  "Creates a  `CfnWebACL$JA3FingerprintProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-ja3-fingerprint-property-builder (new CfnWebACL$JA3FingerprintProperty$Builder) id config))
 
@@ -3148,7 +3668,12 @@
 
 
 (defn cfn-web-acl-json-body-property-builder
-  ""
+  "Creates a  `CfnWebACL$JsonBodyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-json-body-property-builder (new CfnWebACL$JsonBodyProperty$Builder) id config))
 
@@ -3174,7 +3699,12 @@
 
 
 (defn cfn-web-acl-json-match-pattern-property-builder
-  ""
+  "Creates a  `CfnWebACL$JsonMatchPatternProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-json-match-pattern-property-builder (new CfnWebACL$JsonMatchPatternProperty$Builder) id config))
 
@@ -3200,7 +3730,12 @@
 
 
 (defn cfn-web-acl-label-match-statement-property-builder
-  ""
+  "Creates a  `CfnWebACL$LabelMatchStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-label-match-statement-property-builder (new CfnWebACL$LabelMatchStatementProperty$Builder) id config))
 
@@ -3223,7 +3758,12 @@
 
 
 (defn cfn-web-acl-label-property-builder
-  ""
+  "Creates a  `CfnWebACL$LabelProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-label-property-builder (new CfnWebACL$LabelProperty$Builder) id config))
 
@@ -3264,7 +3804,12 @@
 
 
 (defn cfn-web-acl-managed-rule-group-config-property-builder
-  ""
+  "Creates a  `CfnWebACL$ManagedRuleGroupConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-managed-rule-group-config-property-builder (new CfnWebACL$ManagedRuleGroupConfigProperty$Builder) id config))
 
@@ -3305,7 +3850,12 @@
 
 
 (defn cfn-web-acl-managed-rule-group-statement-property-builder
-  ""
+  "Creates a  `CfnWebACL$ManagedRuleGroupStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-managed-rule-group-statement-property-builder (new CfnWebACL$ManagedRuleGroupStatementProperty$Builder) id config))
 
@@ -3328,7 +3878,12 @@
 
 
 (defn cfn-web-acl-not-statement-property-builder
-  ""
+  "Creates a  `CfnWebACL$NotStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-not-statement-property-builder (new CfnWebACL$NotStatementProperty$Builder) id config))
 
@@ -3351,7 +3906,12 @@
 
 
 (defn cfn-web-acl-or-statement-property-builder
-  ""
+  "Creates a  `CfnWebACL$OrStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-or-statement-property-builder (new CfnWebACL$OrStatementProperty$Builder) id config))
 
@@ -3377,7 +3937,12 @@
 
 
 (defn cfn-web-acl-override-action-property-builder
-  ""
+  "Creates a  `CfnWebACL$OverrideActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-override-action-property-builder (new CfnWebACL$OverrideActionProperty$Builder) id config))
 
@@ -3433,7 +3998,12 @@
 
 
 (defn cfn-web-acl-props-builder
-  ""
+  "Creates a  `CfnWebACLProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-props-builder (new CfnWebACLProps$Builder) id config))
 
@@ -3480,7 +4050,12 @@
 
 
 (defn cfn-web-acl-rate-based-statement-custom-key-property-builder
-  ""
+  "Creates a  `CfnWebACL$RateBasedStatementCustomKeyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-rate-based-statement-custom-key-property-builder (new CfnWebACL$RateBasedStatementCustomKeyProperty$Builder) id config))
 
@@ -3518,7 +4093,12 @@
 
 
 (defn cfn-web-acl-rate-based-statement-property-builder
-  ""
+  "Creates a  `CfnWebACL$RateBasedStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-rate-based-statement-property-builder (new CfnWebACL$RateBasedStatementProperty$Builder) id config))
 
@@ -3544,7 +4124,12 @@
 
 
 (defn cfn-web-acl-rate-limit-cookie-property-builder
-  ""
+  "Creates a  `CfnWebACL$RateLimitCookieProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-rate-limit-cookie-property-builder (new CfnWebACL$RateLimitCookieProperty$Builder) id config))
 
@@ -3570,7 +4155,12 @@
 
 
 (defn cfn-web-acl-rate-limit-header-property-builder
-  ""
+  "Creates a  `CfnWebACL$RateLimitHeaderProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-rate-limit-header-property-builder (new CfnWebACL$RateLimitHeaderProperty$Builder) id config))
 
@@ -3593,7 +4183,12 @@
 
 
 (defn cfn-web-acl-rate-limit-label-namespace-property-builder
-  ""
+  "Creates a  `CfnWebACL$RateLimitLabelNamespaceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-rate-limit-label-namespace-property-builder (new CfnWebACL$RateLimitLabelNamespaceProperty$Builder) id config))
 
@@ -3619,7 +4214,12 @@
 
 
 (defn cfn-web-acl-rate-limit-query-argument-property-builder
-  ""
+  "Creates a  `CfnWebACL$RateLimitQueryArgumentProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-rate-limit-query-argument-property-builder (new CfnWebACL$RateLimitQueryArgumentProperty$Builder) id config))
 
@@ -3642,7 +4242,12 @@
 
 
 (defn cfn-web-acl-rate-limit-query-string-property-builder
-  ""
+  "Creates a  `CfnWebACL$RateLimitQueryStringProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-rate-limit-query-string-property-builder (new CfnWebACL$RateLimitQueryStringProperty$Builder) id config))
 
@@ -3665,7 +4270,12 @@
 
 
 (defn cfn-web-acl-rate-limit-uri-path-property-builder
-  ""
+  "Creates a  `CfnWebACL$RateLimitUriPathProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-rate-limit-uri-path-property-builder (new CfnWebACL$RateLimitUriPathProperty$Builder) id config))
 
@@ -3694,7 +4304,12 @@
 
 
 (defn cfn-web-acl-regex-match-statement-property-builder
-  ""
+  "Creates a  `CfnWebACL$RegexMatchStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-regex-match-statement-property-builder (new CfnWebACL$RegexMatchStatementProperty$Builder) id config))
 
@@ -3723,7 +4338,12 @@
 
 
 (defn cfn-web-acl-regex-pattern-set-reference-statement-property-builder
-  ""
+  "Creates a  `CfnWebACL$RegexPatternSetReferenceStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-regex-pattern-set-reference-statement-property-builder (new CfnWebACL$RegexPatternSetReferenceStatementProperty$Builder) id config))
 
@@ -3746,7 +4366,12 @@
 
 
 (defn cfn-web-acl-request-body-associated-resource-type-config-property-builder
-  ""
+  "Creates a  `CfnWebACL$RequestBodyAssociatedResourceTypeConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-request-body-associated-resource-type-config-property-builder (new CfnWebACL$RequestBodyAssociatedResourceTypeConfigProperty$Builder) id config))
 
@@ -3784,7 +4409,12 @@
 
 
 (defn cfn-web-acl-request-inspection-acfp-property-builder
-  ""
+  "Creates a  `CfnWebACL$RequestInspectionACFPProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-request-inspection-acfp-property-builder (new CfnWebACL$RequestInspectionACFPProperty$Builder) id config))
 
@@ -3813,7 +4443,12 @@
 
 
 (defn cfn-web-acl-request-inspection-property-builder
-  ""
+  "Creates a  `CfnWebACL$RequestInspectionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-request-inspection-property-builder (new CfnWebACL$RequestInspectionProperty$Builder) id config))
 
@@ -3839,7 +4474,12 @@
 
 
 (defn cfn-web-acl-response-inspection-body-contains-property-builder
-  ""
+  "Creates a  `CfnWebACL$ResponseInspectionBodyContainsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-response-inspection-body-contains-property-builder (new CfnWebACL$ResponseInspectionBodyContainsProperty$Builder) id config))
 
@@ -3868,7 +4508,12 @@
 
 
 (defn cfn-web-acl-response-inspection-header-property-builder
-  ""
+  "Creates a  `CfnWebACL$ResponseInspectionHeaderProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-response-inspection-header-property-builder (new CfnWebACL$ResponseInspectionHeaderProperty$Builder) id config))
 
@@ -3897,7 +4542,12 @@
 
 
 (defn cfn-web-acl-response-inspection-json-property-builder
-  ""
+  "Creates a  `CfnWebACL$ResponseInspectionJsonProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-response-inspection-json-property-builder (new CfnWebACL$ResponseInspectionJsonProperty$Builder) id config))
 
@@ -3929,7 +4579,12 @@
 
 
 (defn cfn-web-acl-response-inspection-property-builder
-  ""
+  "Creates a  `CfnWebACL$ResponseInspectionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-response-inspection-property-builder (new CfnWebACL$ResponseInspectionProperty$Builder) id config))
 
@@ -3955,7 +4610,12 @@
 
 
 (defn cfn-web-acl-response-inspection-status-code-property-builder
-  ""
+  "Creates a  `CfnWebACL$ResponseInspectionStatusCodeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-response-inspection-status-code-property-builder (new CfnWebACL$ResponseInspectionStatusCodeProperty$Builder) id config))
 
@@ -3981,7 +4641,12 @@
 
 
 (defn cfn-web-acl-rule-action-override-property-builder
-  ""
+  "Creates a  `CfnWebACL$RuleActionOverrideProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-rule-action-override-property-builder (new CfnWebACL$RuleActionOverrideProperty$Builder) id config))
 
@@ -4016,7 +4681,12 @@
 
 
 (defn cfn-web-acl-rule-action-property-builder
-  ""
+  "Creates a  `CfnWebACL$RuleActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-rule-action-property-builder (new CfnWebACL$RuleActionProperty$Builder) id config))
 
@@ -4045,7 +4715,12 @@
 
 
 (defn cfn-web-acl-rule-group-reference-statement-property-builder
-  ""
+  "Creates a  `CfnWebACL$RuleGroupReferenceStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-rule-group-reference-statement-property-builder (new CfnWebACL$RuleGroupReferenceStatementProperty$Builder) id config))
 
@@ -4092,7 +4767,12 @@
 
 
 (defn cfn-web-acl-rule-property-builder
-  ""
+  "Creates a  `CfnWebACL$RuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-rule-property-builder (new CfnWebACL$RuleProperty$Builder) id config))
 
@@ -4115,7 +4795,12 @@
 
 
 (defn cfn-web-acl-single-header-property-builder
-  ""
+  "Creates a  `CfnWebACL$SingleHeaderProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-single-header-property-builder (new CfnWebACL$SingleHeaderProperty$Builder) id config))
 
@@ -4138,7 +4823,12 @@
 
 
 (defn cfn-web-acl-single-query-argument-property-builder
-  ""
+  "Creates a  `CfnWebACL$SingleQueryArgumentProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-single-query-argument-property-builder (new CfnWebACL$SingleQueryArgumentProperty$Builder) id config))
 
@@ -4170,7 +4860,12 @@
 
 
 (defn cfn-web-acl-size-constraint-statement-property-builder
-  ""
+  "Creates a  `CfnWebACL$SizeConstraintStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-size-constraint-statement-property-builder (new CfnWebACL$SizeConstraintStatementProperty$Builder) id config))
 
@@ -4199,7 +4894,12 @@
 
 
 (defn cfn-web-acl-sqli-match-statement-property-builder
-  ""
+  "Creates a  `CfnWebACL$SqliMatchStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-sqli-match-statement-property-builder (new CfnWebACL$SqliMatchStatementProperty$Builder) id config))
 
@@ -4264,7 +4964,12 @@
 
 
 (defn cfn-web-acl-statement-property-builder
-  ""
+  "Creates a  `CfnWebACL$StatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-statement-property-builder (new CfnWebACL$StatementProperty$Builder) id config))
 
@@ -4290,7 +4995,12 @@
 
 
 (defn cfn-web-acl-text-transformation-property-builder
-  ""
+  "Creates a  `CfnWebACL$TextTransformationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-text-transformation-property-builder (new CfnWebACL$TextTransformationProperty$Builder) id config))
 
@@ -4319,7 +5029,12 @@
 
 
 (defn cfn-web-acl-visibility-config-property-builder
-  ""
+  "Creates a  `CfnWebACL$VisibilityConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-visibility-config-property-builder (new CfnWebACL$VisibilityConfigProperty$Builder) id config))
 
@@ -4345,6 +5060,11 @@
 
 
 (defn cfn-web-acl-xss-match-statement-property-builder
-  ""
+  "Creates a  `CfnWebACL$XssMatchStatementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-xss-match-statement-property-builder (new CfnWebACL$XssMatchStatementProperty$Builder) id config))

@@ -79,7 +79,12 @@
 
 
 (defn cfn-destination-builder
-  ""
+  "Creates a  `CfnDestination$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-destination-builder (CfnDestination$Builder/create scope (name id)) id config))
 
@@ -117,7 +122,12 @@
 
 
 (defn cfn-destination-props-builder
-  ""
+  "Creates a  `CfnDestinationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-destination-props-builder (new CfnDestinationProps$Builder) id config))
 
@@ -146,7 +156,12 @@
 
 
 (defn cfn-device-profile-builder
-  ""
+  "Creates a  `CfnDeviceProfile$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-device-profile-builder (CfnDeviceProfile$Builder/create scope (name id)) id config))
 
@@ -223,7 +238,12 @@
 
 
 (defn cfn-device-profile-lo-ra-wan-device-profile-property-builder
-  ""
+  "Creates a  `CfnDeviceProfile$LoRaWANDeviceProfileProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-device-profile-lo-ra-wan-device-profile-property-builder (new CfnDeviceProfile$LoRaWANDeviceProfileProperty$Builder) id config))
 
@@ -252,7 +272,12 @@
 
 
 (defn cfn-device-profile-props-builder
-  ""
+  "Creates a  `CfnDeviceProfileProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-device-profile-props-builder (new CfnDeviceProfileProps$Builder) id config))
 
@@ -302,7 +327,12 @@
 
 
 (defn cfn-fuota-task-builder
-  ""
+  "Creates a  `CfnFuotaTask$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-fuota-task-builder (CfnFuotaTask$Builder/create scope (name id)) id config))
 
@@ -328,7 +358,12 @@
 
 
 (defn cfn-fuota-task-lo-ra-wan-property-builder
-  ""
+  "Creates a  `CfnFuotaTask$LoRaWANProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-fuota-task-lo-ra-wan-property-builder (new CfnFuotaTask$LoRaWANProperty$Builder) id config))
 
@@ -378,7 +413,12 @@
 
 
 (defn cfn-fuota-task-props-builder
-  ""
+  "Creates a  `CfnFuotaTaskProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-fuota-task-props-builder (new CfnFuotaTaskProps$Builder) id config))
 
@@ -416,7 +456,12 @@
 
 
 (defn cfn-multicast-group-builder
-  ""
+  "Creates a  `CfnMulticastGroup$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-multicast-group-builder (CfnMulticastGroup$Builder/create scope (name id)) id config))
 
@@ -448,7 +493,12 @@
 
 
 (defn cfn-multicast-group-lo-ra-wan-property-builder
-  ""
+  "Creates a  `CfnMulticastGroup$LoRaWANProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-multicast-group-lo-ra-wan-property-builder (new CfnMulticastGroup$LoRaWANProperty$Builder) id config))
 
@@ -486,7 +536,12 @@
 
 
 (defn cfn-multicast-group-props-builder
-  ""
+  "Creates a  `CfnMulticastGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-multicast-group-props-builder (new CfnMulticastGroupProps$Builder) id config))
 
@@ -524,7 +579,12 @@
 
 
 (defn cfn-network-analyzer-configuration-builder
-  ""
+  "Creates a  `CfnNetworkAnalyzerConfiguration$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-network-analyzer-configuration-builder (CfnNetworkAnalyzerConfiguration$Builder/create scope (name id)) id config))
 
@@ -562,7 +622,12 @@
 
 
 (defn cfn-network-analyzer-configuration-props-builder
-  ""
+  "Creates a  `CfnNetworkAnalyzerConfigurationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-network-analyzer-configuration-props-builder (new CfnNetworkAnalyzerConfigurationProps$Builder) id config))
 
@@ -588,7 +653,12 @@
 
 
 (defn cfn-network-analyzer-configuration-trace-content-property-builder
-  ""
+  "Creates a  `CfnNetworkAnalyzerConfiguration$TraceContentProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-network-analyzer-configuration-trace-content-property-builder (new CfnNetworkAnalyzerConfiguration$TraceContentProperty$Builder) id config))
 
@@ -629,7 +699,12 @@
 
 
 (defn cfn-partner-account-builder
-  ""
+  "Creates a  `CfnPartnerAccount$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-partner-account-builder (CfnPartnerAccount$Builder/create scope (name id)) id config))
 
@@ -670,7 +745,12 @@
 
 
 (defn cfn-partner-account-props-builder
-  ""
+  "Creates a  `CfnPartnerAccountProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-partner-account-props-builder (new CfnPartnerAccountProps$Builder) id config))
 
@@ -693,7 +773,12 @@
 
 
 (defn cfn-partner-account-sidewalk-account-info-property-builder
-  ""
+  "Creates a  `CfnPartnerAccount$SidewalkAccountInfoProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-partner-account-sidewalk-account-info-property-builder (new CfnPartnerAccount$SidewalkAccountInfoProperty$Builder) id config))
 
@@ -722,7 +807,12 @@
 
 
 (defn cfn-partner-account-sidewalk-account-info-with-fingerprint-property-builder
-  ""
+  "Creates a  `CfnPartnerAccount$SidewalkAccountInfoWithFingerprintProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-partner-account-sidewalk-account-info-with-fingerprint-property-builder (new CfnPartnerAccount$SidewalkAccountInfoWithFingerprintProperty$Builder) id config))
 
@@ -745,7 +835,12 @@
 
 
 (defn cfn-partner-account-sidewalk-update-account-property-builder
-  ""
+  "Creates a  `CfnPartnerAccount$SidewalkUpdateAccountProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-partner-account-sidewalk-update-account-property-builder (new CfnPartnerAccount$SidewalkUpdateAccountProperty$Builder) id config))
 
@@ -774,7 +869,12 @@
 
 
 (defn cfn-service-profile-builder
-  ""
+  "Creates a  `CfnServiceProfile$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-service-profile-builder (CfnServiceProfile$Builder/create scope (name id)) id config))
 
@@ -851,7 +951,12 @@
 
 
 (defn cfn-service-profile-lo-ra-wan-service-profile-property-builder
-  ""
+  "Creates a  `CfnServiceProfile$LoRaWANServiceProfileProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-service-profile-lo-ra-wan-service-profile-property-builder (new CfnServiceProfile$LoRaWANServiceProfileProperty$Builder) id config))
 
@@ -880,7 +985,12 @@
 
 
 (defn cfn-service-profile-props-builder
-  ""
+  "Creates a  `CfnServiceProfileProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-service-profile-props-builder (new CfnServiceProfileProps$Builder) id config))
 
@@ -918,7 +1028,12 @@
 
 
 (defn cfn-task-definition-builder
-  ""
+  "Creates a  `CfnTaskDefinition$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-task-definition-builder (CfnTaskDefinition$Builder/create scope (name id)) id config))
 
@@ -947,7 +1062,12 @@
 
 
 (defn cfn-task-definition-lo-ra-wan-gateway-version-property-builder
-  ""
+  "Creates a  `CfnTaskDefinition$LoRaWANGatewayVersionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-task-definition-lo-ra-wan-gateway-version-property-builder (new CfnTaskDefinition$LoRaWANGatewayVersionProperty$Builder) id config))
 
@@ -979,7 +1099,12 @@
 
 
 (defn cfn-task-definition-lo-ra-wan-update-gateway-task-create-property-builder
-  ""
+  "Creates a  `CfnTaskDefinition$LoRaWANUpdateGatewayTaskCreateProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-task-definition-lo-ra-wan-update-gateway-task-create-property-builder (new CfnTaskDefinition$LoRaWANUpdateGatewayTaskCreateProperty$Builder) id config))
 
@@ -1005,7 +1130,12 @@
 
 
 (defn cfn-task-definition-lo-ra-wan-update-gateway-task-entry-property-builder
-  ""
+  "Creates a  `CfnTaskDefinition$LoRaWANUpdateGatewayTaskEntryProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-task-definition-lo-ra-wan-update-gateway-task-entry-property-builder (new CfnTaskDefinition$LoRaWANUpdateGatewayTaskEntryProperty$Builder) id config))
 
@@ -1043,7 +1173,12 @@
 
 
 (defn cfn-task-definition-props-builder
-  ""
+  "Creates a  `CfnTaskDefinitionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-task-definition-props-builder (new CfnTaskDefinitionProps$Builder) id config))
 
@@ -1072,7 +1207,12 @@
 
 
 (defn cfn-task-definition-update-wireless-gateway-task-create-property-builder
-  ""
+  "Creates a  `CfnTaskDefinition$UpdateWirelessGatewayTaskCreateProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-task-definition-update-wireless-gateway-task-create-property-builder (new CfnTaskDefinition$UpdateWirelessGatewayTaskCreateProperty$Builder) id config))
 
@@ -1098,7 +1238,12 @@
 
 
 (defn cfn-wireless-device-abp-v10x-property-builder
-  ""
+  "Creates a  `CfnWirelessDevice$AbpV10xProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-wireless-device-abp-v10x-property-builder (new CfnWirelessDevice$AbpV10xProperty$Builder) id config))
 
@@ -1124,7 +1269,12 @@
 
 
 (defn cfn-wireless-device-abp-v11-property-builder
-  ""
+  "Creates a  `CfnWirelessDevice$AbpV11Property$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-wireless-device-abp-v11-property-builder (new CfnWirelessDevice$AbpV11Property$Builder) id config))
 
@@ -1171,7 +1321,12 @@
 
 
 (defn cfn-wireless-device-builder
-  ""
+  "Creates a  `CfnWirelessDevice$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-wireless-device-builder (CfnWirelessDevice$Builder/create scope (name id)) id config))
 
@@ -1200,7 +1355,12 @@
 
 
 (defn cfn-wireless-device-import-task-builder
-  ""
+  "Creates a  `CfnWirelessDeviceImportTask$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-wireless-device-import-task-builder (CfnWirelessDeviceImportTask$Builder/create scope (name id)) id config))
 
@@ -1229,7 +1389,12 @@
 
 
 (defn cfn-wireless-device-import-task-props-builder
-  ""
+  "Creates a  `CfnWirelessDeviceImportTaskProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-wireless-device-import-task-props-builder (new CfnWirelessDeviceImportTaskProps$Builder) id config))
 
@@ -1261,7 +1426,12 @@
 
 
 (defn cfn-wireless-device-import-task-sidewalk-property-builder
-  ""
+  "Creates a  `CfnWirelessDeviceImportTask$SidewalkProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-wireless-device-import-task-sidewalk-property-builder (new CfnWirelessDeviceImportTask$SidewalkProperty$Builder) id config))
 
@@ -1302,7 +1472,12 @@
 
 
 (defn cfn-wireless-device-lo-ra-wan-device-property-builder
-  ""
+  "Creates a  `CfnWirelessDevice$LoRaWANDeviceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-wireless-device-lo-ra-wan-device-property-builder (new CfnWirelessDevice$LoRaWANDeviceProperty$Builder) id config))
 
@@ -1328,7 +1503,12 @@
 
 
 (defn cfn-wireless-device-otaa-v10x-property-builder
-  ""
+  "Creates a  `CfnWirelessDevice$OtaaV10xProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-wireless-device-otaa-v10x-property-builder (new CfnWirelessDevice$OtaaV10xProperty$Builder) id config))
 
@@ -1357,7 +1537,12 @@
 
 
 (defn cfn-wireless-device-otaa-v11-property-builder
-  ""
+  "Creates a  `CfnWirelessDevice$OtaaV11Property$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-wireless-device-otaa-v11-property-builder (new CfnWirelessDevice$OtaaV11Property$Builder) id config))
 
@@ -1404,7 +1589,12 @@
 
 
 (defn cfn-wireless-device-props-builder
-  ""
+  "Creates a  `CfnWirelessDeviceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-wireless-device-props-builder (new CfnWirelessDeviceProps$Builder) id config))
 
@@ -1430,7 +1620,12 @@
 
 
 (defn cfn-wireless-device-session-keys-abp-v10x-property-builder
-  ""
+  "Creates a  `CfnWirelessDevice$SessionKeysAbpV10xProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-wireless-device-session-keys-abp-v10x-property-builder (new CfnWirelessDevice$SessionKeysAbpV10xProperty$Builder) id config))
 
@@ -1462,7 +1657,12 @@
 
 
 (defn cfn-wireless-device-session-keys-abp-v11-property-builder
-  ""
+  "Creates a  `CfnWirelessDevice$SessionKeysAbpV11Property$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-wireless-device-session-keys-abp-v11-property-builder (new CfnWirelessDevice$SessionKeysAbpV11Property$Builder) id config))
 
@@ -1503,7 +1703,12 @@
 
 
 (defn cfn-wireless-gateway-builder
-  ""
+  "Creates a  `CfnWirelessGateway$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-wireless-gateway-builder (CfnWirelessGateway$Builder/create scope (name id)) id config))
 
@@ -1529,7 +1734,12 @@
 
 
 (defn cfn-wireless-gateway-lo-ra-wan-gateway-property-builder
-  ""
+  "Creates a  `CfnWirelessGateway$LoRaWANGatewayProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-wireless-gateway-lo-ra-wan-gateway-property-builder (new CfnWirelessGateway$LoRaWANGatewayProperty$Builder) id config))
 
@@ -1570,6 +1780,11 @@
 
 
 (defn cfn-wireless-gateway-props-builder
-  ""
+  "Creates a  `CfnWirelessGatewayProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-wireless-gateway-props-builder (new CfnWirelessGatewayProps$Builder) id config))

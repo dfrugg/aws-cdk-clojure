@@ -45,7 +45,12 @@
 
 
 (defn cfn-environment-account-connection-builder
-  ""
+  "Creates a  `CfnEnvironmentAccountConnection$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-environment-account-connection-builder (CfnEnvironmentAccountConnection$Builder/create scope (name id)) id config))
 
@@ -86,7 +91,12 @@
 
 
 (defn cfn-environment-account-connection-props-builder
-  ""
+  "Creates a  `CfnEnvironmentAccountConnectionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-environment-account-connection-props-builder (new CfnEnvironmentAccountConnectionProps$Builder) id config))
 
@@ -124,7 +134,12 @@
 
 
 (defn cfn-environment-template-builder
-  ""
+  "Creates a  `CfnEnvironmentTemplate$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-environment-template-builder (CfnEnvironmentTemplate$Builder/create scope (name id)) id config))
 
@@ -162,7 +177,12 @@
 
 
 (defn cfn-environment-template-props-builder
-  ""
+  "Creates a  `CfnEnvironmentTemplateProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-environment-template-props-builder (new CfnEnvironmentTemplateProps$Builder) id config))
 
@@ -200,7 +220,12 @@
 
 
 (defn cfn-service-template-builder
-  ""
+  "Creates a  `CfnServiceTemplate$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-service-template-builder (CfnServiceTemplate$Builder/create scope (name id)) id config))
 
@@ -238,6 +263,11 @@
 
 
 (defn cfn-service-template-props-builder
-  ""
+  "Creates a  `CfnServiceTemplateProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-service-template-props-builder (new CfnServiceTemplateProps$Builder) id config))

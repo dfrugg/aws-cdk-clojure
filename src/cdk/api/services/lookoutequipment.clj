@@ -52,7 +52,12 @@
 
 
 (defn cfn-inference-scheduler-builder
-  ""
+  "Creates a  `CfnInferenceScheduler$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-inference-scheduler-builder (CfnInferenceScheduler$Builder/create scope (name id)) id config))
 
@@ -81,7 +86,12 @@
 
 
 (defn cfn-inference-scheduler-data-input-configuration-property-builder
-  ""
+  "Creates a  `CfnInferenceScheduler$DataInputConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-inference-scheduler-data-input-configuration-property-builder (new CfnInferenceScheduler$DataInputConfigurationProperty$Builder) id config))
 
@@ -107,7 +117,12 @@
 
 
 (defn cfn-inference-scheduler-data-output-configuration-property-builder
-  ""
+  "Creates a  `CfnInferenceScheduler$DataOutputConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-inference-scheduler-data-output-configuration-property-builder (new CfnInferenceScheduler$DataOutputConfigurationProperty$Builder) id config))
 
@@ -133,7 +148,12 @@
 
 
 (defn cfn-inference-scheduler-input-name-configuration-property-builder
-  ""
+  "Creates a  `CfnInferenceScheduler$InputNameConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-inference-scheduler-input-name-configuration-property-builder (new CfnInferenceScheduler$InputNameConfigurationProperty$Builder) id config))
 
@@ -180,7 +200,12 @@
 
 
 (defn cfn-inference-scheduler-props-builder
-  ""
+  "Creates a  `CfnInferenceSchedulerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-inference-scheduler-props-builder (new CfnInferenceSchedulerProps$Builder) id config))
 
@@ -206,7 +231,12 @@
 
 
 (defn cfn-inference-scheduler-s3-input-configuration-property-builder
-  ""
+  "Creates a  `CfnInferenceScheduler$S3InputConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-inference-scheduler-s3-input-configuration-property-builder (new CfnInferenceScheduler$S3InputConfigurationProperty$Builder) id config))
 
@@ -232,6 +262,11 @@
 
 
 (defn cfn-inference-scheduler-s3-output-configuration-property-builder
-  ""
+  "Creates a  `CfnInferenceScheduler$S3OutputConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-inference-scheduler-s3-output-configuration-property-builder (new CfnInferenceScheduler$S3OutputConfigurationProperty$Builder) id config))

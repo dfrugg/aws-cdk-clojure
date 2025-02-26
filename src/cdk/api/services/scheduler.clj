@@ -46,7 +46,12 @@
 
 
 (defn cfn-schedule-aws-vpc-configuration-property-builder
-  ""
+  "Creates a  `CfnSchedule$AwsVpcConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-schedule-aws-vpc-configuration-property-builder (new CfnSchedule$AwsVpcConfigurationProperty$Builder) id config))
 
@@ -99,7 +104,12 @@
 
 
 (defn cfn-schedule-builder
-  ""
+  "Creates a  `CfnSchedule$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-schedule-builder (CfnSchedule$Builder/create scope (name id)) id config))
 
@@ -128,7 +138,12 @@
 
 
 (defn cfn-schedule-capacity-provider-strategy-item-property-builder
-  ""
+  "Creates a  `CfnSchedule$CapacityProviderStrategyItemProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-schedule-capacity-provider-strategy-item-property-builder (new CfnSchedule$CapacityProviderStrategyItemProperty$Builder) id config))
 
@@ -151,7 +166,12 @@
 
 
 (defn cfn-schedule-dead-letter-config-property-builder
-  ""
+  "Creates a  `CfnSchedule$DeadLetterConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-schedule-dead-letter-config-property-builder (new CfnSchedule$DeadLetterConfigProperty$Builder) id config))
 
@@ -213,7 +233,12 @@
 
 
 (defn cfn-schedule-ecs-parameters-property-builder
-  ""
+  "Creates a  `CfnSchedule$EcsParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-schedule-ecs-parameters-property-builder (new CfnSchedule$EcsParametersProperty$Builder) id config))
 
@@ -239,7 +264,12 @@
 
 
 (defn cfn-schedule-event-bridge-parameters-property-builder
-  ""
+  "Creates a  `CfnSchedule$EventBridgeParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-schedule-event-bridge-parameters-property-builder (new CfnSchedule$EventBridgeParametersProperty$Builder) id config))
 
@@ -265,7 +295,12 @@
 
 
 (defn cfn-schedule-flexible-time-window-property-builder
-  ""
+  "Creates a  `CfnSchedule$FlexibleTimeWindowProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-schedule-flexible-time-window-property-builder (new CfnSchedule$FlexibleTimeWindowProperty$Builder) id config))
 
@@ -291,7 +326,12 @@
 
 
 (defn cfn-schedule-group-builder
-  ""
+  "Creates a  `CfnScheduleGroup$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-schedule-group-builder (CfnScheduleGroup$Builder/create scope (name id)) id config))
 
@@ -317,7 +357,12 @@
 
 
 (defn cfn-schedule-group-props-builder
-  ""
+  "Creates a  `CfnScheduleGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-schedule-group-props-builder (new CfnScheduleGroupProps$Builder) id config))
 
@@ -340,7 +385,12 @@
 
 
 (defn cfn-schedule-kinesis-parameters-property-builder
-  ""
+  "Creates a  `CfnSchedule$KinesisParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-schedule-kinesis-parameters-property-builder (new CfnSchedule$KinesisParametersProperty$Builder) id config))
 
@@ -363,7 +413,12 @@
 
 
 (defn cfn-schedule-network-configuration-property-builder
-  ""
+  "Creates a  `CfnSchedule$NetworkConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-schedule-network-configuration-property-builder (new CfnSchedule$NetworkConfigurationProperty$Builder) id config))
 
@@ -389,7 +444,12 @@
 
 
 (defn cfn-schedule-placement-constraint-property-builder
-  ""
+  "Creates a  `CfnSchedule$PlacementConstraintProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-schedule-placement-constraint-property-builder (new CfnSchedule$PlacementConstraintProperty$Builder) id config))
 
@@ -415,7 +475,12 @@
 
 
 (defn cfn-schedule-placement-strategy-property-builder
-  ""
+  "Creates a  `CfnSchedule$PlacementStrategyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-schedule-placement-strategy-property-builder (new CfnSchedule$PlacementStrategyProperty$Builder) id config))
 
@@ -468,7 +533,12 @@
 
 
 (defn cfn-schedule-props-builder
-  ""
+  "Creates a  `CfnScheduleProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-schedule-props-builder (new CfnScheduleProps$Builder) id config))
 
@@ -494,7 +564,12 @@
 
 
 (defn cfn-schedule-retry-policy-property-builder
-  ""
+  "Creates a  `CfnSchedule$RetryPolicyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-schedule-retry-policy-property-builder (new CfnSchedule$RetryPolicyProperty$Builder) id config))
 
@@ -520,7 +595,12 @@
 
 
 (defn cfn-schedule-sage-maker-pipeline-parameter-property-builder
-  ""
+  "Creates a  `CfnSchedule$SageMakerPipelineParameterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-schedule-sage-maker-pipeline-parameter-property-builder (new CfnSchedule$SageMakerPipelineParameterProperty$Builder) id config))
 
@@ -543,7 +623,12 @@
 
 
 (defn cfn-schedule-sage-maker-pipeline-parameters-property-builder
-  ""
+  "Creates a  `CfnSchedule$SageMakerPipelineParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-schedule-sage-maker-pipeline-parameters-property-builder (new CfnSchedule$SageMakerPipelineParametersProperty$Builder) id config))
 
@@ -566,7 +651,12 @@
 
 
 (defn cfn-schedule-sqs-parameters-property-builder
-  ""
+  "Creates a  `CfnSchedule$SqsParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-schedule-sqs-parameters-property-builder (new CfnSchedule$SqsParametersProperty$Builder) id config))
 
@@ -616,6 +706,11 @@
 
 
 (defn cfn-schedule-target-property-builder
-  ""
+  "Creates a  `CfnSchedule$TargetProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-schedule-target-property-builder (new CfnSchedule$TargetProperty$Builder) id config))

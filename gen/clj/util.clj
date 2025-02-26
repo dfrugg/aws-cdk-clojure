@@ -213,3 +213,55 @@ uppercase charaacter, which belongs to the next token.
   "Checks if the create is 1 args but not what we know."
   [{:keys [parameter-types]}]
   (= 1 (count parameter-types)))
+
+
+(defn- skip-white
+  "Skips any whitespace characters at the beginning of the char array."
+  [chs]
+  (loop [chs chs]
+    (cond
+      (empty? chs) chs
+      (< 32 (int (first chs))) chs
+      :else
+      (recur (next chs)))))
+
+
+(defn- split-index
+  "Gets the index of the end of the next token"
+  [chs]
+  (loop [idx 0
+         dpt 0
+         chs chs]
+    (cond
+      (empty? chs) idx
+      (and (= 0 dpt) (> 33 (int (first chs)))) idx
+      (= \( (first chs)) (recur (inc idx) (inc dpt) (rest chs))
+      (= \) (first chs)) (recur (inc idx) (dec dpt) (rest chs))
+      :else
+      (recur (inc idx) dpt (rest chs)))))
+
+
+(defn tokenize
+  [^String input]
+  (when input
+    (loop [chs (-> input str/trim char-array chars seq)
+           tokens []]
+      (if (empty? chs)
+        tokens
+        (let [idx (split-index chs)
+              token (apply str (take idx chs))]
+          (recur (skip-white (drop idx chs)) (conj tokens token)))))))
+
+
+(defn pad-right
+  [^String datum]
+  (if-not (str/blank? datum)
+    (str datum " ")
+    ""))
+
+
+(defn pad-left
+  [^String datum]
+  (if-not (str/blank? datum)
+    (str " " datum)
+    ""))

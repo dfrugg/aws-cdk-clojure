@@ -51,7 +51,12 @@
 
 
 (defn cfn-channel-builder
-  ""
+  "Creates a  `CfnChannel$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-channel-builder (CfnChannel$Builder/create scope (name id)) id config))
 
@@ -80,7 +85,12 @@
 
 
 (defn cfn-channel-group-builder
-  ""
+  "Creates a  `CfnChannelGroup$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-channel-group-builder (CfnChannelGroup$Builder/create scope (name id)) id config))
 
@@ -109,7 +119,12 @@
 
 
 (defn cfn-channel-group-props-builder
-  ""
+  "Creates a  `CfnChannelGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-group-props-builder (new CfnChannelGroupProps$Builder) id config))
 
@@ -135,7 +150,12 @@
 
 
 (defn cfn-channel-ingest-endpoint-property-builder
-  ""
+  "Creates a  `CfnChannel$IngestEndpointProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-ingest-endpoint-property-builder (new CfnChannel$IngestEndpointProperty$Builder) id config))
 
@@ -164,7 +184,12 @@
 
 
 (defn cfn-channel-policy-builder
-  ""
+  "Creates a  `CfnChannelPolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-channel-policy-builder (CfnChannelPolicy$Builder/create scope (name id)) id config))
 
@@ -193,7 +218,12 @@
 
 
 (defn cfn-channel-policy-props-builder
-  ""
+  "Creates a  `CfnChannelPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-policy-props-builder (new CfnChannelPolicyProps$Builder) id config))
 
@@ -225,7 +255,12 @@
 
 
 (defn cfn-channel-props-builder
-  ""
+  "Creates a  `CfnChannelProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-channel-props-builder (new CfnChannelProps$Builder) id config))
 
@@ -275,7 +310,12 @@
 
 
 (defn cfn-origin-endpoint-builder
-  ""
+  "Creates a  `CfnOriginEndpoint$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-origin-endpoint-builder (CfnOriginEndpoint$Builder/create scope (name id)) id config))
 
@@ -301,7 +341,12 @@
 
 
 (defn cfn-origin-endpoint-encryption-contract-configuration-property-builder
-  ""
+  "Creates a  `CfnOriginEndpoint$EncryptionContractConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-origin-endpoint-encryption-contract-configuration-property-builder (new CfnOriginEndpoint$EncryptionContractConfigurationProperty$Builder) id config))
 
@@ -327,7 +372,12 @@
 
 
 (defn cfn-origin-endpoint-encryption-method-property-builder
-  ""
+  "Creates a  `CfnOriginEndpoint$EncryptionMethodProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-origin-endpoint-encryption-method-property-builder (new CfnOriginEndpoint$EncryptionMethodProperty$Builder) id config))
 
@@ -359,7 +409,12 @@
 
 
 (defn cfn-origin-endpoint-encryption-property-builder
-  ""
+  "Creates a  `CfnOriginEndpoint$EncryptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-origin-endpoint-encryption-property-builder (new CfnOriginEndpoint$EncryptionProperty$Builder) id config))
 
@@ -391,7 +446,12 @@
 
 
 (defn cfn-origin-endpoint-filter-configuration-property-builder
-  ""
+  "Creates a  `CfnOriginEndpoint$FilterConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-origin-endpoint-filter-configuration-property-builder (new CfnOriginEndpoint$FilterConfigurationProperty$Builder) id config))
 
@@ -432,7 +492,12 @@
 
 
 (defn cfn-origin-endpoint-hls-manifest-configuration-property-builder
-  ""
+  "Creates a  `CfnOriginEndpoint$HlsManifestConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-origin-endpoint-hls-manifest-configuration-property-builder (new CfnOriginEndpoint$HlsManifestConfigurationProperty$Builder) id config))
 
@@ -473,7 +538,12 @@
 
 
 (defn cfn-origin-endpoint-low-latency-hls-manifest-configuration-property-builder
-  ""
+  "Creates a  `CfnOriginEndpoint$LowLatencyHlsManifestConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-origin-endpoint-low-latency-hls-manifest-configuration-property-builder (new CfnOriginEndpoint$LowLatencyHlsManifestConfigurationProperty$Builder) id config))
 
@@ -505,7 +575,12 @@
 
 
 (defn cfn-origin-endpoint-policy-builder
-  ""
+  "Creates a  `CfnOriginEndpointPolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-origin-endpoint-policy-builder (CfnOriginEndpointPolicy$Builder/create scope (name id)) id config))
 
@@ -537,7 +612,12 @@
 
 
 (defn cfn-origin-endpoint-policy-props-builder
-  ""
+  "Creates a  `CfnOriginEndpointPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-origin-endpoint-policy-props-builder (new CfnOriginEndpointPolicyProps$Builder) id config))
 
@@ -587,7 +667,12 @@
 
 
 (defn cfn-origin-endpoint-props-builder
-  ""
+  "Creates a  `CfnOriginEndpointProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-origin-endpoint-props-builder (new CfnOriginEndpointProps$Builder) id config))
 
@@ -610,7 +695,12 @@
 
 
 (defn cfn-origin-endpoint-scte-hls-property-builder
-  ""
+  "Creates a  `CfnOriginEndpoint$ScteHlsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-origin-endpoint-scte-hls-property-builder (new CfnOriginEndpoint$ScteHlsProperty$Builder) id config))
 
@@ -633,7 +723,12 @@
 
 
 (defn cfn-origin-endpoint-scte-property-builder
-  ""
+  "Creates a  `CfnOriginEndpoint$ScteProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-origin-endpoint-scte-property-builder (new CfnOriginEndpoint$ScteProperty$Builder) id config))
 
@@ -674,7 +769,12 @@
 
 
 (defn cfn-origin-endpoint-segment-property-builder
-  ""
+  "Creates a  `CfnOriginEndpoint$SegmentProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-origin-endpoint-segment-property-builder (new CfnOriginEndpoint$SegmentProperty$Builder) id config))
 
@@ -709,6 +809,11 @@
 
 
 (defn cfn-origin-endpoint-speke-key-provider-property-builder
-  ""
+  "Creates a  `CfnOriginEndpoint$SpekeKeyProviderProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-origin-endpoint-speke-key-provider-property-builder (new CfnOriginEndpoint$SpekeKeyProviderProperty$Builder) id config))

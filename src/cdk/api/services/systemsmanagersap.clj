@@ -42,7 +42,12 @@
 
 
 (defn cfn-application-builder
-  ""
+  "Creates a  `CfnApplication$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-application-builder (CfnApplication$Builder/create scope (name id)) id config))
 
@@ -71,7 +76,12 @@
 
 
 (defn cfn-application-credential-property-builder
-  ""
+  "Creates a  `CfnApplication$CredentialProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-application-credential-property-builder (new CfnApplication$CredentialProperty$Builder) id config))
 
@@ -112,6 +122,11 @@
 
 
 (defn cfn-application-props-builder
-  ""
+  "Creates a  `CfnApplicationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-application-props-builder (new CfnApplicationProps$Builder) id config))

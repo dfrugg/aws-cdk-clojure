@@ -41,7 +41,12 @@
 
 
 (defn cfn-enabled-baseline-builder
-  ""
+  "Creates a  `CfnEnabledBaseline$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-enabled-baseline-builder (CfnEnabledBaseline$Builder/create scope (name id)) id config))
 
@@ -67,7 +72,12 @@
 
 
 (defn cfn-enabled-baseline-parameter-property-builder
-  ""
+  "Creates a  `CfnEnabledBaseline$ParameterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-enabled-baseline-parameter-property-builder (new CfnEnabledBaseline$ParameterProperty$Builder) id config))
 
@@ -102,7 +112,12 @@
 
 
 (defn cfn-enabled-baseline-props-builder
-  ""
+  "Creates a  `CfnEnabledBaselineProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-enabled-baseline-props-builder (new CfnEnabledBaselineProps$Builder) id config))
 
@@ -134,7 +149,12 @@
 
 
 (defn cfn-enabled-control-builder
-  ""
+  "Creates a  `CfnEnabledControl$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-enabled-control-builder (CfnEnabledControl$Builder/create scope (name id)) id config))
 
@@ -160,7 +180,12 @@
 
 
 (defn cfn-enabled-control-enabled-control-parameter-property-builder
-  ""
+  "Creates a  `CfnEnabledControl$EnabledControlParameterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-enabled-control-enabled-control-parameter-property-builder (new CfnEnabledControl$EnabledControlParameterProperty$Builder) id config))
 
@@ -192,7 +217,12 @@
 
 
 (defn cfn-enabled-control-props-builder
-  ""
+  "Creates a  `CfnEnabledControlProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-enabled-control-props-builder (new CfnEnabledControlProps$Builder) id config))
 
@@ -221,7 +251,12 @@
 
 
 (defn cfn-landing-zone-builder
-  ""
+  "Creates a  `CfnLandingZone$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-landing-zone-builder (CfnLandingZone$Builder/create scope (name id)) id config))
 
@@ -250,6 +285,11 @@
 
 
 (defn cfn-landing-zone-props-builder
-  ""
+  "Creates a  `CfnLandingZoneProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-landing-zone-props-builder (new CfnLandingZoneProps$Builder) id config))

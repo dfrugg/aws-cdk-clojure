@@ -11,8 +11,9 @@
                            process-builders]]
             [inspect :refer [packages]]
             [template :refer [function-spacer]]
-            [util :refer [package>path
-                          log]]
+            [util :refer [log
+                          package>path
+                          split-at-last]]
             [clojure.string :as str]))
 
 
@@ -92,11 +93,32 @@ and the namespace to use, etc.  Should have the following fields added to the pa
             enums)))
 
 
+(defn >importable
+  "Checks that a class is not part of the java.lang default package."
+  [class-symbol]
+  (let [parts (some->> class-symbol name (split-at-last "."))]
+    (when-not (= "java.lang" (first parts))
+      parts)))
+
+
 (defn prepare-builders-imports
   "Adds any java imports that are need to generate builders."
-  [{:keys [builders ] :as package-data}]
-  (reduce (fn [pd {:keys [package-name class-name]}]
-            (add-source-java-class pd package-name class-name))
+  [{:keys [builders] :as package-data}]
+  (reduce (fn [pd {:keys [package-name class-name inits]}]
+            (let [hinted (->> inits
+                              (filterv :hint)
+                              (filterv (complement :skip-import?))
+                              (mapv :parameter-types)
+                              flatten
+                              (mapv >importable)
+                              (filterv some?)
+                              seq)]
+              (if hinted
+                (reduce (fn [d [p c]]
+                          (add-source-java-class d p c))
+                        pd
+                        (conj hinted [package-name class-name]))
+                (add-source-java-class pd package-name class-name))))
           package-data
           builders))
 

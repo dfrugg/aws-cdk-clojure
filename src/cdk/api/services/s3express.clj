@@ -28,7 +28,12 @@
 
 
 (defn cfn-bucket-policy-builder
-  ""
+  "Creates a  `CfnBucketPolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-bucket-policy-builder (CfnBucketPolicy$Builder/create scope (name id)) id config))
 
@@ -54,7 +59,12 @@
 
 
 (defn cfn-bucket-policy-props-builder
-  ""
+  "Creates a  `CfnBucketPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-bucket-policy-props-builder (new CfnBucketPolicyProps$Builder) id config))
 
@@ -83,7 +93,12 @@
 
 
 (defn cfn-directory-bucket-builder
-  ""
+  "Creates a  `CfnDirectoryBucket$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-directory-bucket-builder (CfnDirectoryBucket$Builder/create scope (name id)) id config))
 
@@ -112,6 +127,11 @@
 
 
 (defn cfn-directory-bucket-props-builder
-  ""
+  "Creates a  `CfnDirectoryBucketProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-directory-bucket-props-builder (new CfnDirectoryBucketProps$Builder) id config))

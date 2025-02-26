@@ -45,7 +45,12 @@
 
 
 (defn cfn-budget-auto-adjust-data-property-builder
-  ""
+  "Creates a  `CfnBudget$AutoAdjustDataProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-budget-auto-adjust-data-property-builder (new CfnBudget$AutoAdjustDataProperty$Builder) id config))
 
@@ -92,7 +97,12 @@
 
 
 (defn cfn-budget-budget-data-property-builder
-  ""
+  "Creates a  `CfnBudget$BudgetDataProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-budget-budget-data-property-builder (new CfnBudget$BudgetDataProperty$Builder) id config))
 
@@ -121,7 +131,12 @@
 
 
 (defn cfn-budget-builder
-  ""
+  "Creates a  `CfnBudget$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-budget-builder (CfnBudget$Builder/create scope (name id)) id config))
 
@@ -174,7 +189,12 @@
 
 
 (defn cfn-budget-cost-types-property-builder
-  ""
+  "Creates a  `CfnBudget$CostTypesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-budget-cost-types-property-builder (new CfnBudget$CostTypesProperty$Builder) id config))
 
@@ -197,7 +217,12 @@
 
 
 (defn cfn-budget-historical-options-property-builder
-  ""
+  "Creates a  `CfnBudget$HistoricalOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-budget-historical-options-property-builder (new CfnBudget$HistoricalOptionsProperty$Builder) id config))
 
@@ -229,7 +254,12 @@
 
 
 (defn cfn-budget-notification-property-builder
-  ""
+  "Creates a  `CfnBudget$NotificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-budget-notification-property-builder (new CfnBudget$NotificationProperty$Builder) id config))
 
@@ -255,7 +285,12 @@
 
 
 (defn cfn-budget-notification-with-subscribers-property-builder
-  ""
+  "Creates a  `CfnBudget$NotificationWithSubscribersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-budget-notification-with-subscribers-property-builder (new CfnBudget$NotificationWithSubscribersProperty$Builder) id config))
 
@@ -284,7 +319,12 @@
 
 
 (defn cfn-budget-props-builder
-  ""
+  "Creates a  `CfnBudgetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-budget-props-builder (new CfnBudgetProps$Builder) id config))
 
@@ -310,7 +350,12 @@
 
 
 (defn cfn-budget-resource-tag-property-builder
-  ""
+  "Creates a  `CfnBudget$ResourceTagProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-budget-resource-tag-property-builder (new CfnBudget$ResourceTagProperty$Builder) id config))
 
@@ -336,7 +381,12 @@
 
 
 (defn cfn-budget-spend-property-builder
-  ""
+  "Creates a  `CfnBudget$SpendProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-budget-spend-property-builder (new CfnBudget$SpendProperty$Builder) id config))
 
@@ -362,7 +412,12 @@
 
 
 (defn cfn-budget-subscriber-property-builder
-  ""
+  "Creates a  `CfnBudget$SubscriberProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-budget-subscriber-property-builder (new CfnBudget$SubscriberProperty$Builder) id config))
 
@@ -388,7 +443,12 @@
 
 
 (defn cfn-budget-time-period-property-builder
-  ""
+  "Creates a  `CfnBudget$TimePeriodProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-budget-time-period-property-builder (new CfnBudget$TimePeriodProperty$Builder) id config))
 
@@ -414,7 +474,12 @@
 
 
 (defn cfn-budgets-action-action-threshold-property-builder
-  ""
+  "Creates a  `CfnBudgetsAction$ActionThresholdProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-budgets-action-action-threshold-property-builder (new CfnBudgetsAction$ActionThresholdProperty$Builder) id config))
 
@@ -461,7 +526,12 @@
 
 
 (defn cfn-budgets-action-builder
-  ""
+  "Creates a  `CfnBudgetsAction$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-budgets-action-builder (CfnBudgetsAction$Builder/create scope (name id)) id config))
 
@@ -490,7 +560,12 @@
 
 
 (defn cfn-budgets-action-definition-property-builder
-  ""
+  "Creates a  `CfnBudgetsAction$DefinitionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-budgets-action-definition-property-builder (new CfnBudgetsAction$DefinitionProperty$Builder) id config))
 
@@ -522,7 +597,12 @@
 
 
 (defn cfn-budgets-action-iam-action-definition-property-builder
-  ""
+  "Creates a  `CfnBudgetsAction$IamActionDefinitionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-budgets-action-iam-action-definition-property-builder (new CfnBudgetsAction$IamActionDefinitionProperty$Builder) id config))
 
@@ -569,7 +649,12 @@
 
 
 (defn cfn-budgets-action-props-builder
-  ""
+  "Creates a  `CfnBudgetsActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-budgets-action-props-builder (new CfnBudgetsActionProps$Builder) id config))
 
@@ -595,7 +680,12 @@
 
 
 (defn cfn-budgets-action-resource-tag-property-builder
-  ""
+  "Creates a  `CfnBudgetsAction$ResourceTagProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-budgets-action-resource-tag-property-builder (new CfnBudgetsAction$ResourceTagProperty$Builder) id config))
 
@@ -621,7 +711,12 @@
 
 
 (defn cfn-budgets-action-scp-action-definition-property-builder
-  ""
+  "Creates a  `CfnBudgetsAction$ScpActionDefinitionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-budgets-action-scp-action-definition-property-builder (new CfnBudgetsAction$ScpActionDefinitionProperty$Builder) id config))
 
@@ -650,7 +745,12 @@
 
 
 (defn cfn-budgets-action-ssm-action-definition-property-builder
-  ""
+  "Creates a  `CfnBudgetsAction$SsmActionDefinitionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-budgets-action-ssm-action-definition-property-builder (new CfnBudgetsAction$SsmActionDefinitionProperty$Builder) id config))
 
@@ -676,6 +776,11 @@
 
 
 (defn cfn-budgets-action-subscriber-property-builder
-  ""
+  "Creates a  `CfnBudgetsAction$SubscriberProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-budgets-action-subscriber-property-builder (new CfnBudgetsAction$SubscriberProperty$Builder) id config))

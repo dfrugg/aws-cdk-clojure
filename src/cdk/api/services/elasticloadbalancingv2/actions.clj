@@ -51,7 +51,12 @@
 
 
 (defn authenticate-cognito-action-builder
-  ""
+  "Creates a  `AuthenticateCognitoAction$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-authenticate-cognito-action-builder (AuthenticateCognitoAction$Builder/create) id config))
 
@@ -101,6 +106,11 @@
 
 
 (defn authenticate-cognito-action-props-builder
-  ""
+  "Creates a  `AuthenticateCognitoActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-authenticate-cognito-action-props-builder (new AuthenticateCognitoActionProps$Builder) id config))

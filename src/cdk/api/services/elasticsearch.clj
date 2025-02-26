@@ -45,7 +45,12 @@
 
 
 (defn cfn-domain-advanced-security-options-input-property-builder
-  ""
+  "Creates a  `CfnDomain$AdvancedSecurityOptionsInputProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-domain-advanced-security-options-input-property-builder (new CfnDomain$AdvancedSecurityOptionsInputProperty$Builder) id config))
 
@@ -113,7 +118,12 @@
 
 
 (defn cfn-domain-builder
-  ""
+  "Creates a  `CfnDomain$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-domain-builder (CfnDomain$Builder/create scope (name id)) id config))
 
@@ -145,7 +155,12 @@
 
 
 (defn cfn-domain-cognito-options-property-builder
-  ""
+  "Creates a  `CfnDomain$CognitoOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-domain-cognito-options-property-builder (new CfnDomain$CognitoOptionsProperty$Builder) id config))
 
@@ -168,7 +183,12 @@
 
 
 (defn cfn-domain-cold-storage-options-property-builder
-  ""
+  "Creates a  `CfnDomain$ColdStorageOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-domain-cold-storage-options-property-builder (new CfnDomain$ColdStorageOptionsProperty$Builder) id config))
 
@@ -203,7 +223,12 @@
 
 
 (defn cfn-domain-domain-endpoint-options-property-builder
-  ""
+  "Creates a  `CfnDomain$DomainEndpointOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-domain-domain-endpoint-options-property-builder (new CfnDomain$DomainEndpointOptionsProperty$Builder) id config))
 
@@ -235,7 +260,12 @@
 
 
 (defn cfn-domain-ebs-options-property-builder
-  ""
+  "Creates a  `CfnDomain$EBSOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-domain-ebs-options-property-builder (new CfnDomain$EBSOptionsProperty$Builder) id config))
 
@@ -288,7 +318,12 @@
 
 
 (defn cfn-domain-elasticsearch-cluster-config-property-builder
-  ""
+  "Creates a  `CfnDomain$ElasticsearchClusterConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-domain-elasticsearch-cluster-config-property-builder (new CfnDomain$ElasticsearchClusterConfigProperty$Builder) id config))
 
@@ -314,7 +349,12 @@
 
 
 (defn cfn-domain-encryption-at-rest-options-property-builder
-  ""
+  "Creates a  `CfnDomain$EncryptionAtRestOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-domain-encryption-at-rest-options-property-builder (new CfnDomain$EncryptionAtRestOptionsProperty$Builder) id config))
 
@@ -340,7 +380,12 @@
 
 
 (defn cfn-domain-log-publishing-option-property-builder
-  ""
+  "Creates a  `CfnDomain$LogPublishingOptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-domain-log-publishing-option-property-builder (new CfnDomain$LogPublishingOptionProperty$Builder) id config))
 
@@ -369,7 +414,12 @@
 
 
 (defn cfn-domain-master-user-options-property-builder
-  ""
+  "Creates a  `CfnDomain$MasterUserOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-domain-master-user-options-property-builder (new CfnDomain$MasterUserOptionsProperty$Builder) id config))
 
@@ -392,7 +442,12 @@
 
 
 (defn cfn-domain-node-to-node-encryption-options-property-builder
-  ""
+  "Creates a  `CfnDomain$NodeToNodeEncryptionOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-domain-node-to-node-encryption-options-property-builder (new CfnDomain$NodeToNodeEncryptionOptionsProperty$Builder) id config))
 
@@ -460,7 +515,12 @@
 
 
 (defn cfn-domain-props-builder
-  ""
+  "Creates a  `CfnDomainProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-domain-props-builder (new CfnDomainProps$Builder) id config))
 
@@ -483,7 +543,12 @@
 
 
 (defn cfn-domain-snapshot-options-property-builder
-  ""
+  "Creates a  `CfnDomain$SnapshotOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-domain-snapshot-options-property-builder (new CfnDomain$SnapshotOptionsProperty$Builder) id config))
 
@@ -509,7 +574,12 @@
 
 
 (defn cfn-domain-vpc-options-property-builder
-  ""
+  "Creates a  `CfnDomain$VPCOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-domain-vpc-options-property-builder (new CfnDomain$VPCOptionsProperty$Builder) id config))
 
@@ -532,6 +602,11 @@
 
 
 (defn cfn-domain-zone-awareness-config-property-builder
-  ""
+  "Creates a  `CfnDomain$ZoneAwarenessConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-domain-zone-awareness-config-property-builder (new CfnDomain$ZoneAwarenessConfigProperty$Builder) id config))

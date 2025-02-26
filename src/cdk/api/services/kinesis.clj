@@ -88,7 +88,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-stream-builder
-  ""
+  "Creates a  `CfnStream$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-stream-builder (CfnStream$Builder/create scope (name id)) id config))
 
@@ -114,7 +119,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-stream-consumer-builder
-  ""
+  "Creates a  `CfnStreamConsumer$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-stream-consumer-builder (CfnStreamConsumer$Builder/create scope (name id)) id config))
 
@@ -140,7 +150,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-stream-consumer-props-builder
-  ""
+  "Creates a  `CfnStreamConsumerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stream-consumer-props-builder (new CfnStreamConsumerProps$Builder) id config))
 
@@ -178,7 +193,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-stream-props-builder
-  ""
+  "Creates a  `CfnStreamProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stream-props-builder (new CfnStreamProps$Builder) id config))
 
@@ -204,7 +224,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-stream-stream-encryption-property-builder
-  ""
+  "Creates a  `CfnStream$StreamEncryptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stream-stream-encryption-property-builder (new CfnStream$StreamEncryptionProperty$Builder) id config))
 
@@ -227,7 +252,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-stream-stream-mode-details-property-builder
-  ""
+  "Creates a  `CfnStream$StreamModeDetailsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-stream-stream-mode-details-property-builder (new CfnStream$StreamModeDetailsProperty$Builder) id config))
 
@@ -253,7 +283,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn stream-attributes-builder
-  ""
+  "Creates a  `StreamAttributes$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-stream-attributes-builder (new StreamAttributes$Builder) id config))
 
@@ -294,7 +329,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn stream-builder
-  ""
+  "Creates a  `Stream$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-stream-builder (Stream$Builder/create scope (name id)) id config))
 
@@ -335,6 +375,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn stream-props-builder
-  ""
+  "Creates a  `StreamProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-stream-props-builder (new StreamProps$Builder) id config))

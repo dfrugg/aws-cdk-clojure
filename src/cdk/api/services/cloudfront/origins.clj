@@ -2,7 +2,8 @@
   "Functions that represent AWS CDK enums and builders in the software.amazon.awscdk.services.cloudfront.origins package. "
   (:require [cdk.api.services.cloudfront :refer [origin-protocol-policy]]
             [cdk.support :refer [lookup-entry]])
-  (:import [software.amazon.awscdk.services.cloudfront.origins FunctionUrlOrigin$Builder
+  (:import [software.amazon.awscdk.services.apigateway RestApiBase]
+           [software.amazon.awscdk.services.cloudfront.origins FunctionUrlOrigin$Builder
                                                                FunctionUrlOriginProps$Builder
                                                                HttpOrigin$Builder
                                                                HttpOriginProps$Builder
@@ -13,7 +14,10 @@
                                                                RestApiOrigin$Builder
                                                                RestApiOriginProps$Builder
                                                                S3Origin$Builder
-                                                               S3OriginProps$Builder]))
+                                                               S3OriginProps$Builder]
+           [software.amazon.awscdk.services.elasticloadbalancingv2 ILoadBalancerV2]
+           [software.amazon.awscdk.services.lambda IFunctionUrl]
+           [software.amazon.awscdk.services.s3 IBucket]))
 
 
 (defn build-function-url-origin-builder
@@ -55,6 +59,20 @@
   (when-let [data (lookup-entry config id :read-timeout)]
     (. builder readTimeout data))
   (.build builder))
+
+
+(defn function-url-origin-builder
+  "Creates a  `FunctionUrlOrigin$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
+
+
+__Create Form:__ ____[software.amazon.awscdk.services.lambda.IFunctionUrl]___
+| Argument | DataType | Description |
+|---|---|---|
+| function-url | software.amazon.awscdk.services.lambda.IFunctionUrl |  |
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
+  [^IFunctionUrl function-url id config]
+  (build-function-url-origin-builder (FunctionUrlOrigin$Builder/create function-url) id config))
 
 
 (defn build-function-url-origin-props-builder
@@ -99,7 +117,12 @@
 
 
 (defn function-url-origin-props-builder
-  ""
+  "Creates a  `FunctionUrlOriginProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-function-url-origin-props-builder (new FunctionUrlOriginProps$Builder) id config))
 
@@ -157,6 +180,20 @@
   (.build builder))
 
 
+(defn http-origin-builder
+  "Creates a  `HttpOrigin$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
+
+
+__Create Form:__ ____[java.lang.String]___
+| Argument | DataType | Description |
+|---|---|---|
+| domain-name | java.lang.String |  |
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
+  [^String domain-name id config]
+  (build-http-origin-builder (HttpOrigin$Builder/create domain-name) id config))
+
+
 (defn build-http-origin-props-builder
   "The build-http-origin-props-builder function updates a HttpOriginProps$Builder instance using the provided configuration.
   The function takes the HttpOriginProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -211,7 +248,12 @@
 
 
 (defn http-origin-props-builder
-  ""
+  "Creates a  `HttpOriginProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-http-origin-props-builder (new HttpOriginProps$Builder) id config))
 
@@ -269,6 +311,20 @@
   (.build builder))
 
 
+(defn load-balancer-v2-origin-builder
+  "Creates a  `LoadBalancerV2Origin$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
+
+
+__Create Form:__ ____[software.amazon.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2]___
+| Argument | DataType | Description |
+|---|---|---|
+| load-balancer | software.amazon.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2 |  |
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
+  [^ILoadBalancerV2 load-balancer id config]
+  (build-load-balancer-v2-origin-builder (LoadBalancerV2Origin$Builder/create load-balancer) id config))
+
+
 (defn build-load-balancer-v2-origin-props-builder
   "The build-load-balancer-v2-origin-props-builder function updates a LoadBalancerV2OriginProps$Builder instance using the provided configuration.
   The function takes the LoadBalancerV2OriginProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -323,7 +379,12 @@
 
 
 (defn load-balancer-v2-origin-props-builder
-  ""
+  "Creates a  `LoadBalancerV2OriginProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-load-balancer-v2-origin-props-builder (new LoadBalancerV2OriginProps$Builder) id config))
 
@@ -352,7 +413,12 @@
 
 
 (defn origin-group-builder
-  ""
+  "Creates a  `OriginGroup$Builder` instance using a no-argument create, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-origin-group-builder (OriginGroup$Builder/create) id config))
 
@@ -381,7 +447,12 @@
 
 
 (defn origin-group-props-builder
-  ""
+  "Creates a  `OriginGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-origin-group-props-builder (new OriginGroupProps$Builder) id config))
 
@@ -427,6 +498,20 @@
   (.build builder))
 
 
+(defn rest-api-origin-builder
+  "Creates a  `RestApiOrigin$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
+
+
+__Create Form:__ ____[software.amazon.awscdk.services.apigateway.RestApiBase]___
+| Argument | DataType | Description |
+|---|---|---|
+| rest-api | software.amazon.awscdk.services.apigateway.RestApiBase |  |
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
+  [^RestApiBase rest-api id config]
+  (build-rest-api-origin-builder (RestApiOrigin$Builder/create rest-api) id config))
+
+
 (defn build-rest-api-origin-props-builder
   "The build-rest-api-origin-props-builder function updates a RestApiOriginProps$Builder instance using the provided configuration.
   The function takes the RestApiOriginProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -469,7 +554,12 @@
 
 
 (defn rest-api-origin-props-builder
-  ""
+  "Creates a  `RestApiOriginProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-rest-api-origin-props-builder (new RestApiOriginProps$Builder) id config))
 
@@ -512,6 +602,20 @@
   (.build builder))
 
 
+(defn s3-origin-builder
+  "Creates a  `S3Origin$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
+
+
+__Create Form:__ ____[software.amazon.awscdk.services.s3.IBucket]___
+| Argument | DataType | Description |
+|---|---|---|
+| bucket | software.amazon.awscdk.services.s3.IBucket |  |
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
+  [^IBucket bucket id config]
+  (build-s3-origin-builder (S3Origin$Builder/create bucket) id config))
+
+
 (defn build-s3-origin-props-builder
   "The build-s3-origin-props-builder function updates a S3OriginProps$Builder instance using the provided configuration.
   The function takes the S3OriginProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -551,6 +655,11 @@
 
 
 (defn s3-origin-props-builder
-  ""
+  "Creates a  `S3OriginProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-s3-origin-props-builder (new S3OriginProps$Builder) id config))

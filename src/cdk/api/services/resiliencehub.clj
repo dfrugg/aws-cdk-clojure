@@ -54,7 +54,12 @@
 
 
 (defn cfn-app-builder
-  ""
+  "Creates a  `CfnApp$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-app-builder (CfnApp$Builder/create scope (name id)) id config))
 
@@ -83,7 +88,12 @@
 
 
 (defn cfn-app-event-subscription-property-builder
-  ""
+  "Creates a  `CfnApp$EventSubscriptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-app-event-subscription-property-builder (new CfnApp$EventSubscriptionProperty$Builder) id config))
 
@@ -112,7 +122,12 @@
 
 
 (defn cfn-app-permission-model-property-builder
-  ""
+  "Creates a  `CfnApp$PermissionModelProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-app-permission-model-property-builder (new CfnApp$PermissionModelProperty$Builder) id config))
 
@@ -144,7 +159,12 @@
 
 
 (defn cfn-app-physical-resource-id-property-builder
-  ""
+  "Creates a  `CfnApp$PhysicalResourceIdProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-app-physical-resource-id-property-builder (new CfnApp$PhysicalResourceIdProperty$Builder) id config))
 
@@ -191,7 +211,12 @@
 
 
 (defn cfn-app-props-builder
-  ""
+  "Creates a  `CfnAppProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-app-props-builder (new CfnAppProps$Builder) id config))
 
@@ -229,7 +254,12 @@
 
 
 (defn cfn-app-resource-mapping-property-builder
-  ""
+  "Creates a  `CfnApp$ResourceMappingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-app-resource-mapping-property-builder (new CfnApp$ResourceMappingProperty$Builder) id config))
 
@@ -267,7 +297,12 @@
 
 
 (defn cfn-resiliency-policy-builder
-  ""
+  "Creates a  `CfnResiliencyPolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-resiliency-policy-builder (CfnResiliencyPolicy$Builder/create scope (name id)) id config))
 
@@ -293,7 +328,12 @@
 
 
 (defn cfn-resiliency-policy-failure-policy-property-builder
-  ""
+  "Creates a  `CfnResiliencyPolicy$FailurePolicyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-resiliency-policy-failure-policy-property-builder (new CfnResiliencyPolicy$FailurePolicyProperty$Builder) id config))
 
@@ -331,6 +371,11 @@
 
 
 (defn cfn-resiliency-policy-props-builder
-  ""
+  "Creates a  `CfnResiliencyPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-resiliency-policy-props-builder (new CfnResiliencyPolicyProps$Builder) id config))

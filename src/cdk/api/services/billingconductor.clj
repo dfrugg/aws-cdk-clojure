@@ -41,7 +41,12 @@
 
 
 (defn cfn-billing-group-account-grouping-property-builder
-  ""
+  "Creates a  `CfnBillingGroup$AccountGroupingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-billing-group-account-grouping-property-builder (new CfnBillingGroup$AccountGroupingProperty$Builder) id config))
 
@@ -79,7 +84,12 @@
 
 
 (defn cfn-billing-group-builder
-  ""
+  "Creates a  `CfnBillingGroup$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-billing-group-builder (CfnBillingGroup$Builder/create scope (name id)) id config))
 
@@ -102,7 +112,12 @@
 
 
 (defn cfn-billing-group-computation-preference-property-builder
-  ""
+  "Creates a  `CfnBillingGroup$ComputationPreferenceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-billing-group-computation-preference-property-builder (new CfnBillingGroup$ComputationPreferenceProperty$Builder) id config))
 
@@ -140,7 +155,12 @@
 
 
 (defn cfn-billing-group-props-builder
-  ""
+  "Creates a  `CfnBillingGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-billing-group-props-builder (new CfnBillingGroupProps$Builder) id config))
 
@@ -166,7 +186,12 @@
 
 
 (defn cfn-custom-line-item-billing-period-range-property-builder
-  ""
+  "Creates a  `CfnCustomLineItem$BillingPeriodRangeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-custom-line-item-billing-period-range-property-builder (new CfnCustomLineItem$BillingPeriodRangeProperty$Builder) id config))
 
@@ -207,7 +232,12 @@
 
 
 (defn cfn-custom-line-item-builder
-  ""
+  "Creates a  `CfnCustomLineItem$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-custom-line-item-builder (CfnCustomLineItem$Builder/create scope (name id)) id config))
 
@@ -239,7 +269,12 @@
 
 
 (defn cfn-custom-line-item-custom-line-item-charge-details-property-builder
-  ""
+  "Creates a  `CfnCustomLineItem$CustomLineItemChargeDetailsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-custom-line-item-custom-line-item-charge-details-property-builder (new CfnCustomLineItem$CustomLineItemChargeDetailsProperty$Builder) id config))
 
@@ -262,7 +297,12 @@
 
 
 (defn cfn-custom-line-item-custom-line-item-flat-charge-details-property-builder
-  ""
+  "Creates a  `CfnCustomLineItem$CustomLineItemFlatChargeDetailsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-custom-line-item-custom-line-item-flat-charge-details-property-builder (new CfnCustomLineItem$CustomLineItemFlatChargeDetailsProperty$Builder) id config))
 
@@ -288,7 +328,12 @@
 
 
 (defn cfn-custom-line-item-custom-line-item-percentage-charge-details-property-builder
-  ""
+  "Creates a  `CfnCustomLineItem$CustomLineItemPercentageChargeDetailsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-custom-line-item-custom-line-item-percentage-charge-details-property-builder (new CfnCustomLineItem$CustomLineItemPercentageChargeDetailsProperty$Builder) id config))
 
@@ -317,7 +362,12 @@
 
 
 (defn cfn-custom-line-item-line-item-filter-property-builder
-  ""
+  "Creates a  `CfnCustomLineItem$LineItemFilterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-custom-line-item-line-item-filter-property-builder (new CfnCustomLineItem$LineItemFilterProperty$Builder) id config))
 
@@ -358,7 +408,12 @@
 
 
 (defn cfn-custom-line-item-props-builder
-  ""
+  "Creates a  `CfnCustomLineItemProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-custom-line-item-props-builder (new CfnCustomLineItemProps$Builder) id config))
 
@@ -390,7 +445,12 @@
 
 
 (defn cfn-pricing-plan-builder
-  ""
+  "Creates a  `CfnPricingPlan$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-pricing-plan-builder (CfnPricingPlan$Builder/create scope (name id)) id config))
 
@@ -422,7 +482,12 @@
 
 
 (defn cfn-pricing-plan-props-builder
-  ""
+  "Creates a  `CfnPricingPlanProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pricing-plan-props-builder (new CfnPricingPlanProps$Builder) id config))
 
@@ -475,7 +540,12 @@
 
 
 (defn cfn-pricing-rule-builder
-  ""
+  "Creates a  `CfnPricingRule$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-pricing-rule-builder (CfnPricingRule$Builder/create scope (name id)) id config))
 
@@ -498,7 +568,12 @@
 
 
 (defn cfn-pricing-rule-free-tier-property-builder
-  ""
+  "Creates a  `CfnPricingRule$FreeTierProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pricing-rule-free-tier-property-builder (new CfnPricingRule$FreeTierProperty$Builder) id config))
 
@@ -551,7 +626,12 @@
 
 
 (defn cfn-pricing-rule-props-builder
-  ""
+  "Creates a  `CfnPricingRuleProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pricing-rule-props-builder (new CfnPricingRuleProps$Builder) id config))
 
@@ -574,6 +654,11 @@
 
 
 (defn cfn-pricing-rule-tiering-property-builder
-  ""
+  "Creates a  `CfnPricingRule$TieringProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pricing-rule-tiering-property-builder (new CfnPricingRule$TieringProperty$Builder) id config))

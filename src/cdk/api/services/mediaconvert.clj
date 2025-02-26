@@ -29,7 +29,12 @@
 
 
 (defn cfn-job-template-acceleration-settings-property-builder
-  ""
+  "Creates a  `CfnJobTemplate$AccelerationSettingsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-job-template-acceleration-settings-property-builder (new CfnJobTemplate$AccelerationSettingsProperty$Builder) id config))
 
@@ -79,7 +84,12 @@
 
 
 (defn cfn-job-template-builder
-  ""
+  "Creates a  `CfnJobTemplate$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-job-template-builder (CfnJobTemplate$Builder/create scope (name id)) id config))
 
@@ -108,7 +118,12 @@
 
 
 (defn cfn-job-template-hop-destination-property-builder
-  ""
+  "Creates a  `CfnJobTemplate$HopDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-job-template-hop-destination-property-builder (new CfnJobTemplate$HopDestinationProperty$Builder) id config))
 
@@ -158,7 +173,12 @@
 
 
 (defn cfn-job-template-props-builder
-  ""
+  "Creates a  `CfnJobTemplateProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-job-template-props-builder (new CfnJobTemplateProps$Builder) id config))
 
@@ -193,7 +213,12 @@
 
 
 (defn cfn-preset-builder
-  ""
+  "Creates a  `CfnPreset$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-preset-builder (CfnPreset$Builder/create scope (name id)) id config))
 
@@ -228,7 +253,12 @@
 
 
 (defn cfn-preset-props-builder
-  ""
+  "Creates a  `CfnPresetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-preset-props-builder (new CfnPresetProps$Builder) id config))
 
@@ -263,7 +293,12 @@
 
 
 (defn cfn-queue-builder
-  ""
+  "Creates a  `CfnQueue$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-queue-builder (CfnQueue$Builder/create scope (name id)) id config))
 
@@ -298,6 +333,11 @@
 
 
 (defn cfn-queue-props-builder
-  ""
+  "Creates a  `CfnQueueProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-queue-props-builder (new CfnQueueProps$Builder) id config))

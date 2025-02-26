@@ -31,7 +31,12 @@
 
 
 (defn cfn-zonal-autoshift-configuration-builder
-  ""
+  "Creates a  `CfnZonalAutoshiftConfiguration$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-zonal-autoshift-configuration-builder (CfnZonalAutoshiftConfiguration$Builder/create scope (name id)) id config))
 
@@ -57,7 +62,12 @@
 
 
 (defn cfn-zonal-autoshift-configuration-control-condition-property-builder
-  ""
+  "Creates a  `CfnZonalAutoshiftConfiguration$ControlConditionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-zonal-autoshift-configuration-control-condition-property-builder (new CfnZonalAutoshiftConfiguration$ControlConditionProperty$Builder) id config))
 
@@ -89,7 +99,12 @@
 
 
 (defn cfn-zonal-autoshift-configuration-practice-run-configuration-property-builder
-  ""
+  "Creates a  `CfnZonalAutoshiftConfiguration$PracticeRunConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-zonal-autoshift-configuration-practice-run-configuration-property-builder (new CfnZonalAutoshiftConfiguration$PracticeRunConfigurationProperty$Builder) id config))
 
@@ -118,6 +133,11 @@
 
 
 (defn cfn-zonal-autoshift-configuration-props-builder
-  ""
+  "Creates a  `CfnZonalAutoshiftConfigurationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-zonal-autoshift-configuration-props-builder (new CfnZonalAutoshiftConfigurationProps$Builder) id config))

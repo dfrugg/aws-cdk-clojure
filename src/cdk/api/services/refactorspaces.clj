@@ -37,7 +37,12 @@
 
 
 (defn cfn-application-api-gateway-proxy-input-property-builder
-  ""
+  "Creates a  `CfnApplication$ApiGatewayProxyInputProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-application-api-gateway-proxy-input-property-builder (new CfnApplication$ApiGatewayProxyInputProperty$Builder) id config))
 
@@ -75,7 +80,12 @@
 
 
 (defn cfn-application-builder
-  ""
+  "Creates a  `CfnApplication$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-application-builder (CfnApplication$Builder/create scope (name id)) id config))
 
@@ -113,7 +123,12 @@
 
 
 (defn cfn-application-props-builder
-  ""
+  "Creates a  `CfnApplicationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-application-props-builder (new CfnApplicationProps$Builder) id config))
 
@@ -145,7 +160,12 @@
 
 
 (defn cfn-environment-builder
-  ""
+  "Creates a  `CfnEnvironment$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-environment-builder (CfnEnvironment$Builder/create scope (name id)) id config))
 
@@ -177,7 +197,12 @@
 
 
 (defn cfn-environment-props-builder
-  ""
+  "Creates a  `CfnEnvironmentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-environment-props-builder (new CfnEnvironmentProps$Builder) id config))
 
@@ -218,7 +243,12 @@
 
 
 (defn cfn-route-builder
-  ""
+  "Creates a  `CfnRoute$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-route-builder (CfnRoute$Builder/create scope (name id)) id config))
 
@@ -241,7 +271,12 @@
 
 
 (defn cfn-route-default-route-input-property-builder
-  ""
+  "Creates a  `CfnRoute$DefaultRouteInputProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-route-default-route-input-property-builder (new CfnRoute$DefaultRouteInputProperty$Builder) id config))
 
@@ -282,7 +317,12 @@
 
 
 (defn cfn-route-props-builder
-  ""
+  "Creates a  `CfnRouteProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-route-props-builder (new CfnRouteProps$Builder) id config))
 
@@ -317,7 +357,12 @@
 
 
 (defn cfn-route-uri-path-route-input-property-builder
-  ""
+  "Creates a  `CfnRoute$UriPathRouteInputProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-route-uri-path-route-input-property-builder (new CfnRoute$UriPathRouteInputProperty$Builder) id config))
 
@@ -364,7 +409,12 @@
 
 
 (defn cfn-service-builder
-  ""
+  "Creates a  `CfnService$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-service-builder (CfnService$Builder/create scope (name id)) id config))
 
@@ -387,7 +437,12 @@
 
 
 (defn cfn-service-lambda-endpoint-input-property-builder
-  ""
+  "Creates a  `CfnService$LambdaEndpointInputProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-service-lambda-endpoint-input-property-builder (new CfnService$LambdaEndpointInputProperty$Builder) id config))
 
@@ -434,7 +489,12 @@
 
 
 (defn cfn-service-props-builder
-  ""
+  "Creates a  `CfnServiceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-service-props-builder (new CfnServiceProps$Builder) id config))
 
@@ -460,6 +520,11 @@
 
 
 (defn cfn-service-url-endpoint-input-property-builder
-  ""
+  "Creates a  `CfnService$UrlEndpointInputProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-service-url-endpoint-input-property-builder (new CfnService$UrlEndpointInputProperty$Builder) id config))

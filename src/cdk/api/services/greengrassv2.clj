@@ -53,7 +53,12 @@
 
 
 (defn cfn-component-version-builder
-  ""
+  "Creates a  `CfnComponentVersion$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-component-version-builder (CfnComponentVersion$Builder/create scope (name id)) id config))
 
@@ -79,7 +84,12 @@
 
 
 (defn cfn-component-version-component-dependency-requirement-property-builder
-  ""
+  "Creates a  `CfnComponentVersion$ComponentDependencyRequirementProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-component-version-component-dependency-requirement-property-builder (new CfnComponentVersion$ComponentDependencyRequirementProperty$Builder) id config))
 
@@ -105,7 +115,12 @@
 
 
 (defn cfn-component-version-component-platform-property-builder
-  ""
+  "Creates a  `CfnComponentVersion$ComponentPlatformProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-component-version-component-platform-property-builder (new CfnComponentVersion$ComponentPlatformProperty$Builder) id config))
 
@@ -137,7 +152,12 @@
 
 
 (defn cfn-component-version-lambda-container-params-property-builder
-  ""
+  "Creates a  `CfnComponentVersion$LambdaContainerParamsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-component-version-lambda-container-params-property-builder (new CfnComponentVersion$LambdaContainerParamsProperty$Builder) id config))
 
@@ -166,7 +186,12 @@
 
 
 (defn cfn-component-version-lambda-device-mount-property-builder
-  ""
+  "Creates a  `CfnComponentVersion$LambdaDeviceMountProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-component-version-lambda-device-mount-property-builder (new CfnComponentVersion$LambdaDeviceMountProperty$Builder) id config))
 
@@ -192,7 +217,12 @@
 
 
 (defn cfn-component-version-lambda-event-source-property-builder
-  ""
+  "Creates a  `CfnComponentVersion$LambdaEventSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-component-version-lambda-event-source-property-builder (new CfnComponentVersion$LambdaEventSourceProperty$Builder) id config))
 
@@ -245,7 +275,12 @@
 
 
 (defn cfn-component-version-lambda-execution-parameters-property-builder
-  ""
+  "Creates a  `CfnComponentVersion$LambdaExecutionParametersProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-component-version-lambda-execution-parameters-property-builder (new CfnComponentVersion$LambdaExecutionParametersProperty$Builder) id config))
 
@@ -283,7 +318,12 @@
 
 
 (defn cfn-component-version-lambda-function-recipe-source-property-builder
-  ""
+  "Creates a  `CfnComponentVersion$LambdaFunctionRecipeSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-component-version-lambda-function-recipe-source-property-builder (new CfnComponentVersion$LambdaFunctionRecipeSourceProperty$Builder) id config))
 
@@ -309,7 +349,12 @@
 
 
 (defn cfn-component-version-lambda-linux-process-params-property-builder
-  ""
+  "Creates a  `CfnComponentVersion$LambdaLinuxProcessParamsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-component-version-lambda-linux-process-params-property-builder (new CfnComponentVersion$LambdaLinuxProcessParamsProperty$Builder) id config))
 
@@ -341,7 +386,12 @@
 
 
 (defn cfn-component-version-lambda-volume-mount-property-builder
-  ""
+  "Creates a  `CfnComponentVersion$LambdaVolumeMountProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-component-version-lambda-volume-mount-property-builder (new CfnComponentVersion$LambdaVolumeMountProperty$Builder) id config))
 
@@ -370,7 +420,12 @@
 
 
 (defn cfn-component-version-props-builder
-  ""
+  "Creates a  `CfnComponentVersionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-component-version-props-builder (new CfnComponentVersionProps$Builder) id config))
 
@@ -411,7 +466,12 @@
 
 
 (defn cfn-deployment-builder
-  ""
+  "Creates a  `CfnDeployment$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-deployment-builder (CfnDeployment$Builder/create scope (name id)) id config))
 
@@ -437,7 +497,12 @@
 
 
 (defn cfn-deployment-component-configuration-update-property-builder
-  ""
+  "Creates a  `CfnDeployment$ComponentConfigurationUpdateProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-deployment-component-configuration-update-property-builder (new CfnDeployment$ComponentConfigurationUpdateProperty$Builder) id config))
 
@@ -466,7 +531,12 @@
 
 
 (defn cfn-deployment-component-deployment-specification-property-builder
-  ""
+  "Creates a  `CfnDeployment$ComponentDeploymentSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-deployment-component-deployment-specification-property-builder (new CfnDeployment$ComponentDeploymentSpecificationProperty$Builder) id config))
 
@@ -495,7 +565,12 @@
 
 
 (defn cfn-deployment-component-run-with-property-builder
-  ""
+  "Creates a  `CfnDeployment$ComponentRunWithProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-deployment-component-run-with-property-builder (new CfnDeployment$ComponentRunWithProperty$Builder) id config))
 
@@ -521,7 +596,12 @@
 
 
 (defn cfn-deployment-deployment-component-update-policy-property-builder
-  ""
+  "Creates a  `CfnDeployment$DeploymentComponentUpdatePolicyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-deployment-deployment-component-update-policy-property-builder (new CfnDeployment$DeploymentComponentUpdatePolicyProperty$Builder) id config))
 
@@ -544,7 +624,12 @@
 
 
 (defn cfn-deployment-deployment-configuration-validation-policy-property-builder
-  ""
+  "Creates a  `CfnDeployment$DeploymentConfigurationValidationPolicyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-deployment-deployment-configuration-validation-policy-property-builder (new CfnDeployment$DeploymentConfigurationValidationPolicyProperty$Builder) id config))
 
@@ -573,7 +658,12 @@
 
 
 (defn cfn-deployment-deployment-io-t-job-configuration-property-builder
-  ""
+  "Creates a  `CfnDeployment$DeploymentIoTJobConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-deployment-deployment-io-t-job-configuration-property-builder (new CfnDeployment$DeploymentIoTJobConfigurationProperty$Builder) id config))
 
@@ -602,7 +692,12 @@
 
 
 (defn cfn-deployment-deployment-policies-property-builder
-  ""
+  "Creates a  `CfnDeployment$DeploymentPoliciesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-deployment-deployment-policies-property-builder (new CfnDeployment$DeploymentPoliciesProperty$Builder) id config))
 
@@ -625,7 +720,12 @@
 
 
 (defn cfn-deployment-io-t-job-abort-config-property-builder
-  ""
+  "Creates a  `CfnDeployment$IoTJobAbortConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-deployment-io-t-job-abort-config-property-builder (new CfnDeployment$IoTJobAbortConfigProperty$Builder) id config))
 
@@ -657,7 +757,12 @@
 
 
 (defn cfn-deployment-io-t-job-abort-criteria-property-builder
-  ""
+  "Creates a  `CfnDeployment$IoTJobAbortCriteriaProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-deployment-io-t-job-abort-criteria-property-builder (new CfnDeployment$IoTJobAbortCriteriaProperty$Builder) id config))
 
@@ -683,7 +788,12 @@
 
 
 (defn cfn-deployment-io-t-job-executions-rollout-config-property-builder
-  ""
+  "Creates a  `CfnDeployment$IoTJobExecutionsRolloutConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-deployment-io-t-job-executions-rollout-config-property-builder (new CfnDeployment$IoTJobExecutionsRolloutConfigProperty$Builder) id config))
 
@@ -712,7 +822,12 @@
 
 
 (defn cfn-deployment-io-t-job-exponential-rollout-rate-property-builder
-  ""
+  "Creates a  `CfnDeployment$IoTJobExponentialRolloutRateProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-deployment-io-t-job-exponential-rollout-rate-property-builder (new CfnDeployment$IoTJobExponentialRolloutRateProperty$Builder) id config))
 
@@ -735,7 +850,12 @@
 
 
 (defn cfn-deployment-io-t-job-timeout-config-property-builder
-  ""
+  "Creates a  `CfnDeployment$IoTJobTimeoutConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-deployment-io-t-job-timeout-config-property-builder (new CfnDeployment$IoTJobTimeoutConfigProperty$Builder) id config))
 
@@ -776,7 +896,12 @@
 
 
 (defn cfn-deployment-props-builder
-  ""
+  "Creates a  `CfnDeploymentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-deployment-props-builder (new CfnDeploymentProps$Builder) id config))
 
@@ -802,6 +927,11 @@
 
 
 (defn cfn-deployment-system-resource-limits-property-builder
-  ""
+  "Creates a  `CfnDeployment$SystemResourceLimitsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-deployment-system-resource-limits-property-builder (new CfnDeployment$SystemResourceLimitsProperty$Builder) id config))

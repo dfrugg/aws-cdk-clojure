@@ -101,7 +101,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn alias-attributes-builder
-  ""
+  "Creates a  `AliasAttributes$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-alias-attributes-builder (new AliasAttributes$Builder) id config))
 
@@ -130,7 +135,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn alias-builder
-  ""
+  "Creates a  `Alias$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-alias-builder (Alias$Builder/create scope (name id)) id config))
 
@@ -159,7 +169,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn alias-props-builder
-  ""
+  "Creates a  `AliasProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-alias-props-builder (new AliasProps$Builder) id config))
 
@@ -185,7 +200,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-alias-builder
-  ""
+  "Creates a  `CfnAlias$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-alias-builder (CfnAlias$Builder/create scope (name id)) id config))
 
@@ -211,7 +231,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-alias-props-builder
-  ""
+  "Creates a  `CfnAliasProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alias-props-builder (new CfnAliasProps$Builder) id config))
 
@@ -267,7 +292,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-key-builder
-  ""
+  "Creates a  `CfnKey$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-key-builder (CfnKey$Builder/create scope (name id)) id config))
 
@@ -323,7 +353,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-key-props-builder
-  ""
+  "Creates a  `CfnKeyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-key-props-builder (new CfnKeyProps$Builder) id config))
 
@@ -361,7 +396,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-replica-key-builder
-  ""
+  "Creates a  `CfnReplicaKey$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-replica-key-builder (CfnReplicaKey$Builder/create scope (name id)) id config))
 
@@ -399,7 +439,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-replica-key-props-builder
-  ""
+  "Creates a  `CfnReplicaKeyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-replica-key-props-builder (new CfnReplicaKeyProps$Builder) id config))
 
@@ -452,7 +497,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn key-builder
-  ""
+  "Creates a  `Key$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-key-builder (Key$Builder/create scope (name id)) id config))
 
@@ -475,7 +525,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn key-lookup-options-builder
-  ""
+  "Creates a  `KeyLookupOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-key-lookup-options-builder (new KeyLookupOptions$Builder) id config))
 
@@ -528,6 +583,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn key-props-builder
-  ""
+  "Creates a  `KeyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-key-props-builder (new KeyProps$Builder) id config))

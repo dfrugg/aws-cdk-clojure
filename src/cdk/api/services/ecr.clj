@@ -100,7 +100,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-public-repository-builder
-  ""
+  "Creates a  `CfnPublicRepository$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-public-repository-builder (CfnPublicRepository$Builder/create scope (name id)) id config))
 
@@ -132,7 +137,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-public-repository-props-builder
-  ""
+  "Creates a  `CfnPublicRepositoryProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-public-repository-props-builder (new CfnPublicRepositoryProps$Builder) id config))
 
@@ -167,7 +177,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-public-repository-repository-catalog-data-property-builder
-  ""
+  "Creates a  `CfnPublicRepository$RepositoryCatalogDataProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-public-repository-repository-catalog-data-property-builder (new CfnPublicRepository$RepositoryCatalogDataProperty$Builder) id config))
 
@@ -199,7 +214,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-pull-through-cache-rule-builder
-  ""
+  "Creates a  `CfnPullThroughCacheRule$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-pull-through-cache-rule-builder (CfnPullThroughCacheRule$Builder/create scope (name id)) id config))
 
@@ -231,7 +251,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-pull-through-cache-rule-props-builder
-  ""
+  "Creates a  `CfnPullThroughCacheRuleProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-pull-through-cache-rule-props-builder (new CfnPullThroughCacheRuleProps$Builder) id config))
 
@@ -254,7 +279,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-registry-policy-builder
-  ""
+  "Creates a  `CfnRegistryPolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-registry-policy-builder (CfnRegistryPolicy$Builder/create scope (name id)) id config))
 
@@ -277,7 +307,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-registry-policy-props-builder
-  ""
+  "Creates a  `CfnRegistryPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-registry-policy-props-builder (new CfnRegistryPolicyProps$Builder) id config))
 
@@ -300,7 +335,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-replication-configuration-builder
-  ""
+  "Creates a  `CfnReplicationConfiguration$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-replication-configuration-builder (CfnReplicationConfiguration$Builder/create scope (name id)) id config))
 
@@ -323,7 +363,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-replication-configuration-props-builder
-  ""
+  "Creates a  `CfnReplicationConfigurationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-replication-configuration-props-builder (new CfnReplicationConfigurationProps$Builder) id config))
 
@@ -346,7 +391,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-replication-configuration-replication-configuration-property-builder
-  ""
+  "Creates a  `CfnReplicationConfiguration$ReplicationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-replication-configuration-replication-configuration-property-builder (new CfnReplicationConfiguration$ReplicationConfigurationProperty$Builder) id config))
 
@@ -372,7 +422,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-replication-configuration-replication-destination-property-builder
-  ""
+  "Creates a  `CfnReplicationConfiguration$ReplicationDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-replication-configuration-replication-destination-property-builder (new CfnReplicationConfiguration$ReplicationDestinationProperty$Builder) id config))
 
@@ -398,7 +453,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-replication-configuration-replication-rule-property-builder
-  ""
+  "Creates a  `CfnReplicationConfiguration$ReplicationRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-replication-configuration-replication-rule-property-builder (new CfnReplicationConfiguration$ReplicationRuleProperty$Builder) id config))
 
@@ -424,7 +484,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-replication-configuration-repository-filter-property-builder
-  ""
+  "Creates a  `CfnReplicationConfiguration$RepositoryFilterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-replication-configuration-repository-filter-property-builder (new CfnReplicationConfiguration$RepositoryFilterProperty$Builder) id config))
 
@@ -468,7 +533,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-repository-builder
-  ""
+  "Creates a  `CfnRepository$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-repository-builder (CfnRepository$Builder/create scope (name id)) id config))
 
@@ -512,7 +582,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-repository-creation-template-builder
-  ""
+  "Creates a  `CfnRepositoryCreationTemplate$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-repository-creation-template-builder (CfnRepositoryCreationTemplate$Builder/create scope (name id)) id config))
 
@@ -538,7 +613,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-repository-creation-template-encryption-configuration-property-builder
-  ""
+  "Creates a  `CfnRepositoryCreationTemplate$EncryptionConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-repository-creation-template-encryption-configuration-property-builder (new CfnRepositoryCreationTemplate$EncryptionConfigurationProperty$Builder) id config))
 
@@ -582,7 +662,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-repository-creation-template-props-builder
-  ""
+  "Creates a  `CfnRepositoryCreationTemplateProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-repository-creation-template-props-builder (new CfnRepositoryCreationTemplateProps$Builder) id config))
 
@@ -608,7 +693,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-repository-encryption-configuration-property-builder
-  ""
+  "Creates a  `CfnRepository$EncryptionConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-repository-encryption-configuration-property-builder (new CfnRepository$EncryptionConfigurationProperty$Builder) id config))
 
@@ -631,7 +721,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-repository-image-scanning-configuration-property-builder
-  ""
+  "Creates a  `CfnRepository$ImageScanningConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-repository-image-scanning-configuration-property-builder (new CfnRepository$ImageScanningConfigurationProperty$Builder) id config))
 
@@ -657,7 +752,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-repository-lifecycle-policy-property-builder
-  ""
+  "Creates a  `CfnRepository$LifecyclePolicyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-repository-lifecycle-policy-property-builder (new CfnRepository$LifecyclePolicyProperty$Builder) id config))
 
@@ -701,7 +801,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-repository-props-builder
-  ""
+  "Creates a  `CfnRepositoryProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-repository-props-builder (new CfnRepositoryProps$Builder) id config))
 
@@ -742,7 +847,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn lifecycle-rule-builder
-  ""
+  "Creates a  `LifecycleRule$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-lifecycle-rule-builder (new LifecycleRule$Builder) id config))
 
@@ -780,7 +890,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn on-cloud-trail-image-pushed-options-builder
-  ""
+  "Creates a  `OnCloudTrailImagePushedOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-on-cloud-trail-image-pushed-options-builder (new OnCloudTrailImagePushedOptions$Builder) id config))
 
@@ -818,7 +933,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn on-image-scan-completed-options-builder
-  ""
+  "Creates a  `OnImageScanCompletedOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-on-image-scan-completed-options-builder (new OnImageScanCompletedOptions$Builder) id config))
 
@@ -844,7 +964,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn repository-attributes-builder
-  ""
+  "Creates a  `RepositoryAttributes$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-repository-attributes-builder (new RepositoryAttributes$Builder) id config))
 
@@ -894,7 +1019,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn repository-builder
-  ""
+  "Creates a  `Repository$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-repository-builder (Repository$Builder/create scope (name id)) id config))
 
@@ -944,6 +1074,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn repository-props-builder
-  ""
+  "Creates a  `RepositoryProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-repository-props-builder (new RepositoryProps$Builder) id config))

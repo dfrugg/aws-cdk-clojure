@@ -23,8 +23,7 @@
                                :full-name "package.name.MyBuilder$Builder"
                                :class package.name.MyBuilder$Builder
                                :fn-name 'my-builder
-                               :init :create
-                               :inits [{:init-type :no-arg
+                               :inits [{:init-type :create
                                         :init-args ["String" "paramter.Types"]
                                         :init-name-args [["id" "String"]
                                                          ["types" "parameter.Types"]]
@@ -44,6 +43,7 @@
 
 
 (defn clear!
+  "Clears all of the data from the caches."
   []
   (reset! packages {})
   (reset! enums {}))
@@ -152,12 +152,27 @@
        (filter :parameter-types)))
 
 
+(defn decorate-inits
+  [{:keys [package-name class-name]} {:keys [inits]} methods]
+  (if-let [hints (and (seq methods) (get-in inits [package-name class-name]))]
+    (reduce (fn [v m]
+              (let [hint (get hints (:parameter-types m))]
+                (cond
+                  (nil? hint) (conj v m)
+                  (:discard? hint) v
+                  :else (conj v (assoc m :hint hint)))))
+            []
+            methods)
+    methods))
+
+
 (defn determine-inits
-  [methods]
+  [builder-data config methods]
   (let [creates (->> methods
                      (filterv #(= create-method (:name %)))
                      (filterv (comp :static :flags))
-                     (mapv #(assoc % :init-type :create)))]
+                     (mapv #(assoc % :init-type :create))
+                     (decorate-inits builder-data config))]
     (if (seq creates)
       creates
       (->> methods
@@ -166,9 +181,9 @@
 
 
 (defn builder-methods
-  [{^Class builder-class :class :as builder-data} _]
+  [{^Class builder-class :class :as builder-data} config]
   (let [methods (public-methods builder-class)
-        inits (determine-inits methods)
+        inits (determine-inits builder-data config methods)
         methods (->> (reduce (fn [field-map {field-name :name :as field}]
                                (if (or (get field-map field-name)
                                        (ignored-builder-methods field-name)

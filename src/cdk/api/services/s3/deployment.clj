@@ -172,7 +172,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn bucket-deployment-builder
-  ""
+  "Creates a  `BucketDeployment$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-bucket-deployment-builder (BucketDeployment$Builder/create scope (name id)) id config))
 
@@ -288,7 +293,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn bucket-deployment-props-builder
-  ""
+  "Creates a  `BucketDeploymentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-bucket-deployment-props-builder (new BucketDeploymentProps$Builder) id config))
 
@@ -323,7 +333,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn deploy-time-substituted-file-builder
-  ""
+  "Creates a  `DeployTimeSubstitutedFile$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-deploy-time-substituted-file-builder (DeployTimeSubstitutedFile$Builder/create scope (name id)) id config))
 
@@ -358,7 +373,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn deploy-time-substituted-file-props-builder
-  ""
+  "Creates a  `DeployTimeSubstitutedFileProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-deploy-time-substituted-file-props-builder (new DeployTimeSubstitutedFileProps$Builder) id config))
 
@@ -381,7 +401,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn deployment-source-context-builder
-  ""
+  "Creates a  `DeploymentSourceContext$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-deployment-source-context-builder (new DeploymentSourceContext$Builder) id config))
 
@@ -410,6 +435,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn source-config-builder
-  ""
+  "Creates a  `SourceConfig$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-source-config-builder (new SourceConfig$Builder) id config))

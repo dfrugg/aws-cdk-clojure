@@ -98,7 +98,12 @@
 
 
 (defn cfn-environment-builder
-  ""
+  "Creates a  `CfnEnvironment$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-environment-builder (CfnEnvironment$Builder/create scope (name id)) id config))
 
@@ -133,7 +138,12 @@
 
 
 (defn cfn-environment-logging-configuration-property-builder
-  ""
+  "Creates a  `CfnEnvironment$LoggingConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-environment-logging-configuration-property-builder (new CfnEnvironment$LoggingConfigurationProperty$Builder) id config))
 
@@ -162,7 +172,12 @@
 
 
 (defn cfn-environment-module-logging-configuration-property-builder
-  ""
+  "Creates a  `CfnEnvironment$ModuleLoggingConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-environment-module-logging-configuration-property-builder (new CfnEnvironment$ModuleLoggingConfigurationProperty$Builder) id config))
 
@@ -188,7 +203,12 @@
 
 
 (defn cfn-environment-network-configuration-property-builder
-  ""
+  "Creates a  `CfnEnvironment$NetworkConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-environment-network-configuration-property-builder (new CfnEnvironment$NetworkConfigurationProperty$Builder) id config))
 
@@ -283,6 +303,11 @@
 
 
 (defn cfn-environment-props-builder
-  ""
+  "Creates a  `CfnEnvironmentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-environment-props-builder (new CfnEnvironmentProps$Builder) id config))

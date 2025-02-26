@@ -44,7 +44,12 @@
 
 
 (defn cfn-container-builder
-  ""
+  "Creates a  `CfnContainer$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-container-builder (CfnContainer$Builder/create scope (name id)) id config))
 
@@ -79,7 +84,12 @@
 
 
 (defn cfn-container-cors-rule-property-builder
-  ""
+  "Creates a  `CfnContainer$CorsRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-container-cors-rule-property-builder (new CfnContainer$CorsRuleProperty$Builder) id config))
 
@@ -105,7 +115,12 @@
 
 
 (defn cfn-container-metric-policy-property-builder
-  ""
+  "Creates a  `CfnContainer$MetricPolicyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-container-metric-policy-property-builder (new CfnContainer$MetricPolicyProperty$Builder) id config))
 
@@ -131,7 +146,12 @@
 
 
 (defn cfn-container-metric-policy-rule-property-builder
-  ""
+  "Creates a  `CfnContainer$MetricPolicyRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-container-metric-policy-rule-property-builder (new CfnContainer$MetricPolicyRuleProperty$Builder) id config))
 
@@ -172,6 +192,11 @@
 
 
 (defn cfn-container-props-builder
-  ""
+  "Creates a  `CfnContainerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-container-props-builder (new CfnContainerProps$Builder) id config))

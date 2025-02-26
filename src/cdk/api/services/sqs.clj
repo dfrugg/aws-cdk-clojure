@@ -166,7 +166,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-queue-builder
-  ""
+  "Creates a  `CfnQueue$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-queue-builder (CfnQueue$Builder/create scope (name id)) id config))
 
@@ -192,7 +197,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-queue-inline-policy-builder
-  ""
+  "Creates a  `CfnQueueInlinePolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-queue-inline-policy-builder (CfnQueueInlinePolicy$Builder/create scope (name id)) id config))
 
@@ -218,7 +228,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-queue-inline-policy-props-builder
-  ""
+  "Creates a  `CfnQueueInlinePolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-queue-inline-policy-props-builder (new CfnQueueInlinePolicyProps$Builder) id config))
 
@@ -244,7 +259,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-queue-policy-builder
-  ""
+  "Creates a  `CfnQueuePolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-queue-policy-builder (CfnQueuePolicy$Builder/create scope (name id)) id config))
 
@@ -270,7 +290,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-queue-policy-props-builder
-  ""
+  "Creates a  `CfnQueuePolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-queue-policy-props-builder (new CfnQueuePolicyProps$Builder) id config))
 
@@ -338,7 +363,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-queue-props-builder
-  ""
+  "Creates a  `CfnQueueProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-queue-props-builder (new CfnQueueProps$Builder) id config))
 
@@ -364,7 +394,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn dead-letter-queue-builder
-  ""
+  "Creates a  `DeadLetterQueue$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-dead-letter-queue-builder (new DeadLetterQueue$Builder) id config))
 
@@ -399,7 +434,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn queue-attributes-builder
-  ""
+  "Creates a  `QueueAttributes$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-queue-attributes-builder (new QueueAttributes$Builder) id config))
 
@@ -470,7 +510,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn queue-builder
-  ""
+  "Creates a  `Queue$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-queue-builder (Queue$Builder/create scope (name id)) id config))
 
@@ -493,7 +538,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn queue-policy-builder
-  ""
+  "Creates a  `QueuePolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-queue-policy-builder (QueuePolicy$Builder/create scope (name id)) id config))
 
@@ -516,7 +566,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn queue-policy-props-builder
-  ""
+  "Creates a  `QueuePolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-queue-policy-props-builder (new QueuePolicyProps$Builder) id config))
 
@@ -587,7 +642,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn queue-props-builder
-  ""
+  "Creates a  `QueueProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-queue-props-builder (new QueueProps$Builder) id config))
 
@@ -613,6 +673,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn redrive-allow-policy-builder
-  ""
+  "Creates a  `RedriveAllowPolicy$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-redrive-allow-policy-builder (new RedriveAllowPolicy$Builder) id config))

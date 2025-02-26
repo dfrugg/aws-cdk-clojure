@@ -74,7 +74,12 @@
 
 
 (defn cfn-alarm-model-acknowledge-flow-property-builder
-  ""
+  "Creates a  `CfnAlarmModel$AcknowledgeFlowProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-acknowledge-flow-property-builder (new CfnAlarmModel$AcknowledgeFlowProperty$Builder) id config))
 
@@ -121,7 +126,12 @@
 
 
 (defn cfn-alarm-model-alarm-action-property-builder
-  ""
+  "Creates a  `CfnAlarmModel$AlarmActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-alarm-action-property-builder (new CfnAlarmModel$AlarmActionProperty$Builder) id config))
 
@@ -147,7 +157,12 @@
 
 
 (defn cfn-alarm-model-alarm-capabilities-property-builder
-  ""
+  "Creates a  `CfnAlarmModel$AlarmCapabilitiesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-alarm-capabilities-property-builder (new CfnAlarmModel$AlarmCapabilitiesProperty$Builder) id config))
 
@@ -170,7 +185,12 @@
 
 
 (defn cfn-alarm-model-alarm-event-actions-property-builder
-  ""
+  "Creates a  `CfnAlarmModel$AlarmEventActionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-alarm-event-actions-property-builder (new CfnAlarmModel$AlarmEventActionsProperty$Builder) id config))
 
@@ -193,7 +213,12 @@
 
 
 (defn cfn-alarm-model-alarm-rule-property-builder
-  ""
+  "Creates a  `CfnAlarmModel$AlarmRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-alarm-rule-property-builder (new CfnAlarmModel$AlarmRuleProperty$Builder) id config))
 
@@ -219,7 +244,12 @@
 
 
 (defn cfn-alarm-model-asset-property-timestamp-property-builder
-  ""
+  "Creates a  `CfnAlarmModel$AssetPropertyTimestampProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-asset-property-timestamp-property-builder (new CfnAlarmModel$AssetPropertyTimestampProperty$Builder) id config))
 
@@ -248,7 +278,12 @@
 
 
 (defn cfn-alarm-model-asset-property-value-property-builder
-  ""
+  "Creates a  `CfnAlarmModel$AssetPropertyValueProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-asset-property-value-property-builder (new CfnAlarmModel$AssetPropertyValueProperty$Builder) id config))
 
@@ -280,7 +315,12 @@
 
 
 (defn cfn-alarm-model-asset-property-variant-property-builder
-  ""
+  "Creates a  `CfnAlarmModel$AssetPropertyVariantProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-asset-property-variant-property-builder (new CfnAlarmModel$AssetPropertyVariantProperty$Builder) id config))
 
@@ -327,7 +367,12 @@
 
 
 (defn cfn-alarm-model-builder
-  ""
+  "Creates a  `CfnAlarmModel$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-alarm-model-builder (CfnAlarmModel$Builder/create scope (name id)) id config))
 
@@ -353,7 +398,12 @@
 
 
 (defn cfn-alarm-model-dynamo-d-bv2-property-builder
-  ""
+  "Creates a  `CfnAlarmModel$DynamoDBv2Property$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-dynamo-d-bv2-property-builder (new CfnAlarmModel$DynamoDBv2Property$Builder) id config))
 
@@ -403,7 +453,12 @@
 
 
 (defn cfn-alarm-model-dynamo-db-property-builder
-  ""
+  "Creates a  `CfnAlarmModel$DynamoDBProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-dynamo-db-property-builder (new CfnAlarmModel$DynamoDBProperty$Builder) id config))
 
@@ -432,7 +487,12 @@
 
 
 (defn cfn-alarm-model-firehose-property-builder
-  ""
+  "Creates a  `CfnAlarmModel$FirehoseProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-firehose-property-builder (new CfnAlarmModel$FirehoseProperty$Builder) id config))
 
@@ -455,7 +515,12 @@
 
 
 (defn cfn-alarm-model-initialization-configuration-property-builder
-  ""
+  "Creates a  `CfnAlarmModel$InitializationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-initialization-configuration-property-builder (new CfnAlarmModel$InitializationConfigurationProperty$Builder) id config))
 
@@ -481,7 +546,12 @@
 
 
 (defn cfn-alarm-model-iot-events-property-builder
-  ""
+  "Creates a  `CfnAlarmModel$IotEventsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-iot-events-property-builder (new CfnAlarmModel$IotEventsProperty$Builder) id config))
 
@@ -516,7 +586,12 @@
 
 
 (defn cfn-alarm-model-iot-site-wise-property-builder
-  ""
+  "Creates a  `CfnAlarmModel$IotSiteWiseProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-iot-site-wise-property-builder (new CfnAlarmModel$IotSiteWiseProperty$Builder) id config))
 
@@ -542,7 +617,12 @@
 
 
 (defn cfn-alarm-model-iot-topic-publish-property-builder
-  ""
+  "Creates a  `CfnAlarmModel$IotTopicPublishProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-iot-topic-publish-property-builder (new CfnAlarmModel$IotTopicPublishProperty$Builder) id config))
 
@@ -568,7 +648,12 @@
 
 
 (defn cfn-alarm-model-lambda-property-builder
-  ""
+  "Creates a  `CfnAlarmModel$LambdaProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-lambda-property-builder (new CfnAlarmModel$LambdaProperty$Builder) id config))
 
@@ -594,7 +679,12 @@
 
 
 (defn cfn-alarm-model-payload-property-builder
-  ""
+  "Creates a  `CfnAlarmModel$PayloadProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-payload-property-builder (new CfnAlarmModel$PayloadProperty$Builder) id config))
 
@@ -641,7 +731,12 @@
 
 
 (defn cfn-alarm-model-props-builder
-  ""
+  "Creates a  `CfnAlarmModelProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-props-builder (new CfnAlarmModelProps$Builder) id config))
 
@@ -670,7 +765,12 @@
 
 
 (defn cfn-alarm-model-simple-rule-property-builder
-  ""
+  "Creates a  `CfnAlarmModel$SimpleRuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-simple-rule-property-builder (new CfnAlarmModel$SimpleRuleProperty$Builder) id config))
 
@@ -696,7 +796,12 @@
 
 
 (defn cfn-alarm-model-sns-property-builder
-  ""
+  "Creates a  `CfnAlarmModel$SnsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-sns-property-builder (new CfnAlarmModel$SnsProperty$Builder) id config))
 
@@ -725,7 +830,12 @@
 
 
 (defn cfn-alarm-model-sqs-property-builder
-  ""
+  "Creates a  `CfnAlarmModel$SqsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-alarm-model-sqs-property-builder (new CfnAlarmModel$SqsProperty$Builder) id config))
 
@@ -784,7 +894,12 @@
 
 
 (defn cfn-detector-model-action-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$ActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-action-property-builder (new CfnDetectorModel$ActionProperty$Builder) id config))
 
@@ -810,7 +925,12 @@
 
 
 (defn cfn-detector-model-asset-property-timestamp-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$AssetPropertyTimestampProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-asset-property-timestamp-property-builder (new CfnDetectorModel$AssetPropertyTimestampProperty$Builder) id config))
 
@@ -839,7 +959,12 @@
 
 
 (defn cfn-detector-model-asset-property-value-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$AssetPropertyValueProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-asset-property-value-property-builder (new CfnDetectorModel$AssetPropertyValueProperty$Builder) id config))
 
@@ -871,7 +996,12 @@
 
 
 (defn cfn-detector-model-asset-property-variant-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$AssetPropertyVariantProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-asset-property-variant-property-builder (new CfnDetectorModel$AssetPropertyVariantProperty$Builder) id config))
 
@@ -912,7 +1042,12 @@
 
 
 (defn cfn-detector-model-builder
-  ""
+  "Creates a  `CfnDetectorModel$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-detector-model-builder (CfnDetectorModel$Builder/create scope (name id)) id config))
 
@@ -935,7 +1070,12 @@
 
 
 (defn cfn-detector-model-clear-timer-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$ClearTimerProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-clear-timer-property-builder (new CfnDetectorModel$ClearTimerProperty$Builder) id config))
 
@@ -961,7 +1101,12 @@
 
 
 (defn cfn-detector-model-detector-model-definition-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$DetectorModelDefinitionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-detector-model-definition-property-builder (new CfnDetectorModel$DetectorModelDefinitionProperty$Builder) id config))
 
@@ -987,7 +1132,12 @@
 
 
 (defn cfn-detector-model-dynamo-d-bv2-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$DynamoDBv2Property$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-dynamo-d-bv2-property-builder (new CfnDetectorModel$DynamoDBv2Property$Builder) id config))
 
@@ -1037,7 +1187,12 @@
 
 
 (defn cfn-detector-model-dynamo-db-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$DynamoDBProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-dynamo-db-property-builder (new CfnDetectorModel$DynamoDBProperty$Builder) id config))
 
@@ -1066,7 +1221,12 @@
 
 
 (defn cfn-detector-model-event-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$EventProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-event-property-builder (new CfnDetectorModel$EventProperty$Builder) id config))
 
@@ -1095,7 +1255,12 @@
 
 
 (defn cfn-detector-model-firehose-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$FirehoseProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-firehose-property-builder (new CfnDetectorModel$FirehoseProperty$Builder) id config))
 
@@ -1121,7 +1286,12 @@
 
 
 (defn cfn-detector-model-iot-events-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$IotEventsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-iot-events-property-builder (new CfnDetectorModel$IotEventsProperty$Builder) id config))
 
@@ -1156,7 +1326,12 @@
 
 
 (defn cfn-detector-model-iot-site-wise-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$IotSiteWiseProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-iot-site-wise-property-builder (new CfnDetectorModel$IotSiteWiseProperty$Builder) id config))
 
@@ -1182,7 +1357,12 @@
 
 
 (defn cfn-detector-model-iot-topic-publish-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$IotTopicPublishProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-iot-topic-publish-property-builder (new CfnDetectorModel$IotTopicPublishProperty$Builder) id config))
 
@@ -1208,7 +1388,12 @@
 
 
 (defn cfn-detector-model-lambda-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$LambdaProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-lambda-property-builder (new CfnDetectorModel$LambdaProperty$Builder) id config))
 
@@ -1231,7 +1416,12 @@
 
 
 (defn cfn-detector-model-on-enter-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$OnEnterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-on-enter-property-builder (new CfnDetectorModel$OnEnterProperty$Builder) id config))
 
@@ -1254,7 +1444,12 @@
 
 
 (defn cfn-detector-model-on-exit-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$OnExitProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-on-exit-property-builder (new CfnDetectorModel$OnExitProperty$Builder) id config))
 
@@ -1280,7 +1475,12 @@
 
 
 (defn cfn-detector-model-on-input-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$OnInputProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-on-input-property-builder (new CfnDetectorModel$OnInputProperty$Builder) id config))
 
@@ -1306,7 +1506,12 @@
 
 
 (defn cfn-detector-model-payload-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$PayloadProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-payload-property-builder (new CfnDetectorModel$PayloadProperty$Builder) id config))
 
@@ -1347,7 +1552,12 @@
 
 
 (defn cfn-detector-model-props-builder
-  ""
+  "Creates a  `CfnDetectorModelProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-props-builder (new CfnDetectorModelProps$Builder) id config))
 
@@ -1370,7 +1580,12 @@
 
 
 (defn cfn-detector-model-reset-timer-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$ResetTimerProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-reset-timer-property-builder (new CfnDetectorModel$ResetTimerProperty$Builder) id config))
 
@@ -1399,7 +1614,12 @@
 
 
 (defn cfn-detector-model-set-timer-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$SetTimerProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-set-timer-property-builder (new CfnDetectorModel$SetTimerProperty$Builder) id config))
 
@@ -1425,7 +1645,12 @@
 
 
 (defn cfn-detector-model-set-variable-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$SetVariableProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-set-variable-property-builder (new CfnDetectorModel$SetVariableProperty$Builder) id config))
 
@@ -1451,7 +1676,12 @@
 
 
 (defn cfn-detector-model-sns-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$SnsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-sns-property-builder (new CfnDetectorModel$SnsProperty$Builder) id config))
 
@@ -1480,7 +1710,12 @@
 
 
 (defn cfn-detector-model-sqs-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$SqsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-sqs-property-builder (new CfnDetectorModel$SqsProperty$Builder) id config))
 
@@ -1512,7 +1747,12 @@
 
 
 (defn cfn-detector-model-state-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$StateProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-state-property-builder (new CfnDetectorModel$StateProperty$Builder) id config))
 
@@ -1544,7 +1784,12 @@
 
 
 (defn cfn-detector-model-transition-event-property-builder
-  ""
+  "Creates a  `CfnDetectorModel$TransitionEventProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-detector-model-transition-event-property-builder (new CfnDetectorModel$TransitionEventProperty$Builder) id config))
 
@@ -1567,7 +1812,12 @@
 
 
 (defn cfn-input-attribute-property-builder
-  ""
+  "Creates a  `CfnInput$AttributeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-input-attribute-property-builder (new CfnInput$AttributeProperty$Builder) id config))
 
@@ -1599,7 +1849,12 @@
 
 
 (defn cfn-input-builder
-  ""
+  "Creates a  `CfnInput$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-input-builder (CfnInput$Builder/create scope (name id)) id config))
 
@@ -1622,7 +1877,12 @@
 
 
 (defn cfn-input-input-definition-property-builder
-  ""
+  "Creates a  `CfnInput$InputDefinitionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-input-input-definition-property-builder (new CfnInput$InputDefinitionProperty$Builder) id config))
 
@@ -1654,6 +1914,11 @@
 
 
 (defn cfn-input-props-builder
-  ""
+  "Creates a  `CfnInputProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-input-props-builder (new CfnInputProps$Builder) id config))

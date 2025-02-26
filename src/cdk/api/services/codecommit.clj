@@ -110,7 +110,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-repository-builder
-  ""
+  "Creates a  `CfnRepository$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-repository-builder (CfnRepository$Builder/create scope (name id)) id config))
 
@@ -136,7 +141,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-repository-code-property-builder
-  ""
+  "Creates a  `CfnRepository$CodeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-repository-code-property-builder (new CfnRepository$CodeProperty$Builder) id config))
 
@@ -174,7 +184,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-repository-props-builder
-  ""
+  "Creates a  `CfnRepositoryProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-repository-props-builder (new CfnRepositoryProps$Builder) id config))
 
@@ -209,7 +224,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-repository-repository-trigger-property-builder
-  ""
+  "Creates a  `CfnRepository$RepositoryTriggerProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-repository-repository-trigger-property-builder (new CfnRepository$RepositoryTriggerProperty$Builder) id config))
 
@@ -238,7 +258,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-repository-s3-property-builder
-  ""
+  "Creates a  `CfnRepository$S3Property$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-repository-s3-property-builder (new CfnRepository$S3Property$Builder) id config))
 
@@ -261,7 +286,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-config-builder
-  ""
+  "Creates a  `CodeConfig$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-code-config-builder (new CodeConfig$Builder) id config))
 
@@ -299,7 +329,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn on-commit-options-builder
-  ""
+  "Creates a  `OnCommitOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-on-commit-options-builder (new OnCommitOptions$Builder) id config))
 
@@ -331,7 +366,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn repository-builder
-  ""
+  "Creates a  `Repository$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-repository-builder (Repository$Builder/create scope (name id)) id config))
 
@@ -363,7 +403,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn repository-notify-on-options-builder
-  ""
+  "Creates a  `RepositoryNotifyOnOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-repository-notify-on-options-builder (new RepositoryNotifyOnOptions$Builder) id config))
 
@@ -395,7 +440,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn repository-props-builder
-  ""
+  "Creates a  `RepositoryProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-repository-props-builder (new RepositoryProps$Builder) id config))
 
@@ -427,6 +477,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn repository-trigger-options-builder
-  ""
+  "Creates a  `RepositoryTriggerOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-repository-trigger-options-builder (new RepositoryTriggerOptions$Builder) id config))

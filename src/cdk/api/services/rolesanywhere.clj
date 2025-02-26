@@ -42,7 +42,12 @@
 
 
 (defn cfn-crl-builder
-  ""
+  "Creates a  `CfnCRL$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-crl-builder (CfnCRL$Builder/create scope (name id)) id config))
 
@@ -77,7 +82,12 @@
 
 
 (defn cfn-crl-props-builder
-  ""
+  "Creates a  `CfnCRLProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-crl-props-builder (new CfnCRLProps$Builder) id config))
 
@@ -121,7 +131,12 @@
 
 
 (defn cfn-profile-builder
-  ""
+  "Creates a  `CfnProfile$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-profile-builder (CfnProfile$Builder/create scope (name id)) id config))
 
@@ -165,7 +180,12 @@
 
 
 (defn cfn-profile-props-builder
-  ""
+  "Creates a  `CfnProfileProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-profile-props-builder (new CfnProfileProps$Builder) id config))
 
@@ -200,7 +220,12 @@
 
 
 (defn cfn-trust-anchor-builder
-  ""
+  "Creates a  `CfnTrustAnchor$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-trust-anchor-builder (CfnTrustAnchor$Builder/create scope (name id)) id config))
 
@@ -232,7 +257,12 @@
 
 
 (defn cfn-trust-anchor-notification-setting-property-builder
-  ""
+  "Creates a  `CfnTrustAnchor$NotificationSettingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-trust-anchor-notification-setting-property-builder (new CfnTrustAnchor$NotificationSettingProperty$Builder) id config))
 
@@ -267,7 +297,12 @@
 
 
 (defn cfn-trust-anchor-props-builder
-  ""
+  "Creates a  `CfnTrustAnchorProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-trust-anchor-props-builder (new CfnTrustAnchorProps$Builder) id config))
 
@@ -293,7 +328,12 @@
 
 
 (defn cfn-trust-anchor-source-data-property-builder
-  ""
+  "Creates a  `CfnTrustAnchor$SourceDataProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-trust-anchor-source-data-property-builder (new CfnTrustAnchor$SourceDataProperty$Builder) id config))
 
@@ -319,6 +359,11 @@
 
 
 (defn cfn-trust-anchor-source-property-builder
-  ""
+  "Creates a  `CfnTrustAnchor$SourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-trust-anchor-source-property-builder (new CfnTrustAnchor$SourceProperty$Builder) id config))

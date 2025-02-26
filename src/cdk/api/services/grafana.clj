@@ -44,7 +44,12 @@
 
 
 (defn cfn-workspace-assertion-attributes-property-builder
-  ""
+  "Creates a  `CfnWorkspace$AssertionAttributesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-workspace-assertion-attributes-property-builder (new CfnWorkspace$AssertionAttributesProperty$Builder) id config))
 
@@ -115,7 +120,12 @@
 
 
 (defn cfn-workspace-builder
-  ""
+  "Creates a  `CfnWorkspace$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-workspace-builder (CfnWorkspace$Builder/create scope (name id)) id config))
 
@@ -141,7 +151,12 @@
 
 
 (defn cfn-workspace-idp-metadata-property-builder
-  ""
+  "Creates a  `CfnWorkspace$IdpMetadataProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-workspace-idp-metadata-property-builder (new CfnWorkspace$IdpMetadataProperty$Builder) id config))
 
@@ -167,7 +182,12 @@
 
 
 (defn cfn-workspace-network-access-control-property-builder
-  ""
+  "Creates a  `CfnWorkspace$NetworkAccessControlProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-workspace-network-access-control-property-builder (new CfnWorkspace$NetworkAccessControlProperty$Builder) id config))
 
@@ -238,7 +258,12 @@
 
 
 (defn cfn-workspace-props-builder
-  ""
+  "Creates a  `CfnWorkspaceProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-workspace-props-builder (new CfnWorkspaceProps$Builder) id config))
 
@@ -264,7 +289,12 @@
 
 
 (defn cfn-workspace-role-values-property-builder
-  ""
+  "Creates a  `CfnWorkspace$RoleValuesProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-workspace-role-values-property-builder (new CfnWorkspace$RoleValuesProperty$Builder) id config))
 
@@ -299,7 +329,12 @@
 
 
 (defn cfn-workspace-saml-configuration-property-builder
-  ""
+  "Creates a  `CfnWorkspace$SamlConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-workspace-saml-configuration-property-builder (new CfnWorkspace$SamlConfigurationProperty$Builder) id config))
 
@@ -325,6 +360,11 @@
 
 
 (defn cfn-workspace-vpc-configuration-property-builder
-  ""
+  "Creates a  `CfnWorkspace$VpcConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-workspace-vpc-configuration-property-builder (new CfnWorkspace$VpcConfigurationProperty$Builder) id config))

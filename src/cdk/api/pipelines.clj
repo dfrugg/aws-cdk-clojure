@@ -102,7 +102,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn add-stage-opts-builder
-  ""
+  "Creates a  `AddStageOpts$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-add-stage-opts-builder (new AddStageOpts$Builder) id config))
 
@@ -152,7 +157,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-build-options-builder
-  ""
+  "Creates a  `CodeBuildOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-code-build-options-builder (new CodeBuildOptions$Builder) id config))
 
@@ -231,6 +241,20 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn code-build-step-builder
+  "Creates a  `CodeBuildStep$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
+
+
+__Create Form:__ ____[java.lang.String]___
+| Argument | DataType | Description |
+|---|---|---|
+
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
+  [id config]
+  (build-code-build-step-builder (CodeBuildStep$Builder/create (name id)) id config))
+
+
 (defn build-code-build-step-props-builder
   "The build-code-build-step-props-builder function updates a CodeBuildStepProps$Builder instance using the provided configuration.
   The function takes the CodeBuildStepProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -306,7 +330,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-build-step-props-builder
-  ""
+  "Creates a  `CodeBuildStepProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-code-build-step-props-builder (new CodeBuildStepProps$Builder) id config))
 
@@ -338,7 +367,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-commit-source-options-builder
-  ""
+  "Creates a  `CodeCommitSourceOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-code-commit-source-options-builder (new CodeCommitSourceOptions$Builder) id config))
 
@@ -364,7 +398,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-pipeline-action-factory-result-builder
-  ""
+  "Creates a  `CodePipelineActionFactoryResult$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-code-pipeline-action-factory-result-builder (new CodePipelineActionFactoryResult$Builder) id config))
 
@@ -444,7 +483,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-pipeline-builder
-  ""
+  "Creates a  `CodePipeline$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-code-pipeline-builder (CodePipeline$Builder/create scope (name id)) id config))
 
@@ -524,7 +568,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn code-pipeline-props-builder
-  ""
+  "Creates a  `CodePipelineProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-code-pipeline-props-builder (new CodePipelineProps$Builder) id config))
 
@@ -547,6 +596,20 @@ function on the data with the provided namespace id and item-key.  The found val
   (when-let [data (lookup-entry config id :stage)]
     (. builder stage data))
   (.build builder))
+
+
+(defn confirm-permissions-broadening-builder
+  "Creates a  `ConfirmPermissionsBroadening$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
+
+
+__Create Form:__ ____[java.lang.String]___
+| Argument | DataType | Description |
+|---|---|---|
+
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
+  [id config]
+  (build-confirm-permissions-broadening-builder (ConfirmPermissionsBroadening$Builder/create (name id)) id config))
 
 
 (defn build-connection-source-options-builder
@@ -576,7 +639,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn connection-source-options-builder
-  ""
+  "Creates a  `ConnectionSourceOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-connection-source-options-builder (new ConnectionSourceOptions$Builder) id config))
 
@@ -602,7 +670,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ecr-docker-credential-options-builder
-  ""
+  "Creates a  `EcrDockerCredentialOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-ecr-docker-credential-options-builder (new EcrDockerCredentialOptions$Builder) id config))
 
@@ -628,7 +701,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn ecr-source-options-builder
-  ""
+  "Creates a  `ECRSourceOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-ecr-source-options-builder (new ECRSourceOptions$Builder) id config))
 
@@ -660,7 +738,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn external-docker-credential-options-builder
-  ""
+  "Creates a  `ExternalDockerCredentialOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-external-docker-credential-options-builder (new ExternalDockerCredentialOptions$Builder) id config))
 
@@ -686,7 +769,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn file-set-location-builder
-  ""
+  "Creates a  `FileSetLocation$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-file-set-location-builder (new FileSetLocation$Builder) id config))
 
@@ -715,7 +803,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn git-hub-source-options-builder
-  ""
+  "Creates a  `GitHubSourceOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-git-hub-source-options-builder (new GitHubSourceOptions$Builder) id config))
 
@@ -737,6 +830,20 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn manual-approval-step-builder
+  "Creates a  `ManualApprovalStep$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
+
+
+__Create Form:__ ____[java.lang.String]___
+| Argument | DataType | Description |
+|---|---|---|
+
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
+  [id config]
+  (build-manual-approval-step-builder (ManualApprovalStep$Builder/create (name id)) id config))
+
+
 (defn build-manual-approval-step-props-builder
   "The build-manual-approval-step-props-builder function updates a ManualApprovalStepProps$Builder instance using the provided configuration.
   The function takes the ManualApprovalStepProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -755,7 +862,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn manual-approval-step-props-builder
-  ""
+  "Creates a  `ManualApprovalStepProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-manual-approval-step-props-builder (new ManualApprovalStepProps$Builder) id config))
 
@@ -781,7 +893,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn permissions-broadening-check-props-builder
-  ""
+  "Creates a  `PermissionsBroadeningCheckProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-permissions-broadening-check-props-builder (new PermissionsBroadeningCheckProps$Builder) id config))
 
@@ -804,7 +921,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn pipeline-base-props-builder
-  ""
+  "Creates a  `PipelineBaseProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-pipeline-base-props-builder (new PipelineBaseProps$Builder) id config))
 
@@ -854,7 +976,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn produce-action-options-builder
-  ""
+  "Creates a  `ProduceActionOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-produce-action-options-builder (new ProduceActionOptions$Builder) id config))
 
@@ -883,7 +1010,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn s3-source-options-builder
-  ""
+  "Creates a  `S3SourceOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-s3-source-options-builder (new S3SourceOptions$Builder) id config))
 
@@ -923,6 +1055,20 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn shell-step-builder
+  "Creates a  `ShellStep$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
+
+
+__Create Form:__ ____[java.lang.String]___
+| Argument | DataType | Description |
+|---|---|---|
+
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
+  [id config]
+  (build-shell-step-builder (ShellStep$Builder/create (name id)) id config))
+
+
 (defn build-shell-step-props-builder
   "The build-shell-step-props-builder function updates a ShellStepProps$Builder instance using the provided configuration.
   The function takes the ShellStepProps$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -959,7 +1105,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn shell-step-props-builder
-  ""
+  "Creates a  `ShellStepProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-shell-step-props-builder (new ShellStepProps$Builder) id config))
 
@@ -997,7 +1148,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn stack-asset-builder
-  ""
+  "Creates a  `StackAsset$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-stack-asset-builder (new StackAsset$Builder) id config))
 
@@ -1050,7 +1206,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn stack-deployment-props-builder
-  ""
+  "Creates a  `StackDeploymentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-stack-deployment-props-builder (new StackDeploymentProps$Builder) id config))
 
@@ -1082,7 +1243,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn stack-steps-builder
-  ""
+  "Creates a  `StackSteps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-stack-steps-builder (new StackSteps$Builder) id config))
 
@@ -1114,7 +1280,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn stage-deployment-props-builder
-  ""
+  "Creates a  `StageDeploymentProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-stage-deployment-props-builder (new StageDeploymentProps$Builder) id config))
 
@@ -1139,6 +1310,20 @@ function on the data with the provided namespace id and item-key.  The found val
   (.build builder))
 
 
+(defn wave-builder
+  "Creates a  `Wave$Builder` instance using provided forms, applies the data configuration, then builds it.  Takes the following arguments: 
+
+
+__Create Form:__ ____[java.lang.String]___
+| Argument | DataType | Description |
+|---|---|---|
+
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
+  [id config]
+  (build-wave-builder (Wave$Builder/create (name id)) id config))
+
+
 (defn build-wave-options-builder
   "The build-wave-options-builder function updates a WaveOptions$Builder instance using the provided configuration.
   The function takes the WaveOptions$Builder instance, an optional namespace to use when looking up a value in the configuration,
@@ -1160,7 +1345,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn wave-options-builder
-  ""
+  "Creates a  `WaveOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-wave-options-builder (new WaveOptions$Builder) id config))
 
@@ -1186,6 +1376,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn wave-props-builder
-  ""
+  "Creates a  `WaveProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-wave-props-builder (new WaveProps$Builder) id config))

@@ -51,7 +51,12 @@
 
 
 (defn cfn-connector-apache-kafka-cluster-property-builder
-  ""
+  "Creates a  `CfnConnector$ApacheKafkaClusterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-connector-apache-kafka-cluster-property-builder (new CfnConnector$ApacheKafkaClusterProperty$Builder) id config))
 
@@ -86,7 +91,12 @@
 
 
 (defn cfn-connector-auto-scaling-property-builder
-  ""
+  "Creates a  `CfnConnector$AutoScalingProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-connector-auto-scaling-property-builder (new CfnConnector$AutoScalingProperty$Builder) id config))
 
@@ -145,7 +155,12 @@
 
 
 (defn cfn-connector-builder
-  ""
+  "Creates a  `CfnConnector$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-connector-builder (CfnConnector$Builder/create scope (name id)) id config))
 
@@ -171,7 +186,12 @@
 
 
 (defn cfn-connector-capacity-property-builder
-  ""
+  "Creates a  `CfnConnector$CapacityProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-connector-capacity-property-builder (new CfnConnector$CapacityProperty$Builder) id config))
 
@@ -197,7 +217,12 @@
 
 
 (defn cfn-connector-cloud-watch-logs-log-delivery-property-builder
-  ""
+  "Creates a  `CfnConnector$CloudWatchLogsLogDeliveryProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-connector-cloud-watch-logs-log-delivery-property-builder (new CfnConnector$CloudWatchLogsLogDeliveryProperty$Builder) id config))
 
@@ -223,7 +248,12 @@
 
 
 (defn cfn-connector-custom-plugin-property-builder
-  ""
+  "Creates a  `CfnConnector$CustomPluginProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-connector-custom-plugin-property-builder (new CfnConnector$CustomPluginProperty$Builder) id config))
 
@@ -249,7 +279,12 @@
 
 
 (defn cfn-connector-firehose-log-delivery-property-builder
-  ""
+  "Creates a  `CfnConnector$FirehoseLogDeliveryProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-connector-firehose-log-delivery-property-builder (new CfnConnector$FirehoseLogDeliveryProperty$Builder) id config))
 
@@ -272,7 +307,12 @@
 
 
 (defn cfn-connector-kafka-cluster-client-authentication-property-builder
-  ""
+  "Creates a  `CfnConnector$KafkaClusterClientAuthenticationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-connector-kafka-cluster-client-authentication-property-builder (new CfnConnector$KafkaClusterClientAuthenticationProperty$Builder) id config))
 
@@ -295,7 +335,12 @@
 
 
 (defn cfn-connector-kafka-cluster-encryption-in-transit-property-builder
-  ""
+  "Creates a  `CfnConnector$KafkaClusterEncryptionInTransitProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-connector-kafka-cluster-encryption-in-transit-property-builder (new CfnConnector$KafkaClusterEncryptionInTransitProperty$Builder) id config))
 
@@ -318,7 +363,12 @@
 
 
 (defn cfn-connector-kafka-cluster-property-builder
-  ""
+  "Creates a  `CfnConnector$KafkaClusterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-connector-kafka-cluster-property-builder (new CfnConnector$KafkaClusterProperty$Builder) id config))
 
@@ -341,7 +391,12 @@
 
 
 (defn cfn-connector-log-delivery-property-builder
-  ""
+  "Creates a  `CfnConnector$LogDeliveryProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-connector-log-delivery-property-builder (new CfnConnector$LogDeliveryProperty$Builder) id config))
 
@@ -364,7 +419,12 @@
 
 
 (defn cfn-connector-plugin-property-builder
-  ""
+  "Creates a  `CfnConnector$PluginProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-connector-plugin-property-builder (new CfnConnector$PluginProperty$Builder) id config))
 
@@ -423,7 +483,12 @@
 
 
 (defn cfn-connector-props-builder
-  ""
+  "Creates a  `CfnConnectorProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-connector-props-builder (new CfnConnectorProps$Builder) id config))
 
@@ -449,7 +514,12 @@
 
 
 (defn cfn-connector-provisioned-capacity-property-builder
-  ""
+  "Creates a  `CfnConnector$ProvisionedCapacityProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-connector-provisioned-capacity-property-builder (new CfnConnector$ProvisionedCapacityProperty$Builder) id config))
 
@@ -478,7 +548,12 @@
 
 
 (defn cfn-connector-s3-log-delivery-property-builder
-  ""
+  "Creates a  `CfnConnector$S3LogDeliveryProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-connector-s3-log-delivery-property-builder (new CfnConnector$S3LogDeliveryProperty$Builder) id config))
 
@@ -501,7 +576,12 @@
 
 
 (defn cfn-connector-scale-in-policy-property-builder
-  ""
+  "Creates a  `CfnConnector$ScaleInPolicyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-connector-scale-in-policy-property-builder (new CfnConnector$ScaleInPolicyProperty$Builder) id config))
 
@@ -524,7 +604,12 @@
 
 
 (defn cfn-connector-scale-out-policy-property-builder
-  ""
+  "Creates a  `CfnConnector$ScaleOutPolicyProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-connector-scale-out-policy-property-builder (new CfnConnector$ScaleOutPolicyProperty$Builder) id config))
 
@@ -550,7 +635,12 @@
 
 
 (defn cfn-connector-vpc-property-builder
-  ""
+  "Creates a  `CfnConnector$VpcProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-connector-vpc-property-builder (new CfnConnector$VpcProperty$Builder) id config))
 
@@ -576,7 +666,12 @@
 
 
 (defn cfn-connector-worker-configuration-property-builder
-  ""
+  "Creates a  `CfnConnector$WorkerConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-connector-worker-configuration-property-builder (new CfnConnector$WorkerConfigurationProperty$Builder) id config))
 
@@ -605,7 +700,12 @@
 
 
 (defn cfn-connector-worker-log-delivery-property-builder
-  ""
+  "Creates a  `CfnConnector$WorkerLogDeliveryProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-connector-worker-log-delivery-property-builder (new CfnConnector$WorkerLogDeliveryProperty$Builder) id config))
 
@@ -640,7 +740,12 @@
 
 
 (defn cfn-custom-plugin-builder
-  ""
+  "Creates a  `CfnCustomPlugin$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-custom-plugin-builder (CfnCustomPlugin$Builder/create scope (name id)) id config))
 
@@ -666,7 +771,12 @@
 
 
 (defn cfn-custom-plugin-custom-plugin-file-description-property-builder
-  ""
+  "Creates a  `CfnCustomPlugin$CustomPluginFileDescriptionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-custom-plugin-custom-plugin-file-description-property-builder (new CfnCustomPlugin$CustomPluginFileDescriptionProperty$Builder) id config))
 
@@ -689,7 +799,12 @@
 
 
 (defn cfn-custom-plugin-custom-plugin-location-property-builder
-  ""
+  "Creates a  `CfnCustomPlugin$CustomPluginLocationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-custom-plugin-custom-plugin-location-property-builder (new CfnCustomPlugin$CustomPluginLocationProperty$Builder) id config))
 
@@ -724,7 +839,12 @@
 
 
 (defn cfn-custom-plugin-props-builder
-  ""
+  "Creates a  `CfnCustomPluginProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-custom-plugin-props-builder (new CfnCustomPluginProps$Builder) id config))
 
@@ -753,7 +873,12 @@
 
 
 (defn cfn-custom-plugin-s3-location-property-builder
-  ""
+  "Creates a  `CfnCustomPlugin$S3LocationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-custom-plugin-s3-location-property-builder (new CfnCustomPlugin$S3LocationProperty$Builder) id config))
 
@@ -785,7 +910,12 @@
 
 
 (defn cfn-worker-configuration-builder
-  ""
+  "Creates a  `CfnWorkerConfiguration$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-worker-configuration-builder (CfnWorkerConfiguration$Builder/create scope (name id)) id config))
 
@@ -817,6 +947,11 @@
 
 
 (defn cfn-worker-configuration-props-builder
-  ""
+  "Creates a  `CfnWorkerConfigurationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-worker-configuration-props-builder (new CfnWorkerConfigurationProps$Builder) id config))

@@ -30,7 +30,12 @@
 
 
 (defn cfn-graph-builder
-  ""
+  "Creates a  `CfnGraph$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-graph-builder (CfnGraph$Builder/create scope (name id)) id config))
 
@@ -56,7 +61,12 @@
 
 
 (defn cfn-graph-props-builder
-  ""
+  "Creates a  `CfnGraphProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-graph-props-builder (new CfnGraphProps$Builder) id config))
 
@@ -91,7 +101,12 @@
 
 
 (defn cfn-member-invitation-builder
-  ""
+  "Creates a  `CfnMemberInvitation$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-member-invitation-builder (CfnMemberInvitation$Builder/create scope (name id)) id config))
 
@@ -126,7 +141,12 @@
 
 
 (defn cfn-member-invitation-props-builder
-  ""
+  "Creates a  `CfnMemberInvitationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-member-invitation-props-builder (new CfnMemberInvitationProps$Builder) id config))
 
@@ -149,7 +169,12 @@
 
 
 (defn cfn-organization-admin-builder
-  ""
+  "Creates a  `CfnOrganizationAdmin$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-organization-admin-builder (CfnOrganizationAdmin$Builder/create scope (name id)) id config))
 
@@ -172,6 +197,11 @@
 
 
 (defn cfn-organization-admin-props-builder
-  ""
+  "Creates a  `CfnOrganizationAdminProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-organization-admin-props-builder (new CfnOrganizationAdminProps$Builder) id config))

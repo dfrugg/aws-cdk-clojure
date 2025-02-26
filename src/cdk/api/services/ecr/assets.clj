@@ -33,7 +33,12 @@
 
 
 (defn docker-cache-option-builder
-  ""
+  "Creates a  `DockerCacheOption$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-docker-cache-option-builder (new DockerCacheOption$Builder) id config))
 
@@ -107,7 +112,12 @@
 
 
 (defn docker-image-asset-builder
-  ""
+  "Creates a  `DockerImageAsset$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-docker-image-asset-builder (DockerImageAsset$Builder/create scope (name id)) id config))
 
@@ -157,7 +167,12 @@
 
 
 (defn docker-image-asset-invalidation-options-builder
-  ""
+  "Creates a  `DockerImageAssetInvalidationOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-docker-image-asset-invalidation-options-builder (new DockerImageAssetInvalidationOptions$Builder) id config))
 
@@ -228,7 +243,12 @@
 
 
 (defn docker-image-asset-options-builder
-  ""
+  "Creates a  `DockerImageAssetOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-docker-image-asset-options-builder (new DockerImageAssetOptions$Builder) id config))
 
@@ -302,7 +322,12 @@
 
 
 (defn docker-image-asset-props-builder
-  ""
+  "Creates a  `DockerImageAssetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-docker-image-asset-props-builder (new DockerImageAssetProps$Builder) id config))
 
@@ -325,7 +350,12 @@
 
 
 (defn tarball-image-asset-builder
-  ""
+  "Creates a  `TarballImageAsset$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-tarball-image-asset-builder (TarballImageAsset$Builder/create scope (name id)) id config))
 
@@ -348,6 +378,11 @@
 
 
 (defn tarball-image-asset-props-builder
-  ""
+  "Creates a  `TarballImageAssetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-tarball-image-asset-props-builder (new TarballImageAssetProps$Builder) id config))

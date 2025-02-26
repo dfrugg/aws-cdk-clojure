@@ -213,7 +213,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn adjustment-tier-builder
-  ""
+  "Creates a  `AdjustmentTier$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-adjustment-tier-builder (new AdjustmentTier$Builder) id config))
 
@@ -251,7 +256,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn base-scalable-attribute-props-builder
-  ""
+  "Creates a  `BaseScalableAttributeProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-base-scalable-attribute-props-builder (new BaseScalableAttributeProps$Builder) id config))
 
@@ -283,7 +293,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn base-target-tracking-props-builder
-  ""
+  "Creates a  `BaseTargetTrackingProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-base-target-tracking-props-builder (new BaseTargetTrackingProps$Builder) id config))
 
@@ -327,7 +342,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn basic-step-scaling-policy-props-builder
-  ""
+  "Creates a  `BasicStepScalingPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-basic-step-scaling-policy-props-builder (new BasicStepScalingPolicyProps$Builder) id config))
 
@@ -371,7 +391,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn basic-target-tracking-scaling-policy-props-builder
-  ""
+  "Creates a  `BasicTargetTrackingScalingPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-basic-target-tracking-scaling-policy-props-builder (new BasicTargetTrackingScalingPolicyProps$Builder) id config))
 
@@ -415,7 +440,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scalable-target-builder
-  ""
+  "Creates a  `CfnScalableTarget$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-scalable-target-builder (CfnScalableTarget$Builder/create scope (name id)) id config))
 
@@ -459,7 +489,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scalable-target-props-builder
-  ""
+  "Creates a  `CfnScalableTargetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scalable-target-props-builder (new CfnScalableTargetProps$Builder) id config))
 
@@ -485,7 +520,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scalable-target-scalable-target-action-property-builder
-  ""
+  "Creates a  `CfnScalableTarget$ScalableTargetActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scalable-target-scalable-target-action-property-builder (new CfnScalableTarget$ScalableTargetActionProperty$Builder) id config))
 
@@ -523,7 +563,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scalable-target-scheduled-action-property-builder
-  ""
+  "Creates a  `CfnScalableTarget$ScheduledActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scalable-target-scheduled-action-property-builder (new CfnScalableTarget$ScheduledActionProperty$Builder) id config))
 
@@ -552,7 +597,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scalable-target-suspended-state-property-builder
-  ""
+  "Creates a  `CfnScalableTarget$SuspendedStateProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scalable-target-suspended-state-property-builder (new CfnScalableTarget$SuspendedStateProperty$Builder) id config))
 
@@ -596,7 +646,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scaling-policy-builder
-  ""
+  "Creates a  `CfnScalingPolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-scaling-policy-builder (CfnScalingPolicy$Builder/create scope (name id)) id config))
 
@@ -634,7 +689,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scaling-policy-customized-metric-specification-property-builder
-  ""
+  "Creates a  `CfnScalingPolicy$CustomizedMetricSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-policy-customized-metric-specification-property-builder (new CfnScalingPolicy$CustomizedMetricSpecificationProperty$Builder) id config))
 
@@ -660,7 +720,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scaling-policy-metric-dimension-property-builder
-  ""
+  "Creates a  `CfnScalingPolicy$MetricDimensionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-policy-metric-dimension-property-builder (new CfnScalingPolicy$MetricDimensionProperty$Builder) id config))
 
@@ -686,7 +751,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scaling-policy-predefined-metric-specification-property-builder
-  ""
+  "Creates a  `CfnScalingPolicy$PredefinedMetricSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-policy-predefined-metric-specification-property-builder (new CfnScalingPolicy$PredefinedMetricSpecificationProperty$Builder) id config))
 
@@ -730,7 +800,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scaling-policy-props-builder
-  ""
+  "Creates a  `CfnScalingPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-policy-props-builder (new CfnScalingPolicyProps$Builder) id config))
 
@@ -759,7 +834,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scaling-policy-step-adjustment-property-builder
-  ""
+  "Creates a  `CfnScalingPolicy$StepAdjustmentProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-policy-step-adjustment-property-builder (new CfnScalingPolicy$StepAdjustmentProperty$Builder) id config))
 
@@ -794,7 +874,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scaling-policy-step-scaling-policy-configuration-property-builder
-  ""
+  "Creates a  `CfnScalingPolicy$StepScalingPolicyConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-policy-step-scaling-policy-configuration-property-builder (new CfnScalingPolicy$StepScalingPolicyConfigurationProperty$Builder) id config))
 
@@ -829,7 +914,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scaling-policy-target-tracking-metric-data-query-property-builder
-  ""
+  "Creates a  `CfnScalingPolicy$TargetTrackingMetricDataQueryProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-policy-target-tracking-metric-data-query-property-builder (new CfnScalingPolicy$TargetTrackingMetricDataQueryProperty$Builder) id config))
 
@@ -855,7 +945,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scaling-policy-target-tracking-metric-dimension-property-builder
-  ""
+  "Creates a  `CfnScalingPolicy$TargetTrackingMetricDimensionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-policy-target-tracking-metric-dimension-property-builder (new CfnScalingPolicy$TargetTrackingMetricDimensionProperty$Builder) id config))
 
@@ -884,7 +979,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scaling-policy-target-tracking-metric-property-builder
-  ""
+  "Creates a  `CfnScalingPolicy$TargetTrackingMetricProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-policy-target-tracking-metric-property-builder (new CfnScalingPolicy$TargetTrackingMetricProperty$Builder) id config))
 
@@ -913,7 +1013,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scaling-policy-target-tracking-metric-stat-property-builder
-  ""
+  "Creates a  `CfnScalingPolicy$TargetTrackingMetricStatProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-policy-target-tracking-metric-stat-property-builder (new CfnScalingPolicy$TargetTrackingMetricStatProperty$Builder) id config))
 
@@ -951,7 +1056,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cfn-scaling-policy-target-tracking-scaling-policy-configuration-property-builder
-  ""
+  "Creates a  `CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-policy-target-tracking-scaling-policy-configuration-property-builder (new CfnScalingPolicy$TargetTrackingScalingPolicyConfigurationProperty$Builder) id config))
 
@@ -989,7 +1099,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn cron-options-builder
-  ""
+  "Creates a  `CronOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cron-options-builder (new CronOptions$Builder) id config))
 
@@ -1015,7 +1130,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn enable-scaling-props-builder
-  ""
+  "Creates a  `EnableScalingProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-enable-scaling-props-builder (new EnableScalingProps$Builder) id config))
 
@@ -1053,7 +1173,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn scalable-target-builder
-  ""
+  "Creates a  `ScalableTarget$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-scalable-target-builder (ScalableTarget$Builder/create scope (name id)) id config))
 
@@ -1091,7 +1216,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn scalable-target-props-builder
-  ""
+  "Creates a  `ScalableTargetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-scalable-target-props-builder (new ScalableTargetProps$Builder) id config))
 
@@ -1120,7 +1250,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn scaling-interval-builder
-  ""
+  "Creates a  `ScalingInterval$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-scaling-interval-builder (new ScalingInterval$Builder) id config))
 
@@ -1158,7 +1293,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn scaling-schedule-builder
-  ""
+  "Creates a  `ScalingSchedule$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-scaling-schedule-builder (new ScalingSchedule$Builder) id config))
 
@@ -1196,7 +1336,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn step-scaling-action-builder
-  ""
+  "Creates a  `StepScalingAction$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-step-scaling-action-builder (StepScalingAction$Builder/create scope (name id)) id config))
 
@@ -1234,7 +1379,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn step-scaling-action-props-builder
-  ""
+  "Creates a  `StepScalingActionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-step-scaling-action-props-builder (new StepScalingActionProps$Builder) id config))
 
@@ -1281,7 +1431,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn step-scaling-policy-builder
-  ""
+  "Creates a  `StepScalingPolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-step-scaling-policy-builder (StepScalingPolicy$Builder/create scope (name id)) id config))
 
@@ -1328,7 +1483,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn step-scaling-policy-props-builder
-  ""
+  "Creates a  `StepScalingPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-step-scaling-policy-props-builder (new StepScalingPolicyProps$Builder) id config))
 
@@ -1375,7 +1535,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn target-tracking-scaling-policy-builder
-  ""
+  "Creates a  `TargetTrackingScalingPolicy$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-target-tracking-scaling-policy-builder (TargetTrackingScalingPolicy$Builder/create scope (name id)) id config))
 
@@ -1422,6 +1587,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn target-tracking-scaling-policy-props-builder
-  ""
+  "Creates a  `TargetTrackingScalingPolicyProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-target-tracking-scaling-policy-props-builder (new TargetTrackingScalingPolicyProps$Builder) id config))

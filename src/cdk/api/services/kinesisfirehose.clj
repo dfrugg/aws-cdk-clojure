@@ -76,7 +76,12 @@
 
 
 (defn cfn-delivery-stream-amazon-open-search-serverless-buffering-hints-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$AmazonOpenSearchServerlessBufferingHintsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-amazon-open-search-serverless-buffering-hints-property-builder (new CfnDeliveryStream$AmazonOpenSearchServerlessBufferingHintsProperty$Builder) id config))
 
@@ -126,7 +131,12 @@
 
 
 (defn cfn-delivery-stream-amazon-open-search-serverless-destination-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$AmazonOpenSearchServerlessDestinationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-amazon-open-search-serverless-destination-configuration-property-builder (new CfnDeliveryStream$AmazonOpenSearchServerlessDestinationConfigurationProperty$Builder) id config))
 
@@ -149,7 +159,12 @@
 
 
 (defn cfn-delivery-stream-amazon-open-search-serverless-retry-options-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$AmazonOpenSearchServerlessRetryOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-amazon-open-search-serverless-retry-options-property-builder (new CfnDeliveryStream$AmazonOpenSearchServerlessRetryOptionsProperty$Builder) id config))
 
@@ -175,7 +190,12 @@
 
 
 (defn cfn-delivery-stream-amazonopensearchservice-buffering-hints-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$AmazonopensearchserviceBufferingHintsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-amazonopensearchservice-buffering-hints-property-builder (new CfnDeliveryStream$AmazonopensearchserviceBufferingHintsProperty$Builder) id config))
 
@@ -237,7 +257,12 @@
 
 
 (defn cfn-delivery-stream-amazonopensearchservice-destination-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$AmazonopensearchserviceDestinationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-amazonopensearchservice-destination-configuration-property-builder (new CfnDeliveryStream$AmazonopensearchserviceDestinationConfigurationProperty$Builder) id config))
 
@@ -260,7 +285,12 @@
 
 
 (defn cfn-delivery-stream-amazonopensearchservice-retry-options-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$AmazonopensearchserviceRetryOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-amazonopensearchservice-retry-options-property-builder (new CfnDeliveryStream$AmazonopensearchserviceRetryOptionsProperty$Builder) id config))
 
@@ -286,7 +316,12 @@
 
 
 (defn cfn-delivery-stream-authentication-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$AuthenticationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-authentication-configuration-property-builder (new CfnDeliveryStream$AuthenticationConfigurationProperty$Builder) id config))
 
@@ -312,7 +347,12 @@
 
 
 (defn cfn-delivery-stream-buffering-hints-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$BufferingHintsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-buffering-hints-property-builder (new CfnDeliveryStream$BufferingHintsProperty$Builder) id config))
 
@@ -377,7 +417,12 @@
 
 
 (defn cfn-delivery-stream-builder
-  ""
+  "Creates a  `CfnDeliveryStream$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-delivery-stream-builder (CfnDeliveryStream$Builder/create scope (name id)) id config))
 
@@ -406,7 +451,12 @@
 
 
 (defn cfn-delivery-stream-cloud-watch-logging-options-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$CloudWatchLoggingOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-cloud-watch-logging-options-property-builder (new CfnDeliveryStream$CloudWatchLoggingOptionsProperty$Builder) id config))
 
@@ -435,7 +485,12 @@
 
 
 (defn cfn-delivery-stream-copy-command-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$CopyCommandProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-copy-command-property-builder (new CfnDeliveryStream$CopyCommandProperty$Builder) id config))
 
@@ -467,7 +522,12 @@
 
 
 (defn cfn-delivery-stream-data-format-conversion-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$DataFormatConversionConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-data-format-conversion-configuration-property-builder (new CfnDeliveryStream$DataFormatConversionConfigurationProperty$Builder) id config))
 
@@ -493,7 +553,12 @@
 
 
 (defn cfn-delivery-stream-delivery-stream-encryption-configuration-input-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$DeliveryStreamEncryptionConfigurationInputProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-delivery-stream-encryption-configuration-input-property-builder (new CfnDeliveryStream$DeliveryStreamEncryptionConfigurationInputProperty$Builder) id config))
 
@@ -519,7 +584,12 @@
 
 
 (defn cfn-delivery-stream-deserializer-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$DeserializerProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-deserializer-property-builder (new CfnDeliveryStream$DeserializerProperty$Builder) id config))
 
@@ -542,7 +612,12 @@
 
 
 (defn cfn-delivery-stream-document-id-options-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$DocumentIdOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-document-id-options-property-builder (new CfnDeliveryStream$DocumentIdOptionsProperty$Builder) id config))
 
@@ -568,7 +643,12 @@
 
 
 (defn cfn-delivery-stream-dynamic-partitioning-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$DynamicPartitioningConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-dynamic-partitioning-configuration-property-builder (new CfnDeliveryStream$DynamicPartitioningConfigurationProperty$Builder) id config))
 
@@ -594,7 +674,12 @@
 
 
 (defn cfn-delivery-stream-elasticsearch-buffering-hints-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$ElasticsearchBufferingHintsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-elasticsearch-buffering-hints-property-builder (new CfnDeliveryStream$ElasticsearchBufferingHintsProperty$Builder) id config))
 
@@ -656,7 +741,12 @@
 
 
 (defn cfn-delivery-stream-elasticsearch-destination-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$ElasticsearchDestinationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-elasticsearch-destination-configuration-property-builder (new CfnDeliveryStream$ElasticsearchDestinationConfigurationProperty$Builder) id config))
 
@@ -679,7 +769,12 @@
 
 
 (defn cfn-delivery-stream-elasticsearch-retry-options-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$ElasticsearchRetryOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-elasticsearch-retry-options-property-builder (new CfnDeliveryStream$ElasticsearchRetryOptionsProperty$Builder) id config))
 
@@ -705,7 +800,12 @@
 
 
 (defn cfn-delivery-stream-encryption-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$EncryptionConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-encryption-configuration-property-builder (new CfnDeliveryStream$EncryptionConfigurationProperty$Builder) id config))
 
@@ -770,7 +870,12 @@
 
 
 (defn cfn-delivery-stream-extended-s3-destination-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$ExtendedS3DestinationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-extended-s3-destination-configuration-property-builder (new CfnDeliveryStream$ExtendedS3DestinationConfigurationProperty$Builder) id config))
 
@@ -793,7 +898,12 @@
 
 
 (defn cfn-delivery-stream-hive-json-ser-de-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$HiveJsonSerDeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-hive-json-ser-de-property-builder (new CfnDeliveryStream$HiveJsonSerDeProperty$Builder) id config))
 
@@ -819,7 +929,12 @@
 
 
 (defn cfn-delivery-stream-http-endpoint-common-attribute-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$HttpEndpointCommonAttributeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-http-endpoint-common-attribute-property-builder (new CfnDeliveryStream$HttpEndpointCommonAttributeProperty$Builder) id config))
 
@@ -848,7 +963,12 @@
 
 
 (defn cfn-delivery-stream-http-endpoint-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$HttpEndpointConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-http-endpoint-configuration-property-builder (new CfnDeliveryStream$HttpEndpointConfigurationProperty$Builder) id config))
 
@@ -895,7 +1015,12 @@
 
 
 (defn cfn-delivery-stream-http-endpoint-destination-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$HttpEndpointDestinationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-http-endpoint-destination-configuration-property-builder (new CfnDeliveryStream$HttpEndpointDestinationConfigurationProperty$Builder) id config))
 
@@ -921,7 +1046,12 @@
 
 
 (defn cfn-delivery-stream-http-endpoint-request-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$HttpEndpointRequestConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-http-endpoint-request-configuration-property-builder (new CfnDeliveryStream$HttpEndpointRequestConfigurationProperty$Builder) id config))
 
@@ -944,7 +1074,12 @@
 
 
 (defn cfn-delivery-stream-input-format-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$InputFormatConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-input-format-configuration-property-builder (new CfnDeliveryStream$InputFormatConfigurationProperty$Builder) id config))
 
@@ -970,7 +1105,12 @@
 
 
 (defn cfn-delivery-stream-kinesis-stream-source-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$KinesisStreamSourceConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-kinesis-stream-source-configuration-property-builder (new CfnDeliveryStream$KinesisStreamSourceConfigurationProperty$Builder) id config))
 
@@ -993,7 +1133,12 @@
 
 
 (defn cfn-delivery-stream-kms-encryption-config-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$KMSEncryptionConfigProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-kms-encryption-config-property-builder (new CfnDeliveryStream$KMSEncryptionConfigProperty$Builder) id config))
 
@@ -1022,7 +1167,12 @@
 
 
 (defn cfn-delivery-stream-msk-source-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$MSKSourceConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-msk-source-configuration-property-builder (new CfnDeliveryStream$MSKSourceConfigurationProperty$Builder) id config))
 
@@ -1051,7 +1201,12 @@
 
 
 (defn cfn-delivery-stream-open-x-json-ser-de-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$OpenXJsonSerDeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-open-x-json-ser-de-property-builder (new CfnDeliveryStream$OpenXJsonSerDeProperty$Builder) id config))
 
@@ -1101,7 +1256,12 @@
 
 
 (defn cfn-delivery-stream-orc-ser-de-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$OrcSerDeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-orc-ser-de-property-builder (new CfnDeliveryStream$OrcSerDeProperty$Builder) id config))
 
@@ -1124,7 +1284,12 @@
 
 
 (defn cfn-delivery-stream-output-format-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$OutputFormatConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-output-format-configuration-property-builder (new CfnDeliveryStream$OutputFormatConfigurationProperty$Builder) id config))
 
@@ -1162,7 +1327,12 @@
 
 
 (defn cfn-delivery-stream-parquet-ser-de-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$ParquetSerDeProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-parquet-ser-de-property-builder (new CfnDeliveryStream$ParquetSerDeProperty$Builder) id config))
 
@@ -1188,7 +1358,12 @@
 
 
 (defn cfn-delivery-stream-processing-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$ProcessingConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-processing-configuration-property-builder (new CfnDeliveryStream$ProcessingConfigurationProperty$Builder) id config))
 
@@ -1214,7 +1389,12 @@
 
 
 (defn cfn-delivery-stream-processor-parameter-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$ProcessorParameterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-processor-parameter-property-builder (new CfnDeliveryStream$ProcessorParameterProperty$Builder) id config))
 
@@ -1240,7 +1420,12 @@
 
 
 (defn cfn-delivery-stream-processor-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$ProcessorProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-processor-property-builder (new CfnDeliveryStream$ProcessorProperty$Builder) id config))
 
@@ -1305,7 +1490,12 @@
 
 
 (defn cfn-delivery-stream-props-builder
-  ""
+  "Creates a  `CfnDeliveryStreamProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-props-builder (new CfnDeliveryStreamProps$Builder) id config))
 
@@ -1358,7 +1548,12 @@
 
 
 (defn cfn-delivery-stream-redshift-destination-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$RedshiftDestinationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-redshift-destination-configuration-property-builder (new CfnDeliveryStream$RedshiftDestinationConfigurationProperty$Builder) id config))
 
@@ -1381,7 +1576,12 @@
 
 
 (defn cfn-delivery-stream-redshift-retry-options-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$RedshiftRetryOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-redshift-retry-options-property-builder (new CfnDeliveryStream$RedshiftRetryOptionsProperty$Builder) id config))
 
@@ -1404,7 +1604,12 @@
 
 
 (defn cfn-delivery-stream-retry-options-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$RetryOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-retry-options-property-builder (new CfnDeliveryStream$RetryOptionsProperty$Builder) id config))
 
@@ -1448,7 +1653,12 @@
 
 
 (defn cfn-delivery-stream-s3-destination-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$S3DestinationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-s3-destination-configuration-property-builder (new CfnDeliveryStream$S3DestinationConfigurationProperty$Builder) id config))
 
@@ -1486,7 +1696,12 @@
 
 
 (defn cfn-delivery-stream-schema-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$SchemaConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-schema-configuration-property-builder (new CfnDeliveryStream$SchemaConfigurationProperty$Builder) id config))
 
@@ -1512,7 +1727,12 @@
 
 
 (defn cfn-delivery-stream-serializer-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$SerializerProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-serializer-property-builder (new CfnDeliveryStream$SerializerProperty$Builder) id config))
 
@@ -1586,7 +1806,12 @@
 
 
 (defn cfn-delivery-stream-snowflake-destination-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$SnowflakeDestinationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-snowflake-destination-configuration-property-builder (new CfnDeliveryStream$SnowflakeDestinationConfigurationProperty$Builder) id config))
 
@@ -1609,7 +1834,12 @@
 
 
 (defn cfn-delivery-stream-snowflake-retry-options-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$SnowflakeRetryOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-snowflake-retry-options-property-builder (new CfnDeliveryStream$SnowflakeRetryOptionsProperty$Builder) id config))
 
@@ -1635,7 +1865,12 @@
 
 
 (defn cfn-delivery-stream-snowflake-role-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$SnowflakeRoleConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-snowflake-role-configuration-property-builder (new CfnDeliveryStream$SnowflakeRoleConfigurationProperty$Builder) id config))
 
@@ -1658,7 +1893,12 @@
 
 
 (defn cfn-delivery-stream-snowflake-vpc-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$SnowflakeVpcConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-snowflake-vpc-configuration-property-builder (new CfnDeliveryStream$SnowflakeVpcConfigurationProperty$Builder) id config))
 
@@ -1684,7 +1924,12 @@
 
 
 (defn cfn-delivery-stream-splunk-buffering-hints-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$SplunkBufferingHintsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-splunk-buffering-hints-property-builder (new CfnDeliveryStream$SplunkBufferingHintsProperty$Builder) id config))
 
@@ -1734,7 +1979,12 @@
 
 
 (defn cfn-delivery-stream-splunk-destination-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$SplunkDestinationConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-splunk-destination-configuration-property-builder (new CfnDeliveryStream$SplunkDestinationConfigurationProperty$Builder) id config))
 
@@ -1757,7 +2007,12 @@
 
 
 (defn cfn-delivery-stream-splunk-retry-options-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$SplunkRetryOptionsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-splunk-retry-options-property-builder (new CfnDeliveryStream$SplunkRetryOptionsProperty$Builder) id config))
 
@@ -1786,6 +2041,11 @@
 
 
 (defn cfn-delivery-stream-vpc-configuration-property-builder
-  ""
+  "Creates a  `CfnDeliveryStream$VpcConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-delivery-stream-vpc-configuration-property-builder (new CfnDeliveryStream$VpcConfigurationProperty$Builder) id config))

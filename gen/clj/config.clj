@@ -46,12 +46,25 @@
   (str source-path "/" (package>path-cache base-package-namespace)))
 
 
+(defn package-class-symbol>string
+  "Converts the keys of maps that represent {package {class {}}} from symbols to strings"
+  ([data]
+   (package-class-symbol>string data 0))
+  ([data level]
+   (if (< level 2)
+     (reduce (fn [m [k v]]
+               (assoc m (name k) (package-class-symbol>string v (inc level))))
+             {}
+             data)
+     data)))
+
+
 (defn load
   "Loads all the configuration and returns it in a map."
   []
   (-> (load-edn "gen.config.edn")
       (update :ignored symbols>string)
-      (assoc :inits (-> "gen.inits.edn" load-edn symbols>string))
+      (assoc :inits (-> "gen.inits.edn" load-edn package-class-symbol>string))
       (ensure-with-value :source-path "src")
       (ensure-with-value :test-path "test/clj")
       (ensure-with-value :base-namespace "cdk.api")

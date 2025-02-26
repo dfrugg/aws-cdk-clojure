@@ -33,7 +33,12 @@
 
 
 (defn cfn-export-builder
-  ""
+  "Creates a  `CfnExport$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-export-builder (CfnExport$Builder/create scope (name id)) id config))
 
@@ -59,7 +64,12 @@
 
 
 (defn cfn-export-data-query-property-builder
-  ""
+  "Creates a  `CfnExport$DataQueryProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-export-data-query-property-builder (new CfnExport$DataQueryProperty$Builder) id config))
 
@@ -82,7 +92,12 @@
 
 
 (defn cfn-export-destination-configurations-property-builder
-  ""
+  "Creates a  `CfnExport$DestinationConfigurationsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-export-destination-configurations-property-builder (new CfnExport$DestinationConfigurationsProperty$Builder) id config))
 
@@ -120,7 +135,12 @@
 
 
 (defn cfn-export-export-property-builder
-  ""
+  "Creates a  `CfnExport$ExportProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-export-export-property-builder (new CfnExport$ExportProperty$Builder) id config))
 
@@ -146,7 +166,12 @@
 
 
 (defn cfn-export-props-builder
-  ""
+  "Creates a  `CfnExportProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-export-props-builder (new CfnExportProps$Builder) id config))
 
@@ -169,7 +194,12 @@
 
 
 (defn cfn-export-refresh-cadence-property-builder
-  ""
+  "Creates a  `CfnExport$RefreshCadenceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-export-refresh-cadence-property-builder (new CfnExport$RefreshCadenceProperty$Builder) id config))
 
@@ -195,7 +225,12 @@
 
 
 (defn cfn-export-resource-tag-property-builder
-  ""
+  "Creates a  `CfnExport$ResourceTagProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-export-resource-tag-property-builder (new CfnExport$ResourceTagProperty$Builder) id config))
 
@@ -227,7 +262,12 @@
 
 
 (defn cfn-export-s3-destination-property-builder
-  ""
+  "Creates a  `CfnExport$S3DestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-export-s3-destination-property-builder (new CfnExport$S3DestinationProperty$Builder) id config))
 
@@ -259,6 +299,11 @@
 
 
 (defn cfn-export-s3-output-configurations-property-builder
-  ""
+  "Creates a  `CfnExport$S3OutputConfigurationsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-export-s3-output-configurations-property-builder (new CfnExport$S3OutputConfigurationsProperty$Builder) id config))

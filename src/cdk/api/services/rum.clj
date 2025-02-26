@@ -54,7 +54,12 @@
 
 
 (defn cfn-app-monitor-app-monitor-configuration-property-builder
-  ""
+  "Creates a  `CfnAppMonitor$AppMonitorConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-app-monitor-app-monitor-configuration-property-builder (new CfnAppMonitor$AppMonitorConfigurationProperty$Builder) id config))
 
@@ -92,7 +97,12 @@
 
 
 (defn cfn-app-monitor-builder
-  ""
+  "Creates a  `CfnAppMonitor$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-app-monitor-builder (CfnAppMonitor$Builder/create scope (name id)) id config))
 
@@ -115,7 +125,12 @@
 
 
 (defn cfn-app-monitor-custom-events-property-builder
-  ""
+  "Creates a  `CfnAppMonitor$CustomEventsProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-app-monitor-custom-events-property-builder (new CfnAppMonitor$CustomEventsProperty$Builder) id config))
 
@@ -153,7 +168,12 @@
 
 
 (defn cfn-app-monitor-metric-definition-property-builder
-  ""
+  "Creates a  `CfnAppMonitor$MetricDefinitionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-app-monitor-metric-definition-property-builder (new CfnAppMonitor$MetricDefinitionProperty$Builder) id config))
 
@@ -185,7 +205,12 @@
 
 
 (defn cfn-app-monitor-metric-destination-property-builder
-  ""
+  "Creates a  `CfnAppMonitor$MetricDestinationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-app-monitor-metric-destination-property-builder (new CfnAppMonitor$MetricDestinationProperty$Builder) id config))
 
@@ -223,6 +248,11 @@
 
 
 (defn cfn-app-monitor-props-builder
-  ""
+  "Creates a  `CfnAppMonitorProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-app-monitor-props-builder (new CfnAppMonitorProps$Builder) id config))

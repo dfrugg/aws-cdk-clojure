@@ -60,7 +60,12 @@
 
 
 (defn cfn-byte-match-set-builder
-  ""
+  "Creates a  `CfnByteMatchSet$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-byte-match-set-builder (CfnByteMatchSet$Builder/create scope (name id)) id config))
 
@@ -95,7 +100,12 @@
 
 
 (defn cfn-byte-match-set-byte-match-tuple-property-builder
-  ""
+  "Creates a  `CfnByteMatchSet$ByteMatchTupleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-byte-match-set-byte-match-tuple-property-builder (new CfnByteMatchSet$ByteMatchTupleProperty$Builder) id config))
 
@@ -121,7 +131,12 @@
 
 
 (defn cfn-byte-match-set-field-to-match-property-builder
-  ""
+  "Creates a  `CfnByteMatchSet$FieldToMatchProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-byte-match-set-field-to-match-property-builder (new CfnByteMatchSet$FieldToMatchProperty$Builder) id config))
 
@@ -147,7 +162,12 @@
 
 
 (defn cfn-byte-match-set-props-builder
-  ""
+  "Creates a  `CfnByteMatchSetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-byte-match-set-props-builder (new CfnByteMatchSetProps$Builder) id config))
 
@@ -173,7 +193,12 @@
 
 
 (defn cfn-geo-match-set-builder
-  ""
+  "Creates a  `CfnGeoMatchSet$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-geo-match-set-builder (CfnGeoMatchSet$Builder/create scope (name id)) id config))
 
@@ -199,7 +224,12 @@
 
 
 (defn cfn-geo-match-set-geo-match-constraint-property-builder
-  ""
+  "Creates a  `CfnGeoMatchSet$GeoMatchConstraintProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-geo-match-set-geo-match-constraint-property-builder (new CfnGeoMatchSet$GeoMatchConstraintProperty$Builder) id config))
 
@@ -225,7 +255,12 @@
 
 
 (defn cfn-geo-match-set-props-builder
-  ""
+  "Creates a  `CfnGeoMatchSetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-geo-match-set-props-builder (new CfnGeoMatchSetProps$Builder) id config))
 
@@ -251,7 +286,12 @@
 
 
 (defn cfn-ip-set-builder
-  ""
+  "Creates a  `CfnIPSet$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-ip-set-builder (CfnIPSet$Builder/create scope (name id)) id config))
 
@@ -277,7 +317,12 @@
 
 
 (defn cfn-ip-set-ip-set-descriptor-property-builder
-  ""
+  "Creates a  `CfnIPSet$IPSetDescriptorProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-ip-set-ip-set-descriptor-property-builder (new CfnIPSet$IPSetDescriptorProperty$Builder) id config))
 
@@ -303,7 +348,12 @@
 
 
 (defn cfn-ip-set-props-builder
-  ""
+  "Creates a  `CfnIPSetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-ip-set-props-builder (new CfnIPSetProps$Builder) id config))
 
@@ -338,7 +388,12 @@
 
 
 (defn cfn-rate-based-rule-builder
-  ""
+  "Creates a  `CfnRateBasedRule$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-rate-based-rule-builder (CfnRateBasedRule$Builder/create scope (name id)) id config))
 
@@ -367,7 +422,12 @@
 
 
 (defn cfn-rate-based-rule-predicate-property-builder
-  ""
+  "Creates a  `CfnRateBasedRule$PredicateProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rate-based-rule-predicate-property-builder (new CfnRateBasedRule$PredicateProperty$Builder) id config))
 
@@ -402,7 +462,12 @@
 
 
 (defn cfn-rate-based-rule-props-builder
-  ""
+  "Creates a  `CfnRateBasedRuleProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rate-based-rule-props-builder (new CfnRateBasedRuleProps$Builder) id config))
 
@@ -428,7 +493,12 @@
 
 
 (defn cfn-regex-pattern-set-builder
-  ""
+  "Creates a  `CfnRegexPatternSet$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-regex-pattern-set-builder (CfnRegexPatternSet$Builder/create scope (name id)) id config))
 
@@ -454,7 +524,12 @@
 
 
 (defn cfn-regex-pattern-set-props-builder
-  ""
+  "Creates a  `CfnRegexPatternSetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-regex-pattern-set-props-builder (new CfnRegexPatternSetProps$Builder) id config))
 
@@ -483,7 +558,12 @@
 
 
 (defn cfn-rule-builder
-  ""
+  "Creates a  `CfnRule$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-rule-builder (CfnRule$Builder/create scope (name id)) id config))
 
@@ -512,7 +592,12 @@
 
 
 (defn cfn-rule-predicate-property-builder
-  ""
+  "Creates a  `CfnRule$PredicateProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-predicate-property-builder (new CfnRule$PredicateProperty$Builder) id config))
 
@@ -541,7 +626,12 @@
 
 
 (defn cfn-rule-props-builder
-  ""
+  "Creates a  `CfnRuleProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-rule-props-builder (new CfnRuleProps$Builder) id config))
 
@@ -567,7 +657,12 @@
 
 
 (defn cfn-size-constraint-set-builder
-  ""
+  "Creates a  `CfnSizeConstraintSet$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-size-constraint-set-builder (CfnSizeConstraintSet$Builder/create scope (name id)) id config))
 
@@ -593,7 +688,12 @@
 
 
 (defn cfn-size-constraint-set-field-to-match-property-builder
-  ""
+  "Creates a  `CfnSizeConstraintSet$FieldToMatchProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-size-constraint-set-field-to-match-property-builder (new CfnSizeConstraintSet$FieldToMatchProperty$Builder) id config))
 
@@ -619,7 +719,12 @@
 
 
 (defn cfn-size-constraint-set-props-builder
-  ""
+  "Creates a  `CfnSizeConstraintSetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-size-constraint-set-props-builder (new CfnSizeConstraintSetProps$Builder) id config))
 
@@ -651,7 +756,12 @@
 
 
 (defn cfn-size-constraint-set-size-constraint-property-builder
-  ""
+  "Creates a  `CfnSizeConstraintSet$SizeConstraintProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-size-constraint-set-size-constraint-property-builder (new CfnSizeConstraintSet$SizeConstraintProperty$Builder) id config))
 
@@ -677,7 +787,12 @@
 
 
 (defn cfn-sql-injection-match-set-builder
-  ""
+  "Creates a  `CfnSqlInjectionMatchSet$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-sql-injection-match-set-builder (CfnSqlInjectionMatchSet$Builder/create scope (name id)) id config))
 
@@ -703,7 +818,12 @@
 
 
 (defn cfn-sql-injection-match-set-field-to-match-property-builder
-  ""
+  "Creates a  `CfnSqlInjectionMatchSet$FieldToMatchProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-sql-injection-match-set-field-to-match-property-builder (new CfnSqlInjectionMatchSet$FieldToMatchProperty$Builder) id config))
 
@@ -729,7 +849,12 @@
 
 
 (defn cfn-sql-injection-match-set-props-builder
-  ""
+  "Creates a  `CfnSqlInjectionMatchSetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-sql-injection-match-set-props-builder (new CfnSqlInjectionMatchSetProps$Builder) id config))
 
@@ -755,7 +880,12 @@
 
 
 (defn cfn-sql-injection-match-set-sql-injection-match-tuple-property-builder
-  ""
+  "Creates a  `CfnSqlInjectionMatchSet$SqlInjectionMatchTupleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-sql-injection-match-set-sql-injection-match-tuple-property-builder (new CfnSqlInjectionMatchSet$SqlInjectionMatchTupleProperty$Builder) id config))
 
@@ -778,7 +908,12 @@
 
 
 (defn cfn-web-acl-action-property-builder
-  ""
+  "Creates a  `CfnWebACL$ActionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-action-property-builder (new CfnWebACL$ActionProperty$Builder) id config))
 
@@ -804,7 +939,12 @@
 
 
 (defn cfn-web-acl-association-builder
-  ""
+  "Creates a  `CfnWebACLAssociation$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-web-acl-association-builder (CfnWebACLAssociation$Builder/create scope (name id)) id config))
 
@@ -830,7 +970,12 @@
 
 
 (defn cfn-web-acl-association-props-builder
-  ""
+  "Creates a  `CfnWebACLAssociationProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-association-props-builder (new CfnWebACLAssociationProps$Builder) id config))
 
@@ -862,7 +1007,12 @@
 
 
 (defn cfn-web-acl-builder
-  ""
+  "Creates a  `CfnWebACL$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-web-acl-builder (CfnWebACL$Builder/create scope (name id)) id config))
 
@@ -894,7 +1044,12 @@
 
 
 (defn cfn-web-acl-props-builder
-  ""
+  "Creates a  `CfnWebACLProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-props-builder (new CfnWebACLProps$Builder) id config))
 
@@ -923,7 +1078,12 @@
 
 
 (defn cfn-web-acl-rule-property-builder
-  ""
+  "Creates a  `CfnWebACL$RuleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-web-acl-rule-property-builder (new CfnWebACL$RuleProperty$Builder) id config))
 
@@ -949,7 +1109,12 @@
 
 
 (defn cfn-xss-match-set-builder
-  ""
+  "Creates a  `CfnXssMatchSet$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-xss-match-set-builder (CfnXssMatchSet$Builder/create scope (name id)) id config))
 
@@ -975,7 +1140,12 @@
 
 
 (defn cfn-xss-match-set-field-to-match-property-builder
-  ""
+  "Creates a  `CfnXssMatchSet$FieldToMatchProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-xss-match-set-field-to-match-property-builder (new CfnXssMatchSet$FieldToMatchProperty$Builder) id config))
 
@@ -1001,7 +1171,12 @@
 
 
 (defn cfn-xss-match-set-props-builder
-  ""
+  "Creates a  `CfnXssMatchSetProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-xss-match-set-props-builder (new CfnXssMatchSetProps$Builder) id config))
 
@@ -1027,6 +1202,11 @@
 
 
 (defn cfn-xss-match-set-xss-match-tuple-property-builder
-  ""
+  "Creates a  `CfnXssMatchSet$XssMatchTupleProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-xss-match-set-xss-match-tuple-property-builder (new CfnXssMatchSet$XssMatchTupleProperty$Builder) id config))

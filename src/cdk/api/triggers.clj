@@ -86,7 +86,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn trigger-builder
-  ""
+  "Creates a  `Trigger$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-trigger-builder (Trigger$Builder/create scope (name id)) id config))
 
@@ -265,7 +270,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn trigger-function-builder
-  ""
+  "Creates a  `TriggerFunction$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-trigger-function-builder (TriggerFunction$Builder/create scope (name id)) id config))
 
@@ -444,7 +454,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn trigger-function-props-builder
-  ""
+  "Creates a  `TriggerFunctionProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-trigger-function-props-builder (new TriggerFunctionProps$Builder) id config))
 
@@ -473,7 +488,12 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn trigger-options-builder
-  ""
+  "Creates a  `TriggerOptions$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-trigger-options-builder (new TriggerOptions$Builder) id config))
 
@@ -511,6 +531,11 @@ function on the data with the provided namespace id and item-key.  The found val
 
 
 (defn trigger-props-builder
-  ""
+  "Creates a  `TriggerProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-trigger-props-builder (new TriggerProps$Builder) id config))

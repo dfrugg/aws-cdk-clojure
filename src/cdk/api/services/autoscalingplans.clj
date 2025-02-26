@@ -35,7 +35,12 @@
 
 
 (defn cfn-scaling-plan-application-source-property-builder
-  ""
+  "Creates a  `CfnScalingPlan$ApplicationSourceProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-plan-application-source-property-builder (new CfnScalingPlan$ApplicationSourceProperty$Builder) id config))
 
@@ -61,7 +66,12 @@
 
 
 (defn cfn-scaling-plan-builder
-  ""
+  "Creates a  `CfnScalingPlan$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-scaling-plan-builder (CfnScalingPlan$Builder/create scope (name id)) id config))
 
@@ -96,7 +106,12 @@
 
 
 (defn cfn-scaling-plan-customized-load-metric-specification-property-builder
-  ""
+  "Creates a  `CfnScalingPlan$CustomizedLoadMetricSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-plan-customized-load-metric-specification-property-builder (new CfnScalingPlan$CustomizedLoadMetricSpecificationProperty$Builder) id config))
 
@@ -131,7 +146,12 @@
 
 
 (defn cfn-scaling-plan-customized-scaling-metric-specification-property-builder
-  ""
+  "Creates a  `CfnScalingPlan$CustomizedScalingMetricSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-plan-customized-scaling-metric-specification-property-builder (new CfnScalingPlan$CustomizedScalingMetricSpecificationProperty$Builder) id config))
 
@@ -157,7 +177,12 @@
 
 
 (defn cfn-scaling-plan-metric-dimension-property-builder
-  ""
+  "Creates a  `CfnScalingPlan$MetricDimensionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-plan-metric-dimension-property-builder (new CfnScalingPlan$MetricDimensionProperty$Builder) id config))
 
@@ -183,7 +208,12 @@
 
 
 (defn cfn-scaling-plan-predefined-load-metric-specification-property-builder
-  ""
+  "Creates a  `CfnScalingPlan$PredefinedLoadMetricSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-plan-predefined-load-metric-specification-property-builder (new CfnScalingPlan$PredefinedLoadMetricSpecificationProperty$Builder) id config))
 
@@ -209,7 +239,12 @@
 
 
 (defn cfn-scaling-plan-predefined-scaling-metric-specification-property-builder
-  ""
+  "Creates a  `CfnScalingPlan$PredefinedScalingMetricSpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-plan-predefined-scaling-metric-specification-property-builder (new CfnScalingPlan$PredefinedScalingMetricSpecificationProperty$Builder) id config))
 
@@ -235,7 +270,12 @@
 
 
 (defn cfn-scaling-plan-props-builder
-  ""
+  "Creates a  `CfnScalingPlanProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-plan-props-builder (new CfnScalingPlanProps$Builder) id config))
 
@@ -297,7 +337,12 @@
 
 
 (defn cfn-scaling-plan-scaling-instruction-property-builder
-  ""
+  "Creates a  `CfnScalingPlan$ScalingInstructionProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-plan-scaling-instruction-property-builder (new CfnScalingPlan$ScalingInstructionProperty$Builder) id config))
 
@@ -323,7 +368,12 @@
 
 
 (defn cfn-scaling-plan-tag-filter-property-builder
-  ""
+  "Creates a  `CfnScalingPlan$TagFilterProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-plan-tag-filter-property-builder (new CfnScalingPlan$TagFilterProperty$Builder) id config))
 
@@ -364,6 +414,11 @@
 
 
 (defn cfn-scaling-plan-target-tracking-configuration-property-builder
-  ""
+  "Creates a  `CfnScalingPlan$TargetTrackingConfigurationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-scaling-plan-target-tracking-configuration-property-builder (new CfnScalingPlan$TargetTrackingConfigurationProperty$Builder) id config))

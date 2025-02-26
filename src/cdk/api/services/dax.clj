@@ -67,7 +67,12 @@
 
 
 (defn cfn-cluster-builder
-  ""
+  "Creates a  `CfnCluster$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-cluster-builder (CfnCluster$Builder/create scope (name id)) id config))
 
@@ -129,7 +134,12 @@
 
 
 (defn cfn-cluster-props-builder
-  ""
+  "Creates a  `CfnClusterProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-cluster-props-builder (new CfnClusterProps$Builder) id config))
 
@@ -152,7 +162,12 @@
 
 
 (defn cfn-cluster-sse-specification-property-builder
-  ""
+  "Creates a  `CfnCluster$SSESpecificationProperty$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-cluster-sse-specification-property-builder (new CfnCluster$SSESpecificationProperty$Builder) id config))
 
@@ -181,7 +196,12 @@
 
 
 (defn cfn-parameter-group-builder
-  ""
+  "Creates a  `CfnParameterGroup$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-parameter-group-builder (CfnParameterGroup$Builder/create scope (name id)) id config))
 
@@ -210,7 +230,12 @@
 
 
 (defn cfn-parameter-group-props-builder
-  ""
+  "Creates a  `CfnParameterGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-parameter-group-props-builder (new CfnParameterGroupProps$Builder) id config))
 
@@ -239,7 +264,12 @@
 
 
 (defn cfn-subnet-group-builder
-  ""
+  "Creates a  `CfnSubnetGroup$Builder` instance using a scope and ID, applies the data configuration, then builds it.  Takes the following arguments: 
+| Argument | DataType | Description |
+|---|---|---|
+| scope | software.constructs.Construct | The parent scope construct of the object being built. |
+| id | String or Keyword or Symbol | Value to use as both the ID of the object being build and the namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [^software.constructs.Construct scope id config]
   (build-cfn-subnet-group-builder (CfnSubnetGroup$Builder/create scope (name id)) id config))
 
@@ -268,6 +298,11 @@
 
 
 (defn cfn-subnet-group-props-builder
-  ""
+  "Creates a  `CfnSubnetGroupProps$Builder` instance using a no-argument constructor, applies the data configuration, then builds it.  Takes the following arguments: 
+
+| Argument | DataType | Description |
+|---|---|---|
+| id | String or Keyword or Symbol | Value to use as namespace when looking up configuration values. |
+| config | map | Data configuration |"
   [id config]
   (build-cfn-subnet-group-props-builder (new CfnSubnetGroupProps$Builder) id config))
